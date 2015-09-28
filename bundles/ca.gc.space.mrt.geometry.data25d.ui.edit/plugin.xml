@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:51:26 pallard Exp $
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated mrt_data25d_ui -->
+      <factory
+            uri="ca.gc.space.mrt.geometry.data25d.ui"
+            class="ca.gc.space.mrt.geometry.data25d.ui.provider.Data25DUIItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated mrt_data25d_ui -->
+      <extender
+            uri="ca.gc.space.topology.ui"
+            class="ca.gc.space.mrt.geometry.data25d.ui.provider.Data25DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.space.mrt.geometry.data25d.ui.provider.Data25DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+   </extension>
+
+</plugin>

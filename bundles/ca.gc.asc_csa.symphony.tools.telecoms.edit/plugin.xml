@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated symphony_tools_telecoms -->
+      <factory
+            uri="ca.gc.asc_csa.symphony.tools.telecoms"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_tools_telecoms -->
+      <extender
+            uri="ca.gc.asc_csa.symphony.tools.core"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.symphony.environment"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$PathsChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.topology.bindings"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.symphony.core"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+   </extension>
+
+</plugin>

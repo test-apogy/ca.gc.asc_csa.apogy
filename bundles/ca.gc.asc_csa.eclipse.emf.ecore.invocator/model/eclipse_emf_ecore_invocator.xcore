@@ -1,0 +1,945 @@
+@GenModel(prefix="EMFEcoreInvocator", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)", modelName="EMFEcoreInvocator", fileExtensions="sym", resource="XMI")
+@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit/src-generated")
+@GenModel(editorDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.editor/src-generated")
+@GenModel(testsDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests/src-generated")
+
+package ca.gc.asc_csa.eclipse.emf.ecore.invocator
+
+import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode
+import ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource
+import ca.gc.asc_csa.eclipse.emf.ecore.Described
+import ca.gc.asc_csa.eclipse.emf.ecore.Exception
+import ca.gc.asc_csa.eclipse.emf.ecore.List
+import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode
+import ca.gc.asc_csa.eclipse.emf.ecore.Named
+import ca.gc.asc_csa.eclipse.emf.ecore.Timed
+import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode
+import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EEnum
+import org.eclipse.emf.ecore.EEnumLiteral
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EOperation
+import org.eclipse.emf.ecore.EParameter
+
+/* -------------------------------------------------------------------------
+ * 
+ * DataTypes.
+ * 
+ * ------------------------------------------------------------------------- */ 
+type Throwable wraps java.lang.Throwable
+type Notification wraps org.eclipse.emf.common.notify.Notification
+type TypeMemberImplementationsEList wraps EList<TypeMemberImplementation>
+type TypeMembersArray wraps TypeMember[]
+
+/* -------------------------------------------------------------------------
+ * 
+ * Utilities
+ * 
+ * ------------------------------------------------------------------------- */
+
+class EMFEcoreInvocatorFacade
+{
+	op void exec(OperationCall operationCall)
+	op void exec(OperationCall operationCall, boolean saveResult)
+	op void exec(OperationCallsList operationCallsList) 
+	
+	op AbstractResultValue createAbstractResultValue(Object value)
+	
+	op Watch resolveWatch(AbstractFeatureNode abstractFeatureNode)
+	op Watch resolveWatch(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement)
+	op Object getValue(AbstractFeatureNode abstractFeatureNode)	
+	
+	op EObject getInstance(Variable variable)
+	op EClass getInstanceClass(Variable variable)
+
+	/*
+	 * Returns the most specific TypeApiAdapter for the given VariableFeatureReference.
+	 */
+	op TypeApiAdapter getTypeApiAdapter(VariableFeatureReference variableFeatureReference)
+
+	/*
+	 * Returns the instance referred by the {@link VariableFeatureReference}
+	 * @param variableFeatureReference Reference to the variable feature.
+	 * @return Reference to the instance or null if not found.
+	 */
+	op EObject getInstance(VariableFeatureReference variableFeatureReference)
+	
+	/*
+	 * Returns the instance referred by the variableFeatureReference.TypeMemberReferenceListElement.
+	 * @param variableFeatureReference Reference to the variable feature.
+	 * @return Reference to the type member instance, null if no TypeMemberReferenceListElement are defined or instance of type member are null.
+	 */
+	op EObject getTypeMemberInstance(VariableFeatureReference variableFeatureReference)
+	
+	/*
+	 * Returns the value referred by the variableFeatureReference.ListRootNode.
+	 * @param variableFeatureReference Reference to the variable feature.
+	 * @return Reference to feature value, null if non is defined.
+	 */
+	op Object getEMFFeatureValue(VariableFeatureReference variableFeatureReference)
+	
+	/** 
+	 * Returns the instance class referred by the {@link VariableFeatureReference}.
+	 * @param variableFeatureReference Reference to the feature.
+	 * @return Instance Class.
+	 */
+	op EClass getInstanceClass(VariableFeatureReference variableFeatureReference)
+	op EObject getInstance(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement)
+	
+	op AbstractTypeImplementation getTypeImplementation(OperationCall operationCall)
+	op AbstractTypeImplementation getTypeImplementation(Variable variable, AbstractType elementType)
+	op AbstractTypeImplementation getTypeImplementation(Variable variable)
+	
+	/**
+	 * Create a structure of {@link TypeMemberReferenceListElement} based on the specified sequence of {@link TypeMember}.
+	 * @param Sequence from the first to the last of type members.
+	 * @return Reference to the newly created structure of {@link TypeMemberReferenceListElement}.
+	 */
+	op TypeMemberReferenceListElement createTypeMemberReferences(TypeMembersArray typeMembers)
+	
+	/**
+	 * Create a {@link ListRootNode} based on the specified sequence of {@link EStructuralFeature}.
+	 * @param Sequence from the first to the last of features.
+	 * @return Reference to the newly created structure of {@link ListRootNode}.
+	 */
+//	op ListRootNode createListRootNode(EStructuralFeaturesArray features)
+		
+	/*
+	 * Searches the {@link AbstractTypeImplementation} based on the fullyQualifiedName.
+	 * @param environment Reference to the environment
+	 * @param fullyQualifiedName Search criteria (e.g. "<variable_instance_name>.<type_member_instance_name>.<type_member_instance_name>").
+	 * @return Reference to the {@link AbstractTypeImplementation} or null if not found.
+	 */
+	op AbstractTypeImplementation getTypeImplementation(Environment environment, String fullyQualifiedName)
+	
+	op String getFullyQualifiedName(TypeMemberReferenceTreeElement typeMemberReferenceTreeElement)
+	op String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode)
+	
+	
+	/*
+	 * Creates a list of TypeMemberImplementation according to the definition of the specified variable type.
+	 * @param variableType Reference to the type.
+	 * @return List of TypeMemberImplementation.
+	 */
+	op List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType)		
+	
+	/*
+	 * Resets the variable instances.
+	 */
+	op void initVariableInstances(Environment environment)
+	
+	/*
+	 * Clear the variable instances.
+	 */
+	op void disposeVariableInstances(Environment environment)
+	
+	/*
+	 * Returns the direct owner of the {@link TypeMemberReferenceListElement}.  Null is returned if the reference 
+	 * is a direct child of the {@link OperationCall}.
+	 * @param typeMemberReference Reference to the {@link TypeMemberReferenceListElement}
+	 * @return {@link OperationCall} that contains the {@link TypeMemberReferenceListElement}.  
+	 * Null is returned if the reference is a direct child of the {@link OperationCall}.
+	 */
+	op OperationCall getOperationCallContainer(TypeMemberReferenceListElement typeMemberReferenceListElement)
+
+	/*
+	 * Apply the initialization data to the specified environment.
+	 * @param environment Environment to initialize.
+	 */
+	op void applyInitializationData(Environment environment)
+	
+	/*
+	 * Collects the initialization data for the specified environment.
+	 * @param environment Environment to collect data from.
+	 */
+	op void collectInitializationData(Environment environment)
+
+	
+	/*
+	 * Apply the initialization data to the specified Variable.
+	 * @param variable Variable to initialize.
+	 */
+	op void applyInitializationData(Variable variable)
+	
+	/*
+	 * Collects the initialization data from the specified Variable.
+	 * @param variable Variable to collect data from.
+	 */
+	op void collectInitializationData(Variable variable)
+	
+	/**
+	 * Refers to the active invocator session.
+	 */
+	refers InvocatorSession activeInvocatorSession
+	
+	/**
+	 * Loads the registered types.
+	 * @param session Reference to the session.
+	 */
+	 op void loadRegisteredTypes(InvocatorSession session)
+	 
+	 /**
+	  * Returns the list of all the {@link Type} contained in the specified {@link Environment}.
+	  * @environment Reference to the environment.
+	  */
+	 op List<Type> getAllTypes(Environment environment) 
+} 
+
+/* -------------------------------------------------------------------------
+ * 
+ * Run Environment.
+ * 
+ * ------------------------------------------------------------------------- */
+
+class InvocatorSession extends Named, Described{
+	contains Environment[0..1] environment opposite invocatorSession
+	contains ProgramsList[0..1] programsList opposite invocatorSession
+	contains DataProductsListsContainer[0..1] dataProductsListContainer opposite invocatorSession
+	contains ToolsList[0..1] toolsList opposite invocatorSession
+}
+
+/* -------------------------------------------------------------------------
+ * Environment.
+ * ------------------------------------------------------------------------- */
+ class Environment extends Named, Described{
+ 	
+   @GenModel(property="None")
+ 		container InvocatorSession invocatorSession opposite environment
+ 	 	contains TypesList[0..1] typesList
+		contains VariablesList[0..1] variablesList opposite environment
+		contains ContextsList[0..1] contextsList opposite environment
+		
+  	@GenModel(notify="true")
+		refers Context[1] activeContext		
+ }
+
+/* -------------------------------------------------------------------------
+ * DataProducts.
+ * ------------------------------------------------------------------------- */
+ class DataProductsListsContainer extends Named, Described{ 	
+ 	container InvocatorSession invocatorSession opposite dataProductsListContainer
+ 	contains DataProductsList[0..*] dataProductsList opposite dataProductsListsContainer 	
+ }
+ 
+ class DataProductsList extends Named, Described
+ { 	
+ 	container DataProductsListsContainer dataProductsListsContainer opposite dataProductsList
+ 
+ 	contains OperationCallResultsList [1] operationCallResultsList opposite dataProductsList
+ 
+ 	contains RecordingResultsList [0..1] recordingResultsList opposite dataProductsList
+ 
+    @GenModel(children="false", property="None")
+		refers local readonly volatile transient derived InvocatorSession invocatorSession get{
+			if (dataProductsListsContainer == null) return null else return dataProductsListsContainer.invocatorSession
+		} 	 	
+ }
+ 
+ 
+/* -------------------------------------------------------------------------
+ * ToolsList.
+ * ------------------------------------------------------------------------- */
+ class ToolsList extends Named, Described{
+ 	 container InvocatorSession invocatorSession opposite toolsList
+ 	 contains AbstractToolsListContainer[0..*] toolsListContainers opposite toolsList
+ 	  
+ }
+ 
+ abstract class AbstractToolsListContainer{ 	
+ 	container ToolsList toolsList opposite toolsListContainers
+ }
+
+/* -------------------------------------------------------------------------
+ * Types.
+ * ------------------------------------------------------------------------- */
+ 
+ class TypesList{
+	contains LocalTypesList[0..1] localTypes
+	contains RegisteredTypesList[0..1] registeredTypes
+ }
+ 
+ class LocalTypesList{
+ 	@GenModel(children="true", createChild="true", property="None") 		
+ 		contains Type[0..*] types
+ }
+ 
+ class RegisteredTypesList{ 	
+ 	@GenModel(children="true", createChild="false", property="None")
+		refers derived transient readonly Type[0..*] types	 	 	
+ }
+ 
+ interface AbstractType{ 	
+ }
+ 
+ class Type extends Named, AbstractType
+ {
+ 	@GenModel(notify="true")
+ 	contains TypeMember[0..*] members
+ 	
+ 	@GenModel(notify="true")
+ 	refers EClass[0..1] interfaceClass
+ 	
+ 	@GenModel(notify="true")
+ 	refers EClass[0..1] typeApiAdapterClass 	
+ }
+  
+ /*
+  * This class implements an adapter pattern that allows injection of specific behaviors when actions are realized on {@link Type} instance.
+  * Developers may specialized certain methods to provide custom implementation to address specific {@link Type} needs.
+  */
+ class TypeApiAdapter{
+ 	refers transient Environment[0..1] environment 	 	
+ 	refers transient EObject[0..1] instance
+ 	refers transient Type[0..1] elementType
+ 	
+ 	/*
+ 	 * Initializes and sets the adapter attributes.
+ 	 * @param environment Reference to the environment.
+ 	 * @param elementType Reference to the {@link Type}.
+ 	 * @param instance Reference to the object instance.
+ 	 */
+	op void init(Environment environment, Type elementType, EObject instance)
+	
+	/*
+	 * Applies the {@link Type} instance state data required to initialize the model.  
+	 * {@link AbstractInitialization} must be specialized to address {@link TypeApiAdapter} needs.
+	 * @param initializationData Reference to the data to apply.
+	 */	
+	op void apply(AbstractInitializationData initializationData)
+
+	/*
+	 * Create a new instance of initializationData.  {@link AbstractInitializationData} must be specialized 
+	 * to address {@link TypeApiAdapter} needs.
+	 * @return Reference to the data container instance.
+	 */	
+	op AbstractInitializationData createInitializationData()	
+	
+	/*
+	 * Collects the {@link Type} instance state.  {@link AbstractInitializationData} must be specialized 
+	 * to address {@link TypeApiAdapter} needs.
+	 * @param data Reference to the data container.
+	 */	
+	op void collect(AbstractInitializationData data)	
+		
+	/*
+	 * Creates and returns a result container. Normally this method only creates the container.  
+	 * This method must be overwritten and synchronized with 
+	 * {@link #createResult(OperationCall, long, Object, Exception)}.  
+	 * @param operationCall Reference to the operation call.
+	 * @return Reference to the new result.
+	 */
+	op OperationCallResult createResult(OperationCall operationCall)
+	
+	/*
+	 * Creates, populates and returns a result container. This method invokes {@link #createResult(OperationCall)}.  
+	 * Ensure super().{@link #createResult(OperationCall operationCall, long invocationTime, Object resultValue, Exception exception)} is called
+	 * if this method is overwritten.  
+	 * @param operationCall Reference to the operation call.
+	 * @param invocationTime Time when the call was submitted.
+	 * @param resultValue Value returned by the operation call.
+	 * @exception Reference to the exception if one exception was raised during the invocation.
+	 * @return Reference to the new result.
+	 */
+	op OperationCallResult createResult(OperationCall operationCall, long invocationTime, Object resultValue, Exception exception)
+	
+	/*
+	 * Invokes the operation call and stores the result if required.
+	 * @param instance Object onto which the operation is to be called.
+	 * @param operationCall Reference to the operation call.
+	 * @param saveResult If true then results will be saved in the {@link DataProductsList}.
+	 */		
+	op void invoke(EObject instance, OperationCall operationCall, boolean saveResult)
+	
+	/*
+	 * This method is called when the adapter is disposed. 
+	 */		
+	op void dispose()
+ }
+
+ 
+class TypeMember extends Named, AbstractType{
+	refers Type memberType
+	contains TreeRootNode [0..1] typeFeatureRootNode
+}
+
+class TypeMemberReference{	
+	
+ 	@GenModel(notify="true")
+	refers TypeMember [1] typeMember	
+}
+
+class TypeMemberReferenceListElement extends TypeMemberReference{
+	@GenModel(property="None")
+	contains TypeMemberReferenceListElement [0..1] child opposite parent
+	@GenModel(property="None")
+	container TypeMemberReferenceListElement [0..1] parent opposite child
+	
+	@GenModel(property="None")
+	derived boolean root get{
+		return parent == null   	
+	}
+	
+	@GenModel(property="None")
+	refers derived TypeMemberReferenceListElement rootElement get{
+		if (root) return this else parent.rootElement
+	}
+	
+	@GenModel(property="None")
+	refers derived TypeMemberReferenceListElement leafElement get{
+		if (leaf) return this else child.leafElement
+	}	
+	
+	@GenModel(property="None")
+	derived boolean leaf get{
+		return child == null
+	}
+	
+	/**
+	 * Returns the number of sub-segments.
+	 * @return Number of segment under this element.
+	 */
+	derived volatile transient readonly int subSegmentsCount
+}
+
+class TypeMemberReferenceTreeElement extends TypeMemberReference{
+	@GenModel(property="None")
+	contains TypeMemberReferenceTreeElement [0..*] child opposite parent
+	@GenModel(property="None")
+	container TypeMemberReferenceTreeElement [0..1] parent opposite child
+	
+	contains TreeRootNode [0..1] featureRootNode
+	
+	@GenModel(property="None")
+	derived boolean root get{
+		return parent == null   	
+	}
+	
+	@GenModel(property="None")
+	refers derived TypeMemberReferenceTreeElement rootElement get{
+		if (root) return this else parent.rootElement
+	}
+		
+	@GenModel(property="None")
+	derived boolean leaf get{
+		return child == null
+	}
+}
+
+
+
+/* -------------------------------------------------------------------------
+ * Variables.
+ * ------------------------------------------------------------------------- */
+ 
+@GenModel(documentation="List of Variables")
+class VariablesList{
+	
+    @GenModel(property="None")
+		container Environment environment opposite variablesList
+		contains Variable[0..*] variables opposite variablesList 
+}
+
+@GenModel(documentation="Variable Definition")
+class Variable extends Named{
+    @GenModel(property="None")
+		container VariablesList variablesList opposite variables   
+		
+		refers Type[1] variableType
+    
+    @GenModel(children="false", notify="true", property="None")
+		refers local readonly volatile transient derived Environment environment get{
+			if (variablesList == null) return null else return variablesList.environment
+		}
+}
+
+/* ------------------------------------------------------------------------- 
+ * Contexts.
+ * ------------------------------------------------------------------------- */
+ 
+class ContextsList{
+	@GenModel(property="None")
+ 		container Environment environment opposite contextsList
+ 	
+ 		contains Context[0..*] contexts opposite contextsList
+}
+
+abstract class Context extends Named{
+	@GenModel(property="None")
+		container ContextsList contextsList opposite contexts	
+		contains VariableImplementationsList[0..1] variableImplementationsList
+
+    @GenModel(children="false", property="None")
+		refers local readonly volatile transient derived Environment environment get{
+			if (contextsList == null) return null else return contextsList.environment
+		} 
+		
+  @GenModel(children="true")
+		refers DataProductsList[1] dataProductsList
+		
+	
+  @GenModel(property="Readonly")
+		Date instancesCreationDate
+		
+  @GenModel(property="Readonly")		
+		Date instancesDisposalDate 
+}
+
+class BasicContext extends Context{
+}
+
+/* ------------------------------------------------------------------------- 
+ * Variables & Type Implementations.
+ * ------------------------------------------------------------------------- */
+class VariableImplementationsList{	
+	contains VariableImplementation [0..*] variableImplementations opposite variableImplementationsList
+	op VariableImplementation getVariableImplementation(Variable variable)
+	
+	/*
+	 * Searches a {@link VariableImplementation} based on the variable name.
+	 * @param name Search criteria.
+	 * @return Reference to the {@link VariableImplementation} or null if not found.
+	 */		
+	op VariableImplementation getVariableImplementation(String name)
+}
+
+abstract class AbstractInitializationData{	
+}
+
+class InitializationData extends AbstractInitializationData{
+}
+
+
+abstract class AbstractTypeImplementation{
+		contains TypeMemberImplementation[0..*] typeMemberImplementations
+	
+		/*
+		 * Searches a {@link TypeMemberImplementation} based on the type member name.
+		 * @param name Search criteria.
+		 * @return Reference to the {@link TypeMemberImplementation} or null if not found.
+		 */		
+		op TypeMemberImplementation getTypeMemberImplementation(String name)
+		
+		/*
+		 * Search the {@link TypeMemberImplementation} that refers to the specified {@link TypeMember}.
+		 * @param typeMember {@link TypeMember} Search Key. 
+		 * @return Reference to the {@link TypeMemberImplementation} or null if the specified {@link TypeMember} was not found.
+		 */
+		op TypeMemberImplementation getTypeMemberImplementation(TypeMember typeMember)
+
+    @GenModel(notify="true")
+		refers EClass [0..1] implementationClass
+		
+	@GenModel(children="true", notify="true")
+		contains AbstractInitializationData [0..1] abstractInitializationData
+	
+	@GenModel(children="true", notify="true")
+		refers transient EObject [0..1] instance
+		
+	@GenModel(children="true", notify="true")
+		refers transient TypeApiAdapter [0..1] adapterInstance
+		refers transient readonly derived volatile Type handlingType
+}
+
+class VariableImplementation extends AbstractTypeImplementation{
+	@GenModel(property="None")
+		container VariableImplementationsList variableImplementationsList opposite variableImplementations
+	refers Variable [1] variable	
+ }
+
+class TypeMemberImplementation extends AbstractTypeImplementation{
+	refers TypeMember[1] typeMember	
+}
+ 
+/* -------------------------------------------------------------------------  
+ * EValues
+ * ------------------------------------------------------------------------- */
+
+class ValuesList {
+	contains Value[0..*] values
+}
+
+class Value extends Named{
+	contains EObject[1] value 
+}
+
+/* ------------------------------------------------------------------------- 
+ * 
+ * Programs.
+ * 
+ * ------------------------------------------------------------------------- */         
+class ProgramsList{	
+	 @GenModel(property="None")
+		container InvocatorSession invocatorSession opposite programsList
+		contains Program[0..*] programs opposite programsList
+}
+
+
+/* -------------------------------------------------------------------------
+ * Program.
+ * ------------------------------------------------------------------------- */
+abstract class Program extends Named, Described{
+ 	@GenModel(property="None")
+		container ProgramsList programsList opposite programs
+	
+    @GenModel(children="false", property="None")
+		refers local readonly volatile transient derived InvocatorSession invocatorSession get{
+			if (programsList == null) return null else return programsList.invocatorSession
+		} 	
+		
+	/** 
+	 * Contains values that could be used as parameter values in the operation 
+	 * calls.
+	 */
+	contains ValuesList[0..1] valuesList
+}
+
+interface OperationCallContainer{
+	contains OperationCall[0..*] operationCalls opposite operationCallContainer
+	op InvocatorSession getInvocatorSession()
+}
+
+class OperationCallsList extends Program, OperationCallContainer{
+}
+
+/*
+ * Reference to the EMF feature of a specific variable and chain of {@link TypeMember} 
+ */
+class VariableFeatureReference extends Named{
+	/*
+	 * Reference to the variable.
+	 */
+  @GenModel(notify="true")
+		refers Variable[1] variable 	
+
+	/* 
+	 * Reference to the {@link TypeMember}
+	 */
+	@GenModel(property="None")
+		contains TypeMemberReferenceListElement[0..1] typeMemberReferenceListElement
+	
+	/* 
+	 * Reference to the EMF feature.
+	 */
+	contains ListRootNode[0..1] featureRoot
+}
+ 
+/* -------------------------------------------------------------------------
+ * Operation Call.
+ * ------------------------------------------------------------------------- */ 
+  
+class OperationCall extends VariableFeatureReference, Named, Described
+{
+    @GenModel(notify="true")
+		refers EOperation[1] eOperation
+	
+    @GenModel(createChild="false")
+		contains ArgumentsList[0..1] argumentsList opposite operationCall
+
+    @GenModel(property="None")
+		container OperationCallContainer operationCallContainer opposite operationCalls 
+	
+		
+	@GenModel(property="None")
+		refers local readonly volatile transient derived InvocatorSession invocatorSession get{
+			if (operationCallContainer == null) 
+				return null 
+			else 
+				return operationCallContainer.invocatorSession
+		}
+		
+	@GenModel(property="None")
+		refers local readonly volatile transient derived Environment environment get{ 
+			if ( invocatorSession == null ) return null 
+			else return invocatorSession.environment
+		 }
+}
+
+class ArgumentsList{
+    @GenModel(property="Readonly")
+		container OperationCall operationCall opposite argumentsList
+		contains Argument [0..*] arguments opposite argumentsList
+		op List<?> getArgumentValues()
+}
+
+abstract class Argument{	
+    @GenModel(property="None")
+	 	container ArgumentsList argumentsList opposite arguments
+	 	op EParameter getEParameter()
+	
+	@GenModel(property="None")
+		refers local readonly volatile transient derived OperationCall operationCall get{
+			if (argumentsList == null) 
+				return null 
+			else 
+				return argumentsList.operationCall
+		} 		 	
+		
+		op Object getParameterValue()
+}
+
+class EDataTypeArgument extends Argument
+{
+	@GenModel(notify="true")
+	String value	
+}
+
+class EEnumArgument extends Argument{
+	@GenModel(property="Editable")
+		refers EEnumLiteral eEnumLiteral
+	@GenModel(property="None", notify="true")
+		refers EEnum eEnum 	
+}
+
+class EClassArgument extends Argument{
+    @GenModel(property="Editable")
+	   contains EObject value
+}
+
+/* ------------------------------------------------------------------------- 
+ * Operation Call Results 
+ * ------------------------------------------------------------------------- */
+ 
+interface ResultsList extends Named, Described
+{
+    @GenModel(notify="true", createChild="false")
+		contains AbstractResult[0..*] results opposite resultsList
+		
+	op InvocatorSession getInvocatorSession()	
+}
+
+class OperationCallResultsList extends ResultsList{	
+	container DataProductsList dataProductsList opposite operationCallResultsList
+	
+    @GenModel(children="false", property="None")
+		refers local readonly volatile transient derived InvocatorSession invocatorSession get{
+			if (dataProductsList == null) return null else return dataProductsList.invocatorSession
+		}	
+}
+
+class RecordingResultsList extends ResultsList
+{
+	container DataProductsList dataProductsList opposite recordingResultsList
+	
+    @GenModel(children="false", property="None")
+	refers local readonly volatile transient derived InvocatorSession invocatorSession get		
+	{
+		if (dataProductsList == null) return null else return dataProductsList.invocatorSession
+	}	
+}
+
+@GenModel(documentation="A result that contains a values and its about the time and context")
+abstract class AbstractResult extends Timed, Described
+{
+	container ResultsList resultsList opposite results
+	
+    @GenModel(children="false", property="None")
+	refers local readonly volatile transient derived InvocatorSession invocatorSession get
+	{
+		if (resultsList == null) return null else return resultsList.invocatorSession
+	}	
+	
+	@GenModel(documentation="The context in which the result was produced.")
+	refers Context[1] context
+	
+	@GenModel(documentation="The value itself.")
+	contains AbstractResultValue[0..1] resultValue opposite result
+}
+
+@GenModel(documentation="A value stored in an AbstractResult.")
+abstract class AbstractResultValue
+{
+	container AbstractResult result opposite resultValue
+}
+
+@GenModel(documentation="The result associated with the invocation of an OperationCall.")
+class OperationCallResult extends AbstractResult, OperationCallContainer
+{
+	/**
+	 * In this case, operationCall refers to the OperationCall stored in the OperationCallContainer. 
+	 */
+	@GenModel(property="None", children="false", notify="true")
+	refers local readonly volatile transient derived OperationCall operationCall get
+	{
+		if (operationCalls.size == 0) return null else return operationCalls.get(0)
+	}		
+		
+	@GenModel(children="false", createChild="false", property="Readonly")
+	contains ExceptionContainer[0..1] exceptionContainer
+}
+ 
+class ExceptionContainer
+{
+ 	@GenModel(property="Readonly")
+	Throwable exception
+}
+
+@GenModel(documentation="A value of a basic type (i.e. no an EObject).")
+class AttributeResultValue extends AbstractResultValue
+{    
+    /**
+     * Reference to a container to the value.  This is required to permit
+     * the value to be seen as a property and to allow override getText().
+     * This permits as well to keep default implementation of 
+     * serialization/deserialization of the data type EJavaObject defined
+     * in EMF. 
+     */
+     @GenModel(property="Readonly", children="true", createChild="false")
+	 contains AttributeValue value
+}
+
+class AttributeValue{
+	 @GenModel(property="Readonly")
+		Object object
+}
+
+@GenModel(documentation="A value of a EMF type (i.e. an EObject).")
+class ReferenceResultValue extends AbstractResultValue
+{
+ 	@GenModel(createChild="true", property="Readonly")
+	contains EObject value
+}
+
+/* -------------------------------------------------------------------------
+ * WatchesListsContainer
+ * ------------------------------------------------------------------------- */ 
+
+class WatchesListsContainer extends AbstractToolsListContainer
+{
+	@GenModel(property="None") 
+	contains WatchesList [0..*] watches opposite watchesListsContainer	
+} 
+
+
+/* -------------------------------------------------------------------------
+ * WatchesList
+ * ------------------------------------------------------------------------- */ 
+
+class WatchesList extends Named, Described
+{		
+	container WatchesListsContainer watchesListsContainer opposite watches
+	
+	contains Watch[0..*] watches opposite watchesList	
+}
+
+
+/* -------------------------------------------------------------------------
+ * Watch
+ * ------------------------------------------------------------------------- */ 
+ 
+class Watch extends Named, Described
+{
+ 	@GenModel(property="None")
+	container WatchesList watchesList opposite watches
+	
+	@GenModel(notify="true")
+	refers Variable[1] variable
+
+	contains TypeMemberReferenceTreeElement[0..1] typeMemberReferenceTreeElement
+
+	contains TreeRootNode[0..1] treeRootNode
+}
+
+/* -------------------------------------------------------------------------
+ * DsiplaysListsContainer
+ * ------------------------------------------------------------------------- */ 
+
+ class WatchFeatureNodeAdapter
+ {
+ 	@GenModel(documentation="The object onto which to apply the WatchFeatureNodeAdapter.")
+ 	refers EObject sourceObject
+ 	
+ 	@GenModel(documentation="The FeatureNode defining which feature to monitor.")
+ 	refers AbstractFeatureNode featureNode
+ 	
+ 	@GenModel(documentation="The current value of the monitored feature.")
+ 	Object currentValue 
+ 	
+ 	@Ecore(defaultValueLiteral="false")
+ 	@GenModel(documentation="Tells whether or not the featureNode is currently resolved.")
+ 	boolean resolved
+ }
+
+
+/* -------------------------------------------------------------------------
+ * DsiplaysListsContainer
+ * ------------------------------------------------------------------------- */ 
+
+class DisplaysListsContainer extends AbstractToolsListContainer
+{
+ 	@GenModel(property="None")   
+	contains DisplaysList [0..*] displays opposite displaysListsContainer	
+} 
+
+/* -------------------------------------------------------------------------
+ * DisplaysList
+ * ------------------------------------------------------------------------- */ 
+
+class DisplaysList extends Named, Described
+{			
+ 	@GenModel(property="None")
+	container DisplaysListsContainer displaysListsContainer opposite displays 
+	
+	contains AbstractDisplay[0..*] displays opposite displaysList
+}
+
+
+/* -------------------------------------------------------------------------
+ * Display
+ * ------------------------------------------------------------------------- */ 
+ 
+abstract class AbstractDisplay extends Described
+{
+	@GenModel(property="None")
+	container DisplaysList displaysList opposite displays
+}
+
+/* -------------------------------------------------------------------------
+ * RecordersListContainer
+ * ------------------------------------------------------------------------- */ 
+class RecordingToolsContainer extends AbstractToolsListContainer
+{
+	contains AbstractRecorder[1] recorder opposite recordingToolsContainer
+ 	contains AbstractPlayer[1] player opposite recordingToolsContainer 	
+ 	contains ChannelsList[0..*] channelsLists opposite recordingToolsContainer
+} 
+
+class ChannelsList extends Named, Described
+{
+	contains AbstractChannel[0..*] channels opposite channelsList 
+	container RecordingToolsContainer recordingToolsContainer opposite channelsLists
+}
+
+abstract class AbstractChannel extends Named, Described
+{
+	container ChannelsList channelsList opposite channels
+}
+
+/* -------------------------------------------------------------------------
+ * Recorder
+ * ------------------------------------------------------------------------- */ 
+ 
+abstract class AbstractRecorder extends Named, Described
+{
+ 	@GenModel(property="None")
+	container RecordingToolsContainer recordingToolsContainer opposite recorder
+}
+
+/* -------------------------------------------------------------------------
+ * Player
+ * ------------------------------------------------------------------------- */ 
+abstract class AbstractPlayer extends Named, Described
+{	
+	container RecordingToolsContainer recordingToolsContainer opposite player
+}
+
+/* -------------------------------------------------------------------------
+ * Specialized Time Sources
+ * ------------------------------------------------------------------------- */
+
+class OperationCallResultsListTimeSource extends CollectionTimedTimeSource
+{
+	refers OperationCallResultsList opsCallList
+}
+ 

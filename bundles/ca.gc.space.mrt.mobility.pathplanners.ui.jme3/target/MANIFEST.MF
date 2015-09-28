@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.mobility.pathplanners.ui.jme3;sin
+ gleton:=true
+Export-Package: ca.gc.space.mrt.mobility.pathplanners.ui.jme3,ca.gc.sp
+ ace.mrt.mobility.pathplanners.ui.jme3.adapters,ca.gc.space.mrt.mobili
+ ty.pathplanners.ui.jme3.scene_objects
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,ca.gc.space.mr
+ t.mobility.pathplanners.ui,ca.gc.asc_csa.topology.ui.jme3;visibility:
+ =reexport
+Bundle-ManifestVersion: 2
+Bundle-Activator: ca.gc.space.mrt.mobility.pathplanners.ui.jme3.Activa
+ tor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+

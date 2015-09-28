@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="ca.gc.asc_csa.symphony.core.WorksiteProvider">
+      <WorksiteProvider
+            Description="CSA Analogue Terrain"
+            Name="Symphony Worksite Example"
+            URI="model/csa_analog_terrain.sws">
+      </WorksiteProvider>
+   </extension>
+
+</plugin>

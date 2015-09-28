@@ -1,0 +1,44 @@
+@GenModel(prefix="Data3DUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="Data3DUI", complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.data3d.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.geometry.data3d.ui.edit/src-generated")
+
+package ca.gc.space.mrt.geometry.data3d.ui
+
+import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet
+import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh
+import ca.gc.space.topology.ui.MeshPresentationMode
+import ca.gc.space.topology.ui.NodePresentation
+
+import ca.gc.asc_csa.eclipse.images.core.AbstractEImage
+
+class CartesianCoordinatesSetPresentation extends NodePresentation
+{
+	refers CartesianCoordinatesSet pointCloud
+
+	int pointSize = "1"
+
+	readonly derived transient int numberOfPoints
+}
+
+class TriangularMeshPresentation extends NodePresentation
+{
+	refers readonly derived transient CartesianTriangularMesh mesh 
+
+ 	int pointSize = "1"
+	
+	readonly derived transient int numberOfPoints
+	
+	readonly derived transient int numberOfPolygons
+	
+	MeshPresentationMode presentationMode ="SURFACE"
+	
+	float transparency 
+	
+	boolean useShading="true"
+	
+	/*
+	 * An image to be used as a texture. 
+	 * Note that the image will be applied using the relative coordinates of the mesh (i.e. relative to its minimum x and Y).
+	 */
+	refers transient AbstractEImage textureImage
+}

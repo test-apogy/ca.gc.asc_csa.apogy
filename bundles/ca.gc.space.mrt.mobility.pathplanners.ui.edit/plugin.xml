@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:50:43 pallard Exp $
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated mrt_path_planners_ui -->
+      <factory
+            uri="ca.gc.space.mrt.mobility.pathplanners.ui"
+            class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated mrt_path_planners_ui -->
+      <extender
+            uri="ca.gc.space.topology.ui"
+            class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+   </extension>
+
+</plugin>

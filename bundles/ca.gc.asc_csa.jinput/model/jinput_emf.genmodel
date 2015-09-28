@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyrights Canadian Space Agency 2012. All rights reserved."
+    modelDirectory="/ca.gc.asc_csa.jinput/src" modelPluginID="ca.gc.asc_csa.jinput"
+    modelName="Jinput_emf" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    suppressGenModelAnnotations="false" operationReflection="true">
+  <foreignModel>jinput_emf.ecore</foreignModel>
+  <genPackages prefix="JInput" basePackage="ca.gc.asc_csa" disposableProviderFactory="true"
+      ecorePackage="jinput_emf.ecore#/">
+    <genDataTypes ecoreDataType="jinput_emf.ecore#//Job"/>
+    <genDataTypes ecoreDataType="jinput_emf.ecore#//Component"/>
+    <genDataTypes ecoreDataType="jinput_emf.ecore#//Controller"/>
+    <genClasses ecoreClass="jinput_emf.ecore#//EController">
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EController/lastPollResult"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EController/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EController/portNumber"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EController/type"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EController/portType"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EController/pojoController"/>
+      <genFeatures children="true" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference jinput_emf.ecore#//EController/eComponents"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EController/controllerCount"/>
+      <genOperations ecoreOperation="jinput_emf.ecore#//EController/poll"/>
+    </genClasses>
+    <genClasses ecoreClass="jinput_emf.ecore#//EControllerEnvironment">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EControllerEnvironment/supported"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference jinput_emf.ecore#//EControllerEnvironment/controllers"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EControllerEnvironment/refreshRequested"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EControllerEnvironment/pollingCount"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EControllerEnvironment/pollingJob"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EControllerEnvironment/pollingProblem"/>
+      <genOperations ecoreOperation="jinput_emf.ecore#//EControllerEnvironment/refresh"/>
+      <genOperations ecoreOperation="jinput_emf.ecore#//EControllerEnvironment/startPolling"/>
+      <genOperations ecoreOperation="jinput_emf.ecore#//EControllerEnvironment/stopPolling"/>
+      <genOperations ecoreOperation="jinput_emf.ecore#//EControllerEnvironment/resolveController">
+        <genParameters ecoreParameter="jinput_emf.ecore#//EControllerEnvironment/resolveController/controllerName"/>
+      </genOperations>
+      <genOperations ecoreOperation="jinput_emf.ecore#//EControllerEnvironment/resolveEComponent">
+        <genParameters ecoreParameter="jinput_emf.ecore#//EControllerEnvironment/resolveEComponent/componentName"/>
+        <genParameters ecoreParameter="jinput_emf.ecore#//EControllerEnvironment/resolveEComponent/eController"/>
+      </genOperations>
+      <genOperations ecoreOperation="jinput_emf.ecore#//EControllerEnvironment/resolveEComponent.1">
+        <genParameters ecoreParameter="jinput_emf.ecore#//EControllerEnvironment/resolveEComponent.1/eComponentQualifier"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="jinput_emf.ecore#//EComponent">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponent/deadZone"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponent/identifier"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponent/relative"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponent/analog"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponent/name"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponent/pojoComponent"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponent/pollData"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference jinput_emf.ecore#//EComponent/eComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="jinput_emf.ecore#//EComponents">
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference jinput_emf.ecore#//EComponents/components"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponents/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference jinput_emf.ecore#//EComponents/eController"/>
+    </genClasses>
+    <genClasses ecoreClass="jinput_emf.ecore#//EButton"/>
+    <genClasses ecoreClass="jinput_emf.ecore#//EAxis"/>
+    <genClasses ecoreClass="jinput_emf.ecore#//EKey"/>
+    <genClasses ecoreClass="jinput_emf.ecore#//EComponentQualifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponentQualifier/eComponentName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EComponentQualifier/eControllerName"/>
+    </genClasses>
+    <genClasses ecoreClass="jinput_emf.ecore#//EVirtualComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jinput_emf.ecore#//EVirtualComponent/currentValue"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

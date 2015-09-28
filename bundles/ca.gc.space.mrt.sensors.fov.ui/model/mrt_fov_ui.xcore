@@ -1,0 +1,30 @@
+@GenModel(prefix="FovUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="FovUI", complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.space.mrt.sensors.fov.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.sensors.fov.ui.edit/src-generated")
+
+package ca.gc.space.mrt.sensors.fov.ui
+
+import ca.gc.space.topology.ui.MeshPresentationMode
+import ca.gc.space.topology.ui.NodePresentation
+import ca.gc.space.topology.ui.RGB
+
+class FieldOfViewPresentation extends NodePresentation
+{
+	float transparency
+	MeshPresentationMode presentationMode
+	boolean showOutlineOnly = "true"
+	boolean showProjection = "false"
+	RGB projectionColor
+} 
+
+class CircularSectorFieldOfViewPresentation extends FieldOfViewPresentation
+{
+}
+
+class ConicalFieldOfViewPresentation extends FieldOfViewPresentation
+{
+}
+
+class RectangularFrustrumFieldOfViewPresentation extends FieldOfViewPresentation
+{
+}

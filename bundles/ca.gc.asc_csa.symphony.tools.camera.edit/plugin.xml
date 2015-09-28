@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
+-->
+
+<plugin>
+
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated symphony_tools_camera -->
+      <factory
+            uri="ca.gc.asc_csa.symphony.tools.camera"
+            class="ca.gc.asc_csa.symphony.tools.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_tools_camera -->
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.asc_csa.symphony.tools.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
+            class="ca.gc.asc_csa.symphony.tools.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+   </extension>
+
+</plugin>

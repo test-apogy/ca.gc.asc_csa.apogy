@@ -1,0 +1,25 @@
+@GenModel(prefix="EMFEcoreUI", childCreationExtenders="true", modelName="EMFEcoreUI")
+@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.ui.edit/src-generated")
+
+package ca.gc.asc_csa.eclipse.emf.ecore.ui
+
+import org.eclipse.emf.ecore.ETypedElement
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Ranges
+
+type Color wraps org.eclipse.swt.graphics.Color
+type Unit wraps javax.measure.unit.Unit
+
+class EMFEcoreUIFacade
+{	
+	@GenModel(documentation="Returns the color currently associated with the specified Ranges. Can be null.")
+	op Color getColorForRange(Ranges range)	
+	
+	/*
+	 * Returns the Unit to be used for display.
+	 * @param eTypedElement The specified ETypedElement.
+	 * @return the display Unit, or the native unit if none found.
+	 */
+	op Unit getDisplayUnits(ETypedElement eTypedElement)
+}

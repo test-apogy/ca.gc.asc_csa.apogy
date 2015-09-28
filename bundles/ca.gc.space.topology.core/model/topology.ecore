@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="topology" nsURI="http:///ca/gc/space/topology.ecore" nsPrefix="ca.gc.space.topology">
+  <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
+    <eOperations name="accept">
+      <eParameters name="visitor" eType="#//INodeVisitor"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TransformNode" eSuperTypes="#//PositionNode #//RotationNode">
+    <eOperations name="asMatrix4d" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d"/>
+    <eOperations name="setTransformation">
+      <eParameters name="matrix" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TopologyFacade">
+    <eOperations name="createContentNode">
+      <eGenericType eClassifier="#//ContentNode">
+        <eTypeArguments eTypeParameter="#//TopologyFacade/createContentNode/T"/>
+      </eGenericType>
+      <eTypeParameters name="T"/>
+      <eParameters name="content">
+        <eGenericType eTypeParameter="#//TopologyFacade/createContentNode/T"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createPositionNode" eType="#//PositionNode">
+      <eParameters name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="createRotationNodeXYZ" eType="#//RotationNode">
+      <eParameters name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="expressNodeInRootFrame" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d">
+      <eParameters name="node" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="expressRootInNodeFrame" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d">
+      <eParameters name="node" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="expressInFrame" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d">
+      <eParameters name="sourceFrame" eType="#//Node"/>
+      <eParameters name="targetFrame" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="createRotationNodeYZX" eType="#//RotationNode">
+      <eParameters name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="createRotationNodeZYX" eType="#//RotationNode">
+      <eParameters name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="createTransformNodeXYZ" eType="#//TransformNode">
+      <eParameters name="tx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="ty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="tz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="rx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="ry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="rz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="createTransformNodeYZX" eType="#//TransformNode">
+      <eParameters name="tx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="ty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="tz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="rx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="ry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="rz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="createTransformNodeZYX" eType="#//TransformNode">
+      <eParameters name="tx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="ty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="tz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="rx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="ry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eParameters name="rz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="createTransformNode" eType="#//TransformNode">
+      <eParameters name="matrix" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d"/>
+    </eOperations>
+    <eOperations name="createPickAndPlaceNode" eType="#//PickAndPlaceNode">
+      <eParameters name="matrix" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d"/>
+    </eOperations>
+    <eOperations name="printTopology">
+      <eParameters name="node" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="createReferencedContentNode">
+      <eGenericType eClassifier="#//ReferencedContentNode">
+        <eTypeArguments eTypeParameter="#//TopologyFacade/createReferencedContentNode/T"/>
+      </eGenericType>
+      <eTypeParameters name="T"/>
+      <eParameters name="content">
+        <eGenericType eTypeParameter="#//TopologyFacade/createReferencedContentNode/T"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createAggregateContentNode">
+      <eGenericType eClassifier="#//AggregateContentNode">
+        <eTypeArguments eTypeParameter="#//TopologyFacade/createAggregateContentNode/T"/>
+      </eGenericType>
+      <eTypeParameters name="T"/>
+      <eParameters name="content">
+        <eGenericType eTypeParameter="#//TopologyFacade/createAggregateContentNode/T"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createLink" eType="#//Link">
+      <eParameters name="node" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="findNodesByDescription" upperBound="-1" eType="#//Node">
+      <eParameters name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="topology" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="findNodesByID" upperBound="-1" eType="#//Node">
+      <eParameters name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="topology" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="findNodesByType" upperBound="-1" eType="#//Node">
+      <eParameters name="clazz" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+      <eParameters name="topology" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="findRoot" eType="#//Node">
+      <eParameters name="node" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="getEuclidianDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eParameters name="fromNode" eType="#//Node"/>
+      <eParameters name="toNode" eType="#//Node"/>
+    </eOperations>
+    <eOperations name="getGeodesicDistance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eParameters name="fromNode" eType="#//Node"/>
+      <eParameters name="toNode" eType="#//Node"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContentNode" eSuperTypes="#//Leaf">
+    <eTypeParameters name="T"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" containment="true">
+      <eGenericType eTypeParameter="#//ContentNode/T"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionNode" eSuperTypes="#//AggregateGroupNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass ../../ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RotationNode" eSuperTypes="#//AggregateGroupNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rotationMatrix" eType="ecore:EClass ../../ca.gc.space.math.core/model/Math.ecore#//Matrix3x3"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupNode" abstract="true" interface="true"
+      eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" ordered="false"
+        upperBound="-1" eType="#//Node" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Leaf" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PickAndPlaceNode" eSuperTypes="#//TransformNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferencedContentNode">
+    <eTypeParameters name="T"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencedContent">
+      <eGenericType eTypeParameter="#//ReferencedContentNode/T"/>
+    </eStructuralFeatures>
+    <eGenericSuperTypes eClassifier="#//ContentNode">
+      <eTypeArguments eTypeParameter="#//ReferencedContentNode/T"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregateContentNode">
+    <eTypeParameters name="T"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aggregateContent" containment="true">
+      <eGenericType eTypeParameter="#//AggregateContentNode/T"/>
+    </eStructuralFeatures>
+    <eGenericSuperTypes eClassifier="#//ContentNode">
+      <eTypeArguments eTypeParameter="#//AggregateContentNode/T"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="URLNode" eSuperTypes="#//Leaf">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="polygonCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vertexCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="URL" instanceClassName="java.net.URL"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TopologyProvider" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topologyRoot" eType="#//GroupNode"
+        changeable="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferencedGroupNode" eSuperTypes="#//GroupNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencedChildren" upperBound="-1"
+        eType="#//Node"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" eType="#//Node"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregateGroupNode" eSuperTypes="#//GroupNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aggregatedChildren" upperBound="-1"
+        eType="#//Node" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="INodeVisitor" instanceClassName="ca.gc.space.topology.INodeVisitor"
+      serializable="false"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CADNode" eSuperTypes="#//URLNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Object" instanceClassName="java.lang.Object"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="DoubleArray" instanceClassName="double[]"/>
+</ecore:EPackage>

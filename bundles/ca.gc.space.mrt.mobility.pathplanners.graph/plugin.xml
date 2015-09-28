@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.3.4.2 2015/05/21 15:50:20 pallard Exp $
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///ca/gc/space/mrt/pathplanners/graph/pathplannersgraph.ecore" 
+       class = "ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage"
+       genModel = "model/pathplannersgraph.genmodel" /> 
+  </extension>
+
+</plugin>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.4.4.2 2015/05/21 15:49:51 pallard Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http:///ca/gc/space/mrt/sensors/gps.ecore"
+            class="ca.gc.space.mrt.sensors.gps.GpsPackage"
+            genModel="model/GPS.genmodel"/>
+   </extension>
+
+</plugin>

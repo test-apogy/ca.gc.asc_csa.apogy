@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment:EarthSurfaceWorksite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ca.gc.asc_csa.eclipse.images="http://ca/gc/asc_csa/eclipse/images/core/1.0" xmlns:environment="ca.gc.asc_csa.symphony.environment" name="CSA Analog Terrain" description="CSA Analog Terrain located at the John H. Chapman Space Center" xAxisAzimuth="179.4">
+  <sky xsi:type="environment:EarthSky" time="2015-05-01T15:17:23.207-0400"/>
+  <mapsList>
+    <maps name="CSA Anlog Terrain DEMs">
+      <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" name="High Resolution" description="CSA Analog Terrain at 1 m resolution." meshIsDirty="false" url="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSAAnalogueTerrainDEM100cm.tri"/>
+    </maps>
+    <maps name="Image Map Layers">
+      <layers xsi:type="environment:URLImageMapLayer" name="Contours 0.2 meter interval" description="Contours map with 0.2 meter altitude interval." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSA-AT-contour-map-black-20cm-per-line.png">
+        <image xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" url="platform:/plugin/CSA-AT-contour-map-black-20cm-per-line.png/data/CSA-AT-contour-map-black-20cm-per-line.png"/>
+      </layers>
+      <layers xsi:type="environment:URLImageMapLayer" name="Altitude " description="Color Coded Altitude Map at 0.5 meters resolution." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-50cm.png" legendURL="platform:/plugin/CSA-AT-contour-map-black-20cm-per-line.png/data/CSA-AT-DEM-legend.png">
+        <image xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" url="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSA-AT-DEM-50cm.png"/>
+        <legend xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" url="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSA-AT-DEM-legend.png"/>
+      </layers>
+      <layers xsi:type="environment:URLImageMapLayer" name="Slope Map" description="Slope Map showing slopes from 0 to 30 degrees.&#xA;" width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees.png" legendURL="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSA-AT-slope-map-0-30-degrees-legend.png">
+        <image xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" url="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSA-AT-slope-map-0-30-degrees.png"/>
+        <legend xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" url="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSA-AT-slope-map-0-30-degrees-legend.png"/>
+      </layers>
+      <layers xsi:type="environment:URLImageMapLayer" name="Aerial View" description="CSA AT See from above." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSA-AT-NGC-MET-seen-from-sky.jpg">
+        <image xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" url="platform:/plugin/ca.gc.asc_csa.symphony.examples.worksites/data/CSA-AT-NGC-MET-seen-from-sky.jpg"/>
+      </layers>
+    </maps>
+    <maps name="Features Of Interest" description="Features of interest fo the CSA Analog Terrain.">
+      <layers xsi:type="environment:FeaturesOfInterestMapLayer">
+        <features>
+          <featuresOfInterest name="Olympus Mons" description="The summit of Olympus Mons.">
+            <pose m00="0.9982448501606123" m01="-0.0032747255861306683" m02="-0.05913117029242879" m03="37.66621398925781" m10="-0.003274725586130672" m11="0.9938900785426957" m12="-0.1103258262907173" m13="8.252184867858887" m20="0.059131170292428786" m21="0.11032582629071729" m22="0.9921349287033081" m23="3.0480494499206543"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Obelix Crater" description="The center of Obelix Crater.">
+            <pose m00="0.9998721542881795" m01="2.9084810441957126E-4" m02="-0.015987197581036457" m03="55.355384826660156" m10="2.90848104419571E-4" m11="0.9993383225871256" m12="0.03637076320521915" m13="23.61966323852539" m20="0.015987197581036457" m21="-0.03637076320521915" m22="0.9992104768753052" m23="-0.36456966400146484"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Asterix Crater" description="The center of Asterix Crater.">
+            <pose m03="54.0" m13="16.0" m23="-0.2"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Hill 937" description="Summit of Hill 937.">
+            <pose m03="33.5" m13="42.0" m23="0.3"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Tom Peak" description="The summit of Tom Peak.">
+            <pose m03="15.0" m13="53.0" m23="1.9"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Jerry Peak" description="The summit of Jerry Peak.">
+            <pose m03="48.0" m13="69.0" m23="1.2"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Jumbo Crater" description="The center of Jumbo Crater.">
+            <pose m03="47.0" m13="105.0" m23="-0.6"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Mesa" description="The summit of the Mesa.">
+            <pose m03="8.0" m13="92.0" m23="2.2"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Arroyo" description="The entrance of the Arroyo.">
+            <pose m03="34.0" m13="85.0" m23="-0.75"/>
+          </featuresOfInterest>
+          <featuresOfInterest name="Drilling Shaft" description="The drilling shaft.">
+            <pose m03="35.2" m13="115.2" m23="0.5"/>
+          </featuresOfInterest>
+        </features>
+      </layers>
+    </maps>
+  </mapsList>
+  <geographicalCoordinates longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
+</environment:EarthSurfaceWorksite>

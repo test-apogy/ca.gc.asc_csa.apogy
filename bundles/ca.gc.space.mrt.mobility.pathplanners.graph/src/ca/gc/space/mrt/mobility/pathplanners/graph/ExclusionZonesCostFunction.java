@@ -1,0 +1,52 @@
+/**
+ * Canadian Space Agency 2008.
+ *
+ * $Id: ExclusionZonesCostFunction.java,v 1.2.4.2 2015/05/21 15:50:20 pallard Exp $
+ */
+package ca.gc.space.mrt.mobility.pathplanners.graph;
+
+import org.eclipse.emf.common.util.EList;
+
+import ca.gc.space.mrt.mobility.pathplanners.ExclusionZone;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Exclusion Zones Cost Function</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link ca.gc.space.mrt.mobility.pathplanners.graph.ExclusionZonesCostFunction#getExclusionZones <em>Exclusion Zones</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage#getExclusionZonesCostFunction()
+ * @model
+ * @generated
+ */
+public interface ExclusionZonesCostFunction extends DisplacementCostFunction {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Canadian Space Agency 2008.";
+
+	/**
+	 * Returns the value of the '<em><b>Exclusion Zones</b></em>' reference list.
+	 * The list contents are of type {@link ca.gc.space.mrt.mobility.pathplanners.ExclusionZone}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Exclusion Zones</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exclusion Zones</em>' reference list.
+	 * @see ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage#getExclusionZonesCostFunction_ExclusionZones()
+	 * @model
+	 * @generated
+	 */
+	EList<ExclusionZone> getExclusionZones();
+
+} // ExclusionZonesCostFunction

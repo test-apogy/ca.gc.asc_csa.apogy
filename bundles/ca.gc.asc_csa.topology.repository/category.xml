@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ca.gc.space.topology.feature.0.5.0.qualifier.jar" id="ca.gc.space.topology.feature" version="0.5.0.qualifier">
+      <category name="ca.gc.asc_csa.topology"/>
+   </feature>
+   <feature url="features/ca.gc.space.topology.ui.feature.0.5.0.qualifier.jar" id="ca.gc.space.topology.ui.feature" version="0.5.0.qualifier">
+      <category name="ca.gc.asc_csa.topology"/>
+   </feature>
+   <category-def name="ca.gc.asc_csa.topology" label="ASC-CSA Topology"/>
+</site>

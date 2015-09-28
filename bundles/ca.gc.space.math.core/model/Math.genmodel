@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ca.gc.space.math.core/src" modelPluginID="ca.gc.space.math.core"
+    modelName="Math" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>Math.ecore</foreignModel>
+  <genPackages prefix="Math" basePackage="ca.gc.space" disposableProviderFactory="true"
+      extensibleProviderFactory="true" childCreationExtenders="true" ecorePackage="Math.ecore#/">
+    <genDataTypes ecoreDataType="Math.ecore#//EDoubleArray"/>
+    <genDataTypes ecoreDataType="Math.ecore#//Matrix3d"/>
+    <genDataTypes ecoreDataType="Math.ecore#//Matrix4d"/>
+    <genDataTypes ecoreDataType="Math.ecore#//VecmathTuple3d"/>
+    <genDataTypes ecoreDataType="Math.ecore#//Exception"/>
+    <genClasses ecoreClass="Math.ecore#//Matrix4x4">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m00"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m01"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m02"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m03"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m10"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m11"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m12"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m13"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m20"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m21"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m22"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m23"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m30"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m31"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m32"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix4x4/m33"/>
+      <genOperations ecoreOperation="Math.ecore#//Matrix4x4/asMatrix4d"/>
+    </genClasses>
+    <genClasses ecoreClass="Math.ecore#//MathFacade">
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/createMatrix4x4">
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/createMatrix4x4/matrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/createMatrix3x3">
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/createMatrix3x3/matrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/createTuple3d">
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/createTuple3d/tuple"/>
+      </genOperations>
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/createTuple3d.1">
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/createTuple3d.1/x"/>
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/createTuple3d.1/y"/>
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/createTuple3d.1/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/createPolynomial">
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/createPolynomial/coeffs"/>
+      </genOperations>
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/createIdentityMatrix4x4"/>
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/createIdentityMatrix3x3"/>
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/extractPosition">
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/extractPosition/matrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="Math.ecore#//MathFacade/extractOrientation">
+        <genParameters ecoreParameter="Math.ecore#//MathFacade/extractOrientation/matrix"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="Math.ecore#//Matrix3x3">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m00"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m01"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m02"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m10"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m11"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m12"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m20"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m21"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Matrix3x3/m22"/>
+      <genOperations ecoreOperation="Math.ecore#//Matrix3x3/asMatrix3d"/>
+    </genClasses>
+    <genClasses ecoreClass="Math.ecore#//Tuple3d">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Tuple3d/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Tuple3d/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Tuple3d/z"/>
+      <genOperations ecoreOperation="Math.ecore#//Tuple3d/asTuple3d"/>
+    </genClasses>
+    <genClasses ecoreClass="Math.ecore#//Polynomial">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Polynomial/degree"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Polynomial/coeffs"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Polynomial/realRoots"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute Math.ecore#//Polynomial/imaginaryRoots"/>
+    </genClasses>
+    <genClasses ecoreClass="Math.ecore#//MathIO">
+      <genOperations ecoreOperation="Math.ecore#//MathIO/readTrMatrix">
+        <genParameters ecoreParameter="Math.ecore#//MathIO/readTrMatrix/fileName"/>
+      </genOperations>
+      <genOperations ecoreOperation="Math.ecore#//MathIO/writeTrMatrix">
+        <genParameters ecoreParameter="Math.ecore#//MathIO/writeTrMatrix/trMatrix"/>
+        <genParameters ecoreParameter="Math.ecore#//MathIO/writeTrMatrix/fileName"/>
+      </genOperations>
+      <genOperations ecoreOperation="Math.ecore#//MathIO/writeTrMatrix.1">
+        <genParameters ecoreParameter="Math.ecore#//MathIO/writeTrMatrix.1/trMatrix"/>
+        <genParameters ecoreParameter="Math.ecore#//MathIO/writeTrMatrix.1/fileName"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

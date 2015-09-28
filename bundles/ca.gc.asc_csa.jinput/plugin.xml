@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyrights Canadian Space Agency 2012. All rights reserved.
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ca/gc/asc_csa/jinput/1.0"
+            class="ca.gc.asc_csa.jinput.JInputPackage"
+            genModel="model/jinput_emf.genmodel"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Export-Package: ca.gc.space.math.provider
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.core.runtime,ca.gc.space.math.core;visibil
+ ity:=reexport,org.eclipse.emf.edit;visibility:=reexport,ca.gc.space.e
+ clipse.emf.edit;visibility:=reexport
+Bundle-Vendor: %providerName
+Bundle-Version: 0.2.0.201312101603
+Bundle-ManifestVersion: 2
+Bundle-Activator: ca.gc.space.math.provider.MathEditPlugin$Implementat
+ ion
+Bundle-SymbolicName: ca.gc.space.math.core.edit;singleton:=true
+

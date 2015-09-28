@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.5.4.2 2015/05/21 15:50:31 pallard Exp $
+-->
+
+<plugin>
+
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.geometry.paths.ui.adapters.WayPointPathPresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.geometry.paths.ui.adapters.WayPointPresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.space.mrt.geometry.paths.ui.preferences.MRTPathsPreferencesInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.space.mrt.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
+            id="ca.gc.space.mrt.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
+            name="Paths">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mrt_paths_ui -->
+      <package
+            uri="ca.gc.space.mrt.geometry.paths.ui"
+            class="ca.gc.space.mrt.geometry.paths.ui.PathsUIPackage"
+            genModel="model/mrt_paths_ui.xcore"/>
+   </extension>
+
+</plugin>

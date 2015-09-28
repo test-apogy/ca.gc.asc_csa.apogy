@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ca.gc.space.mrt.ui.feature"
+      label="ASC-CSA Mobile Robotics Toolkit (MRT) User Interface"
+      version="0.4.0.201502052105"
+      provider-name="Agence Spatiale Canadienne / Canadian Space Agency">
+
+   <description>
+      Graphical support to display Mobile Robotics Toolkit (MRT) elements in 3D and provide GUI support.
+   </description>
+
+   <copyright url="http://www.asc-csa.gc.ca">
+      (C) Government of Canada, 2011-2012. This document contains information
+proprietary to &quot;the Canadian Space Agency&quot;, or to a third party
+to which &quot;the Canadian Space Agency&quot; may have legal obligation
+to protect such information from unauthorized disclosure, use
+or duplication. Any disclosure, use or duplication of this document
+or of any of the information contained herein for other than
+the specific purpose for which it was disclosed is expressly
+prohibited outside the Government of Canada except as &quot;the Canadian
+Space Agency&quot; may otherwise agree to in writing.
+(C) Gouvernement du Canada, 2011-2012. Ce document renferme des
+renseignements appartenant à &quot;l&apos;Agence Spatiale Canadienne&quot; ou
+à une tierce partie envers qui &quot;l&apos;Agence Spatiale Canadienne&quot;
+a l&apos;obligation de protéger lesdits renseignements de toute divulgation,
+utilisation ou reproduction non autorisées. Toute divulgation,
+utilisation ou reproduction du présent document ou des renseignements
+qu&apos;il contient à des fins autres que les fins spécifiques pour
+lesquelles il a été divulgué est formellement interdite à l&apos;extérieur
+du gouvernement du Canada, sauf autorisation écrite de &quot;l&apos;Agence
+Spatiale Canadienne&quot;.
+Canadian Space Agency / Agence spatiale canadienne
+Space Exploration  / Exploration spatiale
+   </copyright>
+
+   <license>
+      (C) Government of Canada, 2011-2012. This document contains information
+proprietary to &quot;the Canadian Space Agency&quot;, or to a third party
+to which &quot;the Canadian Space Agency&quot; may have legal obligation
+to protect such information from unauthorized disclosure, use
+or duplication. Any disclosure, use or duplication of this document
+or of any of the information contained herein for other than
+the specific purpose for which it was disclosed is expressly
+prohibited outside the Government of Canada except as &quot;the Canadian
+Space Agency&quot; may otherwise agree to in writing.
+(C) Gouvernement du Canada, 2011-2012. Ce document renferme des
+renseignements appartenant à &quot;l&apos;Agence Spatiale Canadienne&quot; ou
+à une tierce partie envers qui &quot;l&apos;Agence Spatiale Canadienne&quot;
+a l&apos;obligation de protéger lesdits renseignements de toute divulgation,
+utilisation ou reproduction non autorisées. Toute divulgation,
+utilisation ou reproduction du présent document ou des renseignements
+qu&apos;il contient à des fins autres que les fins spécifiques pour
+lesquelles il a été divulgué est formellement interdite à l&apos;extérieur
+du gouvernement du Canada, sauf autorisation écrite de &quot;l&apos;Agence
+Spatiale Canadienne&quot;.
+Canadian Space Agency / Agence spatiale canadienne
+Space Exploration  / Exploration spatiale
+   </license>
+
+   <plugin
+         id="ca.gc.space.mrt.common.ui"
+         download-size="8"
+         install-size="9"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data25d.ui"
+         download-size="17"
+         install-size="29"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data25d.ui.edit"
+         download-size="10"
+         install-size="17"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.ui"
+         download-size="55"
+         install-size="109"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.ui.edit"
+         download-size="16"
+         install-size="27"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.paths.ui"
+         download-size="32"
+         install-size="60"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.paths.ui.edit"
+         download-size="13"
+         install-size="22"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.ui"
+         download-size="19"
+         install-size="31"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.ui.edit"
+         download-size="10"
+         install-size="16"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.fov.ui"
+         download-size="43"
+         install-size="87"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.fov.ui.edit"
+         download-size="16"
+         install-size="29"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.imaging.ui"
+         download-size="36"
+         install-size="68"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.imaging.ui.edit"
+         download-size="19"
+         install-size="38"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.pose.ui"
+         download-size="31"
+         install-size="58"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.pose.ui.edit"
+         download-size="16"
+         install-size="29"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.range.ui"
+         download-size="24"
+         install-size="43"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.range.ui.edit"
+         download-size="15"
+         install-size="25"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.vtk.ui"
+         download-size="6"
+         install-size="7"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.actuators.edit"
+         download-size="16"
+         install-size="31"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.common.csv.edit"
+         download-size="14"
+         install-size="26"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.common.edit"
+         download-size="14"
+         install-size="26"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.common.processors.edit"
+         download-size="17"
+         install-size="29"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.common.recorders.edit"
+         download-size="15"
+         install-size="28"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data.edit"
+         download-size="29"
+         install-size="55"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data25d.edit"
+         download-size="29"
+         install-size="51"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data25d.matlab.edit"
+         download-size="18"
+         install-size="31"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.edit"
+         download-size="138"
+         install-size="269"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.matlab.edit"
+         download-size="30"
+         install-size="60"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.vtk.edit"
+         download-size="42"
+         install-size="82"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.paths.edit"
+         download-size="31"
+         install-size="60"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.controllers.edit"
+         download-size="25"
+         install-size="52"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.edit"
+         download-size="32"
+         install-size="41"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.edit"
+         download-size="18"
+         install-size="32"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.graph.edit"
+         download-size="37"
+         install-size="70"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.matlab.edit"
+         download-size="23"
+         install-size="49"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.edit"
+         download-size="12"
+         install-size="20"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.fov.edit"
+         download-size="43"
+         install-size="75"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.gps.edit"
+         download-size="23"
+         install-size="46"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.imaging.edit"
+         download-size="32"
+         install-size="61"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.motion.edit"
+         download-size="18"
+         install-size="34"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.pose.edit"
+         download-size="56"
+         install-size="106"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.range.edit"
+         download-size="51"
+         install-size="106"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.persistence.edit"
+         download-size="17"
+         install-size="28"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.paths.vtk.edit"
+         download-size="12"
+         install-size="20"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.gps.sim.edit"
+         download-size="14"
+         install-size="26"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.ui.xyz"
+         download-size="5"
+         install-size="6"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.fov.bindings.edit"
+         download-size="24"
+         install-size="46"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.ui.jme3"
+         download-size="33"
+         install-size="65"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.paths.ui.jme3"
+         download-size="25"
+         install-size="47"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.fov.ui.jme3"
+         download-size="60"
+         install-size="122"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.imaging.ui.jme3"
+         download-size="23"
+         install-size="42"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.ui.jme3"
+         download-size="14"
+         install-size="24"
+         version="0.4.0.201502052105"
+         unpack="false"/>
+
+</feature>

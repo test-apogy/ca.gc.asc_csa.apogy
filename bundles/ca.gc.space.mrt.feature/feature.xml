@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ca.gc.space.mrt.feature"
+      label="ASC-CSA Mobile Robotics Toolkit (MRT)"
+      version="0.5.0.qualifier"
+      provider-name="Agence Spatiale Canadienne / Canadian Space Agency">
+
+   <description>
+      The Mobile Robotics Toolkit (MRT) provides generic data structures and functions used in the implementation of mobile robot guidance and navigation.
+   </description>
+
+   <copyright url="http://www.asc-csa.gc.ca">
+      (C) Government of Canada, 2011-2012. This document contains information
+proprietary to &quot;the Canadian Space Agency&quot;, or to a third party
+to which &quot;the Canadian Space Agency&quot; may have legal obligation
+to protect such information from unauthorized disclosure, use
+or duplication. Any disclosure, use or duplication of this document
+or of any of the information contained herein for other than
+the specific purpose for which it was disclosed is expressly
+prohibited outside the Government of Canada except as &quot;the Canadian
+Space Agency&quot; may otherwise agree to in writing.
+(C) Gouvernement du Canada, 2011-2012. Ce document renferme des
+renseignements appartenant à &quot;l&apos;Agence Spatiale Canadienne&quot; ou
+à une tierce partie envers qui &quot;l&apos;Agence Spatiale Canadienne&quot;
+a l&apos;obligation de protéger lesdits renseignements de toute divulgation,
+utilisation ou reproduction non autorisées. Toute divulgation,
+utilisation ou reproduction du présent document ou des renseignements
+qu&apos;il contient à des fins autres que les fins spécifiques pour
+lesquelles il a été divulgué est formellement interdite à l&apos;extérieur
+du gouvernement du Canada, sauf autorisation écrite de &quot;l&apos;Agence
+Spatiale Canadienne&quot;.
+Canadian Space Agency / Agence spatiale canadienne
+Space Exploration  / Exploration spatiale
+   </copyright>
+
+   <license>
+      (C) Government of Canada, 2011-2012. This document contains information
+proprietary to &quot;the Canadian Space Agency&quot;, or to a third party
+to which &quot;the Canadian Space Agency&quot; may have legal obligation
+to protect such information from unauthorized disclosure, use
+or duplication. Any disclosure, use or duplication of this document
+or of any of the information contained herein for other than
+the specific purpose for which it was disclosed is expressly
+prohibited outside the Government of Canada except as &quot;the Canadian
+Space Agency&quot; may otherwise agree to in writing.
+(C) Gouvernement du Canada, 2011-2012. Ce document renferme des
+renseignements appartenant à &quot;l&apos;Agence Spatiale Canadienne&quot; ou
+à une tierce partie envers qui &quot;l&apos;Agence Spatiale Canadienne&quot;
+a l&apos;obligation de protéger lesdits renseignements de toute divulgation,
+utilisation ou reproduction non autorisées. Toute divulgation,
+utilisation ou reproduction du présent document ou des renseignements
+qu&apos;il contient à des fins autres que les fins spécifiques pour
+lesquelles il a été divulgué est formellement interdite à l&apos;extérieur
+du gouvernement du Canada, sauf autorisation écrite de &quot;l&apos;Agence
+Spatiale Canadienne&quot;.
+Canadian Space Agency / Agence spatiale canadienne
+Space Exploration  / Exploration spatiale
+   </license>
+
+   <plugin
+         id="ca.gc.space.mrt.common"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.utils"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.actuators"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.common.csv"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.common.processors"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.common.recorders"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data25d"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data25d.matlab"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data25d.matlab.linux"
+         os="linux"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data25d.matlab.win32"
+         os="win32"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.matlab"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.matlab.linux"
+         os="linux"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.matlab.win32"
+         os="win32"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.paths"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.controllers"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.graph"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.matlab"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.matlab.linux"
+         os="linux"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.mobility.pathplanners.matlab.win32"
+         os="win32"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.fov"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.imaging"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.motion"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.pose"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.range"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.gps"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.gps.sim"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.fov.bindings"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.sensors.fov.bindings.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.ros"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.asc"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.persistence"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.paths.vtk"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.space.mrt.geometry.data3d.vtk"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

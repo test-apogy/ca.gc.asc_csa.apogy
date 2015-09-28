@@ -1,0 +1,53 @@
+@GenModel(prefix="SymphonyExampleRover", copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015", modelName="SymphonyExampleRover")
+@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.examples.rover/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.symphony.examples.rover.edit/src-generated")
+
+package ca.gc.asc_csa.symphony.examples.rover
+
+import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
+import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
+
+/*
+ * This class is the specialized Symphony API adapter, used for connecting
+ * the existing rover example, located at
+ * {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.Rover},
+ * to Symphony; one can override the well-known callback functions to make
+ * Symphony perform a variety of useful functions, including initialization,
+ * disposal and other features. 
+ */
+class RoverSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+{
+	/*
+	 * For specific implementation details,
+	 * please see
+	 * {@link ca.gc.asc_csa.symphony.examples.rover.impl.RoverSymphonySystemApiAdapterImpl}
+	 */
+}
+
+/*
+ * This class is the specialized data structure which is used to essentially
+ * save and later restore the state of the component; this functionality is
+ * implemented by the apply() (load) and collect() (save) methods of the rover's
+ * API adapter,
+ * which is {@link ca.gc.asc_csa.symphony.examples.rover.RoverSymphonySystemApiAdapter}.
+ */
+class RoverData extends SymphonyInitializationData
+{
+	/*
+	 * This is whether or not the rover has been initialized
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Status")
+	boolean initialized = "false"
+	
+	/*
+	 * This is whether or not the rover has been disposed
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Status")
+	boolean disposed = "false"
+}

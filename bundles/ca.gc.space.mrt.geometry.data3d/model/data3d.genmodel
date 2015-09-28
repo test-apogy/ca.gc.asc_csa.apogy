@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Canadian Space Agency 2008." modelDirectory="/ca.gc.space.mrt.geometry.data3d/src"
+    modelPluginID="ca.gc.space.mrt.geometry.data3d" modelName="Data3d" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.genmodel#//data platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.genmodel#//processors"
+    operationReflection="true">
+  <foreignModel>data3d.ecore</foreignModel>
+  <genPackages prefix="Data3d" basePackage="ca.gc.space.mrt.geometry" disposableProviderFactory="true"
+      ecorePackage="data3d.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="data3d.ecore#//CartesianAxis">
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//CartesianAxis/X"/>
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//CartesianAxis/Y"/>
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//CartesianAxis/Z"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="data3d.ecore#//CartesianPlane">
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//CartesianPlane/XY"/>
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//CartesianPlane/XZ"/>
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//CartesianPlane/YZ"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="data3d.ecore#//MESHING_PLANE">
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//MESHING_PLANE/XY"/>
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//MESHING_PLANE/YZ"/>
+      <genEnumLiterals ecoreEnumLiteral="data3d.ecore#//MESHING_PLANE/XZ"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="data3d.ecore#//InputStream"/>
+    <genDataTypes ecoreDataType="data3d.ecore#//IOException"/>
+    <genDataTypes ecoreDataType="data3d.ecore#//OutputStream"/>
+    <genDataTypes ecoreDataType="data3d.ecore#//Matrix4d"/>
+    <genDataTypes ecoreDataType="data3d.ecore#//Vector3d"/>
+    <genDataTypes ecoreDataType="data3d.ecore#//Point3d"/>
+    <genDataTypes ecoreDataType="data3d.ecore#//DoubleArrayOfArray"/>
+    <genDataTypes ecoreDataType="data3d.ecore#//IntArray"/>
+    <genDataTypes ecoreDataType="data3d.ecore#//List">
+      <genTypeParameters ecoreTypeParameter="data3d.ecore#//List/T"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="data3d.ecore#//GVector"/>
+    <genClasses ecoreClass="data3d.ecore#//CartesianPolygon">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianPolygon/surface"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianPolygon/normal"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference data3d.ecore#//CartesianPolygon/centroid"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//CartesianTriangle"/>
+    <genClasses ecoreClass="data3d.ecore#//SphericalPolygon"/>
+    <genClasses ecoreClass="data3d.ecore#//SphericalTriangle"/>
+    <genClasses ecoreClass="data3d.ecore#//CartesianPositionCoordinates">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianPositionCoordinates/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianPositionCoordinates/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianPositionCoordinates/z"/>
+      <genOperations ecoreOperation="data3d.ecore#//CartesianPositionCoordinates/asPoint3d"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//RGBCartesianPositionCoordinates">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//RGBCartesianPositionCoordinates/red"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//RGBCartesianPositionCoordinates/green"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//RGBCartesianPositionCoordinates/blue"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//CartesianOrientationCoordinates">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianOrientationCoordinates/xRotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianOrientationCoordinates/yRotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianOrientationCoordinates/zRotation"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//CartesianCoordinatesSet">
+      <genOperations ecoreOperation="data3d.ecore#//CartesianCoordinatesSet/getExtent"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//DigitalElevationMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//DigitalElevationMap/xDimension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//DigitalElevationMap/yDimension"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//CartesianCoordinatesMesh"/>
+    <genClasses ecoreClass="data3d.ecore#//CartesianTriangularMesh"/>
+    <genClasses ecoreClass="data3d.ecore#//SphericalCoordinates">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//SphericalCoordinates/phi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//SphericalCoordinates/theta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//SphericalCoordinates/r"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//SphericalCoordinatesSet"/>
+    <genClasses ecoreClass="data3d.ecore#//SpericalCoordinatesMesh"/>
+    <genClasses ecoreClass="data3d.ecore#//SphericalTriangularMesh"/>
+    <genClasses ecoreClass="data3d.ecore#//Pose"/>
+    <genClasses ecoreClass="data3d.ecore#//SphereSamplingShape">
+      <genTypeParameters ecoreTypeParameter="data3d.ecore#//SphereSamplingShape/PolygonType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//SphereSamplingShape/radius"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference data3d.ecore#//SphereSamplingShape/center"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//SphereSamplingShape/includeJustTouching"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//CartesianCoordinatesSetShapeSampler"/>
+    <genClasses ecoreClass="data3d.ecore#//CartesianCoordinatesMeshSampler"/>
+    <genClasses ecoreClass="data3d.ecore#//CartesianCoordinatesMeshPolygonSampler"/>
+    <genClasses ecoreClass="data3d.ecore#//CartesianTriangularMeshSampler"/>
+    <genClasses ecoreClass="data3d.ecore#//CartesianTriangularMeshPolygonSampler"/>
+    <genClasses ecoreClass="data3d.ecore#//CartesianPositionCoordinatesMesher"/>
+    <genClasses ecoreClass="data3d.ecore#//Data3dFacade">
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianPositionCoordinates">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianPositionCoordinates/x"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianPositionCoordinates/y"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianPositionCoordinates/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianOrientationCoordinates">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianOrientationCoordinates/xRotation"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianOrientationCoordinates/yRotation"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianOrientationCoordinates/zRotation"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createSphericalCoordinates">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createSphericalCoordinates/phi"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createSphericalCoordinates/theta"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createSphericalCoordinates/r"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createPose">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose/x"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose/y"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose/z"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose/xRotation"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose/yRotation"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose/zRotation"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createPose.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose.1/pose"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createPose.2">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose.2/position"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPose.2/orientation"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianPolygon">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianPolygon/v1"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianPolygon/v2"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianPolygon/v3"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianPositionCoordinates.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianPositionCoordinates.1/coordinates"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianOrientationCoordinates.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianOrientationCoordinates.1/coordinates"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianCoordinatesMesh">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianCoordinatesMesh/cartesianCoordinatesMesh"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianTriangle">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianTriangle/v1"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianTriangle/v2"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianTriangle/v3"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianTriangle.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianTriangle.1/polygon"/>
+        <genTypeParameters ecoreTypeParameter="data3d.ecore#//Data3dFacade/createCartesianTriangle.1/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/applyTransform">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransform/points"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransform/trMatrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianCoordinatesMesh.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianCoordinatesMesh.1/polygons"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianTriangularMesh">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianTriangularMesh/polygons"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/applyTransform.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransform.1/points"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransform.1/trMatrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/applyTransform.2">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransform.2/mesh"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransform.2/trMatrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/applyTransformInt">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransformInt/mesh"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransformInt/trMatrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/applyTransform.3">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransform.3/points"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/applyTransform.3/trMatrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianCoordinatesMesh.2">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianCoordinatesMesh.2/cartesianTriangularMesh"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createCartesianTriangularMesh.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createCartesianTriangularMesh.1/cartesianCoordinatesMesh"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/updateCartesianCoordinatesSet">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/updateCartesianCoordinatesSet/cartesianCoordinatesSet"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/updateCartesianCoordinatesSet/xyzData"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createPointNormalLocator">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createPointNormalLocator/input"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/createDigitalElevationMap">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/createDigitalElevationMap/coordinatesSet"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3dFacade/concatenateTriangularMeshes">
+        <genParameters ecoreParameter="data3d.ecore#//Data3dFacade/concatenateTriangularMeshes/listOfTriangularMeshes"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//Data3DIO">
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/saveTriangularMesh">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveTriangularMesh/mesh"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveTriangularMesh/file"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/loadTriangularMesh">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/loadTriangularMesh/file"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/saveTriangularMesh.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveTriangularMesh.1/mesh"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveTriangularMesh.1/output"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/loadTriangularMesh.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/loadTriangularMesh.1/input"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/loadTriangularMeshFromASCIIAsNormalPointCloud">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/loadTriangularMeshFromASCIIAsNormalPointCloud/filePrefix"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/loadTriangularMeshFromASCII">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/loadTriangularMeshFromASCII/filePrefix"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/saveTriangularMeshAsASCII">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveTriangularMeshAsASCII/mesh"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveTriangularMeshAsASCII/filePrefix"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/loadXYZ">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/loadXYZ/fileName"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/loadTriangularMeshFromTriXYZ">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/loadTriangularMeshFromTriXYZ/triFileName"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/loadTriangularMeshFromTriXYZ/xyzFileName"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/saveCoordinatesSetToXYZ">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveCoordinatesSetToXYZ/coordinatesSet"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveCoordinatesSetToXYZ/file"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/saveCoordinatesSetToXYZ.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveCoordinatesSetToXYZ.1/coordinatesSet"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveCoordinatesSetToXYZ.1/file"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/saveCoordinatesSetToCSV">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveCoordinatesSetToCSV/coordinatesSet"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveCoordinatesSetToCSV/file"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DIO/saveCoordinatesSetToCSV.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveCoordinatesSetToCSV.1/coordinatesSet"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DIO/saveCoordinatesSetToCSV.1/file"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//PointLocator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute data3d.ecore#//PointLocator/points"/>
+      <genOperations ecoreOperation="data3d.ecore#//PointLocator/findClosestPoint">
+        <genParameters ecoreParameter="data3d.ecore#//PointLocator/findClosestPoint/point"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//PointLocator/findPointsWithinRadius">
+        <genParameters ecoreParameter="data3d.ecore#//PointLocator/findPointsWithinRadius/radius"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointLocator/findPointsWithinRadius/point"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//Data3DUtils">
+      <genOperations ecoreOperation="data3d.ecore#//Data3DUtils/computeNormals">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeNormals/mesh"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DUtils/computeCentroid">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeCentroid/points"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DUtils/computeMinMaxValues">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeMinMaxValues/min"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeMinMaxValues/max"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeMinMaxValues/data"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DUtils/computeCurvatureChange">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeCurvatureChange/pointLocator"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeCurvatureChange/centerPoint"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeCurvatureChange/radius"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DUtils/computeCurvatureChange.1">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeCurvatureChange.1/pointLocator"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeCurvatureChange.1/centerPoint"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/computeCurvatureChange.1/radius"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//Data3DUtils/extrude">
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/extrude/profilePoints"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/extrude/extrusionAxis"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/extrude/extrusionWidth"/>
+        <genParameters ecoreParameter="data3d.ecore#//Data3DUtils/extrude/closeMesh"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//NormalPointCloud">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//NormalPointCloud/points"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//NormalPointCloud/normals"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="data3d.ecore#//VecmathPointLocator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//VecmathPointLocator/points"/>
+      <genOperations ecoreOperation="data3d.ecore#//VecmathPointLocator/findClosestPoint">
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findClosestPoint/point"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//VecmathPointLocator/findPointsWithinRadius">
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findPointsWithinRadius/radius"/>
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findPointsWithinRadius/point"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//VecmathPointLocator/findClosestPointId">
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findClosestPointId/point"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//VecmathPointLocator/findPointIdsWithinRadius">
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findPointIdsWithinRadius/radius"/>
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findPointIdsWithinRadius/point"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//VecmathPointLocator/findClosestNPoints">
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findClosestNPoints/referencePoint"/>
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findClosestNPoints/n"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//VecmathPointLocator/findClosestNPointIds">
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findClosestNPointIds/referencePoint"/>
+        <genParameters ecoreParameter="data3d.ecore#//VecmathPointLocator/findClosestNPointIds/n"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//VecmathKdTreePointLocator"/>
+    <genClasses ecoreClass="data3d.ecore#//MeshLocaliser">
+      <genOperations ecoreOperation="data3d.ecore#//MeshLocaliser/localise">
+        <genParameters ecoreParameter="data3d.ecore#//MeshLocaliser/localise/fixedMesh"/>
+        <genParameters ecoreParameter="data3d.ecore#//MeshLocaliser/localise/fixedMeshTransform"/>
+        <genParameters ecoreParameter="data3d.ecore#//MeshLocaliser/localise/floatingMesh"/>
+        <genParameters ecoreParameter="data3d.ecore#//MeshLocaliser/localise/floatingMeshTransformEstimate"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//PointNormalLocator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference data3d.ecore#//PointNormalLocator/dataSet"/>
+      <genOperations ecoreOperation="data3d.ecore#//PointNormalLocator/findClosestPoint">
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestPoint/point"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestPoint/normal"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//PointNormalLocator/findPointsWithinRadius">
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findPointsWithinRadius/radius"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findPointsWithinRadius/point"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findPointsWithinRadius/normal"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//PointNormalLocator/findClosestNPoints">
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestNPoints/n"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestNPoints/point"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestNPoints/normal"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//PointNormalLocator/findClosestPointId">
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestPointId/point"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestPointId/normal"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//PointNormalLocator/findPointIdsWithinRadius">
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findPointIdsWithinRadius/radius"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findPointIdsWithinRadius/point"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findPointIdsWithinRadius/normal"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//PointNormalLocator/findClosestNPointIds">
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestNPointIds/n"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestNPointIds/point"/>
+        <genParameters ecoreParameter="data3d.ecore#//PointNormalLocator/findClosestNPointIds/normal"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//DelaunayMesher">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//DelaunayMesher/tolerance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//DelaunayMesher/alpha"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//DelaunayMesher/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//DelaunayMesher/boundingTriangulation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//DelaunayMesher/meshingPlane"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//DigitalElevationMapMesher"/>
+    <genClasses ecoreClass="data3d.ecore#//DigitalElevationMapSampler">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//DigitalElevationMapSampler/targetResolution"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//TriangularMeshNormalsCalculator"/>
+    <genClasses ecoreClass="data3d.ecore#//TriangularMesh2NormalPointCloud"/>
+    <genClasses ecoreClass="data3d.ecore#//PointsRangeGager">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//PointsRangeGager/minX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//PointsRangeGager/maxX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//PointsRangeGager/minY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//PointsRangeGager/maxY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//PointsRangeGager/minZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//PointsRangeGager/maxZ"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//UniquePointsFilter"/>
+    <genClasses ecoreClass="data3d.ecore#//TriangleEdgeLenghtTriangularMeshFilter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//TriangleEdgeLenghtTriangularMeshFilter/minimumRange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//TriangleEdgeLenghtTriangularMeshFilter/maximumRange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//TriangleEdgeLenghtTriangularMeshFilter/maximumEdgeLenght"/>
+      <genOperations ecoreOperation="data3d.ecore#//TriangleEdgeLenghtTriangularMeshFilter/filter">
+        <genParameters ecoreParameter="data3d.ecore#//TriangleEdgeLenghtTriangularMeshFilter/filter/input"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//OutlierFilter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//OutlierFilter/maxDistance"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//RasterPointCloud">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//RasterPointCloud/rows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//RasterPointCloud/columns"/>
+      <genOperations ecoreOperation="data3d.ecore#//RasterPointCloud/getPoint">
+        <genParameters ecoreParameter="data3d.ecore#//RasterPointCloud/getPoint/row"/>
+        <genParameters ecoreParameter="data3d.ecore#//RasterPointCloud/getPoint/column"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//RasterPointCloud/setPoint">
+        <genParameters ecoreParameter="data3d.ecore#//RasterPointCloud/setPoint/row"/>
+        <genParameters ecoreParameter="data3d.ecore#//RasterPointCloud/setPoint/column"/>
+        <genParameters ecoreParameter="data3d.ecore#//RasterPointCloud/setPoint/point"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//RasterPointCloudToCartesianCoordinatesSet"/>
+    <genClasses image="false" ecoreClass="data3d.ecore#//MeshSmoother">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//MeshSmoother/numberOfIterations"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//VoxelBased3DPointCloudResampler">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//VoxelBased3DPointCloudResampler/resolutionX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//VoxelBased3DPointCloudResampler/resolutionY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//VoxelBased3DPointCloudResampler/resolutionZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//VoxelBased3DPointCloudResampler/minimumNumberOfPointPerVoxel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//VoxelBased3DPointCloudResampler/tileResolution"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//RigidBodyPoseTracker">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference data3d.ecore#//RigidBodyPoseTracker/positionMarkersAtOrigin"/>
+      <genOperations ecoreOperation="data3d.ecore#//RigidBodyPoseTracker/computeTransformation">
+        <genParameters ecoreParameter="data3d.ecore#//RigidBodyPoseTracker/computeTransformation/markerPositionsToTrack"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//RigidBodyPoseTracker/addPositionMarkers">
+        <genParameters ecoreParameter="data3d.ecore#//RigidBodyPoseTracker/addPositionMarkers/marker"/>
+      </genOperations>
+      <genOperations ecoreOperation="data3d.ecore#//RigidBodyPoseTracker/removePositionMarkers">
+        <genParameters ecoreParameter="data3d.ecore#//RigidBodyPoseTracker/removePositionMarkers/markers"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//PositionMarker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//PositionMarker/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//CubeSamplingShape">
+      <genTypeParameters ecoreTypeParameter="data3d.ecore#//CubeSamplingShape/PolygonType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CubeSamplingShape/includeJustTouching"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference data3d.ecore#//CubeSamplingShape/corner1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference data3d.ecore#//CubeSamplingShape/corner2"/>
+    </genClasses>
+    <genClasses ecoreClass="data3d.ecore#//CartesianCoordinatesSetExtent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/xMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/xMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/yMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/yMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/zMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/zMax"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/xDimension"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/yDimension"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute data3d.ecore#//CartesianCoordinatesSetExtent/zDimension"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

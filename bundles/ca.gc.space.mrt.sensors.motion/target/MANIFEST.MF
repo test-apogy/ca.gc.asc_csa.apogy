@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.sensors.motion;singleton:=true
+Export-Package: motion,motion.impl,motion.util
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport,ca.gc.space.mrt.sensors;visibility:=reexport,ca.gc.spac
+ e.topology.core;visibility:=reexport,ca.gc.space.math.core;visibility
+ :=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+

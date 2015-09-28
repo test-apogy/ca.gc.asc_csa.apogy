@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.sensors.fov.edit;singleton:=true
+Require-Bundle: org.eclipse.core.runtime,ca.gc.space.mrt.sensors.fov;v
+ isibility:=reexport,org.eclipse.emf.edit;visibility:=reexport,ca.gc.s
+ pace.mrt.geometry.data3d;visibility:=reexport,ca.gc.space.math.core;v
+ isibility:=reexport,ca.gc.space.math.core.edit;visibility:=reexport,c
+ a.gc.space.mrt.common.processors;visibility:=reexport,ca.gc.space.mrt
+ .common.processors.edit;visibility:=reexport,ca.gc.space.topology.cor
+ e;visibility:=reexport,ca.gc.space.topology.core.edit;visibility:=ree
+ xport,ca.gc.space.mrt.geometry.data3d.edit,org.eclipse.emf.ecore;visi
+ bility:=reexport,org.eclipse.emf.ecore.edit;visibility:=reexport,ca.g
+ c.space.mrt.geometry.data;visibility:=reexport,ca.gc.space.mrt.geomet
+ ry.data.edit;visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.space.mrt.sensors.fov.provider
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin$I
+ mplementation
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<toc link_to="../../toc.xml#developing_for_symphony" label="Developing For Symphony">
+	<topic label="Developing For Symphony">
+		<topic label="Symphony Architecture">
+			<topic label="System Software Interface Modelling"/>
+			<topic label="Variable Initialization"/>
+			<topic label="Operation Call Invocation"/>
+		</topic>
+		<topic label="Symphonyzing">
+			<topic label="Definition, High-Level Details &amp; Guidelines"/>
+			<topic label="The Three Steps to Symphonyzing">
+				<topic label="1. Defining the System in EMF">
+					<topic label="Creating an EMF model of the System"/>
+					<topic label="Recommended Class Hierarchy"/>
+					<topic label="Example Exercise: A Pan Tilt Unit (PTU) Camera">
+						<topic label="Creating The PTU Camera's EMF Model"/>
+						<topic label="Implementing The Required Methods"/>
+						<topic label="Testing The System"/>
+					</topic>
+				</topic>
+				<topic label="2. Creating the Symphony plugin">
+					<topic label="Definition &amp; Requirements"/>
+					<topic label="The Four Steps to making a Symphony plugin">
+						<topic label="i.   Creating the Symphony plugin itself">
+							<topic label="Example Exercise: Creating the PTU Camera's Symphony plugin"/>
+						</topic>
+						<topic label="ii.  Creating an Xcore model">
+							<topic label="Example Exercise: Developing the PTU Camera's xCore model"/>
+						</topic>
+						<topic label="iii. Defining a subclass of SymphonyInitializationData">
+							<topic label="Guidelines"/>
+							<topic label="Example Exercise: Specializing SymphonyInitializationData for the PTU Camera"/>
+						</topic>
+						<topic label="iv.  Defining a subclass of SymphonySystemApiAdapter">
+							<topic label="Localization"/>
+							<topic label="Guidelines &amp; Requirements"/>
+							<topic label="Example Exercise: Specializing SymphonySystemApiAdapter for the PTU Camera"/>
+						</topic>
+					</topic>
+				</topic>
+				<topic label="3. Creating the Symphony System Model (*.ss file)">
+					<topic label="Definition"/>
+					<topic label="The Six Steps to making a Symphony System Model">
+						<topic label="i.   Defining the Topology Root">
+							<topic label="Topology Guidelines"/>
+						</topic>
+						<topic label="ii.  Defining the Bindings">
+							<topic label="Currently available bindings in Symphony"/>
+							<topic label="Populating the Feature Roots List"/>
+							<topic label="Populating the Bindings List"/>
+						</topic>
+						<topic label="iii. Defining the Connection Points"/>
+						<topic label="iv.  Defining Type Members (Only for Composite Systems)"/>
+						<topic label="v.   Defining Assembly Links (Only for Composite Systems)"/>
+						<topic label="vi.  Registering your Symphony System Model with Symphony">
+							<topic label="Steps to register a Symphony System Model"/>
+						</topic>
+					</topic>
+					<topic label="Example Exercise: Creating a complete Symphony System Model for the PTU Camera">
+						<topic label="Creating the PTU Camera's Symphony System Model file"/>
+						<topic label="Specifying the PTU Camera's Topology">
+							<topic label="Creating the CAD folder"/>
+							<topic label="Populating the topology">
+								<topic label="Desired final topology">
+									<topic label="Node hierarchy"/>
+									<topic label="Transformations"/>
+								</topic>
+							</topic>
+						</topic>
+						<topic label="Making the PTU Camera's Bindings">
+							<topic label="Defining the Feature Nodes"/>
+							<topic label="Making the Bindings themselves"/>
+						</topic>
+						<topic label="Registering the PTU Camera's Symphony System Model"/>
+						<topic label="Testing the complete PTU Camera with Symphony"/>
+					</topic>
+				</topic>
+			</topic>
+		</topic>
+		<topic label="Symphony Examples">
+			<topic label="SymphonySystemPTUDishAntenna"/>
+			<topic label="SymphonySystemCamera"/>
+			<topic label="SymphonySystemPTUCamera"/>
+			<topic label="SymphonySystemLander"/>
+			<topic label="SymphonySystemLidar"/>
+			<topic label="SymphonySystemMobilePlatform"/>
+			<topic label="SymphonySystemRoboticArm"/>
+			<topic label="SymphonySystemRover"/>
+		</topic>
+		<topic label="Advanced Topics">
+			<topic label="Specialized Topology Nodes">
+				<topic label="Currently available specialized topology nodes"/>
+			</topic>
+			<topic label="Extending the tools">
+				<topic label="Currently available tools to extend"/>
+			</topic>
+			<topic label="Management of measurement units"/>
+		</topic>
+	</topic>
+</toc>

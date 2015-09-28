@@ -1,0 +1,537 @@
+/**
+ */
+package ca.gc.asc_csa.eclipse.emf.ecore.util;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.ecore.EObject;
+import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
+import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
+import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
+import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureTreeNode;
+import ca.gc.asc_csa.eclipse.emf.ecore.AbstractRootNode;
+import ca.gc.asc_csa.eclipse.emf.ecore.BrowseableTimeSource;
+import ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource;
+import ca.gc.asc_csa.eclipse.emf.ecore.CurrentTimeSource;
+import ca.gc.asc_csa.eclipse.emf.ecore.Described;
+import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
+import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
+import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
+import ca.gc.asc_csa.eclipse.emf.ecore.FixedTimeSource;
+import ca.gc.asc_csa.eclipse.emf.ecore.ListFeatureNode;
+import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
+import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import ca.gc.asc_csa.eclipse.emf.ecore.SelectionBasedTimeSource;
+import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
+import ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList;
+import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
+import ca.gc.asc_csa.eclipse.emf.ecore.TreeFeatureNode;
+import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Adapter Factory</b> for the model.
+ * It provides an adapter <code>createXXX</code> method for each class of the model.
+ * <!-- end-user-doc -->
+ * @see ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage
+ * @generated
+ */
+public class EMFEcoreAdapterFactory extends AdapterFactoryImpl
+{
+  /**
+	 * The cached model package.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  protected static EMFEcorePackage modelPackage;
+
+  /**
+	 * Creates an instance of the adapter factory.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EMFEcoreAdapterFactory()
+  {
+		if (modelPackage == null) {
+			modelPackage = EMFEcorePackage.eINSTANCE;
+		}
+	}
+
+  /**
+	 * Returns whether this factory is applicable for the type of the object.
+	 * <!-- begin-user-doc -->
+   * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+   * <!-- end-user-doc -->
+	 * @return whether this factory is applicable for the type of the object.
+	 * @generated
+	 */
+  @Override
+  public boolean isFactoryForType(Object object)
+  {
+		if (object == modelPackage) {
+			return true;
+		}
+		if (object instanceof EObject) {
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
+		}
+		return false;
+	}
+
+  /**
+	 * The switch that delegates to the <code>createXXX</code> methods.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  protected EMFEcoreSwitch<Adapter> modelSwitch =
+    new EMFEcoreSwitch<Adapter>() {
+			@Override
+			public Adapter caseEMFEcoreFacade(EMFEcoreFacade object) {
+				return createEMFEcoreFacadeAdapter();
+			}
+			@Override
+			public Adapter caseNamed(Named object) {
+				return createNamedAdapter();
+			}
+			@Override
+			public Adapter caseDescribed(Described object) {
+				return createDescribedAdapter();
+			}
+			@Override
+			public Adapter caseTimed(Timed object) {
+				return createTimedAdapter();
+			}
+			@Override
+			public Adapter caseTimeSourcesList(TimeSourcesList object) {
+				return createTimeSourcesListAdapter();
+			}
+			@Override
+			public Adapter caseTimeSource(TimeSource object) {
+				return createTimeSourceAdapter();
+			}
+			@Override
+			public Adapter caseFixedTimeSource(FixedTimeSource object) {
+				return createFixedTimeSourceAdapter();
+			}
+			@Override
+			public Adapter caseCurrentTimeSource(CurrentTimeSource object) {
+				return createCurrentTimeSourceAdapter();
+			}
+			@Override
+			public Adapter caseBrowseableTimeSource(BrowseableTimeSource object) {
+				return createBrowseableTimeSourceAdapter();
+			}
+			@Override
+			public Adapter caseSelectionBasedTimeSource(SelectionBasedTimeSource object) {
+				return createSelectionBasedTimeSourceAdapter();
+			}
+			@Override
+			public Adapter caseCollectionTimedTimeSource(CollectionTimedTimeSource object) {
+				return createCollectionTimedTimeSourceAdapter();
+			}
+			@Override
+			public Adapter caseDisposable(Disposable object) {
+				return createDisposableAdapter();
+			}
+			@Override
+			public Adapter caseFeatureNodeAdapter(FeatureNodeAdapter object) {
+				return createFeatureNodeAdapterAdapter();
+			}
+			@Override
+			public Adapter caseAbstractFeatureNode(AbstractFeatureNode object) {
+				return createAbstractFeatureNodeAdapter();
+			}
+			@Override
+			public Adapter caseAbstractFeatureListNode(AbstractFeatureListNode object) {
+				return createAbstractFeatureListNodeAdapter();
+			}
+			@Override
+			public Adapter caseAbstractFeatureTreeNode(AbstractFeatureTreeNode object) {
+				return createAbstractFeatureTreeNodeAdapter();
+			}
+			@Override
+			public Adapter caseAbstractRootNode(AbstractRootNode object) {
+				return createAbstractRootNodeAdapter();
+			}
+			@Override
+			public Adapter caseTreeRootNode(TreeRootNode object) {
+				return createTreeRootNodeAdapter();
+			}
+			@Override
+			public Adapter caseTreeFeatureNode(TreeFeatureNode object) {
+				return createTreeFeatureNodeAdapter();
+			}
+			@Override
+			public Adapter caseListRootNode(ListRootNode object) {
+				return createListRootNodeAdapter();
+			}
+			@Override
+			public Adapter caseListFeatureNode(ListFeatureNode object) {
+				return createListFeatureNodeAdapter();
+			}
+			@Override
+			public Adapter caseAbstractFeatureSpecifier(AbstractFeatureSpecifier object) {
+				return createAbstractFeatureSpecifierAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
+
+  /**
+	 * Creates an adapter for the <code>target</code>.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param target the object to adapt.
+	 * @return the adapter for the <code>target</code>.
+	 * @generated
+	 */
+  @Override
+  public Adapter createAdapter(Notifier target)
+  {
+		return modelSwitch.doSwitch((EObject)target);
+	}
+
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade <em>Facade</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade
+	 * @generated
+	 */
+  public Adapter createEMFEcoreFacadeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Named <em>Named</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Named
+	 * @generated
+	 */
+  public Adapter createNamedAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Described <em>Described</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Described
+	 * @generated
+	 */
+  public Adapter createDescribedAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Timed <em>Timed</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Timed
+	 * @generated
+	 */
+  public Adapter createTimedAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList <em>Time Sources List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList
+	 * @generated
+	 */
+	public Adapter createTimeSourcesListAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.TimeSource <em>Time Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.TimeSource
+	 * @generated
+	 */
+	public Adapter createTimeSourceAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.FixedTimeSource <em>Fixed Time Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.FixedTimeSource
+	 * @generated
+	 */
+	public Adapter createFixedTimeSourceAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.CurrentTimeSource <em>Current Time Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.CurrentTimeSource
+	 * @generated
+	 */
+	public Adapter createCurrentTimeSourceAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.BrowseableTimeSource <em>Browseable Time Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.BrowseableTimeSource
+	 * @generated
+	 */
+	public Adapter createBrowseableTimeSourceAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.SelectionBasedTimeSource <em>Selection Based Time Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.SelectionBasedTimeSource
+	 * @generated
+	 */
+	public Adapter createSelectionBasedTimeSourceAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource <em>Collection Timed Time Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource
+	 * @generated
+	 */
+	public Adapter createCollectionTimedTimeSourceAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Disposable <em>Disposable</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Disposable
+	 * @generated
+	 */
+  public Adapter createDisposableAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode <em>Abstract Feature Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode
+	 * @generated
+	 */
+  public Adapter createAbstractFeatureNodeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter <em>Feature Node Adapter</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter
+	 * @generated
+	 */
+  public Adapter createFeatureNodeAdapterAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode <em>Abstract Feature List Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode
+	 * @generated
+	 */
+  public Adapter createAbstractFeatureListNodeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureTreeNode <em>Abstract Feature Tree Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureTreeNode
+	 * @generated
+	 */
+  public Adapter createAbstractFeatureTreeNodeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.AbstractRootNode <em>Abstract Root Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.AbstractRootNode
+	 * @generated
+	 */
+  public Adapter createAbstractRootNodeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode <em>Tree Root Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode
+	 * @generated
+	 */
+  public Adapter createTreeRootNodeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.TreeFeatureNode <em>Tree Feature Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.TreeFeatureNode
+	 * @generated
+	 */
+  public Adapter createTreeFeatureNodeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode <em>List Root Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode
+	 * @generated
+	 */
+  public Adapter createListRootNodeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.ListFeatureNode <em>List Feature Node</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.ListFeatureNode
+	 * @generated
+	 */
+  public Adapter createListFeatureNodeAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier <em>Abstract Feature Specifier</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier
+	 * @generated
+	 */
+  public Adapter createAbstractFeatureSpecifierAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for the default case.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @generated
+	 */
+  public Adapter createEObjectAdapter()
+  {
+		return null;
+	}
+
+} //EMFEcoreAdapterFactory

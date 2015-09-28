@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.sensors.imaging.ui.edit;singleton
+ :=true
+Require-Bundle: org.eclipse.core.runtime,ca.gc.space.mrt.sensors.imagi
+ ng.ui;visibility:=reexport,org.eclipse.emf.edit;visibility:=reexport,
+ ca.gc.space.math.core;visibility:=reexport,ca.gc.space.math.core.edit
+ ;visibility:=reexport,ca.gc.space.mrt.common.processors;visibility:=r
+ eexport,ca.gc.space.mrt.common.processors.edit;visibility:=reexport,c
+ a.gc.space.topology.core;visibility:=reexport,ca.gc.space.topology.co
+ re.edit;visibility:=reexport,org.eclipse.emf.ecore;visibility:=reexpo
+ rt,ca.gc.space.topology.ui;visibility:=reexport,ca.gc.space.topology.
+ ui.edit;visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.space.mrt.sensors.imaging.ui.provider
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: ca.gc.space.mrt.sensors.imaging.ui.provider.MRTSenso
+ rsImagingUIEditPlugin$Implementation
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="ca.gc.space.mrt.sensors.sensorprovider" name="Sensor Provider" schema="schema/ca.gc.space.mrt.sensors.sensorprovider.exsd"/>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="ca.gc.space.mrt.sensors.sensors.SensorsPackage"
+            genModel="model/sensors.genmodel"
+            uri="http:///ca/gc/space/mrt/sensors/model/sensors.ecore">
+      </package>
+   </extension>
+
+</plugin>

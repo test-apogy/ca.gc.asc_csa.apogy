@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2007.
+
+ $Id: plugin.xml,v 1.4.4.2 2015/05/21 15:50:48 pallard Exp $
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///ca/gc/space/mrt/geometry/data3d.ecore" 
+       class = "ca.gc.space.mrt.geometry.data3d.Data3dPackage"
+       genModel = "model/data3d.genmodel" /> 
+  </extension>
+  <extension
+        point="ca.gc.asc_csa.eclipse.converters">
+     <new_element
+           Class="ca.gc.space.mrt.geometry.data3d.converters.TopoIFileToCartesianTriangularMeshConverter">
+     </new_element>
+     <new_element
+           Class="ca.gc.space.mrt.geometry.data3d.converters.TopoFileToCartesianTriangularMeshConverter">
+     </new_element>
+     <new_element
+           Class="ca.gc.space.mrt.geometry.data3d.converters.URLTRIToCartesianTriangularMeshConverter">
+     </new_element>
+     <new_element
+           Class="ca.gc.space.mrt.geometry.data3d.converters.URLTopoToCartesianTriangularMeshConverter">
+     </new_element>
+  </extension>
+
+</plugin>

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore,org.ecl
+ ipse.xtext.xbase.lib,org.eclipse.emf.ecore.xcore.lib,ca.gc.asc_csa.ec
+ lipse.emf.ecore;bundle-version="0.1.0"
+Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platfo
+ rm,ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.impl,ca.g
+ c.asc_csa.eclipse.emf.ecore.examples.mobile_platform.util
+Bundle-Vendor: %providerName
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-Version: 0.2.0.201401221941
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_p
+ latform;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2011
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ca/gc/asc_csa/eclipse/images/core/1.0"
+            class="ca.gc.asc_csa.eclipse.images.core.ImagesCorePackage"
+            genModel="model/ca_gc_asc_csa_eclipse_images.genmodel"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.converters">
+      <new_element
+            Class="ca.gc.asc_csa.eclipse.images.core.converters.IFileToImageData">
+      </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.eclipse.images.core.converters.ObjectToImageDataConverter">
+      </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.eclipse.images.core.converters.EImageToFileConverter">
+      </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.eclipse.images.core.converters.ObjectToBufferedImageConverter">
+      </new_element>
+   </extension>
+
+</plugin>

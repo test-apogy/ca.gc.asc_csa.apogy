@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyCategory
+               category="ca.gc.space.math.ui.property.category.Default"></propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.space.math.ui.property.category.Default"
+               id="ca.gc.space.math.ui.property.tab.Matrix4x4"
+               label="Matrix 4x4">
+         </propertyTab>
+         <propertyTab
+               category="ca.gc.space.math.ui.property.category.Default"
+               id="ca.gc.space.math.ui.property.tab.TransformMatrix"
+               label="Transform">
+         </propertyTab>
+         <propertyTab
+               category="ca.gc.space.math.ui.property.category.Default"
+               id="ca.gc.space.math.ui.property.tab.Matrix3x3"
+               label="Matrix 3x3">
+         </propertyTab>
+         <propertyTab
+               category="ca.gc.space.math.ui.property.category.Default"
+               id="ca.gc.space.math.ui.property.tab.Rotation"
+               label="Rotation">
+         </propertyTab>         
+      </propertyTabs>      
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertySection
+               class="ca.gc.space.math.ui.properties.sections.Matrix4x4PropertySection"
+               id="ca.gc.space.math.ui.property.section.Matrix4x4"
+               tab="ca.gc.space.math.ui.property.tab.Matrix4x4">
+            <input
+                  type="ca.gc.space.math.Matrix4x4">
+            </input>
+         </propertySection>
+         <propertySection
+               class="ca.gc.space.math.ui.properties.sections.TransformMatrixPropertySection"
+               id="ca.gc.space.math.ui.property.section.TransformMatrix"
+               tab="ca.gc.space.math.ui.property.tab.TransformMatrix">
+            <input
+                  type="ca.gc.space.math.Matrix4x4">
+            </input>
+         </propertySection>
+         <propertySection
+               class="ca.gc.space.math.ui.properties.sections.Matrix3x3PropertySection"
+               id="ca.gc.space.math.ui.property.section.Matrix3x3"
+               tab="ca.gc.space.math.ui.property.tab.Matrix3x3">
+            <input
+                  type="ca.gc.space.math.Matrix3x3">
+            </input>
+         </propertySection>
+         <propertySection
+               class="ca.gc.space.math.ui.properties.sections.RotationPropertySection"
+               id="ca.gc.space.math.ui.property.section.Rotation"
+               tab="ca.gc.space.math.ui.property.tab.Rotation">
+            <input
+                  type="ca.gc.space.math.Matrix3x3">
+            </input>
+         </propertySection>         
+      </propertySections>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated space_math_ui -->
+      <package
+            uri="ca.gc.space.math.ui"
+            class="ca.gc.space.math.ui.MathUIPackage"
+            genModel="model/space_math_ui.xcore"/>
+   </extension>
+
+</plugin>

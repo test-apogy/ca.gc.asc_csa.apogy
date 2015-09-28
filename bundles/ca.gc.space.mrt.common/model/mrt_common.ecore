@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="common" nsURI="http:///ca/gc/space/mrt/common/model/mrt_common.ecore"
+    nsPrefix="ca.gc.space.mrt">
+  <eClassifiers xsi:type="ecore:EClass" name="TimeTaggedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//Startable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverJob" eType="#//Job"
+        changeable="false" transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Job" instanceClassName="org.eclipse.core.runtime.jobs.Job"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Startable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="started" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        transient="true" defaultValueLiteral="false"/>
+  </eClassifiers>
+</ecore:EPackage>

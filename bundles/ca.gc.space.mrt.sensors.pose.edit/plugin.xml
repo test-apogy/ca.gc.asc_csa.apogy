@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2007.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:50:00 pallard Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http:///ca/gc/space/mrt/sensors/pose/model/pose.ecore"
+            class="ca.gc.space.mrt.sensors.pose.provider.PoseItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="ca.gc.space.mrt.sensors.pose.edit.PositionSensorContribution"
+            objectClass="ca.gc.space.mrt.sensors.pose.PositionSensor">
+         <action
+               class="ca.gc.space.mrt.sensors.pose.actions.ResetPositionAction"
+               id="ca.gc.space.mrt.sensors.pose.edit.action1"
+               label="Reset Position">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="ca.gc.space.mrt.sensors.pose.edit.OrientationSensoContribution"
+            objectClass="ca.gc.space.mrt.sensors.pose.OrientationSensor">
+         <action
+               class="ca.gc.space.mrt.sensors.pose.actions.ResetOrientationAction"
+               id="ca.gc.space.mrt.sensors.pose.edit.action2"
+               label="Reset Orientation">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

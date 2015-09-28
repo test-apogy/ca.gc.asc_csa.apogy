@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http:///ca/gc/asc_csa/io/las.ecore"
+            class="ca.gc.asc_csa.io.las.LasPackage"
+            genModel="model/las.genmodel"/>
+   </extension>
+
+</plugin>

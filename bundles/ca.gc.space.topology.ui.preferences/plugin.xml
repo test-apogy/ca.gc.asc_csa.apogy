@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.space.topology.ui.preferences.TopologyViewerPreferences">
+      </initializer>
+      <initializer
+            class="ca.gc.space.topology.ui.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="ca.gc.space.topology.ui.preferences.TopologyViewerPreferencesPage"
+            id="ca.gc.space.topology.ui.preferences.TopologyViewerPreferencesPage"
+            name="3D Topology Viewer">
+      </page>
+      <page
+            category="ca.gc.space.topology.ui.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.space.topology.ui.preferences.TopologyViewerLightingPreferencePage"
+            id="ca.gc.space.topology.ui.preferences.TopologyViewerLightingPreferencePage"
+            name="Lighting">
+      </page>
+   </extension>
+
+</plugin>

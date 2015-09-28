@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_IQaeMZ8MEd-a1LtkbZLA8A" type="EcoreTools" name="GPS" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_JOX7QJ8MEd-a1LtkbZLA8A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_JOZwcJ8MEd-a1LtkbZLA8A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_JOa-kJ8MEd-a1LtkbZLA8A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JOa-kZ8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JOa-kp8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JOa-k58MEd-a1LtkbZLA8A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JObloJ8MEd-a1LtkbZLA8A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JObloZ8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JOblop8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JOblo58MEd-a1LtkbZLA8A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_JOX7QZ8MEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GPS.ecore#//GPS"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JOX7Qp8MEd-a1LtkbZLA8A" x="176" y="231"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_gItwEJ8MEd-a1LtkbZLA8A" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_gIuXIJ8MEd-a1LtkbZLA8A" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_gIu-MJ8MEd-a1LtkbZLA8A" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_qxg6wJ8MEd-a1LtkbZLA8A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/INVALID"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_qxg6wZ8MEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="__u8JUZ_wEd-B_5OMPY78gw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/GPS_FIX"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="__u8JUp_wEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_KF4H8J_xEd-B_5OMPY78gw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/SIMULATION"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_KF4H8Z_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Ar6u8J_xEd-B_5OMPY78gw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/DGPS_FIX"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ar6u8Z_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Ci3CcJ_xEd-B_5OMPY78gw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/PPS_FIX"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ci3CcZ_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Euo9gJ_xEd-B_5OMPY78gw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/RTK"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Euo9gZ_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Fibx8J_xEd-B_5OMPY78gw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/FLOAT_RTK"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Fibx8Z_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_HqecgJ_xEd-B_5OMPY78gw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/ESTIMATED"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HqecgZ_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_JQeJ8J_xEd-B_5OMPY78gw" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/MANUAL_INPUT"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JQeJ8Z_xEd-B_5OMPY78gw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_gIu-MZ8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_gIu-Mp8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_gIu-M58MEd-a1LtkbZLA8A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_gItwEZ8MEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="GPS.ecore#//GPS_QUALITY"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gItwEp8MEd-a1LtkbZLA8A" x="561" y="22"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_1_nK4J8MEd-a1LtkbZLA8A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_1_nx8J8MEd-a1LtkbZLA8A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_1_nx8Z8MEd-a1LtkbZLA8A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_KbDUUJ8NEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSConnection/input"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_KbDUUZ8NEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_PVcKsJ8NEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSConnection/output"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_PVcKsZ8NEd-a1LtkbZLA8A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_1_nx8p8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_1_nx858MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_1_nx9J8MEd-a1LtkbZLA8A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_1_oZAJ8MEd-a1LtkbZLA8A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_1_oZAZ8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_1_oZAp8MEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_1_oZA58MEd-a1LtkbZLA8A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_1_nK4Z8MEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GPS.ecore#//GPSConnection"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1_nK4p8MEd-a1LtkbZLA8A" x="33" y="22"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_DvIO4J8NEd-a1LtkbZLA8A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_DvKEEJ8NEd-a1LtkbZLA8A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_DvKEEZ8NEd-a1LtkbZLA8A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_cIniQJ8NEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//SerialConnection/speed"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cIniQZ8NEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_vGz1IJ8OEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//SerialConnection/parity"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vGz1IZ8OEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_xNXR8J8OEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//SerialConnection/dataBits"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xNXR8Z8OEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_yxQtoJ8OEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//SerialConnection/stopBits"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yxQtoZ8OEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GOmQEJ8PEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//SerialConnection/flowControl"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GOmQEZ8PEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_PiZG8J8gEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//SerialConnection/serialPort"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_PiZG8Z8gEd-a1LtkbZLA8A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_DvKEEp8NEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_DvKEE58NEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_DvKEFJ8NEd-a1LtkbZLA8A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_DvKrIJ8NEd-a1LtkbZLA8A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_DvKrIZ8NEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_DvKrIp8NEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_DvKrI58NEd-a1LtkbZLA8A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_DvIO4Z8NEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GPS.ecore#//SerialConnection"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DvIO4p8NEd-a1LtkbZLA8A" x="-121" y="-143"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Itvd8J8NEd-a1LtkbZLA8A" type="1004">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ItxTIJ8NEd-a1LtkbZLA8A" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ItxTIZ8NEd-a1LtkbZLA8A" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_ItwsEJ8NEd-a1LtkbZLA8A" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_ItwsEZ8NEd-a1LtkbZLA8A" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Itvd8Z8NEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="platform:/plugin/ca.gc.space.java.emf/model/java.ecore#//InputStream"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Itvd8p8NEd-a1LtkbZLA8A" x="473" y="242"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Oq71IJ8NEd-a1LtkbZLA8A" type="1004">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OrBUsJ8NEd-a1LtkbZLA8A" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OrBUsZ8NEd-a1LtkbZLA8A" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_OrAtoJ8NEd-a1LtkbZLA8A" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_OrAtoZ8NEd-a1LtkbZLA8A" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Oq71IZ8NEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="platform:/plugin/ca.gc.space.java.emf/model/java.ecore#//OutputStream"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Oq71Ip8NEd-a1LtkbZLA8A" x="495" y="319"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_LZ9hsJ8PEd-a1LtkbZLA8A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_LZ-IwJ8PEd-a1LtkbZLA8A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_LZ-IwZ8PEd-a1LtkbZLA8A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_LZ-Iwp8PEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_LZ-Iw58PEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_LZ-IxJ8PEd-a1LtkbZLA8A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_LZ-IxZ8PEd-a1LtkbZLA8A" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_THLsEJ8PEd-a1LtkbZLA8A" type="2002">
+        <element xmi:type="ecore:EOperation" href="GPS.ecore#//GPSDataInterpreter/updateGPS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_THMTIJ8PEd-a1LtkbZLA8A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_LZ-Ixp8PEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_LZ-Ix58PEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_LZ-IyJ8PEd-a1LtkbZLA8A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_LZ9hsZ8PEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GPS.ecore#//GPSDataInterpreter"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LZ9hsp8PEd-a1LtkbZLA8A" x="286" y="22"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_87X7wJ8PEd-a1LtkbZLA8A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_87Yi0J8PEd-a1LtkbZLA8A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_87Yi0Z8PEd-a1LtkbZLA8A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_87Yi0p8PEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_87Yi058PEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_87Yi1J8PEd-a1LtkbZLA8A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_87Yi1Z8PEd-a1LtkbZLA8A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_87Yi1p8PEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_87Yi158PEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_87Yi2J8PEd-a1LtkbZLA8A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_87X7wZ8PEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GPS.ecore#//NMEAInterpreter"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_87X7wp8PEd-a1LtkbZLA8A" x="352" y="187"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_G2eyoJ8TEd-a1LtkbZLA8A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_G2fZsJ8TEd-a1LtkbZLA8A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_G2fZsZ8TEd-a1LtkbZLA8A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_IQBYcJ8TEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/latitude"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IQBYcZ8TEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_K2V6cJ8TEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/longitude"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_K2V6cZ8TEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_MideAJ8TEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/elevation"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_MideAZ8TEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Rq1GAJ8TEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/quality"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Rq1GAZ8TEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_xEpBgJ8TEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/timeStamp"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xEpokJ8TEd-a1LtkbZLA8A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_L6KwEJ_xEd-B_5OMPY78gw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/numberOfSatellites"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_L6KwEZ_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_RVhlgJ_xEd-B_5OMPY78gw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/horizontalDilutionPos"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RVhlgZ_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_VmV6cJ_xEd-B_5OMPY78gw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/meanSeaLevel"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_VmV6cZ_xEd-B_5OMPY78gw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ZCml8J_xEd-B_5OMPY78gw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSReading/checkSum"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZCml8Z_xEd-B_5OMPY78gw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_G2gAwJ8TEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_G2gAwZ8TEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_G2gAwp8TEd-a1LtkbZLA8A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_G2gAw58TEd-a1LtkbZLA8A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_G2gAxJ8TEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_G2gAxZ8TEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_G2gAxp8TEd-a1LtkbZLA8A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_G2eyoZ8TEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GPS.ecore#//GPSReading"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G2eyop8TEd-a1LtkbZLA8A" x="-99" y="220"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_zEDeEJ8fEd-a1LtkbZLA8A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_zEEFIJ8fEd-a1LtkbZLA8A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_zEEFIZ8fEd-a1LtkbZLA8A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_29Ng8J8fEd-a1LtkbZLA8A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//FileBasedConnection/fileName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_29Ng8Z8fEd-a1LtkbZLA8A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_zEEFIp8fEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_zEEFI58fEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_zEEFJJ8fEd-a1LtkbZLA8A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_zEEsMJ8fEd-a1LtkbZLA8A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_zEEsMZ8fEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_zEEsMp8fEd-a1LtkbZLA8A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_zEEsM58fEd-a1LtkbZLA8A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_zEDeEZ8fEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GPS.ecore#//FileBasedConnection"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zEDeEp8fEd-a1LtkbZLA8A" x="176" y="-44"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_aXoS8arYEd-B_-gTt006mg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_aXqIIKrYEd-B_-gTt006mg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_aXqIIarYEd-B_-gTt006mg" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_IFp68KrZEd-B_-gTt006mg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GPS.ecore#//GPSPoseSensor/EAttribute0"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IFp68arZEd-B_-gTt006mg"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_aXqIIqrYEd-B_-gTt006mg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_aXqII6rYEd-B_-gTt006mg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_aXqIJKrYEd-B_-gTt006mg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_aXqvMKrYEd-B_-gTt006mg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_aXqvMarYEd-B_-gTt006mg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_aXqvMqrYEd-B_-gTt006mg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_aXqvM6rYEd-B_-gTt006mg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_aXoS8qrYEd-B_-gTt006mg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GPS.ecore#//GPSPoseSensor"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aXoS86rYEd-B_-gTt006mg" x="220" y="396"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_f7gLMKrYEd-B_-gTt006mg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_f7hZVqrYEd-B_-gTt006mg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_f7hZV6rYEd-B_-gTt006mg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_f7gyQKrYEd-B_-gTt006mg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_f7gyQarYEd-B_-gTt006mg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_f7gyQqrYEd-B_-gTt006mg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_f7hZUKrYEd-B_-gTt006mg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_f7hZUarYEd-B_-gTt006mg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_f7hZUqrYEd-B_-gTt006mg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_f7hZU6rYEd-B_-gTt006mg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_f7hZVKrYEd-B_-gTt006mg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_f7hZVarYEd-B_-gTt006mg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_f7gLMarYEd-B_-gTt006mg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/plugin/ca.gc.space.mrt.sensors.pose/model/pose.ecore#//PoseSensor"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f7gLMqrYEd-B_-gTt006mg" x="572" y="407"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_IQbFQJ8MEd-a1LtkbZLA8A"/>
+  <element xmi:type="ecore:EPackage" href="GPS.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_4Wb4UJ8MEd-a1LtkbZLA8A" type="3002" source="_JOX7QJ8MEd-a1LtkbZLA8A" target="_1_nK4J8MEd-a1LtkbZLA8A">
+    <children xmi:type="notation:Node" xmi:id="_4WcfYJ8MEd-a1LtkbZLA8A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_4WcfYZ8MEd-a1LtkbZLA8A" x="-19" y="-31"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_4WdGcJ8MEd-a1LtkbZLA8A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_4WdGcZ8MEd-a1LtkbZLA8A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_4Wb4UZ8MEd-a1LtkbZLA8A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_4Wb4Up8MEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GPS.ecore#//GPS/connection"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4Wb4U58MEd-a1LtkbZLA8A" points="[35, 7, -154, -29]$[191, 28, 2, -8]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4W5yYJ8MEd-a1LtkbZLA8A" id="(0.7741935483870968,0.7647058823529411)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4W6ZcJ8MEd-a1LtkbZLA8A" id="(0.591304347826087,0.20930232558139536)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_GEp70J8NEd-a1LtkbZLA8A" type="3003" source="_DvIO4J8NEd-a1LtkbZLA8A" target="_1_nK4J8MEd-a1LtkbZLA8A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_GEp70Z8NEd-a1LtkbZLA8A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_GEp70p8NEd-a1LtkbZLA8A" fontName="Sans"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GEp7058NEd-a1LtkbZLA8A" points="[-21, -20, 72, 77]$[-151, -99, -58, -2]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_OsTcMJ8PEd-a1LtkbZLA8A" type="3002" source="_JOX7QJ8MEd-a1LtkbZLA8A" target="_LZ9hsJ8PEd-a1LtkbZLA8A">
+    <children xmi:type="notation:Node" xmi:id="_OsTcNJ8PEd-a1LtkbZLA8A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_OsTcNZ8PEd-a1LtkbZLA8A" x="23" y="39"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OsTcNp8PEd-a1LtkbZLA8A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_OsTcN58PEd-a1LtkbZLA8A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_OsTcMZ8PEd-a1LtkbZLA8A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_OsTcMp8PEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GPS.ecore#//GPS/dataInterpreter"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OsTcM58PEd-a1LtkbZLA8A" points="[2, 43, -125, 32]$[114, 10, -13, -1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZAawUJ8PEd-a1LtkbZLA8A" id="(0.9806451612903225,0.5784313725490197)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZAbXYJ8PEd-a1LtkbZLA8A" id="(0.09859154929577464,0.7254901960784313)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_XhSf4J8PEd-a1LtkbZLA8A" type="3002" source="_LZ9hsJ8PEd-a1LtkbZLA8A" target="_JOX7QJ8MEd-a1LtkbZLA8A">
+    <children xmi:type="notation:Node" xmi:id="_XhSf5J8PEd-a1LtkbZLA8A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_XhSf5Z8PEd-a1LtkbZLA8A" x="-1" y="-28"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_XhSf5p8PEd-a1LtkbZLA8A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_XhSf558PEd-a1LtkbZLA8A" x="-7" y="8"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_XhSf4Z8PEd-a1LtkbZLA8A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_XhSf4p8PEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GPS.ecore#//GPSDataInterpreter/gps"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XhSf458PEd-a1LtkbZLA8A" points="[-13, -1, 114, 10]$[-125, 32, 2, 43]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZAclgJ8PEd-a1LtkbZLA8A" id="(0.09859154929577464,0.7254901960784313)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZAclgZ8PEd-a1LtkbZLA8A" id="(0.9806451612903225,0.5784313725490197)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Aa9oEJ8QEd-a1LtkbZLA8A" type="3003" source="_87X7wJ8PEd-a1LtkbZLA8A" target="_LZ9hsJ8PEd-a1LtkbZLA8A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Aa9oEZ8QEd-a1LtkbZLA8A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Aa9oEp8QEd-a1LtkbZLA8A" fontName="Sans"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Aa9oE58QEd-a1LtkbZLA8A" points="[2, -20, -12, 119]$[-60, -139, -74, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WKiLgJ8TEd-a1LtkbZLA8A" type="3002" source="_JOX7QJ8MEd-a1LtkbZLA8A" target="_G2eyoJ8TEd-a1LtkbZLA8A">
+    <children xmi:type="notation:Node" xmi:id="_WKiLhJ8TEd-a1LtkbZLA8A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WKiLhZ8TEd-a1LtkbZLA8A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WKiLhp8TEd-a1LtkbZLA8A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_WKiLh58TEd-a1LtkbZLA8A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WKiLgZ8TEd-a1LtkbZLA8A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WKiLgp8TEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GPS.ecore#//GPS/reading"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WKiLg58TEd-a1LtkbZLA8A" points="[-1, 22, -18, -163]$[-30, 135, -47, -50]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WKjZoJ8TEd-a1LtkbZLA8A" id="(0.24509803921568626,0.46511627906976744)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2dZ_gJ8fEd-a1LtkbZLA8A" type="3003" source="_zEDeEJ8fEd-a1LtkbZLA8A" target="_1_nK4J8MEd-a1LtkbZLA8A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2dZ_gZ8fEd-a1LtkbZLA8A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2dZ_gp8fEd-a1LtkbZLA8A" fontName="Sans"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2dZ_g58fEd-a1LtkbZLA8A" points="[-3, -5, 87, 151]$[-88, -170, 2, -14]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2damkJ8fEd-a1LtkbZLA8A" id="(0.24183006535947713,0.13953488372093023)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2dbNoJ8fEd-a1LtkbZLA8A" id="(0.5780346820809249,0.22058823529411764)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_g-GQoKrYEd-B_-gTt006mg" type="3003" source="_aXoS8arYEd-B_-gTt006mg" target="_f7gLMKrYEd-B_-gTt006mg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_g-GQoarYEd-B_-gTt006mg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_g-GQoqrYEd-B_-gTt006mg" fontName="Sans"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_g-GQo6rYEd-B_-gTt006mg" points="[11, -15, -61, 82]$[70, -122, -2, -25]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_nXQLEKrYEd-B_-gTt006mg" type="3002" source="_aXoS8arYEd-B_-gTt006mg" target="_JOX7QJ8MEd-a1LtkbZLA8A">
+    <children xmi:type="notation:Node" xmi:id="_nXQyIKrYEd-B_-gTt006mg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nXQyIarYEd-B_-gTt006mg" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_nXQyIqrYEd-B_-gTt006mg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nXQyI6rYEd-B_-gTt006mg" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_nXQLEarYEd-B_-gTt006mg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nXQLEqrYEd-B_-gTt006mg" fontColor="4210752" fontName="Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GPS.ecore#//GPSPoseSensor/gps"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nXQLE6rYEd-B_-gTt006mg" points="[-2, -5, 41, 109]$[-60, -129, -17, -15]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nXSnUKrYEd-B_-gTt006mg" id="(0.5416666666666666,0.18604651162790697)"/>
+  </edges>
+</notation:Diagram>

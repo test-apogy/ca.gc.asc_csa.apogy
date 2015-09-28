@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocator:Type xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:invocator="ca.gc.asc_csa.eclipse.emf.ecore.invocator" name="SatelliteConstellationExample">
+  <interfaceClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite#//SatelliteConstellation"/>
+  <typeApiAdapterClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite#//SatelliteConstellationTypeApiAdapter"/>
+</invocator:Type>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui;singleton:=true
+Bundle-Version: 0.3.0.qualifier
+Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui.Activator
+Bundle-Vendor: %providerName
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite;bundle-version="0.3.0";visibility:=reexport
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui,
+ ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui.commands

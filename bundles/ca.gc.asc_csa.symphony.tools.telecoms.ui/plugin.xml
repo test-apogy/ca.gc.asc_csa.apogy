@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.asc_csa.symphony.core.ui.category"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.ui.views.TelecomStatusMonitorToolView"
+            id="ca.gc.asc_csa.symphony.tools.network.ui.views.NetworkStatusMonitorView"
+            name="Telecom Status Monitor View"
+            restorable="true">
+      </view>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_tools_telecoms_ui -->
+      <package
+            uri="ca.gc.asc_csa.symphony.tools.telecoms.ui"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.ui.SymphonyTelecomToolsUIPackage"
+            genModel="model/symphony_tools_telecoms_ui.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.asc_csa.symphony.tools.telecoms.ui.adapters.AbstractAntennaRadiationPatternAdapter">
+      </Class>
+   </extension>
+
+</plugin>

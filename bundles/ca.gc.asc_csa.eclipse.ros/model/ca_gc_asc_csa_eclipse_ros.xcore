@@ -1,0 +1,241 @@
+@GenModel(prefix="Ros", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false",copyrightText="Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)", modelName="Ros", suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.ros/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.ros.edit/src-generated")
+
+package ca.gc.asc_csa.eclipse.ros
+
+type ResponseLogger wraps ca.gc.asc_csa.eclipse.ros.utilities.ResponseLogger
+type NullResponseHandler wraps ca.gc.asc_csa.eclipse.ros.utilities.NullResponseHandler
+type NullRequestHandler wraps ca.gc.asc_csa.eclipse.ros.utilities.NullRequestHandler
+type ConnectedNode wraps org.ros.node.ConnectedNode
+type ServiceNotFoundException wraps org.ros.exception.ServiceNotFoundException
+type Message wraps org.ros.internal.message.Message
+type MessageListener<T> wraps org.ros.message.MessageListener
+type AbstractNodeMain wraps org.ros.node.AbstractNodeMain
+type ServiceClient<Request, Response> wraps org.ros.node.service.ServiceClient
+type Publisher<T> wraps org.ros.node.topic.Publisher
+type Subscriber<T> wraps org.ros.node.topic.Subscriber
+type Exception wraps java.lang.Exception
+type HashMap<Key,Value> wraps java.util.HashMap
+
+class RosNode
+{
+	@GenModel(documentation="Starts the ROS node")
+	op void start()
+	
+	op void initialize() throws Exception
+	
+	@GenModel(documentation="Event called when the node is connected to the ROS master <br><br>Start the subscriber handler and the service clients handler")
+	op void onStart(ConnectedNode connectedNode) 
+	
+	@GenModel(documentation="Resets the ROS connection")
+	op void restart ( )
+	
+	@GenModel(documentation="Registers and initializes a new module")
+	op void register ( RosInterface module, boolean initialize )
+	
+	@GenModel(documentation="Registers and initializes a new module")
+	op void register ( RosInterface module )
+	
+	@GenModel(documentation="Creates a new variable from a given type")
+	op <T> T newFromType(String messageType)
+	
+	@GenModel(documentation="Shuts down the ROS node")
+	op void shutdown ( )
+	
+	@GenModel(documentation="Creates a new publisher")
+	op <T> Publisher<T> createPublisher(String topicName, String messageType)
+	
+	@GenModel(documentation="Creates a new service manager")
+	op RosServiceManager createServiceManager ( )
+	
+	@GenModel(documentation="Creates a new topic launcher")
+	op RosTopicLauncher createTopicLauncher ( )
+	
+	@GenModel(documentation="Creates a new publisher manager")
+	op RosPublisherManager createPublisherManager ( )
+	
+	ConnectedNode connectedNode
+	
+	refers RosInterface[] modules
+	refers RosServiceManager[] serviceManagers
+	refers RosTopicLauncher[] topicLaunchers
+	refers RosPublisherManager[] publisherManagers
+	
+	@GenModel(documentation="Node initialized", property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	boolean initialized = "false"
+	
+	@GenModel(documentation="Node connected", property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	boolean connected = "false"
+	
+	@GenModel(documentation="Node restarting", property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	boolean restarting = "false"
+	
+	@GenModel(documentation="Enables auto restart of node on connection lost.", property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	boolean enableAutoRestartOnConnectionLost = "false"
+	
+	@GenModel(documentation="Node name", property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	String nodeName
+	
+	@GenModel(documentation="Strategy to log the new responses")
+	ResponseLogger responseLogger                  
+	
+	@GenModel(documentation="Strategy to handle null responses")
+	NullResponseHandler nullResponseHandler      
+	
+	@GenModel(documentation="Strategy to handle null requests")
+	NullRequestHandler nullRequestHandler          
+}
+
+interface RosInterface
+{
+	op void rosInit()
+	
+	@GenModel(documentation="Service Manager", property="Readonly", children="true", notify="true", propertyCategory="ROS_INTERFACE")
+	refers RosServiceManager serviceManager	
+	
+	@GenModel(documentation="Topic Launcher", property="Readonly", children="true", notify="true", propertyCategory="ROS_INTERFACE")
+	refers RosTopicLauncher topicLauncher
+	
+	@GenModel(documentation="Publisher Manager", property="Readonly", children="true", notify="true", propertyCategory="ROS_INTERFACE")
+	refers RosPublisherManager publisherManager
+	
+	@GenModel(documentation="ROS Node", property="Readonly", children="true", notify="true", propertyCategory="ROS_INTERFACE")
+	refers RosNode node	
+}
+
+class RosPublisherManager
+{
+	op void createPublisher(String topicName, String messageType)
+	op void launch()
+	op void stop ( )
+	op <T extends Message> T createMessage(String topicName)
+	op <T extends Message> void publish(String topicName, T message)
+	op <T extends Message> RosPublisher<T> getPublisher(String topicName)
+	
+	HashMap<String,RosPublisher<?>> publishers
+	
+	@GenModel(documentation="ROS Node", property="Readonly", children="true", notify="true", propertyCategory="ROS_PUBLISHER_MANAGER")
+	refers RosNode node
+	
+	@GenModel(documentation="Publisher Manager Running", property="Readonly", notify="true", propertyCategory="ROS_PUBLISHER_MANAGER")
+	boolean running
+}
+
+class RosPublisher<T extends Message>
+{
+	op void launch(RosNode node)
+	op void publish(T message)
+	op T newMessage()
+	op void stop()
+	
+	@GenModel(documentation="Publisher Manager Launched", property="Readonly", notify="true", propertyCategory="ROS_PUBLISHER")
+	readonly derived unsettable boolean launched
+	
+	String topicName
+	String messageType
+	Publisher<T> publisher
+	refers RosNode node
+}
+
+class RosServiceManager
+{
+	op void createService(String serviceName, String serviceType)
+	op void createService(String serviceName, String serviceType, boolean disconnectOnTimeout)
+	op <Request extends Message, Response extends Message> RosService<Request, Response> getService(String serviceName)
+	op <Request extends Message, Response extends Message> Request createRequestMessage(String serviceName)
+	op <Request extends Message, Response extends Message> Response callService(String serviceName, Request request)
+	op <Request extends Message, Response extends Message> Response callService(String serviceName)
+	
+	op <Request extends Message, Response extends Message> Response callService(String serviceName, Request request, boolean enableLogging)
+	op <Request extends Message, Response extends Message> Response callService(String serviceName, boolean enableLogging)
+	
+	op void launch()
+	op void stop ( )
+	
+	HashMap<String,RosService<?,?>> services
+	
+	@GenModel(documentation="ROS Node", property="Readonly", children="true", notify="true", propertyCategory="ROS_SERVICE_MANAGER")
+	refers RosNode node	
+	
+	@GenModel(documentation="Publisher Manager Running", property="Readonly", notify="true", propertyCategory="ROS_SERVICE_MANAGER")
+	boolean running
+}
+
+class RosService<Request extends Message, Response extends Message>
+{
+	op void launch(RosNode node) throws ServiceNotFoundException
+	op void stop ( )
+	op Request newRequestMessage()
+	op Response call(Request request)
+	op Response call(Request request, boolean enableLogging)
+	
+	String serviceName
+	String serviceType
+	boolean launched = "false"
+	ServiceClient<Request, Response> serviceClient
+	refers RosNode node
+	boolean disconnectOnTimeout
+}
+
+class RosTopicLauncher
+{
+	op <M extends Message> void createListener(String topicName, String messageType, MessageListener<M> messageListener)
+	op void launch()
+	op void stop ( )
+	op void reset()
+	
+	refers RosListener<?>[] listenerList
+			
+	@GenModel(documentation="ROS Node", property="Readonly", children="true", notify="true", propertyCategory="ROS_TOPIC_LAUNCHER")
+	refers RosNode node
+	
+	@GenModel(documentation="Topic Manager Running", property="Readonly", notify="true", propertyCategory="ROS_TOPIC_LAUNCHER")
+	boolean running	
+	
+}
+
+class RosListener<T extends Message>
+{
+	@GenModel(documentation="Start the subscriber <br>\nNote : needed to lock because of a bug on Windows =( <br>\nThe bug was that the program couldn't start multiple subscribers at once.")
+	op boolean startWithLocks(RosNode node) throws Exception
+	@GenModel(documentation="Start the subscriber <br>\nNote : For Linux there's no need to lock, subscribers can subscribe at the same time")
+	op void start(RosNode node) throws Exception
+	op void connectSubscriber(ConnectedNode connectedNode)
+	op void stop()
+	
+	boolean running
+	refers RosNode node
+	Subscriber<T> rosSubscriber
+	String topicName
+	String messageType
+	MessageListener<T> messageListener
+}
+
+class RosFacade
+{
+	/*
+	 * Returns a prefix for a Node name (typically used for client node) that contains the user and machine name.
+	 * @return The node name prefix.
+	 */
+	op String getNodeNamePrefix()
+	
+	/**
+	 * Returns the ROS Master URI value.
+	 * @return The ROS_MASTER_URI environment variable value.
+	 */
+	op String getROSMasterURI()
+	
+	/**
+	 * Returns the ROS Host Name value.
+	 * @return The ROS_HOSTNAME environment variable value.
+	 */
+	op String getROSHostname()
+	
+	/**
+	 * Returns the ROS IP value.
+	 * @return The ROS_IP environment variable value.
+	 */
+	op String getROSIp()
+}
+

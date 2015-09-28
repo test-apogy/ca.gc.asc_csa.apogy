@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2007.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:49:52 pallard Exp $
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging -->
+      <factory
+            uri="ca.gc.space.mrt.sensors.imaging"
+            class="ca.gc.space.mrt.sensors.imaging.provider.MRTSensorsImagingItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging -->
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.space.mrt.sensors.imaging.provider.MRTSensorsImagingItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+   </extension>
+</plugin>

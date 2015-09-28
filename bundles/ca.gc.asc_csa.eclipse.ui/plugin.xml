@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.eclipse.ui.property.category.Advanced"
+               id="ca.gc.asc_csa.eclipse.ui.property.tab.Advanced"
+               label="Advanced">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyCategory
+               category="ca.gc.asc_csa.eclipse.ui.property.category.Advanced"></propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertySection
+               class="ca.gc.asc_csa.eclipse.ui.properties.sections.AdvancedPropertySection"
+               id="ca.gc.asc_csa.eclipse.ui.property.section.Advanced"
+               tab="ca.gc.asc_csa.eclipse.ui.property.tab.Advanced">
+            <input
+                  type="java.lang.Object">
+            </input>
+         </propertySection>
+      </propertySections>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="ca.gc.asc_csa.eclipse.ui.category"
+            name="ASC/CSA Eclipse Toolbox">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester"
+            id="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester"
+            namespace="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester"
+            properties="activeSection"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+
+</plugin>

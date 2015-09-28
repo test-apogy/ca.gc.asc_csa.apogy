@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore,org.ecl
+ ipse.xtext.xbase.lib,org.eclipse.emf.ecore.xcore.lib,javax.vecmath;vi
+ sibility:=reexport;bundle-version="1.5.2"
+Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm,c
+ a.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.impl,ca.gc.asc_cs
+ a.eclipse.emf.ecore.examples.robotic_arm.util
+Bundle-Vendor: %providerName
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-Version: 0.2.0.201401221941
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_
+ arm;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

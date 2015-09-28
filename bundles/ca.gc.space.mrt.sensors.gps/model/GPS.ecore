@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gps" nsURI="http:///ca/gc/space/mrt/sensors/gps.ecore" nsPrefix="gps">
+  <eClassifiers xsi:type="ecore:EClass" name="GPS">
+    <eOperations name="start">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Starts the GPS.&#xA;The gps starts acquiring data."/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="stop">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Stops the acquisition process."/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="reset">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Resets the GPS:&#xA;&lt;ul>&#xA;&lt;li>lastFailure is set to &lt;code>null&lt;/code>&lt;/li>&#xA;&lt;li>status is set to GPS_STATUS.STOPPED&lt;/li>&#xA;&lt;/ul>"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="reconnect" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Resets the GPS:&#xA;&lt;ul>&#xA;&lt;li>lastFailure is set to &lt;code>null&lt;/code>&lt;/li>&#xA;&lt;li>status is set to GPS_STATUS.STOPPED&lt;/li>&#xA;&lt;/ul>"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" lowerBound="1"
+        eType="#//GPSConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataInterpreter" eType="#//GPSDataInterpreter"
+        containment="true" eOpposite="#//GPSDataInterpreter/gps"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reading" eType="#//GPSReading"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Gets the latest gps reading.  This call is not blocking.&#xA;Returns &lt;code>null&lt;/code> if no reading is yet available.&#xA;If the gps's state is 'STOPPED' when this method is called, a call to 'start()' is first made."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//GPS_STATUS"
+        transient="true" defaultValueLiteral="STOPPED"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateRate" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//ELong">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The desired update rate at which we want to acquire data.&#xA;This can be useful when parsing from a file to simulate the real gps behavior."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastFailure" eType="ecore:EDataType platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Exception"
+        transient="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When the GPS falls into FAILED state, this attribute is set."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxReconnectTime" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"
+        defaultValueLiteral="10000">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Maximum time allowed to reconnect the GPS, in milliseconds.&#xA;After that time, the GPS fals into 'FAILED' state."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedKnots" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Current speed in knots.&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedKmh" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Current speed in KM/h."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GPS_QUALITY">
+    <eLiterals name="GPS_FIX" value="1"/>
+    <eLiterals name="INVALID" literal="INVALID"/>
+    <eLiterals name="DGPS_FIX" value="2"/>
+    <eLiterals name="PPS_FIX" value="3"/>
+    <eLiterals name="RTK" value="4"/>
+    <eLiterals name="FLOAT_RTK" value="5"/>
+    <eLiterals name="ESTIMATED" value="6"/>
+    <eLiterals name="MANUAL_INPUT" value="7"/>
+    <eLiterals name="SIMULATION" value="8"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPSConnection" abstract="true" interface="true">
+    <eOperations name="reset" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//IOException">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Resets the connection: closesand opens the connection again.&#xA;Once this method completes, new 'input' and 'output' objects are available."/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" lowerBound="1" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//InputStream"
+        changeable="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="output" lowerBound="1"
+        eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//OutputStream"
+        changeable="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPSDataInterpreter" abstract="true"
+      interface="true">
+    <eOperations name="updateGPS" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//IOException">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Updates the GPS's value according to interpreted values.&#xA;&lt;ul>&#xA;&lt;li>Reads data from the GPS connexion&lt;/li>&#xA;&lt;li>Interprete the data&lt;/li>&#xA;&lt;li>Update the GPS's internal values accordingly&lt;/li>&#xA;&lt;/ul>"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gps" eType="#//GPS" eOpposite="#//GPS/dataInterpreter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPSReading">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elevation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quality" eType="#//GPS_QUALITY"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeStamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSatellites" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="horizontalDilutionPos"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="meanSeaLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkSum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPSPoseSensor" eSuperTypes="platform:/plugin/ca.gc.space.mrt.sensors.pose/model/pose.ecore#//PoseSensor platform:/plugin/ca.gc.space.mrt.common/model/mrt_common.ecore#//Server">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gps" lowerBound="1" upperBound="3"
+        eType="#//MarkedGPS" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originLatitude" lowerBound="1"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="45.518206644445">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is the origin frame's latitude.  The default value is set to &quot;45.518206622222222&quot;, which is the MET's origin value."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originLongitude" lowerBound="1"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="-73.393904468182">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is the origin frame's longitude.  The default value is set to &quot;73.3939031444445&quot;, which is the value which is the MET's origin value."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="neAngle" lowerBound="1"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="0.5940676">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The angle, in radians, between the Noth East frame (z rotation).&#xA;Default value is &quot;0.553858844&quot;, which is the value used for the MET."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originElevation" lowerBound="1"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="33.0985"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxInitTime" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//ELong"
+        defaultValueLiteral="10000">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="While in the initialization stage, maxInitTime is the maximum time we can wait for a valid gps reading.&#xA;The value is in milliseconds and its default value is 10 000 ms (10 seconds)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPSFacade">
+    <eOperations name="createGPSPoseSensor" eType="#//GPSPoseSensor">
+      <eParameters name="originLatitude" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+      <eParameters name="originLongitude" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="createMarkedGPS" eType="#//MarkedGPS">
+      <eParameters name="marker" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//PositionMarker"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkedGPS" eSuperTypes="#//GPS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marker" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//PositionMarker"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GPS_STATUS">
+    <eLiterals name="RUNNING" value="1"/>
+    <eLiterals name="STOPPED"/>
+    <eLiterals name="FAILED" value="2"/>
+    <eLiterals name="RECONNECTING" value="3"/>
+    <eLiterals name="CONNECTING" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPSRepository" abstract="true" interface="true">
+    <eOperations name="scanForDevices"/>
+    <eOperations name="getGPSById" eType="#//GPS">
+      <eParameters name="id" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gpsDevices" upperBound="-1"
+        eType="#//GPS"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,271 @@
+@GenModel(prefix="EMFEcoreExampleMobilePlatform",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
+		  modelName="EMFEcoreExampleMobilePlatform",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit/src-generated")
+
+package ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Disposable 
+
+/*
+ * This class is used to represent a position of a particular object
+ * in space.  In particular, this provides both a Cartesian coordinate
+ * location as well as an angle corresponding to the object's pose.
+ */
+class Position
+{
+	/* 
+	 * This is the position's X coordinate (given in metres)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  csa_units="m")
+	double x = "0.0"
+	
+	/*
+	 * This is the position's Y coordinate (given in metres)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  csa_units="m")
+	double y = "0.0"
+	
+	/*
+	 * This is the pose angle (in radians) of an object, which
+	 * specifies a rotation around the Z axis.  
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  csa_units="rad")
+	double theta = "0.0"
+}
+
+/*
+ * This class is used to represent a named variety of position
+ */
+class NamedPosition extends Position
+{
+	/*
+	 * The name associated with this set of Cartesian coordinates and pose angle.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly")
+	String name = ""
+}
+
+/*
+ * This is an abstract class which represents a mobile platform, a
+ * wheeled robotic vehicle that like the name suggests, can move around
+ * the ground.  As such, this class provides all of the fields
+ * and operations in order to facilitate that.
+ */
+abstract class MobilePlatform extends Disposable
+{
+	/*
+	 * This is whether or not the mobile platform has
+	 * been initialized; initially false.
+	 * @see #init()
+	 */
+ 	@GenModel(children="false",
+			  property="Readonly",
+			  propertyCategory="Status")
+	boolean initialized = "false" 
+
+	/*
+	 * This is whether or not the mobile platform has
+	 * been disposed; initially false.
+	 * @see #dispose()
+	 */
+	 @GenModel(children="false",
+			  property="Readonly",
+			  propertyCategory="Status")
+	 boolean disposed = "false"
+
+	/*
+	 * This is the mobile platform's current estimate of the error
+	 * in its position (given in metres.)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Position",
+			  csa_units="m")
+	double positionError = "0.0"
+	
+	/* 
+	 * This is the mobile platform's current linear velocity
+	 * (in metres per second)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Velocities",
+			  csa_units="m/s")
+	double linearVelocity = "0.0"
+	
+	/* 
+	 * This is the mobile platform's current angular velocity
+	 * (in radians per second).
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Velocities",
+			  csa_units="rad/s")	
+	double angularVelocity = "0.0"
+	
+	/* 
+	 * This is the current angular position (in radians) of
+	 * the mobile platform's left wheels.
+	 */	
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Position",
+			  csa_units="rad")	
+	double leftWheelPosition = "0.0"
+
+	/*
+	 * This is the current angular position (in radians) of
+	 * the mobile platform's right wheels.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Position",
+			  csa_units="rad")
+	double rightWheelPosition = "0.0"
+
+	/* 
+	 * This is the mobile platform's current position
+	 */
+	@GenModel(notify="true",
+			  propertyCategory="Position")
+	refers transient Position[1] position
+
+	/*
+	 * This operation is used to initialize the mobile platform
+	 * and as such, it will perform the required creation and
+	 * initialization steps.
+	 * 
+	 * @return Whether or not the mobile platform was successfully initialized
+	 */
+	op boolean init()
+
+	/*
+	 * This operation is used to change the mobile platform to
+	 * have the coordinates and pose matching the given position.
+	 * That new position will be considered the new starting place
+	 * for the mobile platform and as such, the accumulated error will
+	 * be cleared; all error will be relative to that new position.
+	 * 
+	 * @param position The mobile platform's new desired position
+	 */
+	op void resetPosition(Position position)
+	
+	/*
+	 * This operation is used to clear the mobile platform's positional
+	 * error; this could be used to indicate that all error should now
+	 * be taken in respect to the robot's current position.
+	 */
+	op void clearPositionError()
+	
+	/*
+	 * This operation is used to stop the mobile platform, if it is 
+	 * currently moving.
+	 */
+	op void stop()
+	
+	/*
+	 * This operation is used move the mobile platform to the
+	 * specified coordinates.
+	 * 
+	 * @param x This is the mobile platform's desired X coordinate.
+	 * @param y This is the mobile platform's desired Y coordinate.
+	 */
+	op void moveTo(@GenModel(csa_units="m") double x,
+				   @GenModel(csa_units="m") double y)
+
+	/*
+	 * This operation is used to change the mobile platform's linear
+	 * velocity (in metres per second) to the specified value.
+	 * <p>
+	 * Note: Unlike the traditional definition of linear velocity as a vector,
+	 * this is simply a signed scalar; a positive value indicates the speed
+	 * forward while a negative value is the speed backwards.  Zero means there
+	 * is no movement.
+	 * 
+	 * @param linearVelocity The mobile platform's new linear velocity (in m/s)
+	 * @see #cmdVelocities(double, double)
+	 */
+	op void cmdLinearVelocity(@GenModel(csa_units="m/s") double linearVelocity)
+	
+	/*
+	 * This operation is used to change the mobile platform's angular
+	 * velocity (in radians per second) to the specified value.
+	 * <p>
+	 * Note: Unlike the traditional definition of angular velocity as a vector,
+	 * this is simply a signed scalar; a positive value is the rotation in the
+	 * clockwise direction while a negative value implies the rotation is in the
+	 * counter-clockwise direction.  Zero means there is no rotation.
+	 * 
+	 * @param angularVelocity The mobile platform's new angular velocity (in rad/s)
+	 * @see #cmdVelocities(double, double)
+	 */
+	op void cmdAngularVelocity(@GenModel(csa_units="rad/s") double angularVelocity)
+
+	/*
+	 * The operation is used to change the mobile platform's linear and
+	 * angular velocities, which are in metres / second and radians / second,
+	 * respectively.
+	 * <p>
+	 * Note 1: Unlike the traditional definition of linear velocity as a vector,
+	 * this is simply a signed scalar; a positive value indicates the speed
+	 * forward while a negative value is the speed backwards.  Zero means there
+	 * is no movement.
+	 * <p>
+	 * Note 2: Unlike the traditional definition of angular velocity as a vector,
+	 * this is simply a signed scalar; a positive value is the rotation in the
+	 * clockwise direction while a negative value implies the rotation is in the
+	 * counter-clockwise direction.  Zero means there is no rotation.
+	 * 
+	 * @param linearVelocity The commanded linear velocity.
+	 * @param angularVelocity The commanded angular velocity.
+	 * @see #cmdLinearVelocity(double)
+	 * @see #cmdAngularVelocity(double)
+	 */
+	op void cmdVelocities(@GenModel(csa_units="m/s") double linearVelocity,
+					      @GenModel(csa_units="rad/s") double angularVelocity)
+}
+
+/* 
+ * This is a specific implementation of the mobile platform, in which
+ * all operations are stubs and hence, non-functional; the operations
+ * should simply log a message, indicating that they were performed.
+ */
+class MobilePlatformStub extends MobilePlatform
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.impl.MobilePlatformStubImpl}
+	 */
+}
+
+/*
+ * This is a simulated implementation of the mobile platform, where all
+ * operations are executed upon a simulated (i.e. virtual) platform.  While
+ * there are no physical components interacted with, it attempts to emulate,
+ * wherever possible, the actions and results of its real world counterpart(s).
+ */
+class MobilePlatformSimulated extends MobilePlatform
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.impl.MobilePlatformSimulatedImpl}
+	 */
+}

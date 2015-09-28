@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ca.gc.asc_csa.eclipse.converters.tests;singleton:=true
+Bundle-Version: 0.3.0.qualifier
+Bundle-Activator: ca.gc.asc_csa.eclipse.converters.tests.Activator
+Bundle-Vendor: %pluginProvider
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.junit,
+ ca.gc.asc_csa.eclipse.converters,
+ org.jgrapht;bundle-version="0.8.2"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: ca.gc.asc_csa.eclipse.converters.tests,
+ ca.gc.asc_csa.eclipse.converters.tests.converters,
+ ca.gc.asc_csa.eclipse.converters.tests.types

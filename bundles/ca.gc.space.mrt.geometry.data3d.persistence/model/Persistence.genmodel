@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ca.gc.space.mrt.geometry.data3d.persistence/src"
+    modelPluginID="ca.gc.space.mrt.geometry.data3d.persistence" modelName="Persistence"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.genmodel#//data3d platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.genmodel#//processors platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.genmodel#//data">
+  <foreignModel>Persistence.ecore</foreignModel>
+  <genPackages prefix="Persistence" basePackage="ca.gc.space.mrt.geometry.data3d"
+      disposableProviderFactory="true" ecorePackage="Persistence.ecore#/">
+    <genClasses image="false" ecoreClass="Persistence.ecore#//CartesianCoordinatesSetSource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Persistence.ecore#//CartesianCoordinatesSetSource/dataSet"/>
+    </genClasses>
+    <genClasses ecoreClass="Persistence.ecore#//MemoryCartesianCoordinatesSetSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Persistence.ecore#//MemoryCartesianCoordinatesSetSource/internalDataSet"/>
+    </genClasses>
+    <genClasses ecoreClass="Persistence.ecore#//FileCartesianCoordinatesSetSource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Persistence.ecore#//FileCartesianCoordinatesSetSource/fileName"/>
+    </genClasses>
+    <genClasses ecoreClass="Persistence.ecore#//PersistenceFacade">
+      <genOperations ecoreOperation="Persistence.ecore#//PersistenceFacade/createFileCartesianCoordinatesSetSource">
+        <genParameters ecoreParameter="Persistence.ecore#//PersistenceFacade/createFileCartesianCoordinatesSetSource/fileName"/>
+      </genOperations>
+      <genOperations ecoreOperation="Persistence.ecore#//PersistenceFacade/createMemoryCoordinatesSetSource">
+        <genParameters ecoreParameter="Persistence.ecore#//PersistenceFacade/createMemoryCoordinatesSetSource/dataSet"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

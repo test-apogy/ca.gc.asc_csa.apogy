@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ca.gc.space.topology:NodePresentation xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ca.gc.space.topology="http:///ca/gc/space/topology/ui.ecore" xsi:schemaLocation="http:///ca/gc/space/topology/ui.ecore TopologyUi.ecore"/>

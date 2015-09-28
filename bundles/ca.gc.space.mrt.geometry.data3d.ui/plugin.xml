@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.geometry.data3d.ui.adapters.CartesianCoordinatMeshNodePresentationAdapter">
+      </Class>
+   </extension> 
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.geometry.data3d.ui.adapters.TriangularMeshPresentationAdapter">
+      </Class>
+   </extension> 
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Saves a CartesianCoordinates To File."
+            id="ca.gc.space.mrt.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand"
+            name="Save CartesianCoordinates To File">
+      </command>
+      <command
+            description="Saves a Triangular Mesh To File."
+            id="ca.gc.space.mrt.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommandHandler"
+            name="Save Mesh To File">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.space.mrt.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand"
+               label="Export Points To File"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.space.mrt.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand"
+               label="Export Mesh To File"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.space.mrt.geometry.data3d.ui.preferences.MRTData3DUIPreferencesInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.space.mrt.geometry.data3d.ui.preferences.MRTData3DUIPreferencesPage"
+            id="ca.gc.space.mrt.geometry.data3d.ui.page3"
+            name="Mesh And Point Clouds">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="ca.gc.space.mrt.geometry.data3d.ui.commands.CartesianCoordinatesSetPropertyTester"
+            id="ca.gc.space.mrt.geometry.data3d.ui.CartesianCoordinatesSetPropertyTester"
+            namespace="ca.gc.space.mrt.geometry.data3d.ui"
+            properties="pointsNotEmpty"
+            type="ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet">
+      </propertyTester>
+      <propertyTester
+            class="ca.gc.space.mrt.geometry.data3d.ui.commands.CartesianTriangularMeshPropertyTester"
+            id="ca.gc.space.mrt.geometry.data3d.ui.commands.CartesianTriangularMeshPropertyTester"
+            namespace="ca.gc.space.mrt.geometry.data3d.ui"
+            properties="pointsNotEmpty,trianglesNotEmpty"
+            type="ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh">
+      </propertyTester>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="ca.gc.space.mrt.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommandHandler"
+            commandId="ca.gc.space.mrt.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand">
+         <enabledWhen>
+            <with
+                  variable="activeMenuSelection">
+               <iterate
+                	 ifEmpty="false"
+                     operator="and">
+                  <test
+                       forcePluginActivation="true"
+                       property="ca.gc.space.mrt.geometry.data3d.ui.pointsNotEmpty">
+                  </test>
+               </iterate>
+            </with>
+         </enabledWhen>
+      </handler>
+      <handler
+            class="ca.gc.space.mrt.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommandHandler"
+            commandId="ca.gc.space.mrt.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand">
+         <enabledWhen>
+            <with
+                  variable="activeMenuSelection">
+               <iterate
+                     ifEmpty="false"
+                     operator="and">
+                  <test
+                       forcePluginActivation="true"
+                       property="ca.gc.space.mrt.geometry.data3d.ui.trianglesNotEmpty">
+                  </test>
+               </iterate>
+            </with>
+         </enabledWhen>
+      </handler>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mrt_data3d_ui -->
+      <package
+            uri="ca.gc.space.mrt.geometry.data3d.ui"
+            class="ca.gc.space.mrt.geometry.data3d.ui.Data3DUIPackage"
+            genModel="model/mrt_data3d_ui.xcore"/>
+   </extension>
+
+</plugin>

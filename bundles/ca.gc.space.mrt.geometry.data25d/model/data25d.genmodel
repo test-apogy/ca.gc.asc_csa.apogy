@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Canadian Space Agency 2007." modelDirectory="/ca.gc.space.mrt.geometry.data25d/src"
+    modelPluginID="ca.gc.space.mrt.geometry.data25d" modelName="Data25d" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" usedGenPackages="platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.genmodel#//data3d platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.genmodel#//processors platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.genmodel#//data"
+    operationReflection="true">
+  <foreignModel>data25d.ecore</foreignModel>
+  <genPackages prefix="Data25d" basePackage="ca.gc.space.mrt.geometry" disposableProviderFactory="true"
+      ecorePackage="data25d.ecore#/">
+    <genClasses ecoreClass="data25d.ecore#//Coordinates25D">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data25d.ecore#//Coordinates25D/u"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data25d.ecore#//Coordinates25D/v"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data25d.ecore#//Coordinates25D/w"/>
+    </genClasses>
+    <genClasses ecoreClass="data25d.ecore#//CoordinatesSet25D">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute data25d.ecore#//CoordinatesSet25D/enforceUniqueness"/>
+    </genClasses>
+    <genClasses ecoreClass="data25d.ecore#//Polygon25D"/>
+    <genClasses ecoreClass="data25d.ecore#//Mesh25D"/>
+    <genClasses ecoreClass="data25d.ecore#//VolumetricCoordinatesSet25D">
+      <genOperations ecoreOperation="data25d.ecore#//VolumetricCoordinatesSet25D/getCartesianPositionCoordinates">
+        <genParameters ecoreParameter="data25d.ecore#//VolumetricCoordinatesSet25D/getCartesianPositionCoordinates/coordinates"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="data25d.ecore#//VolumetricMesh25D"/>
+    <genClasses ecoreClass="data25d.ecore#//DataFacade">
+      <genOperations ecoreOperation="data25d.ecore#//DataFacade/createCoordinates25D">
+        <genParameters ecoreParameter="data25d.ecore#//DataFacade/createCoordinates25D/coordinates25D"/>
+      </genOperations>
+      <genOperations ecoreOperation="data25d.ecore#//DataFacade/createCoordinates25D.1">
+        <genParameters ecoreParameter="data25d.ecore#//DataFacade/createCoordinates25D.1/u"/>
+        <genParameters ecoreParameter="data25d.ecore#//DataFacade/createCoordinates25D.1/v"/>
+        <genParameters ecoreParameter="data25d.ecore#//DataFacade/createCoordinates25D.1/w"/>
+      </genOperations>
+      <genOperations ecoreOperation="data25d.ecore#//DataFacade/createCartesianCoordinatesSet">
+        <genParameters ecoreParameter="data25d.ecore#//DataFacade/createCartesianCoordinatesSet/volumetricCoordinatesSet25D"/>
+        <genTypeParameters ecoreTypeParameter="data25d.ecore#//DataFacade/createCartesianCoordinatesSet/T"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="data25d.ecore#//CoordinatesSet25DFilter">
+      <genTypeParameters ecoreTypeParameter="data25d.ecore#//CoordinatesSet25DFilter/T"/>
+      <genOperations ecoreOperation="data25d.ecore#//CoordinatesSet25DFilter/createCoordinatesSet25D"/>
+    </genClasses>
+    <genClasses ecoreClass="data25d.ecore#//Data25DIO">
+      <genOperations ecoreOperation="data25d.ecore#//Data25DIO/saveXYZ">
+        <genParameters ecoreParameter="data25d.ecore#//Data25DIO/saveXYZ/points"/>
+        <genParameters ecoreParameter="data25d.ecore#//Data25DIO/saveXYZ/fileName"/>
+      </genOperations>
+      <genOperations ecoreOperation="data25d.ecore#//Data25DIO/loadXYZ">
+        <genParameters ecoreParameter="data25d.ecore#//Data25DIO/loadXYZ/fileName"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

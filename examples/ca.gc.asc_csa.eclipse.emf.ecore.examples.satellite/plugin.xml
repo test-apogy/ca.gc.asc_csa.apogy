@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emf_ecore_examples_satellite -->
+      <package
+            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite"
+            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.EMFEcoreExampleSatellitePackage"
+            genModel="model/emf_ecore_examples_satellite.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">
+      <Type
+            URI="model/SatelliteConstellationExample.ei">
+      </Type>
+   </extension>
+
+</plugin>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="graph" nsURI="http:///ca/gc/space/mrt/pathplanners/graph/pathplannersgraph.ecore"
+    nsPrefix="ca.gc.space.mrt.pathplanners">
+  <eClassifiers xsi:type="ecore:EClass" name="CostBasedMeshWayPointPathPlanner">
+    <eTypeParameters name="PolygonType">
+      <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="costFunctions" upperBound="-1"
+        eType="#//DisplacementCostFunction" containment="true"/>
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility.pathplanners/model/pathplanners.ecore#//MeshWayPointPathPlanner">
+      <eTypeArguments eTypeParameter="#//CostBasedMeshWayPointPathPlanner/PolygonType"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeshDisplacementCostFunction" eSuperTypes="#//DisplacementCostFunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="planner">
+      <eGenericType eClassifier="#//CostBasedMeshWayPointPathPlanner">
+        <eTypeArguments>
+          <eUpperBound eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+        </eTypeArguments>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DistanceOnlyCostFunction" eSuperTypes="#//MeshDisplacementCostFunction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner">
+    <eTypeParameters name="PolygonType">
+      <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="simpleDirectedWeightedGraph"
+        eType="#//SimpleDirectedWeightedGraph" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enablePathSimplification"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="robotWidthForPathSimplication"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="0.5"/>
+    <eGenericSuperTypes eClassifier="#//CostBasedMeshWayPointPathPlanner">
+      <eTypeArguments eTypeParameter="#//SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner/PolygonType"/>
+    </eGenericSuperTypes>
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//VerboseProvider"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SimpleDirectedWeightedGraph" instanceClassName="org.jgrapht.graph.SimpleDirectedWeightedGraph"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DirectedGraphBasedMeshWayPointPathPlanner">
+    <eTypeParameters name="PolygonType">
+      <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="directedGraph" eType="#//DirectedGraph"
+        transient="true" unsettable="true"/>
+    <eGenericSuperTypes eClassifier="#//CostBasedMeshWayPointPathPlanner">
+      <eTypeArguments eTypeParameter="#//DirectedGraphBasedMeshWayPointPathPlanner/PolygonType"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DirectedGraph" instanceClassName="org.jgrapht.DirectedGraph"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EdgeFactory" instanceClassName="org.jgrapht.EdgeFactory"
+      abstract="true" interface="true">
+    <eTypeParameters name="V"/>
+    <eTypeParameters name="E"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobilityEdge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="costFunctions" upperBound="-1"
+        eType="#//DisplacementCostFunction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MobilityEdgeFactory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="costFunctions" upperBound="-1"
+        eType="#//DisplacementCostFunction"/>
+    <eGenericSuperTypes eClassifier="#//EdgeFactory">
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+      <eTypeArguments eClassifier="#//MobilityEdge"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DistanceAndSlopesCostFunction" eSuperTypes="#//MeshDisplacementCostFunction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upSlopeCostFactor" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="downSlopeCostFactor" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gravityAxis" eType="ecore:EEnum platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianAxis"
+        defaultValueLiteral="Z"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumUpSlope" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="0.33"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumDownSlope" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="0.33"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExclusionZonesCostFunction" eSuperTypes="#//DisplacementCostFunction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exclusionZones" upperBound="-1"
+        eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility.pathplanners/model/pathplanners.ecore#//ExclusionZone"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DisplacementCostFunction" abstract="true">
+    <eOperations name="getCost" lowerBound="1" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">
+      <eParameters name="from" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+      <eParameters name="to" lowerBound="1" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPolygon"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DistanceAndRoverFootprintCostFunction"
+      eSuperTypes="#//DistanceAndSlopesCostFunction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roverFootPrintRadius" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="0.5"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumRoughness" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="0.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumCrossSlope" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
+        defaultValueLiteral="0.488"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Export-Package: ca.gc.space.math.ui.provider
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.core.runtime,ca.gc.space.math.ui;visibilit
+ y:=reexport,org.eclipse.emf.edit;visibility:=reexport,ca.gc.asc_csa.e
+ clipse.emf.ecore;visibility:=reexport,ca.gc.asc_csa.eclipse.emf.ecore
+ .edit;visibility:=reexport,ca.gc.asc_csa.eclipse.emf.ecore.invocator.
+ display;visibility:=reexport,ca.gc.asc_csa.eclipse.emf.ecore.invocato
+ r.display.edit;visibility:=reexport,org.eclipse.emf.ecore;visibility:
+ =reexport,ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexp
+ ort,ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit;visibility:=reexpo
+ rt
+Bundle-Vendor: %providerName
+Bundle-Version: 0.2.0.201312101603
+Bundle-ManifestVersion: 2
+Bundle-Activator: ca.gc.space.math.ui.provider.MathUIEditPlugin$Implem
+ entation
+Bundle-SymbolicName: ca.gc.space.math.ui.edit;singleton:=true
+

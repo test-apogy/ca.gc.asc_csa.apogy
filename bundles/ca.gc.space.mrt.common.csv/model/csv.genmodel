@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Canadian Space Agency 2007." modelDirectory="/ca.gc.space.mrt.common.csv/src"
+    modelPluginID="ca.gc.space.mrt.common.csv" modelName="Csv" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true">
+  <foreignModel>csv.ecore</foreignModel>
+  <genPackages prefix="Csv" basePackage="ca.gc.space.mrt.common" disposableProviderFactory="true"
+      ecorePackage="csv.ecore#/">
+    <genClasses ecoreClass="csv.ecore#//CsvColumnValuesMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute csv.ecore#//CsvColumnValuesMap/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute csv.ecore#//CsvColumnValuesMap/key"/>
+    </genClasses>
+    <genClasses ecoreClass="csv.ecore#//CsvColumn">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference csv.ecore#//CsvColumn/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute csv.ecore#//CsvColumn/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute csv.ecore#//CsvColumn/name"/>
+    </genClasses>
+    <genClasses ecoreClass="csv.ecore#//CsvColumsSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute csv.ecore#//CsvColumsSet/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute csv.ecore#//CsvColumsSet/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="csv.ecore#//CsvValueProvider">
+      <genOperations ecoreOperation="csv.ecore#//CsvValueProvider/getStringValue">
+        <genParameters ecoreParameter="csv.ecore#//CsvValueProvider/getStringValue/object"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

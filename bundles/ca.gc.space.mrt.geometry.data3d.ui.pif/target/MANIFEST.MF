@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.geometry.data3d.ui.pif;singleton:
+ =true
+Export-Package: ca.gc.space.mrt.geometry.data3d.ui.pif
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,javax.vecmath;
+ bundle-version="1.5.2",org.eclipse.core.resources;bundle-version="3.8
+ .1",ca.gc.space.topology.core,ca.gc.space.topology.ui,ca.gc.space.mrt
+ .geometry.data3d,ca.gc.asc_csa.io.pif
+Bundle-ManifestVersion: 2
+Bundle-Activator: ca.gc.space.mrt.geometry.data3d.ui.pif.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+

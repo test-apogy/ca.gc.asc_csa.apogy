@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2.4.7 2015/08/13 19:12:08 pallard Exp $
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated mrt_data3d_ui -->
+      <factory
+            uri="ca.gc.space.mrt.geometry.data3d.ui"
+            class="ca.gc.space.mrt.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated mrt_data3d_ui -->
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.space.mrt.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.space.topology.ui"
+            class="ca.gc.space.mrt.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+   </extension>
+
+</plugin>

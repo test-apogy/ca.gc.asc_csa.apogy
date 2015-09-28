@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:51:00 pallard Exp $
+-->
+
+<plugin>
+
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.sensors.pose.ui.adapters.PositionSensorPresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.sensors.pose.ui.adapters.OrientationSensorPresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.sensors.pose.ui.adapters.PoseSensorPresentationAdapter">
+      </Class>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.views">
+    <category
+            id="ca.gc.space.mrt.sensors.pose.ui.poseSensorCategory"
+            name="Pose Sensor">
+      </category>
+      <view
+            category="ca.gc.space.mrt.sensors.pose.ui.poseSensorCategory"
+            class="ca.gc.space.mrt.sensors.pose.ui.views.PoseSensorView"
+            id="ca.gc.space.mrt.sensors.pose.ui.views.PoseSensorView"
+            name="Pose Sensor Viewe"
+            restorable="true">
+      </view>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mrt_sensors_pose_ui -->
+      <package
+            uri="ca.gc.space.mrt.sensors.pose.ui"
+            class="ca.gc.space.mrt.sensors.pose.ui.SensorsPoseUIPackage"
+            genModel="model/mrt_sensors_pose_ui.xcore"/>
+   </extension>
+
+</plugin>

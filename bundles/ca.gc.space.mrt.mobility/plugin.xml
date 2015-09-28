@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2007.
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http:///ca/gc/space/mrt/mobility/model/mobility.ecore"
+            class="ca.gc.space.mrt.mobility.MobilityPackage"
+            genModel="model/mobility.genmodel"/>
+   </extension>
+
+</plugin>

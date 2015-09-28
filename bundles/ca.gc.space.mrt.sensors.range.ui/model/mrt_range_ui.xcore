@@ -1,0 +1,21 @@
+@GenModel(prefix="RangeSensorsUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="RangeSensorsUI", complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.space.mrt.sensors.range.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.sensors.range.ui.edit/src-generated")
+
+package ca.gc.space.mrt.sensors.range.ui
+
+import ca.gc.space.topology.ui.NodePresentation
+import ca.gc.space.topology.ui.MeshPresentationMode
+
+class RasterScanDataPresentation extends NodePresentation
+{
+	MeshPresentationMode fovPresentationMode = "WIREFRAME"
+	boolean fovVisible = "true"
+	boolean dataVisible = "true"
+}
+
+class SimpleSonarPresentation extends NodePresentation
+{
+	boolean detectedRangeVisible = "true"
+}
+

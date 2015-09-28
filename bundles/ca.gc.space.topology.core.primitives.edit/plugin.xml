@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.3.2.2 2015/02/03 20:01:36 rlarcheveque Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http:///ca/gc/space/topology/core/primitives/topology_primitives.ecore"
+            class="ca.gc.space.topology.core.primitives.provider.PrimitivesItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.space.topology.core.primitives.provider.PrimitivesItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+   </extension>
+
+</plugin>

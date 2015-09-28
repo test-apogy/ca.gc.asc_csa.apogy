@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="jinput" nsURI="http://ca/gc/asc_csa/jinput/1.0" nsPrefix="ca.gc.asc_csa.jinput">
+  <eClassifiers xsi:type="ecore:EClass" name="EController">
+    <eOperations name="poll" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastPollResult" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pojoController" eType="#//Controller"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eComponents" lowerBound="1"
+        eType="#//EComponents" transient="true" containment="true" resolveProxies="false"
+        eOpposite="#//EComponents/eController"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controllerCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EControllerEnvironment">
+    <eOperations name="refresh"/>
+    <eOperations name="startPolling"/>
+    <eOperations name="stopPolling"/>
+    <eOperations name="resolveController" eType="#//EController">
+      <eParameters name="controllerName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="resolveEComponent" eType="#//EComponent">
+      <eParameters name="componentName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="eController" eType="#//EController"/>
+    </eOperations>
+    <eOperations name="resolveEComponent" eType="#//EComponent">
+      <eParameters name="eComponentQualifier" eType="#//EComponentQualifier"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="supported" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        changeable="false" volatile="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controllers" upperBound="-1"
+        eType="#//EController" changeable="false" transient="true" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refreshRequested" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pollingCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pollingJob" eType="#//Job"
+        changeable="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pollingProblem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deadZone" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="analog" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pojoComponent" eType="#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pollData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eComponents" eType="#//EComponents"
+        transient="true" resolveProxies="false" eOpposite="#//EComponents/components"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EComponents">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//EComponent" changeable="false" transient="true" containment="true"
+        resolveProxies="false" eOpposite="#//EComponent/eComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        transient="true" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eController" eType="#//EController"
+        transient="true" resolveProxies="false" eOpposite="#//EController/eComponents"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EButton" eSuperTypes="#//EComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EAxis" eSuperTypes="#//EComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EKey" eSuperTypes="#//EComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EComponentQualifier">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eComponentName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eControllerName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Job" instanceClassName="org.eclipse.core.runtime.jobs.Job"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Component" instanceClassName="net.java.games.input.Component"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Controller" instanceClassName="net.java.games.input.Controller"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EVirtualComponent" eSuperTypes="#//EComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+</ecore:EPackage>

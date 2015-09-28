@@ -1,0 +1,215 @@
+@GenModel(prefix="EMFEcoreExampleRoboticArm",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
+		  modelName="EMFEcoreExampleRoboticArm",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.edit/src-generated")
+
+package ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm
+
+/*
+ * This enumeration is used to indicate the overall possible
+ * levels of speed that a robotic arm can move at; as
+ * expected, this used by RoboticArm (and its subclasses) when
+ * moveTo() is called.
+ */
+enum MoveSpeedLevel
+{
+	/*
+	 * This indicates that the robotic arm should move at a slower
+	 * speed, when compared to the other move speed levels.
+	 */
+	SLOW = 0,
+	
+	/*
+	 * This indicates that the robotic arm should move at an average
+	 * speed, when compared to the other move speed levels. 
+	 */
+	MEDIUM = 1,
+	
+	/*
+	 * This indicates that the robotic arm should move at a faster
+	 * speed, when compared to the other move speed levels.
+	 */
+	FAST = 2
+}
+
+/*
+ * This abstract class represents a robotic arm, including
+ * its relevant state information (e.g. joint angles) as well
+ * as the operations that it can perform.
+ */
+abstract class RoboticArm
+{ 
+	// NOTE
+	// -----------------------------------------------------
+	// The following joint angles are in degrees (°) while 
+	// moveTo() expects the angles in radians (rad); this is
+	// indicated by the "csa_units" field in the below
+	// @GenModel tags.
+	// <p>
+	// While this might seem like a problem, Symphony has
+	// mechanisms to facilitate the automated conversion
+	// between the two. In the general Eclipse settings
+	// (Window > Preferences), there should be a menu
+	// called "Invocator Preferences"; it is here where
+	// one can choose which conversions (e.g. rad -> °,
+	// m/s -> km/h, etc.) they would like to have Symphony
+	// perform.  This makes it simple to work with different
+	// units.   
+	// <p>
+	// Note that for the conversion to be correctly supported
+	// (and show up as expected) in Symphony, the property
+	// descriptor for each of them needs to be changed slightly.
+	// This requires an update to the generated *ItemProvider file
+	// in the .edit project; you only need to change it for the
+	// abstract superclass (e.g in this case, RoboticArmItemProvider.)
+	// There should be a method called add*PropertyDescriptor
+	// for each of the attributes in the superclass; in order to
+	// get the conversion to work, you have to change the property
+	// descriptor used for each.  In particular, you need to change the
+	// line from "createItemPropertyDescriptor" to
+	//           "new AbstractUnitItemPropertyDescriptor".
+	// This will cause the correct descriptor to be used and convert
+	// the value if appropriate.
+	// -------------------------------------------------------
+	
+	/* 
+	 * This is the current turret angle, in degrees.
+	 * @see #moveTo(double, double, double, double)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Joint Angles",
+			  csa_units="°")	
+	double turretAngle = "0.0"
+	
+	/* 
+	 * This is the current shoulder angle, in degrees.
+	 * @see #moveTo(double, double, double, double)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Joint Angles",
+			  csa_units="°")	
+	double shoulderAngle = "90.0"
+	
+	/* 
+	 * This is the current elbow angle, in degrees.
+	 * @see #moveTo(double, double, double, double)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Joint Angles",
+			  csa_units="°")	
+	double elbowAngle = "-180.0"
+	
+	/* 
+	 * This is the current wrist angle, in degrees.
+	 * @see #moveTo(double, double, double, double)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Joint Angles",
+			  csa_units="°")	
+	double wristAngle = "0.0"
+
+	/*
+	 * This is whether or not the robotic arm has been
+	 * initialized; initially false
+	 * @see #init()
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Status")
+	boolean initialized = "false"
+	
+	/*
+	 * This is whether or not the robotic arm is currently
+	 * moving; initially false
+	 * @see #moveTo(double, double, double, double)
+	 * @see #stow()
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Status")
+	boolean armMoving = "false"
+	
+	/* 
+	 * This indicates the level of speed that the robotic arm
+	 * is going to move at.
+	 * @see #cmdMoveSpeedLevel(MoveSpeedLevel)
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Status")
+	MoveSpeedLevel speed
+	
+	/*
+	 * Performs the required operations required in order to initialize
+	 * the robotic arm.
+	 * @return Whether or not the robotic arm was successfully initialized.
+	 */
+	op boolean init()
+	 
+	/* 
+	 * Changes the level of speed at which the robotic arm should move; this
+	 * is likely to be used by both moveTo() and stow() as they both involve
+	 * moving the arm.
+	 * @param speedLevel The new move speed level, indicating how fast the arm should move.
+	 */
+	op void cmdMoveSpeedLevel(MoveSpeedLevel speedLevel)
+	 
+	/*
+	 * Initiates the motion of the arm and move the arm to the specified configuration.
+	 * @param turretAngle The expected angle (in radians) of the turret joint (joint 1) after moving
+	 * @param shoulderAngle The expected angle (in radians) of the shoulder joint (joint 2) after moving.
+	 * @param elbowAngle The expected angle (in radians) of the elbow joint (joint 3) after moving.
+	 * @param wristAngle The expected angle (in radians) of the wrist joint (joint 4) after moving.
+	 */
+	op void moveTo(@GenModel(csa_units="rad") double turretAngle,
+				   @GenModel(csa_units="rad") double shoulderAngle,
+				   @GenModel(csa_units="rad") double elbowAngle,
+				   @GenModel(csa_units="rad") double wristAngle)
+	
+	/*
+	 * Initiates the motion of the arm and moves the arm to the stow configuration.
+	 */
+	op void stow()
+}
+
+/* 
+ * This is a specific implementation of the robotic arm, in which
+ * all operations are stubs and hence, non-functional; the operations
+ * should simply log a message, indicating that they were performed.
+ */
+class RoboticArmStub extends RoboticArm
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.impl.RoboticArmStubImpl}
+	 */
+}
+
+/*
+ * This is a simulated implementation of the robotic arm, where all
+ * operations are executed upon a simulated (i.e. virtual) arm. While there
+ * are no physical components interacted with, it attempts to emulate,
+ * wherever possible, the actions and results of its real world counterpart(s).  
+ */
+class RoboticArmSimulated extends RoboticArm
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link ca.gc.asc_csa.emf.ecore.examples.robotic_arm.impl.RoboticArmSimulatedImpl} 
+	 */
+}

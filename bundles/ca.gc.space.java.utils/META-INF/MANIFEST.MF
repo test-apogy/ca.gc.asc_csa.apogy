@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ca.gc.space.java.utils
+Bundle-Version: 0.3.0.qualifier
+Bundle-Activator: ca.gc.space.java.utils.Activator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: ca.gc.space.java.utils,
+ ca.gc.space.java.utils.io
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin

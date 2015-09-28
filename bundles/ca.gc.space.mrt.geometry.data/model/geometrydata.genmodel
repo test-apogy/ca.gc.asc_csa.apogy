@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Canadian Space Agency 2008" modelDirectory="/ca.gc.space.mrt.geometry.data/src"
+    modelPluginID="ca.gc.space.mrt.geometry.data" modelName="Geometrydata" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.genmodel#//processors"
+    operationReflection="true">
+  <foreignModel>geometrydata.ecore</foreignModel>
+  <genPackages prefix="Data" basePackage="ca.gc.space.mrt.geometry" disposableProviderFactory="true"
+      ecorePackage="geometrydata.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="geometrydata.ecore#//ShapeSamplingMode">
+      <genEnumLiterals ecoreEnumLiteral="geometrydata.ecore#//ShapeSamplingMode/UNION"/>
+      <genEnumLiterals ecoreEnumLiteral="geometrydata.ecore#//ShapeSamplingMode/INTERSECTION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="geometrydata.ecore#//PolygonSamplingMode">
+      <genEnumLiterals ecoreEnumLiteral="geometrydata.ecore#//PolygonSamplingMode/ALL_VERTEX"/>
+      <genEnumLiterals ecoreEnumLiteral="geometrydata.ecore#//PolygonSamplingMode/AT_LEAST_ONE_VERTEX"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="geometrydata.ecore#//List">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//List/T"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="geometrydata.ecore#//Vector3d"/>
+    <genClasses ecoreClass="geometrydata.ecore#//Coordinates"/>
+    <genClasses ecoreClass="geometrydata.ecore#//CoordinatesSet">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//CoordinatesSet/T"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference geometrydata.ecore#//CoordinatesSet/points"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute geometrydata.ecore#//CoordinatesSet/normals"/>
+    </genClasses>
+    <genClasses ecoreClass="geometrydata.ecore#//Polygon">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//Polygon/T"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference geometrydata.ecore#//Polygon/vertices"/>
+    </genClasses>
+    <genClasses ecoreClass="geometrydata.ecore#//Mesh">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//Mesh/CoordinatesType"/>
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//Mesh/PolygonType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geometrydata.ecore#//Mesh/polygons"/>
+      <genOperations ecoreOperation="geometrydata.ecore#//Mesh/getPolygonNeighbours">
+        <genParameters ecoreParameter="geometrydata.ecore#//Mesh/getPolygonNeighbours/polygon"/>
+      </genOperations>
+      <genOperations ecoreOperation="geometrydata.ecore#//Mesh/getPointNeighbours">
+        <genParameters ecoreParameter="geometrydata.ecore#//Mesh/getPointNeighbours/point"/>
+      </genOperations>
+      <genOperations ecoreOperation="geometrydata.ecore#//Mesh/getPolygonsSharingPoint">
+        <genParameters ecoreParameter="geometrydata.ecore#//Mesh/getPolygonsSharingPoint/point"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="geometrydata.ecore#//SamplingShape"/>
+    <genClasses image="false" ecoreClass="geometrydata.ecore#//CoordinatesSamplingShape">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//CoordinatesSamplingShape/T"/>
+      <genOperations ecoreOperation="geometrydata.ecore#//CoordinatesSamplingShape/isInside">
+        <genParameters ecoreParameter="geometrydata.ecore#//CoordinatesSamplingShape/isInside/point"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="geometrydata.ecore#//PolygonSamplingShape">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//PolygonSamplingShape/CoordinatesType"/>
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//PolygonSamplingShape/PolygonType"/>
+      <genOperations ecoreOperation="geometrydata.ecore#//PolygonSamplingShape/isPolygonInside">
+        <genParameters ecoreParameter="geometrydata.ecore#//PolygonSamplingShape/isPolygonInside/polygon"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="geometrydata.ecore#//CoordinatesSetShapesSampler">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//CoordinatesSetShapesSampler/T"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference geometrydata.ecore#//CoordinatesSetShapesSampler/coordinatesSamplingShapes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geometrydata.ecore#//CoordinatesSetShapesSampler/shapeSamplingMode"/>
+    </genClasses>
+    <genClasses ecoreClass="geometrydata.ecore#//MeshCoordinatesShapesSampler">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//MeshCoordinatesShapesSampler/CoordinatesType"/>
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//MeshCoordinatesShapesSampler/PolygonType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference geometrydata.ecore#//MeshCoordinatesShapesSampler/coordinatesSamplingShapes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geometrydata.ecore#//MeshCoordinatesShapesSampler/shapeSamplingMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geometrydata.ecore#//MeshCoordinatesShapesSampler/polygonSamplingMode"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="geometrydata.ecore#//MeshPolygonShapesSampler">
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//MeshPolygonShapesSampler/CoordinatesType"/>
+      <genTypeParameters ecoreTypeParameter="geometrydata.ecore#//MeshPolygonShapesSampler/PolygonType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference geometrydata.ecore#//MeshPolygonShapesSampler/polygonSamplingShapes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geometrydata.ecore#//MeshPolygonShapesSampler/shapeSamplingMode"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

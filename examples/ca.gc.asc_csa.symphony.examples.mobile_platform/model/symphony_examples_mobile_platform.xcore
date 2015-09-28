@@ -1,0 +1,96 @@
+@GenModel(prefix="SymphonyExampleMobilePlatform",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
+		  modelName="SymphonyExampleMobilePlatform")
+@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.examples.mobile_platform/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.symphony.examples.mobile_platform.edit/src-generated")
+
+package ca.gc.asc_csa.symphony.examples.mobile_platform
+
+import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
+import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
+
+import ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation
+
+/*
+ * This class is the specialized Symphony API adapter, used for connecting
+ * the existing Lidar unit example, located at
+ * {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.Lidar},
+ * to Symphony; one can override the well-known callback functions to make
+ * Symphony perform a variety of useful functions, including initialization,
+ * disposal and other features. 
+ */
+class MobilePlatformSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+{
+	/*
+	 * For specific implementation details,
+	 * please see {@link ca.gc.asc_csa.symphony.examples.mobile_platform.impl.MobilePlatformSymphonySystemApiAdapterImpl}
+	 */
+}
+
+/*
+ * This class specifies the initialization data that Symphony
+ * should be interested in when (re)initializing the Mobile
+ * platform with the API Adapter (which in this case is
+ * {@link ca.gc.asc_csa.symphony.examples.mobile_platform.MobilePlatformSymphonySystemApiAdapter})
+ */
+class MobilePlatformData extends SymphonyInitializationData
+{
+	/*
+	 * This is whether or not the mobile platform should be
+	 * initialized.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Status")
+	boolean initialized = "false"
+	
+	/*
+	 * This is whether or not the mobile platform should be
+	 * disposed.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Status")
+	boolean disposed = "false"
+	
+	/*
+	 * This is the linear velocity that the mobile platform
+	 * should have. 
+	 */
+	@GenModel(csa_units="m/s",
+			  children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Velocities")
+	double linearVelocity = "0.0"
+	
+	/*
+	 * This is the angular velocity that the mobile platform
+	 * should have.
+	 */
+	@GenModel(csa_units="rad/s",
+			  children="false",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Velocities")
+	double angularVelocity = "0.0"
+}
+
+/*
+ * This class is used to specify an annotation on the
+ * Map View of Symphony, corresponding to the position of 
+ * the mobile platform; in addition, the annotation is
+ * capable of representing the platform's pose on the map. 
+ */
+class MobilePlatformSymphonySystemAnnotation extends PoseVariableAnnotation
+{
+	/*
+	 * For specific implementation details,
+	 * please see {@link ca.gc.asc_csa.symphony.examples.mobile_platform.impl.MobilePlatformSymphonySystemAnnotationImpl}
+	 */
+}

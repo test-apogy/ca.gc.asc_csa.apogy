@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.sensors.fov.ui.jme3;singleton:=tr
+ ue
+Export-Package: ca.gc.space.mrt.sensors.fov.ui.jme3,ca.gc.space.mrt.se
+ nsors.fov.ui.jme3.adapters,ca.gc.space.mrt.sensors.fov.ui.jme3.scene_
+ objects,ca.gc.space.mrt.sensors.fov.ui.jme3.utils
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,ca.gc.space.mr
+ t.sensors.fov.ui;visibility:=reexport,ca.gc.asc_csa.topology.ui.jme3;
+ bundle-version="0.1.0";visibility:=reexport,ca.gc.space.topology.core
+ .primitives.ui.jme3;bundle-version="0.1.1",ca.gc.asc_csa.eclipse.imag
+ es.core;bundle-version="0.2.0"
+Bundle-ManifestVersion: 2
+Bundle-Activator: ca.gc.space.mrt.sensors.fov.ui.jme3.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+

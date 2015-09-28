@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.5.2.3.2.1 2015/05/11 14:56:22 pallard Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated topology_primitives_ui -->
+      <package
+            uri="ca.gc.space.topology.core.primitives.ui"
+            class="ca.gc.space.topology.core.primitives.ui.TopologyUIPrimitivesPackage"
+            genModel="model/topology_primitives_ui.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.topology.core.primitives.ui.adapters.LabelPresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.topology.core.primitives.ui.adapters.SpherePrimitivePresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.topology.core.primitives.ui.adapters.VectorPresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.topology.core.primitives.ui.adapters.WayPointPresentationAdapter">
+      </Class>
+   </extension>
+
+</plugin>

@@ -1,0 +1,38 @@
+@GenModel(prefix="MRTFOVBindings", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne - Canadian Space Agency 2013 Copyrights (c)", modelName="MRTFOVBindings", complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.space.mrt.sensors.fov.bindings/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.sensors.fov.bindings.edit/src-generated")
+
+package ca.gc.space.mrt.sensors.fov.bindings
+
+import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding
+
+import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView
+import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView
+import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
+
+/**
+ * Binding that binds a CircularSectorFieldOfView to another CircularSectorFieldOfView.
+ */
+class CircularSectorFieldOfViewBinding extends AbstractTopologyBinding
+{
+	@GenModel(propertyCategory="DESTINATION")
+	refers CircularSectorFieldOfView fov
+}
+
+/**
+ * Binding that binds a ConicalFieldOfViewBinding to another ConicalFieldOfViewBinding.
+ */
+class ConicalFieldOfViewBinding extends AbstractTopologyBinding
+{
+	@GenModel(propertyCategory="DESTINATION")
+	refers ConicalFieldOfView fov
+}
+
+/**
+ * Binding that binds a RectangularFrustrumFieldOfViewBinding to another RectangularFrustrumFieldOfViewBinding.
+ */
+class RectangularFrustrumFieldOfViewBinding extends AbstractTopologyBinding
+{
+	@GenModel(propertyCategory="DESTINATION")
+	refers RectangularFrustrumFieldOfView fov	
+}

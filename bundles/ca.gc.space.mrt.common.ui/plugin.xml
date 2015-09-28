@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:49:40 pallard Exp $
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="ca.gc.space.mrt.common.ui.startableobjectContribution"
+            objectClass="ca.gc.space.mrt.common.Startable">
+         <action
+               class="ca.gc.space.mrt.common.ui.extensions.StartableStartAction"
+               enablesFor="*"
+               id="ca.gc.space.mrt.common.ui.extensions.StartableStartAction"
+               label="Start"
+               menubarPath="FileActions"
+               style="push"
+               tooltip="Starts a startable.">ush">
+         </action>
+    <action
+          class="ca.gc.space.mrt.common.ui.extensions.StartableStopAction"
+          enablesFor="*"
+          id="ca.gc.space.mrt.common.ui.extensions.StartableStopAction"
+          label="Stop"
+          menubarPath="FileActions"
+          style="push"
+          tooltip="Stops a startable.">top">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="ca.gc.space.mrt.common.Startable"
+            class="ca.gc.space.mrt.common.ui.adapters.StartableAdapterFactory">
+         <adapter
+               type="org.eclipse.ui.IActionFilter">
+         </adapter>
+      </factory>
+   </extension>
+
+</plugin>

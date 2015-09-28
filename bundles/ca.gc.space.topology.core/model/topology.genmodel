@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ca.gc.space.topology.core/src" modelPluginID="ca.gc.space.topology.core"
+    modelName="Topology" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" usedGenPackages="platform:/plugin/ca.gc.space.math.core/model/Math.genmodel#//math"
+    operationReflection="true">
+  <foreignModel>topology.ecore</foreignModel>
+  <genPackages prefix="Topology" basePackage="ca.gc.space" disposableProviderFactory="true"
+      extensibleProviderFactory="true" childCreationExtenders="true" ecorePackage="topology.ecore#/">
+    <genDataTypes ecoreDataType="topology.ecore#//URL"/>
+    <genDataTypes ecoreDataType="topology.ecore#//INodeVisitor"/>
+    <genDataTypes ecoreDataType="topology.ecore#//Object"/>
+    <genDataTypes ecoreDataType="topology.ecore#//DoubleArray"/>
+    <genClasses ecoreClass="topology.ecore#//Node">
+      <genFeatures notify="false" createChild="false" propertyCategory="TOPOLOGY_INFORMATION"
+          propertySortChoices="true" ecoreFeature="ecore:EReference topology.ecore#//Node/parent"/>
+      <genFeatures createChild="false" propertyCategory="TOPOLOGY_INFORMATION" ecoreFeature="ecore:EAttribute topology.ecore#//Node/description"/>
+      <genFeatures createChild="false" propertyCategory="TOPOLOGY_INFORMATION" ecoreFeature="ecore:EAttribute topology.ecore#//Node/nodeId"/>
+      <genOperations ecoreOperation="topology.ecore#//Node/accept">
+        <genParameters ecoreParameter="topology.ecore#//Node/accept/visitor"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//TransformNode">
+      <genOperations ecoreOperation="topology.ecore#//TransformNode/asMatrix4d"/>
+      <genOperations ecoreOperation="topology.ecore#//TransformNode/setTransformation">
+        <genParameters ecoreParameter="topology.ecore#//TransformNode/setTransformation/matrix"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//TopologyFacade">
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createContentNode">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createContentNode/content"/>
+        <genTypeParameters ecoreTypeParameter="topology.ecore#//TopologyFacade/createContentNode/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createPositionNode">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createPositionNode/x"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createPositionNode/y"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createPositionNode/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createRotationNodeXYZ">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeXYZ/x"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeXYZ/y"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeXYZ/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/expressNodeInRootFrame">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/expressNodeInRootFrame/node"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/expressRootInNodeFrame">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/expressRootInNodeFrame/node"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/expressInFrame">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/expressInFrame/sourceFrame"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/expressInFrame/targetFrame"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createRotationNodeYZX">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeYZX/x"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeYZX/y"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeYZX/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createRotationNodeZYX">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeZYX/x"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeZYX/y"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createRotationNodeZYX/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createTransformNodeXYZ">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeXYZ/tx"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeXYZ/ty"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeXYZ/tz"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeXYZ/rx"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeXYZ/ry"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeXYZ/rz"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createTransformNodeYZX">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeYZX/tx"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeYZX/ty"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeYZX/tz"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeYZX/rx"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeYZX/ry"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeYZX/rz"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createTransformNodeZYX">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeZYX/tx"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeZYX/ty"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeZYX/tz"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeZYX/rx"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeZYX/ry"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNodeZYX/rz"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createTransformNode">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createTransformNode/matrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createPickAndPlaceNode">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createPickAndPlaceNode/matrix"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/printTopology">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/printTopology/node"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createReferencedContentNode">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createReferencedContentNode/content"/>
+        <genTypeParameters ecoreTypeParameter="topology.ecore#//TopologyFacade/createReferencedContentNode/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createAggregateContentNode">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createAggregateContentNode/content"/>
+        <genTypeParameters ecoreTypeParameter="topology.ecore#//TopologyFacade/createAggregateContentNode/T"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/createLink">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/createLink/node"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/findNodesByDescription">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/findNodesByDescription/description"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/findNodesByDescription/topology"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/findNodesByID">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/findNodesByID/id"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/findNodesByID/topology"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/findNodesByType">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/findNodesByType/clazz"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/findNodesByType/topology"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/findRoot">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/findRoot/node"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/getEuclidianDistance">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/getEuclidianDistance/fromNode"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/getEuclidianDistance/toNode"/>
+      </genOperations>
+      <genOperations ecoreOperation="topology.ecore#//TopologyFacade/getGeodesicDistance">
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/getGeodesicDistance/fromNode"/>
+        <genParameters ecoreParameter="topology.ecore#//TopologyFacade/getGeodesicDistance/toNode"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//ContentNode">
+      <genTypeParameters ecoreTypeParameter="topology.ecore#//ContentNode/T"/>
+      <genFeatures children="true" createChild="true" propertyCategory="TOPOLOGY_INFORMATION"
+          propertySortChoices="true" ecoreFeature="ecore:EReference topology.ecore#//ContentNode/content"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//PositionNode">
+      <genFeatures property="None" createChild="true" propertyCategory="TOPOLOGY_INFORMATION"
+          ecoreFeature="ecore:EReference topology.ecore#//PositionNode/position"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//RotationNode">
+      <genFeatures property="None" createChild="true" propertyCategory="TOPOLOGY_INFORMATION"
+          ecoreFeature="ecore:EReference topology.ecore#//RotationNode/rotationMatrix"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//GroupNode">
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="TOPOLOGY_INFORMATION"
+          ecoreFeature="ecore:EReference topology.ecore#//GroupNode/children"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//Leaf"/>
+    <genClasses ecoreClass="topology.ecore#//PickAndPlaceNode"/>
+    <genClasses ecoreClass="topology.ecore#//ReferencedContentNode">
+      <genTypeParameters ecoreTypeParameter="topology.ecore#//ReferencedContentNode/T"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference topology.ecore#//ReferencedContentNode/referencedContent"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//AggregateContentNode">
+      <genTypeParameters ecoreTypeParameter="topology.ecore#//AggregateContentNode/T"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference topology.ecore#//AggregateContentNode/aggregateContent"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//URLNode">
+      <genFeatures createChild="false" propertyCategory="TOPOLOGY_INFORMATION" ecoreFeature="ecore:EAttribute topology.ecore#//URLNode/url"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute topology.ecore#//URLNode/polygonCount"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute topology.ecore#//URLNode/vertexCount"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="topology.ecore#//TopologyProvider">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference topology.ecore#//TopologyProvider/topologyRoot"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//ReferencedGroupNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference topology.ecore#//ReferencedGroupNode/referencedChildren"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//Link">
+      <genFeatures children="true" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference topology.ecore#//Link/node"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//AggregateGroupNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference topology.ecore#//AggregateGroupNode/aggregatedChildren"/>
+    </genClasses>
+    <genClasses ecoreClass="topology.ecore#//CADNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute topology.ecore#//CADNode/nodeName"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

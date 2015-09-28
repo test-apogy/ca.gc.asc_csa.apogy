@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Canadian Space Agency 2008." modelDirectory="/ca.gc.space.mrt.mobility.controllers/src"
+    modelPluginID="ca.gc.space.mrt.mobility.controllers" modelName="Controllers" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" suppressGenModelAnnotations="false" usedGenPackages="platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.genmodel#//data3d platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/ca.gc.space.math.core/model/Math.genmodel#//math platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.genmodel#//mobility platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.genmodel#//paths platform:/plugin/ca.gc.space.mrt.sensors.pose/model/pose.genmodel#//pose platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.genmodel#//processors platform:/plugin/ca.gc.space.mrt.sensors/model/sensors.genmodel#//sensors platform:/plugin/ca.gc.space.topology.core/model/topology.genmodel#//topology platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.genmodel#//data"
+    operationReflection="true">
+  <foreignModel>controllers.ecore</foreignModel>
+  <genPackages prefix="Controllers" basePackage="ca.gc.space.mrt.mobility" disposableProviderFactory="true"
+      ecorePackage="controllers.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="controllers.ecore#//PathFollowerState">
+      <genEnumLiterals ecoreEnumLiteral="controllers.ecore#//PathFollowerState/IDLE"/>
+      <genEnumLiterals ecoreEnumLiteral="controllers.ecore#//PathFollowerState/RUNNING"/>
+      <genEnumLiterals ecoreEnumLiteral="controllers.ecore#//PathFollowerState/PAUSED"/>
+      <genEnumLiterals ecoreEnumLiteral="controllers.ecore#//PathFollowerState/FAILED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="controllers.ecore#//PathRecorderSamplingMode">
+      <genEnumLiterals ecoreEnumLiteral="controllers.ecore#//PathRecorderSamplingMode/ON_DISTANCE_DELTA"/>
+      <genEnumLiterals ecoreEnumLiteral="controllers.ecore#//PathRecorderSamplingMode/ON_TIME_DELTA"/>
+      <genEnumLiterals ecoreEnumLiteral="controllers.ecore#//PathRecorderSamplingMode/ON_TIME_OR_DISTANCE_DELTA"/>
+    </genEnums>
+    <genClasses ecoreClass="controllers.ecore#//PathFollower">
+      <genTypeParameters ecoreTypeParameter="controllers.ecore#//PathFollower/PlatformType"/>
+      <genTypeParameters ecoreTypeParameter="controllers.ecore#//PathFollower/PathType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controllers.ecore#//PathFollower/path"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controllers.ecore#//PathFollower/platform"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controllers.ecore#//PathFollower/poseSensor"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//PathFollower/destinationReached"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//PathFollower/pathFollowerState"/>
+      <genOperations ecoreOperation="controllers.ecore#//PathFollower/start"/>
+      <genOperations ecoreOperation="controllers.ecore#//PathFollower/pause"/>
+      <genOperations ecoreOperation="controllers.ecore#//PathFollower/resume"/>
+      <genOperations ecoreOperation="controllers.ecore#//PathFollower/stop"/>
+      <genOperations ecoreOperation="controllers.ecore#//PathFollower/isTransitionValid">
+        <genParameters ecoreParameter="controllers.ecore#//PathFollower/isTransitionValid/state"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="controllers.ecore#//SkidSteeredPlatformPathFollower">
+      <genTypeParameters ecoreTypeParameter="controllers.ecore#//SkidSteeredPlatformPathFollower/PlateformType"/>
+      <genTypeParameters ecoreTypeParameter="controllers.ecore#//SkidSteeredPlatformPathFollower/PathType"/>
+      <genFeatures createChild="false" propertyCategory="VELOCITIES_BOUNDS" ecoreFeature="ecore:EAttribute controllers.ecore#//SkidSteeredPlatformPathFollower/maximumAngularVelocity"/>
+      <genFeatures createChild="false" propertyCategory="VELOCITIES_BOUNDS" ecoreFeature="ecore:EAttribute controllers.ecore#//SkidSteeredPlatformPathFollower/maximumLinearVelocity"/>
+    </genClasses>
+    <genClasses ecoreClass="controllers.ecore#//PathRecorder">
+      <genTypeParameters ecoreTypeParameter="controllers.ecore#//PathRecorder/PathType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controllers.ecore#//PathRecorder/positionSensor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//PathRecorder/minimumDistanceDelta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//PathRecorder/minimumTimeDelta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//PathRecorder/samplingMode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controllers.ecore#//PathRecorder/recordedPath"/>
+    </genClasses>
+    <genClasses ecoreClass="controllers.ecore#//WaypointPathRecorder"/>
+    <genClasses ecoreClass="controllers.ecore#//SkidSteeredWayPointPathFollower"/>
+    <genClasses ecoreClass="controllers.ecore#//AstolfiGuidanceController">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controllers.ecore#//AstolfiGuidanceController/currentWayPoint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controllers.ecore#//AstolfiGuidanceController/previousWayPoint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference controllers.ecore#//AstolfiGuidanceController/currentPoseInGuidanceReferenceFrame"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/rho"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/phi"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/alpha"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/yaw"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/nu"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/omega"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/krho"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/kphi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/kalpha"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/destinationDistanceThreshold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/wayPointDistanceThreshold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/kHill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/hillThreshold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/phiThresholdForReducedVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/alphaThresholdForReducedVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute controllers.ecore#//AstolfiGuidanceController/smoothPathEnabled"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

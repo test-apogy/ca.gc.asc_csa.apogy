@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.symphony.environment"
+            class="ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage"
+            genModel="model/symphony_environment.xcore"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ca.gc.asc_csa.symphony.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
+            id="ca.gc.asc_csa.symphony.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
+            name="Update Mesh Image">
+      </command>
+      <command
+            defaultHandler="ca.gc.asc_csa.symphony.environment.commands.UpdateImageMapLayerCommandHandler"
+            id="ca.gc.asc_csa.symphony.environment.commands.UpdateImageMapLayerCommandHandler"
+            name="Update Image Map Layer">
+      </command>
+      <command
+            defaultHandler="ca.gc.asc_csa.symphony.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
+            id="ca.gc.asc_csa.symphony.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
+            name="Toggle Mesh Layer Visibility">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.asc_csa.symphony.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
+               label="Update Mesh Image"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                         <instanceof
+                             value="ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer">
+                         </instanceof>
+                   </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.symphony.environment.commands.UpdateImageMapLayerCommandHandler"
+               label="Update Image"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                         <instanceof
+                             value="ca.gc.asc_csa.symphony.environment.ImageMapLayer">
+                         </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.symphony.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
+               label="Toggle Mesh Layer Visibility"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <instanceof
+                           value="ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.converters">
+      <new_element
+            Class="ca.gc.asc_csa.symphony.environment.converters.GeographicalCoordinatesToPositionConverter">
+      </new_element>
+      <new_element
+            Class="ca.gc.asc_csa.symphony.environment.converters.PositionedToGeographicalCoordinatesConverter">
+      </new_element>
+   </extension>
+
+</plugin>

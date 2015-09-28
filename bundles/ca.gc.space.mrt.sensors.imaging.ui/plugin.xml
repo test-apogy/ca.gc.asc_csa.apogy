@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2.4.5 2015/08/25 19:42:45 rlarcheveque Exp $
+-->
+
+<plugin>
+
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.sensors.imaging.ui.ImageSnapshotPresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.space.eclipse.emf.ui.PropertyCellViewerContentProvider">
+      <contentProvider
+            class="ca.gc.space.mrt.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
+            id="ca.gc.space.mrt.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
+            target="org.eclipse.swt.graphics.ImageData">
+      </contentProvider>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging_ui -->
+      <package
+            uri="ca.gc.space.mrt.sensors.imaging.ui"
+            class="ca.gc.space.mrt.sensors.imaging.ui.MRTSensorsImagingUIPackage"
+            genModel="model/ca_gc_asc_csa_mrt_sensors_imaging_ui.xcore"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.space.mrt.sensors.imaging.ui.preferences.MRTImagingPreferencesInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.space.mrt.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
+            class="ca.gc.space.mrt.sensors.imaging.ui.preferences.MRTImagingPreferencesPage"
+            id="ca.gc.space.mrt.sensors.imaging.ui.page1"
+            name="Image Snapshot">
+      </page>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.converters">
+      <new_element
+            Class="ca.gc.space.mrt.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
+      </new_element>
+   </extension>
+
+</plugin>

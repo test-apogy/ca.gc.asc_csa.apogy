@@ -1,0 +1,15 @@
+@GenModel(prefix="PathPlannersUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="PathPlannersUI", complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.space.mrt.mobility.pathplanners.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.mobility.pathplanners.ui.edit/src-generated")
+
+package ca.gc.space.mrt.mobility.pathplanners.ui
+
+import ca.gc.space.topology.ui.NodePresentation
+import ca.gc.space.topology.ui.MeshPresentationMode
+
+class CircularExclusionZonePresentation extends NodePresentation
+{
+	float transparency
+	MeshPresentationMode presentationMode = "SURFACE"
+	double height = "10.0"
+}

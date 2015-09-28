@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ca.gc.asc_csa.symphony.examples.feature_0.4.0.qualifier.jar" id="ca.gc.asc_csa.symphony.examples.feature" version="0.4.0.qualifier">
+      <category name="ca.gc.asc_csa.symphony.examples"/>
+   </feature>
+   <category-def name="ca.gc.asc_csa.symphony.examples" label="ASC-CSA Symphony Examples">
+      <description>
+         Provides Examples for Symphony.
+      </description>
+   </category-def>
+</site>

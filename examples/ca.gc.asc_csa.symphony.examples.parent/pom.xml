@@ -1,0 +1,210 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ca.gc.asc_csa.symphony.examples</groupId>
+	<artifactId>ca.gc.asc_csa.symphony.examples.parent</artifactId>
+	<version>0.4.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<tycho-version>0.22.0</tycho-version>
+		<tycho-extras-version>0.22.0</tycho-extras-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<repositories>
+		<!-- configure p2 repository to resolve against -->
+		<repository>
+			<id>Eclipse-Luna</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/luna</url>
+		</repository>
+
+		<repository>
+			<id>Eclipse-Luna-Updates</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/eclipse/updates/4.4</url>
+		</repository>
+		
+		<repository>
+             <id>Nebula</id>
+             <layout>p2</layout>
+             <url>http://download.eclipse.org/technology/nebula/snapshot</url>
+        </repository>
+		
+		<repository>
+			<id>ca.gc.asc_csa.eclipse.ots</id>
+			<layout>p2</layout>
+			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.eclipse.ots/latest</url>
+		</repository>
+		
+		<repository>
+			<id>ca.gc.asc_csa.eclipse.utils</id>
+			<layout>p2</layout>
+			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.eclipse.utils/latest</url>
+		</repository>		
+
+		<repository>
+			<id>ca.gc.asc_csa.eclipse.net</id>
+			<layout>p2</layout>
+			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.eclipse.net/latest</url>
+		</repository>		
+
+		<repository>
+			<id>ca.gc.asc_csa.topology</id>
+			<layout>p2</layout>
+			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.topology/latest</url>
+		</repository>		
+		
+		<repository>
+			<id>ca.gc.asc_csa.eclipse.mrt</id>
+			<layout>p2</layout>
+			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.eclipse.mrt/latest</url>
+		</repository>		
+
+		<repository>
+			<id>ca.gc.asc_csa.symphony</id>
+			<layout>p2</layout>
+			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.symphony/latest</url>
+		</repository>		
+
+		
+		<repository>
+			<id>ca.gc.asc_csa.eclipse.examples</id>
+			<layout>p2</layout>
+			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.eclipse.examples/latest</url>
+		</repository>		
+
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- enable the Tycho build extension -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-source-plugin</artifactId>
+
+				<executions>
+					<execution>
+						<id>plugin-source</id>
+						<goals>
+							<goal>plugin-source</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-source-feature-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>source-feature</id>
+						<phase>package</phase>
+						<goals>
+							<goal>source-feature</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+ 					<execution>
+						<!-- Don't attach (default) metadata before the source-feature execution. -->
+						<id>default-p2-metadata-default</id>
+						<configuration>
+							<attachP2Metadata>false</attachP2Metadata>
+						</configuration>
+					</execution>					
+					<execution>
+						<id>attach-p2-metadata</id>
+						<phase>package</phase>
+						<goals>
+							<goal>p2-metadata</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>			
+		</plugins>
+		
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-source-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<strictSrcIncludes>false</strictSrcIncludes>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.tycho.extras</groupId>
+					<artifactId>tycho-source-feature-plugin</artifactId>
+					<version>${tycho-extras-version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>		
+	</build>
+	<modules>
+	<module>../ca.gc.asc_csa.symphony.examples.antenna</module>
+	<module>../ca.gc.asc_csa.symphony.examples.antenna.edit</module>
+	<module>../ca.gc.asc_csa.symphony.examples.camera</module>
+	<module>../ca.gc.asc_csa.symphony.examples.camera.edit</module>
+	<module>../ca.gc.asc_csa.symphony.examples.feature</module>
+	<module>../ca.gc.asc_csa.symphony.examples.lander</module>
+	<module>../ca.gc.asc_csa.symphony.examples.lander.edit</module>
+	<module>../ca.gc.asc_csa.symphony.examples.mobile_platform</module>
+	<module>../ca.gc.asc_csa.symphony.examples.mobile_platform.edit</module>
+	<module>../ca.gc.asc_csa.symphony.examples.repository</module>
+	<module>../ca.gc.asc_csa.symphony.examples.robotic_arm</module>
+	<module>../ca.gc.asc_csa.symphony.examples.robotic_arm.edit</module>
+	<module>../ca.gc.asc_csa.symphony.examples.rover</module>
+	<module>../ca.gc.asc_csa.symphony.examples.rover.edit</module>
+	<module>../ca.gc.asc_csa.symphony.examples.lidar</module>
+	<module>../ca.gc.asc_csa.symphony.examples.lidar.edit</module>
+	<module>../ca.gc.asc_csa.symphony.examples.worksites</module>
+	</modules>
+</project>

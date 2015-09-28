@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dynamics" nsURI="http://ca/gc/asc_csa/topology/dynamics/model/topology_dynamics.ecore"
+    nsPrefix="ca.gc.space.topology">
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicSystemProperties" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//AggregateGroupNode">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class for Dynamics System that is used as a container for many Dynamic System attributes."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contraints" upperBound="-1"
+        eType="#//AbstractConstraint" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The list of AbstractConstraint used with a Dynamic System."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="materials" upperBound="-1"
+        eType="#//AbstractMaterial" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The list of AbstractMaterial used in the world."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractDynamicsEngine" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines a generic Dynamics Engine."/>
+    </eAnnotations>
+    <eOperations name="startSimulation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Method that starts the simulation. "/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="stopSimulation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Method that stops the simulation. "/>
+      </eAnnotations>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalBody" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//AggregateGroupNode">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines a physical body."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalProperties" lowerBound="1"
+        eType="#//PhysicalProperties" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The physical properties of the body."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constraintAttachmentPoints"
+        upperBound="-1" eType="#//ConstraintAttachmentPoint" eOpposite="#//ConstraintAttachmentPoint/physicalBody">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The list of constraints associated with this body."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="simulationProperties" upperBound="-1"
+        eType="#//AbstractPhysicalBodySimulationProperties" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The list of simulation properties associated with this body. Note that this list can contain items for different implementation of Dynamic Engine."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="centerOfMassKinematicState"
+        eType="#//KinematicState" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The kinematic state of the center of mass of the Physical body."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pointsOfInterest" upperBound="-1"
+        eType="#//PointOfInterest" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The list of PointOfInterest currently defined for the PhysicalBody."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collisionGeometry" upperBound="-1"
+        eType="#//CollisionGeometry" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The list of collision geometries used to defined the collision volume of the PhysicalBody."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalProperties">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class defining the physical properties of a body."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines the mass of the physical body, in kilograms."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inertiaMatrix" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Matrix3x3"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The matrix of inertia of the body defined for the specified location of the center of mass."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="centerOfMassLocation" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The location of the center of mass of the body expressed in the body frame of reference."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractPhysicalBodySimulationProperties">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class defining simulation specific properties of a body."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractConstraint" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class defining a constraint between two physical bodies."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentPoints" upperBound="-1"
+        eType="#//ConstraintAttachmentPoint" containment="true" eOpposite="#//ConstraintAttachmentPoint/constraint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="simulationProperties" upperBound="-1"
+        eType="#//AbstractConstraintSimulationProperties">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The list of simulation properties associated with this constraint. Note that this list can contain items for different implementation of Dynamic Engine."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A textual description of this contraint."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An identifier for the constraint."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintState">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines the constraint's state which are position, velocity and force. Each values are represented on the constraint axis (e.g. if the constraint is prismatic, position will be the distance from the origin of the constraint, for angular constraints, the position will be the angle from the origin of the constraint."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="velocity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="force" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CylindricalConstraint" eSuperTypes="#//AbstractConstraint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The cylindrical constraint is a 2 DOF constraint (one prismatic and one angular)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angularCurrentState" lowerBound="1"
+        eType="#//ConstraintState" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linearCurrentState" lowerBound="1"
+        eType="#//ConstraintState" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GearRatioConstraint" eSuperTypes="#//AbstractConstraint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This constraint is a velocity-based constraint that constrains the velocity of a body relative to its primary attachment axis to the velocity of another body relative to its primary attachment axis."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="force" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HingeConstraint" eSuperTypes="#//AbstractConstraint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This constraint is used to rotate a pair of bodies about a single axis (no translation)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angularCurrentState" lowerBound="1"
+        eType="#//ConstraintState" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrismaticConstraint" eSuperTypes="#//AbstractConstraint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This constraint is used to move a body to move along an axis (no rotation)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linearCurrentState" lowerBound="1"
+        eType="#//ConstraintState" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RPROConstraint" eSuperTypes="#//AbstractConstraint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="(Relative Position Relative Orientation) is a constraint used to fix two parts with a given distance and orientation. Both linear and angular strengths describes the forces needed to respect this constraint."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linearStrength" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angularStrength" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalConstraint" eSuperTypes="#//AbstractConstraint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This constraint is two-axis rotation constraint."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angular0CurrentState" lowerBound="1"
+        eType="#//ConstraintState" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angular1CurrentState" lowerBound="1"
+        eType="#//ConstraintState" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintAttachmentPoint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class defining a location on a PhysicalBody where a Constraint is applied."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalBody" eType="#//PhysicalBody"
+        eOpposite="#//PhysicalBody/constraintAttachmentPoints">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The PhysicalBody to which the AttachmentPoint is attached."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" eType="#//AbstractConstraint"
+        eOpposite="#//AbstractConstraint/attachmentPoints">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The Constraint attached to this attachment point."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transform" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Matrix4x4"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The transform expressiong the position of the ConstraintAttachmentPoint expressed in the PhysicalBody reference frame."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A textual description of this ContraintAttachmentPoint."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An identifier for this ConstraintAttachmentPoint."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CollisionGeometry">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class defining the bounding volume used in collision detection and handling."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="simulationProperties" upperBound="-1"
+        eType="#//AbstractCollisionGeometrySimulationProperties">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Simulation specific collision geometry properties."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geometry" eType="#//Geometry"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The collision geometry."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transform" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Matrix4x4"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The transform matrix locating the geometry relative to the AbstractCollisionGeometry owner."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="material" eType="#//AbstractMaterial">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A reference to the material associated with this collision geometry."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A textual description of this collision geometry."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An identifier for the collision geometry."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractMaterial" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Class defining the material properties of a body."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractCollisionGeometrySimulationProperties"
+      abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class defining simulation specific properties of an AbstractCollisionGeometry."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Geometry" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class defining a geometry element used in defining collision volume."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoxGeometry" eSuperTypes="#//Geometry">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This geometry is a box defined by its dimension parameter (x, y and z size)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CapsuleGeometry" eSuperTypes="#//Geometry">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The capsule is like a cylinder with rounded extremities. The shape is defined by the radius of the capsule (width) and its length (from one rounded extremity to the other)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CylinderGeometry" eSuperTypes="#//Geometry">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The cylinder is defined by its radius (width) and its length (from one side to the other)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SphereGeometry" eSuperTypes="#//Geometry">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The sphere geometry is defined by its radius."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractConstraintSimulationProperties">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Abstract base class used to represent constraint properties that are specific to a particular simulation engine."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PointOfInterest">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Class defining a location in space relative to a Physical Body."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offset" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kinematicState" eType="#//KinematicState"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KinematicState">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class defining a kinematic state. Such state defines position, velocity and acceleration."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orientation" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linearVelocity" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angularVelocity" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linearAcceleration" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angularAcceleration" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicsFacade">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Helper class containing a variety of dynamic topology utilities methods."/>
+    </eAnnotations>
+    <eOperations name="findCenterOfMass" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Given a node in a topology, traverse the tree and computes the location of the center of mass of the tree."/>
+      </eAnnotations>
+      <eParameters name="root" eType="ecore:EClass platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The root of the topology for which the position of the center of mass is to be computed."/>
+        </eAnnotations>
+      </eParameters>
+    </eOperations>
+    <eOperations name="findTotalMass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Given a node in a topology, traverse the tree and compute the mass of the tree."/>
+      </eAnnotations>
+      <eParameters name="root" eType="ecore:EClass platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The root of the topology for which the total mass is to be computed."/>
+        </eAnnotations>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getPhysicalNodeSimulationProperty">
+      <eGenericType eTypeParameter="#//DynamicsFacade/getPhysicalNodeSimulationProperty/T"/>
+      <eTypeParameters name="T">
+        <eBounds eClassifier="#//AbstractPhysicalBodySimulationProperties"/>
+      </eTypeParameters>
+      <eParameters name="physicalBody" eType="#//PhysicalBody"/>
+      <eParameters name="propertyType">
+        <eGenericType eClassifier="#//Class">
+          <eTypeArguments eTypeParameter="#//DynamicsFacade/getPhysicalNodeSimulationProperty/T"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getConstraintSimulationProperty">
+      <eGenericType eTypeParameter="#//DynamicsFacade/getConstraintSimulationProperty/T"/>
+      <eTypeParameters name="T">
+        <eBounds eClassifier="#//AbstractConstraintSimulationProperties"/>
+      </eTypeParameters>
+      <eParameters name="constraint" eType="#//AbstractConstraint"/>
+      <eParameters name="propertyType">
+        <eGenericType eClassifier="#//Class">
+          <eTypeArguments eTypeParameter="#//DynamicsFacade/getConstraintSimulationProperty/T"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getPhysicalBodies">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Given a node in a topology, traverse the tree and extracts the Set of RigidBody defined in the topology."/>
+      </eAnnotations>
+      <eGenericType eClassifier="#//Set">
+        <eTypeArguments eClassifier="#//PhysicalBody"/>
+      </eGenericType>
+      <eParameters name="root" eType="ecore:EClass platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Set" instanceClassName="java.util.Set">
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Class" instanceClassName="java.lang.Class">
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+</ecore:EPackage>

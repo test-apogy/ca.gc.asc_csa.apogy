@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ca.gc.space.java3d.core
+Bundle-Version: 0.3.0.qualifier
+Bundle-Activator: ca.gc.space.java3d.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ ca.gc.space.java.utils,
+ javax.media;bundle-version="1.5.2";visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Export-Package: ca.gc.space.java3d
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

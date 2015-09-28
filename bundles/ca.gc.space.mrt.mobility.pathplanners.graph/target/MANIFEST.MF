@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.mobility.pathplanners.graph;singl
+ eton:=true
+Export-Package: ca.gc.space.mrt.mobility.pathplanners.graph,ca.gc.spac
+ e.mrt.mobility.pathplanners.graph.impl,ca.gc.space.mrt.mobility.pathp
+ lanners.graph.util,ca.gc.space.mrt.mobility.pathplanners.graph.valida
+ tion
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport,ca.gc.space.mrt.geometry.data3d;visibility:=reexport,ca
+ .gc.space.mrt.geometry.data;visibility:=reexport,ca.gc.space.topology
+ .core;visibility:=reexport,ca.gc.space.math.core;visibility:=reexport
+ ,ca.gc.space.mrt.common.processors;visibility:=reexport,ca.gc.space.m
+ rt.geometry.paths;visibility:=reexport,ca.gc.space.mrt.mobility.pathp
+ lanners;visibility:=reexport,org.jgrapht;bundle-version="0.8.2";visib
+ ility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: %providerName
+

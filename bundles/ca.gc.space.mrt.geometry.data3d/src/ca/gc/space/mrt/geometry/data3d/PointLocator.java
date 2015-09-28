@@ -1,0 +1,79 @@
+/**
+ * Canadian Space Agency 2008.
+ *
+ * $Id: PointLocator.java,v 1.3.4.2 2015/05/21 15:50:48 pallard Exp $
+ */
+package ca.gc.space.mrt.geometry.data3d;
+
+import java.util.List;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Point Locator</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link ca.gc.space.mrt.geometry.data3d.PointLocator#getPoints <em>Points</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see ca.gc.space.mrt.geometry.data3d.Data3dPackage#getPointLocator()
+ * @model
+ * @generated
+ */
+public interface PointLocator extends EObject {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Canadian Space Agency 2008.";
+
+	/**
+	 * Returns the value of the '<em><b>Points</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Points</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Points</em>' attribute.
+	 * @see #setPoints(List)
+	 * @see ca.gc.space.mrt.geometry.data3d.Data3dPackage#getPointLocator_Points()
+	 * @model dataType="ca.gc.space.mrt.geometry.data.List<ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates>" many="false"
+	 * @generated
+	 */
+	List<CartesianPositionCoordinates> getPoints();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.space.mrt.geometry.data3d.PointLocator#getPoints <em>Points</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Points</em>' attribute.
+	 * @see #getPoints()
+	 * @generated
+	 */
+	void setPoints(List<CartesianPositionCoordinates> value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	CartesianPositionCoordinates findClosestPoint(CartesianPositionCoordinates point);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	EList<CartesianPositionCoordinates> findPointsWithinRadius(double radius, CartesianPositionCoordinates point);
+
+} // PointLocator

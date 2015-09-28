@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests</artifactId>
+	<packaging>eclipse-test-plugin</packaging>
+	<parent>
+		<groupId>ca.gc.asc_csa.eclipse.utils</groupId>
+		<artifactId>ca.gc.asc_csa.eclipse.utils.parent</artifactId>
+		<version>0.3.0-SNAPSHOT</version>
+		<relativePath>../ca.gc.asc_csa.eclipse.utils.parent</relativePath>
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<useUIHarness>true</useUIHarness>
+					<testSuite>ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests</testSuite>
+					<testClass>ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests.AllTests</testClass>
+<!-- 					<dependencies>
+						<dependency>
+							<type>eclipse-feature</type>
+							<artifactId>ca.gc.asc_csa.symphony.rcp.e3.feature</artifactId>
+							This is the minimum required version
+							<version>0.0.0</version>
+						</dependency>
+					</dependencies>
+ -->					<!-- <dependency-resolution> <extraRequirements> <requirement> <type>eclipse-feature</type> 
+						<id>org.jama.feature</id> <versionRange>0.0.0</versionRange> </requirement> 
+						</extraRequirements> </dependency-resolution> -->					<!-- <argLine>-ea</argLine> -->
+					<!-- <dependencies> <dependency> <type>p2-installable-unit</type> <artifactId>org.eclipse.equinox.ds</artifactId> 
+						</dependency> </dependencies> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

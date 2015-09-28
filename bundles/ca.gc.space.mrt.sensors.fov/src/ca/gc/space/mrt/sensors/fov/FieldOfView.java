@@ -1,0 +1,29 @@
+/**
+ * Canadian Space Agency 2007.
+ *
+ * $Id: FieldOfView.java,v 1.2.4.2 2015/05/21 15:51:25 pallard Exp $
+ */
+package ca.gc.space.mrt.sensors.fov;
+
+import ca.gc.space.topology.Node;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Field Of View</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see ca.gc.space.mrt.sensors.fov.FovPackage#getFieldOfView()
+ * @model
+ * @generated
+ */
+public interface FieldOfView extends Node {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String copyright = "Canadian Space Agency 2007.";
+
+} // FieldOfView

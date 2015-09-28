@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Canadian Space Agency 2008." modelDirectory="/ca.gc.space.mrt.mobility.pathplanners.graph/src"
+    modelPluginID="ca.gc.space.mrt.mobility.pathplanners.graph" modelName="Pathplannersgraph"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" usedGenPackages="platform:/plugin/ca.gc.space.mrt.mobility.pathplanners/model/pathplanners.genmodel#//pathplanners platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.genmodel#//processors platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.genmodel#//paths platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.genmodel#//data3d platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.genmodel#//data platform:/plugin/ca.gc.space.topology.core/model/topology.genmodel#//topology platform:/plugin/ca.gc.space.math.core/model/Math.genmodel#//math"
+    operationReflection="true">
+  <foreignModel>pathplannersgraph.ecore</foreignModel>
+  <genPackages prefix="PathplannersGraph" basePackage="ca.gc.space.mrt.mobility.pathplanners"
+      disposableProviderFactory="true" ecorePackage="pathplannersgraph.ecore#/">
+    <genDataTypes ecoreDataType="pathplannersgraph.ecore#//SimpleDirectedWeightedGraph"/>
+    <genDataTypes ecoreDataType="pathplannersgraph.ecore#//DirectedGraph"/>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//CostBasedMeshWayPointPathPlanner">
+      <genTypeParameters ecoreTypeParameter="pathplannersgraph.ecore#//CostBasedMeshWayPointPathPlanner/PolygonType"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference pathplannersgraph.ecore#//CostBasedMeshWayPointPathPlanner/costFunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//MeshDisplacementCostFunction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplannersgraph.ecore#//MeshDisplacementCostFunction/planner"/>
+    </genClasses>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//DistanceOnlyCostFunction"/>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner">
+      <genTypeParameters ecoreTypeParameter="pathplannersgraph.ecore#//SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner/PolygonType"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner/simpleDirectedWeightedGraph"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner/enablePathSimplification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner/robotWidthForPathSimplication"/>
+    </genClasses>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//DirectedGraphBasedMeshWayPointPathPlanner">
+      <genTypeParameters ecoreTypeParameter="pathplannersgraph.ecore#//DirectedGraphBasedMeshWayPointPathPlanner/PolygonType"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DirectedGraphBasedMeshWayPointPathPlanner/directedGraph"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="pathplannersgraph.ecore#//EdgeFactory">
+      <genTypeParameters ecoreTypeParameter="pathplannersgraph.ecore#//EdgeFactory/V"/>
+      <genTypeParameters ecoreTypeParameter="pathplannersgraph.ecore#//EdgeFactory/E"/>
+    </genClasses>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//MobilityEdge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplannersgraph.ecore#//MobilityEdge/costFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplannersgraph.ecore#//MobilityEdge/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplannersgraph.ecore#//MobilityEdge/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//MobilityEdge/weight"/>
+    </genClasses>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//MobilityEdgeFactory">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplannersgraph.ecore#//MobilityEdgeFactory/costFunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//DistanceAndSlopesCostFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DistanceAndSlopesCostFunction/upSlopeCostFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DistanceAndSlopesCostFunction/downSlopeCostFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DistanceAndSlopesCostFunction/gravityAxis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DistanceAndSlopesCostFunction/maximumUpSlope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DistanceAndSlopesCostFunction/maximumDownSlope"/>
+    </genClasses>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//ExclusionZonesCostFunction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplannersgraph.ecore#//ExclusionZonesCostFunction/exclusionZones"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="pathplannersgraph.ecore#//DisplacementCostFunction">
+      <genOperations ecoreOperation="pathplannersgraph.ecore#//DisplacementCostFunction/getCost">
+        <genParameters ecoreParameter="pathplannersgraph.ecore#//DisplacementCostFunction/getCost/from"/>
+        <genParameters ecoreParameter="pathplannersgraph.ecore#//DisplacementCostFunction/getCost/to"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="pathplannersgraph.ecore#//DistanceAndRoverFootprintCostFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DistanceAndRoverFootprintCostFunction/roverFootPrintRadius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DistanceAndRoverFootprintCostFunction/maximumRoughness"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplannersgraph.ecore#//DistanceAndRoverFootprintCostFunction/maximumCrossSlope"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

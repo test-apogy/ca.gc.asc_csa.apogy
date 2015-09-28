@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
+            id="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
+            name="Export Satellite Command List to CSV File">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.ui.popup.any?after=ca.gc.asc_csa.eclipse.emf.ecore.ui.additions">
+         <command
+               commandId="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
+               label="Export Satellite Command List to CSV File"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <or>
+                  <iterate>
+                     <instanceof
+                           value="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteCommandList">
+                     </instanceof>
+                  </iterate>
+               </or>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

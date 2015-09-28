@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ca.gc.asc_csa.eclipse.ros.feature"
+      label="ASC-CSA Robot Operating System (ROS) Model"
+      version="0.3.0.qualifier"
+      provider-name="Agence Spatiale Canadienne / Canadian Space Agency">
+
+   <description url="http://www.asc-csa.gc.ca">
+      XCore Model supporting JAVA ROS Clients.
+   </description>
+
+   <copyright url="http://www.asc-csa.gc.ca">
+      (C) Government of Canada, 2012-2013. This document contains information proprietary to &quot;the Canadian Space Agency&quot;, or to a third party to which &quot;the Canadian Space Agency&quot; may have legal obligation to protect such information from unauthorized disclosure, use or duplication. Any disclosure, use or duplication of this document or of any of the information contained herein for other than the specific purpose for which it was disclosed is expressly prohibited outside the Government of Canada except as &quot;the Canadian Space Agency&quot; may otherwise agree to in writing. (C) Gouvernement du Canada, 2011-2012. Ce document renferme des renseignements appartenant à &quot;l&apos;Agence Spatiale Canadienne&quot; ou à une tierce partie envers qui &quot;l&apos;Agence Spatiale Canadienne&quot; a l&apos;obligation de protéger lesdits renseignements de toute divulgation, utilisation ou reproduction non autorisées. Toute divulgation, utilisation ou reproduction du présent document ou des renseignements qu&apos;il contient à des fins autres que les fins spécifiques pour lesquelles il a été divulgué est formellement interdite à l&apos;extérieur du gouvernement du Canada, sauf autorisation écrite de &quot;l&apos;Agence Spatiale Canadienne&quot;. Canadian Space Agency / Agence spatiale canadienne Space Exploration / Exploration spatiale
+   </copyright>
+
+   <license url="http://www.asc-csa.gc.ca">
+      (C) Government of Canada, 2012-2013. This document contains information proprietary to "the Canadian Space Agency", or to a third party to which "the Canadian Space Agency" may have legal obligation to protect such information from unauthorized disclosure, use or duplication. Any disclosure, use or duplication of this document or of any of the information contained herein for other than the specific purpose for which it was disclosed is expressly prohibited outside the Government of Canada except as "the Canadian Space Agency" may otherwise agree to in writing. (C) Gouvernement du Canada, 2011-2012. Ce document renferme des renseignements appartenant à "l'Agence Spatiale Canadienne" ou à une tierce partie envers qui "l'Agence Spatiale Canadienne" a l'obligation de protéger lesdits renseignements de toute divulgation, utilisation ou reproduction non autorisées. Toute divulgation, utilisation ou reproduction du présent document ou des renseignements qu'il contient à des fins autres que les fins spécifiques pour lesquelles il a été divulgué est formellement interdite à l'extérieur du gouvernement du Canada, sauf autorisation écrite de "l'Agence Spatiale Canadienne". Canadian Space Agency / Agence spatiale canadienne Space Exploration / Exploration spatiale
+   </license>
+
+   <plugin
+         id="ca.gc.asc_csa.eclipse.ros"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.eclipse.ros.msgs"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

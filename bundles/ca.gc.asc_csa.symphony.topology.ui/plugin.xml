@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.asc_csa.symphony.core.ui.category"
+            class="ca.gc.asc_csa.symphony.topology.ui.views.SymphonyEnvironment3DView"
+            icon="icons/eview16/Symphony3DViewer.gif"
+            id="ca.gc.asc_csa.symphony.topology.ui.views.Symphony3DView"
+            name="Symphony 3D Viewer"
+            restorable="true">
+      </view>
+      <view
+            category="ca.gc.asc_csa.symphony.core.ui.category"
+            class="ca.gc.asc_csa.symphony.topology.ui.views.SymphonySystem3DView"
+            icon="icons/eview16/SymphonySystem3DViewer.gif"
+            id="ca.gc.asc_csa.symphony.topology.ui.views.SymphonySystem3DView"
+            name="Symphony System 3D Viewer"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.converters">
+      <new_element
+            Class="ca.gc.asc_csa.symphony.topology.ui.converters.PositionResultToNodeConverter">
+      </new_element>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="ca.gc.asc_csa.symphony.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
+            name="Toggle Variable Topology Visibility">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.asc_csa.symphony.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
+               label="Toggle Variable Topology Visibility"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                    ifEmpty="false"
+                    operator="or">
+                     <and>
+                        <instanceof
+                              value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable">
+                        </instanceof>
+                        <test
+                              forcePluginActivation="true"
+                              property="ca.gc.asc_csa.symphony.core.ui.instanceOfSymphonySystem">
+                        </test>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.symphony.topology.ui.preferences.SymphonySystem3DViewerUIPreferencesPage"
+            id="ca.gc.asc_csa.symphony.topology.ui.preferences.SymphonySystem3DViewerUIPreferencesPage"
+            name="Symphony System 3D View">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="ca.gc.asc_csa.symphony.topology.ui.commands.ToggleVariableTopologyVisibilityCommandHandler"
+            commandId="ca.gc.asc_csa.symphony.topology.ui.commands.ToggleVariableTopologyVisibilityCommand">
+         <enabledWhen>
+            <with
+                 variable="activeMenuSelection">
+               <iterate
+                  ifEmpty="false"
+                  operator="and">
+                    <test
+                         forcePluginActivation="true"
+                         property="ca.gc.asc_csa.symphony.core.ui.instanceOfSymphonySystem">
+                    </test>
+               </iterate>
+            </with>
+         </enabledWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.asc_csa.symphony.topology.ui.preferences.SymphonyTopologyUIPreferencesInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2008.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:50:06 pallard Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mrt_range_ui -->
+      <package
+            uri="ca.gc.space.mrt.sensors.range.ui"
+            class="ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIPackage"
+            genModel="model/mrt_range_ui.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.sensors.range.ui.adapters.RasterScanDataPresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="ca.gc.space.mrt.sensors.range.ui.adapters.SimpleSonarPresentationAdapter">
+      </Class>
+   </extension>
+
+</plugin>

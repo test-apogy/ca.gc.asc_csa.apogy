@@ -1,0 +1,20 @@
+@GenModel(prefix="ImagesCoreROS", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false",copyrightText="Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)", modelName="ImagesCoreROS")
+@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.images.core.ros/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.images.core.ros.edit/src-generated")
+
+package ca.gc.asc_csa.eclipse.images.core.ros
+
+import ca.gc.asc_csa.eclipse.images.core.EImage
+import ca.gc.asc_csa.eclipse.images.core.ImageData
+
+type Image wraps sensor_msgs.Image
+type CompressedImage wraps sensor_msgs.CompressedImage
+type ConnectedNode wraps org.ros.node.ConnectedNode
+
+class ImagesCoreROSFacade
+{
+	op EImage convertToEImage(Image rosImage)
+	op EImage convertToEImage(CompressedImage compressedImage)
+	op CompressedImage convertToCompressedImage(EImage eImage, ConnectedNode connectedNode)
+	op CompressedImage convertToCompressedImage(ImageData imageData, ConnectedNode connectedNode)
+}

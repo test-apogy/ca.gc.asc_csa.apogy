@@ -1,0 +1,17 @@
+@GenModel(prefix="MRTSensorsImagingUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false",copyrightText="Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)", modelName="MRTSensorsImagingUI")
+@GenModel(modelDirectory="/ca.gc.space.mrt.sensors.imaging.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.sensors.imaging.ui.edit/src-generated")
+package ca.gc.space.mrt.sensors.imaging.ui
+
+import ca.gc.space.topology.ui.NodePresentation
+import ca.gc.space.topology.ui.MeshPresentationMode
+
+class ImageSnapshotPresentation extends NodePresentation
+{
+	MeshPresentationMode presentationMode
+	float transparency
+	boolean imageProjectionVisible = "false"
+	boolean imageProjectionOnFOVVisible = "false"
+	
+}
+

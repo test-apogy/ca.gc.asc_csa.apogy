@@ -1,0 +1,1078 @@
+@GenModel(prefix="SymphonyEnvironment", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="SymphonyEnvironment", complianceLevel="6.0", suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.environment/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.symphony.environment.edit/src-generated")
+// @GenModel(testsDirectory="/ca.gc.asc_csa.symphony.environment.tests/src-generated")
+
+package ca.gc.asc_csa.symphony.environment
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Described
+import ca.gc.asc_csa.eclipse.emf.ecore.Exception
+import ca.gc.asc_csa.eclipse.emf.ecore.Named
+import ca.gc.asc_csa.eclipse.emf.ecore.Timed
+import ca.gc.asc_csa.eclipse.images.core.AbstractEImage
+import ca.gc.asc_csa.symphony.core.AbstractOrbitModel
+import ca.gc.asc_csa.symphony.core.AbstractWorksite
+import ca.gc.asc_csa.symphony.core.ConnectionPoint
+import ca.gc.asc_csa.symphony.core.FeatureOfInterestList
+import ca.gc.asc_csa.symphony.core.SymphonySystem
+import ca.gc.space.math.Matrix4x4
+import ca.gc.space.math.Tuple3d
+import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh
+import ca.gc.space.topology.AggregateGroupNode
+import ca.gc.space.topology.GroupNode
+import ca.gc.space.topology.Node
+import ca.gc.space.topology.TransformNode
+import org.eclipse.core.runtime.IProgressMonitor
+
+// Types
+
+type List<T> wraps java.util.List
+type SortedSet<T> wraps java.util.SortedSet
+type Date wraps java.util.Date
+type Point3d wraps javax.vecmath.Point3d
+type Color3f wraps javax.vecmath.Color3f
+type IProgressMonitor wraps IProgressMonitor
+
+// Worksites
+
+abstract class Worksite extends AbstractWorksite 
+{
+	refers derived transient readonly WorksiteNode[1] worksiteNode
+	
+	refers AbstractOrbitModel[0..*] orbitsModels
+	
+	contains Environment environment
+}
+
+abstract class SurfaceWorksite extends Worksite
+{	
+	@GenModel(children="true", notify="true", property="None")
+	contains Sky[1] sky opposite surfaceWorksite
+	
+	contains MapsList[1] mapsList
+}
+
+@GenModel(documentation="A specialization of Worksite defining a are or volume at the Earth surface.")
+class EarthSurfaceWorksite extends SurfaceWorksite
+{	
+	/*
+	 * The geographical coordinates of the origin of the worksite, in the WS84 datum.
+	 */
+	contains GeographicCoordinates[1] geographicalCoordinates
+	
+	/*
+	 * Azimuth, relative to true North, of the X axis of the worksite coordinates system. Follows the right hand rule.
+	 * Note that the Z axis is pointing up (toward zenith).
+	 */
+	@GenModel(csa_units="rad")
+	double xAxisAzimuth = "0"
+			
+	/*
+	 * The EarthSky associated with the worksite,
+	 */
+	refers derived transient volatile EarthSky[1] earthSky
+	
+	/*
+	 * Converts a position expressed as XYZ in the EarthSurfaceWorksite frame to a WS84 GeographicCoordinates.
+	 * @param position The position in the worksite coordinates system.
+	 * @return The GeographicCoordinates of the position, in the WS84 datum.
+	 */
+	op GeographicCoordinates convertToGeographicCoordinates(Tuple3d position)
+	
+	/*
+	 * Converts a WS84 GeographicCoordinates to a XYZ position in the EarthSurfaceWorksite frame.
+	 * @param geographicalCoordinates The geographical coordinates expressed in the WS84 datum.
+	 * @return The XYZ position in the worksite coordinates system.
+	 */
+	op Tuple3d convertToXYZPosition(GeographicCoordinates geographicalCoordinates)
+}
+
+// Environment
+class Environment extends Named, Described
+{
+}
+
+class SurfaceEnvironment extends Environment
+{
+	contains Atmosphere atmosphere
+	contains Tuple3d gravity
+}
+
+class EarthSurfaceEnvironment extends SurfaceEnvironment
+{
+}
+
+// Atmosphere
+class Atmosphere
+{	
+	@GenModel(documentation="The wind surface speed, in m/s.")
+	@GenModel(csa_units="m/s")
+	double windSpeed
+	
+	@GenModel(documentation="The wind direction expressed relative to true north, in radians.")
+	@GenModel(csa_units="rad")
+	double windDirection
+	
+	@GenModel(documentation="The atmosphere temperature, in degrees Celcius.")
+	@GenModel(csa_units="℃")
+	double temperature
+	
+	@GenModel(documentation="The atmosphere pressure at the reference altitude, in pascals.")
+	@GenModel(csa_units="Pa")
+	double surfacePressure
+	
+	@GenModel(documentation="The atmosphere density at the reference altitude, in kg/m^3.")
+	@GenModel(csa_units="kg/m³")
+	double surfaceDensity
+}
+
+
+class AtmosphereUtils
+{
+	@GenModel(documentation="Computes the air mass. The Air Mass is the path length which light takes through the atmosphere normalized to the shortest possible path length (that is, when the sun is directly overhead). The Air Mass quantifies the reduction in the power of light as it passes through the atmosphere and is absorbed by air and dust.@see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM.")
+	op double getAirMass(@GenModel(documentation="The sun elevation angle above the horizon, in radians.",csa_units="rad") double sunAltitudeAngle)
+		
+	@GenModel(documentation="Computes the intensity of the direct component of sunlight, in Watts / m2. @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM")
+	@GenModel(csa_units="W/m²") op double getDirectSunIntensity(@GenModel(documentation="The sun elevation angle above the horizon, in radians.",csa_units="rad") double sunAltitudeAngle, 
+																@GenModel(documentation="Height above see level, in meters.",csa_units="m") double heightAboveSeaLevel)
+	
+	@GenModel(documentation="Computes the intensity of the diffuse component of sunlight, in Watts / m2.@see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM")
+	@GenModel(csa_units="W/m²") op double getDiffuseSunIntensity(@GenModel(documentation="The sun elevation angle above the horizon, in radians.", csa_units="rad") double sunAltitudeAngle, 
+																 @GenModel(documentation="Height above see level, in meters.",csa_units="m") double heightAboveSeaLevel)
+	
+	@GenModel(documentation="Computes the change in altitude that needs to be added to the altitude of HorizontalCoordinates to take into account the Earth's atmosphere refraction. The calculations in the NOAA Sunrise/Sunset and Solar Position Calculators are based on equations from Astronomical Algorithms, by Jean Meeus. The sunrise and sunset results have been verified to be accurate to within a minute for locations between +/- 72° latitude, and within 10 minutes outside of those latitudes.@see ../doc/AtmosphereRefractionCalculations.html or http://www.srrb.noaa.gov/highlights/sunrise/calcdetails.html.")
+	op double getAtmosphereRefractionCorrection(@GenModel(documentation="The true altitude (as defined in HorizontalCoordinates) of the object, in radians.") double geometricAltitude)
+}
+
+// Coordinates
+@GenModel(documentation="The equatorial coordinate system is a widely-used method of mapping celestial objects. It functions by projecting the Earth's geographic poles and equator onto the celestial sphere. The projection of the Earth's equator onto the celestial sphere is called the celestial equator. Similarly, the projections of the Earth's north and south geographic poles become the north and south celestial poles, respectively.")
+class EquatorialCoordinates
+{
+	double rightAscension
+	double declination
+	double radius
+}
+
+@GenModel(documentation="A location on Earth.")
+class GeographicCoordinates
+{
+	@GenModel(documentation="The longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.",csa_units="rad")
+	double longitude
+
+	@GenModel(documentation="The latitude, in radians. Latitude North of the equator are positive, South of the equator are negative.",csa_units="rad")	
+	double latitude
+	
+	@GenModel(documentation="Height above the Earth's sea level, in meters.",csa_units="m")
+	double elevation
+}
+
+
+@GenModel(documentation="The horizontal coordinate system is a celestial coordinate system that uses the observer's local horizon as the fundamental plane. This conveniently divides the sky into the upper hemisphere that you can see, and the lower hemisphere that you cannot (because the Earth is in the way). The pole of the upper hemisphere is called the zenith. The pole of the lower hemisphere is called the nadir.
+
+The horizontal coordinates are:
+
+    * altitude (Alt), sometimes referred to as elevation, that is the angle between the object and the observer's local horizon.
+    * azimuth (Az), that is the angle of the object around the horizon, usually measured from the north point towards the east. In former times, it was common to refer to azimuth from the south, as it was then zero at the same time the hour angle of a star was zero. This assumes, however, that the star (upper) culminates in the south, which is only true for most stars in the Northern Hemisphere.
+")
+class HorizontalCoordinates
+{
+	double altitude
+	double azimuth
+	double radius
+}
+
+@GenModel(documentation="The ecliptic coordinate system is a celestial coordinate system that uses the ecliptic for its fundamental plane. The ecliptic is the path that the sun appears to follow across the sky over the course of a year. It is also the projection of the Earth's orbital plane onto the celestial sphere. The latitudinal angle is called the ecliptic latitude or celestial latitude (denoted β), measured positive towards the north. The longitudinal angle is called the ecliptic longitude or celestial longitude (denoted λ), measured eastwards from 0° to 360°. Like right ascension in the equatorial coordinate system, 0° ecliptic longitude is pointing towards the Sun from the Earth at the Northern hemisphere vernal equinox. This choice makes the coordinates of the fixed stars subject to shifts due to the precession, so that always a reference epoch should be specified. Usually epoch J2000.0 is taken, but the instantaneous equinox of the day (called the epoch of date) is possible too. This coordinate system can be particularly useful for charting solar system objects. Most planets (except Mercury), and many small solar system bodies have orbits with small inclinations to the ecliptic plane, and therefore their ecliptic latitude β is always small. Because of the planets' small deviation from the plane of the ecliptic, ecliptic coordinates were used historically to compute their positions. (Aaboe 2001, 17-19)")
+class EclipticCoordinates
+{
+	double longitude
+	double latitude
+	double radius 
+}
+
+
+// Sky
+@GenModel(documentation="The base class defining a the Sky above a SurfaceWorksite. This basic sky includes the sun and stars. The Sky is TimeDependant, which in this context means that the position of both the Sun and the stars should be updated when the time is changed.")
+class Sky extends Timed
+{
+	@GenModel(documentation="The worksite to which the sky is associated.")
+	refers SurfaceWorksite surfaceWorksite opposite sky
+	
+	@GenModel(children="true", notify="true", property="None")
+	refers derived transient readonly SkyNode[1] skyNode
+	
+	@GenModel(documentation="Returns the Sun angular diameter, in radians.", propertyCategory="SUN", csa_units="rad")
+	op double getSunAngularDiameter()
+	
+	@GenModel(documentation="The Sun in the sky.", propertyCategory="SUN")
+	refers derived transient readonly Sun sun
+	
+	@GenModel(documentation="The current HorizontalCordinates of the Sun.", propertyCategory="SUN")
+	refers derived transient HorizontalCoordinates sunHorizontalCoordinates
+	
+	@GenModel(documentation="The stars in the sky.", propertyCategory="STARS")
+	refers derived transient readonly StarField starField
+}
+
+@GenModel(documentation="A specialisation of the Sky for Earth use that adds the Moon. The position of the Moon is updated, along with the Sun and stars, when the time is changed.")
+class EarthSky extends Sky
+{
+	@GenModel(documentation="Returns the Moon angular diameter, in radians.", propertyCategory="MOON", csa_units="rad")
+	op double getMoonAngularDiameter()
+	
+	@GenModel(documentation="The Moon in the sky.", propertyCategory="MOON")
+	refers derived transient readonly Moon moon
+	
+	@GenModel(documentation="The current HorizontalCordinates of the Moon.", propertyCategory="MOON")
+	refers derived transient HorizontalCoordinates moonHorizontalCoordinates		
+}
+
+
+class Sun extends GroupNode
+{
+	@GenModel(documentation="Returns the sun intensity a the specified radius.")
+	op double getIrradiance(@GenModel(documentation="The distance from the sun center, in meters.") double radius)
+	
+	/* Sun radius, in meters. */
+	@GenModel(csa_units="m")
+	double radius = "6.955E8"
+}
+
+/**
+ * The Earth.
+ */
+class Earth extends GroupNode
+{
+	/* Earth mean radius, in meters. */
+	@GenModel(csa_units="m")
+	double radius = "6371000"
+}
+
+class Moon extends GroupNode
+{
+	/* Moon radius, in meters. */
+	@GenModel(csa_units="m")
+	double radius = "1737100"
+}
+
+
+@GenModel(documentation="Utilities class providing conversion methods.")
+class EnvironmentUtilities
+{
+	@GenModel(documentation="Convert from Date (UTC) to Julian. Uses formula found at http://en.wikipedia.org/wiki/Julian_date#cite_note-12")
+	op double convertToJulianDate(Date date)
+	
+	@GenModel(documentation="Methods that parses Right Ascension angle expressed in HH:mm:ss format and return an angle in radians.")
+	@GenModel(csa_units="rad") op float parseRightAscension(String rightAscensionString) throws Exception
+	
+	@GenModel(documentation="Methods that parses an angle expressed in deg:mm:ss format and return an angle in radians.")
+	@GenModel(csa_units="rad") op float parseDegMinSec(String degMinSecAngleString)
+	
+	@GenModel(documentation="Method that sorts a list of stars by magnitude.")
+	op SortedSet<Star> sortByMagnitude(List<Star> stars)
+}
+
+@GenModel(documentation="A class providing utilities methods to create fully initialze object.")
+class EnvironmentFacade
+{	
+	op StarField createAndInitializeStars()
+	
+	@GenModel(documentation="Create an empty EarthSurfaceWorksite with the CSA Mars Yard coordinates.")
+	op EarthSurfaceWorksite createAndInitializeDefaultCSAWorksite()
+	
+	op void initializeSkyNode(Sky sky, SkyNode skyNode)
+	
+	op void initializeEarthSkyNode(EarthSky earthSky, EarthSkyNode earthSkyNode)
+	
+	op GeographicCoordinates getMarsYardGeographicalCoordinates()
+	
+	op Star createStar(float magnitude, double rightAscension, double declination)
+	
+	op TransformNode getMarsYardTransformNode()
+	
+	op EarthSurfaceEnvironment createAndInitializeEarthSurfaceEnvironment()
+	
+	@GenModel(documentation="Creates a International Standard Atmosphere at see level. @see http://en.wikipedia.org/wiki/International_Standard_Atmosphere")
+	op Atmosphere createAndInitializeEarthAtmosphere()		
+		
+	op Tuple3d getSunVector(SymphonySystem symphonySystem, String nodeID, ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	op Tuple3d getSunVector(Node node, ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	
+	op Tuple3d getMoonVector(SymphonySystem symphonySystem, String nodeID, ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	op Tuple3d getMoonVector(Node node, ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	
+	op Tuple3d getVector(Node node, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint,  ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint,  ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, String connectionPointName,  ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, String targetSystemfullyQualifiedName, String connectionPointName,  ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	
+	/**
+	 * Assembles a list of ImageMapLayer into a single eImage reference to the Worksite frame.
+	 * Note that only X,Y and Rz are used in transformation applied between ImageMapLayer and the worksite
+	 * origin.
+	 **/
+	op AbstractEImage createEImage(List<? extends RectangularRegionImage> rectangularRegionImages)
+			
+	/**
+	 * Return a list containing the position of the 4 corners of the specified ImageMapLayer
+	 * @param imageMapLayer The specified ImageMapLayer.
+	 * @return List containing the position (in the worksite frame) of the four corners of the ImageMapLayer. 
+	 * The list contains : lowerLeftCorner, lowerRightCorner, upperRightCorner and upperLeftCorner.
+	 */
+	op List<Tuple3d> getAbsoluteRectangularRegionCorners(RectangularRegion rectangularRegion)
+		
+	/**
+	 * Returns the ImageMapLayer with the highest resolution (minimum meters/pixel).
+	 * @return The ImageMapLayer with the highest resolution (minimum meters/pixel)
+	 */
+	op RectangularRegionImage getBestResolutionRectangularRegionImage(List<? extends RectangularRegionImage> rectangularRegionImages)
+	
+	/**
+	 * Returns the lower left and upper right corners of a specified RectangularRegionProvider.
+	 * @param rectangularRegionProvider The specified RectangularRegionProvider.
+	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
+	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
+	 */
+	op void getRectangularRegionExtent(RectangularRegionProvider rectangularRegionProvider, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	/**
+	 * Returns the lower left and upper right corners of a specified ImageMapLayer.
+	 * @param imageMapLayer The specified ImageMapLayer.
+	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
+	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
+	 * TODO DEPRECATE - REMOVE
+	 */
+	op void getRectangularRegionImageExtent(RectangularRegionImage rectangularRegionImage, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+
+	/**
+	 * Return  the lower left and upper right corners of the region spanned by a list of RectangularRegionProviders.
+	 * @param rectangularRegionProviders The list of RectangularRegionProviders.
+	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
+	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
+	 */
+	op void getRectangularRegionExtent(List<? extends RectangularRegionProvider> rectangularRegionProviders, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	/**
+	 * Return  the lower left and upper right corners of the region spanned by a list of a ImageMapLayer.
+	 * @param The list of ImageMapLayer.
+	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
+	 * @param upperRightCorner The Tuple3d were to put the upper right coordinates.
+	 * TODO DEPRECATE - REMOVE
+	 */
+	op void getRectangularRegionImageExtent(List<? extends RectangularRegionImage> rectangularRegionImages, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	/*
+	 * Returns whether rectangularRegionA fits entirely in rectangularRegionB.
+	 * The current implementation does not take into account the Transform.
+	 * @param rectangularRegionA The first RectangularRegion.
+	 * @param rectangularRegionB The second RectangularRegion.
+	 * @return True if rectangularRegionA fits in rectangularRegionB, false otherwise.
+	 */
+	op boolean fitsInside(RectangularRegion rectangularRegionA, RectangularRegion rectangularRegionB)
+	
+	/*
+	 * Returns whether two RectangularRegion intersects.
+	 * reference frame.
+	 * @param rectangularRegionA The first RectangularRegion.
+	 * @param transformAToB The transformation (expressed as a 4x4 matrix that expresses region A into region B)
+	 * @param rectangularRegionB The second RectangularRegion.
+	 * @return True if rectangularRegionA intersects rectangularRegionB, false otherwise.
+	 */
+	op boolean intersects(RectangularRegion rectangularRegionA, RectangularRegion rectangularRegionB, Matrix4x4 transformAToB)
+	
+	op void getImageMapLayerPresentationExtent(ImageMapLayerPresentation imageMapLayerPresentation, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	op void getImageMapLayerPresentationExtent(List<ImageMapLayerPresentation> imageMapLayerPresentations, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
+	
+	/**
+	 * Returns an image representing the assembly of the specified list of ImageMapLayerPresentation. 
+	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
+	 * @return The image representing the specified list of ImageMapLayerPresentation.
+	 */
+	op AbstractEImage getImageMapLayerPresentationImage(List<ImageMapLayerPresentation> imageMapLayerPresentations)
+	
+	/**
+	 * Returns the ImageMapLayerPresentation with the highest resolution (minimum meters/pixel).
+	 * @return The ImageMapLayerPresentation with the highest resolution (minimum meters/pixel)
+	 */
+	op ImageMapLayerPresentation getBestResolutionMapLayer(List<ImageMapLayerPresentation> imageMapLayerPresentations)
+	
+	/**
+	 * Returns the list of visible ImageMapLayerPresentation from"" a specified imageMapLayerPresentations.
+	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
+	 * @return The list of visible ImageMapLayerPresentation.
+	 */
+	op List<ImageMapLayerPresentation> getVisibleImageMapLayerPresentation(List<ImageMapLayerPresentation> imageMapLayerPresentations)
+	
+	/**
+	 * Returns the RectangularVolumeRegion bounding a triangular mesh.
+	 * @param mesh The triangular mesh.
+	 * @return The RectangularVolumeRegion.
+	 */
+	op RectangularVolumeRegion getRectangularVolumeRegion(CartesianTriangularMesh mesh)				
+}
+
+@GenModel(documentation="A star.")
+class Star
+{
+	float magnitude
+	refers transient EquatorialCoordinates equatorialCoordinates
+}
+
+@GenModel(documentation="Represents the brightest stars in the sky.")
+class StarField extends Node
+{
+	@GenModel(children="true", notify="true", property="None")
+	refers transient Star[0..*] stars
+	
+	@Ecore(defaultValueLiteral="bright_star_catalog_5.txt")
+	String starFieldFileName	
+}
+
+@GenModel(documentation="Class that provides methods to find the position of the Moon and Sun in the sky.")
+class AstronomyUtils
+{
+	@GenModel(documentation="Computes the Sun's equatorial coordinates for a given Julian date.The calculation are based on page C24 of the 1996 Astronomical Almanac which provides a method for finding the position of the Sun in the sky to an accuracy of 0.01 degree between the years 1950 and 2050. The formulas are based on an elliptical orbit for the Earth, using mean orbital elements and a two term approximation for the 'equation of centre'. There is also an approximate allowance made for the change in obliquity of the ecliptic with time, needed when converting to right ascension and declination. The positions are thus apparent positions, they are referred to the mean ecliptic and equinox of date. The positions found using this low precision formula with values referred to the mean ecliptic and equinox of date from a more accurate program. The results (for the whole 1950 to 2050 range) have been found to be accurate within 3 seconds of RA and 15 arc seconds in declination. @see http://www.stargazing.net/kepler/sun.html#twig02")
+	op EquatorialCoordinates getSunEquatorialPosition(double julianDay)
+	
+	@GenModel(documentation="Computes the Sun's horizontal coordinates for a date and location on the surface of the Earth.")
+	op HorizontalCoordinates getHorizontalSunPosition(Date date, @GenModel(documentation="The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.") double observerLongitude, @GenModel(documentation="The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.") double observerLatitude)
+	
+	@GenModel(documentation="Computes the Moon's equatorial coordinates for a given Julian date for an observer a the center of the Earth. See doc/tutorial.html for more details.")
+	op EquatorialCoordinates getMoonEquatorialPosition(double julianDay)
+	
+	@GenModel(documentation="Computes the Moon's equatorial coordinates for a date and location on the surface of the Earth. This position take into account the radius of the Earth.")
+	op EquatorialCoordinates getMoonTopocentricEquatorialPosition(Date date, @GenModel(documentation="The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.") double observerLongitude, @GenModel(documentation="The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.") double observerLatitude )
+	
+	@GenModel(documentation="Computes the Moon's horizontal coordinates.")
+	op HorizontalCoordinates getHorizontalMoonPosition(Date date, @GenModel(documentation="The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.") double observerLongitude, @GenModel(documentation="The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.") double observerLatitude )
+	
+	@GenModel(documentation="Return the number of days since epoch J2000.")
+	op double getTimeSinceJ2000(double julianDay)
+	
+	@GenModel(documentation="Return the local sideral time, in radians, clamped between 0 and 2π (360 degrees). Sidereal time is a system of timekeeping based on the rotation of the Earth with respect to the fixed stars in the sky. More specifically, it is the measure of the hour angle of the vernal equinox. If the hour angle is measured with respect to the true equinox, apparent sidereal time is being measured. If the hour angle is measured with respect to the mean equinox, mean sidereal time is being measured. When the measurements are made with respect to the meridian at Greenwich, the times are referred to as Greenwich mean sidereal time (GMST) and Greenwich apparent sidereal time (GAST). Given below is a simple algorithm for computing apparent sidereal time to an accuracy of about 0.1 second, equivalent to about 1.5 arcseconds on the sky. The input time required by the algorithm is represented as a Julian date (Julian dates can be used to determine Universal Time.)Let JD be the Julian date of the time of interest. Let JD0 be the Julian date of the previous midnight (0h) UT (the value of JD0 will end in .5 exactly), and let H be the hours of UT elapsed since that time. Thus we have JD = JD0 + H/24.
+
+For both of these Julian dates, compute the number of days and fraction (+ or -) from 2000 January 1, 12h UT, Julian date 2451545.0:
+D = JD - 2451545.0
+D0 = JD0 - 2451545.0
+
+Then the Greenwich mean sidereal time in hours is
+GMST = 6.697374558 + 0.06570982441908 D0 + 1.00273790935 H + 0.000026 T2
+where T = D/36525 is the number of centuries since the year 2000; thus the last term can be omitted in most applications. It will be necessary to reduce GMST to the range 0h to 24h. Setting H = 0 in the above formula yields the Greenwich mean sidereal time at 0h UT, which is tabulated in The Astronomical Almanac.
+
+The following alternative formula can be used with a loss of precision of 0.1 second per century:
+GMST = 18.697374558 + 24.06570982441908 D
+where, as above, GMST must be reduced to the range 0h to 24h. The equations for GMST given above are adapted from those given in Appendix A of USNO Circular No. 163 (1981).
+
+The Greenwich apparent sidereal time is obtained by adding a correction to the Greenwich mean sidereal time computed above. The correction term is called the nutation in right ascension or the equation of the equinoxes. Thus,
+GAST = GMST + eqeq.
+The equation of the equinoxes is given as eqeq = Δψ cos ε where Δψ, the nutation in longitude, is given in hours approximately by
+Δψ ≈ -0.000319 sin Ω - 0.000024 sin 2L
+with Ω, the Longitude of the ascending node of the Moon, given as
+Ω = 125.04 - 0.052954 D,
+and L, the Mean Longitude of the Sun, given as
+L = 280.47 + 0.98565 D.
+ε is the obliquity and is given as
+ε = 23.4393 - 0.0000004 D.
+The above expressions for Ω, L, and ε are all expressed in degrees.
+
+The mean or apparent sidereal time locally is found by obtaining the local longitude in degrees, converting it to hours by dividing by 15, and then adding it to or subtracting it from the Greenwich time depending on whether the local position is east (add) or west (subtract) of Greenwich.")
+	op double getLocalSideralTime(Date date, @GenModel(documentation="The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.") double observerLongitude)
+	
+	@GenModel(documentation="Return the decimal time of day in UTC for a given date.")
+	op double getUTCDecimalHours(Date date)
+	
+	@GenModel(documentation="Converts Equatorial Coordinates to HorizontalCoordinates for a given geographic location and date.")
+	op HorizontalCoordinates convertToHorizontalCoordinates(EquatorialCoordinates equatorialCoordinates, @GenModel(documentation="The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.") double observerLongitude, @GenModel(documentation="The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.") double observerLatitude, Date date)
+	
+	@GenModel(documentation="Convert a day's hour, minutes and seconds to an angle, in radians. 24 hours converts to 2π (360 degrees).")
+	@GenModel(csa_units="rad") op double convertTimeToAngle(int hours, int minutes, int seconds)
+	
+	@GenModel(documentation="Clamps the specified angle between 0 and 2π (360 degrees).")
+	@GenModel(csa_units="rad") op double clampAngleToZero2PI(@GenModel(csa_units="rad") double angleInRadians)
+	
+	@GenModel(documentation="Converts Ecliptic Coordinates to Equatorial Coordinates.")
+	op EquatorialCoordinates convertToEquatorialCoordinates(EclipticCoordinates eclipticCoordinates)
+	
+	@GenModel(documentation="Converts Equatorial Coordinates to Ecliptic Coordinates.")
+	op EclipticCoordinates convertToEclipticCoordinates(EquatorialCoordinates equatorialCoordinates)
+	
+	@GenModel(documentation="Converts Rectangular (x,y,z) Equatorial Coordinates to Equatorial Coordinates (Right Ascension and Declination).")
+	op Point3d convertFromEquatorialRectangularToEclipticRectangular(Point3d equatorialRectangularCoordinates)
+
+	@GenModel(documentation="Converts Rectangular (x,y,z) Ecliptic Coordinates to Rectangular (x,y,z) Equatorial Coordinates.")
+	op Point3d convertFromEclipticRectangularToEquatorialRectangular(Point3d eclipticCoordinates)
+	
+	@GenModel(documentation="Converts Rectangular (x,y,z) Ecliptic Coordinates to Ecliptic Coordinates (longitude, latitude, radius).")
+	op EclipticCoordinates convertFromEclipticRectangularToEclipticCoordinates(Point3d eclipticCoordinates)
+		
+	@GenModel(documentation="Converts Rectangular (x,y,z) Equatorial Coordinates to Equatorial Coordinates (Right Ascension, Declination).")
+	op EquatorialCoordinates convertFromEquatorialRectangularToEquatorialCoordinates(Point3d equatorialCoordinates)
+	
+	@GenModel(documentation="Converts HorizontalCoordinates () to Rectangular Horizontal  (x,y,z)  coordinates. Rectangular Horizontal  coordinates are defined as followed: X point to True North. Y points West Z point toward nadir (up);")
+	op Point3d convertFromHorizontalCoordinatesToHorizontalRectangular(HorizontalCoordinates horizontalCoordinates)
+	
+	@GenModel(documentation="")
+	op Point3d convertFromEquatorialCoordinatesToEquatorialRectangular(EquatorialCoordinates equatorialCoordinates)
+	
+	@GenModel(documentation="Convert Astronomical Units (A.U.) to meters.")
+	@GenModel(csa_units="m") op double convertAUtoMeters(double astronomicalUnits)
+	
+	@GenModel(documentation="Return the maximum altitude angle that the sun could reach at the specified latitude, in radians.")
+	@GenModel(csa_units="rad") op double getMaximumSunAltitude(@GenModel(csa_units="rad") double observerLatitude)
+	
+	@GenModel(documentation="Converts a sidreal time in HH:mm:ss string")
+	op String convertToHHmmssString(double sideralTime)
+	
+	@GenModel(documentation="Computes the sun rise time for a given day and location.")
+	op Date getSunRiseTime(@GenModel(documentation="The date of the day") Date day, @GenModel(documentation="The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.") double observerLongitude, @GenModel(documentation="The observer latitude, in radians. Latitude North of the equator are positive, South of the equator are negative.") double observerLatitude)
+
+	@GenModel(documentation="Computes the sun set time for a given day and location.")
+	op Date getSunSetTime(@GenModel(documentation="The date of the day") Date day, @GenModel(documentation="The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.") double observerLongitude, @GenModel(documentation="The observer latitude, in radians. Latitude North of the equator are positive, South of the equator are negative.") double observerLatitude)
+
+	@GenModel(documentation="Computes the time of maximum sun elevation for a given day and location.")
+	op Date getSunHighestElevationTime(@GenModel(documentation="The date of the day") Date day, @GenModel(documentation="The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.") double observerLongitude, @GenModel(documentation="The observer latitude, in radians. Latitude North of the equator are positive, South of the equator are negative.") double observerLatitude)
+	
+}
+
+// Maps and Layers
+
+class Map extends Named, Described
+{
+	contains Matrix4x4[0..1] transformation
+	
+	contains AbstractMapLayer[0..*] layers opposite map
+	
+	refers derived transient readonly MapNode[1] mapNode
+}
+
+class MapsList
+{
+	contains Map[0..*] maps
+	
+	@GenModel(property="None")
+	refers derived transient readonly MapsListNode[1] mapsListNode
+}
+
+@GenModel(documentation="A layer representing a terrain map.")
+abstract class AbstractMapLayer extends Named, Described
+{	
+	@GenModel(property="None")
+	refers Map map opposite layers
+	
+	@GenModel(property="None")
+	refers derived transient readonly AbstractMapLayerNode abstractMapLayerNode
+}
+
+/*
+ * Class representing presentation attributes that are associated to a AbstractMapLayer.
+ */
+abstract class MapLayerPresentation extends Named, Described
+{
+	/* Visibility */
+	@GenModel(notify="true", propertyCategory="PRESENTATION_SETTINGS")
+	boolean visible = "true"
+		
+	refers AbstractMapLayer mapLayer
+}
+
+@GenModel(documentation="A Map Layer containing a URL to some data.")
+abstract class URLMapLayer extends AbstractMapLayer
+{
+	@GenModel(propertyCategory="URL")
+	String url
+}
+
+/**
+ * Defines a Region.
+ */
+abstract class Region
+{	
+	/** 
+	 *	Transform that expresses the origin of the region relative to the worksite. 
+	 */
+	contains Matrix4x4[0..1] transformation
+}
+
+/**
+ * Defines a 2D rectangular region in the XY Plane.
+ */
+class RectangularRegion extends Region
+{		
+	/** Minimum X coordinate on the X axis. */	
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	double xMin = "0.0"
+	
+	/** Maximum X coordinate on the X axis. */
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	double xMax = "0.0"
+	
+	/** Minimum X coordinate on the Y axis. */
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	double yMin = "0.0"
+	
+	/** Maximum X coordinate on the Y axis. */
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	double yMax = "0.0"
+	
+	/** Dimension along the X axis. */
+	@GenModel(propertyCategory="EXTENT_SIZES", csa_units="m")
+	derived transient readonly volatile double xDimension
+	
+	/** Dimension along the Y axis. */
+	@GenModel(propertyCategory="EXTENT_SIZES", csa_units="m")
+	derived transient readonly volatile double yDimension 
+	
+	refers derived transient readonly Tuple3d[1] lowerLeftCorner
+	refers derived transient readonly Tuple3d[1] upperLeftCorner
+	refers derived transient readonly Tuple3d[1] lowerRightCorner
+	refers derived transient readonly Tuple3d[1] upperRightCorner
+}
+
+class RectangularVolumeRegion extends RectangularRegion
+{		
+	/** Minimum Z coordinate on the Z axis. */	
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	double zMin = "0.0"
+	
+	/** Maximum Z coordinate on the Z axis. */
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	double zMax = "0.0"
+	
+	/** Dimension along the Z axis. */
+	@GenModel(propertyCategory="EXTENT_SIZES", csa_units="m")
+	derived transient readonly volatile double zDimension 	
+}
+
+/*
+ * Interface that provides a RectangularRegion.
+ */
+interface RectangularRegionProvider
+{
+   /**
+	* Returns the RectangularRegion defined by the object.
+	* @return The RectangularRegion defined by the object, never null.
+	*/
+	op RectangularRegion getRegion()
+}
+
+/**
+ * Defines a rectangular region covered by an image.
+ */
+interface RectangularRegionImage extends RectangularRegionProvider 
+{
+	/**
+	 * Return the image associated with this region.
+	 * @return The image, can be null.
+	 */
+	op AbstractEImage getRegionImage()
+			
+	/**
+	 * Returns the image resolution.
+	 * @return The resolution, in meters / pixel, or -1 if not defined.
+	 */	
+	@GenModel(csa_units="m/pixel") op double getResolution()
+}
+
+/**
+ * Map Layer containing a 2D image.
+ */
+class ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
+{
+	/* The width of the region covered by the map, in meters.*/
+	@GenModel(property="Editable", propertyCategory="SIZE_AND_RESOLUTION", csa_units="m")	
+	double width = "0.0"
+
+	/* The height of the region covered by the map, in meters.*/
+	@GenModel(property="Editable", propertyCategory="SIZE_AND_RESOLUTION", csa_units="m")
+	double height = "0.0"
+
+	/* Wether or not the map is opaque (i.e. cannot be superimposed on other ImageMapLayer.*/
+	boolean opaque = "true"
+
+	/* The image.*/
+	@GenModel(propertyCategory="IMAGES")
+	contains AbstractEImage[1] image
+	
+	/* An image containing the legend associated with the image.*/
+	@GenModel(propertyCategory="IMAGES")
+	contains AbstractEImage[0..1] legend	
+	
+	/*
+	 * Update the image using the image parameters.
+	 */	
+	op void updateImage(IProgressMonitor progressMonitor)	
+	
+	/* Return the RectangularRegion represented by this ImageMapLayer.*/
+	op RectangularRegion getImageMapLayerRegion()
+	
+	/* The resolution, in meters / pixels */
+	@GenModel(property="Readonly", propertyCategory="SIZE_AND_RESOLUTION", csa_units="m/pixel") 
+	derived transient readonly double resolution		
+}
+
+/*
+ * Presentation properties associated to an Image Layer.
+ */
+class ImageMapLayerPresentation extends MapLayerPresentation, RectangularRegionImage
+{
+	/*
+	 *  Operation that return the Image Map Layer to which this presentation is associated.
+	 */	
+	op ImageMapLayer getImageMapLayer()
+	
+	/**
+	 * The alpha to use to display this layer, from fully opaque (1.0f) to fully transparent (0.0f).
+	 */
+	@GenModel(notify="true", propertyCategory="PRESENTATION_SETTINGS")
+	float alpha = "1.0"	
+}
+
+/**
+ * ImageMapLayer that refers to an image at a URL
+ */
+class URLImageMapLayer extends ImageMapLayer, URLMapLayer
+{
+	/* URL to the Image Map Layer legend.*/
+	@GenModel(propertyCategory="URL")
+	String legendURL
+}
+
+/**
+ * A map Layer that contains an arbitray topology tree.
+ */
+class TopologyTreeMapLayer extends AbstractMapLayer
+{		
+	/*
+	 * The root of the topology contained in this layer. 
+	 */
+	@GenModel(children = "true", property="None")
+	contains TopologyTreeMapLayerNode topologyTreeRoot opposite topologyTreeMapLayer
+}
+
+/*
+ * Specialized GroupNode which parent node is overloarded to make it transient.
+ * This is necessary to avoid dangling exceptions.
+ */
+class TopologyTreeMapLayerNode extends AggregateGroupNode
+{
+	refers TopologyTreeMapLayer topologyTreeMapLayer opposite topologyTreeRoot
+	
+	refers transient Node transientParent			
+}
+
+/**
+ * Abstract base class of all Cartesian Triangular Mesh Map Layers
+ */
+class CartesianTriangularMeshMapLayer extends AbstractMapLayer
+{			
+	/* Operation that returns the CartesianTriangularMesh associated with this layer.*/
+	op CartesianTriangularMesh getCurrentMesh()
+	
+	/* Forces the texture image projected onto the mesh to be updated.*/
+	op void forceUpdateTextureImage()
+		
+	/* Wheter of not the current mesh needs to be refreshed.*/
+	@GenModel(property="None", propertyCategory="TRIANGULAR_MESH")
+	boolean meshIsDirty = "true"
+	
+	/* A list of map layer presentation associated with this CartesianTriangularMeshMapLayer. */	 
+	contains MapLayerPresentation[0..*] mapLayerPresentations
+	
+	/* The texture currently displayed on top of the mesh layer.*/
+	@GenModel(children = "true", property="None")
+	refers transient AbstractEImage textureImage
+	
+	/* The node representing this layer in the topology.*/
+	@GenModel(property="None")
+	refers transient CartesianTriangularMeshMapLayerNode cartesianTriangularMeshMapLayerNode	
+}
+
+/*
+ * Asbtract class defining an ImageMapLayer for which the image is derived from a Mesh.
+ */
+abstract class CartesianTriangularMeshDerivedImageMapLayer extends ImageMapLayer
+{
+	/* The required resolution, in meters / pixels */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m/pixel") 
+	double requiredResolution = "1.0"
+	
+	/*
+	 * The map layer containing the mesh for which to generate the slope map.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS") 
+	refers CartesianTriangularMeshMapLayer cartesianTriangularMeshMapLayer	
+}
+
+/*
+ * A specialized ImageMapLayer that generate a slope map image associated with a CartesianTriangularMeshMapLayer.
+ */
+class CartesianTriangularMeshSlopeImageMapLayer extends CartesianTriangularMeshDerivedImageMapLayer
+{
+	/*
+	 * Wether or not to use autoscalling to generate the color scale.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS") 
+	boolean autoScale = "true"
+	
+	/*
+	 * The minimum slope to use to generate the color scale. This is applicable only if autoScale is true. 
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="deg") 
+	double minimumSlope = "0.0"
+	
+	/*
+	 * The maximum slope to use to generate the color scale. This is applicable only if autoScale is true. 
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="deg") 
+	double maximumSlope = "50.0"	
+}
+
+/*
+ * A specialized CartesianTriangularMeshSlopeImageMapLayer that generate a slope with discrete slope intervals.
+ */
+class CartesianTriangularMeshDiscreteSlopeImageMapLayer extends CartesianTriangularMeshSlopeImageMapLayer
+{
+	/*
+	 * The range of slope for which to generate colors.
+	 */
+	contains SlopeRange[0..*] slopeRanges
+}
+
+/*
+ *  A specialized ImageMapLayer that generate a height map image associated with a CartesianTriangularMeshMapLayer.
+ */
+class CartesianTriangularMeshHeightImageMapLayer extends CartesianTriangularMeshDerivedImageMapLayer
+{
+	/*
+	 * Wether or not to use autoscalling to generate the color scale.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	boolean autoScale = "true"
+
+	/*
+	 * The minimum height to use to generate the color scale. This is applicable only if autoScale is true. 
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m")
+	double minimumHeight = "0.0"
+	
+	/*
+	 * The maximum height to use to generate the color scale. This is applicable only if autoScale is true. 
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m")
+	double maximumHeight = "50.0"	
+}
+
+/*
+ * Class defining a slope range and its associated color.
+ */
+class SlopeRange extends Named, Described
+{
+	/*
+	 * Lower bound of the slope range. Always positive
+	 */
+	@GenModel(property="Editable", csa_units="deg")
+	double slopeLowerBound = "0"
+	
+	/*
+	 * Upper bound of the slope range. Always positive, and should be larger than slopeLower.
+	 */
+	@GenModel(property="Editable", csa_units="deg")
+	double slopeUpperBound = "10"
+	
+	/*
+	 * The color to use for this slope range.
+	 */
+	@GenModel(property="Editable")
+	Color3f color = "1.0,1.0,1.0"
+}
+
+/*
+ * A specialized CartesianTriangularMeshDerivedImageMapLayer that generate a image showing wether or not line of sight is present 
+ * between a point above the mesh and a specified fixed location.
+ */
+class LineOfSightImageMapLayer extends CartesianTriangularMeshDerivedImageMapLayer
+{	
+	/*
+	 * Color to use to mark line of sigh is available.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	Color3f lineOfSightAvailableColor = "0.0,1.0,0.0"
+
+	/*
+	 * Color to use to mark line of sigh is NOT available.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	Color3f lineOfSightNotAvailableColor = "1.0,0.0,0.0"
+
+	/*
+	 * The pose of the observer with which we want line of sight.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	contains Matrix4x4[1] observerPose
+	
+	/*
+	 * The height of target above ground.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m")
+	double targetHeightAboveGround = "1.0" 
+	
+	/*
+	 * Wheter or not find each target position using the local normal.
+	 * Using the local normal requires more processing time.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	boolean useHeightPerpendicularToGround = "false"
+}
+
+/**
+ * Base class of image map layer that represent a 2D shape.
+ */
+abstract class AbstractShapeImageLayer extends ImageMapLayer
+{
+	/*
+	 * Wether or not the shape should be drawn as a filled polygon.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS") 
+	boolean shapedFilled = "false"
+	
+	/*
+	 * Color to use to draw the polygon and fill it is required.
+	 */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS")
+	Color3f color = "0.0,1.0,0.0"
+	
+	/* The required resolution, in meters / pixels */
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m/pixel") 
+	double requiredResolution = "1.0"
+}
+
+/**
+ * An image map layer representing an ellipse.
+ */
+class EllipseShapeImageLayer extends AbstractShapeImageLayer
+{
+	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS", csa_units="m") 
+	double ellipseWidth = "1.0"
+	
+	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS", csa_units="m") 
+	double ellipseHeight = "1.0"
+	
+	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS") 
+	boolean showCenterLines = "true"
+}
+
+/**
+ * An image map layer representing an ellipse.
+ */
+class RectangleShapeImageLayer extends AbstractShapeImageLayer
+{
+	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS", csa_units="m") 
+	double rectangleWidth = "1.0"
+	
+	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS", csa_units="m") 
+	double rectangleHeight = "1.0"
+	
+	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS") 
+	boolean showCenterLines = "true"
+}
+
+/*
+ * Abstract base class of Image Map Layer that are defined by a series of vertices.
+ */
+abstract class PolygonShapeImageMapLayer extends AbstractShapeImageLayer
+{
+	/* Returns the list of vertices required to draw the polygon. */
+	op List<Tuple3d> getVertices()
+}
+
+/*
+ * PolygonShapeImageMapLayer defined by a list of cartesian coordinates.
+ */
+class CartesianCoordinatesPolygonShapeImageMapLayer extends PolygonShapeImageMapLayer
+{
+	contains Tuple3d[0..*] polygonVertices
+}
+
+/*
+ * PolygonShapeImageMapLayer defined by a list of Geographic Coordinates.
+ */
+class GeographicCoordinatesPolygonShapeImageMapLayer extends PolygonShapeImageMapLayer
+{
+	contains GeographicCoordinates[0..*] polygonVerticesGeographicCoordinates
+}
+
+/*
+ * Map Layer that contains a Cartesian Triangular Mesh.
+ */
+class BasicCartesianTriangularMeshMapLayer extends CartesianTriangularMeshMapLayer
+{
+	@GenModel(property="Readonly", propertyCategory="TRIANGULAR_MESH")
+	contains CartesianTriangularMesh[0..1] mesh
+}
+
+/*
+ * Map Layer that contains a URL to a Cartesian Triangular Mesh.
+ */
+class CartesianTriangularMeshURLMapLayer extends CartesianTriangularMeshMapLayer, URLMapLayer 
+{	
+	@GenModel(property="Readonly", propertyCategory="TRIANGULAR_MESH")
+	refers transient CartesianTriangularMesh[0..1] mesh
+}
+
+/*
+ * Map Layer that contains Feature Of Interest.
+ */
+class FeaturesOfInterestMapLayer extends AbstractMapLayer, RectangularRegionProvider
+{
+	contains FeatureOfInterestList[1] features
+}
+
+// Specific Topology Nodes.
+
+class WorksiteNode extends GroupNode
+{	
+	refers transient Worksite worksite	
+}
+
+class SurfaceWorksiteNode extends WorksiteNode
+{	
+}
+
+class EarthSurfaceWorksiteNode extends SurfaceWorksiteNode
+{
+	refers transient TransformNode skyTransformNode
+}
+
+class MapsListNode extends AggregateGroupNode
+{
+	refers transient MapsList mapsList
+}
+
+class MapNode extends TransformNode
+{
+	refers transient Map map
+}
+
+class AbstractMapLayerNode extends AggregateGroupNode
+{
+	refers transient AbstractMapLayer abstractMapLayer
+}
+
+class SkyNode extends GroupNode
+{	
+	refers transient Sky sky
+} 
+
+class EarthSkyNode extends SkyNode
+{
+}
+
+/*
+ * Specialized Node used to represent a artesianTriangularMeshMapLayer in the topology.
+ */
+class CartesianTriangularMeshMapLayerNode extends AbstractMapLayerNode
+{	
+	op CartesianTriangularMeshMapLayer getCartesianTriangularMeshMapLayer()
+}
+
+ 

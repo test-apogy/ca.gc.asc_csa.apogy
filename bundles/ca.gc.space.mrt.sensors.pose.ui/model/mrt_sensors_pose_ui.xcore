@@ -1,0 +1,22 @@
+@GenModel(prefix="SensorsPoseUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="SensorsPoseUI", complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.space.mrt.sensors.pose.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.sensors.pose.ui.edit/src-generated")
+
+package ca.gc.space.mrt.sensors.pose.ui
+
+import ca.gc.space.topology.ui.NodePresentation
+
+class PositionSensorPresentation extends NodePresentation
+{
+	boolean frameVisible = "true"
+}
+
+class OrientationSensorPresentation extends NodePresentation
+{
+	boolean frameVisible = "true"
+}
+
+class PoseSensorPresentation extends NodePresentation
+{
+	boolean frameVisible = "true"
+}

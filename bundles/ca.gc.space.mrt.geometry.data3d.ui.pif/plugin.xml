@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="ca.gc.space.topology.ui.graphicsContextAdapter">
+      <Class
+            Class="ca.gc.space.mrt.geometry.data3d.ui.pif.adapters.GraphicsContextPifAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="ca.gc.space.mrt.geometry.data3d.ui.pif.objectContribution1"
+            nameFilter="*.pf"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="ca.gc.space.mrt.geometry.data3d.ui.pif.menu1"
+               label="New Submenu"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="ca.gc.space.mrt.geometry.data3d.ui.pif.popup.actions.NewAction"
+               id="ca.gc.space.mrt.geometry.data3d.ui.pif.popup.actions.NewAction"
+               label="Export to XYZ"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

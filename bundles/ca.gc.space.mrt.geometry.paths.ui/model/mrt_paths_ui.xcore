@@ -1,0 +1,28 @@
+@GenModel(prefix="PathsUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="PathsUI", complianceLevel="6.0")
+@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.paths.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.geometry.paths.ui.edit/src-generated")
+
+package ca.gc.space.mrt.geometry.paths.ui
+
+import ca.gc.space.topology.ui.NodePresentation
+
+enum PathPresentationMode
+{
+	POINTS as "Points" = 0,
+	LINES as "Lines" = 1,
+	POINTS_LINES as "Points Lines" = 2
+}
+
+class WayPointPathPresentation extends NodePresentation
+{
+	int pointSize = "2"
+
+	PathPresentationMode presentationMode = "Points Lines"
+
+	float endPointsRadius = "0.02"
+}
+
+class WayPointPresentation extends NodePresentation
+{
+	
+}

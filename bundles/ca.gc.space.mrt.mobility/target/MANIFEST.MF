@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.mobility;singleton:=true
+Export-Package: ca.gc.space.mrt.mobility,ca.gc.space.mrt.mobility.impl
+ ,ca.gc.space.mrt.mobility.util
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport,ca.gc.space.math.core;visibility:=reexport,ca.gc.space.
+ topology.core;visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: %providerName
+

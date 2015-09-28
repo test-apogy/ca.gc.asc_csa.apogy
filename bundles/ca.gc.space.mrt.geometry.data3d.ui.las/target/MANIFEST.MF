@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.geometry.data3d.ui.las;singleton:
+ =true
+Export-Package: ca.gc.space.mrt.geometry.data3d.ui.las
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,org.eclipse.core.resources;bundle-versi
+ on="3.8.1",org.eclipse.core.runtime,ca.gc.asc_csa.io.las,ca.gc.space.
+ mrt.geometry.data3d,ca.gc.space.topology.core,ca.gc.space.topology.ui
+Bundle-ManifestVersion: 2
+Bundle-Activator: ca.gc.space.mrt.geometry.data3d.ui.las.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+

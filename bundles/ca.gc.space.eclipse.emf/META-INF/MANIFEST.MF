@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ca.gc.space.eclipse.emf
+Bundle-Version: 0.3.0.qualifier
+Bundle-Activator: ca.gc.space.eclipse.emf.EMFUtilities
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore
+Bundle-ActivationPolicy: lazy
+Export-Package: ca.gc.space.eclipse.emf
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_examples_lidar -->
+      <package
+            uri="ca.gc.asc_csa.symphony.examples.lidar"
+            class="ca.gc.asc_csa.symphony.examples.lidar.SymphonyExampleLidarPackage"
+            genModel="model/symphony_examples_lidar.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">
+      <Type
+            URI="model/LidarSymphonySystem.ss">
+      </Type>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.SessionProvider">
+      <SessionProvider
+            Description="Session showing the use of the Lidar example system."
+            Name="Lidar Example"
+            URI="sessions/LidarExampleSession.sym">
+      </SessionProvider>
+   </extension>
+
+</plugin>

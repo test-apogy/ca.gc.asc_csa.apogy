@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension
+        point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+     <Class
+           Class="ca.gc.space.mrt.mobility.pathplanners.ui.jme3.adapters.CircularExclusionZoneJME3Adapter">
+     </Class>
+  </extension>
+</plugin>

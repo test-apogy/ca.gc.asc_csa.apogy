@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.sensors.fov;singleton:=true
+Export-Package: ca.gc.space.mrt.sensors.fov,ca.gc.space.mrt.sensors.fo
+ v.impl,ca.gc.space.mrt.sensors.fov.util
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-Localization: plugin
+Bundle-ClassPath: .
+Require-Bundle: ca.gc.space.topology.core;visibility:=reexport,ca.gc.s
+ pace.math.core;visibility:=reexport,ca.gc.space.mrt.common.processors
+ ;visibility:=reexport,org.eclipse.core.runtime,org.eclipse.emf.ecore;
+ visibility:=reexport,ca.gc.space.mrt.geometry.data3d;visibility:=reex
+ port,ca.gc.space.mrt.geometry.data;visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: %providerName
+

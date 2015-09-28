@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ca.gc.asc_csa.symphony.feature"
+      label="ASC-CSA Symphony"
+      version="0.4.0.201506161419"
+      provider-name="Agence Spatiale Canadienne / Canadian Space Agency">
+
+   <description>
+      Symphony Framework
+   </description>
+
+   <copyright url="http://www.asc-csa.gc.ca">
+      (C) Government of Canada, 2011-2014. This document contains information
+proprietary to &amp;quot;the Canadian Space Agency&amp;quot;, or to a
+third party
+to which &amp;quot;the Canadian Space Agency&amp;quot; may have legal
+obligation
+to protect such information from unauthorized disclosure, use
+or duplication. Any disclosure, use or duplication of this document
+or of any of the information contained herein for other than
+the specific purpose for which it was disclosed is expressly
+prohibited outside the Government of Canada except as &amp;quot;the
+Canadian
+Space Agency&amp;quot; may otherwise agree to in writing.
+(C) Gouvernement du Canada, 2011-2012. Ce document renferme des
+renseignements appartenant à &amp;quot;l&amp;apos;Agence Spatiale Canadienne&amp;quot;
+ou
+à une tierce partie envers qui &amp;quot;l&amp;apos;Agence Spatiale Canadienne&amp;quot;
+a l&amp;apos;obligation de protéger lesdits renseignements de toute
+divulgation,
+utilisation ou reproduction non autorisées. Toute divulgation,
+utilisation ou reproduction du présent document ou des renseignements
+qu&amp;apos;il contient à des fins autres que les fins spécifiques
+pour
+lesquelles il a été divulgué est formellement interdite à l&amp;apos;extérieur
+du gouvernement du Canada, sauf autorisation écrite de &amp;quot;l&amp;apos;Agence
+Spatiale Canadienne&amp;quot;.
+Canadian Space Agency / Agence spatiale canadienne
+Space Exploration  / Exploration spatiale
+   </copyright>
+
+   <license url="">
+      (C) Government of Canada, 2011-2014. This document contains information
+proprietary to &quot;the Canadian Space Agency&quot;, or to a third party
+to which &quot;the Canadian Space Agency&quot; may have legal obligation
+to protect such information from unauthorized disclosure, use
+or duplication. Any disclosure, use or duplication of this document
+or of any of the information contained herein for other than
+the specific purpose for which it was disclosed is expressly
+prohibited outside the Government of Canada except as &quot;the Canadian
+Space Agency&quot; may otherwise agree to in writing.
+(C) Gouvernement du Canada, 2011-2012. Ce document renferme des
+renseignements appartenant à &quot;l&apos;Agence Spatiale Canadienne&quot; ou
+à une tierce partie envers qui &quot;l&apos;Agence Spatiale Canadienne&quot;
+a l&apos;obligation de protéger lesdits renseignements de toute divulgation,
+utilisation ou reproduction non autorisées. Toute divulgation,
+utilisation ou reproduction du présent document ou des renseignements
+qu&apos;il contient à des fins autres que les fins spécifiques pour
+lesquelles il a été divulgué est formellement interdite à l&apos;extérieur
+du gouvernement du Canada, sauf autorisation écrite de &quot;l&apos;Agence
+Spatiale Canadienne&quot;.
+Canadian Space Agency / Agence spatiale canadienne
+Space Exploration  / Exploration spatiale
+   </license>
+
+   <includes
+         id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.asc_csa.eclipse.emf.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.asc_csa.eclipse.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.asc_csa.eclipse.nebula.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.asc_csa.eclipse.ros.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.asc_csa.io.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.asc_csa.jinput.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.space.eclipse.emf.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.space.java.utils.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.space.java3d.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.space.math.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.space.mrt.feature"
+         version="0.5.0.201506161317"/>
+
+   <includes
+         id="ca.gc.space.mrt.ui.feature"
+         version="0.5.0.201506161317"/>
+
+   <includes
+         id="ca.gc.space.net.ax25_feature"
+         version="0.1.0.201506161322"/>
+
+   <includes
+         id="ca.gc.space.net.feature"
+         version="0.1.0.201506161322"/>
+
+   <includes
+         id="ca.gc.space.net.ui.feature"
+         version="0.1.0.201506161322"/>
+
+   <includes
+         id="ca.gc.space.sync.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="ca.gc.space.topology.feature"
+         version="0.5.0.201506161309"/>
+
+   <includes
+         id="ca.gc.space.topology.ui.feature"
+         version="0.5.0.201506161309"/>
+
+   <includes
+         id="ca.ubc.cs.flann.feature"
+         version="1.6.11.201506160705"/>
+
+   <includes
+         id="com.cvsreader.feature"
+         version="2.0.0.201506160705"/>
+
+   <includes
+         id="com.google.guava.feature"
+         version="14.0.1.201506160705"/>
+
+   <includes
+         id="com.jhlabs.image.feature"
+         version="1.0.0.201506160705"/>
+
+   <includes
+         id="com.jmatio.feature"
+         version="1.0.0.201506160705"/>
+
+   <includes
+         id="com.jme3.feature"
+         version="3.0.0.201506160705"/>
+
+   <includes
+         id="com.sun.imageio.feature"
+         version="1.2.0.201506160705"/>
+
+   <includes
+         id="edu.wlu.cs.levy.CG.feature"
+         version="0.1.0.201506160705"/>
+
+   <includes
+         id="gov.nasa.worldwind.feature"
+         version="2.0.0.201506160705"/>
+
+   <includes
+         id="org.jama.feature"
+         version="1.0.2.201506160705"/>
+
+   <includes
+         id="org.jfree.feature"
+         version="1.0.13.201506160705"/>
+
+   <includes
+         id="org.jgrapht.feature"
+         version="0.8.2.201506160705"/>
+
+   <includes
+         id="org.jinput.feature"
+         version="0.1.0.201506160705"/>
+
+   <includes
+         id="org.jscience.feature"
+         version="4.3.1.201506160705"/>
+
+   <includes
+         id="org.mockito.feature"
+         version="1.8.5.201506160705"/>
+
+   <includes
+         id="org.netlib.jlapack.feature"
+         version="0.8.0.201506160705"/>
+
+   <includes
+         id="org.opencv.feature"
+         version="2.4.3.201506160705"/>
+
+   <includes
+         id="org.orekit.feature"
+         version="0.7.0.201506160705"/>
+
+   <includes
+         id="org.ros.feature"
+         version="1.6.6.201506160705"/>
+
+   <includes
+         id="org.vtk.feature"
+         version="5.4.0.201506160705"/>
+
+   <includes
+         id="org.xbill.DNS.feature"
+         version="2.1.1.201506160705"/>
+
+   <includes
+         id="org.yaml.snakeyaml.feature"
+         version="1.11.0.201506160705"/>
+
+   <includes
+         id="ca.gc.space.java.emf.feature"
+         version="0.3.0.201506161406"/>
+
+   <includes
+         id="com.mathworks.toolbox.javabuilder.feature"
+         version="1.7.10.201506160705"/>
+
+   <includes
+         id="org.gavaghan.geodesy.feature"
+         version="1.1.1.201506160705"/>
+
+   <includes
+         id="gnu.io.rxtx.feature"
+         version="2.1.7.201506160705"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.core"
+         download-size="147"
+         install-size="361"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.core.edit"
+         download-size="164"
+         install-size="256"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.core.ui"
+         download-size="146"
+         install-size="298"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment"
+         download-size="8956"
+         install-size="41057"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.edit"
+         download-size="210"
+         install-size="352"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.ui"
+         download-size="271"
+         install-size="586"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.ui.edit"
+         download-size="116"
+         install-size="194"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.topology"
+         download-size="37"
+         install-size="84"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.topology.edit"
+         download-size="47"
+         install-size="73"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.topology.ui"
+         download-size="34"
+         install-size="60"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.camera"
+         download-size="193"
+         install-size="460"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.camera.edit"
+         download-size="126"
+         install-size="215"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.core"
+         download-size="90"
+         install-size="213"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.core.edit"
+         download-size="75"
+         install-size="140"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.vehicle"
+         download-size="108"
+         install-size="262"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.vehicle.edit"
+         download-size="90"
+         install-size="164"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.vehicle.ui"
+         download-size="38"
+         install-size="73"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.vehicle.ui.edit"
+         download-size="31"
+         install-size="47"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.ui"
+         download-size="37"
+         install-size="70"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.ui.edit"
+         download-size="27"
+         install-size="43"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.core.ui.edit"
+         download-size="26"
+         install-size="58"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.core.ui.jme3"
+         download-size="14"
+         install-size="25"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.ui.jme3"
+         download-size="68"
+         install-size="136"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.ui.jme3"
+         download-size="43"
+         install-size="83"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.tools.vehicle.ui.jme3"
+         download-size="33"
+         install-size="59"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.orbit"
+         download-size="64"
+         install-size="149"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.orbit.earth"
+         download-size="181"
+         install-size="470"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.orbit.earth.edit"
+         download-size="133"
+         install-size="241"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.orbit.earth.ui"
+         download-size="133"
+         install-size="296"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.edit"
+         download-size="63"
+         install-size="115"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+   <plugin
+         id="ca.gc.asc_csa.symphony.environment.orbit.edit"
+         download-size="54"
+         install-size="106"
+         version="0.4.0.201506161419"
+         unpack="false"/>
+
+</feature>

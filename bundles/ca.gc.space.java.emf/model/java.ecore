@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="emf" nsURI="http:///ca/gc/space/java/emf.ecore" nsPrefix="ca.gc.space.java">
+  <eClassifiers xsi:type="ecore:EDataType" name="Matrix4d" instanceClassName="javax.vecmath.Matrix4d"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Matrix3d" instanceClassName="javax.vecmath.Matrix3d"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Vector3d" instanceClassName="javax.vecmath.Vector3d"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Point3d" instanceClassName="javax.vecmath.Point3d"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Tuple3d" instanceClassName="javax.vecmath.Tuple3d"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="InputStream" instanceClassName="java.io.InputStream"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="OutputStream" instanceClassName="java.io.OutputStream"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Comparable" instanceClassName="java.lang.Comparable"
+      abstract="true" interface="true">
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="BranchGroup" instanceClassName="javax.media.j3d.BranchGroup"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Group" instanceClassName="javax.media.j3d.Group"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Node" instanceClassName="javax.media.j3d.Node"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Exception" instanceClassName="java.lang.Exception"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="List" instanceClassName="java.util.List">
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="GVector" instanceClassName="javax.vecmath.GVector"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="BufferedImage" instanceClassName="java.awt.image.BufferedImage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Comparator" instanceClassName="java.util.Comparator"
+      abstract="true" interface="true">
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Class" instanceClassName="java.lang.Class">
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="CoreException" instanceClassName="org.eclipse.core.runtime.CoreException"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="IOException" instanceClassName="java.io.IOException"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Point2d" instanceClassName="javax.vecmath.Point2d"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ImageData" instanceClassName="org.eclipse.swt.graphics.ImageData"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Canvas" instanceClassName="org.eclipse.swt.widgets.Canvas"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Quat4d" instanceClassName="javax.vecmath.Quat4d"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="View" instanceClassName="javax.media.j3d.View"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="NodeArray" instanceClassName="javax.media.j3d.Node[]"/>
+</ecore:EPackage>

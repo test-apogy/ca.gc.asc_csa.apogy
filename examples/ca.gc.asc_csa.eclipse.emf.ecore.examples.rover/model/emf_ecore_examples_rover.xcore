@@ -1,0 +1,357 @@
+@GenModel(prefix="EMFEcoreExampleRover",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
+		  modelName="EMFEcoreExampleRover",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.rover/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.edit/src-generated")
+
+package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Disposable
+import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm
+import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform
+import ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.PTUCamera
+
+/*
+ * This class represents a battery in the rover's
+ * power system; note that the rover's power supply
+ * is comprised of several battery.
+ */
+class Battery
+{
+	/*
+	 * This is whether or not the battery is active
+	 */
+	@GenModel(notify="true",
+			  children="false", 
+			  property="Readonly")
+	boolean active
+	
+	/*
+	 * This is the voltage output by the battery,
+	 * as measured in volts; initially, zero
+	 */
+	@GenModel(notify="true",
+			  csa_units="V", 
+			  property="Readonly")
+	double voltage = "0.0"
+	
+	/*
+	 * This is the current output by the battery,
+	 * as measured in amps; initially, zero
+	 */
+	@GenModel(notify="true",
+			  csa_units="A", 
+			  property="Readonly")
+	double current = "0.0"
+	
+	/*
+	 * This is used to activate this battery, changing
+	 * the voltage and current that it outputs from zero.
+	 */
+	op void activate()
+	
+	/*
+	 * This is used to deactivate this battery, changing
+	 * the voltage and current that it outputs to zero.
+	 */
+	op void deactivate()
+}
+
+/*
+ * This is the rover's internal power system, which is
+ * used to return the 
+ */
+class PowerSystem
+{
+	/*
+	 * This is the array of batteries comprising the
+	 * power system.
+	 */
+	@GenModel(notify="true", createChild="false")
+	contains Battery[1..*] batteries
+	
+	/*
+	 * This is the currently active battery
+	 */
+	@GenModel(notify="true")
+	refers Battery[1] activeBattery
+	
+	/*
+	 * This is used to get the voltage that the power system
+	 * is currently outputting.
+	 */
+	@GenModel(notify="true",
+			  csa_units="V")
+	readonly transient volatile derived double currentVoltage get
+	{
+		// If there is an active battery
+		if (activeBattery != null)
+	 	{
+	 		// Return its voltage
+	 		return activeBattery.voltage 
+	 	}
+	 	// Otherwise, there isn't one
+	 	else
+	 	{
+	 		// Just return 0
+	 		return 0.0;
+	 	}
+	}
+	
+	/*
+	 * This is used to get the current that the power system
+	 * is currently outputting.
+	 */
+	@GenModel(notify="true",
+			  csa_units="A")
+	readonly transient volatile derived double currentCurrent get
+	{
+		// If there is an active battery
+		if (activeBattery != null)
+		{
+			// Return its current
+			return activeBattery.current
+		}
+		// Otherwise, there isn't one
+		else
+		{
+			// Just return 0
+			return 0.0;
+		}
+	}
+	
+	/*
+	 * This is used to change the active battery to
+	 * the battery located at the given index in the
+	 * list (or array) of batteries.
+	 * @param batteryIndex The index of the battery to change to
+	 */
+	op void changeActiveBatteryTo(int batteryIndex)
+}
+
+/* 
+ * This abstract class represents a rover assembly, including
+ * its relevant state (e.g. component parts) as well as the
+ * operations that it can perform.
+ */
+abstract class Rover extends Disposable
+{	
+	/*
+	 * A robotic arm used by the rover assembly to interact
+	 * with the environment.
+	 */
+	@GenModel(notify="true",
+			  propertyCategory="Subcomponents", children="true")
+	refers transient RoboticArm[1] roboticArm
+	
+	/*
+	 * A mobile platform used by the rover assembly to move
+	 * around the environment
+	 */
+	@GenModel(notify="true",
+			  propertyCategory="Subcomponents", children="true")
+	refers transient MobilePlatform[1] mobilePlatform
+	
+	/* 
+	 * A camera mounted on the arm of the rover assembly to
+	 * take pictures of the environment; from those photos,
+	 * additional visual information may be extracted.
+	 */
+	@GenModel(notify="true",
+			  propertyCategory="Subcomponents", children="true")
+	refers transient PTUCamera[1] armCamera
+	
+	/* 
+	 * A camera mounted on the center of the rover mast assembly to
+	 * take pictures of the environment; from those photos,
+	 * additional visual information may be extracted.
+	 */
+	@GenModel(notify="true",
+			  propertyCategory="Subcomponents", children="true")
+	refers transient PTUCamera[1] centerCamera
+
+	/*
+	 * A power system which is used to power the Rover.
+	 */
+	@GenModel(notify="true",
+			  propertyCategory="Subcomponents")
+	contains PowerSystem[1] powerSystem
+
+	/*
+	 * This is the linear velocity of the rover (given in
+	 * metres per second.)
+	 * <p>
+	 * Note: Unlike the traditional definition of linear velocity
+	 * as a vector, this is simply a signed scalar; a positive
+	 * value indicates the speed forward while a negative value
+	 * is the speed backwards.  Zero means there is no movement.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  csa_units="m/s",
+			  property="Readonly",
+			  propertyCategory="Velocities")
+	readonly transient volatile derived double linearVelocity get
+	{
+		// If there is a mobile platform in the rover assembly
+		if (mobilePlatform != null)
+		{
+			// Just extract its linear velocity value
+			return mobilePlatform.linearVelocity
+		}
+		// Otherwise, there is no platform
+		else
+		{
+			// Indicate that the rover can't be moving
+			return 0.0
+		}
+	}
+	
+	/* 
+	 * This is the angular velocity of the rover (given in
+	 * radians per second.)
+	 * <p>
+	 * Note: Unlike the traditional definition of angular
+	 * velocity as a vector, this is simply a signed scalar;
+	 * a positive value is the rotation in the clockwise
+	 * direction while a negative value implies the rotation
+	 * is in the counter-clockwise direction.  Zero means
+	 * there is no rotation.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  csa_units="rad/s",
+			  property="Readonly",
+			  propertyCategory="Velocities")
+	readonly transient volatile derived double angularVelocity get
+	{
+		// If there is a mobile platform in the rover assembly
+		if (mobilePlatform != null)
+		{
+			// Just extract its linear velocity values
+			return mobilePlatform.angularVelocity
+		}
+		// Otherwise, there is no platform
+		else
+		{
+			// Indicate that the rover can't be moving
+			return 0.0
+		}
+	}
+
+	/* 
+	 * This is whether or not the rover has been initialized
+	 * successfully; initially false.
+	 * @see #init()
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Status")
+	boolean initialized = "false"
+	
+	/*
+	 * This is whether or not the rover has been disposed
+	 * successfully; initially false.
+	 * @see #dispose()
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Status")
+	boolean disposed = "false"
+
+	/* 
+	 * This operation is used to perform the required initialization functions
+	 * on the rover assembly; this may involve bootstrapping the components
+	 * of the rover (e.g. mobile platform, cameras, etc.)
+	 * @return Whether or not the rover assembly was successfully initialized
+	 */
+	op boolean init()
+	
+	/* 
+	 * This operation is used to change the linear velocity of the rover
+	 * assembly to the provided value (given in m/s); internally, this is
+	 * likely to cause a change to the mobile platform, as it is this component
+	 * which actually moves the rover.
+	 * <p>
+	 * Note: Unlike the traditional definition of linear velocity as a vector,
+	 * this is simply a signed scalar; a positive value indicates the speed
+	 * forward while a negative value is the speed backwards.  Zero means there
+	 * is no movement.
+	 * 
+	 * @param linearVelocity The rover assembly's new linear velocity (in m/s)
+	 * @see #cmdVelocities(double, double)
+	 */
+	op void cmdLinearVelocity(@GenModel(csa_units="m/s") double linearVelocity)
+	
+	/*
+	 * This operation is used to change the angular velocity of the rover
+	 * assembly to the provided value (given in radians / second); internally,
+	 * this is likely to cause a change to the mobile platform, as it is this
+	 * component which actually moves the rover.
+	 * <p>
+	 * Note: Unlike the traditional definition of angular velocity as a vector,
+	 * this is simply a signed scalar; a positive value is the rotation in the
+	 * clockwise direction while a negative value implies the rotation is in the
+	 * counter-clockwise direction.  Zero means there is no rotation.
+	 * 
+	 * @param angularVelocity The rover assembly's new angular velocity (in rad/s)
+	 * @see #cmdVelocities(double, double)
+	 */
+	op void cmdAngularVelocity(@GenModel(csa_units="rad/s") double angularVelocity)
+	
+	/* 
+	 * This operation is used to change both the linear velocity (given in m/s)
+	 * and angular velocity (given in rad/s) of the rover assembly to the
+	 * provided values; internally, this is likely to cause a change to the
+	 * mobile platform, as it is this component which actually moves the rover.
+	 * <p>
+	 * Note 1: Unlike the traditional definition of linear velocity as a vector,
+	 * this is simply a signed scalar; a positive value indicates the speed
+	 * forward while a negative value is the speed backwards.  Zero means there
+	 * is no movement.
+	 * <p>
+	 * Note 2: Unlike the traditional definition of angular velocity as a vector,
+	 * this is simply a signed scalar; a positive value is the rotation in the
+	 * clockwise direction while a negative value implies the rotation is in the
+	 * counter-clockwise direction.  Zero means there is no rotation.
+	 * 
+	 * @param linearVelocity The rover assembly's new linear velocity (in m/s)
+	 * @param angularVelocity The rover assembly's new angular velocity (in rad/s)
+	 * @see #cmdLinearVelocity(double)
+	 * @see #cmdAngularVelocity(double)
+	 */
+	op void cmdVelocities(@GenModel(csa_units="m/s") double linearVelocity,
+					  	  @GenModel(csa_units="rad/s") double angularVelocity)
+}
+
+/* 
+ * This is a specific implementation of the rover, in which all operations
+ * are stubs and hence, non-functional; the operations should simply log a
+ * message, indicating that they were performed.
+ */
+class RoverStub extends Rover
+{
+	/* 
+	 * For specific implementation details,
+	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.impl.RoverStubImpl}
+	 */	
+}
+
+/*
+ * This is a simulated implementation of the rover, where all operations
+ * are executed upon a simulated (i.e. virtual) rover. While there are no
+ * physical components interacted with, it attempts to emulate, wherever
+ * possible, the actions and results of its real world counterpart(s).  
+ */
+class RoverSimulated extends Rover
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.impl.RoverSimulatedImpl}
+	 */
+}

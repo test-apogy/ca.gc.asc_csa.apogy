@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.contexts">
+      <context
+            id="ca.gc.asc_csa.topology.ui.viewer.TopologyViewerContext"
+            name="Topology Viewer Context">            
+      </context>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ca.gc.asc_csa.topology.ui.viewer.commands.ZoomToFit"
+            id="ca.gc.asc_csa.topology.ui.viewer.commands.ZoomToFit"
+            name="Zoom to Fit">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="ca.gc.space.topology.ui.category"
+            name="ASC/CSA Topology">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesInitializer">
+      </initializer>
+      <initializer
+            class="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerLightingPreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
+            class="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            id="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            name="3D Viewer">
+      </page>
+      <page
+            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerLightingPreferencePage"
+            id="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerLightingPreferencePage"
+            name="Lighting">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated topology_viewer -->
+      <package
+            uri="ca.gc.asc_csa.topology.ui.viewer"
+            class="ca.gc.asc_csa.topology.ui.viewer.TopologyViewerPackage"
+            genModel="model/topology_viewer.xcore"/>
+   </extension>
+
+</plugin>

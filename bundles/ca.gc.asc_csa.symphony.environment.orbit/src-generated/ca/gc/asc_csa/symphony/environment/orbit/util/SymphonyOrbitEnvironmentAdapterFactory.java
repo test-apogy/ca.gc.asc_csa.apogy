@@ -1,0 +1,466 @@
+/**
+ * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
+ */
+package ca.gc.asc_csa.symphony.environment.orbit.util;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.ecore.EObject;
+import ca.gc.asc_csa.eclipse.emf.ecore.Described;
+import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
+import ca.gc.asc_csa.symphony.core.AbstractOrbitModel;
+import ca.gc.asc_csa.symphony.core.AbstractWorksite;
+import ca.gc.asc_csa.symphony.environment.Worksite;
+import ca.gc.asc_csa.symphony.environment.orbit.*;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Adapter Factory</b> for the model.
+ * It provides an adapter <code>createXXX</code> method for each class of the model.
+ * <!-- end-user-doc -->
+ * @see ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage
+ * @generated
+ */
+public class SymphonyOrbitEnvironmentAdapterFactory extends AdapterFactoryImpl {
+	/**
+	 * The cached model package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static SymphonyOrbitEnvironmentPackage modelPackage;
+
+	/**
+	 * Creates an instance of the adapter factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SymphonyOrbitEnvironmentAdapterFactory() {
+		if (modelPackage == null) {
+			modelPackage = SymphonyOrbitEnvironmentPackage.eINSTANCE;
+		}
+	}
+
+	/**
+	 * Returns whether this factory is applicable for the type of the object.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+	 * <!-- end-user-doc -->
+	 * @return whether this factory is applicable for the type of the object.
+	 * @generated
+	 */
+	@Override
+	public boolean isFactoryForType(Object object) {
+		if (object == modelPackage) {
+			return true;
+		}
+		if (object instanceof EObject) {
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
+		}
+		return false;
+	}
+
+	/**
+	 * The switch that delegates to the <code>createXXX</code> methods.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SymphonyOrbitEnvironmentSwitch<Adapter> modelSwitch =
+		new SymphonyOrbitEnvironmentSwitch<Adapter>() {
+			@Override
+			public Adapter caseOrbitWorksite(OrbitWorksite object) {
+				return createOrbitWorksiteAdapter();
+			}
+			@Override
+			public Adapter caseAbstractFrame(AbstractFrame object) {
+				return createAbstractFrameAdapter();
+			}
+			@Override
+			public Adapter casePVACoordinates(PVACoordinates object) {
+				return createPVACoordinatesAdapter();
+			}
+			@Override
+			public Adapter caseTimedStampedPVACoordinates(TimedStampedPVACoordinates object) {
+				return createTimedStampedPVACoordinatesAdapter();
+			}
+			@Override
+			public Adapter casePVCoordinatesProviderProvider(PVCoordinatesProviderProvider object) {
+				return createPVCoordinatesProviderProviderAdapter();
+			}
+			@Override
+			public Adapter caseAngularCoordinates(AngularCoordinates object) {
+				return createAngularCoordinatesAdapter();
+			}
+			@Override
+			public Adapter caseTimedStampedAngularCoordinates(TimedStampedAngularCoordinates object) {
+				return createTimedStampedAngularCoordinatesAdapter();
+			}
+			@Override
+			public Adapter caseSpacecraftAttitude(SpacecraftAttitude object) {
+				return createSpacecraftAttitudeAdapter();
+			}
+			@Override
+			public Adapter caseAttitudeProvider(AttitudeProvider object) {
+				return createAttitudeProviderAdapter();
+			}
+			@Override
+			public Adapter caseSpacecraftState(SpacecraftState object) {
+				return createSpacecraftStateAdapter();
+			}
+			@Override
+			public Adapter caseOrbit(Orbit object) {
+				return createOrbitAdapter();
+			}
+			@Override
+			public Adapter caseAbstractOrbitPropagator(AbstractOrbitPropagator object) {
+				return createAbstractOrbitPropagatorAdapter();
+			}
+			@Override
+			public Adapter caseOrbitModel(OrbitModel object) {
+				return createOrbitModelAdapter();
+			}
+			@Override
+			public Adapter caseOrbitFacade(OrbitFacade object) {
+				return createOrbitFacadeAdapter();
+			}
+			@Override
+			public Adapter caseNamed(Named object) {
+				return createNamedAdapter();
+			}
+			@Override
+			public Adapter caseDescribed(Described object) {
+				return createDescribedAdapter();
+			}
+			@Override
+			public Adapter caseTimed(Timed object) {
+				return createTimedAdapter();
+			}
+			@Override
+			public Adapter caseAbstractWorksite(AbstractWorksite object) {
+				return createAbstractWorksiteAdapter();
+			}
+			@Override
+			public Adapter caseWorksite(Worksite object) {
+				return createWorksiteAdapter();
+			}
+			@Override
+			public Adapter caseAbstractOrbitModel(AbstractOrbitModel object) {
+				return createAbstractOrbitModelAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
+
+	/**
+	 * Creates an adapter for the <code>target</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param target the object to adapt.
+	 * @return the adapter for the <code>target</code>.
+	 * @generated
+	 */
+	@Override
+	public Adapter createAdapter(Notifier target) {
+		return modelSwitch.doSwitch((EObject)target);
+	}
+
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.OrbitWorksite <em>Orbit Worksite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.OrbitWorksite
+	 * @generated
+	 */
+	public Adapter createOrbitWorksiteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.AbstractFrame <em>Abstract Frame</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.AbstractFrame
+	 * @generated
+	 */
+	public Adapter createAbstractFrameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.PVACoordinates <em>PVA Coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.PVACoordinates
+	 * @generated
+	 */
+	public Adapter createPVACoordinatesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.TimedStampedPVACoordinates <em>Timed Stamped PVA Coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.TimedStampedPVACoordinates
+	 * @generated
+	 */
+	public Adapter createTimedStampedPVACoordinatesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.PVCoordinatesProviderProvider <em>PV Coordinates Provider Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.PVCoordinatesProviderProvider
+	 * @generated
+	 */
+	public Adapter createPVCoordinatesProviderProviderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.AngularCoordinates <em>Angular Coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.AngularCoordinates
+	 * @generated
+	 */
+	public Adapter createAngularCoordinatesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.TimedStampedAngularCoordinates <em>Timed Stamped Angular Coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.TimedStampedAngularCoordinates
+	 * @generated
+	 */
+	public Adapter createTimedStampedAngularCoordinatesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.SpacecraftAttitude <em>Spacecraft Attitude</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.SpacecraftAttitude
+	 * @generated
+	 */
+	public Adapter createSpacecraftAttitudeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.AttitudeProvider <em>Attitude Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.AttitudeProvider
+	 * @generated
+	 */
+	public Adapter createAttitudeProviderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState <em>Spacecraft State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState
+	 * @generated
+	 */
+	public Adapter createSpacecraftStateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.Orbit <em>Orbit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.Orbit
+	 * @generated
+	 */
+	public Adapter createOrbitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.AbstractOrbitPropagator <em>Abstract Orbit Propagator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.AbstractOrbitPropagator
+	 * @generated
+	 */
+	public Adapter createAbstractOrbitPropagatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.OrbitModel <em>Orbit Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.OrbitModel
+	 * @generated
+	 */
+	public Adapter createOrbitModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.orbit.OrbitFacade <em>Orbit Facade</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.OrbitFacade
+	 * @generated
+	 */
+	public Adapter createOrbitFacadeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.AbstractWorksite <em>Abstract Worksite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.core.AbstractWorksite
+	 * @generated
+	 */
+	public Adapter createAbstractWorksiteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.Worksite <em>Worksite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.environment.Worksite
+	 * @generated
+	 */
+	public Adapter createWorksiteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.symphony.core.AbstractOrbitModel
+	 * @generated
+	 */
+	public Adapter createAbstractOrbitModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Named <em>Named</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Named
+	 * @generated
+	 */
+	public Adapter createNamedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Described <em>Described</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Described
+	 * @generated
+	 */
+	public Adapter createDescribedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Timed <em>Timed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Timed
+	 * @generated
+	 */
+	public Adapter createTimedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for the default case.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @generated
+	 */
+	public Adapter createEObjectAdapter() {
+		return null;
+	}
+
+} //SymphonyOrbitEnvironmentAdapterFactory

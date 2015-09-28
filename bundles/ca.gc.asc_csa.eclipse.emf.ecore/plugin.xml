@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.eclipse.emf.ecore"
+            class="ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage"
+            genModel="model/eclipse_emf_ecore.xcore"/>
+   </extension>
+
+</plugin>

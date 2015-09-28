@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_examples_antenna -->
+      <package
+            uri="ca.gc.asc_csa.symphony.examples.antenna"
+            class="ca.gc.asc_csa.symphony.examples.antenna.SymphonyExampleAntennaPackage"
+            genModel="model/symphony_examples_antenna.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">
+      <Type
+            URI="model/PTUDishAntennaSymphonySystem.ss">
+      </Type>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.SessionProvider">
+      <SessionProvider
+            Description="Session showing the use of the PTU Dish Antenna example system."
+            Name="PTU Dish Antenna Example"
+            URI="sessions/PTUDishAntennaExampleSession.sym">
+      </SessionProvider>
+   </extension>
+   
+</plugin>

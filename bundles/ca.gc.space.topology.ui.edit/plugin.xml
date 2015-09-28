@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2.2.2.2.1 2015/05/08 19:51:56 pallard Exp $
+-->
+
+<plugin>
+   <extension-point id="provider" name="UI Provider" schema="schema/provider.exsd"/>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated topology_ui -->
+      <factory
+            uri="ca.gc.space.topology.ui"
+            class="ca.gc.space.topology.ui.provider.TopologyUIItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated topology_ui -->
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.space.topology.ui.provider.TopologyUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+   </extension>
+</plugin>

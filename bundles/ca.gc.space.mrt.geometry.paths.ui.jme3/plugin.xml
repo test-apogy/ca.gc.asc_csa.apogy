@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+      <Class
+            Class="ca.gc.space.mrt.geometry.paths.ui.jme3.adapters.WayPointPathJME3Adapter">
+      </Class>
+   </extension>
+
+</plugin>

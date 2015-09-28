@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ca.gc.space.mrt.geometry.data;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: ca.gc.space.mrt.geometry.data,
+ ca.gc.space.mrt.geometry.data.impl,
+ ca.gc.space.mrt.geometry.data.util
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.4.0",
+ org.eclipse.emf.ecore,
+ ca.gc.space.mrt.common.processors;visibility:=reexport,
+ javax.vecmath;visibility:=reexport;bundle-version="1.5.2"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

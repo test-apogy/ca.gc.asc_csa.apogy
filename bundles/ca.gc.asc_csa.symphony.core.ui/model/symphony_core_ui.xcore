@@ -1,0 +1,98 @@
+@GenModel(prefix="SymphonyCoreUi", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="SymphonyCoreUi") 
+@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.core.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.symphony.core.ui.edit/src-generated")
+package ca.gc.asc_csa.symphony.core.ui
+
+import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession
+
+import ca.gc.space.topology.ui.TransformNodePresentation
+import ca.gc.asc_csa.symphony.core.SymphonySystem
+import org.eclipse.core.resources.IProject
+import org.eclipse.core.resources.IContainer
+import org.eclipse.core.resources.IFile
+import org.eclipse.core.resources.IFolder
+import ca.gc.asc_csa.eclipse.emf.ecore.Exception
+
+type IProject wraps IProject
+type IContainer wraps IContainer
+type IFile wraps IFile
+type IFolder wraps IFolder
+
+class SymphonyCoreUiFacade
+{	
+	/** Default Symphony Project Name Prefix. */
+	readonly String defaultSymphonyProjectNamePrefix = "Project"
+
+	/** Default Symphony Session Filename Prefix. */
+	readonly String defaultSymphonySessionFilename = "session"
+	
+	/** Default Symphony Session Filename Extension Prefix. */
+	readonly String defaultSymphonySessionFilenameExtension = "sym"
+	
+	/** Default Symphony Sessions Directory. */
+	readonly String defaultSymphonySessionFolderName = "Sessions"
+	
+		
+	op IProject createSymphonyProject(NewSymphonyProjectSettings settings)	
+	op IFolder createSymphonySessionFolder(NewSymphonyProjectSettings settings)
+	op InvocatorSession createSymphonySession(NewSymphonySessionSettings sessionSettings)
+	op IFile createSymphonySessionFile(IContainer resourceContainer, String filename, InvocatorSession session) throws Exception
+	op IFile getSymphonySessionFile(IContainer resourceContainer, String filename)
+	op SymphonySystem createSymphonySystem(NewSymphonySystemSettings systemSettings)
+}
+
+/** This class is used to support Symphony wizards. */
+class SymphonyResourceSettings
+{
+	IProject resourceProject
+	IFile resourceFile
+	IContainer resourceContainer
+}
+
+class NewSymphonyProjectSettings
+{	
+	/** Returns an available project name. */
+	op String getDefaultProjectName()
+	
+	/** Name of the project. */
+	String name
+	
+	/** Import an existing registered project. */
+	boolean importRegisteredProject = "false"
+	
+	/** Sets the default values of the instance.  */
+	op void setDefaultValues()
+}
+
+
+class NewSymphonySessionSettings
+{	
+	/** Returns an available session filename. */
+	op String getDefaultFilename(IContainer resourceContainer)	
+	
+	String folder	
+	String filename
+	boolean createEnvironment = "true"
+	boolean createPrograms = "true"
+	boolean createDataProducts = "true"
+	boolean createTools = "true"
+	
+	/** Sets the default values of the instance.  */
+	op void setDefaultValues(IContainer resourceContainer)
+}
+
+class NewSymphonySystemSettings
+{
+	String folder	
+	String filename
+}
+
+
+class ResultNodePresentation extends TransformNodePresentation
+{
+	@GenModel(propertyCategory="Flag Visuals")
+	float poleHeight = "1.0f"
+	
+	@GenModel(propertyCategory="Flag Visuals")
+	boolean flagVisible = "true"	
+}

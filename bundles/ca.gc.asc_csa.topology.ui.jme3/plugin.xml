@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension-point id="JME3Adapter" name="JME3Adapter" schema="schema/jme3.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.ui.jme3.views.JME3Topology3DView"
+            icon="icons/3d_topology_viewer.png"
+            id="ca.gc.asc_csa.topology.ui.jme3.views.TopologyView"
+            name="3D Topology Viewer - JME3"
+            restorable="true">
+      </view>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated jme3 -->
+      <package
+            uri="ca.gc.asc_csa.topology.ui.jme3"
+            class="ca.gc.asc_csa.topology.ui.jme3.JME3Package"
+            genModel="model/jme3.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+      <Class
+            Class="ca.gc.asc_csa.topology.ui.jme3.adapters.GroupNodeJME3Adapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+      <Class
+            Class="ca.gc.asc_csa.topology.ui.jme3.adapters.TransformNodeJME3Adapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+      <Class
+            Class="ca.gc.asc_csa.topology.ui.jme3.adapters.URLNodeJME3Adapter">
+      </Class>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+      <Class
+            Class="ca.gc.asc_csa.topology.ui.jme3.adapters.DefaultNodeJME3Adapter">
+      </Class>
+   </extension>
+   <extension
+         id="ObjToJ3oConverter"
+         name="OBJ To J3O Converter"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="ca.gc.asc_csa.topology.ui.jme3.ObjToJ3oConverter">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+      <Class
+            Class="ca.gc.asc_csa.topology.ui.jme3.adapters.ReferencedGroupNodeJME3Adapter">
+      </Class>
+   </extension>
+
+</plugin>

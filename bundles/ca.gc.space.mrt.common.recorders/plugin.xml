@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency 2007.
+
+ $Id: plugin.xml,v 1.2.4.2 2015/05/21 15:50:02 pallard Exp $
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///ca/gc/space/mrt/common/recorders/model/recorders.ecore" 
+       class = "ca.gc.space.mrt.common.recorders.RecordersPackage"
+       genModel = "model/recorders.genmodel" /> 
+  </extension>
+
+</plugin>

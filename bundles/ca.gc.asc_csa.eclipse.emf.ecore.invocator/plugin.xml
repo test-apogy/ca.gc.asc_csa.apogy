@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension-point id="InvocatorDelegate" name="InvocatorDelegate" schema="schema/InvocatorDelegate.exsd"/>
+   <extension-point id="TypeContributor" name="TypeContributor" schema="schema/TypeContributor.exsd"/>
+   <extension-point id="SessionProvider" name="SessionProvider" schema="schema/SessionProvider.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
+            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage"
+            genModel="model/eclipse_emf_ecore_invocator.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated eclipse_emf_ecore_invocator -->
+      <parser
+            type="sym"
+            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorResourceFactoryImpl"/>
+   </extension>
+
+   <extension
+         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorDelegate">
+      <element
+            invocatorDelegateClass="ca.gc.asc_csa.eclipse.emf.ecore.invocator.delegates.DefaultInvocatorDelegate">
+      </element>
+   </extension>
+
+</plugin>

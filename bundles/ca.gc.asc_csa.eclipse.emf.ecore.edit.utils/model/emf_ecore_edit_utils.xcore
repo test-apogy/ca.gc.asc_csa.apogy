@@ -1,0 +1,10 @@
+@GenModel(prefix="EMFEcoreEditUtils", childCreationExtenders="true", modelName="EMFEcoreEditUtils")
+@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.edit.utils/src-generated")
+package ca.gc.asc_csa.eclipse.emf.ecore.edit.utils
+
+type CollectionObject wraps java.util.Collection<Object>
+
+class EMFEcoreEditUtilsFacade{
+	op String getText(Object object)
+	op void removeChildDescriptor(CollectionObject newChildDescriptors, Object feature)
+}

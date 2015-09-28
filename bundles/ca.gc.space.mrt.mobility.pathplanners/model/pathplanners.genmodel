@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Canadian Space Agency 2007." modelDirectory="/ca.gc.space.mrt.mobility.pathplanners/src"
+    modelPluginID="ca.gc.space.mrt.mobility.pathplanners" modelName="Pathplanners"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" usedGenPackages="platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.genmodel#//data3d platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/ca.gc.space.math.core/model/Math.genmodel#//math platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.genmodel#//paths platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.genmodel#//processors platform:/plugin/ca.gc.space.topology.core/model/topology.genmodel#//topology platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.genmodel#//data"
+    operationReflection="true">
+  <foreignModel>pathplanners.ecore</foreignModel>
+  <genPackages prefix="Pathplanners" basePackage="ca.gc.space.mrt.mobility" disposableProviderFactory="true"
+      ecorePackage="pathplanners.ecore#/">
+    <genClasses ecoreClass="pathplanners.ecore#//WayPointPathPlanner">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplanners.ecore#//WayPointPathPlanner/currentDestination"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplanners.ecore#//WayPointPathPlanner/currentPosition"/>
+      <genOperations ecoreOperation="pathplanners.ecore#//WayPointPathPlanner/plan">
+        <genParameters ecoreParameter="pathplanners.ecore#//WayPointPathPlanner/plan/currentPosition"/>
+        <genParameters ecoreParameter="pathplanners.ecore#//WayPointPathPlanner/plan/destinationPosition"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="pathplanners.ecore#//MeshWayPointPathPlanner">
+      <genTypeParameters ecoreTypeParameter="pathplanners.ecore#//MeshWayPointPathPlanner/T"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathplanners.ecore#//MeshWayPointPathPlanner/mesh"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="pathplanners.ecore#//ExclusionZone">
+      <genOperations ecoreOperation="pathplanners.ecore#//ExclusionZone/isInside">
+        <genParameters ecoreParameter="pathplanners.ecore#//ExclusionZone/isInside/point"/>
+      </genOperations>
+      <genOperations ecoreOperation="pathplanners.ecore#//ExclusionZone/intersects">
+        <genParameters ecoreParameter="pathplanners.ecore#//ExclusionZone/intersects/from"/>
+        <genParameters ecoreParameter="pathplanners.ecore#//ExclusionZone/intersects/to"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="pathplanners.ecore#//CircularExclusionZone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplanners.ecore#//CircularExclusionZone/radius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathplanners.ecore#//CircularExclusionZone/invertSamplingShape"/>
+    </genClasses>
+    <genClasses ecoreClass="pathplanners.ecore#//PathPlannersFacade">
+      <genOperations ecoreOperation="pathplanners.ecore#//PathPlannersFacade/createCircularExclusionZone">
+        <genParameters ecoreParameter="pathplanners.ecore#//PathPlannersFacade/createCircularExclusionZone/radius"/>
+        <genParameters ecoreParameter="pathplanners.ecore#//PathPlannersFacade/createCircularExclusionZone/parent"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

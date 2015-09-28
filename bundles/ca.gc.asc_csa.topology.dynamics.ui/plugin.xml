@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.dynamics.ui.views.KinematicsStateView"
+            id="ca.gc.asc_csa.topology.dynamics.ui.views.KinematicsStateView"
+            name="KinematicsState View">
+      </view>
+      <view
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.dynamics.ui.views.ConstraintStateView"
+            id="ca.gc.asc_csa.topology.dynamics.ui.views.ConstraintStateView"
+            name="Constraint State View">
+      </view>
+      <view
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.dynamics.ui.views.GearRatioConstraintView"
+            id="ca.gc.asc_csa.topology.dynamics.ui.views.GearRatioConstraintView"
+            name="Gear Ratio Constraint View">
+      </view>
+      <view
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.dynamics.ui.views.CylindricalConstraintView"
+            id="ca.gc.asc_csa.topology.dynamics.ui.views.CylindricalConstraintView"
+            name="Cylindrical Constraint View">
+      </view>
+      <view
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.dynamics.ui.views.RPROConstraintView"
+            id="ca.gc.asc_csa.topology.dynamics.ui.views.RPROConstraintView"
+            name="RPRO Constraint View">
+      </view>
+      <view
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.dynamics.ui.views.PrismaticConstraintView"
+            id="ca.gc.asc_csa.topology.dynamics.ui.views.PrismaticConstraintView"
+            name="Prismatic Constraint View">
+      </view>
+      <view
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.dynamics.ui.views.HingeConstraintView"
+            id="ca.gc.asc_csa.topology.dynamics.ui.views.HingeConstraintView"
+            name="Hinge Constraint View">
+      </view>
+      <view
+            category="ca.gc.space.topology.ui.category"
+            class="ca.gc.asc_csa.topology.dynamics.ui.views.UniversalConstraintView"
+            id="ca.gc.asc_csa.topology.dynamics.ui.views.UniversalConstraintView"
+            name="Universal Constraint View">
+      </view>
+   </extension>
+</plugin>

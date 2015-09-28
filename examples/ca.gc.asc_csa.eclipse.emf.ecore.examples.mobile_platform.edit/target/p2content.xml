@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='2'>
+  <unit id='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit' version='0.2.0.201401221941'>
+    <update id='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit' range='[0.0.0,0.2.0.201401221941)' severity='0'/>
+    <properties size='8'>
+      <property name='df_LT.providerName' value='Agence Spatiale Canadienne / Canadian Space Agency'/>
+      <property name='df_LT.pluginName' value='EMFEcoreExampleMobilePlatform Edit Support'/>
+      <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      <property name='maven-groupId' value='ca.gc.asc_csa.eclipse.examples'/>
+      <property name='maven-artifactId' value='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit'/>
+      <property name='maven-version' value='0.2.0-SNAPSHOT'/>
+    </properties>
+    <provides size='5'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit' version='0.2.0.201401221941'/>
+      <provided namespace='osgi.bundle' name='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit' version='0.2.0.201401221941'/>
+      <provided namespace='java.package' name='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.provider' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+    </provides>
+    <requires size='9'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.edit' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='ca.gc.asc_csa.eclipse.emf.ecore' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='ca.gc.asc_csa.eclipse.emf.ecore.edit' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore.edit' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore.xcore.lib' range='0.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit' version='0.2.0.201401221941'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit;singleton:=true&#xA;Bundle-Version: 0.2.0.201401221941&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+  <unit id='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit.source' version='0.2.0.201401221941' singleton='false'>
+    <update id='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit.source' range='[0.0.0,0.2.0.201401221941)' severity='0'/>
+    <properties size='9'>
+      <property name='df_LT.bundleVendor' value='Agence Spatiale Canadienne / Canadian Space Agency'/>
+      <property name='df_LT.bundleName' value='EMFEcoreExampleMobilePlatform Edit Support Source'/>
+      <property name='org.eclipse.equinox.p2.name' value='%bundleName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%bundleVendor'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='OSGI-INF/l10n/bundle-src'/>
+      <property name='maven-groupId' value='ca.gc.asc_csa.eclipse.examples'/>
+      <property name='maven-artifactId' value='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit'/>
+      <property name='maven-version' value='0.2.0-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources'/>
+    </properties>
+    <provides size='4'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit.source' version='0.2.0.201401221941'/>
+      <provided namespace='osgi.bundle' name='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit.source' version='0.2.0.201401221941'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+    </provides>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit.source' version='0.2.0.201401221941'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit.source&#xA;Bundle-Version: 0.2.0.201401221941&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

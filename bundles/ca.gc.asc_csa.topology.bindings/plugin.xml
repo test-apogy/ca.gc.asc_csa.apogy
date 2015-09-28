@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyrights Canadian Space Agency 2011
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ca/gc/asc_csa/topology/bindings/model/topology_bindings.ecore"
+            class="ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage"
+            genModel="model/topology_bindings.xcore"/>
+   </extension>
+
+</plugin>

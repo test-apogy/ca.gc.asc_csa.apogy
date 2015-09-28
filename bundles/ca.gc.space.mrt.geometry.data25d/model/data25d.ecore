@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="data25d" nsURI="http:///ca/gc/space/mrt/geometry/data25d/model/data25d.ecore"
+    nsPrefix="ca.gc.space.mrt.geometry">
+  <eClassifiers xsi:type="ecore:EClass" name="Coordinates25D" eSuperTypes="platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Coordinates">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Represent &quot;2.5 D&quot; geometry where u and v are the independant variables and w the dependant variable."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="u" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoordinatesSet25D">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enforceUniqueness" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When this parameter is set to true, this parameter ensures that all points added are unique.  The drawback is that performance is significantely decreased.  This feature can be bypassed by setting this attribute to false.  Default is true."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//CoordinatesSet">
+      <eTypeArguments eClassifier="#//Coordinates25D"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Polygon25D">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Polygon">
+      <eTypeArguments eClassifier="#//Coordinates25D"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mesh25D">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Mesh">
+      <eTypeArguments eClassifier="#//Coordinates25D"/>
+      <eTypeArguments eClassifier="#//Polygon25D"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VolumetricCoordinatesSet25D" eSuperTypes="#//CoordinatesSet25D">
+    <eOperations name="getCartesianPositionCoordinates" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates">
+      <eParameters name="coordinates" eType="#//Coordinates25D"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VolumetricMesh25D" eSuperTypes="#//Mesh25D"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFacade">
+    <eOperations name="createCoordinates25D" eType="#//Coordinates25D">
+      <eParameters name="coordinates25D" eType="#//Coordinates25D"/>
+    </eOperations>
+    <eOperations name="createCoordinates25D" eType="#//Coordinates25D">
+      <eParameters name="u" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+      <eParameters name="v" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+      <eParameters name="w" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+    </eOperations>
+    <eOperations name="createCartesianCoordinatesSet" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianCoordinatesSet">
+      <eTypeParameters name="T">
+        <eBounds eClassifier="#//VolumetricCoordinatesSet25D"/>
+      </eTypeParameters>
+      <eParameters name="volumetricCoordinatesSet25D">
+        <eGenericType eTypeParameter="#//DataFacade/createCartesianCoordinatesSet/T"/>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoordinatesSet25DFilter" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//CoordinatesSet25D"/>
+    </eTypeParameters>
+    <eOperations name="createCoordinatesSet25D">
+      <eGenericType eTypeParameter="#//CoordinatesSet25DFilter/T"/>
+    </eOperations>
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+      <eTypeArguments eTypeParameter="#//CoordinatesSet25DFilter/T"/>
+      <eTypeArguments eTypeParameter="#//CoordinatesSet25DFilter/T"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data25DIO">
+    <eOperations name="saveXYZ" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//IOException">
+      <eParameters name="points" eType="#//VolumetricCoordinatesSet25D"/>
+      <eParameters name="fileName" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    </eOperations>
+    <eOperations name="loadXYZ" eType="#//VolumetricCoordinatesSet25D" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//IOException">
+      <eParameters name="fileName" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    </eOperations>
+  </eClassifiers>
+</ecore:EPackage>

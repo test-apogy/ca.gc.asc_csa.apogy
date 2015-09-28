@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="ca.gc.space.java.emf.EmfPackage"
+            genModel="model/java.genmodel"
+            uri="http:///ca/gc/space/java/emf.ecore">
+      </package>
+   </extension>
+
+</plugin>

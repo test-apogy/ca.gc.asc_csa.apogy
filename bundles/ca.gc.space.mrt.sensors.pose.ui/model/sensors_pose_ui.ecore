@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ui" nsURI="http:///ca/gc/space/mrt/sensors/pose/ui/model/sensors_pose_ui.ecore"
+    nsPrefix="ca.gc.space.mrt.sensors.pose">
+  <eClassifiers xsi:type="ecore:EClass" name="PositionSensorPresentation" eSuperTypes="platform:/plugin/ca.gc.space.topology.ui/model/TopologyUi.ecore#//NodePresentation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frameVisible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrientationSensorPresentation" eSuperTypes="platform:/plugin/ca.gc.space.topology.ui/model/TopologyUi.ecore#//NodePresentation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frameVisible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PoseSensorPresentation" eSuperTypes="platform:/plugin/ca.gc.space.topology.ui/model/TopologyUi.ecore#//NodePresentation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frameVisible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+</ecore:EPackage>
