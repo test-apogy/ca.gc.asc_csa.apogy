@@ -3,9 +3,9 @@
   <artifactId>ca.gc.space.mrt.sensors.range</artifactId>
   <packaging>eclipse-plugin</packaging>
   <parent>
-  	<groupId>ca.gc.asc_csa.eclipse.mrt</groupId>
-  	<artifactId>ca.gc.asc_csa.eclipse.mrt.parent</artifactId>
-  	<version>0.5.0-SNAPSHOT</version>
-  	<relativePath>../ca.gc.asc_csa.eclipse.mrt.parent</relativePath>
+  	<groupId>org.eclipse.symphony</groupId>
+  	<artifactId>org.eclipse.symphony.parent</artifactId>
+  	<version>0.4.0-SNAPSHOT</version>
+  	<relativePath>../../packaging/org.eclipse.symphony.parent</relativePath>
   </parent>
 </project>

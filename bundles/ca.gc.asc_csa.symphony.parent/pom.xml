@@ -3,7 +3,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ca.gc.asc_csa.symphony</groupId>
 	<artifactId>ca.gc.asc_csa.symphony.parent</artifactId>
-	<version>0.4.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -160,4 +159,10 @@
 		<module>../ca.gc.asc_csa.symphony.tools.vehicle.ui.edit</module>
 		<module>../ca.gc.asc_csa.symphony.tools.vehicle.ui.jme3</module>	
 	</modules>
+	<parent>
+		<groupId>org.eclipse.symphony</groupId>
+		<artifactId>org.eclipse.symphony.parent</artifactId>
+		<version>0.4.0-SNAPSHOT</version>
+		<relativePath>../../packaging/org.eclipse.symphony.parent</relativePath>
+	</parent>
 </project>
