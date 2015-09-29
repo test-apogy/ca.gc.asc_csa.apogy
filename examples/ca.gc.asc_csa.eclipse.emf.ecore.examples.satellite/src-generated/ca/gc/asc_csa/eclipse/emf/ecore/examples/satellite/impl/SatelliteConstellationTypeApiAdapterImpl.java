@@ -5,7 +5,6 @@ package ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.osgi.framework.log.EventSeverity;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.EMFEcoreExampleSatelliteFactory;
@@ -18,6 +17,8 @@ import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteConstellation
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.TypeApiAdapterImpl;
+import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
+import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitFacade;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation;
@@ -66,14 +67,14 @@ public class SatelliteConstellationTypeApiAdapterImpl extends TypeApiAdapterImpl
 						
 			for(Satellite sat : getSatelliteConstellation().getSatellites())
 			{
-				Logger.INSTANCE.log(Activator.ID, this, this, "Collecting data from Satellite <" + sat.getName() + ">...", EventSeverity.INFO);
+				Logger.INSTANCE.log(Activator.ID, this, "Collecting data from Satellite <" + sat.getName() + ">...", EventSeverity.INFO);
 				SatelliteInitializationData satData = createSatelliteInitializationData(sat);
 				constellationData.getSatelliteData().add(satData);
 			}
 			
 			for(GroundStation gs : getSatelliteConstellation().getGroundStations())
 			{
-				Logger.INSTANCE.log(Activator.ID, this, this, "Collecting data from Ground Stations <" + gs.getName() + ">...", EventSeverity.INFO);
+				Logger.INSTANCE.log(Activator.ID, this, "Collecting data from Ground Stations <" + gs.getName() + ">...", EventSeverity.INFO);
 				GroundStation gsCopy = EcoreUtil.copy(gs);
 				constellationData.getGroundStations().add(gsCopy);
 			}

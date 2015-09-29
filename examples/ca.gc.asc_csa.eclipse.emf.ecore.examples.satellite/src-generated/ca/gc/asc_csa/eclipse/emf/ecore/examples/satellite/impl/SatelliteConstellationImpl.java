@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.osgi.framework.log.EventSeverity;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.EMFEcoreExampleSatelliteFactory;
@@ -35,6 +34,8 @@ import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteCommandList;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteCommandRoll;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteConstellation;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteUtils;
+import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
+import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitFacade;
@@ -266,7 +267,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 		try
 		{
 			EarthSurfaceLocation earthSurfaceLocation = EarthOrbitFacade.INSTANCE.createEarthSurfaceLocation(Integer.toString(imageOrder.getOrderId()), null, imageOrder.getImageCenter().getLongitude(), imageOrder.getImageCenter().getLatitude(), imageOrder.getImageCenter().getElevation());			
-			Logger.INSTANCE.log(Activator.ID, this, this, "Finding passes for ImageOrder <" + imageOrder.getOrderId() + ">...", EventSeverity.INFO);
+			Logger.INSTANCE.log(Activator.ID, this, "Finding passes for ImageOrder <" + imageOrder.getOrderId() + ">...", EventSeverity.INFO);
 			
 			// Do this in parallel to speed up !
 			boolean parallel = false;
@@ -327,7 +328,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 			long end = System.currentTimeMillis();
 			double duration = (end-start) * 0.001;
 			DecimalFormat format = new DecimalFormat("0.001");
-			Logger.INSTANCE.log(Activator.ID, this, this, "Found <" + passes.size() + "> potential passes for ImageOrder <" + imageOrder.getOrderId() + "> in <" + format.format(duration) + "> seconds.", EventSeverity.OK);
+			Logger.INSTANCE.log(Activator.ID, this, "Found <" + passes.size() + "> potential passes for ImageOrder <" + imageOrder.getOrderId() + "> in <" + format.format(duration) + "> seconds.", EventSeverity.OK);
 		}
 		catch(Throwable t)
 		{
