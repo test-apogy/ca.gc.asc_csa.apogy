@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.common.ui;singleton:=true
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.common.ui;bun
+ dle-version="2.4.0",org.eclipse.emf.ecore;visibility:=reexport,org.ec
+ lipse.ui,ca.gc.space.mrt.common
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.space.mrt.common.ui,ca.gc.space.mrt.common.ui.ad
+ apters,ca.gc.space.mrt.common.ui.extensions
+Bundle-Name: %pluginName
+Bundle-Version: 0.4.0.201502052105
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: ca.gc.space.mrt.common.ui.Activator
+
