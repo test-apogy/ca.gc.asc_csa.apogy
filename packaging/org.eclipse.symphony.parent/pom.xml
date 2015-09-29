@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.eclipse.symphony</groupId>
+	<artifactId>org.eclipse.symphony.parent</artifactId>
+	<version>0.4.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<repositories>
+		<!-- configure p2 repository to resolve against -->
+		<repository>
+			<id>Eclipse</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/${eclipse.version}</url>
+		</repository>
+
+		<repository>
+			<id>Eclipse-Updates</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/eclipse/updates/${eclipse.updates.version}</url>
+		</repository>
+		
+		<repository>
+			<id>Nebula</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/technology/nebula/snapshot</url>
+		</repository>		
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- enable the Tycho build extension -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<!-- enable the Tycho build extension -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
