@@ -594,19 +594,19 @@
 			../../bundles/ca.gc.asc_csa.symphony.environment.orbit.edit
 		</module>
 		<module>
-			../../../../workspaces/workspace-symphony/org.eclipse.symphony.addons.feature
+			../../bundles/org.eclipse.symphony.addons.feature
 		</module>
 		<module>
-			../../../../workspaces/workspace-symphony/org.eclipse.symphony.common.feature
+			../../bundles/org.eclipse.symphony.common.feature
 		</module>
 		<module>
-			../../../../workspaces/workspace-symphony/org.eclipse.symphony.core.feature
+			../../bundles/org.eclipse.symphony.core.feature
 		</module>
 		<module>
-			../../../../workspaces/workspace-symphony/org.eclipse.symphony.examples
+			../../bundles/org.eclipse.symphony.examples
 		</module>
 		<module>
-			../../../../workspaces/workspace-symphony/org.eclipse.symphony.feature
+			../../bundles/org.eclipse.symphony.feature
 		</module>
 	</modules>
 </project>

@@ -5,7 +5,7 @@ Export-Package: ca.gc.asc_csa.eclipse.ui,ca.gc.asc_csa.eclipse.ui.acti
  perties,ca.gc.asc_csa.eclipse.ui.properties.sections,ca.gc.asc_csa.ec
  lipse.ui.views
 Bundle-Name: %bundleName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301737
 Bundle-Localization: bundle
 Require-Bundle: org.eclipse.ui;visibility:=reexport,org.eclipse.core.r
  untime;visibility:=reexport,org.eclipse.ui.views.properties.tabbed;bu

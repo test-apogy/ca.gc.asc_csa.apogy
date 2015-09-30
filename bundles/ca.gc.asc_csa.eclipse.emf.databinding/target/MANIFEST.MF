@@ -3,7 +3,7 @@ Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.databinding
 Export-Package: ca.gc.asc_csa.eclipse.emf.databinding,ca.gc.asc_csa.ec
  lipse.emf.databinding.converters
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301737
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.databinding;
  bundle-version="1.3.100",org.eclipse.emf.ecore;bundle-version="2.6.1"
