@@ -17,7 +17,7 @@ Export-Package: ca.gc.asc_csa.symphony.examples.robotic_arm,ca.gc.asc_
  csa.symphony.examples.robotic_arm.impl,ca.gc.asc_csa.symphony.example
  s.robotic_arm.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.asc_csa.symphony.examples.robotic_arm.Activato

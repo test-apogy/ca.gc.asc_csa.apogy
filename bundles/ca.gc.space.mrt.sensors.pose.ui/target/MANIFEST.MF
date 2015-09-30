@@ -16,7 +16,7 @@ Export-Package: ca.gc.space.mrt.sensors.pose.ui,ca.gc.space.mrt.sensor
  rt.sensors.pose.ui.scene_objects,ca.gc.space.mrt.sensors.pose.ui.util
  ,ca.gc.space.mrt.sensors.pose.ui.views
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.sensors.pose.ui.Activator

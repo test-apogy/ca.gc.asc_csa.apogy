@@ -11,7 +11,7 @@ Eclipse-LazyStart: true
 Export-Package: ca.gc.space.mrt.common.recorders,ca.gc.space.mrt.commo
  n.recorders.impl,ca.gc.space.mrt.common.recorders.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 

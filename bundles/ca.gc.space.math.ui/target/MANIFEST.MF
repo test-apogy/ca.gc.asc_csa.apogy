@@ -5,7 +5,7 @@ Export-Package: ca.gc.space.math.ui,ca.gc.space.math.ui.composites,ca.
  pace.math.ui.util,org.eclipse.wb.swt.layout.grouplayout,org.eclipse.w
  b.swt.widgets.baseline
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-Localization: plugin
 Bundle-ClassPath: libs/swt-grouplayout.jar,.
 Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.em

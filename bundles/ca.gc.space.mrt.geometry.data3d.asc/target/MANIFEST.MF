@@ -14,7 +14,7 @@ Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.geometry.data3d.asc,ca.gc.space.mrt.ge
  ometry.data3d.asc.impl,ca.gc.space.mrt.geometry.data3d.asc.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-Localization: plugin
 Bundle-ClassPath: .
 Bundle-Activator: ca.gc.space.mrt.geometry.data3d.asc.Activator

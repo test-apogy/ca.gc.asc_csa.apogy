@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='ca.gc.space.mrt.sensors.pose' version='0.5.0.201509301407'>
+  <artifact classifier='osgi.bundle' id='ca.gc.space.mrt.sensors.pose' version='0.5.0.201509301832'>
     <properties size='5'>
-      <property name='artifact.size' value='65720'/>
-      <property name='download.size' value='65720'/>
+      <property name='artifact.size' value='65719'/>
+      <property name='download.size' value='65719'/>
       <property name='maven-groupId' value='org.eclipse.symphony'/>
       <property name='maven-artifactId' value='ca.gc.space.mrt.sensors.pose'/>
       <property name='maven-version' value='0.5.0-SNAPSHOT'/>

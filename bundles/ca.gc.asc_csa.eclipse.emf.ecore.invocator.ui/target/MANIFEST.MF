@@ -33,7 +33,7 @@ Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui,ca.gc.asc
  mf.ecore.invocator.ui.views,ca.gc.asc_csa.eclipse.emf.ecore.invocator
  .ui.wizards
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.Activat

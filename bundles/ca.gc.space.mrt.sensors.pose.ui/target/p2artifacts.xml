@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='ca.gc.space.mrt.sensors.pose.ui' version='0.5.0.201509301407'>
+  <artifact classifier='osgi.bundle' id='ca.gc.space.mrt.sensors.pose.ui' version='0.5.0.201509301832'>
     <properties size='5'>
       <property name='artifact.size' value='32982'/>
       <property name='download.size' value='32982'/>

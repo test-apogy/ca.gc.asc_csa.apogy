@@ -5,7 +5,7 @@ Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.edit.utils,ca.gc.asc_c
  sa.eclipse.emf.ecore.edit.utils.impl,ca.gc.asc_csa.eclipse.emf.ecore.
  edit.utils.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301737
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil

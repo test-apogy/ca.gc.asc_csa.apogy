@@ -3,7 +3,7 @@ Eclipse-RegisterBuddy: org.ros.messages, org.ros.bootstrap
 Bundle-SymbolicName: ca.gc.asc_csa.eclipse.ros.msgs
 Export-Package: eclipse_ros_msgs
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301737
+Bundle-Version: 0.5.0.201509301832
 Bundle-Localization: plugin
 Require-Bundle: org.ros.bootstrap;bundle-version="1.6.6",org.ros.messa
  ges;bundle-version="1.6.6"

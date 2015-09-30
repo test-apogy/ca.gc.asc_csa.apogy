@@ -23,7 +23,7 @@ Export-Package: ca.gc.space.topology.ui,ca.gc.space.topology.ui.adapte
  c.space.topology.ui.properties.sections,ca.gc.space.topology.ui.util,
  ca.gc.space.topology.ui.views,ca.gc.space.topology.ui.wizards
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.topology.ui.Activator

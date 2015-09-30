@@ -4,7 +4,7 @@ Export-Package: ca.gc.space.mrt.geometry.data25d,ca.gc.space.mrt.geome
  try.data25d.impl,ca.gc.space.mrt.geometry.data25d.util,ca.gc.space.mr
  t.geometry.data25d.validation
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil

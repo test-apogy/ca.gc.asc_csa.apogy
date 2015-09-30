@@ -3,7 +3,7 @@ Bundle-SymbolicName: ca.gc.space.math.core;singleton:=true
 Export-Package: ca.gc.space.math,ca.gc.space.math.geom,ca.gc.space.mat
  h.impl,ca.gc.space.math.lapack,ca.gc.space.math.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301737
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,org.eclipse

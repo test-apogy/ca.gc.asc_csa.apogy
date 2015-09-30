@@ -17,7 +17,7 @@ Export-Package: ca.gc.space.mrt.sensors.fov.ui,ca.gc.space.mrt.sensors
  sensors.fov.ui.preferences,ca.gc.space.mrt.sensors.fov.ui.scene_objec
  ts,ca.gc.space.mrt.sensors.fov.ui.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.sensors.fov.ui.Activator
