@@ -608,5 +608,9 @@
 		<module>
 			../../bundles/org.eclipse.symphony.feature
 		</module>
+		
+		<module>
+			../../bundles/org.eclipse.symphony.repository
+		</module>		
 	</modules>
 </project>
