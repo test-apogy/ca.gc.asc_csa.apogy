@@ -5,10 +5,11 @@ Export-Package: ca.gc.space.mrt.geometry.paths.ui.jme3,ca.gc.space.mrt
  .geometry.paths.ui.jme3.adapters,ca.gc.space.mrt.geometry.paths.ui.jm
  e3.scene_objects
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,ca.gc.space.mr
- t.geometry.paths.ui,ca.gc.asc_csa.topology.ui.jme3
+ t.geometry.paths.ui,ca.gc.asc_csa.topology.ui.jme3;visibility:=reexpo
+ rt,ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
 Bundle-ManifestVersion: 2
 Bundle-Activator: ca.gc.space.mrt.geometry.paths.ui.jme3.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

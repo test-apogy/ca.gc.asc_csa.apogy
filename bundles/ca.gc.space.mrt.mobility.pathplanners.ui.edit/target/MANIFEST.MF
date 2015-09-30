@@ -8,16 +8,17 @@ Require-Bundle: org.eclipse.core.runtime,ca.gc.space.mrt.mobility.path
  ity:=reexport,ca.gc.space.mrt.common.processors.edit;visibility:=reex
  port,ca.gc.space.topology.core;visibility:=reexport,ca.gc.space.topol
  ogy.core.edit;visibility:=reexport,ca.gc.space.topology.ui;visibility
- :=reexport,ca.gc.space.topology.ui.edit;visibility:=reexport
+ :=reexport,ca.gc.space.topology.ui.edit;visibility:=reexport,org.ecli
+ pse.emf.ecore;visibility:=reexport
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.mobility.pathplanners.ui.provider
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.mobility.pathplanners.ui.provider.Pa
- thplanners_uiEditPlugin$Implementation
+ thPlannersUIEditPlugin$Implementation
 

@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.edit
+ ;singleton:=true
+Require-Bundle: org.eclipse.core.runtime,ca.gc.asc_csa.eclipse.emf.eco
+ re.invocator.ui;visibility:=reexport,org.eclipse.emf.edit;visibility:
+ =reexport,org.eclipse.emf.ecore;visibility:=reexport,ca.gc.asc_csa.ec
+ lipse.emf.ecore.invocator;visibility:=reexport,ca.gc.asc_csa.eclipse.
+ emf.ecore.invocator.edit;visibility:=reexport,ca.gc.asc_csa.eclipse.e
+ mf.ecore;visibility:=reexport,ca.gc.asc_csa.eclipse.emf.ecore.edit;vi
+ sibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.provider
+Bundle-Name: %pluginName
+Bundle-Version: 0.5.0.201509301407
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.provide
+ r.EMFEcoreInvocatorUiEditPlugin$Implementation
+

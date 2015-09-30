@@ -11,7 +11,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.geometry.data.provider
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.geometry.data.provider.GeometrydataE

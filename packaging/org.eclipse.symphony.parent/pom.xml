@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.eclipse.symphony</groupId>
 	<artifactId>org.eclipse.symphony.parent</artifactId>
-	<version>0.4.0-SNAPSHOT</version>
+	<version>0.5.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -23,12 +23,19 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/eclipse/updates/${eclipse.updates.version}</url>
 		</repository>
-		
+
 		<repository>
 			<id>Nebula</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/technology/nebula/snapshot</url>
-		</repository>		
+		</repository>
+		
+		<repository>
+			<id>OTS</id>
+			<layout>p2</layout>
+			<url>http://liberty.speng.space.gc.ca/eclipse/repository/ca.gc.asc_csa.eclipse.ots/latest/</url>
+		</repository>
+		
 	</repositories>
 
 	<build>
@@ -198,9 +205,6 @@
 			../../examples/ca.gc.asc_csa.symphony.examples.camera.edit
 		</module>
 		<module>
-			../../examples/ca.gc.asc_csa.symphony.examples.feature
-		</module>
-		<module>
 			../../examples/ca.gc.asc_csa.symphony.examples.lander
 		</module>
 		<module>
@@ -225,9 +229,6 @@
 			../../examples/ca.gc.asc_csa.symphony.examples.robotic_arm.edit
 		</module>
 		<module>
-			../../examples/ca.gc.asc_csa.symphony.examples.robotic_arm.ui
-		</module>
-		<module>
 			../../examples/ca.gc.asc_csa.symphony.examples.rover
 		</module>
 		<module>
@@ -236,12 +237,6 @@
 		<module>
 			../../examples/ca.gc.asc_csa.symphony.examples.worksites
 		</module>
-		<module>../../bundles/ca.gc.asc_csa.symphony.feature</module>
-		<module>../../bundles/ca.gc.asc_csa.symphony.parent</module>
-		<module>
-			../../bundles/ca.gc.asc_csa.symphony.rcp.e3.feature
-		</module>
-		<module>../../bundles/ca.gc.asc_csa.symphony.repository</module>
 		<module>
 			../../bundles/ca.gc.asc_csa.symphony.tools.camera
 		</module>
@@ -314,18 +309,13 @@
 		</module>
 		<module>../../bundles/ca.gc.space.eclipse.emf</module>
 		<module>../../bundles/ca.gc.space.eclipse.emf.edit</module>
-		<module>../../bundles/ca.gc.space.eclipse.emf.feature</module>
 		<module>../../bundles/ca.gc.space.eclipse.emf.ui</module>
 		<module>../../bundles/ca.gc.space.java.emf</module>
 		<module>../../bundles/ca.gc.space.java.emf.edit</module>
-		<module>../../bundles/ca.gc.space.java.emf.feature</module>
 		<module>../../bundles/ca.gc.space.java.utils</module>
-		<module>../../bundles/ca.gc.space.java.utils.feature</module>
 		<module>../../bundles/ca.gc.space.java3d.core</module>
-		<module>../../bundles/ca.gc.space.java3d.feature</module>
 		<module>../../bundles/ca.gc.space.math.core</module>
 		<module>../../bundles/ca.gc.space.math.core.edit</module>
-		<module>../../bundles/ca.gc.space.math.feature</module>
 		<module>../../bundles/ca.gc.space.math.quickhull3d</module>
 		<module>../../bundles/ca.gc.space.math.statistics</module>
 		<module>../../bundles/ca.gc.space.math.ui</module>
@@ -507,9 +497,6 @@
 			../../bundles/ca.gc.asc_csa.eclipse.emf.ecore.invocator.editor
 		</module>
 		<module>
-			../../bundles/ca.gc.asc_csa.eclipse.emf.ecore.invocator.feature
-		</module>
-		<module>
 			../../bundles/ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs
 		</module>
 		<module>
@@ -563,7 +550,6 @@
 		<module>
 			../../tests/ca.gc.asc_csa.eclipse.utils.log.tests
 		</module>
-		<module>../../bundles/ca.gc.asc_csa.io.feature</module>
 		<module>../../bundles/ca.gc.asc_csa.io.las</module>
 		<module>../../bundles/ca.gc.asc_csa.io.pif</module>
 		<module>../../bundles/ca.gc.asc_csa.jinput</module>

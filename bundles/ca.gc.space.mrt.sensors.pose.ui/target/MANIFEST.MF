@@ -4,15 +4,19 @@ Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
  ity:=reexport,ca.gc.space.math.core;visibility:=reexport,ca.gc.space.
  mrt.common.processors;visibility:=reexport,ca.gc.space.topology.core;
  visibility:=reexport,ca.gc.space.topology.ui;visibility:=reexport,ca.
- gc.space.mrt.sensors.pose;visibility:=reexport
+ gc.space.mrt.sensors.pose;visibility:=reexport,org.eclipse.xtext.xbas
+ e.lib;bundle-version="2.7.3",org.eclipse.emf.ecore.xcore.lib;bundle-v
+ ersion="1.1.0"
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.sensors.pose.ui,ca.gc.space.mrt.sensor
- s.pose.ui.impl,ca.gc.space.mrt.sensors.pose.ui.util
+ s.pose.ui.adapters,ca.gc.space.mrt.sensors.pose.ui.impl,ca.gc.space.m
+ rt.sensors.pose.ui.scene_objects,ca.gc.space.mrt.sensors.pose.ui.util
+ ,ca.gc.space.mrt.sensors.pose.ui.views
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.sensors.pose.ui.Activator

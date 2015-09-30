@@ -11,18 +11,19 @@ Require-Bundle: org.eclipse.core.runtime,ca.gc.space.mrt.geometry.data
  rt,ca.gc.space.mrt.common.processors.edit;visibility:=reexport,ca.gc.
  space.topology.core;visibility:=reexport,ca.gc.space.topology.core.ed
  it;visibility:=reexport,ca.gc.space.topology.ui;visibility:=reexport,
- ca.gc.space.topology.ui.edit;visibility:=reexport,ca.gc.space.mrt.geo
- metry.data;visibility:=reexport,ca.gc.space.mrt.geometry.data.edit;vi
- sibility:=reexport
+ ca.gc.space.topology.ui.edit;visibility:=reexport,ca.gc.asc_csa.eclip
+ se.images.core;visibility:=reexport,ca.gc.asc_csa.eclipse.images.core
+ .edit;visibility:=reexport,ca.gc.space.mrt.geometry.data;visibility:=
+ reexport,ca.gc.space.mrt.geometry.data.edit;visibility:=reexport
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.geometry.data3d.ui.provider
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
-Bundle-Activator: ca.gc.space.mrt.geometry.data3d.ui.provider.Data3dUi
+Bundle-Activator: ca.gc.space.mrt.geometry.data3d.ui.provider.Data3DUI
  EditPlugin$Implementation
 

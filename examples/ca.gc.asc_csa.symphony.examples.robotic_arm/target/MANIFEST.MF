@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.robotic_arm;singl
+ eton:=true
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport,org.eclipse.xtext.xbase.lib,org.eclipse.emf.ecore.xcore
+ .lib,ca.gc.space.math.core;visibility:=reexport,ca.gc.asc_csa.topolog
+ y.bindings;visibility:=reexport,ca.gc.asc_csa.eclipse.emf.ecore.invoc
+ ator;visibility:=reexport,ca.gc.asc_csa.eclipse.emf.ecore.examples.ro
+ botic_arm;visibility:=reexport,ca.gc.space.topology.core;visibility:=
+ reexport,ca.gc.asc_csa.symphony.core;visibility:=reexport,ca.gc.asc_c
+ sa.eclipse.emf.ecore;visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.asc_csa.symphony.examples.robotic_arm,ca.gc.asc_
+ csa.symphony.examples.robotic_arm.impl,ca.gc.asc_csa.symphony.example
+ s.robotic_arm.util
+Bundle-Name: %pluginName
+Bundle-Version: 0.5.0.201509301407
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: ca.gc.asc_csa.symphony.examples.robotic_arm.Activato
+ r
+

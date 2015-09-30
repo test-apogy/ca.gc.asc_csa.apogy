@@ -3,12 +3,12 @@ Bundle-SymbolicName: ca.gc.space.mrt.sensors.gps;singleton:=true
 Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
  ity:=reexport,ca.gc.space.mrt.geometry.data3d;visibility:=reexport,ca
  .gc.space.mrt.geometry.data;visibility:=reexport,ca.gc.space.math.cor
- e;visibility:=reexport,ca.gc.space.net.serial;visibility:=reexport,ca
- .gc.space.java.utils,ca.gc.space.mrt.sensors.pose;visibility:=reexpor
- t,ca.gc.space.mrt.common.processors;visibility:=reexport,ca.gc.space.
- mrt.sensors;visibility:=reexport,ca.gc.space.topology.core;visibility
- :=reexport,org.gavaghan.geodesy.core,ca.gc.space.mrt.common;visibilit
- y:=reexport,ca.gc.space.eclipse.emf
+ e;visibility:=reexport,ca.gc.space.java.utils,ca.gc.space.mrt.sensors
+ .pose;visibility:=reexport,ca.gc.space.mrt.common.processors;visibili
+ ty:=reexport,ca.gc.space.mrt.sensors;visibility:=reexport,ca.gc.space
+ .topology.core;visibility:=reexport,org.gavaghan.geodesy.core,ca.gc.s
+ pace.mrt.common;visibility:=reexport,ca.gc.space.eclipse.emf,ca.gc.as
+ c_csa.eclipse.utils.log;bundle-version="0.3.0"
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
@@ -16,7 +16,7 @@ Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.sensors.gps,ca.gc.space.mrt.sensors.gp
  s.impl,ca.gc.space.mrt.sensors.gps.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.sensors.gps.Activator

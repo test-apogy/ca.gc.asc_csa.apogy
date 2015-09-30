@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='ca.gc.asc_csa.eclipse.converters.tests' version='0.5.0.201509301407'>
+    <update id='ca.gc.asc_csa.eclipse.converters.tests' range='[0.0.0,0.5.0.201509301407)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%pluginProvider'/>
+      <property name='maven-groupId' value='org.eclipse.symphony'/>
+      <property name='maven-artifactId' value='ca.gc.asc_csa.eclipse.converters.tests'/>
+      <property name='maven-version' value='0.5.0-SNAPSHOT'/>
+    </properties>
+    <provides size='6'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='ca.gc.asc_csa.eclipse.converters.tests' version='0.5.0.201509301407'/>
+      <provided namespace='osgi.bundle' name='ca.gc.asc_csa.eclipse.converters.tests' version='0.5.0.201509301407'/>
+      <provided namespace='java.package' name='ca.gc.asc_csa.eclipse.converters.tests' version='0.0.0'/>
+      <provided namespace='java.package' name='ca.gc.asc_csa.eclipse.converters.tests.converters' version='0.0.0'/>
+      <provided namespace='java.package' name='ca.gc.asc_csa.eclipse.converters.tests.types' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='5'>
+      <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.junit' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='ca.gc.asc_csa.eclipse.converters' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.jgrapht' range='0.8.2'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='ca.gc.asc_csa.eclipse.converters.tests' version='0.5.0.201509301407'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: ca.gc.asc_csa.eclipse.converters.tests;singleton:=true&#xA;Bundle-Version: 0.5.0.201509301407&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

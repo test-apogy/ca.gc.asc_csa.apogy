@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.invocator.display
+ .edit;singleton:=true
+Require-Bundle: org.eclipse.core.runtime,ca.gc.asc_csa.eclipse.emf.eco
+ re.invocator.display;visibility:=reexport,org.eclipse.emf.edit;visibi
+ lity:=reexport,ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=
+ reexport,ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit;visibility:=r
+ eexport,ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,ca.gc.as
+ c_csa.eclipse.emf.ecore.edit;visibility:=reexport,org.eclipse.emf.eco
+ re;visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.prov
+ ider
+Bundle-Name: %pluginName
+Bundle-Version: 0.5.0.201509301407
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.pr
+ ovider.EMFEcoreInvocatorDisplayEditPlugin$Implementation
+

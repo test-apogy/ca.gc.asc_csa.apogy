@@ -8,16 +8,17 @@ Require-Bundle: org.eclipse.core.runtime,ca.gc.space.mrt.sensors.fov.u
  ort,ca.gc.space.mrt.common.processors.edit;visibility:=reexport,ca.gc
  .space.topology.core;visibility:=reexport,ca.gc.space.topology.core.e
  dit;visibility:=reexport,ca.gc.space.topology.ui;visibility:=reexport
- ,ca.gc.space.topology.ui.edit;visibility:=reexport
+ ,ca.gc.space.topology.ui.edit;visibility:=reexport,org.eclipse.emf.ec
+ ore;visibility:=reexport
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.sensors.fov.ui.provider
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
-Bundle-Activator: ca.gc.space.mrt.sensors.fov.ui.provider.Fov_uiEditPl
- ugin$Implementation
+Bundle-Activator: ca.gc.space.mrt.sensors.fov.ui.provider.FovUIEditPlu
+ gin$Implementation
 

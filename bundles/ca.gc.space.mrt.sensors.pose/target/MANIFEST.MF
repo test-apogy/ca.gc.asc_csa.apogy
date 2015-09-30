@@ -6,8 +6,9 @@ Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
  sibility:=reexport,ca.gc.space.math.core;visibility:=reexport,ca.gc.s
  pace.mrt.common.processors;visibility:=reexport,ca.gc.space.mrt.geome
  try.data3d;visibility:=reexport,org.eclipse.ui;visibility:=reexport,j
- avax.media;visibility:=reexport;bundle-version="1.5.2",com.csvreader;
- bundle-version="2.0.0"
+ avax.media;bundle-version="1.5.2";visibility:=reexport,com.csvreader;
+ bundle-version="2.0.0",ca.gc.asc_csa.eclipse.utils.log;bundle-version
+ ="0.3.0"
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
@@ -15,7 +16,7 @@ Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.sensors.pose,ca.gc.space.mrt.sensors.p
  ose.impl,ca.gc.space.mrt.sensors.pose.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.sensors.pose.Activator

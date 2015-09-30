@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.space.mrt.geometry.data3d.asc;singleton:=tr
+ ue
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport,org.eclipse.xtext.xbase.lib,org.eclipse.emf.ecore.xcore
+ .lib,ca.gc.space.mrt.geometry.data3d;bundle-version="0.5.0";visibilit
+ y:=reexport,ca.gc.space.mrt.geometry.data;visibility:=reexport,ca.gc.
+ space.mrt.common.processors;visibility:=reexport,ca.gc.asc_csa.eclips
+ e.utils.log;bundle-version="0.3.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.space.mrt.geometry.data3d.asc,ca.gc.space.mrt.ge
+ ometry.data3d.asc.impl,ca.gc.space.mrt.geometry.data3d.asc.util
+Bundle-Name: %pluginName
+Bundle-Version: 0.5.0.201509301407
+Bundle-Localization: plugin
+Bundle-ClassPath: .
+Bundle-Activator: ca.gc.space.mrt.geometry.data3d.asc.Activator
+

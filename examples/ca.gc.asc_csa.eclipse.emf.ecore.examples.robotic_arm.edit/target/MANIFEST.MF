@@ -1,22 +1,22 @@
 Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_
+ arm.edit;singleton:=true
 Require-Bundle: org.eclipse.core.runtime,ca.gc.asc_csa.eclipse.emf.eco
  re.examples.robotic_arm;visibility:=reexport,org.eclipse.emf.edit;vis
  ibility:=reexport,org.eclipse.emf.ecore;visibility:=reexport,org.ecli
  pse.xtext.xbase.lib;visibility:=reexport,org.eclipse.emf.ecore.xcore.
  lib;visibility:=reexport,ca.gc.asc_csa.eclipse.emf.ecore.ui;bundle-ve
  rsion="0.2.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
 Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.p
  rovider
-Bundle-Vendor: %providerName
-Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: .
-Bundle-Version: 0.2.0.201401221941
-Bundle-Localization: plugin
 Bundle-Name: %pluginName
+Bundle-Version: 0.5.0.201509301407
+Bundle-ClassPath: .
+Bundle-Localization: plugin
 Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm
  .provider.EMFEcoreExampleRoboticArmEditPlugin$Implementation
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_
- arm.edit;singleton:=true
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 

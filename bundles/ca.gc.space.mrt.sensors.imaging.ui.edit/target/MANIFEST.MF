@@ -8,15 +8,16 @@ Require-Bundle: org.eclipse.core.runtime,ca.gc.space.mrt.sensors.imagi
  eexport,ca.gc.space.mrt.common.processors.edit;visibility:=reexport,c
  a.gc.space.topology.core;visibility:=reexport,ca.gc.space.topology.co
  re.edit;visibility:=reexport,org.eclipse.emf.ecore;visibility:=reexpo
- rt,ca.gc.space.topology.ui;visibility:=reexport,ca.gc.space.topology.
- ui.edit;visibility:=reexport
+ rt,org.eclipse.emf.ecore.edit;visibility:=reexport,ca.gc.space.topolo
+ gy.ui;visibility:=reexport,ca.gc.space.topology.ui.edit;visibility:=r
+ eexport
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.sensors.imaging.ui.provider
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.sensors.imaging.ui.provider.MRTSenso

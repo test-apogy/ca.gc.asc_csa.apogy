@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.vehicle.ui;singleton
+ :=true
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.0",org.ec
+ lipse.emf.ecore;visibility:=reexport,org.eclipse.xtext.xbase.lib,org.
+ eclipse.emf.ecore.xcore.lib,ca.gc.space.topology.core;visibility:=ree
+ xport,ca.gc.space.topology.ui;visibility:=reexport,ca.gc.space.math.c
+ ore;visibility:=reexport,ca.gc.asc_csa.symphony.tools.vehicle;visibil
+ ity:=reexport,org.eclipse.ui;bundle-version="3.105.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.asc_csa.symphony.tools.vehicle.ui,ca.gc.asc_csa.
+ symphony.tools.vehicle.ui.adapters,ca.gc.asc_csa.symphony.tools.vehic
+ le.ui.commands,ca.gc.asc_csa.symphony.tools.vehicle.ui.impl,ca.gc.asc
+ _csa.symphony.tools.vehicle.ui.preferences,ca.gc.asc_csa.symphony.too
+ ls.vehicle.ui.util
+Bundle-Name: %pluginName
+Bundle-Version: 0.5.0.201509301407
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: ca.gc.asc_csa.symphony.tools.vehicle.ui.Activator
+

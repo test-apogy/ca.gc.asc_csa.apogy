@@ -8,18 +8,19 @@ Require-Bundle: org.eclipse.core.runtime,ca.gc.space.mrt.sensors.range
  xport,ca.gc.space.mrt.common.processors.edit;visibility:=reexport,ca.
  gc.space.topology.core;visibility:=reexport,ca.gc.space.topology.core
  .edit;visibility:=reexport,ca.gc.space.topology.ui;visibility:=reexpo
- rt,ca.gc.space.topology.ui.edit;visibility:=reexport,ca.gc.space.mrt.
- sensors.range.edit;visibility:=reexport,ca.gc.space.mrt.sensors.fov.u
- i.edit;visibility:=reexport
+ rt,ca.gc.space.topology.ui.edit;visibility:=reexport,org.eclipse.emf.
+ ecore;visibility:=reexport,ca.gc.space.mrt.sensors.range.edit;visibil
+ ity:=reexport,ca.gc.space.mrt.sensors.fov.ui.edit;visibility:=reexpor
+ t
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.sensors.range.ui.provider
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
-Bundle-Activator: ca.gc.space.mrt.sensors.range.ui.provider.Range_uiEd
- itPlugin$Implementation
+Bundle-Activator: ca.gc.space.mrt.sensors.range.ui.provider.RangeSenso
+ rsUIEditPlugin$Implementation
 

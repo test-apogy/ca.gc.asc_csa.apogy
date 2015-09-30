@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
-Export-Package: ca.gc.space.java3d
-Require-Bundle: org.eclipse.core.runtime,edu.wlu.cs.levy.CG,ca.gc.spac
- e.java.utils,javax.media;bundle-version="1.5.2";visibility:=reexport
-Bundle-Vendor: %providerName
-Bundle-ActivationPolicy: lazy
-Bundle-Version: 0.2.0.201312101603
-Bundle-Localization: plugin
-Bundle-Name: %pluginName
-Bundle-Activator: ca.gc.space.java3d.Activator
-Bundle-ManifestVersion: 2
 Bundle-SymbolicName: ca.gc.space.java3d.core
+Export-Package: ca.gc.space.java3d
+Bundle-Name: %pluginName
+Bundle-Version: 0.5.0.201509301407
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,ca.gc.space.java.utils,javax.
+ media;bundle-version="1.5.2";visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-Activator: ca.gc.space.java3d.Activator
+Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: %providerName
 

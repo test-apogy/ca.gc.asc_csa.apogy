@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-SymbolicName: ca.gc.space.mrt.sensors.motion;singleton:=true
 Export-Package: motion,motion.impl,motion.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.4.0.201502052105
+Bundle-Version: 0.5.0.201509301407
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil

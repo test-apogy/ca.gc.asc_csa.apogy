@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ca.gc.asc_csa.jinput;singleton:=true
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport,org.jinput;visibility:=reexport;bundle-version="0.1.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: ca.gc.asc_csa.jinput,ca.gc.asc_csa.jinput.impl,ca.gc.a
+ sc_csa.jinput.util
+Bundle-Name: %pluginName
+Bundle-Version: 0.5.0.201509301407
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: ca.gc.asc_csa.jinput.Activator
+
