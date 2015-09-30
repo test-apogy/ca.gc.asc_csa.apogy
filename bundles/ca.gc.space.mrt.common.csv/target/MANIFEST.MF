@@ -9,7 +9,7 @@ Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.common.csv,ca.gc.space.mrt.common.csv.
  impl,ca.gc.space.mrt.common.csv.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.common.csv.Activator

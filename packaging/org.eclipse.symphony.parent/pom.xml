@@ -593,5 +593,20 @@
 		<module>
 			../../bundles/ca.gc.asc_csa.symphony.environment.orbit.edit
 		</module>
+		<module>
+			../../bundles/org.eclipse.symphony.addons.feature
+		</module>
+		<module>
+			../../bundles/org.eclipse.symphony.common.feature
+		</module>
+		<module>
+			../../bundles/org.eclipse.symphony.core.feature
+		</module>
+		<module>
+			../../bundles/org.eclipse.symphony.examples
+		</module>
+		<module>
+			../../bundles/org.eclipse.symphony.feature
+		</module>
 	</modules>
 </project>

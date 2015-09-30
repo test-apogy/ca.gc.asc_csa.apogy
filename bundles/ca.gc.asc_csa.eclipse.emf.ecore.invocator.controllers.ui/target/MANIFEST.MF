@@ -7,7 +7,7 @@ Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.
  .gc.asc_csa.eclipse.emf.ecore.invocator.controllers.ui.properties.sec
  tions
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,ca.gc.asc_csa.
  eclipse.emf.ecore.invocator.controllers,org.eclipse.ui.views.properti

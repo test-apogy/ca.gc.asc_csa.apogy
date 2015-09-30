@@ -5,5 +5,5 @@
 	<classpathentry kind="src" path="src/"/>
 	<classpathentry kind="src" path="src-generated/"/>
 	<classpathentry exported="true" kind="lib" path="libs/swt-grouplayout.jar"/>
-	<classpathentry kind="output" path="target/classes"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -15,7 +15,7 @@ Export-Package: ca.gc.space.mrt.geometry.paths,ca.gc.space.mrt.geometr
  y.paths.impl,ca.gc.space.mrt.geometry.paths.util,ca.gc.space.mrt.geom
  etry.paths.validation
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 

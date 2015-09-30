@@ -3,7 +3,7 @@ Bundle-SymbolicName: ca.gc.asc_csa.eclipse.ros.ui;singleton:=true
 Export-Package: ca.gc.asc_csa.eclipse.ros.ui,ca.gc.asc_csa.eclipse.ros
  .ui.wizards
 Bundle-Name: %bundleName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-Localization: bundle
 Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,ca.gc.asc_csa.
  eclipse.ros;bundle-version="0.3.0"

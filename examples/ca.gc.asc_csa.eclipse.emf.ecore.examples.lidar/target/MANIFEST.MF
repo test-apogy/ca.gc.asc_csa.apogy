@@ -17,7 +17,7 @@ Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar,ca.gc.a
  sc_csa.eclipse.emf.ecore.examples.lidar.impl,ca.gc.asc_csa.eclipse.em
  f.ecore.examples.lidar.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.Activ

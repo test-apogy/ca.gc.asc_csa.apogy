@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='ca.gc.space.mrt.geometry.data3d.asc' version='0.5.0.201509301407'>
-    <update id='ca.gc.space.mrt.geometry.data3d.asc' range='[0.0.0,0.5.0.201509301407)' severity='0'/>
+  <unit id='ca.gc.space.mrt.geometry.data3d.asc' version='0.5.0.201509301832'>
+    <update id='ca.gc.space.mrt.geometry.data3d.asc' range='[0.0.0,0.5.0.201509301832)' severity='0'/>
     <properties size='8'>
       <property name='df_LT.pluginName' value='MRT Data ASC Format Model'/>
       <property name='df_LT.providerName' value='Agence Spatiale Canadienne / Canadian Space Agency'/>
@@ -13,8 +13,8 @@
       <property name='maven-version' value='0.5.0-SNAPSHOT'/>
     </properties>
     <provides size='7'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='ca.gc.space.mrt.geometry.data3d.asc' version='0.5.0.201509301407'/>
-      <provided namespace='osgi.bundle' name='ca.gc.space.mrt.geometry.data3d.asc' version='0.5.0.201509301407'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='ca.gc.space.mrt.geometry.data3d.asc' version='0.5.0.201509301832'/>
+      <provided namespace='osgi.bundle' name='ca.gc.space.mrt.geometry.data3d.asc' version='0.5.0.201509301832'/>
       <provided namespace='java.package' name='ca.gc.space.mrt.geometry.data3d.asc' version='0.0.0'/>
       <provided namespace='java.package' name='ca.gc.space.mrt.geometry.data3d.asc.impl' version='0.0.0'/>
       <provided namespace='java.package' name='ca.gc.space.mrt.geometry.data3d.asc.util' version='0.0.0'/>
@@ -32,13 +32,13 @@
       <required namespace='osgi.bundle' name='ca.gc.asc_csa.eclipse.utils.log' range='0.3.0'/>
     </requires>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='ca.gc.space.mrt.geometry.data3d.asc' version='0.5.0.201509301407'/>
+      <artifact classifier='osgi.bundle' id='ca.gc.space.mrt.geometry.data3d.asc' version='0.5.0.201509301832'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='manifest'>
-          Bundle-SymbolicName: ca.gc.space.mrt.geometry.data3d.asc;singleton:=true&#xA;Bundle-Version: 0.5.0.201509301407&#xA;
+          Bundle-SymbolicName: ca.gc.space.mrt.geometry.data3d.asc;singleton:=true&#xA;Bundle-Version: 0.5.0.201509301832&#xA;
         </instruction>
       </instructions>
     </touchpointData>

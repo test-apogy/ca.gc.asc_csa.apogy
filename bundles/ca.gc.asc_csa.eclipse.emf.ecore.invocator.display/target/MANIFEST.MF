@@ -25,7 +25,7 @@ Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.display,ca.g
  pse.emf.ecore.invocator.display.impl,ca.gc.asc_csa.eclipse.emf.ecore.
  invocator.display.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.Ac

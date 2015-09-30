@@ -18,7 +18,7 @@ Bundle-Vendor: %providerName
 Export-Package: ca.gc.space.mrt.sensors.fov.bindings,ca.gc.space.mrt.s
  ensors.fov.bindings.impl,ca.gc.space.mrt.sensors.fov.bindings.util
 Bundle-Name: %pluginName
-Bundle-Version: 0.5.0.201509301407
+Bundle-Version: 0.5.0.201509301832
 Bundle-ClassPath: .
 Bundle-Localization: plugin
 Bundle-Activator: ca.gc.space.mrt.sensors.fov.bindings.Activator
