@@ -10,6 +10,7 @@
 		<relativePath>../../packaging/org.eclipse.symphony.parent</relativePath>
 	</parent>
 
+<!--
 	<build>
 		<plugins>
 			<plugin>
@@ -20,21 +21,8 @@
 					<useUIHarness>true</useUIHarness>
 					<testSuite>ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests</testSuite>
 					<testClass>ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests.AllTests</testClass>
-<!-- 					<dependencies>
-						<dependency>
-							<type>eclipse-feature</type>
-							<artifactId>ca.gc.asc_csa.symphony.rcp.e3.feature</artifactId>
-							This is the minimum required version
-							<version>0.0.0</version>
-						</dependency>
-					</dependencies>
- -->					<!-- <dependency-resolution> <extraRequirements> <requirement> <type>eclipse-feature</type> 
-						<id>org.jama.feature</id> <versionRange>0.0.0</versionRange> </requirement> 
-						</extraRequirements> </dependency-resolution> -->					<!-- <argLine>-ea</argLine> -->
-					<!-- <dependencies> <dependency> <type>p2-installable-unit</type> <artifactId>org.eclipse.equinox.ds</artifactId> 
-						</dependency> </dependencies> -->
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+-->
 </project>
