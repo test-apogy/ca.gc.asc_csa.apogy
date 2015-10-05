@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer;
 import ca.gc.asc_csa.symphony.tools.core.Activator;
@@ -29,8 +31,6 @@ import ca.gc.asc_csa.symphony.tools.vehicle.PathPlannerTool;
 import ca.gc.asc_csa.symphony.tools.vehicle.PathPlannerToolNode;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;

@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.symphony.environment.RectangleShapeImageLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

@@ -5,7 +5,8 @@ package ca.gc.asc_csa.symphony.tools.core;
 
 import javax.vecmath.Matrix4d;
 
-import ca.gc.space.math.Tuple3d;
+import org.eclipse.symphony.common.math.Tuple3d;
+
 import ca.gc.space.topology.Node;
 
 /**
@@ -289,7 +290,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * <!-- begin-model-doc -->
 	 *  Method called when the pose between from and to changes.
 	 * <!-- end-model-doc -->
-	 * @model newPoseDataType="ca.gc.space.math.Matrix4d" newPoseUnique="false"
+	 * @model newPoseDataType="org.eclipse.symphony.common.math.Matrix4d" newPoseUnique="false"
 	 * @generated
 	 */
 	void pointsRelativePoseChanged(Matrix4d newPose);

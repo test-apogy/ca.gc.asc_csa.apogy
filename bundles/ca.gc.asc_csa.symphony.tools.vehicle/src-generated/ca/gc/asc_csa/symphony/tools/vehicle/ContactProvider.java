@@ -9,9 +9,9 @@ import java.util.Map;
 import javax.vecmath.Point3d;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

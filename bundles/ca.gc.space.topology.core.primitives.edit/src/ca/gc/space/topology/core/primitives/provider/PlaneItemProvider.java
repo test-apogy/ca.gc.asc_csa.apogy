@@ -17,8 +17,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.math.MathFactory;
 
-import ca.gc.space.math.MathFactory;
 import ca.gc.space.topology.core.primitives.Plane;
 import ca.gc.space.topology.core.primitives.PrimitivesPackage;
 import ca.gc.space.topology.provider.NodeItemProvider;

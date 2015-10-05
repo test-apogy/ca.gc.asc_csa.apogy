@@ -20,6 +20,9 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.math.Tuple3d;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
 import org.jfree.chart.annotations.XYTextAnnotation;
@@ -31,9 +34,6 @@ import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
 import ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIFactory;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
-import ca.gc.space.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

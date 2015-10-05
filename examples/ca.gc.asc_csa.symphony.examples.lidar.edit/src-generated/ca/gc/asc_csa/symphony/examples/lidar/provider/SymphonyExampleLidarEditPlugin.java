@@ -7,7 +7,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditP
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
 import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
@@ -50,16 +49,15 @@ public final class SymphonyExampleLidarEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -1543,101 +1543,101 @@ public interface PrimitivesPackage extends EPackage
 	EOperation getPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createAmbientLight(ca.gc.space.math.Tuple3d) <em>Create Ambient Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createAmbientLight(org.eclipse.symphony.common.math.Tuple3d) <em>Create Ambient Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Ambient Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createAmbientLight(ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createAmbientLight(org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreateAmbientLight__Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createAmbientLight(boolean, ca.gc.space.math.Tuple3d) <em>Create Ambient Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createAmbientLight(boolean, org.eclipse.symphony.common.math.Tuple3d) <em>Create Ambient Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Ambient Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createAmbientLight(boolean, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createAmbientLight(boolean, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createDirectionalLight(boolean, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Create Directional Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createDirectionalLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Directional Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Directional Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createDirectionalLight(boolean, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createDirectionalLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createDirectionalLight(ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Create Directional Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createDirectionalLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Directional Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Directional Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createDirectionalLight(ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createDirectionalLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Create Point Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(ca.gc.space.math.Tuple3d) <em>Create Point Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreatePointLight__Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(boolean, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Create Point Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(boolean, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Create Point Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createSpotLight(boolean, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, float, float) <em>Create Spot Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createSpotLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float) <em>Create Spot Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Spot Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createSpotLight(boolean, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, float, float)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createSpotLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createSpotLight(ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, float, float) <em>Create Spot Light</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.core.primitives.PrimitivesFacade#createSpotLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float) <em>Create Spot Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Spot Light</em>' operation.
-	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createSpotLight(ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d, float, float)
+	 * @see ca.gc.space.topology.core.primitives.PrimitivesFacade#createSpotLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float)
 	 * @generated
 	 */
 	EOperation getPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();

@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.math.MathPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
@@ -31,7 +32,6 @@ import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCoreFactory;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.asc_csa.symphony.tools.core.Trajectory3DTool;
 import ca.gc.asc_csa.symphony.tools.core.Trajectory3DToolNode;
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.ui.NodeSelection;

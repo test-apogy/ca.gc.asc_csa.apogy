@@ -36,7 +36,7 @@ public class MathUIPackageImpl extends EPackageImpl implements MathUIPackage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see ca.gc.space.math.ui.MathUIPackage#eNS_URI
+	 * @see org.eclipse.symphony.common.math.ui.MathUIPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

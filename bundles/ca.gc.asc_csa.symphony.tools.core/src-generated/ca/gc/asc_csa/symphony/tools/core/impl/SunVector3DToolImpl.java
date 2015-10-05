@@ -14,6 +14,8 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
@@ -27,8 +29,6 @@ import ca.gc.asc_csa.symphony.tools.core.SunVector3DTool;
 import ca.gc.asc_csa.symphony.tools.core.SunVector3DToolNode;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCoreFactory;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.ui.NodeSelection;

@@ -4,8 +4,7 @@
 package ca.gc.asc_csa.symphony.environment;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.math.Matrix4x4;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

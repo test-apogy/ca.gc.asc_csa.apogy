@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.emf.ecore.generated_package">
       <package
-            class="ca.gc.space.math.MathPackage"
+            class="org.eclipse.symphony.common.math.MathPackage"
             genModel="model/Math.genmodel"
             uri="http:///ca/gc/space/math.ecore">
       </package>

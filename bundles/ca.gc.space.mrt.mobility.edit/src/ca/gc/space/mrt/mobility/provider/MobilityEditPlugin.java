@@ -8,8 +8,8 @@ package ca.gc.space.mrt.mobility.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 /**

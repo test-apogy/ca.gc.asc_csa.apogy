@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.math.statistics;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.math.statistics;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -10,7 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.space.math.statistics.Activator
-Export-Package: ca.gc.space.math.statistics,
- ca.gc.space.math.statistics.impl,
- ca.gc.space.math.statistics.util
+Bundle-Activator: org.eclipse.symphony.common.math.statistics.Activator
+Export-Package: org.eclipse.symphony.common.math.statistics,
+ org.eclipse.symphony.common.math.statistics.impl,
+ org.eclipse.symphony.common.math.statistics.util

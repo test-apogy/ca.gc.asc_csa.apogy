@@ -13,8 +13,8 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 import ca.gc.space.mrt.sensors.pose.PosePackage;

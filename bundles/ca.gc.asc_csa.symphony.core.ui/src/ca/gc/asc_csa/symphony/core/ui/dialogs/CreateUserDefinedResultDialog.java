@@ -19,13 +19,13 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 import ca.gc.asc_csa.symphony.core.SymphonyCoreFactory;
 import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.core.UserDefinedResult;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;

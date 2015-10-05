@@ -28,6 +28,8 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ImageAlignment;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
@@ -44,8 +46,6 @@ import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIFactory;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
 import ca.gc.asc_csa.symphony.environment.ui.listeners.MapViewConfigurationListener;
 import ca.gc.asc_csa.symphony.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
-import ca.gc.space.math.MathFactory;
-import ca.gc.space.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

@@ -7,13 +7,13 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 import ca.gc.asc_csa.symphony.core.ConnectionPoint;
 import ca.gc.asc_csa.symphony.core.SymphonySystem;
 import ca.gc.asc_csa.symphony.environment.impl.EnvironmentFacadeImpl;
-import ca.gc.space.math.Matrix4x4;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TransformNode;
@@ -203,7 +203,7 @@ public interface EnvironmentFacade extends EObject
 	 * @return List containing the position (in the worksite frame) of the four corners of the ImageMapLayer.
 	 * The list contains : lowerLeftCorner, lowerRightCorner, upperRightCorner and upperLeftCorner.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.symphony.environment.List<ca.gc.space.math.Tuple3d>" unique="false" many="false" rectangularRegionUnique="false"
+	 * @model dataType="ca.gc.asc_csa.symphony.environment.List<org.eclipse.symphony.common.math.Tuple3d>" unique="false" many="false" rectangularRegionUnique="false"
 	 * @generated
 	 */
   List<Tuple3d> getAbsoluteRectangularRegionCorners(RectangularRegion rectangularRegion);

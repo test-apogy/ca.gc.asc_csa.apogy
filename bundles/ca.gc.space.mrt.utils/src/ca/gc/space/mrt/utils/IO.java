@@ -18,8 +18,8 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.symphony.common.math.GeometricUtils;
 
-import ca.gc.space.math.GeometricUtils;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFacade;

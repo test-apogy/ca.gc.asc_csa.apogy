@@ -3,7 +3,6 @@
  */
 package ca.gc.asc_csa.symphony.tools.telecoms.ui.provider;
 
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import ca.gc.space.topology.ui.provider.TopologyUIEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
@@ -41,9 +40,8 @@ public final class SymphonyTelecomToolsUIEditPlugin extends EMFPlugin {
 	public SymphonyTelecomToolsUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     MathEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

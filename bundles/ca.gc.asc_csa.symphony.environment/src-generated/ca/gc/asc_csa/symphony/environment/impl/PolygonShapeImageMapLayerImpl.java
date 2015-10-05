@@ -21,13 +21,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.symphony.environment.PolygonShapeImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

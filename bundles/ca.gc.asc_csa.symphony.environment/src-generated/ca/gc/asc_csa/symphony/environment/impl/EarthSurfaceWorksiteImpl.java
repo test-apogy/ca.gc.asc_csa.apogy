@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Tuple3d;
 import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GeodeticCalculator;
 import org.gavaghan.geodesy.GeodeticCurve;
@@ -29,8 +31,6 @@ import ca.gc.asc_csa.symphony.environment.Sky;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.WorksiteNode;
-import ca.gc.space.math.MathFactory;
-import ca.gc.space.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

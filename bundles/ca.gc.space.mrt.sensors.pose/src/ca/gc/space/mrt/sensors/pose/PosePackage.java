@@ -1528,11 +1528,11 @@ public interface PosePackage extends EPackage {
 	EOperation getOrientationSensor__ResetOrientation__CartesianOrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.OrientationSensor#extractOrientationFromMatrix(ca.gc.space.math.Matrix3x3) <em>Extract Orientation From Matrix</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.OrientationSensor#extractOrientationFromMatrix(org.eclipse.symphony.common.math.Matrix3x3) <em>Extract Orientation From Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Extract Orientation From Matrix</em>' operation.
-	 * @see ca.gc.space.mrt.sensors.pose.OrientationSensor#extractOrientationFromMatrix(ca.gc.space.math.Matrix3x3)
+	 * @see ca.gc.space.mrt.sensors.pose.OrientationSensor#extractOrientationFromMatrix(org.eclipse.symphony.common.math.Matrix3x3)
 	 * @generated
 	 */
 	EOperation getOrientationSensor__ExtractOrientationFromMatrix__Matrix3x3();

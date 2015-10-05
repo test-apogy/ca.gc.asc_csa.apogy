@@ -12,13 +12,13 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.symphony.tools.vehicle.LanderSphericalFoot;
 import ca.gc.asc_csa.symphony.tools.vehicle.LanderSphericalFootContactProvider;
 import ca.gc.asc_csa.symphony.tools.vehicle.MeshNodeEntry;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFacade;

@@ -7,8 +7,8 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
 
-import ca.gc.space.math.ui.composites.Tuple3dComposite;
 import ca.gc.space.topology.PositionNode;
 
 public class PositionNodeComposite extends Composite 

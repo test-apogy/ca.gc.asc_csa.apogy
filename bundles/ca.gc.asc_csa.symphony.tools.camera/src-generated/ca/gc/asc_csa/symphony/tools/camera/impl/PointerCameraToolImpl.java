@@ -24,6 +24,8 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
@@ -40,8 +42,6 @@ import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsFactory;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 import ca.gc.asc_csa.symphony.tools.camera.ToolTipTextProvider;
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;

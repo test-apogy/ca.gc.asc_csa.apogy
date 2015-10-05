@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.Matrix4x4;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
@@ -28,7 +29,6 @@ import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
 import ca.gc.asc_csa.symphony.environment.ui.TrajectoryProvider;
 import ca.gc.asc_csa.symphony.environment.ui.VariableTrajectoryAnnotation;
 import ca.gc.asc_csa.symphony.environment.ui.VariableTrajectoryProvider;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

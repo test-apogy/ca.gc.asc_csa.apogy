@@ -16,13 +16,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.topology.dynamics.AbstractCollisionGeometrySimulationProperties;
 import ca.gc.asc_csa.topology.dynamics.AbstractMaterial;
 import ca.gc.asc_csa.topology.dynamics.CollisionGeometry;
 import ca.gc.asc_csa.topology.dynamics.Geometry;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

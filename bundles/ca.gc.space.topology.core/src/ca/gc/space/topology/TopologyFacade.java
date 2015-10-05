@@ -60,14 +60,14 @@ public interface TopologyFacade extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model dataType="ca.gc.space.math.Matrix4d"
+	 * @model dataType="org.eclipse.symphony.common.math.Matrix4d"
 	 * @generated
 	 */
 	Matrix4d expressNodeInRootFrame(Node node);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model dataType="ca.gc.space.math.Matrix4d"
+	 * @model dataType="org.eclipse.symphony.common.math.Matrix4d"
 	 * @generated
 	 */
 	Matrix4d expressRootInNodeFrame(Node node);
@@ -85,7 +85,7 @@ public interface TopologyFacade extends EObject {
 	 * laser scanner in the frame of the sonar sensor.
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @model dataType="ca.gc.space.math.Matrix4d"
+	 * @model dataType="org.eclipse.symphony.common.math.Matrix4d"
 	 * @generated
 	 */
 	Matrix4d expressInFrame(Node sourceFrame, Node targetFrame);
@@ -198,14 +198,14 @@ public interface TopologyFacade extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model matrixDataType="ca.gc.space.math.Matrix4d"
+	 * @model matrixDataType="org.eclipse.symphony.common.math.Matrix4d"
 	 * @generated
 	 */
 	TransformNode createTransformNode(Matrix4d matrix);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model matrixDataType="ca.gc.space.math.Matrix4d"
+	 * @model matrixDataType="org.eclipse.symphony.common.math.Matrix4d"
 	 * @generated
 	 */
 	PickAndPlaceNode createPickAndPlaceNode(Matrix4d matrix);

@@ -3,11 +3,14 @@
  */
 package ca.gc.space.math.ui.util;
 
-import ca.gc.space.math.ui.*;
+import ca.gc.space.math.ui.Dummy;
+import ca.gc.space.math.ui.org;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.ui.*;
 
 import ca.gc.space.math.ui.MathUIPackage;
 
@@ -16,7 +19,7 @@ import ca.gc.space.math.ui.MathUIPackage;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see ca.gc.space.math.ui.MathUIPackage
+ * @see org.eclipse.symphony.common.math.ui.MathUIPackage
  * @generated
  */
 public class MathUIAdapterFactory extends AdapterFactoryImpl
@@ -96,13 +99,13 @@ public class MathUIAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.math.ui.Dummy <em>Dummy</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.ui.Dummy <em>Dummy</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.math.ui.Dummy
+	 * @see org.eclipse.symphony.common.math.ui.Dummy
 	 * @generated
 	 */
   public Adapter createDummyAdapter()

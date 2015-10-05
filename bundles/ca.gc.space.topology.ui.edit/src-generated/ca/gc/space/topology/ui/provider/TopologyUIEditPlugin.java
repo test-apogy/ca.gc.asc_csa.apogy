@@ -5,8 +5,8 @@ package ca.gc.space.topology.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 /**

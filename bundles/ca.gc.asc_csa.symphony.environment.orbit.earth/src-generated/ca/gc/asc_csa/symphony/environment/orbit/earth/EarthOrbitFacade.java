@@ -4,11 +4,12 @@
 package ca.gc.asc_csa.symphony.environment.orbit.earth;
 
 import java.util.Date;
-
 import java.util.List;
 import java.util.SortedSet;
+
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.Matrix3x3;
 import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
 import org.orekit.orbits.KeplerianOrbit;
@@ -22,7 +23,6 @@ import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedAngularCoordinates;
 import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedPVACoordinates;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.impl.EarthOrbitFacadeImpl;
-import ca.gc.space.math.Matrix3x3;
 
 /**
  * <!-- begin-user-doc -->

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.math.MathPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
@@ -89,7 +90,6 @@ import ca.gc.asc_csa.symphony.environment.URLImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.URLMapLayer;
 import ca.gc.asc_csa.symphony.environment.Worksite;
 import ca.gc.asc_csa.symphony.environment.WorksiteNode;
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.topology.TopologyPackage;
 

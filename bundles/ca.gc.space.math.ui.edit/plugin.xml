@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated space_math_ui -->
       <factory
-            uri="ca.gc.space.math.ui"
-            class="ca.gc.space.math.ui.provider.MathUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.math.ui"
+            class="org.eclipse.symphony.common.math.ui.provider.MathUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

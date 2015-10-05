@@ -5,7 +5,8 @@
  */
 package ca.gc.space.mrt.sensors.pose;
 
-import ca.gc.space.math.Matrix3x3;
+import org.eclipse.symphony.common.math.Matrix3x3;
+
 import ca.gc.space.mrt.geometry.data3d.CartesianOrientationCoordinates;
 import ca.gc.space.topology.RotationNode;
 

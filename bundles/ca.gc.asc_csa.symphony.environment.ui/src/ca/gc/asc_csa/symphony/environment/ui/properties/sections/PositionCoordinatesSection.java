@@ -4,10 +4,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.IFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
 
 import ca.gc.asc_csa.eclipse.ui.properties.sections.AbstractExtendedPropertySection;
-import ca.gc.space.math.Tuple3d;
-import ca.gc.space.math.ui.composites.Tuple3dComposite;
 
 public class PositionCoordinatesSection extends AbstractExtendedPropertySection implements
 		IFilter {

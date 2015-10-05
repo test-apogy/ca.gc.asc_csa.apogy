@@ -22,6 +22,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
@@ -36,9 +39,6 @@ import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
 import ca.gc.asc_csa.symphony.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.MathPackage;
-import ca.gc.space.math.Tuple3d;
 
 public class CoordinateConversionComposite extends Composite
 {

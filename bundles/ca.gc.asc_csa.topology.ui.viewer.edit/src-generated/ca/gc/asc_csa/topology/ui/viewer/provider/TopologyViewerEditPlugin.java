@@ -5,8 +5,6 @@ package ca.gc.asc_csa.topology.ui.viewer.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import ca.gc.space.topology.ui.provider.TopologyUIEditPlugin;
 
@@ -43,7 +41,6 @@ public final class TopologyViewerEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     TopologyUIEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		   });
 	}

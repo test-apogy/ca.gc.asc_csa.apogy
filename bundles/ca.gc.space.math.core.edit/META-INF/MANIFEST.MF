@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.math.core.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.math.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.math.provider.MathEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.common.math.provider.MathEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.math.provider
+Export-Package: org.eclipse.symphony.common.math.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.space.math.core;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  ca.gc.space.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

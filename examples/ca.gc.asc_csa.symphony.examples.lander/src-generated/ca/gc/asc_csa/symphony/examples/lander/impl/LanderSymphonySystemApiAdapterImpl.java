@@ -6,11 +6,16 @@ package ca.gc.asc_csa.symphony.examples.lander.impl;
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.GeometricUtils;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.EMFEcoreExampleLanderPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.Lander;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.Position;
@@ -24,9 +29,6 @@ import ca.gc.asc_csa.symphony.examples.lander.SymphonyExampleLanderFactory;
 import ca.gc.asc_csa.symphony.examples.lander.SymphonyExampleLanderPackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
 import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;
-import ca.gc.space.math.GeometricUtils;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

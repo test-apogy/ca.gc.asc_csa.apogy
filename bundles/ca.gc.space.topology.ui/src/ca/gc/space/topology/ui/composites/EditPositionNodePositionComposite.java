@@ -8,9 +8,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.PositionNode;
 
 public class EditPositionNodePositionComposite extends Composite

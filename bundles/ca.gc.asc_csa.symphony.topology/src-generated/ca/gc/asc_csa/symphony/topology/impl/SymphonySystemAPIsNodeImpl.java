@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.ListFeatureNode;
@@ -41,8 +43,6 @@ import ca.gc.asc_csa.symphony.topology.SymphonySystemAPIsNode;
 import ca.gc.asc_csa.symphony.topology.SymphonyTopologyPackage;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
 import ca.gc.asc_csa.topology.bindings.TransformMatrixBinding;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.ReferencedGroupNode;
 import ca.gc.space.topology.TopologyFacade;

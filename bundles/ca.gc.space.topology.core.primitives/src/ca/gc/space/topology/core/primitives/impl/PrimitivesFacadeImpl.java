@@ -14,9 +14,9 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.core.primitives.AmbientLight;
 import ca.gc.space.topology.core.primitives.DirectionalLight;
 import ca.gc.space.topology.core.primitives.Plane;

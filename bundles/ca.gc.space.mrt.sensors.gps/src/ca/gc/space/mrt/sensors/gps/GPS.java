@@ -184,7 +184,7 @@ public interface GPS extends EObject {
 	 * @return the value of the '<em>Last Failure</em>' attribute.
 	 * @see #setLastFailure(Exception)
 	 * @see ca.gc.space.mrt.sensors.gps.GpsPackage#getGPS_LastFailure()
-	 * @model dataType="ca.gc.space.math.Exception" transient="true"
+	 * @model dataType="org.eclipse.symphony.common.math.Exception" transient="true"
 	 * @generated
 	 */
 	Exception getLastFailure();

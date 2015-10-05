@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.math.MathPackage;
 
 import ca.gc.asc_csa.topology.dynamics.AbstractCollisionGeometrySimulationProperties;
 import ca.gc.asc_csa.topology.dynamics.AbstractConstraint;
@@ -48,7 +49,6 @@ import ca.gc.asc_csa.topology.dynamics.SphereGeometry;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsFactory;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
 import ca.gc.asc_csa.topology.dynamics.UniversalConstraint;
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.topology.TopologyPackage;
 
 /**

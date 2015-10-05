@@ -14,6 +14,8 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
@@ -22,8 +24,6 @@ import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.symphony.environment.ui.dialogs.FeatureOfInterestCreationDialog;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 
 public class CreateFOICommand extends AbstractHandler implements IHandler 
 {

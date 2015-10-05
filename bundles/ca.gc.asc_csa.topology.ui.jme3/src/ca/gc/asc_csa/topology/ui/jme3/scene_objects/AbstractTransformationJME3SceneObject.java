@@ -136,36 +136,36 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 			if (featureId == TopologyPackage.TRANSFORM_NODE__POSITION) 
 			{
 				// Unregister from previous position
-				if(notification.getOldValue() instanceof ca.gc.space.math.Tuple3d)
+				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
 				{
-					ca.gc.space.math.Tuple3d oldValue = (ca.gc.space.math.Tuple3d) notification.getOldValue();
+					org.eclipse.symphony.common.math.Tuple3d oldValue = (org.eclipse.symphony.common.math.Tuple3d) notification.getOldValue();
 					oldValue.eAdapters().remove(this);
 				}
 				
 				updateTransform();
 				
 				// Register to new position.
-				if(notification.getNewValue() instanceof ca.gc.space.math.Tuple3d)
+				if(notification.getNewValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
 				{
-					ca.gc.space.math.Tuple3d newValue = (ca.gc.space.math.Tuple3d) notification.getNewValue();
+					org.eclipse.symphony.common.math.Tuple3d newValue = (org.eclipse.symphony.common.math.Tuple3d) notification.getNewValue();
 					newValue.eAdapters().add(this);
 				}
 			}
 			else if(featureId == TopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
 			{
 				// Unregister from previous matrix
-				if(notification.getOldValue() instanceof ca.gc.space.math.Matrix3x3)
+				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
 				{
-					ca.gc.space.math.Matrix3x3 oldValue = (ca.gc.space.math.Matrix3x3) notification.getOldValue();
+					org.eclipse.symphony.common.math.Matrix3x3 oldValue = (org.eclipse.symphony.common.math.Matrix3x3) notification.getOldValue();
 					oldValue.eAdapters().remove(this);
 				}
 				
 				updateTransform();
 				
 				// Register to new matrix.
-				if(notification.getNewValue() instanceof ca.gc.space.math.Matrix3x3)
+				if(notification.getNewValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
 				{
-					ca.gc.space.math.Matrix3x3 newValue = (ca.gc.space.math.Matrix3x3) notification.getNewValue();
+					org.eclipse.symphony.common.math.Matrix3x3 newValue = (org.eclipse.symphony.common.math.Matrix3x3) notification.getNewValue();
 					newValue.eAdapters().add(this);
 				}							
 			}
@@ -176,18 +176,18 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 			if (featureId == TopologyPackage.ROTATION_NODE__ROTATION_MATRIX) 
 			{
 				// Unregister from previous matrix
-				if(notification.getOldValue() instanceof ca.gc.space.math.Matrix3x3)
+				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
 				{
-					ca.gc.space.math.Matrix3x3 oldValue = (ca.gc.space.math.Matrix3x3) notification.getOldValue();
+					org.eclipse.symphony.common.math.Matrix3x3 oldValue = (org.eclipse.symphony.common.math.Matrix3x3) notification.getOldValue();
 					oldValue.eAdapters().remove(this);
 				}
 				
 				updateTransform();
 				
 				// Register to new matrix.
-				if(notification.getNewValue() instanceof ca.gc.space.math.Matrix3x3)
+				if(notification.getNewValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
 				{
-					ca.gc.space.math.Matrix3x3 newValue = (ca.gc.space.math.Matrix3x3) notification.getNewValue();
+					org.eclipse.symphony.common.math.Matrix3x3 newValue = (org.eclipse.symphony.common.math.Matrix3x3) notification.getNewValue();
 					newValue.eAdapters().add(this);
 				}
 			}
@@ -198,27 +198,27 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 			if (featureId == TopologyPackage.POSITION_NODE__POSITION) 
 			{
 				// Unregister from previous position
-				if(notification.getOldValue() instanceof ca.gc.space.math.Tuple3d)
+				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
 				{
-					ca.gc.space.math.Tuple3d oldValue = (ca.gc.space.math.Tuple3d) notification.getOldValue();
+					org.eclipse.symphony.common.math.Tuple3d oldValue = (org.eclipse.symphony.common.math.Tuple3d) notification.getOldValue();
 					oldValue.eAdapters().remove(this);
 				}
 				
 				updateTransform();
 				
 				// Register to new position.
-				if(notification.getNewValue() instanceof ca.gc.space.math.Tuple3d)
+				if(notification.getNewValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
 				{
-					ca.gc.space.math.Tuple3d newValue = (ca.gc.space.math.Tuple3d) notification.getNewValue();
+					org.eclipse.symphony.common.math.Tuple3d newValue = (org.eclipse.symphony.common.math.Tuple3d) notification.getNewValue();
 					newValue.eAdapters().add(this);
 				}								
 			}
 		}		
-		else if(notification.getNotifier() instanceof ca.gc.space.math.Tuple3d)
+		else if(notification.getNotifier() instanceof org.eclipse.symphony.common.math.Tuple3d)
 		{
 			updateTransform();
 		}
-		else if(notification.getNotifier() instanceof ca.gc.space.math.Matrix3x3)
+		else if(notification.getNotifier() instanceof org.eclipse.symphony.common.math.Matrix3x3)
 		{
 			updateTransform();
 		}

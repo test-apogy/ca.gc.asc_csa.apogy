@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.symphony.environment.ImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
@@ -21,8 +23,6 @@ import ca.gc.asc_csa.symphony.environment.RectangularRegionImage;
 import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

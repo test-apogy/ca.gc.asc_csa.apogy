@@ -2,12 +2,12 @@ package ca.gc.asc_csa.symphony.environment.converters;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.converters.IConverter;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-import ca.gc.space.math.Tuple3d;
 
 public class GeographicalCoordinatesToPositionConverter implements IConverter{
 

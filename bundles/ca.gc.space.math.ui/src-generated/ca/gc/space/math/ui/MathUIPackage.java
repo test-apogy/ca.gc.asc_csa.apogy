@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see ca.gc.space.math.ui.MathUIFactory
+ * @see org.eclipse.symphony.common.math.ui.MathUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MathUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)' modelName='MathUI' modelDirectory='/ca.gc.space.math.ui/src-generated' editDirectory='/ca.gc.space.math.ui.edit/src-generated' basePackage='ca.gc.space.math'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MathUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)' modelName='MathUI' modelDirectory='/org.eclipse.symphony.common.math.ui/src-generated' editDirectory='/org.eclipse.symphony.common.math.ui.edit/src-generated' basePackage='org.eclipse.symphony.common.math'"
  * @generated
  */
 public interface MathUIPackage extends EPackage
@@ -39,7 +39,7 @@ public interface MathUIPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "ca.gc.space.math.ui";
+  String eNS_URI = "org.eclipse.symphony.common.math.ui";
 
   /**
 	 * The package namespace name.
@@ -58,11 +58,11 @@ public interface MathUIPackage extends EPackage
   MathUIPackage eINSTANCE = ca.gc.space.math.ui.impl.MathUIPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link ca.gc.space.math.ui.impl.DummyImpl <em>Dummy</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.math.ui.impl.DummyImpl <em>Dummy</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see ca.gc.space.math.ui.impl.DummyImpl
-	 * @see ca.gc.space.math.ui.impl.MathUIPackageImpl#getDummy()
+	 * @see org.eclipse.symphony.common.math.ui.impl.DummyImpl
+	 * @see org.eclipse.symphony.common.math.ui.impl.MathUIPackageImpl#getDummy()
 	 * @generated
 	 */
   int DUMMY = 0;
@@ -87,11 +87,11 @@ public interface MathUIPackage extends EPackage
 
 
   /**
-	 * Returns the meta object for class '{@link ca.gc.space.math.ui.Dummy <em>Dummy</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.ui.Dummy <em>Dummy</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Dummy</em>'.
-	 * @see ca.gc.space.math.ui.Dummy
+	 * @see org.eclipse.symphony.common.math.ui.Dummy
 	 * @generated
 	 */
   EClass getDummy();
@@ -121,11 +121,11 @@ public interface MathUIPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link ca.gc.space.math.ui.impl.DummyImpl <em>Dummy</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.ui.impl.DummyImpl <em>Dummy</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see ca.gc.space.math.ui.impl.DummyImpl
-		 * @see ca.gc.space.math.ui.impl.MathUIPackageImpl#getDummy()
+		 * @see org.eclipse.symphony.common.math.ui.impl.DummyImpl
+		 * @see org.eclipse.symphony.common.math.ui.impl.MathUIPackageImpl#getDummy()
 		 * @generated
 		 */
     EClass DUMMY = eINSTANCE.getDummy();

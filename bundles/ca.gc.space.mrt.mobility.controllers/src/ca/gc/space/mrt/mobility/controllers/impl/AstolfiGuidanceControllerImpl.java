@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.GeometricUtils;
 
-import ca.gc.space.math.GeometricUtils;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 import ca.gc.space.mrt.geometry.data3d.Pose;

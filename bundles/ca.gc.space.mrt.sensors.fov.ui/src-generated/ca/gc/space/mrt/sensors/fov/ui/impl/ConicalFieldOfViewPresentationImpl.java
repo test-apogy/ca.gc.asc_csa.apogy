@@ -11,9 +11,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
 import ca.gc.space.mrt.sensors.fov.ui.Activator;
 import ca.gc.space.mrt.sensors.fov.ui.ConicalFieldOfViewPresentation;

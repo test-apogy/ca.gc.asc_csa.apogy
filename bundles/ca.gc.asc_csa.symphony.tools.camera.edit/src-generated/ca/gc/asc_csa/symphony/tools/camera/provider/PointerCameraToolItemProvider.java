@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.math.MathFactory;
 
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.tools.camera.PointerCameraTool;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
-import ca.gc.space.math.MathFactory;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.symphony.tools.camera.PointerCameraTool} object.

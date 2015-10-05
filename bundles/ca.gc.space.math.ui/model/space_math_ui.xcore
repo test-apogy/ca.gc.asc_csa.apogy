@@ -1,8 +1,8 @@
 @GenModel(prefix="MathUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)", modelName="MathUI")
-@GenModel(modelDirectory="/ca.gc.space.math.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.space.math.ui.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.math.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.math.ui.edit/src-generated")
 
-package ca.gc.space.math.ui
+package org.eclipse.symphony.common.math.ui
 
 /** Remove the following class. */
 class Dummy{}

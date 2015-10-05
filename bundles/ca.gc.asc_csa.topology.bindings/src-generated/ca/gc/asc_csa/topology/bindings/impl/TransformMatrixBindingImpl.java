@@ -12,13 +12,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.TransformMatrixBinding;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TransformNode;
 

@@ -8,10 +8,10 @@ package ca.gc.space.mrt.sensors.pose.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.ui.progress.UIJob;
 
-import ca.gc.space.math.MathFactory;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.SimulatedPositionSensor;
 

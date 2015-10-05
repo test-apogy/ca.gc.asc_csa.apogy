@@ -4532,11 +4532,11 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	EOperation getEarthOrbitFacade__CreateMatrix3x3__Rotation();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitFacade#createRotation(ca.gc.space.math.Matrix3x3) <em>Create Rotation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitFacade#createRotation(org.eclipse.symphony.common.math.Matrix3x3) <em>Create Rotation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rotation</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitFacade#createRotation(ca.gc.space.math.Matrix3x3)
+	 * @see ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitFacade#createRotation(org.eclipse.symphony.common.math.Matrix3x3)
 	 * @generated
 	 */
 	EOperation getEarthOrbitFacade__CreateRotation__Matrix3x3();

@@ -24,13 +24,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.symphony.environment.Activator;
 import ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularVolumeRegion;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangle;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.mrt.geometry.data3d.Geometry3dUtilities;

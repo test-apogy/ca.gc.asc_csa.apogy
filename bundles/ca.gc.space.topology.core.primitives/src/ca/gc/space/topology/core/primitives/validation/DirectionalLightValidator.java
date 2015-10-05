@@ -4,7 +4,7 @@
  */
 package ca.gc.space.topology.core.primitives.validation;
 
-import ca.gc.space.math.Tuple3d;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
  * A sample validator interface for {@link ca.gc.space.topology.core.primitives.DirectionalLight}.

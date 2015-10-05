@@ -3,7 +3,6 @@
  */
 package ca.gc.asc_csa.symphony.tools.vehicle.ui.provider;
 
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -43,9 +42,8 @@ public final class SymphonyToolsVehicleUIEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

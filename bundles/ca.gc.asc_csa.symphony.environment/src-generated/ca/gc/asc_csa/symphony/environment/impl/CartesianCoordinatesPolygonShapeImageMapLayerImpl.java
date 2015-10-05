@@ -5,7 +5,6 @@ package ca.gc.asc_csa.symphony.environment.impl;
 
 import ca.gc.asc_csa.symphony.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.Tuple3d;
 
 import java.util.Collection;
 import java.util.List;
@@ -16,6 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

@@ -59,45 +59,45 @@
       <eParameters name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eOperations>
     <eOperations name="createAmbientLight" eType="#//AmbientLight">
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
     </eOperations>
     <eOperations name="createAmbientLight" eType="#//AmbientLight">
       <eParameters name="lightOn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
     </eOperations>
     <eOperations name="createDirectionalLight" eType="#//DirectionalLight">
       <eParameters name="lightOn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="direction" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="direction" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
     </eOperations>
     <eOperations name="createDirectionalLight" eType="#//DirectionalLight">
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="direction" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="direction" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
     </eOperations>
     <eOperations name="createPointLight" eType="#//PointLight">
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="position" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="position" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
     </eOperations>
     <eOperations name="createPointLight" eType="#//PointLight">
-      <eParameters name="position" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="position" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
     </eOperations>
     <eOperations name="createPointLight" eType="#//PointLight">
       <eParameters name="lightOn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="position" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="attenuation" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="position" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="attenuation" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
     </eOperations>
     <eOperations name="createPointLight" eType="#//PointLight">
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="position" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="attenuation" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="position" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="attenuation" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
     </eOperations>
     <eOperations name="createSpotLight" eType="#//SpotLight">
       <eParameters name="lightOn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="position" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="attenuation" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="direction" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="position" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="attenuation" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="direction" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
       <eParameters name="spreadAngle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The spread angle, in radians."/>
@@ -110,10 +110,10 @@
       </eParameters>
     </eOperations>
     <eOperations name="createSpotLight" eType="#//SpotLight">
-      <eParameters name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="position" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="attenuation" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
-      <eParameters name="direction" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="position" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="attenuation" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
+      <eParameters name="direction" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"/>
       <eParameters name="spreadAngle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The spread angle, in radians."/>
@@ -127,9 +127,9 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Plane" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="v0" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v0" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="v1" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v1" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -142,21 +142,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="Light" abstract="true" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Leaf">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AmbientLight" eSuperTypes="#//Light"/>
   <eClassifiers xsi:type="ecore:EClass" name="DirectionalLight" eSuperTypes="#//Light">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="direction" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="direction" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PointLight" eSuperTypes="#//Light">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The PointLight object specifies an attenuated light source at a fixed point in space that radiates light equally in all directions away from the light source. PointLight has the same attributes as a Light node, with the addition of location and attenuation parameters.&#xA;&#xA;A point light contributes to diffuse and specular reflections, which in turn depend on the orientation and position of a surface. A point light does not contribute to ambient reflections.&#xA;&#xA;A PointLight is attenuated by multiplying the contribution of the light by an attenuation factor. The attenuation factor causes the the PointLight's brightness to decrease as distance from the light source increases. A PointLight's attenuation factor contains three values:&#xA;&lt;ul>&#xA;&lt;li>Constant attenuation&lt;/li>&#xA;&lt;li>Linear attenuation&lt;/li>&#xA;&lt;li>Quadratic attenuation&lt;/li>&#xA;&lt;/ul>&#xA;A PointLight is attenuated by the reciprocal of the sum of:&#xA;&lt;ul>&#xA;&lt;li>The constant attenuation factor&lt;/li>&#xA;&lt;li>The Linear attenuation factor times the distance between the light and the vertex being illuminated&lt;/li>&#xA;&lt;li>The quadratic attenuation factor times the square of the distance between the light and the vertex &lt;/li>&#xA;&lt;/ul>&#xA;By default, the constant attenuation value is 1 and the other two values are 0, resulting in no attenuation. "/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attenuation" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attenuation" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpotLight" eSuperTypes="#//PointLight">
@@ -173,7 +173,7 @@
         <details key="documentation" value="The spread angle, in radians."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="direction" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="direction" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="Point3d" instanceClassName="javax.vecmath.Point3d"/>

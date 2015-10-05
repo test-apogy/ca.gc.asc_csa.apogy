@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
@@ -26,7 +27,6 @@ import ca.gc.asc_csa.symphony.core.ResultNode;
 import ca.gc.asc_csa.symphony.core.ResultsListNode;
 import ca.gc.asc_csa.symphony.core.SymphonyCoreFacade;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.TopologyFacade;
 import ca.gc.space.topology.TransformNode;

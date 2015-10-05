@@ -6,6 +6,7 @@ package ca.gc.asc_csa.symphony.core.impl;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -15,6 +16,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.math.MathPackage;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.symphony.core.AbsolutePoseProvider;
@@ -49,7 +52,6 @@ import ca.gc.asc_csa.symphony.core.Updatable;
 import ca.gc.asc_csa.symphony.core.UserDefinedResult;
 import ca.gc.asc_csa.symphony.core.WorksitesList;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.topology.TopologyPackage;
 
 /**

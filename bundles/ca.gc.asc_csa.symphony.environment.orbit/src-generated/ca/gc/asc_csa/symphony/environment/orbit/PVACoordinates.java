@@ -3,8 +3,8 @@
  */
 package ca.gc.asc_csa.symphony.environment.orbit;
 
-import ca.gc.space.math.Tuple3d;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

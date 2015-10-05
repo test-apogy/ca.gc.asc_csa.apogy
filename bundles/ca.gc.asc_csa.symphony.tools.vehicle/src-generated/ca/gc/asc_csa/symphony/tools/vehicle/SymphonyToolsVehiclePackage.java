@@ -2056,11 +2056,11 @@ public interface SymphonyToolsVehiclePackage extends EPackage
   EOperation getContactProvider__ExtractContactBodies();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.vehicle.ContactProvider#updateContactPoints(ca.gc.space.math.Matrix4x4, java.util.Map) <em>Update Contact Points</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.vehicle.ContactProvider#updateContactPoints(org.eclipse.symphony.common.math.Matrix4x4, java.util.Map) <em>Update Contact Points</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Contact Points</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.vehicle.ContactProvider#updateContactPoints(ca.gc.space.math.Matrix4x4, java.util.Map)
+	 * @see ca.gc.asc_csa.symphony.tools.vehicle.ContactProvider#updateContactPoints(org.eclipse.symphony.common.math.Matrix4x4, java.util.Map)
 	 * @generated
 	 */
   EOperation getContactProvider__UpdateContactPoints__Matrix4x4_Map();

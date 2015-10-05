@@ -12,6 +12,7 @@ import java.util.Set;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.topology.dynamics.AbstractConstraint;
 import ca.gc.asc_csa.topology.dynamics.AbstractConstraintSimulationProperties;
@@ -22,7 +23,6 @@ import ca.gc.asc_csa.topology.dynamics.PhysicalBodyNodeCenterOfMassVisitor;
 import ca.gc.asc_csa.topology.dynamics.PhysicalBodyNodeMassVisitor;
 import ca.gc.asc_csa.topology.dynamics.PhysicalBodyNodeVisitor;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.Node;
 
 /**

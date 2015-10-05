@@ -10,8 +10,8 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
 import ca.gc.asc_csa.symphony.core.FeatureOfInterestList
 import ca.gc.asc_csa.symphony.core.PoseProvider
-import ca.gc.space.math.Matrix4d
-import ca.gc.space.math.Tuple3d
+import org.eclipse.symphony.common.math.Matrix4d
+import org.eclipse.symphony.common.math.Tuple3d
 import ca.gc.space.mrt.geometry.paths.WayPointPath
 import ca.gc.space.topology.Node
 import ca.gc.space.topology.AggregateGroupNode

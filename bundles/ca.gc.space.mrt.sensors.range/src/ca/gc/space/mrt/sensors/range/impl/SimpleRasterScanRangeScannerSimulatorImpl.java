@@ -19,8 +19,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.math.MathFacade;
 
-import ca.gc.space.math.MathFacade;
 import ca.gc.space.mrt.geometry.data25d.Coordinates25D;
 import ca.gc.space.mrt.geometry.data25d.DataFacade;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangle;

@@ -10,7 +10,7 @@ Export-Package: ca.gc.space.mrt.sensors.fov,
  ca.gc.space.mrt.sensors.fov.impl,
  ca.gc.space.mrt.sensors.fov.util
 Require-Bundle: ca.gc.space.topology.core;visibility:=reexport,
- ca.gc.space.math.core;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,

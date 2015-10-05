@@ -4,9 +4,10 @@
 package ca.gc.asc_csa.symphony.tools.vehicle;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.math.Matrix3x3;
+
 import ca.gc.asc_csa.symphony.core.PoseCorrector;
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.math.Matrix3x3;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 
 /**

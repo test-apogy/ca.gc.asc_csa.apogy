@@ -9,7 +9,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditP
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import ca.gc.space.topology.ui.provider.TopologyUIEditPlugin;
 
@@ -45,13 +44,12 @@ public final class SymphonyCoreUiEditPlugin extends EMFPlugin {
 	public SymphonyCoreUiEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyUIEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
+		     TopologyUIEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
 		   });
 	}
 

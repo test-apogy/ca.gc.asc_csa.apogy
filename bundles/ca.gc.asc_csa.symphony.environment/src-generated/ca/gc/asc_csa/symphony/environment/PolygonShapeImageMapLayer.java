@@ -3,8 +3,9 @@
  */
 package ca.gc.asc_csa.symphony.environment;
 
-import ca.gc.space.math.Tuple3d;
 import java.util.List;
+
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +28,7 @@ public interface PolygonShapeImageMapLayer extends AbstractShapeImageLayer {
 	 * <!-- begin-model-doc -->
 	 *  Returns the list of vertices required to draw the polygon.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="ca.gc.asc_csa.symphony.environment.List<ca.gc.space.math.Tuple3d>" unique="false" many="false"
+	 * @model kind="operation" dataType="ca.gc.asc_csa.symphony.environment.List<org.eclipse.symphony.common.math.Tuple3d>" unique="false" many="false"
 	 * @generated
 	 */
 	List<Tuple3d> getVertices();

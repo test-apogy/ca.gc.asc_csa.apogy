@@ -16,6 +16,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
@@ -26,7 +27,6 @@ import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.symphony.environment.Map;
 import ca.gc.asc_csa.symphony.environment.MapsList;
 import ca.gc.asc_csa.symphony.environment.SurfaceWorksite;
-import ca.gc.space.math.Matrix4x4;
 
 public class FeatureOfInterestCreationDialog extends Dialog 
 {

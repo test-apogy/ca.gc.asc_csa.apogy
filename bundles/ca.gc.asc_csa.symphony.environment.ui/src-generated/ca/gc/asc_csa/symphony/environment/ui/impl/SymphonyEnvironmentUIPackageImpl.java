@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.math.MathPackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.plot.XYPlot;
@@ -56,7 +57,6 @@ import ca.gc.asc_csa.symphony.environment.ui.TrajectoryProvider;
 import ca.gc.asc_csa.symphony.environment.ui.VariableTrajectoryAnnotation;
 import ca.gc.asc_csa.symphony.environment.ui.VariableTrajectoryProvider;
 import ca.gc.asc_csa.symphony.environment.ui.VehicleVariableAnnotation;
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.topology.ui.TopologyUIPackage;
 
 /**

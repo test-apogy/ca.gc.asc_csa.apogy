@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see ca.gc.space.math.ui.MathUIPackage#getDummy()
+ * @see org.eclipse.symphony.common.math.ui.MathUIPackage#getDummy()
  * @model
  * @generated
  */

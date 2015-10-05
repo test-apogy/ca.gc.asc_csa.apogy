@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.math.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.math.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ui.views.properties.tabbed,
- ca.gc.space.math.core;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.core.databinding,
  org.eclipse.core.databinding.beans,
  org.eclipse.core.databinding.observable,
@@ -25,7 +25,7 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.eclipse.ui;visibility:=reexport,
  ca.gc.asc_csa.eclipse.core.databinding;visibility:=reexport,
  org.eclipse.emf.databinding.edit,
- ca.gc.space.math.core.edit;visibility:=reexport,
+ org.eclipse.symphony.common.math.edit;visibility:=reexport,
  org.jfree.jfreechart;bundle-version="1.0.13";visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.databinding;visibility:=reexport,
  javax.vecmath;bundle-version="1.5.2",
@@ -36,10 +36,10 @@ Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Bundle-ClassPath: libs/swt-grouplayout.jar,
  .
-Export-Package: ca.gc.space.math.ui,
- ca.gc.space.math.ui.composites,
- ca.gc.space.math.ui.impl,
- ca.gc.space.math.ui.properties.sections,
- ca.gc.space.math.ui.util,
+Export-Package: org.eclipse.symphony.common.math.ui,
+ org.eclipse.symphony.common.math.ui.composites,
+ org.eclipse.symphony.common.math.ui.impl,
+ org.eclipse.symphony.common.math.ui.properties.sections,
+ org.eclipse.symphony.common.math.ui.util,
  org.eclipse.wb.swt.layout.grouplayout,
  org.eclipse.wb.swt.widgets.baseline

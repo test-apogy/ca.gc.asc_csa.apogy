@@ -10,8 +10,9 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
+
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;
 

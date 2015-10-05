@@ -4,10 +4,11 @@ import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Quat4d;
 
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Matrix4x4;
+
 import ca.gc.asc_csa.eclipse.ros.RosNode;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.MathFactory;
-import ca.gc.space.math.Matrix4x4;
 
 public class GeometryUtils
 {

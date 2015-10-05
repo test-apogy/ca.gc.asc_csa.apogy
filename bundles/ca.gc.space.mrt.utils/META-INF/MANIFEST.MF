@@ -7,7 +7,7 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: ca.gc.space.mrt.utils.Activator
 Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.geometry.data3d,
- ca.gc.space.math.core;visibility:=reexport
+ org.eclipse.symphony.common.math;visibility:=reexport
 Eclipse-LazyStart: true
 Export-Package: ca.gc.space.mrt.utils
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

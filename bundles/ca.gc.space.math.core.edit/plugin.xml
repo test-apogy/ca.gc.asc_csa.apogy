@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http:///ca/gc/space/math.ecore"
-            class="ca.gc.space.math.provider.MathItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.math.provider.MathItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

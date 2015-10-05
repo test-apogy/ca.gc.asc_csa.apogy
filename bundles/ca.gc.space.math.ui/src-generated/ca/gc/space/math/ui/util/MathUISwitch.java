@@ -3,10 +3,13 @@
  */
 package ca.gc.space.math.ui.util;
 
-import ca.gc.space.math.ui.*;
+import ca.gc.space.math.ui.Dummy;
+import ca.gc.space.math.ui.org;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.math.ui.*;
 
 import ca.gc.space.math.ui.MathUIPackage;
 
@@ -20,7 +23,7 @@ import ca.gc.space.math.ui.MathUIPackage;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see ca.gc.space.math.ui.MathUIPackage
+ * @see org.eclipse.symphony.common.math.ui.MathUIPackage
  * @generated
  */
 public class MathUISwitch<T> extends Switch<T>

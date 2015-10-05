@@ -2307,11 +2307,11 @@ public interface SymphonyCorePackage extends EPackage {
 	EClass getSymphonyCoreFacade();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.core.SymphonyCoreFacade#computeAbsolutePoseMatrix(ca.gc.asc_csa.symphony.core.SymphonySystem, ca.gc.space.math.Matrix4x4) <em>Compute Absolute Pose Matrix</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.core.SymphonyCoreFacade#computeAbsolutePoseMatrix(ca.gc.asc_csa.symphony.core.SymphonySystem, org.eclipse.symphony.common.math.Matrix4x4) <em>Compute Absolute Pose Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Absolute Pose Matrix</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.core.SymphonyCoreFacade#computeAbsolutePoseMatrix(ca.gc.asc_csa.symphony.core.SymphonySystem, ca.gc.space.math.Matrix4x4)
+	 * @see ca.gc.asc_csa.symphony.core.SymphonyCoreFacade#computeAbsolutePoseMatrix(ca.gc.asc_csa.symphony.core.SymphonySystem, org.eclipse.symphony.common.math.Matrix4x4)
 	 * @generated
 	 */
 	EOperation getSymphonyCoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4();
@@ -2806,11 +2806,11 @@ public interface SymphonyCorePackage extends EPackage {
 	EAttribute getPoseCorrector_Enabled();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.core.PoseCorrector#applyCorrection(ca.gc.space.math.Matrix4x4) <em>Apply Correction</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.core.PoseCorrector#applyCorrection(org.eclipse.symphony.common.math.Matrix4x4) <em>Apply Correction</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Correction</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.core.PoseCorrector#applyCorrection(ca.gc.space.math.Matrix4x4)
+	 * @see ca.gc.asc_csa.symphony.core.PoseCorrector#applyCorrection(org.eclipse.symphony.common.math.Matrix4x4)
 	 * @generated
 	 */
 	EOperation getPoseCorrector__ApplyCorrection__Matrix4x4();

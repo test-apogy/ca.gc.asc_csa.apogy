@@ -39,7 +39,7 @@
         <details key="documentation" value="The desired update rate at which we want to acquire data.&#xA;This can be useful when parsing from a file to simulate the real gps behavior."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastFailure" eType="ecore:EDataType platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Exception"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastFailure" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Exception"
         transient="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="When the GPS falls into FAILED state, this attribute is set."/>

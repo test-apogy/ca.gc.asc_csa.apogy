@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayer;
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayerNode;
@@ -23,7 +24,6 @@ import ca.gc.asc_csa.symphony.environment.Activator;
 import ca.gc.asc_csa.symphony.environment.Map;
 import ca.gc.asc_csa.symphony.environment.MapNode;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.topology.INodeVisitor;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.ReferencedGroupNode;

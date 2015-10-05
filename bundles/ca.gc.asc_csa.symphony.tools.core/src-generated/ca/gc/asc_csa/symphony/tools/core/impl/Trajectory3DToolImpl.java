@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
@@ -31,7 +32,6 @@ import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCoreFactory;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.asc_csa.symphony.tools.core.Trajectory3DTool;
 import ca.gc.asc_csa.symphony.tools.core.Trajectory3DToolNode;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;

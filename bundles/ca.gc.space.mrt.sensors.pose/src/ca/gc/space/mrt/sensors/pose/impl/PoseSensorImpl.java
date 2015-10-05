@@ -20,10 +20,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.GeometricUtils;
+import org.eclipse.symphony.common.math.Matrix3x3;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.GeometricUtils;
-import ca.gc.space.math.Matrix3x3;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.geometry.data3d.CartesianOrientationCoordinates;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFacade;

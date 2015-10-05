@@ -2,7 +2,7 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ca.gc.space.topology.core.primitives/src" modelPluginID="ca.gc.space.topology.core.primitives"
     modelName="Topology_primitives" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
-    copyrightFields="false" usedGenPackages="platform:/plugin/ca.gc.space.math.core/model/Math.genmodel#//math platform:/plugin/ca.gc.space.topology.core/model/topology.genmodel#//topology"
+    copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.genmodel#//math platform:/plugin/ca.gc.space.topology.core/model/topology.genmodel#//topology"
     operationReflection="true">
   <foreignModel>topology_primitives.ecore</foreignModel>
   <genPackages prefix="Primitives" basePackage="ca.gc.space.topology.core" disposableProviderFactory="true"

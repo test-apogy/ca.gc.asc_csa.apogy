@@ -10,7 +10,6 @@ import ca.gc.asc_csa.symphony.environment.orbit.earth.provider.SymphonyEarthOrbi
 import ca.gc.asc_csa.symphony.environment.orbit.provider.SymphonyOrbitEnvironmentEditPlugin;
 import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
 import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
@@ -50,18 +49,17 @@ public final class SymphonyEarthOrbitEnvironmentUIEditPlugin extends EMFPlugin {
 	public SymphonyEarthOrbitEnvironmentUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
-		     SymphonyEarthOrbitEnvironmentEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     SymphonyEarthOrbitEnvironmentEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		   });
 	}
 
