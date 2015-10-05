@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated emf_ecore_examples_lander -->
       <factory
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.lander"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.provider.EMFEcoreExampleLanderItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.examples.lander"
+            class="org.eclipse.symphony.examples.lander.provider.EMFEcoreExampleLanderItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,7 +24,7 @@
       <!-- @generated emf_ecore_examples_lander -->
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.provider.EMFEcoreExampleLanderItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.lander.provider.EMFEcoreExampleLanderItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

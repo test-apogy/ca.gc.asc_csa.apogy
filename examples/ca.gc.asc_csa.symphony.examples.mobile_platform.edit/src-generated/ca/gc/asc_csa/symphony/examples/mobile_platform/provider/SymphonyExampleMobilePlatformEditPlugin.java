@@ -51,17 +51,17 @@ public final class SymphonyExampleMobilePlatformEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     GeometrydataEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     SymphonyEnvironmentUIEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
 		   });
 	}
 

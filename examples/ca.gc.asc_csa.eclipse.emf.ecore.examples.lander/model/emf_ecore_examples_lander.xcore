@@ -4,10 +4,10 @@
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.lander/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.lander/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.lander.edit/src-generated")
 
-package ca.gc.asc_csa.eclipse.emf.ecore.examples.lander
+package org.eclipse.symphony.examples.lander
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Disposable
 
@@ -486,7 +486,7 @@ class LanderStub extends Lander
 {
 	/* 
 	 * For specific implementation details,
-	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.impl.LanderStub}
+	 * see {@link org.eclipse.symphony.examples.lander.impl.LanderStub}
 	 */
 }
 
@@ -500,6 +500,6 @@ class LanderSimulated extends Lander
 {
 	/* 
 	 * For specific implementation details,
-	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.impl.LanderSimulated}
+	 * see {@link org.eclipse.symphony.examples.lander.impl.LanderSimulated}
 	 */
 }

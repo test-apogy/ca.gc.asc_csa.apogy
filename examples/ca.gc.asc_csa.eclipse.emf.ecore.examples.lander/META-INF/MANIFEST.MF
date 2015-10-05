@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.lander;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.lander;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.lander,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.impl,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.util
+Export-Package: org.eclipse.symphony.examples.lander,
+ org.eclipse.symphony.examples.lander.impl,
+ org.eclipse.symphony.examples.lander.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
@@ -33,4 +33,4 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.mobility.pathplanners;visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.Activator
+Bundle-Activator: org.eclipse.symphony.examples.lander.Activator

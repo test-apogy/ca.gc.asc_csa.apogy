@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_examples_lander -->
       <factory
-            uri="ca.gc.asc_csa.symphony.examples.lander"
-            class="ca.gc.asc_csa.symphony.examples.lander.provider.SymphonyExampleLanderItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.examples.lander.symphony"
+            class="org.eclipse.symphony.examples.lander.symphony.provider.SymphonyExampleLanderItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

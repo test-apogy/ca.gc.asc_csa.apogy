@@ -1,18 +1,18 @@
 @GenModel(prefix="SymphonyExampleLander", copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015", modelName="SymphonyExampleLander")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.examples.lander/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.examples.lander.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.lander.symphony/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.lander.symphony.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.examples.lander
+package org.eclipse.symphony.examples.lander.symphony
 
 import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
 import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
 
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.LanderLegExtension
+import org.eclipse.symphony.examples.lander.LanderLegExtension
 
 /*
  * This class is the specialized Symphony API adapter, used for connecting
  * the existing lander example, located at
- * {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.Lander},
+ * {@link org.eclipse.symphony.examples.lander.Lander},
  * to Symphony; one can override the well-known callback functions to make
  * Symphony perform a variety of useful functions, including initialization,
  * disposal and other features. 
@@ -22,7 +22,7 @@ class LanderSymphonySystemApiAdapter extends SymphonySystemApiAdapter
 	/*
 	 * For specific implementation details,
 	 * please see
-	 * {@link ca.gc.asc_csa.symphony.examples.lander.impl.LanderSymphonySystemApiAdapterImpl}
+	 * {@link org.eclipse.symphony.examples.lander.symphony.impl.LanderSymphonySystemApiAdapterImpl}
 	 */
 }
 
