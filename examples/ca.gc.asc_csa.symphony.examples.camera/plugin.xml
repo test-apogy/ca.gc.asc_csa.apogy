@@ -10,9 +10,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_examples_camera -->
       <package
-            uri="ca.gc.asc_csa.symphony.examples.camera"
-            class="ca.gc.asc_csa.symphony.examples.camera.SymphonyExampleCameraPackage"
-            genModel="model/symphony_examples_camera.xcore"/>
+            uri="org.eclipse.symphony.examples.camera.symphony"
+            class="org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage"
+            genModel="model/symphony_examples_camera_symphony.xcore"/>
    </extension>
    <extension
          point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">

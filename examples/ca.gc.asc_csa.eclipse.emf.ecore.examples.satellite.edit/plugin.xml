@@ -35,11 +35,11 @@
             uri="http:///ca/gc/space/topology.ecore"
             class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
-            uri="ca.gc.space.mrt.sensors.imaging"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$MRTSensorsImagingChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.symphony.environment"
             class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
+      <extender
+            uri="ca.gc.space.mrt.sensors.imaging"
+            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$MRTSensorsImagingChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -27,9 +27,6 @@
             uri="http:///ca/gc/space/topology.ecore"
             class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
-            uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
-            class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$PathsChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
             class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
@@ -38,6 +35,9 @@
       <extender
             uri="ca.gc.asc_csa.symphony.core"
             class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
+            class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$PathsChildCreationExtender"/>
    </extension>
 
 </plugin>

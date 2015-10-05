@@ -23,11 +23,11 @@
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6wgrPEeW4-_ONWXXiAw">
-              <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//PTUCameraSimulated"/>
+              <implementationClass href="org.eclipse.symphony.examples.camera#//PTUCameraSimulated"/>
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6wwrPEeW4-_ONWXXiAw">
-              <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//PTUCameraSimulated"/>
+              <implementationClass href="org.eclipse.symphony.examples.camera#//PTUCameraSimulated"/>
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//RoverSimulated"/>
@@ -46,11 +46,11 @@
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6yQrPEeW4-_ONWXXiAw">
-              <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//CameraStub"/>
+              <implementationClass href="org.eclipse.symphony.examples.camera#//CameraStub"/>
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6ygrPEeW4-_ONWXXiAw">
-              <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//CameraStub"/>
+              <implementationClass href="org.eclipse.symphony.examples.camera#//CameraStub"/>
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//RoverStub"/>
@@ -240,7 +240,7 @@
         <typeMemberReferenceListElement xmi:id="_Ul2qsDq1EeW90siL-RZo4A">
           <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//Camera/commandStreaming"/>
+        <eOperation href="org.eclipse.symphony.examples.camera#//Camera/commandStreaming"/>
         <argumentsList xmi:id="_NQWgIDreEeW65IGdx4wJdg">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_NQWgITreEeW65IGdx4wJdg" value="true"/>
         </argumentsList>
@@ -249,7 +249,7 @@
         <typeMemberReferenceListElement xmi:id="_jpclsDq1EeW90siL-RZo4A">
           <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//Camera/commandStreaming"/>
+        <eOperation href="org.eclipse.symphony.examples.camera#//Camera/commandStreaming"/>
         <argumentsList xmi:id="_U6PCoDreEeW65IGdx4wJdg">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_U6PCoTreEeW65IGdx4wJdg" value="true"/>
         </argumentsList>
@@ -320,7 +320,7 @@
             <typeMemberReferenceListElement xmi:id="_PRDzpDreEeW65IGdx4wJdg">
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
             </typeMemberReferenceListElement>
-            <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//Camera/commandStreaming"/>
+            <eOperation href="org.eclipse.symphony.examples.camera#//Camera/commandStreaming"/>
             <argumentsList xmi:id="_PRDzpTreEeW65IGdx4wJdg">
               <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_PRDzpjreEeW65IGdx4wJdg" value="true"/>
             </argumentsList>

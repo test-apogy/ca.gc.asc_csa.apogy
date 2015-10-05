@@ -7,21 +7,21 @@
     </typesList>
     <variablesList>
       <variables name="ptuCamera">
-        <variableType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.camera/model/PTUCameraSymphonySystem.ss#/"/>
+        <variableType href="platform:/plugin/org.eclipse.symphony.examples.camera.symphony/model/PTUCameraSymphonySystem.ss#/"/>
       </variables>
     </variablesList>
     <contextsList>
       <contexts xsi:type="invocator:BasicContext" name="Simulated Impl. Context" dataProductsList="//@dataProductsListContainer/@dataProductsList.0">
         <variableImplementationsList>
           <variableImplementations variable="//@environment/@variablesList/@variables.0">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//PTUCameraSimulated"/>
+            <implementationClass href="org.eclipse.symphony.examples.camera.symphony#//PTUCameraSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" name="Stub Impl. Context" dataProductsList="//@dataProductsListContainer/@dataProductsList.1">
         <variableImplementationsList>
           <variableImplementations variable="//@environment/@variablesList/@variables.0">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//PTUCameraStub"/>
+            <implementationClass href="org.eclipse.symphony.examples.camera.symphony#//PTUCameraStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -46,7 +46,7 @@
   <programsList>
     <programs xsi:type="invocator:OperationCallsList">
       <operationCalls variable="//@environment/@variablesList/@variables.0" name="Init">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//Camera/init"/>
+        <eOperation href="org.eclipse.symphony.examples.camera.symphony#//Camera/init"/>
       </operationCalls>
       <operationCalls variable="//@environment/@variablesList/@variables.0" name="Change Zoom">
         <eOperation href="ca.gc.space.mrt.sensors.imaging#//Zoomable/commandZoom"/>

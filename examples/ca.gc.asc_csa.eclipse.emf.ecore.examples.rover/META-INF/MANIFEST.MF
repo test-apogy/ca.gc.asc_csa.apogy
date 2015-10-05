@@ -26,7 +26,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.sensors;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform;bundle-version="0.1.0";visibility:=reexport,
  ca.gc.asc_csa.eclipse.images.core;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.camera;bundle-version="0.1.0";visibility:=reexport,
+ org.eclipse.symphony.examples.camera;bundle-version="0.1.0";visibility:=reexport,
  ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
  ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy

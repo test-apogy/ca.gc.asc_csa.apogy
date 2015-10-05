@@ -1,0 +1,134 @@
+@GenModel(prefix="EMFEcoreExampleCamera",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
+		  modelName="EMFEcoreExampleCamera",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.camera/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.camera.edit/src-generated")
+
+package org.eclipse.symphony.examples.camera
+
+import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
+
+import ca.gc.space.mrt.sensors.imaging.AbstractCamera
+import ca.gc.space.mrt.sensors.imaging.Zoomable
+
+import ca.gc.space.mrt.actuators.PanTiltUnit
+
+type Throwable wraps java.lang.Throwable
+
+/*
+ * This is the abstract representation of a camera,
+ * which implicitly has a rectangular frustrum as its
+ * field of view.
+ */
+abstract class Camera extends AbstractCamera, Zoomable
+{
+	/*
+	 * The field of view for this particular camera
+	 */
+	@GenModel(notify="true",
+			  propertyCategory="Field Of View")
+	contains RectangularFrustrumFieldOfView[1] fov		
+	
+	/*
+	 * This is whether or not the camera has been
+	 * successfully initialized; initially false
+	 * @see #init()
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Status")
+	boolean initialized = "false"
+	
+	/* 
+	 * This operation performs any required initialization
+	 * operations for the camera.  This is typically called
+	 * before any other operation.
+	 * @return True if the initialization was successful, false otherwise.
+	 */
+	op boolean init()
+	
+	/*
+	 * Whether or not image streaming is enabled.
+	 */
+	@GenModel(children="false",
+			  notify="true",
+			  property="Readonly",
+			  propertyCategory="Status")
+	boolean streamingEnabled = "false"
+		
+	/*
+	 * This operation enables or disables image streaming.
+	 * When image streaming is enabled, images are updated at about 1 Hz.
+	 */
+	op boolean commandStreaming(boolean streamingEnabled)
+}
+
+/* 
+ * This is a specific implementation of the camera, in which
+ * all operations are stubs and hence, non-functional; the
+ * operations should simply log a message, indicating that they
+ * were performed.
+ */
+class CameraStub extends Camera
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link org.eclipse.symphony.examples.camera.impl.CameraStubImpl}
+	 */
+}
+
+/*
+ * This is a simulated implementation of the camera, where all
+ * operations are executed upon a simulated (i.e. virtual) camera.
+ * While there are no physical components interacted with, it attempts
+ * to emulate, wherever possible, the actions and results of its real
+ * world counterpart(s).
+ */
+class CameraSimulated extends Camera
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link org.eclipse.symphony.examples.camera.impl.CameraSimulatedImpl}
+	 */
+}
+
+/*
+ * The abstract definition of a basic camera mounted on a Pan-Tilt Unit (PTU).
+ */
+abstract class PTUCamera extends Camera, PanTiltUnit
+{
+	
+}
+
+/* 
+ * This is a specific implementation of the PTU camera, in which
+ * all operations are stubs and hence, non-functional; the
+ * operations should simply log a message, indicating that they
+ * were performed.
+ */
+class PTUCameraStub extends CameraStub, PTUCamera
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl}
+	 */
+}
+
+/*
+ * This is a simulated implementation of the PTU camera, where all
+ * operations are executed upon a simulated (i.e. virtual) PTU camera.
+ * While there are no physical components interacted with, it attempts
+ * to emulate, wherever possible, the actions and results of its real
+ * world counterpart(s).
+ */
+class PTUCameraSimulated extends CameraSimulated, PTUCamera
+{
+	/* 
+	 * For specific implementation details,
+	 * see {@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl}
+	 */
+}

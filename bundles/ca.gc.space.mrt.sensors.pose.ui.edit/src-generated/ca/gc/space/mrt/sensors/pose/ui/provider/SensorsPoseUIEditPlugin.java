@@ -43,8 +43,8 @@ public final class SensorsPoseUIEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     TopologyEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

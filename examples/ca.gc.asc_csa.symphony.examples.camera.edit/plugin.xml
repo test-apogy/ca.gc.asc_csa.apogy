@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_examples_camera -->
       <factory
-            uri="ca.gc.asc_csa.symphony.examples.camera"
-            class="ca.gc.asc_csa.symphony.examples.camera.provider.SymphonyExampleCameraItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.examples.camera.symphony"
+            class="org.eclipse.symphony.examples.camera.symphony.provider.SymphonyExampleCameraItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

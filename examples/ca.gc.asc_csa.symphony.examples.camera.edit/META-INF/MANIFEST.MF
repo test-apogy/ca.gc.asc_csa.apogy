@@ -1,21 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.camera.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.camera.symphony.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.examples.camera.provider.SymphonyExampleCameraEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.examples.camera.symphony.provider.SymphonyExampleCameraEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.examples.camera.provider
+Export-Package: org.eclipse.symphony.examples.camera.symphony.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.examples.camera;visibility:=reexport,
+ org.eclipse.symphony.examples.camera.symphony;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.edit;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.camera;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.edit;visibility:=reexport,
+ org.eclipse.symphony.examples.camera;visibility:=reexport,
+ org.eclipse.symphony.examples.camera.edit;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov.edit;visibility:=reexport,
  ca.gc.space.mrt.geometry.data;visibility:=reexport,

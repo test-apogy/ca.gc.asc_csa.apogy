@@ -50,15 +50,15 @@ public final class MRTSensorsImagingEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     Data3dEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		     Ca_gc_asc_csa_eclipse_imagesEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -44,9 +44,9 @@ public final class TopologyBindingsEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EcoreEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
+		     EcoreEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
