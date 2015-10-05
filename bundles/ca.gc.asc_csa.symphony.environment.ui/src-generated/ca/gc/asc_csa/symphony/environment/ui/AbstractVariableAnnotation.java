@@ -4,10 +4,10 @@
 package ca.gc.asc_csa.symphony.environment.ui;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

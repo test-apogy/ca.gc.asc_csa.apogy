@@ -16,10 +16,10 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.common.math.GeometricUtils;
 
 import Jama.EigenvalueDecomposition;
 import Jama.Matrix;
-import ca.gc.space.math.GeometricUtils;
 import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;

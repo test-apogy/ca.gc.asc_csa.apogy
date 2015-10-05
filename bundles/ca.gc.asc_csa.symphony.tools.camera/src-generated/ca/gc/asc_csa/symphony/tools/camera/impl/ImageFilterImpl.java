@@ -10,10 +10,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.asc_csa.symphony.tools.camera.ImageFilter;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;

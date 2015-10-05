@@ -3,8 +3,9 @@ package ca.gc.space.mrt.geometry.data3d.converters;
 import java.io.File;
 import java.net.URL;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
+
 import ca.gc.space.mrt.geometry.data3d.Activator;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 
@@ -40,7 +41,7 @@ public class URLTopoToCartesianTriangularMeshConverter extends URLToCartesianTri
 			
 			if(tempFile != null)
 			{
-				 mesh = (CartesianTriangularMesh) ca.gc.asc_csa.eclipse.converters.Activator.convert(tempFile, CartesianTriangularMesh.class);				 				 
+				 mesh = (CartesianTriangularMesh) org.eclipse.symphony.common.converters.Activator.convert(tempFile, CartesianTriangularMesh.class);				 				 
 			}
 			
 			if(mesh != null)

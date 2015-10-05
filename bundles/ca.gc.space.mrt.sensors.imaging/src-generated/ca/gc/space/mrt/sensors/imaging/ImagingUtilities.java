@@ -6,8 +6,8 @@ package ca.gc.space.mrt.sensors.imaging;
 import java.awt.Color;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.space.mrt.sensors.imaging.impl.ImagingUtilitiesImpl;
 
 /**

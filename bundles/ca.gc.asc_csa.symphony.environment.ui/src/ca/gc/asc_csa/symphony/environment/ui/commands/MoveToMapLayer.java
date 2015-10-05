@@ -14,6 +14,8 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
@@ -24,8 +26,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ReferenceResultValue;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.core.AbstractWorksite;
 import ca.gc.asc_csa.symphony.core.OperationCallPositionedResult;
 import ca.gc.asc_csa.symphony.core.PositionedResult;

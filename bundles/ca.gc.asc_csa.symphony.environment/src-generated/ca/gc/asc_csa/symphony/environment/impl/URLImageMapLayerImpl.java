@@ -6,9 +6,9 @@ package ca.gc.asc_csa.symphony.environment.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.URLEImage;
 
-import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
-import ca.gc.asc_csa.eclipse.images.core.URLEImage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.URLImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.URLMapLayer;

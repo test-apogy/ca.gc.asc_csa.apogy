@@ -7,8 +7,16 @@ import ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.provider.EMFEcoreExampleL
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
+import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
+import ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin;
+import ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
-import ca.gc.space.math.provider.MathEditPlugin;
+import ca.gc.asc_csa.topology.dynamics.provider.Topology_dynamicsEditPlugin;
+import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
+import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
+import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
+import ca.gc.space.mrt.geometry.paths.provider.PathEditPlugin;
+import ca.gc.space.mrt.mobility.pathplanners.provider.PathplannersEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -47,13 +55,21 @@ public final class SymphonyExampleLanderEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     PathEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
 		     EMFEcoreExampleLanderEditPlugin.INSTANCE,
+		     Topology_dynamicsEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     SymphonyToolsVehicleEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		   });
 	}
 

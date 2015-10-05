@@ -3667,11 +3667,11 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
   EReference getAbstractVariableAnnotation_SymphonySystemApiAdapter();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation#updatePose(ca.gc.space.math.Matrix4x4) <em>Update Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation#updatePose(org.eclipse.symphony.common.math.Matrix4x4) <em>Update Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Pose</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation#updatePose(ca.gc.space.math.Matrix4x4)
+	 * @see ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation#updatePose(org.eclipse.symphony.common.math.Matrix4x4)
 	 * @generated
 	 */
 	EOperation getAbstractVariableAnnotation__UpdatePose__Matrix4x4();

@@ -9,9 +9,9 @@ package ca.gc.asc_csa.topology.dynamics;
 import java.util.Set;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.topology.dynamics.impl.DynamicsFacadeImpl;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.Node;
 
 /**

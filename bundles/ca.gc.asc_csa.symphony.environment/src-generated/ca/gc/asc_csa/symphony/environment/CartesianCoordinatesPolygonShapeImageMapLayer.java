@@ -3,9 +3,8 @@
  */
 package ca.gc.asc_csa.symphony.environment;
 
-import ca.gc.space.math.Tuple3d;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
 public interface CartesianCoordinatesPolygonShapeImageMapLayer extends PolygonShapeImageMapLayer {
 	/**
 	 * Returns the value of the '<em><b>Polygon Vertices</b></em>' containment reference list.
-	 * The list contents are of type {@link ca.gc.space.math.Tuple3d}.
+	 * The list contents are of type {@link org.eclipse.symphony.common.math.Tuple3d}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Polygon Vertices</em>' containment reference list isn't clear,

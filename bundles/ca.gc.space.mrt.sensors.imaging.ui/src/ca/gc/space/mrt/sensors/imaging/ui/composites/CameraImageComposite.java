@@ -11,11 +11,11 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
+import org.eclipse.symphony.common.images.ui.ImageProvider;
+import org.eclipse.symphony.common.images.ui.composites.ImageDisplayComposite;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
-import ca.gc.asc_csa.eclipse.images.ui.ImageProvider;
-import ca.gc.asc_csa.eclipse.images.ui.composites.ImageDisplayComposite;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;

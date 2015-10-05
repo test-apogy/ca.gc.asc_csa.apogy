@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall;
@@ -28,8 +30,6 @@ import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.core.SymphonyInitializationData;
 import ca.gc.asc_csa.symphony.core.SymphonySystem;
 import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.mobile_platform;singleton:=true
-Bundle-Version: 0.4.0.qualifier
+Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: ca.gc.asc_csa.symphony.examples.mobile_platform.Activator
 Bundle-Vendor: %providerName
@@ -10,12 +10,12 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;bundle-version="2.4.3",
  org.eclipse.emf.ecore.xcore.lib,
- ca.gc.space.math.core;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.symphony.environment;visibility:=reexport,
  ca.gc.space.topology.ui;visibility:=reexport,
  ca.gc.space.mrt.geometry.data;visibility:=reexport,
- ca.gc.asc_csa.eclipse.images.core;visibility:=reexport,
+ org.eclipse.symphony.common.images;visibility:=reexport,
  ca.gc.asc_csa.topology.bindings;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
  ca.gc.asc_csa.symphony.core;visibility:=reexport,

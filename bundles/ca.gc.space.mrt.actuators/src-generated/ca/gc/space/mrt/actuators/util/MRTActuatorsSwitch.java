@@ -6,7 +6,6 @@ package ca.gc.space.mrt.actuators.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-
 import ca.gc.space.mrt.actuators.AbstractActuator;
 import ca.gc.space.mrt.actuators.MRTActuatorsPackage;
 import ca.gc.space.mrt.actuators.PanTiltUnit;

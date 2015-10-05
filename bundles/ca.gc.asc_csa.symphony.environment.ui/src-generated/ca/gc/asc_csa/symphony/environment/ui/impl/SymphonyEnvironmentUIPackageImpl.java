@@ -4,9 +4,11 @@
 package ca.gc.asc_csa.symphony.environment.ui.impl;
 
 import java.util.List;
+
 import javax.vecmath.Color3f;
 import javax.vecmath.Point2d;
 import javax.vecmath.Point3f;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -16,15 +18,17 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.math.MathPackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.experimental.chart.swt.ChartComposite;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCorePackage;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.ui.AbstractTrajectoryTool;
@@ -53,7 +57,6 @@ import ca.gc.asc_csa.symphony.environment.ui.TrajectoryProvider;
 import ca.gc.asc_csa.symphony.environment.ui.VariableTrajectoryAnnotation;
 import ca.gc.asc_csa.symphony.environment.ui.VariableTrajectoryProvider;
 import ca.gc.asc_csa.symphony.environment.ui.VehicleVariableAnnotation;
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.topology.ui.TopologyUIPackage;
 
 /**
@@ -351,8 +354,8 @@ public class SymphonyEnvironmentUIPackageImpl extends EPackageImpl implements Sy
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		TopologyUIPackage.eINSTANCE.eClass();
+		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyEnvironmentUIPackage.createPackageContents();

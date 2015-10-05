@@ -7,17 +7,18 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.*;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
 import ca.gc.space.mrt.sensors.sensors.Sensor;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
@@ -504,13 +505,13 @@ public class EMFEcoreExampleSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.images.core.AbstractEImage <em>Abstract EImage</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.AbstractEImage <em>Abstract EImage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.images.core.AbstractEImage
+	 * @see org.eclipse.symphony.common.images.AbstractEImage
 	 * @generated
 	 */
 	public Adapter createAbstractEImageAdapter() {

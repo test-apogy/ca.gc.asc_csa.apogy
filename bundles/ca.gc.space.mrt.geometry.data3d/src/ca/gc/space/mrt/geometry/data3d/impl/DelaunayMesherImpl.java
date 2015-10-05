@@ -10,8 +10,8 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.quickhull3d.QuickHull3D;
 
-import ca.gc.space.math.quickhull3d.QuickHull3D;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangle;

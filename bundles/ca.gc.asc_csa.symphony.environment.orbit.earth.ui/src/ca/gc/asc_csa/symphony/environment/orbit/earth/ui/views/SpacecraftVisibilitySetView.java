@@ -64,7 +64,7 @@ public class SpacecraftVisibilitySetView extends AbstractView
 	@Override
  	public void updateSelection(ISelection selection) 
  	{ 		
-		List<SpacecraftsVisibilitySet> spacecraftsVisibilitySets = (List<SpacecraftsVisibilitySet>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, SpacecraftsVisibilitySet.class);
+		List<SpacecraftsVisibilitySet> spacecraftsVisibilitySets = (List<SpacecraftsVisibilitySet>) org.eclipse.symphony.common.converters.Activator.convert(selection, SpacecraftsVisibilitySet.class);
 		if(!spacecraftsVisibilitySets.isEmpty())
 		{				
 			SpacecraftsVisibilitySet spacecraftsVisibilitySet = spacecraftsVisibilitySets.get(0);										

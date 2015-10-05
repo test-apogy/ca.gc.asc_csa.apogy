@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="ca.gc.asc_csa.eclipse.emf.ecore.invocator" xmi:id="_wazboArOEeW4-_ONWXXiAw" name="">
+  <environment xsi:type="core:SymphonyEnvironment" xmi:id="_wazboQrOEeW4-_ONWXXiAw" name="PTU Dish Antenna Example" description="This is an example session, demonstrating how the PTU dish antenna is used." activeContext="_wa0CsQrOEeW4-_ONWXXiAw" time="2015-03-30T16:55:13.566-0400" activeWorksite="_wa5iQArOEeW4-_ONWXXiAw" activeTimeSource="_wcQ0MgrOEeW4-_ONWXXiAw">
+    <typesList xmi:id="_wazbogrOEeW4-_ONWXXiAw">
+      <localTypes xmi:id="_wazbowrOEeW4-_ONWXXiAw"/>
+      <registeredTypes xmi:id="_wazbpArOEeW4-_ONWXXiAw"/>
+    </typesList>
+    <variablesList xmi:id="_wazbpQrOEeW4-_ONWXXiAw">
+      <variables xmi:id="_wazbpgrOEeW4-_ONWXXiAw" name="ptuDish">
+        <variableType href="platform:/plugin/org.eclipse.symphony.examples.antenna.symphony/model/PTUDishAntennaSymphonySystem.ss#_sUcqQArOEeW4-_ONWXXiAw"/>
+      </variables>
+    </variablesList>
+    <contextsList xmi:id="_wa0CsArOEeW4-_ONWXXiAw">
+      <contexts xsi:type="invocator:BasicContext" xmi:id="_wa0CsQrOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_wcgr1grOEeW4-_ONWXXiAw">
+        <variableImplementationsList xmi:id="_wa0CsgrOEeW4-_ONWXXiAw">
+          <variableImplementations xmi:id="_wa0CswrOEeW4-_ONWXXiAw" variable="_wazbpgrOEeW4-_ONWXXiAw">
+            <implementationClass href="org.eclipse.symphony.examples.antenna#//PTUDishAntennaSimulated"/>
+          </variableImplementations>
+        </variableImplementationsList>
+      </contexts>
+      <contexts xsi:type="invocator:BasicContext" xmi:id="_wa0CtArOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_wcgr2ArOEeW4-_ONWXXiAw">
+        <variableImplementationsList xmi:id="_wa0CtQrOEeW4-_ONWXXiAw">
+          <variableImplementations xmi:id="_wa0CtgrOEeW4-_ONWXXiAw" variable="_wazbpgrOEeW4-_ONWXXiAw">
+            <implementationClass href="org.eclipse.symphony.examples.antenna#//PTUDishAntennaStub"/>
+          </variableImplementations>
+        </variableImplementationsList>
+      </contexts>
+    </contextsList>
+    <worksitesList xmi:id="_wa0CtwrOEeW4-_ONWXXiAw">
+      <worksites xsi:type="environment:EarthSurfaceWorksite" xmi:id="_wa5iQArOEeW4-_ONWXXiAw" name="CSA AT" description="The CSA Default Worksite." time="2015-03-30T16:55:13.566-0400" xAxisAzimuth="3.1311206780778273">
+        <sky xsi:type="environment:EarthSky" xmi:id="_wa8lkArOEeW4-_ONWXXiAw" time="2015-03-30T16:55:13.566-0400"/>
+        <mapsList xmi:id="_wb19cArOEeW4-_ONWXXiAw">
+          <maps xmi:id="_wb4ZsArOEeW4-_ONWXXiAw" name="MarsYard" description="Simple Mars Yard Map.">
+            <transformation xmi:id="_wcCKsArOEeW4-_ONWXXiAw"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_wcLUoArOEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSAMarsYardDEM100cm.tri"/>
+          </maps>
+        </mapsList>
+        <geographicalCoordinates xmi:id="_wcQNIArOEeW4-_ONWXXiAw" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
+      </worksites>
+      <orbitsModels xmi:id="_wcQ0MArOEeW4-_ONWXXiAw"/>
+    </worksitesList>
+    <timeSourcesList xmi:id="_wcQ0MQrOEeW4-_ONWXXiAw">
+      <timeSources xsi:type="ecore:CurrentTimeSource" xmi:id="_wcQ0MgrOEeW4-_ONWXXiAw" time="2015-03-30T16:55:13.566-0400"/>
+    </timeSourcesList>
+  </environment>
+  <programsList xmi:id="_wcQ0MwrOEeW4-_ONWXXiAw">
+    <programs xsi:type="invocator:OperationCallsList" xmi:id="_wcUekArOEeW4-_ONWXXiAw" name="">
+      <operationCalls xmi:id="_wcZ-IArOEeW4-_ONWXXiAw" name="Init" variable="_wazbpgrOEeW4-_ONWXXiAw">
+        <eOperation href="org.eclipse.symphony.examples.antenna#//Antenna/init"/>
+      </operationCalls>
+      <operationCalls xmi:id="_wcZ-IQrOEeW4-_ONWXXiAw" name="Change Pan / Tilt" variable="_wazbpgrOEeW4-_ONWXXiAw">
+        <eOperation href="org.eclipse.symphony.examples.antenna#//PTUDishAntenna/moveTo"/>
+        <argumentsList xmi:id="_wce2oArOEeW4-_ONWXXiAw">
+          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_wcgr0ArOEeW4-_ONWXXiAw" value="1.5707963267948966"/>
+          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_wcgr0QrOEeW4-_ONWXXiAw" value="0.7853981633974483"/>
+        </argumentsList>
+      </operationCalls>
+      <operationCalls xmi:id="_wcgr0grOEeW4-_ONWXXiAw" name="Track Sun" variable="_wazbpgrOEeW4-_ONWXXiAw">
+        <eOperation href="org.eclipse.symphony.examples.antenna#//PTUDishAntenna/trackSun"/>
+        <argumentsList xmi:id="_wcgr0wrOEeW4-_ONWXXiAw">
+          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_wcgr1ArOEeW4-_ONWXXiAw" value="false"/>
+        </argumentsList>
+      </operationCalls>
+    </programs>
+  </programsList>
+  <dataProductsListContainer xmi:id="_wcgr1QrOEeW4-_ONWXXiAw">
+    <dataProductsList xmi:id="_wcgr1grOEeW4-_ONWXXiAw" name="Simulated Data Products Set" description="The data product set for the PTU dish antenna's simulated implementation">
+      <operationCallResultsList xmi:id="_wcgr1wrOEeW4-_ONWXXiAw"/>
+    </dataProductsList>
+    <dataProductsList xmi:id="_wcgr2ArOEeW4-_ONWXXiAw" name="Stub Data Products Set" description="The data product set for the PTU dish antenna's stub implementation">
+      <operationCallResultsList xmi:id="_wcgr2QrOEeW4-_ONWXXiAw" name="" description=""/>
+    </dataProductsList>
+  </dataProductsListContainer>
+  <toolsList xmi:id="_wcgr2grOEeW4-_ONWXXiAw"/>
+</invocator:InvocatorSession>

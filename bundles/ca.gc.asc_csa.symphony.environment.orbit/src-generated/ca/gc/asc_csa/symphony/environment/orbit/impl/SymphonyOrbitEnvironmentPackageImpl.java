@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.math.MathPackage;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
@@ -31,7 +33,7 @@ import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedAngularCoordinates;
 import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedPVACoordinates;
-import ca.gc.space.math.MathPackage;
+
 import java.util.List;
 
 /**

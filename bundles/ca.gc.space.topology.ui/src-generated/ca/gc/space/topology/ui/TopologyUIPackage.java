@@ -1872,11 +1872,11 @@ public interface TopologyUIPackage extends EPackage {
 	EOperation getTopologyUIFacade__CreateGraphicsContext__Node();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.topology.ui.TopologyUIFacade#findExtent(ca.gc.space.topology.Node, ca.gc.space.topology.ui.TopologyPresentationSet, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Find Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.topology.ui.TopologyUIFacade#findExtent(ca.gc.space.topology.Node, ca.gc.space.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Find Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Extent</em>' operation.
-	 * @see ca.gc.space.topology.ui.TopologyUIFacade#findExtent(ca.gc.space.topology.Node, ca.gc.space.topology.ui.TopologyPresentationSet, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.space.topology.ui.TopologyUIFacade#findExtent(ca.gc.space.topology.Node, ca.gc.space.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();

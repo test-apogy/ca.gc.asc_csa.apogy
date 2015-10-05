@@ -3,8 +3,9 @@
  */
 package ca.gc.asc_csa.symphony.environment;
 
-import ca.gc.space.math.Matrix4x4;
 import javax.vecmath.Color3f;
+
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

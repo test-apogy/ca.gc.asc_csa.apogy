@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.math.MathPackage;
 
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.mrt.geometry.data.DataPackage;
 import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.sensors.fov.AngularSpan;

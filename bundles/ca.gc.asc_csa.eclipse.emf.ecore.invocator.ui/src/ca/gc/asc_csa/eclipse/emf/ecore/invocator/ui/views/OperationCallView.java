@@ -46,7 +46,7 @@ public class OperationCallView extends AbstractView {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void updateSelection(ISelection selection) {
-		List<OperationCall> operationCalls = (List<OperationCall>) ca.gc.asc_csa.eclipse.converters.Activator
+		List<OperationCall> operationCalls = (List<OperationCall>) org.eclipse.symphony.common.converters.Activator
 				.convert(selection, OperationCall.class);
 		if (!operationCalls.isEmpty()) {
 			InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE

@@ -5,8 +5,8 @@ package ca.gc.asc_csa.symphony.environment.orbit.earth.impl;
 
 import java.util.List;
 import java.util.Map;
-
 import java.util.SortedSet;
+
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.math.MathPackage;
 import org.orekit.attitudes.AttitudeProvider;
 import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
@@ -69,7 +70,6 @@ import ca.gc.asc_csa.symphony.environment.orbit.earth.URLBasedTLEEarthOrbitPropa
 import ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
-import ca.gc.space.math.MathPackage;
 
 /**
  * <!-- begin-user-doc -->

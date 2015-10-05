@@ -3,6 +3,8 @@ package ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.wizards;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
@@ -10,8 +12,6 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.EMFEcoreInvocatorUiFacade;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 public class CopyInitializationDataWizard extends Wizard implements INewWizard {
 	private CopyInitializationDataWizardPage page;

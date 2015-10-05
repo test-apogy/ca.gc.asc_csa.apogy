@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.rover;singleton:=true
-Bundle-Version: 0.4.0.qualifier
+Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: ca.gc.asc_csa.symphony.examples.rover.Activator
 Bundle-Vendor: %providerName
@@ -15,11 +15,11 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
  ca.gc.space.mrt.sensors;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
- ca.gc.space.math.core;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
- ca.gc.asc_csa.eclipse.images.core;visibility:=reexport,
+ org.eclipse.symphony.common.images;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.camera;visibility:=reexport,
+ org.eclipse.symphony.examples.camera;visibility:=reexport,
  ca.gc.space.mrt.sensors.imaging;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,
  ca.gc.space.mrt.actuators;visibility:=reexport,

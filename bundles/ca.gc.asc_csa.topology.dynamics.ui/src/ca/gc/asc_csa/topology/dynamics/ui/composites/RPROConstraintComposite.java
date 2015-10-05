@@ -12,9 +12,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
 
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.space.math.ui.composites.Tuple3dComposite;
 
 public class RPROConstraintComposite extends Composite {
 
@@ -135,12 +135,12 @@ public class RPROConstraintComposite extends Composite {
 					// If the angular current state has been changed.
 					if(msg.getFeature() == TopologyDynamicsPackage.Literals.RPRO_CONSTRAINT__ANGULAR_STRENGTH)
 					{														
-						angularStrenghtComposite.setTuple3d((ca.gc.space.math.Tuple3d) msg.getNewValue());					
+						angularStrenghtComposite.setTuple3d((org.eclipse.symphony.common.math.Tuple3d) msg.getNewValue());					
 					}
 					// If the linear current state has been changed.
 					else if(msg.getFeature() == TopologyDynamicsPackage.Literals.RPRO_CONSTRAINT__LINEAR_STRENGTH)
 					{
-						linearStrenghtComposite.setTuple3d((ca.gc.space.math.Tuple3d) msg.getNewValue());	
+						linearStrenghtComposite.setTuple3d((org.eclipse.symphony.common.math.Tuple3d) msg.getNewValue());	
 					}										
 				};
 			};

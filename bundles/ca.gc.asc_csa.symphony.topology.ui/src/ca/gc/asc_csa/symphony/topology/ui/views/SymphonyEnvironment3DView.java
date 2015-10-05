@@ -13,13 +13,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.core.ResultNode;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
@@ -110,7 +110,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 		if(!isBusy())
 		{		
 			// Attempts to convert the selection to a Deployment.
-			List list = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, SymphonyEnvironment.class);
+			List list = org.eclipse.symphony.common.converters.Activator.convert(selection, SymphonyEnvironment.class);
 	
 			if(list.size() > 0) 
 			{
@@ -122,7 +122,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 			}
 			
 			// Tries to see if the selection contains AbstractResult.
-			List results = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, AbstractResult.class);
+			List results = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractResult.class);
 			show(results);
 		}
 		else

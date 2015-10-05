@@ -8,11 +8,11 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.Matrix3x3;
 
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ElevationMask;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
-import ca.gc.space.math.Matrix3x3;
 
 /**
  * <!-- begin-user-doc -->

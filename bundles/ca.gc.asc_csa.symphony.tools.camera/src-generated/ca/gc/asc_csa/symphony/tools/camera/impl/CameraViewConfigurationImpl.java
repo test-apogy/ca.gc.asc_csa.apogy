@@ -15,16 +15,15 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.VariableFeatureReferenceImpl;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.listeners.AbstractVariableFeatureReferenceListener;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.tools.camera.Activator;
 import ca.gc.asc_csa.symphony.tools.camera.CameraImageAnnotation;
 import ca.gc.asc_csa.symphony.tools.camera.CameraOverlayList;
@@ -44,7 +43,6 @@ import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link ca.gc.asc_csa.symphony.tools.camera.impl.CameraViewConfigurationImpl#getName <em>Name</em>}</li>
  *   <li>{@link ca.gc.asc_csa.symphony.tools.camera.impl.CameraViewConfigurationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link ca.gc.asc_csa.symphony.tools.camera.impl.CameraViewConfigurationImpl#getCameraViewConfigurationList <em>Camera View Configuration List</em>}</li>
  *   <li>{@link ca.gc.asc_csa.symphony.tools.camera.impl.CameraViewConfigurationImpl#getCamera <em>Camera</em>}</li>
@@ -65,26 +63,6 @@ import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
  */
 public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl implements CameraViewConfiguration
 {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	private AbstractVariableFeatureReferenceListener abstractVariableFeatureReferenceListener = null;
 	
   /**
@@ -301,27 +279,6 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
   
   
  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__NAME, oldName, name));
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -875,8 +832,6 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__NAME:
-				return getName();
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
 				return getDescription();
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST:
@@ -919,9 +874,6 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__NAME:
-				setName((String)newValue);
-				return;
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
@@ -974,9 +926,6 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -1029,8 +978,6 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST:
@@ -1069,12 +1016,6 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
   @Override
   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
   {
-		if (baseClass == Named.class) {
-			switch (derivedFeatureID) {
-				case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__NAME: return EMFEcorePackage.NAMED__NAME;
-				default: return -1;
-			}
-		}
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
 				case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
@@ -1097,12 +1038,6 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
   @Override
   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
   {
-		if (baseClass == Named.class) {
-			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__NAME;
-				default: return -1;
-			}
-		}
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
 				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION;
@@ -1142,9 +1077,7 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", description: ");
+		result.append(" (description: ");
 		result.append(description);
 		result.append(", imageWidth: ");
 		result.append(imageWidth);

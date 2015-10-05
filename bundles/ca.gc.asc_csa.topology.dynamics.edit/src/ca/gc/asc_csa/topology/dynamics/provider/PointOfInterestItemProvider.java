@@ -24,11 +24,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.math.MathFactory;
 
 import ca.gc.asc_csa.topology.dynamics.PointOfInterest;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsFactory;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.space.math.MathFactory;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.topology.dynamics.PointOfInterest} object.

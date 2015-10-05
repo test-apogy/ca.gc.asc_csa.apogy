@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.math.MathPackage;
 
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.CADNode;

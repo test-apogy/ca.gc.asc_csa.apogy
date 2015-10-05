@@ -40,7 +40,7 @@ public class RoboticArmControlView extends AbstractView
 	public void updateSelection(ISelection selection)
 	{
 		// Attempt to get a robotic arm reference
-		List<RoboticArm> roboticArms = (List<RoboticArm>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, RoboticArm.class);
+		List<RoboticArm> roboticArms = (List<RoboticArm>) org.eclipse.symphony.common.converters.Activator.convert(selection, RoboticArm.class);
 		
 		if (!roboticArms.isEmpty())
 		{

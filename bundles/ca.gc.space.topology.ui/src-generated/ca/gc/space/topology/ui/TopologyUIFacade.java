@@ -7,8 +7,8 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Vector3f;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.ui.impl.TopologyUIFacadeImpl;
 

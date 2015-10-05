@@ -3,7 +3,8 @@
  */
 package ca.gc.space.mrt.sensors.fov;
 
-import ca.gc.space.math.Matrix4x4;
+import org.eclipse.symphony.common.math.Matrix4x4;
+
 import ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape;
 import ca.gc.space.mrt.geometry.data.PolygonSamplingShape;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;

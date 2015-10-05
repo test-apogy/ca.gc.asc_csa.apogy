@@ -8,9 +8,9 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Tuple3d;
 
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.topology.ui.jme3.Activator;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;

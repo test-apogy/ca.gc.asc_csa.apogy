@@ -12,12 +12,12 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.EMFEcoreExampleLidarPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.LidarSimulated;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
@@ -29,6 +29,8 @@ import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lidar Simulated</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

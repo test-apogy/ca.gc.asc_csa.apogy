@@ -1,11 +1,11 @@
 package ca.gc.asc_csa.eclipse.ros.utilities;
 
 import org.eclipse.osgi.framework.log.FrameworkLogEntry;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.ros.message.MessageListener;
 
 import ca.gc.asc_csa.eclipse.ros.Activator;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 public class FrameworkLogTopicListener implements MessageListener<eclipse_ros_msgs.ROSFrameworkLogEntry>
 {

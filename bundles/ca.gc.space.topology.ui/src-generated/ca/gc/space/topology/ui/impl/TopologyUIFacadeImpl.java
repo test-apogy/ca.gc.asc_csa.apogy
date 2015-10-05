@@ -13,8 +13,8 @@ import javax.vecmath.Vector3f;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.AbstractNodeVisitor;
 import ca.gc.space.topology.INodeVisitor;
 import ca.gc.space.topology.Node;

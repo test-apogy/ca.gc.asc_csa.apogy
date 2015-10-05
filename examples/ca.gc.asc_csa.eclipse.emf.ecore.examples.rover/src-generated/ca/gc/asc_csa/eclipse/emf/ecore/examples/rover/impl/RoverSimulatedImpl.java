@@ -4,12 +4,12 @@
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.RoverSimulated;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc -->

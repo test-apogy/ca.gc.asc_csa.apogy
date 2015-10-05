@@ -9,9 +9,9 @@ package ca.gc.space.mrt.geometry.paths.ui.impl;
 import javax.vecmath.Point3d;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.geometry.paths.ui.PathsUIPackage;
 import ca.gc.space.mrt.geometry.paths.ui.WayPointPresentation;
 import ca.gc.space.topology.ui.impl.NodePresentationImpl;

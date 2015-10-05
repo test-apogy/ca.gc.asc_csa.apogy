@@ -2,12 +2,12 @@ package ca.gc.asc_csa.symphony.environment;
 
 import java.net.URL;
 
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 import ca.gc.asc_csa.eclipse.EclipseUtils;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 public class Activator implements BundleActivator {
 

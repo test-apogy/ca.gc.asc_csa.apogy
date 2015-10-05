@@ -25,6 +25,10 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Matrix3x3;
+import org.eclipse.symphony.common.math.Tuple3d;
 import org.orekit.bodies.BodyShape;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
@@ -66,10 +70,6 @@ import ca.gc.asc_csa.symphony.environment.orbit.earth.TLE;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.TLEEarthOrbitPropagator;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPassSpacecraftPosition;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.MathFactory;
-import ca.gc.space.math.Matrix3x3;
-import ca.gc.space.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

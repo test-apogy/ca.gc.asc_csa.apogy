@@ -7,7 +7,6 @@ package ca.gc.asc_csa.symphony.environment.provider;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.MathFactory;
 
 import java.util.Collection;
 import java.util.List;
@@ -19,6 +18,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.math.MathFactory;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer} object.

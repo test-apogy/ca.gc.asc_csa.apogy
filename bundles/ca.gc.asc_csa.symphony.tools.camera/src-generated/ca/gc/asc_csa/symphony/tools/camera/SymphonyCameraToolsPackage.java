@@ -177,6 +177,15 @@ public interface SymphonyCameraToolsPackage extends EPackage
   int CAMERA_VIEW_CONFIGURATION = 2;
 
   /**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int CAMERA_VIEW_CONFIGURATION__NAME = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
+
+		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -203,15 +212,6 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 */
   int CAMERA_VIEW_CONFIGURATION__FEATURE_ROOT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
 
-		/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int CAMERA_VIEW_CONFIGURATION__NAME = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
-
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -219,7 +219,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__DESCRIPTION = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 1;
+  int CAMERA_VIEW_CONFIGURATION__DESCRIPTION = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Camera View Configuration List</b></em>' container reference.
@@ -228,7 +228,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 2;
+	int CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Camera</b></em>' reference.
@@ -237,7 +237,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__CAMERA = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 3;
+  int CAMERA_VIEW_CONFIGURATION__CAMERA = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Image Width</b></em>' attribute.
@@ -246,7 +246,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 4;
+  int CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Image Height</b></em>' attribute.
@@ -255,7 +255,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 5;
+  int CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Image Count</b></em>' attribute.
@@ -264,7 +264,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 6;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 5;
 
 		/**
 	 * The feature id for the '<em><b>Display Rectified Image</b></em>' attribute.
@@ -273,7 +273,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 7;
+  int CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 6;
 
   /**
 	 * The feature id for the '<em><b>Overlay List</b></em>' containment reference.
@@ -282,7 +282,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 8;
+  int CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 7;
 
   /**
 	 * The feature id for the '<em><b>Tool List</b></em>' containment reference.
@@ -291,7 +291,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__TOOL_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 9;
+	int CAMERA_VIEW_CONFIGURATION__TOOL_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 8;
 
 		/**
 	 * The feature id for the '<em><b>Filter List</b></em>' containment reference.
@@ -300,7 +300,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__FILTER_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 10;
+  int CAMERA_VIEW_CONFIGURATION__FILTER_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 9;
 
   /**
 	 * The feature id for the '<em><b>Image Auto Save Enable</b></em>' attribute.
@@ -309,7 +309,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 11;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 10;
 
 		/**
 	 * The feature id for the '<em><b>Save Image With Overlays</b></em>' attribute.
@@ -318,7 +318,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 12;
+	int CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 11;
 
 		/**
 	 * The feature id for the '<em><b>Image Auto Save Folder Path</b></em>' attribute.
@@ -327,7 +327,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 13;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 12;
 
 		/**
 	 * The number of structural features of the '<em>Camera View Configuration</em>' class.
@@ -336,7 +336,7 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_FEATURE_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 14;
+  int CAMERA_VIEW_CONFIGURATION_FEATURE_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 13;
 
   /**
 	 * The operation id for the '<em>Get Camera Image Annotations</em>' operation.
@@ -2994,6 +2994,15 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	int AZIMUTH_FEATURE_REFERENCE = 27;
 
 		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AZIMUTH_FEATURE_REFERENCE__NAME = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
+
+		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3047,6 +3056,15 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	 * @generated
 	 */
 	int ELEVATION_FEATURE_REFERENCE = 28;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATION_FEATURE_REFERENCE__NAME = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -3748,11 +3766,11 @@ public interface SymphonyCameraToolsPackage extends EPackage
   EAttribute getImageFilter_Enabled();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.asc_csa.eclipse.images.core.AbstractEImage) <em>Filter</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage) <em>Filter</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Filter</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.asc_csa.eclipse.images.core.AbstractEImage)
+	 * @see ca.gc.asc_csa.symphony.tools.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage)
 	 * @generated
 	 */
   EOperation getImageFilter__Filter__AbstractCamera_AbstractEImage();
@@ -4009,11 +4027,11 @@ public interface SymphonyCameraToolsPackage extends EPackage
   EClass getDrawnCameraOverlay();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.asc_csa.eclipse.images.core.AbstractEImage, ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment, int, int) <em>Apply Overlay</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment, int, int) <em>Apply Overlay</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Overlay</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.asc_csa.eclipse.images.core.AbstractEImage, ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment, int, int)
+	 * @see ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment, int, int)
 	 * @generated
 	 */
   EOperation getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int();
@@ -4535,21 +4553,21 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	EOperation getCameraTool__Dispose();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.CameraTool#mouseMoved(ca.gc.asc_csa.eclipse.images.core.AbstractEImage, int, int, int) <em>Mouse Moved</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.CameraTool#mouseMoved(org.eclipse.symphony.common.images.AbstractEImage, int, int, int) <em>Mouse Moved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Mouse Moved</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.camera.CameraTool#mouseMoved(ca.gc.asc_csa.eclipse.images.core.AbstractEImage, int, int, int)
+	 * @see ca.gc.asc_csa.symphony.tools.camera.CameraTool#mouseMoved(org.eclipse.symphony.common.images.AbstractEImage, int, int, int)
 	 * @generated
 	 */
 	EOperation getCameraTool__MouseMoved__AbstractEImage_int_int_int();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.CameraTool#positionSelected(ca.gc.asc_csa.eclipse.images.core.AbstractEImage, int, int, int) <em>Position Selected</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.CameraTool#positionSelected(org.eclipse.symphony.common.images.AbstractEImage, int, int, int) <em>Position Selected</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Position Selected</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.camera.CameraTool#positionSelected(ca.gc.asc_csa.eclipse.images.core.AbstractEImage, int, int, int)
+	 * @see ca.gc.asc_csa.symphony.tools.camera.CameraTool#positionSelected(org.eclipse.symphony.common.images.AbstractEImage, int, int, int)
 	 * @generated
 	 */
 	EOperation getCameraTool__PositionSelected__AbstractEImage_int_int_int();

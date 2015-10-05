@@ -4,6 +4,7 @@
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -11,13 +12,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.PTUCamera;
+import org.eclipse.symphony.examples.camera.PTUCamera;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.PowerSystem;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.Rover;
+
 import com.google.common.base.Objects;
 
 /**

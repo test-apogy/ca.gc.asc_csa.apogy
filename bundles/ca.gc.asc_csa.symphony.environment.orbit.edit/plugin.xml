@@ -23,11 +23,11 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_environment_orbit -->
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.environment.orbit.provider.SymphonyOrbitEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.symphony.core"
             class="ca.gc.asc_csa.symphony.environment.orbit.provider.SymphonyOrbitEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.asc_csa.symphony.environment.orbit.provider.SymphonyOrbitEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -5,8 +5,6 @@ package ca.gc.space.mrt.actuators.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 /**
@@ -43,7 +41,6 @@ public final class MRTActuatorsEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     MathEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		   });
 	}

@@ -1,8 +1,8 @@
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.ui.converters;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.converters.IConverter;
 
-import ca.gc.asc_csa.eclipse.converters.IConverter;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;

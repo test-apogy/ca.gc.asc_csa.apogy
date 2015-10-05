@@ -6,6 +6,8 @@ package ca.gc.asc_csa.symphony.examples.robotic_arm.impl;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm;
@@ -16,8 +18,6 @@ import ca.gc.asc_csa.symphony.examples.robotic_arm.RoboticArmData;
 import ca.gc.asc_csa.symphony.examples.robotic_arm.RoboticArmSymphonySystemApiAdapter;
 import ca.gc.asc_csa.symphony.examples.robotic_arm.SymphonyExampleRoboticArmFactory;
 import ca.gc.asc_csa.symphony.examples.robotic_arm.SymphonyExampleRoboticArmPackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;
 

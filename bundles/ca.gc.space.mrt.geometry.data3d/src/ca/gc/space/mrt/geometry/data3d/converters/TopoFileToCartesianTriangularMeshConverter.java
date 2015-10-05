@@ -4,7 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-import ca.gc.asc_csa.eclipse.converters.IConverter;
+import org.eclipse.symphony.common.converters.IConverter;
+
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.mrt.geometry.data3d.Data3DIO;
 

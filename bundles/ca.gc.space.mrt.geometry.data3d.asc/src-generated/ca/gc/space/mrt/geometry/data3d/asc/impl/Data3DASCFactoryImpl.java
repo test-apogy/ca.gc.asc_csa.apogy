@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO;
 import ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData;
 import ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode;

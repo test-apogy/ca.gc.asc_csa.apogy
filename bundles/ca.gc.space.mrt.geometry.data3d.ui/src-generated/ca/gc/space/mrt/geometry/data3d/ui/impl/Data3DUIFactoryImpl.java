@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import ca.gc.space.mrt.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
 import ca.gc.space.mrt.geometry.data3d.ui.Data3DUIFactory;
 import ca.gc.space.mrt.geometry.data3d.ui.Data3DUIPackage;

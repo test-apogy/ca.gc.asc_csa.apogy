@@ -6,10 +6,10 @@ package ca.gc.asc_csa.symphony.environment.ui;
 import javax.vecmath.Color3f;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 

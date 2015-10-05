@@ -3,9 +3,9 @@
   <artifactId>ca.gc.asc_csa.eclipse.emf.ecore.ui.edit</artifactId>
   <packaging>eclipse-plugin</packaging>
   <parent>
-  	<groupId>ca.gc.asc_csa.eclipse.utils</groupId>
-  	<artifactId>ca.gc.asc_csa.eclipse.utils.parent</artifactId>
-  	<version>0.3.0-SNAPSHOT</version>
-  	<relativePath>../ca.gc.asc_csa.eclipse.utils.parent</relativePath>
+  	<groupId>org.eclipse.symphony</groupId>
+  	<artifactId>org.eclipse.symphony.parent</artifactId>
+  	<version>0.5.0-SNAPSHOT</version>
+  	<relativePath>../../packaging/org.eclipse.symphony.parent</relativePath>
   </parent>
 </project>

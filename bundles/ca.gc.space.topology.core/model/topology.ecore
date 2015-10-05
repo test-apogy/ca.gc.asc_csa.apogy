@@ -10,9 +10,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TransformNode" eSuperTypes="#//PositionNode #//RotationNode">
-    <eOperations name="asMatrix4d" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d"/>
+    <eOperations name="asMatrix4d" eType="ecore:EDataType ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix4d"/>
     <eOperations name="setTransformation">
-      <eParameters name="matrix" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d"/>
+      <eParameters name="matrix" eType="ecore:EDataType ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix4d"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TopologyFacade">
@@ -35,13 +35,13 @@
       <eParameters name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eParameters name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eOperations>
-    <eOperations name="expressNodeInRootFrame" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d">
+    <eOperations name="expressNodeInRootFrame" eType="ecore:EDataType ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix4d">
       <eParameters name="node" eType="#//Node"/>
     </eOperations>
-    <eOperations name="expressRootInNodeFrame" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d">
+    <eOperations name="expressRootInNodeFrame" eType="ecore:EDataType ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix4d">
       <eParameters name="node" eType="#//Node"/>
     </eOperations>
-    <eOperations name="expressInFrame" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d">
+    <eOperations name="expressInFrame" eType="ecore:EDataType ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix4d">
       <eParameters name="sourceFrame" eType="#//Node"/>
       <eParameters name="targetFrame" eType="#//Node"/>
     </eOperations>
@@ -80,10 +80,10 @@
       <eParameters name="rz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eOperations>
     <eOperations name="createTransformNode" eType="#//TransformNode">
-      <eParameters name="matrix" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d"/>
+      <eParameters name="matrix" eType="ecore:EDataType ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix4d"/>
     </eOperations>
     <eOperations name="createPickAndPlaceNode" eType="#//PickAndPlaceNode">
-      <eParameters name="matrix" eType="ecore:EDataType ../../ca.gc.space.math.core/model/Math.ecore#//Matrix4d"/>
+      <eParameters name="matrix" eType="ecore:EDataType ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix4d"/>
     </eOperations>
     <eOperations name="printTopology">
       <eParameters name="node" eType="#//Node"/>
@@ -140,11 +140,11 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PositionNode" eSuperTypes="#//AggregateGroupNode">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass ../../ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RotationNode" eSuperTypes="#//AggregateGroupNode">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rotationMatrix" eType="ecore:EClass ../../ca.gc.space.math.core/model/Math.ecore#//Matrix3x3"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rotationMatrix" eType="ecore:EClass ../../org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix3x3"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GroupNode" abstract="true" interface="true"

@@ -30,7 +30,7 @@ public class VariableFeatureReferenceView extends AbstractView {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void updateSelection(ISelection selection) {
-		List<VariableFeatureReference> vfrs = (List<VariableFeatureReference>) ca.gc.asc_csa.eclipse.converters.Activator
+		List<VariableFeatureReference> vfrs = (List<VariableFeatureReference>) org.eclipse.symphony.common.converters.Activator
 				.convert(selection, VariableFeatureReference.class);
 		if (!vfrs.isEmpty()) {
 			VariableFeatureReference vfr = vfrs.get(0);

@@ -7,8 +7,9 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
+
 import ca.gc.space.topology.ui.Activator;
 
 /**

@@ -26,7 +26,7 @@ public class ToggleNodeVisibilityCommand extends AbstractHandler implements IHan
 			if(selection instanceof Node)
 			{
 				Node node = (Node) selection;								
-				NodePresentation nodePresentation = (NodePresentation) ca.gc.asc_csa.eclipse.converters.Activator.convert(node, NodePresentation.class);				
+				NodePresentation nodePresentation = (NodePresentation) org.eclipse.symphony.common.converters.Activator.convert(node, NodePresentation.class);				
 				if(nodePresentation != null)
 				{
 					nodePresentation.setVisible(!nodePresentation.isVisible());

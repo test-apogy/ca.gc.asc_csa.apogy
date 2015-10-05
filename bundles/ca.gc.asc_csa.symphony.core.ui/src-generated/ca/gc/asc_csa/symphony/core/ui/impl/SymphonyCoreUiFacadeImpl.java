@@ -23,10 +23,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.core.Activator;
 import ca.gc.asc_csa.symphony.core.ConnectionPointsList;
 import ca.gc.asc_csa.symphony.core.SymphonyCoreFacade;
@@ -50,18 +50,10 @@ import ca.gc.space.topology.TopologyFactory;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>
- * {@link ca.gc.asc_csa.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonyProjectNamePrefix
- * <em>Default Symphony Project Name Prefix</em>}</li>
- * <li>
- * {@link ca.gc.asc_csa.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFilename
- * <em>Default Symphony Session Filename</em>}</li>
- * <li>
- * {@link ca.gc.asc_csa.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFilenameExtension
- * <em>Default Symphony Session Filename Extension</em>}</li>
- * <li>
- * {@link ca.gc.asc_csa.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFolderName
- * <em>Default Symphony Session Folder Name</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonyProjectNamePrefix <em>Default Symphony Project Name Prefix</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFilename <em>Default Symphony Session Filename</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFilenameExtension <em>Default Symphony Session Filename Extension</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -163,7 +155,6 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected SymphonyCoreUiFacadeImpl() {
@@ -172,7 +163,6 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -182,7 +172,6 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getDefaultSymphonyProjectNamePrefix() {
@@ -191,7 +180,6 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getDefaultSymphonySessionFilename() {
@@ -200,7 +188,6 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getDefaultSymphonySessionFilenameExtension() {
@@ -209,7 +196,6 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getDefaultSymphonySessionFolderName() {
@@ -377,97 +363,78 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
-			return getDefaultSymphonyProjectNamePrefix();
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
-			return getDefaultSymphonySessionFilename();
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
-			return getDefaultSymphonySessionFilenameExtension();
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
-			return getDefaultSymphonySessionFolderName();
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
+				return getDefaultSymphonyProjectNamePrefix();
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
+				return getDefaultSymphonySessionFilename();
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
+				return getDefaultSymphonySessionFilenameExtension();
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
+				return getDefaultSymphonySessionFolderName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
-			return DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT == null ? defaultSymphonyProjectNamePrefix != null
-					: !DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT
-							.equals(defaultSymphonyProjectNamePrefix);
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
-			return DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT == null ? defaultSymphonySessionFilename != null
-					: !DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT
-							.equals(defaultSymphonySessionFilename);
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
-			return DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT == null ? defaultSymphonySessionFilenameExtension != null
-					: !DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT
-							.equals(defaultSymphonySessionFilenameExtension);
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
-			return DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT == null ? defaultSymphonySessionFolderName != null
-					: !DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT
-							.equals(defaultSymphonySessionFolderName);
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
+				return DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT == null ? defaultSymphonyProjectNamePrefix != null : !DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT.equals(defaultSymphonyProjectNamePrefix);
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
+				return DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT == null ? defaultSymphonySessionFilename != null : !DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT.equals(defaultSymphonySessionFilename);
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
+				return DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT == null ? defaultSymphonySessionFilenameExtension != null : !DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT.equals(defaultSymphonySessionFilenameExtension);
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
+				return DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT == null ? defaultSymphonySessionFolderName != null : !DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT.equals(defaultSymphonySessionFolderName);
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS:
-			return createSymphonyProject((NewSymphonyProjectSettings) arguments
-					.get(0));
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS:
-			return createSymphonySessionFolder((NewSymphonyProjectSettings) arguments
-					.get(0));
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS:
-			return createSymphonySession((NewSymphonySessionSettings) arguments
-					.get(0));
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION:
-			try {
-				return createSymphonySessionFile((IContainer) arguments.get(0),
-						(String) arguments.get(1),
-						(InvocatorSession) arguments.get(2));
-			} catch (Throwable throwable) {
-				throw new InvocationTargetException(throwable);
-			}
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING:
-			return getSymphonySessionFile((IContainer) arguments.get(0),
-					(String) arguments.get(1));
-		case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS:
-			return createSymphonySystem((NewSymphonySystemSettings) arguments
-					.get(0));
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS:
+				return createSymphonyProject((NewSymphonyProjectSettings)arguments.get(0));
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS:
+				return createSymphonySessionFolder((NewSymphonyProjectSettings)arguments.get(0));
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS:
+				return createSymphonySession((NewSymphonySessionSettings)arguments.get(0));
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION:
+				try {
+					return createSymphonySessionFile((IContainer)arguments.get(0), (String)arguments.get(1), (InvocatorSession)arguments.get(2));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING:
+				return getSymphonySessionFile((IContainer)arguments.get(0), (String)arguments.get(1));
+			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS:
+				return createSymphonySystem((NewSymphonySystemSettings)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (defaultSymphonyProjectNamePrefix: ");

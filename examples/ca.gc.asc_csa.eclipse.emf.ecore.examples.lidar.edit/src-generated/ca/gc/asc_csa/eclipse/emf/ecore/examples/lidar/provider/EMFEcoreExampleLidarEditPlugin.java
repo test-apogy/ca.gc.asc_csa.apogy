@@ -3,21 +3,15 @@
  */
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.provider;
 
-import ca.gc.space.math.provider.MathEditPlugin;
-
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
-
 import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
-
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
-
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
-
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreExampleLidar edit plugin.
@@ -53,12 +47,12 @@ public final class EMFEcoreExampleLidarEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
 		   });
 	}
 

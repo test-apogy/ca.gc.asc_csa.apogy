@@ -8,8 +8,7 @@ package ca.gc.space.topology.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import ca.gc.space.math.provider.MathEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 
 /**
  * This is the central singleton for the Topology edit plugin.

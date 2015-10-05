@@ -3,9 +3,10 @@
  */
 package ca.gc.asc_csa.symphony.environment;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
+
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->

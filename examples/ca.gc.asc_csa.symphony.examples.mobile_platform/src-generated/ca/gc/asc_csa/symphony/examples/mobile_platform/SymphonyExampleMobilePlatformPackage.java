@@ -394,7 +394,7 @@ public interface SymphonyExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_SYMPHONY_SYSTEM_ANNOTATION___UPDATE_POSE__MATRIX4X4 = SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4;
+	int MOBILE_PLATFORM_SYMPHONY_SYSTEM_ANNOTATION___UPDATE_POSE__OBJECT = SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___UPDATE_POSE__OBJECT;
 
 		/**
 	 * The operation id for the '<em>Update Pose</em>' operation.

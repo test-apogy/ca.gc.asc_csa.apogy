@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.core;singleton:=true
-Bundle-Version: 0.4.0.qualifier
+Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
@@ -21,7 +21,7 @@ Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
- ca.gc.space.math.core;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.asc_csa.topology.ui.viewer,
  org.eclipse.ui.workbench,
  org.eclipse.jface,

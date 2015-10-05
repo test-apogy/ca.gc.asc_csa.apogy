@@ -37,7 +37,7 @@ public class NodePresentationPropertySection extends org.eclipse.ui.views.proper
 		{	
 			Object object = ((IStructuredSelection) selection).getFirstElement();
 						
-			NodePresentation nodePresentation = (NodePresentation) ca.gc.asc_csa.eclipse.converters.Activator.convert(object, NodePresentation.class);
+			NodePresentation nodePresentation = (NodePresentation) org.eclipse.symphony.common.converters.Activator.convert(object, NodePresentation.class);
 			
 			if(nodePresentation != null)
 			{	
@@ -53,7 +53,7 @@ public class NodePresentationPropertySection extends org.eclipse.ui.views.proper
 	{
 		boolean result = false;
 		
-		result = ca.gc.asc_csa.eclipse.converters.Activator.convert(toTest, NodePresentation.class) != null;
+		result = org.eclipse.symphony.common.converters.Activator.convert(toTest, NodePresentation.class) != null;
 		
 		System.out.println("select(" + toTest + ") = " + result);
 		

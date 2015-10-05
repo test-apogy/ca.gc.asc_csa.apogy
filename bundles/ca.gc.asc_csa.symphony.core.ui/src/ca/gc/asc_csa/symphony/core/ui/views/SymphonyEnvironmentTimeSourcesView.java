@@ -83,7 +83,7 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 	public void updateSelection(ISelection selection) 
 	{		
 		Activator.getDefault();
-		List<SymphonyEnvironment> ses = (List<SymphonyEnvironment>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, SymphonyEnvironment.class);
+		List<SymphonyEnvironment> ses = (List<SymphonyEnvironment>) org.eclipse.symphony.common.converters.Activator.convert(selection, SymphonyEnvironment.class);
 		if(!ses.isEmpty())
 		{							
 			SymphonyEnvironment se = ses.get(0);

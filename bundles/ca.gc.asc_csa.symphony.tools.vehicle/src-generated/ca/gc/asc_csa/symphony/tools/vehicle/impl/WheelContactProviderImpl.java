@@ -6,19 +6,22 @@ package ca.gc.asc_csa.symphony.tools.vehicle.impl;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.Matrix4x4;
+
 import ca.gc.asc_csa.symphony.tools.vehicle.MeshNodeEntry;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.Wheel;
 import ca.gc.asc_csa.symphony.tools.vehicle.WheelContactMode;
 import ca.gc.asc_csa.symphony.tools.vehicle.WheelContactProvider;
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFacade;

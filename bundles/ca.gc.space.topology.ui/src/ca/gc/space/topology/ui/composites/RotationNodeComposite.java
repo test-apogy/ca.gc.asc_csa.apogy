@@ -6,9 +6,9 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.symphony.common.math.ui.composites.Matrix3x3Composite;
+import org.eclipse.symphony.common.math.ui.composites.RotationMatrixComposite;
 
-import ca.gc.space.math.ui.composites.Matrix3x3Composite;
-import ca.gc.space.math.ui.composites.RotationMatrixComposite;
 import ca.gc.space.topology.RotationNode;
 
 public class RotationNodeComposite extends Composite 

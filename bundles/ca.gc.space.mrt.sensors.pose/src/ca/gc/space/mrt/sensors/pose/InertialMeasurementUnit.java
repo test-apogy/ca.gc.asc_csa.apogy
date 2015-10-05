@@ -3,7 +3,7 @@
  */
 package ca.gc.space.mrt.sensors.pose;
 
-import ca.gc.space.math.Tuple3d;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

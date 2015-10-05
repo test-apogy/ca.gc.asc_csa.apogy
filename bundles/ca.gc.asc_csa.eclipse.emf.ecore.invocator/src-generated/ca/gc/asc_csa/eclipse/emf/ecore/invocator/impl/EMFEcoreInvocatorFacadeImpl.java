@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
@@ -55,8 +57,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementationsList;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Watch;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.delegates.InvocatorDelegate;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.delegates.InvocatorDelegateRegistry;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

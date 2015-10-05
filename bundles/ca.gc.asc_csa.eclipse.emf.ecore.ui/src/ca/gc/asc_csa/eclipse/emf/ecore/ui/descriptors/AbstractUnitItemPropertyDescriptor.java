@@ -9,12 +9,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.EMFEcoreUIFacade;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 public class AbstractUnitItemPropertyDescriptor extends ItemPropertyDescriptor 
 {

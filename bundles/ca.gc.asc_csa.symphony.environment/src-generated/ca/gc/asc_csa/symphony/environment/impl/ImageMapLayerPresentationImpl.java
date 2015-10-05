@@ -3,8 +3,6 @@
  */
 package ca.gc.asc_csa.symphony.environment.impl;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
 import ca.gc.asc_csa.symphony.environment.ImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
@@ -19,6 +17,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
 
 /**
  * <!-- begin-user-doc -->

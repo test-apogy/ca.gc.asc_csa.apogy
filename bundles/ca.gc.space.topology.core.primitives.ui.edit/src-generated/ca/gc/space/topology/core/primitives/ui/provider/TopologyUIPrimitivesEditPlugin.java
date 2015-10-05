@@ -3,7 +3,6 @@
  */
 package ca.gc.space.topology.core.primitives.ui.provider;
 
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -41,7 +40,6 @@ public final class TopologyUIPrimitivesEditPlugin extends EMFPlugin {
 	public TopologyUIPrimitivesEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     MathEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		   });

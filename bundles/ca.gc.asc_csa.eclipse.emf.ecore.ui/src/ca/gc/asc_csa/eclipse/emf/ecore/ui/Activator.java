@@ -19,6 +19,8 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -27,8 +29,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.preferences.PreferencesConstants;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.utils.TimeSourceCompositeProviderFactory;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * The activator class controls the plug-in life cycle

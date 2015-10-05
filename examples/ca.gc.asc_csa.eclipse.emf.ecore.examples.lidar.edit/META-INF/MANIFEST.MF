@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.edit;singleton:=true
-Bundle-Version: 0.3.0.qualifier
+Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.provider.EMFEcoreExampleLidarEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -20,8 +20,8 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.geometry.data3d.edit;visibility:=reexport,
  ca.gc.space.mrt.geometry.data;visibility:=reexport,
  ca.gc.space.mrt.geometry.data.edit;visibility:=reexport,
- ca.gc.space.math.core;visibility:=reexport,
- ca.gc.space.math.core.edit;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
+ org.eclipse.symphony.common.math.edit;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  ca.gc.space.mrt.common.processors.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport

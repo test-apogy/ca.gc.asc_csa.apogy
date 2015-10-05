@@ -58,7 +58,6 @@ public class RecordingItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
 			addRecordingTracksPropertyDescriptor(object);
 			addDurationPropertyDescriptor(object);
 			addStartDatePropertyDescriptor(object);
@@ -81,28 +80,6 @@ public class RecordingItemProvider
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
 				 EMFEcorePackage.Literals.NAMED__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-		/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Described_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -290,7 +267,6 @@ public class RecordingItemProvider
 
 		switch (notification.getFeatureID(Recording.class)) {
 			case EMFEcoreInvocatorRecordingsPackage.RECORDING__NAME:
-			case EMFEcoreInvocatorRecordingsPackage.RECORDING__DESCRIPTION:
 			case EMFEcoreInvocatorRecordingsPackage.RECORDING__DURATION:
 			case EMFEcoreInvocatorRecordingsPackage.RECORDING__START_DATE:
 			case EMFEcoreInvocatorRecordingsPackage.RECORDING__END_DATE:

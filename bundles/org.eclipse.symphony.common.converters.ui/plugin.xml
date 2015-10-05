@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="org.eclipse.symphony.common.converters.ui.views.ConvertersView"
+         name="Converters View"
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="ca.gc.asc_csa.eclipse.ui.category"
+            class="org.eclipse.symphony.common.converters.ui.views.ConvertersView"
+            icon="icons/convert.gif"
+            id="org.eclipse.symphony.common.converters.ui.views.ConvertersView"
+            name="Converters View"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>

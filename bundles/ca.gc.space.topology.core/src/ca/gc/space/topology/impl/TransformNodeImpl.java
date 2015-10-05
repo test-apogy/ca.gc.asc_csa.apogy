@@ -18,10 +18,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix3x3;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix3x3;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.INodeVisitor;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.RotationNode;

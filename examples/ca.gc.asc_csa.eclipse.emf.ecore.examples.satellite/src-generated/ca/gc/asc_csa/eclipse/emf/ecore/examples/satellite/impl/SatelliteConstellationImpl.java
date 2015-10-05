@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.EMFEcoreExampleSatelliteFactory;
@@ -34,8 +36,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteCommandList;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteCommandRoll;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteConstellation;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteUtils;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitFacade;

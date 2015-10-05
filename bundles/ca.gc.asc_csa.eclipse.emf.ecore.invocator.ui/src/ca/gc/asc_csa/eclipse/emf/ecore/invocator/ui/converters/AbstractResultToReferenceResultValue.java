@@ -1,6 +1,7 @@
 package ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.converters;
 
-import ca.gc.asc_csa.eclipse.converters.IConverter;
+import org.eclipse.symphony.common.converters.IConverter;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ReferenceResultValue;
 

@@ -11,20 +11,23 @@ import java.awt.image.BufferedImage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import ca.gc.asc_csa.eclipse.images.core.EImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.EImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
+import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
+
 import ca.gc.asc_csa.symphony.environment.PolygonShapeImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

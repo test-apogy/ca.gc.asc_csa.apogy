@@ -3,7 +3,8 @@
  */
 package ca.gc.space.mrt.geometry.data3d.ui;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
+import org.eclipse.symphony.common.images.AbstractEImage;
+
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.topology.ui.MeshPresentationMode;
 import ca.gc.space.topology.ui.NodePresentation;

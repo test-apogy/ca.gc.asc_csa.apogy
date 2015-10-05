@@ -2,6 +2,9 @@ package ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests;
 
 import java.io.IOException;
 
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImage;
+import org.eclipse.symphony.common.images.ImagesCoreFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,9 +12,6 @@ import org.junit.Test;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ReferenceResultValue;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImage;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingFactory;
 
@@ -43,31 +43,31 @@ public class AbstractResultToEReferenceValueToImageSnapshotToAbstractEImageConve
 	
 	@Test
 	public void testAbstractResultToEReferenceValue() {		
-		Assert.assertNotNull(ca.gc.asc_csa.eclipse.converters.Activator.convert(operationCallResult, ReferenceResultValue.class));
+		Assert.assertNotNull(org.eclipse.symphony.common.converters.Activator.convert(operationCallResult, ReferenceResultValue.class));
 	}
 		
 	@Test
 	public void testReferenceValueToImageSnapshot() {		
-		Assert.assertNotNull(ca.gc.asc_csa.eclipse.converters.Activator.convert(referenceResultValue, ImageSnapshot.class));
+		Assert.assertNotNull(org.eclipse.symphony.common.converters.Activator.convert(referenceResultValue, ImageSnapshot.class));
 	}
 	
 	@Test
 	public void testImageSnapshotToAbstractEImage() {		
-		Assert.assertNotNull(ca.gc.asc_csa.eclipse.converters.Activator.convert(imageSnapshot, AbstractEImage.class));
+		Assert.assertNotNull(org.eclipse.symphony.common.converters.Activator.convert(imageSnapshot, AbstractEImage.class));
 	}
 
 	@Test
 	public void testAbstractResultToImageSnapshot() {		
-		Assert.assertNotNull(ca.gc.asc_csa.eclipse.converters.Activator.convert(operationCallResult, ImageSnapshot.class));
+		Assert.assertNotNull(org.eclipse.symphony.common.converters.Activator.convert(operationCallResult, ImageSnapshot.class));
 	}
 
 	@Test
 	public void testReferenceValueToAbstractEImage() {		
-		Assert.assertNotNull(ca.gc.asc_csa.eclipse.converters.Activator.convert(referenceResultValue, AbstractEImage.class));
+		Assert.assertNotNull(org.eclipse.symphony.common.converters.Activator.convert(referenceResultValue, AbstractEImage.class));
 	}
 	
 	@Test
 	public void testAbstractResultToAbstractEImage() {		
-		Assert.assertNotNull(ca.gc.asc_csa.eclipse.converters.Activator.convert(operationCallResult, AbstractEImage.class));
+		Assert.assertNotNull(org.eclipse.symphony.common.converters.Activator.convert(operationCallResult, AbstractEImage.class));
 	}	
 }

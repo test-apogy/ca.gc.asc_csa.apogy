@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.ros.node.ConnectedNode;
 import org.ros.node.topic.Publisher;
 
@@ -30,8 +32,6 @@ import ca.gc.asc_csa.eclipse.ros.utilities.NullResponseHandler;
 import ca.gc.asc_csa.eclipse.ros.utilities.ResponseLogger;
 import ca.gc.asc_csa.eclipse.ros.utilities.RosNodeMain;
 import ca.gc.asc_csa.eclipse.ros.utilities.RosNodeMain.NodeStartedListener;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc -->

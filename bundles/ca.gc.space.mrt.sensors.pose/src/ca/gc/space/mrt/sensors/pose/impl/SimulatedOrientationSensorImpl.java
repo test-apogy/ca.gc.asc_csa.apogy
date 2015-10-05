@@ -10,10 +10,10 @@ import javax.vecmath.Matrix3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.GeometricUtils;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.MathFactory;
 
-import ca.gc.space.math.GeometricUtils;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.MathFactory;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.SimulatedOrientationSensor;
 

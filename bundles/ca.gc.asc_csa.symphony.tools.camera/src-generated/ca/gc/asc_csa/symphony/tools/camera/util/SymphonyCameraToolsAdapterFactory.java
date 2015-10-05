@@ -245,12 +245,12 @@ public class SymphonyCameraToolsAdapterFactory extends AdapterFactoryImpl
 				return createAbstractToolsListContainerAdapter();
 			}
 			@Override
-			public Adapter caseVariableFeatureReference(VariableFeatureReference object) {
-				return createVariableFeatureReferenceAdapter();
-			}
-			@Override
 			public Adapter caseNamed(Named object) {
 				return createNamedAdapter();
+			}
+			@Override
+			public Adapter caseVariableFeatureReference(VariableFeatureReference object) {
+				return createVariableFeatureReferenceAdapter();
 			}
 			@Override
 			public Adapter caseDescribed(Described object) {

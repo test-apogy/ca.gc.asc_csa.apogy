@@ -3,8 +3,9 @@
  */
 package ca.gc.asc_csa.symphony.tools.core;
 
+import org.eclipse.symphony.common.math.Tuple3d;
+
 import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.Node;
 
 /**

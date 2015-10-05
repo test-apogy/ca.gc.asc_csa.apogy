@@ -7,9 +7,8 @@
 package ca.gc.asc_csa.topology.dynamics;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.math.Matrix3x3;
-import ca.gc.space.math.Tuple3d;
+import org.eclipse.symphony.common.math.Matrix3x3;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

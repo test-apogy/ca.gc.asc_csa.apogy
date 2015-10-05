@@ -6,8 +6,8 @@ package ca.gc.space.topology.ui;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.Node;
 
 /**

@@ -22,7 +22,7 @@ public interface TransformNode extends PositionNode, RotationNode {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="ca.gc.space.math.Matrix4d"
+	 * @model dataType="org.eclipse.symphony.common.math.Matrix4d"
 	 * @generated
 	 */
 	Matrix4d asMatrix4d();
@@ -30,7 +30,7 @@ public interface TransformNode extends PositionNode, RotationNode {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model matrixDataType="ca.gc.space.math.Matrix4d"
+	 * @model matrixDataType="org.eclipse.symphony.common.math.Matrix4d"
 	 * @generated
 	 */
 	void setTransformation(Matrix4d matrix);

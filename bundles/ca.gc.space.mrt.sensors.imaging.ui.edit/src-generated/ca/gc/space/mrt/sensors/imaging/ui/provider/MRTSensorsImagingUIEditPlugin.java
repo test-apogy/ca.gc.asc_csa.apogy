@@ -5,8 +5,6 @@ package ca.gc.space.mrt.sensors.imaging.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import ca.gc.space.topology.ui.provider.TopologyUIEditPlugin;
 
@@ -44,9 +42,8 @@ public final class MRTSensorsImagingUIEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     MathEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

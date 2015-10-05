@@ -14,13 +14,13 @@ public class MapLayerPresentationsListSection extends AbstractExtendedPropertySe
 
 	@Override
 	public boolean select(Object toTest) {
-		return ca.gc.asc_csa.eclipse.converters.Activator
+		return org.eclipse.symphony.common.converters.Activator
 				.convert(toTest, CartesianTriangularMeshMapLayer.class) != null;
 	}
 
 	@Override
 	protected void render(EObject eObject) {
-		CartesianTriangularMeshMapLayer cartesianTriangularMeshMapLayer = (CartesianTriangularMeshMapLayer) ca.gc.asc_csa.eclipse.converters.Activator
+		CartesianTriangularMeshMapLayer cartesianTriangularMeshMapLayer = (CartesianTriangularMeshMapLayer) org.eclipse.symphony.common.converters.Activator
 				.convert(eObject, CartesianTriangularMeshMapLayer.class);
 		if (cartesianTriangularMeshMapLayer != null) {
 			((MapLayerPresentationsListComposite) getComposite()).setCartesianTriangularMeshMapLayer(cartesianTriangularMeshMapLayer);

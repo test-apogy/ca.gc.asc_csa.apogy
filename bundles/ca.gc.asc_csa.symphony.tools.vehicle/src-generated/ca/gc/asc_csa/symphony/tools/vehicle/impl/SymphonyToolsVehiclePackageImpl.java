@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.math.MathPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
@@ -54,7 +55,6 @@ import ca.gc.asc_csa.symphony.tools.vehicle.WheelVehicleUtilities;
 import ca.gc.asc_csa.symphony.tools.vehicle.ZCorrectionMode;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.space.math.MathPackage;
 import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
@@ -328,8 +328,8 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 
 		// Initialize simple dependencies
 		PathplannersPackage.eINSTANCE.eClass();
-		TopologyDynamicsPackage.eINSTANCE.eClass();
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
+		TopologyDynamicsPackage.eINSTANCE.eClass();
 		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

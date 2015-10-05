@@ -19,21 +19,23 @@ import ca.gc.asc_csa.symphony.examples.mobile_platform.SymphonyExampleMobilePlat
 import ca.gc.asc_csa.symphony.examples.mobile_platform.SymphonyExampleMobilePlatformPackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
 import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;
-import ca.gc.space.math.GeometricUtils;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
-import ca.gc.space.math.Tuple3d;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.GeometricUtils;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Mobile Platform Symphony System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

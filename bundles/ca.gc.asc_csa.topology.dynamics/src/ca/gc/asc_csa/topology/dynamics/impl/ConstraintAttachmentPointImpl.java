@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.topology.dynamics.AbstractConstraint;
 import ca.gc.asc_csa.topology.dynamics.ConstraintAttachmentPoint;
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

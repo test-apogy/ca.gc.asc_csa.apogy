@@ -3,12 +3,9 @@
  */
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.provider.EMFEcoreExampleCameraEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.provider.EMFEcoreExampleMobilePlatformEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.provider.EMFEcoreExampleRoboticArmEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.eclipse.images.core.provider.Ca_gc_asc_csa_eclipse_imagesEditPlugin;
-import ca.gc.space.math.provider.MathEditPlugin;
 import ca.gc.space.mrt.actuators.provider.MRTActuatorsEditPlugin;
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
 import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
@@ -17,8 +14,11 @@ import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
 import ca.gc.space.mrt.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 import ca.gc.space.mrt.sensors.sensors.provider.SensorsEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
+import org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreExampleRover edit plugin.
@@ -54,20 +54,19 @@ public final class EMFEcoreExampleRoverEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
-		     Ca_gc_asc_csa_eclipse_imagesEditPlugin.INSTANCE,
-		     MRTSensorsImagingEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
+		     MRTSensorsImagingEditPlugin.INSTANCE,
 		     MRTActuatorsEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
-		     EMFEcoreExampleMobilePlatformEditPlugin.INSTANCE,
-		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
+		     EMFEcoreExampleMobilePlatformEditPlugin.INSTANCE,
+		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     EMFEcoreExampleCameraEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		   });
 	}
 

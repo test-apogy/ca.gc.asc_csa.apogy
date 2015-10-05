@@ -10,12 +10,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.math.MathFacade;
 
 import ca.gc.asc_csa.topology.bindings.AXIS;
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.TranslationBinding;
-import ca.gc.space.math.MathFacade;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.PositionNode;
 

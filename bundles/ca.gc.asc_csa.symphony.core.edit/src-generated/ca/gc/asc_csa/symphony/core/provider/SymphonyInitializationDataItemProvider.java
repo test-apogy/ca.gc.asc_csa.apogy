@@ -11,11 +11,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.math.MathFactory;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.InitializationDataItemProvider;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.core.SymphonyInitializationData;
-import ca.gc.space.math.MathFactory;
 
 /**
  * This is the item provider adapter for a

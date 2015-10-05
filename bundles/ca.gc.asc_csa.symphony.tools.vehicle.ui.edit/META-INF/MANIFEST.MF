@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.vehicle.ui.edit;singleton:=true
-Bundle-Version: 0.4.0.qualifier
+Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: ca.gc.asc_csa.symphony.tools.vehicle.ui.provider.SymphonyToolsVehicleUIEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -18,6 +18,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
  ca.gc.space.topology.ui;visibility:=reexport,
  ca.gc.space.topology.ui.edit;visibility:=reexport,
- ca.gc.space.math.core;visibility:=reexport,
- ca.gc.space.math.core.edit;visibility:=reexport
+ org.eclipse.symphony.common.math;visibility:=reexport,
+ org.eclipse.symphony.common.math.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -15,9 +15,9 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.GeometricUtils;
+import org.eclipse.symphony.common.math.Matrix3x3;
 
-import ca.gc.space.math.GeometricUtils;
-import ca.gc.space.math.Matrix3x3;
 import ca.gc.space.mrt.geometry.data3d.CartesianOrientationCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
 import ca.gc.space.mrt.geometry.data3d.Data3dFactory;

@@ -8,8 +8,8 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.sensors.pose.InertialMeasurementUnit;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 

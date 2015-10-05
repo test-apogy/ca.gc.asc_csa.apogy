@@ -10,6 +10,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.math.Tuple3d;
 import org.jfree.data.xy.XYDataItem;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
@@ -19,9 +22,6 @@ import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
 import ca.gc.asc_csa.symphony.environment.ui.DefaultVariableTrajectoryProvider;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
-import ca.gc.space.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

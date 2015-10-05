@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.math.Matrix4x4;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
 
@@ -29,7 +30,6 @@ import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;
 import ca.gc.asc_csa.symphony.tools.vehicle.WheelVehicleUtilities;
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.math.Matrix4x4;
 import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;

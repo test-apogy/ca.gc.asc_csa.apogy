@@ -15,16 +15,16 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.images.EImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
+import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
-import ca.gc.asc_csa.eclipse.images.core.EImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
 import ca.gc.asc_csa.symphony.environment.RectangleShapeImageLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

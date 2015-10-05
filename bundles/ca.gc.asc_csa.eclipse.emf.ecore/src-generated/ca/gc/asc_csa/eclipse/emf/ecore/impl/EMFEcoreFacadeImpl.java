@@ -35,6 +35,8 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
@@ -51,8 +53,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 import ca.gc.asc_csa.eclipse.emf.ecore.TreeFeatureNode;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

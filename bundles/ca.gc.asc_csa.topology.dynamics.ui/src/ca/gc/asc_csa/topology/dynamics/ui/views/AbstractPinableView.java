@@ -54,7 +54,7 @@ public abstract class AbstractPinableView<T> extends ViewPart implements ISelect
 				currentSelection = selection;
 				
 				@SuppressWarnings("rawtypes")
-				List list = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, getObjectClass());
+				List list = org.eclipse.symphony.common.converters.Activator.convert(selection, getObjectClass());
 
 				if(list.size() > 0) {
 					setObject((T) list.get(0));	

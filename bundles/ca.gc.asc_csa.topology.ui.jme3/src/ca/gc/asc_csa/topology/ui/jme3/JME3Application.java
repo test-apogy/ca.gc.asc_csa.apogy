@@ -12,9 +12,9 @@ import org.eclipse.swt.awt.SWT_AWT;
 import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.FocusListener;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.topology.ui.jme3.internal.CreateSceneGraphHTMLActionListener;
 import ca.gc.asc_csa.topology.ui.jme3.internal.CustomCameraControl;
 import ca.gc.asc_csa.topology.ui.jme3.internal.CustomScreenshotAppState;

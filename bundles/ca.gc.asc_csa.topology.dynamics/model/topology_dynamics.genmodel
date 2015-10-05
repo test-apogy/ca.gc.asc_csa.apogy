@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyrights Canadian Space Agency 2012." modelDirectory="/ca.gc.asc_csa.topology.dynamics/src"
     modelPluginID="ca.gc.asc_csa.topology.dynamics" modelName="Topology_dynamics"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" suppressGenModelAnnotations="false"
-    usedGenPackages="platform:/plugin/ca.gc.space.math.core/model/Math.genmodel#//math platform:/plugin/ca.gc.space.topology.core/model/topology.genmodel#//topology"
+    usedGenPackages="platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.genmodel#//math platform:/plugin/ca.gc.space.topology.core/model/topology.genmodel#//topology"
     operationReflection="true">
   <foreignModel>topology_dynamics.ecore</foreignModel>
   <genPackages prefix="TopologyDynamics" basePackage="ca.gc.asc_csa.topology" disposableProviderFactory="true"

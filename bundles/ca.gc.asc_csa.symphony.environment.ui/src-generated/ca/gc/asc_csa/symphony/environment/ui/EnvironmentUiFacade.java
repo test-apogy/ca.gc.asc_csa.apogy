@@ -4,10 +4,12 @@
 package ca.gc.asc_csa.symphony.environment.ui;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.images.AbstractEImage;
 import org.jfree.data.xy.XYSeries;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider;

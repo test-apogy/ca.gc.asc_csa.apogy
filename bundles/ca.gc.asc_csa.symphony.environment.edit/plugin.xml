@@ -25,11 +25,11 @@
             uri="ca.gc.asc_csa.symphony.core"
             class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.topology.bindings"
             class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

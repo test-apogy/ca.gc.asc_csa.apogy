@@ -20,9 +20,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.math.MathFactory;
-import ca.gc.space.math.Tuple3d;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.ui.Activator;
 import ca.gc.space.topology.ui.NodePresentation;

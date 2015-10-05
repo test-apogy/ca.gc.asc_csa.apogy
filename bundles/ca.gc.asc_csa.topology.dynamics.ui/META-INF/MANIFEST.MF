@@ -25,9 +25,9 @@ Require-Bundle: org.eclipse.ui,
  com.ibm.icu,
  ca.gc.asc_csa.eclipse.ui,
  org.eclipse.ui.forms;bundle-version="3.5.2",
- ca.gc.space.math.ui,
- ca.gc.asc_csa.eclipse.converters,
- ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.math.ui,
+ org.eclipse.symphony.common.converters,
+ org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,

@@ -14,7 +14,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera
 import ca.gc.space.mrt.sensors.imaging.Zoomable
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage
+import org.eclipse.symphony.common.images.AbstractEImage
 
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel

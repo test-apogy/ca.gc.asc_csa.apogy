@@ -6,7 +6,7 @@
  */
 package ca.gc.space.topology;
 
-import ca.gc.space.math.Matrix3x3;
+import org.eclipse.symphony.common.math.Matrix3x3;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Rotation Node</b></em>'.

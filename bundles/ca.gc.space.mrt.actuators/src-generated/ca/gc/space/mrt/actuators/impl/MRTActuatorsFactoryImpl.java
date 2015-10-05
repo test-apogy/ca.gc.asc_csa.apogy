@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import ca.gc.space.mrt.actuators.ActuatorStatus;
 import ca.gc.space.mrt.actuators.MRTActuatorsFactory;
 import ca.gc.space.mrt.actuators.MRTActuatorsPackage;

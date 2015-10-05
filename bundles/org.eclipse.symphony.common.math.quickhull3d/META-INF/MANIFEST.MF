@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.symphony.common.math.quickhull3d
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: org.eclipse.symphony.common.math.quickhull3d.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ javax.vecmath;bundle-version="1.5.2";visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.symphony.common.math.quickhull3d
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -4,10 +4,10 @@
 package ca.gc.asc_csa.symphony.environment;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.space.math.Matrix4x4;
 
 /**
  * <!-- begin-user-doc -->

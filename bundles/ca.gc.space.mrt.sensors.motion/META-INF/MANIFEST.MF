@@ -14,5 +14,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.space.mrt.sensors;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
- ca.gc.space.math.core;visibility:=reexport
+ org.eclipse.symphony.common.math;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -4,14 +4,14 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.converters.IConverter;
+import org.eclipse.symphony.common.math.MathFacade;
 
-import ca.gc.asc_csa.eclipse.converters.IConverter;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.core.Positioned;
 import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-import ca.gc.space.math.MathFacade;
 
 public class PositionedToGeographicalCoordinatesConverter implements IConverter{
 

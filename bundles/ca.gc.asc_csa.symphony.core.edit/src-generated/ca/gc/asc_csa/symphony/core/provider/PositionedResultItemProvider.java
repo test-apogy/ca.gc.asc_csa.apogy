@@ -6,16 +6,18 @@ package ca.gc.asc_csa.symphony.core.provider;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.math.MathFactory;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractResultItemProvider;
 import ca.gc.asc_csa.symphony.core.PositionedResult;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.space.math.MathFactory;
 
 /**
  * This is the item provider adapter for a

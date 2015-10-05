@@ -19,12 +19,12 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.symphony.common.math.GeometricUtils;
+import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
 import org.eclipse.ui.progress.UIJob;
 
-import ca.gc.space.math.GeometricUtils;
-import ca.gc.space.math.MathFacade;
-import ca.gc.space.math.Tuple3d;
-import ca.gc.space.math.ui.composites.Tuple3dComposite;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;
 

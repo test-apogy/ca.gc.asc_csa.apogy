@@ -4,6 +4,7 @@
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.impl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -11,7 +12,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.Battery;

@@ -14,7 +14,7 @@
       <eParameters name="newOrientation" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates"/>
     </eOperations>
     <eOperations name="extractOrientationFromMatrix" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates">
-      <eParameters name="matrix" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Matrix3x3"/>
+      <eParameters name="matrix" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix3x3"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="orientationCoordinates"
         eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates"
@@ -67,9 +67,9 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InertialMeasurementUnit" eSuperTypes="#//OrientationSensor">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="angularVelocity" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angularVelocity" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linearAcceleration" eType="ecore:EClass platform:/plugin/ca.gc.space.math.core/model/Math.ecore#//Tuple3d"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linearAcceleration" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

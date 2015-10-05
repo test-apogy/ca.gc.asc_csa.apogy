@@ -7365,11 +7365,11 @@ public interface SymphonyEnvironmentPackage extends EPackage
   EReference getEarthSurfaceWorksite_EarthSky();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(ca.gc.space.math.Tuple3d) <em>Convert To Geographic Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(org.eclipse.symphony.common.math.Tuple3d) <em>Convert To Geographic Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Convert To Geographic Coordinates</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite#convertToGeographicCoordinates(org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getEarthSurfaceWorksite__ConvertToGeographicCoordinates__Tuple3d();
@@ -8174,41 +8174,41 @@ public interface SymphonyEnvironmentPackage extends EPackage
   EOperation getEnvironmentFacade__GetBestResolutionRectangularRegionImage__List();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionExtent(ca.gc.asc_csa.symphony.environment.RectangularRegionProvider, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionExtent(ca.gc.asc_csa.symphony.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Region Extent</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionExtent(ca.gc.asc_csa.symphony.environment.RectangularRegionProvider, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionExtent(ca.gc.asc_csa.symphony.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionImageExtent(ca.gc.asc_csa.symphony.environment.RectangularRegionImage, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionImageExtent(ca.gc.asc_csa.symphony.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Region Image Extent</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionImageExtent(ca.gc.asc_csa.symphony.environment.RectangularRegionImage, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionImageExtent(ca.gc.asc_csa.symphony.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
   EOperation getEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionExtent(java.util.List, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Region Extent</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionExtent(java.util.List, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionImageExtent(java.util.List, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Region Image Extent</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionImageExtent(java.util.List, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
   EOperation getEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d();
@@ -8224,31 +8224,31 @@ public interface SymphonyEnvironmentPackage extends EPackage
   EOperation getEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#intersects(ca.gc.asc_csa.symphony.environment.RectangularRegion, ca.gc.asc_csa.symphony.environment.RectangularRegion, ca.gc.space.math.Matrix4x4) <em>Intersects</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#intersects(ca.gc.asc_csa.symphony.environment.RectangularRegion, ca.gc.asc_csa.symphony.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4) <em>Intersects</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Intersects</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#intersects(ca.gc.asc_csa.symphony.environment.RectangularRegion, ca.gc.asc_csa.symphony.environment.RectangularRegion, ca.gc.space.math.Matrix4x4)
+	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#intersects(ca.gc.asc_csa.symphony.environment.RectangularRegion, ca.gc.asc_csa.symphony.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4)
 	 * @generated
 	 */
 	EOperation getEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Image Map Layer Presentation Extent</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Image Map Layer Presentation Extent</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, ca.gc.space.math.Tuple3d, ca.gc.space.math.Tuple3d)
+	 * @see ca.gc.asc_csa.symphony.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
 	EOperation getEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d();

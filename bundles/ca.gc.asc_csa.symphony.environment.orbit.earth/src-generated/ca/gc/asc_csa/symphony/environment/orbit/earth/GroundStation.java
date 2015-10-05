@@ -3,7 +3,7 @@
  */
 package ca.gc.asc_csa.symphony.environment.orbit.earth;
 
-import ca.gc.space.math.Matrix3x3;
+import org.eclipse.symphony.common.math.Matrix3x3;
 
 /**
  * <!-- begin-user-doc -->

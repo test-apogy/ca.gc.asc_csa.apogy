@@ -3,7 +3,6 @@
  */
 package ca.gc.asc_csa.symphony.core.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -20,7 +19,6 @@ import ca.gc.asc_csa.symphony.core.UserDefinedResult;
  * The following features are implemented:
  * <ul>
  *   <li>{@link ca.gc.asc_csa.symphony.core.impl.UserDefinedResultImpl#getName <em>Name</em>}</li>
- *   <li>{@link ca.gc.asc_csa.symphony.core.impl.UserDefinedResultImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,24 +43,6 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,34 +88,11 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.USER_DEFINED_RESULT__DESCRIPTION, oldDescription, description));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
 				return getName();
-			case SymphonyCorePackage.USER_DEFINED_RESULT__DESCRIPTION:
-				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -150,9 +107,6 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 		switch (featureID) {
 			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
 				setName((String)newValue);
-				return;
-			case SymphonyCorePackage.USER_DEFINED_RESULT__DESCRIPTION:
-				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -169,9 +123,6 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyCorePackage.USER_DEFINED_RESULT__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -186,8 +137,6 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 		switch (featureID) {
 			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyCorePackage.USER_DEFINED_RESULT__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -202,12 +151,6 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
 				case SymphonyCorePackage.USER_DEFINED_RESULT__NAME: return EMFEcorePackage.NAMED__NAME;
-				default: return -1;
-			}
-		}
-		if (baseClass == Described.class) {
-			switch (derivedFeatureID) {
-				case SymphonyCorePackage.USER_DEFINED_RESULT__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -227,12 +170,6 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 				default: return -1;
 			}
 		}
-		if (baseClass == Described.class) {
-			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.USER_DEFINED_RESULT__DESCRIPTION;
-				default: return -1;
-			}
-		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -248,8 +185,6 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", description: ");
-		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

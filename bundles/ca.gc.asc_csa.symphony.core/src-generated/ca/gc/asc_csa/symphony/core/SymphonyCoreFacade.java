@@ -4,11 +4,12 @@
 package ca.gc.asc_csa.symphony.core;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.core.impl.SymphonyCoreFacadeImpl;
-import ca.gc.space.math.Matrix4x4;
+
 import java.util.List;
 
 /**

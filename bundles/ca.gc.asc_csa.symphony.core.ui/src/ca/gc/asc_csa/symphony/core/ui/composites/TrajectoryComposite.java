@@ -13,6 +13,7 @@ import org.eclipse.swt.events.ControlListener;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.symphony.common.math.Matrix4x4;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.ValueAxis;
@@ -26,7 +27,6 @@ import org.jfree.ui.RectangleInsets;
 
 import ca.gc.asc_csa.symphony.core.PoseProvider;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.space.math.Matrix4x4;
 
 public class TrajectoryComposite extends Composite 
 {

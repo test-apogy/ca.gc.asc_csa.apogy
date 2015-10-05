@@ -23,14 +23,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
+import org.eclipse.symphony.common.images.ImageAlignment;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
-import ca.gc.asc_csa.eclipse.images.core.ImageAlignment;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.EnvironmentFacade;
 import ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
@@ -44,8 +46,6 @@ import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIFactory;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
 import ca.gc.asc_csa.symphony.environment.ui.listeners.MapViewConfigurationListener;
 import ca.gc.asc_csa.symphony.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
-import ca.gc.space.math.MathFactory;
-import ca.gc.space.math.Tuple3d;
 
 /**
  * <!-- begin-user-doc -->

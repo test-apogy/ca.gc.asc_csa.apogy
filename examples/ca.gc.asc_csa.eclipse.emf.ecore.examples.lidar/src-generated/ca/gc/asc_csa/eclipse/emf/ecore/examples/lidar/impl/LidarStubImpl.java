@@ -4,12 +4,12 @@
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.EMFEcoreExampleLidarPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.LidarStub;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 
 /**

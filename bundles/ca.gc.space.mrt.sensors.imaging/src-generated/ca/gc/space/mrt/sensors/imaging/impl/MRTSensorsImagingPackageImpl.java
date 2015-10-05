@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.images.ImagesCorePackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCorePackage;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.AzimuthDirection;
@@ -143,9 +143,9 @@ public class MRTSensorsImagingPackageImpl extends EPackageImpl implements MRTSen
 		isInited = true;
 
 		// Initialize simple dependencies
+		EMFEcorePackage.eINSTANCE.eClass();
 		SensorsPackage.eINSTANCE.eClass();
 		ImagesCorePackage.eINSTANCE.eClass();
-		EMFEcorePackage.eINSTANCE.eClass();
 		FovPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

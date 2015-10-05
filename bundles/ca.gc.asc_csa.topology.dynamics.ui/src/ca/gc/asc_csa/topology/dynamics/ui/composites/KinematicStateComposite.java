@@ -10,11 +10,11 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
 
 import ca.gc.asc_csa.topology.dynamics.KinematicState;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.space.math.Tuple3d;
-import ca.gc.space.math.ui.composites.Tuple3dComposite;
 
 public class KinematicStateComposite extends Composite {
 	@SuppressWarnings("unused")

@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.math.MathFactory;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.symphony.core.AssemblyLink;
 import ca.gc.asc_csa.symphony.core.SymphonyCoreFactory;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.space.math.MathFactory;
 import ca.gc.space.topology.TopologyFactory;
 
 /**

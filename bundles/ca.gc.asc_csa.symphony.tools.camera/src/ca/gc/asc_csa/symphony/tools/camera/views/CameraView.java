@@ -13,6 +13,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IViewSite;
@@ -22,8 +24,6 @@ import org.eclipse.ui.progress.UIJob;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.tools.camera.Activator;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfiguration;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewUtilities;
@@ -96,7 +96,7 @@ public class CameraView extends AbstractView implements ISelectionListener
 	@Override
 	public void updateSelection(ISelection selection) 
 	{		
-		List cameraViewConfigurations = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, CameraViewConfiguration.class);
+		List cameraViewConfigurations = org.eclipse.symphony.common.converters.Activator.convert(selection, CameraViewConfiguration.class);
 		if(cameraViewConfigurations.size() > 0)
 		{
 			try
@@ -172,7 +172,7 @@ public class CameraView extends AbstractView implements ISelectionListener
 //		{
 //			if (previousSelection != selection)
 //			{
-//				List images = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, CameraViewConfiguration.class);
+//				List images = org.eclipse.symphony.common.converters.Activator.convert(selection, CameraViewConfiguration.class);
 //				if(images.size() > 0)
 //				{
 //					try

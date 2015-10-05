@@ -6,9 +6,9 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;
 import ca.gc.space.mrt.sensors.pose.composites.EditOrientationComposite;
 import ca.gc.space.mrt.sensors.pose.provider.PoseEditPlugin;
