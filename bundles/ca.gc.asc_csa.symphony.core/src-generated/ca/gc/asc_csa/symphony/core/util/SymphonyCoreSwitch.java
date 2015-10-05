@@ -268,6 +268,7 @@ public class SymphonyCoreSwitch<T> extends Switch<T> {
 				if (result == null) result = caseAbstractResult(positionedResult);
 				if (result == null) result = casePositioned(positionedResult);
 				if (result == null) result = caseTimed(positionedResult);
+				if (result == null) result = caseDescribed(positionedResult);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -280,6 +281,7 @@ public class SymphonyCoreSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOperationCallContainer(operationCallPositionedResult);
 				if (result == null) result = casePositioned(operationCallPositionedResult);
 				if (result == null) result = caseTimed(operationCallPositionedResult);
+				if (result == null) result = caseDescribed(operationCallPositionedResult);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -288,10 +290,10 @@ public class SymphonyCoreSwitch<T> extends Switch<T> {
 				T result = caseUserDefinedResult(userDefinedResult);
 				if (result == null) result = casePositionedResult(userDefinedResult);
 				if (result == null) result = caseNamed(userDefinedResult);
-				if (result == null) result = caseDescribed(userDefinedResult);
 				if (result == null) result = caseAbstractResult(userDefinedResult);
 				if (result == null) result = casePositioned(userDefinedResult);
 				if (result == null) result = caseTimed(userDefinedResult);
+				if (result == null) result = caseDescribed(userDefinedResult);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

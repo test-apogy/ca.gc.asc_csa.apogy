@@ -1482,6 +1482,15 @@ public interface SymphonyCorePackage extends EPackage {
 	int POSITIONED_RESULT__TIME = EMFEcoreInvocatorPackage.ABSTRACT_RESULT__TIME;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITIONED_RESULT__DESCRIPTION = EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Results List</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1562,6 +1571,15 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @ordered
 	 */
 	int OPERATION_CALL_POSITIONED_RESULT__TIME = EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__TIME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_CALL_POSITIONED_RESULT__DESCRIPTION = EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Results List</b></em>' container reference.
@@ -1691,6 +1709,15 @@ public interface SymphonyCorePackage extends EPackage {
 	int USER_DEFINED_RESULT__TIME = POSITIONED_RESULT__TIME;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_DEFINED_RESULT__DESCRIPTION = POSITIONED_RESULT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Results List</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1745,22 +1772,13 @@ public interface SymphonyCorePackage extends EPackage {
 	int USER_DEFINED_RESULT__NAME = POSITIONED_RESULT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_DEFINED_RESULT__DESCRIPTION = POSITIONED_RESULT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>User Defined Result</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DEFINED_RESULT_FEATURE_COUNT = POSITIONED_RESULT_FEATURE_COUNT + 2;
+	int USER_DEFINED_RESULT_FEATURE_COUNT = POSITIONED_RESULT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>User Defined Result</em>' class.

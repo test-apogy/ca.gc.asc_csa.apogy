@@ -23,14 +23,14 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_examples_mobile_platform -->
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.examples.mobile_platform.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
             class="ca.gc.asc_csa.symphony.examples.mobile_platform.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.symphony.environment.ui"
             class="ca.gc.asc_csa.symphony.examples.mobile_platform.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$SymphonyEnvironmentUIChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.asc_csa.symphony.examples.mobile_platform.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -5,6 +5,7 @@ package ca.gc.asc_csa.symphony.environment.provider;
 
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -240,7 +241,7 @@ public class SkyItemProvider
   @Override
   public String getText(Object object)
   {
-		Object labelValue = ((Sky)object).getTime();
+		Date labelValue = ((Sky)object).getTime();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Sky_type") :

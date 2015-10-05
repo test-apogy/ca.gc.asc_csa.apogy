@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.antenna.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.antenna.symphony.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.examples.antenna.provider.SymphonyExampleAntennaEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.examples.antenna.provider
+Export-Package: org.eclipse.symphony.examples.antenna.symphony.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.examples.antenna;visibility:=reexport,
+ org.eclipse.symphony.examples.antenna.symphony;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  ca.gc.space.math.core;visibility:=reexport,
  ca.gc.space.math.core.edit;visibility:=reexport,
@@ -34,5 +34,6 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.common.processors.edit;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.edit;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.antenna.edit
+ org.eclipse.symphony.examples.antenna,
+ org.eclipse.symphony.examples.antenna.edit
 Bundle-ActivationPolicy: lazy

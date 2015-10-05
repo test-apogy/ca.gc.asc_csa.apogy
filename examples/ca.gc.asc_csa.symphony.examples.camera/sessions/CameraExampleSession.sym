@@ -7,21 +7,21 @@
     </typesList>
     <variablesList xmi:id="_2irY1QrOEeW4-_ONWXXiAw">
       <variables xmi:id="_2irY1grOEeW4-_ONWXXiAw" name="camera">
-        <variableType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.camera/model/CameraSymphonySystem.ss#_0AJKoArOEeW4-_ONWXXiAw"/>
+        <variableType href="platform:/plugin/org.eclipse.symphony.examples.camera.symphony/model/CameraSymphonySystem.ss#_0AJKoArOEeW4-_ONWXXiAw"/>
       </variables>
     </variablesList>
     <contextsList xmi:id="_2irY1wrOEeW4-_ONWXXiAw">
       <contexts xsi:type="invocator:BasicContext" xmi:id="_2irY2ArOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_2ism_grOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_2irY2QrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_2irY2grOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//CameraSimulated"/>
+            <implementationClass href="org.eclipse.symphony.examples.camera.symphony#//CameraSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" xmi:id="_2irY2wrOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_2isnAArOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_2irY3ArOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_2irY3QrOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//CameraStub"/>
+            <implementationClass href="org.eclipse.symphony.examples.camera.symphony#//CameraStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -46,7 +46,7 @@
   <programsList xmi:id="_2ism9grOEeW4-_ONWXXiAw">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_2ism9wrOEeW4-_ONWXXiAw">
       <operationCalls xmi:id="_2ism-ArOEeW4-_ONWXXiAw" name="Init" variable="_2irY1grOEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera#//Camera/init"/>
+        <eOperation href="org.eclipse.symphony.examples.camera.symphony#//Camera/init"/>
       </operationCalls>
       <operationCalls xmi:id="_2ism-QrOEeW4-_ONWXXiAw" name="Take Snapshot" variable="_2irY1grOEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.space.mrt.sensors.imaging#//AbstractCamera/takeSnapshot"/>

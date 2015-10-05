@@ -34,6 +34,8 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Mobile Platform Symphony System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

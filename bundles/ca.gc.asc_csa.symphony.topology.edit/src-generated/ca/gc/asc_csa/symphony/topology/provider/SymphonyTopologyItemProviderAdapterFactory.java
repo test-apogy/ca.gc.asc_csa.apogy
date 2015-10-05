@@ -3,6 +3,10 @@
  */
 package ca.gc.asc_csa.symphony.topology.provider;
 
+import ca.gc.asc_csa.symphony.core.AssemblyLink;
+import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
+import ca.gc.asc_csa.symphony.core.TopologyRoot;
+import ca.gc.asc_csa.symphony.core.util.SymphonyCoreSwitch;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -29,6 +33,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.asc_csa.symphony.topology.SymphonyTopologyFactory;
 import ca.gc.asc_csa.symphony.topology.SymphonyTopologyPackage;
 import ca.gc.asc_csa.symphony.topology.util.SymphonyTopologyAdapterFactory;
+import ca.gc.asc_csa.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
+import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.GroupNode;
@@ -481,5 +488,209 @@ public class SymphonyTopologyItemProviderAdapterFactory extends SymphonyTopology
 			return SymphonyTopologyEditPlugin.INSTANCE;
 		}
   }
+
+		/**
+	 * A child creation extender for the {@link SymphonyCorePackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends SymphonyCoreSwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAssemblyLink(AssemblyLink object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseTopologyRoot(TopologyRoot object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return SymphonyTopologyEditPlugin.INSTANCE;
+		}
+	}
+
+		/**
+	 * A child creation extender for the {@link TopologyBindingsPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class TopologyBindingsChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends TopologyBindingsSwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseEnumerationCase(EnumerationCase object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return SymphonyTopologyEditPlugin.INSTANCE;
+		}
+	}
 
 }

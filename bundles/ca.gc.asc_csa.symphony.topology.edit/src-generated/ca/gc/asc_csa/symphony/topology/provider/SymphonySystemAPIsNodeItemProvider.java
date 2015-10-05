@@ -4,6 +4,7 @@
 package ca.gc.asc_csa.symphony.topology.provider;
 
 
+import ca.gc.asc_csa.symphony.core.SymphonyCoreFactory;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -211,6 +212,26 @@ public class SymphonySystemAPIsNodeItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 	}
 
 }

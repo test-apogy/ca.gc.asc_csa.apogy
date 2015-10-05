@@ -5,6 +5,7 @@ package ca.gc.asc_csa.symphony.tools.camera.provider;
 
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.VariableFeatureReferenceItemProvider;
+import ca.gc.asc_csa.symphony.tools.camera.AzimuthFeatureReference;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -63,7 +64,10 @@ public class AzimuthFeatureReferenceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_AzimuthFeatureReference_type");
+		String label = ((AzimuthFeatureReference)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_AzimuthFeatureReference_type") :
+			getString("_UI_AzimuthFeatureReference_type") + " " + label;
 	}
 	
 

@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.provider.EMFEcoreExampleCameraItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.examples.camera"
+            class="org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,7 +23,7 @@
       <!-- @generated emf_ecore.examples_camera -->
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.provider.EMFEcoreExampleCameraItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

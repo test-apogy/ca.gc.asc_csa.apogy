@@ -31,6 +31,8 @@ import ca.gc.space.math.GeometricUtils;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lander Simulated</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

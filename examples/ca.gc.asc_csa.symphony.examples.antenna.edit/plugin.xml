@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_antenna -->
       <factory
             uri="ca.gc.asc_csa.symphony.examples.antenna"
-            class="ca.gc.asc_csa.symphony.examples.antenna.provider.SymphonyExampleAntennaItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,13 +21,23 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_examples_antenna_symphony -->
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
+            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_examples_antenna -->
       <extender
             uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
-            class="ca.gc.asc_csa.symphony.examples.antenna.provider.SymphonyExampleAntennaItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.examples.antenna.provider.SymphonyExampleAntennaItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

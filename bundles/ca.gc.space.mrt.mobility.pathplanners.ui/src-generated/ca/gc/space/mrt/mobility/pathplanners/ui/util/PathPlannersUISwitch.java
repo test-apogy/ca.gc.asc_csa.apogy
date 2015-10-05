@@ -6,7 +6,6 @@ package ca.gc.space.mrt.mobility.pathplanners.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-
 import ca.gc.space.mrt.mobility.pathplanners.ui.CircularExclusionZonePresentation;
 import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIPackage;
 import ca.gc.space.topology.ui.NodePresentation;

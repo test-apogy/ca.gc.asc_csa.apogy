@@ -1,21 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.camera;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.camera.symphony;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.examples.camera,
- ca.gc.asc_csa.symphony.examples.camera.impl,
- ca.gc.asc_csa.symphony.examples.camera.util
+Export-Package: org.eclipse.symphony.examples.camera.symphony,
+ org.eclipse.symphony.examples.camera.symphony.impl,
+ org.eclipse.symphony.examples.camera.symphony.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
  ca.gc.asc_csa.eclipse.images.core;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.camera;visibility:=reexport,
+ org.eclipse.symphony.examples.camera;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov;visibility:=reexport,
  ca.gc.space.mrt.geometry.data;visibility:=reexport,
  ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
@@ -28,4 +28,4 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov.bindings
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.symphony.examples.camera.Activator
+Bundle-Activator: org.eclipse.symphony.examples.camera.symphony.Activator

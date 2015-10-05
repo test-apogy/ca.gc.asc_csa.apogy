@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.antenna;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.antenna;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.antenna.Activator
+Bundle-Activator: org.eclipse.symphony.examples.antenna.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
@@ -19,7 +19,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.sensors.fov;bundle-version="0.1.0";visibility:=reexport,
  ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.antenna,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.antenna.impl,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.antenna.util
+Export-Package: org.eclipse.symphony.examples.antenna,
+ org.eclipse.symphony.examples.antenna.impl,
+ org.eclipse.symphony.examples.antenna.util
 Bundle-ActivationPolicy: lazy

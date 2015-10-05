@@ -3,7 +3,6 @@
  */
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.provider.EMFEcoreExampleCameraEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.provider.EMFEcoreExampleMobilePlatformEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.provider.EMFEcoreExampleRoboticArmEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
@@ -17,8 +16,10 @@ import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
 import ca.gc.space.mrt.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 import ca.gc.space.mrt.sensors.sensors.provider.SensorsEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreExampleRover edit plugin.
@@ -54,20 +55,20 @@ public final class EMFEcoreExampleRoverEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     Ca_gc_asc_csa_eclipse_imagesEditPlugin.INSTANCE,
-		     MRTSensorsImagingEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
-		     MRTActuatorsEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     EMFEcoreExampleMobilePlatformEditPlugin.INSTANCE,
+		     EMFEcoreExampleCameraEditPlugin.INSTANCE,
+		     SensorsEditPlugin.INSTANCE,
 		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     MRTActuatorsEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
-		     EMFEcoreExampleCameraEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     MRTSensorsImagingEditPlugin.INSTANCE,
+		     Ca_gc_asc_csa_eclipse_imagesEditPlugin.INSTANCE,
 		   });
 	}
 

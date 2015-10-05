@@ -261,6 +261,11 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 		newChildDescriptors.add
@@ -297,6 +302,11 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -346,6 +356,11 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 		newChildDescriptors.add
@@ -382,6 +397,11 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -26,11 +26,11 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated mrt_sensors_pose_ui -->
       <extender
-            uri="ca.gc.space.topology.ui"
-            class="ca.gc.space.mrt.sensors.pose.ui.provider.SensorsPoseUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-      <extender
             uri="http:///ca/gc/space/topology.ecore"
             class="ca.gc.space.mrt.sensors.pose.ui.provider.SensorsPoseUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.space.topology.ui"
+            class="ca.gc.space.mrt.sensors.pose.ui.provider.SensorsPoseUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
    </extension>
 
 </plugin>

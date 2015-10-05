@@ -4,14 +4,12 @@
 package ca.gc.space.mrt.sensors.imaging.impl;
 
 import java.awt.Color;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import ca.gc.space.mrt.sensors.imaging.AzimuthDirection;
 import ca.gc.space.mrt.sensors.imaging.ElevationDirection;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;

@@ -12,7 +12,7 @@ package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover
 import ca.gc.asc_csa.eclipse.emf.ecore.Disposable
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.PTUCamera
+import org.eclipse.symphony.examples.camera.PTUCamera
 
 /*
  * This class represents a battery in the rover's

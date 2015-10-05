@@ -1,0 +1,90 @@
+@GenModel(prefix="SymphonyExampleAntenna",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
+		  modelName="SymphonyExampleAntenna",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.antenna.symphony/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.antenna.symphony.edit/src-generated")
+
+package org.eclipse.symphony.examples.antenna.symphony
+
+import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
+import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
+
+import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView
+
+/*
+ * This class is the specialized Symphony API adapter, used for connecting
+ * the existing PTU dish antenna example, located at
+ * {@link org.eclipse.symphony.examples.antenna.PTUDishAntenna},
+ * to Symphony; one can override the well-known callback functions to make
+ * Symphony perform a variety of useful functions, including initialization,
+ * disposal and other features. 
+ */
+class PTUDishAntennaSymphonySystemApiAdapter extends SymphonySystemApiAdapter
+{
+	/*
+	 * For specific implementation details,
+	 * see {@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaSymphonySystemApiAdapterImpl}
+	 */	
+}
+
+/*
+ * This class specifies the initialization data that Symphony
+ * should be interested in when (re)initializing the PTU dish
+ * antenna with the API Adapter (which in this case is
+ * {org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter})
+ */
+class PTUDishAntennaData extends SymphonyInitializationData
+{
+	/*
+	 * This is the dish antenna's current field of view (FOV).
+	 */
+	@GenModel(notify="true",
+			  property="Editable",
+			  propertyCategory="Field Of View")
+	contains ConicalFieldOfView[1] fov
+	
+	/*
+	 * This is the current pan angle of the dish antenna's
+	 * Pan-Tilt Unit (PTU).
+	 */
+	@GenModel(csa_units="rad",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Pan-Tilt Unit")
+	double panAngle
+	
+	/*
+	 * This is the current tilt angle of the dish antenna's
+	 * Pan-Tilt Unit (PTU).
+	 */
+	@GenModel(csa_units="rad",
+			  notify="true",
+			  property="Editable",
+			  propertyCategory="Pan-Tilt Unit")
+	double tiltAngle
+	
+	/*
+	 * This is whether or not the dish antenna's Pan-Tilt Unit (PTU)
+	 * is tracking the sun
+	 */
+	@GenModel(notify="true",
+	 		  property="Editable",
+	 		  propertyCategory="Status")
+	boolean trackingSun = "false"
+	
+	/*
+	 * This is whether or not the dish antenna has been initialized
+	 */
+	 @GenModel(notify="true",
+	 		   property="Editable",
+	 		   propertyCategory="Status")
+	 boolean initialized = "false"
+	
+	/*
+	 * For specific implementation details,
+	 * see {@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl}
+	 */
+}

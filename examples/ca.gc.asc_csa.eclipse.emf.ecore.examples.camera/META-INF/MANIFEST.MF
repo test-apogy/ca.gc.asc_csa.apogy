@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.camera;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.camera;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.camera,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.impl,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.util
+Export-Package: org.eclipse.symphony.examples.camera,
+ org.eclipse.symphony.examples.camera.impl,
+ org.eclipse.symphony.examples.camera.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
@@ -30,4 +30,4 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0",
  ca.gc.asc_csa.eclipse.utils.log.edit;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.Activator
+Bundle-Activator: org.eclipse.symphony.examples.camera.Activator

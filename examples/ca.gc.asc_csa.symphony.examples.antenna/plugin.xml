@@ -10,9 +10,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_examples_antenna -->
       <package
-            uri="ca.gc.asc_csa.symphony.examples.antenna"
-            class="ca.gc.asc_csa.symphony.examples.antenna.SymphonyExampleAntennaPackage"
-            genModel="model/symphony_examples_antenna.xcore"/>
+            uri="org.eclipse.symphony.examples.antenna.symphony"
+            class="org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage"
+            genModel="model/symphony_examples_antenna_symphony.xcore"/>
    </extension>
    <extension
          point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">

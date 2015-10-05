@@ -51,7 +51,6 @@ public class CameraViewConfigurationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addCameraViewConfigurationListPropertyDescriptor(object);
 			addCameraPropertyDescriptor(object);
@@ -67,28 +66,6 @@ public class CameraViewConfigurationItemProvider
 	}
 
   /**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Named_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 EMFEcorePackage.Literals.NAMED__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-		/**
 	 * This adds a property descriptor for the Description feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -387,7 +364,6 @@ public class CameraViewConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraViewConfiguration.class)) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__NAME:
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
 			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:

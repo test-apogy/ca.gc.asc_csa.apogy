@@ -376,6 +376,7 @@ public class SymphonyCameraToolsSwitch<T> extends Switch<T>
 				AzimuthFeatureReference azimuthFeatureReference = (AzimuthFeatureReference)theEObject;
 				T result = caseAzimuthFeatureReference(azimuthFeatureReference);
 				if (result == null) result = caseVariableFeatureReference(azimuthFeatureReference);
+				if (result == null) result = caseNamed(azimuthFeatureReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -383,6 +384,7 @@ public class SymphonyCameraToolsSwitch<T> extends Switch<T>
 				ElevationFeatureReference elevationFeatureReference = (ElevationFeatureReference)theEObject;
 				T result = caseElevationFeatureReference(elevationFeatureReference);
 				if (result == null) result = caseVariableFeatureReference(elevationFeatureReference);
+				if (result == null) result = caseNamed(elevationFeatureReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
