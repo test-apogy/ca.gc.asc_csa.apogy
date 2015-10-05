@@ -54,7 +54,7 @@ public class ImageView extends AbstractView {
 	@Override
 	public void updateSelection(ISelection selection) {
 
-		List<?> images = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, AbstractEImage.class);
+		List<?> images = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractEImage.class);
 		if(!images.isEmpty())
 		{
 			abstractEImage = (AbstractEImage) images.get(0);			

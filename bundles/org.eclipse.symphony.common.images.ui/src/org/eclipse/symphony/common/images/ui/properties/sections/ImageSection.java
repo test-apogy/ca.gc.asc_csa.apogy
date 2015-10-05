@@ -16,13 +16,13 @@ public class ImageSection extends AbstractExtendedPropertySection implements
 
 	@Override
 	public boolean select(Object toTest) {
-		return ca.gc.asc_csa.eclipse.converters.Activator
+		return org.eclipse.symphony.common.converters.Activator
 				.convert(toTest, AbstractEImage.class) != null;
 	}
 
 	@Override
 	protected void render(EObject eObject) {
-		AbstractEImage image = (AbstractEImage) ca.gc.asc_csa.eclipse.converters.Activator
+		AbstractEImage image = (AbstractEImage) org.eclipse.symphony.common.converters.Activator
 				.convert(eObject, AbstractEImage.class);
 		if (image != null && image.asBufferedImage() != null) {
 			ImageData imageData = EImagesUtilities.INSTANCE

@@ -1,18 +1,18 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.converters.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.converters.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.eclipse.converters.ui.Activator
+Bundle-Activator: org.eclipse.symphony.common.converters.ui.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- ca.gc.asc_csa.eclipse.converters
+ org.eclipse.symphony.common.converters
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: ca.gc.asc_csa.eclipse.converters.ui,
- ca.gc.asc_csa.eclipse.converters.ui.actions,
- ca.gc.asc_csa.eclipse.converters.ui.composites,
- ca.gc.asc_csa.eclipse.converters.ui.utils,
- ca.gc.asc_csa.eclipse.converters.ui.views
+Export-Package: org.eclipse.symphony.common.converters.ui,
+ org.eclipse.symphony.common.converters.ui.actions,
+ org.eclipse.symphony.common.converters.ui.composites,
+ org.eclipse.symphony.common.converters.ui.utils,
+ org.eclipse.symphony.common.converters.ui.views

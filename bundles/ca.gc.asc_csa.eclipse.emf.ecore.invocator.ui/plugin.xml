@@ -365,7 +365,7 @@
       </wizard>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.converters">
+         point="org.eclipse.symphony.common.converters">
       <new_element
             Class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.converters.AbstractResultToReferenceResultValue">
       </new_element>

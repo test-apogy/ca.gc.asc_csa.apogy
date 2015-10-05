@@ -41,7 +41,7 @@ public class URLTopoToCartesianTriangularMeshConverter extends URLToCartesianTri
 			
 			if(tempFile != null)
 			{
-				 mesh = (CartesianTriangularMesh) ca.gc.asc_csa.eclipse.converters.Activator.convert(tempFile, CartesianTriangularMesh.class);				 				 
+				 mesh = (CartesianTriangularMesh) org.eclipse.symphony.common.converters.Activator.convert(tempFile, CartesianTriangularMesh.class);				 				 
 			}
 			
 			if(mesh != null)

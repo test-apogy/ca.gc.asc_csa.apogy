@@ -93,7 +93,7 @@
       </menuContribution>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.converters">
+         point="org.eclipse.symphony.common.converters">
       <new_element
             Class="ca.gc.asc_csa.symphony.environment.converters.GeographicalCoordinatesToPositionConverter">
       </new_element>

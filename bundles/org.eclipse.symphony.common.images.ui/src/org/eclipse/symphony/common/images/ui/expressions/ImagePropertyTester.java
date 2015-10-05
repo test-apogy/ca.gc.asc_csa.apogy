@@ -3,9 +3,8 @@ package org.eclipse.symphony.common.images.ui.expressions;
 import java.util.List;
 
 import org.eclipse.core.expressions.PropertyTester;
+import org.eclipse.symphony.common.converters.Activator;
 import org.eclipse.symphony.common.images.AbstractEImage;
-
-import ca.gc.asc_csa.eclipse.converters.Activator;
 
 public class ImagePropertyTester extends PropertyTester {
 

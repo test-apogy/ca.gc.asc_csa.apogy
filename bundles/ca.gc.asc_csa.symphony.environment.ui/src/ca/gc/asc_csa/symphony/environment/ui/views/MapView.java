@@ -140,7 +140,7 @@ public class MapView extends AbstractView
 	@Override
 	public void updateSelection(ISelection selection) 
 	{		
-		List<MapViewConfiguration> mapViewConfigurations = (List<MapViewConfiguration>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, MapViewConfiguration.class);
+		List<MapViewConfiguration> mapViewConfigurations = (List<MapViewConfiguration>) org.eclipse.symphony.common.converters.Activator.convert(selection, MapViewConfiguration.class);
 		if(!mapViewConfigurations.isEmpty())
 		{				
 			MapViewConfiguration mapViewConfiguration = mapViewConfigurations.get(0);										

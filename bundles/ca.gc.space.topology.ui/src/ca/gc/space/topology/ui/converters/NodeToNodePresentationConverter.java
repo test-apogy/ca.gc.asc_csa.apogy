@@ -1,6 +1,7 @@
 package ca.gc.space.topology.ui.converters;
 
-import ca.gc.asc_csa.eclipse.converters.IConverter;
+import org.eclipse.symphony.common.converters.IConverter;
+
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.ui.Activator;
 import ca.gc.space.topology.ui.NodePresentation;

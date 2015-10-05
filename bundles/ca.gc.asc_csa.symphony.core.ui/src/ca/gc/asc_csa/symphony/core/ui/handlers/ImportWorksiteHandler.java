@@ -12,7 +12,7 @@ public class ImportWorksiteHandler extends AbstractHandler {
 		/** Verifies if there is a selection associated to the event. */
 //		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
 //		if (selection != null) {
-//			List<?> list = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, AbstractEImage.class);
+//			List<?> list = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractEImage.class);
 //			if (list != null && !list.isEmpty()){
 //				AbstractEImage image = (AbstractEImage) list.get(0);
 //				ImageData imageData = EImagesUtilities.INSTANCE.convertToImageData(image.asBufferedImage());

@@ -317,7 +317,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	  try
 	  {
 		  URL url = resolveURLString(urlString);
-		  loadedMesh = (CartesianTriangularMesh) ca.gc.asc_csa.eclipse.converters.Activator.convert(url, CartesianTriangularMesh.class);
+		  loadedMesh = (CartesianTriangularMesh) org.eclipse.symphony.common.converters.Activator.convert(url, CartesianTriangularMesh.class);
 		  if(loadedMesh != null)
 		  {				
 			  Logger.INSTANCE.log(Activator.ID, this, "Sucesfully loaded Mesh from url " + url + ">. Mesh contains " + loadedMesh.getPolygons().size() + " triangles.", EventSeverity.OK);

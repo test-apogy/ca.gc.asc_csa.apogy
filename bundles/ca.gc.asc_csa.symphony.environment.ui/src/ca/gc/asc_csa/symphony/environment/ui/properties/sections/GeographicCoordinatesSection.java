@@ -14,13 +14,13 @@ public class GeographicCoordinatesSection extends AbstractExtendedPropertySectio
 
 	@Override
 	public boolean select(Object toTest) {
-		return ca.gc.asc_csa.eclipse.converters.Activator.convert(toTest, GeographicCoordinates.class) != null;
+		return org.eclipse.symphony.common.converters.Activator.convert(toTest, GeographicCoordinates.class) != null;
 	}
 
 	@Override
 	protected void render(EObject eObject) 
 	{
-		GeographicCoordinates geographicCoordinates = (GeographicCoordinates) ca.gc.asc_csa.eclipse.converters.Activator.convert(eObject, GeographicCoordinates.class);
+		GeographicCoordinates geographicCoordinates = (GeographicCoordinates) org.eclipse.symphony.common.converters.Activator.convert(eObject, GeographicCoordinates.class);
 		if (geographicCoordinates != null) 
 		{			
 			((GeographicCoordinatesComposite) getComposite()).setGeographicCoordinates(geographicCoordinates);

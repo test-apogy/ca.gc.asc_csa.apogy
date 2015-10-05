@@ -21,7 +21,7 @@ public class NodesDistanceView extends ViewPart implements ISelectionListener
 	@Override
 	public void selectionChanged(IWorkbenchPart part, ISelection selection) 
 	{
-		List<Node> nodes = (List<Node>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, Node.class);
+		List<Node> nodes = (List<Node>) org.eclipse.symphony.common.converters.Activator.convert(selection, Node.class);
 		if(!nodes.isEmpty())
 		{				
 			for(Node node : nodes)

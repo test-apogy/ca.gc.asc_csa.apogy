@@ -71,7 +71,7 @@ public class EarthView extends AbstractView
 	@Override
  	public void updateSelection(ISelection selection) 
  	{ 		
-		List<EarthViewConfiguration> earthViewConfigurations = (List<EarthViewConfiguration>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, EarthViewConfiguration.class);
+		List<EarthViewConfiguration> earthViewConfigurations = (List<EarthViewConfiguration>) org.eclipse.symphony.common.converters.Activator.convert(selection, EarthViewConfiguration.class);
 		if(!earthViewConfigurations.isEmpty())
 		{				
 			EarthViewConfiguration earthViewConfiguration = earthViewConfigurations.get(0);										

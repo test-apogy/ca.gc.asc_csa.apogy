@@ -96,7 +96,7 @@ public class CameraView extends AbstractView implements ISelectionListener
 	@Override
 	public void updateSelection(ISelection selection) 
 	{		
-		List cameraViewConfigurations = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, CameraViewConfiguration.class);
+		List cameraViewConfigurations = org.eclipse.symphony.common.converters.Activator.convert(selection, CameraViewConfiguration.class);
 		if(cameraViewConfigurations.size() > 0)
 		{
 			try
@@ -172,7 +172,7 @@ public class CameraView extends AbstractView implements ISelectionListener
 //		{
 //			if (previousSelection != selection)
 //			{
-//				List images = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, CameraViewConfiguration.class);
+//				List images = org.eclipse.symphony.common.converters.Activator.convert(selection, CameraViewConfiguration.class);
 //				if(images.size() > 0)
 //				{
 //					try

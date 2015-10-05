@@ -43,7 +43,7 @@ public class EarthSkyView extends AbstractView
 	@Override
 	public void updateSelection(ISelection selection) {		
 		Activator.getDefault();
-		List<EarthSky> earthSkies = (List<EarthSky>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, EarthSky.class);
+		List<EarthSky> earthSkies = (List<EarthSky>) org.eclipse.symphony.common.converters.Activator.convert(selection, EarthSky.class);
 		if(!earthSkies.isEmpty())
 		{				
 				EarthSky sky = earthSkies.get(0);										

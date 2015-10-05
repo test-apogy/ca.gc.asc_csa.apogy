@@ -2,9 +2,8 @@ package org.eclipse.symphony.common.images.converters;
 
 import java.awt.image.BufferedImage;
 
+import org.eclipse.symphony.common.converters.IConverter;
 import org.eclipse.symphony.common.images.EImage;
-
-import ca.gc.asc_csa.eclipse.converters.IConverter;
 
 public class ObjectToBufferedImageConverter implements IConverter {
 

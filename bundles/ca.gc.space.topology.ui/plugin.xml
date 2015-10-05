@@ -181,7 +181,7 @@
             genModel="model/topology_ui.xcore"/>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.converters">
+         point="org.eclipse.symphony.common.converters">
       <new_element
             Class="ca.gc.space.topology.ui.converters.NodeToNodePresentationConverter">
       </new_element>

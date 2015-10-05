@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.converters;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.converters;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.eclipse.converters.Activator
+Bundle-Activator: org.eclipse.symphony.common.converters.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
@@ -12,5 +12,5 @@ Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: ca.gc.asc_csa.eclipse.converters,
- ca.gc.asc_csa.eclipse.converters.graphs
+Export-Package: org.eclipse.symphony.common.converters,
+ org.eclipse.symphony.common.converters.graphs

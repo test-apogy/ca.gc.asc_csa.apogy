@@ -3,8 +3,8 @@ package ca.gc.space.mrt.geometry.data3d.converters;
 import java.io.InputStream;
 
 import org.eclipse.core.resources.IFile;
+import org.eclipse.symphony.common.converters.IConverter;
 
-import ca.gc.asc_csa.eclipse.converters.IConverter;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.mrt.geometry.data3d.Data3DIO;
 

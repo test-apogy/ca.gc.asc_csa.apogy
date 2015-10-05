@@ -116,9 +116,9 @@ public class EMFEcoreExampleRoverPackageImpl extends EPackageImpl implements EMF
 		isInited = true;
 
 		// Initialize simple dependencies
-		EMFEcoreExampleCameraPackage.eINSTANCE.eClass();
-		EMFEcoreExampleRoboticArmPackage.eINSTANCE.eClass();
 		EMFEcoreExampleMobilePlatformPackage.eINSTANCE.eClass();
+		EMFEcoreExampleRoboticArmPackage.eINSTANCE.eClass();
+		EMFEcoreExampleCameraPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleRoverPackage.createPackageContents();

@@ -14,13 +14,13 @@ public class PositionCoordinatesSection extends AbstractExtendedPropertySection 
 
 	@Override
 	public boolean select(Object toTest) {
-		return ca.gc.asc_csa.eclipse.converters.Activator.convert(toTest, Tuple3d.class) != null;
+		return org.eclipse.symphony.common.converters.Activator.convert(toTest, Tuple3d.class) != null;
 	}
 
 	@Override
 	protected void render(EObject eObject) 
 	{
-		Tuple3d tuple3d = (Tuple3d) ca.gc.asc_csa.eclipse.converters.Activator.convert(eObject, Tuple3d.class);
+		Tuple3d tuple3d = (Tuple3d) org.eclipse.symphony.common.converters.Activator.convert(eObject, Tuple3d.class);
 		if (tuple3d != null) 
 		{			
 			((Tuple3dComposite) getComposite()).setTuple3d(tuple3d);

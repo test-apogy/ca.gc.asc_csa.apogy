@@ -1,10 +1,9 @@
 package org.eclipse.symphony.common.images.converters;
 
 import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.symphony.common.converters.IConverter;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-
-import ca.gc.asc_csa.eclipse.converters.IConverter;
 
 public class ObjectToImageDataConverter implements IConverter {
 

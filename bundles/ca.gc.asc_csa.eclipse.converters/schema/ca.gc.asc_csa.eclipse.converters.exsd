@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.asc_csa.eclipse.converters" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.common.converters" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="ca.gc.asc_csa.eclipse.converters" id="ca.gc.asc_csa.eclipse.converters" name="Converters"/>
+         <meta.schema plugin="org.eclipse.symphony.common.converters" id="org.eclipse.symphony.common.converters" name="Converters"/>
       </appinfo>
       <documentation>
          [Enter description of this extension point.]
@@ -55,7 +55,7 @@
                   The class implementing IConverter.
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":ca.gc.asc_csa.eclipse.converters.IConverter"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.common.converters.IConverter"/>
                </appinfo>
             </annotation>
          </attribute>

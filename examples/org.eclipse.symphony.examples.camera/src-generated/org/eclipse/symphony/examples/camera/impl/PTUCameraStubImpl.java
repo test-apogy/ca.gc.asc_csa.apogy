@@ -8,6 +8,8 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -717,6 +719,11 @@ public class PTUCameraStubImpl extends CameraStubImpl implements PTUCameraStub
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == EObject.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == AbstractActuator.class) {
 			switch (derivedFeatureID) {
 				case EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB__MOVING: return MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING;
@@ -748,6 +755,11 @@ public class PTUCameraStubImpl extends CameraStubImpl implements PTUCameraStub
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == EObject.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == AbstractActuator.class) {
 			switch (baseFeatureID) {
 				case MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB__MOVING;
@@ -779,6 +791,26 @@ public class PTUCameraStubImpl extends CameraStubImpl implements PTUCameraStub
 	 */
 	@Override
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == EObject.class) {
+			switch (baseOperationID) {
+				case EcorePackage.EOBJECT___ECLASS: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___ECLASS;
+				case EcorePackage.EOBJECT___EIS_PROXY: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___EIS_PROXY;
+				case EcorePackage.EOBJECT___ERESOURCE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___ERESOURCE;
+				case EcorePackage.EOBJECT___ECONTAINER: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___ECONTAINER;
+				case EcorePackage.EOBJECT___ECONTAINING_FEATURE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___ECONTAINING_FEATURE;
+				case EcorePackage.EOBJECT___ECONTAINMENT_FEATURE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___ECONTAINMENT_FEATURE;
+				case EcorePackage.EOBJECT___ECONTENTS: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___ECONTENTS;
+				case EcorePackage.EOBJECT___EALL_CONTENTS: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___EALL_CONTENTS;
+				case EcorePackage.EOBJECT___ECROSS_REFERENCES: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___ECROSS_REFERENCES;
+				case EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___EGET__ESTRUCTURALFEATURE;
+				case EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE_BOOLEAN: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___EGET__ESTRUCTURALFEATURE_BOOLEAN;
+				case EcorePackage.EOBJECT___ESET__ESTRUCTURALFEATURE_OBJECT: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___ESET__ESTRUCTURALFEATURE_OBJECT;
+				case EcorePackage.EOBJECT___EIS_SET__ESTRUCTURALFEATURE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___EIS_SET__ESTRUCTURALFEATURE;
+				case EcorePackage.EOBJECT___EUNSET__ESTRUCTURALFEATURE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___EUNSET__ESTRUCTURALFEATURE;
+				case EcorePackage.EOBJECT___EINVOKE__EOPERATION_ELIST: return EMFEcoreExampleCameraPackage.PTU_CAMERA_STUB___EINVOKE__EOPERATION_ELIST;
+				default: return -1;
+			}
+		}
 		if (baseClass == AbstractActuator.class) {
 			switch (baseOperationID) {
 				default: return -1;

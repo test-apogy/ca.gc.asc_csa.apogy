@@ -46,8 +46,8 @@ public final class EMFEcoreControllersEditPlugin extends EMFPlugin
 		  (new ResourceLocator [] {
 		     EcoreEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     Jinput_emfEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     Jinput_emfEditPlugin.INSTANCE,
 		   });
 	}
 

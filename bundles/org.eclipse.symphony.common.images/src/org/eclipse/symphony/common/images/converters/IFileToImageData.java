@@ -2,8 +2,7 @@ package org.eclipse.symphony.common.images.converters;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.swt.graphics.ImageData;
-
-import ca.gc.asc_csa.eclipse.converters.IConverter;
+import org.eclipse.symphony.common.converters.IConverter;
 
 /**
  * Converter that produces an ImageData from a IFile.

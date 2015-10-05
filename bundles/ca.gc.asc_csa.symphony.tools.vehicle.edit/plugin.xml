@@ -23,8 +23,8 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_vehicle -->
       <extender
-            uri="ca.gc.asc_csa.topology.bindings"
-            class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.symphony.core"
             class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
@@ -32,11 +32,11 @@
             uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
             class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$PathsChildCreationExtender"/>
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.symphony.tools.core"
             class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.topology.bindings"
+            class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

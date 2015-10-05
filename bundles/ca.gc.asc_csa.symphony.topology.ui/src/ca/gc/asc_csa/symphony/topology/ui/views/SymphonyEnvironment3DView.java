@@ -110,7 +110,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 		if(!isBusy())
 		{		
 			// Attempts to convert the selection to a Deployment.
-			List list = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, SymphonyEnvironment.class);
+			List list = org.eclipse.symphony.common.converters.Activator.convert(selection, SymphonyEnvironment.class);
 	
 			if(list.size() > 0) 
 			{
@@ -122,7 +122,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 			}
 			
 			// Tries to see if the selection contains AbstractResult.
-			List results = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, AbstractResult.class);
+			List results = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractResult.class);
 			show(results);
 		}
 		else

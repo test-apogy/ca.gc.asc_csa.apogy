@@ -4,8 +4,8 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.converters.IConverter;
 
-import ca.gc.asc_csa.eclipse.converters.IConverter;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.core.Positioned;
 import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;

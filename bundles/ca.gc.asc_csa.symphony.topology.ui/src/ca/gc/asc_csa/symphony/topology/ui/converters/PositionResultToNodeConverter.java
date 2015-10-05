@@ -3,7 +3,8 @@ package ca.gc.asc_csa.symphony.topology.ui.converters;
 import java.util.Iterator;
 import java.util.List;
 
-import ca.gc.asc_csa.eclipse.converters.IConverter;
+import org.eclipse.symphony.common.converters.IConverter;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.core.PositionedResult;

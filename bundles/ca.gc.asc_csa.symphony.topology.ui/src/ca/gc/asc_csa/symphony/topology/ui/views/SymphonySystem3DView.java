@@ -271,7 +271,7 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 	@Override
 	public void updateSelection(ISelection selection) 
 	{	
-		List systems = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, SymphonySystem.class);
+		List systems = org.eclipse.symphony.common.converters.Activator.convert(selection, SymphonySystem.class);
 		if(systems.size() > 0)
 		{
 			SymphonySystem newSS = (SymphonySystem) systems.get(0);

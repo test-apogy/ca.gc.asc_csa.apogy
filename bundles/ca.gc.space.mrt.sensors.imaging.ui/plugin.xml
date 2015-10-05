@@ -48,7 +48,7 @@
       </page>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.converters">
+         point="org.eclipse.symphony.common.converters">
       <new_element
             Class="ca.gc.space.mrt.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
       </new_element>

@@ -104,7 +104,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 				currentSelection = selection;
 				
 				// Attempts to convert the selection to a Deployment.				
-				List list = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, PoseProvider.class);
+				List list = org.eclipse.symphony.common.converters.Activator.convert(selection, PoseProvider.class);
 
 				if(list.size() > 0) 
 				{
@@ -116,7 +116,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 				}
 				else
 				{
-					list = ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, AbstractTypeImplementation.class);
+					list = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractTypeImplementation.class);
 					if(list.size() > 0)
 					{
 						AbstractTypeImplementation ati = (AbstractTypeImplementation) list.get(0);						

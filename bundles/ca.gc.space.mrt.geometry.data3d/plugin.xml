@@ -16,7 +16,7 @@
        genModel = "model/data3d.genmodel" /> 
   </extension>
   <extension
-        point="ca.gc.asc_csa.eclipse.converters">
+        point="org.eclipse.symphony.common.converters">
      <new_element
            Class="ca.gc.space.mrt.geometry.data3d.converters.TopoIFileToCartesianTriangularMeshConverter">
      </new_element>

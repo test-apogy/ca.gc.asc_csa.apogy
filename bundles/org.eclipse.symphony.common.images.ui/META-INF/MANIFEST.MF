@@ -8,7 +8,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- ca.gc.asc_csa.eclipse.converters,
+ org.eclipse.symphony.common.converters,
  org.eclipse.core.resources;bundle-version="3.6.1",
  org.eclipse.core.databinding,
  org.eclipse.core.databinding.beans,

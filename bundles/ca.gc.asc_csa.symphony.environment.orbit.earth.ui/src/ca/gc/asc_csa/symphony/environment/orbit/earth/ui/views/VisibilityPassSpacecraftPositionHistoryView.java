@@ -60,7 +60,7 @@ public class VisibilityPassSpacecraftPositionHistoryView extends AbstractView
 	@Override
  	public void updateSelection(ISelection selection) 
  	{ 		
-		List<VisibilityPassSpacecraftPositionHistory> visibilityPassSpacecraftPositionHistories = (List<VisibilityPassSpacecraftPositionHistory>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, VisibilityPassSpacecraftPositionHistory.class);
+		List<VisibilityPassSpacecraftPositionHistory> visibilityPassSpacecraftPositionHistories = (List<VisibilityPassSpacecraftPositionHistory>) org.eclipse.symphony.common.converters.Activator.convert(selection, VisibilityPassSpacecraftPositionHistory.class);
 		if(!visibilityPassSpacecraftPositionHistories.isEmpty())
 		{				
 			VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory = visibilityPassSpacecraftPositionHistories.get(0);										
@@ -68,7 +68,7 @@ public class VisibilityPassSpacecraftPositionHistoryView extends AbstractView
 		} 		
 		else
 		{
-			List<VisibilityPass> passes = (List<VisibilityPass>) ca.gc.asc_csa.eclipse.converters.Activator.convert(selection, VisibilityPass.class);
+			List<VisibilityPass> passes = (List<VisibilityPass>) org.eclipse.symphony.common.converters.Activator.convert(selection, VisibilityPass.class);
 			if(!passes.isEmpty())
 			{
 				VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory = passes.get(0).getPositionHistory();
