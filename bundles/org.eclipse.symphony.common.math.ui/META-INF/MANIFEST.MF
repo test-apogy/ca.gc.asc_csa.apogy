@@ -38,8 +38,6 @@ Bundle-ClassPath: libs/swt-grouplayout.jar,
  .
 Export-Package: org.eclipse.symphony.common.math.ui,
  org.eclipse.symphony.common.math.ui.composites,
- org.eclipse.symphony.common.math.ui.impl,
- org.eclipse.symphony.common.math.ui.properties.sections,
- org.eclipse.symphony.common.math.ui.util,
- org.eclipse.wb.swt.layout.grouplayout,
+  org.eclipse.symphony.common.math.ui.properties.sections,
+  org.eclipse.wb.swt.layout.grouplayout,
  org.eclipse.wb.swt.widgets.baseline

@@ -46,7 +46,7 @@ public class PopulationImpl extends EObjectImpl implements Population {
 	private boolean sumSquaredDirty = true;
 	private boolean stdDirty = true;
 	private boolean isDirty = true;
-	private boolean isMinMaxDirty = true;
+//	private boolean isMinMaxDirty = true;
 
 	/**
 	 * The cached value of the '{@link #getData() <em>Data</em>}' attribute list.
@@ -214,6 +214,7 @@ public class PopulationImpl extends EObjectImpl implements Population {
 	 * 
 	 * @generated_NOT
 	 */
+	@SuppressWarnings("serial")
 	public EList<Double> getData() {
 		if (data == null) {
 			data = new EDataTypeEList<Double>(Double.class, this,
