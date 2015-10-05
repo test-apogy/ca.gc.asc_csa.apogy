@@ -197,26 +197,6 @@ public class ImageSnapshotItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
@@ -283,6 +263,26 @@ public class ImageSnapshotItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 TopologyFactory.eINSTANCE.createCADNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 FovFactory.eINSTANCE.createFieldOfView()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -22,14 +22,14 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_core -->
       <extender
+            uri="ca.gc.asc_csa.topology.bindings"
+            class="ca.gc.asc_csa.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+      <extender
             uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
             class="ca.gc.asc_csa.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
             class="ca.gc.asc_csa.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="ca.gc.asc_csa.topology.bindings"
-            class="ca.gc.asc_csa.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

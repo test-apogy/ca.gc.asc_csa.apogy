@@ -23,12 +23,6 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_telecoms -->
       <extender
-            uri="ca.gc.asc_csa.symphony.tools.core"
-            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
-      <extender
-            uri="ca.gc.asc_csa.symphony.core"
-            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
-      <extender
             uri="http:///ca/gc/space/topology.ecore"
             class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
@@ -38,8 +32,14 @@
             uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
             class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$PathsChildCreationExtender"/>
       <extender
+            uri="ca.gc.asc_csa.symphony.tools.core"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
+      <extender
             uri="ca.gc.asc_csa.topology.bindings"
             class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+      <extender
+            uri="ca.gc.asc_csa.symphony.core"
+            class="ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
    </extension>
 
 </plugin>
