@@ -18,12 +18,12 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.core.ConnectionPoint;
 import ca.gc.asc_csa.symphony.core.ConnectionPointsList;
 import ca.gc.asc_csa.symphony.core.FeatureOfInterest;

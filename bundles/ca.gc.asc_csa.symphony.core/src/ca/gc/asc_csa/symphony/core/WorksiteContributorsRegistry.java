@@ -7,9 +7,8 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
-
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 public class WorksiteContributorsRegistry 
 {

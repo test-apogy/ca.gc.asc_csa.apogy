@@ -21,14 +21,14 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.listeners.AbstractVariableFeatureReferenceListener;
 import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.core.AbsolutePoseProvider;
 import ca.gc.asc_csa.symphony.core.PoseProvider;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;

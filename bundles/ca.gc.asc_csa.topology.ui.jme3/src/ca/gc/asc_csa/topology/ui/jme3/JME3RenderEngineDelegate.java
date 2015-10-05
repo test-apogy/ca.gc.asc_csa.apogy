@@ -16,9 +16,9 @@ import javax.vecmath.Tuple3d;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.topology.ui.viewer.IRenderEngineDelegate;
 import ca.gc.asc_csa.topology.ui.viewer.ITopologyViewer;
 import ca.gc.space.math.MathFactory;

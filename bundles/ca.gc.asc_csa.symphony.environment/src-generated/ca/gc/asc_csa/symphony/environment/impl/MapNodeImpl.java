@@ -14,9 +14,9 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayer;
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayerNode;
 import ca.gc.asc_csa.symphony.environment.Activator;

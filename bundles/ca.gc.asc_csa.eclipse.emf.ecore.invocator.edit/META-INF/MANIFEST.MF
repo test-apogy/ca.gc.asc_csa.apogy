@@ -20,5 +20,5 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.emf.ecore.edit;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.edit.utils,
  ca.gc.asc_csa.eclipse.emf.ecore.ui;bundle-version="0.2.0";visibility:=reexport,
- ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy

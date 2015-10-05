@@ -11,7 +11,7 @@
       <!-- @generated utils_log -->
       <package
             uri="ca.gc.asc_csa.eclipse.utils.log"
-            class="ca.gc.asc_csa.eclipse.utils.log.UtilsLogPackage"
+            class="org.eclipse.symphony.common.log.UtilsLogPackage"
             genModel="model/utils_log.xcore"/>
    </extension>
 

@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer;
 import ca.gc.asc_csa.symphony.tools.core.Activator;
 import ca.gc.asc_csa.symphony.tools.core.impl.AbstractTwoPoints3DToolImpl;

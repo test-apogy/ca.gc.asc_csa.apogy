@@ -24,7 +24,7 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.eclipse.core.databinding;bundle-version="0.2.0",
  org.eclipse.core.databinding.beans;bundle-version="1.2.200",
  org.eclipse.emf.edit.ui;bundle-version="2.10.2",
- ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.ui,
  ca.gc.asc_csa.eclipse.emf.ecore.ui.adapters,

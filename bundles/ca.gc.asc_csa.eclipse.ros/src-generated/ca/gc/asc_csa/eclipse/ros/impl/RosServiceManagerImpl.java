@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.ros.exception.ServiceNotFoundException;
 import org.ros.internal.message.Message;
 
@@ -21,8 +23,6 @@ import ca.gc.asc_csa.eclipse.ros.RosNode;
 import ca.gc.asc_csa.eclipse.ros.RosPackage;
 import ca.gc.asc_csa.eclipse.ros.RosService;
 import ca.gc.asc_csa.eclipse.ros.RosServiceManager;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc -->

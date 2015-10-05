@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.xml.type.internal.DataValue.Base64;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.graphics.ImageLoader;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.images.core.Activator;
 import ca.gc.asc_csa.eclipse.images.core.EImage;
@@ -31,8 +33,6 @@ import ca.gc.asc_csa.eclipse.images.core.ImagesAlbum;
 import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
 import ca.gc.asc_csa.eclipse.images.core.ImagesCorePackage;
 import ca.gc.asc_csa.eclipse.images.core.URLEImage;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc -->

@@ -27,6 +27,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.graphics.ImageLoader;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.buffer.ChannelBuffers;
 import org.ros.node.ConnectedNode;
@@ -39,8 +41,6 @@ import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
 import ca.gc.asc_csa.eclipse.images.core.ros.Activator;
 import ca.gc.asc_csa.eclipse.images.core.ros.ImagesCoreROSFacade;
 import ca.gc.asc_csa.eclipse.images.core.ros.ImagesCoreROSPackage;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc -->

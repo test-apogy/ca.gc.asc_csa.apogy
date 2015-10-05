@@ -10,14 +10,14 @@ import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 import ca.gc.asc_csa.eclipse.converters.graphs.ConverterEdge;
 import ca.gc.asc_csa.eclipse.converters.graphs.ConverterGraphUtilities;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * The activator class controls the plug-in life cycle

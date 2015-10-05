@@ -13,10 +13,10 @@ import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.Activator;
 import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshSlopeImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularVolumeRegion;

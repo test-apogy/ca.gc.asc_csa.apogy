@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.topology.ui.viewer.Activator;
 import ca.gc.asc_csa.topology.ui.viewer.ITopologyViewer;
 import ca.gc.asc_csa.topology.ui.viewer.TopologyViewerPackage;

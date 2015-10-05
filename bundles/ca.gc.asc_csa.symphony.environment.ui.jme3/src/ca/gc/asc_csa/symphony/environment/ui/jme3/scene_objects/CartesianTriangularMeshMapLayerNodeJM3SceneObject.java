@@ -16,11 +16,11 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer;
 import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayerNode;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;

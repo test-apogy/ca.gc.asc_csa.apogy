@@ -3,14 +3,14 @@ package ca.gc.asc_csa.eclipse.ros.utilities;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.ros.RosRun;
 import org.ros.namespace.GraphName;
 import org.ros.node.AbstractNodeMain;
 import org.ros.node.ConnectedNode;
 
 import ca.gc.asc_csa.eclipse.ros.Activator;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 public class RosNodeMain extends AbstractNodeMain
 {

@@ -5,6 +5,8 @@ package ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.EMFEcoreExampleSatelliteFactory;
@@ -17,8 +19,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteConstellation
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.TypeApiAdapterImpl;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitFacade;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation;

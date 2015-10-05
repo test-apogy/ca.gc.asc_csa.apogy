@@ -12,10 +12,10 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
 import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
 import ca.gc.asc_csa.symphony.core.SymphonyCoreFacade;

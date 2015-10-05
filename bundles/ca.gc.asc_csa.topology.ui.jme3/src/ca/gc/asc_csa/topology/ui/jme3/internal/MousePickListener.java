@@ -8,9 +8,9 @@ import javax.vecmath.Point3d;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.topology.ui.jme3.Activator;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
 import ca.gc.space.topology.Node;

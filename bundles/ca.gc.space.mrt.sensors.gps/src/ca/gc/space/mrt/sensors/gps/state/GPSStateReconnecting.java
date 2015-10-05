@@ -2,8 +2,9 @@ package ca.gc.space.mrt.sensors.gps.state;
 
 import java.io.IOException;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
+
 import ca.gc.space.java.utils.Timer;
 import ca.gc.space.mrt.sensors.gps.Activator;
 import ca.gc.space.mrt.sensors.gps.GPS;

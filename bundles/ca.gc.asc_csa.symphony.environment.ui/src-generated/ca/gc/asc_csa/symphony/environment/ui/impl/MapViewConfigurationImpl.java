@@ -23,14 +23,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
 import ca.gc.asc_csa.eclipse.images.core.ImageAlignment;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.EnvironmentFacade;
 import ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;

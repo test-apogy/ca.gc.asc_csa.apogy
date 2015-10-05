@@ -15,14 +15,14 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.camera.Activator;
 import org.eclipse.symphony.examples.camera.CameraSimulated;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
 
 import ca.gc.asc_csa.eclipse.images.core.EImage;
 import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.space.mrt.sensors.fov.FOVFacade;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;

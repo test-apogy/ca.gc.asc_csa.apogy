@@ -13,14 +13,14 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.EMFEcoreExampleMobilePlatformFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatformSimulated;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.Position;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc -->

@@ -9,13 +9,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.camera.Activator;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
 import org.eclipse.symphony.examples.camera.PTUCamera;
 import org.eclipse.symphony.examples.camera.PTUCameraStub;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.space.mrt.actuators.AbstractActuator;
 import ca.gc.space.mrt.actuators.ActuatorStatus;
 import ca.gc.space.mrt.actuators.MRTActuatorsPackage;

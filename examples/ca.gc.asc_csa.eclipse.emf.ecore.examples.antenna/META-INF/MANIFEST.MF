@@ -17,7 +17,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov;bundle-version="0.1.0";visibility:=reexport,
- ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.eclipse.symphony.examples.antenna,
  org.eclipse.symphony.examples.antenna.impl,

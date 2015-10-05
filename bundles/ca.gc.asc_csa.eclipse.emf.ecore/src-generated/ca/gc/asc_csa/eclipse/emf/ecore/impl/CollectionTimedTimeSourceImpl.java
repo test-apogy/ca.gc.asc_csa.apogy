@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource;
@@ -28,8 +30,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeDirection;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc -->

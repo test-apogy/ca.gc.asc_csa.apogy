@@ -6,13 +6,13 @@ package ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.impl;
 import javax.vecmath.GVector;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.MoveSpeedLevel;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArmSimulated;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

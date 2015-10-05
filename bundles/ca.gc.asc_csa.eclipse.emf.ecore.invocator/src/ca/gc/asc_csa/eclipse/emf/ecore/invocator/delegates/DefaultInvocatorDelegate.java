@@ -5,6 +5,8 @@ import java.util.Iterator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
@@ -21,8 +23,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeMember;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementation;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 public class DefaultInvocatorDelegate implements InvocatorDelegate {
 

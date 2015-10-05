@@ -6,12 +6,12 @@ package org.eclipse.symphony.examples.antenna.impl;
 import javax.vecmath.GVector;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.antenna.Activator;
 import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
 import org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated;
 
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
 import ca.gc.space.mrt.sensors.fov.FOVFacade;
 

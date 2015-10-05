@@ -30,7 +30,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.math.core;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
  ca.gc.asc_csa.symphony.environment;visibility:=reexport,
- ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.Activator

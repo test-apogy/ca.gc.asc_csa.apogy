@@ -16,6 +16,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xcore.lib,
  ca.gc.asc_csa.eclipse.emf.ecore;bundle-version="0.1.0";visibility:=reexport,
  javax.vecmath,
- ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.Activator

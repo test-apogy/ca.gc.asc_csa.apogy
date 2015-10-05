@@ -17,6 +17,8 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.ListFeatureNode;
@@ -28,8 +30,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeMemberImplementation;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementation;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.core.AssemblyLink;
 import ca.gc.asc_csa.symphony.core.PoseProvider;
 import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;

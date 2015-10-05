@@ -1,8 +1,8 @@
 @GenModel(prefix="UtilsLog", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="UtilsLog")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.utils.log/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.utils.log.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.log/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.log.edit/src-generated")
 
-package ca.gc.asc_csa.eclipse.utils.log
+package org.eclipse.symphony.common.log
 
 type Throwable wraps java.lang.Throwable 
 type Bundle wraps org.osgi.framework.Bundle

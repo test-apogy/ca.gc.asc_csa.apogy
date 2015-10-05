@@ -8,11 +8,11 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 public class InvocatorDelegateRegistry {
 	public static final String INVOCATOR_DELEGATE_POINT_ID = "ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorDelegate";

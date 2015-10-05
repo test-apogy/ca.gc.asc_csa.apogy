@@ -8,6 +8,8 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.AbstractInputConditioning;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.Activator;
@@ -15,8 +17,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.ControllerFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.ControllerValueSource;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.EMFEcoreControllersFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.EMFEcoreControllersPackage;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.jinput.EComponent;
 import ca.gc.asc_csa.jinput.EComponentQualifier;
 import ca.gc.asc_csa.jinput.JInputFactory;

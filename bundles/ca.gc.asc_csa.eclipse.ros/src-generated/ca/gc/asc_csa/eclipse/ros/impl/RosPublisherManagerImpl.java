@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 import org.ros.internal.message.Message;
 
 import ca.gc.asc_csa.eclipse.ros.Activator;
@@ -20,8 +22,6 @@ import ca.gc.asc_csa.eclipse.ros.RosNode;
 import ca.gc.asc_csa.eclipse.ros.RosPackage;
 import ca.gc.asc_csa.eclipse.ros.RosPublisher;
 import ca.gc.asc_csa.eclipse.ros.RosPublisherManager;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc -->

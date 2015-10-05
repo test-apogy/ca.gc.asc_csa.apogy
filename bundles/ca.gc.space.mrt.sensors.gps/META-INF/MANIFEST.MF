@@ -22,7 +22,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.gavaghan.geodesy.core,
  ca.gc.space.mrt.common;visibility:=reexport,
  ca.gc.space.eclipse.emf,
- ca.gc.asc_csa.eclipse.utils.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.space.mrt.sensors.gps.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -15,6 +15,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.log.EventSeverity;
+import org.eclipse.symphony.common.log.Logger;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
@@ -28,8 +30,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
-import ca.gc.asc_csa.eclipse.utils.log.Logger;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
