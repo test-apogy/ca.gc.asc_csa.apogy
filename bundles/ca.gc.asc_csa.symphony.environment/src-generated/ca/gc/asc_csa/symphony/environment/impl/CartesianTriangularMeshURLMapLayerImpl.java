@@ -4,12 +4,10 @@
 package ca.gc.asc_csa.symphony.environment.impl;
 
 import java.net.URL;
-
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import ca.gc.asc_csa.eclipse.utils.log.EventSeverity;
 import ca.gc.asc_csa.eclipse.utils.log.Logger;
 import ca.gc.asc_csa.symphony.environment.Activator;

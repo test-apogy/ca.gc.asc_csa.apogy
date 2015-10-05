@@ -26,17 +26,17 @@
             uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
             class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="ca.gc.space.mrt.sensors.imaging"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$MRTSensorsImagingChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.topology.bindings"
             class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.symphony.core"
             class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.space.mrt.sensors.imaging"
+            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$MRTSensorsImagingChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.symphony.environment"
             class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>

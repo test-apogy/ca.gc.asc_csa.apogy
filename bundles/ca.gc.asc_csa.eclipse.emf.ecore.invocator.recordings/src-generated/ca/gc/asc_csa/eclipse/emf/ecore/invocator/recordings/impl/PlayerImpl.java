@@ -10,7 +10,6 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -19,8 +18,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.osgi.framework.log.FrameworkLogEntry;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractPlayerImpl;

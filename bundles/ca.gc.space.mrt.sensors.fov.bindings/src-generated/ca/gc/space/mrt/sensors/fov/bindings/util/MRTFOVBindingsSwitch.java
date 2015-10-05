@@ -6,7 +6,6 @@ package ca.gc.space.mrt.sensors.fov.bindings.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
 import ca.gc.space.mrt.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
 import ca.gc.space.mrt.sensors.fov.bindings.ConicalFieldOfViewBinding;

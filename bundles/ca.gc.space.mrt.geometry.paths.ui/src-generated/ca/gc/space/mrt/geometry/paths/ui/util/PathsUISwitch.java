@@ -6,7 +6,6 @@ package ca.gc.space.mrt.geometry.paths.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-
 import ca.gc.space.mrt.geometry.paths.ui.PathsUIPackage;
 import ca.gc.space.mrt.geometry.paths.ui.WayPointPathPresentation;
 import ca.gc.space.mrt.geometry.paths.ui.WayPointPresentation;

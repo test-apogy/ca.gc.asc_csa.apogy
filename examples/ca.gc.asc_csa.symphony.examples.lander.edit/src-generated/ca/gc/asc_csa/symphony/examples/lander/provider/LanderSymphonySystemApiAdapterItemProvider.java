@@ -4,7 +4,9 @@
 package ca.gc.asc_csa.symphony.examples.lander.provider;
 
 
+import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
+import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -97,6 +99,11 @@ public class LanderSymphonySystemApiAdapterItemProvider
   protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
   {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
+				 SymphonyToolsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 	}
 
   /**

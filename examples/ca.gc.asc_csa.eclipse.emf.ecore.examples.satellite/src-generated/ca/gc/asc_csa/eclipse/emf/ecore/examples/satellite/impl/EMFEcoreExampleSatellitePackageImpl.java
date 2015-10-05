@@ -218,8 +218,8 @@ public class EMFEcoreExampleSatellitePackageImpl extends EPackageImpl implements
 		isInited = true;
 
 		// Initialize simple dependencies
-		MRTSensorsImagingPackage.eINSTANCE.eClass();
 		SymphonyEarthOrbitEnvironmentPackage.eINSTANCE.eClass();
+		MRTSensorsImagingPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleSatellitePackage.createPackageContents();

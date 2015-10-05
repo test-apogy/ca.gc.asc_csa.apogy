@@ -26,6 +26,8 @@ import ca.gc.asc_csa.eclipse.utils.log.Logger;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Mobile Platform Simulated</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -6,7 +6,6 @@ package ca.gc.space.mrt.geometry.data3d.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-
 import ca.gc.space.mrt.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
 import ca.gc.space.mrt.geometry.data3d.ui.Data3DUIPackage;
 import ca.gc.space.mrt.geometry.data3d.ui.TriangularMeshPresentation;

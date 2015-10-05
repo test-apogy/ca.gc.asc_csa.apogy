@@ -6,9 +6,19 @@ package ca.gc.asc_csa.symphony.examples.lander.provider;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.lander.provider.EMFEcoreExampleLanderEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
+import ca.gc.asc_csa.eclipse.images.core.provider.Ca_gc_asc_csa_eclipse_imagesEditPlugin;
 import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
+import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
+import ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin;
+import ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
+import ca.gc.asc_csa.topology.dynamics.provider.Topology_dynamicsEditPlugin;
 import ca.gc.space.math.provider.MathEditPlugin;
+import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
+import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
+import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
+import ca.gc.space.mrt.geometry.paths.provider.PathEditPlugin;
+import ca.gc.space.mrt.mobility.pathplanners.provider.PathplannersEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -47,13 +57,23 @@ public final class SymphonyExampleLanderEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
+		     EMFEcoreExampleLanderEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
+		     Ca_gc_asc_csa_eclipse_imagesEditPlugin.INSTANCE,
+		     SymphonyToolsVehicleEditPlugin.INSTANCE,
+		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     PathEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     Topology_dynamicsEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreExampleLanderEditPlugin.INSTANCE,
 		   });
 	}
 

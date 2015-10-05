@@ -29,7 +29,6 @@ import ca.gc.space.mrt.actuators.PanTiltUnit;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.impl.PTUCameraSimulatedImpl#isMoving <em>Moving</em>}</li>
  *   <li>{@link ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.impl.PTUCameraSimulatedImpl#getActuatorStatus <em>Actuator Status</em>}</li>
@@ -38,6 +37,7 @@ import ca.gc.space.mrt.actuators.PanTiltUnit;
  *   <li>{@link ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.impl.PTUCameraSimulatedImpl#getCommandedPanAngle <em>Commanded Pan Angle</em>}</li>
  *   <li>{@link ca.gc.asc_csa.eclipse.emf.ecore.examples.camera.impl.PTUCameraSimulatedImpl#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

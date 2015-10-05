@@ -44,9 +44,9 @@ public final class MRTSensorsImagingUIEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
+		     TopologyUIEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     TopologyUIEditPlugin.INSTANCE,
 		   });
 	}
 

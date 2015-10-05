@@ -5,6 +5,7 @@ package ca.gc.asc_csa.symphony.tools.camera.provider;
 
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.VariableFeatureReferenceItemProvider;
+import ca.gc.asc_csa.symphony.tools.camera.ElevationFeatureReference;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -64,7 +65,10 @@ public class ElevationFeatureReferenceItemProvider
 	@Override
 	public String getText(Object object) 
 	{
-		return getString("_UI_ElevationFeatureReference_type");
+		String label = ((ElevationFeatureReference)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ElevationFeatureReference_type") :
+			getString("_UI_ElevationFeatureReference_type") + " " + label;
 	}
 	
 

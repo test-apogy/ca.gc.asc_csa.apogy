@@ -42,8 +42,8 @@ public final class FovUIEditPlugin extends EMFPlugin {
 	public FovUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		   });
 	}

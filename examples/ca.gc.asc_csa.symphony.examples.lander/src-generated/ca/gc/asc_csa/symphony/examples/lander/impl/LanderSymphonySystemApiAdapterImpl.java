@@ -32,6 +32,8 @@ import ca.gc.space.math.Matrix4x4;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lander Symphony System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

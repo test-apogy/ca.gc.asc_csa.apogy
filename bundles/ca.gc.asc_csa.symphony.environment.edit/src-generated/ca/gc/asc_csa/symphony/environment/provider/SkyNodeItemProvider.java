@@ -244,26 +244,6 @@ public class SkyNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
@@ -325,6 +305,26 @@ public class SkyNodeItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 TopologyFactory.eINSTANCE.createCADNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 	}
 
 }

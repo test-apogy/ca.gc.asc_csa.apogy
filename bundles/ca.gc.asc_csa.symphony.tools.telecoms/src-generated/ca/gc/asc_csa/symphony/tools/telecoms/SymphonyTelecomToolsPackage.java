@@ -1229,15 +1229,6 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_RESOLUTION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_RESOLUTION;
 
 	/**
-	 * The operation id for the '<em>Get Image Map Layer Region</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION;
-
-	/**
 	 * The operation id for the '<em>Update Image</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1245,6 +1236,15 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @ordered
 	 */
 	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR;
+
+	/**
+	 * The operation id for the '<em>Get Image Map Layer Region</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION;
 
 	/**
 	 * The number of operations of the '<em>Antenna Radiation Pattern Image Map Layer</em>' class.

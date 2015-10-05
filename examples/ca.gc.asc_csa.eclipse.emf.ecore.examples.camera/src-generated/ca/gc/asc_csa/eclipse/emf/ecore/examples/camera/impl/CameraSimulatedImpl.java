@@ -33,6 +33,8 @@ import ca.gc.space.mrt.sensors.sensors.SensorStatus;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Camera Simulated</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

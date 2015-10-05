@@ -6,7 +6,6 @@ package ca.gc.space.mrt.geometry.data3d.asc.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-
 import ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO;
 import ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData;
 import ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D;

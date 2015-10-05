@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIFactory;
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIPackage;
 import ca.gc.space.mrt.sensors.range.ui.RasterScanDataPresentation;
