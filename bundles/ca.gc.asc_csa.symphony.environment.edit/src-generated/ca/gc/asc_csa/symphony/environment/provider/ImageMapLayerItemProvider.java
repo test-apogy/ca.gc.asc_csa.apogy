@@ -6,6 +6,7 @@ package ca.gc.asc_csa.symphony.environment.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -13,8 +14,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.images.ImagesCoreFactory;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
 import ca.gc.asc_csa.symphony.environment.ImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 

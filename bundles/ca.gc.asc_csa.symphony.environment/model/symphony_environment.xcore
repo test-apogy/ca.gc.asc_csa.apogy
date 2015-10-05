@@ -9,7 +9,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Exception
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage
+import org.eclipse.symphony.common.images.AbstractEImage
 import ca.gc.asc_csa.symphony.core.AbstractOrbitModel
 import ca.gc.asc_csa.symphony.core.AbstractWorksite
 import ca.gc.asc_csa.symphony.core.ConnectionPoint

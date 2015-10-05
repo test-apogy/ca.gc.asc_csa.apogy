@@ -3766,11 +3766,11 @@ public interface SymphonyCameraToolsPackage extends EPackage
   EAttribute getImageFilter_Enabled();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.asc_csa.eclipse.images.core.AbstractEImage) <em>Filter</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage) <em>Filter</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Filter</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.asc_csa.eclipse.images.core.AbstractEImage)
+	 * @see ca.gc.asc_csa.symphony.tools.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage)
 	 * @generated
 	 */
   EOperation getImageFilter__Filter__AbstractCamera_AbstractEImage();
@@ -4027,11 +4027,11 @@ public interface SymphonyCameraToolsPackage extends EPackage
   EClass getDrawnCameraOverlay();
 
   /**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.asc_csa.eclipse.images.core.AbstractEImage, ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment, int, int) <em>Apply Overlay</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment, int, int) <em>Apply Overlay</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Overlay</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.asc_csa.eclipse.images.core.AbstractEImage, ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment, int, int)
+	 * @see ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment, int, int)
 	 * @generated
 	 */
   EOperation getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int();
@@ -4553,21 +4553,21 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	EOperation getCameraTool__Dispose();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.CameraTool#mouseMoved(ca.gc.asc_csa.eclipse.images.core.AbstractEImage, int, int, int) <em>Mouse Moved</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.CameraTool#mouseMoved(org.eclipse.symphony.common.images.AbstractEImage, int, int, int) <em>Mouse Moved</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Mouse Moved</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.camera.CameraTool#mouseMoved(ca.gc.asc_csa.eclipse.images.core.AbstractEImage, int, int, int)
+	 * @see ca.gc.asc_csa.symphony.tools.camera.CameraTool#mouseMoved(org.eclipse.symphony.common.images.AbstractEImage, int, int, int)
 	 * @generated
 	 */
 	EOperation getCameraTool__MouseMoved__AbstractEImage_int_int_int();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.CameraTool#positionSelected(ca.gc.asc_csa.eclipse.images.core.AbstractEImage, int, int, int) <em>Position Selected</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.tools.camera.CameraTool#positionSelected(org.eclipse.symphony.common.images.AbstractEImage, int, int, int) <em>Position Selected</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Position Selected</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.tools.camera.CameraTool#positionSelected(ca.gc.asc_csa.eclipse.images.core.AbstractEImage, int, int, int)
+	 * @see ca.gc.asc_csa.symphony.tools.camera.CameraTool#positionSelected(org.eclipse.symphony.common.images.AbstractEImage, int, int, int)
 	 * @generated
 	 */
 	EOperation getCameraTool__PositionSelected__AbstractEImage_int_int_int();

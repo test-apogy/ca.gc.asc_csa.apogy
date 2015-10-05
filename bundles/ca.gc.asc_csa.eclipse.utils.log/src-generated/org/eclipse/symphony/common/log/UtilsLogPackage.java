@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.log.UtilsLogFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='UtilsLog' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='UtilsLog' modelDirectory='/org.eclipse.symphony.common.log/src-generated' editDirectory='/org.eclipse.symphony.common.log.edit/src-generated' basePackage='ca.gc.asc_csa.eclipse.utils'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='UtilsLog' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='UtilsLog' modelDirectory='/org.eclipse.symphony.common.log/src-generated' editDirectory='/org.eclipse.symphony.common.log.edit/src-generated' basePackage='org.eclipse.symphony.common'"
  * @generated
  */
 public interface UtilsLogPackage extends EPackage {

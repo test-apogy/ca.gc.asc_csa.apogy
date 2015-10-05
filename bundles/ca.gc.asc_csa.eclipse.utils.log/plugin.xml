@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated utils_log -->
       <package
-            uri="ca.gc.asc_csa.eclipse.utils.log"
+            uri="org.eclipse.symphony.common.log"
             class="org.eclipse.symphony.common.log.UtilsLogPackage"
             genModel="model/utils_log.xcore"/>
    </extension>

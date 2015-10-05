@@ -12,8 +12,8 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.space.math.MathFacade;
 import ca.gc.space.math.Tuple3d;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;

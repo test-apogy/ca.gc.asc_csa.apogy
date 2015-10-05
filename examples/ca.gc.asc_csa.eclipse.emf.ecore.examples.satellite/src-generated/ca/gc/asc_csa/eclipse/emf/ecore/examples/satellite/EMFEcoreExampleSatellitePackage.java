@@ -5,14 +5,15 @@ package ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCorePackage;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.common.images.ImagesCorePackage;
 
 /**
  * <!-- begin-user-doc -->

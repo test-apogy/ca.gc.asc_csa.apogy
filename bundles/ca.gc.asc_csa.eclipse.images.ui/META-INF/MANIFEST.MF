@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.images.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.images.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.eclipse.images.ui.Activator
+Bundle-Activator: org.eclipse.symphony.common.images.ui.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
@@ -16,7 +16,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.databinding.property,
  org.eclipse.jface.databinding,
  com.ibm.icu,
- ca.gc.asc_csa.eclipse.images.core,
+ org.eclipse.symphony.common.images,
  org.eclipse.emf.databinding,
  org.eclipse.emf.common.ui;bundle-version="2.6.0",
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.100",
@@ -25,11 +25,11 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.expressions;bundle-version="3.4.600"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: ca.gc.asc_csa.eclipse.images.ui,
- ca.gc.asc_csa.eclipse.images.ui.composites,
- ca.gc.asc_csa.eclipse.images.ui.handlers,
- ca.gc.asc_csa.eclipse.images.ui.properties.sections,
- ca.gc.asc_csa.eclipse.images.ui.views,
+Export-Package: org.eclipse.symphony.common.images.ui,
+ org.eclipse.symphony.common.images.ui.composites,
+ org.eclipse.symphony.common.images.ui.handlers,
+ org.eclipse.symphony.common.images.ui.properties.sections,
+ org.eclipse.symphony.common.images.ui.views,
  org.eclipse.wb.swt
 Import-Package: org.eclipse.emf.edit.provider,
  org.eclipse.emf.edit.ui.provider,

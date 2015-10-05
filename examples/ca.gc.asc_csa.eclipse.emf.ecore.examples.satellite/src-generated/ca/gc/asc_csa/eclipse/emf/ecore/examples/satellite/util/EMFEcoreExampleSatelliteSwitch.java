@@ -7,16 +7,17 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.*;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
 import ca.gc.space.mrt.sensors.sensors.Sensor;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->

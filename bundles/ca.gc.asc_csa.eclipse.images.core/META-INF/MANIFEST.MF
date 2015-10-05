@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.images.core;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.images;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.eclipse.images.core,
- ca.gc.asc_csa.eclipse.images.core.converters,
- ca.gc.asc_csa.eclipse.images.core.impl,
- ca.gc.asc_csa.eclipse.images.core.util
+Export-Package: org.eclipse.symphony.common.images,
+ org.eclipse.symphony.common.images.converters,
+ org.eclipse.symphony.common.images.impl,
+ org.eclipse.symphony.common.images.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ui;bundle-version="3.6.2",
@@ -19,4 +19,4 @@ Require-Bundle: org.eclipse.core.runtime,
  com.jhlabs.image;bundle-version="1.0.0",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.eclipse.images.core.Activator
+Bundle-Activator: org.eclipse.symphony.common.images.Activator

@@ -32,6 +32,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaFactory;
+import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.symphony.util.SymphonyExampleAntennaAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -42,7 +45,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SymphonyExampleAntennaItemProviderAdapterFactory extends org.eclipse.symphony.examples.antenna.symphony.util.SymphonyExampleAntennaAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
+public class SymphonyExampleAntennaItemProviderAdapterFactory extends SymphonyExampleAntennaAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
   /**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
@@ -66,7 +69,7 @@ public class SymphonyExampleAntennaItemProviderAdapterFactory extends org.eclips
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(SymphonyExampleAntennaEditPlugin.INSTANCE, org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(SymphonyExampleAntennaEditPlugin.INSTANCE, SymphonyExampleAntennaPackage.eNS_URI);
 
 		/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -328,12 +331,12 @@ public class SymphonyExampleAntennaItemProviderAdapterFactory extends org.eclips
 				newChildDescriptors.add
 					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaFactory.eINSTANCE.createPTUDishAntennaSymphonySystemApiAdapter()));
+						 SymphonyExampleAntennaFactory.eINSTANCE.createPTUDishAntennaSymphonySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaFactory.eINSTANCE.createPTUDishAntennaData()));
+						 SymphonyExampleAntennaFactory.eINSTANCE.createPTUDishAntennaData()));
 
 				return null;
 			}
@@ -420,7 +423,7 @@ public class SymphonyExampleAntennaItemProviderAdapterFactory extends org.eclips
 				newChildDescriptors.add
 					(createChildParameter
 						(EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
-						 org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaFactory.eINSTANCE.createPTUDishAntennaData()));
+						 SymphonyExampleAntennaFactory.eINSTANCE.createPTUDishAntennaData()));
 
 				return null;
 			}

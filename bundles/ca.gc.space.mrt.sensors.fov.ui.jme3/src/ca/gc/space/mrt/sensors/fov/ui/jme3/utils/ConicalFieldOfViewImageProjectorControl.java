@@ -5,9 +5,9 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
 import ca.gc.space.mrt.sensors.fov.ui.jme3.scene_objects.ProjectorData;

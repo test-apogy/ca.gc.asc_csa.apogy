@@ -2,10 +2,11 @@ package ca.gc.space.mrt.sensors.imaging.ui.jme3.utils;
 
 import java.awt.image.BufferedImage;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
+import org.eclipse.symphony.common.images.ImagesCoreFactory;
+
 import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
 import ca.gc.space.mrt.sensors.fov.ui.jme3.scene_objects.ProjectorData;
 import ca.gc.space.mrt.sensors.fov.ui.jme3.utils.ImageProjectorControl;

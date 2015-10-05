@@ -3,7 +3,7 @@
  */
 package ca.gc.space.mrt.sensors.imaging;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->

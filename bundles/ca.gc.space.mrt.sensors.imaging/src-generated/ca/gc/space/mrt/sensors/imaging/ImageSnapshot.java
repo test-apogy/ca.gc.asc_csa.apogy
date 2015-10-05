@@ -3,8 +3,9 @@
  */
 package ca.gc.space.mrt.sensors.imaging;
 
+import org.eclipse.symphony.common.images.AbstractEImage;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.topology.GroupNode;
 

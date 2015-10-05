@@ -9,7 +9,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage
+import org.eclipse.symphony.common.images.AbstractEImage
 import ca.gc.asc_csa.symphony.core.FeatureOfInterestList
 import ca.gc.asc_csa.symphony.core.PoseProvider
 import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter

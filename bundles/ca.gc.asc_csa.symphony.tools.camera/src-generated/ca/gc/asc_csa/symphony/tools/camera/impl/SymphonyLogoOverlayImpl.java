@@ -6,11 +6,11 @@ package ca.gc.asc_csa.symphony.tools.camera.impl;
 import java.awt.Graphics2D;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
+import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.URLEImage;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCoreFactory;
-import ca.gc.asc_csa.eclipse.images.core.URLEImage;
 import ca.gc.asc_csa.symphony.tools.camera.OverlayAlignment;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyLogoOverlay;

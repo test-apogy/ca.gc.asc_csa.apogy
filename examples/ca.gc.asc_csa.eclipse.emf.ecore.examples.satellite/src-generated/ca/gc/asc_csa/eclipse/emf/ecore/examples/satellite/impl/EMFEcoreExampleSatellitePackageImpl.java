@@ -22,13 +22,14 @@ import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteSimulated;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteStub;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteUtils;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.images.core.ImagesCorePackage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
+
 import java.util.List;
 import java.util.SortedSet;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.images.ImagesCorePackage;
 
 /**
  * <!-- begin-user-doc -->

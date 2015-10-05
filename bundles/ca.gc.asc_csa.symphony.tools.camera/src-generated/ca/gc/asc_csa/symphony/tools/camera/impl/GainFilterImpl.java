@@ -6,9 +6,9 @@ package ca.gc.asc_csa.symphony.tools.camera.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
 import ca.gc.asc_csa.symphony.tools.camera.GainFilter;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;

@@ -26,11 +26,11 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated mrt_path_planners_ui -->
       <extender
-            uri="ca.gc.space.topology.ui"
-            class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-      <extender
             uri="http:///ca/gc/space/topology.ecore"
             class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="ca.gc.space.topology.ui"
+            class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
    </extension>
 
 </plugin>

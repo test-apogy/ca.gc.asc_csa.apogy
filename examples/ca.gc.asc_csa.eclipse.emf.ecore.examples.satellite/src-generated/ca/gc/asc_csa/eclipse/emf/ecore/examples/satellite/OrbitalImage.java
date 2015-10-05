@@ -3,7 +3,7 @@
  */
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
+import org.eclipse.symphony.common.images.AbstractEImage;
 
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
 

@@ -6,7 +6,7 @@
       <view
             allowMultiple="true"
             category="ca.gc.asc_csa.eclipse.ui.category"
-            class="ca.gc.asc_csa.eclipse.images.ui.views.ImageView"
+            class="org.eclipse.symphony.common.images.ui.views.ImageView"
             icon="icons/image_view.png"
             id="ca.gc.asc_csa.eclipse.images.ui.ImageView"
             name="Image View"
@@ -22,8 +22,8 @@
       <propertySections
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection"
-               filter="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection"
+               class="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection"
+               filter="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection"
                id="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection"
                tab="ca.gc.asc_csa.eclipse.images.ui.properties.tabs.Image">
          </propertySection>
@@ -104,7 +104,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.eclipse.images.core.AbstractEImage">
+                           value="org.eclipse.symphony.common.images.AbstractEImage">
                        </instanceof>
                   </iterate>
                </with>
@@ -122,7 +122,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.eclipse.images.ui.ImageProvider">
+                           value="org.eclipse.symphony.common.images.ui.ImageProvider">
                        </instanceof>
                   </iterate>
                </with>
@@ -140,7 +140,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.eclipse.images.core.AbstractEImageProvider">
+                           value="org.eclipse.symphony.common.images.AbstractEImageProvider">
                        </instanceof>
                   </iterate>
                </with>
@@ -311,32 +311,32 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="ca.gc.asc_csa.eclipse.images.ui.handlers.ImageCanvasZoomInHandler"
+            class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasZoomInHandler"
             commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomIn">
       </handler>
       <handler
-            class="ca.gc.asc_csa.eclipse.images.ui.handlers.ImageCanvasZoomOutHandler"
+            class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasZoomOutHandler"
             commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomOut">
       </handler>      
       <handler
-            class="ca.gc.asc_csa.eclipse.images.ui.handlers.ImageCanvasZoomFitHandler"
+            class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasZoomFitHandler"
             commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomFit">
       </handler>      
       <handler
-            class="ca.gc.asc_csa.eclipse.images.ui.handlers.ImageCanvasRotate90degClockwiseHandler"
+            class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasRotate90degClockwiseHandler"
             commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degClockwise">
       </handler>
       <handler
-            class="ca.gc.asc_csa.eclipse.images.ui.handlers.ImageCanvasRotate90degCounterClockwiseHandler"
+            class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasRotate90degCounterClockwiseHandler"
             commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degCounterClockwise">
       </handler>      
       <handler
-            class="ca.gc.asc_csa.eclipse.images.ui.handlers.ImageCanvasShowOriginalHandler"
+            class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasShowOriginalHandler"
             commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasShowOriginal">
       </handler>
       
       <handler
-            class="ca.gc.asc_csa.eclipse.images.ui.handlers.ExportImageHandler"
+            class="org.eclipse.symphony.common.images.ui.handlers.ExportImageHandler"
             commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ExportImage">
       </handler>                                          
    </extension>   
@@ -344,7 +344,7 @@
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="ca.gc.asc_csa.eclipse.images.ui.expressions.ImagePropertyTester"
+            class="org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester"
             id="ca.gc.asc_csa.eclipse.images.ui.expressions.ImagePropertyTester"
             namespace="ca.gc.asc_csa.eclipse.images.ui.expressions.ImagePropertyTester"
             properties="canConvertToAbstractEImage"

@@ -6,9 +6,9 @@ import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
 
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
-import ca.gc.asc_csa.eclipse.images.core.EImagesUtilities;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
 import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView;

@@ -10,22 +10,22 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://ca/gc/asc_csa/eclipse/images/core/1.0"
-            class="ca.gc.asc_csa.eclipse.images.core.ImagesCorePackage"
+            class="org.eclipse.symphony.common.images.ImagesCorePackage"
             genModel="model/ca_gc_asc_csa_eclipse_images.genmodel"/>
    </extension>
    <extension
          point="ca.gc.asc_csa.eclipse.converters">
       <new_element
-            Class="ca.gc.asc_csa.eclipse.images.core.converters.IFileToImageData">
+            Class="org.eclipse.symphony.common.images.converters.IFileToImageData">
       </new_element>
       <new_element
-            Class="ca.gc.asc_csa.eclipse.images.core.converters.ObjectToImageDataConverter">
+            Class="org.eclipse.symphony.common.images.converters.ObjectToImageDataConverter">
       </new_element>
       <new_element
-            Class="ca.gc.asc_csa.eclipse.images.core.converters.EImageToFileConverter">
+            Class="org.eclipse.symphony.common.images.converters.EImageToFileConverter">
       </new_element>
       <new_element
-            Class="ca.gc.asc_csa.eclipse.images.core.converters.ObjectToBufferedImageConverter">
+            Class="org.eclipse.symphony.common.images.converters.ObjectToBufferedImageConverter">
       </new_element>
    </extension>
 

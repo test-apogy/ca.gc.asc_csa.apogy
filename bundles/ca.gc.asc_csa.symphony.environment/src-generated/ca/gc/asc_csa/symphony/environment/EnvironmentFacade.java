@@ -4,9 +4,11 @@
 package ca.gc.asc_csa.symphony.environment;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.images.AbstractEImage;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
-import ca.gc.asc_csa.eclipse.images.core.AbstractEImage;
 import ca.gc.asc_csa.symphony.core.ConnectionPoint;
 import ca.gc.asc_csa.symphony.core.SymphonySystem;
 import ca.gc.asc_csa.symphony.environment.impl.EnvironmentFacadeImpl;

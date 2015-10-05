@@ -14,6 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
 import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
@@ -142,7 +143,7 @@ extends SymphonyInitializationDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntennaData_trackingSun_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_trackingSun_feature", "_UI_PTUDishAntennaData_type"),
-				 org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__TRACKING_SUN,
+				 SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__TRACKING_SUN,
 				 true,
 				 false,
 				 false,
@@ -164,7 +165,7 @@ extends SymphonyInitializationDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntennaData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_initialized_feature", "_UI_PTUDishAntennaData_type"),
-				 org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__INITIALIZED,
+				 SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -185,7 +186,7 @@ extends SymphonyInitializationDataItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV);
+			childrenFeatures.add(SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -224,7 +225,7 @@ extends SymphonyInitializationDataItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData ptuDishAntennaData = (org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData)object;
+		PTUDishAntennaData ptuDishAntennaData = (PTUDishAntennaData)object;
 		return getString("_UI_PTUDishAntennaData_type") + " " + ptuDishAntennaData.getPanAngle();
 	}
 
@@ -240,14 +241,14 @@ extends SymphonyInitializationDataItemProvider
 	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData.class)) {
-			case org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
-			case org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
-			case org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
-			case org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
+		switch (notification.getFeatureID(PTUDishAntennaData.class)) {
+			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
+			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
+			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
+			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV:
+			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -268,7 +269,7 @@ extends SymphonyInitializationDataItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
+				(SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
 				 FovFactory.eINSTANCE.createConicalFieldOfView()));
 	}
 

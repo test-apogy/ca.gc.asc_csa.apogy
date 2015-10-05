@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.topology.ui.jme3,
  ca.gc.asc_csa.symphony.core.ui,
  ca.gc.asc_csa.symphony.core,
- ca.gc.asc_csa.eclipse.images.core,
+ org.eclipse.symphony.common.images,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
