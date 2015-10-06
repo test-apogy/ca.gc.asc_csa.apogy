@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated emf_ecore_examples_robotic_arm -->
       <factory
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.provider.EMFEcoreExampleRoboticArmItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.examples.robotic_arm"
+            class="org.eclipse.symphony.examples.robotic_arm.provider.EMFEcoreExampleRoboticArmItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

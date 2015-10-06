@@ -66,7 +66,7 @@ public interface MathFacade extends EObject {
 	 * @model unique="false" coeffsDataType="org.eclipse.symphony.common.math.EDoubleArray" coeffsUnique="false"
 	 * @generated
 	 */
-	Polynomial createPolynomial(double coeffs);
+	Polynomial createPolynomial(double[] coeffs);
 
 	/**
 	 * <!-- begin-user-doc -->

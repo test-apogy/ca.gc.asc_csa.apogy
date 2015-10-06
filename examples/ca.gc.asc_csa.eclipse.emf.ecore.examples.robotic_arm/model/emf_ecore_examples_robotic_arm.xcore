@@ -4,10 +4,10 @@
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.robotic_arm/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.robotic_arm.edit/src-generated")
 
-package ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm
+package org.eclipse.symphony.examples.robotic_arm
 
 /*
  * This enumeration is used to indicate the overall possible
@@ -196,7 +196,7 @@ class RoboticArmStub extends RoboticArm
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.impl.RoboticArmStubImpl}
+	 * see {@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmStubImpl}
 	 */
 }
 

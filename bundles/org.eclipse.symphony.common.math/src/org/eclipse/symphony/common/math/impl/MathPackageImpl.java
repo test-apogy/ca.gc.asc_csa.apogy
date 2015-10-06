@@ -871,7 +871,7 @@ public class MathPackageImpl extends EPackageImpl implements MathPackage {
 		addEException(op, this.getException());
 
 		// Initialize data types
-		initEDataType(eDoubleArrayEDataType, double.class, "EDoubleArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(eDoubleArrayEDataType, double[].class, "EDoubleArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(matrix3dEDataType, Matrix3d.class, "Matrix3d", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(matrix4dEDataType, Matrix4d.class, "Matrix4d", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(vecmathTuple3dEDataType, javax.vecmath.Tuple3d.class, "VecmathTuple3d", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

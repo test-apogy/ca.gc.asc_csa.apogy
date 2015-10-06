@@ -15,7 +15,7 @@
         <variableImplementationsList xmi:id="_P7kTuQrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_P7kTugrPEeW4-_ONWXXiAw" variable="_P7kTtgrPEeW4-_ONWXXiAw">
             <typeMemberImplementations xmi:id="_P7k6wArPEeW4-_ONWXXiAw">
-              <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArmSimulated"/>
+              <implementationClass href="org.eclipse.symphony.examples.robotic_arm#//RoboticArmSimulated"/>
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6wQrPEeW4-_ONWXXiAw">
@@ -38,7 +38,7 @@
         <variableImplementationsList xmi:id="_P7k6xQrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_P7k6xgrPEeW4-_ONWXXiAw" variable="_P7kTtgrPEeW4-_ONWXXiAw">
             <typeMemberImplementations xmi:id="_P7k6xwrPEeW4-_ONWXXiAw">
-              <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArmStub"/>
+              <implementationClass href="org.eclipse.symphony.examples.robotic_arm#//RoboticArmStub"/>
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6yArPEeW4-_ONWXXiAw">
@@ -163,7 +163,7 @@
         <typeMemberReferenceListElement xmi:id="_gixh8DqwEeWejcyRaZRBaQ">
           <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArm/moveTo"/>
+        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/moveTo"/>
         <argumentsList xmi:id="_iyapUDqwEeWejcyRaZRBaQ">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_iyapUTqwEeWejcyRaZRBaQ" value="0.0"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_iyapUjqwEeWejcyRaZRBaQ" value="0.0"/>
@@ -187,7 +187,7 @@
         <typeMemberReferenceListElement xmi:id="_y-OwoTqwEeWejcyRaZRBaQ">
           <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArm/stow"/>
+        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/stow"/>
       </operationCalls>
     </programs>
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_Htwo0DqzEeW90siL-RZo4A" name="Initialize">

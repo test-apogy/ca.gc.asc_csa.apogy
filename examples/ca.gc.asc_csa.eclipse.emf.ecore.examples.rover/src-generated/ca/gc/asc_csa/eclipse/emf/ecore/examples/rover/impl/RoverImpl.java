@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.examples.camera.PTUCamera;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
+import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.PowerSystem;

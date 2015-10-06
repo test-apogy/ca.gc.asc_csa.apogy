@@ -7,21 +7,21 @@
     </typesList>
     <variablesList xmi:id="_MjIYRQrPEeW4-_ONWXXiAw">
       <variables xmi:id="_MjIYRgrPEeW4-_ONWXXiAw" name="roboticArm">
-        <variableType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.robotic_arm/model/RoboticArmSymphonySystem.ss#_LQwxcArPEeW4-_ONWXXiAw"/>
+        <variableType href="platform:/plugin/org.eclipse.symphony.examples.robotic_arm.symphony/model/RoboticArmSymphonySystem.ss#_LQwxcArPEeW4-_ONWXXiAw"/>
       </variables>
     </variablesList>
     <contextsList xmi:id="_MjI_UArPEeW4-_ONWXXiAw">
       <contexts xsi:type="invocator:BasicContext" xmi:id="_MjI_UQrPEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_MjK0jgrPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_MjI_UgrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_MjI_UwrPEeW4-_ONWXXiAw" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArmSimulated"/>
+            <implementationClass href="org.eclipse.symphony.examples.robotic_arm#//RoboticArmSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" xmi:id="_MjI_VArPEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_MjLbkArPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_MjI_VQrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_MjI_VgrPEeW4-_ONWXXiAw" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArmStub"/>
+            <implementationClass href="org.eclipse.symphony.examples.robotic_arm#//RoboticArmStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -46,19 +46,19 @@
   <programsList xmi:id="_MjK0gArPEeW4-_ONWXXiAw">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_MjK0gQrPEeW4-_ONWXXiAw">
       <operationCalls xmi:id="_MjK0ggrPEeW4-_ONWXXiAw" name="Init" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArm/init"/>
+        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/init"/>
       </operationCalls>
       <operationCalls xmi:id="_MjK0gwrPEeW4-_ONWXXiAw" name="Change Move Speed" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArm/cmdMoveSpeedLevel"/>
+        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/cmdMoveSpeedLevel"/>
         <argumentsList xmi:id="_MjK0hArPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EEnumArgument" xmi:id="_MjK0hQrPEeW4-_ONWXXiAw">
-            <eEnumLiteral href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//MoveSpeedLevel/FAST"/>
-            <eEnum href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//MoveSpeedLevel"/>
+            <eEnumLiteral href="org.eclipse.symphony.examples.robotic_arm#//MoveSpeedLevel/FAST"/>
+            <eEnum href="org.eclipse.symphony.examples.robotic_arm#//MoveSpeedLevel"/>
           </arguments>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_MjK0hgrPEeW4-_ONWXXiAw" name="Move To" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArm/moveTo"/>
+        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/moveTo"/>
         <argumentsList xmi:id="_MjK0hwrPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MjK0iArPEeW4-_ONWXXiAw" value="0.7853981633974483"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_MjK0iQrPEeW4-_ONWXXiAw" value="0.5235987755982988"/>
@@ -67,7 +67,7 @@
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_MjK0jArPEeW4-_ONWXXiAw" name="Stow" variable="_MjIYRgrPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm#//RoboticArm/stow"/>
+        <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/stow"/>
       </operationCalls>
     </programs>
   </programsList>

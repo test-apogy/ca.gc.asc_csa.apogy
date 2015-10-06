@@ -189,8 +189,8 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Double createEDoubleArrayFromString(EDataType eDataType, String initialValue) {
-		return (Double)super.createFromString(eDataType, initialValue);
+	public double[] createEDoubleArrayFromString(EDataType eDataType, String initialValue) {
+		return (double[])super.createFromString(initialValue);
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory {
 	 * @generated
 	 */
 	public String convertEDoubleArrayToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
+		return super.convertToString(instanceValue);
 	}
 
 	/**
