@@ -9,23 +9,23 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.category"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.ui.views.RoboticArmControlView"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.ui.views.RoboticArmControlView"
+            category="org.eclipse.symphony.examples.robotic_arm.category"
+            class="org.eclipse.symphony.examples.robotic_arm.ui.views.RoboticArmControlView"
+            id="org.eclipse.symphony.examples.robotic_arm.ui.views.RoboticArmControlView"
             name="Robotic Arm Control View"
             restorable="true">
       </view>
       
             
       <category
-            id="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.category"
+            id="org.eclipse.symphony.examples.robotic_arm.category"
             name="ASC/CSA Eclipse Examples - Robotic Arm">
       </category>
    </extension>
    <extension
          point="org.eclipse.symphony.common.converters">
       <new_element
-            Class="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.ui.converters.VariableToRoboticArmConverter">
+            Class="org.eclipse.symphony.examples.robotic_arm.ui.converters.VariableToRoboticArmConverter">
       </new_element>
    </extension>
 

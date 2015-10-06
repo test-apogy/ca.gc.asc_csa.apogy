@@ -947,11 +947,11 @@ public interface MathPackage extends EPackage {
 	EOperation getMathFacade__CreateTuple3d__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createPolynomial(double) <em>Create Polynomial</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createPolynomial(double[]) <em>Create Polynomial</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Polynomial</em>' operation.
-	 * @see org.eclipse.symphony.common.math.MathFacade#createPolynomial(double)
+	 * @see org.eclipse.symphony.common.math.MathFacade#createPolynomial(double[])
 	 * @generated
 	 */
 	EOperation getMathFacade__CreatePolynomial__double();
@@ -1267,7 +1267,7 @@ public interface MathPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>EDouble Array</em>'.
-	 * @model instanceClass="double"
+	 * @model instanceClass="double[]"
 	 * @generated
 	 */
 	EDataType getEDoubleArray();

@@ -47,7 +47,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double COEFFS_EDEFAULT = 0.0;
+	protected static final double[] COEFFS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCoeffs() <em>Coeffs</em>}' attribute.
@@ -56,7 +56,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	 * @generated
 	 * @ordered
 	 */
-	protected double coeffs = COEFFS_EDEFAULT;
+	protected double[] coeffs = COEFFS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRealRoots() <em>Real Roots</em>}' attribute.
@@ -65,7 +65,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double REAL_ROOTS_EDEFAULT = 0.0;
+	protected static final double[] REAL_ROOTS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getRealRoots() <em>Real Roots</em>}' attribute.
@@ -74,7 +74,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	 * @generated
 	 * @ordered
 	 */
-	protected double realRoots = REAL_ROOTS_EDEFAULT;
+	protected double[] realRoots = REAL_ROOTS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getImaginaryRoots() <em>Imaginary Roots</em>}' attribute.
@@ -84,7 +84,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double IMAGINARY_ROOTS_EDEFAULT = 0.0;
+	protected static final double[] IMAGINARY_ROOTS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getImaginaryRoots() <em>Imaginary Roots</em>}' attribute.
@@ -94,7 +94,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	 * @generated
 	 * @ordered
 	 */
-	protected double imaginaryRoots = IMAGINARY_ROOTS_EDEFAULT;
+	protected double[] imaginaryRoots = IMAGINARY_ROOTS_EDEFAULT;
 
 	private boolean isDirty;
 
@@ -132,20 +132,8 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getCoeffs() {
+	public double[] getCoeffs() {
 		return coeffs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCoeffs(double newCoeffs) {
-		double oldCoeffs = coeffs;
-		coeffs = newCoeffs;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.POLYNOMIAL__COEFFS, oldCoeffs, coeffs));
 	}
 
 	/**
@@ -217,7 +205,7 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MathPackage.POLYNOMIAL__COEFFS:
-				setCoeffs((Double)newValue);
+				setCoeffs((double[])newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -247,11 +235,11 @@ public class PolynomialImpl extends MinimalEObjectImpl.Container implements Poly
 			case MathPackage.POLYNOMIAL__DEGREE:
 				return getDegree() != DEGREE_EDEFAULT;
 			case MathPackage.POLYNOMIAL__COEFFS:
-				return coeffs != COEFFS_EDEFAULT;
+				return COEFFS_EDEFAULT == null ? coeffs != null : !COEFFS_EDEFAULT.equals(coeffs);
 			case MathPackage.POLYNOMIAL__REAL_ROOTS:
-				return realRoots != REAL_ROOTS_EDEFAULT;
+				return REAL_ROOTS_EDEFAULT == null ? realRoots != null : !REAL_ROOTS_EDEFAULT.equals(realRoots);
 			case MathPackage.POLYNOMIAL__IMAGINARY_ROOTS:
-				return imaginaryRoots != IMAGINARY_ROOTS_EDEFAULT;
+				return IMAGINARY_ROOTS_EDEFAULT == null ? imaginaryRoots != null : !IMAGINARY_ROOTS_EDEFAULT.equals(imaginaryRoots);
 		}
 		return super.eIsSet(featureID);
 	}

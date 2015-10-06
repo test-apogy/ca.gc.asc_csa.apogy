@@ -1,18 +1,18 @@
 @GenModel(prefix="SymphonyExampleRoboticArm", copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015", modelName="SymphonyExampleRoboticArm")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.examples.robotic_arm/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.examples.robotic_arm.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.robotic_arm.symphony/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.robotic_arm.symphony.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.examples.robotic_arm
+package org.eclipse.symphony.examples.robotic_arm.symphony
 
 import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
 import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
 
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.MoveSpeedLevel
+import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel
 
 /*
  * This class is the specialized Symphony API adapter, used for connecting
  * the existing robotic arm example, located at
- * {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm},
+ * {@link org.eclipse.symphony.examples.robotic_arm.RoboticArm},
  * to Symphony; one can override the well-known callback functions to make
  * Symphony perform a variety of useful functions, including initialization,
  * disposal and other features. 
@@ -22,7 +22,7 @@ class RoboticArmSymphonySystemApiAdapter extends SymphonySystemApiAdapter
 	/*
 	 * For specific implementation details,
 	 * please see
-	 * {@link ca.gc.asc_csa.symphony.examples.robotic_arm.impl.RoboticArmSymphonySystemApiAdapterImpl}
+	 * {@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmSymphonySystemApiAdapterImpl}
 	 */
 }
 
@@ -31,7 +31,7 @@ class RoboticArmSymphonySystemApiAdapter extends SymphonySystemApiAdapter
  * save and later restore the state of the component; this functionality is
  * implemented by the apply() (load) and collect() (save) methods of the robotic
  * arm's API adapter,
- * which is {@link ca.gc.asc_csa.symphony.examples.robotic_arm.RoboticArmSymphonySystemApiAdapter}.
+ * which is {@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter}.
  */
 class RoboticArmData extends SymphonyInitializationData
 {

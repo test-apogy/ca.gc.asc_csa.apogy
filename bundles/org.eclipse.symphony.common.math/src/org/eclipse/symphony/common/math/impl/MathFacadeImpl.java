@@ -150,17 +150,6 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Polynomial createPolynomial(double coeffs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -249,7 +238,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 			case MathPackage.MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE:
 				return createTuple3d((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 			case MathPackage.MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE:
-				return createPolynomial((Double)arguments.get(0));
+				return createPolynomial((double[])arguments.get(0));
 			case MathPackage.MATH_FACADE___CREATE_IDENTITY_MATRIX4X4:
 				return createIdentityMatrix4x4();
 			case MathPackage.MATH_FACADE___CREATE_IDENTITY_MATRIX3X3:

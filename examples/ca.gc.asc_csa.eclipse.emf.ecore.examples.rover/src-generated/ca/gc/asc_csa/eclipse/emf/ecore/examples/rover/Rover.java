@@ -5,9 +5,9 @@ package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover;
 
 import org.eclipse.symphony.examples.camera.PTUCamera;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
+import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm;
 
 /**
  * <!-- begin-user-doc -->

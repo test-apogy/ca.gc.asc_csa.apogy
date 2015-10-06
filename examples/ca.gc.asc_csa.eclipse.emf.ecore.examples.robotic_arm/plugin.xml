@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated emf_ecore_examples_robotic_arm -->
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage"
+            uri="org.eclipse.symphony.examples.robotic_arm"
+            class="org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage"
             genModel="model/emf_ecore_examples_robotic_arm.xcore"/>
    </extension>
 

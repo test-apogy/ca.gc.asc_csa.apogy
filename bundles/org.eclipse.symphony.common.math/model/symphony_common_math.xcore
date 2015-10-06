@@ -68,7 +68,7 @@ class MathIO {
 	op void writeTrMatrix(Matrix4d trMatrix , String fileName) throws Exception
 }
 
-type EDoubleArray wraps double
+type EDoubleArray wraps double[]
 
 type Matrix3d wraps javax.vecmath.Matrix3d
 
