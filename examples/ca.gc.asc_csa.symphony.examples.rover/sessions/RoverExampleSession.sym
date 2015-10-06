@@ -7,7 +7,7 @@
     </typesList>
     <variablesList xmi:id="_P7kTtQrPEeW4-_ONWXXiAw">
       <variables xmi:id="_P7kTtgrPEeW4-_ONWXXiAw" name="rover">
-        <variableType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoArPEeW4-_ONWXXiAw"/>
+        <variableType href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyMoArPEeW4-_ONWXXiAw"/>
       </variables>
     </variablesList>
     <contextsList xmi:id="_P7kTtwrPEeW4-_ONWXXiAw">
@@ -16,21 +16,21 @@
           <variableImplementations xmi:id="_P7kTugrPEeW4-_ONWXXiAw" variable="_P7kTtgrPEeW4-_ONWXXiAw">
             <typeMemberImplementations xmi:id="_P7k6wArPEeW4-_ONWXXiAw">
               <implementationClass href="org.eclipse.symphony.examples.robotic_arm#//RoboticArmSimulated"/>
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6wQrPEeW4-_ONWXXiAw">
               <implementationClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatformSimulated"/>
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6wgrPEeW4-_ONWXXiAw">
               <implementationClass href="org.eclipse.symphony.examples.camera#//PTUCameraSimulated"/>
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6wwrPEeW4-_ONWXXiAw">
               <implementationClass href="org.eclipse.symphony.examples.camera#//PTUCameraSimulated"/>
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//RoverSimulated"/>
+            <implementationClass href="org.eclipse.symphony.examples.rover#//RoverSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -39,21 +39,21 @@
           <variableImplementations xmi:id="_P7k6xgrPEeW4-_ONWXXiAw" variable="_P7kTtgrPEeW4-_ONWXXiAw">
             <typeMemberImplementations xmi:id="_P7k6xwrPEeW4-_ONWXXiAw">
               <implementationClass href="org.eclipse.symphony.examples.robotic_arm#//RoboticArmStub"/>
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6yArPEeW4-_ONWXXiAw">
               <implementationClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatformStub"/>
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6yQrPEeW4-_ONWXXiAw">
               <implementationClass href="org.eclipse.symphony.examples.camera#//CameraStub"/>
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6ygrPEeW4-_ONWXXiAw">
               <implementationClass href="org.eclipse.symphony.examples.camera#//CameraStub"/>
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//RoverStub"/>
+            <implementationClass href="org.eclipse.symphony.examples.rover#//RoverStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -129,19 +129,19 @@
   <programsList xmi:id="_P7mI5ArPEeW4-_ONWXXiAw">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_P7mI5QrPEeW4-_ONWXXiAw" name="Navigate">
       <operationCalls xmi:id="_P7mI6wrPEeW4-_ONWXXiAw" name="Change Linear Velocity" variable="_P7kTtgrPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/cmdLinearVelocity"/>
+        <eOperation href="org.eclipse.symphony.examples.rover#//Rover/cmdLinearVelocity"/>
         <argumentsList xmi:id="_P7mI7ArPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_P7mI7QrPEeW4-_ONWXXiAw" value="0.5"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_P7mI6ArPEeW4-_ONWXXiAw" name="Change Angular Velocity" variable="_P7kTtgrPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/cmdAngularVelocity"/>
+        <eOperation href="org.eclipse.symphony.examples.rover#//Rover/cmdAngularVelocity"/>
         <argumentsList xmi:id="_P7mI6QrPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_P7mI6grPEeW4-_ONWXXiAw" value="0.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_P7mI7grPEeW4-_ONWXXiAw" name="Change Velocities" variable="_P7kTtgrPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/cmdVelocities"/>
+        <eOperation href="org.eclipse.symphony.examples.rover#//Rover/cmdVelocities"/>
         <argumentsList xmi:id="_P7mI7wrPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_P7mI8ArPEeW4-_ONWXXiAw" value="0.5"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_P7mI8QrPEeW4-_ONWXXiAw" value="0.0"/>
@@ -151,7 +151,7 @@
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_btnw4DqwEeWejcyRaZRBaQ" name="Unstow Arm">
       <operationCalls xmi:id="_OC4X0DqzEeW90siL-RZo4A" name="Move to Pan - Tilt 0,0" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_P1Bq4DqzEeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.space.mrt.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_RrHp0DqzEeW90siL-RZo4A">
@@ -161,7 +161,7 @@
       </operationCalls>
       <operationCalls xmi:id="_d_DA8DqwEeWejcyRaZRBaQ" name="Move Arm" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_gixh8DqwEeWejcyRaZRBaQ">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/moveTo"/>
         <argumentsList xmi:id="_iyapUDqwEeWejcyRaZRBaQ">
@@ -175,7 +175,7 @@
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_xStqADqwEeWejcyRaZRBaQ" name="Stow Arm">
       <operationCalls xmi:id="_V9rEIDqzEeW90siL-RZo4A" name="Move to Pan - Tilt 0,0" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_V9rEITqzEeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.space.mrt.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_V9rEIjqzEeW90siL-RZo4A">
@@ -185,20 +185,20 @@
       </operationCalls>
       <operationCalls xmi:id="_y-OwoDqwEeWejcyRaZRBaQ" name="Stow Arm" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_y-OwoTqwEeWejcyRaZRBaQ">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="org.eclipse.symphony.examples.robotic_arm#//RoboticArm/stow"/>
       </operationCalls>
     </programs>
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_Htwo0DqzEeW90siL-RZo4A" name="Initialize">
       <operationCalls xmi:id="_P7mI5grPEeW4-_ONWXXiAw" name="Init" variable="_P7kTtgrPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/init"/>
+        <eOperation href="org.eclipse.symphony.examples.rover#//Rover/init"/>
       </operationCalls>
     </programs>
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_XvPIYDqzEeW90siL-RZo4A" name="Move Cameras">
       <operationCalls xmi:id="_Z6Bk8DqzEeW90siL-RZo4A" name="Move Arm Camera" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_bb5AUDqzEeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.space.mrt.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_eHAiwDqzEeW90siL-RZo4A">
@@ -208,7 +208,7 @@
       </operationCalls>
       <operationCalls xmi:id="_iBW4cDqzEeW90siL-RZo4A" name="Move Rover Camera" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_j0KS0DqzEeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.space.mrt.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList xmi:id="_lhuA0DqzEeW90siL-RZo4A">
@@ -218,7 +218,7 @@
       </operationCalls>
       <operationCalls xmi:id="_ivy2UDq0EeW90siL-RZo4A" name="Zoom Arm Cam 2x" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_ivy2UTq0EeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.space.mrt.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_kCcJ8Dq0EeW90siL-RZo4A">
@@ -227,7 +227,7 @@
       </operationCalls>
       <operationCalls xmi:id="_o-jeoDq0EeW90siL-RZo4A" name="Zoom Arm Cam 1x" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_o-jeoTq0EeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="ca.gc.space.mrt.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_o-jeojq0EeW90siL-RZo4A">
@@ -238,7 +238,7 @@
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_5rqVIDq0EeW90siL-RZo4A" name="Take Images">
       <operationCalls xmi:id="_69ESoDq0EeW90siL-RZo4A" name="Robot Arm Enable Streaming" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_Ul2qsDq1EeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="org.eclipse.symphony.examples.camera#//Camera/commandStreaming"/>
         <argumentsList xmi:id="_NQWgIDreEeW65IGdx4wJdg">
@@ -247,7 +247,7 @@
       </operationCalls>
       <operationCalls xmi:id="_iPESYDq1EeW90siL-RZo4A" name="Rover Camera Enable Streaming" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_jpclsDq1EeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="org.eclipse.symphony.examples.camera#//Camera/commandStreaming"/>
         <argumentsList xmi:id="_U6PCoDreEeW65IGdx4wJdg">
@@ -258,7 +258,7 @@
     <programs xsi:type="controllers:ControllersConfiguration" xmi:id="_iPcJADq5EeWXh-FRH46AWA" name="Velocity Controls">
       <operationCalls xsi:type="controllers:OperationCallControllerBinding" xmi:id="_nxHzcDq6EeWtwNaLmFVPnQ" name="Velocities" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_ow8RsDq6EeWtwNaLmFVPnQ">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
         <argumentsList xmi:id="_p9-skDq6EeWtwNaLmFVPnQ">
@@ -287,7 +287,7 @@
             <value xmi:id="_BogoMDq7EeWtwNaLmFVPnQ" object="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
           </resultValue>
           <operationCalls xmi:id="_BogoMTq7EeWtwNaLmFVPnQ" name="Init" variable="_P7kTtgrPEeW4-_ONWXXiAw">
-            <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/init"/>
+            <eOperation href="org.eclipse.symphony.examples.rover#//Rover/init"/>
           </operationCalls>
           <pose xmi:id="_BogoMjq7EeWtwNaLmFVPnQ"/>
           <relativePose xmi:id="_BogoMzq7EeWtwNaLmFVPnQ"/>
@@ -297,7 +297,7 @@
             <value xmi:id="_LP-j0jreEeW65IGdx4wJdg" object="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
           </resultValue>
           <operationCalls xmi:id="_LP-j0zreEeW65IGdx4wJdg" name="Init" variable="_P7kTtgrPEeW4-_ONWXXiAw">
-            <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/init"/>
+            <eOperation href="org.eclipse.symphony.examples.rover#//Rover/init"/>
           </operationCalls>
           <pose xmi:id="_LP-j1DreEeW65IGdx4wJdg"/>
           <relativePose xmi:id="_LP-j1TreEeW65IGdx4wJdg"/>
@@ -307,7 +307,7 @@
             <value xmi:id="_OxT8kjreEeW65IGdx4wJdg" object="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
           </resultValue>
           <operationCalls xmi:id="_OxT8kzreEeW65IGdx4wJdg" name="Init" variable="_P7kTtgrPEeW4-_ONWXXiAw">
-            <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/init"/>
+            <eOperation href="org.eclipse.symphony.examples.rover#//Rover/init"/>
           </operationCalls>
           <pose xmi:id="_OxT8lDreEeW65IGdx4wJdg"/>
           <relativePose xmi:id="_OxT8lTreEeW65IGdx4wJdg"/>
@@ -318,7 +318,7 @@
           </resultValue>
           <operationCalls xmi:id="_PRDzozreEeW65IGdx4wJdg" name="Robot Arm Camera Take Image" variable="_P7kTtgrPEeW4-_ONWXXiAw">
             <typeMemberReferenceListElement xmi:id="_PRDzpDreEeW65IGdx4wJdg">
-              <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+              <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
             </typeMemberReferenceListElement>
             <eOperation href="org.eclipse.symphony.examples.camera#//Camera/commandStreaming"/>
             <argumentsList xmi:id="_PRDzpTreEeW65IGdx4wJdg">
@@ -338,7 +338,7 @@
     <toolsListContainers xsi:type="camera:CameraViewConfigurationList" xmi:id="_mxzdwDq1EeW90siL-RZo4A">
       <cameraViewConfigurations xmi:id="_nVINQDq1EeW90siL-RZo4A" name="Rover Cam" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_ttTQQDq1EeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyztArPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <overlayList xmi:id="_nVKpgDq1EeW90siL-RZo4A">
           <overlays xsi:type="camera:ImageCountOverlay" xmi:id="_4Cjz4Dq1EeW90siL-RZo4A" overlayAlignment="Upper Left" fontSize="24"/>
@@ -354,7 +354,7 @@
       </cameraViewConfigurations>
       <cameraViewConfigurations xmi:id="_NxLccDq2EeW90siL-RZo4A" name="Arm Cam" variable="_P7kTtgrPEeW4-_ONWXXiAw">
         <typeMemberReferenceListElement xmi:id="_Px8aUDq2EeW90siL-RZo4A">
-          <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
+          <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
         <overlayList xmi:id="_NxN4sDq2EeW90siL-RZo4A">
           <overlays xsi:type="camera:SymphonyLogoOverlay" xmi:id="_R3298Dq2EeW90siL-RZo4A" overlayAlignment="Upper Right"/>

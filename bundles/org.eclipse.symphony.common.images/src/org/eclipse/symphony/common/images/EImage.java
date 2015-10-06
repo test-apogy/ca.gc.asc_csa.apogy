@@ -23,13 +23,6 @@ import java.awt.image.BufferedImage;
  */
 public interface EImage extends AbstractEImage {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * Returns the value of the '<em><b>Image Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -40,7 +33,7 @@ public interface EImage extends AbstractEImage {
 	 * @return the value of the '<em>Image Content</em>' attribute.
 	 * @see #setImageContent(BufferedImage)
 	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getEImage_ImageContent()
-	 * @model dataType="org.eclipse.symphony.common.images.BufferedImage"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.images.BufferedImage"
 	 * @generated
 	 */
 	BufferedImage getImageContent();

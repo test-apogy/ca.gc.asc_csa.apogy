@@ -30,14 +30,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2011";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model originalImageRequired="true"
+	 * @model unique="false" originalImageUnique="false" originalImageRequired="true"
 	 * @generated
 	 */
 	AbstractEImage copy(AbstractEImage originalImage);
@@ -45,7 +38,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false"
 	 * @generated
 	 */
 	AbstractEImage convertToGrayScale(AbstractEImage originalImage);
@@ -53,7 +46,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" scaleFactorUnique="false"
 	 * @generated
 	 */
 	AbstractEImage resize(AbstractEImage originalImage, double scaleFactor);
@@ -61,7 +54,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model originalImageRequired="true" widthScaleFactorRequired="true" heightScaleFactorRequired="true"
+	 * @model unique="false" originalImageUnique="false" originalImageRequired="true" widthScaleFactorUnique="false" widthScaleFactorRequired="true" heightScaleFactorUnique="false" heightScaleFactorRequired="true"
 	 * @generated
 	 */
 	AbstractEImage resize(AbstractEImage originalImage, double widthScaleFactor, double heightScaleFactor);
@@ -69,7 +62,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model originalImageRequired="true" newWidthRequired="true" newHeightRequired="true"
+	 * @model unique="false" originalImageUnique="false" originalImageRequired="true" newWidthUnique="false" newWidthRequired="true" newHeightUnique="false" newHeightRequired="true"
 	 * @generated
 	 */
 	AbstractEImage resize(AbstractEImage originalImage, int newWidth, int newHeight);
@@ -77,7 +70,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model widthRequired="true" heightRequired="true"
+	 * @model unique="false" widthUnique="false" widthRequired="true" heightUnique="false" heightRequired="true"
 	 * @generated
 	 */
 	AbstractEImage createTransparentImage(int width, int height);
@@ -85,7 +78,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.images.Exception" destinationFilePathRequired="true"
+	 * @model exceptions="org.eclipse.symphony.common.images.Exception" destinationFilePathUnique="false" destinationFilePathRequired="true" imageUnique="false"
 	 * @generated
 	 */
 	void saveImageAsJPEG(String destinationFilePath, AbstractEImage image) throws Exception;
@@ -93,7 +86,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.images.Exception" destinationFilePathRequired="true"
+	 * @model exceptions="org.eclipse.symphony.common.images.Exception" destinationFilePathUnique="false" destinationFilePathRequired="true" imageUnique="false"
 	 * @generated
 	 */
 	void saveImageAsPNG(String destinationFilePath, AbstractEImage image) throws Exception;
@@ -101,7 +94,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" overlayImageUnique="false" allowOverlayResizeUnique="false"
 	 * @generated
 	 */
 	AbstractEImage applyOverlay(AbstractEImage originalImage, AbstractEImage overlayImage, boolean allowOverlayResize);
@@ -109,7 +102,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false"
 	 * @generated
 	 */
 	AbstractEImage flipHorizontal(AbstractEImage originalImage);
@@ -117,7 +110,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false"
 	 * @generated
 	 */
 	AbstractEImage flipVertical(AbstractEImage originalImage);
@@ -125,7 +118,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" angleUnique="false" enableImageResizeUnique="false"
 	 * @generated
 	 */
 	AbstractEImage rotate(AbstractEImage originalImage, double angle, boolean enableImageResize);
@@ -133,7 +126,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" widthTranslationUnique="false" heightTranslationUnique="false"
 	 * @generated
 	 */
 	AbstractEImage translate(AbstractEImage originalImage, int widthTranslation, int heightTranslation);
@@ -141,7 +134,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model imagesDataType="org.eclipse.symphony.common.images.List<? extends org.eclipse.symphony.common.images.AbstractEImage>" imagesMany="false"
+	 * @model unique="false" imagesDataType="org.eclipse.symphony.common.images.List<? extends org.eclipse.symphony.common.images.AbstractEImage>" imagesUnique="false" imagesMany="false"
 	 * @generated
 	 */
 	ImageSize getAllEncompassingImageSize(List<? extends AbstractEImage> images);
@@ -149,7 +142,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model imagesDataType="org.eclipse.symphony.common.images.List<? extends org.eclipse.symphony.common.images.AbstractEImage>" imagesMany="false"
+	 * @model unique="false" imagesDataType="org.eclipse.symphony.common.images.List<? extends org.eclipse.symphony.common.images.AbstractEImage>" imagesUnique="false" imagesMany="false" allowImageResizeUnique="false" alignmentUnique="false"
 	 * @generated
 	 */
 	AbstractEImage superPoseImages(List<? extends AbstractEImage> images, boolean allowImageResize, ImageAlignment alignment);
@@ -157,7 +150,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" imageAUnique="false" imageBUnique="false" allowImageResizeUnique="false" alignmentUnique="false"
 	 * @generated
 	 */
 	AbstractEImage superPoseImages(AbstractEImage imageA, AbstractEImage imageB, boolean allowImageResize, ImageAlignment alignment);
@@ -165,7 +158,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" borderWidthUnique="false" redUnique="false" greenUnique="false" blueUnique="false"
 	 * @generated
 	 */
 	AbstractEImage addBorder(AbstractEImage originalImage, int borderWidth, int red, int green, int blue);
@@ -176,7 +169,7 @@ public interface EImagesUtilities extends EObject
 	 * <!-- begin-model-doc -->
 	 * Gets a sub image from a specified image. Note that the widthOffset and heightOffset are relative to the upper left corner of the image.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.images.Exception"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.images.Exception" originalImageUnique="false" widthOffsetUnique="false" heightOffsetUnique="false" subImageWidthUnique="false" subImageHeightUnique="false"
 	 * @generated
 	 */
 	AbstractEImage getSubImage(AbstractEImage originalImage, int widthOffset, int heightOffset, int subImageWidth, int subImageHeight) throws Exception;
@@ -184,7 +177,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.images.BufferedImage" imageDataDataType="org.eclipse.symphony.common.images.ImageData"
+	 * @model dataType="org.eclipse.symphony.common.images.BufferedImage" unique="false" imageDataDataType="org.eclipse.symphony.common.images.ImageData" imageDataUnique="false"
 	 * @generated
 	 */
 	BufferedImage convertToBufferedImage(ImageData imageData);
@@ -192,7 +185,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.images.ImageData" bufferedImageDataType="org.eclipse.symphony.common.images.BufferedImage"
+	 * @model dataType="org.eclipse.symphony.common.images.ImageData" unique="false" bufferedImageDataType="org.eclipse.symphony.common.images.BufferedImage" bufferedImageUnique="false"
 	 * @generated
 	 */
 	ImageData convertToImageData(BufferedImage bufferedImage);
@@ -200,7 +193,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model widthRequired="true" heightRequired="true"
+	 * @model unique="false" widthUnique="false" widthRequired="true" heightUnique="false" heightRequired="true" redUnique="false" greenUnique="false" blueUnique="false" alphaUnique="false"
 	 * @generated
 	 */
 	AbstractEImage createUniformColorImage(int width, int height, int red, int green, int blue, int alpha);
@@ -208,7 +201,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" alphaUnique="false"
 	 * @generated
 	 */
 	AbstractEImage applyAlpha(AbstractEImage originalImage, float alpha);
@@ -216,7 +209,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false"
 	 * @generated
 	 */
 	AbstractEImage applyEdgeFilter(AbstractEImage originalImage);
@@ -224,7 +217,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" contrastUnique="false" brightnessUnique="false"
 	 * @generated
 	 */
 	AbstractEImage applyContrastAndBrightnessFilter(AbstractEImage originalImage, double contrast, double brightness);
@@ -232,7 +225,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" exposureUnique="false"
 	 * @generated
 	 */
 	AbstractEImage applyExposureFilter(AbstractEImage originalImage, double exposure);
@@ -240,7 +233,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false"
 	 * @generated
 	 */
 	AbstractEImage applyInvertFilter(AbstractEImage originalImage);
@@ -248,7 +241,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" scaleUnique="false"
 	 * @generated
 	 */
 	AbstractEImage applyRescaleFilter(AbstractEImage originalImage, double scale);
@@ -256,7 +249,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" originalImageUnique="false" gainUnique="false" biasUnique="false"
 	 * @generated
 	 */
 	AbstractEImage applyGainFilter(AbstractEImage originalImage, double gain, double bias);
@@ -264,7 +257,7 @@ public interface EImagesUtilities extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model fontDataType="org.eclipse.symphony.common.images.Font" textColorDataType="org.eclipse.symphony.common.images.Color" backgroundColorDataType="org.eclipse.symphony.common.images.Color"
+	 * @model unique="false" textUnique="false" fontDataType="org.eclipse.symphony.common.images.Font" fontUnique="false" textColorDataType="org.eclipse.symphony.common.images.Color" textColorUnique="false" backgroundColorDataType="org.eclipse.symphony.common.images.Color" backgroundColorUnique="false" borderWidthUnique="false"
 	 * @generated
 	 */
 	AbstractEImage createTextImage(String text, Font font, Color textColor, Color backgroundColor, int borderWidth);

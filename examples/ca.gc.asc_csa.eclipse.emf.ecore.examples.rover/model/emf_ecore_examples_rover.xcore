@@ -4,10 +4,10 @@
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.rover/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.rover/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.rover.edit/src-generated")
 
-package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover
+package org.eclipse.symphony.examples.rover
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Disposable
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm
@@ -338,7 +338,7 @@ class RoverStub extends Rover
 {
 	/* 
 	 * For specific implementation details,
-	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.impl.RoverStubImpl}
+	 * see {@link org.eclipse.symphony.examples.rover.impl.RoverStubImpl}
 	 */	
 }
 
@@ -352,6 +352,6 @@ class RoverSimulated extends Rover
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.impl.RoverSimulatedImpl}
+	 * see {@link org.eclipse.symphony.examples.rover.impl.RoverSimulatedImpl}
 	 */
 }

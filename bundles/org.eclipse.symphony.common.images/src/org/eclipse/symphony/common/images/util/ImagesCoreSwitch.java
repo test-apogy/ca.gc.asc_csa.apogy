@@ -23,13 +23,6 @@ import org.eclipse.symphony.common.images.*;
  */
 public class ImagesCoreSwitch<T> extends Switch<T> {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

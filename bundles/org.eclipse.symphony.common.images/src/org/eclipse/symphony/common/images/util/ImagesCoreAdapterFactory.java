@@ -19,13 +19,6 @@ import org.eclipse.symphony.common.images.*;
  */
 public class ImagesCoreAdapterFactory extends AdapterFactoryImpl {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

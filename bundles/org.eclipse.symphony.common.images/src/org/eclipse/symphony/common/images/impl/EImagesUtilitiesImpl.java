@@ -24,12 +24,10 @@ import java.io.FileInputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.imageio.ImageIO;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.graphics.PaletteData;
 import org.eclipse.swt.graphics.RGB;
@@ -40,7 +38,6 @@ import org.eclipse.symphony.common.images.ImageAlignment;
 import org.eclipse.symphony.common.images.ImageSize;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
-
 import com.jhlabs.image.ContrastFilter;
 import com.jhlabs.image.EdgeFilter;
 import com.jhlabs.image.ExposureFilter;
@@ -59,7 +56,7 @@ import com.jhlabs.image.RescaleFilter;
  *
  * @generated
  */
-public class EImagesUtilitiesImpl extends EObjectImpl implements EImagesUtilities 
+public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implements EImagesUtilities 
 {
 	private static EImagesUtilities instance = null;
 	
@@ -73,13 +70,6 @@ public class EImagesUtilitiesImpl extends EObjectImpl implements EImagesUtilitie
 	}
 	
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -25,13 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ImagesAlbum extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * Returns the value of the '<em><b>Images</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.common.images.AbstractEImage}.
 	 * <!-- begin-user-doc -->
@@ -58,7 +51,7 @@ public interface ImagesAlbum extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImagesAlbum_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();

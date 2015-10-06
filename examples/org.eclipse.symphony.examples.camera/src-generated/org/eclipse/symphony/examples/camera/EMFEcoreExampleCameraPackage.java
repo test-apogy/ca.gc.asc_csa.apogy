@@ -873,133 +873,13 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 */
 	int PTU_CAMERA___COMMAND_STREAMING__BOOLEAN = CAMERA___COMMAND_STREAMING__BOOLEAN;
 		/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___ECLASS = CAMERA_OPERATION_COUNT + 0;
-		/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___EIS_PROXY = CAMERA_OPERATION_COUNT + 1;
-		/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___ERESOURCE = CAMERA_OPERATION_COUNT + 2;
-		/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___ECONTAINER = CAMERA_OPERATION_COUNT + 3;
-		/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___ECONTAINING_FEATURE = CAMERA_OPERATION_COUNT + 4;
-		/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___ECONTAINMENT_FEATURE = CAMERA_OPERATION_COUNT + 5;
-		/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___ECONTENTS = CAMERA_OPERATION_COUNT + 6;
-		/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___EALL_CONTENTS = CAMERA_OPERATION_COUNT + 7;
-		/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___ECROSS_REFERENCES = CAMERA_OPERATION_COUNT + 8;
-		/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___EGET__ESTRUCTURALFEATURE = CAMERA_OPERATION_COUNT + 9;
-		/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___EGET__ESTRUCTURALFEATURE_BOOLEAN = CAMERA_OPERATION_COUNT + 10;
-		/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___ESET__ESTRUCTURALFEATURE_OBJECT = CAMERA_OPERATION_COUNT + 11;
-		/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___EIS_SET__ESTRUCTURALFEATURE = CAMERA_OPERATION_COUNT + 12;
-		/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___EUNSET__ESTRUCTURALFEATURE = CAMERA_OPERATION_COUNT + 13;
-		/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA___EINVOKE__EOPERATION_ELIST = CAMERA_OPERATION_COUNT + 14;
-		/**
 	 * The operation id for the '<em>Get Maximum Pan Angle</em>' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___GET_MAXIMUM_PAN_ANGLE = CAMERA_OPERATION_COUNT + 15;
+  int PTU_CAMERA___GET_MAXIMUM_PAN_ANGLE = CAMERA_OPERATION_COUNT + 0;
   /**
 	 * The operation id for the '<em>Get Minimum Pan Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1007,7 +887,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___GET_MINIMUM_PAN_ANGLE = CAMERA_OPERATION_COUNT + 16;
+  int PTU_CAMERA___GET_MINIMUM_PAN_ANGLE = CAMERA_OPERATION_COUNT + 1;
   /**
 	 * The operation id for the '<em>Get Maximum Tilt Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1015,7 +895,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___GET_MAXIMUM_TILT_ANGLE = CAMERA_OPERATION_COUNT + 17;
+  int PTU_CAMERA___GET_MAXIMUM_TILT_ANGLE = CAMERA_OPERATION_COUNT + 2;
   /**
 	 * The operation id for the '<em>Get Minimum Tilt Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1023,7 +903,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___GET_MINIMUM_TILT_ANGLE = CAMERA_OPERATION_COUNT + 18;
+  int PTU_CAMERA___GET_MINIMUM_TILT_ANGLE = CAMERA_OPERATION_COUNT + 3;
   /**
 	 * The operation id for the '<em>Move To Pan Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1031,7 +911,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE = CAMERA_OPERATION_COUNT + 19;
+  int PTU_CAMERA___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE = CAMERA_OPERATION_COUNT + 4;
   /**
 	 * The operation id for the '<em>Move To Pan</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1039,7 +919,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___MOVE_TO_PAN__DOUBLE = CAMERA_OPERATION_COUNT + 20;
+  int PTU_CAMERA___MOVE_TO_PAN__DOUBLE = CAMERA_OPERATION_COUNT + 5;
   /**
 	 * The operation id for the '<em>Move To Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1047,7 +927,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___MOVE_TO_TILT__DOUBLE = CAMERA_OPERATION_COUNT + 21;
+  int PTU_CAMERA___MOVE_TO_TILT__DOUBLE = CAMERA_OPERATION_COUNT + 6;
   /**
 	 * The operation id for the '<em>Move By Pan Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1055,7 +935,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE = CAMERA_OPERATION_COUNT + 22;
+  int PTU_CAMERA___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE = CAMERA_OPERATION_COUNT + 7;
   /**
 	 * The operation id for the '<em>Move By Pan</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1063,7 +943,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___MOVE_BY_PAN__DOUBLE = CAMERA_OPERATION_COUNT + 23;
+  int PTU_CAMERA___MOVE_BY_PAN__DOUBLE = CAMERA_OPERATION_COUNT + 8;
   /**
 	 * The operation id for the '<em>Move By Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1071,7 +951,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___MOVE_BY_TILT__DOUBLE = CAMERA_OPERATION_COUNT + 24;
+  int PTU_CAMERA___MOVE_BY_TILT__DOUBLE = CAMERA_OPERATION_COUNT + 9;
   /**
 	 * The operation id for the '<em>Stop Motion</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1079,7 +959,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___STOP_MOTION = CAMERA_OPERATION_COUNT + 25;
+  int PTU_CAMERA___STOP_MOTION = CAMERA_OPERATION_COUNT + 10;
   /**
 	 * The number of operations of the '<em>PTU Camera</em>' class.
 	 * <!-- begin-user-doc -->
@@ -1087,7 +967,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA_OPERATION_COUNT = CAMERA_OPERATION_COUNT + 26;
+  int PTU_CAMERA_OPERATION_COUNT = CAMERA_OPERATION_COUNT + 11;
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl <em>PTU Camera Stub</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -1322,133 +1202,13 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 */
 	int PTU_CAMERA_STUB___COMMAND_STREAMING__BOOLEAN = CAMERA_STUB___COMMAND_STREAMING__BOOLEAN;
 		/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___ECLASS = CAMERA_STUB_OPERATION_COUNT + 0;
-		/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___EIS_PROXY = CAMERA_STUB_OPERATION_COUNT + 1;
-		/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___ERESOURCE = CAMERA_STUB_OPERATION_COUNT + 2;
-		/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___ECONTAINER = CAMERA_STUB_OPERATION_COUNT + 3;
-		/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___ECONTAINING_FEATURE = CAMERA_STUB_OPERATION_COUNT + 4;
-		/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___ECONTAINMENT_FEATURE = CAMERA_STUB_OPERATION_COUNT + 5;
-		/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___ECONTENTS = CAMERA_STUB_OPERATION_COUNT + 6;
-		/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___EALL_CONTENTS = CAMERA_STUB_OPERATION_COUNT + 7;
-		/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___ECROSS_REFERENCES = CAMERA_STUB_OPERATION_COUNT + 8;
-		/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___EGET__ESTRUCTURALFEATURE = CAMERA_STUB_OPERATION_COUNT + 9;
-		/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___EGET__ESTRUCTURALFEATURE_BOOLEAN = CAMERA_STUB_OPERATION_COUNT + 10;
-		/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___ESET__ESTRUCTURALFEATURE_OBJECT = CAMERA_STUB_OPERATION_COUNT + 11;
-		/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___EIS_SET__ESTRUCTURALFEATURE = CAMERA_STUB_OPERATION_COUNT + 12;
-		/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___EUNSET__ESTRUCTURALFEATURE = CAMERA_STUB_OPERATION_COUNT + 13;
-		/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_STUB___EINVOKE__EOPERATION_ELIST = CAMERA_STUB_OPERATION_COUNT + 14;
-		/**
 	 * The operation id for the '<em>Get Maximum Pan Angle</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___GET_MAXIMUM_PAN_ANGLE = CAMERA_STUB_OPERATION_COUNT + 15;
+	int PTU_CAMERA_STUB___GET_MAXIMUM_PAN_ANGLE = CAMERA_STUB_OPERATION_COUNT + 0;
 		/**
 	 * The operation id for the '<em>Get Minimum Pan Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1456,7 +1216,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___GET_MINIMUM_PAN_ANGLE = CAMERA_STUB_OPERATION_COUNT + 16;
+	int PTU_CAMERA_STUB___GET_MINIMUM_PAN_ANGLE = CAMERA_STUB_OPERATION_COUNT + 1;
 		/**
 	 * The operation id for the '<em>Get Maximum Tilt Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1464,7 +1224,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___GET_MAXIMUM_TILT_ANGLE = CAMERA_STUB_OPERATION_COUNT + 17;
+	int PTU_CAMERA_STUB___GET_MAXIMUM_TILT_ANGLE = CAMERA_STUB_OPERATION_COUNT + 2;
 		/**
 	 * The operation id for the '<em>Get Minimum Tilt Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1472,7 +1232,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___GET_MINIMUM_TILT_ANGLE = CAMERA_STUB_OPERATION_COUNT + 18;
+	int PTU_CAMERA_STUB___GET_MINIMUM_TILT_ANGLE = CAMERA_STUB_OPERATION_COUNT + 3;
 		/**
 	 * The operation id for the '<em>Move To Pan Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1480,7 +1240,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE = CAMERA_STUB_OPERATION_COUNT + 19;
+	int PTU_CAMERA_STUB___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE = CAMERA_STUB_OPERATION_COUNT + 4;
 		/**
 	 * The operation id for the '<em>Move To Pan</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1488,7 +1248,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___MOVE_TO_PAN__DOUBLE = CAMERA_STUB_OPERATION_COUNT + 20;
+	int PTU_CAMERA_STUB___MOVE_TO_PAN__DOUBLE = CAMERA_STUB_OPERATION_COUNT + 5;
 		/**
 	 * The operation id for the '<em>Move To Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1496,7 +1256,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___MOVE_TO_TILT__DOUBLE = CAMERA_STUB_OPERATION_COUNT + 21;
+	int PTU_CAMERA_STUB___MOVE_TO_TILT__DOUBLE = CAMERA_STUB_OPERATION_COUNT + 6;
 		/**
 	 * The operation id for the '<em>Move By Pan Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1504,7 +1264,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE = CAMERA_STUB_OPERATION_COUNT + 22;
+	int PTU_CAMERA_STUB___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE = CAMERA_STUB_OPERATION_COUNT + 7;
 		/**
 	 * The operation id for the '<em>Move By Pan</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1512,7 +1272,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___MOVE_BY_PAN__DOUBLE = CAMERA_STUB_OPERATION_COUNT + 23;
+	int PTU_CAMERA_STUB___MOVE_BY_PAN__DOUBLE = CAMERA_STUB_OPERATION_COUNT + 8;
 		/**
 	 * The operation id for the '<em>Move By Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1520,7 +1280,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___MOVE_BY_TILT__DOUBLE = CAMERA_STUB_OPERATION_COUNT + 24;
+	int PTU_CAMERA_STUB___MOVE_BY_TILT__DOUBLE = CAMERA_STUB_OPERATION_COUNT + 9;
 		/**
 	 * The operation id for the '<em>Stop Motion</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1528,7 +1288,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB___STOP_MOTION = CAMERA_STUB_OPERATION_COUNT + 25;
+	int PTU_CAMERA_STUB___STOP_MOTION = CAMERA_STUB_OPERATION_COUNT + 10;
 		/**
 	 * The number of operations of the '<em>PTU Camera Stub</em>' class.
 	 * <!-- begin-user-doc -->
@@ -1536,7 +1296,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_STUB_OPERATION_COUNT = CAMERA_STUB_OPERATION_COUNT + 26;
+	int PTU_CAMERA_STUB_OPERATION_COUNT = CAMERA_STUB_OPERATION_COUNT + 11;
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.PTUCameraSimulatedImpl <em>PTU Camera Simulated</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -1771,133 +1531,13 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 */
 	int PTU_CAMERA_SIMULATED___COMMAND_STREAMING__BOOLEAN = CAMERA_SIMULATED___COMMAND_STREAMING__BOOLEAN;
 		/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___ECLASS = CAMERA_SIMULATED_OPERATION_COUNT + 0;
-		/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___EIS_PROXY = CAMERA_SIMULATED_OPERATION_COUNT + 1;
-		/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___ERESOURCE = CAMERA_SIMULATED_OPERATION_COUNT + 2;
-		/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___ECONTAINER = CAMERA_SIMULATED_OPERATION_COUNT + 3;
-		/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___ECONTAINING_FEATURE = CAMERA_SIMULATED_OPERATION_COUNT + 4;
-		/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___ECONTAINMENT_FEATURE = CAMERA_SIMULATED_OPERATION_COUNT + 5;
-		/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___ECONTENTS = CAMERA_SIMULATED_OPERATION_COUNT + 6;
-		/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___EALL_CONTENTS = CAMERA_SIMULATED_OPERATION_COUNT + 7;
-		/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___ECROSS_REFERENCES = CAMERA_SIMULATED_OPERATION_COUNT + 8;
-		/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___EGET__ESTRUCTURALFEATURE = CAMERA_SIMULATED_OPERATION_COUNT + 9;
-		/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___EGET__ESTRUCTURALFEATURE_BOOLEAN = CAMERA_SIMULATED_OPERATION_COUNT + 10;
-		/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___ESET__ESTRUCTURALFEATURE_OBJECT = CAMERA_SIMULATED_OPERATION_COUNT + 11;
-		/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___EIS_SET__ESTRUCTURALFEATURE = CAMERA_SIMULATED_OPERATION_COUNT + 12;
-		/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___EUNSET__ESTRUCTURALFEATURE = CAMERA_SIMULATED_OPERATION_COUNT + 13;
-		/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTU_CAMERA_SIMULATED___EINVOKE__EOPERATION_ELIST = CAMERA_SIMULATED_OPERATION_COUNT + 14;
-		/**
 	 * The operation id for the '<em>Get Maximum Pan Angle</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___GET_MAXIMUM_PAN_ANGLE = CAMERA_SIMULATED_OPERATION_COUNT + 15;
+	int PTU_CAMERA_SIMULATED___GET_MAXIMUM_PAN_ANGLE = CAMERA_SIMULATED_OPERATION_COUNT + 0;
 		/**
 	 * The operation id for the '<em>Get Minimum Pan Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1905,7 +1545,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___GET_MINIMUM_PAN_ANGLE = CAMERA_SIMULATED_OPERATION_COUNT + 16;
+	int PTU_CAMERA_SIMULATED___GET_MINIMUM_PAN_ANGLE = CAMERA_SIMULATED_OPERATION_COUNT + 1;
 		/**
 	 * The operation id for the '<em>Get Maximum Tilt Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1913,7 +1553,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___GET_MAXIMUM_TILT_ANGLE = CAMERA_SIMULATED_OPERATION_COUNT + 17;
+	int PTU_CAMERA_SIMULATED___GET_MAXIMUM_TILT_ANGLE = CAMERA_SIMULATED_OPERATION_COUNT + 2;
 		/**
 	 * The operation id for the '<em>Get Minimum Tilt Angle</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1921,7 +1561,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___GET_MINIMUM_TILT_ANGLE = CAMERA_SIMULATED_OPERATION_COUNT + 18;
+	int PTU_CAMERA_SIMULATED___GET_MINIMUM_TILT_ANGLE = CAMERA_SIMULATED_OPERATION_COUNT + 3;
 		/**
 	 * The operation id for the '<em>Move To Pan Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1929,7 +1569,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 19;
+	int PTU_CAMERA_SIMULATED___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 4;
 		/**
 	 * The operation id for the '<em>Move To Pan</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1937,7 +1577,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___MOVE_TO_PAN__DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 20;
+	int PTU_CAMERA_SIMULATED___MOVE_TO_PAN__DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 5;
 		/**
 	 * The operation id for the '<em>Move To Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1945,7 +1585,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___MOVE_TO_TILT__DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 21;
+	int PTU_CAMERA_SIMULATED___MOVE_TO_TILT__DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 6;
 		/**
 	 * The operation id for the '<em>Move By Pan Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1953,7 +1593,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 22;
+	int PTU_CAMERA_SIMULATED___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 7;
 		/**
 	 * The operation id for the '<em>Move By Pan</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1961,7 +1601,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___MOVE_BY_PAN__DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 23;
+	int PTU_CAMERA_SIMULATED___MOVE_BY_PAN__DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 8;
 		/**
 	 * The operation id for the '<em>Move By Tilt</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1969,7 +1609,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___MOVE_BY_TILT__DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 24;
+	int PTU_CAMERA_SIMULATED___MOVE_BY_TILT__DOUBLE = CAMERA_SIMULATED_OPERATION_COUNT + 9;
 		/**
 	 * The operation id for the '<em>Stop Motion</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -1977,7 +1617,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED___STOP_MOTION = CAMERA_SIMULATED_OPERATION_COUNT + 25;
+	int PTU_CAMERA_SIMULATED___STOP_MOTION = CAMERA_SIMULATED_OPERATION_COUNT + 10;
 		/**
 	 * The number of operations of the '<em>PTU Camera Simulated</em>' class.
 	 * <!-- begin-user-doc -->
@@ -1985,7 +1625,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PTU_CAMERA_SIMULATED_OPERATION_COUNT = CAMERA_SIMULATED_OPERATION_COUNT + 26;
+	int PTU_CAMERA_SIMULATED_OPERATION_COUNT = CAMERA_SIMULATED_OPERATION_COUNT + 11;
 		/**
 	 * The meta object id for the '<em>Throwable</em>' data type.
 	 * <!-- begin-user-doc -->

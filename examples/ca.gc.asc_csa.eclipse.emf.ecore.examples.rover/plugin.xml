@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverPackage"
+            uri="org.eclipse.symphony.examples.rover"
+            class="org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage"
             genModel="model/emf_ecore_examples_rover.xcore"/>
    </extension>
 

@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.symphony.common.images.AbstractEImage;
@@ -37,13 +38,6 @@ import java.awt.Font;
  * @generated
  */
 public class ImagesCorePackageImpl extends EPackageImpl implements ImagesCorePackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,6 +181,9 @@ public class ImagesCorePackageImpl extends EPackageImpl implements ImagesCorePac
 		ImagesCorePackageImpl theImagesCorePackage = (ImagesCorePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ImagesCorePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ImagesCorePackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theImagesCorePackage.createPackageContents();
@@ -796,6 +793,9 @@ public class ImagesCorePackageImpl extends EPackageImpl implements ImagesCorePac
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
 
@@ -807,173 +807,173 @@ public class ImagesCorePackageImpl extends EPackageImpl implements ImagesCorePac
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eImageEClass, EImage.class, "EImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEImage_ImageContent(), this.getBufferedImage(), "imageContent", null, 0, 1, EImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEImage_ImageContent(), this.getBufferedImage(), "imageContent", null, 0, 1, EImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imagesAlbumEClass, ImagesAlbum.class, "ImagesAlbum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImagesAlbum_Name(), ecorePackage.getEString(), "name", null, 0, 1, ImagesAlbum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImagesAlbum_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ImagesAlbum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImagesAlbum_Images(), this.getAbstractEImage(), null, "images", null, 0, -1, ImagesAlbum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractEImageEClass, AbstractEImage.class, "AbstractEImage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAbstractEImage_Width(), ecorePackage.getEInt(), "width", "-1", 0, 1, AbstractEImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAbstractEImage_Height(), ecorePackage.getEInt(), "height", "-1", 0, 1, AbstractEImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractEImage_Width(), theEcorePackage.getEInt(), "width", "-1", 0, 1, AbstractEImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractEImage_Height(), theEcorePackage.getEInt(), "height", "-1", 0, 1, AbstractEImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getAbstractEImage__AsBufferedImage(), this.getBufferedImage(), "asBufferedImage", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getAbstractEImage__AsBufferedImage(), this.getBufferedImage(), "asBufferedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(urleImageEClass, URLEImage.class, "URLEImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getURLEImage_Url(), ecorePackage.getEString(), "url", null, 0, 1, URLEImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getURLEImage_Url(), theEcorePackage.getEString(), "url", null, 0, 1, URLEImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eImagesUtilitiesEClass, EImagesUtilities.class, "EImagesUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getEImagesUtilities__Copy__AbstractEImage(), this.getAbstractEImage(), "copy", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 1, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getEImagesUtilities__Copy__AbstractEImage(), this.getAbstractEImage(), "copy", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 1, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ConvertToGrayScale__AbstractEImage(), this.getAbstractEImage(), "convertToGrayScale", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ConvertToGrayScale__AbstractEImage(), this.getAbstractEImage(), "convertToGrayScale", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__Resize__AbstractEImage_double(), this.getAbstractEImage(), "resize", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "scaleFactor", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__Resize__AbstractEImage_double(), this.getAbstractEImage(), "resize", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "scaleFactor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__Resize__AbstractEImage_double_double(), this.getAbstractEImage(), "resize", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "widthScaleFactor", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "heightScaleFactor", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__Resize__AbstractEImage_double_double(), this.getAbstractEImage(), "resize", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "widthScaleFactor", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "heightScaleFactor", 1, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__Resize__AbstractEImage_int_int(), this.getAbstractEImage(), "resize", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "newWidth", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "newHeight", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__Resize__AbstractEImage_int_int(), this.getAbstractEImage(), "resize", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "newWidth", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "newHeight", 1, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__CreateTransparentImage__int_int(), this.getAbstractEImage(), "createTransparentImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "width", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "height", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__CreateTransparentImage__int_int(), this.getAbstractEImage(), "createTransparentImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "width", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "height", 1, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__SaveImageAsJPEG__String_AbstractEImage(), null, "saveImageAsJPEG", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "destinationFilePath", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "image", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__SaveImageAsJPEG__String_AbstractEImage(), null, "saveImageAsJPEG", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "destinationFilePath", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "image", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEImagesUtilities__SaveImageAsPNG__String_AbstractEImage(), null, "saveImageAsPNG", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "destinationFilePath", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "image", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__SaveImageAsPNG__String_AbstractEImage(), null, "saveImageAsPNG", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "destinationFilePath", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "image", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEImagesUtilities__ApplyOverlay__AbstractEImage_AbstractEImage_boolean(), this.getAbstractEImage(), "applyOverlay", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "overlayImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "allowOverlayResize", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ApplyOverlay__AbstractEImage_AbstractEImage_boolean(), this.getAbstractEImage(), "applyOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "overlayImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "allowOverlayResize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__FlipHorizontal__AbstractEImage(), this.getAbstractEImage(), "flipHorizontal", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__FlipHorizontal__AbstractEImage(), this.getAbstractEImage(), "flipHorizontal", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__FlipVertical__AbstractEImage(), this.getAbstractEImage(), "flipVertical", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__FlipVertical__AbstractEImage(), this.getAbstractEImage(), "flipVertical", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__Rotate__AbstractEImage_double_boolean(), this.getAbstractEImage(), "rotate", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "angle", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "enableImageResize", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__Rotate__AbstractEImage_double_boolean(), this.getAbstractEImage(), "rotate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "angle", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "enableImageResize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__Translate__AbstractEImage_int_int(), this.getAbstractEImage(), "translate", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "widthTranslation", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "heightTranslation", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__Translate__AbstractEImage_int_int(), this.getAbstractEImage(), "translate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "widthTranslation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "heightTranslation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__GetAllEncompassingImageSize__List(), this.getImageSize(), "getAllEncompassingImageSize", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__GetAllEncompassingImageSize__List(), this.getImageSize(), "getAllEncompassingImageSize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
 		EGenericType g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
 		EGenericType g3 = createEGenericType(this.getAbstractEImage());
 		g2.setEUpperBound(g3);
-		addEParameter(op, g1, "images", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, g1, "images", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__SuperPoseImages__List_boolean_ImageAlignment(), this.getAbstractEImage(), "superPoseImages", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__SuperPoseImages__List_boolean_ImageAlignment(), this.getAbstractEImage(), "superPoseImages", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
 		g3 = createEGenericType(this.getAbstractEImage());
 		g2.setEUpperBound(g3);
-		addEParameter(op, g1, "images", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "allowImageResize", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getImageAlignment(), "alignment", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, g1, "images", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "allowImageResize", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getImageAlignment(), "alignment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__SuperPoseImages__AbstractEImage_AbstractEImage_boolean_ImageAlignment(), this.getAbstractEImage(), "superPoseImages", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "imageA", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "imageB", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "allowImageResize", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getImageAlignment(), "alignment", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__SuperPoseImages__AbstractEImage_AbstractEImage_boolean_ImageAlignment(), this.getAbstractEImage(), "superPoseImages", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "imageA", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "imageB", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEBoolean(), "allowImageResize", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getImageAlignment(), "alignment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__AddBorder__AbstractEImage_int_int_int_int(), this.getAbstractEImage(), "addBorder", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "borderWidth", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "red", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "green", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "blue", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__AddBorder__AbstractEImage_int_int_int_int(), this.getAbstractEImage(), "addBorder", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "borderWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "red", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "green", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "blue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__GetSubImage__AbstractEImage_int_int_int_int(), this.getAbstractEImage(), "getSubImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "widthOffset", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "heightOffset", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "subImageWidth", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "subImageHeight", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__GetSubImage__AbstractEImage_int_int_int_int(), this.getAbstractEImage(), "getSubImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "widthOffset", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "heightOffset", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "subImageWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "subImageHeight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEImagesUtilities__ConvertToBufferedImage__ImageData(), this.getBufferedImage(), "convertToBufferedImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getImageData(), "imageData", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ConvertToBufferedImage__ImageData(), this.getBufferedImage(), "convertToBufferedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getImageData(), "imageData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ConvertToImageData__BufferedImage(), this.getImageData(), "convertToImageData", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getBufferedImage(), "bufferedImage", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ConvertToImageData__BufferedImage(), this.getImageData(), "convertToImageData", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getBufferedImage(), "bufferedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__CreateUniformColorImage__int_int_int_int_int_int(), this.getAbstractEImage(), "createUniformColorImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "width", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "height", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "red", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "green", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "blue", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "alpha", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__CreateUniformColorImage__int_int_int_int_int_int(), this.getAbstractEImage(), "createUniformColorImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "width", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "height", 1, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "red", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "green", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "blue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "alpha", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ApplyAlpha__AbstractEImage_float(), this.getAbstractEImage(), "applyAlpha", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEFloat(), "alpha", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ApplyAlpha__AbstractEImage_float(), this.getAbstractEImage(), "applyAlpha", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEFloat(), "alpha", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ApplyEdgeFilter__AbstractEImage(), this.getAbstractEImage(), "applyEdgeFilter", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ApplyEdgeFilter__AbstractEImage(), this.getAbstractEImage(), "applyEdgeFilter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ApplyContrastAndBrightnessFilter__AbstractEImage_double_double(), this.getAbstractEImage(), "applyContrastAndBrightnessFilter", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "contrast", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "brightness", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ApplyContrastAndBrightnessFilter__AbstractEImage_double_double(), this.getAbstractEImage(), "applyContrastAndBrightnessFilter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "contrast", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "brightness", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ApplyExposureFilter__AbstractEImage_double(), this.getAbstractEImage(), "applyExposureFilter", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "exposure", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ApplyExposureFilter__AbstractEImage_double(), this.getAbstractEImage(), "applyExposureFilter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "exposure", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ApplyInvertFilter__AbstractEImage(), this.getAbstractEImage(), "applyInvertFilter", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ApplyInvertFilter__AbstractEImage(), this.getAbstractEImage(), "applyInvertFilter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ApplyRescaleFilter__AbstractEImage_double(), this.getAbstractEImage(), "applyRescaleFilter", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "scale", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ApplyRescaleFilter__AbstractEImage_double(), this.getAbstractEImage(), "applyRescaleFilter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "scale", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__ApplyGainFilter__AbstractEImage_double_double(), this.getAbstractEImage(), "applyGainFilter", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "gain", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "bias", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__ApplyGainFilter__AbstractEImage_double_double(), this.getAbstractEImage(), "applyGainFilter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractEImage(), "originalImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "gain", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "bias", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEImagesUtilities__CreateTextImage__String_Font_Color_Color_int(), this.getAbstractEImage(), "createTextImage", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "text", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getFont(), "font", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getColor(), "textColor", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getColor(), "backgroundColor", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "borderWidth", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEImagesUtilities__CreateTextImage__String_Font_Color_Color_int(), this.getAbstractEImage(), "createTextImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "text", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFont(), "font", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getColor(), "textColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getColor(), "backgroundColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "borderWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(imageSizeEClass, ImageSize.class, "ImageSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImageSize_Width(), ecorePackage.getEInt(), "width", "-1", 0, 1, ImageSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImageSize_Height(), ecorePackage.getEInt(), "height", "-1", 0, 1, ImageSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImageSize_Width(), theEcorePackage.getEInt(), "width", "-1", 0, 1, ImageSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImageSize_Height(), theEcorePackage.getEInt(), "height", "-1", 0, 1, ImageSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractEImageProviderEClass, AbstractEImageProvider.class, "AbstractEImageProvider", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getAbstractEImageProvider__GetAbstractEImage(), this.getAbstractEImage(), "getAbstractEImage", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getAbstractEImageProvider__GetAbstractEImage(), this.getAbstractEImage(), "getAbstractEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(imageAlignmentEEnum, ImageAlignment.class, "ImageAlignment");

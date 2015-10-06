@@ -4,40 +4,40 @@
     <memberType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.robotic_arm/model/RoboticArmSymphonySystem.ss#_LQwxcArPEeW4-_ONWXXiAw"/>
     <typeFeatureRootNode xmi:id="_OeyMogrPEeW4-_ONWXXiAw">
       <children xsi:type="ecore:TreeFeatureNode" xmi:id="_OeyMowrPEeW4-_ONWXXiAw">
-        <structuralFeature xsi:type="ecore_1:EReference" href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/roboticArm"/>
+        <structuralFeature xsi:type="ecore_1:EReference" href="org.eclipse.symphony.examples.rover#//Rover/roboticArm"/>
       </children>
-      <sourceClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover"/>
+      <sourceClass href="org.eclipse.symphony.examples.rover#//Rover"/>
     </typeFeatureRootNode>
   </members>
   <members xmi:id="_OeyMpArPEeW4-_ONWXXiAw" name="mobilePlatform">
     <memberType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.mobile_platform/model/MobilePlatformSymphonySystem.ss#_aD78wArNEeW4-_ONWXXiAw"/>
     <typeFeatureRootNode xmi:id="_OeyMpQrPEeW4-_ONWXXiAw">
       <children xsi:type="ecore:TreeFeatureNode" xmi:id="_OeyzsArPEeW4-_ONWXXiAw">
-        <structuralFeature xsi:type="ecore_1:EReference" href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/mobilePlatform"/>
+        <structuralFeature xsi:type="ecore_1:EReference" href="org.eclipse.symphony.examples.rover#//Rover/mobilePlatform"/>
       </children>
-      <sourceClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover"/>
+      <sourceClass href="org.eclipse.symphony.examples.rover#//Rover"/>
     </typeFeatureRootNode>
   </members>
   <members xmi:id="_OeyzsQrPEeW4-_ONWXXiAw" name="armCamera">
     <memberType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.camera/model/PTUCameraSymphonySystem.ss#_1LPEwArOEeW4-_ONWXXiAw"/>
     <typeFeatureRootNode xmi:id="_OeyzsgrPEeW4-_ONWXXiAw">
       <children xsi:type="ecore:TreeFeatureNode" xmi:id="_OeyzswrPEeW4-_ONWXXiAw">
-        <structuralFeature xsi:type="ecore_1:EReference" href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/armCamera"/>
+        <structuralFeature xsi:type="ecore_1:EReference" href="org.eclipse.symphony.examples.rover#//Rover/armCamera"/>
       </children>
-      <sourceClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover"/>
+      <sourceClass href="org.eclipse.symphony.examples.rover#//Rover"/>
     </typeFeatureRootNode>
   </members>
   <members xmi:id="_OeyztArPEeW4-_ONWXXiAw" name="centerCamera">
     <memberType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.camera/model/PTUCameraSymphonySystem.ss#_1LPEwArOEeW4-_ONWXXiAw"/>
     <typeFeatureRootNode xmi:id="_OeyztQrPEeW4-_ONWXXiAw">
       <children xsi:type="ecore:TreeFeatureNode" xmi:id="_OeyztgrPEeW4-_ONWXXiAw">
-        <structuralFeature xsi:type="ecore_1:EReference" href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover/centerCamera"/>
+        <structuralFeature xsi:type="ecore_1:EReference" href="org.eclipse.symphony.examples.rover#//Rover/centerCamera"/>
       </children>
-      <sourceClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover"/>
+      <sourceClass href="org.eclipse.symphony.examples.rover#//Rover"/>
     </typeFeatureRootNode>
   </members>
-  <interfaceClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.rover#//Rover"/>
-  <typeApiAdapterClass href="ca.gc.asc_csa.symphony.examples.rover#//RoverSymphonySystemApiAdapter"/>
+  <interfaceClass href="org.eclipse.symphony.examples.rover#//Rover"/>
+  <typeApiAdapterClass href="org.eclipse.symphony.examples.rover.symphony#//RoverSymphonySystemApiAdapter"/>
   <topologyRoot xmi:id="_OeyztwrPEeW4-_ONWXXiAw">
     <originNode xsi:type="ca.gc.space.topology:AggregateGroupNode" xmi:id="_OeyzuArPEeW4-_ONWXXiAw" description="The root node for the rover" nodeId="ROVER_SYM_SYS_ROOT">
       <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_OeyzuQrPEeW4-_ONWXXiAw" parent="_OeyzuArPEeW4-_ONWXXiAw" description="The rover's connection point for a mobile platform" nodeId="ROVER_SYM_SYS_MOBILE_PLATFORM">
