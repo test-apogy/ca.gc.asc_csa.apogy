@@ -86,8 +86,8 @@ public class SymphonyExampleRoboticArmPackageImpl extends EPackageImpl implement
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyCorePackage.eINSTANCE.eClass();
 		EMFEcoreExampleRoboticArmPackage.eINSTANCE.eClass();
+		SymphonyCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyExampleRoboticArmPackage.createPackageContents();
