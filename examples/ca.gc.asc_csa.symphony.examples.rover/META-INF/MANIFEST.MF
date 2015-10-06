@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.rover;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.rover.symphony;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.examples.rover.Activator
+Bundle-Activator: org.eclipse.symphony.examples.rover.symphony.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
@@ -24,13 +24,13 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,
  ca.gc.space.mrt.actuators;visibility:=reexport,
  ca.gc.asc_csa.topology.bindings;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.rover;visibility:=reexport,
+ org.eclipse.symphony.examples.rover;visibility:=reexport,
  ca.gc.asc_csa.symphony.core;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov;visibility:=reexport,
  ca.gc.space.mrt.geometry.data;visibility:=reexport,
  org.eclipse.symphony.examples.robotic_arm;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.examples.rover,
- ca.gc.asc_csa.symphony.examples.rover.impl,
- ca.gc.asc_csa.symphony.examples.rover.util
+Export-Package: org.eclipse.symphony.examples.rover.symphony,
+ org.eclipse.symphony.examples.rover.symphony.impl,
+ org.eclipse.symphony.examples.rover.symphony.util
 Bundle-ActivationPolicy: lazy

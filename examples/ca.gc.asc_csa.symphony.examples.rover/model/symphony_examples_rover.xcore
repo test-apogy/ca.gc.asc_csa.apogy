@@ -1,8 +1,8 @@
 @GenModel(prefix="SymphonyExampleRover", copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015", modelName="SymphonyExampleRover")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.examples.rover/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.examples.rover.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.rover.symphony/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.rover.symphony.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.examples.rover
+package org.eclipse.symphony.examples.rover.symphony
 
 import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
 import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
@@ -10,7 +10,7 @@ import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
 /*
  * This class is the specialized Symphony API adapter, used for connecting
  * the existing rover example, located at
- * {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.Rover},
+ * {@link org.eclipse.symphony.examples.rover.Rover},
  * to Symphony; one can override the well-known callback functions to make
  * Symphony perform a variety of useful functions, including initialization,
  * disposal and other features. 
@@ -20,7 +20,7 @@ class RoverSymphonySystemApiAdapter extends SymphonySystemApiAdapter
 	/*
 	 * For specific implementation details,
 	 * please see
-	 * {@link ca.gc.asc_csa.symphony.examples.rover.impl.RoverSymphonySystemApiAdapterImpl}
+	 * {@link org.eclipse.symphony.examples.rover.symphony.impl.RoverSymphonySystemApiAdapterImpl}
 	 */
 }
 
@@ -29,7 +29,7 @@ class RoverSymphonySystemApiAdapter extends SymphonySystemApiAdapter
  * save and later restore the state of the component; this functionality is
  * implemented by the apply() (load) and collect() (save) methods of the rover's
  * API adapter,
- * which is {@link ca.gc.asc_csa.symphony.examples.rover.RoverSymphonySystemApiAdapter}.
+ * which is {@link org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter}.
  */
 class RoverData extends SymphonyInitializationData
 {

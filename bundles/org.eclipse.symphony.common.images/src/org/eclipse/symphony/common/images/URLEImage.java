@@ -22,13 +22,6 @@ package org.eclipse.symphony.common.images;
  */
 public interface URLEImage extends AbstractEImage {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -39,7 +32,7 @@ public interface URLEImage extends AbstractEImage {
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
 	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getURLEImage_Url()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getUrl();

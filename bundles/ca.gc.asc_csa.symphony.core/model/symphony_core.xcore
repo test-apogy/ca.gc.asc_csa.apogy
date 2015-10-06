@@ -1,4 +1,3 @@
-
 @GenModel(prefix="SymphonyCore", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="SymphonyCore", multipleEditorPages="false", fileExtensions="sym") 
 @GenModel(modelDirectory="/ca.gc.asc_csa.symphony.core/src-generated")
 @GenModel(editDirectory="/ca.gc.asc_csa.symphony.core.edit/src-generated")

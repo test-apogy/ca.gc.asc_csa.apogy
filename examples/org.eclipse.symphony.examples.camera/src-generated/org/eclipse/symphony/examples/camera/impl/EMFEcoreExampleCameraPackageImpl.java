@@ -131,8 +131,8 @@ public class EMFEcoreExampleCameraPackageImpl extends EPackageImpl implements EM
 		isInited = true;
 
 		// Initialize simple dependencies
-		MRTActuatorsPackage.eINSTANCE.eClass();
 		MRTSensorsImagingPackage.eINSTANCE.eClass();
+		MRTActuatorsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleCameraPackage.createPackageContents();

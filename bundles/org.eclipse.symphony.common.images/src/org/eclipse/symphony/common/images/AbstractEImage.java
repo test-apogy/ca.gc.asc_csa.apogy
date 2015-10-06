@@ -26,13 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface AbstractEImage extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
@@ -44,7 +37,8 @@ public interface AbstractEImage extends EObject {
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(int)
 	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getAbstractEImage_Width()
-	 * @model default="-1"
+	 * @model default="-1" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_INFORMATION'"
 	 * @generated
 	 */
 	int getWidth();
@@ -71,7 +65,8 @@ public interface AbstractEImage extends EObject {
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(int)
 	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getAbstractEImage_Height()
-	 * @model default="-1"
+	 * @model default="-1" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_INFORMATION'"
 	 * @generated
 	 */
 	int getHeight();
@@ -89,7 +84,7 @@ public interface AbstractEImage extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.images.BufferedImage"
+	 * @model dataType="org.eclipse.symphony.common.images.BufferedImage" unique="false"
 	 * @generated
 	 */
 	BufferedImage asBufferedImage();

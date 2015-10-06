@@ -24,13 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ImageSize extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
@@ -42,7 +35,7 @@ public interface ImageSize extends EObject {
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(int)
 	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImageSize_Width()
-	 * @model default="-1"
+	 * @model default="-1" unique="false"
 	 * @generated
 	 */
 	int getWidth();
@@ -69,7 +62,7 @@ public interface ImageSize extends EObject {
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(int)
 	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImageSize_Height()
-	 * @model default="-1"
+	 * @model default="-1" unique="false"
 	 * @generated
 	 */
 	int getHeight();

@@ -5,12 +5,11 @@ package org.eclipse.symphony.common.images.impl;
 
 import java.awt.image.BufferedImage;
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 
@@ -29,14 +28,7 @@ import org.eclipse.symphony.common.images.ImagesCorePackage;
  *
  * @generated
  */
-public class EImageImpl extends EObjectImpl implements EImage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
+public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->

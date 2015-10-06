@@ -70,13 +70,6 @@ public enum ImageAlignment implements Enumerator {
 	UPPER_RIGHT_CORNER(5, "UPPER_RIGHT_CORNER", "UPPER_RIGHT_CORNER");
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * The '<em><b>CENTER</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>

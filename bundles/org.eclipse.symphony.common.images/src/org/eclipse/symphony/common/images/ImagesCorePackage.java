@@ -24,23 +24,17 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.images.ImagesCoreFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel copyrightText='Canadian Space Agency 2011' prefix='ImagesCore' extensibleProviderFactory='true' childCreationExtenders='true' modelDirectory='/org.eclipse.symphony.common.images/src' modelName='Ca_gc_asc_csa_eclipse_images' importerID='org.eclipse.emf.importer.ecore' basePackage='org.eclipse.symphony.common'"
  * @generated
  */
 public interface ImagesCorePackage extends EPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2011";
-
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "core";
+	String eNAME = "images";
 
 	/**
 	 * The package namespace URI.
@@ -48,7 +42,7 @@ public interface ImagesCorePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://ca/gc/asc_csa/eclipse/images/core/1.0";
+	String eNS_URI = "org.eclipse.symphony.common.images";
 
 	/**
 	 * The package namespace name.
@@ -56,7 +50,7 @@ public interface ImagesCorePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ca.gc.asc_csa.eclipse.images";
+	String eNS_PREFIX = "images";
 
 	/**
 	 * The singleton instance of the package.

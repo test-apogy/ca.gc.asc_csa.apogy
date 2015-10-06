@@ -4,6 +4,7 @@
 package ca.gc.asc_csa.symphony.tools.telecoms.provider;
 
 
+import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.provider.LineOfSightImageMapLayerItemProvider;
 import ca.gc.asc_csa.symphony.tools.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.symphony.tools.telecoms.SymphonyTelecomToolsFactory;
@@ -244,6 +245,29 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 			(createChildParameter
 				(SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
 				 SymphonyTelecomToolsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

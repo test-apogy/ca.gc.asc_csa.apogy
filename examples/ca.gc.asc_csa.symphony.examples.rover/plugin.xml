@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_examples_rover -->
       <package
-            uri="ca.gc.asc_csa.symphony.examples.rover"
-            class="ca.gc.asc_csa.symphony.examples.rover.SymphonyExampleRoverPackage"
+            uri="org.eclipse.symphony.examples.rover.symphony"
+            class="org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage"
             genModel="model/symphony_examples_rover.xcore"/>
    </extension>
    <extension

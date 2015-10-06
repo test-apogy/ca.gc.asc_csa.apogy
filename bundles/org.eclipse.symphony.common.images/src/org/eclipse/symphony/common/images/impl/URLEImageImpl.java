@@ -9,14 +9,12 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
-
 import javax.imageio.ImageIO;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.images.Activator;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.common.images.URLEImage;
@@ -38,18 +36,11 @@ import org.eclipse.symphony.common.log.Logger;
  *
  * @generated
  */
-public class URLEImageImpl extends EObjectImpl implements URLEImage 
+public class URLEImageImpl extends MinimalEObjectImpl.Container implements URLEImage 
 {
 	private boolean dirty = true;
 	private BufferedImage bufferedImage = null;
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
 	 * <!-- begin-user-doc -->

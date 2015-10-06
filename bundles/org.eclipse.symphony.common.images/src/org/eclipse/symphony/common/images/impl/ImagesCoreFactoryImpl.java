@@ -10,7 +10,6 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.List;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -40,13 +39,6 @@ import org.eclipse.symphony.common.log.Logger;
  * @generated
  */
 public class ImagesCoreFactoryImpl extends EFactoryImpl implements ImagesCoreFactory {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->

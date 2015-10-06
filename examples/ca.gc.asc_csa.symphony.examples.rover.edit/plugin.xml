@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_examples_rover -->
       <factory
-            uri="ca.gc.asc_csa.symphony.examples.rover"
-            class="ca.gc.asc_csa.symphony.examples.rover.provider.SymphonyExampleRoverItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.examples.rover.symphony"
+            class="org.eclipse.symphony.examples.rover.symphony.provider.SymphonyExampleRoverItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
