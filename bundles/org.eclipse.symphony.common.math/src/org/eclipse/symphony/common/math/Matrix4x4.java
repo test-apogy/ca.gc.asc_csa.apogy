@@ -363,7 +363,7 @@ public interface Matrix4x4 extends EObject {
 	 * @return the value of the '<em>M30</em>' attribute.
 	 * @see #setM30(double)
 	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M30()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
   double getM30();
@@ -458,7 +458,7 @@ public interface Matrix4x4 extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.math.Matrix4d"
+	 * @model dataType="org.eclipse.symphony.common.math.Matrix4d" unique="false"
 	 * @generated
 	 */
 	Matrix4d asMatrix4d();

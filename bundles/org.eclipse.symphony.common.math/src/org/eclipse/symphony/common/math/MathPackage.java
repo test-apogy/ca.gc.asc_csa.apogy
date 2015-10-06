@@ -8,6 +8,7 @@ package org.eclipse.symphony.common.math;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
 /**
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.math.MathFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel modelDirectory='/org.eclipse.symphony.common.math/src' extensibleProviderFactory='true' childCreationExtenders='true' modelPluginID='org.eclipse.symphony.common.math' importerID='org.eclipse.emf.importer.ecore' basePackage='org.eclipse.symphony.common'"
  * @generated
  */
 public interface MathPackage extends EPackage {
@@ -40,7 +42,7 @@ public interface MathPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ca/gc/space/math.ecore";
+	String eNS_URI = "org.eclipse.symphony.common.math";
 
 	/**
 	 * The package namespace name.
@@ -48,7 +50,7 @@ public interface MathPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ca.gc.space";
+	String eNS_PREFIX = "math";
 
 	/**
 	 * The singleton instance of the package.
@@ -222,6 +224,24 @@ public interface MathPackage extends EPackage {
 	int MATRIX4X4_FEATURE_COUNT = 16;
 
 	/**
+	 * The operation id for the '<em>As Matrix4d</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATRIX4X4___AS_MATRIX4D = 0;
+
+	/**
+	 * The number of operations of the '<em>Matrix4x4</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATRIX4X4_OPERATION_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.MathFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,6 +259,96 @@ public interface MathPackage extends EPackage {
 	 * @ordered
 	 */
 	int MATH_FACADE_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Create Matrix4x4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D = 0;
+
+	/**
+	 * The operation id for the '<em>Create Matrix3x3</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D = 1;
+
+	/**
+	 * The operation id for the '<em>Create Tuple3d</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___CREATE_TUPLE3D__TUPLE3D = 2;
+
+	/**
+	 * The operation id for the '<em>Create Tuple3d</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE = 3;
+
+	/**
+	 * The operation id for the '<em>Create Polynomial</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE = 4;
+
+	/**
+	 * The operation id for the '<em>Create Identity Matrix4x4</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___CREATE_IDENTITY_MATRIX4X4 = 5;
+
+	/**
+	 * The operation id for the '<em>Create Identity Matrix3x3</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___CREATE_IDENTITY_MATRIX3X3 = 6;
+
+	/**
+	 * The operation id for the '<em>Extract Position</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___EXTRACT_POSITION__MATRIX4X4 = 7;
+
+	/**
+	 * The operation id for the '<em>Extract Orientation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4 = 8;
+
+	/**
+	 * The number of operations of the '<em>Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_FACADE_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.Matrix3x3Impl <em>Matrix3x3</em>}' class.
@@ -341,6 +451,24 @@ public interface MathPackage extends EPackage {
 	int MATRIX3X3_FEATURE_COUNT = 9;
 
 	/**
+	 * The operation id for the '<em>As Matrix3d</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATRIX3X3___AS_MATRIX3D = 0;
+
+	/**
+	 * The number of operations of the '<em>Matrix3x3</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATRIX3X3_OPERATION_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl <em>Tuple3d</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -385,6 +513,24 @@ public interface MathPackage extends EPackage {
 	 * @ordered
 	 */
 	int TUPLE3D_FEATURE_COUNT = 3;
+
+	/**
+	 * The operation id for the '<em>As Tuple3d</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUPLE3D___AS_TUPLE3D = 0;
+
+	/**
+	 * The number of operations of the '<em>Tuple3d</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUPLE3D_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.PolynomialImpl <em>Polynomial</em>}' class.
@@ -442,6 +588,15 @@ public interface MathPackage extends EPackage {
 	int POLYNOMIAL_FEATURE_COUNT = 4;
 
 	/**
+	 * The number of operations of the '<em>Polynomial</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLYNOMIAL_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.math.impl.MathIOImpl <em>IO</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -461,6 +616,42 @@ public interface MathPackage extends EPackage {
   int MATH_IO_FEATURE_COUNT = 0;
 
   /**
+	 * The operation id for the '<em>Read Tr Matrix</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_IO___READ_TR_MATRIX__STRING = 0;
+
+		/**
+	 * The operation id for the '<em>Write Tr Matrix</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_IO___WRITE_TR_MATRIX__MATRIX4X4_STRING = 1;
+
+		/**
+	 * The operation id for the '<em>Write Tr Matrix</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_IO___WRITE_TR_MATRIX__MATRIX4D_STRING = 2;
+
+		/**
+	 * The number of operations of the '<em>IO</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATH_IO_OPERATION_COUNT = 3;
+
+		/**
 	 * The meta object id for the '<em>EDouble Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -696,6 +887,16 @@ public interface MathPackage extends EPackage {
 	EAttribute getMatrix4x4_M33();
 
 	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Matrix4x4#asMatrix4d() <em>As Matrix4d</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>As Matrix4d</em>' operation.
+	 * @see org.eclipse.symphony.common.math.Matrix4x4#asMatrix4d()
+	 * @generated
+	 */
+	EOperation getMatrix4x4__AsMatrix4d();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.MathFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -704,6 +905,96 @@ public interface MathPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMathFacade();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createMatrix4x4(javax.vecmath.Matrix4d) <em>Create Matrix4x4</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Matrix4x4</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#createMatrix4x4(javax.vecmath.Matrix4d)
+	 * @generated
+	 */
+	EOperation getMathFacade__CreateMatrix4x4__Matrix4d();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createMatrix3x3(javax.vecmath.Matrix3d) <em>Create Matrix3x3</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Matrix3x3</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#createMatrix3x3(javax.vecmath.Matrix3d)
+	 * @generated
+	 */
+	EOperation getMathFacade__CreateMatrix3x3__Matrix3d();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createTuple3d(javax.vecmath.Tuple3d) <em>Create Tuple3d</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Tuple3d</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#createTuple3d(javax.vecmath.Tuple3d)
+	 * @generated
+	 */
+	EOperation getMathFacade__CreateTuple3d__Tuple3d();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createTuple3d(double, double, double) <em>Create Tuple3d</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Tuple3d</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#createTuple3d(double, double, double)
+	 * @generated
+	 */
+	EOperation getMathFacade__CreateTuple3d__double_double_double();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createPolynomial(double) <em>Create Polynomial</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Polynomial</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#createPolynomial(double)
+	 * @generated
+	 */
+	EOperation getMathFacade__CreatePolynomial__double();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createIdentityMatrix4x4() <em>Create Identity Matrix4x4</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Identity Matrix4x4</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#createIdentityMatrix4x4()
+	 * @generated
+	 */
+	EOperation getMathFacade__CreateIdentityMatrix4x4();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#createIdentityMatrix3x3() <em>Create Identity Matrix3x3</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Identity Matrix3x3</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#createIdentityMatrix3x3()
+	 * @generated
+	 */
+	EOperation getMathFacade__CreateIdentityMatrix3x3();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#extractPosition(org.eclipse.symphony.common.math.Matrix4x4) <em>Extract Position</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Extract Position</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#extractPosition(org.eclipse.symphony.common.math.Matrix4x4)
+	 * @generated
+	 */
+	EOperation getMathFacade__ExtractPosition__Matrix4x4();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathFacade#extractOrientation(org.eclipse.symphony.common.math.Matrix4x4) <em>Extract Orientation</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Extract Orientation</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathFacade#extractOrientation(org.eclipse.symphony.common.math.Matrix4x4)
+	 * @generated
+	 */
+	EOperation getMathFacade__ExtractOrientation__Matrix4x4();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.Matrix3x3 <em>Matrix3x3</em>}'.
@@ -815,6 +1106,16 @@ public interface MathPackage extends EPackage {
 	EAttribute getMatrix3x3_M22();
 
 	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Matrix3x3#asMatrix3d() <em>As Matrix3d</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>As Matrix3d</em>' operation.
+	 * @see org.eclipse.symphony.common.math.Matrix3x3#asMatrix3d()
+	 * @generated
+	 */
+	EOperation getMatrix3x3__AsMatrix3d();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.Tuple3d <em>Tuple3d</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -856,6 +1157,16 @@ public interface MathPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTuple3d_Z();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.Tuple3d#asTuple3d() <em>As Tuple3d</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>As Tuple3d</em>' operation.
+	 * @see org.eclipse.symphony.common.math.Tuple3d#asTuple3d()
+	 * @generated
+	 */
+	EOperation getTuple3d__AsTuple3d();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.math.Polynomial <em>Polynomial</em>}'.
@@ -922,11 +1233,41 @@ public interface MathPackage extends EPackage {
   EClass getMathIO();
 
   /**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathIO#readTrMatrix(java.lang.String) <em>Read Tr Matrix</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Read Tr Matrix</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathIO#readTrMatrix(java.lang.String)
+	 * @generated
+	 */
+	EOperation getMathIO__ReadTrMatrix__String();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathIO#writeTrMatrix(org.eclipse.symphony.common.math.Matrix4x4, java.lang.String) <em>Write Tr Matrix</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Write Tr Matrix</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathIO#writeTrMatrix(org.eclipse.symphony.common.math.Matrix4x4, java.lang.String)
+	 * @generated
+	 */
+	EOperation getMathIO__WriteTrMatrix__Matrix4x4_String();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.math.MathIO#writeTrMatrix(javax.vecmath.Matrix4d, java.lang.String) <em>Write Tr Matrix</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Write Tr Matrix</em>' operation.
+	 * @see org.eclipse.symphony.common.math.MathIO#writeTrMatrix(javax.vecmath.Matrix4d, java.lang.String)
+	 * @generated
+	 */
+	EOperation getMathIO__WriteTrMatrix__Matrix4d_String();
+
+		/**
 	 * Returns the meta object for data type '<em>EDouble Array</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>EDouble Array</em>'.
-	 * @model instanceClass="double[]"
+	 * @model instanceClass="double"
 	 * @generated
 	 */
 	EDataType getEDoubleArray();
@@ -1136,6 +1477,14 @@ public interface MathPackage extends EPackage {
 		EAttribute MATRIX4X4__M33 = eINSTANCE.getMatrix4x4_M33();
 
 		/**
+		 * The meta object literal for the '<em><b>As Matrix4d</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATRIX4X4___AS_MATRIX4D = eINSTANCE.getMatrix4x4__AsMatrix4d();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.MathFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1144,6 +1493,78 @@ public interface MathPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MATH_FACADE = eINSTANCE.getMathFacade();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Matrix4x4</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D = eINSTANCE.getMathFacade__CreateMatrix4x4__Matrix4d();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Matrix3x3</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D = eINSTANCE.getMathFacade__CreateMatrix3x3__Matrix3d();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Tuple3d</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___CREATE_TUPLE3D__TUPLE3D = eINSTANCE.getMathFacade__CreateTuple3d__Tuple3d();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Tuple3d</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getMathFacade__CreateTuple3d__double_double_double();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Polynomial</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE = eINSTANCE.getMathFacade__CreatePolynomial__double();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Identity Matrix4x4</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___CREATE_IDENTITY_MATRIX4X4 = eINSTANCE.getMathFacade__CreateIdentityMatrix4x4();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Identity Matrix3x3</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___CREATE_IDENTITY_MATRIX3X3 = eINSTANCE.getMathFacade__CreateIdentityMatrix3x3();
+
+		/**
+		 * The meta object literal for the '<em><b>Extract Position</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___EXTRACT_POSITION__MATRIX4X4 = eINSTANCE.getMathFacade__ExtractPosition__Matrix4x4();
+
+		/**
+		 * The meta object literal for the '<em><b>Extract Orientation</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4 = eINSTANCE.getMathFacade__ExtractOrientation__Matrix4x4();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.Matrix3x3Impl <em>Matrix3x3</em>}' class.
@@ -1228,6 +1649,14 @@ public interface MathPackage extends EPackage {
 		EAttribute MATRIX3X3__M22 = eINSTANCE.getMatrix3x3_M22();
 
 		/**
+		 * The meta object literal for the '<em><b>As Matrix3d</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATRIX3X3___AS_MATRIX3D = eINSTANCE.getMatrix3x3__AsMatrix3d();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl <em>Tuple3d</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1260,6 +1689,14 @@ public interface MathPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TUPLE3D__Z = eINSTANCE.getTuple3d_Z();
+
+		/**
+		 * The meta object literal for the '<em><b>As Tuple3d</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation TUPLE3D___AS_TUPLE3D = eINSTANCE.getTuple3d__AsTuple3d();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.math.impl.PolynomialImpl <em>Polynomial</em>}' class.
@@ -1314,6 +1751,30 @@ public interface MathPackage extends EPackage {
     EClass MATH_IO = eINSTANCE.getMathIO();
 
     /**
+		 * The meta object literal for the '<em><b>Read Tr Matrix</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_IO___READ_TR_MATRIX__STRING = eINSTANCE.getMathIO__ReadTrMatrix__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Write Tr Matrix</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_IO___WRITE_TR_MATRIX__MATRIX4X4_STRING = eINSTANCE.getMathIO__WriteTrMatrix__Matrix4x4_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Write Tr Matrix</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MATH_IO___WRITE_TR_MATRIX__MATRIX4D_STRING = eINSTANCE.getMathIO__WriteTrMatrix__Matrix4d_String();
+
+				/**
 		 * The meta object literal for the '<em>EDouble Array</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

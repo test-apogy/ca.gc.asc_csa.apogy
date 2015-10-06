@@ -37,7 +37,7 @@ public interface Tuple3d extends EObject {
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
 	 * @see org.eclipse.symphony.common.math.MathPackage#getTuple3d_X()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getX();
@@ -63,7 +63,7 @@ public interface Tuple3d extends EObject {
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
 	 * @see org.eclipse.symphony.common.math.MathPackage#getTuple3d_Y()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getY();
@@ -89,7 +89,7 @@ public interface Tuple3d extends EObject {
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(double)
 	 * @see org.eclipse.symphony.common.math.MathPackage#getTuple3d_Z()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getZ();
@@ -107,7 +107,7 @@ public interface Tuple3d extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.common.math.VecmathTuple3d"
+	 * @model dataType="org.eclipse.symphony.common.math.VecmathTuple3d" unique="false"
 	 * @generated
 	 */
 	javax.vecmath.Tuple3d asTuple3d();

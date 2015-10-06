@@ -5,12 +5,13 @@
  */
 package org.eclipse.symphony.common.math.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.MathFactory;
@@ -28,7 +29,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * @generated
  */
-public class MathFacadeImpl extends EObjectImpl implements MathFacade {
+public class MathFacadeImpl extends MinimalEObjectImpl.Container implements MathFacade {
 
 	private static MathFacade instance;
 
@@ -149,6 +150,17 @@ public class MathFacadeImpl extends EObjectImpl implements MathFacade {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Polynomial createPolynomial(double coeffs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -218,6 +230,36 @@ public class MathFacadeImpl extends EObjectImpl implements MathFacade {
 		orientation.setZ(rotationVector.z);
 
 		return orientation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case MathPackage.MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D:
+				return createMatrix4x4((Matrix4d)arguments.get(0));
+			case MathPackage.MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D:
+				return createMatrix3x3((Matrix3d)arguments.get(0));
+			case MathPackage.MATH_FACADE___CREATE_TUPLE3D__TUPLE3D:
+				return createTuple3d((javax.vecmath.Tuple3d)arguments.get(0));
+			case MathPackage.MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE:
+				return createTuple3d((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
+			case MathPackage.MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE:
+				return createPolynomial((Double)arguments.get(0));
+			case MathPackage.MATH_FACADE___CREATE_IDENTITY_MATRIX4X4:
+				return createIdentityMatrix4x4();
+			case MathPackage.MATH_FACADE___CREATE_IDENTITY_MATRIX3X3:
+				return createIdentityMatrix3x3();
+			case MathPackage.MATH_FACADE___EXTRACT_POSITION__MATRIX4X4:
+				return extractPosition((Matrix4x4)arguments.get(0));
+			case MathPackage.MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4:
+				return extractOrientation((Matrix4x4)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } // MathFacadeImpl

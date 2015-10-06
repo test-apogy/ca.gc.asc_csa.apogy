@@ -5,12 +5,13 @@
  */
 package org.eclipse.symphony.common.math.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import javax.vecmath.Matrix4d;
-
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.math.Matrix4x4;
 
@@ -41,7 +42,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *
  * @generated
  */
-public class Matrix4x4Impl extends EObjectImpl implements Matrix4x4 {
+public class Matrix4x4Impl extends MinimalEObjectImpl.Container implements Matrix4x4 {
 	/**
 	 * The default value of the '{@link #getM00() <em>M00</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -872,6 +873,20 @@ public class Matrix4x4Impl extends EObjectImpl implements Matrix4x4 {
 				return m33 != M33_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case MathPackage.MATRIX4X4___AS_MATRIX4D:
+				return asMatrix4d();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

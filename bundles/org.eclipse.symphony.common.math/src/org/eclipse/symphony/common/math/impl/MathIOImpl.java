@@ -8,11 +8,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-
+import java.lang.reflect.InvocationTargetException;
 import javax.vecmath.Matrix4d;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.common.math.MathIO;
 import org.eclipse.symphony.common.math.MathPackage;
@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *
  * @generated
  */
-public class MathIOImpl extends EObjectImpl implements MathIO {
+public class MathIOImpl extends MinimalEObjectImpl.Container implements MathIO {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -150,6 +150,41 @@ public class MathIOImpl extends EObjectImpl implements MathIO {
 		}
 
 		writer.close();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case MathPackage.MATH_IO___READ_TR_MATRIX__STRING:
+				try {
+					return readTrMatrix((String)arguments.get(0));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case MathPackage.MATH_IO___WRITE_TR_MATRIX__MATRIX4X4_STRING:
+				try {
+					writeTrMatrix((Matrix4x4)arguments.get(0), (String)arguments.get(1));
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+			case MathPackage.MATH_IO___WRITE_TR_MATRIX__MATRIX4D_STRING:
+				try {
+					writeTrMatrix((Matrix4d)arguments.get(0), (String)arguments.get(1));
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } // MathIOImpl

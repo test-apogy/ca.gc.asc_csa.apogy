@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.mobile_platform.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.mobile_platform.symphony.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.examples.mobile_platform.provider.SymphonyExampleMobilePlatformEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.examples.mobile_platform.provider
+Export-Package: org.eclipse.symphony.examples.mobile_platform.symphony.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.examples.mobile_platform;visibility:=reexport,
+ org.eclipse.symphony.examples.mobile_platform.symphony;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,
@@ -37,8 +37,8 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.geometry.data.edit;visibility:=reexport,
  org.eclipse.symphony.common.images;visibility:=reexport,
  org.eclipse.symphony.common.images.edit;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.edit;visibility:=reexport,
+ org.eclipse.symphony.examples.mobile_platform;visibility:=reexport,
+ org.eclipse.symphony.examples.mobile_platform.edit;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit;visibility:=reexport

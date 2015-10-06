@@ -3,7 +3,6 @@
  */
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.provider.EMFEcoreExampleMobilePlatformEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.provider.EMFEcoreExampleRoboticArmEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 import ca.gc.space.mrt.actuators.provider.MRTActuatorsEditPlugin;
@@ -19,6 +18,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraEditPlugin;
+import org.eclipse.symphony.examples.mobile_platform.provider.EMFEcoreExampleMobilePlatformEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreExampleRover edit plugin.

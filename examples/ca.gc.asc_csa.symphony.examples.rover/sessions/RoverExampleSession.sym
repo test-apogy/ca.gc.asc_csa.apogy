@@ -19,7 +19,7 @@
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6wQrPEeW4-_ONWXXiAw">
-              <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatformSimulated"/>
+              <implementationClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatformSimulated"/>
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6wgrPEeW4-_ONWXXiAw">
@@ -42,7 +42,7 @@
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMoQrPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6yArPEeW4-_ONWXXiAw">
-              <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatformStub"/>
+              <implementationClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatformStub"/>
               <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
             </typeMemberImplementations>
             <typeMemberImplementations xmi:id="_P7k6yQrPEeW4-_ONWXXiAw">
@@ -260,7 +260,7 @@
         <typeMemberReferenceListElement xmi:id="_ow8RsDq6EeWtwNaLmFVPnQ">
           <typeMember href="platform:/plugin/ca.gc.asc_csa.symphony.examples.rover/model/RoverSymphonySystem.ss#_OeyMpArPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
         <argumentsList xmi:id="_p9-skDq6EeWtwNaLmFVPnQ">
           <arguments xsi:type="controllers:BindedEDataTypeArgument" xmi:id="_p9-skTq6EeWtwNaLmFVPnQ">
             <valueSource xsi:type="controllers:ControllerValueSource" xmi:id="_safLQDq6EeWtwNaLmFVPnQ" lastValue="ACED0005737200106A6176612E6C616E672E446F75626C6580B3C24A296BFB0402000144000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000000">

@@ -23,21 +23,21 @@ public interface MathIO extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.math.Exception"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.math.Exception" fileNameUnique="false"
 	 * @generated
 	 */
 	Matrix4x4 readTrMatrix(String fileName) throws IOException, Exception;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.math.Exception"
+	 * @model exceptions="org.eclipse.symphony.common.math.Exception" trMatrixUnique="false" fileNameUnique="false"
 	 * @generated
 	 */
 	void writeTrMatrix(Matrix4x4 trMatrix, String fileName) throws IOException, Exception;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model exceptions="org.eclipse.symphony.common.math.Exception" trMatrixDataType="org.eclipse.symphony.common.math.Matrix4d"
+	 * @model exceptions="org.eclipse.symphony.common.math.Exception" trMatrixDataType="org.eclipse.symphony.common.math.Matrix4d" trMatrixUnique="false" fileNameUnique="false"
 	 * @generated
 	 */
 	void writeTrMatrix(Matrix4d trMatrix, String fileName) throws IOException, Exception;

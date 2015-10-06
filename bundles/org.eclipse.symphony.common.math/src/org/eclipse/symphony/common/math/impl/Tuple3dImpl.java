@@ -5,10 +5,12 @@
  */
 package org.eclipse.symphony.common.math.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.math.Tuple3d;
 
@@ -26,7 +28,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * @generated
  */
-public class Tuple3dImpl extends EObjectImpl implements Tuple3d {
+public class Tuple3dImpl extends MinimalEObjectImpl.Container implements Tuple3d {
 	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -241,6 +243,20 @@ public class Tuple3dImpl extends EObjectImpl implements Tuple3d {
 				return z != Z_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case MathPackage.TUPLE3D___AS_TUPLE3D:
+				return asTuple3d();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

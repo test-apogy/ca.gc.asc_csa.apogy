@@ -7,7 +7,6 @@ package org.eclipse.symphony.common.math.impl;
 
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -190,8 +189,8 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double[] createEDoubleArrayFromString(EDataType eDataType, String initialValue) {
-		return (double[])super.createFromString(initialValue);
+	public Double createEDoubleArrayFromString(EDataType eDataType, String initialValue) {
+		return (Double)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
@@ -200,7 +199,7 @@ public class MathFactoryImpl extends EFactoryImpl implements MathFactory {
 	 * @generated
 	 */
 	public String convertEDoubleArrayToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(instanceValue);
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

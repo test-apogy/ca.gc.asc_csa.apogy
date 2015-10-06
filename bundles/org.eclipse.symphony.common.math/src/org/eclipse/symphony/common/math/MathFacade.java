@@ -26,7 +26,7 @@ public interface MathFacade extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model matrixDataType="org.eclipse.symphony.common.math.Matrix4d"
+	 * @model unique="false" matrixDataType="org.eclipse.symphony.common.math.Matrix4d" matrixUnique="false"
 	 * @generated
 	 */
 	Matrix4x4 createMatrix4x4(Matrix4d matrix);
@@ -34,7 +34,7 @@ public interface MathFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model matrixDataType="org.eclipse.symphony.common.math.Matrix3d"
+	 * @model unique="false" matrixDataType="org.eclipse.symphony.common.math.Matrix3d" matrixUnique="false"
 	 * @generated
 	 */
 	Matrix3x3 createMatrix3x3(Matrix3d matrix);
@@ -42,7 +42,7 @@ public interface MathFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model tupleDataType="org.eclipse.symphony.common.math.VecmathTuple3d"
+	 * @model unique="false" tupleDataType="org.eclipse.symphony.common.math.VecmathTuple3d" tupleUnique="false"
 	 * @generated
 	 */
 	Tuple3d createTuple3d(javax.vecmath.Tuple3d tuple);
@@ -50,7 +50,7 @@ public interface MathFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" xUnique="false" yUnique="false" zUnique="false"
 	 * @generated
 	 */
 	Tuple3d createTuple3d(double x, double y, double z);
@@ -63,15 +63,15 @@ public interface MathFacade extends EObject {
 	 *   The coefficients of the polynomial, sorted in increasing order.
 	 *   coeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0]
 	 * <!-- end-model-doc -->
-	 * @model coeffsDataType="org.eclipse.symphony.common.math.EDoubleArray"
+	 * @model unique="false" coeffsDataType="org.eclipse.symphony.common.math.EDoubleArray" coeffsUnique="false"
 	 * @generated
 	 */
-	Polynomial createPolynomial(double[] coeffs);
+	Polynomial createPolynomial(double coeffs);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Matrix4x4 createIdentityMatrix4x4();
@@ -79,7 +79,7 @@ public interface MathFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	Matrix3x3 createIdentityMatrix3x3();
@@ -87,7 +87,7 @@ public interface MathFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" matrixUnique="false"
 	 * @generated
 	 */
 	Tuple3d extractPosition(Matrix4x4 matrix);
@@ -95,7 +95,7 @@ public interface MathFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" matrixUnique="false"
 	 * @generated
 	 */
 	Tuple3d extractOrientation(Matrix4x4 matrix);

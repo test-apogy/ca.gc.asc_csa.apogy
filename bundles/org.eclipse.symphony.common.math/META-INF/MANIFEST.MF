@@ -13,9 +13,12 @@ Export-Package: org.eclipse.symphony.common.math,
  org.eclipse.symphony.common.math.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime;bundle-version="3.4.0",
- org.jama;visibility:=reexport;bundle-version="1.0.2",
+ org.jama;bundle-version="1.0.2";visibility:=reexport,
  org.netlib.jlapack;bundle-version="0.8.0",
  org.netlib.jlapack.simple;bundle-version="0.8.0",
- javax.vecmath;visibility:=reexport;bundle-version="1.5.2"
+ javax.vecmath;bundle-version="1.5.2";visibility:=reexport,
+ org.eclipse.emf.ecore.xcore.lib,
+ org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

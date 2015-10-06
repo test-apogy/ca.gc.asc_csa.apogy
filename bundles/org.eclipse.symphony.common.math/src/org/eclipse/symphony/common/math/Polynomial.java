@@ -38,7 +38,7 @@ public interface Polynomial extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Degree</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial_Degree()
-	 * @model default="0" transient="true" changeable="false" volatile="true"
+	 * @model default="0" unique="false" transient="true" changeable="false" volatile="true"
 	 * @generated
 	 */
 	int getDegree();
@@ -55,12 +55,12 @@ public interface Polynomial extends EObject {
 	 * coeffs = { 2, 5, 3 }.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Coeffs</em>' attribute.
-	 * @see #setCoeffs(double[])
+	 * @see #setCoeffs(double)
 	 * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial_Coeffs()
-	 * @model dataType="org.eclipse.symphony.common.math.EDoubleArray"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray"
 	 * @generated
 	 */
-	double[] getCoeffs();
+	double getCoeffs();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.symphony.common.math.Polynomial#getCoeffs <em>Coeffs</em>}' attribute.
@@ -70,7 +70,7 @@ public interface Polynomial extends EObject {
 	 * @see #getCoeffs()
 	 * @generated
 	 */
-	void setCoeffs(double[] value);
+	void setCoeffs(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Real Roots</b></em>' attribute.
@@ -82,10 +82,10 @@ public interface Polynomial extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Real Roots</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial_RealRoots()
-	 * @model dataType="org.eclipse.symphony.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
-	double[] getRealRoots();
+	double getRealRoots();
 
 	/**
 	 * Returns the value of the '<em><b>Imaginary Roots</b></em>' attribute.
@@ -97,9 +97,9 @@ public interface Polynomial extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Imaginary Roots</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial_ImaginaryRoots()
-	 * @model dataType="org.eclipse.symphony.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
-	double[] getImaginaryRoots();
+	double getImaginaryRoots();
 
 } // Polynomial

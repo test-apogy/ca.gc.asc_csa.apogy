@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="ca.gc.asc_csa.eclipse.emf.ecore.invocator" xmlns:mobile_platform="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform" xmi:id="_CaxBIArPEeW4-_ONWXXiAw" name="">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="ca.gc.asc_csa.eclipse.emf.ecore.invocator" xmlns:mobile_platform="org.eclipse.symphony.examples.mobile_platform" xmi:id="_CaxBIArPEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:SymphonyEnvironment" xmi:id="_CaxBIQrPEeW4-_ONWXXiAw" name="Mobile Platform Example" description="This is an example session, illustrating how to use the mobile platform example" activeContext="_CaxoMgrPEeW4-_ONWXXiAw" time="2015-04-13T11:14:28.621-0400" activeWorksite="_CaxoOQrPEeW4-_ONWXXiAw" activeTimeSource="_Ca4V4grPEeW4-_ONWXXiAw">
     <typesList xmi:id="_CaxBIgrPEeW4-_ONWXXiAw">
       <localTypes xmi:id="_CaxBIwrPEeW4-_ONWXXiAw"/>
@@ -7,21 +7,21 @@
     </typesList>
     <variablesList xmi:id="_CaxBJQrPEeW4-_ONWXXiAw">
       <variables xmi:id="_CaxoMArPEeW4-_ONWXXiAw" name="mobilePlatform">
-        <variableType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.mobile_platform/model/MobilePlatformSymphonySystem.ss#_aD78wArNEeW4-_ONWXXiAw"/>
+        <variableType href="platform:/plugin/org.eclipse.symphony.examples.mobile_platform.symphony/model/MobilePlatformSymphonySystem.ss#_aD78wArNEeW4-_ONWXXiAw"/>
       </variables>
     </variablesList>
     <contextsList xmi:id="_CaxoMQrPEeW4-_ONWXXiAw">
       <contexts xsi:type="invocator:BasicContext" xmi:id="_CaxoMgrPEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_Ca7ZMgrPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_CaxoMwrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_CaxoNArPEeW4-_ONWXXiAw" variable="_CaxoMArPEeW4-_ONWXXiAw">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatformSimulated"/>
+            <implementationClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatformSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" xmi:id="_CaxoNQrPEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_Ca7ZNArPEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_CaxoNgrPEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_CaxoNwrPEeW4-_ONWXXiAw" variable="_CaxoMArPEeW4-_ONWXXiAw">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatformStub"/>
+            <implementationClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatformStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -46,42 +46,42 @@
   <programsList xmi:id="_Ca4V4wrPEeW4-_ONWXXiAw">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_Ca4V5ArPEeW4-_ONWXXiAw">
       <operationCalls xmi:id="_Ca4V5QrPEeW4-_ONWXXiAw" name="Init" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/init"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/init"/>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V5grPEeW4-_ONWXXiAw" name="Dispose" variable="_CaxoMArPEeW4-_ONWXXiAw">
         <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore#//Disposable/dispose"/>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V5wrPEeW4-_ONWXXiAw" name="Change Angular Velocity" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/cmdAngularVelocity"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/cmdAngularVelocity"/>
         <argumentsList xmi:id="_Ca4V6ArPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V6QrPEeW4-_ONWXXiAw" value="0.17453292519943295"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V6grPEeW4-_ONWXXiAw" name="Change Linear Velocity" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/cmdLinearVelocity"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/cmdLinearVelocity"/>
         <argumentsList xmi:id="_Ca4V6wrPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V7ArPEeW4-_ONWXXiAw" value="0.5"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V7QrPEeW4-_ONWXXiAw" name="Change Velocities" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/cmdVelocities"/>
         <argumentsList xmi:id="_Ca4V7grPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V7wrPEeW4-_ONWXXiAw" value="0.25"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V8ArPEeW4-_ONWXXiAw" value="0.3490658503988659"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V8QrPEeW4-_ONWXXiAw" name="Clear Error" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/clearPositionError"/>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V8grPEeW4-_ONWXXiAw" name="Move To" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/moveTo"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/moveTo"/>
         <argumentsList xmi:id="_Ca4V8wrPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V9ArPEeW4-_ONWXXiAw" value="0.0"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_Ca4V9QrPEeW4-_ONWXXiAw" value="0.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca4V9grPEeW4-_ONWXXiAw" name="Reset Position" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/resetPosition"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/resetPosition"/>
         <argumentsList xmi:id="_Ca4V9wrPEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EClassArgument" xmi:id="_Ca5kAArPEeW4-_ONWXXiAw">
             <value xsi:type="mobile_platform:Position" xmi:id="_Ca6yIArPEeW4-_ONWXXiAw"/>
@@ -89,7 +89,7 @@
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="_Ca7ZMArPEeW4-_ONWXXiAw" name="Stop" variable="_CaxoMArPEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform#//MobilePlatform/stop"/>
+        <eOperation href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform/stop"/>
       </operationCalls>
     </programs>
   </programsList>

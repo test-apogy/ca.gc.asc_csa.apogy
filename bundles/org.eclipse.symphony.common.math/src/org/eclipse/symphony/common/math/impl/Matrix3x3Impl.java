@@ -5,12 +5,13 @@
  */
 package org.eclipse.symphony.common.math.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import javax.vecmath.Matrix3d;
-
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.math.Matrix3x3;
 
@@ -34,7 +35,7 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  *
  * @generated
  */
-public class Matrix3x3Impl extends EObjectImpl implements Matrix3x3 {
+public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matrix3x3 {
 	/**
 	 * The default value of the '{@link #getM00() <em>M00</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -548,6 +549,20 @@ public class Matrix3x3Impl extends EObjectImpl implements Matrix3x3 {
 				return m22 != M22_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case MathPackage.MATRIX3X3___AS_MATRIX3D:
+				return asMatrix3d();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
