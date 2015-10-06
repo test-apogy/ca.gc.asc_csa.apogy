@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.lidar;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.lidar.symphony;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.0",
@@ -19,12 +19,12 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.0",
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov.bindings;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar;visibility:=reexport
+ org.eclipse.symphony.examples.lidar;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.examples.lidar,
- ca.gc.asc_csa.symphony.examples.lidar.impl,
- ca.gc.asc_csa.symphony.examples.lidar.util
-Bundle-Activator: ca.gc.asc_csa.symphony.examples.lidar.Activator
+Export-Package: org.eclipse.symphony.examples.lidar.symphony,
+ org.eclipse.symphony.examples.lidar.symphony.impl,
+ org.eclipse.symphony.examples.lidar.symphony.util
+Bundle-Activator: org.eclipse.symphony.examples.lidar.symphony.Activator

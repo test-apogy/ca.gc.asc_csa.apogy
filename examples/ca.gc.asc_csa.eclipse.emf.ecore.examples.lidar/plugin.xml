@@ -10,9 +10,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated emf_ecore.examples_lidar -->
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.EMFEcoreExampleLidarPackage"
-            genModel="model/emf_ecore_examples_lidar.xcore"/>
+            uri="org.eclipse.symphony.examples.lidar"
+            class="org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage"
+            genModel="model/symphony_examples_lidar.xcore"/>
    </extension>
 
 </plugin>

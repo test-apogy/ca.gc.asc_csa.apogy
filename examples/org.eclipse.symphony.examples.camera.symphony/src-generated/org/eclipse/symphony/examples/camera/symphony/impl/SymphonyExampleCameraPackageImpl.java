@@ -100,8 +100,8 @@ public class SymphonyExampleCameraPackageImpl extends EPackageImpl implements Sy
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyCorePackage.eINSTANCE.eClass();
 		FovPackage.eINSTANCE.eClass();
+		SymphonyCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyExampleCameraPackage.createPackageContents();

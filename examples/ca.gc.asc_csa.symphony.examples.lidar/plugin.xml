@@ -10,9 +10,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_examples_lidar -->
       <package
-            uri="ca.gc.asc_csa.symphony.examples.lidar"
-            class="ca.gc.asc_csa.symphony.examples.lidar.SymphonyExampleLidarPackage"
-            genModel="model/symphony_examples_lidar.xcore"/>
+            uri="org.eclipse.symphony.examples.lidar.symphony"
+            class="org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage"
+            genModel="model/symphony_examples_lidar_symphony.xcore"/>
    </extension>
    <extension
          point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">

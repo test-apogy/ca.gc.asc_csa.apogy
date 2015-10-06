@@ -7,21 +7,21 @@
     </typesList>
     <variablesList xmi:id="__IW1NQrOEeW4-_ONWXXiAw">
       <variables xmi:id="__IW1NgrOEeW4-_ONWXXiAw" name="lidar">
-        <variableType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.lidar/model/LidarSymphonySystem.ss#_9z1SQArOEeW4-_ONWXXiAw"/>
+        <variableType href="platform:/plugin/org.eclipse.symphony.examples.lidar.symphony/model/LidarSymphonySystem.ss#_9z1SQArOEeW4-_ONWXXiAw"/>
       </variables>
     </variablesList>
     <contextsList xmi:id="__IXcQArOEeW4-_ONWXXiAw">
       <contexts xsi:type="invocator:BasicContext" xmi:id="__IXcQQrOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="__Idi8ArOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="__IXcQgrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="__IXcQwrOEeW4-_ONWXXiAw" variable="__IW1NgrOEeW4-_ONWXXiAw">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar#//LidarSimulated"/>
+            <implementationClass href="org.eclipse.symphony.examples.lidar#//LidarSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" xmi:id="__IXcRArOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="__Idi8grOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="__IXcRQrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="__IXcRgrOEeW4-_ONWXXiAw" variable="__IW1NgrOEeW4-_ONWXXiAw">
-            <implementationClass href="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar#//LidarStub"/>
+            <implementationClass href="org.eclipse.symphony.examples.lidar#//LidarStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -46,17 +46,17 @@
   <programsList xmi:id="__Idi5ArOEeW4-_ONWXXiAw">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="__Idi5QrOEeW4-_ONWXXiAw" name="">
       <operationCalls xmi:id="__Idi5grOEeW4-_ONWXXiAw" name="Init" variable="__IW1NgrOEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar#//Lidar/init"/>
+        <eOperation href="org.eclipse.symphony.examples.lidar#//Lidar/init"/>
       </operationCalls>
       <operationCalls xmi:id="__Idi5wrOEeW4-_ONWXXiAw" name="Acquire Scan (Blocking)" variable="__IW1NgrOEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar#//Lidar/acquireScan"/>
+        <eOperation href="org.eclipse.symphony.examples.lidar#//Lidar/acquireScan"/>
         <argumentsList xmi:id="__Idi6ArOEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi6QrOEeW4-_ONWXXiAw" value="0.8726646259971648"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi6grOEeW4-_ONWXXiAw" value="0.6981317007977318"/>
         </argumentsList>
       </operationCalls>
       <operationCalls xmi:id="__Idi6wrOEeW4-_ONWXXiAw" name="Acquire Scan (Non-Blocking)" variable="__IW1NgrOEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar#//Lidar/acquireScanNonBlocking"/>
+        <eOperation href="org.eclipse.symphony.examples.lidar#//Lidar/acquireScanNonBlocking"/>
         <argumentsList xmi:id="__Idi7ArOEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi7QrOEeW4-_ONWXXiAw" value="0.8726646259971648"/>
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="__Idi7grOEeW4-_ONWXXiAw" value="0.6981317007977318"/>

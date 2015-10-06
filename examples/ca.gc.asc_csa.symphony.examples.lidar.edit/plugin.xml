@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_examples_lidar -->
       <factory
-            uri="ca.gc.asc_csa.symphony.examples.lidar"
-            class="ca.gc.asc_csa.symphony.examples.lidar.provider.SymphonyExampleLidarItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.examples.lidar.symphony"
+            class="org.eclipse.symphony.examples.lidar.symphony.provider.SymphonyExampleLidarItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.lidar;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.impl,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.util
+Export-Package: org.eclipse.symphony.examples.lidar,
+ org.eclipse.symphony.examples.lidar.impl,
+ org.eclipse.symphony.examples.lidar.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
@@ -22,4 +22,4 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.Activator
+Bundle-Activator: org.eclipse.symphony.examples.lidar.Activator

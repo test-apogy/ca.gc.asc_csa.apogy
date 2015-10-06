@@ -92,8 +92,8 @@ public class MRTFOVBindingsPackageImpl extends EPackageImpl implements MRTFOVBin
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyBindingsPackage.eINSTANCE.eClass();
 		FovPackage.eINSTANCE.eClass();
+		TopologyBindingsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theMRTFOVBindingsPackage.createPackageContents();

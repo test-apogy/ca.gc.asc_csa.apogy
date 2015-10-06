@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.examples.lidar.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.lidar.symphony.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.examples.lidar.provider.SymphonyExampleLidarEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.examples.lidar.symphony.provider.SymphonyExampleLidarEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.examples.lidar.provider
+Export-Package: org.eclipse.symphony.examples.lidar.symphony.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.examples.lidar;visibility:=reexport,
+ org.eclipse.symphony.examples.lidar.symphony;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov.edit;visibility:=reexport,

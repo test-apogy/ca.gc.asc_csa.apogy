@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated emf_ecore.examples_lidar -->
       <factory
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.provider.EMFEcoreExampleLidarItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.examples.lidar"
+            class="org.eclipse.symphony.examples.lidar.provider.EMFEcoreExampleLidarItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,7 +24,7 @@
       <!-- @generated emf_ecore.examples_lidar -->
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.provider.EMFEcoreExampleLidarItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.lidar.provider.EMFEcoreExampleLidarItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>
