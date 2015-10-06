@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.Battery;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverFactory;
@@ -771,7 +771,7 @@ public class EMFEcoreExampleRoverPackageImpl extends EPackageImpl implements EMF
 			 "csa_units", "m/s",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
-			 "get", "<%ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
+			 "get", "<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
 		   });	
 		addAnnotation
 		  (getRover_AngularVelocity(), 
@@ -783,7 +783,7 @@ public class EMFEcoreExampleRoverPackageImpl extends EPackageImpl implements EMF
 			 "csa_units", "rad/s",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
-			 "get", "<%ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
+			 "get", "<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
 		   });	
 		addAnnotation
 		  (getRover_Initialized(), 

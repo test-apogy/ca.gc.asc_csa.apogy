@@ -4,10 +4,10 @@
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
 		  modelName="SymphonyExampleMobilePlatform")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.examples.mobile_platform/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.examples.mobile_platform.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.mobile_platform.symphony/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.mobile_platform.symphony.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.examples.mobile_platform
+package org.eclipse.symphony.examples.mobile_platform.symphony
 
 import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
 import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
@@ -26,7 +26,7 @@ class MobilePlatformSymphonySystemApiAdapter extends SymphonySystemApiAdapter
 {
 	/*
 	 * For specific implementation details,
-	 * please see {@link ca.gc.asc_csa.symphony.examples.mobile_platform.impl.MobilePlatformSymphonySystemApiAdapterImpl}
+	 * please see {@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformSymphonySystemApiAdapterImpl}
 	 */
 }
 
@@ -34,7 +34,7 @@ class MobilePlatformSymphonySystemApiAdapter extends SymphonySystemApiAdapter
  * This class specifies the initialization data that Symphony
  * should be interested in when (re)initializing the Mobile
  * platform with the API Adapter (which in this case is
- * {@link ca.gc.asc_csa.symphony.examples.mobile_platform.MobilePlatformSymphonySystemApiAdapter})
+ * {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter})
  */
 class MobilePlatformData extends SymphonyInitializationData
 {
@@ -91,6 +91,6 @@ class MobilePlatformSymphonySystemAnnotation extends PoseVariableAnnotation
 {
 	/*
 	 * For specific implementation details,
-	 * please see {@link ca.gc.asc_csa.symphony.examples.mobile_platform.impl.MobilePlatformSymphonySystemAnnotationImpl}
+	 * please see {@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformSymphonySystemAnnotationImpl}
 	 */
 }

@@ -428,7 +428,7 @@ class PoseVariableAnnotation extends AbstractVariableAnnotation
 	
 	/** Whether to show the pose as text. */
 	boolean showPose = "true"	
-	
+		
 	/**
 	 * Method called when the position or orientation of the variable changes.
 	 * @param x The x coordinates, in meters.

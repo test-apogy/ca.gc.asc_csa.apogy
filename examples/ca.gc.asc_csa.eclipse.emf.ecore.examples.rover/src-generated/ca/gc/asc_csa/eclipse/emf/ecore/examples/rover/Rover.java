@@ -4,9 +4,9 @@
 package ca.gc.asc_csa.eclipse.emf.ecore.examples.rover;
 
 import org.eclipse.symphony.examples.camera.PTUCamera;
+import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
-import ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform;
 import ca.gc.asc_csa.eclipse.emf.ecore.examples.robotic_arm.RoboticArm;
 
 /**
@@ -202,7 +202,7 @@ public interface Rover extends Disposable
 	 * @return the value of the '<em>Linear Velocity</em>' attribute.
 	 * @see ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverPackage#getRover_LinearVelocity()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='m/s' property='Readonly' propertyCategory='Velocities' get='<%ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='m/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
 	 */
 	double getLinearVelocity();
@@ -225,7 +225,7 @@ public interface Rover extends Disposable
 	 * @return the value of the '<em>Angular Velocity</em>' attribute.
 	 * @see ca.gc.asc_csa.eclipse.emf.ecore.examples.rover.EMFEcoreExampleRoverPackage#getRover_AngularVelocity()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad/s' property='Readonly' propertyCategory='Velocities' get='<%ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%ca.gc.asc_csa.eclipse.emf.ecore.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
 	 */
 	double getAngularVelocity();

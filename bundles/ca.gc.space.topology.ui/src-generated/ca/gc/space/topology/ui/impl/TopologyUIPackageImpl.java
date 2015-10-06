@@ -218,7 +218,7 @@ public class TopologyUIPackageImpl extends EPackageImpl implements TopologyUIPac
 		isInited = true;
 
 		// Initialize simple dependencies
-		EcorePackage.eINSTANCE.eClass();
+		MathPackage.eINSTANCE.eClass();
 		TopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
