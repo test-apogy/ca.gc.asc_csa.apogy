@@ -87,8 +87,8 @@ public class Data3DUIPackageImpl extends EPackageImpl implements Data3DUIPackage
 
 		// Initialize simple dependencies
 		ImagesCorePackage.eINSTANCE.eClass();
-		TopologyUIPackage.eINSTANCE.eClass();
 		Data3dPackage.eINSTANCE.eClass();
+		TopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theData3DUIPackage.createPackageContents();

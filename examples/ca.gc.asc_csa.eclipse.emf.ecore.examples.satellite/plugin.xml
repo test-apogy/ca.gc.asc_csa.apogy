@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated emf_ecore_examples_satellite -->
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.EMFEcoreExampleSatellitePackage"
+            uri="org.eclipse.symphony.examples.satellite"
+            class="org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage"
             genModel="model/emf_ecore_examples_satellite.xcore"/>
    </extension>
    <extension

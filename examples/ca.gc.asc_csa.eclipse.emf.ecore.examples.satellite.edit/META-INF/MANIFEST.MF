@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.examples.satellite.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider.EMFEcoreExampleSatelliteEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.provider
+Export-Package: org.eclipse.symphony.examples.satellite.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite;visibility:=reexport,
+ org.eclipse.symphony.examples.satellite;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  ca.gc.asc_csa.symphony.environment.orbit;visibility:=reexport,
  ca.gc.asc_csa.symphony.environment.orbit.edit;visibility:=reexport,

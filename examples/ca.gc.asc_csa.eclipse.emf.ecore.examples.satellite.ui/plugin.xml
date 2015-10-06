@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
+            defaultHandler="org.eclipse.symphony.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
+            id="org.eclipse.symphony.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
             name="Export Satellite Command List to CSV File">
       </command>
    </extension>
@@ -15,7 +15,7 @@
             allPopups="true"
             locationURI="popup:org.eclipse.ui.popup.any?after=ca.gc.asc_csa.eclipse.emf.ecore.ui.additions">
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
+               commandId="org.eclipse.symphony.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
                label="Export Satellite Command List to CSV File"
                style="push">
             <visibleWhen
@@ -23,7 +23,7 @@
                <or>
                   <iterate>
                      <instanceof
-                           value="ca.gc.asc_csa.eclipse.emf.ecore.examples.satellite.SatelliteCommandList">
+                           value="org.eclipse.symphony.examples.satellite.SatelliteCommandList">
                      </instanceof>
                   </iterate>
                </or>
