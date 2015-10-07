@@ -4,13 +4,13 @@
 package ca.gc.asc_csa.symphony.tools.telecoms.provider;
 
 
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.asc_csa.symphony.environment.provider.LineOfSightImageMapLayerItemProvider;
 import ca.gc.asc_csa.symphony.tools.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.symphony.tools.telecoms.SymphonyTelecomToolsFactory;
 import ca.gc.asc_csa.symphony.tools.telecoms.SymphonyTelecomToolsPackage;
+
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -18,6 +18,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.provider.LineOfSightImageMapLayerItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.symphony.tools.telecoms.AntennaRadiationPatternImageMapLayer} object.

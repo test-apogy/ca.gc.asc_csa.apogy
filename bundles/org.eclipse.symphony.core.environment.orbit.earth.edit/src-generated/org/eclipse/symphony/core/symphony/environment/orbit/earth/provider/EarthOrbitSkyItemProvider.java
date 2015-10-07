@@ -4,8 +4,6 @@
 package org.eclipse.symphony.core.symphony.environment.orbit.earth.provider;
 
 
-import ca.gc.asc_csa.symphony.environment.provider.SkyItemProvider;
-
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -16,6 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.provider.SkyItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky} object.

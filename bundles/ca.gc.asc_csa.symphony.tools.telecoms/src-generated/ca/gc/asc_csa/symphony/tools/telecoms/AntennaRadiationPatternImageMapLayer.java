@@ -3,8 +3,9 @@
  */
 package ca.gc.asc_csa.symphony.tools.telecoms;
 
-import ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer;
 import javax.vecmath.Color3f;
+
+import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
 
 /**
  * <!-- begin-user-doc -->

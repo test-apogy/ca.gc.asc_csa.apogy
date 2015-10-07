@@ -3,7 +3,8 @@
  */
 package ca.gc.asc_csa.symphony.tools.vehicle;
 
-import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer;
+import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
+
 import ca.gc.asc_csa.symphony.tools.core.AbstractTwoPoints3DTool;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner;

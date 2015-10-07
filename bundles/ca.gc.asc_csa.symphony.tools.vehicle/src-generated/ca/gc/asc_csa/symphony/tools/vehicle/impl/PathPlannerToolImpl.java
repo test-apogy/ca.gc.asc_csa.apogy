@@ -23,8 +23,8 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
 
-import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer;
 import ca.gc.asc_csa.symphony.tools.core.Activator;
 import ca.gc.asc_csa.symphony.tools.core.impl.AbstractTwoPoints3DToolImpl;
 import ca.gc.asc_csa.symphony.tools.vehicle.PathPlannerTool;

@@ -3,14 +3,13 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
-
 import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;

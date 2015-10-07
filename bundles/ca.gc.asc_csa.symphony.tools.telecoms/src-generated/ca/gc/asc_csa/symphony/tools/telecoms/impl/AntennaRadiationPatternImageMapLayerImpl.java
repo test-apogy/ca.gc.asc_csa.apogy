@@ -15,8 +15,8 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.environment.impl.LineOfSightImageMapLayerImpl;
 
-import ca.gc.asc_csa.symphony.environment.impl.LineOfSightImageMapLayerImpl;
 import ca.gc.asc_csa.symphony.tools.telecoms.AbstractAntennaRadiationPattern;
 import ca.gc.asc_csa.symphony.tools.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.symphony.tools.telecoms.SymphonyTelecomToolsPackage;

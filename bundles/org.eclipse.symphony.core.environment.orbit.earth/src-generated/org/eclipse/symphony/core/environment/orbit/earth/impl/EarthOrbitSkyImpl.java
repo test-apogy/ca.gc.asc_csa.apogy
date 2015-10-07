@@ -12,13 +12,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.core.environment.Earth;
+import org.eclipse.symphony.core.environment.Moon;
+import org.eclipse.symphony.core.environment.impl.SkyImpl;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
-
-import ca.gc.asc_csa.symphony.environment.Earth;
-import ca.gc.asc_csa.symphony.environment.Moon;
-import ca.gc.asc_csa.symphony.environment.impl.SkyImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth;
 
-import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState;
+import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 
 /**
  * <!-- begin-user-doc -->

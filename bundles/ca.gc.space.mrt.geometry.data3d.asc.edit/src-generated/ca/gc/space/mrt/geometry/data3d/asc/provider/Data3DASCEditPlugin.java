@@ -42,9 +42,9 @@ public final class Data3DASCEditPlugin extends EMFPlugin {
 	public Data3DASCEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     Data3dEditPlugin.INSTANCE,
 		     GeometrydataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
 		   });
 	}
 

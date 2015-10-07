@@ -1,8 +1,8 @@
 @GenModel(prefix="SymphonyEnvironmentUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="SymphonyEnvironmentUI", complianceLevel="6.0", suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.environment.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.environment.ui.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.environment.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.environment.ui.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.environment.ui
+package org.eclipse.symphony.core.environment.ui
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
@@ -13,11 +13,11 @@ import org.eclipse.symphony.common.images.AbstractEImage
 import org.eclipse.symphony.core.FeatureOfInterestList
 import org.eclipse.symphony.core.PoseProvider
 import org.eclipse.symphony.core.SymphonySystemApiAdapter
-import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer
-import ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation
-import ca.gc.asc_csa.symphony.environment.RectangularRegion
-import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider
-import ca.gc.asc_csa.symphony.environment.Star
+import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer
+import org.eclipse.symphony.core.environment.ImageMapLayerPresentation
+import org.eclipse.symphony.core.environment.RectangularRegion
+import org.eclipse.symphony.core.environment.RectangularRegionProvider
+import org.eclipse.symphony.core.environment.Star
 import org.eclipse.symphony.common.math.Matrix4x4
 import ca.gc.space.topology.ui.NodePresentation
 import org.eclipse.emf.ecore.EObject

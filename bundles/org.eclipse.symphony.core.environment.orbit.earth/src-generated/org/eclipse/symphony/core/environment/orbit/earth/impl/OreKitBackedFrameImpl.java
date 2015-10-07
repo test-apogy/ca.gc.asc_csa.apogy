@@ -3,14 +3,13 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth.impl;
 
-import ca.gc.asc_csa.symphony.environment.orbit.impl.AbstractFrameImpl;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.impl.AbstractFrameImpl;
 import org.orekit.frames.Frame;
 
 /**

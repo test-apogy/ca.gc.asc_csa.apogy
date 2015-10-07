@@ -28,7 +28,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.asc_csa.symphony.tools.vehicle;visibility:=reexport,
  org.eclipse.symphony.core.invocator;visibility:=reexport,
- ca.gc.asc_csa.symphony.environment;visibility:=reexport,
+ org.eclipse.symphony.core.environment;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  ca.gc.space.mrt.mobility.pathplanners;visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"

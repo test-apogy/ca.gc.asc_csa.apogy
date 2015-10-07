@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.environment.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.environment.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.environment.provider
+Export-Package: org.eclipse.symphony.core.environment.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.environment;visibility:=reexport,
+ org.eclipse.symphony.core.environment;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.core;visibility:=reexport,
  org.eclipse.symphony.core.edit;visibility:=reexport,

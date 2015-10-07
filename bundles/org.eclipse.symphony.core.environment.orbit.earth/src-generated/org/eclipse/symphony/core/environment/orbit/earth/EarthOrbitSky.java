@@ -3,9 +3,9 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth;
 
-import ca.gc.asc_csa.symphony.environment.Earth;
-import ca.gc.asc_csa.symphony.environment.Moon;
-import ca.gc.asc_csa.symphony.environment.Sky;
+import org.eclipse.symphony.core.environment.Earth;
+import org.eclipse.symphony.core.environment.Moon;
+import org.eclipse.symphony.core.environment.Sky;
 
 /**
  * <!-- begin-user-doc -->

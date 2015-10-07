@@ -25,6 +25,9 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
@@ -33,9 +36,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEn
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState;
 
 /**
  * <!-- begin-user-doc -->

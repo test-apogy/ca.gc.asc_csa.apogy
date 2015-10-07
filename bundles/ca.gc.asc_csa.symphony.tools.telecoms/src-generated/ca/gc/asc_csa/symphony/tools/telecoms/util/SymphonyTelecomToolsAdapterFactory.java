@@ -5,23 +5,21 @@ package ca.gc.asc_csa.symphony.tools.telecoms.util;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.symphony.environment.AbstractMapLayer;
-import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.ImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.RectangularRegionImage;
-import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider;
 import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
 import ca.gc.asc_csa.symphony.tools.core.SimpleTool;
 import ca.gc.asc_csa.symphony.tools.telecoms.*;
-
 import ca.gc.space.topology.Node;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.environment.AbstractMapLayer;
+import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import org.eclipse.symphony.core.environment.ImageMapLayer;
+import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
+import org.eclipse.symphony.core.environment.RectangularRegionImage;
+import org.eclipse.symphony.core.environment.RectangularRegionProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -412,13 +410,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.AbstractMapLayer <em>Abstract Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.AbstractMapLayer <em>Abstract Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.AbstractMapLayer
+	 * @see org.eclipse.symphony.core.environment.AbstractMapLayer
 	 * @generated
 	 */
 	public Adapter createAbstractMapLayerAdapter() {
@@ -426,13 +424,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.RectangularRegionProvider <em>Rectangular Region Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.RectangularRegionProvider <em>Rectangular Region Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.RectangularRegionProvider
+	 * @see org.eclipse.symphony.core.environment.RectangularRegionProvider
 	 * @generated
 	 */
 	public Adapter createRectangularRegionProviderAdapter() {
@@ -440,13 +438,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.RectangularRegionImage <em>Rectangular Region Image</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.RectangularRegionImage <em>Rectangular Region Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.RectangularRegionImage
+	 * @see org.eclipse.symphony.core.environment.RectangularRegionImage
 	 * @generated
 	 */
 	public Adapter createRectangularRegionImageAdapter() {
@@ -454,13 +452,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ImageMapLayer <em>Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ImageMapLayer <em>Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ImageMapLayer
+	 * @see org.eclipse.symphony.core.environment.ImageMapLayer
 	 * @generated
 	 */
 	public Adapter createImageMapLayerAdapter() {
@@ -468,13 +466,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshDerivedImageMapLayer <em>Cartesian Triangular Mesh Derived Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer <em>Cartesian Triangular Mesh Derived Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshDerivedImageMapLayer
+	 * @see org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshDerivedImageMapLayerAdapter() {
@@ -482,13 +480,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer <em>Line Of Sight Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer <em>Line Of Sight Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer
+	 * @see org.eclipse.symphony.core.environment.LineOfSightImageMapLayer
 	 * @generated
 	 */
 	public Adapter createLineOfSightImageMapLayerAdapter() {

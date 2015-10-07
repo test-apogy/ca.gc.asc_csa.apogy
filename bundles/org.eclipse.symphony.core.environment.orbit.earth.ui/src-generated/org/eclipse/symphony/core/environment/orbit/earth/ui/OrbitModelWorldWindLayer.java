@@ -4,7 +4,7 @@
 package org.eclipse.symphony.core.environment.orbit.earth.ui;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 
 /**
  * <!-- begin-user-doc -->

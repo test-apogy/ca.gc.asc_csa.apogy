@@ -26,13 +26,13 @@
             uri="org.eclipse.symphony.core"
             class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.symphony.environment"
+            uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
             class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.symphony.environment.orbit"
+            uri="org.eclipse.symphony.core.environment.orbit"
             class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$SymphonyOrbitEnvironmentChildCreationExtender"/>
    </extension>
 

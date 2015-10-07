@@ -13,6 +13,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.core.environment.orbit.Orbit;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
@@ -24,6 +27,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftS
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
+import org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl;
 import org.orekit.bodies.BodyShape;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
@@ -41,11 +45,6 @@ import org.orekit.propagation.sampling.OrekitFixedStepHandler;
 import org.orekit.time.AbsoluteDate;
 import org.orekit.utils.Constants;
 import org.orekit.utils.IERSConventions;
-
-import ca.gc.asc_csa.symphony.environment.orbit.Orbit;
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState;
-import ca.gc.asc_csa.symphony.environment.orbit.impl.AbstractOrbitPropagatorImpl;
 
 /**
  * <!-- begin-user-doc -->

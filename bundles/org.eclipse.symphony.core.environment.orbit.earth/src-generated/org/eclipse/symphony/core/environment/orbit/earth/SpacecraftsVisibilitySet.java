@@ -9,10 +9,10 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.symphony.core.Updatable;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,7 +90,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 
 	/**
 	 * Returns the value of the '<em><b>Orbit Models</b></em>' reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.symphony.environment.orbit.OrbitModel}.
+	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.OrbitModel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

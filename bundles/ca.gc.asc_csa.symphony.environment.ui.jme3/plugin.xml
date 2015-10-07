@@ -4,46 +4,46 @@
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.environment.ui.jme3.adapters.EarthSurfaceWorksiteNodeJME3Adapter">
+            Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.EarthSurfaceWorksiteNodeJME3Adapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.environment.ui.jme3.adapters.EarthSkyNodeJME3Adapter">
+            Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.EarthSkyNodeJME3Adapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.environment.ui.jme3.adapters.StarFieldJME3Adapter">
+            Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.StarFieldJME3Adapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.equinox.preferences.preferences">
       <initializer
-            class="ca.gc.asc_csa.symphony.environment.ui.jme3.preferences.SymphonyEnvironmentUIJME3Initializer">
+            class="org.eclipse.symphony.core.environment.ui.jme3.preferences.SymphonyEnvironmentUIJME3Initializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.symphony.environment.ui.page1"
-            class="ca.gc.asc_csa.symphony.environment.ui.jme3.preferences.SymphonyEnvironmentUIJME3PreferencesPage"
-            id="ca.gc.asc_csa.symphony.environment.ui.jme3.page1"
+            category="org.eclipse.symphony.core.environment.ui.page1"
+            class="org.eclipse.symphony.core.environment.ui.jme3.preferences.SymphonyEnvironmentUIJME3PreferencesPage"
+            id="org.eclipse.symphony.core.environment.ui.jme3.page1"
             name="Earth Sky">
       </page>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.environment.ui.jme3.adapters.FeatureOfInterestNodeJME3Adapter">
+            Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.FeatureOfInterestNodeJME3Adapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.environment.ui.jme3.adapters.CartesianTriangularMeshMapLayerNodeJME3Adapter">
+            Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.CartesianTriangularMeshMapLayerNodeJME3Adapter">
       </Class>
    </extension>
 

@@ -8,19 +8,19 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.Updatable;
+import org.eclipse.symphony.core.environment.Sky;
+import org.eclipse.symphony.core.environment.Worksite;
+import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
+import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
+import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
+import org.eclipse.symphony.core.environment.orbit.Orbit;
+import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
+import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.*;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.symphony.environment.Sky;
-import ca.gc.asc_csa.symphony.environment.Worksite;
-import ca.gc.asc_csa.symphony.environment.orbit.AbstractFrame;
-import ca.gc.asc_csa.symphony.environment.orbit.AbstractOrbitPropagator;
-import ca.gc.asc_csa.symphony.environment.orbit.AttitudeProvider;
-import ca.gc.asc_csa.symphony.environment.orbit.Orbit;
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitWorksite;
-import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState;
 
 /**
  * <!-- begin-user-doc -->

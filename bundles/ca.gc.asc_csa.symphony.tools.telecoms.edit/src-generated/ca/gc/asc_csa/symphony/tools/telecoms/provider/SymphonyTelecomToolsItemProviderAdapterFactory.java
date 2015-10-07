@@ -3,9 +3,6 @@
  */
 package ca.gc.asc_csa.symphony.tools.telecoms.provider;
 
-import ca.gc.asc_csa.symphony.environment.Map;
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.asc_csa.symphony.environment.util.SymphonyEnvironmentSwitch;
 import ca.gc.asc_csa.symphony.tools.core.SimpleToolList;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.asc_csa.symphony.tools.core.util.SymphonyToolsCoreSwitch;
@@ -50,6 +47,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.core.environment.Map;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.util.SymphonyEnvironmentSwitch;
 import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 
 /**

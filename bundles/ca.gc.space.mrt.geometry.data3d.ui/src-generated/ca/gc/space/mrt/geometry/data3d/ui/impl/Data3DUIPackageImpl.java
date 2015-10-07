@@ -86,8 +86,8 @@ public class Data3DUIPackageImpl extends EPackageImpl implements Data3DUIPackage
 		isInited = true;
 
 		// Initialize simple dependencies
-		ImagesCorePackage.eINSTANCE.eClass();
 		Data3dPackage.eINSTANCE.eClass();
+		ImagesCorePackage.eINSTANCE.eClass();
 		TopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

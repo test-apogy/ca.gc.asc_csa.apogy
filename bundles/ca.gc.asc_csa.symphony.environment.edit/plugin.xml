@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="ca.gc.asc_csa.symphony.environment"
-            class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.core.environment"
+            class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,13 +23,13 @@
       <!-- @generated symphony_environment -->
       <extender
             uri="org.eclipse.symphony.core"
-            class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.topology.bindings"
-            class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

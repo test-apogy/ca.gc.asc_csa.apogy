@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
 import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
@@ -32,7 +33,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWi
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.MultiEObjectsAdapter;
 
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
 import ca.gc.space.mrt.sensors.fov.DistanceRange;
 import ca.gc.space.mrt.sensors.fov.FovPackage;

@@ -9,9 +9,8 @@ import java.awt.Stroke;
 import java.awt.geom.Ellipse2D;
 import java.util.List;
 
-import ca.gc.asc_csa.symphony.environment.ui.impl.PoseVariableAnnotationImpl;
-
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation;
 import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage;

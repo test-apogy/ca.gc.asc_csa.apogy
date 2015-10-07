@@ -3,8 +3,7 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth;
 
-import ca.gc.asc_csa.symphony.environment.orbit.AbstractFrame;
-
+import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
 import org.orekit.frames.Frame;
 
 /**

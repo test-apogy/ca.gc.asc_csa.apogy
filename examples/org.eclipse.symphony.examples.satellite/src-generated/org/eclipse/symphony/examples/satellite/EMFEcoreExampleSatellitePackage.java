@@ -1790,11 +1790,11 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	EAttribute getSatelliteConstellation_EndDate();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(ca.gc.asc_csa.symphony.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(org.eclipse.symphony.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Satellite</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(ca.gc.asc_csa.symphony.environment.orbit.OrbitModel)
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(org.eclipse.symphony.core.environment.orbit.OrbitModel)
 	 * @generated
 	 */
 	EOperation getSatelliteConstellation__GetSatellite__OrbitModel();

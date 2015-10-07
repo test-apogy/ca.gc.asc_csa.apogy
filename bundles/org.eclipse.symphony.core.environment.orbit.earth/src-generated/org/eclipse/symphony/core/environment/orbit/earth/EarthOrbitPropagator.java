@@ -6,9 +6,8 @@ package org.eclipse.symphony.core.environment.orbit.earth;
 import java.util.Date;
 import java.util.List;
 
+import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
 import org.orekit.propagation.Propagator;
-
-import ca.gc.asc_csa.symphony.environment.orbit.AbstractOrbitPropagator;
 
 /**
  * <!-- begin-user-doc -->

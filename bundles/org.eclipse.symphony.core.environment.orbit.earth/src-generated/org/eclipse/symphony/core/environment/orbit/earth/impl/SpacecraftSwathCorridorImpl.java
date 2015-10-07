@@ -21,6 +21,9 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.Updatable;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
@@ -44,9 +47,6 @@ import org.orekit.utils.PVCoordinates;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 
 /**
  * <!-- begin-user-doc -->

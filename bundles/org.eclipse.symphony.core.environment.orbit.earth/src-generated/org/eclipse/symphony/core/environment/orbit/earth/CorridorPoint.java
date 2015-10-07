@@ -3,8 +3,9 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth;
 
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->

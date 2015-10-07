@@ -10,6 +10,11 @@ import java.util.SortedSet;
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.math.Matrix3x3;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import org.eclipse.symphony.core.environment.orbit.Orbit;
+import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
+import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
+import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
 import org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitFacadeImpl;
 import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
@@ -17,12 +22,6 @@ import org.orekit.orbits.KeplerianOrbit;
 import org.orekit.time.AbsoluteDate;
 import org.orekit.utils.TimeStampedAngularCoordinates;
 import org.orekit.utils.TimeStampedPVCoordinates;
-
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-import ca.gc.asc_csa.symphony.environment.orbit.Orbit;
-import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState;
-import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedAngularCoordinates;
-import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedPVACoordinates;
 
 /**
  * <!-- begin-user-doc -->

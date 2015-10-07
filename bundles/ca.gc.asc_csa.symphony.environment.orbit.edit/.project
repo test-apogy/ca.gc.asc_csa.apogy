@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ca.gc.asc_csa.symphony.environment.orbit.edit</name>
+	<name>org.eclipse.symphony.core.environment.orbit.edit</name>
 	<comment></comment>
 	<projects>
 	</projects>

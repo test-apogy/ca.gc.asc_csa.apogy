@@ -12,8 +12,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
-
-import ca.gc.asc_csa.symphony.environment.orbit.impl.OrbitWorksiteImpl;
+import org.eclipse.symphony.core.environment.orbit.impl.OrbitWorksiteImpl;
 
 /**
  * <!-- begin-user-doc -->

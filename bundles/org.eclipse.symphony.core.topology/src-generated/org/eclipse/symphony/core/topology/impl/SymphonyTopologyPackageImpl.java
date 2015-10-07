@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
@@ -20,7 +21,6 @@ import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
 import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
 
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.space.topology.TopologyPackage;
 
 /**

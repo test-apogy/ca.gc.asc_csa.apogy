@@ -5,8 +5,8 @@ package org.eclipse.symphony.core.topology;
 
 import org.eclipse.symphony.core.ResultsListNode;
 import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.environment.WorksiteNode;
 
-import ca.gc.asc_csa.symphony.environment.WorksiteNode;
 import ca.gc.space.topology.ReferencedGroupNode;
 
 /**

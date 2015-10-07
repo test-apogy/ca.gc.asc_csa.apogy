@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -4452,51 +4452,51 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	EOperation getEarthOrbitFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftElevationAngle(ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Elevation Angle</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftElevationAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Elevation Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Spacecraft Elevation Angle</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftElevationAngle(ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftElevationAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
 	 * @generated
 	 */
 	EOperation getEarthOrbitFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftAzimuthAngle(ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Azimuth Angle</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftAzimuthAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Azimuth Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Spacecraft Azimuth Angle</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftAzimuthAngle(ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftAzimuthAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
 	 * @generated
 	 */
 	EOperation getEarthOrbitFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getRange(ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Range</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getRange(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Range</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getRange(ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getRange(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
 	 * @generated
 	 */
 	EOperation getEarthOrbitFacade__GetRange__SpacecraftState_EarthSurfaceLocation();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createSpacecraftState(ca.gc.asc_csa.symphony.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState) <em>Create Spacecraft State</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState) <em>Create Spacecraft State</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Spacecraft State</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createSpacecraftState(ca.gc.asc_csa.symphony.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState)
 	 * @generated
 	 */
 	EOperation getEarthOrbitFacade__CreateSpacecraftState__Orbit_SpacecraftState();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createOreKitBackedSpacecraftState(ca.gc.asc_csa.symphony.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState) <em>Create Ore Kit Backed Spacecraft State</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createOreKitBackedSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState) <em>Create Ore Kit Backed Spacecraft State</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Ore Kit Backed Spacecraft State</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createOreKitBackedSpacecraftState(ca.gc.asc_csa.symphony.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createOreKitBackedSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState)
 	 * @generated
 	 */
 	EOperation getEarthOrbitFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState();

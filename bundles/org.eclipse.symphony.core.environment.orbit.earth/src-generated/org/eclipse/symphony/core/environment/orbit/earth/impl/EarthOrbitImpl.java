@@ -9,9 +9,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.impl.OrbitImpl;
 import org.orekit.orbits.Orbit;
-
-import ca.gc.asc_csa.symphony.environment.orbit.impl.OrbitImpl;
 
 /**
  * <!-- begin-user-doc -->

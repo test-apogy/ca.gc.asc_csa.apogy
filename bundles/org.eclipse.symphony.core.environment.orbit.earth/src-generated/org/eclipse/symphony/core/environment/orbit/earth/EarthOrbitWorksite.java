@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth;
 
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitWorksite;
+import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
 
 /**
  * <!-- begin-user-doc -->

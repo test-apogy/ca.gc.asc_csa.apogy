@@ -3,10 +3,9 @@
  */
 package ca.gc.asc_csa.symphony.tools.telecoms;
 
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
-
 import ca.gc.space.topology.TopologyPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -14,6 +13,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -10,13 +10,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState;
 
 public class WorldWindUtils 
 {

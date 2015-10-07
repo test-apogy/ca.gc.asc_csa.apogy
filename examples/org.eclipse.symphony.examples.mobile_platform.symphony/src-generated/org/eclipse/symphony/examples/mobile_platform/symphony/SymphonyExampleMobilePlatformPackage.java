@@ -3,12 +3,11 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.symphony;
 
-import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->

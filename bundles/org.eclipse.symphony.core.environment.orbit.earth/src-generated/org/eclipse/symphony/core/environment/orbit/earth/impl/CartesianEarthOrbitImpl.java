@@ -11,11 +11,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
 import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
 import org.orekit.orbits.CartesianOrbit;
-
-import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedPVACoordinates;
 
 /**
  * <!-- begin-user-doc -->

@@ -29,6 +29,13 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.Orbit;
+import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
+import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
+import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
 import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
@@ -62,14 +69,6 @@ import org.orekit.utils.IERSConventions;
 import org.orekit.utils.PVCoordinates;
 import org.orekit.utils.TimeStampedAngularCoordinates;
 import org.orekit.utils.TimeStampedPVCoordinates;
-
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
-import ca.gc.asc_csa.symphony.environment.orbit.Orbit;
-import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftState;
-import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentFactory;
-import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedAngularCoordinates;
-import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedPVACoordinates;
 
 /**
  * <!-- begin-user-doc -->

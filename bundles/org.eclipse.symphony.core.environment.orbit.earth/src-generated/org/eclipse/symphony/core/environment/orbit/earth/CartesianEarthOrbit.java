@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth;
 
+import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
 import org.orekit.orbits.CartesianOrbit;
-
-import ca.gc.asc_csa.symphony.environment.orbit.TimedStampedPVACoordinates;
 
 /**
  * <!-- begin-user-doc -->

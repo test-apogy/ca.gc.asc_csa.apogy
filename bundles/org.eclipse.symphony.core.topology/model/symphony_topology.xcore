@@ -12,7 +12,7 @@ import ca.gc.space.topology.ReferencedGroupNode
 import org.eclipse.symphony.core.SymphonyEnvironment
 
 import org.eclipse.symphony.core.ResultsListNode
-import ca.gc.asc_csa.symphony.environment.WorksiteNode
+import org.eclipse.symphony.core.environment.WorksiteNode
 
 type SortedSet<T> wraps java.util.SortedSet 
 

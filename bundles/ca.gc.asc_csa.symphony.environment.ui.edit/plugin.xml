@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="ca.gc.asc_csa.symphony.environment.ui"
-            class="ca.gc.asc_csa.symphony.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.core.environment.ui"
+            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,22 +23,22 @@
       <!-- @generated symphony_environment_ui -->
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="ca.gc.asc_csa.symphony.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="ca.gc.space.topology.ui"
-            class="ca.gc.asc_csa.symphony.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="http:///ca/gc/space/topology/ui.ecore"
-            class="ca.gc.asc_csa.symphony.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$UiChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$UiChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -5,21 +5,20 @@ package ca.gc.asc_csa.symphony.tools.telecoms.util;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.symphony.environment.AbstractMapLayer;
-import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.ImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.RectangularRegionImage;
-import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider;
 import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
 import ca.gc.asc_csa.symphony.tools.core.SimpleTool;
 import ca.gc.asc_csa.symphony.tools.telecoms.*;
-
 import ca.gc.space.topology.Node;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.core.environment.AbstractMapLayer;
+import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
+import org.eclipse.symphony.core.environment.ImageMapLayer;
+import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
+import org.eclipse.symphony.core.environment.RectangularRegionImage;
+import org.eclipse.symphony.core.environment.RectangularRegionProvider;
 
 /**
  * <!-- begin-user-doc -->

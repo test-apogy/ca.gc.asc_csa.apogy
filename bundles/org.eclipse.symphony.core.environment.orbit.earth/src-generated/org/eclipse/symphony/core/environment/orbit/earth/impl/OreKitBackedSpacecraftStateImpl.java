@@ -8,9 +8,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.impl.SpacecraftStateImpl;
 import org.orekit.propagation.SpacecraftState;
-
-import ca.gc.asc_csa.symphony.environment.orbit.impl.SpacecraftStateImpl;
 
 /**
  * <!-- begin-user-doc -->

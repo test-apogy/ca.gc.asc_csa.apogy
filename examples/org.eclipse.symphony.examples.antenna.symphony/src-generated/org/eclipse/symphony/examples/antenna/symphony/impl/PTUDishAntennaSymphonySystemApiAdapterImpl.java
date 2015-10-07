@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.environment.EnvironmentFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.Environment;
@@ -21,7 +22,6 @@ import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySyst
 import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaFactory;
 import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage;
 
-import ca.gc.asc_csa.symphony.environment.EnvironmentFacade;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
 import ca.gc.space.mrt.sensors.fov.FOVFacade;
 

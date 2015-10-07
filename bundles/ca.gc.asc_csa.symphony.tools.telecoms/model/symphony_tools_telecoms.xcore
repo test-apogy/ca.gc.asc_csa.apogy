@@ -14,7 +14,7 @@ package ca.gc.asc_csa.symphony.tools.telecoms
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
 import ca.gc.asc_csa.symphony.tools.core.SimpleTool
 import ca.gc.space.topology.Node
-import ca.gc.asc_csa.symphony.environment.LineOfSightImageMapLayer
+import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer
 
 type Color3f wraps javax.vecmath.Color3f
 

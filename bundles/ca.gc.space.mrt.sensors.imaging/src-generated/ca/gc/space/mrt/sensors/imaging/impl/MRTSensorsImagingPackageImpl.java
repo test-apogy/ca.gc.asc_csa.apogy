@@ -144,9 +144,9 @@ public class MRTSensorsImagingPackageImpl extends EPackageImpl implements MRTSen
 
 		// Initialize simple dependencies
 		ImagesCorePackage.eINSTANCE.eClass();
+		FovPackage.eINSTANCE.eClass();
 		EMFEcorePackage.eINSTANCE.eClass();
 		SensorsPackage.eINSTANCE.eClass();
-		FovPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theMRTSensorsImagingPackage.createPackageContents();

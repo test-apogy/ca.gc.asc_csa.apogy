@@ -7,11 +7,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter;

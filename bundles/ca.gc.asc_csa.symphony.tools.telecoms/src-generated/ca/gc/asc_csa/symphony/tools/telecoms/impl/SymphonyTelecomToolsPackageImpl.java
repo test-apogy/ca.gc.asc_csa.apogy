@@ -4,7 +4,6 @@
 package ca.gc.asc_csa.symphony.tools.telecoms.impl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.asc_csa.symphony.tools.telecoms.AbstractAntennaRadiationPattern;
 import ca.gc.asc_csa.symphony.tools.telecoms.AntennaRadiationPatternImageMapLayer;
@@ -21,7 +20,9 @@ import ca.gc.asc_csa.symphony.tools.telecoms.TelecomStatusMonitorTool;
 import ca.gc.asc_csa.symphony.tools.telecoms.TelecomStatusMonitorToolList;
 import ca.gc.asc_csa.symphony.tools.telecoms.URlBasedAntennaRadiationPattern;
 import ca.gc.space.topology.TopologyPackage;
+
 import javax.vecmath.Color3f;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->

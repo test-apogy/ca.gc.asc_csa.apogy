@@ -6,8 +6,7 @@ package org.eclipse.symphony.core.environment.orbit.earth;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 
 /**
  * <!-- begin-user-doc -->

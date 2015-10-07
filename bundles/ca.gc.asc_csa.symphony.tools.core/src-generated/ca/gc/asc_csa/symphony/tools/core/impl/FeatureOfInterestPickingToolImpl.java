@@ -26,9 +26,9 @@ import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
+import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
 
-import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
-import ca.gc.asc_csa.symphony.environment.ui.dialogs.FeatureOfInterestCreationDialog;
 import ca.gc.asc_csa.symphony.tools.core.FeatureOfInterestPickingTool;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.space.topology.Node;

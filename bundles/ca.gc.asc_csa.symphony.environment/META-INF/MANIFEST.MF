@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.environment;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.environment;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.environment,
- ca.gc.asc_csa.symphony.environment.commands,
- ca.gc.asc_csa.symphony.environment.converters,
- ca.gc.asc_csa.symphony.environment.impl,
- ca.gc.asc_csa.symphony.environment.util
+Export-Package: org.eclipse.symphony.core.environment,
+ org.eclipse.symphony.core.environment.commands,
+ org.eclipse.symphony.core.environment.converters,
+ org.eclipse.symphony.core.environment.impl,
+ org.eclipse.symphony.core.environment.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
@@ -33,4 +33,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.gavaghan.geodesy.core;bundle-version="1.1.1",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.symphony.environment.Activator
+Bundle-Activator: org.eclipse.symphony.core.environment.Activator

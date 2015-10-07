@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.environment.orbit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.environment.orbit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- ca.gc.asc_csa.symphony.environment;bundle-version="0.3.0";visibility:=reexport,
+ org.eclipse.symphony.core.environment;bundle-version="0.3.0";visibility:=reexport,
  org.eclipse.symphony.core;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
@@ -24,7 +24,7 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.symphony.environment.orbit,
- ca.gc.asc_csa.symphony.environment.orbit.impl,
- ca.gc.asc_csa.symphony.environment.orbit.util
-Bundle-Activator: ca.gc.asc_csa.symphony.environment.orbit.Activator
+Export-Package: org.eclipse.symphony.core.environment.orbit,
+ org.eclipse.symphony.core.environment.orbit.impl,
+ org.eclipse.symphony.core.environment.orbit.util
+Bundle-Activator: org.eclipse.symphony.core.environment.orbit.Activator

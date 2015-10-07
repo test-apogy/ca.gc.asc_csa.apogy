@@ -17,6 +17,8 @@ import org.eclipse.symphony.core.ResultsListNode;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.environment.Worksite;
+import org.eclipse.symphony.core.environment.WorksiteNode;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ResultsList;
@@ -25,8 +27,6 @@ import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
 
-import ca.gc.asc_csa.symphony.environment.Worksite;
-import ca.gc.asc_csa.symphony.environment.WorksiteNode;
 import ca.gc.space.topology.impl.ReferencedGroupNodeImpl;
 
 /**

@@ -1,9 +1,9 @@
 @GenModel(prefix="SymphonyEnvironment", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="SymphonyEnvironment", complianceLevel="6.0", suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.environment/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.environment.edit/src-generated")
-// @GenModel(testsDirectory="/ca.gc.asc_csa.symphony.environment.tests/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.environment/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.environment.edit/src-generated")
+// @GenModel(testsDirectory="/org.eclipse.symphony.core.environment.tests/src-generated")
 
-package ca.gc.asc_csa.symphony.environment
+package org.eclipse.symphony.core.environment
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Exception

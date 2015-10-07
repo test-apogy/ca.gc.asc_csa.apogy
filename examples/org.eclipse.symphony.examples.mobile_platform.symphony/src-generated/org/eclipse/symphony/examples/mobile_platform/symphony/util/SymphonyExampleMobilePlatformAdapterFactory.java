@@ -10,14 +10,14 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
+import org.eclipse.symphony.core.environment.ui.MapAnnotation;
+import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
+import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.InitializationData;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.examples.mobile_platform.symphony.*;
-import ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation;
-import ca.gc.asc_csa.symphony.environment.ui.MapAnnotation;
-import ca.gc.asc_csa.symphony.environment.ui.MapViewItemPresentation;
-import ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation;
 
 /**
  * <!-- begin-user-doc -->
@@ -265,13 +265,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.MapViewItemPresentation
+	 * @see org.eclipse.symphony.core.environment.ui.MapViewItemPresentation
 	 * @generated
 	 */
   public Adapter createMapViewItemPresentationAdapter()
@@ -280,13 +280,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.MapAnnotation
+	 * @see org.eclipse.symphony.core.environment.ui.MapAnnotation
 	 * @generated
 	 */
   public Adapter createMapAnnotationAdapter()
@@ -295,13 +295,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation
+	 * @see org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation
 	 * @generated
 	 */
   public Adapter createAbstractVariableAnnotationAdapter()
@@ -310,13 +310,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation
+	 * @see org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation
 	 * @generated
 	 */
   public Adapter createPoseVariableAnnotationAdapter()

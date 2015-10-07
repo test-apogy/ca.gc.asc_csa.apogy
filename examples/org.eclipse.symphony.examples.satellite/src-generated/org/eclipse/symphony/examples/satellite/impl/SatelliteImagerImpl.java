@@ -3,10 +3,6 @@
  */
 package org.eclipse.symphony.examples.satellite.impl;
 
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import ca.gc.space.mrt.sensors.imaging.Zoomable;
-import ca.gc.space.mrt.sensors.imaging.impl.AbstractCameraImpl;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.List;
@@ -24,6 +20,10 @@ import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteImager;
+
+import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
+import ca.gc.space.mrt.sensors.imaging.Zoomable;
+import ca.gc.space.mrt.sensors.imaging.impl.AbstractCameraImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,16 +3,15 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth.impl;
 
-import ca.gc.asc_csa.symphony.environment.orbit.AbstractFrame;
-import ca.gc.asc_csa.symphony.environment.orbit.PVCoordinatesProviderProvider;
-import ca.gc.asc_csa.symphony.environment.orbit.SpacecraftAttitude;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
+import org.eclipse.symphony.core.environment.orbit.PVCoordinatesProviderProvider;
+import org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
 import org.orekit.attitudes.AttitudeProvider;

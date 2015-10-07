@@ -1,19 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.environment.orbit.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.environment.orbit.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.environment.orbit.provider.SymphonyOrbitEnvironmentEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.core.environment.orbit.provider.SymphonyOrbitEnvironmentEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.symphony.environment.orbit.provider
+Export-Package: org.eclipse.symphony.core.environment.orbit.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.environment.orbit;visibility:=reexport,
+ org.eclipse.symphony.core.environment.orbit;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- ca.gc.asc_csa.symphony.environment;visibility:=reexport,
- ca.gc.asc_csa.symphony.environment.edit;visibility:=reexport,
+ org.eclipse.symphony.core.environment;visibility:=reexport,
+ org.eclipse.symphony.core.environment.edit;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.edit;visibility:=reexport,
  org.eclipse.symphony.core;visibility:=reexport,
