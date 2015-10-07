@@ -9,11 +9,13 @@
 
 <plugin>
 
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <package 
-       uri = "http:///ca/gc/space/mrt/common/csv/model/csv.ecore" 
-       class = "ca.gc.space.mrt.common.csv.CsvPackage"
-       genModel = "model/csv.genmodel" /> 
-  </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mrt_csv -->
+      <package
+            uri="ca.gc.space.mrt.common.csv"
+            class="ca.gc.space.mrt.common.csv.CsvPackage"
+            genModel="model/mrt_common_csv.xcore"/>
+   </extension>
 
 </plugin>

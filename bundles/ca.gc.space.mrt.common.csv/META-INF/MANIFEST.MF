@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.common.csv; singleton:=true
+Bundle-SymbolicName: ca.gc.space.mrt.common.csv;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -11,6 +11,9 @@ Export-Package: ca.gc.space.mrt.common.csv,
  ca.gc.space.mrt.common.csv.impl,
  ca.gc.space.mrt.common.csv.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xcore.lib,
+ org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.space.mrt.common.csv.Activator
+
