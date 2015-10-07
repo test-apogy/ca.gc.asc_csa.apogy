@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.provider.EMFEcoreControllersItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.core.programs.controllers"
+            class="org.eclipse.symphony.core.programs.controllers.provider.EMFEcoreControllersItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -22,7 +22,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.provider.EMFEcoreControllersItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.core.programs.controllers.provider.EMFEcoreControllersItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
    </extension>
 
 </plugin>

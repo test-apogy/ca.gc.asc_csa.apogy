@@ -9,8 +9,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.controllers.EMFEcoreControllersPackage"
+            uri="org.eclipse.symphony.core.programs.controllers"
+            class="org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage"
             genModel="model/eclipse_emf_ecore_invocator_controllers.xcore"/>
    </extension>
 
