@@ -179,8 +179,8 @@ public class TopologyBindingsPackageImpl extends EPackageImpl implements Topolog
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyPackage.eINSTANCE.eClass();
 		EMFEcorePackage.eINSTANCE.eClass();
+		TopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTopologyBindingsPackage.createPackageContents();

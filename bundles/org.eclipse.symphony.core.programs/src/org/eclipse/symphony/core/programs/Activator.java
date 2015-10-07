@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs;
+package org.eclipse.symphony.core.programs;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
