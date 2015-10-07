@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_environment_orbit_earth_ui -->
       <factory
-            uri="ca.gc.asc_csa.symphony.environment.orbit.earth.ui"
-            class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.core.environment.orbit.earth.ui"
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,10 +24,10 @@
       <!-- @generated symphony_environment_orbit_earth_ui -->
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

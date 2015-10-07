@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.invocator.provider.AbstractPlayerItemProvider;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.Player;
 
@@ -23,7 +24,7 @@ import org.eclipse.symphony.core.recordings.Player;
  * @generated
  */
 public class PlayerItemProvider
-  extends org.eclipse.symphony.core.invocator.provider.AbstractPlayerItemProvider
+  extends AbstractPlayerItemProvider
 {
 	public static final String DATE_FORMAT_STRING = "yyyy.MM.dd HH:mm:ss.SSS z";	
 	protected SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT_STRING);

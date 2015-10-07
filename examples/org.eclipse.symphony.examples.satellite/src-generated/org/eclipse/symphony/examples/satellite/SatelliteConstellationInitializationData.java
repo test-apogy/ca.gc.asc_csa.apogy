@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 
 /**
@@ -52,7 +51,7 @@ public interface SatelliteConstellationInitializationData extends AbstractInitia
 
 	/**
 	 * Returns the value of the '<em><b>Ground Stations</b></em>' containment reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation}.
+	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ground Stations</em>' containment reference list isn't clear,

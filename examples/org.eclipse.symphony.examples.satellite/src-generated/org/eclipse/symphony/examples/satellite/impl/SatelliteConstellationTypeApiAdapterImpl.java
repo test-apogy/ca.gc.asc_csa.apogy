@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl;
 import org.eclipse.symphony.examples.satellite.Activator;
@@ -21,7 +22,6 @@ import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
 
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitFacade;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation;
 
 /**
  * <!-- begin-user-doc -->

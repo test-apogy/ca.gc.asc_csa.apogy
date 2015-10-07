@@ -15,6 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.provider.AbstractChannelItemProvider;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.RecordingPolicy;
@@ -26,7 +27,7 @@ import org.eclipse.symphony.core.recordings.RecordingPolicy;
  * @generated
  */
 public class ChannelItemProvider
-  extends org.eclipse.symphony.core.invocator.provider.AbstractChannelItemProvider
+  extends AbstractChannelItemProvider
 {
 	protected DecimalFormat durationDecimalFormat = new DecimalFormat("0.000");
 	

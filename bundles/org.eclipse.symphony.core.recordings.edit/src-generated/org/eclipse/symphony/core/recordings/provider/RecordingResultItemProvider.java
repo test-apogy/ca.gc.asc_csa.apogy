@@ -8,7 +8,6 @@ package org.eclipse.symphony.core.recordings.provider;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
@@ -19,10 +18,10 @@ import org.eclipse.symphony.core.invocator.AttributeResultValue;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.ReferenceResultValue;
 import org.eclipse.symphony.core.invocator.Watch;
+import org.eclipse.symphony.core.invocator.provider.AbstractResultItemProvider;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.RecordingResult;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 
 /**
@@ -32,7 +31,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
  * @generated
  */
 public class RecordingResultItemProvider
-  extends org.eclipse.symphony.core.invocator.provider.AbstractResultItemProvider
+  extends AbstractResultItemProvider
 {
 	public static final String DATE_FORMAT_STRING = "yyyy.MM.dd HH:mm:ss.SSS z";	
 	protected SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT_STRING);

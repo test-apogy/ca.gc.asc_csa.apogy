@@ -12,6 +12,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.invocator.provider.AbstractRecorderItemProvider;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.Recorder;
 
@@ -23,7 +24,7 @@ import org.eclipse.symphony.core.recordings.Recorder;
  * @generated
  */
 public class RecorderItemProvider
-  extends org.eclipse.symphony.core.invocator.provider.AbstractRecorderItemProvider
+  extends AbstractRecorderItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.

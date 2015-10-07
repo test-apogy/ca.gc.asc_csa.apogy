@@ -6,23 +6,23 @@
       <view
             allowMultiple="false"
             category="org.eclipse.symphony.core.ui.category"
-            class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.EarthView"
-            id="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.view1"
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.views.EarthView"
+            id="org.eclipse.symphony.core.environment.orbit.earth.ui.view1"
             name="Earth View"
             restorable="true">
       </view>
       <view
             allowMultiple="false"
             category="org.eclipse.symphony.core.ui.category"
-            class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
-            id="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
+            id="org.eclipse.symphony.core.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
             name="Spacecraft Visibility"
             restorable="true">
       </view>
       <view
             category="org.eclipse.symphony.core.ui.category"
-            class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
-            id="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
+            id="org.eclipse.symphony.core.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
             name="Visibility Pass View"
             restorable="true">
       </view>
@@ -31,8 +31,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_environment_orbit_earth_ui -->
       <package
-            uri="ca.gc.asc_csa.symphony.environment.orbit.earth.ui"
-            class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage"
+            uri="org.eclipse.symphony.core.environment.orbit.earth.ui"
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage"
             genModel="model/symphony_environment_orbit_earth_ui.xcore"/>
    </extension>
 

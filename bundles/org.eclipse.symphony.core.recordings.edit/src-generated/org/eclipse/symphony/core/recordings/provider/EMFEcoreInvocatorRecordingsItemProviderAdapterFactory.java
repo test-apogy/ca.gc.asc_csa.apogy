@@ -26,6 +26,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.core.invocator.ChannelsList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFactory;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.util.EMFEcoreInvocatorRecordingsAdapterFactory;
@@ -404,7 +408,7 @@ public class EMFEcoreInvocatorRecordingsItemProviderAdapterFactory extends EMFEc
 	}
 
   /**
-	 * A child creation extender for the {@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage}.
+	 * A child creation extender for the {@link EMFEcoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -417,7 +421,7 @@ public class EMFEcoreInvocatorRecordingsItemProviderAdapterFactory extends EMFEc
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    protected static class CreationSwitch extends org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch<Object>
+    protected static class CreationSwitch extends EMFEcoreInvocatorSwitch<Object>
     {
       /**
 			 * The child descriptors being populated.
@@ -452,15 +456,15 @@ public class EMFEcoreInvocatorRecordingsItemProviderAdapterFactory extends EMFEc
 			 * @generated
 			 */
 			@Override
-			public Object caseRecordingToolsContainer(org.eclipse.symphony.core.invocator.RecordingToolsContainer object) {
+			public Object caseRecordingToolsContainer(RecordingToolsContainer object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__RECORDER,
+						(EMFEcoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__RECORDER,
 						 EMFEcoreInvocatorRecordingsFactory.eINSTANCE.createRecorder()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__PLAYER,
+						(EMFEcoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__PLAYER,
 						 EMFEcoreInvocatorRecordingsFactory.eINSTANCE.createPlayer()));
 
 				return null;
@@ -471,10 +475,10 @@ public class EMFEcoreInvocatorRecordingsItemProviderAdapterFactory extends EMFEc
 			 * @generated
 			 */
 			@Override
-			public Object caseChannelsList(org.eclipse.symphony.core.invocator.ChannelsList object) {
+			public Object caseChannelsList(ChannelsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage.Literals.CHANNELS_LIST__CHANNELS,
+						(EMFEcoreInvocatorPackage.Literals.CHANNELS_LIST__CHANNELS,
 						 EMFEcoreInvocatorRecordingsFactory.eINSTANCE.createChannel()));
 
 				return null;

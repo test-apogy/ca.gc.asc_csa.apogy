@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.environment.orbit.earth;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.environment.orbit.earth;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
@@ -29,7 +29,7 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.symphony.environment.orbit.earth,
- ca.gc.asc_csa.symphony.environment.orbit.earth.impl,
- ca.gc.asc_csa.symphony.environment.orbit.earth.util
-Bundle-Activator: ca.gc.asc_csa.symphony.environment.orbit.earth.Activator
+Export-Package: org.eclipse.symphony.core.environment.orbit.earth,
+ org.eclipse.symphony.core.environment.orbit.earth.impl,
+ org.eclipse.symphony.core.environment.orbit.earth.util
+Bundle-Activator: org.eclipse.symphony.core.environment.orbit.earth.Activator
