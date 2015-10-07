@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.programs;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs.Activator
+Bundle-Activator: org.eclipse.symphony.core.programs.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.invocator;bundle-version="0.3.0";visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs.impl,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs.util
+Export-Package: org.eclipse.symphony.core.programs,
+ org.eclipse.symphony.core.programs.impl,
+ org.eclipse.symphony.core.programs.util
 Bundle-ActivationPolicy: lazy

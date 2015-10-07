@@ -1,8 +1,8 @@
 @GenModel(prefix="EMFEcoreInvocatorRecordings", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)", modelName="EMFEcoreInvocatorRecordings")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.recordings/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.recordings.edit/src-generated")
 
-package ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings
+package org.eclipse.symphony.core.recordings
 
 import org.eclipse.emf.ecore.EDate
 

@@ -6,9 +6,9 @@
       <view
             allowMultiple="true"
             category="ca.gc.asc_csa.eclipse.ui.category"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.views.TelemetryView"
+            class="org.eclipse.symphony.core.display.ui.views.TelemetryView"
             icon="icons/configurable_telemetry_view_icon.gif"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.views.TelemetryView"
+            id="org.eclipse.symphony.core.display.ui.views.TelemetryView"
             name="Telemetry View"
             restorable="true">
          <description>
@@ -19,8 +19,8 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.handlers.PinViewHandler"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.PinTelemetryView"
+            defaultHandler="org.eclipse.symphony.core.display.ui.handlers.PinViewHandler"
+            id="org.eclipse.symphony.core.display.ui.PinTelemetryView"
             name="Pin Telemetry View">
          <state
                class="org.eclipse.ui.handlers.RegistryToggleState:false"
@@ -28,8 +28,8 @@
          </state>
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.handlers.NewTelemetryViewHandler"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.NewTelemetryView"
+            defaultHandler="org.eclipse.symphony.core.display.ui.handlers.NewTelemetryViewHandler"
+            id="org.eclipse.symphony.core.display.ui.NewTelemetryView"
             name="New Telemetry View">
       </command>
    </extension>
@@ -37,15 +37,15 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="toolbar:ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.views.TelemetryView">
+            locationURI="toolbar:org.eclipse.symphony.core.display.ui.views.TelemetryView">
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.PinTelemetryView"
+               commandId="org.eclipse.symphony.core.display.ui.PinTelemetryView"
                icon="icons/pin.gif"
                label="Pin View"
                style="toggle">
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.ui.NewTelemetryView"
+               commandId="org.eclipse.symphony.core.display.ui.NewTelemetryView"
                icon="icons/new_view.gif"
                label="New Telemetry View"
                style="push">

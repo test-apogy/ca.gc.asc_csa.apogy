@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated eclipse_emf_ecore_invocator_programs -->
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs.InvocatorProgramsPackage"
+            uri="org.eclipse.symphony.core.programs"
+            class="org.eclipse.symphony.core.programs.InvocatorProgramsPackage"
             genModel="model/eclipse_emf_ecore_invocator_programs.xcore"/>
    </extension>
 

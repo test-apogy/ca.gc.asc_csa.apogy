@@ -1,10 +1,10 @@
 @GenModel(prefix="EMFEcoreInvocatorDisplay", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)", modelName="EMFEcoreInvocatorDisplay")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.display/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.edit/src-generated")
-//@GenModel(editorDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.editor/src")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.display/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.display.edit/src-generated")
+//@GenModel(editorDirectory="/org.eclipse.symphony.core.display.editor/src")
 //@GenModel(testsDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests/src")
 
-package ca.gc.asc_csa.eclipse.emf.ecore.invocator.display
+package org.eclipse.symphony.core.display
 
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EStructuralFeature

@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.recordings.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.provider.EMFEcoreInvocatorRecordingsEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.core.recordings.provider.EMFEcoreInvocatorRecordingsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.provider
+Export-Package: org.eclipse.symphony.core.recordings.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings;visibility:=reexport,
+ org.eclipse.symphony.core.recordings;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,

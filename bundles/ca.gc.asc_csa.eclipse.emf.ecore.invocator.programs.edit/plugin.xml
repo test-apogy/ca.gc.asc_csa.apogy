@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated eclipse_emf_ecore_invocator_programs -->
       <factory
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.programs.provider.InvocatorProgramsItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.core.programs"
+            class="org.eclipse.symphony.core.programs.provider.InvocatorProgramsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

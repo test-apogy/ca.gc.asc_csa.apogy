@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.invocator.display;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.display;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.display,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.composites,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.databindings,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.impl,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.util
+Export-Package: org.eclipse.symphony.core.display,
+ org.eclipse.symphony.core.display.composites,
+ org.eclipse.symphony.core.display.databindings,
+ org.eclipse.symphony.core.display.impl,
+ org.eclipse.symphony.core.display.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
@@ -31,4 +31,4 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.emf.ecore.databinding,
  ca.gc.asc_csa.eclipse.emf.ecore.ui;bundle-version="0.1.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.Activator
+Bundle-Activator: org.eclipse.symphony.core.display.Activator

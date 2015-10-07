@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.core.display" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display" id="WatchFeatureControlAdapter" name="WatchFeatureControlAdapter"/>
+         <meta.schema plugin="org.eclipse.symphony.core.display" id="WatchFeatureControlAdapter" name="WatchFeatureControlAdapter"/>
       </appInfo>
       <documentation>
          Extension where contribution to the list of WatchFeatureControlAdapter can be made to provide additionnal Control to be used when displaying WatchFeatures.
@@ -55,7 +55,7 @@
                   The class implemneting the WatchFeatureControlAdapter.
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn=":ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.WatchFeatureControlAdapter"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.core.display.WatchFeatureControlAdapter"/>
                </appInfo>
             </annotation>
          </attribute>

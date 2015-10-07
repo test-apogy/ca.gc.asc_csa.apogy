@@ -4,28 +4,28 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.StartRecorderCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.StartRecorderCommand"
+            defaultHandler="org.eclipse.symphony.core.recordings.ui.commands.StartRecorderCommand"
+            id="org.eclipse.symphony.core.recordings.ui.commands.StartRecorderCommand"
             name="StartRecorderCommand">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.StopRecorderCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.StopRecorderCommand"
+            defaultHandler="org.eclipse.symphony.core.recordings.ui.commands.StopRecorderCommand"
+            id="org.eclipse.symphony.core.recordings.ui.commands.StopRecorderCommand"
             name="StopRecorderCommand">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.PauseRecorderCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.PauseRecorderCommand"
+            defaultHandler="org.eclipse.symphony.core.recordings.ui.commands.PauseRecorderCommand"
+            id="org.eclipse.symphony.core.recordings.ui.commands.PauseRecorderCommand"
             name="PauseRecorderCommand">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.ResumeRecorderCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.ResumeRecorderCommand"
+            defaultHandler="org.eclipse.symphony.core.recordings.ui.commands.ResumeRecorderCommand"
+            id="org.eclipse.symphony.core.recordings.ui.commands.ResumeRecorderCommand"
             name="ResumeRecorderCommand">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.ExportToCSVCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.ExportToCSVCommand"
+            defaultHandler="org.eclipse.symphony.core.recordings.ui.commands.ExportToCSVCommand"
+            id="org.eclipse.symphony.core.recordings.ui.commands.ExportToCSVCommand"
             name="ExportToCSVCommand">
       </command> 
    </extension>
@@ -35,7 +35,7 @@
             allPopups="true"
             locationURI="popup:ca.gc.asc_csa.symphony.ui.menu?after=additions">
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.StartRecorderCommand"
+               commandId="org.eclipse.symphony.core.recordings.ui.commands.StartRecorderCommand"
                label="Start Recorder"
                style="push">
             <visibleWhen
@@ -48,7 +48,7 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.Recorder">
+                             value="org.eclipse.symphony.core.recordings.Recorder">
                          </instanceof>
                      </iterate>
                   </and>
@@ -56,7 +56,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.StopRecorderCommand"
+               commandId="org.eclipse.symphony.core.recordings.ui.commands.StopRecorderCommand"
                label="Stop Recorder"
                style="push">
             <visibleWhen
@@ -69,7 +69,7 @@
                         ifEmpty="false"
                         operator="or">
                            <instanceof
-                              value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.Recorder">
+                              value="org.eclipse.symphony.core.recordings.Recorder">
                            </instanceof>
                      </iterate>
                   </and>
@@ -77,7 +77,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.PauseRecorderCommand"
+               commandId="org.eclipse.symphony.core.recordings.ui.commands.PauseRecorderCommand"
                label="Pause Recorder"
                style="push">
             <visibleWhen
@@ -90,7 +90,7 @@
                         ifEmpty="false"
                         operator="or">
                           <instanceof
-                             value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.Recorder">
+                             value="org.eclipse.symphony.core.recordings.Recorder">
                           </instanceof>
                      </iterate>
                   </and>
@@ -98,7 +98,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.ResumeRecorderCommand"
+               commandId="org.eclipse.symphony.core.recordings.ui.commands.ResumeRecorderCommand"
                label="Resume Recorder"
                style="push">
             <visibleWhen
@@ -111,7 +111,7 @@
                         ifEmpty="false"
                         operator="or">
                          <instanceof
-                            value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.Recorder">
+                            value="org.eclipse.symphony.core.recordings.Recorder">
                          </instanceof>
                      </iterate>
                   </and>
@@ -119,7 +119,7 @@
             </visibleWhen>
          </command>
                  <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.commands.ExportToCSVCommand"
+               commandId="org.eclipse.symphony.core.recordings.ui.commands.ExportToCSVCommand"
                label="Export Channel To CSV"
                style="push">
             <visibleWhen
@@ -133,7 +133,7 @@
                            ifEmpty="false"
                            operator="or">
                              <instanceof
-                                value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.RecordingTrack">
+                                value="org.eclipse.symphony.core.recordings.RecordingTrack">
                              </instanceof>
                         </iterate>
                      </and>
@@ -143,7 +143,7 @@
                            ifEmpty="false"
                            operator="or">
                              <instanceof
-                                 value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.Recording">
+                                 value="org.eclipse.symphony.core.recordings.Recording">
                              </instanceof>
                          </iterate>
                      </and>
@@ -158,13 +158,13 @@
       <propertyTabs
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.category.Default"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.property.tab.RecordingTrack"
+               category="org.eclipse.symphony.core.recordings.ui.category.Default"
+               id="org.eclipse.symphony.core.recordings.ui.property.tab.RecordingTrack"
                label="Plot">
          </propertyTab>
          <propertyTab
-               category="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.category.Default"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.property.tab.Player"
+               category="org.eclipse.symphony.core.recordings.ui.category.Default"
+               id="org.eclipse.symphony.core.recordings.ui.property.tab.Player"
                label="Controls">
          </propertyTab>
       </propertyTabs>
@@ -174,11 +174,11 @@
       <propertySections
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.properties.sections.RecordingTrackPropertySection"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.property.section.RecordingTrack"
-               tab="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.property.tab.RecordingTrack">
+               class="org.eclipse.symphony.core.recordings.ui.properties.sections.RecordingTrackPropertySection"
+               id="org.eclipse.symphony.core.recordings.ui.property.section.RecordingTrack"
+               tab="org.eclipse.symphony.core.recordings.ui.property.tab.RecordingTrack">
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.RecordingTrack">
+                  type="org.eclipse.symphony.core.recordings.RecordingTrack">
             </input>
          </propertySection>
       </propertySections>
@@ -188,7 +188,7 @@
       <propertyContributor
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
-               category="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.ui.category.Default"></propertyCategory>
+               category="org.eclipse.symphony.core.recordings.ui.category.Default"></propertyCategory>
       </propertyContributor>
    </extension>
 

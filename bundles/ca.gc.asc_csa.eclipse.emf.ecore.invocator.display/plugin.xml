@@ -10,8 +10,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.display.EMFEcoreInvocatorDisplayPackage"
+            uri="org.eclipse.symphony.core.display"
+            class="org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage"
             genModel="model/eclipse_emf_ecore_invocator_display.xcore"/>
    </extension>
 

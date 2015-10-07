@@ -10,23 +10,23 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.EMFEcoreInvocatorRecordingsPackage"
+            uri="org.eclipse.symphony.core.recordings"
+            class="org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage"
             genModel="model/eclipse_emf_ecore_invocator_recordings.xcore"/>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.CSVAdapter">
+         point="org.eclipse.symphony.core.recordings.CSVAdapter">
       <Class
-            Class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.csv.NumberCSVAdapter">
+            Class="org.eclipse.symphony.core.recordings.csv.NumberCSVAdapter">
       </Class>
       <Class
-            Class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.csv.DateCSVAdapter">
+            Class="org.eclipse.symphony.core.recordings.csv.DateCSVAdapter">
       </Class>
       <Class
-            Class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.csv.EObjectCSVAdapter">
+            Class="org.eclipse.symphony.core.recordings.csv.EObjectCSVAdapter">
       </Class>
       <Class
-            Class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.recordings.csv.StringCSVAdapter">
+            Class="org.eclipse.symphony.core.recordings.csv.StringCSVAdapter">
       </Class>
    </extension>
 
