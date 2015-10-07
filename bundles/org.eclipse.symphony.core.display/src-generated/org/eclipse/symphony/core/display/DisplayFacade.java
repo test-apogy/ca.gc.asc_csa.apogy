@@ -8,8 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.symphony.core.display.impl.DisplayFacadeImpl;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay;
+import org.eclipse.symphony.core.invocator.AbstractDisplay;
 
 /**
  * <!-- begin-user-doc -->

@@ -29,13 +29,13 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.LocalTypesList;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 import org.eclipse.symphony.core.util.SymphonyCoreAdapterFactory;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.LocalTypesList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorSwitch;
 import ca.gc.asc_csa.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;

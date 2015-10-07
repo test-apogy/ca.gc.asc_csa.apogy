@@ -8,8 +8,8 @@ import org.eclipse.symphony.common.converters.IConverter;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
 

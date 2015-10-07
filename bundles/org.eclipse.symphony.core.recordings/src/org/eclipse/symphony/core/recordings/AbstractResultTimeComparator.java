@@ -1,7 +1,8 @@
 package org.eclipse.symphony.core.recordings;
 
+import org.eclipse.symphony.core.invocator.AbstractResult;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.TimedComparator;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
 
 public class AbstractResultTimeComparator implements java.util.Comparator<AbstractResult>
 {

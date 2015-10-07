@@ -11,8 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyInitializationData;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.InitializationDataImpl;
+import org.eclipse.symphony.core.invocator.impl.InitializationDataImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

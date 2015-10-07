@@ -4,8 +4,6 @@
 package org.eclipse.symphony.examples.satellite.util;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
 import ca.gc.space.mrt.sensors.sensors.Sensor;
@@ -17,6 +15,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.examples.satellite.*;
 
 /**

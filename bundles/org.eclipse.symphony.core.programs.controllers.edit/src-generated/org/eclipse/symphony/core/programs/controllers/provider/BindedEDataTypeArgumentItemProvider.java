@@ -12,11 +12,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.invocator.provider.ArgumentItemProvider;
 import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.ArgumentItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument} object.

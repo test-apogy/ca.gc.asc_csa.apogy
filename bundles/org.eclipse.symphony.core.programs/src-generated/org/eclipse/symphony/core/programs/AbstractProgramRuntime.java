@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.core.programs;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.invocator.Program;
 
 /**
  * <!-- begin-user-doc -->

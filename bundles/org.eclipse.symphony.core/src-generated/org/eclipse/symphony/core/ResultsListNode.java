@@ -3,7 +3,8 @@
  */
 package org.eclipse.symphony.core;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ResultsList;
+import org.eclipse.symphony.core.invocator.ResultsList;
+
 import ca.gc.space.topology.AggregateGroupNode;
 
 /**

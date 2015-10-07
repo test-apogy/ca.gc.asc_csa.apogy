@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->

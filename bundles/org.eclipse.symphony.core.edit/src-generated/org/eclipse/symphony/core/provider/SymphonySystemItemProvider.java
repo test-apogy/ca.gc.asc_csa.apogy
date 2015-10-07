@@ -15,8 +15,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.invocator.provider.TypeItemProvider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.TypeItemProvider;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
 
 /**

@@ -9,9 +9,9 @@ import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.ResultsListNode;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;

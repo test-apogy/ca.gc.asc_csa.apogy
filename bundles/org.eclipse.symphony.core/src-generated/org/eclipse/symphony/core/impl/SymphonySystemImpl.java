@@ -14,9 +14,9 @@ import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.core.invocator.AbstractType;
+import org.eclipse.symphony.core.invocator.impl.TypeImpl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractType;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.TypeImpl;
 import ca.gc.asc_csa.topology.bindings.BindingsSet;
 
 /**

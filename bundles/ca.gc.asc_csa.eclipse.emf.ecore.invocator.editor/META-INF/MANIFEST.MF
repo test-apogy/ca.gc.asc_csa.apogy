@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.invocator.editor;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.invocator.editor;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation.EMFEcoreInvocatorEditorPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation
+Export-Package: org.eclipse.symphony.core.invocator.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit;visibility:=reexport,
+ org.eclipse.symphony.core.invocator.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,

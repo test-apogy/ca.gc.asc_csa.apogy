@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.space.topology.TopologyPackage;
 
 /**
@@ -2337,11 +2337,11 @@ public interface SymphonyCorePackage extends EPackage {
 	EOperation getSymphonyCoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonyCoreFacade#getSymphonySystem(ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment, java.lang.String) <em>Get Symphony System</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonyCoreFacade#getSymphonySystem(org.eclipse.symphony.core.invocator.Environment, java.lang.String) <em>Get Symphony System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Symphony System</em>' operation.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade#getSymphonySystem(ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment, java.lang.String)
+	 * @see org.eclipse.symphony.core.SymphonyCoreFacade#getSymphonySystem(org.eclipse.symphony.core.invocator.Environment, java.lang.String)
 	 * @generated
 	 */
 	EOperation getSymphonyCoreFacade__GetSymphonySystem__Environment_String();
@@ -2561,11 +2561,11 @@ public interface SymphonyCorePackage extends EPackage {
 	EReference getSymphonySystemApiAdapter_SymphonySystem();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonySystemApiAdapter#createResultMatrix(ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall) <em>Create Result Matrix</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonySystemApiAdapter#createResultMatrix(org.eclipse.symphony.core.invocator.OperationCall) <em>Create Result Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Result Matrix</em>' operation.
-	 * @see org.eclipse.symphony.core.SymphonySystemApiAdapter#createResultMatrix(ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall)
+	 * @see org.eclipse.symphony.core.SymphonySystemApiAdapter#createResultMatrix(org.eclipse.symphony.core.invocator.OperationCall)
 	 * @generated
 	 */
 	EOperation getSymphonySystemApiAdapter__CreateResultMatrix__OperationCall();

@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.core.programs.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.core.invocator.Program;
 import org.eclipse.symphony.core.programs.AbstractProgramRuntime;
 import org.eclipse.symphony.core.programs.InvocatorProgramsPackage;
 

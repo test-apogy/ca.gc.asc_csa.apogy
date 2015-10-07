@@ -3,15 +3,15 @@
  */
 package org.eclipse.symphony.examples.camera.symphony.util;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.InitializationData;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.examples.camera.symphony.CameraData;
 import org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;

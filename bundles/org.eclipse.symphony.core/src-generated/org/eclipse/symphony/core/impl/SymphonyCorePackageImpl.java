@@ -48,9 +48,9 @@ import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.Updatable;
 import org.eclipse.symphony.core.UserDefinedResult;
 import org.eclipse.symphony.core.WorksitesList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.space.topology.TopologyPackage;
 

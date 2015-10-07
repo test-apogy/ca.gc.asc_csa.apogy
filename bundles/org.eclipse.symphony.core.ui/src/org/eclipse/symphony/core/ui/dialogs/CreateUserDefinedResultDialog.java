@@ -24,8 +24,8 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.UserDefinedResult;
+import org.eclipse.symphony.core.invocator.Context;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;

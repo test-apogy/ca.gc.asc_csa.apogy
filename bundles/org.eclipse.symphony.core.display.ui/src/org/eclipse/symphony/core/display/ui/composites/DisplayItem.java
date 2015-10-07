@@ -31,10 +31,10 @@ import org.eclipse.symphony.core.display.HistoryDataHandler;
 import org.eclipse.symphony.core.display.databindings.WatchFeatureNodeObservableValue;
 import org.eclipse.symphony.core.display.provider.EMFEcoreInvocatorDisplayEditPlugin;
 import org.eclipse.symphony.core.display.ui.Activator;
+import org.eclipse.symphony.core.invocator.AbstractDisplay;
+import org.eclipse.symphony.core.invocator.Context;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.EMFEcoreUIFacade;
 
 public class DisplayItem implements IPropertyChangeListener

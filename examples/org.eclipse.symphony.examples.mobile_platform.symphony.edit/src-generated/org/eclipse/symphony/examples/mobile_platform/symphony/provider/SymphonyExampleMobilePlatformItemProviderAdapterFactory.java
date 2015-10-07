@@ -3,10 +3,6 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorSwitch;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -31,6 +27,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformFactory;
 import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.symphony.util.SymphonyExampleMobilePlatformAdapterFactory;

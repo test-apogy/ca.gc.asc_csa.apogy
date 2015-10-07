@@ -5,6 +5,7 @@ package ca.gc.asc_csa.symphony.tools.core.impl;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,7 +15,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractToolsListContainerImpl;
+import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
+
 import ca.gc.asc_csa.symphony.tools.core.SimpleTool;
 import ca.gc.asc_csa.symphony.tools.core.SimpleToolList;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;

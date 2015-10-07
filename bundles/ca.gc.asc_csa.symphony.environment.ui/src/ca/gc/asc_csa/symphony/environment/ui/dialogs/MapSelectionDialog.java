@@ -15,8 +15,8 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.invocator.Context;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 import ca.gc.asc_csa.symphony.environment.Map;
 import ca.gc.asc_csa.symphony.environment.MapsList;
 import ca.gc.asc_csa.symphony.environment.SurfaceWorksite;

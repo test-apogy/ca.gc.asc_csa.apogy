@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
 import ca.gc.asc_csa.symphony.tools.core.AbstractTwoPoints3DTool;
 import ca.gc.asc_csa.symphony.tools.core.FeatureOfInterestPickingTool;
@@ -188,8 +188,8 @@ public class SymphonyToolsCorePackageImpl extends EPackageImpl implements Sympho
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyCorePackage.eINSTANCE.eClass();
 		PathsPackage.eINSTANCE.eClass();
+		SymphonyCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyToolsCorePackage.createPackageContents();

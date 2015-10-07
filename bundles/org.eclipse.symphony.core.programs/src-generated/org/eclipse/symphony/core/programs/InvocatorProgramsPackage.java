@@ -375,11 +375,11 @@ public interface InvocatorProgramsPackage extends EPackage {
 	EReference getProgramFacade_Variables();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.ProgramFacade#exec(ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall) <em>Exec</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.ProgramFacade#exec(org.eclipse.symphony.core.invocator.OperationCall) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.ProgramFacade#exec(ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall)
+	 * @see org.eclipse.symphony.core.programs.ProgramFacade#exec(org.eclipse.symphony.core.invocator.OperationCall)
 	 * @generated
 	 */
 	EOperation getProgramFacade__Exec__OperationCall();

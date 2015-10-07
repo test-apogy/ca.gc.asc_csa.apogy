@@ -6,9 +6,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.core.Activator;
 import org.eclipse.symphony.core.WorksiteContributor;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.ui.composites.WorksiteContributorsListComposite;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 
 public class SymphonyWorksiteSelectionWizardPage extends WizardPage {
 

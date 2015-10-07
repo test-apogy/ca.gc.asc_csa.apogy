@@ -520,21 +520,21 @@ public interface SymphonyTopologyPackage extends EPackage
   EClass getSymphonyTopologyFacade();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getVariableOriginNode(ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable) <em>Get Variable Origin Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getVariableOriginNode(org.eclipse.symphony.core.invocator.Variable) <em>Get Variable Origin Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Variable Origin Node</em>' operation.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getVariableOriginNode(ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable)
+	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getVariableOriginNode(org.eclipse.symphony.core.invocator.Variable)
 	 * @generated
 	 */
 	EOperation getSymphonyTopologyFacade__GetVariableOriginNode__Variable();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getAbstractTypeImplementationOriginNode(ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation) <em>Get Abstract Type Implementation Origin Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getAbstractTypeImplementationOriginNode(org.eclipse.symphony.core.invocator.AbstractTypeImplementation) <em>Get Abstract Type Implementation Origin Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Abstract Type Implementation Origin Node</em>' operation.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getAbstractTypeImplementationOriginNode(ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation)
+	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getAbstractTypeImplementationOriginNode(org.eclipse.symphony.core.invocator.AbstractTypeImplementation)
 	 * @generated
 	 */
 	EOperation getSymphonyTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation();

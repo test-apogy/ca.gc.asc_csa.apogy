@@ -16,16 +16,16 @@ import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor.PropertyValueWrapper;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
+import org.eclipse.symphony.core.invocator.Variable;
+import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.listeners.AbstractVariableFeatureReferenceListener;
 import ca.gc.asc_csa.symphony.tools.camera.EMFFeatureOverlay;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 

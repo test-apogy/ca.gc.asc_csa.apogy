@@ -14,12 +14,10 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.RecordingPolicy;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractChannelItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.recordings.Channel} object.
@@ -28,7 +26,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractChannelItemPro
  * @generated
  */
 public class ChannelItemProvider
-  extends AbstractChannelItemProvider
+  extends org.eclipse.symphony.core.invocator.provider.AbstractChannelItemProvider
 {
 	protected DecimalFormat durationDecimalFormat = new DecimalFormat("0.000");
 	

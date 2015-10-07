@@ -23,10 +23,10 @@ import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.ResultsListNode;
 import org.eclipse.symphony.core.SymphonyCoreFacade;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.invocator.AbstractResult;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.ResultsList;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ResultsList;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.TopologyFacade;
 import ca.gc.space.topology.TransformNode;

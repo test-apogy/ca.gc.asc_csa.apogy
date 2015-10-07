@@ -7,7 +7,6 @@ package org.eclipse.symphony.core.recordings.provider;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -18,9 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFactory;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.Recording;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractResultItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.recordings.Recording} object.
@@ -29,7 +26,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractResultItemProv
  * @generated
  */
 public class RecordingItemProvider
-  extends AbstractResultItemProvider
+  extends org.eclipse.symphony.core.invocator.provider.AbstractResultItemProvider
 {
 	
 	protected DecimalFormat durationDecimalFormat = new DecimalFormat("0.000");

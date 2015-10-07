@@ -3,9 +3,10 @@
  */
 package org.eclipse.symphony.core;
 
+import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->

@@ -32,8 +32,8 @@ import org.eclipse.symphony.core.SymphonyCoreFacade;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.invocator.Environment;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 import ca.gc.asc_csa.symphony.environment.Activator;
 import ca.gc.asc_csa.symphony.environment.AstronomyUtils;
 import ca.gc.asc_csa.symphony.environment.Atmosphere;

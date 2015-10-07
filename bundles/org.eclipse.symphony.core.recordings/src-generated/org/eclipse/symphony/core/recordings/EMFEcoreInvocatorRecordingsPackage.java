@@ -10,8 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 
 /**
@@ -1199,11 +1198,11 @@ public interface EMFEcoreInvocatorRecordingsPackage extends EPackage
   EOperation getEMFEcoreInvocatorRecordingsFacade__GetReversedTimeSortedAbstractResults__Collection();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade#getTimeSortedAbstractResults(ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList) <em>Get Time Sorted Abstract Results</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade#getTimeSortedAbstractResults(org.eclipse.symphony.core.invocator.DataProductsList) <em>Get Time Sorted Abstract Results</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Time Sorted Abstract Results</em>' operation.
-	 * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade#getTimeSortedAbstractResults(ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList)
+	 * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade#getTimeSortedAbstractResults(org.eclipse.symphony.core.invocator.DataProductsList)
 	 * @generated
 	 */
   EOperation getEMFEcoreInvocatorRecordingsFacade__GetTimeSortedAbstractResults__DataProductsList();

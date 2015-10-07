@@ -30,10 +30,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayFactory;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
 import org.eclipse.symphony.core.display.util.EMFEcoreInvocatorDisplayAdapterFactory;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DisplaysList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorSwitch;
+import org.eclipse.symphony.core.invocator.DisplaysList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

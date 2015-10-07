@@ -17,12 +17,12 @@ import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.DisplayFacade;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
 import org.eclipse.symphony.core.display.databindings.WatchFeatureNodeObservableValue;
+import org.eclipse.symphony.core.invocator.AbstractDisplay;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Variable;
+import org.eclipse.symphony.core.invocator.Watch;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Watch;
 
 /**
  * <!-- begin-user-doc -->

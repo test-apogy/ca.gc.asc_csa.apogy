@@ -12,8 +12,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.SymphonyCorePackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractResultImpl;
+import org.eclipse.symphony.core.invocator.impl.AbstractResultImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

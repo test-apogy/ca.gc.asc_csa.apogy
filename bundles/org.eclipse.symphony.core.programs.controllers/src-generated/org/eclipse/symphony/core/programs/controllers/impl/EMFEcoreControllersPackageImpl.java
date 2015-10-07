@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
 import org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning;
@@ -39,7 +40,6 @@ import org.eclipse.symphony.core.programs.controllers.Trigger;
 import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.ValueSource;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.jinput.JInputPackage;
 
 import java.util.List;

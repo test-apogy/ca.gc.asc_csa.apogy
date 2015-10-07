@@ -30,11 +30,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.ToolsList;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ToolsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorSwitch;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCoreFactory;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.asc_csa.symphony.tools.core.util.SymphonyToolsCoreAdapterFactory;

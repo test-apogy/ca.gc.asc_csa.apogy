@@ -7,10 +7,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.core.Updatable;
+import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ui.*;
 
 /**

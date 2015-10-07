@@ -9,8 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1319,11 +1318,11 @@ public interface EMFEcoreInvocatorDisplayPackage extends EPackage
   EOperation getDisplayFacade__GetSource__AbstractFeatureDisplay();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.display.DisplayFacade#getEStructuralFeature(ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay) <em>Get EStructural Feature</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.display.DisplayFacade#getEStructuralFeature(org.eclipse.symphony.core.invocator.AbstractDisplay) <em>Get EStructural Feature</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get EStructural Feature</em>' operation.
-	 * @see org.eclipse.symphony.core.display.DisplayFacade#getEStructuralFeature(ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay)
+	 * @see org.eclipse.symphony.core.display.DisplayFacade#getEStructuralFeature(org.eclipse.symphony.core.invocator.AbstractDisplay)
 	 * @generated
 	 */
   EOperation getDisplayFacade__GetEStructuralFeature__AbstractDisplay();

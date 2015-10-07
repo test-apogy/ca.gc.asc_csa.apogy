@@ -8,9 +8,9 @@ import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.core.FeatureOfInterestList;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.jfree.data.xy.XYSeries;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider;
 import ca.gc.asc_csa.symphony.environment.ui.impl.EnvironmentUiFacadeImpl;

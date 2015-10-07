@@ -6,8 +6,8 @@ package ca.gc.asc_csa.symphony.tools.core
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
+import org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+import org.eclipse.symphony.core.invocator.Variable
 import org.eclipse.symphony.core.FeatureOfInterestList
 import org.eclipse.symphony.core.PoseProvider
 import org.eclipse.symphony.common.math.Matrix4d

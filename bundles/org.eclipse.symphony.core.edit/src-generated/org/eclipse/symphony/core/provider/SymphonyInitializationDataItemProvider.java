@@ -14,8 +14,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyInitializationData;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.InitializationDataItemProvider;
+import org.eclipse.symphony.core.invocator.provider.InitializationDataItemProvider;
 
 /**
  * This is the item provider adapter for a

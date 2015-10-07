@@ -12,8 +12,7 @@ import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Activator;
+import org.eclipse.symphony.core.invocator.Activator;
 
 public class CSVAdaptersRegistry 
 {

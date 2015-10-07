@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation.EMFEcoreInvocatorModelWizardID"
+            id="org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorModelWizardID"
             name="%_UI_EMFEcoreInvocatorModelWizard_label"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation.EMFEcoreInvocatorModelWizard"
+            class="org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/EMFEcoreInvocatorModelFile.gif">
          <description>%_UI_EMFEcoreInvocatorModelWizard_description</description>
@@ -24,12 +24,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation.EMFEcoreInvocatorEditorID"
+            id="org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorEditorID"
             name="%_UI_EMFEcoreInvocatorEditor_label"
             icon="platform:/plugin/ca.gc.asc_csa.symphony.core.ui/icons/symphony_logo_16x16.gif"
             extensions="ei, ss, sym"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation.CustomEMFEcoreInvocatorEditor"
-            contributorClass="ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation.EMFEcoreInvocatorActionBarContributor">
+            class="org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorEditor"
+            contributorClass="org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorActionBarContributor">
       </editor>
    </extension>
 

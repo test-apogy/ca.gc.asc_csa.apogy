@@ -4,11 +4,11 @@
 package org.eclipse.symphony.core.recordings;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
+
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractPlayer;
+import org.eclipse.symphony.core.invocator.AbstractPlayer;
 
 /**
  * <!-- begin-user-doc -->

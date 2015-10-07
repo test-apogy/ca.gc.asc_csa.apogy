@@ -5,37 +5,37 @@
          point="org.eclipse.ui.commands">
 
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesResetCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesResetCommand"
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesResetCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesResetCommand"
             name="ResetVariableInstancesCommand">
       </command>
       
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesClearCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesClearCommand"
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesClearCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesClearCommand"
             name="ResetVariableInstancesCommand">
       </command>      
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.ExecuteOperationCallCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.ExecuteOperationCallCommand"
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.ExecuteOperationCallCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.ExecuteOperationCallCommand"
             name="ExecuteOperationCallCommand">
       </command>
       
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
             name="VariableInstancesApplyInitializationDataCommand">
       </command>
 
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
             name="VariableInstancesCollectInitializationDataCommand">
       </command>      
       
       <command
-            defaultHandler="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.SetActiveInvocatorSessionCommand"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
             name="SetActiveInvocatorSessionCommand">
       </command>            
       
@@ -47,7 +47,7 @@
             locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
 
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesResetCommand"
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesResetCommand"
                label="Reset Instances"
                style="push">
             <visibleWhen
@@ -58,7 +58,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment">
+                           value="org.eclipse.symphony.core.invocator.Environment">
                        </instanceof>
                   </iterate>
                </with>
@@ -66,7 +66,7 @@
          </command>
          
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
                label="Set As Active Session"
                style="push">
             <visibleWhen
@@ -77,7 +77,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession">
+                           value="org.eclipse.symphony.core.invocator.InvocatorSession">
                        </instanceof>
                   </iterate>
                </with>
@@ -85,7 +85,7 @@
          </command>         
 
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesClearCommand"
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesClearCommand"
                label="Clear Instances"
                style="push">
             <visibleWhen
@@ -96,7 +96,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment">
+                           value="org.eclipse.symphony.core.invocator.Environment">
                        </instanceof>
                   </iterate>
                </with>
@@ -104,7 +104,7 @@
          </command>
 
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
                label="Apply Data"
                style="push">
             <visibleWhen
@@ -115,7 +115,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment">
+                           value="org.eclipse.symphony.core.invocator.Environment">
                        </instanceof>
                   </iterate>
                </with>
@@ -123,7 +123,7 @@
          </command>
 
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
                label="Collect Data"
                style="push">
             <visibleWhen
@@ -134,7 +134,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment">
+                           value="org.eclipse.symphony.core.invocator.Environment">
                        </instanceof>
                   </iterate>
                </with>
@@ -143,7 +143,7 @@
 
 
          <command
-               commandId="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.commands.ExecuteOperationCallCommand"
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.ExecuteOperationCallCommand"
                label="Invoke"
                style="push">
             <visibleWhen
@@ -157,7 +157,7 @@
                           ifEmpty="false"
                           operator="or">
                             <instanceof
-                                value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall">
+                                value="org.eclipse.symphony.core.invocator.OperationCall">
                             </instanceof>
                        </iterate>
                     </and>
@@ -167,7 +167,7 @@
                           ifEmpty="false"
                           operator="or">
                             <instanceof
-                                value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallsList">
+                                value="org.eclipse.symphony.core.invocator.OperationCallsList">
                             </instanceof>
                        </iterate>
                     </and>
@@ -181,24 +181,24 @@
          point="org.eclipse.ui.decorators">
       <decorator
             adaptable="true"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.decorators.OperationCallResultDecorator"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.decorator1"
+            class="org.eclipse.symphony.core.invocator.ui.decorators.OperationCallResultDecorator"
+            id="org.eclipse.symphony.core.invocator.ui.decorator1"
             label="Operation CallResult Decorator"
             lightweight="true"
             location="TOP_LEFT"
             state="true">
          <enablement>
             <objectClass
-                  name="ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult">
+                  name="org.eclipse.symphony.core.invocator.OperationCallResult">
             </objectClass>
          </enablement>
       </decorator>
       
       <decorator
             adaptable="true"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
+            class="org.eclipse.symphony.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
             icon="icons/ovr/active_session_7x8.gif"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
+            id="org.eclipse.symphony.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
             label="Active Session Decorator"
             lightweight="true"
             location="TOP_LEFT"
@@ -206,7 +206,7 @@
          <enablement>
             <or>
                <objectClass
-                     name="ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession">
+                     name="org.eclipse.symphony.core.invocator.InvocatorSession">
                </objectClass>
                <objectClass
                      name="org.eclipse.core.resources.IResource">
@@ -223,35 +223,35 @@
          point="org.eclipse.ui.views">
       <view
             category="ca.gc.asc_csa.eclipse.ui.category"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.views.OperationCallView"
-            icon="platform:/plugin/ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit/icons/full/obj16/OperationCall.gif"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.views.OperationCallView"
+            class="org.eclipse.symphony.core.invocator.ui.views.OperationCallView"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/OperationCall.gif"
+            id="org.eclipse.symphony.core.invocator.ui.views.OperationCallView"
             name="Operation Call"
             restorable="true">
       </view>
       
       <view
             category="ca.gc.asc_csa.eclipse.ui.category"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.views.ContextsDefinitionView"
-            icon="platform:/plugin/ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit/icons/full/obj16/ContextsList.gif"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.views.ContextsDefinitionView"
+            class="org.eclipse.symphony.core.invocator.ui.views.ContextsDefinitionView"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/ContextsList.gif"
+            id="org.eclipse.symphony.core.invocator.ui.views.ContextsDefinitionView"
             name="Contexts"
             restorable="true">
       </view>      
       
       <view
             category="ca.gc.asc_csa.eclipse.ui.category"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.views.DocumentationView"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.views.DocumentationView"
+            class="org.eclipse.symphony.core.invocator.ui.views.DocumentationView"
+            id="org.eclipse.symphony.core.invocator.ui.views.DocumentationView"
             name="Documentation"
             restorable="true">
       </view>      
       
       <view
             category="ca.gc.asc_csa.eclipse.ui.category"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.views.InstanceView"
-            icon="platform:/plugin/ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit/icons/full/obj16/Instance.gif"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.views.InstanceView"
+            class="org.eclipse.symphony.core.invocator.ui.views.InstanceView"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/Instance.gif"
+            id="org.eclipse.symphony.core.invocator.ui.views.InstanceView"
             name="Instance"
             restorable="true">
       </view>
@@ -263,51 +263,51 @@
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
                afterSection="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.sections.NamedSection"
-               class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.VariableFeatureReferenceSection"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               class="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               id="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
                tab="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.tabs.General">
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference">
+                  type="org.eclipse.symphony.core.invocator.VariableFeatureReference">
             </input>
          </propertySection>
          
          <propertySection
-               afterSection="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.VariableFeatureReferenceSection"
-               class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.OperationCallSection"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.OperationCallSection"
+               afterSection="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               class="org.eclipse.symphony.core.invocator.ui.properties.sections.OperationCallSection"
+               id="org.eclipse.symphony.core.invocator.ui.properties.sections.OperationCallSection"
                tab="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.tabs.General">
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall">
+                  type="org.eclipse.symphony.core.invocator.OperationCall">
             </input>
          </propertySection>
                   
          <propertySection
-               class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.ContextsDefinitionSection"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.ContextsDefinitionSection"
-               tab="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.propertyTabs.Contexts">
+               class="org.eclipse.symphony.core.invocator.ui.properties.sections.ContextsDefinitionSection"
+               id="org.eclipse.symphony.core.invocator.ui.properties.sections.ContextsDefinitionSection"
+               tab="org.eclipse.symphony.core.invocator.ui.propertyTabs.Contexts">
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment">
+                  type="org.eclipse.symphony.core.invocator.Environment">
             </input>
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ContextsList">
+                  type="org.eclipse.symphony.core.invocator.ContextsList">
             </input>
          </propertySection>
          
          <propertySection
-               class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.DocumentationSection"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.sections.DocumentationSection"
-               tab="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.propertyTabs.Documentation">
+               class="org.eclipse.symphony.core.invocator.ui.properties.sections.DocumentationSection"
+               id="org.eclipse.symphony.core.invocator.ui.properties.sections.DocumentationSection"
+               tab="org.eclipse.symphony.core.invocator.ui.propertyTabs.Documentation">
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation">
+                  type="org.eclipse.symphony.core.invocator.AbstractTypeImplementation">
             </input>
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable">
+                  type="org.eclipse.symphony.core.invocator.Variable">
             </input>
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type">
+                  type="org.eclipse.symphony.core.invocator.Type">
             </input>
             <input
-                  type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeMember">
+                  type="org.eclipse.symphony.core.invocator.TypeMember">
             </input>
          </propertySection>    
       </propertySections>
@@ -319,7 +319,7 @@
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.properties.tabs.ResultImage"
+               id="org.eclipse.symphony.core.invocator.ui.properties.tabs.ResultImage"
                label="Image">
          </propertyTab>
       </propertyTabs>
@@ -331,7 +331,7 @@
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.propertyTabs.Contexts"
+               id="org.eclipse.symphony.core.invocator.ui.propertyTabs.Contexts"
                label="Contexts">
          </propertyTab>
       </propertyTabs>
@@ -343,7 +343,7 @@
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
-               id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.propertyTabs.Documentation"
+               id="org.eclipse.symphony.core.invocator.ui.propertyTabs.Documentation"
                label="Documentation">
          </propertyTab>
       </propertyTabs>
@@ -357,9 +357,9 @@
       </category>
       <wizard
             category="ca.gc.asc_csa.symphony.core.ui"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.wizards.NewOperationCallWizard"
-            icon="platform:/plugin/ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit/icons/full/obj16/OperationCall.gif"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.wizards.NewOperationCallWizard"
+            class="org.eclipse.symphony.core.invocator.ui.wizards.NewOperationCallWizard"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/OperationCall.gif"
+            id="org.eclipse.symphony.core.invocator.ui.wizards.NewOperationCallWizard"
             name="New Operation Call"
             project="false">
       </wizard>
@@ -367,7 +367,7 @@
    <extension
          point="org.eclipse.symphony.common.converters">
       <new_element
-            Class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.converters.AbstractResultToReferenceResultValue">
+            Class="org.eclipse.symphony.core.invocator.ui.converters.AbstractResultToReferenceResultValue">
       </new_element>
    </extension>
    
@@ -386,9 +386,9 @@
       </category>
       <wizard
             category="ca.gc.asc_csa.symphony.core.ui"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.wizards.CopyInitializationDataWizard"
+            class="org.eclipse.symphony.core.invocator.ui.wizards.CopyInitializationDataWizard"
             icon="icons/symphony_logo_16x16.gif"
-            id="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.wizards.CopyInitializationDataWizard"
+            id="org.eclipse.symphony.core.invocator.ui.wizards.CopyInitializationDataWizard"
             name="Symphony Initialization Data">
          <description>
             This wizard allows to copy Symphony Initialization Data from a Symphony context to another Symphony context.
@@ -398,8 +398,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated eclipse_emf_ecore_invocator_ui -->
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.EMFEcoreInvocatorUiPackage"
+            uri="org.eclipse.symphony.core.invocator.ui"
+            class="org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUiPackage"
             genModel="model/eclipse_emf_ecore_invocator_ui.xcore"/>
    </extension>
 

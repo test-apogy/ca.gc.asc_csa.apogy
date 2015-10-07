@@ -14,10 +14,10 @@ import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.invocator.TypeMember;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeMember;
 import ca.gc.space.topology.Node;
 
 /**

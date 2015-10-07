@@ -17,11 +17,11 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
+import org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractDisplayImpl;
 
 /**
  * <!-- begin-user-doc -->

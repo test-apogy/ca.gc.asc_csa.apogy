@@ -16,10 +16,10 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.invocator.provider.EnvironmentItemProvider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EnvironmentItemProvider;
 
 /**
  * This is the item provider adapter for a

@@ -29,7 +29,7 @@
       <view
             category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.core.ui.views.DataProductsListsContainerView"
-            icon="platform:/plugin/ca.gc.asc_csa.eclipse.emf.ecore.invocator.edit/icons/full/obj16/DataProductsListsContainer.gif"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/DataProductsListsContainer.gif"
             id="org.eclipse.symphony.core.ui.views.DataProductsListsContainerView"
             name="Data Products"
             restorable="true">
@@ -163,7 +163,7 @@
                      operator="or">
                        <and>
                            <instanceof
-                                 value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable">
+                                 value="org.eclipse.symphony.core.invocator.Variable">
                            </instanceof>
                            <test
                                  forcePluginActivation="true"
@@ -222,7 +222,7 @@
                       ifEmpty="false"
                       operator="or">
                         <instanceof
-                             value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList">
+                             value="org.eclipse.symphony.core.invocator.DataProductsList">
                         </instanceof>
                   </iterate>
                </with>
@@ -293,7 +293,7 @@
             id="org.eclipse.symphony.core.ui.commands.SymphonySystemVariableInstancePropertyTester"
             namespace="org.eclipse.symphony.core.ui"
             properties="instanceOfSymphonySystem"
-            type="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable">
+            type="org.eclipse.symphony.core.invocator.Variable">
       </propertyTester>
    </extension>
    <extension

@@ -18,12 +18,12 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonyTopology;
 import org.eclipse.symphony.core.WorksitesList;
+import org.eclipse.symphony.core.invocator.impl.EnvironmentImpl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.EnvironmentImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

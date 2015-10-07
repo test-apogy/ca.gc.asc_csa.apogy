@@ -10,15 +10,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Variable;
+import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementation;
 import ca.gc.space.topology.Node;
 
 /**

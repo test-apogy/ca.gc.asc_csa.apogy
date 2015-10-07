@@ -6,7 +6,6 @@ package org.eclipse.symphony.core.recordings.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 
 
@@ -45,7 +44,7 @@ public final class EMFEcoreInvocatorRecordingsEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     EMFEcoreEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin.INSTANCE,
 		   });
 	}
 

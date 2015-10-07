@@ -12,14 +12,14 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.symphony.core.display.DisplayFacade;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayFactory;
+import org.eclipse.symphony.core.invocator.AbstractDisplay;
+import org.eclipse.symphony.core.invocator.Context;
+import org.eclipse.symphony.core.invocator.DisplaysList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DisplaysList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 
 public class DisplaysListComposite extends Composite 
 {

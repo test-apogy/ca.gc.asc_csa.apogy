@@ -27,10 +27,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.ToolsList;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ToolsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorSwitch;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsFactory;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 import ca.gc.asc_csa.symphony.tools.camera.util.SymphonyCameraToolsAdapterFactory;

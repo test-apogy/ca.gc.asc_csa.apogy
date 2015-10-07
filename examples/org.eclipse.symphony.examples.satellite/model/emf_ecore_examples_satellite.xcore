@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.EDate
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData
+import org.eclipse.symphony.core.invocator.TypeApiAdapter
+import org.eclipse.symphony.core.invocator.AbstractInitializationData
 
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera
 import ca.gc.space.mrt.sensors.imaging.Zoomable

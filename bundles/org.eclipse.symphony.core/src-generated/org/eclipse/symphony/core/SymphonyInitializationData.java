@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core;
 
 import org.eclipse.symphony.common.math.Matrix4x4;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData;
+import org.eclipse.symphony.core.invocator.InitializationData;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

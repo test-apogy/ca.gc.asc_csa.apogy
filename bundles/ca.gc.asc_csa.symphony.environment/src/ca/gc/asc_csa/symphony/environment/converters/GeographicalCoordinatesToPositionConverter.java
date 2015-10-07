@@ -4,8 +4,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.converters.IConverter;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
 

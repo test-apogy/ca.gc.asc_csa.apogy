@@ -1,12 +1,12 @@
 @GenModel(prefix="EMFEcoreInvocatorUi", childCreationExtenders="true", modelName="EMFEcoreInvocatorUi")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.invocator.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.invocator.ui.edit/src-generated")
 
-package ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui
+package org.eclipse.symphony.core.invocator.ui
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context
+import org.eclipse.symphony.core.invocator.Context
 import ca.gc.asc_csa.eclipse.emf.ecore.Exception
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
 

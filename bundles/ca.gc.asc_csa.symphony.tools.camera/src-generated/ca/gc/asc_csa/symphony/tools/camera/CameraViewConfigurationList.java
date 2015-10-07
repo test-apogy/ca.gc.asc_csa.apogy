@@ -4,8 +4,7 @@
 package ca.gc.asc_csa.symphony.tools.camera;
 
 import org.eclipse.emf.common.util.EList;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer;
+import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->

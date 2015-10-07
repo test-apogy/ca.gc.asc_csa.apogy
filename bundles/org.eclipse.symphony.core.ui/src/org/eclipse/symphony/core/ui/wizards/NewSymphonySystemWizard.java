@@ -19,6 +19,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorEditor;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFactory;
@@ -32,8 +33,6 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation.CustomEMFEcoreInvocatorEditor;
 
 public class NewSymphonySystemWizard extends Wizard implements INewWizard {
 	private NewSymphonySystemWizardPage page;

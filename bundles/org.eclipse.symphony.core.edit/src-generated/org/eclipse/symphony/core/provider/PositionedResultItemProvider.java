@@ -16,8 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.SymphonyCorePackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractResultItemProvider;
+import org.eclipse.symphony.core.invocator.provider.AbstractResultItemProvider;
 
 /**
  * This is the item provider adapter for a

@@ -3,10 +3,11 @@
  */
 package org.eclipse.symphony.core;
 
+import org.eclipse.symphony.core.invocator.Environment;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

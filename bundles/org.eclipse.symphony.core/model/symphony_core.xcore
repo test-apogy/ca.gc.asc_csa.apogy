@@ -12,24 +12,24 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Timed
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ResultsList
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment
+import org.eclipse.symphony.core.invocator.AbstractResult
+import org.eclipse.symphony.core.invocator.OperationCallResult
+import org.eclipse.symphony.core.invocator.ResultsList
+import org.eclipse.symphony.core.invocator.Environment
 import ca.gc.space.topology.Node
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type
+import org.eclipse.symphony.core.invocator.Type
 import ca.gc.asc_csa.topology.bindings.BindingsSet
 import org.eclipse.symphony.common.math.Matrix4x4
 import ca.gc.space.topology.GroupNode
 import ca.gc.space.topology.AggregateGroupNode
 import ca.gc.space.topology.TransformNode
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeMember
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractType
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference
+import org.eclipse.symphony.core.invocator.TypeMember
+import org.eclipse.symphony.core.invocator.InvocatorSession
+import org.eclipse.symphony.core.invocator.TypeApiAdapter
+import org.eclipse.symphony.core.invocator.OperationCall
+import org.eclipse.symphony.core.invocator.AbstractType
+import org.eclipse.symphony.core.invocator.InitializationData
+import org.eclipse.symphony.core.invocator.VariableFeatureReference
 
 /* Types definitions. */
 type Map<K,V> wraps java.util.Map

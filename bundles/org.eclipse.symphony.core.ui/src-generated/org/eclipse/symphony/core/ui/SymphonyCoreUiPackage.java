@@ -751,11 +751,11 @@ public interface SymphonyCoreUiPackage extends EPackage
 	EOperation getSymphonyCoreUiFacade__CreateSymphonySession__NewSymphonySessionSettings();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession) <em>Create Symphony Session File</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, org.eclipse.symphony.core.invocator.InvocatorSession) <em>Create Symphony Session File</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony Session File</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession)
+	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, org.eclipse.symphony.core.invocator.InvocatorSession)
 	 * @generated
 	 */
 	EOperation getSymphonyCoreUiFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession();

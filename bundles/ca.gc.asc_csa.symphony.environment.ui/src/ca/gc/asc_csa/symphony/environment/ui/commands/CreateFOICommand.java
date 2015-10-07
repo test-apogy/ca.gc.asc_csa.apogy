@@ -19,9 +19,9 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.symphony.environment.ui.dialogs.FeatureOfInterestCreationDialog;
 

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFactory;
@@ -39,7 +40,6 @@ import org.eclipse.symphony.core.recordings.RecordingResult;
 import org.eclipse.symphony.core.recordings.RecordingTrack;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -7,6 +7,7 @@ package org.eclipse.symphony.core.recordings.provider;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -22,11 +23,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFactory;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.RecordingTrack;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.recordings.RecordingTrack} object.

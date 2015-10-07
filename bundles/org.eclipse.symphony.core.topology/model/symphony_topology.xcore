@@ -4,8 +4,8 @@
 
 package org.eclipse.symphony.core.topology
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation
+import org.eclipse.symphony.core.invocator.Variable
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation
 
 import ca.gc.space.topology.Node
 import ca.gc.space.topology.ReferencedGroupNode

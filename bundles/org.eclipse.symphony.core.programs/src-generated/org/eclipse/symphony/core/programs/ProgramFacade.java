@@ -3,13 +3,11 @@
  */
 package org.eclipse.symphony.core.programs;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.OperationCall;
+import org.eclipse.symphony.core.invocator.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +49,7 @@ public interface ProgramFacade extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Variables</b></em>' reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable}.
+	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.Variable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Variables</em>' reference list isn't clear,

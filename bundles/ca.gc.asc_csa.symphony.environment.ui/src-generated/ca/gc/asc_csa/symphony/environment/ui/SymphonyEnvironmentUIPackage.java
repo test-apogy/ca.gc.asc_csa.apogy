@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.space.topology.ui.TopologyUIPackage;
 
 /**
@@ -3276,11 +3276,11 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	EOperation getEnvironmentUiFacade__GetActiveMapViewConfigurationList();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.ui.EnvironmentUiFacade#getFeatureOfInterestLists(ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession) <em>Get Feature Of Interest Lists</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.environment.ui.EnvironmentUiFacade#getFeatureOfInterestLists(org.eclipse.symphony.core.invocator.InvocatorSession) <em>Get Feature Of Interest Lists</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Feature Of Interest Lists</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.EnvironmentUiFacade#getFeatureOfInterestLists(ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession)
+	 * @see ca.gc.asc_csa.symphony.environment.ui.EnvironmentUiFacade#getFeatureOfInterestLists(org.eclipse.symphony.core.invocator.InvocatorSession)
 	 * @generated
 	 */
 	EOperation getEnvironmentUiFacade__GetFeatureOfInterestLists__InvocatorSession();

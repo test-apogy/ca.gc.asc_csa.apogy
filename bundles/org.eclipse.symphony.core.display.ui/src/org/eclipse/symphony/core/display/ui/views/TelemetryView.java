@@ -9,15 +9,15 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.ui.composites.DisplaysListComposite;
+import org.eclipse.symphony.core.invocator.DisplaysList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Watch;
+import org.eclipse.symphony.core.invocator.WatchesList;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.part.ViewPart;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DisplaysList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Watch;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.WatchesList;
 
 public class TelemetryView extends ViewPart implements ISelectionListener 
 {

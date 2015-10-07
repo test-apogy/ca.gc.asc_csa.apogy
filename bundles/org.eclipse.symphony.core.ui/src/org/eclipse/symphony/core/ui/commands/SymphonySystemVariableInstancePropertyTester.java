@@ -2,11 +2,10 @@ package org.eclipse.symphony.core.ui.commands;
 
 import org.eclipse.core.expressions.PropertyTester;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementation;
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Variable;
+import org.eclipse.symphony.core.invocator.VariableImplementation;
 
 public class SymphonySystemVariableInstancePropertyTester extends PropertyTester {
 	

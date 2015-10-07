@@ -10,10 +10,9 @@ import java.util.List;
 import java.util.SortedSet;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.invocator.AbstractResult;
+import org.eclipse.symphony.core.invocator.DataProductsList;
 import org.eclipse.symphony.core.recordings.impl.EMFEcoreInvocatorRecordingsFacadeImpl;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList;
 
 /**
  * <!-- begin-user-doc -->
@@ -105,7 +104,7 @@ public interface EMFEcoreInvocatorRecordingsFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" unique="false" abstractResultsDataType="org.eclipse.symphony.core.recordings.Collection<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" abstractResultsUnique="false"
+	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" unique="false" abstractResultsDataType="org.eclipse.symphony.core.recordings.Collection<org.eclipse.symphony.core.invocator.AbstractResult>" abstractResultsUnique="false"
 	 * @generated
 	 */
   SortedSet<AbstractResult> getTimeSortedAbstractResults(Collection<AbstractResult> abstractResults);
@@ -113,7 +112,7 @@ public interface EMFEcoreInvocatorRecordingsFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" unique="false" abstractResultsDataType="org.eclipse.symphony.core.recordings.Collection<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" abstractResultsUnique="false"
+	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" unique="false" abstractResultsDataType="org.eclipse.symphony.core.recordings.Collection<org.eclipse.symphony.core.invocator.AbstractResult>" abstractResultsUnique="false"
 	 * @generated
 	 */
   SortedSet<AbstractResult> getReversedTimeSortedAbstractResults(Collection<AbstractResult> abstractResults);
@@ -121,7 +120,7 @@ public interface EMFEcoreInvocatorRecordingsFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" unique="false" dataProductsUnique="false"
+	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" unique="false" dataProductsUnique="false"
 	 * @generated
 	 */
   SortedSet<AbstractResult> getTimeSortedAbstractResults(DataProductsList dataProducts);
@@ -129,7 +128,7 @@ public interface EMFEcoreInvocatorRecordingsFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" unique="false" timeSortedAbstractResultsDataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" timeSortedAbstractResultsUnique="false" dateDataType="org.eclipse.symphony.core.recordings.Date" dateUnique="false" inclusiveUnique="false"
+	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" unique="false" timeSortedAbstractResultsDataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" timeSortedAbstractResultsUnique="false" dateDataType="org.eclipse.symphony.core.recordings.Date" dateUnique="false" inclusiveUnique="false"
 	 * @generated
 	 */
   SortedSet<AbstractResult> getAbstractResultsBefore(SortedSet<AbstractResult> timeSortedAbstractResults, Date date, boolean inclusive);
@@ -137,7 +136,7 @@ public interface EMFEcoreInvocatorRecordingsFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" unique="false" timeSortedAbstractResultsDataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" timeSortedAbstractResultsUnique="false" dateDataType="org.eclipse.symphony.core.recordings.Date" dateUnique="false" inclusiveUnique="false"
+	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" unique="false" timeSortedAbstractResultsDataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" timeSortedAbstractResultsUnique="false" dateDataType="org.eclipse.symphony.core.recordings.Date" dateUnique="false" inclusiveUnique="false"
 	 * @generated
 	 */
   SortedSet<AbstractResult> getAbstractResultsAfter(SortedSet<AbstractResult> timeSortedAbstractResults, Date date, boolean inclusive);
@@ -145,7 +144,7 @@ public interface EMFEcoreInvocatorRecordingsFacade extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" unique="false" timeSortedAbstractResultsDataType="org.eclipse.symphony.core.recordings.SortedSet<ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult>" timeSortedAbstractResultsUnique="false" startDateDataType="org.eclipse.symphony.core.recordings.Date" startDateUnique="false" endDateDataType="org.eclipse.symphony.core.recordings.Date" endDateUnique="false" includeStartUnique="false" includeEndUnique="false"
+	 * @model dataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" unique="false" timeSortedAbstractResultsDataType="org.eclipse.symphony.core.recordings.SortedSet<org.eclipse.symphony.core.invocator.AbstractResult>" timeSortedAbstractResultsUnique="false" startDateDataType="org.eclipse.symphony.core.recordings.Date" startDateUnique="false" endDateDataType="org.eclipse.symphony.core.recordings.Date" endDateUnique="false" includeStartUnique="false" includeEndUnique="false"
 	 * @generated
 	 */
   SortedSet<AbstractResult> getAbstractResultsInInterval(SortedSet<AbstractResult> timeSortedAbstractResults, Date startDate, Date endDate, boolean includeStart, boolean includeEnd);

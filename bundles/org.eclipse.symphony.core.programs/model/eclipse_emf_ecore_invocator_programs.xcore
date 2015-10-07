@@ -9,11 +9,11 @@ package org.eclipse.symphony.core.programs
  * The intent is to support capabilities similar to the Debug capabilities.
  * Specialized {@link Program} must provide its own {@link ProgramRuntime}.  
  */
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
+import org.eclipse.symphony.core.invocator.Program
+import org.eclipse.symphony.core.invocator.InvocatorSession
+import org.eclipse.symphony.core.invocator.Variable
 import ca.gc.asc_csa.eclipse.emf.ecore.Exception
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall
+import org.eclipse.symphony.core.invocator.OperationCall
 
 abstract class AbstractProgramRuntime{
 	refers Program program

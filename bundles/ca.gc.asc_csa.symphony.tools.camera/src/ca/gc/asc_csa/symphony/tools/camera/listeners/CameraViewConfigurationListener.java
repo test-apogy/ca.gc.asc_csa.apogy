@@ -9,10 +9,10 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Variable;
+import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.listeners.AbstractVariableFeatureReferenceListener;
 import ca.gc.asc_csa.symphony.tools.camera.Activator;
 import ca.gc.asc_csa.symphony.tools.camera.CameraOverlay;
 import ca.gc.asc_csa.symphony.tools.camera.CameraOverlayList;

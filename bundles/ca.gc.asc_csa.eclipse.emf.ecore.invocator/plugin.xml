@@ -11,8 +11,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage"
+            uri="org.eclipse.symphony.core.invocator"
+            class="org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage"
             genModel="model/eclipse_emf_ecore_invocator.xcore"/>
    </extension>
 
@@ -20,13 +20,13 @@
       <!-- @generated eclipse_emf_ecore_invocator -->
       <parser
             type="sym"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorResourceFactoryImpl"/>
+            class="org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorResourceFactoryImpl"/>
    </extension>
 
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorDelegate">
+         point="org.eclipse.symphony.core.invocator.InvocatorDelegate">
       <element
-            invocatorDelegateClass="ca.gc.asc_csa.eclipse.emf.ecore.invocator.delegates.DefaultInvocatorDelegate">
+            invocatorDelegateClass="org.eclipse.symphony.core.invocator.delegates.DefaultInvocatorDelegate">
       </element>
    </extension>
 

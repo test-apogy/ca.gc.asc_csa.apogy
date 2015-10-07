@@ -5,13 +5,13 @@ import java.io.IOException;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.OperationCallResult;
+import org.eclipse.symphony.core.invocator.ReferenceResultValue;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ReferenceResultValue;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingFactory;
 

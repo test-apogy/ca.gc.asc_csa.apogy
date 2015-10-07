@@ -17,10 +17,10 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
+import org.eclipse.symphony.core.invocator.Variable;
+import org.eclipse.symphony.core.invocator.listeners.AbstractTypeImplementationListener;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.listeners.AbstractTypeImplementationListener;
 import ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
 

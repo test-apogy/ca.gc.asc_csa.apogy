@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 

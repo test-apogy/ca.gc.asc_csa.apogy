@@ -3,9 +3,6 @@
  */
 package org.eclipse.symphony.examples.satellite.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorSwitch;
 import ca.gc.asc_csa.symphony.environment.ImageMapLayer;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.util.SymphonyEnvironmentSwitch;
@@ -48,6 +45,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;

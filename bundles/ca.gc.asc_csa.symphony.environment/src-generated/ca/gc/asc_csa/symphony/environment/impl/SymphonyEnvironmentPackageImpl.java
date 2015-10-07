@@ -23,9 +23,9 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayer;
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayerNode;
 import ca.gc.asc_csa.symphony.environment.AbstractShapeImageLayer;

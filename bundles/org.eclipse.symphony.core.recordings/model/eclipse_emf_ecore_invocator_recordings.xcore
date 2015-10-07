@@ -11,12 +11,12 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractRecorder
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractPlayer
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractChannel
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ChannelsList
+import org.eclipse.symphony.core.invocator.AbstractResult
+import org.eclipse.symphony.core.invocator.AbstractRecorder
+import org.eclipse.symphony.core.invocator.DataProductsList
+import org.eclipse.symphony.core.invocator.AbstractPlayer
+import org.eclipse.symphony.core.invocator.AbstractChannel
+import org.eclipse.symphony.core.invocator.ChannelsList
 
 /* -------------------------------------------------------------------------
  * 

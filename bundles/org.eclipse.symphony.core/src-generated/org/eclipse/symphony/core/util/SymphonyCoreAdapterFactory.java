@@ -8,19 +8,19 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.core.*;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.AbstractResult;
+import org.eclipse.symphony.core.invocator.AbstractType;
+import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.InitializationData;
+import org.eclipse.symphony.core.invocator.OperationCallContainer;
+import org.eclipse.symphony.core.invocator.OperationCallResult;
+import org.eclipse.symphony.core.invocator.Type;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractType;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
@@ -721,13 +721,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment <em>Environment</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.Environment <em>Environment</em>}'.
 	 * <!-- begin-user-doc --> This default
 	 * implementation returns null so that we can easily ignore cases; it's
 	 * useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment
+	 * @see org.eclipse.symphony.core.invocator.Environment
 	 * @generated
 	 */
 	public Adapter createEnvironmentAdapter() {
@@ -749,13 +749,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractType <em>Abstract Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractType <em>Abstract Type</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractType
+	 * @see org.eclipse.symphony.core.invocator.AbstractType
 	 * @generated
 	 */
   public Adapter createAbstractTypeAdapter()
@@ -764,12 +764,12 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type <em>Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that
 	 * we can easily ignore cases; it's useful to ignore a case when inheritance
 	 * will catch all the cases anyway. <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type
+	 * @see org.eclipse.symphony.core.invocator.Type
 	 * @generated
 	 */
 	public Adapter createTypeAdapter() {
@@ -777,13 +777,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter
+	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter
 	 * @generated
 	 */
   public Adapter createTypeApiAdapterAdapter()
@@ -792,13 +792,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
 	 * <!-- begin-user-doc --> This
 	 * default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases
 	 * anyway. <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData
+	 * @see org.eclipse.symphony.core.invocator.AbstractInitializationData
 	 * @generated
 	 */
 	public Adapter createAbstractInitializationDataAdapter() {
@@ -806,13 +806,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData <em>Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.InitializationData <em>Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData
+	 * @see org.eclipse.symphony.core.invocator.InitializationData
 	 * @generated
 	 */
   public Adapter createInitializationDataAdapter()
@@ -821,13 +821,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult <em>Abstract Result</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractResult <em>Abstract Result</em>}'.
 	 * <!-- begin-user-doc --> This default
 	 * implementation returns null so that we can easily ignore cases; it's
 	 * useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult
+	 * @see org.eclipse.symphony.core.invocator.AbstractResult
 	 * @generated
 	 */
 	public Adapter createAbstractResultAdapter() {
@@ -835,13 +835,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer <em>Operation Call Container</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.OperationCallContainer <em>Operation Call Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer
+	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer
 	 * @generated
 	 */
 	public Adapter createOperationCallContainerAdapter() {
@@ -849,13 +849,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult <em>Operation Call Result</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.OperationCallResult <em>Operation Call Result</em>}'.
 	 * <!-- begin-user-doc --> This default
 	 * implementation returns null so that we can easily ignore cases; it's
 	 * useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult
+	 * @see org.eclipse.symphony.core.invocator.OperationCallResult
 	 * @generated
 	 */
 	public Adapter createOperationCallResultAdapter() {

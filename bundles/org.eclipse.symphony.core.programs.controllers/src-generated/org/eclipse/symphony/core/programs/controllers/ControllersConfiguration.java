@@ -3,8 +3,8 @@
  */
 package org.eclipse.symphony.core.programs.controllers;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program;
+import org.eclipse.symphony.core.invocator.OperationCallContainer;
+import org.eclipse.symphony.core.invocator.Program;
 
 /**
  * <!-- begin-user-doc -->

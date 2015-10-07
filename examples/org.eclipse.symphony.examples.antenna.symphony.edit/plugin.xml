@@ -23,7 +23,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_examples_antenna -->
       <extender
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
+            uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"

@@ -8,10 +8,10 @@ import java.awt.Point;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.symphony.core.invocator.AbstractDisplay;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay;
 
 /**
  * <!-- begin-user-doc -->

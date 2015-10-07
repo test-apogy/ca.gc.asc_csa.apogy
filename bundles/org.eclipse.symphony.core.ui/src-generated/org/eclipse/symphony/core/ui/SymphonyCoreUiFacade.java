@@ -9,9 +9,8 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

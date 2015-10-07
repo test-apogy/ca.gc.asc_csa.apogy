@@ -13,6 +13,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
+import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
+import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.ui.actions.ClearTrajectoryDataAction;
 import org.eclipse.symphony.core.ui.actions.PinTrajectoryViewAction;
 import org.eclipse.symphony.core.ui.composites.TrajectoryComposite;
@@ -22,9 +25,6 @@ import org.eclipse.ui.part.ViewPart;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeMemberImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementation;
 
 public class MovableTrajectoryView extends ViewPart implements ISelectionListener
 {

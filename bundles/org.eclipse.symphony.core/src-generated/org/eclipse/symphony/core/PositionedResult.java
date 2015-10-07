@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
+import org.eclipse.symphony.core.invocator.AbstractResult;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

@@ -13,16 +13,15 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.OperationCall;
+import org.eclipse.symphony.core.invocator.OperationCallContainer;
+import org.eclipse.symphony.core.invocator.Program;
+import org.eclipse.symphony.core.invocator.ProgramsList;
+import org.eclipse.symphony.core.invocator.impl.ProgramImpl;
 import org.eclipse.symphony.core.programs.controllers.ControllersConfiguration;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ProgramsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.ProgramImpl;
 
 /**
  * <!-- begin-user-doc -->

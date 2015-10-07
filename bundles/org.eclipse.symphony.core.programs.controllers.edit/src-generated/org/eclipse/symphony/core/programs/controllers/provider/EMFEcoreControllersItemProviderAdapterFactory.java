@@ -27,15 +27,14 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.core.invocator.ArgumentsList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.OperationCallContainer;
+import org.eclipse.symphony.core.invocator.ProgramsList;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.util.EMFEcoreControllersAdapterFactory;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ArgumentsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ProgramsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

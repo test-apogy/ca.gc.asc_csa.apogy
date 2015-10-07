@@ -11,11 +11,11 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
 import org.eclipse.symphony.core.topology.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.ui.NodePresentation;
 

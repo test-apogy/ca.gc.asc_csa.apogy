@@ -3,7 +3,7 @@
  */
 package ca.gc.asc_csa.symphony.tools.vehicle;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
+import org.eclipse.symphony.core.invocator.Variable;
 
 /**
  * <!-- begin-user-doc -->

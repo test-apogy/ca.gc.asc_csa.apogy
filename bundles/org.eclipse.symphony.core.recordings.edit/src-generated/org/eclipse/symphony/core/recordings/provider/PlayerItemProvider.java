@@ -7,7 +7,6 @@ package org.eclipse.symphony.core.recordings.provider;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -17,8 +16,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.Player;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractPlayerItemProvider;
-
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.recordings.Player} object.
  * <!-- begin-user-doc -->
@@ -26,7 +23,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractPlayerItemProv
  * @generated
  */
 public class PlayerItemProvider
-  extends AbstractPlayerItemProvider
+  extends org.eclipse.symphony.core.invocator.provider.AbstractPlayerItemProvider
 {
 	public static final String DATE_FORMAT_STRING = "yyyy.MM.dd HH:mm:ss.SSS z";	
 	protected SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT_STRING);

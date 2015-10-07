@@ -4,8 +4,8 @@
 package ca.gc.asc_csa.symphony.tools.camera.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.VariableFeatureReferenceImpl;
 import ca.gc.asc_csa.symphony.tools.camera.AzimuthFeatureReference;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 

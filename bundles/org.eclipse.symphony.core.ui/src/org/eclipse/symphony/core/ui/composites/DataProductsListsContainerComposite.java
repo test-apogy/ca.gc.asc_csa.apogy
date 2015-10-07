@@ -28,17 +28,17 @@ import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.OperationCallPositionedResult;
+import org.eclipse.symphony.core.invocator.Context;
+import org.eclipse.symphony.core.invocator.DataProductsList;
+import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
+import org.eclipse.symphony.core.invocator.OperationCallResult;
+import org.eclipse.symphony.core.invocator.OperationCallResultsList;
+import org.eclipse.symphony.core.invocator.RecordingResultsList;
 import org.eclipse.ui.PlatformUI;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsListsContainer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResultsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.RecordingResultsList;
 
 public class DataProductsListsContainerComposite extends Composite {
 	private DataBindingContext m_currentDataBindings;

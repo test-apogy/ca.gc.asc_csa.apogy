@@ -51,7 +51,7 @@
                     operator="or">
                      <and>
                         <instanceof
-                              value="ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable">
+                              value="org.eclipse.symphony.core.invocator.Variable">
                         </instanceof>
                         <test
                               forcePluginActivation="true"

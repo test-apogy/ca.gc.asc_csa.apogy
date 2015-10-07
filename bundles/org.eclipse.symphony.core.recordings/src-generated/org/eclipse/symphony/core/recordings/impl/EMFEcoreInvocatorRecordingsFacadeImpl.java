@@ -22,6 +22,13 @@ import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.core.invocator.AbstractResult;
+import org.eclipse.symphony.core.invocator.AttributeResultValue;
+import org.eclipse.symphony.core.invocator.DataProductsList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.ReferenceResultValue;
+import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
+import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.recordings.AbstractResultTimeComparator;
 import org.eclipse.symphony.core.recordings.Activator;
 import org.eclipse.symphony.core.recordings.Channel;
@@ -40,13 +47,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractRootNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AttributeResultValue;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ReferenceResultValue;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeMemberReferenceTreeElement;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Watch;
 
 /**
  * <!-- begin-user-doc -->

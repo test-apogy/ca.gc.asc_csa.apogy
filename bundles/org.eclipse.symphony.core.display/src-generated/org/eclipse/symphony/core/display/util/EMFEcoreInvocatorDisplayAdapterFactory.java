@@ -17,8 +17,8 @@ import org.eclipse.symphony.core.display.HistoryDataHandler;
 import org.eclipse.symphony.core.display.NumberVersusTimeHistoryData;
 import org.eclipse.symphony.core.display.NumberVsTimePlotDisplay;
 import org.eclipse.symphony.core.display.TextDisplay;
+import org.eclipse.symphony.core.invocator.AbstractDisplay;
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay;
 
 /**
  * <!-- begin-user-doc -->
@@ -295,13 +295,13 @@ public class EMFEcoreInvocatorDisplayAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay <em>Abstract Display</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractDisplay <em>Abstract Display</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay
+	 * @see org.eclipse.symphony.core.invocator.AbstractDisplay
 	 * @generated
 	 */
   public Adapter createAbstractDisplayAdapter()

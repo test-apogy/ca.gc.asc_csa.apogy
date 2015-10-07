@@ -6,6 +6,10 @@ package org.eclipse.symphony.core.recordings.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.core.invocator.AbstractChannel;
+import org.eclipse.symphony.core.invocator.AbstractPlayer;
+import org.eclipse.symphony.core.invocator.AbstractRecorder;
+import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
@@ -17,10 +21,6 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractChannel;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractPlayer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractRecorder;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
 
 /**
  * <!-- begin-user-doc -->

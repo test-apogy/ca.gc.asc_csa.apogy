@@ -294,16 +294,16 @@ class EnvironmentFacade
 	@GenModel(documentation="Creates a International Standard Atmosphere at see level. @see http://en.wikipedia.org/wiki/International_Standard_Atmosphere")
 	op Atmosphere createAndInitializeEarthAtmosphere()		
 		
-	op Tuple3d getSunVector(SymphonySystem symphonySystem, String nodeID, ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
-	op Tuple3d getSunVector(Node node, ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	op Tuple3d getSunVector(SymphonySystem symphonySystem, String nodeID, org.eclipse.symphony.core.invocator.Environment environment)
+	op Tuple3d getSunVector(Node node, org.eclipse.symphony.core.invocator.Environment environment)
 	
-	op Tuple3d getMoonVector(SymphonySystem symphonySystem, String nodeID, ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
-	op Tuple3d getMoonVector(Node node, ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	op Tuple3d getMoonVector(SymphonySystem symphonySystem, String nodeID, org.eclipse.symphony.core.invocator.Environment environment)
+	op Tuple3d getMoonVector(Node node, org.eclipse.symphony.core.invocator.Environment environment)
 	
-	op Tuple3d getVector(Node node, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint,  ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
-	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint,  ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
-	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, String connectionPointName,  ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
-	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, String targetSystemfullyQualifiedName, String connectionPointName,  ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment environment)
+	op Tuple3d getVector(Node node, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint,  org.eclipse.symphony.core.invocator.Environment environment)
+	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, ConnectionPoint connectionPoint,  org.eclipse.symphony.core.invocator.Environment environment)
+	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, SymphonySystem targetSymphonySystem, String connectionPointName,  org.eclipse.symphony.core.invocator.Environment environment)
+	op Tuple3d getVector(SymphonySystem sourceSymphonySystem, String nodeID, String targetSystemfullyQualifiedName, String connectionPointName,  org.eclipse.symphony.core.invocator.Environment environment)
 	
 	/**
 	 * Assembles a list of ImageMapLayer into a single eImage reference to the Worksite frame.

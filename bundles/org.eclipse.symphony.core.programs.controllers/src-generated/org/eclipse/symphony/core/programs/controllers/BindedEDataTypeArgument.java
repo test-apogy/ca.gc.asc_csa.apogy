@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.programs.controllers;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Argument;
+import org.eclipse.symphony.core.invocator.Argument;
 
 /**
  * <!-- begin-user-doc -->

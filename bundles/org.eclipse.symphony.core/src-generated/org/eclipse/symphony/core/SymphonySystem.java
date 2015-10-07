@@ -3,8 +3,9 @@
  */
 package org.eclipse.symphony.core;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractType;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type;
+import org.eclipse.symphony.core.invocator.AbstractType;
+import org.eclipse.symphony.core.invocator.Type;
+
 import ca.gc.asc_csa.topology.bindings.BindingsSet;
 
 /**

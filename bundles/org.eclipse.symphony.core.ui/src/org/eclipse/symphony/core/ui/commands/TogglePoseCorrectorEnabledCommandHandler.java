@@ -9,12 +9,11 @@ import org.eclipse.core.commands.IHandler;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.symphony.core.PoseCorrector;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Variable;
+import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.ui.handlers.HandlerUtil;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementation;
 
 public class TogglePoseCorrectorEnabledCommandHandler extends AbstractHandler implements
 		IHandler {

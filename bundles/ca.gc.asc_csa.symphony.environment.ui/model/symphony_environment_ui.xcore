@@ -6,9 +6,9 @@ package ca.gc.asc_csa.symphony.environment.ui
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
+import org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+import org.eclipse.symphony.core.invocator.InvocatorSession
+import org.eclipse.symphony.core.invocator.Variable
 import org.eclipse.symphony.common.images.AbstractEImage
 import org.eclipse.symphony.core.FeatureOfInterestList
 import org.eclipse.symphony.core.PoseProvider

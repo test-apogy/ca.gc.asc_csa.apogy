@@ -16,6 +16,9 @@ import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
 import org.eclipse.symphony.examples.lander.Lander;
 import org.eclipse.symphony.examples.lander.Position;
@@ -24,9 +27,6 @@ import org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdap
 import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderFactory;
 import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
 import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;
 

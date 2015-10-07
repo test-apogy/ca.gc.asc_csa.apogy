@@ -10,11 +10,10 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.core.UserDefinedResult;
+import org.eclipse.symphony.core.invocator.Context;
+import org.eclipse.symphony.core.invocator.DataProductsList;
 import org.eclipse.symphony.core.ui.dialogs.CreateUserDefinedResultDialog;
 import org.eclipse.ui.handlers.HandlerUtil;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList;
 
 
 public class CreateUserDefinedResult extends AbstractHandler implements IHandler 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="ca.gc.asc_csa.eclipse.emf.ecore.invocator" xmi:id="_MjIYQArPEeW4-_ONWXXiAw" name="">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmi:id="_MjIYQArPEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:SymphonyEnvironment" xmi:id="_MjIYQQrPEeW4-_ONWXXiAw" name="Robotic Arm Example" description="This is an example session, illustrating how to use the robotic arm example" activeContext="_MjI_UQrPEeW4-_ONWXXiAw" time="2015-04-13T11:56:46.865-0400" activeWorksite="_MjI_WArPEeW4-_ONWXXiAw" activeTimeSource="_MjKNcgrPEeW4-_ONWXXiAw">
     <typesList xmi:id="_MjIYQgrPEeW4-_ONWXXiAw">
       <localTypes xmi:id="_MjIYQwrPEeW4-_ONWXXiAw"/>

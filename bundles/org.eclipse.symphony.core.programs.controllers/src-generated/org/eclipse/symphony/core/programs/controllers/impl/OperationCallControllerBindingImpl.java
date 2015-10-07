@@ -11,12 +11,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.impl.OperationCallImpl;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
 import org.eclipse.symphony.core.programs.controllers.Trigger;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.OperationCallImpl;
 
 /**
  * <!-- begin-user-doc -->

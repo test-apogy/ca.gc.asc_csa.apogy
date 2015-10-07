@@ -3,9 +3,10 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation;
+
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 
 /**
  * <!-- begin-user-doc -->

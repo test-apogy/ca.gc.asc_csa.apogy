@@ -5,8 +5,8 @@ package ca.gc.asc_csa.symphony.tools.core;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.invocator.Variable;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 
 /**

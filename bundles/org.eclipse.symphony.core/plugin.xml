@@ -16,7 +16,7 @@
             genModel="model/symphony_core.xcore"/>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorDelegate">
+         point="org.eclipse.symphony.core.invocator.InvocatorDelegate">
       <element
             invocatorDelegateClass="org.eclipse.symphony.core.invocator.SymphonyInvocatorDelegate">
       </element>
@@ -25,6 +25,6 @@
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="ss"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorResourceFactoryImpl"/>
+            class="org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorResourceFactoryImpl"/>
    </extension>
 </plugin>

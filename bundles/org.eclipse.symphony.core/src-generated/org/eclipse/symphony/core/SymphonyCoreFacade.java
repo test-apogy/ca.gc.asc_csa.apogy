@@ -6,9 +6,8 @@ package org.eclipse.symphony.core;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.impl.SymphonyCoreFacadeImpl;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 
 import java.util.List;
 

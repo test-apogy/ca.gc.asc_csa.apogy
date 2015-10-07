@@ -34,9 +34,9 @@ import org.eclipse.symphony.core.display.HistoryDataHandler;
 import org.eclipse.symphony.core.display.NumberVersusTimeHistoryData;
 import org.eclipse.symphony.core.display.NumberVsTimePlotDisplay;
 import org.eclipse.symphony.core.display.TextDisplay;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -22,6 +22,15 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.core.invocator.AbstractChannel;
+import org.eclipse.symphony.core.invocator.AbstractResultValue;
+import org.eclipse.symphony.core.invocator.ChannelsList;
+import org.eclipse.symphony.core.invocator.Context;
+import org.eclipse.symphony.core.invocator.DataProductsList;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
+import org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFactory;
@@ -36,15 +45,6 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractChannel;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResultValue;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ChannelsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.WatchFeatureNodeAdapter;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractRecorderImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

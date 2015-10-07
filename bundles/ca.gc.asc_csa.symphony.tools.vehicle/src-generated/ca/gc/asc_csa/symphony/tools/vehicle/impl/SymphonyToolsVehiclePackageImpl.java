@@ -24,8 +24,8 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.ClosestNeighbourIteratorProvider;
@@ -327,9 +327,9 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
+		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
 		PathplannersPackage.eINSTANCE.eClass();
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		TopologyDynamicsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

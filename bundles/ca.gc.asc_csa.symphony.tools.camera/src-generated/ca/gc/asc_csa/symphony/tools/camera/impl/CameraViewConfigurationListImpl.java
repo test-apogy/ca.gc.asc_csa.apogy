@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractToolsListContainerImpl;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfiguration;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfigurationList;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;

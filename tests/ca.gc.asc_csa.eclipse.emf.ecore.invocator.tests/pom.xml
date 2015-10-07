@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests</artifactId>
+	<artifactId>org.eclipse.symphony.core.invocator.tests</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
 	<parent>
 		<groupId>org.eclipse.symphony</groupId>
@@ -19,8 +19,8 @@
 				<version>${tycho.version}</version>
 				<configuration>
 					<useUIHarness>true</useUIHarness>
-					<testSuite>ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests</testSuite>
-					<testClass>ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests.AllTests</testClass>
+					<testSuite>org.eclipse.symphony.core.invocator.tests</testSuite>
+					<testClass>org.eclipse.symphony.core.invocator.tests.AllTests</testClass>
 			</plugin>
 		</plugins>
 	</build>

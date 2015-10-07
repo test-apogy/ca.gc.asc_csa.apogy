@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.programs.controllers;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EDataTypeArgument;
+import org.eclipse.symphony.core.invocator.EDataTypeArgument;
 
 /**
  * <!-- begin-user-doc -->

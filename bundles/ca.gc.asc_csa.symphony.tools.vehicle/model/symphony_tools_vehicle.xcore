@@ -5,7 +5,7 @@
 
 package ca.gc.asc_csa.symphony.tools.vehicle
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
+import org.eclipse.symphony.core.invocator.Variable
 import org.eclipse.symphony.core.PoseCorrector
 import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer
 import ca.gc.asc_csa.symphony.tools.core.AbstractTwoPoints3DTool

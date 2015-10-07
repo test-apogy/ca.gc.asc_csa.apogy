@@ -29,11 +29,11 @@ import org.eclipse.symphony.core.display.DisplayFacade;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayFactory;
 import org.eclipse.symphony.core.display.HistoryData;
 import org.eclipse.symphony.core.display.HistoryDataHandler;
+import org.eclipse.symphony.core.invocator.AbstractDisplay;
+import org.eclipse.symphony.core.invocator.Context;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractDisplay;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 
 public class DisplayTable extends Table 
 {

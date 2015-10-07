@@ -25,11 +25,10 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.TypeApiAdapterImpl;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.OperationCall;
+import org.eclipse.symphony.core.invocator.OperationCallResult;
+import org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

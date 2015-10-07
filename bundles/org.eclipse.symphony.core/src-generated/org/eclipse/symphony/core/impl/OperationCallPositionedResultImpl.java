@@ -13,8 +13,7 @@ import org.eclipse.symphony.core.OperationCallPositionedResult;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.SymphonyCorePackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.OperationCallResultImpl;
+import org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl;
 
 /**
  * <!-- begin-user-doc -->

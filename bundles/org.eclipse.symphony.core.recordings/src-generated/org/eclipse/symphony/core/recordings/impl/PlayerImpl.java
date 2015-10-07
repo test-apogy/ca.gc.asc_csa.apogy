@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.core.invocator.AbstractResult;
+import org.eclipse.symphony.core.invocator.impl.AbstractPlayerImpl;
 import org.eclipse.symphony.core.recordings.Activator;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
@@ -29,8 +31,6 @@ import org.eclipse.symphony.core.recordings.Recording;
 import org.eclipse.symphony.core.recordings.RecordingResult;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractPlayerImpl;
 
 /**
  * <!-- begin-user-doc -->

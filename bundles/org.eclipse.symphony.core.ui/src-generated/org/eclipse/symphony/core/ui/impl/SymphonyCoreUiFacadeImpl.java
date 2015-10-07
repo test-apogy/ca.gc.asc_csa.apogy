@@ -31,6 +31,7 @@ import org.eclipse.symphony.core.SymphonyCoreFacade;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
@@ -38,7 +39,6 @@ import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
 import org.eclipse.symphony.core.ui.natures.SymphonyProjectNature;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.topology.bindings.BindingsSet;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
 import ca.gc.space.topology.AggregateGroupNode;

@@ -12,6 +12,8 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorEditor;
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
@@ -28,9 +30,6 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.presentation.CustomEMFEcoreInvocatorEditor;
 
 public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 	private NewSymphonySessionWizardPage page;

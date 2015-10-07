@@ -13,12 +13,11 @@ import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.core.invocator.impl.EDataTypeArgumentImpl;
 import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.FixedValueSource;
 import org.eclipse.symphony.core.programs.controllers.ValueSource;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.EDataTypeArgumentImpl;
 
 /**
  * <!-- begin-user-doc -->

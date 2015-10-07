@@ -27,12 +27,12 @@ import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
 import ca.gc.asc_csa.eclipse.core.databinding.converters.DoubleToStringConverter;
 import ca.gc.asc_csa.eclipse.core.databinding.converters.StringToDoubleConverter;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;

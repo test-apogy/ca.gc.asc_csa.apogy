@@ -24,17 +24,17 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.invocator.Argument;
+import org.eclipse.symphony.core.invocator.ArgumentsList;
+import org.eclipse.symphony.core.invocator.EEnumArgument;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.provider.OperationCallItemProvider;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Argument;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ArgumentsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EEnumArgument;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.OperationCallItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding} object.

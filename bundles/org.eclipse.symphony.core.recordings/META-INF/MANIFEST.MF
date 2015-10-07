@@ -16,7 +16,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,
+ org.eclipse.symphony.core.invocator;visibility:=reexport,
  org.eclipse.emf.databinding;bundle-version="1.2.0",
  javax.vecmath;bundle-version="1.5.2",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"

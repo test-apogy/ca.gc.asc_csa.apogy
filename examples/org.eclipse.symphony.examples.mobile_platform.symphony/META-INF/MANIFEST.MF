@@ -21,7 +21,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.core;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,
+ org.eclipse.symphony.core.invocator;visibility:=reexport,
  org.eclipse.symphony.examples.mobile_platform;visibility:=reexport,
  ca.gc.asc_csa.symphony.environment.ui;visibility:=reexport,
  ca.gc.asc_csa.symphony.tools.vehicle

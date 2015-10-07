@@ -3,7 +3,7 @@
 @GenModel(editDirectory="/org.eclipse.symphony.core.ui.edit/src-generated")
 package org.eclipse.symphony.core.ui
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession
+import org.eclipse.symphony.core.invocator.InvocatorSession
 
 import ca.gc.space.topology.ui.TransformNodePresentation
 import org.eclipse.symphony.core.SymphonySystem

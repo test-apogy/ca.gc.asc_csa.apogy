@@ -25,7 +25,7 @@
             uri="http:///ca/gc/space/topology.ecore"
             class="ca.gc.asc_csa.symphony.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
+            uri="org.eclipse.symphony.core.invocator"
             class="ca.gc.asc_csa.symphony.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="ca.gc.space.topology.ui"

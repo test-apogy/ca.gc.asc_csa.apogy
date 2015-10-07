@@ -3,8 +3,9 @@
  */
 package org.eclipse.symphony.core.recordings;
 
+import org.eclipse.symphony.core.invocator.AbstractChannel;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractChannel;
 
 /**
  * <!-- begin-user-doc -->

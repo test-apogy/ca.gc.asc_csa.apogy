@@ -6,10 +6,9 @@ package org.eclipse.symphony.core.recordings;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractRecorder;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ChannelsList;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.DataProductsList;
+import org.eclipse.symphony.core.invocator.AbstractRecorder;
+import org.eclipse.symphony.core.invocator.ChannelsList;
+import org.eclipse.symphony.core.invocator.DataProductsList;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,7 +71,7 @@ public interface Recorder extends AbstractRecorder
 
   /**
 	 * Returns the value of the '<em><b>Channels Lists</b></em>' reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.ChannelsList}.
+	 * The list contents are of type {@link org.eclipse.symphony.core.invocator.ChannelsList}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

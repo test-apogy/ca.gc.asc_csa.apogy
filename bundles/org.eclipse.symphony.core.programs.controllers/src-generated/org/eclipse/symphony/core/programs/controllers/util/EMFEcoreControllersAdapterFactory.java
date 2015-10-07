@@ -5,17 +5,17 @@ package org.eclipse.symphony.core.programs.controllers.util;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Argument;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EDataTypeArgument;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.invocator.Argument;
+import org.eclipse.symphony.core.invocator.EDataTypeArgument;
+import org.eclipse.symphony.core.invocator.OperationCall;
+import org.eclipse.symphony.core.invocator.OperationCallContainer;
+import org.eclipse.symphony.core.invocator.Program;
+import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import org.eclipse.symphony.core.programs.controllers.*;
 
 /**
@@ -515,13 +515,13 @@ public class EMFEcoreControllersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program <em>Program</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.Program <em>Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program
+	 * @see org.eclipse.symphony.core.invocator.Program
 	 * @generated
 	 */
 	public Adapter createProgramAdapter() {
@@ -529,13 +529,13 @@ public class EMFEcoreControllersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer <em>Operation Call Container</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.OperationCallContainer <em>Operation Call Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer
+	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer
 	 * @generated
 	 */
 	public Adapter createOperationCallContainerAdapter() {
@@ -543,13 +543,13 @@ public class EMFEcoreControllersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference <em>Variable Feature Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference
+	 * @see org.eclipse.symphony.core.invocator.VariableFeatureReference
 	 * @generated
 	 */
 	public Adapter createVariableFeatureReferenceAdapter() {
@@ -557,13 +557,13 @@ public class EMFEcoreControllersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall <em>Operation Call</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.OperationCall <em>Operation Call</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall
+	 * @see org.eclipse.symphony.core.invocator.OperationCall
 	 * @generated
 	 */
 	public Adapter createOperationCallAdapter() {
@@ -571,13 +571,13 @@ public class EMFEcoreControllersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.Argument <em>Argument</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.Argument <em>Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.Argument
+	 * @see org.eclipse.symphony.core.invocator.Argument
 	 * @generated
 	 */
 	public Adapter createArgumentAdapter() {
@@ -585,13 +585,13 @@ public class EMFEcoreControllersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.EDataTypeArgument <em>EData Type Argument</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.EDataTypeArgument <em>EData Type Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.EDataTypeArgument
+	 * @see org.eclipse.symphony.core.invocator.EDataTypeArgument
 	 * @generated
 	 */
 	public Adapter createEDataTypeArgumentAdapter() {

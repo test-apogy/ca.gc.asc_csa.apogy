@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.asc_csa.eclipse.emf.ecore.invocator" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.core.invocator" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="ca.gc.asc_csa.eclipse.emf.ecore.invocator" id="SessionProvider" name="SessionProvider"/>
+         <meta.schema plugin="org.eclipse.symphony.core.invocator" id="SessionProvider" name="SessionProvider"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]

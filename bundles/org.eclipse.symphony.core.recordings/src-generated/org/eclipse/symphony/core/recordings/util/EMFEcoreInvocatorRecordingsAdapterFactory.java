@@ -7,6 +7,10 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.invocator.AbstractChannel;
+import org.eclipse.symphony.core.invocator.AbstractPlayer;
+import org.eclipse.symphony.core.invocator.AbstractRecorder;
+import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
@@ -18,10 +22,6 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractChannel;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractPlayer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractRecorder;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult;
 
 /**
  * <!-- begin-user-doc -->
@@ -280,13 +280,13 @@ public class EMFEcoreInvocatorRecordingsAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult <em>Abstract Result</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractResult <em>Abstract Result</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractResult
+	 * @see org.eclipse.symphony.core.invocator.AbstractResult
 	 * @generated
 	 */
   public Adapter createAbstractResultAdapter()
@@ -325,13 +325,13 @@ public class EMFEcoreInvocatorRecordingsAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractChannel <em>Abstract Channel</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractChannel <em>Abstract Channel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractChannel
+	 * @see org.eclipse.symphony.core.invocator.AbstractChannel
 	 * @generated
 	 */
 	public Adapter createAbstractChannelAdapter() {
@@ -339,13 +339,13 @@ public class EMFEcoreInvocatorRecordingsAdapterFactory extends AdapterFactoryImp
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractRecorder <em>Abstract Recorder</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractRecorder <em>Abstract Recorder</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractRecorder
+	 * @see org.eclipse.symphony.core.invocator.AbstractRecorder
 	 * @generated
 	 */
   public Adapter createAbstractRecorderAdapter()
@@ -354,13 +354,13 @@ public class EMFEcoreInvocatorRecordingsAdapterFactory extends AdapterFactoryImp
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractPlayer <em>Abstract Player</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractPlayer <em>Abstract Player</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractPlayer
+	 * @see org.eclipse.symphony.core.invocator.AbstractPlayer
 	 * @generated
 	 */
   public Adapter createAbstractPlayerAdapter()

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.ecore.invocator;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.invocator;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -15,9 +15,9 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.emf.ecore;bundle-version="0.1.0";visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: ca.gc.asc_csa.eclipse.emf.ecore.invocator,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.delegates,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.listeners,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator.util
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.ecore.invocator.Activator
+Export-Package: org.eclipse.symphony.core.invocator,
+ org.eclipse.symphony.core.invocator.delegates,
+ org.eclipse.symphony.core.invocator.impl,
+ org.eclipse.symphony.core.invocator.listeners,
+ org.eclipse.symphony.core.invocator.util
+Bundle-Activator: org.eclipse.symphony.core.invocator.Activator

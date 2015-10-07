@@ -6,8 +6,8 @@ package ca.gc.asc_csa.symphony.tools.camera
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference
+import org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+import org.eclipse.symphony.core.invocator.VariableFeatureReference
 import org.eclipse.symphony.common.images.AbstractEImage
 import ca.gc.asc_csa.symphony.tools.core.AbstractTool
 

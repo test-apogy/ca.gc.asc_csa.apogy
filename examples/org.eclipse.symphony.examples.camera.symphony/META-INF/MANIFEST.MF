@@ -25,7 +25,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.asc_csa.topology.bindings;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator;visibility:=reexport,
+ org.eclipse.symphony.core.invocator;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov.bindings
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.examples.camera.symphony.Activator

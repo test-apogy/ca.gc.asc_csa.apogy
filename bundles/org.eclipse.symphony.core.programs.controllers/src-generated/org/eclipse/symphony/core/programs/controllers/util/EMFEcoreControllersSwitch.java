@@ -5,16 +5,16 @@ package org.eclipse.symphony.core.programs.controllers.util;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Argument;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EDataTypeArgument;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCall;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallContainer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Program;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.core.invocator.Argument;
+import org.eclipse.symphony.core.invocator.EDataTypeArgument;
+import org.eclipse.symphony.core.invocator.OperationCall;
+import org.eclipse.symphony.core.invocator.OperationCallContainer;
+import org.eclipse.symphony.core.invocator.Program;
+import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import org.eclipse.symphony.core.programs.controllers.*;
 
 /**

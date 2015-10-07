@@ -6,7 +6,6 @@ package org.eclipse.symphony.core.recordings.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -16,8 +15,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.Recorder;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractRecorderItemProvider;
-
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.recordings.Recorder} object.
@@ -26,7 +23,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractRecorderItemPr
  * @generated
  */
 public class RecorderItemProvider
-  extends AbstractRecorderItemProvider
+  extends org.eclipse.symphony.core.invocator.provider.AbstractRecorderItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.

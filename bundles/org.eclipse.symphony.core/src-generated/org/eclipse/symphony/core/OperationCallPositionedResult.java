@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core;
 
 import org.eclipse.symphony.common.math.Matrix4x4;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.OperationCallResult;
+import org.eclipse.symphony.core.invocator.OperationCallResult;
 
 /**
  * <!-- begin-user-doc -->

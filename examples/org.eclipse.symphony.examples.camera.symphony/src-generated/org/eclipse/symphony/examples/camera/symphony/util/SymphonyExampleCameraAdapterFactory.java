@@ -3,9 +3,6 @@
  */
 package org.eclipse.symphony.examples.camera.symphony.util;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -13,6 +10,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.InitializationData;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.examples.camera.symphony.CameraData;
 import org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
@@ -200,13 +200,13 @@ public class SymphonyExampleCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter
+	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter
 	 * @generated
 	 */
 	public Adapter createTypeApiAdapterAdapter() {
@@ -244,13 +244,13 @@ public class SymphonyExampleCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData
+	 * @see org.eclipse.symphony.core.invocator.AbstractInitializationData
 	 * @generated
 	 */
 	public Adapter createAbstractInitializationDataAdapter() {
@@ -258,13 +258,13 @@ public class SymphonyExampleCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData <em>Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.InitializationData <em>Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData
+	 * @see org.eclipse.symphony.core.invocator.InitializationData
 	 * @generated
 	 */
 	public Adapter createInitializationDataAdapter() {

@@ -5,7 +5,6 @@ package org.eclipse.symphony.core.impl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,6 +16,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.OrbitModelsList;
 import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->

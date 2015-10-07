@@ -8,21 +8,22 @@ package org.eclipse.symphony.core.recordings.provider;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.invocator.AttributeResultValue;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.ReferenceResultValue;
+import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.RecordingResult;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AttributeResultValue;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ReferenceResultValue;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Watch;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractResultItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.recordings.RecordingResult} object.
@@ -31,7 +32,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractResultItemProv
  * @generated
  */
 public class RecordingResultItemProvider
-  extends AbstractResultItemProvider
+  extends org.eclipse.symphony.core.invocator.provider.AbstractResultItemProvider
 {
 	public static final String DATE_FORMAT_STRING = "yyyy.MM.dd HH:mm:ss.SSS z";	
 	protected SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT_STRING);

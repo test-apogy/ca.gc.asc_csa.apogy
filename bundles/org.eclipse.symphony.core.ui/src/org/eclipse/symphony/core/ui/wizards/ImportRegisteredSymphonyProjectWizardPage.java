@@ -4,10 +4,9 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Activator;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.SessionContributor;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ui.composites.SessionContributorListComposite;
+import org.eclipse.symphony.core.invocator.Activator;
+import org.eclipse.symphony.core.invocator.SessionContributor;
+import org.eclipse.symphony.core.invocator.ui.composites.SessionContributorListComposite;
 
 public class ImportRegisteredSymphonyProjectWizardPage extends WizardPage {
 

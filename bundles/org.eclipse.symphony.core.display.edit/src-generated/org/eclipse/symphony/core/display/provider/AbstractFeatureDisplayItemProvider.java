@@ -15,8 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractDisplayItemProvider;
+import org.eclipse.symphony.core.invocator.provider.AbstractDisplayItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.display.AbstractFeatureDisplay} object.

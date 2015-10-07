@@ -16,8 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.TypeApiAdapterItemProvider;
+import org.eclipse.symphony.core.invocator.provider.TypeApiAdapterItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.SymphonySystemApiAdapter} object.

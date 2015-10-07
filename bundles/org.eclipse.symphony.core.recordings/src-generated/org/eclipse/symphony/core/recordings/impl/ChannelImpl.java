@@ -8,13 +8,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.invocator.impl.AbstractChannelImpl;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.FixedPeriodValues;
 import org.eclipse.symphony.core.recordings.RecordingPolicy;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractChannelImpl;
 
 /**
  * <!-- begin-user-doc -->

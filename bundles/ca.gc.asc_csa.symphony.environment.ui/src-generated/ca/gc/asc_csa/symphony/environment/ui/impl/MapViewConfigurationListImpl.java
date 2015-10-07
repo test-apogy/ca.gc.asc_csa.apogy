@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.impl.AbstractToolsListContainerImpl;
 import ca.gc.asc_csa.symphony.environment.ui.MapViewConfiguration;
 import ca.gc.asc_csa.symphony.environment.ui.MapViewConfigurationList;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;

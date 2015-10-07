@@ -5,7 +5,8 @@ package ca.gc.asc_csa.symphony.tools.camera;
 
 import java.util.List;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference;
+import org.eclipse.symphony.core.invocator.VariableFeatureReference;
+
 import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 

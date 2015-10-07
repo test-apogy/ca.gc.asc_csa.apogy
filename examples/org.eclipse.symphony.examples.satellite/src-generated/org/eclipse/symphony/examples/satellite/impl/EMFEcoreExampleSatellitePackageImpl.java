@@ -4,7 +4,6 @@
 package org.eclipse.symphony.examples.satellite.impl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
@@ -23,6 +22,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
@@ -220,8 +220,8 @@ public class EMFEcoreExampleSatellitePackageImpl extends EPackageImpl implements
 		isInited = true;
 
 		// Initialize simple dependencies
-		MRTSensorsImagingPackage.eINSTANCE.eClass();
 		SymphonyEarthOrbitEnvironmentPackage.eINSTANCE.eClass();
+		MRTSensorsImagingPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleSatellitePackage.createPackageContents();
