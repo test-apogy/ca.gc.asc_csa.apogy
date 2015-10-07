@@ -30,7 +30,7 @@ Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.symphony.environment,
  ca.gc.space.topology.core.primitives,
  ca.gc.space.mrt.geometry.paths;visibility:=reexport,
- ca.gc.asc_csa.symphony.topology.ui;visibility:=reexport,
+ org.eclipse.symphony.core.topology.ui;visibility:=reexport,
  ca.gc.asc_csa.symphony.environment.ui
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.symphony.tools.core.Activator

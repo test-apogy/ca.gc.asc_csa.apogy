@@ -41,7 +41,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.topology.bindings;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov.bindings,
  ca.gc.space.topology.core.primitives,
- ca.gc.asc_csa.symphony.topology.ui,
+ org.eclipse.symphony.core.topology.ui,
  ca.gc.space.topology.ui,
  ca.gc.asc_csa.eclipse.ui;bundle-version="0.3.0",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"

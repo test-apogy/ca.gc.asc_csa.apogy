@@ -1,8 +1,8 @@
 @GenModel(prefix="SymphonyTopology", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="SymphonyTopology")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.topology/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.topology.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.topology/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.topology.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.topology
+package org.eclipse.symphony.core.topology
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation

@@ -51,7 +51,7 @@ public class Activator implements BundleActivator
 	 */
 	public void stop(BundleContext bundleContext) throws Exception 
 	{
-		// ca.gc.asc_csa.symphony.topology.ui.Activator.unregisterActiveViewerListener(getActiveViewerListener() );
+		// org.eclipse.symphony.core.topology.ui.Activator.unregisterActiveViewerListener(getActiveViewerListener() );
 		Activator.context = null;
 	}
 	public static void registerSimple3DTool(Simple3DTool tool)

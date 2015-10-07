@@ -10,11 +10,11 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.core.topology.ui.Activator;
 
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.Thruster;
 import ca.gc.asc_csa.symphony.tools.vehicle.ui.ThrusterSceneObject;
-import ca.gc.asc_csa.symphony.topology.ui.Activator;
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
 import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
