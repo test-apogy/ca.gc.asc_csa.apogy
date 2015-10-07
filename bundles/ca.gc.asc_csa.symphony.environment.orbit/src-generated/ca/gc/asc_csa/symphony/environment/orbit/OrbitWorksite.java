@@ -3,7 +3,8 @@
  */
 package ca.gc.asc_csa.symphony.environment.orbit;
 
-import ca.gc.asc_csa.symphony.core.AbstractOrbitModel;
+import org.eclipse.symphony.core.AbstractOrbitModel;
+
 import ca.gc.asc_csa.symphony.environment.Worksite;
 
 /**

@@ -5,7 +5,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="false"
-            category="ca.gc.asc_csa.symphony.core.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.EarthView"
             id="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.view1"
             name="Earth View"
@@ -13,14 +13,14 @@
       </view>
       <view
             allowMultiple="false"
-            category="ca.gc.asc_csa.symphony.core.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
             id="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.SpacecraftVisibilitySetView"
             name="Spacecraft Visibility"
             restorable="true">
       </view>
       <view
-            category="ca.gc.asc_csa.symphony.core.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
             id="ca.gc.asc_csa.symphony.environment.orbit.earth.ui.views.VisibilityPassSpacecraftPositionHistoryView"
             name="Visibility Pass View"

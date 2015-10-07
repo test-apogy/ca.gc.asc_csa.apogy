@@ -10,11 +10,11 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Exception
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed
 import org.eclipse.symphony.common.images.AbstractEImage
-import ca.gc.asc_csa.symphony.core.AbstractOrbitModel
-import ca.gc.asc_csa.symphony.core.AbstractWorksite
-import ca.gc.asc_csa.symphony.core.ConnectionPoint
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList
-import ca.gc.asc_csa.symphony.core.SymphonySystem
+import org.eclipse.symphony.core.AbstractOrbitModel
+import org.eclipse.symphony.core.AbstractWorksite
+import org.eclipse.symphony.core.ConnectionPoint
+import org.eclipse.symphony.core.FeatureOfInterestList
+import org.eclipse.symphony.core.SymphonySystem
 import org.eclipse.symphony.common.math.Matrix4x4
 import org.eclipse.symphony.common.math.Tuple3d
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh

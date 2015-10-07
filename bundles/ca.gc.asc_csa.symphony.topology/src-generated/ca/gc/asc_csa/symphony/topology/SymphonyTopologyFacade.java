@@ -4,10 +4,10 @@
 package ca.gc.asc_csa.symphony.topology;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.SymphonyEnvironment;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.topology.impl.SymphonyTopologyFacadeImpl;
 import ca.gc.space.topology.Node;
 

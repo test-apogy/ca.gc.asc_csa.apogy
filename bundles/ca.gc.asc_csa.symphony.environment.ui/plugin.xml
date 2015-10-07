@@ -39,7 +39,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="ca.gc.asc_csa.symphony.core.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="ca.gc.asc_csa.symphony.environment.ui.views.EarthSkyView"
             icon="icons/earth_sky_view.gif"
             id="ca.gc.asc_csa.symphony.environment.ui.view1"
@@ -47,7 +47,7 @@
             restorable="true">
       </view>
       <view
-            category="ca.gc.asc_csa.symphony.core.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="ca.gc.asc_csa.symphony.environment.ui.views.MapView"
             icon="icons/map_view_icon.gif"
             id="ca.gc.asc_csa.symphony.environment.ui.views.MapView"
@@ -317,7 +317,7 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="ca.gc.asc_csa.symphony.core.PositionedResult">
+                             value="org.eclipse.symphony.core.PositionedResult">
                          </instanceof>
                     </iterate>
                </with>
@@ -335,7 +335,7 @@
                        ifEmpty="false"
                        operator="or">
                          <instanceof
-                             value="ca.gc.asc_csa.symphony.core.AbsolutePoseProvider">
+                             value="org.eclipse.symphony.core.AbsolutePoseProvider">
                          </instanceof>
                     </iterate>
                </with>
@@ -360,7 +360,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
+            category="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
             class="ca.gc.asc_csa.symphony.environment.ui.preferences.SymphonyEnvironmentUIPreferencesPage"
             id="ca.gc.asc_csa.symphony.environment.ui.preferences.SymphonyEnvironmentUIPreferencesPage"
             name="Maps and Map View">

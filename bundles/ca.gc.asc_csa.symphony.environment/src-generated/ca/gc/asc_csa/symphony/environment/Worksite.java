@@ -4,9 +4,8 @@
 package ca.gc.asc_csa.symphony.environment;
 
 import org.eclipse.emf.common.util.EList;
-
-import ca.gc.asc_csa.symphony.core.AbstractOrbitModel;
-import ca.gc.asc_csa.symphony.core.AbstractWorksite;
+import org.eclipse.symphony.core.AbstractOrbitModel;
+import org.eclipse.symphony.core.AbstractWorksite;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +45,7 @@ public interface Worksite extends AbstractWorksite
 
   /**
 	 * Returns the value of the '<em><b>Orbits Models</b></em>' reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.symphony.core.AbstractOrbitModel}.
+	 * The list contents are of type {@link org.eclipse.symphony.core.AbstractOrbitModel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Orbits Models</em>' reference list isn't clear,

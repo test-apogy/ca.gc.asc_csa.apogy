@@ -1,6 +1,7 @@
 package ca.gc.asc_csa.symphony.environment.ui.jme3.adapters;
 
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestNode;
+import org.eclipse.symphony.core.FeatureOfInterestNode;
+
 import ca.gc.asc_csa.symphony.environment.ui.jme3.scene_objects.FeatureOfInterestNodeJME3Object;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Adapter;
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;

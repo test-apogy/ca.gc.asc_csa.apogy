@@ -177,8 +177,8 @@ public class SymphonyTelecomToolsPackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
+		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyTelecomToolsPackage.createPackageContents();

@@ -8,8 +8,8 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList
-import ca.gc.asc_csa.symphony.core.PoseProvider
+import org.eclipse.symphony.core.FeatureOfInterestList
+import org.eclipse.symphony.core.PoseProvider
 import org.eclipse.symphony.common.math.Matrix4d
 import org.eclipse.symphony.common.math.Tuple3d
 import ca.gc.space.mrt.geometry.paths.WayPointPath

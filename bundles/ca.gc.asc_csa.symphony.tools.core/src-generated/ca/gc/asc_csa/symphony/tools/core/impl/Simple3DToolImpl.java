@@ -10,8 +10,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.SymphonyEnvironment;
 
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.tools.core.Simple3DTool;
 import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.space.topology.Node;

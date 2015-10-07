@@ -3,7 +3,6 @@
  */
 package org.eclipse.symphony.examples.lidar.symphony.impl;
 
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -12,6 +11,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.examples.lidar.symphony.LidarData;
 import org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarFactory;
@@ -86,8 +86,8 @@ public class SymphonyExampleLidarPackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
-		FovPackage.eINSTANCE.eClass();
 		SymphonyCorePackage.eINSTANCE.eClass();
+		FovPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyExampleLidarPackage.createPackageContents();

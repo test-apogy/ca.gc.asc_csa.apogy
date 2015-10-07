@@ -5,7 +5,8 @@ package ca.gc.asc_csa.symphony.tools.camera;
 
 import javax.vecmath.Color3f;
 
-import ca.gc.asc_csa.symphony.core.AbsolutePoseProvider;
+import org.eclipse.symphony.core.AbsolutePoseProvider;
+
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**

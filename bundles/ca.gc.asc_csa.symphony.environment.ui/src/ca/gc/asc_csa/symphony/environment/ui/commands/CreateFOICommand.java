@@ -16,12 +16,12 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.core.AbsolutePoseProvider;
+import org.eclipse.symphony.core.FeatureOfInterest;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.symphony.core.AbsolutePoseProvider;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.symphony.environment.ui.dialogs.FeatureOfInterestCreationDialog;
 

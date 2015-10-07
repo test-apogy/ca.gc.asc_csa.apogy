@@ -3,15 +3,16 @@
  */
 package ca.gc.asc_csa.symphony.environment.orbit.impl;
 
-import ca.gc.asc_csa.symphony.core.AbstractOrbitModel;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import ca.gc.asc_csa.symphony.environment.impl.WorksiteImpl;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitWorksite;
 import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.symphony.core.AbstractOrbitModel;
 
 /**
  * <!-- begin-user-doc -->

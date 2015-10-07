@@ -8,7 +8,6 @@ import javax.vecmath.Matrix4d;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type;
-import ca.gc.asc_csa.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
 import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;
 
@@ -21,6 +20,7 @@ import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformFactory;
 import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;

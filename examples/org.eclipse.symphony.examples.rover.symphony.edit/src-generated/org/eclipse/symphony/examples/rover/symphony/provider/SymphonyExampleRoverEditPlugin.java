@@ -5,11 +5,12 @@ package org.eclipse.symphony.examples.rover.symphony.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
 /**
  * This is the central singleton for the SymphonyExampleRover edit plugin.
@@ -45,16 +46,11 @@ public final class SymphonyExampleRoverEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}
 

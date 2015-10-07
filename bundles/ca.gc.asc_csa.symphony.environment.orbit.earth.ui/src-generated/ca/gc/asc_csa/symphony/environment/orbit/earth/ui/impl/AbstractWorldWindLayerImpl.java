@@ -3,13 +3,16 @@
  */
 package ca.gc.asc_csa.symphony.environment.orbit.earth.ui.impl;
 
-import ca.gc.asc_csa.symphony.core.impl.UpdatableImpl;
 import gov.nasa.worldwind.layers.RenderableLayer;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.impl.UpdatableImpl;
+
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
 

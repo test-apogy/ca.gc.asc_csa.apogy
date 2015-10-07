@@ -17,7 +17,7 @@ import  ca.gc.space.mrt.sensors.imaging.AzimuthDirection
 import  ca.gc.space.mrt.sensors.imaging.ElevationDirection
 
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
-import ca.gc.asc_csa.symphony.core.AbsolutePoseProvider
+import org.eclipse.symphony.core.AbsolutePoseProvider
 
 type Color3f wraps javax.vecmath.Color3f
 type List<T> wraps java.util.List

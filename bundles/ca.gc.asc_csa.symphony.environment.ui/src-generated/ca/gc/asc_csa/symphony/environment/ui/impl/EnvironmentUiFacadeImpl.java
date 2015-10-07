@@ -19,6 +19,8 @@ import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.core.FeatureOfInterestList;
+import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
 
@@ -27,8 +29,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ToolsList;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayer;
 import ca.gc.asc_csa.symphony.environment.EnvironmentFacade;
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;

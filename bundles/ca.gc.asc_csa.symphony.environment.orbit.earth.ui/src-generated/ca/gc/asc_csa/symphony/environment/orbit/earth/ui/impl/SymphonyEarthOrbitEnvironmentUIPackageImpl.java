@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ui.AbstractWorldWindLayer;

@@ -4,7 +4,7 @@
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.core.ui.jme3.adapters.ResultNodeJME3Adapter">
+            Class="org.eclipse.symphony.core.ui.jme3.adapters.ResultNodeJME3Adapter">
       </Class>
    </extension>
 

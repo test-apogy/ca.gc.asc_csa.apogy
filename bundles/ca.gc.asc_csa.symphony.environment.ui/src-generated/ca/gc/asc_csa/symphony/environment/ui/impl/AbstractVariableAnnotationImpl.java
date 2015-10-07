@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.listeners.AbstractTypeImplementationListener;
-import ca.gc.asc_csa.symphony.core.PoseProvider;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
 import ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
 

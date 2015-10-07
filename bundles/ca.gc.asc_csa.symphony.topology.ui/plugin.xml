@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="ca.gc.asc_csa.symphony.core.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="ca.gc.asc_csa.symphony.topology.ui.views.SymphonyEnvironment3DView"
             icon="icons/eview16/Symphony3DViewer.gif"
             id="ca.gc.asc_csa.symphony.topology.ui.views.Symphony3DView"
@@ -12,7 +12,7 @@
             restorable="true">
       </view>
       <view
-            category="ca.gc.asc_csa.symphony.core.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="ca.gc.asc_csa.symphony.topology.ui.views.SymphonySystem3DView"
             icon="icons/eview16/SymphonySystem3DViewer.gif"
             id="ca.gc.asc_csa.symphony.topology.ui.views.SymphonySystem3DView"
@@ -37,7 +37,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
          <command
                commandId="ca.gc.asc_csa.symphony.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"
                label="Toggle Variable Topology Visibility"
@@ -55,7 +55,7 @@
                         </instanceof>
                         <test
                               forcePluginActivation="true"
-                              property="ca.gc.asc_csa.symphony.core.ui.instanceOfSymphonySystem">
+                              property="org.eclipse.symphony.core.ui.instanceOfSymphonySystem">
                         </test>
                      </and>
                   </iterate>
@@ -86,7 +86,7 @@
                   operator="and">
                     <test
                          forcePluginActivation="true"
-                         property="ca.gc.asc_csa.symphony.core.ui.instanceOfSymphonySystem">
+                         property="org.eclipse.symphony.core.ui.instanceOfSymphonySystem">
                     </test>
                </iterate>
             </with>

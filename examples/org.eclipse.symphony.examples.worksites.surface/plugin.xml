@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="ca.gc.asc_csa.symphony.core.WorksiteProvider">
+         point="org.eclipse.symphony.core.WorksiteProvider">
       <WorksiteProvider
             Description="CSA Analogue Terrain"
             Name="Symphony Worksite Example"

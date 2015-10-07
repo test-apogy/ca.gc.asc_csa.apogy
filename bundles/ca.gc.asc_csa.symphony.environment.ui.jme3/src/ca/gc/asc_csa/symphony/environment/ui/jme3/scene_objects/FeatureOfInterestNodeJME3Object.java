@@ -16,10 +16,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
+import org.eclipse.symphony.core.FeatureOfInterest;
+import org.eclipse.symphony.core.FeatureOfInterestNode;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
-import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestNode;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.ui.FeatureOfInterestSceneObject;
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;

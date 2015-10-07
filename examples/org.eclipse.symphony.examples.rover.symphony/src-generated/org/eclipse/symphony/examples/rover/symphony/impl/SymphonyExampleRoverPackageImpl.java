@@ -7,10 +7,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.examples.rover.symphony.RoverData;
 import org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverFactory;

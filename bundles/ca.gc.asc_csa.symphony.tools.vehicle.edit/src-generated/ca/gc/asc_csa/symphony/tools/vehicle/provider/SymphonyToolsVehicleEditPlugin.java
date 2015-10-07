@@ -5,9 +5,11 @@ package ca.gc.asc_csa.symphony.tools.vehicle.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
+
 import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
 import ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
@@ -53,19 +55,19 @@ public final class SymphonyToolsVehicleEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     Topology_dynamicsEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
 		     PathEditPlugin.INSTANCE,
-		     PathplannersEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     SymphonyToolsCoreEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -3,7 +3,7 @@
  */
 package ca.gc.asc_csa.symphony.environment.ui;
 
-import ca.gc.asc_csa.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.PoseProvider;
 
 
 /**

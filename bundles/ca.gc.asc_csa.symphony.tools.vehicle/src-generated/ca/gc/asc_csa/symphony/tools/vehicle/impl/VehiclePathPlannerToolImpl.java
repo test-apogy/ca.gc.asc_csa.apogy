@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementation;
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePathPlannerTool;
 import ca.gc.space.topology.Node;

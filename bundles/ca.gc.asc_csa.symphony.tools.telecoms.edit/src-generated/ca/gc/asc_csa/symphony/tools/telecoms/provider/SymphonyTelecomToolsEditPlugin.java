@@ -5,7 +5,6 @@ package ca.gc.asc_csa.symphony.tools.telecoms.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
 import ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
@@ -14,8 +13,10 @@ import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
 import ca.gc.space.mrt.geometry.paths.provider.PathEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
 /**
  * This is the central singleton for the SymphonyTelecomTools edit plugin.
@@ -49,17 +50,17 @@ public final class SymphonyTelecomToolsEditPlugin extends EMFPlugin {
 	public SymphonyTelecomToolsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     PathEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     PathEditPlugin.INSTANCE,
 		   });
 	}
 

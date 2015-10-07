@@ -4,13 +4,15 @@
 package ca.gc.asc_csa.symphony.environment.provider;
 
 
-import ca.gc.asc_csa.symphony.core.SymphonyCoreFactory;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.core.SymphonyCoreFactory;
+
 import ca.gc.asc_csa.symphony.environment.MapNode;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;

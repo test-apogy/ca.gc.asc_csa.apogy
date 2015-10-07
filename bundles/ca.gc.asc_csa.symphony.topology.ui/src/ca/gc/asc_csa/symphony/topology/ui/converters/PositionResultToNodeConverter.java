@@ -4,14 +4,14 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.symphony.common.converters.IConverter;
+import org.eclipse.symphony.core.PositionedResult;
+import org.eclipse.symphony.core.ResultNode;
+import org.eclipse.symphony.core.ResultsListNode;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.SymphonyEnvironment;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.symphony.core.PositionedResult;
-import ca.gc.asc_csa.symphony.core.ResultNode;
-import ca.gc.asc_csa.symphony.core.ResultsListNode;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;

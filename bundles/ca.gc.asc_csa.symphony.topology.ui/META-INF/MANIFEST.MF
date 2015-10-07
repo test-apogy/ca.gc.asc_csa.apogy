@@ -9,7 +9,7 @@ Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.symphony.common.converters,
  ca.gc.asc_csa.topology.ui.viewer,
  ca.gc.asc_csa.symphony.topology,
- ca.gc.asc_csa.symphony.core.ui,
+ org.eclipse.symphony.core.ui,
  ca.gc.asc_csa.topology.ui.jme3,
  org.eclipse.emf.edit,
  org.eclipse.core.expressions,

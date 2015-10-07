@@ -1,6 +1,7 @@
 package ca.gc.asc_csa.symphony.environment.ui.adapters;
 
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestNode;
+import org.eclipse.symphony.core.FeatureOfInterestNode;
+
 import ca.gc.asc_csa.symphony.environment.ui.FeatureOfInterestNodePresentation;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIFactory;
 import ca.gc.space.topology.Node;

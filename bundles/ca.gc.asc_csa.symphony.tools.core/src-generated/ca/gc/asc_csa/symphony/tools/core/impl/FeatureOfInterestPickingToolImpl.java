@@ -23,10 +23,10 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.FeatureOfInterest;
+import org.eclipse.symphony.core.FeatureOfInterestList;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
-import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.symphony.environment.ui.dialogs.FeatureOfInterestCreationDialog;
 import ca.gc.asc_csa.symphony.tools.core.FeatureOfInterestPickingTool;

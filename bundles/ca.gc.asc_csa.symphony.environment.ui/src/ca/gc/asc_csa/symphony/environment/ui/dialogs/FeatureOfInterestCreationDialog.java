@@ -17,11 +17,11 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.core.FeatureOfInterest;
+import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.SymphonyEnvironment;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
-import ca.gc.asc_csa.symphony.core.SymphonyCoreFactory;
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayer;
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.symphony.environment.Map;

@@ -5,7 +5,6 @@ package org.eclipse.symphony.examples.lander.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
 import ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin;
 import ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleEditPlugin;
@@ -17,8 +16,10 @@ import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
 import ca.gc.space.mrt.geometry.paths.provider.PathEditPlugin;
 import ca.gc.space.mrt.mobility.pathplanners.provider.PathplannersEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreExampleLander edit plugin.
@@ -54,20 +55,20 @@ public final class EMFEcoreExampleLanderEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
-		     PathplannersEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
 		     SymphonyToolsVehicleEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
 		     PathEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     Topology_dynamicsEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
+		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     Topology_dynamicsEditPlugin.INSTANCE,
 		   });
 	}
 

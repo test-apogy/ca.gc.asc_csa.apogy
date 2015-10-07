@@ -2,8 +2,8 @@
 <?eclipse version="3.0"?>
 <plugin>
   <extension point="org.eclipse.sirius.componentization">
-    <component class="ca.gc.asc_csa.symphony.core.ui.sirius.Activator"
-               id="ca.gc.asc_csa.symphony.core.ui.sirius"
+    <component class="org.eclipse.symphony.core.ui.sirius.Activator"
+               id="org.eclipse.symphony.core.ui.sirius"
 	       name="symphony_core_ui_sirius">
     </component>
   </extension>

@@ -27,11 +27,11 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Updatable;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.Updatable;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.Activator;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitPropagator;

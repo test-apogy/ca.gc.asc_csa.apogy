@@ -23,14 +23,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
 import org.jfree.chart.annotations.XYTextAnnotation;
 import org.jfree.ui.TextAnchor;
 
-import ca.gc.asc_csa.symphony.core.PoseProvider;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
 import ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIFactory;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;

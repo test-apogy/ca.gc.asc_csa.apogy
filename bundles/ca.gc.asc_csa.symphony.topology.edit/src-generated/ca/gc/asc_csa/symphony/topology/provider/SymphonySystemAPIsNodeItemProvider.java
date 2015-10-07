@@ -4,13 +4,15 @@
 package ca.gc.asc_csa.symphony.topology.provider;
 
 
-import ca.gc.asc_csa.symphony.core.SymphonyCoreFactory;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.core.SymphonyCoreFactory;
+
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.topology.SymphonySystemAPIsNode;
 import ca.gc.asc_csa.symphony.topology.SymphonyTopologyFactory;
@@ -146,6 +148,26 @@ public class SymphonySystemAPIsNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 		newChildDescriptors.add
@@ -212,26 +234,6 @@ public class SymphonySystemAPIsNodeItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 	}
 
 }

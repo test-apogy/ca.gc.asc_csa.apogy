@@ -5,7 +5,6 @@ package ca.gc.asc_csa.symphony.environment.orbit.earth.ui.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentEditPlugin;
 import ca.gc.asc_csa.symphony.environment.orbit.provider.SymphonyOrbitEnvironmentEditPlugin;
 import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
@@ -14,8 +13,10 @@ import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
 import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
 /**
  * This is the central singleton for the SymphonyEarthOrbitEnvironmentUI edit plugin.
@@ -49,17 +50,17 @@ public final class SymphonyEarthOrbitEnvironmentUIEditPlugin extends EMFPlugin {
 	public SymphonyEarthOrbitEnvironmentUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     TopologyEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
 		     SymphonyEarthOrbitEnvironmentEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.symphony.core.AbstractOrbitModel;
+import org.eclipse.symphony.core.impl.AbstractWorksiteImpl;
 
-import ca.gc.asc_csa.symphony.core.AbstractOrbitModel;
-import ca.gc.asc_csa.symphony.core.impl.AbstractWorksiteImpl;
 import ca.gc.asc_csa.symphony.environment.Environment;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;

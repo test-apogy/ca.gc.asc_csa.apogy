@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.ConnectionPoint;
+import org.eclipse.symphony.core.SymphonySystem;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
-import ca.gc.asc_csa.symphony.core.ConnectionPoint;
-import ca.gc.asc_csa.symphony.core.SymphonySystem;
 import ca.gc.asc_csa.symphony.environment.impl.EnvironmentFacadeImpl;
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.topology.Node;

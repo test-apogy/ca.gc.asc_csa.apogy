@@ -4,6 +4,7 @@
 package ca.gc.asc_csa.symphony.topology.impl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
+
 import java.util.SortedSet;
 
 import org.eclipse.emf.ecore.EClass;
@@ -12,8 +13,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.topology.SymphonyEnvironmentNode;
 import ca.gc.asc_csa.symphony.topology.SymphonySystemAPIsNode;

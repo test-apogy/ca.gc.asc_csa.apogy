@@ -5,7 +5,6 @@ package org.eclipse.symphony.examples.lander.symphony.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
 import ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin;
 import ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleEditPlugin;
@@ -20,6 +19,7 @@ import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 import org.eclipse.symphony.examples.lander.provider.EMFEcoreExampleLanderEditPlugin;
 
 /**
@@ -56,21 +56,21 @@ public final class SymphonyExampleLanderEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     PathEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     PathplannersEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
 		     EMFEcoreExampleLanderEditPlugin.INSTANCE,
-		     Topology_dynamicsEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     SymphonyToolsVehicleEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     PathEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     SymphonyToolsVehicleEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     Topology_dynamicsEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -3,11 +3,11 @@
  */
 package ca.gc.asc_csa.symphony.environment.provider;
 
-import ca.gc.asc_csa.symphony.core.AssemblyLink;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -28,10 +28,12 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.TopologyRoot;
-import ca.gc.asc_csa.symphony.core.WorksitesList;
-import ca.gc.asc_csa.symphony.core.util.SymphonyCoreSwitch;
+import org.eclipse.symphony.core.AssemblyLink;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.core.WorksitesList;
+import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
+
 import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.symphony.environment.EnvironmentFacade;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;

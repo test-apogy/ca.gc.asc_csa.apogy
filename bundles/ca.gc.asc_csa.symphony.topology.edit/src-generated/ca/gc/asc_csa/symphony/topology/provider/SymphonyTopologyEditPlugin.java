@@ -4,10 +4,12 @@
 package ca.gc.asc_csa.symphony.topology.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
@@ -49,15 +51,15 @@ public final class SymphonyTopologyEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     GeometrydataEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

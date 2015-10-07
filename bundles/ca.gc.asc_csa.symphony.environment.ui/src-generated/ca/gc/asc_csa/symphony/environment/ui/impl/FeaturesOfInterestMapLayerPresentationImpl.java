@@ -22,14 +22,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.core.FeatureOfInterest;
+import org.eclipse.symphony.core.FeatureOfInterestList;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
 import org.jfree.chart.annotations.XYTextAnnotation;
 import org.jfree.ui.TextAnchor;
 
-import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider;

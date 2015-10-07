@@ -22,7 +22,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_environment -->
       <extender
-            uri="ca.gc.asc_csa.symphony.core"
+            uri="org.eclipse.symphony.core"
             class="ca.gc.asc_csa.symphony.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.topology.bindings"

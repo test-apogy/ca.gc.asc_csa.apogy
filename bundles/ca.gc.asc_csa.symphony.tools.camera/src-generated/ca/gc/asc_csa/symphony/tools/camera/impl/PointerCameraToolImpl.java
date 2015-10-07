@@ -26,14 +26,14 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.core.AbsolutePoseProvider;
+import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.listeners.AbstractVariableFeatureReferenceListener;
-import ca.gc.asc_csa.symphony.core.AbsolutePoseProvider;
-import ca.gc.asc_csa.symphony.core.PoseProvider;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.tools.camera.Activator;
 import ca.gc.asc_csa.symphony.tools.camera.CameraToolList;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfiguration;

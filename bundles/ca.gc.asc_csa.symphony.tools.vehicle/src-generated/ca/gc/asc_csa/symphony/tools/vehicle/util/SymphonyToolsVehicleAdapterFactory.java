@@ -7,29 +7,15 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.PoseCorrector;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.symphony.core.PoseCorrector;
 import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
 import ca.gc.asc_csa.symphony.tools.core.AbstractTwoPoints3DTool;
 import ca.gc.asc_csa.symphony.tools.core.Simple3DTool;
 import ca.gc.asc_csa.symphony.tools.core.SimpleTool;
 import ca.gc.asc_csa.symphony.tools.vehicle.*;
-import ca.gc.asc_csa.symphony.tools.vehicle.ContactProvider;
-import ca.gc.asc_csa.symphony.tools.vehicle.LanderSphericalFoot;
-import ca.gc.asc_csa.symphony.tools.vehicle.LanderSphericalFootContactProvider;
-import ca.gc.asc_csa.symphony.tools.vehicle.MeshExtent2D;
-import ca.gc.asc_csa.symphony.tools.vehicle.PathPlannerTool;
-import ca.gc.asc_csa.symphony.tools.vehicle.PathPlannerToolNode;
-import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
-import ca.gc.asc_csa.symphony.tools.vehicle.Thruster;
-import ca.gc.asc_csa.symphony.tools.vehicle.ThrusterBinding;
-import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePathPlannerTool;
-import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;
-import ca.gc.asc_csa.symphony.tools.vehicle.VehiculeToolsFacade;
-import ca.gc.asc_csa.symphony.tools.vehicle.Wheel;
-import ca.gc.asc_csa.symphony.tools.vehicle.WheelContactProvider;
-import ca.gc.asc_csa.symphony.tools.vehicle.WheelVehicleUtilities;
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
 import ca.gc.space.topology.AggregateGroupNode;
@@ -446,13 +432,13 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.PoseCorrector <em>Pose Corrector</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.PoseCorrector <em>Pose Corrector</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.PoseCorrector
+	 * @see org.eclipse.symphony.core.PoseCorrector
 	 * @generated
 	 */
   public Adapter createPoseCorrectorAdapter()

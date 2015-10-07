@@ -1,10 +1,10 @@
 @GenModel(prefix="SymphonyCore", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="SymphonyCore", multipleEditorPages="false", fileExtensions="sym") 
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.core/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.core.edit/src-generated")
-//@GenModel(editorDirectory="/ca.gc.asc_csa.symphony.core.editor/src-generated")
-//@GenModel(testsDirectory="/ca.gc.asc_csa.symphony.core.tests/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.core/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.edit/src-generated")
+//@GenModel(editorDirectory="/org.eclipse.symphony.core.editor/src-generated")
+//@GenModel(testsDirectory="/org.eclipse.symphony.core.tests/src-generated")
 
-package ca.gc.asc_csa.symphony.core
+package org.eclipse.symphony.core
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named

@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.provider.AbstractWorksiteItemProvider;
 
-import ca.gc.asc_csa.symphony.core.provider.AbstractWorksiteItemProvider;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentFactory;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.Worksite;

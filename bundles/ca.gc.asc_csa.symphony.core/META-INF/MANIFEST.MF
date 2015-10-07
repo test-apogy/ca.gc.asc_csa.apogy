@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.core;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -19,8 +19,8 @@ Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.space.mrt.geometry.data3d,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: ca.gc.asc_csa.symphony.core,
- ca.gc.asc_csa.symphony.core.impl,
- ca.gc.asc_csa.symphony.core.invocator,
- ca.gc.asc_csa.symphony.core.util
-Bundle-Activator: ca.gc.asc_csa.symphony.core.Activator
+Export-Package: org.eclipse.symphony.core,
+ org.eclipse.symphony.core.impl,
+ org.eclipse.symphony.core.invocator,
+ org.eclipse.symphony.core.util
+Bundle-Activator: org.eclipse.symphony.core.Activator

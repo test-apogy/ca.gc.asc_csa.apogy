@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.examples.lander.symphony;
 
+import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.examples.lander.LanderLegExtension;
-
-import ca.gc.asc_csa.symphony.core.SymphonyInitializationData;
 
 /**
  * <!-- begin-user-doc -->

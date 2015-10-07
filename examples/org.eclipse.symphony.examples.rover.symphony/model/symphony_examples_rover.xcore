@@ -4,8 +4,8 @@
 
 package org.eclipse.symphony.examples.rover.symphony
 
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
-import ca.gc.asc_csa.symphony.core.SymphonyInitializationData
+import org.eclipse.symphony.core.SymphonySystemApiAdapter
+import org.eclipse.symphony.core.SymphonyInitializationData
 
 /*
  * This class is the specialized Symphony API adapter, used for connecting

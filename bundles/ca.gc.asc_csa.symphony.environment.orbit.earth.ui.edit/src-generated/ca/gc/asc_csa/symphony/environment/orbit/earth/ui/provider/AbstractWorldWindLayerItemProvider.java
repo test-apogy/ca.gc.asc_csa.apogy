@@ -4,15 +4,17 @@
 package ca.gc.asc_csa.symphony.environment.orbit.earth.ui.provider;
 
 
-import ca.gc.asc_csa.symphony.core.provider.UpdatableItemProvider;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.provider.UpdatableItemProvider;
+
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
 

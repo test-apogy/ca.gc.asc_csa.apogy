@@ -13,10 +13,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.symphony.core.AbstractWorksite;
+import org.eclipse.symphony.core.SymphonyEnvironment;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Context;
-import ca.gc.asc_csa.symphony.core.AbstractWorksite;
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.environment.Map;
 import ca.gc.asc_csa.symphony.environment.MapsList;
 import ca.gc.asc_csa.symphony.environment.SurfaceWorksite;

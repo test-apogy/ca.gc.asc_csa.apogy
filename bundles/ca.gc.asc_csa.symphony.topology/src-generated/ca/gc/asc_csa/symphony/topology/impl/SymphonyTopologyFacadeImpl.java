@@ -8,13 +8,13 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableImplementation;
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
 import ca.gc.asc_csa.symphony.topology.SymphonyEnvironmentNode;
 import ca.gc.asc_csa.symphony.topology.SymphonyTopologyFacade;
 import ca.gc.asc_csa.symphony.topology.SymphonyTopologyFactory;

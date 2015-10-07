@@ -3,7 +3,8 @@
  */
 package ca.gc.asc_csa.symphony.topology;
 
-import ca.gc.asc_csa.symphony.core.PositionedResult;
+import org.eclipse.symphony.core.PositionedResult;
+
 import ca.gc.space.topology.Node;
 
 /**

@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.examples.robotic_arm.symphony;
 
+import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
-
-import ca.gc.asc_csa.symphony.core.SymphonyInitializationData;
 
 /**
  * <!-- begin-user-doc -->

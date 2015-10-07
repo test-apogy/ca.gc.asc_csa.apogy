@@ -3,7 +3,7 @@
  */
 package ca.gc.asc_csa.symphony.environment;
 
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
+import org.eclipse.symphony.core.FeatureOfInterestList;
 
 /**
  * <!-- begin-user-doc -->

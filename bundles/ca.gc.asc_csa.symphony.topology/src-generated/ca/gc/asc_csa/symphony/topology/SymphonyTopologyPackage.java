@@ -540,11 +540,11 @@ public interface SymphonyTopologyPackage extends EPackage
 	EOperation getSymphonyTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.topology.SymphonyTopologyFacade#createSymphonyEnvironmentNode(ca.gc.asc_csa.symphony.core.SymphonyEnvironment) <em>Create Symphony Environment Node</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.symphony.topology.SymphonyTopologyFacade#createSymphonyEnvironmentNode(org.eclipse.symphony.core.SymphonyEnvironment) <em>Create Symphony Environment Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony Environment Node</em>' operation.
-	 * @see ca.gc.asc_csa.symphony.topology.SymphonyTopologyFacade#createSymphonyEnvironmentNode(ca.gc.asc_csa.symphony.core.SymphonyEnvironment)
+	 * @see ca.gc.asc_csa.symphony.topology.SymphonyTopologyFacade#createSymphonyEnvironmentNode(org.eclipse.symphony.core.SymphonyEnvironment)
 	 * @generated
 	 */
 	EOperation getSymphonyTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment();

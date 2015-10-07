@@ -48,11 +48,11 @@ public final class MRTFOVBindingsEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     TopologyEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     GeometrydataEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}

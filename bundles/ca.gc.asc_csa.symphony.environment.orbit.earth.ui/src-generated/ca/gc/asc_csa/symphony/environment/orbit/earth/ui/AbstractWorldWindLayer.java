@@ -3,7 +3,8 @@
  */
 package ca.gc.asc_csa.symphony.environment.orbit.earth.ui;
 
-import ca.gc.asc_csa.symphony.core.Updatable;
+import org.eclipse.symphony.core.Updatable;
+
 import gov.nasa.worldwind.layers.RenderableLayer;
 
 /**

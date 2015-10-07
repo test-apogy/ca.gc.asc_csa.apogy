@@ -10,11 +10,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.SymphonyInitializationData;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.rover.symphony.*;
-
-import ca.gc.asc_csa.symphony.core.PoseProvider;
-import ca.gc.asc_csa.symphony.core.SymphonyInitializationData;
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->

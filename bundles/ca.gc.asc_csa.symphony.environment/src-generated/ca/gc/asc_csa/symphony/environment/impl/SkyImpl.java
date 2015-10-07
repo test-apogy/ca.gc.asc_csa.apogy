@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.core.AbstractWorksite;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
-import ca.gc.asc_csa.symphony.core.AbstractWorksite;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.EnvironmentFacade;
 import ca.gc.asc_csa.symphony.environment.HorizontalCoordinates;
 import ca.gc.asc_csa.symphony.environment.Sky;

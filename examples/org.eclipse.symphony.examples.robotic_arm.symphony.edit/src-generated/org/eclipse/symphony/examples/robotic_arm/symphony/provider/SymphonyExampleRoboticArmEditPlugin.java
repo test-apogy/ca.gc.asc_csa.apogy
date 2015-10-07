@@ -5,12 +5,12 @@ package org.eclipse.symphony.examples.robotic_arm.symphony.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 import org.eclipse.symphony.examples.robotic_arm.provider.EMFEcoreExampleRoboticArmEditPlugin;
 
 /**
@@ -48,10 +48,10 @@ public final class SymphonyExampleRoboticArmEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		   });
 	}

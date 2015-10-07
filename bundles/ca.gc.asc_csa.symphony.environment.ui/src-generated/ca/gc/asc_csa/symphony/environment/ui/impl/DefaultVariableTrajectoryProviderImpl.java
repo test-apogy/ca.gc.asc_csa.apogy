@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.jfree.data.xy.XYDataItem;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.symphony.core.PoseProvider;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
 import ca.gc.asc_csa.symphony.environment.ui.DefaultVariableTrajectoryProvider;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
 

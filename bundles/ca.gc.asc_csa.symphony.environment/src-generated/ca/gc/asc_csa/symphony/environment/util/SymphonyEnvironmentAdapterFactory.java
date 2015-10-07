@@ -7,56 +7,12 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.AbstractWorksite;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.symphony.core.AbstractWorksite;
 import ca.gc.asc_csa.symphony.environment.*;
-import ca.gc.asc_csa.symphony.environment.AbstractMapLayer;
-import ca.gc.asc_csa.symphony.environment.AbstractMapLayerNode;
-import ca.gc.asc_csa.symphony.environment.AstronomyUtils;
-import ca.gc.asc_csa.symphony.environment.Atmosphere;
-import ca.gc.asc_csa.symphony.environment.AtmosphereUtils;
-import ca.gc.asc_csa.symphony.environment.BasicCartesianTriangularMeshMapLayer;
-import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayer;
-import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshURLMapLayer;
-import ca.gc.asc_csa.symphony.environment.Earth;
-import ca.gc.asc_csa.symphony.environment.EarthSky;
-import ca.gc.asc_csa.symphony.environment.EarthSkyNode;
-import ca.gc.asc_csa.symphony.environment.EarthSurfaceEnvironment;
-import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;
-import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksiteNode;
-import ca.gc.asc_csa.symphony.environment.EclipticCoordinates;
-import ca.gc.asc_csa.symphony.environment.Environment;
-import ca.gc.asc_csa.symphony.environment.EnvironmentFacade;
-import ca.gc.asc_csa.symphony.environment.EnvironmentUtilities;
-import ca.gc.asc_csa.symphony.environment.EquatorialCoordinates;
-import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-import ca.gc.asc_csa.symphony.environment.HorizontalCoordinates;
-import ca.gc.asc_csa.symphony.environment.ImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.Map;
-import ca.gc.asc_csa.symphony.environment.MapNode;
-import ca.gc.asc_csa.symphony.environment.MapsList;
-import ca.gc.asc_csa.symphony.environment.MapsListNode;
-import ca.gc.asc_csa.symphony.environment.Moon;
-import ca.gc.asc_csa.symphony.environment.RectangularRegion;
-import ca.gc.asc_csa.symphony.environment.RectangularRegionImage;
-import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider;
-import ca.gc.asc_csa.symphony.environment.Region;
-import ca.gc.asc_csa.symphony.environment.Sky;
-import ca.gc.asc_csa.symphony.environment.SkyNode;
-import ca.gc.asc_csa.symphony.environment.Star;
-import ca.gc.asc_csa.symphony.environment.StarField;
-import ca.gc.asc_csa.symphony.environment.Sun;
-import ca.gc.asc_csa.symphony.environment.SurfaceEnvironment;
-import ca.gc.asc_csa.symphony.environment.SurfaceWorksite;
-import ca.gc.asc_csa.symphony.environment.SurfaceWorksiteNode;
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.asc_csa.symphony.environment.URLImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.URLMapLayer;
-import ca.gc.asc_csa.symphony.environment.Worksite;
-import ca.gc.asc_csa.symphony.environment.WorksiteNode;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
@@ -1370,13 +1326,13 @@ public class SymphonyEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.AbstractWorksite <em>Abstract Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbstractWorksite <em>Abstract Worksite</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.AbstractWorksite
+	 * @see org.eclipse.symphony.core.AbstractWorksite
 	 * @generated
 	 */
   public Adapter createAbstractWorksiteAdapter()

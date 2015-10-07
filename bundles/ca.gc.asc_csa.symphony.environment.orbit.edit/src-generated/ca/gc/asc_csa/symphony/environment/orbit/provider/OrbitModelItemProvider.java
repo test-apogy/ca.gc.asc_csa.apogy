@@ -4,16 +4,18 @@
 package ca.gc.asc_csa.symphony.environment.orbit.provider;
 
 
-import ca.gc.asc_csa.symphony.core.provider.AbstractOrbitModelItemProvider;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
+
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.provider.AbstractOrbitModelItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.symphony.environment.orbit.OrbitModel} object.

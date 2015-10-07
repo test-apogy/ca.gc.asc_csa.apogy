@@ -13,11 +13,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.FeatureOfInterest;
+import org.eclipse.symphony.core.FeatureOfInterestList;
+import org.eclipse.symphony.core.FeatureOfInterestListNode;
+import org.eclipse.symphony.core.SymphonyCoreFactory;
 
-import ca.gc.asc_csa.symphony.core.FeatureOfInterest;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestListNode;
-import ca.gc.asc_csa.symphony.core.SymphonyCoreFactory;
 import ca.gc.asc_csa.symphony.environment.AbstractMapLayerNode;
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;

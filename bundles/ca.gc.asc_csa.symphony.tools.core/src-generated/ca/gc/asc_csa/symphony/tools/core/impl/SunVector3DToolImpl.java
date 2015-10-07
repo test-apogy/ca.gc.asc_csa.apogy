@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.SymphonyEnvironment;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.environment.AstronomyUtils;
 import ca.gc.asc_csa.symphony.environment.AtmosphereUtils;
 import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;

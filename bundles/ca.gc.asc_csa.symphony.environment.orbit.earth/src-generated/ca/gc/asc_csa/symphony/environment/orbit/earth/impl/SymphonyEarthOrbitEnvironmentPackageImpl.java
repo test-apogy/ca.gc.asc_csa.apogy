@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.orekit.attitudes.AttitudeProvider;
 import org.orekit.frames.Frame;
 import org.orekit.orbits.CartesianOrbit;
@@ -37,7 +38,6 @@ import org.orekit.utils.TimeStampedAngularCoordinates;
 import org.orekit.utils.TimeStampedPVCoordinates;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.earth.CartesianEarthOrbit;

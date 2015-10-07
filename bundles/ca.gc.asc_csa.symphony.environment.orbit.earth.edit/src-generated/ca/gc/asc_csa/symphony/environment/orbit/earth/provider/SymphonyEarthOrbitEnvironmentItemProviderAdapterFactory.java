@@ -3,9 +3,6 @@
  */
 package ca.gc.asc_csa.symphony.environment.orbit.earth.provider;
 
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.WorksitesList;
-import ca.gc.asc_csa.symphony.core.util.SymphonyCoreSwitch;
 import ca.gc.asc_csa.symphony.environment.SurfaceWorksite;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.orbit.AbstractOrbitPropagator;
@@ -22,9 +19,11 @@ import ca.gc.asc_csa.symphony.environment.util.SymphonyEnvironmentSwitch;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.util.TopologySwitch;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -45,6 +44,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.WorksitesList;
+import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

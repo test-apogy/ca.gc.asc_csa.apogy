@@ -1,12 +1,12 @@
 @GenModel(prefix="SymphonyCoreUi", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="SymphonyCoreUi") 
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.core.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.core.ui.edit/src-generated")
-package ca.gc.asc_csa.symphony.core.ui
+@GenModel(modelDirectory="/org.eclipse.symphony.core.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.ui.edit/src-generated")
+package org.eclipse.symphony.core.ui
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession
 
 import ca.gc.space.topology.ui.TransformNodePresentation
-import ca.gc.asc_csa.symphony.core.SymphonySystem
+import org.eclipse.symphony.core.SymphonySystem
 import org.eclipse.core.resources.IProject
 import org.eclipse.core.resources.IContainer
 import org.eclipse.core.resources.IFile

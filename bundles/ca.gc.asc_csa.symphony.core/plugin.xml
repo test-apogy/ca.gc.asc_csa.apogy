@@ -12,13 +12,13 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="ca.gc.asc_csa.symphony.core"
-            class="ca.gc.asc_csa.symphony.core.SymphonyCorePackage"
+            class="org.eclipse.symphony.core.SymphonyCorePackage"
             genModel="model/symphony_core.xcore"/>
    </extension>
    <extension
          point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorDelegate">
       <element
-            invocatorDelegateClass="ca.gc.asc_csa.symphony.core.invocator.SymphonyInvocatorDelegate">
+            invocatorDelegateClass="org.eclipse.symphony.core.invocator.SymphonyInvocatorDelegate">
       </element>
    </extension>
    

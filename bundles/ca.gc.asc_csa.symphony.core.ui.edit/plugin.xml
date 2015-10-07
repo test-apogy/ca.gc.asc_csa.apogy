@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_core_ui -->
       <factory
-            uri="ca.gc.asc_csa.symphony.core.ui"
-            class="ca.gc.asc_csa.symphony.core.ui.provider.SymphonyCoreUiItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.core.ui"
+            class="org.eclipse.symphony.core.ui.provider.SymphonyCoreUiItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

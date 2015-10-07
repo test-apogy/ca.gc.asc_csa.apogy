@@ -35,7 +35,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
          <command
                commandId="ca.gc.asc_csa.symphony.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
                label="Update Mesh Image"

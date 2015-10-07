@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.core.PoseProvider;
 import org.jfree.data.xy.XYSeries;
 
-import ca.gc.asc_csa.symphony.core.PoseProvider;
 import ca.gc.asc_csa.symphony.environment.ui.SymphonyEnvironmentUIPackage;
 import ca.gc.asc_csa.symphony.environment.ui.VariableTrajectoryAnnotation;
 import ca.gc.asc_csa.symphony.environment.ui.VariableTrajectoryProvider;

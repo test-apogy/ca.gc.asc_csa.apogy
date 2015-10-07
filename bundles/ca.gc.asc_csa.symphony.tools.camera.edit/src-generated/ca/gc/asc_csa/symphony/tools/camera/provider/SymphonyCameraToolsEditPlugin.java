@@ -5,9 +5,10 @@ package ca.gc.asc_csa.symphony.tools.camera.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
 import ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
@@ -53,19 +54,19 @@ public final class SymphonyCameraToolsEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     MRTSensorsImagingEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
 		     GeometrydataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     PathEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     MRTSensorsImagingEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     PathEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		   });
 	}
 

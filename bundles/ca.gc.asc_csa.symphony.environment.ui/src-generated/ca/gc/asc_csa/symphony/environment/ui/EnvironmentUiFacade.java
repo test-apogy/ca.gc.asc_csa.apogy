@@ -7,10 +7,10 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.core.FeatureOfInterestList;
 import org.jfree.data.xy.XYSeries;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList;
 import ca.gc.asc_csa.symphony.environment.RectangularRegion;
 import ca.gc.asc_csa.symphony.environment.RectangularRegionProvider;
 import ca.gc.asc_csa.symphony.environment.ui.impl.EnvironmentUiFacadeImpl;
@@ -117,7 +117,7 @@ public interface EnvironmentUiFacade extends EObject
 		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="ca.gc.asc_csa.symphony.environment.ui.List<ca.gc.asc_csa.symphony.core.FeatureOfInterestList>" unique="false" many="false" sessionUnique="false"
+	 * @model dataType="ca.gc.asc_csa.symphony.environment.ui.List<org.eclipse.symphony.core.FeatureOfInterestList>" unique="false" many="false" sessionUnique="false"
 	 * @generated
 	 */
 	List<FeatureOfInterestList> getFeatureOfInterestLists(InvocatorSession session);

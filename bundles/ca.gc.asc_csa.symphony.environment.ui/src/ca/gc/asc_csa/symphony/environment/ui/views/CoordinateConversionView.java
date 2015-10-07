@@ -6,9 +6,9 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.core.Positioned;
 
 import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
-import ca.gc.asc_csa.symphony.core.Positioned;
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
 import ca.gc.asc_csa.symphony.environment.ui.composites.CoordinateConversionComposite;
 

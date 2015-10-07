@@ -25,7 +25,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.actuators;visibility:=reexport,
  ca.gc.asc_csa.topology.bindings;visibility:=reexport,
  org.eclipse.symphony.examples.rover;visibility:=reexport,
- ca.gc.asc_csa.symphony.core;visibility:=reexport,
+ org.eclipse.symphony.core;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov;visibility:=reexport,
  ca.gc.space.mrt.geometry.data;visibility:=reexport,
  org.eclipse.symphony.examples.robotic_arm;visibility:=reexport

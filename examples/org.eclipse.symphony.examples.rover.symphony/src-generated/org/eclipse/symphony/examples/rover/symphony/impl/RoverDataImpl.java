@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.examples.rover.symphony.impl;
 
-import ca.gc.asc_csa.symphony.core.impl.SymphonyInitializationDataImpl;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
 import org.eclipse.symphony.examples.rover.symphony.RoverData;
 import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage;
 

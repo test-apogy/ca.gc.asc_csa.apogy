@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="ca.gc.asc_csa.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="ca.gc.asc_csa.eclipse.emf.ecore.invocator" xmi:id="__IW1MArOEeW4-_ONWXXiAw" name="">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="ca.gc.asc_csa.eclipse.emf.ecore.invocator" xmi:id="__IW1MArOEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:SymphonyEnvironment" xmi:id="__IW1MQrOEeW4-_ONWXXiAw" name="Lidar Example" description="This is an example session, illustrating how to use the lidar example" activeContext="__IXcQQrOEeW4-_ONWXXiAw" time="2015-04-13T10:09:19.465-0400" activeWorksite="__IXcSArOEeW4-_ONWXXiAw" activeTimeSource="__Idi4wrOEeW4-_ONWXXiAw">
     <typesList xmi:id="__IW1MgrOEeW4-_ONWXXiAw">
       <localTypes xmi:id="__IW1MwrOEeW4-_ONWXXiAw"/>

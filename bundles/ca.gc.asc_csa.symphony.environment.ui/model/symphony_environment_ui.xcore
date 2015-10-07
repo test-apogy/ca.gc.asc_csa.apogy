@@ -10,9 +10,9 @@ import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable
 import org.eclipse.symphony.common.images.AbstractEImage
-import ca.gc.asc_csa.symphony.core.FeatureOfInterestList
-import ca.gc.asc_csa.symphony.core.PoseProvider
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
+import org.eclipse.symphony.core.FeatureOfInterestList
+import org.eclipse.symphony.core.PoseProvider
+import org.eclipse.symphony.core.SymphonySystemApiAdapter
 import ca.gc.asc_csa.symphony.environment.FeaturesOfInterestMapLayer
 import ca.gc.asc_csa.symphony.environment.ImageMapLayerPresentation
 import ca.gc.asc_csa.symphony.environment.RectangularRegion

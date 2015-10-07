@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.examples.robotic_arm.symphony.impl;
 
-import ca.gc.asc_csa.symphony.core.impl.SymphonyInitializationDataImpl;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
 import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
 import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
 import org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRoboticArmPackage;

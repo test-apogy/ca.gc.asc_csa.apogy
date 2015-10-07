@@ -28,9 +28,9 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.impl.PoseCorrectorImpl;
 
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
-import ca.gc.asc_csa.symphony.core.impl.PoseCorrectorImpl;
 import ca.gc.asc_csa.symphony.environment.CartesianTriangularMeshMapLayerNode;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.Activator;

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.plot.XYPlot;
@@ -29,7 +30,6 @@ import org.jfree.experimental.chart.swt.ChartComposite;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
 import ca.gc.asc_csa.symphony.environment.ui.AbstractTrajectoryTool;
 import ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation;

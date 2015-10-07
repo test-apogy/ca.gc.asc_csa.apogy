@@ -7,46 +7,14 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.AbsolutePoseProvider;
+import org.eclipse.symphony.core.PoseProvider;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference;
-import ca.gc.asc_csa.symphony.core.AbsolutePoseProvider;
-import ca.gc.asc_csa.symphony.core.PoseProvider;
 import ca.gc.asc_csa.symphony.tools.camera.*;
-import ca.gc.asc_csa.symphony.tools.camera.AbstractTextOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.AzimuthElevationFOVOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.AzimuthFeatureReference;
-import ca.gc.asc_csa.symphony.tools.camera.CameraImageAnnotation;
-import ca.gc.asc_csa.symphony.tools.camera.CameraNameOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.CameraOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.CameraOverlayList;
-import ca.gc.asc_csa.symphony.tools.camera.CameraTool;
-import ca.gc.asc_csa.symphony.tools.camera.CameraToolList;
-import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfiguration;
-import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfigurationList;
-import ca.gc.asc_csa.symphony.tools.camera.CameraViewUtilities;
-import ca.gc.asc_csa.symphony.tools.camera.ContrastAndBrightnessFilter;
-import ca.gc.asc_csa.symphony.tools.camera.DrawnCameraOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.EMFFeatureAzimuthElevationFOVOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.EMFFeatureOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.EdgeFilter;
-import ca.gc.asc_csa.symphony.tools.camera.ElevationFeatureReference;
-import ca.gc.asc_csa.symphony.tools.camera.ExposureFilter;
-import ca.gc.asc_csa.symphony.tools.camera.FOVOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.FilterList;
-import ca.gc.asc_csa.symphony.tools.camera.GainFilter;
-import ca.gc.asc_csa.symphony.tools.camera.GrayScaleFilter;
-import ca.gc.asc_csa.symphony.tools.camera.ImageCameraOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.ImageCountOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.ImageFilter;
-import ca.gc.asc_csa.symphony.tools.camera.InvertFilter;
-import ca.gc.asc_csa.symphony.tools.camera.PointerCameraTool;
-import ca.gc.asc_csa.symphony.tools.camera.RescaleFilter;
-import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
-import ca.gc.asc_csa.symphony.tools.camera.SymphonyLogoOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.ToolTipTextProvider;
-import ca.gc.asc_csa.symphony.tools.camera.URLImageOverlay;
 import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
 
 /**
@@ -846,13 +814,13 @@ public class SymphonyCameraToolsAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.PoseProvider <em>Pose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.PoseProvider <em>Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.PoseProvider
+	 * @see org.eclipse.symphony.core.PoseProvider
 	 * @generated
 	 */
 	public Adapter createPoseProviderAdapter() {
@@ -860,13 +828,13 @@ public class SymphonyCameraToolsAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.AbsolutePoseProvider <em>Absolute Pose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbsolutePoseProvider <em>Absolute Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.AbsolutePoseProvider
+	 * @see org.eclipse.symphony.core.AbsolutePoseProvider
 	 * @generated
 	 */
 	public Adapter createAbsolutePoseProviderAdapter() {

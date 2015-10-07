@@ -7,10 +7,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
 import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
 import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter;
@@ -86,8 +84,8 @@ public class SymphonyExampleRoboticArmPackageImpl extends EPackageImpl implement
 		isInited = true;
 
 		// Initialize simple dependencies
-		EMFEcoreExampleRoboticArmPackage.eINSTANCE.eClass();
 		SymphonyCorePackage.eINSTANCE.eClass();
+		EMFEcoreExampleRoboticArmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyExampleRoboticArmPackage.createPackageContents();

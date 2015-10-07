@@ -26,7 +26,7 @@
             uri="http:///ca/gc/space/topology.ecore"
             class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.symphony.core"
+            uri="org.eclipse.symphony.core"
             class="ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"

@@ -2,10 +2,10 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.core.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.core.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.core.ui.Activator
+Bundle-Activator: org.eclipse.symphony.core.ui.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -20,7 +20,7 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.space.topology.core;visibility:=reexport,
  ca.gc.asc_csa.topology.ui.viewer,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300",
- ca.gc.asc_csa.symphony.core;visibility:=reexport,
+ org.eclipse.symphony.core;visibility:=reexport,
  ca.gc.asc_csa.eclipse.ui,
  org.eclipse.core.databinding;bundle-version="1.4.1",
  org.eclipse.core.resources,
@@ -41,18 +41,18 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.eclipse.emf.ecore.edit.utils;bundle-version="0.3.0",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.core.ui,
- ca.gc.asc_csa.symphony.core.ui.actions,
- ca.gc.asc_csa.symphony.core.ui.commands,
- ca.gc.asc_csa.symphony.core.ui.composites,
- ca.gc.asc_csa.symphony.core.ui.decorators,
- ca.gc.asc_csa.symphony.core.ui.dialogs,
- ca.gc.asc_csa.symphony.core.ui.impl,
- ca.gc.asc_csa.symphony.core.ui.natures,
- ca.gc.asc_csa.symphony.core.ui.parts,
- ca.gc.asc_csa.symphony.core.ui.preferences,
- ca.gc.asc_csa.symphony.core.ui.properties.sections,
- ca.gc.asc_csa.symphony.core.ui.util,
- ca.gc.asc_csa.symphony.core.ui.views,
- ca.gc.asc_csa.symphony.core.ui.wizards
+Export-Package: org.eclipse.symphony.core.ui,
+ org.eclipse.symphony.core.ui.actions,
+ org.eclipse.symphony.core.ui.commands,
+ org.eclipse.symphony.core.ui.composites,
+ org.eclipse.symphony.core.ui.decorators,
+ org.eclipse.symphony.core.ui.dialogs,
+ org.eclipse.symphony.core.ui.impl,
+ org.eclipse.symphony.core.ui.natures,
+ org.eclipse.symphony.core.ui.parts,
+ org.eclipse.symphony.core.ui.preferences,
+ org.eclipse.symphony.core.ui.properties.sections,
+ org.eclipse.symphony.core.ui.util,
+ org.eclipse.symphony.core.ui.views,
+ org.eclipse.symphony.core.ui.wizards
 Bundle-ActivationPolicy: lazy

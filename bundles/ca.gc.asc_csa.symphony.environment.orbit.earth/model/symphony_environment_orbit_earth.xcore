@@ -9,7 +9,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed
 
-import ca.gc.asc_csa.symphony.core.Updatable
+import org.eclipse.symphony.core.Updatable
 
 import ca.gc.asc_csa.symphony.environment.Earth
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates

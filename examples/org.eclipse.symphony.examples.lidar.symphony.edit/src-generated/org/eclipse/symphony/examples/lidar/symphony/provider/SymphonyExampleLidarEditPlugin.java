@@ -4,26 +4,17 @@
 package org.eclipse.symphony.examples.lidar.symphony.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.EMFEcoreInvocatorEditPlugin;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-
-import ca.gc.asc_csa.symphony.core.provider.SymphonyCoreEditPlugin;
-
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
-
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
-
 import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
-
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
-
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
-
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
 /**
  * This is the central singleton for the SymphonyExampleLidar edit plugin.
@@ -57,15 +48,15 @@ public final class SymphonyExampleLidarEditPlugin extends EMFPlugin {
 	public SymphonyExampleLidarEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
 		     GeometrydataEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

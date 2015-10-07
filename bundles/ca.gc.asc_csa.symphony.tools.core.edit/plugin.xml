@@ -27,7 +27,7 @@
             uri="ca.gc.asc_csa.topology.bindings"
             class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.symphony.core"
+            uri="org.eclipse.symphony.core"
             class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"

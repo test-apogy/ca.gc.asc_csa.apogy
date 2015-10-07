@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.tools.camera.PointerCameraTool;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 

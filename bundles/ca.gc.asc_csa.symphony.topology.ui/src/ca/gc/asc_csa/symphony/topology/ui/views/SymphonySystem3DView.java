@@ -14,13 +14,13 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.IWorkbenchPartReference;
 
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.SymphonySystem;
-import ca.gc.asc_csa.symphony.core.TopologyRoot;
 import ca.gc.asc_csa.symphony.topology.ui.Activator;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;

@@ -4,9 +4,11 @@
 package ca.gc.asc_csa.symphony.environment.orbit.earth;
 
 import java.util.Date;
+
+import org.eclipse.symphony.core.Updatable;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.symphony.core.Updatable;
 import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 
 /**

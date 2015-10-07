@@ -6,10 +6,10 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.converters.IConverter;
 import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.core.Positioned;
+import org.eclipse.symphony.core.SymphonyEnvironment;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.symphony.core.Positioned;
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
 import ca.gc.asc_csa.symphony.environment.EarthSurfaceWorksite;
 import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
 

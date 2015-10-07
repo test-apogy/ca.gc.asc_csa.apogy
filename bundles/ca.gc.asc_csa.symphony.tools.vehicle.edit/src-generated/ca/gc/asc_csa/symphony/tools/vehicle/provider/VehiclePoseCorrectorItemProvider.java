@@ -7,6 +7,7 @@ package ca.gc.asc_csa.symphony.tools.vehicle.provider;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -14,7 +15,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.symphony.core.provider.PoseCorrectorItemProvider;
+import org.eclipse.symphony.core.provider.PoseCorrectorItemProvider;
+
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
 import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
 import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;

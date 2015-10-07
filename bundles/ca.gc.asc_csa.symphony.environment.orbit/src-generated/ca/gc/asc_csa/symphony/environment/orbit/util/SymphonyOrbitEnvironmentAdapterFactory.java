@@ -7,11 +7,12 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.AbstractOrbitModel;
+import org.eclipse.symphony.core.AbstractWorksite;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.symphony.core.AbstractOrbitModel;
-import ca.gc.asc_csa.symphony.core.AbstractWorksite;
 import ca.gc.asc_csa.symphony.environment.Worksite;
 import ca.gc.asc_csa.symphony.environment.orbit.*;
 
@@ -368,13 +369,13 @@ public class SymphonyOrbitEnvironmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.AbstractWorksite <em>Abstract Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbstractWorksite <em>Abstract Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.AbstractWorksite
+	 * @see org.eclipse.symphony.core.AbstractWorksite
 	 * @generated
 	 */
 	public Adapter createAbstractWorksiteAdapter() {
@@ -396,13 +397,13 @@ public class SymphonyOrbitEnvironmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.AbstractOrbitModel
+	 * @see org.eclipse.symphony.core.AbstractOrbitModel
 	 * @generated
 	 */
 	public Adapter createAbstractOrbitModelAdapter() {

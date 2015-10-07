@@ -3,7 +3,8 @@
  */
 package ca.gc.asc_csa.symphony.topology;
 
-import ca.gc.asc_csa.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.SymphonyEnvironment;
+
 import ca.gc.space.topology.ReferencedGroupNode;
 
 /**

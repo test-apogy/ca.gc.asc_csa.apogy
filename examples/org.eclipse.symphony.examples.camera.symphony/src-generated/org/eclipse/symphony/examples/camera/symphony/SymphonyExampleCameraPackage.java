@@ -6,9 +6,8 @@ package org.eclipse.symphony.examples.camera.symphony;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
 /**
  * <!-- begin-user-doc -->

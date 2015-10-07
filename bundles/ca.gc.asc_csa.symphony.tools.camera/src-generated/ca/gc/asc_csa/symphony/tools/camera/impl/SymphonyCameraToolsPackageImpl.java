@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.asc_csa.symphony.tools.camera.AbstractTextOverlay;
 import ca.gc.asc_csa.symphony.tools.camera.AzimuthElevationFOVOverlay;
 import ca.gc.asc_csa.symphony.tools.camera.AzimuthFeatureReference;
@@ -346,8 +346,8 @@ public class SymphonyCameraToolsPackageImpl extends EPackageImpl implements Symp
 		isInited = true;
 
 		// Initialize simple dependencies
-		MRTSensorsImagingPackage.eINSTANCE.eClass();
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
+		MRTSensorsImagingPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyCameraToolsPackage.createPackageContents();

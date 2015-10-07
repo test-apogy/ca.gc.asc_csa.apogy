@@ -10,6 +10,8 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
 import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
 import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter;
@@ -19,8 +21,6 @@ import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPack
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Environment;
 import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Type;
-import ca.gc.asc_csa.symphony.core.SymphonySystem;
-import ca.gc.asc_csa.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import ca.gc.asc_csa.symphony.environment.EnvironmentFacade;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
 import ca.gc.space.mrt.sensors.fov.FOVFacade;
