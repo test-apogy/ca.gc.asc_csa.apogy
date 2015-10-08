@@ -328,9 +328,9 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 
 		// Initialize simple dependencies
 		PathplannersPackage.eINSTANCE.eClass();
-		SymphonyToolsCorePackage.eINSTANCE.eClass();
-		TopologyDynamicsPackage.eINSTANCE.eClass();
 		SymphonyEnvironmentPackage.eINSTANCE.eClass();
+		TopologyDynamicsPackage.eINSTANCE.eClass();
+		SymphonyToolsCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyToolsVehiclePackage.createPackageContents();
