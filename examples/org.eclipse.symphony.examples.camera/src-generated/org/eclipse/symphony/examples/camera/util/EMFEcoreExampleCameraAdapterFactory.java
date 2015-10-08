@@ -9,10 +9,10 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.actuators.AbstractActuator;
+import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.examples.camera.*;
 
-import ca.gc.space.mrt.actuators.AbstractActuator;
-import ca.gc.space.mrt.actuators.PanTiltUnit;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
 import ca.gc.space.mrt.sensors.sensors.Sensor;
@@ -309,13 +309,13 @@ public class EMFEcoreExampleCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.actuators.AbstractActuator <em>Abstract Actuator</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.actuators.AbstractActuator <em>Abstract Actuator</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.actuators.AbstractActuator
+	 * @see org.eclipse.symphony.addons.actuators.AbstractActuator
 	 * @generated
 	 */
   public Adapter createAbstractActuatorAdapter()
@@ -324,13 +324,13 @@ public class EMFEcoreExampleCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.actuators.PanTiltUnit <em>Pan Tilt Unit</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.actuators.PanTiltUnit <em>Pan Tilt Unit</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.actuators.PanTiltUnit
+	 * @see org.eclipse.symphony.addons.actuators.PanTiltUnit
 	 * @generated
 	 */
   public Adapter createPanTiltUnitAdapter()

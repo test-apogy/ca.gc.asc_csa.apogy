@@ -3,15 +3,16 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.ElevationMask;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPass;
 import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
+import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +64,7 @@ public interface SatelliteConstellation extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Ground Stations</b></em>' reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation}.
+	 * The list contents are of type {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ground Stations</em>' containment reference list isn't clear,
@@ -176,7 +177,7 @@ public interface SatelliteConstellation extends EObject {
 	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
 	 * @return The list of Visibility passes, ordered by start time.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.examples.satellite.SortedSet<ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPass>" unique="false" exceptions="org.eclipse.symphony.examples.satellite.Exception" imageOrderUnique="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false"
+	 * @model dataType="org.eclipse.symphony.examples.satellite.SortedSet<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass>" unique="false" exceptions="org.eclipse.symphony.examples.satellite.Exception" imageOrderUnique="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false"
 	 * @generated
 	 */
 	SortedSet<VisibilityPass> getTargetPasses(ImageOrder imageOrder, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception;
@@ -193,7 +194,7 @@ public interface SatelliteConstellation extends EObject {
 	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
 	 * @return The list of Visibility passes, ordered by start time.
 	 * <!-- end-model-doc -->
-	 * @model dataType="org.eclipse.symphony.examples.satellite.SortedSet<ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPass>" unique="false" exceptions="org.eclipse.symphony.examples.satellite.Exception" satelliteUnique="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false"
+	 * @model dataType="org.eclipse.symphony.examples.satellite.SortedSet<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass>" unique="false" exceptions="org.eclipse.symphony.examples.satellite.Exception" satelliteUnique="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false"
 	 * @generated
 	 */
 	SortedSet<VisibilityPass> getGroundStationPasses(Satellite satellite, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception;

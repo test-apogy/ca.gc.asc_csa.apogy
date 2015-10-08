@@ -8,10 +8,11 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Export-Package: ca.gc.space.mrt.geometry.data25d,
  ca.gc.space.mrt.geometry.data25d.impl,
- ca.gc.space.mrt.geometry.data25d.util,
- ca.gc.space.mrt.geometry.data25d.validation
+ ca.gc.space.mrt.geometry.data25d.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  ca.gc.space.mrt.geometry.data;visibility:=reexport,
  ca.gc.space.mrt.geometry.data3d;visibility:=reexport

@@ -1,0 +1,43 @@
+@GenModel(prefix="InvocatorPrograms", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)", modelName="InvocatorPrograms")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.programs/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.programs.edit/src-generated")
+
+package org.eclipse.symphony.core.programs
+
+/**
+ * This class defines the main specifications of the Program runtime.  
+ * The intent is to support capabilities similar to the Debug capabilities.
+ * Specialized {@link Program} must provide its own {@link ProgramRuntime}.  
+ */
+import org.eclipse.symphony.core.invocator.Program
+import org.eclipse.symphony.core.invocator.InvocatorSession
+import org.eclipse.symphony.core.invocator.Variable
+import ca.gc.asc_csa.eclipse.emf.ecore.Exception
+import org.eclipse.symphony.core.invocator.OperationCall
+
+abstract class AbstractProgramRuntime{
+	refers Program program
+	op void resume()
+	op void suspend()
+	op void terminate()	
+	op void stepInto()
+	op void stepOver()
+	op void stepReturn()
+}
+
+/**
+ * The program runtimes must use this to interact with the EMF invocator Singleton.
+ */
+class ProgramFacade{
+	refers transient readonly volatile InvocatorSession session
+	refers transient readonly volatile Variable[0..*] variables	
+	op Object exec(OperationCall operationCall) throws Exception
+}
+
+class TimeInterval{
+	long startTime	
+	long endTime	
+ 	readonly derived long duration get{
+ 		return endTime - startTime
+ 	}
+}

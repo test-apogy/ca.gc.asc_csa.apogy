@@ -11,9 +11,9 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http:///ca/gc/space/mrt/common/model/mrt_common.ecore"
+            uri="ca.gc.space.mrt.common"
             class="ca.gc.space.mrt.common.CommonPackage"
-            genModel="model/mrt_common.genmodel"/>
+            genModel="model/mrt_common.xcore"/>
    </extension>
 
 </plugin>

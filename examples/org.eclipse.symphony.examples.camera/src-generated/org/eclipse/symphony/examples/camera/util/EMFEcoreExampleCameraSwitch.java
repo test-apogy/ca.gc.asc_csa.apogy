@@ -8,10 +8,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.addons.actuators.AbstractActuator;
+import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.examples.camera.*;
 
-import ca.gc.space.mrt.actuators.AbstractActuator;
-import ca.gc.space.mrt.actuators.PanTiltUnit;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
 import ca.gc.space.mrt.sensors.sensors.Sensor;

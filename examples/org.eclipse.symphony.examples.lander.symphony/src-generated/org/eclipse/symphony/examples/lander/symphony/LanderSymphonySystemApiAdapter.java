@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.examples.lander.symphony;
 
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 
 /**
  * <!-- begin-user-doc -->

@@ -4,8 +4,6 @@
 package org.eclipse.symphony.examples.rover.symphony.provider;
 
 
-import ca.gc.asc_csa.symphony.core.provider.SymphonyInitializationDataItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -16,6 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.rover.symphony.RoverData;
 import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage;
 

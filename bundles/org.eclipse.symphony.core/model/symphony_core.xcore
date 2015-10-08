@@ -1,0 +1,361 @@
+@GenModel(prefix="SymphonyCore", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="SymphonyCore", multipleEditorPages="false", fileExtensions="sym") 
+@GenModel(modelDirectory="/org.eclipse.symphony.core/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.edit/src-generated")
+//@GenModel(editorDirectory="/org.eclipse.symphony.core.editor/src-generated")
+//@GenModel(testsDirectory="/org.eclipse.symphony.core.tests/src-generated")
+
+package org.eclipse.symphony.core
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Described
+import ca.gc.asc_csa.eclipse.emf.ecore.Named
+import ca.gc.asc_csa.eclipse.emf.ecore.Timed
+import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource
+import ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList
+
+import org.eclipse.symphony.core.invocator.AbstractResult
+import org.eclipse.symphony.core.invocator.OperationCallResult
+import org.eclipse.symphony.core.invocator.ResultsList
+import org.eclipse.symphony.core.invocator.Environment
+import ca.gc.space.topology.Node
+import org.eclipse.symphony.core.invocator.Type
+import ca.gc.asc_csa.topology.bindings.BindingsSet
+import org.eclipse.symphony.common.math.Matrix4x4
+import ca.gc.space.topology.GroupNode
+import ca.gc.space.topology.AggregateGroupNode
+import ca.gc.space.topology.TransformNode
+import org.eclipse.symphony.core.invocator.TypeMember
+import org.eclipse.symphony.core.invocator.InvocatorSession
+import org.eclipse.symphony.core.invocator.TypeApiAdapter
+import org.eclipse.symphony.core.invocator.OperationCall
+import org.eclipse.symphony.core.invocator.AbstractType
+import org.eclipse.symphony.core.invocator.InitializationData
+import org.eclipse.symphony.core.invocator.VariableFeatureReference
+
+/* Types definitions. */
+type Map<K,V> wraps java.util.Map
+type List<T> wraps java.util.List
+type Collection<T> wraps java.util.Collection
+type Exception wraps java.lang.Exception
+
+/* -------------------------------------------------------------------------
+ * 
+ * Symphony Core Facade.
+ * 
+ * ------------------------------------------------------------------------- */ 
+class SymphonyCoreFacade
+{
+	op Matrix4x4 computeAbsolutePoseMatrix(SymphonySystem symphonySystem, Matrix4x4 relativePose)
+	op ResultNode createResultNode(PositionedResult result)		
+	op InvocatorSession createSymphonySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools)
+	
+	/*
+	 * Searches and returns the {@link SymphonySystem} instance based on the specified fullyQualifiedName.
+	 * @param environment Environment from which the search will be performed.
+	 * @param param fullyQualifiedName Fully qualified name that refers the {@link SymphonySystem} instance.
+	 * @return Reference to the {@link SymphonySystem} that matches the fully qualified name or null if not found.
+	 */
+	op SymphonySystem getSymphonySystem(Environment environment, String fullyQualifiedName)	
+	
+	/**
+	 * Loads FeatureOfInterest from file.
+	 * @param url The URL locating the file.
+	 * @return The list of loaded FeatureOfInterest.
+	 * @throws An Exception if the file could not be loaded.
+	 */
+	op List<FeatureOfInterest> loadFeatureOfInterestFromFile(String url) throws Exception
+	
+    /**
+	 * Saves a list of FeatureOfInterest to file (in CSV format).
+	 * @param path The path to the file.	
+	 * @param foiList The list of FeatureOfInterest.
+	 * @throws An Exception if the file could not be saved.
+	 */
+	op void saveFeatureOfInterestToFile(String path, List<FeatureOfInterest> foiList) throws Exception
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Symphony Environment.
+ * 
+ * ------------------------------------------------------------------------- */ 
+class SymphonyEnvironment extends Environment, Timed
+{
+	contains WorksitesList[0..1] worksitesList
+	
+	/**
+	 * The worksite currently active.
+	 */
+	refers AbstractWorksite activeWorksite
+		
+	@GenModel(children="true", notify="true", property="None")
+	refers derived transient SymphonyTopology[0..1] symphonyTopology	
+	
+	/*
+	 * The list of available time sources.
+	 */
+	contains TimeSourcesList[0..1] timeSourcesList
+	
+	/*
+	 * The time source currently providing time used to drive the environment.
+	 */
+	refers TimeSource activeTimeSource	
+}
+
+class SymphonyTopology
+{
+ 	@GenModel(children="true", notify="true", property="Readonly")
+	refers derived transient GroupNode rootNode
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Symphony System.
+ * 
+ * ------------------------------------------------------------------------- */ 
+class SymphonySystem extends Type
+{
+	@GenModel(children="true", createChild="true", property="None")
+	contains TopologyRoot topologyRoot
+	contains BindingsSet bindingSet
+	contains ConnectionPointsList [0..1] connectionPointsList opposite symphonySystem
+	contains AssemblyLinksList[0..1] assemblyLinksList
+	refers AbstractType[0..1] poseProvider
+	
+	// Used in the SymphonySystem copies only.
+	refers transient PoseProvider [0..1] poseProviderInstance	
+}
+
+class SymphonySystemApiAdapter extends TypeApiAdapter, PoseProvider
+{
+	contains PoseCorrector[0..1] poseCorrector opposite symphonySystemApiAdapter
+	op Matrix4x4 createResultMatrix(OperationCall operationCall)	
+	
+	@GenModel(children="true", createChild="false")
+	refers transient SymphonySystem [0..1] symphonySystem	
+}
+
+class ConnectionPointsList
+{
+	container SymphonySystem[1] symphonySystem opposite connectionPointsList
+	contains ConnectionPoint[0..*] connectionPoints opposite pointsList	
+}
+
+class ConnectionPoint extends Named, Described 
+{
+	container ConnectionPointsList[1] pointsList opposite connectionPoints
+	refers GroupNode node
+}
+
+class AssemblyLink extends Named, Described 
+{
+	@GenModel(documentation="The parent type member of the link.", propertyCategory="LINK_PARENT")
+	refers TypeMember [0..1] parentTypeMember
+
+	@GenModel(documentation="The destination type member of the link.", propertyCategory="LINK_CHILD")
+	refers TypeMember [1] subSystemTypeMember
+
+	@GenModel(documentation="The connection on the parent member of the link.", propertyCategory="LINK_PARENT")
+	refers ConnectionPoint [1] parentConnectionPoint
+	
+	@GenModel(documentation="The transformation to position the subSystem relative to the connection point.", propertyCategory="LINK_TOPOLOGY")
+	contains Matrix4x4 [0..1] transformationMatrix
+
+	@GenModel(documentation="Any geometry topology used to represent interface hardware. This topology will be attached to the connection point.", propertyCategory="LINK_TOPOLOGY")
+	contains Node [0..1] geometryNode
+		
+ 	@GenModel(property="Readonly", propertyCategory="LINK_PARENT")
+	refers transient SymphonySystem [0..1] parentInstance
+		
+ 	@GenModel(property="Readonly", propertyCategory="LINK_CHILD")
+	refers transient SymphonySystem [0..1] subSystemInstance	
+}
+
+class AssemblyLinksList{
+	contains AssemblyLink [0..*] assemblyLinks
+}
+
+
+/* -------------------------------------------------------------------------
+ * 
+ * Symphony System API.
+ * 
+ * ------------------------------------------------------------------------- */ 
+ 
+class PoseProvider
+{
+	contains Matrix4x4 [0..1] poseTransform 
+} 
+
+/**
+ * Class that provide an absolute pose (i.e. a transform relative to the worksite.)
+ */
+class AbsolutePoseProvider extends PoseProvider
+{
+}
+
+/*
+ * Class that provides pose correction.
+ */
+abstract class PoseCorrector
+{
+	refers SymphonySystemApiAdapter symphonySystemApiAdapter opposite poseCorrector
+	op Matrix4x4 applyCorrection(Matrix4x4 originalPose)
+	
+	/* Whether the Pose Predictor is enabled. */
+	@GenModel(notify="true", propertyCategory="SETTINGS_INFO")
+	boolean enabled = "false"
+}
+
+class SymphonyInitializationData extends InitializationData
+{
+	contains Matrix4x4 [0..1] initialPoseTransform	
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Worksites.
+ * 
+ * ------------------------------------------------------------------------- */
+
+class WorksitesList extends Named, Described
+{
+	contains AbstractWorksite[0..*] worksites opposite worksitesList
+	
+	@GenModel(children="true", notify="true", property="Editable")
+	contains OrbitModelsList[1] orbitsModels
+}
+
+abstract class AbstractWorksite extends Named, Described, Timed
+{	
+	container WorksitesList worksitesList opposite worksites
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Orbits classes
+ * 
+ * ------------------------------------------------------------------------- */
+
+class OrbitModelsList extends Named, Described
+{	
+	contains AbstractOrbitModel[0..*] orbitModels opposite orbitModelsList
+}
+
+abstract class AbstractOrbitModel extends Named, Described
+{	
+	container OrbitModelsList orbitModelsList opposite orbitModels
+	refers VariableFeatureReference variableFeatureReference
+}
+
+
+
+/* -------------------------------------------------------------------------
+ * 
+ * Positioned classes
+ * 
+ * ------------------------------------------------------------------------- */
+
+class Positioned
+{
+	@GenModel(children="true", notify="true", property="Editable", propertyCategory="POSITION_INFO")
+	contains Matrix4x4[1] pose
+}
+
+/* A feature of interest. */
+class FeatureOfInterest extends Positioned, Named, Described
+{	
+}
+
+/* List of Feature Of Interest */
+class FeatureOfInterestList extends Named, Described
+{
+	contains FeatureOfInterest[0..*] featuresOfInterest	
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Topology.
+ * 
+ * ------------------------------------------------------------------------- */
+class TopologyRoot
+{
+	contains Node originNode	
+}
+
+/* --------------------------------------------value-----------------------------
+ * 
+ * Positioned Results.
+ * 
+ * ------------------------------------------------------------------------- */ 
+ 
+class PositionedResult extends AbstractResult, Positioned
+{	
+}
+ 
+class OperationCallPositionedResult extends OperationCallResult, PositionedResult
+{	
+	/* Pose relative to the system that produced the result.*/
+	@GenModel(children="true", notify="true", property="Readonly", propertyCategory="POSITION_INFO")
+	contains Matrix4x4[1] relativePose	
+}
+
+/* Class representing a result that is no related to an ops call. */
+class UserDefinedResult extends PositionedResult, Named, Described
+{	
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Specialized Nodes.
+ * 
+ * ------------------------------------------------------------------------- */ 
+@GenModel(documentation="A specialized Topology node representing a SymphonyResult.")
+class ResultNode extends AggregateGroupNode
+{
+	@GenModel(documentation="The SymphonyResult represented by this node.")
+	refers transient PositionedResult result
+}
+
+@GenModel(documentation="A specialized Topology node representing a ResultsList.")
+class ResultsListNode extends AggregateGroupNode
+{
+	refers transient ResultsList resultsList	
+}
+
+class FeatureOfInterestNode extends TransformNode
+{
+	@GenModel(documentation="The Feature Of Interest represented by this node.")
+	refers transient FeatureOfInterest featureOfInterest
+}
+
+class FeatureOfInterestListNode extends AggregateGroupNode
+{
+	refers transient FeatureOfInterestList featureOfInterestList
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Other Generic Classes.
+ * 
+ * ------------------------------------------------------------------------- */ 
+
+/**
+ * Represent an Object for which some attrbutes needs update to be done either automatically or 
+ * manually triggered.
+ */
+abstract class Updatable
+{
+	@GenModel(documentation="Whether or not the object is busy updating.", property="Readonly", propertyCategory="UPDATABLE")
+	transient boolean updating = "false"
+	
+	@GenModel(documentation="Whether or not the object auto update is enabled.", propertyCategory="UPDATABLE")
+	boolean autoUpdateEnabled
+	
+	/**
+	 * Returns the default value of autoUpdateEnabled;
+	 */
+	op boolean getDefaultAutoUpdateEnabled()
+	
+	/** Update method. */
+	op void update() throws Exception
+}

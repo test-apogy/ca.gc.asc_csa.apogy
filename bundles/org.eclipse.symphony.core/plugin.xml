@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
+-->
+
+<plugin>
+   <extension-point id="SymphonySystemContributor" name="SymphonySystemContributor" schema="schema/SymphonySystemContributor.exsd"/>
+   <extension-point id="WorksiteProvider" name="WorksiteProvider" schema="schema/WorksiteProvider.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.asc_csa.symphony.core"
+            class="org.eclipse.symphony.core.SymphonyCorePackage"
+            genModel="model/symphony_core.xcore"/>
+   </extension>
+   <extension
+         point="org.eclipse.symphony.core.invocator.InvocatorDelegate">
+      <element
+            invocatorDelegateClass="org.eclipse.symphony.core.invocator.SymphonyInvocatorDelegate">
+      </element>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="ss"
+            class="org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorResourceFactoryImpl"/>
+   </extension>
+</plugin>

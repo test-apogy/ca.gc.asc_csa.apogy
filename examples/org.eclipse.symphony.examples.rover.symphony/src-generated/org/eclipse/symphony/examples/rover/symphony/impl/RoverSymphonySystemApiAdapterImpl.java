@@ -3,10 +3,9 @@
  */
 package org.eclipse.symphony.examples.rover.symphony.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.symphony.core.impl.SymphonySystemApiAdapterImpl;
-
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.examples.rover.Rover;
 import org.eclipse.symphony.examples.rover.symphony.RoverData;
 import org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter;

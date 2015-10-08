@@ -2,11 +2,10 @@ package org.eclipse.symphony.examples.robotic_arm.ui.converters;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.converters.IConverter;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.Variable;
 
 public class VariableToRoboticArmConverter implements IConverter
 {

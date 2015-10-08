@@ -3,22 +3,20 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.symphony.util;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.SymphonyInitializationData;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
+import org.eclipse.symphony.core.environment.ui.MapAnnotation;
+import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
+import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.InitializationData;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.examples.mobile_platform.symphony.*;
-
-import ca.gc.asc_csa.symphony.core.PoseProvider;
-import ca.gc.asc_csa.symphony.core.SymphonyInitializationData;
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
-import ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation;
-import ca.gc.asc_csa.symphony.environment.ui.MapAnnotation;
-import ca.gc.asc_csa.symphony.environment.ui.MapViewItemPresentation;
-import ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,12 +3,11 @@
  */
 package org.eclipse.symphony.examples.antenna.symphony;
 
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
 /**
  * <!-- begin-user-doc -->

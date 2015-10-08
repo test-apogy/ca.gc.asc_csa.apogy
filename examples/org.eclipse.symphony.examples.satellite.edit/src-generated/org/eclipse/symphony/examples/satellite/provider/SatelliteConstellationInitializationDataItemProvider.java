@@ -4,9 +4,6 @@
 package org.eclipse.symphony.examples.satellite.provider;
 
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.provider.AbstractInitializationDataItemProvider;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -15,6 +12,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.invocator.provider.AbstractInitializationDataItemProvider;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData;

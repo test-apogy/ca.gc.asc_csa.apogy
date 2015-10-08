@@ -6,10 +6,10 @@ package ca.gc.asc_csa.symphony.tools.camera
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference
+import org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+import org.eclipse.symphony.core.invocator.VariableFeatureReference
 import org.eclipse.symphony.common.images.AbstractEImage
-import ca.gc.asc_csa.symphony.tools.core.AbstractTool
+import org.eclipse.symphony.addons.AbstractTool
 
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot
@@ -17,7 +17,7 @@ import  ca.gc.space.mrt.sensors.imaging.AzimuthDirection
 import  ca.gc.space.mrt.sensors.imaging.ElevationDirection
 
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
-import ca.gc.asc_csa.symphony.core.AbsolutePoseProvider
+import org.eclipse.symphony.core.AbsolutePoseProvider
 
 type Color3f wraps javax.vecmath.Color3f
 type List<T> wraps java.util.List

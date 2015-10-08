@@ -9,12 +9,12 @@ import java.util.Iterator;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.ToolsList;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractToolsListContainer;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ToolsList;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfiguration;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfigurationList;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewUtilities;

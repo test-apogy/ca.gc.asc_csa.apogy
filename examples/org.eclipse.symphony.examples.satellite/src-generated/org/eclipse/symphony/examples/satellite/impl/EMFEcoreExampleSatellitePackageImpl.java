@@ -3,13 +3,6 @@
  */
 package org.eclipse.symphony.examples.satellite.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.asc_csa.symphony.environment.orbit.SymphonyOrbitEnvironmentPackage;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-
 import java.util.List;
 import java.util.SortedSet;
 
@@ -23,6 +16,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
@@ -40,6 +37,9 @@ import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
 import org.eclipse.symphony.examples.satellite.SatelliteSimulated;
 import org.eclipse.symphony.examples.satellite.SatelliteStub;
 import org.eclipse.symphony.examples.satellite.SatelliteUtils;
+
+import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 
 /**
  * <!-- begin-user-doc -->

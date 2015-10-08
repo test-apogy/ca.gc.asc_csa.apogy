@@ -23,4 +23,4 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.equinox.registry,
  ca.gc.asc_csa.eclipse.ui,
  org.eclipse.symphony.common.converters,
- ca.gc.asc_csa.eclipse.emf.ecore.invocator
+ org.eclipse.symphony.core.invocator

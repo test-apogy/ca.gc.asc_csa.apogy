@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 
 /**
  * <!-- begin-user-doc -->

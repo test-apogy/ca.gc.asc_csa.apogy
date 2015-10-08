@@ -1,0 +1,353 @@
+@GenModel(prefix="SymphonyTelecomTools",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+	      modelName="SymphonyTelecomTools",
+	      complianceLevel="6.0",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.telecoms/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.telecoms.edit/src-generated")
+
+package org.eclipse.symphony.addons.telecoms
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Named
+import org.eclipse.symphony.addons.SimpleTool
+import ca.gc.space.topology.Node
+import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer
+
+type Color3f wraps javax.vecmath.Color3f
+
+/*
+ *  The different possible states of the TelecomNode
+ */ 
+enum TelecomNodeStatus
+{
+	NOT_STARTED as "Not Started" = 0
+	NOT_ENABLED as "Not Enabled" = 1
+	UNREACHABLE as "Unreachable" = 2
+	NORMAL as "Normal" = 3
+	PACKET_LOSS_WARNING as "Warning: High Packet Loss" = 4
+	PACKET_LOSS_ALARM as "Alarm: Packet Loss Out Of Valid Range" = 5
+	LATENCY_WARNING as "Warning: High Latency" = 6
+	LATENCY_ALARM as "Alarm: Latency Out Of Valid Range" = 7
+	BOTH_WARNING as "Warning: High Latency & Packet Loss" = 8
+	BOTH_ALARM as "Alarm: Latency & Packet Loss Out Of Valid Range" = 9
+}
+
+/*
+ * A node containing all the information required to attempt communication
+ * with the desired network address, keeping track of the current latency,
+ * packet loss and overall state.
+ */
+class TelecomNode
+{
+	/*
+	 * The status monitor to which this node belongs  
+	 */	
+	container TelecomStatusMonitorTool statusMonitorTool opposite telecomNodes
+	
+	/*
+	 * Whether the network node is enabled, and thus, is actively
+	 * receiving updates.
+	 */
+	@GenModel(propertyCategory="Current Status", property="Readonly", notify="true", children="false")
+	boolean enabled = "true"
+	
+	/*
+	 * The current name of the telecom node
+	 */
+	@GenModel(propertyCategory="Connection Settings", notify="true", children="false")
+	String name = ""
+	
+	/*
+	 * The current address of the telecom node
+	 */
+	@GenModel(propertyCategory="Connection Settings", notify="true", children="false")
+	String address = "localhost"
+	
+	/*
+	 * The number of packets to send in each update requested (>= 1)
+	 */
+	@GenModel(propertyCategory="Connection Settings", notify="true", children="false")
+	int packetsToSend = "1"
+	
+	/*
+	 * The time (in ms) to wait between waiting for a response and considering
+	 * a packet lost.
+	 */
+	@GenModel(propertyCategory="Connection Settings", notify="true", children="false")
+	int connectionTimeout = "2000"
+	
+	/*
+	 * The point where packet latency (in ms) is becoming high (should be warned)
+	 */
+	@GenModel(propertyCategory="Warnings And Alarms", notify="true", children="false")
+	double latencyWarning = "500.0"
+	
+	/*
+	 * The point where packet latency (in ms) is so high as to be out of valid range (should be an alarm)
+	 */
+	@GenModel(propertyCategory="Warnings And Alarms", notify="true", children="false")
+	double latencyAlarm = "1000.0"
+	
+	/*
+	 * The point where packet loss (in %) is becoming high (should be warned)
+	 */
+	@GenModel(propertyCategory="Warnings And Alarms", notify="true", children="false")
+	double packetLossWarning = "20.0"
+	
+	/*
+	 * The point where packet loss (in %) is so high as to be out of valid range (should be an alarm)
+	 */
+	@GenModel(propertyCategory="Warnings And Alarms", notify="true", children="false")
+	double packetLossAlarm = "50.0"
+	
+	/*
+	 * The current packet latency between this computer and the target address
+	 */
+	@GenModel(propertyCategory="Current Status", property="Readonly", notify="true", children="false")
+	transient double latency = "0.0"
+	
+	/*
+	 * The current packet loss between this computer and the target address
+	 */
+	@GenModel(propertyCategory="Current Status", property="Readonly", notify="true", children="false")
+	transient double packetLoss = "0.0"
+	
+	/*
+	 * The current status of the network node, as derived from the network
+	 * node's other state.
+	 */
+	@GenModel(propertyCategory="Current Status", property="Readonly", notify="true", children="false")
+	transient volatile derived TelecomNodeStatus status get
+	{
+		if (statusMonitorTool.running == false)
+		{
+			return TelecomNodeStatus.NOT_STARTED
+		}
+		else if (enabled == false)
+		{
+			return TelecomNodeStatus.NOT_ENABLED
+		}
+		else
+		{
+			if (packetLoss >= 100.0)
+			{
+				return TelecomNodeStatus.UNREACHABLE
+			}
+			else if (latency >= 0 && latency < latencyWarning)
+			{
+				if (packetLoss < packetLossWarning)
+				{
+					return TelecomNodeStatus.NORMAL	
+				}
+				else if (packetLoss >= packetLossWarning &&
+						 packetLoss < packetLossAlarm)
+				{
+					return TelecomNodeStatus.PACKET_LOSS_WARNING
+				}
+				else
+				{
+					return TelecomNodeStatus.PACKET_LOSS_ALARM
+				}
+			}
+			else if (latency >= latencyWarning &&
+					 latency < latencyAlarm)
+			{
+				if (packetLoss < packetLossWarning)
+				{
+					return TelecomNodeStatus.LATENCY_WARNING
+				}
+				else if (packetLoss >= packetLossWarning &&
+						 packetLoss < packetLossAlarm)
+				{
+					return TelecomNodeStatus.BOTH_WARNING
+				}
+				else
+				{
+					return TelecomNodeStatus.BOTH_ALARM
+				}
+			}
+			else
+			{
+				if (packetLoss < packetLossWarning)
+				{
+					return TelecomNodeStatus.LATENCY_ALARM
+				}
+				else if (packetLoss >= packetLossWarning &&
+						 packetLoss < packetLossAlarm)
+				{
+					return TelecomNodeStatus.BOTH_ALARM
+				}
+				else
+				{
+					return TelecomNodeStatus.BOTH_ALARM
+				}
+			}
+		}
+	}
+}
+
+/*
+ * This is used to keep track of all the relevant state for 
+ * a telecom status monitor tool.
+ */
+class TelecomStatusMonitorTool
+{
+	/*
+	 * All of the telecom nodes that are associated with the
+	 * associated with this status monitor tool
+	 */
+	contains TelecomNode[0..*] telecomNodes opposite statusMonitorTool
+	
+	/*
+	 * The list of telecom status monitors to which this particular monitor belongs
+	 */
+	container TelecomStatusMonitorToolList statusMonitorToolList opposite telecomStatusMonitors
+	
+	/*
+	 * Whether or not the telecom status monitor is currently running
+	 */
+	@GenModel(property="Readonly",
+			  notify="true",
+			  children="false")
+	transient boolean running = "false"
+	
+	/*
+	 * Whether or not the telecom status monitor is currently disposed
+	 */
+	@GenModel(property="Readonly",
+			  notify="true",
+			  children="false")
+	transient boolean disposed = "false"
+	
+	/*
+	 * Operation used to start the telecom status monitor running.
+	 */
+	op void start()
+	
+	/*
+	 * Operation used to stop the telecom status monitor.
+	 */
+	op void stop()
+	
+	/*
+	 * Operation used to dispose of the telecom status monitor
+	 * when it is no longer needed
+	 */
+	op void dispose()
+}
+
+/*
+ * This is used to keep track of the list of telecom status monitor
+ * tool.
+ */
+class TelecomStatusMonitorToolList extends SimpleTool
+{
+	/*
+	 * Used to keep track of all of the telecom status monitors
+	 */
+	contains TelecomStatusMonitorTool[0..*] telecomStatusMonitors opposite statusMonitorToolList 
+}
+
+/*
+ * Abstract class defining a antenna radiation pattern, which is the directional (angular) dependence of 
+ * the strength of the radio waves from the antenna or other source.
+ */
+abstract class AbstractAntennaRadiationPattern extends Node, Named
+{
+	/*
+	 * Returns the gain of the antenna in the direction specified by a vector.
+	 * @param theta The angle between the z axis and the direction vector, in radians.
+	 * @param phi The angle between the x axis and the projection of the point in the x-y plane, in radians
+	 * @return The gain, in dBi (decibels isotropic or dBi) associated with the radiation pattern in the specified direction.
+	 */
+	@GenModel(csa_units="dB")
+	op double computeGain(@GenModel(csa_units="rad") double theta, @GenModel(csa_units="rad") double phi)
+}
+
+/*
+ * Class that represent a theoretical antenna that acts as a point source of electromagnetic waves which radiates 
+ * the same intensity of radiation in all directions.
+ */
+class IsotropicAntenna extends AbstractAntennaRadiationPattern
+{	
+}
+
+/*
+ * Simple dipole antenna. The antenna axis is along the z-axis.
+ */
+class DipoleAntennaRadiationPattern extends AbstractAntennaRadiationPattern
+{
+}
+
+/*
+ * Simple half-wave dipole antenna. The antenna axis is along the z-axis.
+ */
+class HalfWaveDipoleAntennaRadiationPattern extends AbstractAntennaRadiationPattern
+{	
+}
+
+/*
+ * A simple radiation pattern defined as a rectangular frustum. Outside the frustum, gain is null.
+ */
+class SimpleConicalRadiationPattern extends AbstractAntennaRadiationPattern
+{
+	/*
+	 * The apex angle of the cone. The cone is pointing toward +Z.
+	 */
+	@GenModel(csa_units="rad")
+	double apexAngle = "0.79"
+}
+
+/*
+ * A simple radiation pattern defined as a rectangular frustum. Outside the frustum, gain is null.
+ */
+class SimpleRectangularFrustumRadiationPattern extends AbstractAntennaRadiationPattern
+{
+	/*
+	 * Horizontal field of view angle.
+	 */
+	@GenModel(csa_units="rad")
+	double horizontalFieldOfView = "0.79"
+	
+	/*
+	 * Vertical field of view angle.
+	 */
+	@GenModel(csa_units="rad")
+	double verticalFieldOfView = "1.57"
+}
+
+/*
+ * Defines an antenna radiation pattern which actually pattern data is found in a URL.
+ */
+class URlBasedAntennaRadiationPattern extends AbstractAntennaRadiationPattern
+{
+	/*
+	 * The URL to the file containing the radiation pattern data.
+	 */
+	@GenModel(propertyCategory="URL")
+	String url
+}
+
+class AntennaRadiationPatternImageMapLayer extends LineOfSightImageMapLayer
+{
+	@GenModel(property="Editable", propertyCategory="ANTENNA")
+	contains AbstractAntennaRadiationPattern antennaRadiationPattern
+	
+	/*
+	 * Cutoff signal strength under which no signal is usuable.
+	 */
+	@GenModel(property="Editable", propertyCategory="CUTOFF_SETTINGS", csa_units="dB")
+	double signalStrengthCutoff = "-100.0"
+	
+	/*
+	 * Color to use to mark line of sigh is available.
+	 */
+	@GenModel(property="Editable", propertyCategory="CUTOFF_SETTINGS")
+	Color3f bellowCutoffColor
+	
+	
+}
+

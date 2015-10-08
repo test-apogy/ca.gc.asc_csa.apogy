@@ -5,8 +5,8 @@ package org.eclipse.symphony.examples.robotic_arm.symphony;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 
 /**
  * <!-- begin-user-doc -->

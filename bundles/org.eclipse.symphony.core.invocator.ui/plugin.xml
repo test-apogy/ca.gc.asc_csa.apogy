@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+
+      <command
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesResetCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesResetCommand"
+            name="ResetVariableInstancesCommand">
+      </command>
+      
+      <command
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesClearCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesClearCommand"
+            name="ResetVariableInstancesCommand">
+      </command>      
+      <command
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.ExecuteOperationCallCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.ExecuteOperationCallCommand"
+            name="ExecuteOperationCallCommand">
+      </command>
+      
+      <command
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+            name="VariableInstancesApplyInitializationDataCommand">
+      </command>
+
+      <command
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+            name="VariableInstancesCollectInitializationDataCommand">
+      </command>      
+      
+      <command
+            defaultHandler="org.eclipse.symphony.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+            id="org.eclipse.symphony.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+            name="SetActiveInvocatorSessionCommand">
+      </command>            
+      
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+
+         <command
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesResetCommand"
+               label="Reset Instances"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.core.invocator.Environment">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         
+         <command
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.SetActiveInvocatorSessionCommand"
+               label="Set As Active Session"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.core.invocator.InvocatorSession">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>         
+
+         <command
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesClearCommand"
+               label="Clear Instances"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.core.invocator.Environment">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+
+         <command
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesApplyInitializationDataCommand"
+               label="Apply Data"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.core.invocator.Environment">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+
+         <command
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesCollectInitializationDataCommand"
+               label="Collect Data"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.core.invocator.Environment">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+
+
+         <command
+               commandId="org.eclipse.symphony.core.invocator.ui.commands.ExecuteOperationCallCommand"
+               label="Invoke"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <with
+                    variable="activeMenuSelection">
+                 <or>
+                    <and>
+                       <count value="1"/>
+                       <iterate
+                          ifEmpty="false"
+                          operator="or">
+                            <instanceof
+                                value="org.eclipse.symphony.core.invocator.OperationCall">
+                            </instanceof>
+                       </iterate>
+                    </and>
+                    <and>
+                       <count value="1"/>
+                       <iterate
+                          ifEmpty="false"
+                          operator="or">
+                            <instanceof
+                                value="org.eclipse.symphony.core.invocator.OperationCallsList">
+                            </instanceof>
+                       </iterate>
+                    </and>
+                 </or>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            adaptable="true"
+            class="org.eclipse.symphony.core.invocator.ui.decorators.OperationCallResultDecorator"
+            id="org.eclipse.symphony.core.invocator.ui.decorator1"
+            label="Operation CallResult Decorator"
+            lightweight="true"
+            location="TOP_LEFT"
+            state="true">
+         <enablement>
+            <objectClass
+                  name="org.eclipse.symphony.core.invocator.OperationCallResult">
+            </objectClass>
+         </enablement>
+      </decorator>
+      
+      <decorator
+            adaptable="true"
+            class="org.eclipse.symphony.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
+            icon="icons/ovr/active_session_7x8.gif"
+            id="org.eclipse.symphony.core.invocator.ui.decorators.ActiveInvocatorSessionDecorator"
+            label="Active Session Decorator"
+            lightweight="true"
+            location="TOP_LEFT"
+            state="true">
+         <enablement>
+            <or>
+               <objectClass
+                     name="org.eclipse.symphony.core.invocator.InvocatorSession">
+               </objectClass>
+               <objectClass
+                     name="org.eclipse.core.resources.IResource">
+               </objectClass>
+               <objectClass
+                     name="org.eclipse.emf.ecore.resource.Resource">
+               </objectClass>
+            </or>
+         </enablement>
+      </decorator>
+      
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="ca.gc.asc_csa.eclipse.ui.category"
+            class="org.eclipse.symphony.core.invocator.ui.views.OperationCallView"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/OperationCall.gif"
+            id="org.eclipse.symphony.core.invocator.ui.views.OperationCallView"
+            name="Operation Call"
+            restorable="true">
+      </view>
+      
+      <view
+            category="ca.gc.asc_csa.eclipse.ui.category"
+            class="org.eclipse.symphony.core.invocator.ui.views.ContextsDefinitionView"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/ContextsList.gif"
+            id="org.eclipse.symphony.core.invocator.ui.views.ContextsDefinitionView"
+            name="Contexts"
+            restorable="true">
+      </view>      
+      
+      <view
+            category="ca.gc.asc_csa.eclipse.ui.category"
+            class="org.eclipse.symphony.core.invocator.ui.views.DocumentationView"
+            id="org.eclipse.symphony.core.invocator.ui.views.DocumentationView"
+            name="Documentation"
+            restorable="true">
+      </view>      
+      
+      <view
+            category="ca.gc.asc_csa.eclipse.ui.category"
+            class="org.eclipse.symphony.core.invocator.ui.views.InstanceView"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/Instance.gif"
+            id="org.eclipse.symphony.core.invocator.ui.views.InstanceView"
+            name="Instance"
+            restorable="true">
+      </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertySection
+               afterSection="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.sections.NamedSection"
+               class="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               id="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               tab="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.tabs.General">
+            <input
+                  type="org.eclipse.symphony.core.invocator.VariableFeatureReference">
+            </input>
+         </propertySection>
+         
+         <propertySection
+               afterSection="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
+               class="org.eclipse.symphony.core.invocator.ui.properties.sections.OperationCallSection"
+               id="org.eclipse.symphony.core.invocator.ui.properties.sections.OperationCallSection"
+               tab="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.tabs.General">
+            <input
+                  type="org.eclipse.symphony.core.invocator.OperationCall">
+            </input>
+         </propertySection>
+                  
+         <propertySection
+               class="org.eclipse.symphony.core.invocator.ui.properties.sections.ContextsDefinitionSection"
+               id="org.eclipse.symphony.core.invocator.ui.properties.sections.ContextsDefinitionSection"
+               tab="org.eclipse.symphony.core.invocator.ui.propertyTabs.Contexts">
+            <input
+                  type="org.eclipse.symphony.core.invocator.Environment">
+            </input>
+            <input
+                  type="org.eclipse.symphony.core.invocator.ContextsList">
+            </input>
+         </propertySection>
+         
+         <propertySection
+               class="org.eclipse.symphony.core.invocator.ui.properties.sections.DocumentationSection"
+               id="org.eclipse.symphony.core.invocator.ui.properties.sections.DocumentationSection"
+               tab="org.eclipse.symphony.core.invocator.ui.propertyTabs.Documentation">
+            <input
+                  type="org.eclipse.symphony.core.invocator.AbstractTypeImplementation">
+            </input>
+            <input
+                  type="org.eclipse.symphony.core.invocator.Variable">
+            </input>
+            <input
+                  type="org.eclipse.symphony.core.invocator.Type">
+            </input>
+            <input
+                  type="org.eclipse.symphony.core.invocator.TypeMember">
+            </input>
+         </propertySection>    
+      </propertySections>
+	</extension>
+
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
+               id="org.eclipse.symphony.core.invocator.ui.properties.tabs.ResultImage"
+               label="Image">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+         
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
+               id="org.eclipse.symphony.core.invocator.ui.propertyTabs.Contexts"
+               label="Contexts">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
+               id="org.eclipse.symphony.core.invocator.ui.propertyTabs.Documentation"
+               label="Documentation">
+         </propertyTab>
+      </propertyTabs>
+   </extension>   
+   
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="ca.gc.asc_csa.symphony.core.ui"
+            name="Symphony">
+      </category>
+      <wizard
+            category="ca.gc.asc_csa.symphony.core.ui"
+            class="org.eclipse.symphony.core.invocator.ui.wizards.NewOperationCallWizard"
+            icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/OperationCall.gif"
+            id="org.eclipse.symphony.core.invocator.ui.wizards.NewOperationCallWizard"
+            name="New Operation Call"
+            project="false">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.symphony.common.converters">
+      <new_element
+            Class="org.eclipse.symphony.core.invocator.ui.converters.AbstractResultToReferenceResultValue">
+      </new_element>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <category
+            id="ca.gc.asc_csa.symphony.core.ui"
+            name="Symphony">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <category
+            id="ca.gc.asc_csa.symphony.core.ui"
+            name="Symphony">
+      </category>
+      <wizard
+            category="ca.gc.asc_csa.symphony.core.ui"
+            class="org.eclipse.symphony.core.invocator.ui.wizards.CopyInitializationDataWizard"
+            icon="icons/symphony_logo_16x16.gif"
+            id="org.eclipse.symphony.core.invocator.ui.wizards.CopyInitializationDataWizard"
+            name="Symphony Initialization Data">
+         <description>
+            This wizard allows to copy Symphony Initialization Data from a Symphony context to another Symphony context.
+         </description>
+      </wizard>
+   </extension>   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated eclipse_emf_ecore_invocator_ui -->
+      <package
+            uri="org.eclipse.symphony.core.invocator.ui"
+            class="org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUiPackage"
+            genModel="model/eclipse_emf_ecore_invocator_ui.xcore"/>
+   </extension>
+
+</plugin>

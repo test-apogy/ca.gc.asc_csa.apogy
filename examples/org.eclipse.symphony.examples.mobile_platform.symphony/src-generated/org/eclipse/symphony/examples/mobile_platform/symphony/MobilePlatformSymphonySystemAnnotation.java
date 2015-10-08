@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.symphony;
 
-import ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation;
+import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
 
 /**
  * <!-- begin-user-doc -->

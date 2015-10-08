@@ -7,7 +7,6 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-
 import ca.gc.space.mrt.geometry.data25d.ui.Data25DUIPackage;
 import ca.gc.space.mrt.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
 import ca.gc.space.topology.ui.NodePresentation;

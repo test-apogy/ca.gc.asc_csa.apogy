@@ -3,13 +3,12 @@
  */
 package org.eclipse.symphony.examples.lander.symphony.impl;
 
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
 import org.eclipse.symphony.examples.lander.symphony.LanderData;
 import org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter;

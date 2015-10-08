@@ -14,7 +14,7 @@ import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera
 import ca.gc.space.mrt.sensors.imaging.Zoomable
 
-import ca.gc.space.mrt.actuators.PanTiltUnit
+import org.eclipse.symphony.addons.actuators.PanTiltUnit
 
 type Throwable wraps java.lang.Throwable
 

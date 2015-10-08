@@ -1,8 +1,8 @@
 package ca.gc.space.mrt.sensors.imaging.ui.converters;
 
 import org.eclipse.symphony.common.converters.IConverter;
+import org.eclipse.symphony.core.invocator.ReferenceResultValue;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.ReferenceResultValue;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 
 public class ReferenceResultValueToImageSnapshotConverter implements IConverter {

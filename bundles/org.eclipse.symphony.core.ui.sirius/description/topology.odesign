@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="symphony_core_ui_sirius" version="8.1.0">
+  <ownedViewpoints name="Topology" modelFileExtension="ss">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="org.eclipse.symphony.core.ui.sirius.diagrams.topology" label="Topology" domainClass="SymphonySystem">
+      <metamodel href="http:///ca/gc/space/topology.ecore#/"/>
+      <metamodel href="org.eclipse.symphony.core#/"/>
+      <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#/"/>
+      <metamodel href="http://www.eclipse.org/sirius/1.1.0#/"/>
+      <metamodel href="http:///ca/gc/space/mrt/sensors/fov/model/fov.ecore#/"/>
+      <metamodel href="ca.gc.asc_csa.symphony.tools.vehicle#/"/>
+      <defaultLayer name="org.eclipse.symphony.core.ui.sirius.topology.layers.default" label="Topology">
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.transform_node" label="Transform Node" preconditionExpression="[self.oclIsTypeOf(TransformNode) = true/]" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node']" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.TransformNode">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Transform Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(GroupNode).children->size().toString()).concat(')') /]" sizeComputationExpression="0" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.position_node" label="Position Node" preconditionExpression="[self.oclIsTypeOf(PositionNode) = true/]" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node']" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.PositionNode">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Position Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(PositionNode).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.rotation_node" label="Rotation Node" preconditionExpression="[self.oclIsTypeOf(RotationNode) = true/]" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node']" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.RotationNode">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Rotation Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(RotationNode).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.group_node" label="Group Node" preconditionExpression="[self.oclIsTypeOf(TransformNode) = false and self.oclIsTypeOf(PositionNode) = false and self.oclIsTypeOf(RotationNode) = false and self.oclIsTypeOf(URLNode) = false and self.oclIsTypeOf(PickAndPlaceNode) = false and self.oclIsTypeOf(AggregateGroupNode) = false and self.oclIsTypeOf(Wheel) = false and self.oclIsTypeOf(LanderSphericalFoot) = false/]" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node']" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.GroupNode">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Group Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(GroupNode).children->size().toString()).concat(')') /]" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.url_node" label="URL Node" preconditionExpression="[self.oclIsTypeOf(URLNode) = true/]" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node']" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.URLNode">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['URL Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.node" label="Topology Node" preconditionExpression="[self.oclIsKindOf(GroupNode) = false and self.oclIsTypeOf(URLNode) = false and self.oclIsTypeOf(CircularSectorFieldOfView) = false and self.oclIsTypeOf(ConicalFieldOfView) = false and self.oclIsTypeOf(RectangularFrustrumFieldOfView) = false and self.oclIsTypeOf(Thruster) = false/]" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node']" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.Node">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.topology_root" label="Topology Root" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.delete_root_topology_node']" domainClass="core.TopologyRoot">
+          <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelExpression="['Topology Root'/]" tooltipExpression="['Topology Root'/]" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.pick_and_place" label="Pick &amp; Place Node" preconditionExpression="[self.oclIsTypeOf(PickAndPlaceNode) = true/]" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node']" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.PickAndPlaceNode">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Pick &amp; Place Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(PickAndPlaceNode).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.aggregate_group" label="Aggregate Group Node" preconditionExpression="[self.oclIsTypeOf(AggregateGroupNode) = true/]" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.AggregateGroupNode">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Aggregate Group Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(AggregateGroupNode).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.circular_fov" label="Circular Sector FOV Node" preconditionExpression="[self.oclIsTypeOf(CircularSectorFieldOfView) = true/]" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="fov.CircularSectorFieldOfView">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Circular Sector FOV Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.conical_fov" label="Conical FOV Node" preconditionExpression="[self.oclIsTypeOf(ConicalFieldOfView) = true/]" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="fov.ConicalFieldOfView">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Conical FOV Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.rectangular_fov" label="Rectangular Frustrum FOV Node" preconditionExpression="[self.oclIsTypeOf(RectangularFrustrumFieldOfView) = true/]" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="fov.RectangularFrustrumFieldOfView">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Rectangular Frustrum FOV Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.nodes.thruster" label="Thruster Node" preconditionExpression="[self.oclIsTypeOf(Thruster) = true/]" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="vehicle.Thruster">
+          <style xsi:type="style:SquareDescription" labelExpression="feature:nodeId" tooltipExpression="['Thruster Node '.concat(self.nodeId)/]" sizeComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.wheel" label="Wheel Node" preconditionExpression="[self.oclIsTypeOf(Wheel) = true/]" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="vehicle.Wheel">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Wheel Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(Wheell).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.lander_spherical_foot" label="Lander Spherical Foot Node" domainClass="vehicle.LanderSphericalFoot">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Lander Spherical Foot Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(LanderSphericalFoot).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="org.eclipse.symphony.core.ui.sirius.topology.edges.parent_edge" label="Topology Edge" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.delete.topology_edges']" sourceMapping="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.position_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.rotation_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.transform_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.group_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.url_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.pick_and_place'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.aggregate_group'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.circular_fov'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.conical_fov'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.rectangular_fov'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.nodes.thruster'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.wheel'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.lander_spherical_foot']" targetMapping="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.position_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.rotation_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.transform_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.group_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.url_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.pick_and_place'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.aggregate_group'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.circular_fov'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.conical_fov'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.rectangular_fov'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.nodes.thruster'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.wheel'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.lander_spherical_foot']" targetFinderExpression="feature:parent" reconnections="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.reconnect_target_edge'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.reconnect_source_edge']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="org.eclipse.symphony.core.ui.sirius.edges.topology_root" label="Topology Root Edge" preconditionExpression="[target.oclAsType(TopologyRoot).originNode = source/]" sourceMapping="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.group_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.position_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.rotation_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.transform_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.url_node'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.pick_and_place'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.aggregate_group'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.circular_fov'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.conical_fov'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.rectangular_fov']" targetMapping="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.topology_root']" targetFinderExpression="[TopologyRoot.allInstances()->select(t : TopologyRoot | t.originNode = self)/]" reconnections="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.reconnect_target_root_edge'] //@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.reconnect_source_root_edge']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="org.eclipse.symphony.core.ui.sirius.topology.sections.create_group_nodes" label="Create Group Nodes">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.aggregate_group" label="Create Aggregate Group Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.pick_and_place']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="children" variableName="newInst">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((PickAndPlaceNode.allInstances()->size() - 1).toString())/]"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:For" expression="[TransformNode.allInstances()/]" iteratorName="node">
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[node/]">
+                                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.transform" label="Create Transform Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.transform_node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.TransformNode" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_TRANSFORM_NODE_'.concat((TransformNode.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.TransformNode" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_TRANSFORM_NODE_'.concat((TransformNode.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.TransformNode" referenceName="children" variableName="newInst">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_TRANSFORM_NODE_'.concat((TransformNode.allInstances()->size() - 1).toString())/]"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:For" expression="[TransformNode.allInstances()/]" iteratorName="node">
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[node/]">
+                                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.position" label="Create Position Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.position_node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.PositionNode" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_POSITION_NODE_'.concat((PositionNode.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.PositionNode" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_POSITION_NODE_'.concat((PositionNode.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.PositionNode" referenceName="children" variableName="newInst">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_POSITION_NODE_'.concat((PositionNode.allInstances()->size() - 1).toString())/]"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:For" expression="[TransformNode.allInstances()/]" iteratorName="node">
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[node/]">
+                                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.rotation" label="Create Rotation Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.rotation_node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.RotationNode" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_ROTATION_NODE_'.concat((RotationNode.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.RotationNode" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_ROTATION_NODE_'.concat((RotationNode.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.RotationNode" referenceName="children" variableName="newInst">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_ROTATION_NODE_'.concat((RotationNode.allInstances()->size() - 1).toString())/]"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:For" expression="[TransformNode.allInstances()/]" iteratorName="node">
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[node/]">
+                                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.pick_and_place" label="Create Pick &amp; Place Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.pick_and_place']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.PickAndPlaceNode" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_PICK_AND_PLACE_NODE_'.concat((PickAndPlaceNode.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.PickAndPlaceNode" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_PICK_AND_PLACE_NODE_'.concat((PickAndPlaceNode.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.PickAndPlaceNode" referenceName="children" variableName="newInst">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_PICK_AND_PLACE_NODE_'.concat((PickAndPlaceNode.allInstances()->size() - 1).toString())/]"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:For" expression="[TransformNode.allInstances()/]" iteratorName="node">
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[node/]">
+                                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="org.eclipse.symphony.core.ui.sirius.topology.section.create_leaf_nodes" label="Create Leaf Nodes">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.url" label="Create URL Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.url_node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.URLNode" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_URL_NODE_'.concat((URLNode.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.URLNode" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_URL_NODE_'.concat((URLNode.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.URLNode" referenceName="children" variableName="newInst">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_URL_NODE_'.concat((URLNode.allInstances()->size() - 1).toString())/]"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:For" expression="[TransformNode.allInstances()/]" iteratorName="node">
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[node/]">
+                                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.circular_fov" label="Create Circular Sector FOV Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.circular_fov']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.CircularSectorFieldOfView" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_CIRCULAR_SECTOR_FOV_NODE_'.concat((CircularSectorFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.CircularSectorFieldOfView" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_CIRCULAR_SECTOR_FOV_NODE_'.concat((CircularSectorFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.CircularSectorFieldOfView" referenceName="children" variableName="newInst">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_CIRCULAR_SECTOR_FOV_NODE_'.concat((CircularSectorFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:For" expression="[TransformNode.allInstances()/]" iteratorName="node">
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[node/]">
+                                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.conical_fov" label="Create Conical FOV Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.conical_fov']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.ConicalFieldOfView" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_CONICAL_FOV_NODE_'.concat((ConicalFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.ConicalFieldOfView" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_CONICAL_FOV_NODE_'.concat((ConicalFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.ConicalFieldOfView" referenceName="children" variableName="newInst">
+                                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_CONICAL_FOV_NODE_'.concat((ConicalFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                                </subModelOperations>
+                                <subModelOperations xsi:type="tool_1:For" expression="[TransformNode.allInstances()/]" iteratorName="node">
+                                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[node/]">
+                                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                                  </subModelOperations>
+                                </subModelOperations>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.rectangular_fov" label="Create Rectangular Frustrum FOV Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.rectangular_fov']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.RectangularFrustrumFieldOfView" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_RECTANGULAR_FRUSTRUM_FOV_NODE_'.concat((RectangularFrustrumFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.RectangularFrustrumFieldOfView" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_RECTANGULAR_FRUSTRUM_FOV_NODE_'.concat((RectangularFrustrumFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fov.RectangularFrustrumFieldOfView" referenceName="children" variableName="newInst">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_RECTANGULAR_FRUSTRUM_FOV_NODE_'.concat((RectangularFrustrumFieldOfView.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.create_node.thruster" label="Create Thruster Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.nodes.thruster']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="vehicle.Thruster" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_THRUSTER_NODE_'.concat((Thruster.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="vehicle.Thruster" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_THRUSTER_NODE_'.concat((Thruster.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="vehicle.Thruster" referenceName="children" variableName="newInst">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_THRUSTER_NODE_'.concat((Thruster.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.topology.tools.create_node.wheel" label="Create Wheel Node" nodeMappings="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.topology.nodes.wheel']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[container.oclIsTypeOf(SymphonySystem) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container.oclAsType(SymphonySystem).topologyRoot.oclAsType(TopologyRoot)/]">
+                    <subModelOperations xsi:type="tool_1:Switch">
+                      <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode = null/]">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="vehicle.Wheel" referenceName="originNode">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_Wheel_NODE_'.concat((Wheel.allInstances()->size() - 1).toString())/]"/>
+                        </subModelOperations>
+                      </cases>
+                      <default>
+                        <subModelOperations xsi:type="tool_1:Switch">
+                          <cases conditionExpression="[self.oclAsType(TopologyRoot).originNode.oclIsKindOf(GroupNode) = true/]">
+                            <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(TopologyRoot).originNode.oclAsType(GroupNode)/]">
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="vehicle.Wheel" referenceName="children">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_WHEEL_NODE_'.concat((Wheel.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </cases>
+                          <default>
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="containerView" valueExpression="[self.oclAsType(TopologyRoot).originNode/]"/>
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="topology.AggregateGroupNode" referenceName="originNode" variableName="newOrigin">
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_AGGREGATE_GROUP_NODE_'.concat((AggregateGroupNode.allInstances()->size() - 1).toString())/]"/>
+                              <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Set {containerView})/]"/>
+                              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="vehicle.Wheel" referenceName="children" variableName="newInst">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="['NEW_WHEEL_NODE_'.concat((Wheel.allInstances()->size() - 1).toString())/]"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </default>
+                        </subModelOperations>
+                      </default>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="org.eclipse.symphony.core.ui.sirius.sections.background_tools" label="Background Tools">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node" label="Delete Topology Node">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.oclAsType(Node).parent &lt;> null/]">
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.oclIsKindOf(GroupNode) = true/]">
+                    <subModelOperations xsi:type="tool_1:For" expression="[Node.allInstances()->select(n : Node | n.parent = self)/]" iteratorName="child">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element.oclAsType(GroupNode).parent/]">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Sequence{child})/]"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[child.oclAsType(Node)/]">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="[element.oclAsType(Node).parent/]"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element.oclAsType(Node).parent/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->select(n : Node | n &lt;> element)/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="org.eclipse.symphony.core.ui.sirius.tools.reconnect_source_edge" label="Reconnect Source Edge" precondition="[false/]" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="org.eclipse.symphony.core.ui.sirius.tools.reconnect_target_edge" label="Reconnect Target Edge">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[source &lt;> element and target &lt;> element and target.oclIsKindOf(GroupNode) = true/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[self.oclAsType(GroupNode).children->addAll(Sequence{element})/]"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="children" valueExpression="[source.oclAsType(GroupNode).children->select(n : Node | n &lt;> element)/]"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="parent" valueExpression="[target.oclAsType(Node)/]"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="org.eclipse.symphony.core.ui.sirius.tools.delete_root_topology_node" label="Delete Root Topology Node" precondition="[false/]">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="org.eclipse.symphony.core.ui.sirius.tools.reconnect_target_root_edge" label="Reconnect Target Root Edge" precondition="[false/]">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="org.eclipse.symphony.core.ui.sirius.tools.reconnect_source_root_edge" label="Reconnect Source Root Edge" precondition="[self.parent = null/]" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[TopologyRoot.allInstances()->asSequence()->at(0)/]">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="originNode" valueExpression="[target/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id" label="Edit Node Id" inputLabelExpression="[view.target.oclAsType(Node).nodeId.toString()/]">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(Node)/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="nodeId" valueExpression="[arg0/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="org.eclipse.symphony.core.ui.sirius.topology.delete.topology_edges" label="Delete Topology Edges">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="[elementView.oclAsType(DEdge).targetNode.oclAsType(DNode).target.oclIsTypeOf(TopologyRoot) = false/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[element/]">
+                    <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

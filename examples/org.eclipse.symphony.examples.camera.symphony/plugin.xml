@@ -15,20 +15,20 @@
             genModel="model/symphony_examples_camera_symphony.xcore"/>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">
+         point="org.eclipse.symphony.core.invocator.TypeContributor">
       <Type
             URI="model/CameraSymphonySystem.ss">
       </Type>
    </extension>
    
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">
+         point="org.eclipse.symphony.core.invocator.TypeContributor">
       <Type
             URI="model/PTUCameraSymphonySystem.ss">
       </Type>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.SessionProvider">
+         point="org.eclipse.symphony.core.invocator.SessionProvider">
       <SessionProvider
             Description="Session showing the use of the Camera example system."
             Name="Camera Example"
@@ -36,7 +36,7 @@
       </SessionProvider>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.SessionProvider">
+         point="org.eclipse.symphony.core.invocator.SessionProvider">
       <SessionProvider
             Description="Session showing the use of the PTU Camera example system."
             Name="PTU Camera Example"

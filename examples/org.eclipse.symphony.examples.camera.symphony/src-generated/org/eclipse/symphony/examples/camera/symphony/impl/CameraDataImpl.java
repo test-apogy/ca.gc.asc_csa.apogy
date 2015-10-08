@@ -8,10 +8,10 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
 import org.eclipse.symphony.examples.camera.symphony.CameraData;
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
 
-import ca.gc.asc_csa.symphony.core.impl.SymphonyInitializationDataImpl;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**

@@ -4,7 +4,7 @@
 package org.eclipse.symphony.examples.antenna.provider;
 
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
-import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
+import ca.gc.space.mrt.geometry.data.provider.DataEditPlugin;
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
@@ -47,7 +47,7 @@ public final class EMFEcoreExampleAntennaEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     GeometrydataEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,

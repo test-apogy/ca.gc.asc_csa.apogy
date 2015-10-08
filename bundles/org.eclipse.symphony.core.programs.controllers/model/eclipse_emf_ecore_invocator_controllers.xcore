@@ -1,0 +1,231 @@
+@GenModel(prefix="EMFEcoreControllers", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)", modelName="EMFEcoreControllers", suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.programs.controllers/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.programs.controllers.edit/src-generated")
+// @GenModel(editorDirectory="/org.eclipse.symphony.core.programs.controllers.editor/src")
+
+package org.eclipse.symphony.core.programs.controllers
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Described
+import ca.gc.asc_csa.eclipse.emf.ecore.Named
+
+import org.eclipse.symphony.core.invocator.Argument
+import org.eclipse.symphony.core.invocator.EDataTypeArgument
+import org.eclipse.symphony.core.invocator.OperationCall
+import org.eclipse.symphony.core.invocator.OperationCallContainer
+import org.eclipse.symphony.core.invocator.Program
+import org.eclipse.symphony.common.io.jinput.EComponent
+import org.eclipse.symphony.common.io.jinput.EComponentQualifier
+import org.eclipse.emf.ecore.EParameter
+
+/* -------------------------------------------------------------------------
+ * 
+ * DataTypes.
+ * 
+ * ------------------------------------------------------------------------- */ 
+ 
+ 
+type List<T> wraps java.util.List
+type TreeSet<T> wraps java.util.TreeSet
+ 
+
+/* -------------------------------------------------------------------------
+ * 
+ * Utilities
+ * 
+ * ------------------------------------------------------------------------- */
+
+class ControllerFacade
+{
+	op Object createValue(EParameter eParameter, float value)	
+	
+	op TreeSet<CustomInputConditioningPoint> sortCustomInputConditioningPoint(List<CustomInputConditioningPoint> points)
+	
+	op CustomInputConditioningPoint createCustomInputConditioningPoint(double inputValue, double outputValue)
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * ControllersConfiguration
+ * 
+ * ------------------------------------------------------------------------- */
+
+
+class ControllersConfiguration extends Program, OperationCallContainer 
+{	
+	transient boolean active = "false"
+}
+
+
+class OperationCallControllerBinding extends OperationCall
+{
+ 	@GenModel(documentation= "Whether or not to generate a result when binding is called.", notify="true")
+	boolean createResult = "false"
+	
+ 	@GenModel(property="Readonly")
+	transient boolean active
+	
+	contains Trigger[1] trigger opposite operationCallControllerBinding
+	
+	op void update()
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Trigger : Defines a trigger that invokes a OperationControllerBinding 
+ * update.
+ * 
+ * ------------------------------------------------------------------------- */
+
+abstract class Trigger extends Named, Described
+{	
+ 	@GenModel(property="None")
+	refers OperationCallControllerBinding operationCallControllerBinding opposite trigger
+}
+
+class TimeTrigger extends Trigger
+{
+	// The refresh period, in millisecond, at which the operation should be called.
+	@GenModel(notify="true", csa_units="ms")
+	long refreshPeriod = "100"
+}
+
+abstract class ControllerTrigger extends Trigger
+{
+	@GenModel(notify="true")
+	contains EComponentQualifier componentQualifier
+}
+
+class ControllerEdgeTrigger extends ControllerTrigger
+{
+	EdgeType edgeType
+}
+
+class ControllerStateTrigger extends ControllerTrigger
+{
+	// The value of controller input that will enable the binding.
+	boolean enablingValue = "true"
+	
+	// The repeat period, in millisecond, at which the operation should be called.
+	@GenModel(notify="true", csa_units="ms")
+	long repeatPeriod = "100"
+	
+}
+
+
+enum EdgeType
+{
+	RISING as "Rising" = 0,
+	FALLING as "Falling" = 1,
+	BOTH as "Both" = 2
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Value Source
+ * 
+ * ------------------------------------------------------------------------- */
+
+class BindedEDataTypeArgument extends Argument
+{		
+ 	@GenModel(notify="true", property="None")
+	contains ValueSource valueSource opposite bindedEDataTypeArgument
+}
+
+abstract class ValueSource
+{	
+ 	@GenModel(property="None")
+	refers BindedEDataTypeArgument bindedEDataTypeArgument opposite valueSource 
+	
+	op Object getSourceValue()
+}
+
+class FixedValueSource extends EDataTypeArgument, ValueSource
+{	
+}
+
+class ToggleValueSource extends ValueSource
+{
+	@Ecore(defaultValueLiteral="true",  notify="true")
+	boolean initialValue
+	
+	@GenModel( notify="true", property="Readonly")
+	boolean currentValue
+}
+
+class ControllerValueSource extends ValueSource
+{
+	@GenModel(property="None", notify="true", resolveProxies = "false")
+	refers transient derived EComponent[0..1] component
+	
+	@GenModel(notify="true")
+	contains EComponentQualifier eComponentQualifier
+	
+	@GenModel(children="true")
+	contains AbstractInputConditioning[0..1] conditioning
+	
+	@GenModel(property="Readonly")
+	Object lastValue
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Input Conditioning
+ * 
+ * ------------------------------------------------------------------------- */
+
+abstract class AbstractInputConditioning
+{		
+	// Condition the value of the component and produces an Argument that
+	// will be used as an input to a eOperation.
+	op float conditionInput(EComponent component)
+}
+
+class LinearInputConditioning extends AbstractInputConditioning
+{
+	@Ecore(defaultValueLiteral="-1.0")
+	float minimum
+	
+	@Ecore(defaultValueLiteral="1.0")
+	float maximum
+}
+
+class CenteredLinearInputConditioning extends LinearInputConditioning
+{	
+	@Ecore(defaultValueLiteral="0.0")
+	float deadBand
+}
+
+class ParabolicInputConditioning extends AbstractInputConditioning
+{	
+	@Ecore(defaultValueLiteral="-1.0")
+	float minimum
+	
+	@Ecore(defaultValueLiteral="1.0")
+	float maximum		
+}
+
+class CenteredParabolicInputConditioning extends ParabolicInputConditioning
+{
+	@Ecore(defaultValueLiteral="0.0")
+	float deadBand
+}
+
+class UserDefinedInputConditioning extends AbstractInputConditioning
+{
+	/* The units of the values. */
+	@GenModel(notify="true")
+	String units = ""
+	
+	@GenModel(notify="true")
+	contains CustomInputConditioningPoint[0..*] transferFunction
+}
+
+class CustomInputConditioningPoint
+{	
+	double inputValue = "0"
+	double outputValue = "0"
+}
+
+
+
+

@@ -24,6 +24,17 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
+import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
+import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
+import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
+import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import org.eclipse.symphony.examples.satellite.Activator;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
@@ -35,18 +46,6 @@ import org.eclipse.symphony.examples.satellite.SatelliteCommandList;
 import org.eclipse.symphony.examples.satellite.SatelliteCommandRoll;
 import org.eclipse.symphony.examples.satellite.SatelliteConstellation;
 import org.eclipse.symphony.examples.satellite.SatelliteUtils;
-
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.ConstantElevationMask;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitFacade;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.EarthOrbitPropagator;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.ElevationMask;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.SpacecraftsVisibilitySet;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPass;
-import ca.gc.asc_csa.symphony.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 
 /**
  * <!-- begin-user-doc -->

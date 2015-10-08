@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated symphony_tools_core -->
+      <factory
+            uri="org.eclipse.symphony.addons"
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_tools_core -->
+      <extender
+            uri="ca.gc.asc_csa.topology.bindings"
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.core"
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.core.invocator"
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+      <extender
+            uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$PathsChildCreationExtender"/>
+   </extension>
+
+</plugin>

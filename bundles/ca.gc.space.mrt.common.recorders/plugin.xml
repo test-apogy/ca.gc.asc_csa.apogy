@@ -9,11 +9,13 @@
 
 <plugin>
 
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <package 
-       uri = "http:///ca/gc/space/mrt/common/recorders/model/recorders.ecore" 
-       class = "ca.gc.space.mrt.common.recorders.RecordersPackage"
-       genModel = "model/recorders.genmodel" /> 
-  </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mrt_common_recorders -->
+      <package
+            uri="ca.gc.space.mrt.common.recorders"
+            class="ca.gc.space.mrt.common.recorders.RecordersPackage"
+            genModel="model/mrt_common_recorders.xcore"/>
+   </extension>
 
 </plugin>

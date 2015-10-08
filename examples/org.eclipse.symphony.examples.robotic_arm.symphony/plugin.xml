@@ -15,13 +15,13 @@
             genModel="model/symphony_examples_robotic_arm.xcore"/>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeContributor">
+         point="org.eclipse.symphony.core.invocator.TypeContributor">
       <Type
             URI="model/RoboticArmSymphonySystem.ss">
       </Type>
    </extension>
    <extension
-         point="ca.gc.asc_csa.eclipse.emf.ecore.invocator.SessionProvider">
+         point="org.eclipse.symphony.core.invocator.SessionProvider">
       <SessionProvider
             Description="Session showing the use of the Robotic Arm example system."
             Name="Robotic Arm Example"

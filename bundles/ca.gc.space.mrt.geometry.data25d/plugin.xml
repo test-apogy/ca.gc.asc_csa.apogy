@@ -11,9 +11,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http:///ca/gc/space/mrt/geometry/data25d/model/data25d.ecore" 
+       uri = "ca.gc.space.mrt.geometry.data25d" 
        class = "ca.gc.space.mrt.geometry.data25d.Data25dPackage"
-       genModel = "model/data25d.genmodel" /> 
+       genModel = "model/mrt_geometry_data25d.xcore" /> 
   </extension>
 
 </plugin>

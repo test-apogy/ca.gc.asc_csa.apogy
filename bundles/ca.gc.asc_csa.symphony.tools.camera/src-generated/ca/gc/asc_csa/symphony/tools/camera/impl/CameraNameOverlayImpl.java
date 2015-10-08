@@ -5,8 +5,8 @@ package ca.gc.asc_csa.symphony.tools.camera.impl;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.core.invocator.InvocatorSession;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InvocatorSession;
 import ca.gc.asc_csa.symphony.tools.camera.CameraNameOverlay;
 import ca.gc.asc_csa.symphony.tools.camera.CameraViewConfiguration;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;

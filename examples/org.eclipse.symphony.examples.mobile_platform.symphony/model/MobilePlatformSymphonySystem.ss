@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.topology.bindings" xmlns:ca.gc.space.topology="http:///ca/gc/space/topology.ecore" xmlns:core="ca.gc.asc_csa.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="ca.gc.asc_csa.symphony.tools.vehicle" xmi:id="_aD78wArNEeW4-_ONWXXiAw" name="MobilePlatformSymphonySystem">
+<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.topology.bindings" xmlns:ca.gc.space.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="org.eclipse.symphony.addons.vehicle" xmi:id="_aD78wArNEeW4-_ONWXXiAw" name="MobilePlatformSymphonySystem">
   <interfaceClass href="org.eclipse.symphony.examples.mobile_platform#//MobilePlatform"/>
   <typeApiAdapterClass href="org.eclipse.symphony.examples.mobile_platform.symphony#//MobilePlatformSymphonySystemApiAdapter"/>
   <topologyRoot xmi:id="_aD78wQrNEeW4-_ONWXXiAw">

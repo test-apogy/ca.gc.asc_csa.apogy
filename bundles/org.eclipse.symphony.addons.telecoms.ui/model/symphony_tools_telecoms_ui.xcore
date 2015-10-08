@@ -1,0 +1,12 @@
+@GenModel(prefix="SymphonyTelecomToolsUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="SymphonyTelecomToolsUI", complianceLevel="6.0", suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.telecoms.ui/src-generated")
+@GenModel(editDirectory= "/org.eclipse.symphony.addons.telecoms.ui.edit/src-generated")
+
+package org.eclipse.symphony.addons.telecoms.ui
+
+import ca.gc.space.topology.ui.NodePresentation
+
+class AbstractAntennaRadiationPatternPresentation extends NodePresentation
+{
+	
+}

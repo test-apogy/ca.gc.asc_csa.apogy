@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.examples.camera.symphony.CameraData;
 import org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
@@ -16,7 +17,6 @@ import org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiA
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraFactory;
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
 
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 
 /**
@@ -100,8 +100,8 @@ public class SymphonyExampleCameraPackageImpl extends EPackageImpl implements Sy
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyCorePackage.eINSTANCE.eClass();
 		FovPackage.eINSTANCE.eClass();
+		SymphonyCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyExampleCameraPackage.createPackageContents();

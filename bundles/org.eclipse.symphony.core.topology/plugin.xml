@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="org.eclipse.symphony.core.topology"
+            class="org.eclipse.symphony.core.topology.SymphonyTopologyPackage"
+            genModel="model/symphony_topology.xcore"/>
+   </extension>
+
+</plugin>

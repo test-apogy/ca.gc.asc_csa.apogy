@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="org.eclipse.symphony.core.ui" version="2">
+    <resource path="src/ca/gc/asc_csa/symphony/core/ui/wizards/NewSymphonyProjectWizard.java" type="org.eclipse.symphony.core.ui.wizards.NewSymphonyProjectWizard">
+        <filter id="571519004">
+            <message_arguments>
+                <message_argument value="org.eclipse.symphony.core.ui.wizards.NewSymphonyProjectWizard.performFinish()"/>
+                <message_argument value="ImportOperation"/>
+            </message_arguments>
+        </filter>
+    </resource>
+</component>

@@ -3,28 +3,6 @@
  */
 package org.eclipse.symphony.examples.satellite.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractTypeImplementation;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.util.EMFEcoreInvocatorSwitch;
-import ca.gc.asc_csa.symphony.core.AssemblyLink;
-import ca.gc.asc_csa.symphony.core.SymphonyCorePackage;
-import ca.gc.asc_csa.symphony.core.TopologyRoot;
-import ca.gc.asc_csa.symphony.core.util.SymphonyCoreSwitch;
-import ca.gc.asc_csa.symphony.environment.ImageMapLayer;
-import ca.gc.asc_csa.symphony.environment.SymphonyEnvironmentPackage;
-import ca.gc.asc_csa.symphony.environment.util.SymphonyEnvironmentSwitch;
-import ca.gc.asc_csa.topology.bindings.EnumerationCase;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import ca.gc.space.mrt.sensors.imaging.util.MRTSensorsImagingSwitch;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -49,9 +27,31 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.core.AssemblyLink;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.core.environment.ImageMapLayer;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.util.SymphonyEnvironmentSwitch;
+import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
+import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.util.EMFEcoreExampleSatelliteAdapterFactory;
+
+import ca.gc.asc_csa.topology.bindings.EnumerationCase;
+import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
+import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
+import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
+import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
+import ca.gc.space.mrt.sensors.imaging.util.MRTSensorsImagingSwitch;
+import ca.gc.space.topology.AggregateGroupNode;
+import ca.gc.space.topology.ContentNode;
+import ca.gc.space.topology.GroupNode;
+import ca.gc.space.topology.TopologyPackage;
+import ca.gc.space.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

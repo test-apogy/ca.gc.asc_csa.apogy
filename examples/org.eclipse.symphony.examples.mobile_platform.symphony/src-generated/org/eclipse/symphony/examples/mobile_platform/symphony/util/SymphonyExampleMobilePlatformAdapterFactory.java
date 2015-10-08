@@ -3,23 +3,21 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.symphony.util;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.SymphonyInitializationData;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
+import org.eclipse.symphony.core.environment.ui.MapAnnotation;
+import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
+import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
+import org.eclipse.symphony.core.invocator.AbstractInitializationData;
+import org.eclipse.symphony.core.invocator.InitializationData;
+import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.examples.mobile_platform.symphony.*;
-
-import ca.gc.asc_csa.symphony.core.PoseProvider;
-import ca.gc.asc_csa.symphony.core.SymphonyInitializationData;
-import ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter;
-import ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation;
-import ca.gc.asc_csa.symphony.environment.ui.MapAnnotation;
-import ca.gc.asc_csa.symphony.environment.ui.MapViewItemPresentation;
-import ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation;
 
 /**
  * <!-- begin-user-doc -->
@@ -196,13 +194,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.TypeApiAdapter
+	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter
 	 * @generated
 	 */
 	public Adapter createTypeApiAdapterAdapter() {
@@ -210,13 +208,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.SymphonySystemApiAdapter
+	 * @see org.eclipse.symphony.core.SymphonySystemApiAdapter
 	 * @generated
 	 */
   public Adapter createSymphonySystemApiAdapterAdapter()
@@ -225,13 +223,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.AbstractInitializationData
+	 * @see org.eclipse.symphony.core.invocator.AbstractInitializationData
 	 * @generated
 	 */
 	public Adapter createAbstractInitializationDataAdapter() {
@@ -239,13 +237,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData <em>Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.InitializationData <em>Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.invocator.InitializationData
+	 * @see org.eclipse.symphony.core.invocator.InitializationData
 	 * @generated
 	 */
 	public Adapter createInitializationDataAdapter() {
@@ -253,13 +251,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.SymphonyInitializationData <em>Symphony Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonyInitializationData <em>Symphony Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.SymphonyInitializationData
+	 * @see org.eclipse.symphony.core.SymphonyInitializationData
 	 * @generated
 	 */
 	public Adapter createSymphonyInitializationDataAdapter() {
@@ -267,13 +265,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.MapViewItemPresentation
+	 * @see org.eclipse.symphony.core.environment.ui.MapViewItemPresentation
 	 * @generated
 	 */
   public Adapter createMapViewItemPresentationAdapter()
@@ -282,13 +280,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.MapAnnotation
+	 * @see org.eclipse.symphony.core.environment.ui.MapAnnotation
 	 * @generated
 	 */
   public Adapter createMapAnnotationAdapter()
@@ -297,13 +295,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.AbstractVariableAnnotation
+	 * @see org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation
 	 * @generated
 	 */
   public Adapter createAbstractVariableAnnotationAdapter()
@@ -312,13 +310,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.environment.ui.PoseVariableAnnotation
+	 * @see org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation
 	 * @generated
 	 */
   public Adapter createPoseVariableAnnotationAdapter()
@@ -327,13 +325,13 @@ public class SymphonyExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.core.PoseProvider <em>Pose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.PoseProvider <em>Pose Provider</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.core.PoseProvider
+	 * @see org.eclipse.symphony.core.PoseProvider
 	 * @generated
 	 */
   public Adapter createPoseProviderAdapter()

@@ -4,7 +4,6 @@
 package org.eclipse.symphony.examples.satellite;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.EMFEcoreInvocatorPackage;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -14,6 +13,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1790,31 +1790,31 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	EAttribute getSatelliteConstellation_EndDate();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(ca.gc.asc_csa.symphony.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(org.eclipse.symphony.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Satellite</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(ca.gc.asc_csa.symphony.environment.orbit.OrbitModel)
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(org.eclipse.symphony.core.environment.orbit.OrbitModel)
 	 * @generated
 	 */
 	EOperation getSatelliteConstellation__GetSatellite__OrbitModel();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getTargetPasses(org.eclipse.symphony.examples.satellite.ImageOrder, java.util.Date, java.util.Date, ca.gc.asc_csa.symphony.environment.orbit.earth.ElevationMask) <em>Get Target Passes</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getTargetPasses(org.eclipse.symphony.examples.satellite.ImageOrder, java.util.Date, java.util.Date, org.eclipse.symphony.core.environment.orbit.earth.ElevationMask) <em>Get Target Passes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Target Passes</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getTargetPasses(org.eclipse.symphony.examples.satellite.ImageOrder, java.util.Date, java.util.Date, ca.gc.asc_csa.symphony.environment.orbit.earth.ElevationMask)
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getTargetPasses(org.eclipse.symphony.examples.satellite.ImageOrder, java.util.Date, java.util.Date, org.eclipse.symphony.core.environment.orbit.earth.ElevationMask)
 	 * @generated
 	 */
 	EOperation getSatelliteConstellation__GetTargetPasses__ImageOrder_Date_Date_ElevationMask();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStationPasses(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, java.util.Date, ca.gc.asc_csa.symphony.environment.orbit.earth.ElevationMask) <em>Get Ground Station Passes</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStationPasses(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, java.util.Date, org.eclipse.symphony.core.environment.orbit.earth.ElevationMask) <em>Get Ground Station Passes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Ground Station Passes</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStationPasses(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, java.util.Date, ca.gc.asc_csa.symphony.environment.orbit.earth.ElevationMask)
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStationPasses(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, java.util.Date, org.eclipse.symphony.core.environment.orbit.earth.ElevationMask)
 	 * @generated
 	 */
 	EOperation getSatelliteConstellation__GetGroundStationPasses__Satellite_Date_Date_ElevationMask();

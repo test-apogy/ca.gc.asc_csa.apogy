@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
-import ca.gc.space.mrt.common.provider.Mrt_commonEditPlugin;
-import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
+import ca.gc.space.mrt.common.provider.CommonEditPlugin;
+import ca.gc.space.mrt.geometry.data.provider.DataEditPlugin;
 import ca.gc.space.mrt.geometry.data25d.provider.Data25dEditPlugin;
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
@@ -58,9 +58,9 @@ public final class RangeEditPlugin extends EMFPlugin
 		     Data3dEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
-		     Mrt_commonEditPlugin.INSTANCE,
+		     CommonEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,

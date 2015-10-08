@@ -1,0 +1,54 @@
+@GenModel(prefix="Processors",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="Processors",
+	      operationReflection="true",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.space.mrt.common.processors/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.common.processors.edit/src-generated")
+
+package ca.gc.space.mrt.common.processors
+
+@GenModel(documentation="Represent a object for which operation progress can be reported.")
+interface Monitorable
+{
+	@GenModel(property="None")
+	transient IProgressMonitor progressMonitor
+}
+
+type IProgressMonitor wraps org.eclipse.core.runtime.IProgressMonitor
+
+@GenModel(documentation="Defines an object that can process an input to get an output.")
+abstract class Processor<I , O> extends Monitorable
+{
+	transient I input
+
+	transient O output
+
+	op O process(I input) throws Exception
+}
+
+type Exception wraps Exception
+
+class ProcessorsChain<I , O> extends Processor < I , O >
+{
+	Object intermediateResult
+
+	refers Processor < ? , ? >[1] runningProcessor
+
+	refers Processor < ? , ? >[] processors
+}
+
+class JobProcessorsChain<I , O> extends ProcessorsChain < I , O >
+{
+
+}
+
+interface VerboseProvider
+{
+	boolean verbose
+
+	op void printVerbose(String message)
+}

@@ -11,7 +11,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="ca.gc.asc_csa.symphony.core.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="ca.gc.asc_csa.symphony.tools.camera.views.CameraView"
             icon="icons/CameraView.gif"
             id="ca.gc.asc_csa.symphony.tools.camera.views.CameraView"
@@ -45,7 +45,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
          <command
                commandId="ca.gc.asc_csa.symphony.tools.camera.commands.ToggleImageFilterEnableCommand"
                label="Toggle Image Filter"

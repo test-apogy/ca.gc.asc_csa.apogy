@@ -3,7 +3,7 @@
  */
 package ca.gc.asc_csa.symphony.tools.camera;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.invocator.VariableFeatureReference;
+import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->

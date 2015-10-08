@@ -1,0 +1,33 @@
+@GenModel(prefix="SymphonyToolsVehicleUI", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)", modelName="SymphonyToolsVehicleUI") 
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.vehicle.ui/src-generated")
+@GenModel(editDirectory= "/org.eclipse.symphony.addons.vehicle.ui.edit/src-generated")
+
+
+package org.eclipse.symphony.addons.vehicle.ui
+
+import ca.gc.space.topology.ui.NodePresentation
+
+class PhysicalWheelPresentation extends NodePresentation
+{
+	
+}
+
+class LanderSphericalFootPresentation extends NodePresentation
+{
+	
+}
+
+class ThrusterPresentation extends NodePresentation
+{	
+	/**
+	 * Whether or not the plume envelope is visible. 
+	 */
+	@GenModel(notify="true", child = "false", propertyCategory="PLUME_INFO")
+	boolean plumeEnvelopeVisible = "false"
+	
+	/**
+	 * The length of the cone used to represent the plume envelope.
+	 */
+	@GenModel(notify="true", child = "false", propertyCategory="PLUME_INFO")
+	double plumeEnvelopeLenght = "1.0"	
+}

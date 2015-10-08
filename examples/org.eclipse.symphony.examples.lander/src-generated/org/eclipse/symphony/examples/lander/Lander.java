@@ -3,8 +3,9 @@
  */
 package org.eclipse.symphony.examples.lander;
 
+import org.eclipse.symphony.addons.vehicle.Thruster;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
-import ca.gc.asc_csa.symphony.tools.vehicle.Thruster;
 
 /**
  * <!-- begin-user-doc -->

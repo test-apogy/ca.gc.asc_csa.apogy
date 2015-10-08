@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_tools_ui -->
+      <package
+            uri="org.eclipse.symphony.addons.ui"
+            class="org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage"
+            genModel="model/symphony_tools_ui.xcore"/>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="org.eclipse.symphony.addons.ui.adapters.Ruler3dToolNodePresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.AbstractTwoPoints3DToolLockFromNodeCommand"
+            id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
+            name="Toggle Ruler3D From Node Lock">
+      </command>
+      <command
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.AbstractTwoPoints3DToolLockToNodeCommand"
+            id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleRuler3DToolLockToNodeCommand"
+            name="Toggle Ruler3D To Node Lock">
+      </command>
+      <command
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleSimpleToolActiveCommand"
+            id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleSimpleToolActiveCommand"
+            name="Toggle Simple3DTool Active">
+      </command>
+      <command
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
+            id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleSimple3DToolVisibilityCommand"
+            name="Toggle Simple3DTool Visibility">
+      </command>
+      <command
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
+            id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleTrajectory3DToolPenCommand"
+            name="Toggle Trajectory3DTool Pen">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+         <command
+               commandId="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
+               label="Toggle From Node Lock"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.addons.AbstractTwoPoints3DTool">
+                       </instanceof>
+                   </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleRuler3DToolLockToNodeCommand"
+               label="Toggle To Node Lock"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                   <iterate
+                      ifEmpty="false"
+                      operator="or">
+                        <instanceof
+                           value="org.eclipse.symphony.addons.AbstractTwoPoints3DTool">
+                        </instanceof>
+                   </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleSimpleToolActiveCommand"
+               label="Toggle Simple3DTool Active"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.addons.Simple3DTool">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleSimple3DToolVisibilityCommand"
+               label="Toggle Simple3DTool Visibility"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.addons.Simple3DTool">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleTrajectory3DToolPenCommand"
+               label="Toggle Trajectory3DTool Pen"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                    variable="activeMenuSelection">
+                  <iterate
+                     ifEmpty="false"
+                     operator="or">
+                       <instanceof
+                           value="org.eclipse.symphony.addons.Trajectory3DTool">
+                       </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="org.eclipse.symphony.addons.ui.adapters.SunVector3DToolNodePresentationAdapter">
+      </Class>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesPage"
+            id="ca.gc.asc_csa.symphony.tools.ui.page1"
+            name="Symphony Tools">
+      </page>
+   </extension>
+   <extension
+         point="ca.gc.space.topology.ui.presentation">
+      <Class
+            Class="org.eclipse.symphony.addons.ui.adapters.Trajectory3DToolNodePresentationAdapter">
+      </Class>
+   </extension>
+
+</plugin>

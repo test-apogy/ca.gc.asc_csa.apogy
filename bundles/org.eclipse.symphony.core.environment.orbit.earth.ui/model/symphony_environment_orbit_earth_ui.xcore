@@ -1,0 +1,160 @@
+@GenModel(prefix="SymphonyEarthOrbitEnvironmentUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="SymphonyEarthOrbitEnvironmentUI", complianceLevel="8.0", suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.environment.orbit.earth.ui/src-generated")
+@GenModel(editDirectory= "/org.eclipse.symphony.core.environment.orbit.earth.ui.edit/src-generated")
+
+package org.eclipse.symphony.core.environment.orbit.earth.ui
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Described
+import ca.gc.asc_csa.eclipse.emf.ecore.Named
+import ca.gc.asc_csa.eclipse.emf.ecore.Timed
+import org.eclipse.symphony.core.invocator.AbstractToolsListContainer
+
+import org.eclipse.symphony.core.Updatable
+
+import org.eclipse.symphony.core.environment.orbit.OrbitModel
+import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStation
+import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet
+import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor
+
+type RenderableLayer wraps gov.nasa.worldwind.layers.RenderableLayer
+type Map<K,V> wraps java.util.Map
+
+class EarthViewConfigurationList extends AbstractToolsListContainer
+{
+	contains EarthViewConfiguration[0..*] earthViewConfigurations
+}
+
+class EarthViewConfiguration extends Named, Described
+{
+	/** List of Maps being displayed.*/
+	@GenModel(children="true", notify="true", property="None")
+	contains AbstractWorldWindLayer[0..*] layers
+}
+
+/**
+ * Defines a Layer that can be shown on the WordWindModel
+ **/
+abstract class AbstractWorldWindLayer extends Updatable
+{
+	@GenModel(documentation="Whether or not to display the layer.",notify="true", property="Editable")
+	boolean visible="true"
+	
+   /*
+	* The RenderableLayer associated with this Layer
+	*/
+	@GenModel(children="false", notify="false", property="None")
+	transient RenderableLayer renderableLayer
+	
+	/**
+	 * Method called when the layer is not longer needed (i.e. when it gets deleted.)
+	 */
+	op void dispose()
+}
+
+class SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer, Named
+{
+	@GenModel(documentation="The orbit model.", propertyCategory="ORBIT_MODEL")
+	refers OrbitModel orbitModel
+	
+	@GenModel(documentation="The time source to used to get the time used to compute the S/C position.", propertyCategory="TIME")
+	refers Timed timeSource
+	
+	@GenModel(documentation="Whether or not to display the position projected on the ground.",notify="true", property="Editable")
+	boolean showGroundProjection = "true"	
+	
+	@GenModel(documentation="Whether or not to the longitude and latitude of the spacecraft.",notify="true", property="Editable")
+	boolean showLatLon ="true"
+}
+
+class OrbitModelWorldWindLayer extends AbstractWorldWindLayer
+{
+	@GenModel(documentation="The orbit model.", propertyCategory="ORBIT_MODEL")
+	refers OrbitModel orbitModel
+	
+	@GenModel(documentation="The time source to used to get the time used to define the reference time.", propertyCategory="TIME")
+	refers Timed timeSource
+	
+	@GenModel(documentation="The time interval at which to show the position.", propertyCategory="TIME_PERIOD", csa_units="s")
+	double timeInterval = "600.0"
+	
+	@GenModel(documentation="The forward propagation duration from the current time.", propertyCategory="TIME_PERIOD", csa_units="s")
+	double forwardPropagationDuration = "43200.0"
+	
+	@GenModel(documentation="The backward propagation duration from the current time.", propertyCategory="TIME_PERIOD", csa_units="s")
+	double backwardPropagationDuration = "43200.0"	
+	
+	@GenModel(documentation="Whether or not to display the orbit projected on the ground.",propertyCategory="VISUALS", notify="true", property="Editable")
+	boolean showGroundTrace = "true"
+	
+	@GenModel(documentation="Whether or not to display the orbit.",notify="true", propertyCategory="VISUALS", property="Editable")
+	boolean showOrbit = "true"	
+}
+
+class SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer
+{
+	@GenModel(documentation="The orbit model.", propertyCategory="ORBIT_MODEL")
+	refers OrbitModel orbitModel	
+	
+	@GenModel(documentation="The time source to used to get the time used to define the reference time.", propertyCategory="TIME")
+	refers Timed timeSource
+	
+	@GenModel(documentation="The forward propagation duration from the current time.", propertyCategory="TIME_PERIOD", csa_units="s")
+	double forwardPropagationDuration = "43200.0"
+	
+	@GenModel(documentation="The backward propagation duration from the current time.", propertyCategory="TIME_PERIOD", csa_units="s")
+	double backwardPropagationDuration = "43200.0"	
+	
+	@GenModel(documentation="The time interval at which to show the position.", notify="true", propertyCategory="TIME_PERIOD", property="Editable", csa_units="s")
+	double timeInterval = "600.0"
+		
+	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", csa_units="rad")
+	double leftSwathAngle = "0"
+	
+	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", csa_units="rad")
+	double rightSwathAngle = "0"
+			
+	@GenModel(documentation="Whether or not to display the orbit projected on the ground.",notify="true", propertyCategory="VISUALS", property="Editable")
+	boolean showGroundTrace = "true"
+			
+	contains SpacecraftSwathCorridor forwardSpacecraftSwathCorridor
+	
+	contains SpacecraftSwathCorridor backwardSpacecraftSwathCorridor
+}
+
+class EarthSurfaceLocationWorldWindLayer extends AbstractWorldWindLayer
+{
+	refers EarthSurfaceLocation earthSurfaceLocation
+	
+	@GenModel(documentation="The radius of the target.", propertyCategory="VISUALS", csa_units="km")
+	double targetRadius = "50"
+}
+
+class GroundStationWorldWindLayer extends EarthSurfaceLocationWorldWindLayer
+{
+	refers GroundStation groundStation
+	
+	@GenModel(documentation="The altitude to which to project the ElevationMask.", propertyCategory="VISUALS", csa_units="km")
+	double referenceAltitude = "500"
+}
+
+/**
+ * Defines a list of configuration for the view that shows the visibility of spacecraft from ground stations.
+ */
+
+class SpacecraftVisibilityPassViewConfigurationList extends AbstractToolsListContainer
+{
+	contains SpacecraftVisibilityPassViewConfiguration[0..*] configurations opposite configurationsList
+}
+
+/*
+ * Defines the configuration for the view that shows the visibility of spacecraft from ground stations.
+ */
+class SpacecraftVisibilityPassViewConfiguration extends Named, Described
+{				
+	container SpacecraftVisibilityPassViewConfigurationList configurationsList opposite configurations
+	
+	@GenModel(notify="true", chilrend = "true", property="None")
+	contains SpacecraftsVisibilitySet visibilitySet
+}
+

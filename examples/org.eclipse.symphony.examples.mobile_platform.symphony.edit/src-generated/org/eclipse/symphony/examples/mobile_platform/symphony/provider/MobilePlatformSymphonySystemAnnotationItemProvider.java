@@ -4,14 +4,13 @@
 package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
 
 
-import ca.gc.asc_csa.symphony.environment.ui.provider.PoseVariableAnnotationItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.core.environment.ui.provider.PoseVariableAnnotationItemProvider;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation;
 
 /**

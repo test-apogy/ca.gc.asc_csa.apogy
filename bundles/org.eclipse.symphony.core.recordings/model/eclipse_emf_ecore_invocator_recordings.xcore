@@ -1,0 +1,257 @@
+@GenModel(prefix="EMFEcoreInvocatorRecordings", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)", modelName="EMFEcoreInvocatorRecordings")
+@GenModel(modelDirectory="/org.eclipse.symphony.core.recordings/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.core.recordings.edit/src-generated")
+
+package org.eclipse.symphony.core.recordings
+
+import org.eclipse.emf.ecore.EDate
+
+import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode
+import ca.gc.asc_csa.eclipse.emf.ecore.Named
+import ca.gc.asc_csa.eclipse.emf.ecore.Described
+import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource
+
+import org.eclipse.symphony.core.invocator.AbstractResult
+import org.eclipse.symphony.core.invocator.AbstractRecorder
+import org.eclipse.symphony.core.invocator.DataProductsList
+import org.eclipse.symphony.core.invocator.AbstractPlayer
+import org.eclipse.symphony.core.invocator.AbstractChannel
+import org.eclipse.symphony.core.invocator.ChannelsList
+
+/* -------------------------------------------------------------------------
+ * 
+ * DataTypes.
+ * 
+ * ------------------------------------------------------------------------- */ 
+type Throwable wraps java.lang.Throwable
+type Adapter wraps org.eclipse.emf.common.notify.Adapter
+type EStructuralFeature wraps  org.eclipse.emf.ecore.EStructuralFeature
+type Map<K,V> wraps java.util.Map
+type List<T> wraps java.util.List
+type Collection<T> wraps java.util.Collection
+type SortedSet<T> wraps java.util.SortedSet
+type Date wraps java.util.Date
+type StringBuffer wraps java.lang.StringBuffer
+
+
+/* -------------------------------------------------------------------------
+ * 
+ * RecordingResult
+ * 
+ * ------------------------------------------------------------------------- */
+class RecordingResult extends AbstractResult
+{
+	@GenModel(documentation="The Channel that created the result.", property="Readonly", notify="true")	
+	container RecordingTrack[1] recordingTrack opposite results
+}
+
+class RecordingTrack
+{	
+ 	@GenModel(property="Readonly", notify="true")
+	refers Channel[1] channel
+		
+ 	@GenModel(property="Readonly", notify="true")
+	refers Recording recording opposite recordingTracks
+			
+	@GenModel(documentation="The list of result associated with this track.", notify="true")
+	contains RecordingResult[0..*] results opposite recordingTrack
+	
+	@GenModel(documentation="The earliest date found in this track.", property="Readonly",notify="true")
+	EDate startDate
+
+	@GenModel(documentation="The latest date found in this track.", property="Readonly",notify="true")
+	EDate endDate
+	
+	@GenModel(documentation="The duration of the track.", csa_units = "s", property="Readonly", notify="true")
+	double duration = "0"	
+}
+
+class Recording extends AbstractResult, Named, Described
+{				
+	@GenModel(property="Readonly")
+	contains RecordingTrack[0..*] recordingTracks opposite recording
+	
+	@GenModel(documentation="The duration of the recording.", csa_units = "s", property="Readonly", notify="true")
+	double duration = "0"
+	
+	@GenModel(documentation="The earliest date found in this recording.", property="Readonly", notify="true")
+	EDate startDate
+
+	@GenModel(documentation="The latest date found in this recording.", property="Readonly", notify="true")
+	EDate endDate	
+	
+	op List<RecordingResult> getRecordingResults()
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Channel
+ * 
+ * ------------------------------------------------------------------------- */
+class Channel extends AbstractChannel
+{
+	@GenModel(documentation="The recording policy being used for this channel.")
+	RecordingPolicy recordingPolicy
+	
+	@GenModel(documentation="The recording period to be used if using FixedPeriod as RecordingPolicy.")		
+	FixedPeriodValues fixedPeriodValues
+	
+	@GenModel(documentation="The feature being recorded.", notify="true")
+	refers AbstractFeatureNode[1] feature
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * RecordingPolicy
+ * 
+ * ------------------------------------------------------------------------- */
+enum RecordingPolicy
+{
+	@GenModel(documentation="Record value when it changes.")
+	OnChange as "On Change" = 0,
+	
+	@GenModel(documentation="Record value at fixed intervals.")
+	FixedPeriod as "Fixed Period" = 1
+} 
+
+enum FixedPeriodValues
+{
+	VERY_LONG_INTERVAL=0
+	LONG_INTERVAL=1
+	MEDIUM_INTERVAL=2
+	SHORT_INTERVAL=3
+	VERY_SHORT_INTERVAL=4
+	USER_DEFINED_1=5
+	USER_DEFINED_2=6
+	USER_DEFINED_3=7
+	USER_DEFINED_4=8
+	USER_DEFINED_5=9
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Recorder
+ * 
+ * ------------------------------------------------------------------------- */
+class Recorder extends AbstractRecorder
+{
+	@GenModel(documentation="The destination where to write the Recording.")
+	refers DataProductsList[1] destination
+	
+	@GenModel(documentation="The list of channels list recorder by this Recorder.")
+	refers ChannelsList[0..*] channelsLists 
+	
+	@GenModel(documentation="The current state of the Recorder.")
+	transient RecorderState recorderState
+	
+	refers Recording recording
+	
+	@GenModel(documentation="Stops recording data defined in the channels.")
+	op void stop()
+	
+	@GenModel(documentation="Starts recording data defined in the channels.")
+	op void record()
+	
+	@GenModel(documentation="Pause recording the data to the source.")
+	op void pause()
+	
+	@GenModel(documentation="Resume recording the data to the source.")
+	op void resume()	
+		
+	op List<Channel> getAllChannels()
+}
+
+enum RecorderState
+{
+	STOPPED as "Stopped" = 0,
+	RECORDING as "Recording" = 1,	
+	PAUSED as "Paused" = 2
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Player
+ * 
+ * ------------------------------------------------------------------------- */
+class Player extends AbstractPlayer
+{	
+	@GenModel(documentation="Whether or not this Player is enabled.", notify="true")
+	boolean enabled = "false"	
+	
+	@GenModel(documentation="The TimeSource used to drive this Player.", notify="true")
+	refers TimeSource timeSource
+	
+	@GenModel(documentation="The list of Recordings being played back.")
+	refers Recording[0..*] recordings
+		
+	@GenModel(documentation="The start time of the data.", notify="true", property="Readonly")
+	EDate dataStartTime
+		
+	@GenModel(documentation="The end time of the data.", notify="true", property="Readonly")
+	EDate dataEndTime
+		
+	@GenModel(documentation="The current play back time.", notify="true", property="Readonly")
+	EDate playBackTime	
+			
+	@GenModel(documentation="Sets the playBackTime to the specified Date.")
+	op void jumpTo(Date date)
+	
+}
+
+enum PlayerState
+{
+	STOPPED as "Stopped "= 0,	
+	PLAYING as "Playing" = 1,
+	PAUSED as "Paused" =2	
+}
+
+enum PlayerDirection
+{
+	FORWARD as "Forward" = 0,
+	REVERSE as "Reverse" = 1
+}
+
+/* -------------------------------------------------------------------------
+ * 
+ * Utilities
+ * 
+ * ------------------------------------------------------------------------- */
+class EMFEcoreInvocatorRecordingsFacade
+{		
+	op Object getResultValue(RecordingResult recordingResult)
+	
+	op double getRecordingPeriodInSeconds(FixedPeriodValues periodValue)	
+	
+	op SortedSet<RecordingResult> getTimeSortedRecordingResults(Collection<RecordingResult> recordingResults)
+	op SortedSet<RecordingResult> getReversedTimeSortedRecordingResults(Collection<RecordingResult> recordingResults)
+	op SortedSet<RecordingResult> getTimeSortedRecordingResults(RecordingTrack track)
+	op SortedSet<RecordingResult> getRecordingResultsBefore(SortedSet<RecordingResult> timeSortedRecordingResult, Date date, boolean inclusive)
+	op SortedSet<RecordingResult> getRecordingResultsAfter(SortedSet<RecordingResult> timeSortedRecordingResult, Date date, boolean inclusive)
+	op SortedSet<RecordingResult> getRecordingResultsInInterval(SortedSet<RecordingResult> timeSortedRecordingResult, Date startDate, Date endDate, boolean inclusive)
+
+	op SortedSet<AbstractResult> getTimeSortedAbstractResults(Collection<AbstractResult> abstractResults)
+	op SortedSet<AbstractResult> getReversedTimeSortedAbstractResults(Collection<AbstractResult> abstractResults)
+	op SortedSet<AbstractResult> getTimeSortedAbstractResults(DataProductsList dataProducts)
+	op SortedSet<AbstractResult> getAbstractResultsBefore(SortedSet<AbstractResult> timeSortedAbstractResults, Date date, boolean inclusive)
+	op SortedSet<AbstractResult> getAbstractResultsAfter(SortedSet<AbstractResult> timeSortedAbstractResults, Date date, boolean inclusive)
+	op SortedSet<AbstractResult> getAbstractResultsInInterval(SortedSet<AbstractResult> timeSortedAbstractResults, Date startDate, Date endDate, boolean includeStart, boolean includeEnd)
+		
+	op Recording createRecording(Recorder recorder)
+	
+	op void applyRecordingResult(RecordingResult recordingResult)	
+	
+	// CSV Export utilities	
+	
+	op List<Channel> getChannels(List<RecordingResult> recordingResults)
+	
+	op String getCSVTimeTitleString()
+	op String getCSVTimeValueString(Date date)		
+	
+	op String getCSVTitleString(Channel channel)
+	op String getCSVValueString(RecordingResult recordingResult)	
+	
+	op StringBuffer exportRecordingTrackToCSV(RecordingTrack track)
+	op StringBuffer exportRecordingTracksToCSV(List<RecordingTrack> tracks)	
+} 
+
+

@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->

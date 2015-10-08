@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.examples.satellite.impl;
 
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
-
 import java.awt.image.BufferedImage;
 import java.lang.reflect.InvocationTargetException;
 
@@ -15,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
 

@@ -4,8 +4,7 @@
 package org.eclipse.symphony.examples.satellite;
 
 import org.eclipse.symphony.common.images.AbstractEImage;
-
-import ca.gc.asc_csa.symphony.environment.GeographicCoordinates;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->

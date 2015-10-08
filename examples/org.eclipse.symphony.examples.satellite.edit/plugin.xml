@@ -32,13 +32,13 @@
             uri="ca.gc.space.mrt.sensors.imaging"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$MRTSensorsImagingChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.symphony.core"
+            uri="org.eclipse.symphony.core"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
+            uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.symphony.environment"
+            uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
    </extension>
 

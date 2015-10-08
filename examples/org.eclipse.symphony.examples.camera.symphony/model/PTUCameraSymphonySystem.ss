@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.topology.bindings" xmlns:bindings_1="ca.gc.space.mrt.sensors.fov.bindings" xmlns:ca.gc.space.mrt.sensors.fov="http:///ca/gc/space/mrt/sensors/fov/model/fov.ecore" xmlns:ca.gc.space.topology="http:///ca/gc/space/topology.ecore" xmlns:core="ca.gc.asc_csa.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_1LPEwArOEeW4-_ONWXXiAw" name="PTUCameraSymphonySystem">
+<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.topology.bindings" xmlns:bindings_1="ca.gc.space.mrt.sensors.fov.bindings" xmlns:ca.gc.space.mrt.sensors.fov="http:///ca/gc/space/mrt/sensors/fov/model/fov.ecore" xmlns:ca.gc.space.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_1LPEwArOEeW4-_ONWXXiAw" name="PTUCameraSymphonySystem">
   <interfaceClass href="org.eclipse.symphony.examples.camera#//PTUCamera"/>
   <typeApiAdapterClass href="org.eclipse.symphony.examples.camera.symphony#//PTUCameraSymphonySystemApiAdapter"/>
   <topologyRoot xmi:id="_1LPEwQrOEeW4-_ONWXXiAw">
@@ -42,10 +42,10 @@
     <featureRootsList xmi:id="_1LQ6AQrOEeW4-_ONWXXiAw">
       <featureRoots xmi:id="_1LQ6AgrOEeW4-_ONWXXiAw">
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_1LQ6AwrOEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.space.mrt.actuators#//PanTiltUnit/currentPanAngle"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/currentPanAngle"/>
         </children>
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_1LQ6BArOEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.space.mrt.actuators#//PanTiltUnit/currentTiltAngle"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/currentTiltAngle"/>
         </children>
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_1LQ6BQrOEeW4-_ONWXXiAw">
           <structuralFeature xsi:type="ecore_1:EReference" href="org.eclipse.symphony.examples.camera.symphony#//Camera/fov"/>

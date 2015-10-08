@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            category="ca.gc.asc_csa.eclipse.ui.category"
+            class="org.eclipse.symphony.core.display.ui.views.TelemetryView"
+            icon="icons/configurable_telemetry_view_icon.gif"
+            id="org.eclipse.symphony.core.display.ui.views.TelemetryView"
+            name="Telemetry View"
+            restorable="true">
+         <description>
+            A view to display Watch List.
+         </description>
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.eclipse.symphony.core.display.ui.handlers.PinViewHandler"
+            id="org.eclipse.symphony.core.display.ui.PinTelemetryView"
+            name="Pin Telemetry View">
+         <state
+               class="org.eclipse.ui.handlers.RegistryToggleState:false"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="org.eclipse.symphony.core.display.ui.handlers.NewTelemetryViewHandler"
+            id="org.eclipse.symphony.core.display.ui.NewTelemetryView"
+            name="New Telemetry View">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="toolbar:org.eclipse.symphony.core.display.ui.views.TelemetryView">
+         <command
+               commandId="org.eclipse.symphony.core.display.ui.PinTelemetryView"
+               icon="icons/pin.gif"
+               label="Pin View"
+               style="toggle">
+         </command>
+         <command
+               commandId="org.eclipse.symphony.core.display.ui.NewTelemetryView"
+               icon="icons/new_view.gif"
+               label="New Telemetry View"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

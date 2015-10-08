@@ -3,9 +3,11 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.symphony.environment.orbit.OrbitModel;
 import java.util.List;
+
+import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+
+import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->
