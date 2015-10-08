@@ -188,8 +188,8 @@ public class SymphonyToolsCorePackageImpl extends EPackageImpl implements Sympho
 		isInited = true;
 
 		// Initialize simple dependencies
-		PathsPackage.eINSTANCE.eClass();
 		SymphonyCorePackage.eINSTANCE.eClass();
+		PathsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyToolsCorePackage.createPackageContents();

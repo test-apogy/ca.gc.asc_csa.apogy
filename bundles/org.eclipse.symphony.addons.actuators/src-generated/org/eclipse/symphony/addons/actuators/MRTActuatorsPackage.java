@@ -25,7 +25,7 @@ import ca.gc.space.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.actuators.MRTActuatorsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MRTActuators' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)' modelName='MRTActuators' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.actuators/src-generated' editDirectory='/org.eclipse.symphony.addons.actuators.edit/src-generated' basePackage='ca.gc.space.mrt'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MRTActuators' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)' modelName='MRTActuators' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.actuators/src-generated' editDirectory='/org.eclipse.symphony.addons.actuators.edit/src-generated' basePackage='org.eclipse.symphony.addons'"
  * @generated
  */
 public interface MRTActuatorsPackage extends EPackage

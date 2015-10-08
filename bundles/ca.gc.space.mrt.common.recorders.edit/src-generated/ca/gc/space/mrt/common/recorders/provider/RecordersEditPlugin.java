@@ -43,8 +43,8 @@ public final class RecordersEditPlugin extends EMFPlugin {
 	public RecordersEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     CsvEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     CsvEditPlugin.INSTANCE,
 		   });
 	}
 

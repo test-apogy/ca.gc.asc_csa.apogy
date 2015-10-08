@@ -96,8 +96,8 @@ public class MRTActuatorsPackageImpl extends EPackageImpl implements MRTActuator
 		isInited = true;
 
 		// Initialize simple dependencies
-		EcorePackage.eINSTANCE.eClass();
 		TopologyPackage.eINSTANCE.eClass();
+		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theMRTActuatorsPackage.createPackageContents();
@@ -483,7 +483,7 @@ public class MRTActuatorsPackageImpl extends EPackageImpl implements MRTActuator
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons.actuators/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.actuators.edit/src-generated",
-			 "basePackage", "ca.gc.space.mrt"
+			 "basePackage", "org.eclipse.symphony.addons"
 		   });	
 		addAnnotation
 		  (getAbstractActuator_Moving(), 
