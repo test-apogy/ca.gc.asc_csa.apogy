@@ -10,10 +10,10 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: ca.gc.space.mrt.common,
  ca.gc.space.mrt.common.impl,
  ca.gc.space.mrt.common.util
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.xtext.xbase.lib
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.core.runtime;bundle-version="3.10.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.space.mrt.common.Activator
 

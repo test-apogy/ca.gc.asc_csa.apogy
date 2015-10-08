@@ -93,7 +93,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		if (isInited) return (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
 
 		// Obtain or create and register package
-		CommonPackageImpl theMRTCommonPackage = (CommonPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CommonPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CommonPackageImpl());
+		CommonPackageImpl theCommonPackage = (CommonPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CommonPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CommonPackageImpl());
 
 		isInited = true;
 
@@ -101,18 +101,18 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theMRTCommonPackage.createPackageContents();
+		theCommonPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theMRTCommonPackage.initializePackageContents();
+		theCommonPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theMRTCommonPackage.freeze();
+		theCommonPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(CommonPackage.eNS_URI, theMRTCommonPackage);
-		return theMRTCommonPackage;
+		EPackage.Registry.INSTANCE.put(CommonPackage.eNS_URI, theCommonPackage);
+		return theCommonPackage;
 	}
 
 	/**
@@ -183,7 +183,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CommonFactory getMRTCommonFactory() {
+	public CommonFactory getCommonFactory() {
 		return (CommonFactory)getEFactoryInstance();
 	}
 
@@ -285,12 +285,12 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "MRTCommon",
+			 "prefix", "Common",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "MRTCommon",
+			 "modelName", "Common",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.space.mrt.common/src-generated",
 			 "editDirectory", "/ca.gc.space.mrt.common.edit/src-generated",

@@ -56,6 +56,6 @@ public interface CommonFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	CommonPackage getMRTCommonPackage();
+	CommonPackage getCommonPackage();
 
 } //CommonFactory

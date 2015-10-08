@@ -327,9 +327,9 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
+		TopologyDynamicsPackage.eINSTANCE.eClass();
 		PathplannersPackage.eINSTANCE.eClass();
 		SymphonyEnvironmentPackage.eINSTANCE.eClass();
-		TopologyDynamicsPackage.eINSTANCE.eClass();
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -1471,7 +1471,7 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons.vehicle/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.vehicle.edit/src-generated",
-			 "basePackage", "ca.gc.asc_csa.symphony.tools"
+			 "basePackage", "org.eclipse.symphony.addons"
 		   });	
 		addAnnotation
 		  (zCorrectionModeEEnum, 

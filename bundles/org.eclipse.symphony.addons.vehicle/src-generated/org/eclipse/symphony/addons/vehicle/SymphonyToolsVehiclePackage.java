@@ -31,7 +31,7 @@ import ca.gc.space.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyToolsVehicle' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='SymphonyToolsVehicle' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.vehicle/src-generated' editDirectory='/org.eclipse.symphony.addons.vehicle.edit/src-generated' basePackage='ca.gc.asc_csa.symphony.tools'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyToolsVehicle' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='SymphonyToolsVehicle' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.vehicle/src-generated' editDirectory='/org.eclipse.symphony.addons.vehicle.edit/src-generated' basePackage='org.eclipse.symphony.addons'"
  * @generated
  */
 public interface SymphonyToolsVehiclePackage extends EPackage
