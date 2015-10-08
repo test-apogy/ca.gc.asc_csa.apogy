@@ -4,18 +4,16 @@
 package org.eclipse.symphony.common.io.jinput.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import net.java.games.input.Component;
 import net.java.games.input.Component.Identifier;
 import net.java.games.input.Controller;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.io.jinput.EAxis;
 import org.eclipse.symphony.common.io.jinput.EButton;
 import org.eclipse.symphony.common.io.jinput.EComponents;
@@ -44,17 +42,10 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  *
  * @generated
  */
-public class EControllerImpl extends EObjectImpl implements EController {
+public class EControllerImpl extends MinimalEObjectImpl.Container implements EController {
 	
 	private boolean componentsHaveBeenLoaded = false;
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
 	/**
 	 * The default value of the '{@link #isLastPollResult() <em>Last Poll Result</em>}' attribute.
 	 * <!-- begin-user-doc -->

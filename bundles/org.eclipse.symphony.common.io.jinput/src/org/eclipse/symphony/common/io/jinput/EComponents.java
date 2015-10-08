@@ -26,13 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface EComponents extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.common.io.jinput.EComponent}.
 	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.io.jinput.EComponent#getEComponents <em>EComponents</em>}'.
@@ -62,7 +55,7 @@ public interface EComponents extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponents_Name()
-	 * @model default="" transient="true"
+	 * @model default="" unique="false" transient="true"
 	 * @generated
 	 */
 	String getName();
@@ -90,7 +83,7 @@ public interface EComponents extends EObject {
 	 * @see #setEController(EController)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponents_EController()
 	 * @see org.eclipse.symphony.common.io.jinput.EController#getEComponents
-	 * @model opposite="eComponents" resolveProxies="false"
+	 * @model opposite="eComponents"
 	 * @generated
 	 */
 	EController getEController();

@@ -32,13 +32,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface EComponent extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * Returns the value of the '<em><b>Dead Zone</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -48,7 +41,7 @@ public interface EComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dead Zone</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_DeadZone()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	float getDeadZone();
@@ -63,7 +56,7 @@ public interface EComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Identifier</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_Identifier()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	String getIdentifier();
@@ -78,7 +71,7 @@ public interface EComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relative</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_Relative()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	boolean isRelative();
@@ -93,7 +86,7 @@ public interface EComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Analog</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_Analog()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	boolean isAnalog();
@@ -108,7 +101,7 @@ public interface EComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_Name()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	String getName();
@@ -124,7 +117,7 @@ public interface EComponent extends EObject {
 	 * @return the value of the '<em>Pojo Component</em>' attribute.
 	 * @see #setPojoComponent(Component)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_PojoComponent()
-	 * @model dataType="org.eclipse.symphony.common.io.jinput.Component"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.io.jinput.Component"
 	 * @generated
 	 */
 	Component getPojoComponent();
@@ -149,7 +142,7 @@ public interface EComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Poll Data</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_PollData()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	float getPollData();
@@ -167,7 +160,7 @@ public interface EComponent extends EObject {
 	 * @see #setEComponents(EComponents)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_EComponents()
 	 * @see org.eclipse.symphony.common.io.jinput.EComponents#getComponents
-	 * @model opposite="components" resolveProxies="false"
+	 * @model opposite="components"
 	 * @generated
 	 */
 	EComponents getEComponents();

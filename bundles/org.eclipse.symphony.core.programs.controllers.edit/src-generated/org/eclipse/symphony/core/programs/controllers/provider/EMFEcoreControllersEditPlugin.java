@@ -6,9 +6,7 @@ package org.eclipse.symphony.core.programs.controllers.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.common.io.jinput.provider.Jinput_emfEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 
 /**
@@ -45,7 +43,6 @@ public final class EMFEcoreControllersEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     Jinput_emfEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,

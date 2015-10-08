@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -33,14 +33,7 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  *
  * @generated
  */
-public class EComponentsImpl extends EObjectImpl implements EComponents {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
+public class EComponentsImpl extends MinimalEObjectImpl.Container implements EComponents {
 	/**
 	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -133,6 +126,16 @@ public class EComponentsImpl extends EObjectImpl implements EComponents {
 	 * @generated
 	 */
 	public EController getEController() {
+		if (eContainerFeatureID() != JInputPackage.ECOMPONENTS__ECONTROLLER) return null;
+		return (EController)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EController basicGetEController() {
 		if (eContainerFeatureID() != JInputPackage.ECOMPONENTS__ECONTROLLER) return null;
 		return (EController)eInternalContainer();
 	}
@@ -230,7 +233,8 @@ public class EComponentsImpl extends EObjectImpl implements EComponents {
 			case JInputPackage.ECOMPONENTS__NAME:
 				return getName();
 			case JInputPackage.ECOMPONENTS__ECONTROLLER:
-				return getEController();
+				if (resolve) return getEController();
+				return basicGetEController();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -284,7 +288,7 @@ public class EComponentsImpl extends EObjectImpl implements EComponents {
 			case JInputPackage.ECOMPONENTS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case JInputPackage.ECOMPONENTS__ECONTROLLER:
-				return getEController() != null;
+				return basicGetEController() != null;
 		}
 		return super.eIsSet(featureID);
 	}

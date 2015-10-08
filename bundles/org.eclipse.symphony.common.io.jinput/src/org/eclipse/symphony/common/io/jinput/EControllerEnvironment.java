@@ -30,13 +30,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface EControllerEnvironment extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * Returns the value of the '<em><b>Supported</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -46,7 +39,7 @@ public interface EControllerEnvironment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Supported</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_Supported()
-	 * @model changeable="false" volatile="true" derived="true"
+	 * @model unique="false" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	boolean isSupported();
@@ -79,7 +72,7 @@ public interface EControllerEnvironment extends EObject {
 	 * @return the value of the '<em>Refresh Requested</em>' attribute.
 	 * @see #setRefreshRequested(boolean)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_RefreshRequested()
-	 * @model default="true"
+	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isRefreshRequested();
@@ -105,7 +98,7 @@ public interface EControllerEnvironment extends EObject {
 	 * @return the value of the '<em>Polling Count</em>' attribute.
 	 * @see #setPollingCount(long)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_PollingCount()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getPollingCount();
@@ -130,7 +123,7 @@ public interface EControllerEnvironment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polling Job</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_PollingJob()
-	 * @model dataType="org.eclipse.symphony.common.io.jinput.Job" changeable="false"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.io.jinput.Job" changeable="false"
 	 * @generated
 	 */
 	Job getPollingJob();
@@ -146,7 +139,7 @@ public interface EControllerEnvironment extends EObject {
 	 * @return the value of the '<em>Polling Problem</em>' attribute.
 	 * @see #setPollingProblem(boolean)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_PollingProblem()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isPollingProblem();
@@ -188,7 +181,7 @@ public interface EControllerEnvironment extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" controllerNameUnique="false"
 	 * @generated
 	 */
 	EController resolveController(String controllerName);
@@ -196,7 +189,7 @@ public interface EControllerEnvironment extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" componentNameUnique="false" eControllerUnique="false"
 	 * @generated
 	 */
 	EComponent resolveEComponent(String componentName, EController eController);
@@ -204,7 +197,7 @@ public interface EControllerEnvironment extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" eComponentQualifierUnique="false"
 	 * @generated
 	 */
 	EComponent resolveEComponent(EComponentQualifier eComponentQualifier);

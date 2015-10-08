@@ -8,10 +8,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
 import net.java.games.input.Controller;
 import net.java.games.input.ControllerEnvironment;
-
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -22,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.io.jinput.Activator;
@@ -51,18 +49,11 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  *
  * @generated
  */
-public class EControllerEnvironmentImpl extends EObjectImpl implements EControllerEnvironment {
+public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container implements EControllerEnvironment {
 	
 	//TODO: Transferer cette constante dans les préférences.
 	private static final long MILLIS_BEFORE_NEXT_POLLING = 50;
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
 	/**
 	 * The default value of the '{@link #isSupported() <em>Supported</em>}' attribute.
 	 * <!-- begin-user-doc -->

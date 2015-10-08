@@ -3,10 +3,8 @@
  */
 package org.eclipse.symphony.common.io.jinput.impl;
 
-import java.awt.Component;
-
+import net.java.games.input.Component;
 import net.java.games.input.Controller;
-
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -14,6 +12,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.io.jinput.EAxis;
 import org.eclipse.symphony.common.io.jinput.EButton;
@@ -34,13 +33,6 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  * @generated
  */
 public class JInputPackageImpl extends EPackageImpl implements JInputPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -170,6 +162,9 @@ public class JInputPackageImpl extends EPackageImpl implements JInputPackage {
 		JInputPackageImpl theJInputPackage = (JInputPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof JInputPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new JInputPackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theJInputPackage.createPackageContents();
@@ -746,6 +741,9 @@ public class JInputPackageImpl extends EPackageImpl implements JInputPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -758,55 +756,55 @@ public class JInputPackageImpl extends EPackageImpl implements JInputPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eControllerEClass, EController.class, "EController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEController_LastPollResult(), ecorePackage.getEBoolean(), "lastPollResult", null, 0, 1, EController.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEController_Name(), ecorePackage.getEString(), "name", "", 0, 1, EController.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEController_PortNumber(), ecorePackage.getEInt(), "portNumber", null, 0, 1, EController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEController_Type(), ecorePackage.getEString(), "type", null, 0, 1, EController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEController_PortType(), ecorePackage.getEString(), "portType", null, 0, 1, EController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEController_PojoController(), this.getController(), "pojoController", null, 0, 1, EController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEController_LastPollResult(), theEcorePackage.getEBoolean(), "lastPollResult", null, 0, 1, EController.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEController_Name(), theEcorePackage.getEString(), "name", "", 0, 1, EController.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEController_PortNumber(), theEcorePackage.getEInt(), "portNumber", null, 0, 1, EController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEController_Type(), theEcorePackage.getEString(), "type", null, 0, 1, EController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEController_PortType(), theEcorePackage.getEString(), "portType", null, 0, 1, EController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEController_PojoController(), this.getController(), "pojoController", null, 0, 1, EController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEController_EComponents(), this.getEComponents(), this.getEComponents_EController(), "eComponents", null, 1, 1, EController.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEController_ControllerCount(), ecorePackage.getEInt(), "controllerCount", "-1", 0, 1, EController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEController_ControllerCount(), theEcorePackage.getEInt(), "controllerCount", "-1", 0, 1, EController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getEController__Poll(), ecorePackage.getEBoolean(), "poll", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getEController__Poll(), theEcorePackage.getEBoolean(), "poll", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(eControllerEnvironmentEClass, EControllerEnvironment.class, "EControllerEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEControllerEnvironment_Supported(), ecorePackage.getEBoolean(), "supported", null, 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEControllerEnvironment_Supported(), theEcorePackage.getEBoolean(), "supported", null, 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getEControllerEnvironment_Controllers(), this.getEController(), null, "controllers", null, 0, -1, EControllerEnvironment.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEControllerEnvironment_RefreshRequested(), ecorePackage.getEBoolean(), "refreshRequested", "true", 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEControllerEnvironment_PollingCount(), ecorePackage.getELong(), "pollingCount", null, 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEControllerEnvironment_PollingJob(), this.getJob(), "pollingJob", null, 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEControllerEnvironment_PollingProblem(), ecorePackage.getEBoolean(), "pollingProblem", null, 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEControllerEnvironment_RefreshRequested(), theEcorePackage.getEBoolean(), "refreshRequested", "true", 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEControllerEnvironment_PollingCount(), theEcorePackage.getELong(), "pollingCount", null, 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEControllerEnvironment_PollingJob(), this.getJob(), "pollingJob", null, 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEControllerEnvironment_PollingProblem(), theEcorePackage.getEBoolean(), "pollingProblem", null, 0, 1, EControllerEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getEControllerEnvironment__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getEControllerEnvironment__Refresh(), null, "refresh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getEControllerEnvironment__StartPolling(), null, "startPolling", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getEControllerEnvironment__StartPolling(), null, "startPolling", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getEControllerEnvironment__StopPolling(), null, "stopPolling", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getEControllerEnvironment__StopPolling(), null, "stopPolling", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		EOperation op = initEOperation(getEControllerEnvironment__ResolveController__String(), this.getEController(), "resolveController", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "controllerName", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getEControllerEnvironment__ResolveController__String(), this.getEController(), "resolveController", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "controllerName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEControllerEnvironment__ResolveEComponent__String_EController(), this.getEComponent(), "resolveEComponent", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "componentName", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getEController(), "eController", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEControllerEnvironment__ResolveEComponent__String_EController(), this.getEComponent(), "resolveEComponent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "componentName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEController(), "eController", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEControllerEnvironment__ResolveEComponent__EComponentQualifier(), this.getEComponent(), "resolveEComponent", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getEComponentQualifier(), "eComponentQualifier", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEControllerEnvironment__ResolveEComponent__EComponentQualifier(), this.getEComponent(), "resolveEComponent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getEComponentQualifier(), "eComponentQualifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(eComponentEClass, EComponent.class, "EComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEComponent_DeadZone(), ecorePackage.getEFloat(), "deadZone", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEComponent_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEComponent_Relative(), ecorePackage.getEBoolean(), "relative", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEComponent_Analog(), ecorePackage.getEBoolean(), "analog", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEComponent_PojoComponent(), this.getComponent(), "pojoComponent", null, 0, 1, EComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEComponent_PollData(), ecorePackage.getEFloat(), "pollData", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getEComponent_EComponents(), this.getEComponents(), this.getEComponents_Components(), "eComponents", null, 0, 1, EComponent.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponent_DeadZone(), theEcorePackage.getEFloat(), "deadZone", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponent_Identifier(), theEcorePackage.getEString(), "identifier", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponent_Relative(), theEcorePackage.getEBoolean(), "relative", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponent_Analog(), theEcorePackage.getEBoolean(), "analog", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponent_Name(), theEcorePackage.getEString(), "name", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponent_PojoComponent(), this.getComponent(), "pojoComponent", null, 0, 1, EComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponent_PollData(), theEcorePackage.getEFloat(), "pollData", null, 0, 1, EComponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getEComponent_EComponents(), this.getEComponents(), this.getEComponents_Components(), "eComponents", null, 0, 1, EComponent.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eComponentsEClass, EComponents.class, "EComponents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEComponents_Components(), this.getEComponent(), this.getEComponent_EComponents(), "components", null, 0, -1, EComponents.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEComponents_Name(), ecorePackage.getEString(), "name", "", 0, 1, EComponents.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEComponents_EController(), this.getEController(), this.getEController_EComponents(), "eController", null, 0, 1, EComponents.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponents_Name(), theEcorePackage.getEString(), "name", "", 0, 1, EComponents.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEComponents_EController(), this.getEController(), this.getEController_EComponents(), "eController", null, 0, 1, EComponents.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eButtonEClass, EButton.class, "EButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -815,19 +813,45 @@ public class JInputPackageImpl extends EPackageImpl implements JInputPackage {
 		initEClass(eKeyEClass, EKey.class, "EKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eComponentQualifierEClass, EComponentQualifier.class, "EComponentQualifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEComponentQualifier_EComponentName(), ecorePackage.getEString(), "eComponentName", null, 1, 1, EComponentQualifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEComponentQualifier_EControllerName(), ecorePackage.getEString(), "eControllerName", null, 1, 1, EComponentQualifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponentQualifier_EComponentName(), theEcorePackage.getEString(), "eComponentName", null, 1, 1, EComponentQualifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEComponentQualifier_EControllerName(), theEcorePackage.getEString(), "eControllerName", null, 1, 1, EComponentQualifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eVirtualComponentEClass, EVirtualComponent.class, "EVirtualComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEVirtualComponent_CurrentValue(), ecorePackage.getEFloat(), "currentValue", null, 0, 1, EVirtualComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEVirtualComponent_CurrentValue(), theEcorePackage.getEFloat(), "currentValue", null, 0, 1, EVirtualComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(jobEDataType, Job.class, "Job", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(componentEDataType, net.java.games.input.Component.class, "Component", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(componentEDataType, Component.class, "Component", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(controllerEDataType, Controller.class, "Controller", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/GenModel
+		createGenModelAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "copyrightText", "Copyrights Canadian Space Agency 2012. All rights reserved.",
+			 "prefix", "JInput",
+			 "modelDirectory", "/org.eclipse.symphony.common.io.jinput/src",
+			 "modelName", "Jinput_emf",
+			 "importerID", "org.eclipse.emf.importer.ecore",
+			 "suppressGenModelAnnotations", "false",
+			 "basePackage", "org.eclipse.symphony.common.io"
+		   });
 	}
 
 } //JInputPackageImpl

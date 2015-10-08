@@ -15,11 +15,5 @@ package org.eclipse.symphony.common.io.jinput;
  * @generated
  */
 public interface EButton extends EComponent {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
 
 } // EButton

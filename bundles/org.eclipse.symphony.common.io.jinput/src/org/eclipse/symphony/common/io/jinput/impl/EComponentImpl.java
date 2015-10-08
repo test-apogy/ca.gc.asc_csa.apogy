@@ -4,13 +4,12 @@
 package org.eclipse.symphony.common.io.jinput.impl;
 
 import net.java.games.input.Component;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.common.io.jinput.EComponents;
@@ -36,14 +35,7 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  *
  * @generated
  */
-public class EComponentImpl extends EObjectImpl implements EComponent {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
+public class EComponentImpl extends MinimalEObjectImpl.Container implements EComponent {
 	/**
 	 * The default value of the '{@link #getDeadZone() <em>Dead Zone</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -233,6 +225,16 @@ public class EComponentImpl extends EObjectImpl implements EComponent {
 	 */
 	public EComponents getEComponents() {
 		if (eContainerFeatureID() != JInputPackage.ECOMPONENT__ECOMPONENTS) return null;
+		return (EComponents)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EComponents basicGetEComponents() {
+		if (eContainerFeatureID() != JInputPackage.ECOMPONENT__ECOMPONENTS) return null;
 		return (EComponents)eInternalContainer();
 	}
 
@@ -334,7 +336,8 @@ public class EComponentImpl extends EObjectImpl implements EComponent {
 			case JInputPackage.ECOMPONENT__POLL_DATA:
 				return getPollData();
 			case JInputPackage.ECOMPONENT__ECOMPONENTS:
-				return getEComponents();
+				if (resolve) return getEComponents();
+				return basicGetEComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -398,7 +401,7 @@ public class EComponentImpl extends EObjectImpl implements EComponent {
 			case JInputPackage.ECOMPONENT__POLL_DATA:
 				return getPollData() != POLL_DATA_EDEFAULT;
 			case JInputPackage.ECOMPONENT__ECOMPONENTS:
-				return getEComponents() != null;
+				return basicGetEComponents() != null;
 		}
 		return super.eIsSet(featureID);
 	}

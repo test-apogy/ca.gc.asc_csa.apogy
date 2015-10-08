@@ -24,13 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface EComponentQualifier extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * Returns the value of the '<em><b>EComponent Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -41,7 +34,7 @@ public interface EComponentQualifier extends EObject {
 	 * @return the value of the '<em>EComponent Name</em>' attribute.
 	 * @see #setEComponentName(String)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponentQualifier_EComponentName()
-	 * @model required="true"
+	 * @model unique="false" required="true"
 	 * @generated
 	 */
 	String getEComponentName();
@@ -67,7 +60,7 @@ public interface EComponentQualifier extends EObject {
 	 * @return the value of the '<em>EController Name</em>' attribute.
 	 * @see #setEControllerName(String)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponentQualifier_EControllerName()
-	 * @model required="true"
+	 * @model unique="false" required="true"
 	 * @generated
 	 */
 	String getEControllerName();

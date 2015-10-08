@@ -6,7 +6,7 @@ package org.eclipse.symphony.common.io.jinput.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
 import org.eclipse.symphony.common.io.jinput.JInputPackage;
 
@@ -24,14 +24,7 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  *
  * @generated
  */
-public class EComponentQualifierImpl extends EObjectImpl implements EComponentQualifier {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
+public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implements EComponentQualifier {
 	/**
 	 * The default value of the '{@link #getEComponentName() <em>EComponent Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

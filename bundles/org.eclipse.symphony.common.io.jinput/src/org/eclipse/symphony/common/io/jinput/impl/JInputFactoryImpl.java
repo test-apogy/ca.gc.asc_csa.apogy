@@ -23,13 +23,6 @@ import org.eclipse.symphony.common.io.jinput.*;
  */
 public class JInputFactoryImpl extends EFactoryImpl implements JInputFactory {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

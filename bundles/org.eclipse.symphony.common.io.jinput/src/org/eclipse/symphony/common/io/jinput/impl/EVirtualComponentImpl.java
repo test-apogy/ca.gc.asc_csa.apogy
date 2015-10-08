@@ -24,13 +24,6 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  */
 public class EVirtualComponentImpl extends EComponentImpl implements EVirtualComponent {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * The default value of the '{@link #getCurrentValue() <em>Current Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

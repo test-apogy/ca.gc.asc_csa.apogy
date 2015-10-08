@@ -22,13 +22,6 @@ public class EButtonImpl extends EComponentImpl implements EButton {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	protected EButtonImpl() {
 		super();
 	}

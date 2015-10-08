@@ -1,0 +1,70 @@
+@GenModel(copyrightText="Copyrights Canadian Space Agency 2012. All rights reserved.", prefix="JInput", modelDirectory="/org.eclipse.symphony.common.io.jinput/src", modelName="Jinput_emf", importerID="org.eclipse.emf.importer.ecore", suppressGenModelAnnotations="false")
+package org.eclipse.symphony.common.io.jinput
+
+class EController {
+	transient boolean lastPollResult
+	readonly String name = ""
+	readonly transient volatile derived int portNumber
+	readonly transient volatile derived String ^type
+	readonly transient volatile derived String portType
+	Controller pojoController
+	contains transient EComponents[1] eComponents opposite eController
+	int controllerCount = "-1"
+	op boolean poll()
+}
+
+class EControllerEnvironment {
+	readonly volatile derived boolean supported
+	contains readonly transient EController[] controllers
+	boolean refreshRequested = "true"
+	long pollingCount
+	readonly Job pollingJob
+	boolean pollingProblem
+	op void refresh()
+	op void startPolling()
+	op void stopPolling()
+	op EController resolveController(String controllerName)
+	op EComponent resolveEComponent(String componentName , EController eController)
+	op EComponent resolveEComponent(EComponentQualifier eComponentQualifier)
+}
+
+class EComponent {
+	readonly transient volatile derived float deadZone
+	readonly transient volatile derived String identifier
+	readonly transient volatile derived boolean relative
+	readonly transient volatile derived boolean analog
+	readonly transient volatile derived String name
+	Component pojoComponent
+	readonly transient volatile derived float pollData
+	container transient EComponents eComponents opposite components
+}
+
+class EComponents {
+	contains readonly transient EComponent[] components opposite eComponents
+	transient String name = ""
+	container transient EController eController opposite eComponents
+}
+
+class EButton extends EComponent {
+}
+
+class EAxis extends EComponent {
+}
+
+class EKey extends EComponent {
+}
+
+class EComponentQualifier {
+	String[1] eComponentName
+	String[1] eControllerName
+}
+
+type Job wraps org.eclipse.core.runtime.jobs.Job
+
+type Component wraps net.java.games.input.Component
+
+type Controller wraps net.java.games.input.Controller
+
+class EVirtualComponent extends EComponent {
+	float currentValue
+}

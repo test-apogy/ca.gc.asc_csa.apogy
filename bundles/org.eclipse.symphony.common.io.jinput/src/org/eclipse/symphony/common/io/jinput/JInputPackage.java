@@ -24,16 +24,10 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.io.jinput.JInputFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel copyrightText='Copyrights Canadian Space Agency 2012. All rights reserved.' prefix='JInput' modelDirectory='/org.eclipse.symphony.common.io.jinput/src' modelName='Jinput_emf' importerID='org.eclipse.emf.importer.ecore' suppressGenModelAnnotations='false' basePackage='org.eclipse.symphony.common.io'"
  * @generated
  */
 public interface JInputPackage extends EPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -48,7 +42,7 @@ public interface JInputPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://ca/gc/asc_csa/jinput/1.0";
+	String eNS_URI = "org.eclipse.symphony.common.io.jinput";
 
 	/**
 	 * The package namespace name.
@@ -56,7 +50,7 @@ public interface JInputPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "org.eclipse.symphony.common.io.jinput";
+	String eNS_PREFIX = "jinput";
 
 	/**
 	 * The singleton instance of the package.

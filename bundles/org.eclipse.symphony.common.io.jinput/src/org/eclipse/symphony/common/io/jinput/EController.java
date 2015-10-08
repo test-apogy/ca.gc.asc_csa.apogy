@@ -32,13 +32,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface EController extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * Returns the value of the '<em><b>Last Poll Result</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -49,7 +42,7 @@ public interface EController extends EObject {
 	 * @return the value of the '<em>Last Poll Result</em>' attribute.
 	 * @see #setLastPollResult(boolean)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_LastPollResult()
-	 * @model transient="true"
+	 * @model unique="false" transient="true"
 	 * @generated
 	 */
 	boolean isLastPollResult();
@@ -75,7 +68,7 @@ public interface EController extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_Name()
-	 * @model default="" changeable="false"
+	 * @model default="" unique="false" changeable="false"
 	 * @generated
 	 */
 	String getName();
@@ -90,7 +83,7 @@ public interface EController extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port Number</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_PortNumber()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	int getPortNumber();
@@ -105,7 +98,7 @@ public interface EController extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_Type()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	String getType();
@@ -120,7 +113,7 @@ public interface EController extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port Type</em>' attribute.
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_PortType()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	String getPortType();
@@ -136,7 +129,7 @@ public interface EController extends EObject {
 	 * @return the value of the '<em>Pojo Controller</em>' attribute.
 	 * @see #setPojoController(Controller)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_PojoController()
-	 * @model dataType="org.eclipse.symphony.common.io.jinput.Controller"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.io.jinput.Controller"
 	 * @generated
 	 */
 	Controller getPojoController();
@@ -191,7 +184,7 @@ public interface EController extends EObject {
 	 * @return the value of the '<em>Controller Count</em>' attribute.
 	 * @see #setControllerCount(int)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_ControllerCount()
-	 * @model default="-1"
+	 * @model default="-1" unique="false"
 	 * @generated
 	 */
 	int getControllerCount();
@@ -209,7 +202,7 @@ public interface EController extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean poll();

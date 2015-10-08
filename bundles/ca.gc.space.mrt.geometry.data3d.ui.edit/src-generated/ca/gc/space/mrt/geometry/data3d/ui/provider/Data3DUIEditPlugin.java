@@ -43,9 +43,9 @@ public final class Data3DUIEditPlugin extends EMFPlugin {
 	public Data3DUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     TopologyEditPlugin.INSTANCE,
 		     GeometrydataEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
 		   });

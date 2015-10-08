@@ -19,13 +19,6 @@ import org.eclipse.symphony.common.io.jinput.*;
  */
 public class JInputAdapterFactory extends AdapterFactoryImpl {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

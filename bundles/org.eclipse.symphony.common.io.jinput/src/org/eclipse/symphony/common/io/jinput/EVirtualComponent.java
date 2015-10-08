@@ -22,13 +22,6 @@ package org.eclipse.symphony.common.io.jinput;
  */
 public interface EVirtualComponent extends EComponent {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * Returns the value of the '<em><b>Current Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -39,7 +32,7 @@ public interface EVirtualComponent extends EComponent {
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(float)
 	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEVirtualComponent_CurrentValue()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	float getCurrentValue();

@@ -40,8 +40,8 @@ public final class TopologyViewerEditPlugin extends EMFPlugin {
 	public TopologyViewerEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 
