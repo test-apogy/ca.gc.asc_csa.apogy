@@ -28,7 +28,8 @@ package ca.gc.space.topology;
  * </pre>
  *
  */
-public interface INodeVisitor {
+public interface INodeVisitor
+{
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
