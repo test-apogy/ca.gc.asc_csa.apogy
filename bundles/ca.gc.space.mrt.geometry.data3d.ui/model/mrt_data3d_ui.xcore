@@ -1,4 +1,10 @@
-@GenModel(prefix="Data3DUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="Data3DUI", complianceLevel="6.0")
+@GenModel(prefix="Data3DUI",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+	      modelName="Data3DUI",
+	      complianceLevel="6.0")
 @GenModel(modelDirectory="/ca.gc.space.mrt.geometry.data3d.ui/src-generated")
 @GenModel(editDirectory="/ca.gc.space.mrt.geometry.data3d.ui.edit/src-generated")
 

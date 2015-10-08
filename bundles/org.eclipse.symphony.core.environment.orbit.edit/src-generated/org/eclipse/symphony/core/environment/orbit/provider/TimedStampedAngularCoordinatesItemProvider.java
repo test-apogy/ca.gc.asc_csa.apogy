@@ -6,7 +6,6 @@ package org.eclipse.symphony.core.environment.orbit.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -91,7 +90,7 @@ public class TimedStampedAngularCoordinatesItemProvider extends AngularCoordinat
 	 */
 	@Override
 	public String getText(Object object) {
-		Date labelValue = ((TimedStampedAngularCoordinates)object).getTime();
+		Object labelValue = ((TimedStampedAngularCoordinates)object).getTime();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_TimedStampedAngularCoordinates_type") :

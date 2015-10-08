@@ -249,7 +249,7 @@ public class CsvPackageImpl extends EPackageImpl implements CsvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CsvFactory getMRTCsvFactory() {
+	public CsvFactory getCsvFactory() {
 		return (CsvFactory)getEFactoryInstance();
 	}
 

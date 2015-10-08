@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see ca.gc.space.mrt.common.CommonFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MRTCommon' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='MRTCommon' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.space.mrt.common/src-generated' editDirectory='/ca.gc.space.mrt.common.edit/src-generated' basePackage='ca.gc.space.mrt'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Common' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Common' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.space.mrt.common/src-generated' editDirectory='/ca.gc.space.mrt.common.edit/src-generated' basePackage='ca.gc.space.mrt'"
  * @generated
  */
 public interface CommonPackage extends EPackage {
@@ -270,7 +270,7 @@ public interface CommonPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	CommonFactory getMRTCommonFactory();
+	CommonFactory getCommonFactory();
 
 	/**
 	 * <!-- begin-user-doc -->

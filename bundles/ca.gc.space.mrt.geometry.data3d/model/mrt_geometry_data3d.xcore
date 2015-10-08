@@ -1,0 +1,518 @@
+@GenModel(prefix="Data3d",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="Data3d",
+	      operationReflection="true",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.data3d/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.geometry.data3d.edit/src-generated")
+
+package ca.gc.space.mrt.geometry.data3d
+
+import ca.gc.space.mrt.geometry.data.Polygon
+import ca.gc.space.mrt.geometry.data.PolygonSamplingShape
+import ca.gc.space.mrt.geometry.data.Coordinates
+import ca.gc.space.mrt.geometry.data.CoordinatesSet
+import ca.gc.space.mrt.geometry.data.Mesh
+import ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape
+import ca.gc.space.mrt.geometry.data.CoordinatesSetShapesSampler
+import ca.gc.space.mrt.geometry.data.MeshPolygonShapesSampler
+import ca.gc.space.mrt.geometry.data.MeshCoordinatesShapesSampler
+
+import ca.gc.space.mrt.common.processors.Processor
+
+type Vector2d wraps javax.vecmath.Vector2d
+type Vector3d wraps javax.vecmath.Vector3d
+type Point3d wraps javax.vecmath.Point3d
+type Matrix4d wraps javax.vecmath.Matrix4d
+type GVector wraps javax.vecmath.GVector
+type List<T> wraps java.util.List
+type Map<K, V> wraps java.util.Map
+type Set<T> wraps java.util.Set
+type SortedSet<T> wraps java.util.SortedSet
+type Collection<T> wraps java.util.Collection
+type EList<T> wraps org.eclipse.emf.common.util.EList
+type IProgressMonitor wraps org.eclipse.core.runtime.IProgressMonitor
+type OutputStream wraps java.io.OutputStream
+type InputStream wraps java.io.InputStream
+type IOException wraps java.io.IOException
+type Exception wraps java.lang.Exception
+type IllegalArgumentException wraps java.lang.IllegalArgumentException
+type DoubleArrayOfArray wraps double[][]
+type IntArray wraps int[]
+
+enum CartesianAxis
+{
+	X as "X" = 0,
+	Y as "Y" = 1,
+	Z as "Z" = 2
+}
+
+enum CartesianPlane
+{
+	XY as "XY" = 0,
+	XZ as "XZ" = 1,
+	YZ as "YZ" = 2
+}
+
+class CartesianPolygon extends Polygon<CartesianPositionCoordinates>
+{
+	transient readonly volatile derived double surface
+	
+	transient readonly volatile derived Vector3d normal
+	
+	refers readonly transient volatile derived CartesianPositionCoordinates centroid
+}
+
+class CartesianTriangle extends CartesianPolygon
+{
+	
+}
+
+class SphericalPolygon extends Polygon<SphericalCoordinates>
+{
+	
+}
+
+class SphericalTriangle extends SphericalPolygon
+{
+	
+}
+
+class CartesianPositionCoordinates extends Coordinates
+{
+	double x
+	
+	double y
+	
+	double z
+	
+	op Point3d asPoint3d()
+}
+
+class RGBCartesianPositionCoordinates extends CartesianPositionCoordinates
+{
+	byte red
+	
+	byte green
+	
+	byte blue
+}
+
+class CartesianOrientationCoordinates extends Coordinates
+{
+	double xRotation
+	
+	double yRotation
+	
+	double zRotation
+}
+
+class CartesianCoordinatesSet extends CoordinatesSet<CartesianPositionCoordinates>
+{
+	op CartesianCoordinatesSetExtent getExtent()
+}
+
+class CartesianCoordinatesSetExtent
+{
+	double xMin
+	
+	double xMax
+	
+	double yMin
+	
+	double yMax
+	
+	double zMin
+	
+	double zMax
+	
+	transient readonly volatile derived double xDimension
+	
+	transient readonly volatile derived double yDimension
+	
+	transient readonly volatile derived double zDimension
+}
+
+class DigitalElevationMap extends CartesianCoordinatesSet
+{
+	int xDimension
+	
+	int yDimension
+}
+
+class CartesianCoordinatesMesh extends Mesh<CartesianPositionCoordinates, CartesianPolygon>,
+                                       CartesianCoordinatesSet
+{
+	
+}
+
+class CartesianTriangularMesh extends Mesh<CartesianPositionCoordinates, CartesianTriangle>,
+									  CartesianCoordinatesSet
+{
+	
+}
+
+class SphericalCoordinates extends Coordinates
+{
+	double phi
+	
+	double theta
+	
+	double r
+}
+
+class SphericalCoordinatesSet extends CoordinatesSet<SphericalCoordinates>
+{
+	
+}
+
+class SphericalCoordinatesMesh extends Mesh<SphericalCoordinates, SphericalPolygon>,
+									   SphericalCoordinatesSet
+{
+	
+}
+
+class SphericalTriangularMesh extends Mesh<SphericalCoordinates, SphericalTriangle>,
+									  SphericalCoordinatesSet
+{
+									  	
+}
+
+class Pose extends CartesianPositionCoordinates, CartesianOrientationCoordinates
+{
+	
+}
+
+class SphereSamplingShape<PolygonType extends CartesianPolygon> extends CoordinatesSamplingShape<CartesianPositionCoordinates>,
+																		PolygonSamplingShape<CartesianPositionCoordinates, PolygonType>
+{
+	double radius = "1.0"
+	
+	refers CartesianPositionCoordinates center
+	
+	boolean includeJustTouching = "true"
+}
+
+class CubeSamplingShape<PolygonType extends CartesianPolygon> extends CoordinatesSamplingShape<CartesianPositionCoordinates>,
+																	  PolygonSamplingShape<CartesianPositionCoordinates, PolygonType>
+{
+	refers CartesianPositionCoordinates corner1
+	
+	refers CartesianPositionCoordinates corner2
+	
+	boolean includeJustTouching = "true"
+}
+
+class CartesianCoordinatesSetShapeSampler extends CoordinatesSetShapesSampler<CartesianPositionCoordinates>
+{
+	
+}
+
+class CartesianCoordinatesMeshSampler extends MeshCoordinatesShapesSampler<CartesianPositionCoordinates, CartesianPolygon>
+{
+	
+}
+
+class CartesianCoordinatesMeshPolygonSampler extends MeshPolygonShapesSampler<CartesianPositionCoordinates, CartesianPolygon>
+{
+	
+}
+
+class CartesianTriangularMeshSampler extends MeshCoordinatesShapesSampler<CartesianPositionCoordinates, CartesianTriangle>
+{
+	
+}
+
+class CartesianTriangularMeshPolygonSampler extends MeshPolygonShapesSampler<CartesianPositionCoordinates, CartesianTriangle>
+{
+	
+}
+
+class CartesianPositionCoordinatesMesher extends Processor<CartesianCoordinatesSet, CartesianTriangularMesh>
+{
+	
+}
+
+class NormalPointCloud
+{
+	List<Point3d> points
+	
+	List<Vector3d> normals
+}
+
+class PointLocator
+{
+	List<CartesianPositionCoordinates> points
+	
+	op CartesianPositionCoordinates findClosestPoint(CartesianPositionCoordinates point)
+	
+	op CartesianPositionCoordinates[] findPointsWithinRadius(double radius, CartesianPositionCoordinates point)
+}
+
+class VecmathPointLocator
+{
+	List<Point3d> points
+	
+	op Point3d findClosestPoint(Point3d point)
+	
+	op Point3d[] findPointsWithinRadius(double radius, Point3d point)
+	
+	op int findClosestPointId(Point3d point)
+	
+	op IntArray findPointIdsWithinRadius(double radius, Point3d point)
+	
+	op Point3d[] findClosestNPoints(Point3d referencePoint, int n)
+	
+	op IntArray findClosestNPointIds(Point3d referencePoint, int n)
+}
+
+class VecmathKdTreePointLocator extends VecmathPointLocator
+{
+	
+}
+
+@GenModel(documentation="Localize a floating mesh with respect to a fixed mesh. The transform returned is the transform between the floating mesh and the origin (i.e. a revised version of the floatingMeshTransformEstimate).")
+class MeshLocalizer
+{
+	op Matrix4d localize(CartesianTriangularMesh fixedMesh, Matrix4d fixedMeshTransform, CartesianTriangularMesh floatingMesh, Matrix4d floatingMeshTransformEstimate) throws Exception
+}
+
+class PointNormalLocator
+{
+	refers NormalPointCloud dataSet
+	
+	op GVector findClosestPoint(Point3d point, Vector3d normal)
+	
+	op GVector[] findPointsWithinRadius(double radius, Point3d point, Vector3d normal)
+	
+	op GVector[] findClosestNPoints(int n, Point3d point, Vector3d normal)
+	
+	op int findClosestPointId(Point3d point, Vector3d normal)
+	
+	op IntArray findPointIdsWithinRadius(double radius, Point3d point, Vector3d normal)
+	
+	op IntArray findClosestNPointIds(int n, Point3d point, Vector3d normal)
+}
+
+class DelaunayMesher extends CartesianPositionCoordinatesMesher
+{
+	double tolerance
+	
+	double alpha
+	
+	double offset = "0.75"
+	
+	boolean boundingTriangulation
+	
+	CartesianPlane meshingPlane
+}
+
+class DigitalElevationMapMesher extends Processor<DigitalElevationMap, CartesianTriangularMesh>
+{
+	
+}
+
+class DigitalElevationMapSampler extends Processor<DigitalElevationMap, DigitalElevationMap>
+{
+	double targetResolution = "1.0"
+}
+
+class TriangularMeshNormalsCalculator extends Processor<CartesianTriangularMesh, CartesianTriangularMesh>
+{
+	
+}
+
+class TriangularMeshToNormalPointCloud extends Processor<CartesianTriangularMesh, NormalPointCloud>
+{
+	
+}
+
+class PointsRangeGager extends Processor<CartesianCoordinatesSet, CartesianCoordinatesSet>
+{
+	double minX = "-1.0"
+	
+	double maxX = "1.0"
+	
+	double minY = "-1.0"
+	
+	double maxY = "1.0"
+	
+	double minZ = "-1.0"
+	
+	double maxZ = "1.0" 
+}
+
+class UniquePointsFilter extends Processor<CartesianCoordinatesSet, CartesianCoordinatesSet>
+{
+	
+}
+
+class TriangleEdgeLengthTriangularMeshFilter
+{
+	double minimumRange
+	
+	double maximumRange
+	
+	double maximumEdgeLength
+	
+	op CartesianTriangularMesh filter(CartesianTriangularMesh input)
+}
+
+class OutlierFilter extends Processor<CartesianCoordinatesSet, CartesianCoordinatesSet>
+{
+	double maxDistance
+}
+
+class RasterPointCloud
+{
+	int rows = "1"
+	
+	int columns = "1"
+	
+	op CartesianPositionCoordinates getPoint(int row, int column)
+	
+	op void setPoint(int row, int column, CartesianPositionCoordinates point)
+}
+
+class RasterPointCloudToCartesianCoordinatesSet extends Processor<RasterPointCloud, CartesianCoordinatesSet>
+{
+	
+}
+
+class MeshSmoother extends Processor<CartesianCoordinatesSet, CartesianTriangularMesh>
+{
+	int numberOfIterations = "1"
+}
+
+@GenModel(documentation="This processor sub-samples a point cloud using a voxel approach based on an implementation of J. Bakambu from MDA.")
+class VoxelBased3DPointCloudResampler extends Processor<CartesianCoordinatesSet, CartesianCoordinatesSet>
+{
+	double resolutionX = "0.1"
+	
+	double resolutionY = "0.1"
+	
+	double resolutionZ = "0.05"
+	
+	int minimumNumberOfPointPerVoxel = "1"
+	
+	double tileResolution = "5.0"
+}
+
+class RigidBodyPoseTracker
+{
+	refers readonly derived PositionMarker [0..*] positionMarkersAtOrigin
+
+	@GenModel(documentation="This method computes the 3D rigid body transformation between two 3D data sets. First, the rotation matrix is computed using the Singular Values Decomposition (SVD) approach. Then, translation composent is computed. Finally, rotation and translation components are packed into an homogenous 4x4 matrix. Note : at least 3 markers are required to solve the 3D pose. If more than 3 markers are specified, the best fit (minimizing the root meaning squarre error) will be found.")	
+	op Point3d computeTransformation(EList<PositionMarker> markerPositionsToTrack) throws Exception
+	
+	op Matrix4d computeTransformation(List<PositionMarker> markerPositionsToTrack) throws Exception
+	
+	op void addPositionMarkers(List<PositionMarker> markers) throws Exception
+	
+	op void removePositionMarkers(List<PositionMarker> markers)
+}
+
+class PositionMarker extends CartesianPositionCoordinates
+{
+	String identifier
+}
+
+class Data3dFacade
+{	
+	op CartesianPositionCoordinates createCartesianPositionCoordinates(double x, double y, double z)
+	
+	op CartesianOrientationCoordinates createCartesianOrientationCoordinates(double xRotation, double yRotation, double zRotation)
+	
+	op SphericalCoordinates createSphericalCoordinates(double phi, double theta, double r)
+
+	op Pose createPose(double x, double y, double z, double xRotation, double yRotation, double zRotation)
+	
+	op Pose createPose(Pose pose)
+	
+	op Pose createPose(CartesianPositionCoordinates position, CartesianOrientationCoordinates orientation)
+	
+	op PointNormalLocator createPointNormalLocator(NormalPointCloud input)
+	
+	op DigitalElevationMap createDigitalElevationMap(CartesianCoordinatesSet coordinatesSet)
+	
+	op CartesianPolygon createCartesianPolygon(CartesianPositionCoordinates v1, CartesianPositionCoordinates v2, CartesianPositionCoordinates v3)
+	
+	op CartesianPositionCoordinates createCartesianPositionCoordinates(CartesianPositionCoordinates coordinates)
+	
+	op CartesianOrientationCoordinates createCartesianOrientationCoordinates(CartesianOrientationCoordinates coordinates)
+	
+	op CartesianCoordinatesMesh createCartesianCoordinatesMesh(CartesianCoordinatesMesh cartesianCoordinatesMesh)
+	
+	op CartesianTriangle createCartesianTriangle(CartesianPositionCoordinates v1, CartesianPositionCoordinates v2, CartesianPositionCoordinates v3)
+	
+	op <T extends CartesianPolygon> CartesianTriangle createCartesianTriangle(T polygon) throws IllegalArgumentException
+	
+	op CartesianCoordinatesMesh createCartesianCoordinatesMesh(List<CartesianPolygon> polygons)
+	
+	op CartesianCoordinatesMesh createCartesianCoordinatesMesh(CartesianTriangularMesh cartesianCoordinatesMesh)
+	
+	op CartesianTriangularMesh createCartesianTriangularMesh(List<CartesianTriangle> polygons)
+	
+	op CartesianTriangularMesh createCartesianTriangularMesh(CartesianTriangularMesh cartesianCoordinatesMesh)
+	
+	op CartesianCoordinatesSet applyTransform(CartesianCoordinatesSet points, Matrix4d trMatrix)
+	
+	op List<CartesianPositionCoordinates> applyTransform(List<CartesianPositionCoordinates> points, Matrix4d trMatrix)
+	
+	op CartesianTriangularMesh applyTransform(CartesianTriangularMesh mesh, Matrix4d trMatrix)
+	
+	op CartesianTriangularMesh applyTransformInt(CartesianTriangularMesh mesh, Matrix4d trMatrix)
+	
+	op NormalPointCloud applyTransform(NormalPointCloud points, Matrix4d trMatrix)
+	
+	op void updateCartesianCoordinatesSet(CartesianCoordinatesSet cartesianCoordinatesSet, DoubleArrayOfArray xyzData)
+	
+	op CartesianTriangularMesh concatenateTriangularMeshes(EList<CartesianTriangularMesh> listOfTriangularMeshes)
+}
+
+class Data3DIO
+{
+	op CartesianTriangularMesh loadTriangularMesh(String file) throws IOException
+	
+	op CartesianTriangularMesh loadTriangularMesh(InputStream input) throws IOException
+	
+	op void saveTriangularMesh(CartesianTriangularMesh mesh, String file) throws IOException
+	
+	op void saveTriangularMesh(CartesianTriangularMesh mesh, OutputStream output) throws IOException
+	
+	op NormalPointCloud loadTriangularMeshFromASCIIAsNormalPointCloud(String filePrefix) throws IOException
+	
+	op CartesianTriangularMesh loadTriangularMeshFromASCII(String filePrefix) throws IOException
+	
+	op void saveTriangularMeshAsASCII(CartesianTriangularMesh mesh, String filePrefix) throws IOException
+	
+	op CartesianCoordinatesSet loadXYZ(String fileName) throws IOException
+	
+	op CartesianTriangularMesh loadTriangularMeshFromTriXYZ(String triFileName, String xyzFileName) throws IOException
+	
+	op void saveCoordinatesSetToXYZ(CartesianCoordinatesSet coordinatesSet, String file) throws IOException
+	
+	op void saveCoordinatesSetToXYZ(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException
+	
+	op void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, String file) throws IOException
+	
+	op void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException
+}
+
+class Data3DUtils
+{
+	op EList<Vector3d> computeNormals(CartesianTriangularMesh mesh)
+	
+	op CartesianPositionCoordinates computeCentroid(CartesianCoordinatesSet points)
+	
+	op void computeMinMaxValues(Point3d min, Point3d max, CartesianCoordinatesSet data)
+	
+	op double computeCurvatureChange(PointLocator pointLocator, int centerPoint, double radius)
+	
+	op double computeCurvatureChange(VecmathPointLocator pointLocator, int centerPoint, double radius)
+	
+	op CartesianTriangularMesh extrude(List<CartesianPositionCoordinates> profilePoints, CartesianAxis extrusionAxis, double extrusionWidth, boolean closeMesh)
+}

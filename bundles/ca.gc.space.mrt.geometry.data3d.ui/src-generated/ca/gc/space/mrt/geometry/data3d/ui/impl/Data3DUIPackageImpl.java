@@ -3,6 +3,7 @@
  */
 package ca.gc.space.mrt.geometry.data3d.ui.impl;
 
+import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -10,8 +11,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
-
-import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
 import ca.gc.space.mrt.geometry.data3d.ui.Data3DUIFactory;
 import ca.gc.space.mrt.geometry.data3d.ui.Data3DUIPackage;
@@ -86,9 +85,9 @@ public class Data3DUIPackageImpl extends EPackageImpl implements Data3DUIPackage
 		isInited = true;
 
 		// Initialize simple dependencies
-		ImagesCorePackage.eINSTANCE.eClass();
-		Data3dPackage.eINSTANCE.eClass();
 		TopologyUIPackage.eINSTANCE.eClass();
+		Data3dPackage.eINSTANCE.eClass();
+		ImagesCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theData3DUIPackage.createPackageContents();

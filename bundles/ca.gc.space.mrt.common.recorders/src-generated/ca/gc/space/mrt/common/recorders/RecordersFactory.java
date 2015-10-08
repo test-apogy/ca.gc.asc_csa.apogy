@@ -65,6 +65,6 @@ public interface RecordersFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	RecordersPackage getMRTRecordersPackage();
+	RecordersPackage getRecordersPackage();
 
 } //RecordersFactory

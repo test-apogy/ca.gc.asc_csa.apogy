@@ -3,6 +3,7 @@
  */
 package ca.gc.space.mrt.geometry.data3d.asc.impl;
 
+import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -11,8 +12,6 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData;
 import ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode;
 import ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D;

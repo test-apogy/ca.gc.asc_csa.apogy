@@ -1,0 +1,81 @@
+@GenModel(prefix="Data25d",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="Data25d",
+	      operationReflection="true",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.data25d/src-generated")
+@GenModel(editDirectory="/ca.gc.space.mrt.geometry.data25d.edit/src-generated")
+
+package ca.gc.space.mrt.geometry.data25d
+
+import ca.gc.space.mrt.common.processors.Processor
+
+import ca.gc.space.mrt.geometry.data.Coordinates
+import ca.gc.space.mrt.geometry.data.CoordinatesSet
+import ca.gc.space.mrt.geometry.data.Polygon
+import ca.gc.space.mrt.geometry.data.Mesh
+
+import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates
+import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet
+
+type IOException wraps java.io.IOException
+
+@GenModel(documentation="Represent \"2.5 D\" geometry where u and v are the independent variables and w the dependent variable.")
+class Coordinates25D extends Coordinates
+{
+	double u
+	
+	double v
+	
+	double w
+}
+
+class CoordinatesSet25D extends CoordinatesSet<Coordinates25D>
+{
+	@GenModel(documentation="When this parameter is set to true, this parameter ensures that all points added are unique.  The drawback is that performance is significantly decreased.  This feature can be bypassed by setting this attribute to false.  Default is true.")
+	boolean enforceUniqueness = "true"
+}
+
+class VolumetricCoordinatesSet25D extends CoordinatesSet25D
+{
+	op CartesianPositionCoordinates getCartesianPositionCoordinates(Coordinates25D coordinates)
+}
+
+class Polygon25D extends Polygon<Coordinates25D>
+{
+	
+}
+
+class Mesh25D extends Mesh<Coordinates25D, Polygon25D>
+{
+	
+}
+
+class VolumetricMesh25D extends Mesh25D
+{
+	
+}
+
+abstract class CoordinatesSet25DFilter <T extends CoordinatesSet25D> extends Processor<T, T>
+{
+	op T createCoordinatesSet25D()
+}
+
+class DataFacade
+{
+	op Coordinates25D createCoordinates25D(Coordinates25D coordinates25D)
+	
+	op Coordinates25D createCoordinates25D(double u, double v, double w)
+	
+	op <T extends VolumetricCoordinatesSet25D> CartesianCoordinatesSet createCartesianCoordinatesSet(T volumetricCoordinatesSet25D)
+}
+
+class Data25DIO
+{
+	op void saveXYZ(VolumetricCoordinatesSet25D points, String fileName) throws IOException
+	
+	op VolumetricCoordinatesSet25D loadXYZ(String fileName) throws IOException
+}

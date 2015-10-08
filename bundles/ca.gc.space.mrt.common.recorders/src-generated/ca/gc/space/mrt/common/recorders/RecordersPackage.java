@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see ca.gc.space.mrt.common.recorders.RecordersFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MRTRecorders' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='MRTRecorders' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.space.mrt.common.recorders/src-generated' editDirectory='/ca.gc.space.mrt.common.recorders.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Recorders' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Recorders' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.space.mrt.common.recorders/src-generated' editDirectory='/ca.gc.space.mrt.common.recorders.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
  * @generated
  */
 public interface RecordersPackage extends EPackage {
@@ -566,7 +566,7 @@ public interface RecordersPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	RecordersFactory getMRTRecordersFactory();
+	RecordersFactory getRecordersFactory();
 
 	/**
 	 * <!-- begin-user-doc -->

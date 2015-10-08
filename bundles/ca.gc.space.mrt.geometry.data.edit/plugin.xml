@@ -11,7 +11,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http:///ca/gc/space/mrt/geometry/data/model/geometrydata.ecore"
+            uri="ca.gc.space.mrt.geometry.data.edit"
             class="ca.gc.space.mrt.geometry.data.provider.DataItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

@@ -5,9 +5,7 @@ package org.eclipse.symphony.core.invocator.provider;
 
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -26,7 +24,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 
 /**
@@ -206,7 +203,7 @@ public class AbstractResultItemProvider
   @Override
   public String getText(Object object)
   {
-		Date labelValue = ((AbstractResult)object).getTime();
+		Object labelValue = ((AbstractResult)object).getTime();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_AbstractResult_type") :

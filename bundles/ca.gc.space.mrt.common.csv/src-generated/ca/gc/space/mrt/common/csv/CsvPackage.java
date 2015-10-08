@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see ca.gc.space.mrt.common.csv.CsvFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MRTCsv' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='MRTCsv' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.space.mrt.common.csv/src-generated' editDirectory='/ca.gc.space.mrt.common.csv.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Csv' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Csv' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.space.mrt.common.csv/src-generated' editDirectory='/ca.gc.space.mrt.common.csv.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
  * @generated
  */
 public interface CsvPackage extends EPackage {
@@ -61,7 +61,7 @@ public interface CsvPackage extends EPackage {
 	CsvPackage eINSTANCE = ca.gc.space.mrt.common.csv.impl.CsvPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnValuesMapImpl <em>Csv Column Values Map</em>}' class.
+	 * The meta object id for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnValuesMapImpl <em>Column Values Map</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see ca.gc.space.mrt.common.csv.impl.CsvColumnValuesMapImpl
@@ -89,7 +89,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMN_VALUES_MAP__VALUE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Csv Column Values Map</em>' class.
+	 * The number of structural features of the '<em>Column Values Map</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -98,7 +98,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMN_VALUES_MAP_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Csv Column Values Map</em>' class.
+	 * The number of operations of the '<em>Column Values Map</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -107,7 +107,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMN_VALUES_MAP_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnImpl <em>Csv Column</em>}' class.
+	 * The meta object id for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnImpl <em>Column</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see ca.gc.space.mrt.common.csv.impl.CsvColumnImpl
@@ -144,7 +144,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMN__DESCRIPTION = 2;
 
 	/**
-	 * The number of structural features of the '<em>Csv Column</em>' class.
+	 * The number of structural features of the '<em>Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -153,7 +153,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMN_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Csv Column</em>' class.
+	 * The number of operations of the '<em>Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,7 +162,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnsSetImpl <em>Csv Columns Set</em>}' class.
+	 * The meta object id for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnsSetImpl <em>Columns Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see ca.gc.space.mrt.common.csv.impl.CsvColumnsSetImpl
@@ -190,7 +190,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMNS_SET__NAME = 1;
 
 	/**
-	 * The number of structural features of the '<em>Csv Columns Set</em>' class.
+	 * The number of structural features of the '<em>Columns Set</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -199,7 +199,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMNS_SET_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Csv Columns Set</em>' class.
+	 * The number of operations of the '<em>Columns Set</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -208,7 +208,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_COLUMNS_SET_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.space.mrt.common.csv.impl.CsvValueProviderImpl <em>Csv Value Provider</em>}' class.
+	 * The meta object id for the '{@link ca.gc.space.mrt.common.csv.impl.CsvValueProviderImpl <em>Value Provider</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see ca.gc.space.mrt.common.csv.impl.CsvValueProviderImpl
@@ -218,7 +218,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_VALUE_PROVIDER = 3;
 
 	/**
-	 * The number of structural features of the '<em>Csv Value Provider</em>' class.
+	 * The number of structural features of the '<em>Value Provider</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -236,7 +236,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_VALUE_PROVIDER___GET_STRING_VALUE__OBJECT = 0;
 
 	/**
-	 * The number of operations of the '<em>Csv Value Provider</em>' class.
+	 * The number of operations of the '<em>Value Provider</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -245,7 +245,7 @@ public interface CsvPackage extends EPackage {
 	int CSV_VALUE_PROVIDER_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '<em>Csv Column Map</em>' data type.
+	 * The meta object id for the '<em>Column Map</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see java.util.Map
@@ -256,10 +256,10 @@ public interface CsvPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link java.util.Map.Entry<java.lang.Integer, java.lang.Object> <em>Csv Column Values Map</em>}'.
+	 * Returns the meta object for class '{@link java.util.Map.Entry<java.lang.Integer, java.lang.Object> <em>Column Values Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Csv Column Values Map</em>'.
+	 * @return the meta object for class '<em>Column Values Map</em>'.
 	 * @see java.util.Map.Entry<java.lang.Integer, java.lang.Object>
 	 * @model keyUnique="false" keyDataType="org.eclipse.emf.ecore.EIntegerObject"
 	 *        valueUnique="false" valueDataType="org.eclipse.emf.ecore.EJavaObject"
@@ -290,10 +290,10 @@ public interface CsvPackage extends EPackage {
 	EAttribute getCsvColumnValuesMap_Key();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.space.mrt.common.csv.CsvColumn <em>Csv Column</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.space.mrt.common.csv.CsvColumn <em>Column</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Csv Column</em>'.
+	 * @return the meta object for class '<em>Column</em>'.
 	 * @see ca.gc.space.mrt.common.csv.CsvColumn
 	 * @generated
 	 */
@@ -333,10 +333,10 @@ public interface CsvPackage extends EPackage {
 	EAttribute getCsvColumn_Description();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.space.mrt.common.csv.CsvColumnsSet <em>Csv Columns Set</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.space.mrt.common.csv.CsvColumnsSet <em>Columns Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Csv Columns Set</em>'.
+	 * @return the meta object for class '<em>Columns Set</em>'.
 	 * @see ca.gc.space.mrt.common.csv.CsvColumnsSet
 	 * @generated
 	 */
@@ -365,10 +365,10 @@ public interface CsvPackage extends EPackage {
 	EAttribute getCsvColumnsSet_Name();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.space.mrt.common.csv.CsvValueProvider <em>Csv Value Provider</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.space.mrt.common.csv.CsvValueProvider <em>Value Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Csv Value Provider</em>'.
+	 * @return the meta object for class '<em>Value Provider</em>'.
 	 * @see ca.gc.space.mrt.common.csv.CsvValueProvider
 	 * @generated
 	 */
@@ -385,10 +385,10 @@ public interface CsvPackage extends EPackage {
 	EOperation getCsvValueProvider__GetStringValue__Object();
 
 	/**
-	 * Returns the meta object for data type '{@link java.util.Map <em>Csv Column Map</em>}'.
+	 * Returns the meta object for data type '{@link java.util.Map <em>Column Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Csv Column Map</em>'.
+	 * @return the meta object for data type '<em>Column Map</em>'.
 	 * @see java.util.Map
 	 * @model instanceClass="java.util.Map<java.lang.String, ca.gc.space.mrt.common.csv.CsvColumn>"
 	 * @generated
@@ -402,7 +402,7 @@ public interface CsvPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	CsvFactory getMRTCsvFactory();
+	CsvFactory getCsvFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -419,7 +419,7 @@ public interface CsvPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnValuesMapImpl <em>Csv Column Values Map</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnValuesMapImpl <em>Column Values Map</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see ca.gc.space.mrt.common.csv.impl.CsvColumnValuesMapImpl
@@ -445,7 +445,7 @@ public interface CsvPackage extends EPackage {
 		EAttribute CSV_COLUMN_VALUES_MAP__KEY = eINSTANCE.getCsvColumnValuesMap_Key();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnImpl <em>Csv Column</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnImpl <em>Column</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see ca.gc.space.mrt.common.csv.impl.CsvColumnImpl
@@ -479,7 +479,7 @@ public interface CsvPackage extends EPackage {
 		EAttribute CSV_COLUMN__DESCRIPTION = eINSTANCE.getCsvColumn_Description();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnsSetImpl <em>Csv Columns Set</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.space.mrt.common.csv.impl.CsvColumnsSetImpl <em>Columns Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see ca.gc.space.mrt.common.csv.impl.CsvColumnsSetImpl
@@ -505,7 +505,7 @@ public interface CsvPackage extends EPackage {
 		EAttribute CSV_COLUMNS_SET__NAME = eINSTANCE.getCsvColumnsSet_Name();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.space.mrt.common.csv.impl.CsvValueProviderImpl <em>Csv Value Provider</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.space.mrt.common.csv.impl.CsvValueProviderImpl <em>Value Provider</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see ca.gc.space.mrt.common.csv.impl.CsvValueProviderImpl
@@ -523,7 +523,7 @@ public interface CsvPackage extends EPackage {
 		EOperation CSV_VALUE_PROVIDER___GET_STRING_VALUE__OBJECT = eINSTANCE.getCsvValueProvider__GetStringValue__Object();
 
 		/**
-		 * The meta object literal for the '<em>Csv Column Map</em>' data type.
+		 * The meta object literal for the '<em>Column Map</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see java.util.Map

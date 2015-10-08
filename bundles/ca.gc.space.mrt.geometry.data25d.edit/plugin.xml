@@ -21,4 +21,11 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated mrt_geometry_data25d -->
+      <extender
+            uri="ca.gc.space.mrt.geometry.data"
+            class="ca.gc.space.mrt.geometry.data25d.provider.Data25dItemProviderAdapterFactory$DataChildCreationExtender"/>
+   </extension>
+
 </plugin>

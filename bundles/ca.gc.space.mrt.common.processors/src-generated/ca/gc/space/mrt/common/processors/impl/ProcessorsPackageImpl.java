@@ -123,7 +123,7 @@ public class ProcessorsPackageImpl extends EPackageImpl implements ProcessorsPac
 		if (isInited) return (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ProcessorsPackageImpl theMRTProcessorsPackage = (ProcessorsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ProcessorsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ProcessorsPackageImpl());
+		ProcessorsPackageImpl theProcessorsPackage = (ProcessorsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ProcessorsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ProcessorsPackageImpl());
 
 		isInited = true;
 
@@ -131,18 +131,18 @@ public class ProcessorsPackageImpl extends EPackageImpl implements ProcessorsPac
 		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theMRTProcessorsPackage.createPackageContents();
+		theProcessorsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theMRTProcessorsPackage.initializePackageContents();
+		theProcessorsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theMRTProcessorsPackage.freeze();
+		theProcessorsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(ProcessorsPackage.eNS_URI, theMRTProcessorsPackage);
-		return theMRTProcessorsPackage;
+		EPackage.Registry.INSTANCE.put(ProcessorsPackage.eNS_URI, theProcessorsPackage);
+		return theProcessorsPackage;
 	}
 
 	/**
@@ -294,7 +294,7 @@ public class ProcessorsPackageImpl extends EPackageImpl implements ProcessorsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessorsFactory getMRTProcessorsFactory() {
+	public ProcessorsFactory getProcessorsFactory() {
 		return (ProcessorsFactory)getEFactoryInstance();
 	}
 
@@ -456,12 +456,12 @@ public class ProcessorsPackageImpl extends EPackageImpl implements ProcessorsPac
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "MRTProcessors",
+			 "prefix", "Processors",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "MRTProcessors",
+			 "modelName", "Processors",
 			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.space.mrt.common.processors/src-generated",

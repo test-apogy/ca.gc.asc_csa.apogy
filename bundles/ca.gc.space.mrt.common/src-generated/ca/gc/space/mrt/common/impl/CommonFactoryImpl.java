@@ -31,9 +31,9 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 	 */
 	public static CommonFactory init() {
 		try {
-			CommonFactory theMRTCommonFactory = (CommonFactory)EPackage.Registry.INSTANCE.getEFactory(CommonPackage.eNS_URI);
-			if (theMRTCommonFactory != null) {
-				return theMRTCommonFactory;
+			CommonFactory theCommonFactory = (CommonFactory)EPackage.Registry.INSTANCE.getEFactory(CommonPackage.eNS_URI);
+			if (theCommonFactory != null) {
+				return theCommonFactory;
 			}
 		}
 		catch (Exception exception) {
@@ -151,7 +151,7 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CommonPackage getMRTCommonPackage() {
+	public CommonPackage getCommonPackage() {
 		return (CommonPackage)getEPackage();
 	}
 

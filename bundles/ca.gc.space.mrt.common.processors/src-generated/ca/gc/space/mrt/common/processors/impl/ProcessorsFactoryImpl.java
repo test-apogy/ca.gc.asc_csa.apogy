@@ -31,9 +31,9 @@ public class ProcessorsFactoryImpl extends EFactoryImpl implements ProcessorsFac
 	 */
 	public static ProcessorsFactory init() {
 		try {
-			ProcessorsFactory theMRTProcessorsFactory = (ProcessorsFactory)EPackage.Registry.INSTANCE.getEFactory(ProcessorsPackage.eNS_URI);
-			if (theMRTProcessorsFactory != null) {
-				return theMRTProcessorsFactory;
+			ProcessorsFactory theProcessorsFactory = (ProcessorsFactory)EPackage.Registry.INSTANCE.getEFactory(ProcessorsPackage.eNS_URI);
+			if (theProcessorsFactory != null) {
+				return theProcessorsFactory;
 			}
 		}
 		catch (Exception exception) {
@@ -162,7 +162,7 @@ public class ProcessorsFactoryImpl extends EFactoryImpl implements ProcessorsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessorsPackage getMRTProcessorsPackage() {
+	public ProcessorsPackage getProcessorsPackage() {
 		return (ProcessorsPackage)getEPackage();
 	}
 

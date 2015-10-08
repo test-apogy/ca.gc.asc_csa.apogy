@@ -3,12 +3,11 @@
  */
 package ca.gc.space.mrt.geometry.data25d.ui.impl;
 
+import ca.gc.space.mrt.geometry.data25d.Data25dPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import ca.gc.space.mrt.geometry.data25d.Data25dPackage;
 import ca.gc.space.mrt.geometry.data25d.ui.Data25DUIFactory;
 import ca.gc.space.mrt.geometry.data25d.ui.Data25DUIPackage;
 import ca.gc.space.mrt.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
