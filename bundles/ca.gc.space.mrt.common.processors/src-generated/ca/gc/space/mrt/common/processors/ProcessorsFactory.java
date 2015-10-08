@@ -23,10 +23,10 @@ public interface ProcessorsFactory extends EFactory {
 	ProcessorsFactory eINSTANCE = ca.gc.space.mrt.common.processors.impl.ProcessorsFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Processors Chain</em>'.
+	 * Returns a new object of class '<em>Chain</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Processors Chain</em>'.
+	 * @return a new object of class '<em>Chain</em>'.
 	 * @generated
 	 */
 	<I, O> ProcessorsChain<I, O> createProcessorsChain();
@@ -47,6 +47,6 @@ public interface ProcessorsFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	ProcessorsPackage getMRTProcessorsPackage();
+	ProcessorsPackage getProcessorsPackage();
 
 } //ProcessorsFactory

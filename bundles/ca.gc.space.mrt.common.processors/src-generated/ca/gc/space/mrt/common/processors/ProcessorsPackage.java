@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see ca.gc.space.mrt.common.processors.ProcessorsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MRTProcessors' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='MRTProcessors' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.space.mrt.common.processors/src-generated' editDirectory='/ca.gc.space.mrt.common.processors.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Processors' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Processors' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/ca.gc.space.mrt.common.processors/src-generated' editDirectory='/ca.gc.space.mrt.common.processors.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
  * @generated
  */
 public interface ProcessorsPackage extends EPackage {
@@ -162,7 +162,7 @@ public interface ProcessorsPackage extends EPackage {
 	int PROCESSOR_OPERATION_COUNT = MONITORABLE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link ca.gc.space.mrt.common.processors.impl.ProcessorsChainImpl <em>Processors Chain</em>}' class.
+	 * The meta object id for the '{@link ca.gc.space.mrt.common.processors.impl.ProcessorsChainImpl <em>Chain</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see ca.gc.space.mrt.common.processors.impl.ProcessorsChainImpl
@@ -226,7 +226,7 @@ public interface ProcessorsPackage extends EPackage {
 	int PROCESSORS_CHAIN__PROCESSORS = PROCESSOR_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Processors Chain</em>' class.
+	 * The number of structural features of the '<em>Chain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -244,7 +244,7 @@ public interface ProcessorsPackage extends EPackage {
 	int PROCESSORS_CHAIN___PROCESS__OBJECT = PROCESSOR___PROCESS__OBJECT;
 
 	/**
-	 * The number of operations of the '<em>Processors Chain</em>' class.
+	 * The number of operations of the '<em>Chain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -474,10 +474,10 @@ public interface ProcessorsPackage extends EPackage {
 	EOperation getProcessor__Process__Object();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.space.mrt.common.processors.ProcessorsChain <em>Processors Chain</em>}'.
+	 * Returns the meta object for class '{@link ca.gc.space.mrt.common.processors.ProcessorsChain <em>Chain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Processors Chain</em>'.
+	 * @return the meta object for class '<em>Chain</em>'.
 	 * @see ca.gc.space.mrt.common.processors.ProcessorsChain
 	 * @generated
 	 */
@@ -586,7 +586,7 @@ public interface ProcessorsPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	ProcessorsFactory getMRTProcessorsFactory();
+	ProcessorsFactory getProcessorsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -655,7 +655,7 @@ public interface ProcessorsPackage extends EPackage {
 		EOperation PROCESSOR___PROCESS__OBJECT = eINSTANCE.getProcessor__Process__Object();
 
 		/**
-		 * The meta object literal for the '{@link ca.gc.space.mrt.common.processors.impl.ProcessorsChainImpl <em>Processors Chain</em>}' class.
+		 * The meta object literal for the '{@link ca.gc.space.mrt.common.processors.impl.ProcessorsChainImpl <em>Chain</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see ca.gc.space.mrt.common.processors.impl.ProcessorsChainImpl

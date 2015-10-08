@@ -34,9 +34,9 @@ public class RecordersFactoryImpl extends EFactoryImpl implements RecordersFacto
 	 */
 	public static RecordersFactory init() {
 		try {
-			RecordersFactory theMRTRecordersFactory = (RecordersFactory)EPackage.Registry.INSTANCE.getEFactory(RecordersPackage.eNS_URI);
-			if (theMRTRecordersFactory != null) {
-				return theMRTRecordersFactory;
+			RecordersFactory theRecordersFactory = (RecordersFactory)EPackage.Registry.INSTANCE.getEFactory(RecordersPackage.eNS_URI);
+			if (theRecordersFactory != null) {
+				return theRecordersFactory;
 			}
 		}
 		catch (Exception exception) {
@@ -190,7 +190,7 @@ public class RecordersFactoryImpl extends EFactoryImpl implements RecordersFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RecordersPackage getMRTRecordersPackage() {
+	public RecordersPackage getRecordersPackage() {
 		return (RecordersPackage)getEPackage();
 	}
 

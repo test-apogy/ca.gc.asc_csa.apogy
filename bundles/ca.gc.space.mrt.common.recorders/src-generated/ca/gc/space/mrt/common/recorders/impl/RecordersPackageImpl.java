@@ -119,7 +119,7 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 		if (isInited) return (RecordersPackage)EPackage.Registry.INSTANCE.getEPackage(RecordersPackage.eNS_URI);
 
 		// Obtain or create and register package
-		RecordersPackageImpl theMRTRecordersPackage = (RecordersPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof RecordersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new RecordersPackageImpl());
+		RecordersPackageImpl theRecordersPackage = (RecordersPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof RecordersPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new RecordersPackageImpl());
 
 		isInited = true;
 
@@ -128,18 +128,18 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 		CsvPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theMRTRecordersPackage.createPackageContents();
+		theRecordersPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theMRTRecordersPackage.initializePackageContents();
+		theRecordersPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theMRTRecordersPackage.freeze();
+		theRecordersPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(RecordersPackage.eNS_URI, theMRTRecordersPackage);
-		return theMRTRecordersPackage;
+		EPackage.Registry.INSTANCE.put(RecordersPackage.eNS_URI, theRecordersPackage);
+		return theRecordersPackage;
 	}
 
 	/**
@@ -336,7 +336,7 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RecordersFactory getMRTRecordersFactory() {
+	public RecordersFactory getRecordersFactory() {
 		return (RecordersFactory)getEFactoryInstance();
 	}
 
@@ -414,15 +414,15 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ProcessorsPackage theMRTProcessorsPackage = (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
-		CsvPackage theMRTCsvPackage = (CsvPackage)EPackage.Registry.INSTANCE.getEPackage(CsvPackage.eNS_URI);
+		ProcessorsPackage theProcessorsPackage = (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
+		CsvPackage theCsvPackage = (CsvPackage)EPackage.Registry.INSTANCE.getEPackage(CsvPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		recorderEClass.getESuperTypes().add(theMRTProcessorsPackage.getMonitorable());
+		recorderEClass.getESuperTypes().add(theProcessorsPackage.getMonitorable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(recordingsEClass, Recordings.class, "Recordings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -454,7 +454,7 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 		initEClass(csvExporterEClass, CsvExporter.class, "CsvExporter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCsvExporter_IncludeColumnDescription(), theEcorePackage.getEBoolean(), "includeColumnDescription", null, 0, 1, CsvExporter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCsvExporter_IncludeColumnName(), theEcorePackage.getEBoolean(), "includeColumnName", null, 0, 1, CsvExporter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCsvExporter_ColumnSet(), theMRTCsvPackage.getCsvColumnsSet(), null, "columnSet", null, 0, 1, CsvExporter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getCsvExporter_ColumnSet(), theCsvPackage.getCsvColumnsSet(), null, "columnSet", null, 0, 1, CsvExporter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getCsvExporter__ExportToCSVFile__String(), null, "exportToCSVFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "exportPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -489,12 +489,12 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 		  (this, 
 		   source, 
 		   new String[] {
-			 "prefix", "MRTRecorders",
+			 "prefix", "Recorders",
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-			 "modelName", "MRTRecorders",
+			 "modelName", "Recorders",
 			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/ca.gc.space.mrt.common.recorders/src-generated",
