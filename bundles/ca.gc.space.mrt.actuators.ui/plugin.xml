@@ -11,8 +11,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.space.mrt.actuators.ui"
-            class="ca.gc.space.mrt.actuators.ui.MRTActuatorsUIPackage"
+            uri="org.eclipse.symphony.addons.actuators.ui"
+            class="org.eclipse.symphony.addons.actuators.ui.MRTActuatorsUIPackage"
             genModel="model/ca_gc_asc_csa_mrt_actuators_ui.xcore"/>
    </extension>
 

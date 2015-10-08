@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.actuators.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.actuators.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.mrt.actuators.provider.MRTActuatorsEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.actuators.provider.MRTActuatorsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.space.mrt.actuators.provider
+Export-Package: org.eclipse.symphony.addons.actuators.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.space.mrt.actuators;visibility:=reexport,
+ org.eclipse.symphony.addons.actuators;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,

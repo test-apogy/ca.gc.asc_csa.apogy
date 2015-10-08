@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.actuators;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.actuators;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.actuators,
- ca.gc.space.mrt.actuators.impl,
- ca.gc.space.mrt.actuators.util
+Export-Package: org.eclipse.symphony.addons.actuators,
+ org.eclipse.symphony.addons.actuators.impl,
+ org.eclipse.symphony.addons.actuators.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
@@ -16,5 +16,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.space.mrt.actuators.Activator
+Bundle-Activator: org.eclipse.symphony.addons.actuators.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

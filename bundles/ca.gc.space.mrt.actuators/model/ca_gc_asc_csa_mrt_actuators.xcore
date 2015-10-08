@@ -1,8 +1,8 @@
 @GenModel(prefix="MRTActuators", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false",copyrightText="Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)", modelName="MRTActuators", suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.space.mrt.actuators/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.actuators.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.actuators/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.actuators.edit/src-generated")
 
-package ca.gc.space.mrt.actuators
+package org.eclipse.symphony.addons.actuators
 
 import ca.gc.space.topology.Node
 

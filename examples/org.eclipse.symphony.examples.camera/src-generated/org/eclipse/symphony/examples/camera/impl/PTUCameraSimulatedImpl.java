@@ -4,21 +4,23 @@
 package org.eclipse.symphony.examples.camera.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import javax.vecmath.GVector;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.actuators.AbstractActuator;
+import org.eclipse.symphony.addons.actuators.ActuatorStatus;
+import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.camera.Activator;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
 import org.eclipse.symphony.examples.camera.PTUCamera;
 import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
-import ca.gc.space.mrt.actuators.AbstractActuator;
-import ca.gc.space.mrt.actuators.ActuatorStatus;
-import ca.gc.space.mrt.actuators.MRTActuatorsPackage;
-import ca.gc.space.mrt.actuators.PanTiltUnit;
 
 /**
  * <!-- begin-user-doc -->

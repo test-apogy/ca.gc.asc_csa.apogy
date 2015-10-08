@@ -4,9 +4,11 @@
 package org.eclipse.symphony.examples.camera.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import ca.gc.space.mrt.actuators.provider.MRTActuatorsEditPlugin;
+import org.eclipse.symphony.addons.actuators.provider.MRTActuatorsEditPlugin;
+
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
 import ca.gc.space.mrt.geometry.data.provider.DataEditPlugin;
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;

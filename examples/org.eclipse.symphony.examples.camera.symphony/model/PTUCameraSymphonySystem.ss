@@ -42,10 +42,10 @@
     <featureRootsList xmi:id="_1LQ6AQrOEeW4-_ONWXXiAw">
       <featureRoots xmi:id="_1LQ6AgrOEeW4-_ONWXXiAw">
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_1LQ6AwrOEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.space.mrt.actuators#//PanTiltUnit/currentPanAngle"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/currentPanAngle"/>
         </children>
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_1LQ6BArOEeW4-_ONWXXiAw">
-          <structuralFeature xsi:type="ecore_1:EAttribute" href="ca.gc.space.mrt.actuators#//PanTiltUnit/currentTiltAngle"/>
+          <structuralFeature xsi:type="ecore_1:EAttribute" href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/currentTiltAngle"/>
         </children>
         <children xsi:type="ecore:TreeFeatureNode" xmi:id="_1LQ6BQrOEeW4-_ONWXXiAw">
           <structuralFeature xsi:type="ecore_1:EReference" href="org.eclipse.symphony.examples.camera.symphony#//Camera/fov"/>

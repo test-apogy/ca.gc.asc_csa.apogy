@@ -58,21 +58,21 @@
         <eOperation href="ca.gc.space.mrt.sensors.imaging#//AbstractCamera/takeSnapshot"/>
       </operationCalls>
       <operationCalls variable="//@environment/@variablesList/@variables.0" name="Move To Pan / Tilt Angles">
-        <eOperation href="ca.gc.space.mrt.actuators#//PanTiltUnit/moveToPanTilt"/>
+        <eOperation href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/moveToPanTilt"/>
         <argumentsList>
           <arguments xsi:type="invocator:EDataTypeArgument" value="0.7853981633974483"/>
           <arguments xsi:type="invocator:EDataTypeArgument" value="1.5707963267948966"/>
         </argumentsList>
       </operationCalls>
       <operationCalls variable="//@environment/@variablesList/@variables.0" name="Move By Pan / Tilt Offsets">
-        <eOperation href="ca.gc.space.mrt.actuators#//PanTiltUnit/moveByPanTilt"/>
+        <eOperation href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/moveByPanTilt"/>
         <argumentsList>
           <arguments xsi:type="invocator:EDataTypeArgument" value="0.17453292519943295"/>
           <arguments xsi:type="invocator:EDataTypeArgument" value="-0.17453292519943295"/>
         </argumentsList>
       </operationCalls>
       <operationCalls variable="//@environment/@variablesList/@variables.0" name="Stop Movement">
-        <eOperation href="ca.gc.space.mrt.actuators#//PanTiltUnit/stopMotion"/>
+        <eOperation href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/stopMotion"/>
       </operationCalls>
     </programs>
   </programsList>

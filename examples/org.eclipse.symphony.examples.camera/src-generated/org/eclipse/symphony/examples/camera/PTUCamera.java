@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.examples.camera;
 
-import ca.gc.space.mrt.actuators.PanTiltUnit;
+import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 
 /**
  * <!-- begin-user-doc -->

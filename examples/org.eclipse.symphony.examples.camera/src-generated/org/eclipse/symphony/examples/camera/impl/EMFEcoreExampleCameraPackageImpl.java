@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import ca.gc.space.mrt.actuators.MRTActuatorsPackage;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
 import org.eclipse.symphony.examples.camera.Camera;
 import org.eclipse.symphony.examples.camera.CameraSimulated;
 import org.eclipse.symphony.examples.camera.CameraStub;
