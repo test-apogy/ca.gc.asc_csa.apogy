@@ -22,7 +22,7 @@ import ca.gc.space.topology.ui.TopologyUIPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.ui.SymphonyToolsUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyToolsUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='SymphonyToolsUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.ui/src-generated' editDirectory='/org.eclipse.symphony.addons.ui.edit/src-generated' basePackage='ca.gc.asc_csa.symphony.tools'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyToolsUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='SymphonyToolsUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.ui/src-generated' editDirectory='/org.eclipse.symphony.addons.ui.edit/src-generated' basePackage='org.eclipse.symphony.addons'"
  * @generated
  */
 public interface SymphonyToolsUIPackage extends EPackage {

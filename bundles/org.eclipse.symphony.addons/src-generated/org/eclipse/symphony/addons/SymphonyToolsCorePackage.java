@@ -28,7 +28,7 @@ import ca.gc.space.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.SymphonyToolsCoreFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyToolsCore' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='SymphonyToolsCore' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons/src-generated' editDirectory='/org.eclipse.symphony.addons.edit/src-generated' basePackage='ca.gc.asc_csa.symphony.tools'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyToolsCore' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='SymphonyToolsCore' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons/src-generated' editDirectory='/org.eclipse.symphony.addons.edit/src-generated' basePackage='org.eclipse.symphony'"
  * @generated
  */
 public interface SymphonyToolsCorePackage extends EPackage
@@ -39,7 +39,7 @@ public interface SymphonyToolsCorePackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNAME = "core";
+  String eNAME = "addons";
 
   /**
 	 * The package namespace URI.
@@ -55,7 +55,7 @@ public interface SymphonyToolsCorePackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_PREFIX = "core";
+  String eNS_PREFIX = "addons";
 
   /**
 	 * The singleton instance of the package.

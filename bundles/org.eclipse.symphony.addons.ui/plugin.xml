@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_tools_ui -->
       <package
-            uri="ca.gc.asc_csa.symphony.tools.ui"
+            uri="org.eclipse.symphony.addons.ui"
             class="org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage"
             genModel="model/symphony_tools_ui.xcore"/>
    </extension>

@@ -188,8 +188,8 @@ public class SymphonyToolsCorePackageImpl extends EPackageImpl implements Sympho
 		isInited = true;
 
 		// Initialize simple dependencies
-		PathsPackage.eINSTANCE.eClass();
 		SymphonyCorePackage.eINSTANCE.eClass();
+		PathsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyToolsCorePackage.createPackageContents();
@@ -1054,7 +1054,7 @@ public class SymphonyToolsCorePackageImpl extends EPackageImpl implements Sympho
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.edit/src-generated",
-			 "basePackage", "ca.gc.asc_csa.symphony.tools"
+			 "basePackage", "org.eclipse.symphony"
 		   });	
 		addAnnotation
 		  (getSimpleToolList_SimpleTools(), 
