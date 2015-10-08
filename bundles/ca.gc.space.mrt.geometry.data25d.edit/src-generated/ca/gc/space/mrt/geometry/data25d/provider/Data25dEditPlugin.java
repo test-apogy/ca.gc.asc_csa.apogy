@@ -1,28 +1,28 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.core.programs.provider;
+package ca.gc.space.mrt.geometry.data25d.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-
+import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
+import ca.gc.space.mrt.geometry.data.provider.DataEditPlugin;
+import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 
 /**
- * This is the central singleton for the InvocatorPrograms edit plugin.
+ * This is the central singleton for the Data25d edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class InvocatorProgramsEditPlugin extends EMFPlugin {
+public final class Data25dEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final InvocatorProgramsEditPlugin INSTANCE = new InvocatorProgramsEditPlugin();
+	public static final Data25dEditPlugin INSTANCE = new Data25dEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -38,11 +38,12 @@ public final class InvocatorProgramsEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InvocatorProgramsEditPlugin() {
+	public Data25dEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		   });
 	}
 
