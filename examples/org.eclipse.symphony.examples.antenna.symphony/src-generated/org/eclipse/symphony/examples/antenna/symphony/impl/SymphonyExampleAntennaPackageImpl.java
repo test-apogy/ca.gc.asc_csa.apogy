@@ -88,8 +88,8 @@ public class SymphonyExampleAntennaPackageImpl extends EPackageImpl implements S
 		isInited = true;
 
 		// Initialize simple dependencies
-		FovPackage.eINSTANCE.eClass();
 		SymphonyCorePackage.eINSTANCE.eClass();
+		FovPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyExampleAntennaPackage.createPackageContents();
