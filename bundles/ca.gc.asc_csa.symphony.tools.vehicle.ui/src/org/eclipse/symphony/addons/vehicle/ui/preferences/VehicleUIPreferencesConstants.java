@@ -1,0 +1,28 @@
+package org.eclipse.symphony.addons.vehicle.ui.preferences;
+
+import org.eclipse.swt.graphics.RGB;
+
+
+public class VehicleUIPreferencesConstants 
+{
+	public static final String DEFAULT_PHYSICAL_WHEEL_VISIBILITY_ID = "DEFAULT_PHYSICAL_WHEEL_VISIBILITY_ID";
+	public static final boolean DEFAULT_PHYSICAL_WHEEL_VISIBILITY = false;
+	
+	public static final String DEFAULT_PHYSICAL_WHEEL_COLOR_ID = "DEFAULT_PHYSICAL_WHEEL_COLOR_ID";		
+	public static final RGB DEFAULT_PHYSICAL_WHEEL_COLOR  = new RGB(255,255,255);
+	
+	public static final String DEFAULT_LANDER_SPHERICAL_FOOT_VISIBILITY_ID = "DEFAULT_LANDER_SPHERICAL_FOOT_VISIBILITY_ID";
+	public static final boolean DEFAULT_LANDER_SPHERICAL_FOOT_VISIBILITY = false;
+	
+	public static final String DEFAULT_LANDER_SPHERICAL_FOOT_COLOR_ID = "DEFAULT_LANDER_SPHERICAL_FOOT_COLOR_ID";		
+	public static final RGB DEFAULT_LANDER_SPHERICAL_FOOT_COLOR  = new RGB(255,255,255);
+	
+	public static final String DEFAULT_THRUSTER_PLUME_ENVELOPE_VISIBILITY_ID = "DEFAULT_THRUSTER_PLUME_ENVELOPE_VISIBILITY_ID";
+	public static final boolean DEFAULT_THRUSTER_PLUME_ENVELOPE_VISIBILITY = false;
+	
+	public static final String DEFAULT_THRUSTER_PLUME_ENVELOPE_COLOR_ID = "DEFAULT_THRUSTER_PLUME_ENVELOPE_COLOR_ID";		
+	public static final RGB DEFAULT_THRUSTER_PLUME_ENVELOPE_COLOR  = new RGB(255,0,0);
+	
+	public static final String DEFAULT_THRUSTER_PLUME_ENVELOPE_LENGTH_ID = "DEFAULT_THRUSTER_PLUME_ENVELOPE_LENGTH_ID";
+	public static final double DEFAULT_THRUSTER_PLUME_ENVELOPE_LENGTH = 1.0;
+}

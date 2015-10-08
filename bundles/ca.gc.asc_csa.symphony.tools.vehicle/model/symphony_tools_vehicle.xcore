@@ -1,9 +1,9 @@
 @GenModel(prefix="SymphonyToolsVehicle", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)", modelName="SymphonyToolsVehicle", suppressGenModelAnnotations="false") 
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.tools.vehicle/src-generated")
-@GenModel(editDirectory= "/ca.gc.asc_csa.symphony.tools.vehicle.edit/src-generated")
-// @GenModel(testsDirectory="/ca.gc.asc_csa.symphony.tools.vehicle.tests/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.vehicle/src-generated")
+@GenModel(editDirectory= "/org.eclipse.symphony.addons.vehicle.edit/src-generated")
+// @GenModel(testsDirectory="/org.eclipse.symphony.addons.vehicle.tests/src-generated")
 
-package ca.gc.asc_csa.symphony.tools.vehicle
+package org.eclipse.symphony.addons.vehicle
 
 import org.eclipse.symphony.core.invocator.Variable
 import org.eclipse.symphony.core.PoseCorrector
@@ -29,12 +29,12 @@ type List<T> wraps java.util.List
 type SortedSet<T> wraps java.util.SortedSet
 type Iterator<T> wraps java.util.Iterator
 
-type Segment2D wraps ca.gc.asc_csa.symphony.tools.vehicle.Segment2D
-type Line3d wraps ca.gc.asc_csa.symphony.tools.vehicle.Line3d
-type Plane wraps ca.gc.asc_csa.symphony.tools.vehicle.Plane
-type TerrainProfile wraps ca.gc.asc_csa.symphony.tools.vehicle.TerrainProfile
+type Segment2D wraps org.eclipse.symphony.addons.vehicle.Segment2D
+type Line3d wraps org.eclipse.symphony.addons.vehicle.Line3d
+type Plane wraps org.eclipse.symphony.addons.vehicle.Plane
+type TerrainProfile wraps org.eclipse.symphony.addons.vehicle.TerrainProfile
 
-type ClosestNeighbourIteratorProvider wraps ca.gc.asc_csa.symphony.tools.vehicle.ClosestNeighbourIteratorProvider
+type ClosestNeighbourIteratorProvider wraps org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider
 
 
 /*

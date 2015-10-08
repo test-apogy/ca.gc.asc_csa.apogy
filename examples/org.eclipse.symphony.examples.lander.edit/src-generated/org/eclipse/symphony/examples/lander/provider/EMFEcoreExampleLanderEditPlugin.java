@@ -5,7 +5,6 @@ package org.eclipse.symphony.examples.lander.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 import ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin;
-import ca.gc.asc_csa.symphony.tools.vehicle.provider.SymphonyToolsVehicleEditPlugin;
 import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
 import ca.gc.asc_csa.topology.dynamics.provider.Topology_dynamicsEditPlugin;
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
@@ -14,8 +13,10 @@ import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
 import ca.gc.space.mrt.geometry.paths.provider.PathEditPlugin;
 import ca.gc.space.mrt.mobility.pathplanners.provider.PathplannersEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleEditPlugin;
 import org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;

@@ -1,9 +1,9 @@
 @GenModel(prefix="SymphonyToolsVehicleUI", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)", modelName="SymphonyToolsVehicleUI") 
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.tools.vehicle.ui/src-generated")
-@GenModel(editDirectory= "/ca.gc.asc_csa.symphony.tools.vehicle.ui.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.vehicle.ui/src-generated")
+@GenModel(editDirectory= "/org.eclipse.symphony.addons.vehicle.ui.edit/src-generated")
 
 
-package ca.gc.asc_csa.symphony.tools.vehicle.ui
+package org.eclipse.symphony.addons.vehicle.ui
 
 import ca.gc.space.topology.ui.NodePresentation
 

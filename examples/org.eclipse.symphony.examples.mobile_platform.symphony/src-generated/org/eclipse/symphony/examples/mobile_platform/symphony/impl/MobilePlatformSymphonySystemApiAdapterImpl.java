@@ -5,14 +5,13 @@ package org.eclipse.symphony.examples.mobile_platform.symphony.impl;
 
 import javax.vecmath.Matrix4d;
 
-import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
-import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;

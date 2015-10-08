@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ca.gc.asc_csa.symphony.tools.vehicle.ui.edit</name>
+	<name>org.eclipse.symphony.addons.vehicle.ui.edit</name>
 	<comment></comment>
 	<projects>
 	</projects>

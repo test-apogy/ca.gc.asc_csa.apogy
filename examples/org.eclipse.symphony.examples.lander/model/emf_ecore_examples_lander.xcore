@@ -11,7 +11,7 @@ package org.eclipse.symphony.examples.lander
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Disposable
 
-import ca.gc.asc_csa.symphony.tools.vehicle.Thruster
+import org.eclipse.symphony.addons.vehicle.Thruster
 
 /*
  * A 3x3 Matrix, used to help implement the lander's position,

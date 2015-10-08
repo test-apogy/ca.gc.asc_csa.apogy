@@ -4,25 +4,25 @@
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.vehicle.ui.jme3.adapters.WheelJME3Adapter">
+            Class="org.eclipse.symphony.addons.vehicle.ui.jme3.adapters.WheelJME3Adapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.vehicle.ui.jme3.adapters.LanderSphericalFootJME3Adapter">
+            Class="org.eclipse.symphony.addons.vehicle.ui.jme3.adapters.LanderSphericalFootJME3Adapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
          <Class
-            Class="ca.gc.asc_csa.symphony.tools.vehicle.ui.jme3.adapters.ThrusterJME3Adapter">
+            Class="org.eclipse.symphony.addons.vehicle.ui.jme3.adapters.ThrusterJME3Adapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.vehicle.ui.jme3.adapters.PathPlannerToolNodeJME3Adapter">
+            Class="org.eclipse.symphony.addons.vehicle.ui.jme3.adapters.PathPlannerToolNodeJME3Adapter">
       </Class>
    </extension>
 

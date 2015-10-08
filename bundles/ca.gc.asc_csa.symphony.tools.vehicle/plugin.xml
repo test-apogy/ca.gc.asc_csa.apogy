@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_tools_vehicle -->
       <package
-            uri="ca.gc.asc_csa.symphony.tools.vehicle"
-            class="ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage"
+            uri="org.eclipse.symphony.addons.vehicle"
+            class="org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage"
             genModel="model/symphony_tools_vehicle.xcore"/>
    </extension>
 
