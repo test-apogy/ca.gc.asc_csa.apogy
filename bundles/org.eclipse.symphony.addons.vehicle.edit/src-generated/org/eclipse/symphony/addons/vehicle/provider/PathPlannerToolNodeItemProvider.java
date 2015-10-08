@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.vehicle.provider;
 
 
-import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCoreFactory;
 import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsFactory;
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersFactory;
@@ -18,6 +17,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;

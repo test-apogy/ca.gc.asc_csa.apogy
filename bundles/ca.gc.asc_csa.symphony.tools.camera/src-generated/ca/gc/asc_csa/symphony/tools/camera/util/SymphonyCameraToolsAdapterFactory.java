@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.AbstractTool;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
@@ -15,7 +16,6 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.symphony.tools.camera.*;
-import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
 
 /**
  * <!-- begin-user-doc -->
@@ -799,13 +799,13 @@ public class SymphonyCameraToolsAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.tools.core.AbstractTool <em>Abstract Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.AbstractTool <em>Abstract Tool</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.tools.core.AbstractTool
+	 * @see org.eclipse.symphony.addons.AbstractTool
 	 * @generated
 	 */
   public Adapter createAbstractToolAdapter()

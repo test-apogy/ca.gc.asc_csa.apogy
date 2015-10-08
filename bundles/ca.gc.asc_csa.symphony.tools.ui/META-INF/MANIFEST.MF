@@ -1,18 +1,18 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.tools.ui,
- ca.gc.asc_csa.symphony.tools.ui.adapters,
- ca.gc.asc_csa.symphony.tools.ui.commands,
- ca.gc.asc_csa.symphony.tools.ui.impl,
- ca.gc.asc_csa.symphony.tools.ui.preferences,
- ca.gc.asc_csa.symphony.tools.ui.util
+Export-Package: org.eclipse.symphony.addons.ui,
+ org.eclipse.symphony.addons.ui.adapters,
+ org.eclipse.symphony.addons.ui.commands,
+ org.eclipse.symphony.addons.ui.impl,
+ org.eclipse.symphony.addons.ui.preferences,
+ org.eclipse.symphony.addons.ui.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
  org.eclipse.emf.ecore;visibility:=reexport,
@@ -22,6 +22,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.space.topology.ui;visibility:=reexport,
  org.eclipse.swt,
- ca.gc.asc_csa.symphony.tools.core;visibility:=reexport
+ org.eclipse.symphony.addons;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.symphony.tools.ui.Activator
+Bundle-Activator: org.eclipse.symphony.addons.ui.Activator

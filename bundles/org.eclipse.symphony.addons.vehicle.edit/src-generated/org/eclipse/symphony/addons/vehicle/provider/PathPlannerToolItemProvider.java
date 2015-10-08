@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.vehicle.provider;
 
 
-import ca.gc.asc_csa.symphony.tools.core.provider.AbstractTwoPoints3DToolItemProvider;
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersFactory;
 
@@ -19,6 +18,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.provider.AbstractTwoPoints3DToolItemProvider;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 

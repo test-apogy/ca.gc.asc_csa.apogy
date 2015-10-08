@@ -3,9 +3,6 @@
  */
 package org.eclipse.symphony.addons.telecoms.provider;
 
-import ca.gc.asc_csa.symphony.tools.core.SimpleToolList;
-import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
-import ca.gc.asc_csa.symphony.tools.core.util.SymphonyToolsCoreSwitch;
 import ca.gc.asc_csa.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
@@ -41,9 +38,12 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.addons.SimpleToolList;
+import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsFactory;
 import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
 import org.eclipse.symphony.addons.telecoms.util.SymphonyTelecomToolsAdapterFactory;
+import org.eclipse.symphony.addons.util.SymphonyToolsCoreSwitch;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;

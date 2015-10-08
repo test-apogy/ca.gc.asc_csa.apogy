@@ -29,7 +29,7 @@
             uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.symphony.tools.core"
+            uri="org.eclipse.symphony.addons"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core"

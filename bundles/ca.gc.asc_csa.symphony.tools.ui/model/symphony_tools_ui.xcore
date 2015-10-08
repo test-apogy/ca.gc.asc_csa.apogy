@@ -1,8 +1,8 @@
 @GenModel(prefix="SymphonyToolsUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)", modelName="SymphonyToolsUI", complianceLevel="6.0")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.tools.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.tools.ui.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.ui.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.tools.ui
+package org.eclipse.symphony.addons.ui
 
 import ca.gc.space.topology.ui.NodePresentation
 

@@ -8,7 +8,7 @@ package org.eclipse.symphony.addons.vehicle
 import org.eclipse.symphony.core.invocator.Variable
 import org.eclipse.symphony.core.PoseCorrector
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer
-import ca.gc.asc_csa.symphony.tools.core.AbstractTwoPoints3DTool
+import org.eclipse.symphony.addons.AbstractTwoPoints3DTool
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody
 import org.eclipse.symphony.common.math.Matrix3x3

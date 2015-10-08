@@ -5,14 +5,14 @@ package org.eclipse.symphony.addons.telecoms.util;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
-import ca.gc.asc_csa.symphony.tools.core.SimpleTool;
 import ca.gc.space.topology.Node;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.AbstractTool;
+import org.eclipse.symphony.addons.SimpleTool;
 import org.eclipse.symphony.addons.telecoms.*;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
@@ -368,13 +368,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.tools.core.AbstractTool <em>Abstract Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.AbstractTool <em>Abstract Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.tools.core.AbstractTool
+	 * @see org.eclipse.symphony.addons.AbstractTool
 	 * @generated
 	 */
 	public Adapter createAbstractToolAdapter() {
@@ -382,13 +382,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.symphony.tools.core.SimpleTool <em>Simple Tool</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.SimpleTool <em>Simple Tool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.symphony.tools.core.SimpleTool
+	 * @see org.eclipse.symphony.addons.SimpleTool
 	 * @generated
 	 */
 	public Adapter createSimpleToolAdapter() {

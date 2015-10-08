@@ -11,8 +11,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_tools_core -->
       <factory
-            uri="ca.gc.asc_csa.symphony.tools.core"
-            class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.addons"
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -25,19 +25,19 @@
       <!-- @generated symphony_tools_core -->
       <extender
             uri="ca.gc.asc_csa.topology.bindings"
-            class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core"
-            class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
-            class="ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreItemProviderAdapterFactory$PathsChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$PathsChildCreationExtender"/>
    </extension>
 
 </plugin>

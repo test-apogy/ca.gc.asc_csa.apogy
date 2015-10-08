@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.addons.telecoms;
 
-import ca.gc.asc_csa.symphony.tools.core.SimpleTool;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.addons.SimpleTool;
 
 /**
  * <!-- begin-user-doc -->

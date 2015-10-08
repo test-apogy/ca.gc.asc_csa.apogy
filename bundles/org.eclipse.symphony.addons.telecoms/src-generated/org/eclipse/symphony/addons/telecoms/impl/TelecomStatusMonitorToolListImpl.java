@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.addons.telecoms.impl;
 
-import ca.gc.asc_csa.symphony.tools.core.impl.SimpleToolImpl;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -13,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.addons.impl.SimpleToolImpl;
 import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;

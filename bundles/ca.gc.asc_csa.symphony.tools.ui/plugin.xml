@@ -11,39 +11,39 @@
       <!-- @generated symphony_tools_ui -->
       <package
             uri="ca.gc.asc_csa.symphony.tools.ui"
-            class="ca.gc.asc_csa.symphony.tools.ui.SymphonyToolsUIPackage"
+            class="org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage"
             genModel="model/symphony_tools_ui.xcore"/>
    </extension>
    <extension
          point="ca.gc.space.topology.ui.presentation">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.ui.adapters.Ruler3dToolNodePresentationAdapter">
+            Class="org.eclipse.symphony.addons.ui.adapters.Ruler3dToolNodePresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="ca.gc.asc_csa.symphony.tools.ui.commands.AbstractTwoPoints3DToolLockFromNodeCommand"
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.AbstractTwoPoints3DToolLockFromNodeCommand"
             id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleRuler3DToolLockFromNodeCommand"
             name="Toggle Ruler3D From Node Lock">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.symphony.tools.ui.commands.AbstractTwoPoints3DToolLockToNodeCommand"
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.AbstractTwoPoints3DToolLockToNodeCommand"
             id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleRuler3DToolLockToNodeCommand"
             name="Toggle Ruler3D To Node Lock">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleSimpleToolActiveCommand"
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleSimpleToolActiveCommand"
             id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleSimpleToolActiveCommand"
             name="Toggle Simple3DTool Active">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleSimple3DToolVisibilityCommand"
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleSimple3DToolVisibilityCommand"
             id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleSimple3DToolVisibilityCommand"
             name="Toggle Simple3DTool Visibility">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleTrajectory3DToolPenCommand"
+            defaultHandler="org.eclipse.symphony.addons.ui.commands.ToggleTrajectory3DToolPenCommand"
             id="ca.gc.asc_csa.symphony.tools.ui.commands.ToggleTrajectory3DToolPenCommand"
             name="Toggle Trajectory3DTool Pen">
       </command>
@@ -65,7 +65,7 @@
                       ifEmpty="false"
                       operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.symphony.tools.core.AbstractTwoPoints3DTool">
+                           value="org.eclipse.symphony.addons.AbstractTwoPoints3DTool">
                        </instanceof>
                    </iterate>
                </with>
@@ -83,7 +83,7 @@
                       ifEmpty="false"
                       operator="or">
                         <instanceof
-                           value="ca.gc.asc_csa.symphony.tools.core.AbstractTwoPoints3DTool">
+                           value="org.eclipse.symphony.addons.AbstractTwoPoints3DTool">
                         </instanceof>
                    </iterate>
                </with>
@@ -101,7 +101,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.symphony.tools.core.Simple3DTool">
+                           value="org.eclipse.symphony.addons.Simple3DTool">
                        </instanceof>
                   </iterate>
                </with>
@@ -119,7 +119,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.symphony.tools.core.Simple3DTool">
+                           value="org.eclipse.symphony.addons.Simple3DTool">
                        </instanceof>
                   </iterate>
                </with>
@@ -137,7 +137,7 @@
                      ifEmpty="false"
                      operator="or">
                        <instanceof
-                           value="ca.gc.asc_csa.symphony.tools.core.Trajectory3DTool">
+                           value="org.eclipse.symphony.addons.Trajectory3DTool">
                        </instanceof>
                   </iterate>
                </with>
@@ -148,20 +148,20 @@
    <extension
          point="ca.gc.space.topology.ui.presentation">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.ui.adapters.SunVector3DToolNodePresentationAdapter">
+            Class="org.eclipse.symphony.addons.ui.adapters.SunVector3DToolNodePresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="ca.gc.asc_csa.symphony.tools.ui.preferences.SymphonyToolsUIPreferencesInitializer">
+            class="org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="ca.gc.asc_csa.symphony.tools.ui.preferences.SymphonyToolsUIPreferencesPage"
+            class="org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesPage"
             id="ca.gc.asc_csa.symphony.tools.ui.page1"
             name="Symphony Tools">
       </page>
@@ -169,7 +169,7 @@
    <extension
          point="ca.gc.space.topology.ui.presentation">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.ui.adapters.Trajectory3DToolNodePresentationAdapter">
+            Class="org.eclipse.symphony.addons.ui.adapters.Trajectory3DToolNodePresentationAdapter">
       </Class>
    </extension>
 

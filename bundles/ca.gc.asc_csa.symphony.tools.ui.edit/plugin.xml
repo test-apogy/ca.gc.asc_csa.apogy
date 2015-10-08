@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_tools_ui -->
       <factory
-            uri="ca.gc.asc_csa.symphony.tools.ui"
-            class="ca.gc.asc_csa.symphony.tools.ui.provider.SymphonyToolsUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.addons.ui"
+            class="org.eclipse.symphony.addons.ui.provider.SymphonyToolsUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,10 +24,10 @@
       <!-- @generated symphony_tools_ui -->
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.tools.ui.provider.SymphonyToolsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.ui.provider.SymphonyToolsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="ca.gc.space.topology.ui"
-            class="ca.gc.asc_csa.symphony.tools.ui.provider.SymphonyToolsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.ui.provider.SymphonyToolsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
    </extension>
 
 </plugin>

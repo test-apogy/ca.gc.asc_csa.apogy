@@ -5,13 +5,13 @@ package org.eclipse.symphony.addons.telecoms.util;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.symphony.tools.core.AbstractTool;
-import ca.gc.asc_csa.symphony.tools.core.SimpleTool;
 import ca.gc.space.topology.Node;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.addons.AbstractTool;
+import org.eclipse.symphony.addons.SimpleTool;
 import org.eclipse.symphony.addons.telecoms.*;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;

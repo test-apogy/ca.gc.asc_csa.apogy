@@ -3,7 +3,6 @@
  */
 package org.eclipse.symphony.addons.telecoms;
 
-import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.space.topology.TopologyPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -13,6 +12,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
 /**

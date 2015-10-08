@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.core.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.tools.core.provider.SymphonyToolsCoreEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.provider.SymphonyToolsCoreEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.tools.core.provider
+Export-Package: org.eclipse.symphony.addons.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.tools.core;visibility:=reexport,
+ org.eclipse.symphony.addons;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  ca.gc.asc_csa.topology.bindings;visibility:=reexport,
  ca.gc.asc_csa.topology.bindings.edit;visibility:=reexport,

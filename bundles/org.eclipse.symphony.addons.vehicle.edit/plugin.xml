@@ -32,7 +32,7 @@
             uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$PathsChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.symphony.tools.core"
+            uri="org.eclipse.symphony.addons"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.topology.bindings"

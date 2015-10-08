@@ -4,19 +4,19 @@
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.ui.jme3.adapters.Ruler3dToolNodeJME3Adapter">
+            Class="org.eclipse.symphony.addons.ui.jme3.adapters.Ruler3dToolNodeJME3Adapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.ui.jme3.adapters.SunVector3DToolNodeJME3Adapter">
+            Class="org.eclipse.symphony.addons.ui.jme3.adapters.SunVector3DToolNodeJME3Adapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.asc_csa.symphony.tools.ui.jme3.adapters.Trajectory3DToolNodeJME3Adapter">
+            Class="org.eclipse.symphony.addons.ui.jme3.adapters.Trajectory3DToolNodeJME3Adapter">
       </Class>
    </extension>
 

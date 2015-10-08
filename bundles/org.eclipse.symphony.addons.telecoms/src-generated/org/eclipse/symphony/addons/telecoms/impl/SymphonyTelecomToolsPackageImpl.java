@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.telecoms.impl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.symphony.tools.core.SymphonyToolsCorePackage;
 import ca.gc.space.topology.TopologyPackage;
 
 import javax.vecmath.Color3f;
@@ -18,6 +17,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
 import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern;
