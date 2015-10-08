@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderFactory;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
 import org.eclipse.symphony.examples.lander.Lander;
@@ -23,8 +24,6 @@ import org.eclipse.symphony.examples.lander.LanderLegExtension;
 import org.eclipse.symphony.examples.lander.LanderSimulated;
 import org.eclipse.symphony.examples.lander.LanderStub;
 import org.eclipse.symphony.examples.lander.Position;
-
-import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehiclePackage;
 
 /**
  * <!-- begin-user-doc -->

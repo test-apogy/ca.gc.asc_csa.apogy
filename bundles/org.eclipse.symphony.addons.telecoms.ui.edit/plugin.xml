@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_tools_telecoms_ui -->
       <factory
-            uri="ca.gc.asc_csa.symphony.tools.telecoms.ui"
-            class="ca.gc.asc_csa.symphony.tools.telecoms.ui.provider.SymphonyTelecomToolsUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.addons.telecoms.ui"
+            class="org.eclipse.symphony.addons.telecoms.ui.provider.SymphonyTelecomToolsUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,10 +24,10 @@
       <!-- @generated symphony_tools_telecoms_ui -->
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.tools.telecoms.ui.provider.SymphonyTelecomToolsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.telecoms.ui.provider.SymphonyTelecomToolsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="ca.gc.space.topology.ui"
-            class="ca.gc.asc_csa.symphony.tools.telecoms.ui.provider.SymphonyTelecomToolsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.telecoms.ui.provider.SymphonyTelecomToolsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
    </extension>
 
 </plugin>

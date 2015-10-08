@@ -1,21 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.telecoms.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.telecoms.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.tools.telecoms.provider.SymphonyTelecomToolsEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.symphony.tools.telecoms.provider
+Export-Package: org.eclipse.symphony.addons.telecoms.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.tools.telecoms;visibility:=reexport,
+ org.eclipse.symphony.addons.telecoms;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
- ca.gc.asc_csa.symphony.tools.core;visibility:=reexport,
- ca.gc.asc_csa.symphony.tools.core.edit;visibility:=reexport,
+ org.eclipse.symphony.addons;visibility:=reexport,
+ org.eclipse.symphony.addons.edit;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.edit;visibility:=reexport,
  org.eclipse.symphony.core.invocator;visibility:=reexport,

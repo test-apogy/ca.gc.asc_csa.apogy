@@ -12,6 +12,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
@@ -26,9 +28,6 @@ import org.eclipse.symphony.examples.lander.symphony.LanderData;
 import org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderFactory;
 import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage;
-
-import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
-import ca.gc.asc_csa.symphony.tools.vehicle.VehiclePoseCorrector;
 
 /**
  * <!-- begin-user-doc -->

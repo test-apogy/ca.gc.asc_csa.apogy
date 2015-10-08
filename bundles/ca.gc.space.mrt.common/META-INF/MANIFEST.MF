@@ -10,10 +10,17 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: ca.gc.space.mrt.common,
  ca.gc.space.mrt.common.impl,
  ca.gc.space.mrt.common.util
+<<<<<<< HEAD
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport
+=======
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xcore.lib,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.core.runtime;bundle-version="3.10.0"
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.space.mrt.common.Activator
 

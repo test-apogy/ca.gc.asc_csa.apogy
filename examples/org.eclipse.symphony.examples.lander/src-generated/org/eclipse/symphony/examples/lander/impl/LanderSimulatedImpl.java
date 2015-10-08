@@ -14,6 +14,8 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.GeometricUtils;
@@ -23,9 +25,6 @@ import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
 import org.eclipse.symphony.examples.lander.LanderLegExtension;
 import org.eclipse.symphony.examples.lander.LanderSimulated;
 import org.eclipse.symphony.examples.lander.Position;
-
-import ca.gc.asc_csa.symphony.tools.vehicle.SymphonyToolsVehicleFactory;
-import ca.gc.asc_csa.symphony.tools.vehicle.Thruster;
 
 /**
  * <!-- begin-user-doc -->

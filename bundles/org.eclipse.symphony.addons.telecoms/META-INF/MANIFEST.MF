@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.telecoms;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.telecoms;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib,
- ca.gc.asc_csa.symphony.tools.core;bundle-version="0.4.0";visibility:=reexport,
+ org.eclipse.symphony.addons;bundle-version="0.4.0";visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.core.invocator;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
@@ -25,6 +25,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.core.environment;bundle-version="0.4.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.symphony.tools.telecoms,
- ca.gc.asc_csa.symphony.tools.telecoms.impl,
- ca.gc.asc_csa.symphony.tools.telecoms.util
+Export-Package: org.eclipse.symphony.addons.telecoms,
+ org.eclipse.symphony.addons.telecoms.impl,
+ org.eclipse.symphony.addons.telecoms.util
+Bundle-Activator: org.eclipse.symphony.addons.telecoms.Activator

@@ -6,13 +6,13 @@
 	      modelName="SymphonyTelecomTools",
 	      complianceLevel="6.0",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.tools.telecoms/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.tools.telecoms.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.telecoms/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.telecoms.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.tools.telecoms
+package org.eclipse.symphony.addons.telecoms
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.symphony.tools.core.SimpleTool
+import org.eclipse.symphony.addons.SimpleTool
 import ca.gc.space.topology.Node
 import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer
 

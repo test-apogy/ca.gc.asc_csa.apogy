@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.telecoms.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.telecoms.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.tools.telecoms.ui.Activator
+Bundle-Activator: org.eclipse.symphony.addons.telecoms.ui.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
@@ -14,17 +14,17 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.core.databinding,
- ca.gc.asc_csa.symphony.tools.telecoms;visibility:=reexport,
+ org.eclipse.symphony.addons.telecoms;visibility:=reexport,
  org.eclipse.emf.edit.ui,
  org.eclipse.jface.databinding,
  ca.gc.asc_csa.eclipse.ui;bundle-version="0.3.0",
  ca.gc.space.topology.ui;bundle-version="0.5.0";visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.symphony.tools.telecoms.ui,
- ca.gc.asc_csa.symphony.tools.telecoms.ui.adapters,
- ca.gc.asc_csa.symphony.tools.telecoms.ui.composites,
- ca.gc.asc_csa.symphony.tools.telecoms.ui.impl,
- ca.gc.asc_csa.symphony.tools.telecoms.ui.util,
- ca.gc.asc_csa.symphony.tools.telecoms.ui.views
+Export-Package: org.eclipse.symphony.addons.telecoms.ui,
+ org.eclipse.symphony.addons.telecoms.ui.adapters,
+ org.eclipse.symphony.addons.telecoms.ui.composites,
+ org.eclipse.symphony.addons.telecoms.ui.impl,
+ org.eclipse.symphony.addons.telecoms.ui.util,
+ org.eclipse.symphony.addons.telecoms.ui.views
 Bundle-ActivationPolicy: lazy
