@@ -9,9 +9,11 @@
 
 <plugin>
 
+
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated mrt_common -->
       <factory
-            uri="http:///ca/gc/space/mrt/common/model/mrt_common.ecore"
+            uri="ca.gc.space.mrt.common"
             class="ca.gc.space.mrt.common.provider.CommonItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

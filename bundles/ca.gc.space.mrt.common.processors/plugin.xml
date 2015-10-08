@@ -8,12 +8,10 @@
 -->
 
 <plugin>
-
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <package 
-       uri = "http:///ca/gc/space/mrt/common/processors/model/processors.ecore" 
-       class = "ca.gc.space.mrt.common.processors.ProcessorsPackage"
-       genModel = "model/processors.genmodel" /> 
-  </extension>
-
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="ca.gc.space.mrt.common.processors"
+            class="ca.gc.space.mrt.common.processors.ProcessorsPackage"
+            genModel="model/mrt_common_processors.xcore"/>
+   </extension>
 </plugin>

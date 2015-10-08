@@ -1,4 +1,9 @@
-@GenModel(prefix="MRTActuatorsUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false",copyrightText="Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)", modelName="MRTActuatorsUI")
+@GenModel(prefix="MRTActuatorsUI",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)",
+	      modelName="MRTActuatorsUI")
 @GenModel(modelDirectory="/ca.gc.space.mrt.actuators.ui/src-generated")
 @GenModel(editDirectory="/ca.gc.space.mrt.actuators.ui.edit/src-generated")
 

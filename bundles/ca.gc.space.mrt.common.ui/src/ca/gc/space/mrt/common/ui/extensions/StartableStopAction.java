@@ -10,7 +10,7 @@ import ca.gc.space.mrt.common.Startable;
 
 public class StartableStopAction extends WorkbenchWindowActionDelegate
 {
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "rawtypes" })
 	public void run(IAction action)
 	{				
 		try

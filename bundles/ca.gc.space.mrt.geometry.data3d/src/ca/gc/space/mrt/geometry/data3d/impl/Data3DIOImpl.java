@@ -302,41 +302,48 @@ public class Data3DIOImpl extends EObjectImpl implements Data3DIO {
 		// We keep track of the line number for information.
 		int lineNumber = 1;
 
-		while (!eof) {
-			String line = fileReader.readLine();
+		try
+		{
+			while (!eof) {
+				String line = fileReader.readLine();
 
-			eof = line == null;
+				eof = line == null;
 
-			if (!eof) {
-				// We parse this line, it should have 3 columns or more, i.e.,
-				// x,y,z.
-				String[] cols = line.split("\\s+");
+				if (!eof) {
+					// We parse this line, it should have 3 columns or more, i.e.,
+					// x,y,z.
+					String[] cols = line.split("\\s+");
 
-				if (cols.length < 3) {
-					throw new IllegalArgumentException("File " + fileName + "("
-							+ lineNumber + "): expected 3 columns, found "
-							+ cols.length);
+					if (cols.length < 3) {
+						throw new IllegalArgumentException("File " + fileName + "("
+								+ lineNumber + "): expected 3 columns, found "
+								+ cols.length);
+					}
+
+					try {
+						// We parse the colums into number.
+						double x = Double.parseDouble(cols[0]);
+						double y = Double.parseDouble(cols[1]);
+						double z = Double.parseDouble(cols[2]);
+
+						CartesianPositionCoordinates point = Data3dFacade.INSTANCE
+								.createCartesianPositionCoordinates(x, y, z);
+
+						points.getPoints().add(point);
+
+					} catch (NumberFormatException e) {
+						throw new IllegalArgumentException("File " + fileName + "("
+								+ lineNumber
+								+ "): error while parsing numerical values: "
+								+ e.getMessage());
+					}
 				}
-
-				try {
-					// We parse the colums into number.
-					double x = Double.parseDouble(cols[0]);
-					double y = Double.parseDouble(cols[1]);
-					double z = Double.parseDouble(cols[2]);
-
-					CartesianPositionCoordinates point = Data3dFacade.INSTANCE
-							.createCartesianPositionCoordinates(x, y, z);
-
-					points.getPoints().add(point);
-
-				} catch (NumberFormatException e) {
-					throw new IllegalArgumentException("File " + fileName + "("
-							+ lineNumber
-							+ "): error while parsing numerical values: "
-							+ e.getMessage());
-				}
+				lineNumber++;
 			}
-			lineNumber++;
+		}
+		finally
+		{
+			fileReader.close();
 		}
 
 		System.out.println("Data3DIOImpl.loadXYZ() loaded "
@@ -580,6 +587,7 @@ public class Data3DIOImpl extends EObjectImpl implements Data3DIO {
 		double[] xyz = new double[3];
 		double[] normal = new double[3];
 		boolean eof = false;
+		
 		while (!eof) {
 			String line = pointsReader.readLine();
 

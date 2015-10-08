@@ -10,7 +10,7 @@ import ca.gc.space.mrt.common.Startable;
 
 public class StartableStartAction extends WorkbenchWindowActionDelegate
 {
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "rawtypes" })
 	public void run(IAction action)
 	{
 		System.out.println("StartableStartAction.run()");
