@@ -7,10 +7,10 @@
 package ca.gc.space.mrt.sensors.range.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
 
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RangeSensor;
-import ca.gc.space.mrt.sensors.sensors.impl.SensorImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -11,11 +11,11 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
+import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.examples.camera.*;
 
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
-import ca.gc.space.mrt.sensors.sensors.Sensor;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;
@@ -249,13 +249,13 @@ public class EMFEcoreExampleCameraAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.sensors.sensors.Sensor <em>Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.Sensor <em>Sensor</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.sensors.sensors.Sensor
+	 * @see org.eclipse.symphony.addons.sensors.Sensor
 	 * @generated
 	 */
   public Adapter createSensorAdapter()

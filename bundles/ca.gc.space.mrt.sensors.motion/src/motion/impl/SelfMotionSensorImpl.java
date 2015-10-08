@@ -10,8 +10,7 @@ import motion.MotionPackage;
 import motion.SelfMotionSensor;
 
 import org.eclipse.emf.ecore.EClass;
-
-import ca.gc.space.mrt.sensors.sensors.impl.SensorImpl;
+import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
 
 /**
  * <!-- begin-user-doc -->

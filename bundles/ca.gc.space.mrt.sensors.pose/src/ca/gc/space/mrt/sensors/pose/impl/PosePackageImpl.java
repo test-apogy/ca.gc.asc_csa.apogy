@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.sensors.SensorsPackage;
 import org.eclipse.symphony.common.math.MathPackage;
 
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
@@ -29,7 +30,6 @@ import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedOrientationSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPoseSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPositionSensor;
-import ca.gc.space.mrt.sensors.sensors.SensorsPackage;
 import ca.gc.space.topology.TopologyPackage;
 
 /**

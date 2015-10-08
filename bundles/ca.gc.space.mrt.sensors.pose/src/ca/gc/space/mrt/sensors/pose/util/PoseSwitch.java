@@ -8,6 +8,7 @@ package ca.gc.space.mrt.sensors.pose.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.addons.sensors.Sensor;
 
 import ca.gc.space.mrt.sensors.pose.CSVDataLogger;
 import ca.gc.space.mrt.sensors.pose.InertialMeasurementUnit;
@@ -21,7 +22,6 @@ import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedOrientationSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPoseSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPositionSensor;
-import ca.gc.space.mrt.sensors.sensors.Sensor;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;

@@ -3,9 +3,10 @@
  */
 package ca.gc.space.mrt.sensors.imaging;
 
+import org.eclipse.symphony.addons.sensors.Sensor;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
-import ca.gc.space.mrt.sensors.sensors.Sensor;
 
 /**
  * <!-- begin-user-doc -->

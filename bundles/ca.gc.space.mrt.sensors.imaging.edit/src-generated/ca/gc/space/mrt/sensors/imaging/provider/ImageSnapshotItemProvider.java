@@ -14,6 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.SensorsFactory;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
@@ -21,7 +22,6 @@ import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingFactory;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import ca.gc.space.mrt.sensors.sensors.SensorsFactory;
 import ca.gc.space.topology.TopologyFactory;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.provider.NodeItemProvider;

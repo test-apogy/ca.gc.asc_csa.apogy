@@ -9,6 +9,7 @@ package ca.gc.space.mrt.sensors.gps.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.addons.sensors.Sensor;
 
 import ca.gc.space.mrt.common.Server;
 import ca.gc.space.mrt.common.Startable;
@@ -25,7 +26,6 @@ import ca.gc.space.mrt.sensors.pose.OrientationSensor;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
 import ca.gc.space.mrt.sensors.pose.PositionSensor;
 import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
-import ca.gc.space.mrt.sensors.sensors.Sensor;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;

@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
@@ -59,7 +60,6 @@ import ca.gc.space.mrt.sensors.gps.GpsPackage;
 import ca.gc.space.mrt.sensors.gps.MarkedGPS;
 import ca.gc.space.mrt.sensors.pose.Activator;
 import ca.gc.space.mrt.sensors.pose.impl.PoseSensorImpl;
-import ca.gc.space.mrt.sensors.sensors.SensorStatus;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

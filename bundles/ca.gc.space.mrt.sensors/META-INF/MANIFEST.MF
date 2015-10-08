@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.sensors;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.sensors;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
@@ -12,8 +12,8 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Eclipse-LazyStart: true
-Export-Package: ca.gc.space.mrt.sensors.sensors,
- ca.gc.space.mrt.sensors.sensors.impl,
- ca.gc.space.mrt.sensors.sensors.util,
- ca.gc.space.mrt.sensors.sensors.validation
+Export-Package: org.eclipse.symphony.addons.sensors,
+ org.eclipse.symphony.addons.sensors.impl,
+ org.eclipse.symphony.addons.sensors.util,
+ org.eclipse.symphony.addons.sensors.validation
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

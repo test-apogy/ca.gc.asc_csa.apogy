@@ -26,8 +26,8 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.sensors.pose.edit;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  ca.gc.space.mrt.common.processors.edit;visibility:=reexport,
- ca.gc.space.mrt.sensors;visibility:=reexport,
- ca.gc.space.mrt.sensors.edit;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.edit;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
  ca.gc.space.topology.core.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

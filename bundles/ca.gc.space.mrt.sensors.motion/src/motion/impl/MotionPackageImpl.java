@@ -17,8 +17,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import ca.gc.space.mrt.sensors.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.SensorsPackage;
 
 /**
  * <!-- begin-user-doc -->

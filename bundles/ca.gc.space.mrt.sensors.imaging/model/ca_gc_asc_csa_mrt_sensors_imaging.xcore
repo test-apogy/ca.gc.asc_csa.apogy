@@ -3,7 +3,7 @@
 @GenModel(editDirectory="/ca.gc.space.mrt.sensors.imaging.edit/src-generated")
 package ca.gc.space.mrt.sensors.imaging
 
-import ca.gc.space.mrt.sensors.sensors.Sensor
+import org.eclipse.symphony.addons.sensors.Sensor
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed

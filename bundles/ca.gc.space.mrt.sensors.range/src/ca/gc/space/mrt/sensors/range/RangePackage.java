@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.addons.sensors.SensorsPackage;
 
 import ca.gc.space.mrt.sensors.fov.FovPackage;
-import ca.gc.space.mrt.sensors.sensors.SensorsPackage;
 import ca.gc.space.topology.TopologyPackage;
 
 /**

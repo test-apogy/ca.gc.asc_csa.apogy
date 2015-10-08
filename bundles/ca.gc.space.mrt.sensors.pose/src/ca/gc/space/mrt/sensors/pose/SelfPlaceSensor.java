@@ -5,7 +5,7 @@
  */
 package ca.gc.space.mrt.sensors.pose;
 
-import ca.gc.space.mrt.sensors.sensors.Sensor;
+import org.eclipse.symphony.addons.sensors.Sensor;
 
 /**
  * <!-- begin-user-doc -->

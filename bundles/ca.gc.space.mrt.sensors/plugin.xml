@@ -5,7 +5,7 @@
    <extension
          point="org.eclipse.emf.ecore.generated_package">
       <package
-            class="ca.gc.space.mrt.sensors.sensors.SensorsPackage"
+            class="org.eclipse.symphony.addons.sensors.SensorsPackage"
             genModel="model/sensors.genmodel"
             uri="http:///ca/gc/space/mrt/sensors/model/sensors.ecore">
       </package>

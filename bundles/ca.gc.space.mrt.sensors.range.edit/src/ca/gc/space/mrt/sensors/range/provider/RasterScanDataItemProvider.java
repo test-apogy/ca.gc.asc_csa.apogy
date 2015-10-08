@@ -22,6 +22,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.SensorsFactory;
 
 import ca.gc.space.mrt.common.CommonPackage;
 import ca.gc.space.mrt.geometry.data25d.Data25dFactory;
@@ -29,7 +30,6 @@ import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.range.RangeFactory;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RasterScanData;
-import ca.gc.space.mrt.sensors.sensors.SensorsFactory;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.provider.AggregateGroupNodeItemProvider;
 

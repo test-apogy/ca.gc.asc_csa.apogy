@@ -22,13 +22,13 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.SensorsFactory;
+import org.eclipse.symphony.addons.sensors.SensorsPackage;
 
 import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 import ca.gc.space.mrt.sensors.pose.PoseFactory;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
-import ca.gc.space.mrt.sensors.sensors.SensorsFactory;
-import ca.gc.space.mrt.sensors.sensors.SensorsPackage;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.provider.TransformNodeItemProvider;
 

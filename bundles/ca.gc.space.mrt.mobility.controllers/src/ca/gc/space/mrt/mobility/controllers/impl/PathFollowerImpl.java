@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
@@ -31,7 +32,6 @@ import ca.gc.space.mrt.mobility.controllers.PathFollower;
 import ca.gc.space.mrt.mobility.controllers.PathFollowerState;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
-import ca.gc.space.mrt.sensors.sensors.SensorStatus;
 
 /**
  * <!-- begin-user-doc -->

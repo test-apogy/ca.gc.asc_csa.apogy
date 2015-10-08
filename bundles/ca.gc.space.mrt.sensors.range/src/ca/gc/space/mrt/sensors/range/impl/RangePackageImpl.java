@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.sensors.SensorsPackage;
 
 import ca.gc.space.mrt.common.CommonPackage;
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
@@ -42,7 +43,6 @@ import ca.gc.space.mrt.sensors.range.SimpleRangeSensor;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScanner;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import ca.gc.space.mrt.sensors.range.SimpleSonar;
-import ca.gc.space.mrt.sensors.sensors.SensorsPackage;
 import ca.gc.space.topology.TopologyPackage;
 
 /**

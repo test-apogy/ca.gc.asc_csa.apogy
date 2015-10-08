@@ -9,6 +9,7 @@ package ca.gc.space.mrt.sensors.range.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.addons.sensors.Sensor;
 
 import ca.gc.space.mrt.common.TimeTaggedElement;
 import ca.gc.space.mrt.common.processors.Monitorable;
@@ -31,7 +32,6 @@ import ca.gc.space.mrt.sensors.range.SimpleRangeSensor;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScanner;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import ca.gc.space.mrt.sensors.range.SimpleSonar;
-import ca.gc.space.mrt.sensors.sensors.Sensor;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;

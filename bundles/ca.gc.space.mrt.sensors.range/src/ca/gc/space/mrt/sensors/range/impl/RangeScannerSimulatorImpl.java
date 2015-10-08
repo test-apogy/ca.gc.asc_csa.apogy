@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
@@ -38,7 +39,6 @@ import ca.gc.space.mrt.sensors.range.Activator;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RangeScannerSimulator;
 import ca.gc.space.mrt.sensors.range.RayData;
-import ca.gc.space.mrt.sensors.sensors.SensorStatus;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyFacade;
 
