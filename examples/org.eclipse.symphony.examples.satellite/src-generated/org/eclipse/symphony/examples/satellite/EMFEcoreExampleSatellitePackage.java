@@ -4,6 +4,7 @@
 package org.eclipse.symphony.examples.satellite;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -12,7 +13,9 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.symphony.common.images.ImagesCorePackage;
+
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**
@@ -173,7 +176,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int SATELLITE_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 4;
-
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteSimulatedImpl <em>Satellite Simulated</em>}' class.
@@ -392,7 +394,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int SATELLITE_STUB_OPERATION_COUNT = SATELLITE_OPERATION_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandImpl <em>Satellite Command</em>}' class.
@@ -662,60 +663,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	int SATELLITE_IMAGER = 8;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__PARENT = MRTSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__DESCRIPTION = MRTSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__NODE_ID = MRTSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__CHILDREN = MRTSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__AGGREGATED_CHILDREN = MRTSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__STATUS = MRTSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -779,13 +726,139 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	int SATELLITE_IMAGER_FEATURE_COUNT = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Accept</em>' operation.
+	 * The operation id for the '<em>EClass</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER___ACCEPT__INODEVISITOR = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
+	int SATELLITE_IMAGER___ECLASS = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECLASS;
+
+	/**
+	 * The operation id for the '<em>EIs Proxy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___EIS_PROXY = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EIS_PROXY;
+
+	/**
+	 * The operation id for the '<em>EResource</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___ERESOURCE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ERESOURCE;
+
+	/**
+	 * The operation id for the '<em>EContainer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___ECONTAINER = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECONTAINER;
+
+	/**
+	 * The operation id for the '<em>EContaining Feature</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___ECONTAINING_FEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECONTAINING_FEATURE;
+
+	/**
+	 * The operation id for the '<em>EContainment Feature</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___ECONTAINMENT_FEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECONTAINMENT_FEATURE;
+
+	/**
+	 * The operation id for the '<em>EContents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___ECONTENTS = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECONTENTS;
+
+	/**
+	 * The operation id for the '<em>EAll Contents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___EALL_CONTENTS = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EALL_CONTENTS;
+
+	/**
+	 * The operation id for the '<em>ECross References</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___ECROSS_REFERENCES = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECROSS_REFERENCES;
+
+	/**
+	 * The operation id for the '<em>EGet</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___EGET__ESTRUCTURALFEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EGET__ESTRUCTURALFEATURE_1;
+
+	/**
+	 * The operation id for the '<em>EGet</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___EGET__ESTRUCTURALFEATURE_BOOLEAN = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EGET__ESTRUCTURALFEATURE_BOOLEAN_1;
+
+	/**
+	 * The operation id for the '<em>ESet</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___ESET__ESTRUCTURALFEATURE_OBJECT = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ESET__ESTRUCTURALFEATURE_OBJECT_1;
+
+	/**
+	 * The operation id for the '<em>EIs Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___EIS_SET__ESTRUCTURALFEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EIS_SET__ESTRUCTURALFEATURE_1;
+
+	/**
+	 * The operation id for the '<em>EUnset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___EUNSET__ESTRUCTURALFEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EUNSET__ESTRUCTURALFEATURE_1;
+
+	/**
+	 * The operation id for the '<em>EInvoke</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___EINVOKE__EOPERATION_ELIST = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EINVOKE__EOPERATION_ELIST_1;
 
 	/**
 	 * The operation id for the '<em>Take Snapshot</em>' operation.
@@ -932,7 +1005,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 */
 	int ORBITAL_IMAGE_OPERATION_COUNT = ImagesCorePackage.ABSTRACT_EIMAGE_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl <em>Satellite Constellation</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -1060,37 +1132,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 */
 	int SATELLITE_CONSTELLATION_OPERATION_COUNT = 6;
 
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl <em>Satellite Constellation Initialization Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteConstellationInitializationData()
-	 * @generated
-	 */
-	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA = 13;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl <em>Satellite Constellation Type Api Adapter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteConstellationTypeApiAdapter()
-	 * @generated
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER = 12;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl <em>Satellite Initialization Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteInitializationData()
-	 * @generated
-	 */
-	int SATELLITE_INITIALIZATION_DATA = 14;
-
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteUtilsImpl <em>Satellite Utils</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -1145,6 +1186,16 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int SATELLITE_UTILS_OPERATION_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl <em>Satellite Constellation Type Api Adapter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteConstellationTypeApiAdapter()
+	 * @generated
+	 */
+	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -1264,6 +1315,16 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER_OPERATION_COUNT = EMFEcoreInvocatorPackage.TYPE_API_ADAPTER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl <em>Satellite Constellation Initialization Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteConstellationInitializationData()
+	 * @generated
+	 */
+	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA = 13;
+
+	/**
 	 * The feature id for the '<em><b>Satellite Data</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1307,6 +1368,16 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA_OPERATION_COUNT = EMFEcoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl <em>Satellite Initialization Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteInitializationData()
+	 * @generated
+	 */
+	int SATELLITE_INITIALIZATION_DATA = 14;
 
 	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' containment reference.
@@ -1353,7 +1424,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	int LIST = 15;
-
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -1850,6 +1920,56 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	EOperation getSatelliteConstellation__Plan();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils <em>Satellite Utils</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Satellite Utils</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils
+	 * @generated
+	 */
+	EClass getSatelliteUtils();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandRoll(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, double) <em>Create Satellite Command Roll</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Satellite Command Roll</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandRoll(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, double)
+	 * @generated
+	 */
+	EOperation getSatelliteUtils__CreateSatelliteCommandRoll__Satellite_Date_double();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandAcquireImage(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, org.eclipse.symphony.examples.satellite.ImageOrder) <em>Create Satellite Command Acquire Image</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Satellite Command Acquire Image</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandAcquireImage(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, org.eclipse.symphony.examples.satellite.ImageOrder)
+	 * @generated
+	 */
+	EOperation getSatelliteUtils__CreateSatelliteCommandAcquireImage__Satellite_Date_ImageOrder();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#sortImageOrderByPriority(java.util.List) <em>Sort Image Order By Priority</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Sort Image Order By Priority</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#sortImageOrderByPriority(java.util.List)
+	 * @generated
+	 */
+	EOperation getSatelliteUtils__SortImageOrderByPriority__List();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter <em>Satellite Constellation Type Api Adapter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Satellite Constellation Type Api Adapter</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter
+	 * @generated
+	 */
+	EClass getSatelliteConstellationTypeApiAdapter();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData <em>Satellite Constellation Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1893,16 +2013,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	EReference getSatelliteConstellationInitializationData_PendingImageOrders();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter <em>Satellite Constellation Type Api Adapter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Constellation Type Api Adapter</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter
-	 * @generated
-	 */
-	EClass getSatelliteConstellationTypeApiAdapter();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteInitializationData <em>Satellite Initialization Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1933,46 +2043,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSatelliteInitializationData_OrbitModel();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils <em>Satellite Utils</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Utils</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils
-	 * @generated
-	 */
-	EClass getSatelliteUtils();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandRoll(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, double) <em>Create Satellite Command Roll</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Satellite Command Roll</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandRoll(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, double)
-	 * @generated
-	 */
-	EOperation getSatelliteUtils__CreateSatelliteCommandRoll__Satellite_Date_double();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandAcquireImage(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, org.eclipse.symphony.examples.satellite.ImageOrder) <em>Create Satellite Command Acquire Image</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Satellite Command Acquire Image</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandAcquireImage(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, org.eclipse.symphony.examples.satellite.ImageOrder)
-	 * @generated
-	 */
-	EOperation getSatelliteUtils__CreateSatelliteCommandAcquireImage__Satellite_Date_ImageOrder();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#sortImageOrderByPriority(java.util.List) <em>Sort Image Order By Priority</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Sort Image Order By Priority</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#sortImageOrderByPriority(java.util.List)
-	 * @generated
-	 */
-	EOperation getSatelliteUtils__SortImageOrderByPriority__List();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
@@ -2039,6 +2109,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE = eINSTANCE.getSatellite();
+
 		/**
 		 * The meta object literal for the '<em><b>Maximum Roll Rate</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2046,6 +2117,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SATELLITE__MAXIMUM_ROLL_RATE = eINSTANCE.getSatellite_MaximumRollRate();
+
 		/**
 		 * The meta object literal for the '<em><b>Maximum Roll</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2053,6 +2125,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SATELLITE__MAXIMUM_ROLL = eINSTANCE.getSatellite_MaximumRoll();
+
 		/**
 		 * The meta object literal for the '<em><b>Orbit Model</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
@@ -2060,6 +2133,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE__ORBIT_MODEL = eINSTANCE.getSatellite_OrbitModel();
+
 		/**
 		 * The meta object literal for the '<em><b>Imager</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
@@ -2067,6 +2141,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE__IMAGER = eINSTANCE.getSatellite_Imager();
+
 		/**
 		 * The meta object literal for the '<em><b>Roll</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2074,6 +2149,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE___ROLL__DOUBLE = eINSTANCE.getSatellite__Roll__double();
+
 		/**
 		 * The meta object literal for the '<em><b>Acquire Image</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2081,6 +2157,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE___ACQUIRE_IMAGE__DOUBLE = eINSTANCE.getSatellite__AcquireImage__double();
+
 		/**
 		 * The meta object literal for the '<em><b>Download Images</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2088,6 +2165,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE___DOWNLOAD_IMAGES__INT = eINSTANCE.getSatellite__DownloadImages__int();
+
 		/**
 		 * The meta object literal for the '<em><b>Enqueue Satellite Command</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2095,6 +2173,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND = eINSTANCE.getSatellite__EnqueueSatelliteCommand__SatelliteCommand();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteSimulatedImpl <em>Satellite Simulated</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2104,6 +2183,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_SIMULATED = eINSTANCE.getSatelliteSimulated();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteStubImpl <em>Satellite Stub</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2113,6 +2193,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_STUB = eINSTANCE.getSatelliteStub();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandImpl <em>Satellite Command</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2122,6 +2203,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_COMMAND = eINSTANCE.getSatelliteCommand();
+
 		/**
 		 * The meta object literal for the '<em><b>Satellite</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
@@ -2129,6 +2211,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE_COMMAND__SATELLITE = eINSTANCE.getSatelliteCommand_Satellite();
+
 		/**
 		 * The meta object literal for the '<em><b>Command Start Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2136,6 +2219,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SATELLITE_COMMAND__COMMAND_START_TIME = eINSTANCE.getSatelliteCommand_CommandStartTime();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandListImpl <em>Satellite Command List</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2145,6 +2229,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_COMMAND_LIST = eINSTANCE.getSatelliteCommandList();
+
 		/**
 		 * The meta object literal for the '<em><b>Commands</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
@@ -2152,6 +2237,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE_COMMAND_LIST__COMMANDS = eINSTANCE.getSatelliteCommandList_Commands();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandRollImpl <em>Satellite Command Roll</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2161,6 +2247,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_COMMAND_ROLL = eINSTANCE.getSatelliteCommandRoll();
+
 		/**
 		 * The meta object literal for the '<em><b>Target Roll Angle</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2168,6 +2255,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE = eINSTANCE.getSatelliteCommandRoll_TargetRollAngle();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandAcquireImageImpl <em>Satellite Command Acquire Image</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2177,6 +2265,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_COMMAND_ACQUIRE_IMAGE = eINSTANCE.getSatelliteCommandAcquireImage();
+
 		/**
 		 * The meta object literal for the '<em><b>Image Order</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
@@ -2184,6 +2273,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER = eINSTANCE.getSatelliteCommandAcquireImage_ImageOrder();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl <em>Image Order</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2193,6 +2283,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass IMAGE_ORDER = eINSTANCE.getImageOrder();
+
 		/**
 		 * The meta object literal for the '<em><b>Order Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2200,6 +2291,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IMAGE_ORDER__ORDER_ID = eINSTANCE.getImageOrder_OrderId();
+
 		/**
 		 * The meta object literal for the '<em><b>Priority</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2207,6 +2299,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IMAGE_ORDER__PRIORITY = eINSTANCE.getImageOrder_Priority();
+
 		/**
 		 * The meta object literal for the '<em><b>Image Center</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
@@ -2214,6 +2307,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference IMAGE_ORDER__IMAGE_CENTER = eINSTANCE.getImageOrder_ImageCenter();
+
 		/**
 		 * The meta object literal for the '<em><b>Commanded Zoom</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2221,6 +2315,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IMAGE_ORDER__COMMANDED_ZOOM = eINSTANCE.getImageOrder_CommandedZoom();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl <em>Satellite Imager</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2230,6 +2325,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_IMAGER = eINSTANCE.getSatelliteImager();
+
 		/**
 		 * The meta object literal for the '<em><b>Satellite</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
@@ -2237,6 +2333,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE_IMAGER__SATELLITE = eINSTANCE.getSatelliteImager_Satellite();
+
 		/**
 		 * The meta object literal for the '<em><b>Images Acquired</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
@@ -2244,6 +2341,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE_IMAGER__IMAGES_ACQUIRED = eINSTANCE.getSatelliteImager_ImagesAcquired();
+
 		/**
 		 * The meta object literal for the '<em><b>Download Images</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2251,6 +2349,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_IMAGER___DOWNLOAD_IMAGES__INT = eINSTANCE.getSatelliteImager__DownloadImages__int();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl <em>Orbital Image</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2260,6 +2359,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ORBITAL_IMAGE = eINSTANCE.getOrbitalImage();
+
 		/**
 		 * The meta object literal for the '<em><b>Order Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2267,6 +2367,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORBITAL_IMAGE__ORDER_ID = eINSTANCE.getOrbitalImage_OrderId();
+
 		/**
 		 * The meta object literal for the '<em><b>Image Center</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
@@ -2274,6 +2375,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ORBITAL_IMAGE__IMAGE_CENTER = eINSTANCE.getOrbitalImage_ImageCenter();
+
 		/**
 		 * The meta object literal for the '<em><b>Download Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2281,6 +2383,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORBITAL_IMAGE__DOWNLOAD_SIZE = eINSTANCE.getOrbitalImage_DownloadSize();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl <em>Satellite Constellation</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2290,6 +2393,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_CONSTELLATION = eINSTANCE.getSatelliteConstellation();
+
 		/**
 		 * The meta object literal for the '<em><b>Satellites</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
@@ -2297,6 +2401,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE_CONSTELLATION__SATELLITES = eINSTANCE.getSatelliteConstellation_Satellites();
+
 		/**
 		 * The meta object literal for the '<em><b>Ground Stations</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
@@ -2304,6 +2409,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE_CONSTELLATION__GROUND_STATIONS = eINSTANCE.getSatelliteConstellation_GroundStations();
+
 		/**
 		 * The meta object literal for the '<em><b>Pending Image Orders</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
@@ -2311,6 +2417,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS = eINSTANCE.getSatelliteConstellation_PendingImageOrders();
+
 		/**
 		 * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2318,6 +2425,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SATELLITE_CONSTELLATION__START_DATE = eINSTANCE.getSatelliteConstellation_StartDate();
+
 		/**
 		 * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2325,6 +2433,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SATELLITE_CONSTELLATION__END_DATE = eINSTANCE.getSatelliteConstellation_EndDate();
+
 		/**
 		 * The meta object literal for the '<em><b>Get Satellite</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2332,6 +2441,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_CONSTELLATION___GET_SATELLITE__ORBITMODEL = eINSTANCE.getSatelliteConstellation__GetSatellite__OrbitModel();
+
 		/**
 		 * The meta object literal for the '<em><b>Get Target Passes</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2339,6 +2449,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_CONSTELLATION___GET_TARGET_PASSES__IMAGEORDER_DATE_DATE_ELEVATIONMASK = eINSTANCE.getSatelliteConstellation__GetTargetPasses__ImageOrder_Date_Date_ElevationMask();
+
 		/**
 		 * The meta object literal for the '<em><b>Get Ground Station Passes</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2346,6 +2457,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_CONSTELLATION___GET_GROUND_STATION_PASSES__SATELLITE_DATE_DATE_ELEVATIONMASK = eINSTANCE.getSatelliteConstellation__GetGroundStationPasses__Satellite_Date_Date_ElevationMask();
+
 		/**
 		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2353,6 +2465,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_CONSTELLATION___PLAN__LIST_DATE_DATE = eINSTANCE.getSatelliteConstellation__Plan__List_Date_Date();
+
 		/**
 		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2360,6 +2473,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_CONSTELLATION___PLAN__DATE_DATE = eINSTANCE.getSatelliteConstellation__Plan__Date_Date();
+
 		/**
 		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2367,68 +2481,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_CONSTELLATION___PLAN = eINSTANCE.getSatelliteConstellation__Plan();
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl <em>Satellite Constellation Initialization Data</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteConstellationInitializationData()
-		 * @generated
-		 */
-		EClass SATELLITE_CONSTELLATION_INITIALIZATION_DATA = eINSTANCE.getSatelliteConstellationInitializationData();
-		/**
-		 * The meta object literal for the '<em><b>Satellite Data</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA = eINSTANCE.getSatelliteConstellationInitializationData_SatelliteData();
-		/**
-		 * The meta object literal for the '<em><b>Ground Stations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS = eINSTANCE.getSatelliteConstellationInitializationData_GroundStations();
-		/**
-		 * The meta object literal for the '<em><b>Pending Image Orders</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS = eINSTANCE.getSatelliteConstellationInitializationData_PendingImageOrders();
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl <em>Satellite Constellation Type Api Adapter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteConstellationTypeApiAdapter()
-		 * @generated
-		 */
-		EClass SATELLITE_CONSTELLATION_TYPE_API_ADAPTER = eINSTANCE.getSatelliteConstellationTypeApiAdapter();
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl <em>Satellite Initialization Data</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteInitializationData()
-		 * @generated
-		 */
-		EClass SATELLITE_INITIALIZATION_DATA = eINSTANCE.getSatelliteInitializationData();
-		/**
-		 * The meta object literal for the '<em><b>Satellite</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_INITIALIZATION_DATA__SATELLITE = eINSTANCE.getSatelliteInitializationData_Satellite();
-		/**
-		 * The meta object literal for the '<em><b>Orbit Model</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL = eINSTANCE.getSatelliteInitializationData_OrbitModel();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteUtilsImpl <em>Satellite Utils</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2438,6 +2491,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE_UTILS = eINSTANCE.getSatelliteUtils();
+
 		/**
 		 * The meta object literal for the '<em><b>Create Satellite Command Roll</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2445,6 +2499,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ROLL__SATELLITE_DATE_DOUBLE = eINSTANCE.getSatelliteUtils__CreateSatelliteCommandRoll__Satellite_Date_double();
+
 		/**
 		 * The meta object literal for the '<em><b>Create Satellite Command Acquire Image</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2452,6 +2507,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ACQUIRE_IMAGE__SATELLITE_DATE_IMAGEORDER = eINSTANCE.getSatelliteUtils__CreateSatelliteCommandAcquireImage__Satellite_Date_ImageOrder();
+
 		/**
 		 * The meta object literal for the '<em><b>Sort Image Order By Priority</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -2459,6 +2515,77 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SATELLITE_UTILS___SORT_IMAGE_ORDER_BY_PRIORITY__LIST = eINSTANCE.getSatelliteUtils__SortImageOrderByPriority__List();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl <em>Satellite Constellation Type Api Adapter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteConstellationTypeApiAdapter()
+		 * @generated
+		 */
+		EClass SATELLITE_CONSTELLATION_TYPE_API_ADAPTER = eINSTANCE.getSatelliteConstellationTypeApiAdapter();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl <em>Satellite Constellation Initialization Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteConstellationInitializationData()
+		 * @generated
+		 */
+		EClass SATELLITE_CONSTELLATION_INITIALIZATION_DATA = eINSTANCE.getSatelliteConstellationInitializationData();
+
+		/**
+		 * The meta object literal for the '<em><b>Satellite Data</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA = eINSTANCE.getSatelliteConstellationInitializationData_SatelliteData();
+
+		/**
+		 * The meta object literal for the '<em><b>Ground Stations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS = eINSTANCE.getSatelliteConstellationInitializationData_GroundStations();
+
+		/**
+		 * The meta object literal for the '<em><b>Pending Image Orders</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS = eINSTANCE.getSatelliteConstellationInitializationData_PendingImageOrders();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl <em>Satellite Initialization Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.EMFEcoreExampleSatellitePackageImpl#getSatelliteInitializationData()
+		 * @generated
+		 */
+		EClass SATELLITE_INITIALIZATION_DATA = eINSTANCE.getSatelliteInitializationData();
+
+		/**
+		 * The meta object literal for the '<em><b>Satellite</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SATELLITE_INITIALIZATION_DATA__SATELLITE = eINSTANCE.getSatelliteInitializationData_Satellite();
+
+		/**
+		 * The meta object literal for the '<em><b>Orbit Model</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL = eINSTANCE.getSatelliteInitializationData_OrbitModel();
+
 		/**
 		 * The meta object literal for the '<em>List</em>' data type.
 		 * <!-- begin-user-doc -->
@@ -2468,6 +2595,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType LIST = eINSTANCE.getList();
+
 		/**
 		 * The meta object literal for the '<em>Sorted Set</em>' data type.
 		 * <!-- begin-user-doc -->
@@ -2477,6 +2605,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType SORTED_SET = eINSTANCE.getSortedSet();
+
 		/**
 		 * The meta object literal for the '<em>Exception</em>' data type.
 		 * <!-- begin-user-doc -->

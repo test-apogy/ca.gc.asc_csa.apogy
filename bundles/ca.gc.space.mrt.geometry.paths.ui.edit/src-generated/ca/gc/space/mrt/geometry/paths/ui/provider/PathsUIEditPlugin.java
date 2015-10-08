@@ -40,8 +40,8 @@ public final class PathsUIEditPlugin extends EMFPlugin {
 	public PathsUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -6,14 +6,9 @@ package org.eclipse.symphony.examples.satellite.util;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
@@ -136,11 +131,7 @@ public class EMFEcoreExampleSatelliteSwitch<T> extends Switch<T> {
 				T result = caseSatelliteImager(satelliteImager);
 				if (result == null) result = caseAbstractCamera(satelliteImager);
 				if (result == null) result = caseZoomable(satelliteImager);
-				if (result == null) result = caseSensor(satelliteImager);
 				if (result == null) result = caseNamed(satelliteImager);
-				if (result == null) result = caseAggregateGroupNode(satelliteImager);
-				if (result == null) result = caseGroupNode(satelliteImager);
-				if (result == null) result = caseNode(satelliteImager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -425,66 +416,6 @@ public class EMFEcoreExampleSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNamed(Named object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNode(Node object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Group Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Group Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGroupNode(GroupNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Aggregate Group Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Aggregate Group Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAggregateGroupNode(AggregateGroupNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sensor</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sensor</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSensor(Sensor object) {
 		return null;
 	}
 

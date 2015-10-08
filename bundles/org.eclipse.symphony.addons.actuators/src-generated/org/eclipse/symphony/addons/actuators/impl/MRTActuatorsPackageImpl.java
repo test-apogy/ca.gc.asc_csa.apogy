@@ -96,8 +96,8 @@ public class MRTActuatorsPackageImpl extends EPackageImpl implements MRTActuator
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyPackage.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
+		TopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theMRTActuatorsPackage.createPackageContents();
