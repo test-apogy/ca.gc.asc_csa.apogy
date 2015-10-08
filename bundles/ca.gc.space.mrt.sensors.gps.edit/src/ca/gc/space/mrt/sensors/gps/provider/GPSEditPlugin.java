@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
-import ca.gc.space.mrt.common.provider.Mrt_commonEditPlugin;
-import ca.gc.space.mrt.geometry.data.provider.GeometrydataEditPlugin;
+import ca.gc.space.mrt.common.provider.CommonEditPlugin;
+import ca.gc.space.mrt.geometry.data.provider.DataEditPlugin;
 import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
 import ca.gc.space.mrt.sensors.pose.provider.PoseEditPlugin;
 import ca.gc.space.mrt.sensors.sensors.provider.SensorsEditPlugin;
@@ -49,9 +49,9 @@ public final class GPSEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     Data3dEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
-		     GeometrydataEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
-		     Mrt_commonEditPlugin.INSTANCE,
+		     CommonEditPlugin.INSTANCE,
 		     PoseEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,

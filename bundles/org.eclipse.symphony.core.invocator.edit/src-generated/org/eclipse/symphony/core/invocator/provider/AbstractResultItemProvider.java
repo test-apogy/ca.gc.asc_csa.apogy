@@ -5,6 +5,7 @@ package org.eclipse.symphony.core.invocator.provider;
 
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -203,7 +204,7 @@ public class AbstractResultItemProvider
   @Override
   public String getText(Object object)
   {
-		Object labelValue = ((AbstractResult)object).getTime();
+		Date labelValue = ((AbstractResult)object).getTime();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_AbstractResult_type") :
