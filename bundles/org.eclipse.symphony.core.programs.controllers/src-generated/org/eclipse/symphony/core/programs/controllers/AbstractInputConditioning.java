@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.core.programs.controllers;
 
-import ca.gc.asc_csa.jinput.EComponent;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.io.jinput.EComponent;
 
 /**
  * <!-- begin-user-doc -->

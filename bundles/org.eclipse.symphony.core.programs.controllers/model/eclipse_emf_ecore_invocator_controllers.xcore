@@ -13,8 +13,8 @@ import org.eclipse.symphony.core.invocator.EDataTypeArgument
 import org.eclipse.symphony.core.invocator.OperationCall
 import org.eclipse.symphony.core.invocator.OperationCallContainer
 import org.eclipse.symphony.core.invocator.Program
-import ca.gc.asc_csa.jinput.EComponent
-import ca.gc.asc_csa.jinput.EComponentQualifier
+import org.eclipse.symphony.common.io.jinput.EComponent
+import org.eclipse.symphony.common.io.jinput.EComponentQualifier
 import org.eclipse.emf.ecore.EParameter
 
 /* -------------------------------------------------------------------------

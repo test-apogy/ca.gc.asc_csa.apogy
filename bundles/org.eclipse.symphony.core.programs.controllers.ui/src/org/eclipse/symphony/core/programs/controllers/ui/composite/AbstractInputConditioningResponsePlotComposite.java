@@ -7,6 +7,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.io.jinput.EVirtualComponent;
+import org.eclipse.symphony.common.io.jinput.JInputFactory;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -19,9 +21,6 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.experimental.chart.swt.ChartComposite;
 import org.jfree.ui.RectangleInsets;
-
-import ca.gc.asc_csa.jinput.EVirtualComponent;
-import ca.gc.asc_csa.jinput.JInputFactory;
 
 public class AbstractInputConditioningResponsePlotComposite extends Composite {
 	

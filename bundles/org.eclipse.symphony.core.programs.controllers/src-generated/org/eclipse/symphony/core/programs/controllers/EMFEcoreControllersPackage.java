@@ -1863,11 +1863,11 @@ public interface EMFEcoreControllersPackage extends EPackage {
 	EClass getAbstractInputConditioning();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning#conditionInput(ca.gc.asc_csa.jinput.EComponent) <em>Condition Input</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning#conditionInput(org.eclipse.symphony.common.io.jinput.EComponent) <em>Condition Input</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Condition Input</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning#conditionInput(ca.gc.asc_csa.jinput.EComponent)
+	 * @see org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning#conditionInput(org.eclipse.symphony.common.io.jinput.EComponent)
 	 * @generated
 	 */
 	EOperation getAbstractInputConditioning__ConditionInput__EComponent();

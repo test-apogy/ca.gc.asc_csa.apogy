@@ -44,8 +44,8 @@ public final class EMFEcoreInvocatorEditorPlugin extends EMFPlugin
   {
 		super
 			(new ResourceLocator [] {
-				EcoreEditPlugin.INSTANCE,
 				EMFEcoreEditPlugin.INSTANCE,
+				EcoreEditPlugin.INSTANCE,
 			});
 	}
 

@@ -12,10 +12,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.io.jinput.JInputFactory;
 import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
-
-import ca.gc.asc_csa.jinput.JInputFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerTrigger} object.

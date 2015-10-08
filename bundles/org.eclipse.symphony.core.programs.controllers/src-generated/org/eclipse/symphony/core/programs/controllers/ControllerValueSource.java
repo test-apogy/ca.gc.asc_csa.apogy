@@ -3,8 +3,8 @@
  */
 package org.eclipse.symphony.core.programs.controllers;
 
-import ca.gc.asc_csa.jinput.EComponent;
-import ca.gc.asc_csa.jinput.EComponentQualifier;
+import org.eclipse.symphony.common.io.jinput.EComponent;
+import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
 
 /**
  * <!-- begin-user-doc -->

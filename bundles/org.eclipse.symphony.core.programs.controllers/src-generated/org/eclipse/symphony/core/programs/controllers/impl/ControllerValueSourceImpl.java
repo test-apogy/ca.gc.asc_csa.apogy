@@ -8,6 +8,9 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.io.jinput.EComponent;
+import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
+import org.eclipse.symphony.common.io.jinput.JInputFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
@@ -16,10 +19,6 @@ import org.eclipse.symphony.core.programs.controllers.ControllerFacade;
 import org.eclipse.symphony.core.programs.controllers.ControllerValueSource;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
-
-import ca.gc.asc_csa.jinput.EComponent;
-import ca.gc.asc_csa.jinput.EComponentQualifier;
-import ca.gc.asc_csa.jinput.JInputFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,7 +120,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
   {
 	  if(getEComponentQualifier() != null)
 	  {  
-		  return ca.gc.asc_csa.jinput.Activator.getEControllerEnvironment().resolveEComponent(getEComponentQualifier());
+		  return org.eclipse.symphony.common.io.jinput.Activator.getEControllerEnvironment().resolveEComponent(getEComponentQualifier());
 	  }
 	  else
 	  {

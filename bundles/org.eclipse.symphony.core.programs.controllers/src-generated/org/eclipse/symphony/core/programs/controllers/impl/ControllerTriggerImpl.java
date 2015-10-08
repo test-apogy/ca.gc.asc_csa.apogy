@@ -10,15 +10,14 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.io.jinput.Activator;
+import org.eclipse.symphony.common.io.jinput.EComponent;
+import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
+import org.eclipse.symphony.common.io.jinput.EControllerEnvironment;
+import org.eclipse.symphony.common.io.jinput.JInputFactory;
+import org.eclipse.symphony.common.io.jinput.JInputPackage;
 import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
-
-import ca.gc.asc_csa.jinput.Activator;
-import ca.gc.asc_csa.jinput.EComponent;
-import ca.gc.asc_csa.jinput.EComponentQualifier;
-import ca.gc.asc_csa.jinput.EControllerEnvironment;
-import ca.gc.asc_csa.jinput.JInputFactory;
-import ca.gc.asc_csa.jinput.JInputPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -8,10 +8,9 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
-
-import ca.gc.asc_csa.jinput.EComponent;
 
 /**
  * <!-- begin-user-doc -->

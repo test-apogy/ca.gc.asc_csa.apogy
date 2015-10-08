@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.io.jinput.JInputPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
@@ -39,8 +40,6 @@ import org.eclipse.symphony.core.programs.controllers.ToggleValueSource;
 import org.eclipse.symphony.core.programs.controllers.Trigger;
 import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.ValueSource;
-
-import ca.gc.asc_csa.jinput.JInputPackage;
 
 import java.util.List;
 import java.util.TreeSet;
@@ -263,8 +262,8 @@ public class EMFEcoreControllersPackageImpl extends EPackageImpl implements EMFE
 		isInited = true;
 
 		// Initialize simple dependencies
-		EMFEcoreInvocatorPackage.eINSTANCE.eClass();
 		JInputPackage.eINSTANCE.eClass();
+		EMFEcoreInvocatorPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreControllersPackage.createPackageContents();

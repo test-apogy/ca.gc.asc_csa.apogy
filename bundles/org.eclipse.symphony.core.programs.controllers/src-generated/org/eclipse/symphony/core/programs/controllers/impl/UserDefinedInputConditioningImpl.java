@@ -16,12 +16,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.core.programs.controllers.ControllerFacade;
 import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
-
-import ca.gc.asc_csa.jinput.EComponent;
 
 /**
  * <!-- begin-user-doc -->

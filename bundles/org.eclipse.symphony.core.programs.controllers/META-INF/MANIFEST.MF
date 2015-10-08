@@ -16,7 +16,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.core.invocator;visibility:=reexport,
- ca.gc.asc_csa.jinput;visibility:=reexport,
+ org.eclipse.symphony.common.io.jinput;visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.core.programs.controllers.Activator

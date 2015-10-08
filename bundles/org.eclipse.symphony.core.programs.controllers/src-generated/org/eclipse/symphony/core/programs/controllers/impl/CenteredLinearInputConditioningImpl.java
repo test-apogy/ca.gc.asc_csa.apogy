@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.core.programs.controllers.impl;
 
-import ca.gc.asc_csa.jinput.EComponent;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 

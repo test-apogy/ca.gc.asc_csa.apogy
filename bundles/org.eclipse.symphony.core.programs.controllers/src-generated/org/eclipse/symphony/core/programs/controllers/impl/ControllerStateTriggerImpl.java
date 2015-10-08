@@ -6,14 +6,13 @@ package org.eclipse.symphony.core.programs.controllers.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.io.jinput.EComponent;
+import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.programs.controllers.Activator;
 import org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
-
-import ca.gc.asc_csa.jinput.EComponent;
-import ca.gc.asc_csa.jinput.EComponentQualifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -252,7 +251,7 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
 	  super.setComponentQualifier(newComponentQualifier);
 	  
 	  // Check to see if we should start the update
-	  EComponent component = ca.gc.asc_csa.jinput.Activator.getEControllerEnvironment().resolveEComponent(newComponentQualifier);
+	  EComponent component = org.eclipse.symphony.common.io.jinput.Activator.getEControllerEnvironment().resolveEComponent(newComponentQualifier);
 	  if(component != null)
 	  {
 		  boolean buttonStatus = convert(component.getPollData());
