@@ -10,11 +10,11 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
+import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
+import org.eclipse.symphony.common.geometry.data3d.las.LASReader;
+import org.eclipse.symphony.common.geometry.data3d.las.LasFactory;
 
-import ca.gc.asc_csa.io.las.LASHeader;
-import ca.gc.asc_csa.io.las.LASPoint;
-import ca.gc.asc_csa.io.las.LASReader;
-import ca.gc.asc_csa.io.las.LasFactory;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.TopologyFactory;

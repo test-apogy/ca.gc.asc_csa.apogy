@@ -11,8 +11,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.pif.PifReader;
 
-import ca.gc.asc_csa.io.pif.PifReader;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.TopologyFacade;

@@ -13,7 +13,7 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.space.topology.core,
  ca.gc.space.topology.ui,
  org.eclipse.symphony.common.geometry.data3d,
- ca.gc.asc_csa.io.pif
+ org.eclipse.symphony.common.geometry.data3d.pif
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.common.geometry.data3d.pif.ui

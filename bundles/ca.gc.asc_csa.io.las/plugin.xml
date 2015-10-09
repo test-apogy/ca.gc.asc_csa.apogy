@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http:///ca/gc/asc_csa/io/las.ecore"
-            class="ca.gc.asc_csa.io.las.LasPackage"
+            class="org.eclipse.symphony.common.geometry.data3d.las.LasPackage"
             genModel="model/las.genmodel"/>
    </extension>
 

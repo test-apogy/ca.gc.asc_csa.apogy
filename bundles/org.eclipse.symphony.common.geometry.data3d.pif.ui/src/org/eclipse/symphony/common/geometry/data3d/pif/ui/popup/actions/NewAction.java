@@ -19,11 +19,10 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.symphony.common.geometry.data3d.pif.PifReader;
 import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
-
-import ca.gc.asc_csa.io.pif.PifReader;
 
 public class NewAction implements IObjectActionDelegate {
 
