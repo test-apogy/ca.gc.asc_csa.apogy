@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.space.mrt.sensors.imaging.ui.jme3.adapters.ImageSnapshotJME3Adapter">
+            Class="org.eclipse.symphony.addons.sensors.imaging.ui.jme3.adapters.ImageSnapshotJME3Adapter">
       </Class>
    </extension>
 

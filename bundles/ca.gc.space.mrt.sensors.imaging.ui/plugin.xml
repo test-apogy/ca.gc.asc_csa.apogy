@@ -13,14 +13,14 @@
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.sensors.imaging.ui.ImageSnapshotPresentationAdapter">
+            Class="org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="ca.gc.space.eclipse.emf.ui.PropertyCellViewerContentProvider">
       <contentProvider
-            class="ca.gc.space.mrt.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
-            id="ca.gc.space.mrt.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
+            id="org.eclipse.symphony.addons.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
             target="org.eclipse.swt.graphics.ImageData">
       </contentProvider>
    </extension>
@@ -28,29 +28,29 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging_ui -->
       <package
-            uri="ca.gc.space.mrt.sensors.imaging.ui"
-            class="ca.gc.space.mrt.sensors.imaging.ui.MRTSensorsImagingUIPackage"
+            uri="org.eclipse.symphony.addons.sensors.imaging.ui"
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage"
             genModel="model/ca_gc_asc_csa_mrt_sensors_imaging_ui.xcore"/>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="ca.gc.space.mrt.sensors.imaging.ui.preferences.MRTImagingPreferencesInitializer">
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
-            class="ca.gc.space.mrt.sensors.imaging.ui.preferences.MRTImagingPreferencesPage"
-            id="ca.gc.space.mrt.sensors.imaging.ui.page1"
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesPage"
+            id="org.eclipse.symphony.addons.sensors.imaging.ui.page1"
             name="Image Snapshot">
       </page>
    </extension>
    <extension
          point="org.eclipse.symphony.common.converters">
       <new_element
-            Class="ca.gc.space.mrt.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
+            Class="org.eclipse.symphony.addons.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
       </new_element>
    </extension>
 

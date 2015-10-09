@@ -1,7 +1,7 @@
 @GenModel(prefix="MRTSensorsImaging", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false",copyrightText="Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)", modelName="MRTSensorsImaging")
-@GenModel(modelDirectory="/ca.gc.space.mrt.sensors.imaging/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.sensors.imaging.edit/src-generated")
-package ca.gc.space.mrt.sensors.imaging
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.imaging/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.imaging.edit/src-generated")
+package org.eclipse.symphony.addons.sensors.imaging
 
 import org.eclipse.symphony.addons.sensors.Sensor
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
