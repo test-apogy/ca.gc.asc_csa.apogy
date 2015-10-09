@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.pif.adapters;
+package org.eclipse.symphony.common.geometry.data3d.pif.ui.adapters;
 
 import java.io.IOException;
 import java.util.ArrayList;

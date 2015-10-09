@@ -4,7 +4,7 @@
    <extension
          point="ca.gc.space.topology.ui.graphicsContextAdapter">
       <Class
-            Class="org.eclipse.symphony.common.geometry.data3d.ui.pif.adapters.GraphicsContextPifAdapter">
+            Class="org.eclipse.symphony.common.geometry.data3d.pif.ui.adapters.GraphicsContextPifAdapter">
       </Class>
    </extension>
    <extension
@@ -22,7 +22,7 @@
             </separator>
          </menu>
          <action
-               class="org.eclipse.symphony.common.geometry.data3d.ui.pif.popup.actions.NewAction"
+               class="org.eclipse.symphony.common.geometry.data3d.pif.ui.popup.actions.NewAction"
                id="org.eclipse.symphony.common.geometry.data3d.ui.pif.popup.actions.NewAction"
                label="Export to XYZ"
                menubarPath="additions">

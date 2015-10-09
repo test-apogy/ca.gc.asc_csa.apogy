@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.xyz.adapters;
+package org.eclipse.symphony.common.geometry.data3d.xyz.ui.adapters;
 
 import java.io.IOException;
 

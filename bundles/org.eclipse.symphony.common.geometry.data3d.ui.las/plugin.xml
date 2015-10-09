@@ -4,7 +4,7 @@
    <extension
          point="ca.gc.space.topology.ui.graphicsContextAdapter">
       <Class
-            Class="org.eclipse.symphony.common.geometry.data3d.ui.las.GraphicsContextLasAdapter">
+            Class="org.eclipse.symphony.common.geometry.data3d.las.ui.GraphicsContextLasAdapter">
       </Class>
    </extension>
 

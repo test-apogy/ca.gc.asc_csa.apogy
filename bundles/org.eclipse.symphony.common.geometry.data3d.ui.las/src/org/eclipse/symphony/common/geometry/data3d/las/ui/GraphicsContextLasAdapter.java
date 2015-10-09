@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.las;
+package org.eclipse.symphony.common.geometry.data3d.las.ui;
 
 import java.io.IOException;
 import java.util.ArrayList;

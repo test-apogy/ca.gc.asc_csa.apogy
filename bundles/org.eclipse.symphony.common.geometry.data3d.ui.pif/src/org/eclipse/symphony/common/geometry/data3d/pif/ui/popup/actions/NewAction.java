@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.geometry.data3d.ui.pif.popup.actions;
+package org.eclipse.symphony.common.geometry.data3d.pif.ui.popup.actions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
