@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="range" nsURI="http:///ca/gc/space/mrt/sensors/range/model/range.ecore"
-    nsPrefix="ca.gc.space.mrt.sensors.range">
+    nsPrefix="org.eclipse.symphony.addons.sensors.range">
   <eClassifiers xsi:type="ecore:EClass" name="RangeSensor" eSuperTypes="platform:/plugin/ca.gc.space.mrt.sensors/model/sensors.ecore#//Sensor"/>
   <eClassifiers xsi:type="ecore:EClass" name="ContactSensor" eSuperTypes="#//RangeSensor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contacted" lowerBound="1"

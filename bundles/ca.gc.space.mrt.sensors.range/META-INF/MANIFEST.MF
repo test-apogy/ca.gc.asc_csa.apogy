@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: ca.gc.space.mrt.sensors.range,
- ca.gc.space.mrt.sensors.range.impl,
- ca.gc.space.mrt.sensors.range.util
+Export-Package: org.eclipse.symphony.addons.sensors.range,
+ org.eclipse.symphony.addons.sensors.range.impl,
+ org.eclipse.symphony.addons.sensors.range.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  ca.gc.space.mrt.common;visibility:=reexport,
@@ -23,5 +23,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology.core;visibility:=reexport,
  javax.media;bundle-version="1.5.2",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
-Bundle-Activator: ca.gc.space.mrt.sensors.range.Activator
+Bundle-Activator: org.eclipse.symphony.addons.sensors.range.Activator
 Bundle-ActivationPolicy: lazy

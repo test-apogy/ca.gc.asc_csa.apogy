@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http:///ca/gc/space/mrt/sensors/range/model/range.ecore"
-            class="ca.gc.space.mrt.sensors.range.provider.RangeItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.sensors.range.provider.RangeItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

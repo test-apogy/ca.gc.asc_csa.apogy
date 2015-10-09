@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_range_ui -->
       <factory
-            uri="ca.gc.space.mrt.sensors.range.ui"
-            class="ca.gc.space.mrt.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.addons.sensors.range.ui"
+            class="org.eclipse.symphony.addons.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -27,10 +27,10 @@
       <!-- @generated mrt_range_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="ca.gc.space.mrt.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="ca.gc.space.mrt.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

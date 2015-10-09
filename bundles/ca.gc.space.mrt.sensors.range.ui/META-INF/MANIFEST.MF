@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.sensors.range.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.range.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.sensors.range.ui,
- ca.gc.space.mrt.sensors.range.ui.adapters,
- ca.gc.space.mrt.sensors.range.ui.impl,
- ca.gc.space.mrt.sensors.range.ui.scene_objects,
- ca.gc.space.mrt.sensors.range.ui.util
+Export-Package: org.eclipse.symphony.addons.sensors.range.ui,
+ org.eclipse.symphony.addons.sensors.range.ui.adapters,
+ org.eclipse.symphony.addons.sensors.range.ui.impl,
+ org.eclipse.symphony.addons.sensors.range.ui.scene_objects,
+ org.eclipse.symphony.addons.sensors.range.ui.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui;bundle-version="3.103.0",
  org.eclipse.emf.ecore;visibility:=reexport,
@@ -20,9 +20,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology.ui;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov.ui;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data25d.ui;visibility:=reexport,
- ca.gc.space.mrt.sensors.range;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.range;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.3",
  org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.space.mrt.sensors.range.ui.Activator
+Bundle-Activator: org.eclipse.symphony.addons.sensors.range.ui.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
