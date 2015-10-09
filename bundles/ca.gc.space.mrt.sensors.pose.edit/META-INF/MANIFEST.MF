@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.sensors.pose.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.pose.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.mrt.sensors.pose.provider.PoseEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: ca.gc.space.mrt.sensors.pose.provider
+Export-Package: org.eclipse.symphony.addons.sensors.pose.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.space.mrt.sensors.pose;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.pose;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.addons.sensors;visibility:=reexport,

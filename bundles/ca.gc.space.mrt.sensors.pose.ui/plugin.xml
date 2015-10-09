@@ -12,32 +12,32 @@
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.sensors.pose.ui.adapters.PositionSensorPresentationAdapter">
+            Class="org.eclipse.symphony.addons.sensors.pose.ui.adapters.PositionSensorPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.sensors.pose.ui.adapters.OrientationSensorPresentationAdapter">
+            Class="org.eclipse.symphony.addons.sensors.pose.ui.adapters.OrientationSensorPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.sensors.pose.ui.adapters.PoseSensorPresentationAdapter">
+            Class="org.eclipse.symphony.addons.sensors.pose.ui.adapters.PoseSensorPresentationAdapter">
       </Class>
    </extension>
    
     <extension
          point="org.eclipse.ui.views">
     <category
-            id="ca.gc.space.mrt.sensors.pose.ui.poseSensorCategory"
+            id="org.eclipse.symphony.addons.sensors.pose.ui.poseSensorCategory"
             name="Pose Sensor">
       </category>
       <view
-            category="ca.gc.space.mrt.sensors.pose.ui.poseSensorCategory"
-            class="ca.gc.space.mrt.sensors.pose.ui.views.PoseSensorView"
-            id="ca.gc.space.mrt.sensors.pose.ui.views.PoseSensorView"
+            category="org.eclipse.symphony.addons.sensors.pose.ui.poseSensorCategory"
+            class="org.eclipse.symphony.addons.sensors.pose.ui.views.PoseSensorView"
+            id="org.eclipse.symphony.addons.sensors.pose.ui.views.PoseSensorView"
             name="Pose Sensor Viewe"
             restorable="true">
       </view>
@@ -46,8 +46,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated mrt_sensors_pose_ui -->
       <package
-            uri="ca.gc.space.mrt.sensors.pose.ui"
-            class="ca.gc.space.mrt.sensors.pose.ui.SensorsPoseUIPackage"
+            uri="org.eclipse.symphony.addons.sensors.pose.ui"
+            class="org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage"
             genModel="model/mrt_sensors_pose_ui.xcore"/>
    </extension>
 

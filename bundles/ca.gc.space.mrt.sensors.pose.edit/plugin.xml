@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http:///ca/gc/space/mrt/sensors/pose/model/pose.ecore"
-            class="ca.gc.space.mrt.sensors.pose.provider.PoseItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.sensors.pose.provider.PoseItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,21 +24,21 @@
          point="org.eclipse.ui.popupMenus">
       <objectContribution
             adaptable="true"
-            id="ca.gc.space.mrt.sensors.pose.edit.PositionSensorContribution"
-            objectClass="ca.gc.space.mrt.sensors.pose.PositionSensor">
+            id="org.eclipse.symphony.addons.sensors.pose.edit.PositionSensorContribution"
+            objectClass="org.eclipse.symphony.addons.sensors.pose.PositionSensor">
          <action
-               class="ca.gc.space.mrt.sensors.pose.actions.ResetPositionAction"
-               id="ca.gc.space.mrt.sensors.pose.edit.action1"
+               class="org.eclipse.symphony.addons.sensors.pose.actions.ResetPositionAction"
+               id="org.eclipse.symphony.addons.sensors.pose.edit.action1"
                label="Reset Position">
          </action>
       </objectContribution>
       <objectContribution
             adaptable="false"
-            id="ca.gc.space.mrt.sensors.pose.edit.OrientationSensoContribution"
-            objectClass="ca.gc.space.mrt.sensors.pose.OrientationSensor">
+            id="org.eclipse.symphony.addons.sensors.pose.edit.OrientationSensoContribution"
+            objectClass="org.eclipse.symphony.addons.sensors.pose.OrientationSensor">
          <action
-               class="ca.gc.space.mrt.sensors.pose.actions.ResetOrientationAction"
-               id="ca.gc.space.mrt.sensors.pose.edit.action2"
+               class="org.eclipse.symphony.addons.sensors.pose.actions.ResetOrientationAction"
+               id="org.eclipse.symphony.addons.sensors.pose.edit.action2"
                label="Reset Orientation">
          </action>
       </objectContribution>

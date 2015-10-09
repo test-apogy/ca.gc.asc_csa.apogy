@@ -1,26 +1,26 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.sensors.pose.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.pose.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.sensors.pose.ui,
- ca.gc.space.mrt.sensors.pose.ui.adapters,
- ca.gc.space.mrt.sensors.pose.ui.impl,
- ca.gc.space.mrt.sensors.pose.ui.scene_objects,
- ca.gc.space.mrt.sensors.pose.ui.util,
- ca.gc.space.mrt.sensors.pose.ui.views
+Export-Package: org.eclipse.symphony.addons.sensors.pose.ui,
+ org.eclipse.symphony.addons.sensors.pose.ui.adapters,
+ org.eclipse.symphony.addons.sensors.pose.ui.impl,
+ org.eclipse.symphony.addons.sensors.pose.ui.scene_objects,
+ org.eclipse.symphony.addons.sensors.pose.ui.util,
+ org.eclipse.symphony.addons.sensors.pose.ui.views
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
  org.eclipse.symphony.common.topology.core;visibility:=reexport,
  org.eclipse.symphony.common.topology.ui;visibility:=reexport,
- ca.gc.space.mrt.sensors.pose;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.pose;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.3",
  org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.space.mrt.sensors.pose.ui.Activator
+Bundle-Activator: org.eclipse.symphony.addons.sensors.pose.ui.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

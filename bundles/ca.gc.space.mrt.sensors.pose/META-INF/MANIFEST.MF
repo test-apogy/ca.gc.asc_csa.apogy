@@ -6,9 +6,9 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.sensors.pose,
- ca.gc.space.mrt.sensors.pose.impl,
- ca.gc.space.mrt.sensors.pose.util
+Export-Package: org.eclipse.symphony.addons.sensors.pose,
+ org.eclipse.symphony.addons.sensors.pose.impl,
+ org.eclipse.symphony.addons.sensors.pose.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.addons.sensors;visibility:=reexport,
@@ -21,6 +21,6 @@ Require-Bundle: org.eclipse.core.runtime,
  javax.media;bundle-version="1.5.2";visibility:=reexport,
  com.csvreader;bundle-version="2.0.0",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
-Bundle-Activator: ca.gc.space.mrt.sensors.pose.Activator
+Bundle-Activator: org.eclipse.symphony.addons.sensors.pose.Activator
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy

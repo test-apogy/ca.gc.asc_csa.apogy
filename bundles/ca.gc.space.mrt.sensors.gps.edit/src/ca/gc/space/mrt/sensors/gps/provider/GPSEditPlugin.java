@@ -5,6 +5,7 @@ package ca.gc.space.mrt.sensors.gps.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
@@ -13,7 +14,6 @@ import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 import ca.gc.space.mrt.common.provider.CommonEditPlugin;
-import ca.gc.space.mrt.sensors.pose.provider.PoseEditPlugin;
 
 /**
  * This is the central singleton for the GPS edit plugin.
