@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated eclipse_emf_ecore_ui -->
       <factory
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.ui"
-            class="ca.gc.asc_csa.eclipse.emf.ecore.ui.provider.EMFEcoreUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.emf.ui"
+            class="org.eclipse.symphony.common.emf.ui.provider.EMFEcoreUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

@@ -18,16 +18,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor.PropertyValueWrapper;
 import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 
 /**
  * <!-- begin-user-doc -->

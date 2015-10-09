@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore;bundle-version="0.1.0";visibility:=reexport,
+ org.eclipse.symphony.common.emf;bundle-version="0.1.0";visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.core.invocator,

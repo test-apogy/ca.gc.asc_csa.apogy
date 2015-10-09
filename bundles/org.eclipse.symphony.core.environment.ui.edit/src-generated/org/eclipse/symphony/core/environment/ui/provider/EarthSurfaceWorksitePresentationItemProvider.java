@@ -14,11 +14,10 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation} object.

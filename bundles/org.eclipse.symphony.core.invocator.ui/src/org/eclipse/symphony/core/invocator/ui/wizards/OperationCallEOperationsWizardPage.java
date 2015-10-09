@@ -9,12 +9,11 @@ import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.emf.ui.composites.EOperationsComposite;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.composites.EOperationsComposite;
 
 public class OperationCallEOperationsWizardPage extends WizardPage {
 

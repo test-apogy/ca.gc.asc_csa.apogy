@@ -3,9 +3,9 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreExampleMobilePlatform edit plugin.

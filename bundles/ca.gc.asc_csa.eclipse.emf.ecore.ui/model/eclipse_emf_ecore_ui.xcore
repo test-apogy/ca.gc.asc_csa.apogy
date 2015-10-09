@@ -1,12 +1,12 @@
 @GenModel(prefix="EMFEcoreUI", childCreationExtenders="true", modelName="EMFEcoreUI")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.ui.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.emf.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.emf.ui.edit/src-generated")
 
-package ca.gc.asc_csa.eclipse.emf.ecore.ui
+package org.eclipse.symphony.common.emf.ui
 
 import org.eclipse.emf.ecore.ETypedElement
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges
+import org.eclipse.symphony.common.emf.Ranges
 
 type Color wraps org.eclipse.swt.graphics.Color
 type Unit wraps javax.measure.unit.Unit

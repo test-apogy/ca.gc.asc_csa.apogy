@@ -3,10 +3,9 @@
  */
 package org.eclipse.symphony.core.programs.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 
 /**

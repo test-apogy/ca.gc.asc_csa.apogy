@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.asc_csa.eclipse.emf.ecore.ui" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.common.emf.ui" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="ca.gc.asc_csa.eclipse.emf.ecore.ui" id="ca.gc.asc_csa.eclipse.emf.ecore.ui.TimeSourceCompositeProvider" name="TimeSourceCompositeProvider"/>
+         <meta.schema plugin="org.eclipse.symphony.common.emf.ui" id="org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider" name="TimeSourceCompositeProvider"/>
       </appinfo>
       <documentation>
          [Enter description of this extension point.]
@@ -55,7 +55,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":ca.gc.asc_csa.eclipse.emf.ecore.ui.TimeSourceCompositeProvider"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider"/>
                </appinfo>
             </annotation>
          </attribute>

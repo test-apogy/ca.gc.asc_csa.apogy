@@ -23,8 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.AbstractTool;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.AbstractTool} object.

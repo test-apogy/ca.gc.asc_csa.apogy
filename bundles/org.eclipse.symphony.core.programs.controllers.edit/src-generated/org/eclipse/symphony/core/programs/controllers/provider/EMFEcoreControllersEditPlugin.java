@@ -6,8 +6,8 @@ package org.eclipse.symphony.core.programs.controllers.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
-import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreControllers edit plugin.

@@ -22,7 +22,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated eclipse_emf_ecore_invocator -->
       <extender
-            uri="ca.gc.asc_csa.eclipse.emf.ecore"
+            uri="org.eclipse.symphony.common.emf"
             class="org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorItemProviderAdapterFactory$EMFEcoreChildCreationExtender"/>
    </extension>
 

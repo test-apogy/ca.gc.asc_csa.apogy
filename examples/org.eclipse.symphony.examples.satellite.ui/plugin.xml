@@ -13,7 +13,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:org.eclipse.ui.popup.any?after=ca.gc.asc_csa.eclipse.emf.ecore.ui.additions">
+            locationURI="popup:org.eclipse.ui.popup.any?after=org.eclipse.symphony.common.emf.ui.additions">
          <command
                commandId="org.eclipse.symphony.examples.satellite.ui.commands.ExportSatelliteCommandListToFile"
                label="Export Satellite Command List to CSV File"

@@ -13,13 +13,13 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.core.display.BooleanDisplay;
 import org.eclipse.symphony.core.display.DisplayFacade;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
 import org.eclipse.symphony.core.display.databindings.UpdateValueStrategyWithRange;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.EMFEcoreUIFacade;
 
 /**
  * <!-- begin-user-doc -->

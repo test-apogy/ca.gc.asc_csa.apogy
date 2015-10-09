@@ -12,9 +12,9 @@ import org.eclipse.symphony.common.topology.GroupNode
 import org.eclipse.symphony.common.topology.RotationNode
 import org.eclipse.symphony.common.topology.PositionNode
 
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode
-import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter
+import org.eclipse.symphony.common.emf.AbstractFeatureNode
+import org.eclipse.symphony.common.emf.TreeRootNode
+import org.eclipse.symphony.common.emf.FeatureNodeAdapter
 import org.eclipse.symphony.common.topology.TransformNode
 
 type Map<K,V> wraps java.util.Map

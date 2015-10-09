@@ -9,6 +9,6 @@
 		<relativePath>../../packaging/org.eclipse.symphony.parent</relativePath>
 	</parent>
 
-	<artifactId>ca.gc.asc_csa.eclipse.emf.ecore</artifactId>
+	<artifactId>org.eclipse.symphony.common.emf</artifactId>
 	<packaging>eclipse-plugin</packaging>
 </project>

@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation
 /*
  * This class is the specialized Symphony API adapter, used for connecting
  * the existing Lidar unit example, located at
- * {@link ca.gc.asc_csa.eclipse.emf.ecore.examples.lidar.Lidar},
+ * {@link org.eclipse.symphony.common.emf.examples.lidar.Lidar},
  * to Symphony; one can override the well-known callback functions to make
  * Symphony perform a variety of useful functions, including initialization,
  * disposal and other features. 

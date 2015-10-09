@@ -6,7 +6,7 @@ package org.eclipse.symphony.core.invocator.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
+import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreInvocator edit plugin. <!--

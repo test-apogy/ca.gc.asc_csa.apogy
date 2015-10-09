@@ -4,8 +4,6 @@
 package org.eclipse.symphony.addons.vehicle.provider;
 
 
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -18,6 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Wheel;
+import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.asc_csa.topology.dynamics.provider.PhysicalBodyItemProvider;

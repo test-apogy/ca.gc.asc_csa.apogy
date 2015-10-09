@@ -12,7 +12,7 @@ package org.eclipse.symphony.core.programs
 import org.eclipse.symphony.core.invocator.Program
 import org.eclipse.symphony.core.invocator.InvocatorSession
 import org.eclipse.symphony.core.invocator.Variable
-import ca.gc.asc_csa.eclipse.emf.ecore.Exception
+import org.eclipse.symphony.common.emf.Exception
 import org.eclipse.symphony.core.invocator.OperationCall
 
 abstract class AbstractProgramRuntime{

@@ -30,7 +30,7 @@ public interface EMFEcoreInvocatorUiFacade extends EObject {
 	 * @param source Reference to the source context.
 	 * @param destination Reference to the destination context.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="ca.gc.asc_csa.eclipse.emf.ecore.Exception" sourceUnique="false" destinationUnique="false"
+	 * @model exceptions="org.eclipse.symphony.common.emf.Exception" sourceUnique="false" destinationUnique="false"
 	 * @generated
 	 */
 	void copyInitializationData(Context source, Context destination) throws Exception;
@@ -44,7 +44,7 @@ public interface EMFEcoreInvocatorUiFacade extends EObject {
 	 * @param destination Reference to the destination implementation.
 	 * @param command Reference to the stack command.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="ca.gc.asc_csa.eclipse.emf.ecore.Exception" sourceUnique="false" destinationUnique="false" commandDataType="org.eclipse.symphony.core.invocator.ui.CompoundCommand" commandUnique="false"
+	 * @model exceptions="org.eclipse.symphony.common.emf.Exception" sourceUnique="false" destinationUnique="false" commandDataType="org.eclipse.symphony.core.invocator.ui.CompoundCommand" commandUnique="false"
 	 * @generated
 	 */
 	void copyInitializationData(AbstractTypeImplementation source, AbstractTypeImplementation destination, CompoundCommand command) throws Exception;

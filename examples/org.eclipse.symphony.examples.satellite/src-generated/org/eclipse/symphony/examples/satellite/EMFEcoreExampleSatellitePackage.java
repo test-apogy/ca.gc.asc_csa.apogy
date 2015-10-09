@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -13,9 +11,8 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
-
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**

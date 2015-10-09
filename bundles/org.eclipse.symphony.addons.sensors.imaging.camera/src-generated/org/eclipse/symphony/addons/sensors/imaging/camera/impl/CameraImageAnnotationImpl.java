@@ -12,9 +12,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 /**
  * <!-- begin-user-doc -->

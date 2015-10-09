@@ -21,7 +21,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.invocator"
+            uri="org.eclipse.symphony.common.emf.invocator"
             class="org.eclipse.symphony.core.recordings.provider.EMFEcoreInvocatorRecordingsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
    </extension>
 

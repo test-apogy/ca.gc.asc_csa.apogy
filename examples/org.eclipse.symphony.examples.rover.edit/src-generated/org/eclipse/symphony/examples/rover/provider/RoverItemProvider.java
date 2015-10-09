@@ -5,8 +5,6 @@ package org.eclipse.symphony.examples.rover.provider;
 
 
 
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -25,6 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverFactory;
 import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
 import org.eclipse.symphony.examples.rover.Rover;

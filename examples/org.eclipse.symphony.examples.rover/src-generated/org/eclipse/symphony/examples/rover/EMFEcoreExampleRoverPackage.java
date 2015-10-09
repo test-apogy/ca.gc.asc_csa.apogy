@@ -3,12 +3,12 @@
  */
 package org.eclipse.symphony.examples.rover;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcoreExampleRover' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='EMFEcoreExampleRover' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.rover/src-generated' editDirectory='/org.eclipse.symphony.examples.rover.edit/src-generated' basePackage='ca.gc.asc_csa.eclipse.emf.ecore.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcoreExampleRover' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='EMFEcoreExampleRover' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.rover/src-generated' editDirectory='/org.eclipse.symphony.examples.rover.edit/src-generated' basePackage='org.eclipse.symphony.common.emf.examples'"
  * @generated
  */
 public interface EMFEcoreExampleRoverPackage extends EPackage

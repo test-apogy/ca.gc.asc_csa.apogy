@@ -7,9 +7,9 @@ package org.eclipse.symphony.core.environment.orbit
 
 import org.eclipse.emf.ecore.EDate
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed
-import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.eclipse.emf.ecore.Described
+import org.eclipse.symphony.common.emf.Timed
+import org.eclipse.symphony.common.emf.Named
+import org.eclipse.symphony.common.emf.Described
 
 import org.eclipse.symphony.common.math.Tuple3d
 import org.eclipse.symphony.common.math.Matrix3x3

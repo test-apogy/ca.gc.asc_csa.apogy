@@ -3,10 +3,9 @@
  */
 package org.eclipse.symphony.examples.rover.symphony.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;

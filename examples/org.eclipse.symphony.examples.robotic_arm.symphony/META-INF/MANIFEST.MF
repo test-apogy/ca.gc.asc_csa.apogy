@@ -20,6 +20,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.examples.robotic_arm;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
  org.eclipse.symphony.core;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.symphony.common.emf;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.examples.robotic_arm.symphony.Activator

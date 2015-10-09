@@ -3,10 +3,10 @@
  */
 package org.eclipse.symphony.addons.sensors.imaging.camera;
 
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.images.AbstractEImage;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**

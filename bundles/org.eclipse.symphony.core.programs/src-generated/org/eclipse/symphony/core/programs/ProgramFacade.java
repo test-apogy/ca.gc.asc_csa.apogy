@@ -66,7 +66,7 @@ public interface ProgramFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" exceptions="ca.gc.asc_csa.eclipse.emf.ecore.Exception" operationCallUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.emf.Exception" operationCallUnique="false"
 	 * @generated
 	 */
 	Object exec(OperationCall operationCall) throws Exception;

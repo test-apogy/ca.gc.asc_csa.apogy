@@ -13,12 +13,11 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguratio
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ToolsList;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 
 /**
  * <!-- begin-user-doc -->

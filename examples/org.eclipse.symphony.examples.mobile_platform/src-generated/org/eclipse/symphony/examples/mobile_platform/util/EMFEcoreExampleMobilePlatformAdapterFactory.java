@@ -190,13 +190,13 @@ public class EMFEcoreExampleMobilePlatformAdapterFactory extends AdapterFactoryI
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Disposable <em>Disposable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Disposable <em>Disposable</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Disposable
+	 * @see org.eclipse.symphony.common.emf.Disposable
 	 * @generated
 	 */
   public Adapter createDisposableAdapter()

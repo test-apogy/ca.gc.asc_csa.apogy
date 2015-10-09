@@ -4,8 +4,6 @@
 package org.eclipse.symphony.addons.provider;
 
 
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -17,6 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool} object.

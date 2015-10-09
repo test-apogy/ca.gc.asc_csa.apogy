@@ -11,7 +11,7 @@
 
 package org.eclipse.symphony.addons.telecoms
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Named
+import org.eclipse.symphony.common.emf.Named
 import org.eclipse.symphony.addons.SimpleTool
 import org.eclipse.symphony.common.topology.Node
 import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer

@@ -6,6 +6,7 @@ package org.eclipse.symphony.addons.telecoms.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.addons.provider.SymphonyToolsCoreEditPlugin;
+import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
@@ -15,7 +16,6 @@ import org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentEditPlu
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 import ca.gc.space.mrt.geometry.paths.provider.PathEditPlugin;
 
 /**

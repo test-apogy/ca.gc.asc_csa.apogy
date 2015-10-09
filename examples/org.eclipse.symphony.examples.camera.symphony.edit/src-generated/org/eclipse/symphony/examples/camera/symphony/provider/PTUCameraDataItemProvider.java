@@ -13,10 +13,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData} object.

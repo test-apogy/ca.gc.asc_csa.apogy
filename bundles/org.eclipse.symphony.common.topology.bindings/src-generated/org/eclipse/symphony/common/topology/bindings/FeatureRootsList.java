@@ -33,7 +33,7 @@ public interface FeatureRootsList extends EObject
 {
   /**
 	 * Returns the value of the '<em><b>Feature Roots</b></em>' containment reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode}.
+	 * The list contents are of type {@link org.eclipse.symphony.common.emf.TreeRootNode}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Feature Roots</em>' containment reference list isn't clear,

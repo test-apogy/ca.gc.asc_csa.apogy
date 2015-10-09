@@ -1,8 +1,8 @@
 @GenModel(prefix="EMFEcore", childCreationExtenders="true", extensibleProviderFactory="true",modelName="EMFEcore")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.emf/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.emf.edit/src-generated")
 
-package ca.gc.asc_csa.eclipse.emf.ecore
+package org.eclipse.symphony.common.emf
 
 import org.eclipse.emf.ecore.EOperation
 import org.eclipse.emf.ecore.EClass

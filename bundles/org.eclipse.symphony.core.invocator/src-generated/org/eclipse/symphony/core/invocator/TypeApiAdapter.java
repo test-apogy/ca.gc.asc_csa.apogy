@@ -190,7 +190,7 @@ public interface TypeApiAdapter extends EObject
 	 * @exception Reference to the exception if one exception was raised during the invocation.
 	 * @return Reference to the new result.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" operationCallUnique="false" invocationTimeUnique="false" resultValueUnique="false" exceptionDataType="ca.gc.asc_csa.eclipse.emf.ecore.Exception" exceptionUnique="false"
+	 * @model unique="false" operationCallUnique="false" invocationTimeUnique="false" resultValueUnique="false" exceptionDataType="org.eclipse.symphony.common.emf.Exception" exceptionUnique="false"
 	 * @generated
 	 */
   OperationCallResult createResult(OperationCall operationCall, long invocationTime, Object resultValue, Exception exception);

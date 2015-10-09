@@ -4,7 +4,7 @@ Bundle-Localization: plugin
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.eclipse.emf.databinding
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.eclipse.emf.databinding.Activator
+Bundle-Activator: org.eclipse.symphony.common.emf.databinding.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.databinding;bundle-version="1.3.100",
  org.eclipse.emf.ecore;bundle-version="2.6.1",
@@ -13,5 +13,5 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: %providerName
-Export-Package: ca.gc.asc_csa.eclipse.emf.databinding,
- ca.gc.asc_csa.eclipse.emf.databinding.converters
+Export-Package: org.eclipse.symphony.common.emf.databinding,
+ org.eclipse.symphony.common.emf.databinding.converters

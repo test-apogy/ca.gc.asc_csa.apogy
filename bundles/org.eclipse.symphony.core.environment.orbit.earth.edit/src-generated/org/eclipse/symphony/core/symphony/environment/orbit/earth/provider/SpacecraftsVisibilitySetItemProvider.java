@@ -22,12 +22,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet} object.

@@ -5,10 +5,10 @@
 
 package org.eclipse.symphony.core.environment
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described
-import ca.gc.asc_csa.eclipse.emf.ecore.Exception
-import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed
+import org.eclipse.symphony.common.emf.Described
+import org.eclipse.symphony.common.emf.Exception
+import org.eclipse.symphony.common.emf.Named
+import org.eclipse.symphony.common.emf.Timed
 import org.eclipse.symphony.common.images.AbstractEImage
 import org.eclipse.symphony.core.AbstractOrbitModel
 import org.eclipse.symphony.core.AbstractWorksite

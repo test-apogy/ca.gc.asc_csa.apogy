@@ -5,9 +5,8 @@ package org.eclipse.symphony.examples.satellite;
 
 import java.util.List;
 
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->

@@ -11,6 +11,7 @@ import javax.measure.unit.Unit;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -26,7 +27,6 @@ import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.ui.RectangleInsets;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.EMFEcoreUIFacade;
 
 public class NumberVsTimeChartComposite extends AbstractValueVsTimeChartComposite<Number> 
 {	

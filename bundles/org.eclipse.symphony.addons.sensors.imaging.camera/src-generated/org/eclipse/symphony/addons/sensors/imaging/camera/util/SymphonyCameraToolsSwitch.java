@@ -8,13 +8,12 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.AbstractTool;
 import org.eclipse.symphony.addons.sensors.imaging.camera.*;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->

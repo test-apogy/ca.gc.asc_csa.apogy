@@ -25,6 +25,8 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguratio
 import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -32,8 +34,6 @@ import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl;
 import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**

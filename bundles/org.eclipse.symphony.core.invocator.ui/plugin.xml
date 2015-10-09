@@ -262,10 +262,10 @@
       <propertySections
             contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               afterSection="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.sections.NamedSection"
+               afterSection="org.eclipse.symphony.common.emf.ui.properties.sections.NamedSection"
                class="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
                id="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
-               tab="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.tabs.General">
+               tab="org.eclipse.symphony.common.emf.ui.properties.tabs.General">
             <input
                   type="org.eclipse.symphony.core.invocator.VariableFeatureReference">
             </input>
@@ -275,7 +275,7 @@
                afterSection="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
                class="org.eclipse.symphony.core.invocator.ui.properties.sections.OperationCallSection"
                id="org.eclipse.symphony.core.invocator.ui.properties.sections.OperationCallSection"
-               tab="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.tabs.General">
+               tab="org.eclipse.symphony.common.emf.ui.properties.tabs.General">
             <input
                   type="org.eclipse.symphony.core.invocator.OperationCall">
             </input>
@@ -318,7 +318,7 @@
       <propertyTabs
             contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
+               category="org.eclipse.symphony.common.emf.ui"
                id="org.eclipse.symphony.core.invocator.ui.properties.tabs.ResultImage"
                label="Image">
          </propertyTab>
@@ -330,7 +330,7 @@
       <propertyTabs
             contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
+               category="org.eclipse.symphony.common.emf.ui"
                id="org.eclipse.symphony.core.invocator.ui.propertyTabs.Contexts"
                label="Contexts">
          </propertyTab>
@@ -342,7 +342,7 @@
       <propertyTabs
             contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
+               category="org.eclipse.symphony.common.emf.ui"
                id="org.eclipse.symphony.core.invocator.ui.propertyTabs.Documentation"
                label="Documentation">
          </propertyTab>

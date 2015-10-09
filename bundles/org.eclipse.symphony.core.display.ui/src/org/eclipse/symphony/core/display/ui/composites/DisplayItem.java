@@ -23,6 +23,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.DisplayFacade;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayFactory;
@@ -35,7 +36,6 @@ import org.eclipse.symphony.core.invocator.AbstractDisplay;
 import org.eclipse.symphony.core.invocator.Context;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.EMFEcoreUIFacade;
 
 public class DisplayItem implements IPropertyChangeListener
 {
@@ -64,7 +64,7 @@ public class DisplayItem implements IPropertyChangeListener
 		setAbstractDisplay(abstractDisplay, -1);
 		
 		// Register for display unit changes.
-		ca.gc.asc_csa.eclipse.emf.ecore.ui.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
+		org.eclipse.symphony.common.emf.ui.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
 	}	
 	
 	public DisplayItem(final DisplayTable watchFeatureTable, final AbstractDisplay abstractDisplay, final int index)
@@ -73,7 +73,7 @@ public class DisplayItem implements IPropertyChangeListener
 		setAbstractDisplay(abstractDisplay, index);		
 		
 		// Register for display unit changes.
-		ca.gc.asc_csa.eclipse.emf.ecore.ui.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
+		org.eclipse.symphony.common.emf.ui.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
 	}	
 
 	@Override
@@ -122,7 +122,7 @@ public class DisplayItem implements IPropertyChangeListener
 		abstractDisplay = null;
 		
 		// Unregister from Preference Store.
-		ca.gc.asc_csa.eclipse.emf.ecore.ui.Activator.getDefault().getPreferenceStore().removePropertyChangeListener(this);
+		org.eclipse.symphony.common.emf.ui.Activator.getDefault().getPreferenceStore().removePropertyChangeListener(this);
 	}
 	
 	public AbstractDisplay getAbstractDisplay() 

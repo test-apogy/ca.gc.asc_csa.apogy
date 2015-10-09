@@ -9,7 +9,7 @@
 
 package org.eclipse.symphony.examples.mobile_platform
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Disposable 
+import org.eclipse.symphony.common.emf.Disposable 
 
 /*
  * This class is used to represent a position of a particular object

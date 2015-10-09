@@ -16,9 +16,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Thruster;
+import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.Thruster} object.

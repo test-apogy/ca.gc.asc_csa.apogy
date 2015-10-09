@@ -5,7 +5,7 @@
 package org.eclipse.symphony.core.invocator.ui
 
 import org.eclipse.symphony.core.invocator.Context
-import ca.gc.asc_csa.eclipse.emf.ecore.Exception
+import org.eclipse.symphony.common.emf.Exception
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand

@@ -4704,11 +4704,11 @@ public interface EMFEcoreInvocatorPackage extends EPackage
   EOperation getEMFEcoreInvocatorFacade__CreateAbstractResultValue__Object();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve Watch</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
   EOperation getEMFEcoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
@@ -4724,11 +4724,11 @@ public interface EMFEcoreInvocatorPackage extends EPackage
   EOperation getEMFEcoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Get Value</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Value</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
   EOperation getEMFEcoreInvocatorFacade__GetValue__AbstractFeatureNode();
@@ -4874,11 +4874,11 @@ public interface EMFEcoreInvocatorPackage extends EPackage
   EOperation getEMFEcoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Fully Qualified Name</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
   EOperation getEMFEcoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();

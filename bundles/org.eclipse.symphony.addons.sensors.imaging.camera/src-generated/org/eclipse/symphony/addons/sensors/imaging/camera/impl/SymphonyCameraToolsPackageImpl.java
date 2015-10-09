@@ -55,11 +55,11 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPac
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
 import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 

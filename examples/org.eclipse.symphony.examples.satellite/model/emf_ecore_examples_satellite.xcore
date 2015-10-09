@@ -6,7 +6,7 @@ package org.eclipse.symphony.examples.satellite
 
 import org.eclipse.emf.ecore.EDate
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Named
+import org.eclipse.symphony.common.emf.Named
 
 import org.eclipse.symphony.core.invocator.TypeApiAdapter
 import org.eclipse.symphony.core.invocator.AbstractInitializationData

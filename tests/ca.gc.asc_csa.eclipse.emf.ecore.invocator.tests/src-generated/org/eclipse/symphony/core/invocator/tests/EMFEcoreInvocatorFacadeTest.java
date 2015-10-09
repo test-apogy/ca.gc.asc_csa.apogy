@@ -20,9 +20,9 @@ import junit.textui.TestRunner;
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall, boolean) <em>Exec</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCallsList) <em>Exec</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createAbstractResultValue(java.lang.Object) <em>Create Abstract Result Value</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Resolve Watch</em>}</li>
+ *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Resolve Watch</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Resolve Watch</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Get Value</em>}</li>
+ *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.Variable) <em>Get Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.Variable) <em>Get Instance Class</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeApiAdapter(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Type Api Adapter</em>}</li>
@@ -37,7 +37,7 @@ import junit.textui.TestRunner;
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createTypeMemberReferences(org.eclipse.symphony.core.invocator.TypeMember[]) <em>Create Type Member References</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Environment, java.lang.String) <em>Get Type Implementation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Get Fully Qualified Name</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}</li>
+ *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createTypeMemberImplementations(org.eclipse.symphony.core.invocator.Type) <em>Create Type Member Implementations</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#initVariableInstances(org.eclipse.symphony.core.invocator.Environment) <em>Init Variable Instances</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#disposeVariableInstances(org.eclipse.symphony.core.invocator.Environment) <em>Dispose Variable Instances</em>}</li>
@@ -176,10 +176,10 @@ public class EMFEcoreInvocatorFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
 	public void testResolveWatch__AbstractFeatureNode() {
@@ -202,10 +202,10 @@ public class EMFEcoreInvocatorFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Get Value</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
 	public void testGetValue__AbstractFeatureNode() {
@@ -397,10 +397,10 @@ public class EMFEcoreInvocatorFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
 	public void testGetFullyQualifiedName__AbstractFeatureNode() {

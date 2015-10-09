@@ -6,10 +6,10 @@ package org.eclipse.symphony.core.recordings
 
 import org.eclipse.emf.ecore.EDate
 
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode
-import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.eclipse.emf.ecore.Described
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource
+import org.eclipse.symphony.common.emf.AbstractFeatureNode
+import org.eclipse.symphony.common.emf.Named
+import org.eclipse.symphony.common.emf.Described
+import org.eclipse.symphony.common.emf.TimeSource
 
 import org.eclipse.symphony.core.invocator.AbstractResult
 import org.eclipse.symphony.core.invocator.AbstractRecorder

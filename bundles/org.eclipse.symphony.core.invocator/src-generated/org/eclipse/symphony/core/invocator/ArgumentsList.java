@@ -77,7 +77,7 @@ public interface ArgumentsList extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="ca.gc.asc_csa.eclipse.emf.ecore.List<?>" unique="false" many="false"
+	 * @model kind="operation" dataType="org.eclipse.symphony.common.emf.List<?>" unique="false" many="false"
 	 * @generated
 	 */
   List<?> getArgumentValues();

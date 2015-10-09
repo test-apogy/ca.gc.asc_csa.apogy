@@ -4,8 +4,6 @@
 package org.eclipse.symphony.examples.camera.provider;
 
 
-import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -16,6 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
 import org.eclipse.symphony.examples.camera.PTUCameraStub;

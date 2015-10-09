@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.examples.rover;
 
+import org.eclipse.symphony.common.emf.Disposable;
 import org.eclipse.symphony.examples.camera.PTUCamera;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
 
 /**
  * <!-- begin-user-doc -->

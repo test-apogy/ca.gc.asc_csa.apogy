@@ -6,15 +6,15 @@
 
 package org.eclipse.symphony.core.invocator
 
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode
-import ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource
-import ca.gc.asc_csa.eclipse.emf.ecore.Described
-import ca.gc.asc_csa.eclipse.emf.ecore.Exception
-import ca.gc.asc_csa.eclipse.emf.ecore.List
-import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode
-import ca.gc.asc_csa.eclipse.emf.ecore.Named
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode
+import org.eclipse.symphony.common.emf.AbstractFeatureNode
+import org.eclipse.symphony.common.emf.CollectionTimedTimeSource
+import org.eclipse.symphony.common.emf.Described
+import org.eclipse.symphony.common.emf.Exception
+import org.eclipse.symphony.common.emf.List
+import org.eclipse.symphony.common.emf.ListRootNode
+import org.eclipse.symphony.common.emf.Named
+import org.eclipse.symphony.common.emf.Timed
+import org.eclipse.symphony.common.emf.TreeRootNode
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EEnum

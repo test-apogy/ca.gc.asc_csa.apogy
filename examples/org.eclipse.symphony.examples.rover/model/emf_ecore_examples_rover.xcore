@@ -9,7 +9,7 @@
 
 package org.eclipse.symphony.examples.rover
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Disposable
+import org.eclipse.symphony.common.emf.Disposable
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform
 import org.eclipse.symphony.examples.camera.PTUCamera

@@ -9,9 +9,9 @@ package org.eclipse.symphony.core.display
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EStructuralFeature
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges
+import org.eclipse.symphony.common.emf.Ranges
 import org.eclipse.symphony.core.invocator.AbstractDisplay
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode
+import org.eclipse.symphony.common.emf.AbstractFeatureNode
 
 
 /* ------------------------------------------------------------------------------------------

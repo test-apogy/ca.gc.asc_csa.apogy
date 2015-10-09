@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.symphony.tools.camera.ImageFilter;
 import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 

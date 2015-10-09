@@ -287,7 +287,7 @@ public interface EMFEcoreInvocatorFacade extends EObject
 	 * @param variableType Reference to the type.
 	 * @return List of TypeMemberImplementation.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.eclipse.emf.ecore.List<org.eclipse.symphony.core.invocator.TypeMemberImplementation>" unique="false" many="false" variableTypeUnique="false"
+	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.core.invocator.TypeMemberImplementation>" unique="false" many="false" variableTypeUnique="false"
 	 * @generated
 	 */
   List<TypeMemberImplementation> createTypeMemberImplementations(Type variableType);
@@ -398,7 +398,7 @@ public interface EMFEcoreInvocatorFacade extends EObject
 	 * Returns the list of all the {@link Type} contained in the specified {@link Environment}.
 	 * @environment Reference to the environment.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.eclipse.emf.ecore.List<org.eclipse.symphony.core.invocator.Type>" unique="false" many="false" environmentUnique="false"
+	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.core.invocator.Type>" unique="false" many="false" environmentUnique="false"
 	 * @generated
 	 */
 	List<Type> getAllTypes(Environment environment);

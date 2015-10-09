@@ -1,6 +1,6 @@
 @GenModel(prefix="EMFEcoreEditUtils", childCreationExtenders="true", modelName="EMFEcoreEditUtils")
-@GenModel(modelDirectory="/ca.gc.asc_csa.eclipse.emf.ecore.edit.utils/src-generated")
-package ca.gc.asc_csa.eclipse.emf.ecore.edit.utils
+@GenModel(modelDirectory="/org.eclipse.symphony.common.emf.edit.utils/src-generated")
+package org.eclipse.symphony.common.emf.edit.utils
 
 type CollectionObject wraps java.util.Collection<Object>
 

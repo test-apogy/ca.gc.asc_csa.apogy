@@ -16,13 +16,13 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthEleva
 import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**

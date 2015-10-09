@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.eclipse.symphony.common.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_OeyMoArPEeW4-_ONWXXiAw" name="RoverSymphonySystem" poseProvider="_OeyMpArPEeW4-_ONWXXiAw">
+<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.eclipse.symphony.common.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_OeyMoArPEeW4-_ONWXXiAw" name="RoverSymphonySystem" poseProvider="_OeyMpArPEeW4-_ONWXXiAw">
   <members xmi:id="_OeyMoQrPEeW4-_ONWXXiAw" name="roboticArm">
     <memberType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.robotic_arm/model/RoboticArmSymphonySystem.ss#_LQwxcArPEeW4-_ONWXXiAw"/>
     <typeFeatureRootNode xmi:id="_OeyMogrPEeW4-_ONWXXiAw">

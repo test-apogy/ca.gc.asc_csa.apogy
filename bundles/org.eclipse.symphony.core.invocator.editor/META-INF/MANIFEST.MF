@@ -16,7 +16,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.edit;visibility:=reexport,
+ org.eclipse.symphony.common.emf.edit;visibility:=reexport,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300";visibility:=reexport,
  org.eclipse.symphony.common.ui;visibility:=reexport
 Bundle-ActivationPolicy: lazy
