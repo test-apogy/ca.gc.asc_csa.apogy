@@ -41,8 +41,8 @@ public final class Data3dEditPlugin extends EMFPlugin {
 	public Data3dEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ProcessorsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

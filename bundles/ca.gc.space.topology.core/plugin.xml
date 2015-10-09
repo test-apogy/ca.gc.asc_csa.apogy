@@ -12,9 +12,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http:///ca/gc/space/topology.ecore" 
+       uri = "ca.gc.space.topology.core" 
        class = "ca.gc.space.topology.TopologyPackage"
-       genModel = "model/topology.genmodel" /> 
+       genModel = "model/topology.xcore" /> 
   </extension>
 
 </plugin>

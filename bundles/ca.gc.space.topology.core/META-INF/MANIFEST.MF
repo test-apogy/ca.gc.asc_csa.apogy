@@ -10,7 +10,11 @@ Export-Package: ca.gc.space.topology,
  ca.gc.space.topology.impl,
  ca.gc.space.topology.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.symphony.common.math;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib;visibility:=reexport,
+ org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
+ ca.gc.space.topology.core;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.space.topology.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
