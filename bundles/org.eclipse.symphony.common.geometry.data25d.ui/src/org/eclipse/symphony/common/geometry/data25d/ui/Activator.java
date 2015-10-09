@@ -1,4 +1,4 @@
-package ca.gc.space.mrt.geometry.data25d.ui;
+package org.eclipse.symphony.common.geometry.data25d.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;

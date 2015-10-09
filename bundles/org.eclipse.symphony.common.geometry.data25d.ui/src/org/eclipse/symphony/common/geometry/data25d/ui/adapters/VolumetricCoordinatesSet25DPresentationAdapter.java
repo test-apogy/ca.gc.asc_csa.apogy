@@ -1,4 +1,4 @@
-package ca.gc.space.mrt.geometry.data25d.ui.adapters;
+package org.eclipse.symphony.common.geometry.data25d.ui.adapters;
 
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIFactory;
