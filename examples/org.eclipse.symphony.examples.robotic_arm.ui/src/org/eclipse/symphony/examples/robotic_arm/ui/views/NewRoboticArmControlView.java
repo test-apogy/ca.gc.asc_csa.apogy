@@ -5,10 +5,9 @@ import java.util.List;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
 import org.eclipse.symphony.examples.robotic_arm.ui.composites.NewRoboticArmControlComposite;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class NewRoboticArmControlView extends AbstractView
 {

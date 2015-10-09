@@ -9,12 +9,11 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.ui.composites.DataProductsListsContainerComposite;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class DataProductsListsContainerView extends AbstractView implements IEditingDomainProvider{
 

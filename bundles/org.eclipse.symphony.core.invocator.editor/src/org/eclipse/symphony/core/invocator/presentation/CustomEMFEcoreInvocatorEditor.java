@@ -31,6 +31,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorEditor;
@@ -49,7 +50,6 @@ import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributo
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.ui.properties.ExtendedTabbedPropertySheetPage;
 
 /**
  * This is an example of a EMFEcoreInvocator model editor. <!-- begin-user-doc

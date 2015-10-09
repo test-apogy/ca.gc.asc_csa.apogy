@@ -58,7 +58,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
                category="org.eclipse.symphony.core.environment.ui.property.category.Default">
          </propertyCategory>
@@ -67,7 +67,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
                class="org.eclipse.symphony.core.environment.ui.properties.sections.EarthSkyPropertySection"
                id="org.eclipse.symphony.core.environment.ui.property.section.CartesianCoordinatesSet"
@@ -89,7 +89,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="org.eclipse.symphony.core.environment.ui.property.category.Default"
                id="org.eclipse.symphony.core.environment.ui.property.tab.EarthSky"
@@ -101,7 +101,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="org.eclipse.symphony.core.environment.ui.property.category.Default"
                id="org.eclipse.symphony.core.environment.ui.property.tab.MapLayers"
@@ -393,7 +393,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
                class="org.eclipse.symphony.core.environment.ui.properties.sections.GeographicCoordinatesSection"
                filter="org.eclipse.symphony.core.environment.ui.properties.sections.GeographicCoordinatesSection"
@@ -405,7 +405,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="org.eclipse.symphony.core.environment.ui.property.category.Default"
                id="org.eclipse.symphony.core.environment.ui.property.tabs.GeographicalCoordinates"
@@ -416,7 +416,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
                class="org.eclipse.symphony.core.environment.ui.properties.sections.PositionCoordinatesSection"
                filter="org.eclipse.symphony.core.environment.ui.properties.sections.PositionCoordinatesSection"
@@ -428,7 +428,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="org.eclipse.symphony.core.environment.ui.property.category.Default"
                id="org.eclipse.symphony.core.environment.ui.property.tabs.Position"

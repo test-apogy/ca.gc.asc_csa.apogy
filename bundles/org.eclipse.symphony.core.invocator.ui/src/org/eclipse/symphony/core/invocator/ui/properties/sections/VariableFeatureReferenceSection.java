@@ -3,13 +3,12 @@ package org.eclipse.symphony.core.invocator.ui.properties.sections;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import org.eclipse.symphony.core.invocator.VariablesList;
 import org.eclipse.symphony.core.invocator.ui.composites.VariableFeatureReferenceComposite;
-
-import ca.gc.asc_csa.eclipse.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class VariableFeatureReferenceSection extends AbstractExtendedPropertySection {
 		

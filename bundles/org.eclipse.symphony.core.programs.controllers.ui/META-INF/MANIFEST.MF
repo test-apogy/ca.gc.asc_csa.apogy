@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.symphony.core.programs.controllers,
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300",
  org.eclipse.core.databinding;bundle-version="1.4.1",
- ca.gc.asc_csa.eclipse.ui,
+ org.eclipse.symphony.common.ui,
  org.eclipse.symphony.core.display,
  ca.gc.asc_csa.eclipse.emf.ecore.ui,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"

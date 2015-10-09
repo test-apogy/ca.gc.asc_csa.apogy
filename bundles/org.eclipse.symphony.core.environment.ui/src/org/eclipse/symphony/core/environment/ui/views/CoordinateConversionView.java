@@ -6,11 +6,10 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.ui.composites.CoordinateConversionComposite;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class CoordinateConversionView extends AbstractView
 {

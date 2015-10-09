@@ -4,6 +4,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.TypeMember;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
@@ -11,7 +12,6 @@ import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.composites.EClassDocumentationComposite;
-import ca.gc.asc_csa.eclipse.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class DocumentationSection extends AbstractExtendedPropertySection {
 		

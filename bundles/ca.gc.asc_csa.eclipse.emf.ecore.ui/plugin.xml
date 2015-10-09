@@ -23,7 +23,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"></propertyCategory>
       </propertyContributor>
@@ -31,7 +31,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
                class="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.sections.NamedSection"
                id="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.sections.NamedSection"
@@ -63,7 +63,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
                id="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.tabs.General"
@@ -75,7 +75,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
                id="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.tabs.Documentation"

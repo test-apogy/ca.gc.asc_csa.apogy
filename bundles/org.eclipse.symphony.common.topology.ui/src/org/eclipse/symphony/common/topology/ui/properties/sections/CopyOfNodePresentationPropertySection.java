@@ -8,10 +8,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.Activator;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
-
-import ca.gc.asc_csa.eclipse.ui.properties.ExtendedTabbedPropertySheetPage;
 
 public class CopyOfNodePresentationPropertySection extends org.eclipse.ui.views.properties.tabbed.AdvancedPropertySection 
 {

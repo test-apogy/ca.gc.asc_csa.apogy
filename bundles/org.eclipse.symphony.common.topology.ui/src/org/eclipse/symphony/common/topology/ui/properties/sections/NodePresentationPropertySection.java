@@ -7,10 +7,9 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
-
-import ca.gc.asc_csa.eclipse.ui.properties.ExtendedTabbedPropertySheetPage;
 
 public class NodePresentationPropertySection extends org.eclipse.ui.views.properties.tabbed.AdvancedPropertySection implements IFilter   
 {	

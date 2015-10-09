@@ -22,8 +22,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Spinner;
+import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
 
-import ca.gc.asc_csa.eclipse.core.databinding.converters.DateToStringConverter;
 import ca.gc.asc_csa.eclipse.emf.ecore.BrowseableTimeSource;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;

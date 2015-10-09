@@ -12,10 +12,9 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
+import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
 import org.eclipse.symphony.common.math.MathPackage.Literals;
-
-import ca.gc.asc_csa.eclipse.core.databinding.converters.DoubleToStringConverter;
-import ca.gc.asc_csa.eclipse.core.databinding.converters.StringToDoubleConverter;
 
 public class Matrix4x4Composite extends Composite {
 

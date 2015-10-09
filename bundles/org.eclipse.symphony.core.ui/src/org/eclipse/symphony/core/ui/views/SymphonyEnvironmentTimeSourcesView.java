@@ -11,14 +11,13 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.composites.SymphonyEnvironmentTimeSourceComposite;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class SymphonyEnvironmentTimeSourcesView extends AbstractView 
 {

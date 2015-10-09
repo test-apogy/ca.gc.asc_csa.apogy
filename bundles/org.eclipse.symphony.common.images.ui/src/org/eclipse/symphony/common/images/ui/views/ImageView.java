@@ -12,9 +12,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ui.composites.SWTImageCanvas;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.ui.progress.UIJob;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class ImageView extends AbstractView {
 

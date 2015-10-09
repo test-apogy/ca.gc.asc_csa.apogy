@@ -6,12 +6,11 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.symphony.common.images.ui.Activator;
 import org.eclipse.symphony.common.images.ui.properties.sections.ImageSection;
 import org.eclipse.symphony.common.images.ui.views.ImageView;
+import org.eclipse.symphony.common.ui.EclipseUiUtilities;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.tabbed.ISection;
-
-import ca.gc.asc_csa.eclipse.ui.EclipseUiUtilities;
 
 public class ImageCanvasZoomInHandler extends AbstractHandler {
 

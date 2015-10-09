@@ -7,10 +7,10 @@ import javax.measure.unit.Unit;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
+import org.eclipse.symphony.common.databinding.converters.AbstractNumberConverter;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.eclipse.core.databinding.converters.AbstractNumberConverter;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.Activator;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.EMFEcoreUIFacade;

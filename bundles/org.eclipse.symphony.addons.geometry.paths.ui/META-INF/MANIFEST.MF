@@ -22,7 +22,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology.ui.viewer,
  org.eclipse.core.databinding;bundle-version="1.4.1",
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300",
- ca.gc.asc_csa.eclipse.ui,
+ org.eclipse.symphony.common.ui,
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.3",
  org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.0"
 Bundle-ActivationPolicy: lazy

@@ -8,6 +8,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.TypeMember;
@@ -17,7 +18,6 @@ import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.composites.EClassDocumentationComposite;
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class DocumentationView extends AbstractView implements
 		ITabbedPropertySheetPageContributor, IEditingDomainProvider {

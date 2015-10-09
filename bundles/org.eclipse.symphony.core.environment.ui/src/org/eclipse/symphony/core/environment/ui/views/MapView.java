@@ -15,6 +15,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
@@ -28,8 +29,6 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.progress.UIJob;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class MapView extends AbstractView 
 {

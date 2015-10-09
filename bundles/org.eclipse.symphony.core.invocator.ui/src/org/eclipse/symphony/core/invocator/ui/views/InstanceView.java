@@ -8,12 +8,12 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.composites.EObjectComposite;
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class InstanceView extends AbstractView implements IEditingDomainProvider {
 	private EObjectComposite eObjectComposite;

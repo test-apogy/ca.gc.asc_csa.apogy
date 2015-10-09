@@ -23,14 +23,14 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.symphony.common.databinding.converters.BooleanToStringConverter;
+import org.eclipse.symphony.common.databinding.converters.IntegerToStringConverter;
 import org.eclipse.symphony.core.display.DisplayFacade;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
 import org.eclipse.symphony.core.display.TextDisplay;
 import org.eclipse.symphony.core.display.databindings.EnumUpdateValueStrategy;
 import org.eclipse.symphony.core.display.databindings.UpdateValueStrategyWithRange;
 
-import ca.gc.asc_csa.eclipse.core.databinding.converters.BooleanToStringConverter;
-import ca.gc.asc_csa.eclipse.core.databinding.converters.IntegerToStringConverter;
 import ca.gc.asc_csa.eclipse.emf.databinding.EMFReferenceUpdateStrategy;
 import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.EMFEcoreUIFacade;

@@ -16,14 +16,13 @@ import org.eclipse.symphony.common.topology.ui.viewer.actions.EnableStatisticsDi
 import org.eclipse.symphony.common.topology.ui.viewer.actions.LevelViewpointAction;
 import org.eclipse.symphony.common.topology.ui.viewer.actions.TakeScreenShotAction;
 import org.eclipse.symphony.common.topology.ui.viewer.actions.ZoomToFitAction;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IPartListener2;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.PartInitException;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public abstract class AbstractTopology3DView extends AbstractView implements IPartListener2, TopologyViewerProvider, ITopologyViewerListener 
 {

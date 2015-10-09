@@ -25,7 +25,7 @@
       <propertySections
             contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
-               class="ca.gc.asc_csa.eclipse.ui.properties.sections.AdvancedPropertySection"
+               class="org.eclipse.symphony.common.ui.properties.sections.AdvancedPropertySection"
                id="ca.gc.asc_csa.eclipse.ui.property.section.Advanced"
                tab="ca.gc.asc_csa.eclipse.ui.property.tab.Advanced">
             <input
@@ -44,7 +44,7 @@
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester"
+            class="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester"
             id="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester"
             namespace="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester"
             properties="activeSection"

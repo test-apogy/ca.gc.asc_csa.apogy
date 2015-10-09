@@ -21,7 +21,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.common.ui;bundle-version="2.6.0",
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.100",
  org.eclipse.nebula.widgets.gallery,
- ca.gc.asc_csa.eclipse.ui;bundle-version="0.1.0",
+ org.eclipse.symphony.common.ui;bundle-version="0.1.0",
  org.eclipse.core.expressions;bundle-version="3.4.600"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

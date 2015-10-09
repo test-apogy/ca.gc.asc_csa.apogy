@@ -9,12 +9,11 @@ import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ui.composites.ContextsDefinitionComposite;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
 
 public class ContextsDefinitionView extends AbstractView implements	IEditingDomainProvider {
 	private ContextsDefinitionComposite contextsDefinitionComposite;

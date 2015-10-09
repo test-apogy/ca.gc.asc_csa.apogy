@@ -39,7 +39,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="org.eclipse.symphony.core.ui.property.category.Default"
                id="ca.asc_csa.symphony.system.ui.property.tab.SymphonySystem3dViewer"
@@ -50,7 +50,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
                category="org.eclipse.symphony.core.ui.property.category.Default">
          </propertyCategory>

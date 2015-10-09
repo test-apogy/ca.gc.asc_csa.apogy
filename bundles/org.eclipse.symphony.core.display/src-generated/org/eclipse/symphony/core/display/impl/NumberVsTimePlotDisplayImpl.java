@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.symphony.common.databinding.converters.BooleanToDoubleConverter;
+import org.eclipse.symphony.common.databinding.converters.NumberToDoubleConverter;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.DisplayFacade;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayFactory;
@@ -31,8 +33,6 @@ import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.data.time.TimeSeriesDataItem;
 
-import ca.gc.asc_csa.eclipse.core.databinding.converters.BooleanToDoubleConverter;
-import ca.gc.asc_csa.eclipse.core.databinding.converters.NumberToDoubleConverter;
 import ca.gc.asc_csa.eclipse.emf.databinding.converters.EnumeratorToDoubleConverter;
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;

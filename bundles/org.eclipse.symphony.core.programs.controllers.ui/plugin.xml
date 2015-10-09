@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="org.eclipse.symphony.core.programs.controllers.ui.property.category.Default"
                id="org.eclipse.symphony.core.programs.controllers.ui.property.tab.AbstractInputConditionning"
@@ -15,7 +15,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
                class="org.eclipse.symphony.core.programs.controllers.ui.properties.sections.AbstractInputConditionningPropertySection"
                id="org.eclipse.symphony.core.programs.controllers.ui.property.section.AbstractInputConditionning"
@@ -29,7 +29,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
                category="org.eclipse.symphony.core.programs.controllers.ui.property.category.Default"></propertyCategory>
       </propertyContributor>

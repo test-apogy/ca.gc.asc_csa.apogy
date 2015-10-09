@@ -4,10 +4,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.IFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.ui.composites.GeographicCoordinatesComposite;
-
-import ca.gc.asc_csa.eclipse.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class GeographicCoordinatesSection extends AbstractExtendedPropertySection implements
 		IFilter {

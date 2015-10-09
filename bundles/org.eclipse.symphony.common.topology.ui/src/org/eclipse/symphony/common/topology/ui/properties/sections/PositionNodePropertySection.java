@@ -5,8 +5,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.ui.composites.PositionNodeComposite;
-
-import ca.gc.asc_csa.eclipse.ui.properties.sections.AbstractExtendedPropertySection;
+import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class PositionNodePropertySection extends AbstractExtendedPropertySection 
 {

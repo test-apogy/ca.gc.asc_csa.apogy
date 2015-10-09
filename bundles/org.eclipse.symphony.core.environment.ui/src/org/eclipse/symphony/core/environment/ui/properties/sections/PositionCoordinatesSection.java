@@ -6,8 +6,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
-
-import ca.gc.asc_csa.eclipse.ui.properties.sections.AbstractExtendedPropertySection;
+import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class PositionCoordinatesSection extends AbstractExtendedPropertySection implements
 		IFilter {

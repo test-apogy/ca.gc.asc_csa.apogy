@@ -5,7 +5,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="ca.gc.asc_csa.eclipse.ui.category"
+            category="org.eclipse.symphony.common.ui.category"
             class="org.eclipse.symphony.core.display.ui.views.TelemetryView"
             icon="icons/configurable_telemetry_view_icon.gif"
             id="org.eclipse.symphony.core.display.ui.views.TelemetryView"

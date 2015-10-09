@@ -222,7 +222,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="ca.gc.asc_csa.eclipse.ui.category"
+            category="org.eclipse.symphony.common.ui.category"
             class="org.eclipse.symphony.core.invocator.ui.views.OperationCallView"
             icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/OperationCall.gif"
             id="org.eclipse.symphony.core.invocator.ui.views.OperationCallView"
@@ -231,7 +231,7 @@
       </view>
       
       <view
-            category="ca.gc.asc_csa.eclipse.ui.category"
+            category="org.eclipse.symphony.common.ui.category"
             class="org.eclipse.symphony.core.invocator.ui.views.ContextsDefinitionView"
             icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/ContextsList.gif"
             id="org.eclipse.symphony.core.invocator.ui.views.ContextsDefinitionView"
@@ -240,7 +240,7 @@
       </view>      
       
       <view
-            category="ca.gc.asc_csa.eclipse.ui.category"
+            category="org.eclipse.symphony.common.ui.category"
             class="org.eclipse.symphony.core.invocator.ui.views.DocumentationView"
             id="org.eclipse.symphony.core.invocator.ui.views.DocumentationView"
             name="Documentation"
@@ -248,7 +248,7 @@
       </view>      
       
       <view
-            category="ca.gc.asc_csa.eclipse.ui.category"
+            category="org.eclipse.symphony.common.ui.category"
             class="org.eclipse.symphony.core.invocator.ui.views.InstanceView"
             icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/Instance.gif"
             id="org.eclipse.symphony.core.invocator.ui.views.InstanceView"
@@ -260,7 +260,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
                afterSection="ca.gc.asc_csa.eclipse.emf.ecore.ui.properties.sections.NamedSection"
                class="org.eclipse.symphony.core.invocator.ui.properties.sections.VariableFeatureReferenceSection"
@@ -316,7 +316,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
                id="org.eclipse.symphony.core.invocator.ui.properties.tabs.ResultImage"
@@ -328,7 +328,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
                id="org.eclipse.symphony.core.invocator.ui.propertyTabs.Contexts"
@@ -340,7 +340,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.emf.ecore.ui"
                id="org.eclipse.symphony.core.invocator.ui.propertyTabs.Documentation"

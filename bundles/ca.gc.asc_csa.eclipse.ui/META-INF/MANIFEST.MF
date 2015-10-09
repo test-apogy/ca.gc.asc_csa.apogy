@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %bundleName
 Bundle-SymbolicName: ca.gc.asc_csa.eclipse.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.eclipse.ui.Activator
+Bundle-Activator: org.eclipse.symphony.common.ui.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui;visibility:=reexport,
  org.eclipse.core.runtime;visibility:=reexport,
@@ -16,9 +16,9 @@ Require-Bundle: org.eclipse.ui;visibility:=reexport,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: bundle
-Export-Package: ca.gc.asc_csa.eclipse.ui,
- ca.gc.asc_csa.eclipse.ui.actions,
- ca.gc.asc_csa.eclipse.ui.expressions,
- ca.gc.asc_csa.eclipse.ui.properties,
- ca.gc.asc_csa.eclipse.ui.properties.sections,
- ca.gc.asc_csa.eclipse.ui.views
+Export-Package: org.eclipse.symphony.common.ui,
+ org.eclipse.symphony.common.ui.actions,
+ org.eclipse.symphony.common.ui.expressions,
+ org.eclipse.symphony.common.ui.properties,
+ org.eclipse.symphony.common.ui.properties.sections,
+ org.eclipse.symphony.common.ui.views

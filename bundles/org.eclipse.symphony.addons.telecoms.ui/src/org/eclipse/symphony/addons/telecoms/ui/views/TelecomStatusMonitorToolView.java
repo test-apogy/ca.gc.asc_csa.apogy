@@ -8,8 +8,7 @@ import org.eclipse.symphony.addons.telecoms.TelecomNode;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
 import org.eclipse.symphony.addons.telecoms.ui.composites.TelecomStatusMonitorToolComposite;
-
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 
 public class TelecomStatusMonitorToolView extends AbstractView
 {

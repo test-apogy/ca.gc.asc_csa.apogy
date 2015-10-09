@@ -8,8 +8,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ui.composites.SWTImageCanvas;
-
-import ca.gc.asc_csa.eclipse.ui.properties.sections.AbstractExtendedPropertySection;
+import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
 
 public class ImageSection extends AbstractExtendedPropertySection implements
 		IFilter {

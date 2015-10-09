@@ -5,7 +5,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="ca.gc.asc_csa.eclipse.ui.category"
+            category="org.eclipse.symphony.common.ui.category"
             class="org.eclipse.symphony.common.images.ui.views.ImageView"
             icon="icons/image_view.png"
             id="ca.gc.asc_csa.eclipse.images.ui.ImageView"
@@ -20,7 +20,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <propertySections
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertySection
                class="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection"
                filter="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection"
@@ -32,7 +32,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="ca.gc.asc_csa.eclipse.images.ui"
                id="ca.gc.asc_csa.eclipse.images.ui.properties.tabs.Image"
@@ -43,7 +43,7 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="ca.gc.asc_csa.eclipse.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
                category="ca.gc.asc_csa.eclipse.images.ui">
          </propertyCategory>
@@ -174,7 +174,7 @@
             <visibleWhen
                   checkEnabled="true">
                <test
-                     property="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
+                     property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
                      value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>
@@ -187,7 +187,7 @@
             <visibleWhen
                   checkEnabled="true">
                <test
-                     property="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
+                     property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
                      value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>               
@@ -200,7 +200,7 @@
             <visibleWhen
                   checkEnabled="true">
                <test
-                     property="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
+                     property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
                      value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>                              
@@ -213,7 +213,7 @@
             <visibleWhen
                   checkEnabled="true">
                <test
-                     property="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
+                     property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
                      value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>               
@@ -226,7 +226,7 @@
             <visibleWhen
                   checkEnabled="true">
                <test
-                     property="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
+                     property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
                      value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>               
@@ -239,7 +239,7 @@
             <visibleWhen
                   checkEnabled="true">
                <test
-                     property="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
+                     property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
                      value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>               
@@ -252,7 +252,7 @@
             <visibleWhen
                   checkEnabled="true">
                <test
-                     property="ca.gc.asc_csa.eclipse.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
+                     property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
                      value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>
