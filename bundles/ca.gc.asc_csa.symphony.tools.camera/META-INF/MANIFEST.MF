@@ -7,14 +7,14 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.tools.camera,
- ca.gc.asc_csa.symphony.tools.camera.actions,
- ca.gc.asc_csa.symphony.tools.camera.commands,
- ca.gc.asc_csa.symphony.tools.camera.composites,
- ca.gc.asc_csa.symphony.tools.camera.impl,
- ca.gc.asc_csa.symphony.tools.camera.listeners,
- ca.gc.asc_csa.symphony.tools.camera.util,
- ca.gc.asc_csa.symphony.tools.camera.views
+Export-Package: org.eclipse.symphony.addons.sensors.imaging.camera,
+ org.eclipse.symphony.addons.sensors.imaging.camera.actions,
+ org.eclipse.symphony.addons.sensors.imaging.camera.commands,
+ org.eclipse.symphony.addons.sensors.imaging.camera.composites,
+ org.eclipse.symphony.addons.sensors.imaging.camera.impl,
+ org.eclipse.symphony.addons.sensors.imaging.camera.listeners,
+ org.eclipse.symphony.addons.sensors.imaging.camera.util,
+ org.eclipse.symphony.addons.sensors.imaging.camera.views
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui;bundle-version="3.105.0",
  org.eclipse.emf.ecore;visibility:=reexport,
@@ -46,4 +46,4 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.eclipse.ui;bundle-version="0.3.0",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.symphony.tools.camera.Activator
+Bundle-Activator: org.eclipse.symphony.addons.sensors.imaging.camera.Activator

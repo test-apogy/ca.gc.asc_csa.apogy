@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.symphony.tools.camera.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.imaging.camera.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.asc_csa.symphony.tools.camera.provider.SymphonyCameraToolsEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.symphony.tools.camera.provider
+Export-Package: org.eclipse.symphony.addons.sensors.imaging.camera.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.symphony.tools.camera;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.imaging.camera;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.addons.sensors;visibility:=reexport,
  org.eclipse.symphony.addons.sensors.edit;visibility:=reexport,

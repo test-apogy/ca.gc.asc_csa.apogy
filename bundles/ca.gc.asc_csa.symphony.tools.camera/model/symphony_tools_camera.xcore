@@ -1,8 +1,8 @@
 @GenModel(prefix="SymphonyCameraTools", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)", modelName="SymphonyCameraTools", complianceLevel="6.0")
-@GenModel(modelDirectory="/ca.gc.asc_csa.symphony.tools.camera/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.symphony.tools.camera.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.imaging.camera/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.imaging.camera.edit/src-generated")
 
-package ca.gc.asc_csa.symphony.tools.camera
+package org.eclipse.symphony.addons.sensors.imaging.camera
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described
 import ca.gc.asc_csa.eclipse.emf.ecore.Named

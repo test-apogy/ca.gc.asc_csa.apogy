@@ -13,13 +13,13 @@
       <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging -->
       <package
             uri="ca.gc.space.mrt.sensors.imaging"
-            class="ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage"
+            class="org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage"
             genModel="model/ca_gc_asc_csa_mrt_sensors_imaging.xcore"/>
    </extension>
    <extension
          point="org.eclipse.symphony.common.converters">
       <new_element
-            Class="ca.gc.space.mrt.sensors.imaging.converters.ImageSnapshotToAbstractEImageConverter">
+            Class="org.eclipse.symphony.addons.sensors.imaging.converters.ImageSnapshotToAbstractEImageConverter">
       </new_element>
    </extension>
 

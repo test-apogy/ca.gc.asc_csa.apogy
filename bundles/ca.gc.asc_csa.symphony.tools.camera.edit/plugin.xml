@@ -12,8 +12,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated symphony_tools_camera -->
       <factory
-            uri="ca.gc.asc_csa.symphony.tools.camera"
-            class="ca.gc.asc_csa.symphony.tools.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.addons.sensors.imaging.camera"
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -26,10 +26,10 @@
       <!-- @generated symphony_tools_camera -->
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.asc_csa.symphony.tools.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="ca.gc.asc_csa.symphony.tools.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
    </extension>
 
 </plugin>

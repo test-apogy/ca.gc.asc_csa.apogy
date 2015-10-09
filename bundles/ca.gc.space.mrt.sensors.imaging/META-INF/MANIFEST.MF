@@ -6,10 +6,10 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.sensors.imaging,
- ca.gc.space.mrt.sensors.imaging.converters,
- ca.gc.space.mrt.sensors.imaging.impl,
- ca.gc.space.mrt.sensors.imaging.util
+Export-Package: org.eclipse.symphony.addons.sensors.imaging,
+ org.eclipse.symphony.addons.sensors.imaging.converters,
+ org.eclipse.symphony.addons.sensors.imaging.impl,
+ org.eclipse.symphony.addons.sensors.imaging.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
@@ -31,4 +31,4 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-Activator: ca.gc.space.mrt.sensors.imaging.Activator
+Bundle-Activator: org.eclipse.symphony.addons.sensors.imaging.Activator

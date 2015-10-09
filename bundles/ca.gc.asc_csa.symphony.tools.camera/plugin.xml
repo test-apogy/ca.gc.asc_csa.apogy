@@ -12,9 +12,9 @@
       <view
             allowMultiple="true"
             category="org.eclipse.symphony.core.ui.category"
-            class="ca.gc.asc_csa.symphony.tools.camera.views.CameraView"
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView"
             icon="icons/CameraView.gif"
-            id="ca.gc.asc_csa.symphony.tools.camera.views.CameraView"
+            id="org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView"
             name="Symphony Camera View"
             restorable="true">
       </view>
@@ -24,20 +24,20 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_tools_camera -->
       <package
-            uri="ca.gc.asc_csa.symphony.tools.camera"
-            class="ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage"
+            uri="org.eclipse.symphony.addons.sensors.imaging.camera"
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage"
             genModel="model/symphony_tools_camera.xcore"/>
    </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="ca.gc.asc_csa.symphony.tools.camera.commands.ToggleImageFilterEnableCommand"
-            id="ca.gc.asc_csa.symphony.tools.camera.commands.ToggleImageFilterEnableCommand"
+            defaultHandler="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
+            id="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
             name="Toggle Image Filter">
       </command>
       <command
-            defaultHandler="ca.gc.asc_csa.symphony.tools.camera.commands.ToggleCameraImageAnnotationVisibilityCommand"
-            id="ca.gc.asc_csa.symphony.tools.camera.commands.ToggleCameraOverlayVisibilityCommand"
+            defaultHandler="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleCameraImageAnnotationVisibilityCommand"
+            id="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleCameraOverlayVisibilityCommand"
             name="Toggle Camera Image Annotation Visibility">
       </command>
    </extension>
@@ -47,7 +47,7 @@
             allPopups="true"
             locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
          <command
-               commandId="ca.gc.asc_csa.symphony.tools.camera.commands.ToggleImageFilterEnableCommand"
+               commandId="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleImageFilterEnableCommand"
                label="Toggle Image Filter"
                style="push">
             <visibleWhen
@@ -58,14 +58,14 @@
                      ifEmpty="false"
                      operator="or">
                     <instanceof
-                          value="ca.gc.asc_csa.symphony.tools.camera.ImageFilter">
+                          value="org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter">
                     </instanceof>
                   </iterate>
                </with>
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.symphony.tools.camera.commands.ToggleCameraOverlayVisibilityCommand"
+               commandId="org.eclipse.symphony.addons.sensors.imaging.camera.commands.ToggleCameraOverlayVisibilityCommand"
                label="Toggle Visibility"
                style="push">
             <visibleWhen
@@ -76,7 +76,7 @@
                       ifEmpty="false"
                       operator="or">
                      <instanceof
-                           value="ca.gc.asc_csa.symphony.tools.camera.CameraImageAnnotation">
+                           value="org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation">
                      </instanceof>
                   </iterate>
                </with>
