@@ -7,7 +7,7 @@ Bundle-Activator: ca.gc.space.mrt.sensors.gps.ui.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  ca.gc.space.mrt.sensors.gps,
- ca.gc.space.java.utils,
+ org.eclipse.symphony.common.lang.java,
  ca.gc.space.eclipse.emf
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

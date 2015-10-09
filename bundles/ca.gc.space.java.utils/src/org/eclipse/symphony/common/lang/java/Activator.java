@@ -1,4 +1,4 @@
-package ca.gc.space.java.utils;
+package org.eclipse.symphony.common.lang.java;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends Plugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "ca.gc.space.java.utils";
+	public static final String PLUGIN_ID = "org.eclipse.symphony.common.lang.java";
 
 	// The shared instance
 	private static Activator plugin;

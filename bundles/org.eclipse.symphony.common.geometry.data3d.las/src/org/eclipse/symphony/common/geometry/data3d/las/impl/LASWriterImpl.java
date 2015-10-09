@@ -30,8 +30,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
 import org.eclipse.symphony.common.geometry.data3d.las.LASWriter;
 import org.eclipse.symphony.common.geometry.data3d.las.LasFactory;
 import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
-
-import ca.gc.space.java.utils.io.LittleEndianDataOutputStream;
+import org.eclipse.symphony.common.lang.java.io.LittleEndianDataOutputStream;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

@@ -1,4 +1,4 @@
-package ca.gc.space.java.utils;
+package org.eclipse.symphony.common.lang.java;
 
 /**
  * A time class.

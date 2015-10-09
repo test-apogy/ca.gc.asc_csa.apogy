@@ -16,8 +16,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
 import org.eclipse.symphony.common.geometry.data3d.las.LasFactory;
 import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
 import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
-
-import ca.gc.space.java.utils.io.LittleEndianDataInputStream;
+import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

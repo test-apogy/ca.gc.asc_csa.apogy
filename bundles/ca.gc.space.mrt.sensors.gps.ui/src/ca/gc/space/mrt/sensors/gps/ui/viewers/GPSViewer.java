@@ -21,10 +21,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.symphony.common.lang.java.Timer;
 
 import ca.gc.space.eclipse.emf.EListAdapter;
 import ca.gc.space.eclipse.emf.ListEventDelegate;
-import ca.gc.space.java.utils.Timer;
 import ca.gc.space.mrt.sensors.gps.Activator;
 import ca.gc.space.mrt.sensors.gps.GPS;
 import ca.gc.space.mrt.sensors.gps.GPSReading;

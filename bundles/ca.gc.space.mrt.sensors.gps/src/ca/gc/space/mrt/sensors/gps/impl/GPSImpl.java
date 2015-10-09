@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.common.lang.java.Timer;
 
-import ca.gc.space.java.utils.Timer;
 import ca.gc.space.mrt.sensors.gps.GPS;
 import ca.gc.space.mrt.sensors.gps.GPSConnection;
 import ca.gc.space.mrt.sensors.gps.GPSDataInterpreter;

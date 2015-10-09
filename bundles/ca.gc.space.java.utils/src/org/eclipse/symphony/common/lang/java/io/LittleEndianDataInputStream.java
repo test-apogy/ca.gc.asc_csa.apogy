@@ -1,4 +1,4 @@
-package ca.gc.space.java.utils.io;
+package org.eclipse.symphony.common.lang.java.io;
 
 import java.io.DataInput;
 import java.io.DataInputStream;

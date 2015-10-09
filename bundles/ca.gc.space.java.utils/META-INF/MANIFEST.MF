@@ -3,11 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.space.java.utils
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.space.java.utils.Activator
+Bundle-Activator: org.eclipse.symphony.common.lang.java.Activator
 Require-Bundle: org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.space.java.utils,
- ca.gc.space.java.utils.io
+Export-Package: org.eclipse.symphony.common.lang.java,
+ org.eclipse.symphony.common.lang.java.io
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

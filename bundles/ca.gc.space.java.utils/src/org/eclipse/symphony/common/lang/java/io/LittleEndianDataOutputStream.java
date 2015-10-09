@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ca.gc.space.java.utils.io;
+package org.eclipse.symphony.common.lang.java.io;
 
 import java.io.DataOutput;
 import java.io.DataOutputStream;
