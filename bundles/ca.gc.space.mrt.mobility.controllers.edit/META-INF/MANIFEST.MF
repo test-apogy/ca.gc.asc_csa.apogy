@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.mobility.controllers.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.mobility.controllers.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.mrt.mobility.controllers.provider.ControllersEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.mobility.controllers.provider.ControllersEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.space.mrt.mobility.controllers.provider
+Export-Package: org.eclipse.symphony.addons.mobility.controllers.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.space.mrt.mobility.controllers;visibility:=reexport,
+ org.eclipse.symphony.addons.mobility.controllers;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data3d.edit;visibility:=reexport,
@@ -18,8 +18,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,
- ca.gc.space.mrt.mobility;visibility:=reexport,
- ca.gc.space.mrt.mobility.edit;visibility:=reexport,
+ org.eclipse.symphony.addons.mobility;visibility:=reexport,
+ org.eclipse.symphony.addons.mobility.edit;visibility:=reexport,
  org.eclipse.symphony.addons.geometry.paths;visibility:=reexport,
  org.eclipse.symphony.addons.geometry.paths.edit;visibility:=reexport,
  ca.gc.space.mrt.sensors.pose;visibility:=reexport,

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="controllers" nsURI="http:///ca/gc/space/mrt/mobility/controllers/model/controllers.ecore"
-    nsPrefix="ca.gc.space.mrt.mobility">
+    nsPrefix="org.eclipse.symphony.addons.mobility">
   <eClassifiers xsi:type="ecore:EClass" name="PathFollower">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A PathFollower is an entity that makes a MobilePlatform follow a specified Path.&#xA;&#xA;The default implementation of PathFollower listens for changes in the SensorStatus of its PoseSensor and the MobilePlateformStatus of its MobilePlateform and pauses or resumes the path following accordingly."/>
     </eAnnotations>
     <eTypeParameters name="PlatformType">
-      <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.ecore#//MobilePlateform"/>
+      <eBounds eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.mobility/model/mobility.ecore#//MobilePlateform"/>
     </eTypeParameters>
     <eTypeParameters name="PathType">
       <eBounds eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//Path"/>
@@ -38,7 +38,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SkidSteeredPlatformPathFollower">
     <eTypeParameters name="PlateformType">
-      <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
+      <eBounds eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
     </eTypeParameters>
     <eTypeParameters name="PathType">
       <eBounds eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//Path"/>
@@ -79,7 +79,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SkidSteeredWayPointPathFollower">
     <eGenericSuperTypes eClassifier="#//PathFollower">
-      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
       <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//WayPointPath"/>
     </eGenericSuperTypes>
   </eClassifiers>
@@ -116,7 +116,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="smoothPathEnabled" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eGenericSuperTypes eClassifier="#//SkidSteeredPlatformPathFollower">
-      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
       <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//WayPointPath"/>
     </eGenericSuperTypes>
   </eClassifiers>

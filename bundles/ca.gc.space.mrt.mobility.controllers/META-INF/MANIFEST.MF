@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.mobility.controllers;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.mobility.controllers;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.mobility.controllers,
- ca.gc.space.mrt.mobility.controllers.impl,
- ca.gc.space.mrt.mobility.controllers.util
-Require-Bundle: ca.gc.space.mrt.mobility;visibility:=reexport,
+Export-Package: org.eclipse.symphony.addons.mobility.controllers,
+ org.eclipse.symphony.addons.mobility.controllers.impl,
+ org.eclipse.symphony.addons.mobility.controllers.util
+Require-Bundle: org.eclipse.symphony.addons.mobility;visibility:=reexport,
  org.eclipse.symphony.addons.geometry.paths;visibility:=reexport,
  ca.gc.space.mrt.sensors.pose;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
@@ -23,5 +23,5 @@ Require-Bundle: ca.gc.space.mrt.mobility;visibility:=reexport,
  javax.media;bundle-version="1.5.2";visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.space.mrt.mobility.controllers.Activator
+Bundle-Activator: org.eclipse.symphony.addons.mobility.controllers.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

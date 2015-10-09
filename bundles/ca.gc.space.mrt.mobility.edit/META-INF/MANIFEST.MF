@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.mobility.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.mobility.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.mrt.mobility.provider.MobilityEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.mobility.provider.MobilityEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.space.mrt.mobility.provider
+Export-Package: org.eclipse.symphony.addons.mobility.provider
 Require-Bundle: org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;bundle-version="2.4.0";visibility:=reexport,
@@ -16,6 +16,6 @@ Require-Bundle: org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,
  org.eclipse.symphony.common.topology.core;visibility:=reexport,
  org.eclipse.core.runtime;visibility:=reexport,
- ca.gc.space.mrt.mobility;visibility:=reexport,
+ org.eclipse.symphony.addons.mobility;visibility:=reexport,
  org.eclipse.symphony.common.topology.core.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

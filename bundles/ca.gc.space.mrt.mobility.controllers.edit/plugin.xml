@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http:///ca/gc/space/mrt/mobility/controllers/model/controllers.ecore"
-            class="ca.gc.space.mrt.mobility.controllers.provider.ControllersItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.mobility.controllers.provider.ControllersItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
