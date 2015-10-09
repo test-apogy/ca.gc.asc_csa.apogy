@@ -4,19 +4,18 @@
  *
  * $Id: MotionPackageImpl.java,v 1.3.4.2 2015/05/21 15:50:25 pallard Exp $
  */
-package motion.impl;
-
-import motion.AngularVelocitySensor;
-import motion.LinearAccelerationSensor;
-import motion.LinearVelocitySensor;
-import motion.MotionFactory;
-import motion.MotionPackage;
-import motion.SelfMotionSensor;
+package org.eclipse.symphony.addons.motion.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.motion.AngularVelocitySensor;
+import org.eclipse.symphony.addons.motion.LinearAccelerationSensor;
+import org.eclipse.symphony.addons.motion.LinearVelocitySensor;
+import org.eclipse.symphony.addons.motion.MotionFactory;
+import org.eclipse.symphony.addons.motion.MotionPackage;
+import org.eclipse.symphony.addons.motion.SelfMotionSensor;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
 
 /**
@@ -65,7 +64,7 @@ public class MotionPackageImpl extends EPackageImpl implements MotionPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see motion.MotionPackage#eNS_URI
+	 * @see org.eclipse.symphony.addons.motion.MotionPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

@@ -4,7 +4,7 @@
  *
  * $Id: MotionPackage.java,v 1.3.4.2 2015/05/21 15:50:26 pallard Exp $
  */
-package motion;
+package org.eclipse.symphony.addons.motion;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,7 +22,7 @@ import org.eclipse.symphony.addons.sensors.SensorsPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see motion.MotionFactory
+ * @see org.eclipse.symphony.addons.motion.MotionFactory
  * @model kind="package"
  * @generated
  */
@@ -33,7 +33,7 @@ public interface MotionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "motion";
+	String eNAME = "org.eclipse.symphony.addons.motion";
 
 	/**
 	 * The package namespace URI.
@@ -41,7 +41,7 @@ public interface MotionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ca/gc/space/mrt/sensors/motion/model/motion.ecore";
+	String eNS_URI = "http:///ca/gc/space/mrt/sensors/org.eclipse.symphony.addons.motion/model/org.eclipse.symphony.addons.motion.ecore";
 
 	/**
 	 * The package namespace name.
@@ -57,14 +57,14 @@ public interface MotionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	MotionPackage eINSTANCE = motion.impl.MotionPackageImpl.init();
+	MotionPackage eINSTANCE = org.eclipse.symphony.addons.motion.impl.MotionPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link motion.impl.SelfMotionSensorImpl <em>Self Motion Sensor</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.motion.impl.SelfMotionSensorImpl <em>Self Motion Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see motion.impl.SelfMotionSensorImpl
-	 * @see motion.impl.MotionPackageImpl#getSelfMotionSensor()
+	 * @see org.eclipse.symphony.addons.motion.impl.SelfMotionSensorImpl
+	 * @see org.eclipse.symphony.addons.motion.impl.MotionPackageImpl#getSelfMotionSensor()
 	 * @generated
 	 */
 	int SELF_MOTION_SENSOR = 3;
@@ -151,11 +151,11 @@ public interface MotionPackage extends EPackage {
 	int SELF_MOTION_SENSOR_OPERATION_COUNT = SensorsPackage.SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link motion.impl.AngularVelocitySensorImpl <em>Angular Velocity Sensor</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.motion.impl.AngularVelocitySensorImpl <em>Angular Velocity Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see motion.impl.AngularVelocitySensorImpl
-	 * @see motion.impl.MotionPackageImpl#getAngularVelocitySensor()
+	 * @see org.eclipse.symphony.addons.motion.impl.AngularVelocitySensorImpl
+	 * @see org.eclipse.symphony.addons.motion.impl.MotionPackageImpl#getAngularVelocitySensor()
 	 * @generated
 	 */
 	int ANGULAR_VELOCITY_SENSOR = 0;
@@ -269,11 +269,11 @@ public interface MotionPackage extends EPackage {
 	int ANGULAR_VELOCITY_SENSOR_OPERATION_COUNT = SELF_MOTION_SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link motion.impl.LinearAccelerationSensorImpl <em>Linear Acceleration Sensor</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.motion.impl.LinearAccelerationSensorImpl <em>Linear Acceleration Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see motion.impl.LinearAccelerationSensorImpl
-	 * @see motion.impl.MotionPackageImpl#getLinearAccelerationSensor()
+	 * @see org.eclipse.symphony.addons.motion.impl.LinearAccelerationSensorImpl
+	 * @see org.eclipse.symphony.addons.motion.impl.MotionPackageImpl#getLinearAccelerationSensor()
 	 * @generated
 	 */
 	int LINEAR_ACCELERATION_SENSOR = 1;
@@ -387,11 +387,11 @@ public interface MotionPackage extends EPackage {
 	int LINEAR_ACCELERATION_SENSOR_OPERATION_COUNT = SELF_MOTION_SENSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link motion.impl.LinearVelocitySensorImpl <em>Linear Velocity Sensor</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.motion.impl.LinearVelocitySensorImpl <em>Linear Velocity Sensor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see motion.impl.LinearVelocitySensorImpl
-	 * @see motion.impl.MotionPackageImpl#getLinearVelocitySensor()
+	 * @see org.eclipse.symphony.addons.motion.impl.LinearVelocitySensorImpl
+	 * @see org.eclipse.symphony.addons.motion.impl.MotionPackageImpl#getLinearVelocitySensor()
 	 * @generated
 	 */
 	int LINEAR_VELOCITY_SENSOR = 2;
@@ -507,140 +507,140 @@ public interface MotionPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link motion.AngularVelocitySensor <em>Angular Velocity Sensor</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.motion.AngularVelocitySensor <em>Angular Velocity Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Angular Velocity Sensor</em>'.
-	 * @see motion.AngularVelocitySensor
+	 * @see org.eclipse.symphony.addons.motion.AngularVelocitySensor
 	 * @generated
 	 */
 	EClass getAngularVelocitySensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.AngularVelocitySensor#getXAngularVelocity <em>XAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.AngularVelocitySensor#getXAngularVelocity <em>XAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XAngular Velocity</em>'.
-	 * @see motion.AngularVelocitySensor#getXAngularVelocity()
+	 * @see org.eclipse.symphony.addons.motion.AngularVelocitySensor#getXAngularVelocity()
 	 * @see #getAngularVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getAngularVelocitySensor_XAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.AngularVelocitySensor#getYAngularVelocity <em>YAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.AngularVelocitySensor#getYAngularVelocity <em>YAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YAngular Velocity</em>'.
-	 * @see motion.AngularVelocitySensor#getYAngularVelocity()
+	 * @see org.eclipse.symphony.addons.motion.AngularVelocitySensor#getYAngularVelocity()
 	 * @see #getAngularVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getAngularVelocitySensor_YAngularVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.AngularVelocitySensor#getZAngularVelocity <em>ZAngular Velocity</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.AngularVelocitySensor#getZAngularVelocity <em>ZAngular Velocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZAngular Velocity</em>'.
-	 * @see motion.AngularVelocitySensor#getZAngularVelocity()
+	 * @see org.eclipse.symphony.addons.motion.AngularVelocitySensor#getZAngularVelocity()
 	 * @see #getAngularVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getAngularVelocitySensor_ZAngularVelocity();
 
 	/**
-	 * Returns the meta object for class '{@link motion.LinearAccelerationSensor <em>Linear Acceleration Sensor</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.motion.LinearAccelerationSensor <em>Linear Acceleration Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Linear Acceleration Sensor</em>'.
-	 * @see motion.LinearAccelerationSensor
+	 * @see org.eclipse.symphony.addons.motion.LinearAccelerationSensor
 	 * @generated
 	 */
 	EClass getLinearAccelerationSensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XAcceleration</em>'.
-	 * @see motion.LinearAccelerationSensor#getXAcceleration()
+	 * @see org.eclipse.symphony.addons.motion.LinearAccelerationSensor#getXAcceleration()
 	 * @see #getLinearAccelerationSensor()
 	 * @generated
 	 */
 	EAttribute getLinearAccelerationSensor_XAcceleration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YAcceleration</em>'.
-	 * @see motion.LinearAccelerationSensor#getYAcceleration()
+	 * @see org.eclipse.symphony.addons.motion.LinearAccelerationSensor#getYAcceleration()
 	 * @see #getLinearAccelerationSensor()
 	 * @generated
 	 */
 	EAttribute getLinearAccelerationSensor_YAcceleration();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZAcceleration</em>'.
-	 * @see motion.LinearAccelerationSensor#getZAcceleration()
+	 * @see org.eclipse.symphony.addons.motion.LinearAccelerationSensor#getZAcceleration()
 	 * @see #getLinearAccelerationSensor()
 	 * @generated
 	 */
 	EAttribute getLinearAccelerationSensor_ZAcceleration();
 
 	/**
-	 * Returns the meta object for class '{@link motion.LinearVelocitySensor <em>Linear Velocity Sensor</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor <em>Linear Velocity Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Linear Velocity Sensor</em>'.
-	 * @see motion.LinearVelocitySensor
+	 * @see org.eclipse.symphony.addons.motion.LinearVelocitySensor
 	 * @generated
 	 */
 	EClass getLinearVelocitySensor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>XVelocity</em>'.
-	 * @see motion.LinearVelocitySensor#getXVelocity()
+	 * @see org.eclipse.symphony.addons.motion.LinearVelocitySensor#getXVelocity()
 	 * @see #getLinearVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getLinearVelocitySensor_XVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>YVelocity</em>'.
-	 * @see motion.LinearVelocitySensor#getYVelocity()
+	 * @see org.eclipse.symphony.addons.motion.LinearVelocitySensor#getYVelocity()
 	 * @see #getLinearVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getLinearVelocitySensor_YVelocity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>ZVelocity</em>'.
-	 * @see motion.LinearVelocitySensor#getZVelocity()
+	 * @see org.eclipse.symphony.addons.motion.LinearVelocitySensor#getZVelocity()
 	 * @see #getLinearVelocitySensor()
 	 * @generated
 	 */
 	EAttribute getLinearVelocitySensor_ZVelocity();
 
 	/**
-	 * Returns the meta object for class '{@link motion.SelfMotionSensor <em>Self Motion Sensor</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.motion.SelfMotionSensor <em>Self Motion Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Self Motion Sensor</em>'.
-	 * @see motion.SelfMotionSensor
+	 * @see org.eclipse.symphony.addons.motion.SelfMotionSensor
 	 * @generated
 	 */
 	EClass getSelfMotionSensor();
@@ -668,11 +668,11 @@ public interface MotionPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link motion.impl.AngularVelocitySensorImpl <em>Angular Velocity Sensor</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.motion.impl.AngularVelocitySensorImpl <em>Angular Velocity Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see motion.impl.AngularVelocitySensorImpl
-		 * @see motion.impl.MotionPackageImpl#getAngularVelocitySensor()
+		 * @see org.eclipse.symphony.addons.motion.impl.AngularVelocitySensorImpl
+		 * @see org.eclipse.symphony.addons.motion.impl.MotionPackageImpl#getAngularVelocitySensor()
 		 * @generated
 		 */
 		EClass ANGULAR_VELOCITY_SENSOR = eINSTANCE.getAngularVelocitySensor();
@@ -702,11 +702,11 @@ public interface MotionPackage extends EPackage {
 		EAttribute ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY = eINSTANCE.getAngularVelocitySensor_ZAngularVelocity();
 
 		/**
-		 * The meta object literal for the '{@link motion.impl.LinearAccelerationSensorImpl <em>Linear Acceleration Sensor</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.motion.impl.LinearAccelerationSensorImpl <em>Linear Acceleration Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see motion.impl.LinearAccelerationSensorImpl
-		 * @see motion.impl.MotionPackageImpl#getLinearAccelerationSensor()
+		 * @see org.eclipse.symphony.addons.motion.impl.LinearAccelerationSensorImpl
+		 * @see org.eclipse.symphony.addons.motion.impl.MotionPackageImpl#getLinearAccelerationSensor()
 		 * @generated
 		 */
 		EClass LINEAR_ACCELERATION_SENSOR = eINSTANCE.getLinearAccelerationSensor();
@@ -736,11 +736,11 @@ public interface MotionPackage extends EPackage {
 		EAttribute LINEAR_ACCELERATION_SENSOR__ZACCELERATION = eINSTANCE.getLinearAccelerationSensor_ZAcceleration();
 
 		/**
-		 * The meta object literal for the '{@link motion.impl.LinearVelocitySensorImpl <em>Linear Velocity Sensor</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.motion.impl.LinearVelocitySensorImpl <em>Linear Velocity Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see motion.impl.LinearVelocitySensorImpl
-		 * @see motion.impl.MotionPackageImpl#getLinearVelocitySensor()
+		 * @see org.eclipse.symphony.addons.motion.impl.LinearVelocitySensorImpl
+		 * @see org.eclipse.symphony.addons.motion.impl.MotionPackageImpl#getLinearVelocitySensor()
 		 * @generated
 		 */
 		EClass LINEAR_VELOCITY_SENSOR = eINSTANCE.getLinearVelocitySensor();
@@ -770,11 +770,11 @@ public interface MotionPackage extends EPackage {
 		EAttribute LINEAR_VELOCITY_SENSOR__ZVELOCITY = eINSTANCE.getLinearVelocitySensor_ZVelocity();
 
 		/**
-		 * The meta object literal for the '{@link motion.impl.SelfMotionSensorImpl <em>Self Motion Sensor</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.motion.impl.SelfMotionSensorImpl <em>Self Motion Sensor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see motion.impl.SelfMotionSensorImpl
-		 * @see motion.impl.MotionPackageImpl#getSelfMotionSensor()
+		 * @see org.eclipse.symphony.addons.motion.impl.SelfMotionSensorImpl
+		 * @see org.eclipse.symphony.addons.motion.impl.MotionPackageImpl#getSelfMotionSensor()
 		 * @generated
 		 */
 		EClass SELF_MOTION_SENSOR = eINSTANCE.getSelfMotionSensor();

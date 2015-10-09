@@ -4,12 +4,11 @@
  *
  * $Id: SelfMotionSensorImpl.java,v 1.2.4.2 2015/05/21 15:50:25 pallard Exp $
  */
-package motion.impl;
-
-import motion.MotionPackage;
-import motion.SelfMotionSensor;
+package org.eclipse.symphony.addons.motion.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.addons.motion.MotionPackage;
+import org.eclipse.symphony.addons.motion.SelfMotionSensor;
 import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
 
 /**

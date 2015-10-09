@@ -4,12 +4,10 @@
  *
  * $Id: MotionItemProviderAdapterFactory.java,v 1.3.4.2 2015/05/21 15:50:04 pallard Exp $
  */
-package motion.provider;
+package org.eclipse.symphony.addons.motion.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
-import motion.util.MotionAdapterFactory;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -25,6 +23,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.addons.motion.util.MotionAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -77,7 +76,7 @@ public class MotionItemProviderAdapterFactory extends MotionAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link motion.AngularVelocitySensor} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.motion.AngularVelocitySensor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -85,7 +84,7 @@ public class MotionItemProviderAdapterFactory extends MotionAdapterFactory imple
 	protected AngularVelocitySensorItemProvider angularVelocitySensorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link motion.AngularVelocitySensor}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.motion.AngularVelocitySensor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -101,7 +100,7 @@ public class MotionItemProviderAdapterFactory extends MotionAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link motion.LinearAccelerationSensor} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.motion.LinearAccelerationSensor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -109,7 +108,7 @@ public class MotionItemProviderAdapterFactory extends MotionAdapterFactory imple
 	protected LinearAccelerationSensorItemProvider linearAccelerationSensorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link motion.LinearAccelerationSensor}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.motion.LinearAccelerationSensor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -125,7 +124,7 @@ public class MotionItemProviderAdapterFactory extends MotionAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link motion.LinearVelocitySensor} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.motion.LinearVelocitySensor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -133,7 +132,7 @@ public class MotionItemProviderAdapterFactory extends MotionAdapterFactory imple
 	protected LinearVelocitySensorItemProvider linearVelocitySensorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link motion.LinearVelocitySensor}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.motion.LinearVelocitySensor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,7 +148,7 @@ public class MotionItemProviderAdapterFactory extends MotionAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link motion.SelfMotionSensor} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.motion.SelfMotionSensor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -157,7 +156,7 @@ public class MotionItemProviderAdapterFactory extends MotionAdapterFactory imple
 	protected SelfMotionSensorItemProvider selfMotionSensorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link motion.SelfMotionSensor}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.motion.SelfMotionSensor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

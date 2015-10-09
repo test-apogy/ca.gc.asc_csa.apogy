@@ -4,7 +4,7 @@
  *
  * $Id: LinearVelocitySensor.java,v 1.2.4.2 2015/05/21 15:50:26 pallard Exp $
  */
-package motion;
+package org.eclipse.symphony.addons.motion;
 
 
 /**
@@ -15,13 +15,13 @@ package motion;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}</li>
- *   <li>{@link motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}</li>
- *   <li>{@link motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}</li>
  * </ul>
  * </p>
  *
- * @see motion.MotionPackage#getLinearVelocitySensor()
+ * @see org.eclipse.symphony.addons.motion.MotionPackage#getLinearVelocitySensor()
  * @model
  * @generated
  */
@@ -36,14 +36,14 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XVelocity</em>' attribute.
 	 * @see #setXVelocity(double)
-	 * @see motion.MotionPackage#getLinearVelocitySensor_XVelocity()
+	 * @see org.eclipse.symphony.addons.motion.MotionPackage#getLinearVelocitySensor_XVelocity()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getXVelocity();
 
 	/**
-	 * Sets the value of the '{@link motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>XVelocity</em>' attribute.
@@ -62,14 +62,14 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YVelocity</em>' attribute.
 	 * @see #setYVelocity(double)
-	 * @see motion.MotionPackage#getLinearVelocitySensor_YVelocity()
+	 * @see org.eclipse.symphony.addons.motion.MotionPackage#getLinearVelocitySensor_YVelocity()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getYVelocity();
 
 	/**
-	 * Sets the value of the '{@link motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>YVelocity</em>' attribute.
@@ -88,14 +88,14 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZVelocity</em>' attribute.
 	 * @see #setZVelocity(double)
-	 * @see motion.MotionPackage#getLinearVelocitySensor_ZVelocity()
+	 * @see org.eclipse.symphony.addons.motion.MotionPackage#getLinearVelocitySensor_ZVelocity()
 	 * @model required="true"
 	 * @generated
 	 */
 	double getZVelocity();
 
 	/**
-	 * Sets the value of the '{@link motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>ZVelocity</em>' attribute.

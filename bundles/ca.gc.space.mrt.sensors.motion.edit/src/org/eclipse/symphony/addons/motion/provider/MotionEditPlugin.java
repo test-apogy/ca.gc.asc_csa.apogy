@@ -4,7 +4,7 @@
  *
  * $Id: MotionEditPlugin.java,v 1.3.4.2 2015/05/21 15:50:04 pallard Exp $
  */
-package motion.provider;
+package org.eclipse.symphony.addons.motion.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;

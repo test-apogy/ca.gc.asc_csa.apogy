@@ -4,20 +4,19 @@
  *
  * $Id: MotionFactoryImpl.java,v 1.5.4.3 2015/09/22 19:39:41 rlarcheveque Exp $
  */
-package motion.impl;
-
-import motion.AngularVelocitySensor;
-import motion.LinearAccelerationSensor;
-import motion.LinearVelocitySensor;
-import motion.MotionFactory;
-import motion.MotionPackage;
-import motion.SelfMotionSensor;
+package org.eclipse.symphony.addons.motion.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.symphony.addons.motion.AngularVelocitySensor;
+import org.eclipse.symphony.addons.motion.LinearAccelerationSensor;
+import org.eclipse.symphony.addons.motion.LinearVelocitySensor;
+import org.eclipse.symphony.addons.motion.MotionFactory;
+import org.eclipse.symphony.addons.motion.MotionPackage;
+import org.eclipse.symphony.addons.motion.SelfMotionSensor;
 
 /**
  * <!-- begin-user-doc -->

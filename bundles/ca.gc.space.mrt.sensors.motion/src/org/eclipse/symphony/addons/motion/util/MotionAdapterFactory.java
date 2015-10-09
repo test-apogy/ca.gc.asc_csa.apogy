@@ -4,18 +4,17 @@
  *
  * $Id: MotionAdapterFactory.java,v 1.5.4.3 2015/09/22 19:39:41 rlarcheveque Exp $
  */
-package motion.util;
-
-import motion.AngularVelocitySensor;
-import motion.LinearAccelerationSensor;
-import motion.LinearVelocitySensor;
-import motion.MotionPackage;
-import motion.SelfMotionSensor;
+package org.eclipse.symphony.addons.motion.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.motion.AngularVelocitySensor;
+import org.eclipse.symphony.addons.motion.LinearAccelerationSensor;
+import org.eclipse.symphony.addons.motion.LinearVelocitySensor;
+import org.eclipse.symphony.addons.motion.MotionPackage;
+import org.eclipse.symphony.addons.motion.SelfMotionSensor;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
@@ -26,7 +25,7 @@ import org.eclipse.symphony.common.topology.Node;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see motion.MotionPackage
+ * @see org.eclipse.symphony.addons.motion.MotionPackage
  * @generated
  */
 public class MotionAdapterFactory extends AdapterFactoryImpl {
@@ -130,13 +129,13 @@ public class MotionAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link motion.AngularVelocitySensor <em>Angular Velocity Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.motion.AngularVelocitySensor <em>Angular Velocity Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see motion.AngularVelocitySensor
+	 * @see org.eclipse.symphony.addons.motion.AngularVelocitySensor
 	 * @generated
 	 */
 	public Adapter createAngularVelocitySensorAdapter() {
@@ -144,13 +143,13 @@ public class MotionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link motion.LinearAccelerationSensor <em>Linear Acceleration Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.motion.LinearAccelerationSensor <em>Linear Acceleration Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see motion.LinearAccelerationSensor
+	 * @see org.eclipse.symphony.addons.motion.LinearAccelerationSensor
 	 * @generated
 	 */
 	public Adapter createLinearAccelerationSensorAdapter() {
@@ -158,13 +157,13 @@ public class MotionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link motion.LinearVelocitySensor <em>Linear Velocity Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.motion.LinearVelocitySensor <em>Linear Velocity Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see motion.LinearVelocitySensor
+	 * @see org.eclipse.symphony.addons.motion.LinearVelocitySensor
 	 * @generated
 	 */
 	public Adapter createLinearVelocitySensorAdapter() {
@@ -172,13 +171,13 @@ public class MotionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link motion.SelfMotionSensor <em>Self Motion Sensor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.motion.SelfMotionSensor <em>Self Motion Sensor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see motion.SelfMotionSensor
+	 * @see org.eclipse.symphony.addons.motion.SelfMotionSensor
 	 * @generated
 	 */
 	public Adapter createSelfMotionSensorAdapter() {

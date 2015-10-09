@@ -4,7 +4,7 @@
  *
  * $Id: MotionFactory.java,v 1.2.4.2 2015/05/21 15:50:26 pallard Exp $
  */
-package motion;
+package org.eclipse.symphony.addons.motion;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see motion.MotionPackage
+ * @see org.eclipse.symphony.addons.motion.MotionPackage
  * @generated
  */
 public interface MotionFactory extends EFactory {
@@ -23,7 +23,7 @@ public interface MotionFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	MotionFactory eINSTANCE = motion.impl.MotionFactoryImpl.init();
+	MotionFactory eINSTANCE = org.eclipse.symphony.addons.motion.impl.MotionFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Angular Velocity Sensor</em>'.

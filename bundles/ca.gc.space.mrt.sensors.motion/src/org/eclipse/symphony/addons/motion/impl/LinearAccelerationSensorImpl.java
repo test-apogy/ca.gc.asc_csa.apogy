@@ -4,14 +4,13 @@
  *
  * $Id: LinearAccelerationSensorImpl.java,v 1.3.4.2 2015/05/21 15:50:25 pallard Exp $
  */
-package motion.impl;
-
-import motion.LinearAccelerationSensor;
-import motion.MotionPackage;
+package org.eclipse.symphony.addons.motion.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.motion.LinearAccelerationSensor;
+import org.eclipse.symphony.addons.motion.MotionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link motion.impl.LinearAccelerationSensorImpl#getXAcceleration <em>XAcceleration</em>}</li>
- *   <li>{@link motion.impl.LinearAccelerationSensorImpl#getYAcceleration <em>YAcceleration</em>}</li>
- *   <li>{@link motion.impl.LinearAccelerationSensorImpl#getZAcceleration <em>ZAcceleration</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.LinearAccelerationSensorImpl#getXAcceleration <em>XAcceleration</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.LinearAccelerationSensorImpl#getYAcceleration <em>YAcceleration</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.LinearAccelerationSensorImpl#getZAcceleration <em>ZAcceleration</em>}</li>
  * </ul>
  * </p>
  *

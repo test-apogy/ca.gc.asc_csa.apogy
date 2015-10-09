@@ -4,14 +4,11 @@
  *
  * $Id: SelfMotionSensorItemProvider.java,v 1.3.4.2 2015/05/21 15:50:04 pallard Exp $
  */
-package motion.provider;
+package org.eclipse.symphony.addons.motion.provider;
 
 
 import java.util.Collection;
 import java.util.List;
-
-import motion.MotionFactory;
-import motion.SelfMotionSensor;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -22,11 +19,13 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.addons.motion.MotionFactory;
+import org.eclipse.symphony.addons.motion.SelfMotionSensor;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link motion.SelfMotionSensor} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.addons.motion.SelfMotionSensor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

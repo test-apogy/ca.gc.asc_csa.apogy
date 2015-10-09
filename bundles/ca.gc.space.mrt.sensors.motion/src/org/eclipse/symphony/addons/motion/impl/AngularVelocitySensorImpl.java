@@ -4,14 +4,13 @@
  *
  * $Id: AngularVelocitySensorImpl.java,v 1.3.4.2 2015/05/21 15:50:25 pallard Exp $
  */
-package motion.impl;
-
-import motion.AngularVelocitySensor;
-import motion.MotionPackage;
+package org.eclipse.symphony.addons.motion.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.motion.AngularVelocitySensor;
+import org.eclipse.symphony.addons.motion.MotionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link motion.impl.AngularVelocitySensorImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
- *   <li>{@link motion.impl.AngularVelocitySensorImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
- *   <li>{@link motion.impl.AngularVelocitySensorImpl#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.AngularVelocitySensorImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.AngularVelocitySensorImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.AngularVelocitySensorImpl#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  * </ul>
  * </p>
  *

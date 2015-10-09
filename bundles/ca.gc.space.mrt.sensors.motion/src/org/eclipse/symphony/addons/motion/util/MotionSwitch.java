@@ -4,17 +4,16 @@
  *
  * $Id: MotionSwitch.java,v 1.5.4.3 2015/09/22 19:39:41 rlarcheveque Exp $
  */
-package motion.util;
-
-import motion.AngularVelocitySensor;
-import motion.LinearAccelerationSensor;
-import motion.LinearVelocitySensor;
-import motion.MotionPackage;
-import motion.SelfMotionSensor;
+package org.eclipse.symphony.addons.motion.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.addons.motion.AngularVelocitySensor;
+import org.eclipse.symphony.addons.motion.LinearAccelerationSensor;
+import org.eclipse.symphony.addons.motion.LinearVelocitySensor;
+import org.eclipse.symphony.addons.motion.MotionPackage;
+import org.eclipse.symphony.addons.motion.SelfMotionSensor;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
@@ -30,7 +29,7 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see motion.MotionPackage
+ * @see org.eclipse.symphony.addons.motion.MotionPackage
  * @generated
  */
 public class MotionSwitch<T> extends Switch<T> {

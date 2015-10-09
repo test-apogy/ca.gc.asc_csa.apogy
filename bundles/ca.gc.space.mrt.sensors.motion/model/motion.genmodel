@@ -4,32 +4,32 @@
     modelName="Motion" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
     copyrightFields="false" usedGenPackages="platform:/plugin/ca.gc.space.mrt.sensors/model/sensors.genmodel#//sensors platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.genmodel#//topology platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.genmodel#//math"
     operationReflection="true">
-  <foreignModel>motion.ecore</foreignModel>
-  <genPackages prefix="Motion" disposableProviderFactory="true" ecorePackage="motion.ecore#/">
-    <genClasses ecoreClass="motion.ecore#//AngularVelocitySensor">
+  <foreignModel>org.eclipse.symphony.addons.motion.ecore</foreignModel>
+  <genPackages prefix="Motion" disposableProviderFactory="true" ecorePackage="org.eclipse.symphony.addons.motion.ecore#/">
+    <genClasses ecoreClass="org.eclipse.symphony.addons.motion.ecore#//AngularVelocitySensor">
       <genFeatures property="Readonly" createChild="false" propertyCategory="ANGULAR_VELOCITY"
-          ecoreFeature="ecore:EAttribute motion.ecore#//AngularVelocitySensor/xAngularVelocity"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//AngularVelocitySensor/xAngularVelocity"/>
       <genFeatures property="Readonly" createChild="false" propertyCategory="ANGULAR_VELOCITY"
-          ecoreFeature="ecore:EAttribute motion.ecore#//AngularVelocitySensor/yAngularVelocity"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//AngularVelocitySensor/yAngularVelocity"/>
       <genFeatures property="Readonly" createChild="false" propertyCategory="ANGULAR_VELOCITY"
-          ecoreFeature="ecore:EAttribute motion.ecore#//AngularVelocitySensor/zAngularVelocity"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//AngularVelocitySensor/zAngularVelocity"/>
     </genClasses>
-    <genClasses ecoreClass="motion.ecore#//LinearAccelerationSensor">
+    <genClasses ecoreClass="org.eclipse.symphony.addons.motion.ecore#//LinearAccelerationSensor">
       <genFeatures property="Readonly" createChild="false" propertyCategory="LINEAR_ACCELERATION"
-          ecoreFeature="ecore:EAttribute motion.ecore#//LinearAccelerationSensor/xAcceleration"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//LinearAccelerationSensor/xAcceleration"/>
       <genFeatures property="Readonly" createChild="false" propertyCategory="LINEAR_ACCELERATION"
-          ecoreFeature="ecore:EAttribute motion.ecore#//LinearAccelerationSensor/yAcceleration"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//LinearAccelerationSensor/yAcceleration"/>
       <genFeatures property="Readonly" createChild="false" propertyCategory="LINEAR_ACCELERATION"
-          ecoreFeature="ecore:EAttribute motion.ecore#//LinearAccelerationSensor/zAcceleration"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//LinearAccelerationSensor/zAcceleration"/>
     </genClasses>
-    <genClasses ecoreClass="motion.ecore#//LinearVelocitySensor">
+    <genClasses ecoreClass="org.eclipse.symphony.addons.motion.ecore#//LinearVelocitySensor">
       <genFeatures property="Readonly" createChild="false" propertyCategory="LINEAR_VELOCITY"
-          ecoreFeature="ecore:EAttribute motion.ecore#//LinearVelocitySensor/xVelocity"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//LinearVelocitySensor/xVelocity"/>
       <genFeatures property="Readonly" createChild="false" propertyCategory="LINEAR_VELOCITY"
-          ecoreFeature="ecore:EAttribute motion.ecore#//LinearVelocitySensor/yVelocity"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//LinearVelocitySensor/yVelocity"/>
       <genFeatures property="Readonly" createChild="false" propertyCategory="LINEAR_VELOCITY"
-          ecoreFeature="ecore:EAttribute motion.ecore#//LinearVelocitySensor/zVelocity"/>
+          ecoreFeature="ecore:EAttribute org.eclipse.symphony.addons.motion.ecore#//LinearVelocitySensor/zVelocity"/>
     </genClasses>
-    <genClasses ecoreClass="motion.ecore#//SelfMotionSensor"/>
+    <genClasses ecoreClass="org.eclipse.symphony.addons.motion.ecore#//SelfMotionSensor"/>
   </genPackages>
 </genmodel:GenModel>

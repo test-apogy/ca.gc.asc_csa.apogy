@@ -4,14 +4,13 @@
  *
  * $Id: LinearVelocitySensorImpl.java,v 1.3.4.2 2015/05/21 15:50:26 pallard Exp $
  */
-package motion.impl;
-
-import motion.LinearVelocitySensor;
-import motion.MotionPackage;
+package org.eclipse.symphony.addons.motion.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.motion.LinearVelocitySensor;
+import org.eclipse.symphony.addons.motion.MotionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +19,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link motion.impl.LinearVelocitySensorImpl#getXVelocity <em>XVelocity</em>}</li>
- *   <li>{@link motion.impl.LinearVelocitySensorImpl#getYVelocity <em>YVelocity</em>}</li>
- *   <li>{@link motion.impl.LinearVelocitySensorImpl#getZVelocity <em>ZVelocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.LinearVelocitySensorImpl#getXVelocity <em>XVelocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.LinearVelocitySensorImpl#getYVelocity <em>YVelocity</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.motion.impl.LinearVelocitySensorImpl#getZVelocity <em>ZVelocity</em>}</li>
  * </ul>
  * </p>
  *

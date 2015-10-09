@@ -4,7 +4,7 @@
  *
  * $Id: SelfMotionSensor.java,v 1.2.4.2 2015/05/21 15:50:26 pallard Exp $
  */
-package motion;
+package org.eclipse.symphony.addons.motion;
 
 import org.eclipse.symphony.addons.sensors.Sensor;
 
@@ -14,7 +14,7 @@ import org.eclipse.symphony.addons.sensors.Sensor;
  * <!-- end-user-doc -->
  *
  *
- * @see motion.MotionPackage#getSelfMotionSensor()
+ * @see org.eclipse.symphony.addons.motion.MotionPackage#getSelfMotionSensor()
  * @model
  * @generated
  */
