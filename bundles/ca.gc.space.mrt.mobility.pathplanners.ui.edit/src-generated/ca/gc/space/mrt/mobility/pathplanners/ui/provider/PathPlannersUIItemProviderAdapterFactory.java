@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIFactory;
 import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIPackage;
 import ca.gc.space.mrt.mobility.pathplanners.ui.util.PathPlannersUIAdapterFactory;
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.ui.TopologyPresentationRegistry;
@@ -388,6 +389,20 @@ public class PathPlannersUIItemProviderAdapterFactory extends PathPlannersUIAdap
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 PathPlannersUIFactory.eINSTANCE.createCircularExclusionZonePresentation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

@@ -162,6 +162,10 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 				return createPhysicalBodyAdapter();
 			}
 			@Override
+			public Adapter caseTopology_Node(Node object) {
+				return createTopology_NodeAdapter();
+			}
+			@Override
 			public Adapter caseAbstractTopologyBinding(AbstractTopologyBinding object) {
 				return createAbstractTopologyBindingAdapter();
 			}
@@ -188,6 +192,14 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseAbstractTwoPoints3DTool(AbstractTwoPoints3DTool object) {
 				return createAbstractTwoPoints3DToolAdapter();
+			}
+			@Override
+			public Adapter caseTopology_GroupNode(GroupNode object) {
+				return createTopology_GroupNodeAdapter();
+			}
+			@Override
+			public Adapter caseTopology_AggregateGroupNode(AggregateGroupNode object) {
+				return createTopology_AggregateGroupNodeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -507,6 +519,20 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.space.topology.Node
+	 * @generated
+	 */
+	public Adapter createTopology_NodeAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding <em>Abstract Topology Binding</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -602,6 +628,34 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createAbstractTwoPoints3DToolAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.GroupNode <em>Group Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.space.topology.GroupNode
+	 * @generated
+	 */
+	public Adapter createTopology_GroupNodeAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.space.topology.AggregateGroupNode
+	 * @generated
+	 */
+	public Adapter createTopology_AggregateGroupNodeAdapter() {
 		return null;
 	}
 

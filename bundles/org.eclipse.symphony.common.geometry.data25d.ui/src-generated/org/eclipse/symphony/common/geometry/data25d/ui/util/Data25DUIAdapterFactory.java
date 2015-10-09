@@ -9,7 +9,6 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage;
 import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
-
 import ca.gc.space.topology.ui.NodePresentation;
 
 /**

@@ -3,21 +3,12 @@
  */
 package org.eclipse.symphony.core.environment.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.environment.Moon;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.impl.NodeImpl;
+import ca.gc.space.topology.impl.GroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,25 +17,14 @@ import ca.gc.space.topology.impl.NodeImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.symphony.core.environment.impl.MoonImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MoonImpl#getRadius <em>Radius</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MoonImpl extends NodeImpl implements Moon
+public class MoonImpl extends GroupNodeImpl implements Moon
 {
-  /**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-  protected EList<Node> children;
-
   /**
 	 * The default value of the '{@link #getRadius() <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,19 +71,6 @@ public class MoonImpl extends NodeImpl implements Moon
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<Node> getChildren()
-  {
-		if (children == null) {
-			children = new EObjectContainmentEList<Node>(Node.class, this, SymphonyEnvironmentPackage.MOON__CHILDREN);
-		}
-		return children;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
   public double getRadius()
   {
 		return radius;
@@ -128,26 +95,9 @@ public class MoonImpl extends NodeImpl implements Moon
 	 * @generated
 	 */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__CHILDREN:
-				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__CHILDREN:
-				return getChildren();
 			case SymphonyEnvironmentPackage.MOON__RADIUS:
 				return getRadius();
 		}
@@ -164,10 +114,6 @@ public class MoonImpl extends NodeImpl implements Moon
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__CHILDREN:
-				getChildren().clear();
-				getChildren().addAll((Collection<? extends Node>)newValue);
-				return;
 			case SymphonyEnvironmentPackage.MOON__RADIUS:
 				setRadius((Double)newValue);
 				return;
@@ -184,9 +130,6 @@ public class MoonImpl extends NodeImpl implements Moon
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__CHILDREN:
-				getChildren().clear();
-				return;
 			case SymphonyEnvironmentPackage.MOON__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
@@ -203,8 +146,6 @@ public class MoonImpl extends NodeImpl implements Moon
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__CHILDREN:
-				return children != null && !children.isEmpty();
 			case SymphonyEnvironmentPackage.MOON__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}

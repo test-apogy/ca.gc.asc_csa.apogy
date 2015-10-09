@@ -6,10 +6,8 @@ package org.eclipse.symphony.core.environment.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -18,11 +16,9 @@ import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.environment.Sun;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import ca.gc.space.topology.TopologyFactory;
 import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.NodeItemProvider;
+import ca.gc.space.topology.provider.GroupNodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Sun} object.
@@ -31,7 +27,7 @@ import ca.gc.space.topology.provider.NodeItemProvider;
  * @generated
  */
 public class SunItemProvider
-  extends NodeItemProvider
+  extends GroupNodeItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -85,38 +81,6 @@ public class SunItemProvider
   }
 
   /**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
-  {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyPackage.Literals.GROUP_NODE__CHILDREN);
-		}
-		return childrenFeatures;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  protected EStructuralFeature getChildFeature(Object object, Object child)
-  {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-  /**
 	 * This returns Sun.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -158,9 +122,6 @@ public class SunItemProvider
 		switch (notification.getFeatureID(Sun.class)) {
 			case SymphonyEnvironmentPackage.SUN__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case SymphonyEnvironmentPackage.SUN__CHILDREN:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -267,71 +228,6 @@ public class SunItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createLeaf()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createReferencedContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createAggregateContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createURLNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createReferencedGroupNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createLink()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createCADNode()));
 	}
 
 }

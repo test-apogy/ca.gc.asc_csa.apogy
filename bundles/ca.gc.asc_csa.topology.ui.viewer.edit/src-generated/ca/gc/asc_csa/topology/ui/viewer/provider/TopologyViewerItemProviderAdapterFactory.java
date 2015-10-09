@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.asc_csa.topology.ui.viewer.TopologyViewerFactory;
 import ca.gc.asc_csa.topology.ui.viewer.TopologyViewerPackage;
 import ca.gc.asc_csa.topology.ui.viewer.util.TopologyViewerAdapterFactory;
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.util.TopologySwitch;
@@ -298,6 +299,20 @@ public class TopologyViewerItemProviderAdapterFactory extends TopologyViewerAdap
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyViewerFactory.eINSTANCE.createTopologyViewerRegistry()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

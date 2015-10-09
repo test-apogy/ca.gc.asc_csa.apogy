@@ -625,9 +625,9 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyCorePackage.eINSTANCE.eClass();
-		ImagesCorePackage.eINSTANCE.eClass();
 		Data3dPackage.eINSTANCE.eClass();
+		ImagesCorePackage.eINSTANCE.eClass();
+		SymphonyCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyEnvironmentPackage.createPackageContents();
@@ -4279,7 +4279,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.core.environment/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.core.environment.edit/src-generated",
-			 "basePackage", "ca.gc.asc_csa.symphony"
+			 "basePackage", "org.eclipse.symphony.core"
 		   });	
 		addAnnotation
 		  (getSurfaceWorksite_Sky(), 

@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.geometry.data.DataPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.geometry.data25d.Data25dFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Data25d' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Data25d' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data25d/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data25d.edit/src-generated' basePackage='ca.gc.space.mrt.geometry'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Data25d' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Data25d' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data25d/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data25d.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry'"
  * @generated
  */
 public interface Data25dPackage extends EPackage {

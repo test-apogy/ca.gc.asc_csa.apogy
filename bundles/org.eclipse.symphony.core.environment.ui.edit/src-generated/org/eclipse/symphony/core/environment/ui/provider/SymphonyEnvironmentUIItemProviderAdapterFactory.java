@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.core.environment.ui.provider;
 
+import ca.gc.space.topology.AggregateContentNode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -1008,6 +1009,100 @@ public class SymphonyEnvironmentUIItemProviderAdapterFactory extends SymphonyEnv
 			}
  
       /**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createEnvironmentUiUtilities()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createEnvironmentUiFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapRuler()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
+
+				return null;
+			}
+						/**
 			 * <!-- begin-user-doc -->
        * <!-- end-user-doc -->
 			 * @generated

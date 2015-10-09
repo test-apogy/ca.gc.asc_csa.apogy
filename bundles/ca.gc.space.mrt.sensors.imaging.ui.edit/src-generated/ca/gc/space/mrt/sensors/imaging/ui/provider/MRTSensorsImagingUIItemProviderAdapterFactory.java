@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.space.mrt.sensors.imaging.ui.MRTSensorsImagingUIFactory;
 import ca.gc.space.mrt.sensors.imaging.ui.MRTSensorsImagingUIPackage;
 import ca.gc.space.mrt.sensors.imaging.ui.util.MRTSensorsImagingUIAdapterFactory;
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.ui.TopologyPresentationRegistry;
@@ -408,6 +409,20 @@ public class MRTSensorsImagingUIItemProviderAdapterFactory extends MRTSensorsIma
 			}
  
       /**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 MRTSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation()));
+
+				return null;
+			}
+						/**
 			 * <!-- begin-user-doc -->
        * <!-- end-user-doc -->
 			 * @generated

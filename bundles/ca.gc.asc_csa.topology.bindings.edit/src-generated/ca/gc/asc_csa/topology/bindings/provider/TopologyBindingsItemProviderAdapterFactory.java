@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsAdapterFactory;
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.util.TopologySwitch;
@@ -535,6 +536,60 @@ public class TopologyBindingsItemProviderAdapterFactory extends TopologyBindings
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createRotationBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createBindingsList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createBindingsSet()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyBindingsFactory.eINSTANCE.createTopologyBindingsFacade()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

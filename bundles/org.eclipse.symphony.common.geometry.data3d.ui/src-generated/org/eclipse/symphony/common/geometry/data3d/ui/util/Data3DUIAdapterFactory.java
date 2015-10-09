@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
 import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage;
 import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
-
 import ca.gc.space.topology.ui.NodePresentation;
 
 /**

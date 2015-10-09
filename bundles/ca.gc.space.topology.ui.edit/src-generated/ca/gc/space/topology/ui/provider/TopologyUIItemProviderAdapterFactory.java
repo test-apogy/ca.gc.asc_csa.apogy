@@ -3,6 +3,7 @@
  */
 package ca.gc.space.topology.ui.provider;
 
+import ca.gc.space.topology.AggregateContentNode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -559,6 +560,65 @@ public class TopologyUIItemProviderAdapterFactory extends TopologyUIAdapterFacto
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createGraphicsContext()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createNodeSelection()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createNodePresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createURLNodePresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIFactory.eINSTANCE.createTopologyUIFacade()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

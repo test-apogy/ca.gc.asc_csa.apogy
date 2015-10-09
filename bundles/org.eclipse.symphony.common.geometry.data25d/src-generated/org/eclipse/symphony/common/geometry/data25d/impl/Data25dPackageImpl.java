@@ -575,7 +575,7 @@ public class Data25dPackageImpl extends EPackageImpl implements Data25dPackage {
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data25d/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data25d.edit/src-generated",
-			 "basePackage", "ca.gc.space.mrt.geometry"
+			 "basePackage", "org.eclipse.symphony.common.geometry"
 		   });	
 		addAnnotation
 		  (coordinates25DEClass, 

@@ -27,11 +27,11 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated mrt_data3d_ui -->
       <extender
+            uri="ca.gc.space.topology"
+            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
             uri="ca.gc.space.topology.ui"
             class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-      <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

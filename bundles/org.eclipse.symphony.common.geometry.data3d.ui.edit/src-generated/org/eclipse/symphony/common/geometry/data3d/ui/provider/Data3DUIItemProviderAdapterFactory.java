@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.common.geometry.data3d.ui.provider;
 
+import ca.gc.space.topology.AggregateContentNode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -330,6 +331,25 @@ public class Data3DUIItemProviderAdapterFactory extends Data3DUIAdapterFactory i
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Data3DUIFactory.eINSTANCE.createCartesianCoordinatesSetPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Data3DUIFactory.eINSTANCE.createTriangularMeshPresentation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

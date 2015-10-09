@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.core.environment.orbit.provider;
 
+import ca.gc.space.topology.AggregateContentNode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -504,6 +505,55 @@ public class SymphonyOrbitEnvironmentItemProviderAdapterFactory extends Symphony
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createPVACoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createAngularCoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createSpacecraftAttitude()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createSpacecraftState()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createOrbitModel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createOrbitFacade()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

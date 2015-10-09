@@ -3,6 +3,7 @@
  */
 package ca.gc.space.topology.core.primitives.ui.provider;
 
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import java.util.ArrayList;
@@ -386,6 +387,35 @@ public class TopologyUIPrimitivesItemProviderAdapterFactory extends TopologyUIPr
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIPrimitivesFactory.eINSTANCE.createVectorPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIPrimitivesFactory.eINSTANCE.createWayPointPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIPrimitivesFactory.eINSTANCE.createLabelPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 TopologyUIPrimitivesFactory.eINSTANCE.createSpherePrimitivePresentation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

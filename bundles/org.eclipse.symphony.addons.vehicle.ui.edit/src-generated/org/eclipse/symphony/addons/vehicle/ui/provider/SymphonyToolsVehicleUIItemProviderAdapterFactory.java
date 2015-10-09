@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.addons.vehicle.ui.provider;
 
+import ca.gc.space.topology.AggregateContentNode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -376,6 +377,30 @@ public class SymphonyToolsVehicleUIItemProviderAdapterFactory extends SymphonyTo
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsVehicleUIFactory.eINSTANCE.createPhysicalWheelPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsVehicleUIFactory.eINSTANCE.createLanderSphericalFootPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsVehicleUIFactory.eINSTANCE.createThrusterPresentation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

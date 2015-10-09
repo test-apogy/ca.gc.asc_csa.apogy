@@ -38,6 +38,7 @@ import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 import ca.gc.asc_csa.topology.bindings.EnumerationCase;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.AggregateGroupNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.GroupNode;
@@ -417,6 +418,35 @@ public class SymphonyTopologyItemProviderAdapterFactory extends SymphonyTopology
 			}
  
       /**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyTopologyFactory.eINSTANCE.createSystemsTopologyAdapter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyTopologyFactory.eINSTANCE.createSymphonyTopologyFacade()));
+
+				return null;
+			}
+						/**
 			 * <!-- begin-user-doc -->
        * <!-- end-user-doc -->
 			 * @generated

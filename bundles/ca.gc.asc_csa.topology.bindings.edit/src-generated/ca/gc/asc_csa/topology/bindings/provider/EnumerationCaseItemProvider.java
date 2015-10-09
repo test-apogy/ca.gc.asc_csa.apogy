@@ -202,17 +202,7 @@ public class EnumerationCaseItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
+				 TopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -222,17 +212,17 @@ public class EnumerationCaseItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 TopologyFactory.eINSTANCE.createURLNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 TopologyFactory.eINSTANCE.createCADNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 TopologyFactory.eINSTANCE.createContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -247,7 +237,7 @@ public class EnumerationCaseItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createURLNode()));
+				 TopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -257,12 +247,27 @@ public class EnumerationCaseItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createLink()));
+				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createCADNode()));
+				 TopologyFactory.eINSTANCE.createPositionNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 TopologyFactory.eINSTANCE.createRotationNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 TopologyFactory.eINSTANCE.createTransformNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
   /**

@@ -3517,7 +3517,7 @@ public class Data3dPackageImpl extends EPackageImpl implements Data3dPackage {
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.edit/src-generated",
-			 "basePackage", "ca.gc.space.mrt.geometry"
+			 "basePackage", "org.eclipse.symphony.common.geometry"
 		   });	
 		addAnnotation
 		  (meshLocalizerEClass, 

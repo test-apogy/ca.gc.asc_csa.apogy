@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth.ui.provider;
 
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.util.TopologySwitch;
@@ -533,6 +534,60 @@ public class SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory extends S
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthViewConfiguration()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

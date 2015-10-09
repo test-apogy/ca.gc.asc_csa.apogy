@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.space.mrt.sensors.fov.ui.FovUIFactory;
 import ca.gc.space.mrt.sensors.fov.ui.FovUIPackage;
 import ca.gc.space.mrt.sensors.fov.ui.util.FovUIAdapterFactory;
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.ui.TopologyPresentationRegistry;
@@ -490,6 +491,35 @@ public class FovUIItemProviderAdapterFactory extends FovUIAdapterFactory impleme
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 FovUIFactory.eINSTANCE.createFieldOfViewPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 FovUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 FovUIFactory.eINSTANCE.createConicalFieldOfViewPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 FovUIFactory.eINSTANCE.createRectangularFrustrumFieldOfViewPresentation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

@@ -25,11 +25,11 @@
             uri="ca.gc.asc_csa.topology.bindings"
             class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+      <extender
+            uri="ca.gc.space.topology"
+            class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

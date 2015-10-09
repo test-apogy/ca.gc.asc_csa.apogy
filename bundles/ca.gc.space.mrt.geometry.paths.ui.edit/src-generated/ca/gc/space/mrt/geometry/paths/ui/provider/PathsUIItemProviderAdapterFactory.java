@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.space.mrt.geometry.paths.ui.PathsUIFactory;
 import ca.gc.space.mrt.geometry.paths.ui.PathsUIPackage;
 import ca.gc.space.mrt.geometry.paths.ui.util.PathsUIAdapterFactory;
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.ui.TopologyPresentationRegistry;
@@ -422,6 +423,25 @@ public class PathsUIItemProviderAdapterFactory extends PathsUIAdapterFactory imp
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 PathsUIFactory.eINSTANCE.createWayPointPathPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 PathsUIFactory.eINSTANCE.createWayPointPresentation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

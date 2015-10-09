@@ -164,17 +164,7 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
+				 TopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -184,17 +174,17 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 TopologyFactory.eINSTANCE.createURLNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 TopologyFactory.eINSTANCE.createCADNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 TopologyFactory.eINSTANCE.createContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -209,7 +199,7 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createURLNode()));
+				 TopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -219,12 +209,27 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createLink()));
+				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createCADNode()));
+				 TopologyFactory.eINSTANCE.createPositionNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 TopologyFactory.eINSTANCE.createRotationNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 TopologyFactory.eINSTANCE.createTransformNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
 	/**

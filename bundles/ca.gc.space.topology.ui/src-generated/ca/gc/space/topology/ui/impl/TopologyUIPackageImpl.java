@@ -219,7 +219,6 @@ public class TopologyUIPackageImpl extends EPackageImpl implements TopologyUIPac
 
 		// Initialize simple dependencies
 		TopologyPackage.eINSTANCE.eClass();
-		MathPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTopologyUIPackage.createPackageContents();

@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.geometry.data.DataPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Data3d' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Data3d' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.edit/src-generated' basePackage='ca.gc.space.mrt.geometry'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Data3d' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Data3d' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry'"
  * @generated
  */
 public interface Data3dPackage extends EPackage {

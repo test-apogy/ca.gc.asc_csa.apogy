@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIFactory;
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIPackage;
 import ca.gc.space.mrt.sensors.range.ui.util.RangeSensorsUIAdapterFactory;
+import ca.gc.space.topology.AggregateContentNode;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.TopologyPackage;
 import ca.gc.space.topology.ui.TopologyPresentationRegistry;
@@ -422,6 +423,25 @@ public class RangeSensorsUIItemProviderAdapterFactory extends RangeSensorsUIAdap
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 RangeSensorsUIFactory.eINSTANCE.createRasterScanDataPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 RangeSensorsUIFactory.eINSTANCE.createSimpleSonarPresentation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

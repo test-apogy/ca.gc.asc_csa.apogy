@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
 
+import ca.gc.space.topology.AggregateContentNode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -470,6 +471,30 @@ public class SymphonyExampleMobilePlatformItemProviderAdapterFactory extends Sym
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformSymphonySystemApiAdapter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformData()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformSymphonySystemAnnotation()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

@@ -5,23 +5,17 @@ package org.eclipse.symphony.addons.vehicle.provider;
 
 
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Wheel;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-
 import ca.gc.asc_csa.topology.dynamics.provider.PhysicalBodyItemProvider;
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersFactory;
@@ -179,57 +173,7 @@ public class WheelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createThruster()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyToolsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PathplannersFactory.eINSTANCE.createCircularExclusionZone()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -249,72 +193,7 @@ public class WheelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+				 PathplannersFactory.eINSTANCE.createCircularExclusionZone()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -324,57 +203,7 @@ public class WheelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createThruster()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyToolsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PathplannersFactory.eINSTANCE.createCircularExclusionZone()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -394,72 +223,7 @@ public class WheelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+				 PathplannersFactory.eINSTANCE.createCircularExclusionZone()));
 	}
 
   /**

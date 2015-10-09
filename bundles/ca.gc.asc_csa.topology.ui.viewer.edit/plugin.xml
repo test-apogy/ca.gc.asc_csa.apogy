@@ -23,7 +23,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated topology_viewer -->
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
+            uri="ca.gc.space.topology"
             class="ca.gc.asc_csa.topology.ui.viewer.provider.TopologyViewerItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

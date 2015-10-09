@@ -4,7 +4,6 @@
 package org.eclipse.symphony.core.environment.impl;
 
 import java.net.URL;
-
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;

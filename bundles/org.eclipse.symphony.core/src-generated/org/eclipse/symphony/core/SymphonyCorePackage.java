@@ -28,7 +28,7 @@ import ca.gc.space.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.core.SymphonyCoreFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyCore' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)' modelName='SymphonyCore' multipleEditorPages='false' fileExtensions='sym' modelDirectory='/org.eclipse.symphony.core/src-generated' editDirectory='/org.eclipse.symphony.core.edit/src-generated' basePackage='ca.gc.asc_csa.symphony'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyCore' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)' modelName='SymphonyCore' multipleEditorPages='false' fileExtensions='sym' modelDirectory='/org.eclipse.symphony.core/src-generated' editDirectory='/org.eclipse.symphony.core.edit/src-generated' basePackage='org.eclipse.symphony'"
  * @generated
  */
 public interface SymphonyCorePackage extends EPackage {

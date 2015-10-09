@@ -26,11 +26,11 @@
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.core.environment.ui"
             class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$SymphonyEnvironmentUIChildCreationExtender"/>
+      <extender
+            uri="ca.gc.space.topology"
+            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>
