@@ -12,7 +12,7 @@ Export-Package: ca.gc.space.mrt.common.recorders,
  ca.gc.space.mrt.common.recorders.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- ca.gc.space.mrt.common.csv;visibility:=reexport,
+ org.eclipse.symphony.common.file.csv;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib

@@ -3,9 +3,8 @@
  */
 package ca.gc.space.mrt.common.recorders;
 
-import ca.gc.space.mrt.common.csv.CsvColumnsSet;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.file.csv.CsvColumnsSet;
 
 /**
  * <!-- begin-user-doc -->

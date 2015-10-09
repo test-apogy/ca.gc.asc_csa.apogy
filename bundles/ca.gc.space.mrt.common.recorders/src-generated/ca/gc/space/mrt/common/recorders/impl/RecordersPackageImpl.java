@@ -3,10 +3,7 @@
  */
 package ca.gc.space.mrt.common.recorders.impl;
 
-import ca.gc.space.mrt.common.csv.CsvPackage;
-
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-
 import ca.gc.space.mrt.common.recorders.CsvExporter;
 import ca.gc.space.mrt.common.recorders.RecordersFactory;
 import ca.gc.space.mrt.common.recorders.RecordersPackage;
@@ -25,8 +22,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.file.csv.CsvPackage;
 
 /**
  * <!-- begin-user-doc -->

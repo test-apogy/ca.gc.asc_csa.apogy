@@ -62,7 +62,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="includeColumnName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="columnSet" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.csv/model/csv.ecore#//CsvColumsSet"
+        eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.file.csv/model/csv.ecore#//CsvColumsSet"
         changeable="false" derived="true"/>
   </eClassifiers>
 </ecore:EPackage>

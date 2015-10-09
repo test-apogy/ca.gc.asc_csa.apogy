@@ -1,28 +1,26 @@
 /**
  * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package ca.gc.space.mrt.common.recorders.provider;
-
-import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
+package org.eclipse.symphony.common.file.csv.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
+
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.file.csv.provider.CsvEditPlugin;
 
 /**
- * This is the central singleton for the Recorders edit plugin.
+ * This is the central singleton for the Csv edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class RecordersEditPlugin extends EMFPlugin {
+public final class CsvEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final RecordersEditPlugin INSTANCE = new RecordersEditPlugin();
+	public static final CsvEditPlugin INSTANCE = new CsvEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -38,11 +36,9 @@ public final class RecordersEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RecordersEditPlugin() {
+	public CsvEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     CsvEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -14,7 +14,7 @@ package ca.gc.space.mrt.common.recorders
 import java.util.Map
 import java.util.Date
 
-import ca.gc.space.mrt.common.csv.CsvColumnsSet
+import org.eclipse.symphony.common.file.csv.CsvColumnsSet
 import ca.gc.space.mrt.common.processors.Monitorable
 
 import org.eclipse.emf.ecore.EObject

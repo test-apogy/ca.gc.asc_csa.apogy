@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_csv -->
       <factory
-            uri="ca.gc.space.mrt.common.csv"
-            class="ca.gc.space.mrt.common.csv.provider.CsvItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.file.csv"
+            class="org.eclipse.symphony.common.file.csv.provider.CsvItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

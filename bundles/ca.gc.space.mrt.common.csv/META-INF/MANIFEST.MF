@@ -1,19 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.common.csv;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.file.common.csv;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: ca.gc.space.mrt.common.csv,
- ca.gc.space.mrt.common.csv.impl,
- ca.gc.space.mrt.common.csv.util
+Export-Package: org.eclipse.symphony.common.file.csv,
+ org.eclipse.symphony.common.file.csv.impl,
+ org.eclipse.symphony.common.file.csv.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.space.mrt.common.csv.Activator
+Bundle-Activator: org.eclipse.symphony.common.file.csv.Activator
 
