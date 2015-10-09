@@ -67,7 +67,7 @@ public interface RayData extends EObject {
 	 * @return the value of the '<em>Direction</em>' attribute.
 	 * @see #setDirection(Vector3d)
 	 * @see ca.gc.space.mrt.sensors.range.RangePackage#getRayData_Direction()
-	 * @model dataType="ca.gc.space.mrt.geometry.data.Vector3d"
+	 * @model dataType="org.eclipse.symphony.common.geometry.data.Vector3d"
 	 * @generated
 	 */
 	Vector3d getDirection();

@@ -8,13 +8,15 @@ package ca.gc.space.mrt.geometry.data25d.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.space.mrt.geometry.data.provider.CoordinatesItemProvider;
+import org.eclipse.symphony.common.geometry.data.provider.CoordinatesItemProvider;
+
 import ca.gc.space.mrt.geometry.data25d.Coordinates25D;
 import ca.gc.space.mrt.geometry.data25d.Data25dPackage;
 

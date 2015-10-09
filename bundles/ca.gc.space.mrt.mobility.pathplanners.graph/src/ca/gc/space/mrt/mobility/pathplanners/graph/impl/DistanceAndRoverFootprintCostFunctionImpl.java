@@ -14,8 +14,8 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.geometry.data.Mesh;
 
-import ca.gc.space.mrt.geometry.data.Mesh;
 import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;

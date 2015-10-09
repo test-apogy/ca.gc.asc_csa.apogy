@@ -3,17 +3,8 @@
  */
 package ca.gc.space.mrt.geometry.data3d.provider;
 
-import ca.gc.space.mrt.geometry.data.Coordinates;
-import ca.gc.space.mrt.geometry.data.CoordinatesSet;
-import ca.gc.space.mrt.geometry.data.DataPackage;
-import ca.gc.space.mrt.geometry.data.Mesh;
-import ca.gc.space.mrt.geometry.data.Polygon;
-
-import ca.gc.space.mrt.geometry.data.util.DataSwitch;
-
 import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
-
 import ca.gc.space.mrt.geometry.data3d.util.Data3dAdapterFactory;
 
 import java.util.ArrayList;
@@ -23,15 +14,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.edit.command.CommandParameter;
-
 import org.eclipse.emf.edit.domain.EditingDomain;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ChildCreationExtenderManager;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -45,6 +31,12 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.geometry.data.Coordinates;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Mesh;
+import org.eclipse.symphony.common.geometry.data.Polygon;
+import org.eclipse.symphony.common.geometry.data.util.DataSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

@@ -5,26 +5,22 @@ package ca.gc.space.mrt.geometry.data3d.util;
 
 import ca.gc.space.mrt.common.processors.Monitorable;
 import ca.gc.space.mrt.common.processors.Processor;
-
-import ca.gc.space.mrt.geometry.data.Coordinates;
-import ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape;
-import ca.gc.space.mrt.geometry.data.CoordinatesSet;
-import ca.gc.space.mrt.geometry.data.CoordinatesSetShapesSampler;
-import ca.gc.space.mrt.geometry.data.Mesh;
-import ca.gc.space.mrt.geometry.data.MeshCoordinatesShapesSampler;
-import ca.gc.space.mrt.geometry.data.MeshPolygonShapesSampler;
-import ca.gc.space.mrt.geometry.data.Polygon;
-import ca.gc.space.mrt.geometry.data.PolygonSamplingShape;
-import ca.gc.space.mrt.geometry.data.SamplingShape;
-
 import ca.gc.space.mrt.geometry.data3d.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.geometry.data.Coordinates;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
+import org.eclipse.symphony.common.geometry.data.Mesh;
+import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler;
+import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler;
+import org.eclipse.symphony.common.geometry.data.Polygon;
+import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+import org.eclipse.symphony.common.geometry.data.SamplingShape;
 
 /**
  * <!-- begin-user-doc -->
@@ -1033,13 +1029,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.Polygon <em>Polygon</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Polygon <em>Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.Polygon
+	 * @see org.eclipse.symphony.common.geometry.data.Polygon
 	 * @generated
 	 */
 	public Adapter createPolygonAdapter() {
@@ -1047,13 +1043,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.Coordinates <em>Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Coordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.Coordinates
+	 * @see org.eclipse.symphony.common.geometry.data.Coordinates
 	 * @generated
 	 */
 	public Adapter createCoordinatesAdapter() {
@@ -1061,13 +1057,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.CoordinatesSet
+	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetAdapter() {
@@ -1075,13 +1071,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.Mesh <em>Mesh</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Mesh <em>Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.Mesh
+	 * @see org.eclipse.symphony.common.geometry.data.Mesh
 	 * @generated
 	 */
 	public Adapter createMeshAdapter() {
@@ -1089,13 +1085,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.SamplingShape
+	 * @see org.eclipse.symphony.common.geometry.data.SamplingShape
 	 * @generated
 	 */
 	public Adapter createSamplingShapeAdapter() {
@@ -1103,13 +1099,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape
+	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
 	 * @generated
 	 */
 	public Adapter createCoordinatesSamplingShapeAdapter() {
@@ -1117,13 +1113,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.PolygonSamplingShape
+	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
 	 * @generated
 	 */
 	public Adapter createPolygonSamplingShapeAdapter() {
@@ -1159,13 +1155,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.CoordinatesSetShapesSampler <em>Coordinates Set Shapes Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler <em>Coordinates Set Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.CoordinatesSetShapesSampler
+	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetShapesSamplerAdapter() {
@@ -1173,13 +1169,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.MeshCoordinatesShapesSampler <em>Mesh Coordinates Shapes Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler <em>Mesh Coordinates Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.MeshCoordinatesShapesSampler
+	 * @see org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler
 	 * @generated
 	 */
 	public Adapter createMeshCoordinatesShapesSamplerAdapter() {
@@ -1187,13 +1183,13 @@ public class Data3dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.MeshPolygonShapesSampler <em>Mesh Polygon Shapes Sampler</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler <em>Mesh Polygon Shapes Sampler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.MeshPolygonShapesSampler
+	 * @see org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler
 	 * @generated
 	 */
 	public Adapter createMeshPolygonShapesSamplerAdapter() {

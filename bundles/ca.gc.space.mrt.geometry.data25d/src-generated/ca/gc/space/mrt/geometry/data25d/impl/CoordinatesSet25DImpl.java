@@ -9,15 +9,17 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.space.mrt.geometry.data.DataPackage;
-import ca.gc.space.mrt.geometry.data.Mesh;
-import ca.gc.space.mrt.geometry.data.impl.CoordinatesSetImpl;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Mesh;
+import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl;
+
 import ca.gc.space.mrt.geometry.data25d.Coordinates25D;
 import ca.gc.space.mrt.geometry.data25d.CoordinatesSet25D;
 import ca.gc.space.mrt.geometry.data25d.Data25dPackage;

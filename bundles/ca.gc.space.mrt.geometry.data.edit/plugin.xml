@@ -11,8 +11,8 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="ca.gc.space.mrt.geometry.data.edit"
-            class="ca.gc.space.mrt.geometry.data.provider.DataItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.geometry.data.edit"
+            class="org.eclipse.symphony.common.geometry.data.provider.DataItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

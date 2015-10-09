@@ -7,23 +7,23 @@
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="normal" lowerBound="1"
-        eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="centroid" lowerBound="1"
         eType="#//CartesianPositionCoordinates" changeable="false" volatile="true"
         transient="true" derived="true"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Polygon">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Polygon">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianTriangle" eSuperTypes="#//CartesianPolygon"/>
   <eClassifiers xsi:type="ecore:EClass" name="SphericalPolygon">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Polygon">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Polygon">
       <eTypeArguments eClassifier="#//SphericalCoordinates"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SphericalTriangle" eSuperTypes="#//SphericalPolygon"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CartesianPositionCoordinates" eSuperTypes="platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Coordinates">
+  <eClassifiers xsi:type="ecore:EClass" name="CartesianPositionCoordinates" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Coordinates">
     <eOperations name="asPoint3d" eType="#//Point3d"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -34,7 +34,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="green" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EByte"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="blue" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EByte"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CartesianOrientationCoordinates" eSuperTypes="platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Coordinates">
+  <eClassifiers xsi:type="ecore:EClass" name="CartesianOrientationCoordinates" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Coordinates">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xRotation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yRotation" lowerBound="1"
@@ -44,7 +44,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianCoordinatesSet">
     <eOperations name="getExtent" eType="#//CartesianCoordinatesSetExtent"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//CoordinatesSet">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//CoordinatesSet">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
     </eGenericSuperTypes>
   </eClassifiers>
@@ -53,39 +53,39 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yDimension" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianCoordinatesMesh">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Mesh">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Mesh">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       <eTypeArguments eClassifier="#//CartesianPolygon"/>
     </eGenericSuperTypes>
     <eGenericSuperTypes eClassifier="#//CartesianCoordinatesSet"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianTriangularMesh">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Mesh">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Mesh">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       <eTypeArguments eClassifier="#//CartesianTriangle"/>
     </eGenericSuperTypes>
     <eGenericSuperTypes eClassifier="#//CartesianCoordinatesSet"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SphericalCoordinates" eSuperTypes="platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Coordinates">
+  <eClassifiers xsi:type="ecore:EClass" name="SphericalCoordinates" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Coordinates">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="theta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="r" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SphericalCoordinatesSet">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//CoordinatesSet">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//CoordinatesSet">
       <eTypeArguments eClassifier="#//SphericalCoordinates"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpericalCoordinatesMesh">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Mesh">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Mesh">
       <eTypeArguments eClassifier="#//SphericalCoordinates"/>
       <eTypeArguments eClassifier="#//SphericalPolygon"/>
     </eGenericSuperTypes>
     <eGenericSuperTypes eClassifier="#//SphericalCoordinatesSet"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SphericalTriangularMesh">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Mesh">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Mesh">
       <eTypeArguments eClassifier="#//SphericalCoordinates"/>
       <eTypeArguments eClassifier="#//SphericalTriangle"/>
     </eGenericSuperTypes>
@@ -101,39 +101,39 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="center" eType="#//CartesianPositionCoordinates"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="includeJustTouching" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//CoordinatesSamplingShape">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//CoordinatesSamplingShape">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
     </eGenericSuperTypes>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//PolygonSamplingShape">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//PolygonSamplingShape">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       <eTypeArguments eTypeParameter="#//SphereSamplingShape/PolygonType"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianCoordinatesSetShapeSampler">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//CoordinatesSetShapesSampler">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//CoordinatesSetShapesSampler">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianCoordinatesMeshSampler">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//MeshCoordinatesShapesSampler">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//MeshCoordinatesShapesSampler">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       <eTypeArguments eClassifier="#//CartesianPolygon"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianCoordinatesMeshPolygonSampler">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//MeshPolygonShapesSampler">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//MeshPolygonShapesSampler">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       <eTypeArguments eClassifier="#//CartesianPolygon"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianTriangularMeshSampler">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//MeshCoordinatesShapesSampler">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//MeshCoordinatesShapesSampler">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       <eTypeArguments eClassifier="#//CartesianTriangle"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianTriangularMeshPolygonSampler">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//MeshPolygonShapesSampler">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//MeshPolygonShapesSampler">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       <eTypeArguments eClassifier="#//CartesianTriangle"/>
     </eGenericSuperTypes>
@@ -221,11 +221,11 @@
       </eParameters>
     </eOperations>
     <eOperations name="applyTransform">
-      <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
         <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       </eGenericType>
       <eParameters name="points">
-        <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+        <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
           <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
         </eGenericType>
       </eParameters>
@@ -324,7 +324,7 @@
       <eParameters name="point" eType="#//CartesianPositionCoordinates"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="points">
-      <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
         <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       </eGenericType>
     </eStructuralFeatures>
@@ -353,7 +353,7 @@
     </eOperations>
     <eOperations name="extrude" eType="#//CartesianTriangularMesh">
       <eParameters name="profilePoints">
-        <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+        <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
           <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
         </eGenericType>
       </eParameters>
@@ -374,13 +374,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NormalPointCloud">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="points">
-      <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
         <eTypeArguments eClassifier="#//Point3d"/>
       </eGenericType>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="normals">
-      <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
-        <eTypeArguments eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"/>
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
+        <eTypeArguments eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
@@ -409,7 +409,7 @@
       <eParameters name="n" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="points" defaultValueLiteral="">
-      <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
         <eTypeArguments eClassifier="#//Point3d"/>
       </eGenericType>
     </eStructuralFeatures>
@@ -445,31 +445,31 @@
   <eClassifiers xsi:type="ecore:EClass" name="PointNormalLocator">
     <eOperations name="findClosestPoint" eType="#//GVector">
       <eParameters name="point" eType="#//Point3d"/>
-      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"/>
+      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
     </eOperations>
     <eOperations name="findPointsWithinRadius" upperBound="-1" eType="#//GVector">
       <eParameters name="radius" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
       <eParameters name="point" eType="#//Point3d"/>
-      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"/>
+      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
     </eOperations>
     <eOperations name="findClosestNPoints" upperBound="-1" eType="#//GVector">
       <eParameters name="n" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
       <eParameters name="point" eType="#//Point3d"/>
-      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"/>
+      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
     </eOperations>
     <eOperations name="findClosestPointId" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt">
       <eParameters name="point" eType="#//Point3d"/>
-      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"/>
+      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
     </eOperations>
     <eOperations name="findPointIdsWithinRadius" eType="#//IntArray">
       <eParameters name="radius" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
       <eParameters name="point" eType="#//Point3d"/>
-      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"/>
+      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
     </eOperations>
     <eOperations name="findClosestNPointIds" eType="#//IntArray">
       <eParameters name="n" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
       <eParameters name="point" eType="#//Point3d"/>
-      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"/>
+      <eParameters name="normal" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataSet" eType="#//NormalPointCloud"/>
   </eClassifiers>
@@ -633,14 +633,14 @@
     </eOperations>
     <eOperations name="addPositionMarkers" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
       <eParameters name="marker" lowerBound="1">
-        <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+        <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
           <eTypeArguments eClassifier="#//PositionMarker"/>
         </eGenericType>
       </eParameters>
     </eOperations>
     <eOperations name="removePositionMarkers">
       <eParameters name="markers" lowerBound="1">
-        <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+        <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
           <eTypeArguments eClassifier="#//PositionMarker"/>
         </eGenericType>
       </eParameters>
@@ -671,10 +671,10 @@
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="corner1" eType="#//CartesianPositionCoordinates"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="corner2" eType="#//CartesianPositionCoordinates"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//CoordinatesSamplingShape">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//CoordinatesSamplingShape">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
     </eGenericSuperTypes>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//PolygonSamplingShape">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//PolygonSamplingShape">
       <eTypeArguments eClassifier="#//CartesianPositionCoordinates"/>
       <eTypeArguments eTypeParameter="#//CubeSamplingShape/PolygonType"/>
     </eGenericSuperTypes>

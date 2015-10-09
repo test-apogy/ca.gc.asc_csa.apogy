@@ -8,10 +8,11 @@ package ca.gc.space.mrt.geometry.data3d.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import ca.gc.space.mrt.geometry.data.provider.PolygonItemProvider;
+import org.eclipse.symphony.common.geometry.data.provider.PolygonItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.geometry.data3d.SphericalPolygon} object.

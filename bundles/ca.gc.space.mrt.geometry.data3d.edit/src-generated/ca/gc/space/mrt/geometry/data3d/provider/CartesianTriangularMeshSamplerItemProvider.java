@@ -8,11 +8,13 @@ package ca.gc.space.mrt.geometry.data3d.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import ca.gc.space.mrt.geometry.data.provider.MeshCoordinatesShapesSamplerItemProvider;
+import org.eclipse.symphony.common.geometry.data.provider.MeshCoordinatesShapesSamplerItemProvider;
+
 import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMeshSampler;
 
 /**

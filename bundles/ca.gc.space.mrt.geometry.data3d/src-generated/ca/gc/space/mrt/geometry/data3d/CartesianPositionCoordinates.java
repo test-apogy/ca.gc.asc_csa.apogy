@@ -3,9 +3,9 @@
  */
 package ca.gc.space.mrt.geometry.data3d;
 
-import ca.gc.space.mrt.geometry.data.Coordinates;
-
 import javax.vecmath.Point3d;
+
+import org.eclipse.symphony.common.geometry.data.Coordinates;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="data25d" nsURI="http:///ca/gc/space/mrt/geometry/data25d/model/data25d.ecore"
     nsPrefix="ca.gc.space.mrt.geometry">
-  <eClassifiers xsi:type="ecore:EClass" name="Coordinates25D" eSuperTypes="platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Coordinates">
+  <eClassifiers xsi:type="ecore:EClass" name="Coordinates25D" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Coordinates">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Represent &quot;2.5 D&quot; geometry where u and v are the independant variables and w the dependant variable."/>
     </eAnnotations>
@@ -17,17 +17,17 @@
         <details key="documentation" value="When this parameter is set to true, this parameter ensures that all points added are unique.  The drawback is that performance is significantely decreased.  This feature can be bypassed by setting this attribute to false.  Default is true."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//CoordinatesSet">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//CoordinatesSet">
       <eTypeArguments eClassifier="#//Coordinates25D"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Polygon25D">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Polygon">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Polygon">
       <eTypeArguments eClassifier="#//Coordinates25D"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mesh25D">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Mesh">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Mesh">
       <eTypeArguments eClassifier="#//Coordinates25D"/>
       <eTypeArguments eClassifier="#//Polygon25D"/>
     </eGenericSuperTypes>

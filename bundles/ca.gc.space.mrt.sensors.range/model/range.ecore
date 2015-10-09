@@ -51,7 +51,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Method that returns the list of Ray Data that will be used to specify the position and direction of the simulated laser rays. This method is abstract and must be overloaded."/>
       </eAnnotations>
-      <eGenericType eClassifier="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//List">
+      <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
         <eTypeArguments eClassifier="#//RayData"/>
       </eGenericType>
     </eOperations>
@@ -133,7 +133,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RayData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="origin" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//Point3d"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//Vector3d"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RasterScanRangeSensor">
     <eOperations name="getScanSettings" eType="#//RasterScanSettings"/>

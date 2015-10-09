@@ -3,7 +3,7 @@
  */
 package ca.gc.space.mrt.geometry.data25d;
 
-import ca.gc.space.mrt.geometry.data.Polygon;
+import org.eclipse.symphony.common.geometry.data.Polygon;
 
 /**
  * <!-- begin-user-doc -->

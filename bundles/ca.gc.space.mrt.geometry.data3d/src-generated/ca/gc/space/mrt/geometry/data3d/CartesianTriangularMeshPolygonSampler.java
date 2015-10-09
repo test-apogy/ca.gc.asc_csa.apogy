@@ -3,7 +3,7 @@
  */
 package ca.gc.space.mrt.geometry.data3d;
 
-import ca.gc.space.mrt.geometry.data.MeshPolygonShapesSampler;
+import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler;
 
 /**
  * <!-- begin-user-doc -->

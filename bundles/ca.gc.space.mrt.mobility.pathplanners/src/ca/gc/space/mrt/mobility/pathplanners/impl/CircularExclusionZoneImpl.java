@@ -15,11 +15,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+import org.eclipse.symphony.common.geometry.data.SamplingShape;
 
-import ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape;
-import ca.gc.space.mrt.geometry.data.DataPackage;
-import ca.gc.space.mrt.geometry.data.PolygonSamplingShape;
-import ca.gc.space.mrt.geometry.data.SamplingShape;
 import ca.gc.space.mrt.geometry.data3d.CartesianPlane;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;

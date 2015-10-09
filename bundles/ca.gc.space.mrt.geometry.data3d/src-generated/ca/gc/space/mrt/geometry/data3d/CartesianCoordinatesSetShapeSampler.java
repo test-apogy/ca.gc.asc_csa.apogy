@@ -3,7 +3,7 @@
  */
 package ca.gc.space.mrt.geometry.data3d;
 
-import ca.gc.space.mrt.geometry.data.CoordinatesSetShapesSampler;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
 
 /**
  * <!-- begin-user-doc -->

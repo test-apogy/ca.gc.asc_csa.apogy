@@ -4,9 +4,6 @@
 package ca.gc.space.mrt.geometry.data3d.impl;
 
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-
-import ca.gc.space.mrt.geometry.data.DataPackage;
-
 import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesMesh;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesMeshPolygonSampler;
@@ -64,7 +61,6 @@ import ca.gc.space.mrt.geometry.data3d.VoxelBased3DPointCloudResampler;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -78,9 +74,7 @@ import javax.vecmath.Vector2d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.core.runtime.IProgressMonitor;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -91,8 +85,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
 
 /**
  * <!-- begin-user-doc -->

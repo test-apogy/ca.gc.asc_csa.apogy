@@ -5,11 +5,9 @@ package ca.gc.space.mrt.geometry.data3d.provider;
 
 import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
 
-import ca.gc.space.mrt.geometry.data.provider.DataEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 
 /**
  * This is the central singleton for the Data3d edit plugin.

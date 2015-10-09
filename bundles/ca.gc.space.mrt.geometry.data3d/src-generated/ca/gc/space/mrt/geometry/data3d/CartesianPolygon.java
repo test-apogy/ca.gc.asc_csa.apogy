@@ -3,9 +3,9 @@
  */
 package ca.gc.space.mrt.geometry.data3d;
 
-import ca.gc.space.mrt.geometry.data.Polygon;
-
 import javax.vecmath.Vector3d;
+
+import org.eclipse.symphony.common.geometry.data.Polygon;
 
 /**
  * <!-- begin-user-doc -->

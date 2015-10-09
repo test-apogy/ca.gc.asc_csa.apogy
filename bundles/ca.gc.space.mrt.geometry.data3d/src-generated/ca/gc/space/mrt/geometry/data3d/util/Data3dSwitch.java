@@ -5,24 +5,21 @@ package ca.gc.space.mrt.geometry.data3d.util;
 
 import ca.gc.space.mrt.common.processors.Monitorable;
 import ca.gc.space.mrt.common.processors.Processor;
-
-import ca.gc.space.mrt.geometry.data.Coordinates;
-import ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape;
-import ca.gc.space.mrt.geometry.data.CoordinatesSet;
-import ca.gc.space.mrt.geometry.data.CoordinatesSetShapesSampler;
-import ca.gc.space.mrt.geometry.data.Mesh;
-import ca.gc.space.mrt.geometry.data.MeshCoordinatesShapesSampler;
-import ca.gc.space.mrt.geometry.data.MeshPolygonShapesSampler;
-import ca.gc.space.mrt.geometry.data.Polygon;
-import ca.gc.space.mrt.geometry.data.PolygonSamplingShape;
-import ca.gc.space.mrt.geometry.data.SamplingShape;
-
 import ca.gc.space.mrt.geometry.data3d.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.geometry.data.Coordinates;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
+import org.eclipse.symphony.common.geometry.data.Mesh;
+import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler;
+import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler;
+import org.eclipse.symphony.common.geometry.data.Polygon;
+import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+import org.eclipse.symphony.common.geometry.data.SamplingShape;
 
 /**
  * <!-- begin-user-doc -->

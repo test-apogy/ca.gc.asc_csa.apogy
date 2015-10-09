@@ -158,10 +158,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="transform" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix4x4"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rectangularFrustrumFieldOfView"
         eType="#//RectangularFrustrumFieldOfView"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//CoordinatesSamplingShape">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//CoordinatesSamplingShape">
       <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
     </eGenericSuperTypes>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data/model/geometrydata.ecore#//PolygonSamplingShape">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//PolygonSamplingShape">
       <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
       <eTypeArguments eTypeParameter="#//RectangularFrustrumFieldOfViewSamplingShape/PolygonType"/>
     </eGenericSuperTypes>

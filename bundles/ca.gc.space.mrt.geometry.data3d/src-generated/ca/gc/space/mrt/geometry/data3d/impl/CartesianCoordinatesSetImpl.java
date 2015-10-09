@@ -18,9 +18,9 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl;
 
-import ca.gc.space.mrt.geometry.data.DataPackage;
-import ca.gc.space.mrt.geometry.data.impl.CoordinatesSetImpl;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSetExtent;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;

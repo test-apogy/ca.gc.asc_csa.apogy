@@ -9,14 +9,14 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.geometry.data.Coordinates;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
+import org.eclipse.symphony.common.geometry.data.Polygon;
+import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+import org.eclipse.symphony.common.geometry.data.SamplingShape;
 
 import ca.gc.space.mrt.common.processors.Monitorable;
 import ca.gc.space.mrt.common.processors.Processor;
-import ca.gc.space.mrt.geometry.data.Coordinates;
-import ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape;
-import ca.gc.space.mrt.geometry.data.Polygon;
-import ca.gc.space.mrt.geometry.data.PolygonSamplingShape;
-import ca.gc.space.mrt.geometry.data.SamplingShape;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.mobility.pathplanners.CircularExclusionZone;
 import ca.gc.space.mrt.mobility.pathplanners.ExclusionZone;
@@ -267,13 +267,13 @@ public class PathplannersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.SamplingShape <em>Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.SamplingShape
+	 * @see org.eclipse.symphony.common.geometry.data.SamplingShape
 	 * @generated
 	 */
 	public Adapter createSamplingShapeAdapter() {
@@ -281,13 +281,13 @@ public class PathplannersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape <em>Coordinates Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.CoordinatesSamplingShape
+	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape
 	 * @generated
 	 */
 	public Adapter createCoordinatesSamplingShapeAdapter() {
@@ -295,13 +295,13 @@ public class PathplannersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.PolygonSamplingShape <em>Polygon Sampling Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.PolygonSamplingShape
+	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingShape
 	 * @generated
 	 */
 	public Adapter createPolygonSamplingShapeAdapter() {

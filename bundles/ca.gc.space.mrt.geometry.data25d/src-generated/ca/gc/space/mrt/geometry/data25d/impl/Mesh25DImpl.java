@@ -8,7 +8,8 @@ package ca.gc.space.mrt.geometry.data25d.impl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import ca.gc.space.mrt.geometry.data.impl.MeshImpl;
+import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
+
 import ca.gc.space.mrt.geometry.data25d.Coordinates25D;
 import ca.gc.space.mrt.geometry.data25d.Data25dPackage;
 import ca.gc.space.mrt.geometry.data25d.Mesh25D;

@@ -9,11 +9,11 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.geometry.data.Coordinates;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
 
 import ca.gc.space.mrt.common.processors.Monitorable;
 import ca.gc.space.mrt.common.processors.Processor;
-import ca.gc.space.mrt.geometry.data.Coordinates;
-import ca.gc.space.mrt.geometry.data.CoordinatesSet;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.paths.CatmullRomWayPointPathInterpolator;
@@ -359,13 +359,13 @@ public class PathsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.CoordinatesSet
+	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetAdapter() {
@@ -415,13 +415,13 @@ public class PathsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.Coordinates <em>Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Coordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.Coordinates
+	 * @see org.eclipse.symphony.common.geometry.data.Coordinates
 	 * @generated
 	 */
 	public Adapter createCoordinatesAdapter()

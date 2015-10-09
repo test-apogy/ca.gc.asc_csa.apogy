@@ -6,10 +6,10 @@
 	      modelName="Data",
 	      operationReflection="true",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.data/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.geometry.data.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data.edit/src-generated")
 
-package ca.gc.space.mrt.geometry.data
+package org.eclipse.symphony.common.geometry.data
 
 import ca.gc.space.mrt.common.processors.Processor
 

@@ -195,7 +195,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- begin-model-doc -->
 	 * Method that returns the list of Ray Data that will be used to specify the position and direction of the simulated laser rays. This method is abstract and must be overloaded.
 	 * <!-- end-model-doc -->
-	 * @model kind="operation" dataType="ca.gc.space.mrt.geometry.data.List<ca.gc.space.mrt.sensors.range.RayData>" many="false"
+	 * @model kind="operation" dataType="org.eclipse.symphony.common.geometry.data.List<ca.gc.space.mrt.sensors.range.RayData>" many="false"
 	 * @generated
 	 */
 	List<RayData> getSimulatedRays();

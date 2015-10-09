@@ -5,20 +5,16 @@ package ca.gc.space.mrt.geometry.data25d.util;
 
 import ca.gc.space.mrt.common.processors.Monitorable;
 import ca.gc.space.mrt.common.processors.Processor;
-
-import ca.gc.space.mrt.geometry.data.Coordinates;
-import ca.gc.space.mrt.geometry.data.CoordinatesSet;
-import ca.gc.space.mrt.geometry.data.Mesh;
-import ca.gc.space.mrt.geometry.data.Polygon;
-
 import ca.gc.space.mrt.geometry.data25d.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.geometry.data.Coordinates;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
+import org.eclipse.symphony.common.geometry.data.Mesh;
+import org.eclipse.symphony.common.geometry.data.Polygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -283,13 +279,13 @@ public class Data25dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.Coordinates <em>Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Coordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.Coordinates
+	 * @see org.eclipse.symphony.common.geometry.data.Coordinates
 	 * @generated
 	 */
 	public Adapter createCoordinatesAdapter() {
@@ -297,13 +293,13 @@ public class Data25dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet <em>Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.CoordinatesSet
+	 * @see org.eclipse.symphony.common.geometry.data.CoordinatesSet
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetAdapter() {
@@ -311,13 +307,13 @@ public class Data25dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.Polygon <em>Polygon</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Polygon <em>Polygon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.Polygon
+	 * @see org.eclipse.symphony.common.geometry.data.Polygon
 	 * @generated
 	 */
 	public Adapter createPolygonAdapter() {
@@ -325,13 +321,13 @@ public class Data25dAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data.Mesh <em>Mesh</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data.Mesh <em>Mesh</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data.Mesh
+	 * @see org.eclipse.symphony.common.geometry.data.Mesh
 	 * @generated
 	 */
 	public Adapter createMeshAdapter() {

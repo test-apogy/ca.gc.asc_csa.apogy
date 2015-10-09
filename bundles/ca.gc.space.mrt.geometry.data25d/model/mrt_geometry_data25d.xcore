@@ -13,10 +13,10 @@ package ca.gc.space.mrt.geometry.data25d
 
 import ca.gc.space.mrt.common.processors.Processor
 
-import ca.gc.space.mrt.geometry.data.Coordinates
-import ca.gc.space.mrt.geometry.data.CoordinatesSet
-import ca.gc.space.mrt.geometry.data.Polygon
-import ca.gc.space.mrt.geometry.data.Mesh
+import org.eclipse.symphony.common.geometry.data.Coordinates
+import org.eclipse.symphony.common.geometry.data.CoordinatesSet
+import org.eclipse.symphony.common.geometry.data.Polygon
+import org.eclipse.symphony.common.geometry.data.Mesh
 
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet

@@ -8,7 +8,8 @@ package ca.gc.space.mrt.geometry.data25d.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.space.mrt.geometry.data.impl.CoordinatesImpl;
+import org.eclipse.symphony.common.geometry.data.impl.CoordinatesImpl;
+
 import ca.gc.space.mrt.geometry.data25d.Coordinates25D;
 import ca.gc.space.mrt.geometry.data25d.Data25dPackage;
 

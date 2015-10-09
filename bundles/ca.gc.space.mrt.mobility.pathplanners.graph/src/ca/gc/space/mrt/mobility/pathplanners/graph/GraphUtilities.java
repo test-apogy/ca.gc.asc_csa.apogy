@@ -8,12 +8,12 @@ import javax.vecmath.Vector2d;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.jgrapht.EdgeFactory;
 import org.jgrapht.Graph;
 import org.jgrapht.alg.DijkstraShortestPath;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
-import ca.gc.space.mrt.geometry.data.Mesh;
 import ca.gc.space.mrt.geometry.data3d.CartesianPlane;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;

@@ -3,7 +3,7 @@
  */
 package ca.gc.space.mrt.geometry.data3d;
 
-import ca.gc.space.mrt.geometry.data.Coordinates;
+import org.eclipse.symphony.common.geometry.data.Coordinates;
 
 /**
  * <!-- begin-user-doc -->

@@ -5,13 +5,12 @@ package ca.gc.space.mrt.geometry.data25d;
 
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
 
-import ca.gc.space.mrt.geometry.data.DataPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
 
 /**
  * <!-- begin-user-doc -->

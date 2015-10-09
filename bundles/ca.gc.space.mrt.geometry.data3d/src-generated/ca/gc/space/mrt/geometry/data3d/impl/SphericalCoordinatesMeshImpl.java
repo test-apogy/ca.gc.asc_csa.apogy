@@ -8,8 +8,8 @@ package ca.gc.space.mrt.geometry.data3d.impl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
 
-import ca.gc.space.mrt.geometry.data.impl.MeshImpl;
 import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.geometry.data3d.SphericalCoordinatesMesh;
 import ca.gc.space.mrt.geometry.data3d.SphericalCoordinates;

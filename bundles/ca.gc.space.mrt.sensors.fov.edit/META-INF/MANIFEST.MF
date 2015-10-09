@@ -22,6 +22,6 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.geometry.data3d.edit,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
- ca.gc.space.mrt.geometry.data;visibility:=reexport,
- ca.gc.space.mrt.geometry.data.edit;visibility:=reexport
+ org.eclipse.symphony.common.geometry.data;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

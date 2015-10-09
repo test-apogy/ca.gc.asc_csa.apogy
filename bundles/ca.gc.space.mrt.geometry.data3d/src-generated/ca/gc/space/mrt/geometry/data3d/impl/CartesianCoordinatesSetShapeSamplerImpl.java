@@ -6,9 +6,9 @@
 package ca.gc.space.mrt.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
+import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetShapesSamplerImpl;
 
-import ca.gc.space.mrt.geometry.data.CoordinatesSet;
-import ca.gc.space.mrt.geometry.data.impl.CoordinatesSetShapesSamplerImpl;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSetShapeSampler;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.Data3dFacade;

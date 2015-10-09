@@ -10,8 +10,8 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
 
-import ca.gc.space.mrt.geometry.data.impl.MeshImpl;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSetExtent;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;

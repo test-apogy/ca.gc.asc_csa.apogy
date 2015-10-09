@@ -4,14 +4,16 @@
 package ca.gc.space.mrt.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.space.mrt.geometry.data.DataPackage;
-import ca.gc.space.mrt.geometry.data.PolygonSamplingShape;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.geometry.data3d.CubeSamplingShape;

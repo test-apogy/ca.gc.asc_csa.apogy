@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
 
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-import ca.gc.space.mrt.geometry.data.DataPackage;
 import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.mobility.pathplanners.CircularExclusionZone;

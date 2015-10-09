@@ -6,8 +6,8 @@
 package ca.gc.space.mrt.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl;
 
-import ca.gc.space.mrt.geometry.data.impl.MeshCoordinatesShapesSamplerImpl;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesMeshSampler;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
@@ -54,7 +54,7 @@ public class CartesianCoordinatesMeshSamplerImpl extends MeshCoordinatesShapesSa
 	}
 
 	@Override
-	protected ca.gc.space.mrt.geometry.data.Mesh<CartesianPositionCoordinates, CartesianPolygon> createMesh()
+	protected org.eclipse.symphony.common.geometry.data.Mesh<CartesianPositionCoordinates, CartesianPolygon> createMesh()
 	{
 		return Data3dFactory.eINSTANCE.createCartesianCoordinatesMesh();
 	}

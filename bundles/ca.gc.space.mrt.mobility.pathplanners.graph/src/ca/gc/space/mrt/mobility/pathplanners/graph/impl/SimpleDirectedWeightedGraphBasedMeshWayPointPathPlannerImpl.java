@@ -24,11 +24,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
 import ca.gc.space.mrt.common.processors.VerboseProvider;
-import ca.gc.space.mrt.geometry.data.Mesh;
 import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 import ca.gc.space.mrt.geometry.data3d.CartesianPlane;
 import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;

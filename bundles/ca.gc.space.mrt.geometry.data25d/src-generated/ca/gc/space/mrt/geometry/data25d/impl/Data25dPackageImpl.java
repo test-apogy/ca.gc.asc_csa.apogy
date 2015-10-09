@@ -14,8 +14,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.geometry.data.DataPackage;
+
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-import ca.gc.space.mrt.geometry.data.DataPackage;
 import ca.gc.space.mrt.geometry.data25d.Coordinates25D;
 import ca.gc.space.mrt.geometry.data25d.CoordinatesSet25D;
 import ca.gc.space.mrt.geometry.data25d.CoordinatesSet25DFilter;
@@ -28,6 +29,7 @@ import ca.gc.space.mrt.geometry.data25d.Polygon25D;
 import ca.gc.space.mrt.geometry.data25d.VolumetricCoordinatesSet25D;
 import ca.gc.space.mrt.geometry.data25d.VolumetricMesh25D;
 import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
+
 import java.io.IOException;
 
 /**
