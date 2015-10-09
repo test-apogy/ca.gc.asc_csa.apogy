@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.geometry.data25d.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.geometry.data25d.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.mrt.geometry.data25d.provider.Data25dEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.common.geometry.data25d.provider.Data25dEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.geometry.data25d.provider
+Export-Package: org.eclipse.symphony.common.geometry.data25d.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.space.mrt.geometry.data25d;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data25d;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
  ca.gc.space.mrt.geometry.data3d.edit;visibility:=reexport,

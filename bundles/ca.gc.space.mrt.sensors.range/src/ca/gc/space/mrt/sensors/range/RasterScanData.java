@@ -6,8 +6,9 @@
  */
 package ca.gc.space.mrt.sensors.range;
 
+import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
+
 import ca.gc.space.mrt.common.TimeTaggedElement;
-import ca.gc.space.mrt.geometry.data25d.VolumetricCoordinatesSet25D;
 import ca.gc.space.topology.AggregateGroupNode;
 
 /**

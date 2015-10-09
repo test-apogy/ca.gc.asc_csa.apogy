@@ -37,7 +37,7 @@
     <eGenericSuperTypes eClassifier="#//RangeSensor"/>
     <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eTypeParameter="#//RangeScanner/InputType"/>
-      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"/>
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RangeScannerSimulator" abstract="true">
@@ -86,7 +86,7 @@
         </eAnnotations>
       </eParameters>
     </eOperations>
-    <eOperations name="createCoordinates25D" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data25d/model/data25d.ecore#//Coordinates25D">
+    <eOperations name="createCoordinates25D" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data25d/model/data25d.ecore#//Coordinates25D">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Method that construct the Coordinates25D from ray data and range. This Coordinates25D is then added to the simulated point cloud. This method is abstract and should be overloaded."/>
       </eAnnotations>
@@ -142,7 +142,7 @@
     </eGenericSuperTypes>
     <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//RasterScanSettings"/>
-      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"/>
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleRasterScanRangeScanner" eSuperTypes="#//RasterScanRangeSensor"/>
@@ -187,7 +187,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="RasterScanData" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//AggregateGroupNode platform:/plugin/ca.gc.space.mrt.common/model/mrt_common.ecore#//TimeTaggedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rasterScanSettings" eType="#//RasterScanSettings"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="scanData" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scanData" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="List" instanceClassName="java.util.List">

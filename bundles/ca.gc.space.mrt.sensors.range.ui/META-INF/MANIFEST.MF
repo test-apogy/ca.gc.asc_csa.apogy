@@ -19,7 +19,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.topology.core;visibility:=reexport,
  ca.gc.space.topology.ui;visibility:=reexport,
  ca.gc.space.mrt.sensors.fov.ui;visibility:=reexport,
- ca.gc.space.mrt.geometry.data25d.ui;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data25d.ui;visibility:=reexport,
  ca.gc.space.mrt.sensors.range;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.3",
  org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.0"

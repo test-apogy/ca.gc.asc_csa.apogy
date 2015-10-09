@@ -1,8 +1,9 @@
 package ca.gc.space.mrt.geometry.data25d.ui.adapters;
 
-import ca.gc.space.mrt.geometry.data25d.VolumetricCoordinatesSet25D;
-import ca.gc.space.mrt.geometry.data25d.ui.Data25DUIFactory;
-import ca.gc.space.mrt.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
+import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIFactory;
+import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
+
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.ui.NodePresentation;

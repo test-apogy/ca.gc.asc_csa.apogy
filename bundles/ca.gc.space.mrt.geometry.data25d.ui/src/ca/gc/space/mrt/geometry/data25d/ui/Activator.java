@@ -6,7 +6,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String ID = "ca.gc.space.mrt.geometry.data25d.ui";
+	public static final String ID = "org.eclipse.symphony.common.geometry.data25d.ui";
 	
 	// The shared instance
 	private static Activator plugin;
