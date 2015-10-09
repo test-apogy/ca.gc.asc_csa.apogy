@@ -7,7 +7,7 @@
          point="org.eclipse.core.runtime.applications">
       <application>
          <run
-               class="ca.gc.space.mrt.sensors.gps.ui.Application">
+               class="org.eclipse.symphony.addons.sensors.gps.ui.Application">
          </run>
       </application>
    </extension>
@@ -15,21 +15,21 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             name="RCP Perspective"
-            class="ca.gc.space.mrt.sensors.gps.ui.Perspective"
-            id="ca.gc.space.mrt.sensors.gps.ui.perspective">
+            class="org.eclipse.symphony.addons.sensors.gps.ui.Perspective"
+            id="org.eclipse.symphony.addons.sensors.gps.ui.perspective">
       </perspective>
    </extension>
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="ca.gc.space.mrt.sensors.gps.ui.gpsCategory"
-            class="ca.gc.space.mrt.sensors.gps.ui.views.GPSView"
-            id="ca.gc.space.mrt.sensors.gps.ui.views.GPSView"
+            category="org.eclipse.symphony.addons.sensors.gps.ui.gpsCategory"
+            class="org.eclipse.symphony.addons.sensors.gps.ui.views.GPSView"
+            id="org.eclipse.symphony.addons.sensors.gps.ui.views.GPSView"
             name="GPS View"
             restorable="true">
       </view>
       <category
-            id="ca.gc.space.mrt.sensors.gps.ui.gpsCategory"
+            id="org.eclipse.symphony.addons.sensors.gps.ui.gpsCategory"
             name="GPS">
       </category>
    </extension>
@@ -37,7 +37,7 @@
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            application="ca.gc.space.mrt.sensors.gps.ui.application"
+            application="org.eclipse.symphony.addons.sensors.gps.ui.application"
             name="GPS">
          <property
                name="appName"

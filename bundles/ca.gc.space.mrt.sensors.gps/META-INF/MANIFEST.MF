@@ -6,9 +6,9 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.sensors.gps,
- ca.gc.space.mrt.sensors.gps.impl,
- ca.gc.space.mrt.sensors.gps.util
+Export-Package: org.eclipse.symphony.addons.sensors.gps,
+ org.eclipse.symphony.addons.sensors.gps.impl,
+ org.eclipse.symphony.addons.sensors.gps.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
@@ -24,5 +24,5 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.eclipse.emf,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.space.mrt.sensors.gps.Activator
+Bundle-Activator: org.eclipse.symphony.addons.sensors.gps.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

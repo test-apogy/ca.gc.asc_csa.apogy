@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http:///ca/gc/space/mrt/sensors/gps.ecore"
-            class="ca.gc.space.mrt.sensors.gps.GpsPackage"
+            class="org.eclipse.symphony.addons.sensors.gps.GpsPackage"
             genModel="model/GPS.genmodel"/>
    </extension>
 
