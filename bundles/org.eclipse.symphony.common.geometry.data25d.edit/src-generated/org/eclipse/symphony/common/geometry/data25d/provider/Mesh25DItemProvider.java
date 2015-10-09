@@ -16,8 +16,7 @@ import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data.provider.MeshItemProvider;
 import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
 import org.eclipse.symphony.common.geometry.data25d.Mesh25D;
-
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Mesh25D} object.

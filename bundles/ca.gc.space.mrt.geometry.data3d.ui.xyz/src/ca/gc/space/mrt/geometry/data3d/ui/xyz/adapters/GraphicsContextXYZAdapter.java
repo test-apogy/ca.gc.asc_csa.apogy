@@ -5,9 +5,9 @@ import java.io.IOException;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
+import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
-import ca.gc.space.mrt.geometry.data3d.Data3DIO;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.TopologyFacade;

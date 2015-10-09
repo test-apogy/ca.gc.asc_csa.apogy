@@ -11,8 +11,8 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 
-import ca.gc.space.mrt.geometry.data3d.PositionMarker;
 import ca.gc.space.mrt.sensors.gps.GpsPackage;
 import ca.gc.space.mrt.sensors.gps.MarkedGPS;
 

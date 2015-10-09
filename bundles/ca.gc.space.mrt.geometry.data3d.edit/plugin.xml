@@ -11,7 +11,7 @@
       <!-- @generated data3d -->
       <factory
             uri="http:///ca/gc/space/mrt/geometry/data3d.ecore"
-            class="ca.gc.space.mrt.geometry.data3d.provider.Data3dItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.geometry.data3d.provider.Data3dItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,7 +24,7 @@
       <!-- @generated mrt_geometry_data3d -->
       <extender
             uri="org.eclipse.symphony.common.geometry.data"
-            class="ca.gc.space.mrt.geometry.data3d.provider.Data3dItemProviderAdapterFactory$DataChildCreationExtender"/>
+            class="org.eclipse.symphony.common.geometry.data3d.provider.Data3dItemProviderAdapterFactory$DataChildCreationExtender"/>
    </extension>
 
 </plugin>

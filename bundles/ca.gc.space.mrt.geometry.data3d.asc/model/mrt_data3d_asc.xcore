@@ -1,12 +1,12 @@
 @GenModel(prefix="Data3DASC", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="Data3DASC", complianceLevel="6.0", suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.data3d.asc/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.geometry.data3d.asc.edit/src-generated")
-@GenModel(testsDirectory="/ca.gc.space.mrt.geometry.data3d.asc.tests/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d.asc/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated")
+@GenModel(testsDirectory="/org.eclipse.symphony.common.geometry.data3d.asc.tests/src-generated")
 
-package ca.gc.space.mrt.geometry.data3d.asc
+package org.eclipse.symphony.common.geometry.data3d.asc
 
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh
-import ca.gc.space.mrt.geometry.data3d.DigitalElevationMap
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
+import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap
 
 type Exception wraps java.lang.Exception
 

@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.mobility.pathplanners.graph.DisplacementCostFunction;
 import ca.gc.space.mrt.mobility.pathplanners.graph.MobilityEdge;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphFactory;

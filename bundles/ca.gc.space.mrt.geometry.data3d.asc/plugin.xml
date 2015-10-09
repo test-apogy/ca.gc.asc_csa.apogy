@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated mrt_data3d_asc -->
       <package
-            uri="ca.gc.space.mrt.geometry.data3d.asc"
-            class="ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage"
+            uri="org.eclipse.symphony.common.geometry.data3d.asc"
+            class="org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage"
             genModel="model/mrt_data3d_asc.xcore"/>
    </extension>
 

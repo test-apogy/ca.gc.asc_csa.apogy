@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_data3d_asc -->
       <factory
-            uri="ca.gc.space.mrt.geometry.data3d.asc"
-            class="ca.gc.space.mrt.geometry.data3d.asc.provider.Data3DASCItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.geometry.data3d.asc"
+            class="org.eclipse.symphony.common.geometry.data3d.asc.provider.Data3DASCItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

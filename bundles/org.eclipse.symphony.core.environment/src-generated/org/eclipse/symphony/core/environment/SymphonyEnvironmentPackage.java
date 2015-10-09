@@ -8284,11 +8284,11 @@ public interface SymphonyEnvironmentPackage extends EPackage
 	EOperation getEnvironmentFacade__GetVisibleImageMapLayerPresentation__List();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularVolumeRegion(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh) <em>Get Rectangular Volume Region</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Get Rectangular Volume Region</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Volume Region</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularVolumeRegion(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh)
+	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
 	EOperation getEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh();

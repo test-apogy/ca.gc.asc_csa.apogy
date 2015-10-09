@@ -3,7 +3,6 @@
  */
 package org.eclipse.symphony.addons.vehicle.impl;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.topology.Node;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * <!-- begin-user-doc -->

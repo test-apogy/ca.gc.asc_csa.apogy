@@ -41,7 +41,7 @@ public interface RayData extends EObject {
 	 * @return the value of the '<em>Origin</em>' attribute.
 	 * @see #setOrigin(Point3d)
 	 * @see ca.gc.space.mrt.sensors.range.RangePackage#getRayData_Origin()
-	 * @model dataType="ca.gc.space.mrt.geometry.data3d.Point3d"
+	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.Point3d"
 	 * @generated
 	 */
 	Point3d getOrigin();

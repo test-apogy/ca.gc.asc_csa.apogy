@@ -21,7 +21,7 @@ import ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage
  * @generated
  */
 public class Data3DASCSwitch<T> extends Switch<T> {

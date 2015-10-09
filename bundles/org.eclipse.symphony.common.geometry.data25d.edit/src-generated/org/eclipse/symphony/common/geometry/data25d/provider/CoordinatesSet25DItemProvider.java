@@ -20,8 +20,7 @@ import org.eclipse.symphony.common.geometry.data.provider.CoordinatesSetItemProv
 import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D;
 import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
 import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
-
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D} object.

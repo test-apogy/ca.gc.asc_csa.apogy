@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.PositionSensor;
 import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;

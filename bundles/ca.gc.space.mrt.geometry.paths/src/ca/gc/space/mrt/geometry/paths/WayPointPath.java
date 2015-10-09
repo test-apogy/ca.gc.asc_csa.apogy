@@ -5,8 +5,8 @@
  */
 package ca.gc.space.mrt.geometry.paths;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * <!-- begin-user-doc -->

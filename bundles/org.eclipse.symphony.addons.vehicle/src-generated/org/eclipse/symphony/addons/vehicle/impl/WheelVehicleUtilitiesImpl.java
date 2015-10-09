@@ -24,11 +24,11 @@ import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.TerrainProfile;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 
 import Jama.Matrix;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangle;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * <!-- begin-user-doc -->

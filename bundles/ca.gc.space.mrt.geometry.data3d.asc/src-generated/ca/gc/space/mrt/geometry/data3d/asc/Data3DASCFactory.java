@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage
  * @generated
  */
 public interface Data3DASCFactory extends EFactory {

@@ -5,6 +5,8 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.PoseProvider;
@@ -27,8 +29,6 @@ import org.eclipse.symphony.core.invocator.delegates.DefaultInvocatorDelegate;
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsFacade;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
-import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.Node;

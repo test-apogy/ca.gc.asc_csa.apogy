@@ -17,7 +17,7 @@ import ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage
  * @generated
  */
 public class Data3DASCAdapterFactory extends AdapterFactoryImpl {
@@ -101,13 +101,13 @@ public class Data3DASCAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO <em>ASC3DIO</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO <em>ASC3DIO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO
 	 * @generated
 	 */
 	public Adapter createASC3DIOAdapter() {
@@ -115,13 +115,13 @@ public class Data3DASCAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData <em>ASC Header Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData <em>ASC Header Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData
 	 * @generated
 	 */
 	public Adapter createASCHeaderDataAdapter() {
@@ -129,13 +129,13 @@ public class Data3DASCAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D <em>Coordinates2 D</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D <em>Coordinates2 D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D
 	 * @generated
 	 */
 	public Adapter createCoordinates2DAdapter() {

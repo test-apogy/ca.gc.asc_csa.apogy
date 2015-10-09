@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.SensorsFactory;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 import ca.gc.space.mrt.sensors.pose.PoseFactory;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;

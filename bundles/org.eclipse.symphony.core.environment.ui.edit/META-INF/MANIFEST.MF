@@ -36,9 +36,9 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.topology.bindings.edit;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  ca.gc.space.mrt.common.processors.edit;visibility:=reexport,
- ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  ca.gc.space.mrt.geometry.paths;visibility:=reexport,
  ca.gc.space.mrt.geometry.paths.edit;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore.ui,
- ca.gc.space.mrt.geometry.data3d.edit;visibility:=reexport
+ org.eclipse.symphony.common.geometry.data3d.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

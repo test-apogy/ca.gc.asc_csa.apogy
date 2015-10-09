@@ -8,8 +8,7 @@ package ca.gc.space.mrt.sensors.pose;
 import java.io.IOException;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.mrt.geometry.data3d.Pose;
+import org.eclipse.symphony.common.geometry.data3d.Pose;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,7 +63,7 @@ public interface PoseDataLogger extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="ca.gc.space.mrt.geometry.data3d.IOException"
+	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException"
 	 * @generated
 	 */
 	void logPose(Pose pose) throws IOException;

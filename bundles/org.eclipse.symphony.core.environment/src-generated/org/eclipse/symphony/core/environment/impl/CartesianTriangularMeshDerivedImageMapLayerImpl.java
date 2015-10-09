@@ -24,6 +24,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
@@ -42,11 +47,6 @@ import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangle;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
-import ca.gc.space.mrt.geometry.data3d.Geometry3dUtilities;
 import edu.wlu.cs.levy.CG.KDTree;
 import edu.wlu.cs.levy.CG.KeySizeException;
 

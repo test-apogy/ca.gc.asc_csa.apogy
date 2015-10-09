@@ -3,8 +3,9 @@
  */
 package ca.gc.space.mrt.mobility.controllers;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Pose;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Pose;
+
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform;
 

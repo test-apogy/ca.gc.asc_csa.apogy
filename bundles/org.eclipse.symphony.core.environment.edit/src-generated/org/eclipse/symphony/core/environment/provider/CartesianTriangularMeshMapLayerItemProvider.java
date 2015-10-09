@@ -12,11 +12,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer} object.

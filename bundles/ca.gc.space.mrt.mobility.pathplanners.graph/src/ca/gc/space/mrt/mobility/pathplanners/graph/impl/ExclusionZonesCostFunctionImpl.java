@@ -11,9 +11,9 @@ import java.util.Iterator;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.space.mrt.mobility.pathplanners.ExclusionZone;
 import ca.gc.space.mrt.mobility.pathplanners.graph.ExclusionZonesCostFunction;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage;

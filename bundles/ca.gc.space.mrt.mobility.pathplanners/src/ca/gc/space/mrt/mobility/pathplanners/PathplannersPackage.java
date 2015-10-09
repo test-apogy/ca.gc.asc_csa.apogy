@@ -521,11 +521,11 @@ public interface PathplannersPackage extends EPackage {
 	EReference getWayPointPathPlanner_CurrentPosition();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner#plan(ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates, ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates) <em>Plan</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner#plan(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Plan</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Plan</em>' operation.
-	 * @see ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner#plan(ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates, ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner#plan(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
 	EOperation getWayPointPathPlanner__Plan__CartesianPositionCoordinates_CartesianPositionCoordinates();
@@ -562,21 +562,21 @@ public interface PathplannersPackage extends EPackage {
 	EClass getExclusionZone();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.ExclusionZone#isInside(ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates) <em>Is Inside</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.ExclusionZone#isInside(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Is Inside</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Inside</em>' operation.
-	 * @see ca.gc.space.mrt.mobility.pathplanners.ExclusionZone#isInside(ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.space.mrt.mobility.pathplanners.ExclusionZone#isInside(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
 	EOperation getExclusionZone__IsInside__CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.ExclusionZone#intersects(ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates, ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates) <em>Intersects</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.ExclusionZone#intersects(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Intersects</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Intersects</em>' operation.
-	 * @see ca.gc.space.mrt.mobility.pathplanners.ExclusionZone#intersects(ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates, ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.space.mrt.mobility.pathplanners.ExclusionZone#intersects(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
 	EOperation getExclusionZone__Intersects__CartesianPositionCoordinates_CartesianPositionCoordinates();

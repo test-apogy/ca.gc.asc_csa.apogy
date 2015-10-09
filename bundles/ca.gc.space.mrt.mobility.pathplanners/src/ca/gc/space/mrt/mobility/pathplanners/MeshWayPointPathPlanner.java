@@ -6,9 +6,8 @@
 package ca.gc.space.mrt.mobility.pathplanners;
 
 import org.eclipse.symphony.common.geometry.data.Mesh;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * <!-- begin-user-doc -->

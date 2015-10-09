@@ -4,13 +4,12 @@
 package org.eclipse.symphony.examples.lidar.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.lidar.Activator;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
 import org.eclipse.symphony.examples.lidar.LidarStub;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
 
 /**
  * <!-- begin-user-doc -->

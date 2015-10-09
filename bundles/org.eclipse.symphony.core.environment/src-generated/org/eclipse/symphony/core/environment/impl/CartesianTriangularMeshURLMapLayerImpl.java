@@ -9,14 +9,13 @@ import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.URLMapLayer;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * <!-- begin-user-doc -->

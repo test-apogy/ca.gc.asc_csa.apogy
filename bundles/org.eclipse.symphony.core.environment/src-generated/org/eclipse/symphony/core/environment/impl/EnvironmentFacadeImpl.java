@@ -18,6 +18,8 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -64,8 +66,6 @@ import org.eclipse.symphony.core.environment.URLImageMapLayer;
 import org.eclipse.symphony.core.environment.Worksite;
 import org.eclipse.symphony.core.invocator.Environment;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSetExtent;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;
 import ca.gc.space.topology.TransformNode;

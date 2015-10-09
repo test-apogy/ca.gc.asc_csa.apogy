@@ -15,8 +15,7 @@ import org.eclipse.symphony.addons.vehicle.Plane;
 import org.eclipse.symphony.addons.vehicle.Segment2D;
 import org.eclipse.symphony.addons.vehicle.TerrainProfile;
 import org.eclipse.symphony.addons.vehicle.impl.WheelVehicleUtilitiesImpl;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * <!-- begin-user-doc -->

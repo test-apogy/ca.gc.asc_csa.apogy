@@ -9,8 +9,8 @@ package ca.gc.space.mrt.sensors.range;
 import java.util.List;
 
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.topology.ContentNode;
 
 /**

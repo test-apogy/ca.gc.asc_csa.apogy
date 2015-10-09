@@ -4,27 +4,27 @@
     nsPrefix="ca.gc.space.mrt.sensors">
   <eClassifiers xsi:type="ecore:EClass" name="PositionSensor" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//PositionNode #//SelfPlaceSensor">
     <eOperations name="resetPosition" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
-      <eParameters name="newPosition" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
+      <eParameters name="newPosition" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="positionCoordinates" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positionCoordinates" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"
         changeable="false" transient="true" derived="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OrientationSensor" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//RotationNode #//SelfPlaceSensor">
     <eOperations name="resetOrientation" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
-      <eParameters name="newOrientation" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates"/>
+      <eParameters name="newOrientation" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates"/>
     </eOperations>
-    <eOperations name="extractOrientationFromMatrix" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates">
+    <eOperations name="extractOrientationFromMatrix" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates">
       <eParameters name="matrix" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Matrix3x3"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="orientationCoordinates"
-        eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates"
+        eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates"
         changeable="false" transient="true" derived="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PoseSensor" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//TransformNode #//PositionSensor #//OrientationSensor">
     <eOperations name="resetPose" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
-      <eParameters name="newPose" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//Pose"/>
+      <eParameters name="newPose" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//Pose"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//Pose"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//Pose"
         changeable="false" transient="true" derived="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataLogger" eType="#//PoseDataLogger"
         containment="true"/>
@@ -55,8 +55,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zAngularVelocity" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PoseDataLogger" abstract="true" interface="true">
-    <eOperations name="logPose" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//IOException">
-      <eParameters name="pose" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//Pose"/>
+    <eOperations name="logPose" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//IOException">
+      <eParameters name="pose" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//Pose"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputFile" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>

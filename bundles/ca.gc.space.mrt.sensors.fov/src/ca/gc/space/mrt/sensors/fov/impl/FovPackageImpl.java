@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
 
-import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.sensors.fov.AngularSpan;
 import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;

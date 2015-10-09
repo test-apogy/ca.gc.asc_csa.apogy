@@ -11,7 +11,7 @@ package org.eclipse.symphony.examples.lidar
 
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
 
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
 
 /* 
  * This is an abstraction of the Lidar unit, a 3D laser-based range

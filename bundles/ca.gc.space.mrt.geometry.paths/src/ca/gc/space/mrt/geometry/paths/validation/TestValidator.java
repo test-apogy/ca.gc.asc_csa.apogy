@@ -7,8 +7,7 @@
 package ca.gc.space.mrt.geometry.paths.validation;
 
 import org.eclipse.emf.common.util.EList;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * A sample validator interface for {@link ca.gc.space.mrt.geometry.paths.Test}.

@@ -17,12 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}</li>
  * </ul>
  * </p>
  *
- * @see ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D()
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Coordinates2D extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D_X()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D_X()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -45,7 +45,7 @@ public interface Coordinates2D extends EObject {
 	double getX();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getX <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>X</em>' attribute.
@@ -64,7 +64,7 @@ public interface Coordinates2D extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D_Y()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D_Y()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -72,7 +72,7 @@ public interface Coordinates2D extends EObject {
 	double getY();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Y</em>' attribute.

@@ -3,10 +3,9 @@
  */
 package org.eclipse.symphony.common.geometry.data25d;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.geometry.data25d.impl.DataFacadeImpl;
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 
 /**
  * <!-- begin-user-doc -->

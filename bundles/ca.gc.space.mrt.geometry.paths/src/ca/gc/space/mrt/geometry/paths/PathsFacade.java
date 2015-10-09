@@ -8,8 +8,7 @@ package ca.gc.space.mrt.geometry.paths;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
 
 /**
@@ -50,7 +49,7 @@ public interface PathsFacade extends EObject {
 	 * <!-- begin-model-doc -->
 	 * Creates a WayPointPath using a list of CartesianPositionCoordinates. The WayPointPath created contains copies of all the points found in the specified list.
 	 * <!-- end-model-doc -->
-	 * @model pointsDataType="ca.gc.space.mrt.geometry.paths.List<ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates>" pointsMany="false"
+	 * @model pointsDataType="ca.gc.space.mrt.geometry.paths.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" pointsMany="false"
 	 * @generated
 	 */
 	WayPointPath createWayPointPath(List<CartesianPositionCoordinates> points);

@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.math.Matrix4x4;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
-import ca.gc.space.mrt.geometry.data3d.Geometry3dUtilities;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;

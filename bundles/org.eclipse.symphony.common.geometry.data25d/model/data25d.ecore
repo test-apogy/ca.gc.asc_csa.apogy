@@ -33,7 +33,7 @@
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VolumetricCoordinatesSet25D" eSuperTypes="#//CoordinatesSet25D">
-    <eOperations name="getCartesianPositionCoordinates" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates">
+    <eOperations name="getCartesianPositionCoordinates" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates">
       <eParameters name="coordinates" eType="#//Coordinates25D"/>
     </eOperations>
   </eClassifiers>
@@ -47,7 +47,7 @@
       <eParameters name="v" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
       <eParameters name="w" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
     </eOperations>
-    <eOperations name="createCartesianCoordinatesSet" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianCoordinatesSet">
+    <eOperations name="createCartesianCoordinatesSet" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianCoordinatesSet">
       <eTypeParameters name="T">
         <eBounds eClassifier="#//VolumetricCoordinatesSet25D"/>
       </eTypeParameters>
@@ -69,11 +69,11 @@
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Data25DIO">
-    <eOperations name="saveXYZ" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//IOException">
+    <eOperations name="saveXYZ" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//IOException">
       <eParameters name="points" eType="#//VolumetricCoordinatesSet25D"/>
       <eParameters name="fileName" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     </eOperations>
-    <eOperations name="loadXYZ" eType="#//VolumetricCoordinatesSet25D" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//IOException">
+    <eOperations name="loadXYZ" eType="#//VolumetricCoordinatesSet25D" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//IOException">
       <eParameters name="fileName" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     </eOperations>
   </eClassifiers>

@@ -17,14 +17,14 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode) <em>Load Digital Elevation Map</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, double) <em>Load Digital Elevation Map</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D) <em>Load Digital Elevation Map</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, double) <em>Load Digital Elevation Map</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode) <em>Load Triangular Mesh</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, double) <em>Load Triangular Mesh</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D) <em>Load Triangular Mesh</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, double) <em>Load Triangular Mesh</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode) <em>Load Digital Elevation Map</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double) <em>Load Digital Elevation Map</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D) <em>Load Digital Elevation Map</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double) <em>Load Digital Elevation Map</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode) <em>Load Triangular Mesh</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double) <em>Load Triangular Mesh</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D) <em>Load Triangular Mesh</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double) <em>Load Triangular Mesh</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -101,10 +101,10 @@ public class ASC3DIOTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode) <em>Load Digital Elevation Map</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode) <em>Load Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode)
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode)
 	 * @generated
 	 */
 	public void testLoadDigitalElevationMap__String_AltitudeMode() {
@@ -114,10 +114,10 @@ public class ASC3DIOTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, double) <em>Load Digital Elevation Map</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double) <em>Load Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, double)
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double)
 	 * @generated
 	 */
 	public void testLoadDigitalElevationMap__String_AltitudeMode_double() {
@@ -127,10 +127,10 @@ public class ASC3DIOTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D) <em>Load Digital Elevation Map</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D) <em>Load Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D)
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D)
 	 * @generated
 	 */
 	public void testLoadDigitalElevationMap__String_AltitudeMode_Coordinates2D_Coordinates2D() {
@@ -140,10 +140,10 @@ public class ASC3DIOTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, double) <em>Load Digital Elevation Map</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double) <em>Load Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, double)
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadDigitalElevationMap(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double)
 	 * @generated
 	 */
 	public void testLoadDigitalElevationMap__String_AltitudeMode_Coordinates2D_Coordinates2D_double() {
@@ -153,10 +153,10 @@ public class ASC3DIOTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode) <em>Load Triangular Mesh</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode)
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode)
 	 * @generated
 	 */
 	public void testLoadTriangularMesh__String_AltitudeMode() {
@@ -166,10 +166,10 @@ public class ASC3DIOTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, double) <em>Load Triangular Mesh</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, double)
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, double)
 	 * @generated
 	 */
 	public void testLoadTriangularMesh__String_AltitudeMode_double() {
@@ -179,10 +179,10 @@ public class ASC3DIOTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D) <em>Load Triangular Mesh</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D)
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D)
 	 * @generated
 	 */
 	public void testLoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D() {
@@ -192,10 +192,10 @@ public class ASC3DIOTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, double) <em>Load Triangular Mesh</em>}' operation.
+	 * Tests the '{@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double) <em>Load Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D, double)
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO#loadTriangularMesh(java.lang.String, org.eclipse.symphony.common.geometry.data3d.asc.AltitudeMode, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D, double)
 	 * @generated
 	 */
 	public void testLoadTriangularMesh__String_AltitudeMode_Coordinates2D_Coordinates2D_double() {

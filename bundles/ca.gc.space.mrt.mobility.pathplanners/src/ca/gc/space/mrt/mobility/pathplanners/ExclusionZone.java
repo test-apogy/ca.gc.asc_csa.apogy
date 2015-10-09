@@ -5,7 +5,8 @@
  */
 package ca.gc.space.mrt.mobility.pathplanners;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+
 import ca.gc.space.topology.Node;
 
 /**

@@ -7,9 +7,8 @@ package ca.gc.space.mrt.mobility.pathplanners;
 
 import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangle;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 
 
 /**

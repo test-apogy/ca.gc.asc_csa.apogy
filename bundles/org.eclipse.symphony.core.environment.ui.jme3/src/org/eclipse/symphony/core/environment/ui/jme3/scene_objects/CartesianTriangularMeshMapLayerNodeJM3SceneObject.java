@@ -16,6 +16,12 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.ui.jme3.Data3dJME3Utilities;
+import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
+import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -28,12 +34,6 @@ import org.eclipse.symphony.core.environment.ui.jme3.Activator;
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
 import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
-import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
-import ca.gc.space.mrt.geometry.data3d.ui.jme3.Data3dJME3Utilities;
-import ca.gc.space.mrt.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
-import ca.gc.space.mrt.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
 import ca.gc.space.topology.ui.MeshPresentationMode;
 
 import com.jme3.asset.AssetManager;
@@ -454,7 +454,7 @@ public class CartesianTriangularMeshMapLayerNodeJM3SceneObject extends DefaultJM
 	
 	private RGB getDefaultColor()
 	{
-		IPreferenceStore store = ca.gc.space.mrt.geometry.data3d.ui.Activator.getDefault().getPreferenceStore();
+		IPreferenceStore store = org.eclipse.symphony.common.geometry.data3d.ui.Activator.getDefault().getPreferenceStore();
 		
 		// Change color.
 		RGB rgb = PreferenceConverter.getColor(store, MRTData3DUIPreferencesConstants.DEFAULT_TRIANGULAR_MESH_COLOR_ID);

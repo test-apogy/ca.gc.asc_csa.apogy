@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.geometry.data3d.asc.tests;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.geometry.data3d.asc.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.space.mrt.geometry.data3d.asc.tests
+Export-Package: org.eclipse.symphony.common.geometry.data3d.asc.tests
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.space.mrt.geometry.data3d.asc;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data3d.asc;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport,
- ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

@@ -19,12 +19,12 @@ import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
+import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;
 

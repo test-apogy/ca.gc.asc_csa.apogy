@@ -8,12 +8,12 @@ package ca.gc.space.mrt.mobility.pathplanners.graph.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.jgrapht.EdgeFactory;
 
 import ca.gc.space.mrt.common.processors.Monitorable;
 import ca.gc.space.mrt.common.processors.Processor;
 import ca.gc.space.mrt.common.processors.VerboseProvider;
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;

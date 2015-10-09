@@ -21,6 +21,9 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -31,9 +34,6 @@ import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangle;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
-import ca.gc.space.mrt.geometry.data3d.Geometry3dUtilities;
 import edu.wlu.cs.levy.CG.KDTree;
 
 /**

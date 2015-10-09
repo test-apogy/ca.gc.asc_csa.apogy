@@ -5,7 +5,8 @@
  */
 package ca.gc.space.mrt.sensors.pose;
 
-import ca.gc.space.mrt.geometry.data3d.Pose;
+import org.eclipse.symphony.common.geometry.data3d.Pose;
+
 import ca.gc.space.topology.TransformNode;
 
 

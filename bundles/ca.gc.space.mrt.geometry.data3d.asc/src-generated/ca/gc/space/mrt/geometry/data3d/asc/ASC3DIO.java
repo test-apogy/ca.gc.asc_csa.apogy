@@ -4,9 +4,8 @@
 package ca.gc.space.mrt.geometry.data3d.asc;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
-import ca.gc.space.mrt.geometry.data3d.DigitalElevationMap;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
+import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import ca.gc.space.mrt.geometry.data3d.DigitalElevationMap;
  * <!-- end-model-doc -->
  *
  *
- * @see ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage#getASC3DIO()
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASC3DIO()
  * @model
  * @generated
  */
@@ -39,7 +38,7 @@ public interface ASC3DIO extends EObject {
 	 * @return The DigitalElevationMap. The x axis is along the west-east direction, positive toward the west. The y axis
 	 * is along the north-south axis, positive toward north.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.space.mrt.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false"
 	 * @generated
 	 */
 	DigitalElevationMap loadDigitalElevationMap(String file, AltitudeMode altitudeMode) throws Exception;
@@ -55,7 +54,7 @@ public interface ASC3DIO extends EObject {
 	 * @return The DigitalElevationMap. The x axis is along the west-east direction, positive toward the west. The y axis
 	 * is along the north-south axis, positive toward north.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.space.mrt.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" targetResolutionUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" targetResolutionUnique="false"
 	 * @generated
 	 */
 	DigitalElevationMap loadDigitalElevationMap(String file, AltitudeMode altitudeMode, double targetResolution) throws Exception;
@@ -72,7 +71,7 @@ public interface ASC3DIO extends EObject {
 	 * @return The DigitalElevationMap. The x axis is along the west-east direction, positive toward the west. The y axis
 	 * is along the north-south axis, positive toward north.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.space.mrt.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" southWestCornerUnique="false" northEastCornerUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" southWestCornerUnique="false" northEastCornerUnique="false"
 	 * @generated
 	 */
 	DigitalElevationMap loadDigitalElevationMap(String file, AltitudeMode altitudeMode, Coordinates2D southWestCorner, Coordinates2D northEastCorner) throws Exception;
@@ -90,7 +89,7 @@ public interface ASC3DIO extends EObject {
 	 * @return The DigitalElevationMap. The x axis is along the west-east direction, positive toward the west. The y axis
 	 * is along the north-south axis, positive toward north.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.space.mrt.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" southWestCornerUnique="false" northEastCornerUnique="false" targetResolutionUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" southWestCornerUnique="false" northEastCornerUnique="false" targetResolutionUnique="false"
 	 * @generated
 	 */
 	DigitalElevationMap loadDigitalElevationMap(String file, AltitudeMode altitudeMode, Coordinates2D southWestCorner, Coordinates2D northEastCorner, double targetResolution) throws Exception;
@@ -105,7 +104,7 @@ public interface ASC3DIO extends EObject {
 	 * @return The CartesianTriangularMesh. The x axis is along the west-east direction, positive toward the west. The y axis
 	 * is along the north-south axis, positive toward north.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.space.mrt.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false"
 	 * @generated
 	 */
 	CartesianTriangularMesh loadTriangularMesh(String file, AltitudeMode altitudeMode) throws Exception;
@@ -121,7 +120,7 @@ public interface ASC3DIO extends EObject {
 	 * @return The CartesianTriangularMesh. The x axis is along the west-east direction, positive toward the west. The y axis
 	 * is along the north-south axis, positive toward north.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.space.mrt.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" targetResolutionUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" targetResolutionUnique="false"
 	 * @generated
 	 */
 	CartesianTriangularMesh loadTriangularMesh(String file, AltitudeMode altitudeMode, double targetResolution) throws Exception;
@@ -138,7 +137,7 @@ public interface ASC3DIO extends EObject {
 	 * @return The CartesianTriangularMesh. The x axis is along the west-east direction, positive toward the west. The y axis
 	 * is along the north-south axis, positive toward north.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.space.mrt.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" southWestCornerUnique="false" northEastCornerUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" southWestCornerUnique="false" northEastCornerUnique="false"
 	 * @generated
 	 */
 	CartesianTriangularMesh loadTriangularMesh(String file, AltitudeMode altitudeMode, Coordinates2D southWestCorner, Coordinates2D northEastCorner) throws Exception;
@@ -155,7 +154,7 @@ public interface ASC3DIO extends EObject {
 	 * @return The CartesianTriangularMesh. The x axis is along the west-east direction, positive toward the west. The y axis
 	 * is along the north-south axis, positive toward north.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.space.mrt.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" southWestCornerUnique="false" northEastCornerUnique="false" targetResolutionUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.asc.Exception" fileUnique="false" altitudeModeUnique="false" southWestCornerUnique="false" northEastCornerUnique="false" targetResolutionUnique="false"
 	 * @generated
 	 */
 	CartesianTriangularMesh loadTriangularMesh(String file, AltitudeMode altitudeMode, Coordinates2D southWestCorner, Coordinates2D northEastCorner, double targetResolution) throws Exception;

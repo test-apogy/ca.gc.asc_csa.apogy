@@ -1293,11 +1293,11 @@ public interface PathplannersGraphPackage extends EPackage {
 	EClass getDisplacementCostFunction();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.graph.DisplacementCostFunction#getCost(ca.gc.space.mrt.geometry.data3d.CartesianPolygon, ca.gc.space.mrt.geometry.data3d.CartesianPolygon) <em>Get Cost</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.graph.DisplacementCostFunction#getCost(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, org.eclipse.symphony.common.geometry.data3d.CartesianPolygon) <em>Get Cost</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Cost</em>' operation.
-	 * @see ca.gc.space.mrt.mobility.pathplanners.graph.DisplacementCostFunction#getCost(ca.gc.space.mrt.geometry.data3d.CartesianPolygon, ca.gc.space.mrt.geometry.data3d.CartesianPolygon)
+	 * @see ca.gc.space.mrt.mobility.pathplanners.graph.DisplacementCostFunction#getCost(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, org.eclipse.symphony.common.geometry.data3d.CartesianPolygon)
 	 * @generated
 	 */
 	EOperation getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon();

@@ -5,9 +5,8 @@
  */
 package ca.gc.space.mrt.mobility.pathplanners.graph;
 
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.jgrapht.DirectedGraph;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->

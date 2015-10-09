@@ -42,7 +42,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RangeScannerSimulator" abstract="true">
     <eTypeParameters name="InputType"/>
-    <eOperations name="getCroppedMesh" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianTriangularMesh">
+    <eOperations name="getCroppedMesh" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianTriangularMesh">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Method that takes the mesh node and crops it to get only the part of the terrain that falls within the field of view of the sensor. This method is abstract and must be overloaded."/>
       </eAnnotations>
@@ -102,7 +102,7 @@
         <details key="documentation" value="The ContentNode where the simulated terrain mesh is found. Note that a topology path between this node and the RangeScannerSimulator must exist (both the RangeScannerSimulator and terrain mesh must be part of the same topology)."/>
       </eAnnotations>
       <eGenericType eClassifier="ecore:EClass platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//ContentNode">
-        <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianTriangularMesh"/>
+        <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianTriangularMesh"/>
       </eGenericType>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="noiseEnabled" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
@@ -132,7 +132,7 @@
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RayData">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="origin" eType="ecore:EDataType platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//Point3d"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="origin" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//Point3d"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//Vector3d"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RasterScanRangeSensor">

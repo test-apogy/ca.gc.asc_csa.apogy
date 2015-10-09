@@ -5,7 +5,7 @@
  */
 package ca.gc.space.mrt.mobility.pathplanners.graph;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
+import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,7 +92,7 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	/**
 	 * Returns the value of the '<em><b>Gravity Axis</b></em>' attribute.
 	 * The default value is <code>"Z"</code>.
-	 * The literals are from the enumeration {@link ca.gc.space.mrt.geometry.data3d.CartesianAxis}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.common.geometry.data3d.CartesianAxis}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Gravity Axis</em>' attribute isn't clear,
@@ -100,7 +100,7 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gravity Axis</em>' attribute.
-	 * @see ca.gc.space.mrt.geometry.data3d.CartesianAxis
+	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianAxis
 	 * @see #setGravityAxis(CartesianAxis)
 	 * @see ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceAndSlopesCostFunction_GravityAxis()
 	 * @model default="Z"
@@ -113,7 +113,7 @@ public interface DistanceAndSlopesCostFunction extends MeshDisplacementCostFunct
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Gravity Axis</em>' attribute.
-	 * @see ca.gc.space.mrt.geometry.data3d.CartesianAxis
+	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianAxis
 	 * @see #getGravityAxis()
 	 * @generated
 	 */

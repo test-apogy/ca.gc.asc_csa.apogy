@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl;
 
-import ca.gc.space.mrt.geometry.data3d.impl.CartesianPositionCoordinatesImpl;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.geometry.paths.WayPoint;
 import ca.gc.space.topology.GroupNode;

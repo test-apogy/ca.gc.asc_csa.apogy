@@ -13,10 +13,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer} object.

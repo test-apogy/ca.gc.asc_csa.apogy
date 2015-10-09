@@ -8,11 +8,11 @@ package ca.gc.space.mrt.mobility.pathplanners.graph.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Geometry3dUtilities;
 import ca.gc.space.mrt.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage;
 

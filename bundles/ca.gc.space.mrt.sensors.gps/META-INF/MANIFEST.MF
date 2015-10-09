@@ -11,7 +11,7 @@ Export-Package: ca.gc.space.mrt.sensors.gps,
  ca.gc.space.mrt.sensors.gps.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.space.java.utils,

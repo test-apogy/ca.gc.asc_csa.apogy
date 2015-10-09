@@ -86,7 +86,7 @@ public class Data3DASCItemProviderAdapterFactory extends Data3DASCAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -94,7 +94,7 @@ public class Data3DASCItemProviderAdapterFactory extends Data3DASCAdapterFactory
 	protected ASC3DIOItemProvider asc3DIOItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.mrt.geometry.data3d.asc.ASC3DIO}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -109,7 +109,7 @@ public class Data3DASCItemProviderAdapterFactory extends Data3DASCAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -117,7 +117,7 @@ public class Data3DASCItemProviderAdapterFactory extends Data3DASCAdapterFactory
 	protected ASCHeaderDataItemProvider ascHeaderDataItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -132,7 +132,7 @@ public class Data3DASCItemProviderAdapterFactory extends Data3DASCAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,7 +140,7 @@ public class Data3DASCItemProviderAdapterFactory extends Data3DASCAdapterFactory
 	protected Coordinates2DItemProvider coordinates2DItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -6,6 +6,7 @@ package org.eclipse.symphony.core.environment;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
@@ -14,7 +15,6 @@ import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.environment.impl.EnvironmentFacadeImpl;
 import org.eclipse.symphony.core.invocator.Environment;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TransformNode;
 

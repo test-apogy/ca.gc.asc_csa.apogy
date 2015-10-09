@@ -1,18 +1,18 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.geometry.data3d.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.geometry.data3d.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.space.mrt.geometry.data3d.decorators,
- ca.gc.space.mrt.geometry.data3d.provider
+Export-Package: org.eclipse.symphony.common.geometry.data3d.decorators,
+ org.eclipse.symphony.common.geometry.data3d.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jface;bundle-version="3.4.0";visibility:=reexport,
- ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,

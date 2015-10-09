@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.addons.vehicle;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
-
 import ca.gc.space.topology.Node;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * <!-- begin-user-doc -->

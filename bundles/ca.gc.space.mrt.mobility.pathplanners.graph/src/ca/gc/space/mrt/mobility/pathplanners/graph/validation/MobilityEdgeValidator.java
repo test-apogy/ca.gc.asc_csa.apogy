@@ -7,8 +7,8 @@
 package ca.gc.space.mrt.mobility.pathplanners.graph.validation;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.mobility.pathplanners.graph.DisplacementCostFunction;
 import ca.gc.space.mrt.mobility.pathplanners.graph.MeshDisplacementCostFunction;
 

@@ -7,9 +7,8 @@ package ca.gc.space.mrt.mobility.pathplanners.graph;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.jgrapht.EdgeFactory;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
  * </p>
  *
  * @see ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdgeFactory()
- * @model superTypes="ca.gc.space.mrt.mobility.pathplanners.graph.EdgeFactory<ca.gc.space.mrt.geometry.data3d.CartesianPolygon, ca.gc.space.mrt.mobility.pathplanners.graph.MobilityEdge>"
+ * @model superTypes="ca.gc.space.mrt.mobility.pathplanners.graph.EdgeFactory<org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, ca.gc.space.mrt.mobility.pathplanners.graph.MobilityEdge>"
  * @generated
  */
 public interface MobilityEdgeFactory extends EObject, EdgeFactory<CartesianPolygon, MobilityEdge> {

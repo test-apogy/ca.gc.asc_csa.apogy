@@ -9,11 +9,11 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
-import ca.gc.space.mrt.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 
 public class PathUtilities {
 	

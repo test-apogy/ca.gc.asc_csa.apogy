@@ -1973,21 +1973,21 @@ public interface SymphonyToolsVehiclePackage extends EPackage
   EOperation getVehiclePoseCorrector__ReInitialize();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getMeshExtent2D(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh) <em>Get Mesh Extent2 D</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getMeshExtent2D(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Get Mesh Extent2 D</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Mesh Extent2 D</em>' operation.
-	 * @see org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getMeshExtent2D(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh)
+	 * @see org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getMeshExtent2D(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
   EOperation getVehiclePoseCorrector__GetMeshExtent2D__CartesianTriangularMesh();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getClosestNeighbourIteratorProvider(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh) <em>Get Closest Neighbour Iterator Provider</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getClosestNeighbourIteratorProvider(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Get Closest Neighbour Iterator Provider</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Closest Neighbour Iterator Provider</em>' operation.
-	 * @see org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getClosestNeighbourIteratorProvider(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh)
+	 * @see org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getClosestNeighbourIteratorProvider(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
   EOperation getVehiclePoseCorrector__GetClosestNeighbourIteratorProvider__CartesianTriangularMesh();
@@ -2349,11 +2349,11 @@ public interface SymphonyToolsVehiclePackage extends EPackage
   EOperation getWheelVehicleUtilities__GetWheelCenterPoint__double_double_TerrainProfile();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities#findTerrainProfile(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh, org.eclipse.symphony.addons.vehicle.Plane) <em>Find Terrain Profile</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities#findTerrainProfile(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, org.eclipse.symphony.addons.vehicle.Plane) <em>Find Terrain Profile</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Terrain Profile</em>' operation.
-	 * @see org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities#findTerrainProfile(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh, org.eclipse.symphony.addons.vehicle.Plane)
+	 * @see org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities#findTerrainProfile(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, org.eclipse.symphony.addons.vehicle.Plane)
 	 * @generated
 	 */
   EOperation getWheelVehicleUtilities__FindTerrainProfile__CartesianTriangularMesh_Plane();
@@ -2379,11 +2379,11 @@ public interface SymphonyToolsVehiclePackage extends EPackage
   EOperation getWheelVehicleUtilities__IsPointOnSegment__Point2d_Segment2D();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities#findMeshExtent2D(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh) <em>Find Mesh Extent2 D</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities#findMeshExtent2D(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Find Mesh Extent2 D</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Mesh Extent2 D</em>' operation.
-	 * @see org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities#findMeshExtent2D(ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh)
+	 * @see org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities#findMeshExtent2D(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
   EOperation getWheelVehicleUtilities__FindMeshExtent2D__CartesianTriangularMesh();

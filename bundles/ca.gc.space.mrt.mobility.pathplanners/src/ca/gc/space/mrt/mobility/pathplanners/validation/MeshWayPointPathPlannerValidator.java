@@ -7,10 +7,9 @@
 package ca.gc.space.mrt.mobility.pathplanners.validation;
 
 import org.eclipse.symphony.common.geometry.data.Mesh;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesMesh;
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
 /**
  * A sample validator interface for {@link ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner}.

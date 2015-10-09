@@ -26,7 +26,7 @@ import ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData;
 import ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

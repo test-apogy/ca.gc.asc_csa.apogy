@@ -18,13 +18,12 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.math.GeometricUtils;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
-import ca.gc.space.mrt.geometry.data3d.Pose;
 /**
  * A class providing basic IO capabilities.
  * See the individual functions for descriptions

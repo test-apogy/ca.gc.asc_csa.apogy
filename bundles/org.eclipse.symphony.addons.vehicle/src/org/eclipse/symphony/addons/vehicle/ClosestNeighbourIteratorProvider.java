@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.alg.ConnectivityInspector;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangle;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 
 public class ClosestNeighbourIteratorProvider 
 {

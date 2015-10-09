@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 import ca.gc.space.mrt.sensors.gps.GPS_STATUS;
 import ca.gc.space.mrt.sensors.gps.GpsPackage;
 import ca.gc.space.mrt.sensors.gps.MarkedGPS;

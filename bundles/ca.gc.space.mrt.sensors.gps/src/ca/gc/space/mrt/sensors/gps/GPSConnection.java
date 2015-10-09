@@ -40,7 +40,7 @@ public interface GPSConnection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input</em>' attribute.
 	 * @see ca.gc.space.mrt.sensors.gps.GpsPackage#getGPSConnection_Input()
-	 * @model dataType="ca.gc.space.mrt.geometry.data3d.InputStream" required="true" changeable="false"
+	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.InputStream" required="true" changeable="false"
 	 * @generated
 	 */
 	InputStream getInput();
@@ -55,7 +55,7 @@ public interface GPSConnection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output</em>' attribute.
 	 * @see ca.gc.space.mrt.sensors.gps.GpsPackage#getGPSConnection_Output()
-	 * @model dataType="ca.gc.space.mrt.geometry.data3d.OutputStream" required="true" changeable="false"
+	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.OutputStream" required="true" changeable="false"
 	 * @generated
 	 */
 	OutputStream getOutput();
@@ -67,7 +67,7 @@ public interface GPSConnection extends EObject {
 	 * Resets the connection: closesand opens the connection again.
 	 * Once this method completes, new 'input' and 'output' objects are available.
 	 * <!-- end-model-doc -->
-	 * @model exceptions="ca.gc.space.mrt.geometry.data3d.IOException"
+	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException"
 	 * @generated
 	 */
 	void reset() throws IOException;

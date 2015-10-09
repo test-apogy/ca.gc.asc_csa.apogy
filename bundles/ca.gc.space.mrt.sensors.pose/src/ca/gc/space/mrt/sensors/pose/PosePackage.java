@@ -1487,11 +1487,11 @@ public interface PosePackage extends EPackage {
 	EReference getPositionSensor_PositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.PositionSensor#resetPosition(ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates) <em>Reset Position</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.PositionSensor#resetPosition(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Reset Position</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset Position</em>' operation.
-	 * @see ca.gc.space.mrt.sensors.pose.PositionSensor#resetPosition(ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates)
+	 * @see ca.gc.space.mrt.sensors.pose.PositionSensor#resetPosition(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
 	EOperation getPositionSensor__ResetPosition__CartesianPositionCoordinates();
@@ -1518,11 +1518,11 @@ public interface PosePackage extends EPackage {
 	EReference getOrientationSensor_OrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.OrientationSensor#resetOrientation(ca.gc.space.mrt.geometry.data3d.CartesianOrientationCoordinates) <em>Reset Orientation</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.OrientationSensor#resetOrientation(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Reset Orientation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset Orientation</em>' operation.
-	 * @see ca.gc.space.mrt.sensors.pose.OrientationSensor#resetOrientation(ca.gc.space.mrt.geometry.data3d.CartesianOrientationCoordinates)
+	 * @see ca.gc.space.mrt.sensors.pose.OrientationSensor#resetOrientation(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
 	 * @generated
 	 */
 	EOperation getOrientationSensor__ResetOrientation__CartesianOrientationCoordinates();
@@ -1570,11 +1570,11 @@ public interface PosePackage extends EPackage {
 	EReference getPoseSensor_DataLogger();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.PoseSensor#resetPose(ca.gc.space.mrt.geometry.data3d.Pose) <em>Reset Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.PoseSensor#resetPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Reset Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reset Pose</em>' operation.
-	 * @see ca.gc.space.mrt.sensors.pose.PoseSensor#resetPose(ca.gc.space.mrt.geometry.data3d.Pose)
+	 * @see ca.gc.space.mrt.sensors.pose.PoseSensor#resetPose(org.eclipse.symphony.common.geometry.data3d.Pose)
 	 * @generated
 	 */
 	EOperation getPoseSensor__ResetPose__Pose();
@@ -1806,11 +1806,11 @@ public interface PosePackage extends EPackage {
 	EAttribute getPoseDataLogger_OutputFile();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.PoseDataLogger#logPose(ca.gc.space.mrt.geometry.data3d.Pose) <em>Log Pose</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.sensors.pose.PoseDataLogger#logPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Log Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Log Pose</em>' operation.
-	 * @see ca.gc.space.mrt.sensors.pose.PoseDataLogger#logPose(ca.gc.space.mrt.geometry.data3d.Pose)
+	 * @see ca.gc.space.mrt.sensors.pose.PoseDataLogger#logPose(org.eclipse.symphony.common.geometry.data3d.Pose)
 	 * @generated
 	 */
 	EOperation getPoseDataLogger__LogPose__Pose();

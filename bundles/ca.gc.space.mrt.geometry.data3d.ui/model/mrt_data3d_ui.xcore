@@ -5,13 +5,13 @@
 	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
 	      modelName="Data3DUI",
 	      complianceLevel="6.0")
-@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.data3d.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.geometry.data3d.ui.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.ui.edit/src-generated")
 
-package ca.gc.space.mrt.geometry.data3d.ui
+package org.eclipse.symphony.common.geometry.data3d.ui
 
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
 import ca.gc.space.topology.ui.MeshPresentationMode
 import ca.gc.space.topology.ui.NodePresentation
 

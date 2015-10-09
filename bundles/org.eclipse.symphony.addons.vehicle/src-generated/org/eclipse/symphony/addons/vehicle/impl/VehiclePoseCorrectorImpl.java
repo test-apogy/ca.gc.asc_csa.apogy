@@ -34,6 +34,7 @@ import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
 import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
@@ -45,7 +46,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.impl.PoseCorrectorImpl;
 
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.Node;
 import ca.gc.space.topology.TopologyFacade;

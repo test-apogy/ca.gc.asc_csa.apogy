@@ -23,7 +23,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.topology.core.edit;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data.edit;visibility:=reexport,
- ca.gc.space.mrt.geometry.data3d;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,
  ca.gc.space.mrt.common;visibility:=reexport,
@@ -31,7 +31,7 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.space.mrt.common.processors.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
- ca.gc.space.mrt.geometry.data3d.edit;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data3d.edit;visibility:=reexport,
  ca.gc.space.mrt.common.processors;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

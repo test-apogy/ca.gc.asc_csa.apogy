@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.graph.DisplacementCostFunction;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage;

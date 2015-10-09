@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.common.geometry.data3d.Pose;
 
-import ca.gc.space.mrt.geometry.data3d.Pose;
 import ca.gc.space.mrt.sensors.pose.CSVDataLogger;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 

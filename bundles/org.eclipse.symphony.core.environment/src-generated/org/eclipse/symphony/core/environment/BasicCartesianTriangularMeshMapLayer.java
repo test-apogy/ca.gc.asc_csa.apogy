@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.environment;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh;
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 
 /**
  * <!-- begin-user-doc -->

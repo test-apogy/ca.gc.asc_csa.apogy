@@ -9,8 +9,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.graph.MeshDisplacementCostFunction;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage;

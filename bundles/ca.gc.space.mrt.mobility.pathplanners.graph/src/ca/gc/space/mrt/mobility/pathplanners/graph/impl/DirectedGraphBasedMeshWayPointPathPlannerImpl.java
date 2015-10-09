@@ -8,9 +8,9 @@ package ca.gc.space.mrt.mobility.pathplanners.graph.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.jgrapht.DirectedGraph;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage;
 

@@ -17,11 +17,10 @@ import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
 import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
 import org.eclipse.symphony.common.geometry.data25d.DataFacade;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 
 /**
  * <!-- begin-user-doc -->

@@ -8,8 +8,8 @@ package ca.gc.space.mrt.sensors.gps.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 
-import ca.gc.space.mrt.geometry.data3d.PositionMarker;
 import ca.gc.space.mrt.sensors.gps.GPSFacade;
 import ca.gc.space.mrt.sensors.gps.GPSPoseSensor;
 import ca.gc.space.mrt.sensors.gps.GpsFactory;

@@ -7,8 +7,7 @@
 package ca.gc.space.mrt.sensors.gps;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.mrt.geometry.data3d.PositionMarker;
+import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

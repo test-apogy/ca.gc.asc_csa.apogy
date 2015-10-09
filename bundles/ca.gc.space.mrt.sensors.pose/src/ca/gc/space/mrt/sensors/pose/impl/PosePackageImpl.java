@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
 
 import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.sensors.pose.CSVDataLogger;
 import ca.gc.space.mrt.sensors.pose.InertialMeasurementUnit;
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;

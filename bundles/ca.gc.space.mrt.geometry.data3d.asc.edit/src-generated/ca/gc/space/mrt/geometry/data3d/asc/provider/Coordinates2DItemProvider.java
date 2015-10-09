@@ -26,7 +26,7 @@ import ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D;
 import ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

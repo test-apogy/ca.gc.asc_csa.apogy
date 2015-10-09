@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
 import ca.gc.space.mrt.sensors.fov.AngularSpan;
 import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;

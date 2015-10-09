@@ -6,7 +6,7 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator 
 {
 
-	public static final String ID = "ca.gc.space.mrt.geometry.data3d.asc";
+	public static final String ID = "org.eclipse.symphony.common.geometry.data3d.asc";
 	
 	// The shared instance
 	private static Activator plugin;

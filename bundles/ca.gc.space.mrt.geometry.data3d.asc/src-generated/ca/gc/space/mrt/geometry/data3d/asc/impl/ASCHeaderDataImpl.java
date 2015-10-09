@@ -18,12 +18,12 @@ import ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNumberOfRow <em>Number Of Row</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNumberOfColumns <em>Number Of Columns</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.impl.ASCHeaderDataImpl#getXllCenter <em>Xll Center</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.impl.ASCHeaderDataImpl#getYllCenter <em>Yll Center</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.impl.ASCHeaderDataImpl#getCellSize <em>Cell Size</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNoDataValue <em>No Data Value</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNumberOfRow <em>Number Of Row</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNumberOfColumns <em>Number Of Columns</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getXllCenter <em>Xll Center</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getYllCenter <em>Yll Center</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getCellSize <em>Cell Size</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNoDataValue <em>No Data Value</em>}</li>
  * </ul>
  * </p>
  *

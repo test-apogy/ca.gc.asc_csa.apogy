@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
 
 import ca.gc.space.mrt.common.CommonPackage;
-import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import ca.gc.space.mrt.sensors.gps.GPSConnection;
 import ca.gc.space.mrt.sensors.gps.GPSDataInterpreter;
 import ca.gc.space.mrt.sensors.gps.GPSFacade;

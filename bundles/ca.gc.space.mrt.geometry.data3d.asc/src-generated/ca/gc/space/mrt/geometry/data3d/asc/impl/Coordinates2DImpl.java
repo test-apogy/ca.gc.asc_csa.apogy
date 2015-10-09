@@ -18,8 +18,8 @@ import ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.impl.Coordinates2DImpl#getX <em>X</em>}</li>
- *   <li>{@link ca.gc.space.mrt.geometry.data3d.asc.impl.Coordinates2DImpl#getY <em>Y</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl#getX <em>X</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl#getY <em>Y</em>}</li>
  * </ul>
  * </p>
  *

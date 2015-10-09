@@ -3,7 +3,6 @@
  */
 package ca.gc.space.mrt.geometry.data3d.asc.impl;
 
-import ca.gc.space.mrt.geometry.data3d.Data3dPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -12,6 +11,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+
 import ca.gc.space.mrt.geometry.data3d.asc.ASCHeaderData;
 import ca.gc.space.mrt.geometry.data3d.asc.AltitudeMode;
 import ca.gc.space.mrt.geometry.data3d.asc.Coordinates2D;
@@ -71,7 +72,7 @@ public class Data3DASCPackageImpl extends EPackageImpl implements Data3DASCPacka
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see ca.gc.space.mrt.geometry.data3d.asc.Data3DASCPackage#eNS_URI
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
@@ -509,10 +510,10 @@ public class Data3DASCPackageImpl extends EPackageImpl implements Data3DASCPacka
 			 "modelName", "Data3DASC",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/ca.gc.space.mrt.geometry.data3d.asc/src-generated",
-			 "editDirectory", "/ca.gc.space.mrt.geometry.data3d.asc.edit/src-generated",
-			 "testsDirectory", "/ca.gc.space.mrt.geometry.data3d.asc.tests/src-generated",
-			 "basePackage", "ca.gc.space.mrt.geometry.data3d"
+			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc/src-generated",
+			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated",
+			 "testsDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc.tests/src-generated",
+			 "basePackage", "org.eclipse.symphony.common.geometry.data3d"
 		   });	
 		addAnnotation
 		  (asc3DIOEClass, 

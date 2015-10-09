@@ -84,10 +84,10 @@
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AstolfiGuidanceController">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentWayPoint" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="previousWayPoint" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentWayPoint" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previousWayPoint" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="currentPoseInGuidanceReferenceFrame"
-        eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.data3d/model/data3d.ecore#//Pose"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//Pose"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rho" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
         changeable="false" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phi" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"

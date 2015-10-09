@@ -6,7 +6,7 @@
  */
 package ca.gc.space.mrt.mobility.pathplanners.graph.validation;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianAxis;
+import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 
 /**
  * A sample validator interface for {@link ca.gc.space.mrt.mobility.pathplanners.graph.DistanceAndSlopesCostFunction}.

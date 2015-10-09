@@ -6,10 +6,10 @@
 	      modelName="Data3d",
 	      operationReflection="true",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.data3d/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.geometry.data3d.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.edit/src-generated")
 
-package ca.gc.space.mrt.geometry.data3d
+package org.eclipse.symphony.common.geometry.data3d
 
 import org.eclipse.symphony.common.geometry.data.Polygon
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape

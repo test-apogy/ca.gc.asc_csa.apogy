@@ -13,7 +13,7 @@ import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding
 import ca.gc.asc_csa.topology.dynamics.PhysicalBody
 import org.eclipse.symphony.common.math.Matrix3x3
 import org.eclipse.symphony.common.math.Matrix4x4
-import ca.gc.space.mrt.geometry.data3d.CartesianTriangularMesh
+import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
 import ca.gc.space.mrt.geometry.paths.WayPointPath
 import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner
 import ca.gc.space.topology.AggregateGroupNode

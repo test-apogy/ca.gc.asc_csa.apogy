@@ -6,7 +6,7 @@
  */
 package ca.gc.space.mrt.mobility.pathplanners.validation;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
 
 /**

@@ -8,9 +8,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianOrientationCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;
 
 public class EditOrientationComposite extends Composite

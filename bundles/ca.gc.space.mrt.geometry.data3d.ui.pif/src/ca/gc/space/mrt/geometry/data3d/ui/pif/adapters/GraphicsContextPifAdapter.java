@@ -7,12 +7,12 @@ import java.util.List;
 import javax.vecmath.Point3f;
 
 import org.eclipse.core.resources.IFile;
+import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 
 import ca.gc.asc_csa.io.pif.PifReader;
-import ca.gc.space.mrt.geometry.data3d.CartesianCoordinatesSet;
-import ca.gc.space.mrt.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.space.mrt.geometry.data3d.Data3dFacade;
-import ca.gc.space.mrt.geometry.data3d.Data3dFactory;
 import ca.gc.space.topology.ContentNode;
 import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.TopologyFacade;

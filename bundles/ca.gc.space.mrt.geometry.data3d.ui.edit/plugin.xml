@@ -14,8 +14,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_data3d_ui -->
       <factory
-            uri="ca.gc.space.mrt.geometry.data3d.ui"
-            class="ca.gc.space.mrt.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.geometry.data3d.ui"
+            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -28,10 +28,10 @@
       <!-- @generated mrt_data3d_ui -->
       <extender
             uri="ca.gc.space.topology.ui"
-            class="ca.gc.space.mrt.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.space.mrt.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

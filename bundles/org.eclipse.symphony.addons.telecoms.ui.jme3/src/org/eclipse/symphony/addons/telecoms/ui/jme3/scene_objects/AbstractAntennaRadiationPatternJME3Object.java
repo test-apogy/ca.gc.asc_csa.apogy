@@ -217,7 +217,7 @@ public class AbstractAntennaRadiationPatternJME3Object extends DefaultJME3SceneO
 	{
 //		ColorRGBA rgba = null;
 //		
-//		IPreferenceStore store = ca.gc.space.mrt.geometry.data3d.ui.Activator.getDefault().getPreferenceStore();
+//		IPreferenceStore store = org.eclipse.symphony.common.geometry.data3d.ui.Activator.getDefault().getPreferenceStore();
 //		
 //		// Change color.
 //		RGB rgb = PreferenceConverter.getColor(store, MRTData3DUIPreferencesConstants.DEFAULT_TRIANGULAR_MESH_COLOR_ID);

@@ -6,9 +6,9 @@
 package ca.gc.space.mrt.mobility.pathplanners.graph.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
-import ca.gc.space.mrt.geometry.data3d.Geometry3dUtilities;
 import ca.gc.space.mrt.mobility.pathplanners.graph.DistanceOnlyCostFunction;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage;
 

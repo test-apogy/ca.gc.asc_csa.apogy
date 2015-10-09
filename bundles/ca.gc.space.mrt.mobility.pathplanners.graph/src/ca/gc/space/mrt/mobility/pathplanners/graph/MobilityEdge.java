@@ -7,8 +7,7 @@ package ca.gc.space.mrt.mobility.pathplanners.graph;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.mrt.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
 /**
  * <!-- begin-user-doc -->

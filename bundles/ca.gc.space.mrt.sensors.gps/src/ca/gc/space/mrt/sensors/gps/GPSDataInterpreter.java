@@ -66,7 +66,7 @@ public interface GPSDataInterpreter extends EObject {
 	 * <li>Update the GPS's internal values accordingly</li>
 	 * </ul>
 	 * <!-- end-model-doc -->
-	 * @model exceptions="ca.gc.space.mrt.geometry.data3d.IOException"
+	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException"
 	 * @generated
 	 */
 	void updateGPS() throws IOException;
