@@ -10,7 +10,7 @@
       <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.ecore#//MobilePlateform"/>
     </eTypeParameters>
     <eTypeParameters name="PathType">
-      <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.ecore#//Path"/>
+      <eBounds eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//Path"/>
     </eTypeParameters>
     <eOperations name="start" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
     <eOperations name="pause" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
@@ -41,7 +41,7 @@
       <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
     </eTypeParameters>
     <eTypeParameters name="PathType">
-      <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.ecore#//Path"/>
+      <eBounds eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//Path"/>
     </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumAngularVelocity"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
@@ -54,7 +54,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PathRecorder">
     <eTypeParameters name="PathType">
-      <eBounds eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.ecore#//Path"/>
+      <eBounds eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//Path"/>
     </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="positionSensor" eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.sensors.pose/model/pose.ecore#//PoseSensor"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimumDistanceDelta" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
@@ -69,7 +69,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WaypointPathRecorder">
     <eGenericSuperTypes eClassifier="#//PathRecorder">
-      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.ecore#//WayPointPath"/>
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//WayPointPath"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PathRecorderSamplingMode">
@@ -80,7 +80,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SkidSteeredWayPointPathFollower">
     <eGenericSuperTypes eClassifier="#//PathFollower">
       <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
-      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.ecore#//WayPointPath"/>
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//WayPointPath"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AstolfiGuidanceController">
@@ -117,7 +117,7 @@
         defaultValueLiteral="true"/>
     <eGenericSuperTypes eClassifier="#//SkidSteeredPlatformPathFollower">
       <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility/model/mobility.ecore#//SkidSteeredMobilePlateform"/>
-      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.geometry.paths/model/paths.ecore#//WayPointPath"/>
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.geometry.paths/model/paths.ecore#//WayPointPath"/>
     </eGenericSuperTypes>
   </eClassifiers>
 </ecore:EPackage>

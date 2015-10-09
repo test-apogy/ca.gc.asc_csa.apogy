@@ -6,8 +6,8 @@
 package ca.gc.space.mrt.mobility.controllers;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.geometry.paths.Path;
 
-import ca.gc.space.mrt.geometry.paths.Path;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
 
 /**

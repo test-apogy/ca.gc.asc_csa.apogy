@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.addons.geometry.paths.Path;
 
-import ca.gc.space.mrt.geometry.paths.Path;
 import ca.gc.space.mrt.mobility.controllers.ControllersPackage;
 import ca.gc.space.mrt.mobility.controllers.PathRecorder;
 import ca.gc.space.mrt.mobility.controllers.PathRecorderSamplingMode;

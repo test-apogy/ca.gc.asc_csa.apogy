@@ -13,27 +13,27 @@
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.geometry.paths.ui.adapters.WayPointPathPresentationAdapter">
+            Class="org.eclipse.symphony.addons.geometry.paths.ui.adapters.WayPointPathPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.geometry.paths.ui.adapters.WayPointPresentationAdapter">
+            Class="org.eclipse.symphony.addons.geometry.paths.ui.adapters.WayPointPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="ca.gc.space.mrt.geometry.paths.ui.preferences.MRTPathsPreferencesInitializer">
+            class="org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesInitializer">
       </initializer>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="ca.gc.space.mrt.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
-            id="ca.gc.space.mrt.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
+            class="org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
+            id="org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
             name="Paths">
       </page>
    </extension>
@@ -41,8 +41,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated mrt_paths_ui -->
       <package
-            uri="ca.gc.space.mrt.geometry.paths.ui"
-            class="ca.gc.space.mrt.geometry.paths.ui.PathsUIPackage"
+            uri="org.eclipse.symphony.addons.geometry.paths.ui"
+            class="org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage"
             genModel="model/mrt_paths_ui.xcore"/>
    </extension>
 

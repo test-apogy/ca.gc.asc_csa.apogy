@@ -1,8 +1,8 @@
 @GenModel(prefix="PathsUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="PathsUI", complianceLevel="6.0")
-@GenModel(modelDirectory="/ca.gc.space.mrt.geometry.paths.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.geometry.paths.ui.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.geometry.paths.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.geometry.paths.ui.edit/src-generated")
 
-package ca.gc.space.mrt.geometry.paths.ui
+package org.eclipse.symphony.addons.geometry.paths.ui
 
 import org.eclipse.symphony.common.topology.ui.NodePresentation
 

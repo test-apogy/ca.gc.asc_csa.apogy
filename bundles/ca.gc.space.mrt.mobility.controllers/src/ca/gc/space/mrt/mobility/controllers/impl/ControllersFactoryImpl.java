@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.symphony.addons.geometry.paths.Path;
 
-import ca.gc.space.mrt.geometry.paths.Path;
 import ca.gc.space.mrt.mobility.MobilePlateform;
 import ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform;
 import ca.gc.space.mrt.mobility.controllers.AstolfiGuidanceController;

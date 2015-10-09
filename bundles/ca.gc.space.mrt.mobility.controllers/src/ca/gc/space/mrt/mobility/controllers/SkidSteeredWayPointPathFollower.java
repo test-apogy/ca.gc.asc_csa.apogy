@@ -6,7 +6,8 @@
  */
 package ca.gc.space.mrt.mobility.controllers;
 
-import ca.gc.space.mrt.geometry.paths.WayPointPath;
+import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
+
 import ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform;
 
 /**

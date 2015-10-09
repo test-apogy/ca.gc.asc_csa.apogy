@@ -7,8 +7,8 @@
 package ca.gc.space.mrt.mobility.controllers;
 
 import org.eclipse.emf.ecore.EFactory;
+import org.eclipse.symphony.addons.geometry.paths.Path;
 
-import ca.gc.space.mrt.geometry.paths.Path;
 import ca.gc.space.mrt.mobility.MobilePlateform;
 import ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform;
 

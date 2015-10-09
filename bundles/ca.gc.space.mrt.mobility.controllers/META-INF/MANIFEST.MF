@@ -10,7 +10,7 @@ Export-Package: ca.gc.space.mrt.mobility.controllers,
  ca.gc.space.mrt.mobility.controllers.impl,
  ca.gc.space.mrt.mobility.controllers.util
 Require-Bundle: ca.gc.space.mrt.mobility;visibility:=reexport,
- ca.gc.space.mrt.geometry.paths;visibility:=reexport,
+ org.eclipse.symphony.addons.geometry.paths;visibility:=reexport,
  ca.gc.space.mrt.sensors.pose;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
  org.eclipse.symphony.addons.sensors;visibility:=reexport,

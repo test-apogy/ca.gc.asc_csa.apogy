@@ -5,11 +5,10 @@
  */
 package ca.gc.space.mrt.mobility.pathplanners;
 
+import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.processors.Processor;
-
-import ca.gc.space.mrt.geometry.paths.WayPointPath;
 
 /**
  * <!-- begin-user-doc -->

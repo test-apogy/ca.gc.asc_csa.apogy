@@ -9,8 +9,8 @@ package ca.gc.space.mrt.mobility.controllers.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.addons.geometry.paths.Path;
 
-import ca.gc.space.mrt.geometry.paths.Path;
 import ca.gc.space.mrt.mobility.MobilePlateform;
 import ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform;
 import ca.gc.space.mrt.mobility.controllers.AstolfiGuidanceController;
