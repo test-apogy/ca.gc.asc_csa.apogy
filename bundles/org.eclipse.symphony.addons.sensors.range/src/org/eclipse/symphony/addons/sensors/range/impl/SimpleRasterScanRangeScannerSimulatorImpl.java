@@ -19,6 +19,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
 import org.eclipse.symphony.addons.sensors.range.RangeFactory;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanRangeSensor;
@@ -38,9 +40,6 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
-
-import ca.gc.space.mrt.sensors.fov.FovFactory;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
 
 /**
  * <!-- begin-user-doc -->

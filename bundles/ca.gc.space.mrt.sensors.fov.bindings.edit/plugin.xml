@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_fov_bindings -->
       <factory
-            uri="ca.gc.space.mrt.sensors.fov.bindings"
-            class="ca.gc.space.mrt.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.addons.sensors.fov.bindings"
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,10 +24,10 @@
       <!-- @generated mrt_fov_bindings -->
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
-            class="ca.gc.space.mrt.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
             uri="http:///ca/gc/space/topology.ecore"
-            class="ca.gc.space.mrt.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

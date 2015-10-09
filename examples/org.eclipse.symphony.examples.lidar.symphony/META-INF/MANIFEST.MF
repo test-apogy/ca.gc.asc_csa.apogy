@@ -17,8 +17,8 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.0",
  org.eclipse.symphony.common.geometry.data;visibility:=reexport,
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
- ca.gc.space.mrt.sensors.fov;visibility:=reexport,
- ca.gc.space.mrt.sensors.fov.bindings;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.fov;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.fov.bindings;visibility:=reexport,
  org.eclipse.symphony.examples.lidar;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName

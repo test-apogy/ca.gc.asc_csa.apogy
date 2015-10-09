@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.examples.camera.Camera;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
 
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;

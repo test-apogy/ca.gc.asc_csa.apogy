@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.examples.lidar.impl;
 
-import ca.gc.space.mrt.sensors.fov.FovPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -12,6 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarFactory;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;

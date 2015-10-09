@@ -13,9 +13,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.space.mrt.sensors.fov.FovPackage;
 
 /**
  * <!-- begin-user-doc -->

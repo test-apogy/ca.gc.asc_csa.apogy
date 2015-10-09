@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.addons.sensors.range.ContactSensor;
 import org.eclipse.symphony.addons.sensors.range.LineRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.RangeFactory;
@@ -43,7 +44,6 @@ import org.eclipse.symphony.common.processors.ProcessorsPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.common.CommonPackage;
-import ca.gc.space.mrt.sensors.fov.FovPackage;
 
 /**
  * <!-- begin-user-doc -->

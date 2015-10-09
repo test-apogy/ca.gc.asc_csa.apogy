@@ -9,7 +9,7 @@
 
 package org.eclipse.symphony.examples.antenna
 
-import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView
+import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
 
 /*
  * This class represents the abstract concept of an antenna.

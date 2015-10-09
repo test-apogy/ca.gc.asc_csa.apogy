@@ -11,13 +11,12 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
+import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
 import org.eclipse.symphony.addons.sensors.range.RangeFactory;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
 import org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade;
-
-import ca.gc.space.mrt.sensors.fov.DistanceRange;
-import ca.gc.space.mrt.sensors.fov.FOVFacade;
 
 /**
  * <!-- begin-user-doc -->

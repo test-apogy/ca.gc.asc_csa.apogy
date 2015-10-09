@@ -26,7 +26,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology.bindings;visibility:=reexport,
  org.eclipse.symphony.examples.rover;visibility:=reexport,
  org.eclipse.symphony.core;visibility:=reexport,
- ca.gc.space.mrt.sensors.fov;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.fov;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport,
  org.eclipse.symphony.examples.robotic_arm;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

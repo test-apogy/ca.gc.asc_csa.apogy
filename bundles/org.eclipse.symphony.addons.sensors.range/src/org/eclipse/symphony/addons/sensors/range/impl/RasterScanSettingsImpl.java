@@ -9,10 +9,9 @@ package org.eclipse.symphony.addons.sensors.range.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-
-import ca.gc.space.mrt.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl;
 
 /**
  * <!-- begin-user-doc -->

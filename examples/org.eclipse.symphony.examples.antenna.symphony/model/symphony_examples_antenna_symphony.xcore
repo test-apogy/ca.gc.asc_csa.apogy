@@ -12,7 +12,7 @@ package org.eclipse.symphony.examples.antenna.symphony
 import org.eclipse.symphony.core.SymphonySystemApiAdapter
 import org.eclipse.symphony.core.SymphonyInitializationData
 
-import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView
+import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
 
 /*
  * This class is the specialized Symphony API adapter, used for connecting

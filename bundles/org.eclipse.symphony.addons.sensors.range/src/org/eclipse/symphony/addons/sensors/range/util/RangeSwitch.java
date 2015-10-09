@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.sensors.Sensor;
+import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.range.ContactSensor;
 import org.eclipse.symphony.addons.sensors.range.LineRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
@@ -33,8 +35,6 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.common.TimeTaggedElement;
-import ca.gc.space.mrt.sensors.fov.FieldOfView;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->

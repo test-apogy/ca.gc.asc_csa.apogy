@@ -4,19 +4,19 @@
    <extension
          point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.space.mrt.sensors.fov.ui.jme3.adapters.CircularSectorFieldOfViewJME3Adapter">
+            Class="org.eclipse.symphony.addons.sensors.fov.ui.jme3.adapters.CircularSectorFieldOfViewJME3Adapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.space.mrt.sensors.fov.ui.jme3.adapters.ConicalFieldOfViewJME3Adapter">
+            Class="org.eclipse.symphony.addons.sensors.fov.ui.jme3.adapters.ConicalFieldOfViewJME3Adapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.space.mrt.sensors.fov.ui.jme3.adapters.RectangularFrustumFieldOfViewJME3Adapter">
+            Class="org.eclipse.symphony.addons.sensors.fov.ui.jme3.adapters.RectangularFrustumFieldOfViewJME3Adapter">
       </Class>
    </extension>
 

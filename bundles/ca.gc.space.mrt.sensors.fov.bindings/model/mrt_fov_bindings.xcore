@@ -1,14 +1,14 @@
 @GenModel(prefix="MRTFOVBindings", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne - Canadian Space Agency 2013 Copyrights (c)", modelName="MRTFOVBindings", complianceLevel="6.0")
-@GenModel(modelDirectory="/ca.gc.space.mrt.sensors.fov.bindings/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.sensors.fov.bindings.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.fov.bindings/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.fov.bindings.edit/src-generated")
 
-package ca.gc.space.mrt.sensors.fov.bindings
+package org.eclipse.symphony.addons.sensors.fov.bindings
 
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
 
-import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView
-import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
+import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView
+import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
 
 /**
  * Binding that binds a CircularSectorFieldOfView to another CircularSectorFieldOfView.

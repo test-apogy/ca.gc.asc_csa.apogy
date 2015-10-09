@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.examples.antenna.Antenna;
 import org.eclipse.symphony.examples.antenna.DishAntenna;
 import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaFactory;
@@ -17,8 +18,6 @@ import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
 import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
 import org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated;
 import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
-
-import ca.gc.space.mrt.sensors.fov.FovPackage;
 
 /**
  * <!-- begin-user-doc -->

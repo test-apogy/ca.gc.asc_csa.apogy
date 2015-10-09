@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="org.eclipse.symphony.common.topology.bindings" xmlns:ca.gc.space.mrt.sensors.fov="http:///ca/gc/space/mrt/sensors/fov/model/fov.ecore" xmlns:org.eclipse.symphony.common.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_sUcqQArOEeW4-_ONWXXiAw" name="PTUDishAntennaSymphonySystem">
+<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="org.eclipse.symphony.common.topology.bindings" xmlns:org.eclipse.symphony.addons.sensors.fov="http:///ca/gc/space/mrt/sensors/fov/model/fov.ecore" xmlns:org.eclipse.symphony.common.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_sUcqQArOEeW4-_ONWXXiAw" name="PTUDishAntennaSymphonySystem">
   <interfaceClass href="org.eclipse.symphony.examples.antenna#//PTUDishAntenna"/>
   <typeApiAdapterClass href="org.eclipse.symphony.examples.antenna.symphony#//PTUDishAntennaSymphonySystemApiAdapter"/>
   <topologyRoot xmi:id="_sUcqQQrOEeW4-_ONWXXiAw">
@@ -9,7 +9,7 @@
           <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_sUcqRQrOEeW4-_ONWXXiAw" parent="_sUcqRArOEeW4-_ONWXXiAw" nodeId="PTU_DISH_ANTENNA_SYM_SYS_PAN_TO_TILT">
             <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_sUcqRgrOEeW4-_ONWXXiAw" parent="_sUcqRQrOEeW4-_ONWXXiAw" nodeId="PTU_DISH_ANTENNA_SYM_SYS_TILT_JOINT">
               <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_sUcqRwrOEeW4-_ONWXXiAw" parent="_sUcqRgrOEeW4-_ONWXXiAw" nodeId="PTU_DISH_ANTENNA_SYM_SYS_FOV_TRANSFORM">
-                <aggregatedChildren xsi:type="ca.gc.space.mrt.sensors.fov:ConicalFieldOfView" xmi:id="_sUdRUArOEeW4-_ONWXXiAw" parent="_sUcqRwrOEeW4-_ONWXXiAw" nodeId="PTU_DISH_ANTENNA_SYM_SYS_FOV" fieldOfViewAngle="0.17453292519943295">
+                <aggregatedChildren xsi:type="org.eclipse.symphony.addons.sensors.fov:ConicalFieldOfView" xmi:id="_sUdRUArOEeW4-_ONWXXiAw" parent="_sUcqRwrOEeW4-_ONWXXiAw" nodeId="PTU_DISH_ANTENNA_SYM_SYS_FOV" fieldOfViewAngle="0.17453292519943295">
                   <range xmi:id="_sUdRUgrOEeW4-_ONWXXiAw" maximumDistance="100.0"/>
                 </aggregatedChildren>
                 <position xmi:id="_sUdRUwrOEeW4-_ONWXXiAw" x="0.05" y="-0.032" z="0.125"/>

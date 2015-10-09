@@ -9,7 +9,7 @@ package org.eclipse.symphony.examples.lidar.symphony
 import org.eclipse.symphony.core.SymphonySystemApiAdapter
 import org.eclipse.symphony.core.SymphonyInitializationData
 
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
 
 /*
  * This class is the specialized Symphony API adapter, used for connecting

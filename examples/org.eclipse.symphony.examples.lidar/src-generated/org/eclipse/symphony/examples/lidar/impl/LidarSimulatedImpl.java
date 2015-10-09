@@ -12,6 +12,8 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
@@ -21,9 +23,6 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.lidar.Activator;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
 import org.eclipse.symphony.examples.lidar.LidarSimulated;
-
-import ca.gc.space.mrt.sensors.fov.FOVFacade;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->

@@ -13,42 +13,42 @@
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.sensors.fov.ui.adapters.CircularSectorFieldOfViewPresentationAdapter">
+            Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.CircularSectorFieldOfViewPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.sensors.fov.ui.adapters.ConicalFieldOfViewPresentationAdapter">
+            Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.ConicalFieldOfViewPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.space.mrt.sensors.fov.ui.adapters.RectangularFrustrumFieldOfViewPresentationAdapter">
+            Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.RectangularFrustrumFieldOfViewPresentationAdapter">
       </Class>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="ca.gc.space.mrt.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
-            id="ca.gc.space.mrt.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
+            class="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
+            id="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
             name="Field Of View">
       </page>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="ca.gc.space.mrt.sensors.fov.ui.preferences.MRTFOVPreferencesInitializer">
+            class="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesInitializer">
       </initializer>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated mrt_fov_ui -->
       <package
-            uri="ca.gc.space.mrt.sensors.fov.ui"
-            class="ca.gc.space.mrt.sensors.fov.ui.FovUIPackage"
+            uri="org.eclipse.symphony.addons.sensors.fov.ui"
+            class="org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage"
             genModel="model/mrt_fov_ui.xcore"/>
    </extension>
 

@@ -22,5 +22,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology.ui.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.addons.sensors.range.edit;visibility:=reexport,
- ca.gc.space.mrt.sensors.fov.ui.edit;visibility:=reexport
+ org.eclipse.symphony.addons.sensors.fov.ui.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

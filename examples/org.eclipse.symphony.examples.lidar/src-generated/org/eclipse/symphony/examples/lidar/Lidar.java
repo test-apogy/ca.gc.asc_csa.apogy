@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.examples.lidar;
 
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 
 /**

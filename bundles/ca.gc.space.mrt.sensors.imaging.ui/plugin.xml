@@ -41,7 +41,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.space.mrt.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
+            category="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
             class="ca.gc.space.mrt.sensors.imaging.ui.preferences.MRTImagingPreferencesPage"
             id="ca.gc.space.mrt.sensors.imaging.ui.page1"
             name="Image Snapshot">

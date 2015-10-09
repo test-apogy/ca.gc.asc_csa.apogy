@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.sensors.fov.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.fov.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.space.mrt.sensors.fov.provider
+Export-Package: org.eclipse.symphony.addons.sensors.fov.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.space.mrt.sensors.fov;visibility:=reexport,
+ org.eclipse.symphony.addons.sensors.fov;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,

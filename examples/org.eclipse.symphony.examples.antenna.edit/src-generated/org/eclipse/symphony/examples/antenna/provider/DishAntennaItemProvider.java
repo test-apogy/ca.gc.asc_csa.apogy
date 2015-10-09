@@ -4,8 +4,6 @@
 package org.eclipse.symphony.examples.antenna.provider;
 
 
-import ca.gc.space.mrt.sensors.fov.FovFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -15,6 +13,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.examples.antenna.DishAntenna;
 import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
 

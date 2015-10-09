@@ -6,9 +6,9 @@ Bundle-SymbolicName: ca.gc.space.mrt.sensors.fov;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
-Export-Package: ca.gc.space.mrt.sensors.fov,
- ca.gc.space.mrt.sensors.fov.impl,
- ca.gc.space.mrt.sensors.fov.util
+Export-Package: org.eclipse.symphony.addons.sensors.fov,
+ org.eclipse.symphony.addons.sensors.fov.impl,
+ org.eclipse.symphony.addons.sensors.fov.util
 Require-Bundle: org.eclipse.symphony.common.topology.core;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,

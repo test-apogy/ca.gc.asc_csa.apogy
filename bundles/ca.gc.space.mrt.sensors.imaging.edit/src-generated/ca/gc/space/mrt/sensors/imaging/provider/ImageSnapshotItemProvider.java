@@ -15,13 +15,13 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.SensorsFactory;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
 import org.eclipse.symphony.common.topology.TopologyFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingFactory;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;

@@ -4,8 +4,6 @@
 package org.eclipse.symphony.examples.lidar.provider;
 
 
-import ca.gc.space.mrt.sensors.fov.FovFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -24,6 +22,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
 import org.eclipse.symphony.examples.lidar.Lidar;
 

@@ -6,7 +6,7 @@
  */
 package org.eclipse.symphony.addons.sensors.range;
 
-import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView;
+import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
 
 /**
  * <!-- begin-user-doc -->

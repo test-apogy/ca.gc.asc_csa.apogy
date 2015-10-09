@@ -7,7 +7,7 @@ public class Activator extends AbstractUIPlugin
 {
 
 	// The plug-in ID
-	public static final String ID = "ca.gc.space.mrt.sensors.fov.ui";
+	public static final String ID = "org.eclipse.symphony.addons.sensors.fov.ui";
 	
 	// The shared instance
 	private static Activator plugin;

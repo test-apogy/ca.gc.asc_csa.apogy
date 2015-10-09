@@ -5,6 +5,7 @@ package ca.gc.space.mrt.sensors.imaging.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
@@ -12,7 +13,6 @@ import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
 
 /**
  * This is the central singleton for the MRTSensorsImaging edit plugin.

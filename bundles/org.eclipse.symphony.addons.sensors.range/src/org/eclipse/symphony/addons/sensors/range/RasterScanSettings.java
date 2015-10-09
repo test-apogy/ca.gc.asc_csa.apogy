@@ -6,7 +6,7 @@
  */
 package org.eclipse.symphony.addons.sensors.range;
 
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->

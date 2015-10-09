@@ -14,12 +14,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.examples.camera.Camera;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraFactory;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
 
-import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 import ca.gc.space.mrt.sensors.imaging.provider.AbstractCameraItemProvider;
 

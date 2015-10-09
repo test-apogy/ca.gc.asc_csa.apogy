@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_fov_ui -->
       <factory
-            uri="ca.gc.space.mrt.sensors.fov.ui"
-            class="ca.gc.space.mrt.sensors.fov.ui.provider.FovUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.addons.sensors.fov.ui"
+            class="org.eclipse.symphony.addons.sensors.fov.ui.provider.FovUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -27,10 +27,10 @@
       <!-- @generated mrt_fov_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="ca.gc.space.mrt.sensors.fov.ui.provider.FovUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.ui.provider.FovUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="ca.gc.space.mrt.sensors.fov.ui.provider.FovUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.ui.provider.FovUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

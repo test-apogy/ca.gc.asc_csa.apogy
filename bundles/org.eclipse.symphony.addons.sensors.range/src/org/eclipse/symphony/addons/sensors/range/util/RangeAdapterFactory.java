@@ -11,6 +11,8 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.sensors.Sensor;
+import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.range.ContactSensor;
 import org.eclipse.symphony.addons.sensors.range.LineRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
@@ -34,8 +36,6 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.common.TimeTaggedElement;
-import ca.gc.space.mrt.sensors.fov.FieldOfView;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->
@@ -504,13 +504,13 @@ public class RangeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.sensors.fov.FieldOfView <em>Field Of View</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.FieldOfView <em>Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.sensors.fov.FieldOfView
+	 * @see org.eclipse.symphony.addons.sensors.fov.FieldOfView
 	 * @generated
 	 */
 	public Adapter createFieldOfViewAdapter() {
@@ -518,13 +518,13 @@ public class RangeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView
+	 * @see org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
 	 * @generated
 	 */
 	public Adapter createRectangularFrustrumFieldOfViewAdapter() {

@@ -3,10 +3,9 @@
  */
 package org.eclipse.symphony.examples.antenna.provider;
 
-import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;

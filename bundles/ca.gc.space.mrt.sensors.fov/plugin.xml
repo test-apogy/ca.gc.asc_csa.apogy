@@ -12,7 +12,7 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "http:///ca/gc/space/mrt/sensors/fov/model/fov.ecore" 
-       class = "ca.gc.space.mrt.sensors.fov.FovPackage"
+       class = "org.eclipse.symphony.addons.sensors.fov.FovPackage"
        genModel = "model/fov.genmodel" /> 
   </extension>
 

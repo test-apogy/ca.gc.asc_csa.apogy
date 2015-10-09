@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingFactory;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;

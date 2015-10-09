@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.AzimuthDirection;
 import ca.gc.space.mrt.sensors.imaging.ElevationDirection;

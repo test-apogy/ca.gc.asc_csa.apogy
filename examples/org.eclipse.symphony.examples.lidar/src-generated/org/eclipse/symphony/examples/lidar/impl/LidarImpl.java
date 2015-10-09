@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.examples.lidar.impl;
 
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,6 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
 import org.eclipse.symphony.examples.lidar.Lidar;
