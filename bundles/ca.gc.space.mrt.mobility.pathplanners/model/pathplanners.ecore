@@ -7,7 +7,7 @@
       <details key="documentation" value="A path planner that produces a WayPoinPath."/>
     </eAnnotations>
     <eOperations name="plan" lowerBound="1" eType="ecore:EClass ../../ca.gc.space.mrt.geometry.paths/model/paths.ecore#//WayPointPath"
-        eExceptions="ecore:EDataType ../../ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
+        eExceptions="ecore:EDataType ../../org.eclipse.symphony.common.processors/model/processors.ecore#//Exception">
       <eParameters name="currentPosition" lowerBound="1" eType="ecore:EClass ../../org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
       <eParameters name="destinationPosition" lowerBound="1" eType="ecore:EClass ../../org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
     </eOperations>
@@ -15,7 +15,7 @@
         transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="currentPosition" eType="ecore:EClass ../../org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"
         transient="true"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="ecore:EClass ../../org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianCoordinatesSet"/>
       <eTypeArguments eClassifier="ecore:EClass ../../ca.gc.space.mrt.geometry.paths/model/paths.ecore#//WayPointPath"/>
     </eGenericSuperTypes>

@@ -204,7 +204,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="ca.gc.space.mrt.common.processors.Exception"
+	 * @model exceptions="org.eclipse.symphony.common.processors.Exception"
 	 * @generated
 	 */
 	void acquireData() throws Exception;

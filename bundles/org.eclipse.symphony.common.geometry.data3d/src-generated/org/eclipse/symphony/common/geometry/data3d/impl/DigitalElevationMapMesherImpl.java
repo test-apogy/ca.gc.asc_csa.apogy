@@ -17,8 +17,7 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
-
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->

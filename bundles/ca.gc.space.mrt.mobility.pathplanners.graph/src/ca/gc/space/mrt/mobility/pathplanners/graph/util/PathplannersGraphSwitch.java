@@ -9,11 +9,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.processors.Monitorable;
+import org.eclipse.symphony.common.processors.Processor;
+import org.eclipse.symphony.common.processors.VerboseProvider;
 import org.jgrapht.EdgeFactory;
 
-import ca.gc.space.mrt.common.processors.Monitorable;
-import ca.gc.space.mrt.common.processors.Processor;
-import ca.gc.space.mrt.common.processors.VerboseProvider;
 import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;

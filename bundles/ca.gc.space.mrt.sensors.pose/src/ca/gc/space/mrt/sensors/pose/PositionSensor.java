@@ -52,7 +52,7 @@ public interface PositionSensor extends PositionNode, SelfPlaceSensor {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="ca.gc.space.mrt.common.processors.Exception"
+	 * @model exceptions="org.eclipse.symphony.common.processors.Exception"
 	 * @generated
 	 */
 	void resetPosition(CartesianPositionCoordinates newPosition) throws Exception;

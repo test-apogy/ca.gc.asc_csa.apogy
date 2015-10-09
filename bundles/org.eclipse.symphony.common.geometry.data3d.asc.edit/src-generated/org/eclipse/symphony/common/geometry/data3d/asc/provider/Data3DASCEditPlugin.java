@@ -7,8 +7,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
-
-import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
+import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 
 /**
  * This is the central singleton for the Data3DASC edit plugin.

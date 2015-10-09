@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_processors -->
       <factory
-            uri="ca.gc.space.mrt.common.processors"
-            class="ca.gc.space.mrt.common.processors.provider.ProcessorsItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.processors"
+            class="org.eclipse.symphony.common.processors.provider.ProcessorsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

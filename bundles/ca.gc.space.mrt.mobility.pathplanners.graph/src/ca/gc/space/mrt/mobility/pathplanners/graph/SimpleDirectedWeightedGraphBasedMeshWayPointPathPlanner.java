@@ -6,9 +6,8 @@
 package ca.gc.space.mrt.mobility.pathplanners.graph;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.processors.VerboseProvider;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
-
-import ca.gc.space.mrt.common.processors.VerboseProvider;
 
 /**
  * <!-- begin-user-doc -->

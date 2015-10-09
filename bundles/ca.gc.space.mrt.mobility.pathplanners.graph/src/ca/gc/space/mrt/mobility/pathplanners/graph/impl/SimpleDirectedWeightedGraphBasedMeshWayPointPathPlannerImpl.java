@@ -33,10 +33,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.VerboseProvider;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-import ca.gc.space.mrt.common.processors.VerboseProvider;
 import ca.gc.space.mrt.geometry.paths.PathUtilities;
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;

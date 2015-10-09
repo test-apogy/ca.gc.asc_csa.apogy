@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler
 import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler
 import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler
 
-import ca.gc.space.mrt.common.processors.Processor
+import org.eclipse.symphony.common.processors.Processor
 
 type Vector2d wraps javax.vecmath.Vector2d
 type Vector3d wraps javax.vecmath.Vector3d

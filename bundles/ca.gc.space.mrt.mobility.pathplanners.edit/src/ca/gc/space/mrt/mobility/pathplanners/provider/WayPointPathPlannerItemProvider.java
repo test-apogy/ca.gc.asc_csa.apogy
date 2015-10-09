@@ -15,8 +15,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
-import ca.gc.space.mrt.common.processors.provider.ProcessorItemProvider;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
 import ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner;
 

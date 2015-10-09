@@ -18,8 +18,7 @@ import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data.ShapeSamplingMode;
-
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->

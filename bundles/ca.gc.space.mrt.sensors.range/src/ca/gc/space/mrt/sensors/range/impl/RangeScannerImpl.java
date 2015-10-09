@@ -14,10 +14,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import org.eclipse.symphony.common.processors.Monitorable;
+import org.eclipse.symphony.common.processors.Processor;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
-import ca.gc.space.mrt.common.processors.Monitorable;
-import ca.gc.space.mrt.common.processors.Processor;
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RangeScanner;
 

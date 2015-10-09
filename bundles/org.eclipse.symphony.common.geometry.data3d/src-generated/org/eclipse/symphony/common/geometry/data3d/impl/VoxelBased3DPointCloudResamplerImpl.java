@@ -24,8 +24,7 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -6,8 +6,8 @@
 package ca.gc.space.mrt.geometry.paths.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.mrt.geometry.paths.WayPointPathInterpolator;

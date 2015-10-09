@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.common.geometry.data3d.impl;
 
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -12,6 +10,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.geometry.data3d.MeshSmoother;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -10,11 +10,11 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.processors.Monitorable;
+import org.eclipse.symphony.common.processors.Processor;
+import org.eclipse.symphony.common.processors.VerboseProvider;
 import org.jgrapht.EdgeFactory;
 
-import ca.gc.space.mrt.common.processors.Monitorable;
-import ca.gc.space.mrt.common.processors.Processor;
-import ca.gc.space.mrt.common.processors.VerboseProvider;
 import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
@@ -351,13 +351,13 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.common.processors.Monitorable
+	 * @see org.eclipse.symphony.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -365,13 +365,13 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.common.processors.Processor
+	 * @see org.eclipse.symphony.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {
@@ -407,13 +407,13 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.common.processors.VerboseProvider <em>Verbose Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.VerboseProvider <em>Verbose Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.common.processors.VerboseProvider
+	 * @see org.eclipse.symphony.common.processors.VerboseProvider
 	 * @generated
 	 */
 	public Adapter createVerboseProviderAdapter() {

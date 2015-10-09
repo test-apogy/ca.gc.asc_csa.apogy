@@ -14,9 +14,9 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data.SamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.processors.Monitorable;
+import org.eclipse.symphony.common.processors.Processor;
 
-import ca.gc.space.mrt.common.processors.Monitorable;
-import ca.gc.space.mrt.common.processors.Processor;
 import ca.gc.space.mrt.mobility.pathplanners.CircularExclusionZone;
 import ca.gc.space.mrt.mobility.pathplanners.ExclusionZone;
 import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner;

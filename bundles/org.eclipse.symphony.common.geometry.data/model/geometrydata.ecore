@@ -101,7 +101,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shapeSamplingMode" lowerBound="1"
         eType="#//ShapeSamplingMode" defaultValueLiteral="UNION"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CoordinatesSet">
         <eTypeArguments eTypeParameter="#//CoordinatesSetShapesSampler/T"/>
       </eTypeArguments>
@@ -129,7 +129,7 @@
         eType="#//ShapeSamplingMode" defaultValueLiteral="UNION"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="polygonSamplingMode" lowerBound="1"
         eType="#//PolygonSamplingMode" defaultValueLiteral="AT_LEAST_ONE_VERTEX"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//Mesh">
         <eTypeArguments eTypeParameter="#//MeshCoordinatesShapesSampler/CoordinatesType"/>
         <eTypeArguments eTypeParameter="#//MeshCoordinatesShapesSampler/PolygonType"/>
@@ -158,7 +158,7 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shapeSamplingMode" lowerBound="1"
         eType="#//ShapeSamplingMode" defaultValueLiteral="UNION"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//Mesh">
         <eTypeArguments eTypeParameter="#//MeshPolygonShapesSampler/CoordinatesType"/>
         <eTypeArguments eTypeParameter="#//MeshPolygonShapesSampler/PolygonType"/>

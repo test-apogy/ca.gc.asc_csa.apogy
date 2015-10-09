@@ -6,16 +6,16 @@
 	      modelName="Recorders",
 	      operationReflection="true",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.space.mrt.common.recorders/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.common.recorders.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.recorders/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.recorders.edit/src-generated")
 
-package ca.gc.space.mrt.common.recorders
+package org.eclipse.symphony.common.recorders
 
 import java.util.Map
 import java.util.Date
 
 import org.eclipse.symphony.common.file.csv.CsvColumnsSet
-import ca.gc.space.mrt.common.processors.Monitorable
+import org.eclipse.symphony.common.processors.Monitorable
 
 import org.eclipse.emf.ecore.EObject
 

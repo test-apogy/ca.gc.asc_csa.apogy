@@ -27,8 +27,7 @@ import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
 import java.io.IOException;
 

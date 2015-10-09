@@ -35,7 +35,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="RangeScanner">
     <eTypeParameters name="InputType"/>
     <eGenericSuperTypes eClassifier="#//RangeSensor"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eTypeParameter="#//RangeScanner/InputType"/>
       <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"/>
     </eGenericSuperTypes>
@@ -55,7 +55,7 @@
         <eTypeArguments eClassifier="#//RayData"/>
       </eGenericType>
     </eOperations>
-    <eOperations name="acquireData" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception"/>
+    <eOperations name="acquireData" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Exception"/>
     <eOperations name="applyOrientationNoise" eType="#//RayData">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Method that applies orientation noise on the original ray data. This method is abstact and should be overloaded."/>
@@ -140,7 +140,7 @@
     <eGenericSuperTypes eClassifier="#//RangeScanner">
       <eTypeArguments eClassifier="#//RasterScanSettings"/>
     </eGenericSuperTypes>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//RasterScanSettings"/>
       <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"/>
     </eGenericSuperTypes>

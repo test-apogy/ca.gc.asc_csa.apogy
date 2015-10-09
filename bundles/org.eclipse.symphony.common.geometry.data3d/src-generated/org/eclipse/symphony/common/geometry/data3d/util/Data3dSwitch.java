@@ -3,9 +3,6 @@
  */
 package org.eclipse.symphony.common.geometry.data3d.util;
 
-import ca.gc.space.mrt.common.processors.Monitorable;
-import ca.gc.space.mrt.common.processors.Processor;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -20,6 +17,8 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data.SamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.*;
+import org.eclipse.symphony.common.processors.Monitorable;
+import org.eclipse.symphony.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->

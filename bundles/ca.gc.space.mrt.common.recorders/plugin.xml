@@ -14,7 +14,7 @@
       <!-- @generated mrt_common_recorders -->
       <package
             uri="ca.gc.space.mrt.common.recorders"
-            class="ca.gc.space.mrt.common.recorders.RecordersPackage"
+            class="org.eclipse.symphony.common.recorders.RecordersPackage"
             genModel="model/mrt_common_recorders.xcore"/>
    </extension>
 

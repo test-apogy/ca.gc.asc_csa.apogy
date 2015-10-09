@@ -3,7 +3,6 @@
  */
 package org.eclipse.symphony.examples.antenna.provider;
 
-import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 
@@ -12,6 +11,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
+import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreExampleAntenna edit plugin.

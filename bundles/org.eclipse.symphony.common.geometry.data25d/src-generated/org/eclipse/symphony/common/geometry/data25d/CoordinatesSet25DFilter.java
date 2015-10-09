@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.common.geometry.data25d;
 
-import ca.gc.space.mrt.common.processors.Processor;
+import org.eclipse.symphony.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->

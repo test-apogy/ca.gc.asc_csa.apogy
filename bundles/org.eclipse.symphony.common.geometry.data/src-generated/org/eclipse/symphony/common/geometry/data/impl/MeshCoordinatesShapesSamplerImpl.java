@@ -24,8 +24,7 @@ import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler;
 import org.eclipse.symphony.common.geometry.data.Polygon;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingMode;
 import org.eclipse.symphony.common.geometry.data.ShapeSamplingMode;
-
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->

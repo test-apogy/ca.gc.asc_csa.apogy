@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.common.geometry.data;
 
-import ca.gc.space.mrt.common.processors.Processor;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->

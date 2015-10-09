@@ -11,8 +11,8 @@ import org.eclipse.symphony.addons.actuators.provider.MRTActuatorsEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 
-import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
 import ca.gc.space.mrt.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;

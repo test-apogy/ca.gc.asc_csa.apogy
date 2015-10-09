@@ -22,8 +22,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RangeScanner;
 import ca.gc.space.topology.TopologyPackage;

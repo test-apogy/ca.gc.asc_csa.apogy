@@ -139,7 +139,7 @@
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CartesianPositionCoordinatesMesher">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
       <eTypeArguments eClassifier="#//CartesianTriangularMesh"/>
     </eGenericSuperTypes>
@@ -286,7 +286,7 @@
         eExceptions="#//IOException">
       <eParameters name="filePrefix" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     </eOperations>
-    <eOperations name="saveTriangularMeshAsASCII" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
+    <eOperations name="saveTriangularMeshAsASCII" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Exception">
       <eParameters name="mesh" eType="#//CartesianTriangularMesh"/>
       <eParameters name="filePrefix" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     </eOperations>
@@ -416,7 +416,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VecmathKdTreePointLocator" eSuperTypes="#//VecmathPointLocator"/>
   <eClassifiers xsi:type="ecore:EClass" name="MeshLocaliser">
-    <eOperations name="localise" eType="#//Matrix4d" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
+    <eOperations name="localise" eType="#//Matrix4d" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Exception">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Localise a floating mesh with respect to a fixed mesh. The transform returned is the transform between the floating mesh and the origin (i.e. a revised version of the floatingMeshTransformEstimate)."/>
       </eAnnotations>
@@ -483,7 +483,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="meshingPlane" eType="#//MESHING_PLANE"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DigitalElevationMapMesher">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//DigitalElevationMap"/>
       <eTypeArguments eClassifier="#//CartesianTriangularMesh"/>
     </eGenericSuperTypes>
@@ -491,19 +491,19 @@
   <eClassifiers xsi:type="ecore:EClass" name="DigitalElevationMapSampler">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetResolution" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
         defaultValueLiteral="1.0"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//DigitalElevationMap"/>
       <eTypeArguments eClassifier="#//DigitalElevationMap"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TriangularMeshNormalsCalculator">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CartesianTriangularMesh"/>
       <eTypeArguments eClassifier="#//CartesianTriangularMesh"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TriangularMesh2NormalPointCloud">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CartesianTriangularMesh"/>
       <eTypeArguments eClassifier="#//NormalPointCloud"/>
     </eGenericSuperTypes>
@@ -526,13 +526,13 @@
         defaultValueLiteral="-1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxZ" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"
         defaultValueLiteral="1"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UniquePointsFilter">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
     </eGenericSuperTypes>
@@ -547,7 +547,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OutlierFilter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxDistance" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
     </eGenericSuperTypes>
@@ -568,14 +568,14 @@
         defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RasterPointCloudToCartesianCoordinatesSet">
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//RasterPointCloud"/>
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeshSmoother" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfIterations" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CartesianTriangularMesh"/>
       <eTypeArguments eClassifier="#//CartesianTriangularMesh"/>
     </eGenericSuperTypes>
@@ -615,13 +615,13 @@
         <details key="documentation" value="Size of the tiling to be used to process large data set. This is done to avoid memory problem."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
       <eTypeArguments eClassifier="#//CartesianCoordinatesSet"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RigidBodyPoseTracker">
-    <eOperations name="computeTransformation" eType="#//Point3d" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
+    <eOperations name="computeTransformation" eType="#//Point3d" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Exception">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This method computes the 3D rigid body transformation between two 3D data sets. First, the rotation matrix is computed using the Singular Values Decomposition (SVD) approach. Then, translation composent is computed. Finally, rotation and translation components are packed into an homogenous 4x4 matrix. Note : at least 3 markers are required to solve the 3D pose. If more than 3 markers are specified, the best fit (minimizing the root meaning squarre error) will be found."/>
       </eAnnotations>
@@ -631,7 +631,7 @@
         </eAnnotations>
       </eParameters>
     </eOperations>
-    <eOperations name="addPositionMarkers" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
+    <eOperations name="addPositionMarkers" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Exception">
       <eParameters name="marker" lowerBound="1">
         <eGenericType eClassifier="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.geometry.data/model/geometrydata.ecore#//List">
           <eTypeArguments eClassifier="#//PositionMarker"/>

@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.EdgeFactory;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
 import ca.gc.space.mrt.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;

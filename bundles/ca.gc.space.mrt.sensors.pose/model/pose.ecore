@@ -3,14 +3,14 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pose" nsURI="http:///ca/gc/space/mrt/sensors/pose/model/pose.ecore"
     nsPrefix="ca.gc.space.mrt.sensors">
   <eClassifiers xsi:type="ecore:EClass" name="PositionSensor" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//PositionNode #//SelfPlaceSensor">
-    <eOperations name="resetPosition" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
+    <eOperations name="resetPosition" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Exception">
       <eParameters name="newPosition" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="positionCoordinates" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianPositionCoordinates"
         changeable="false" transient="true" derived="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OrientationSensor" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//RotationNode #//SelfPlaceSensor">
-    <eOperations name="resetOrientation" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
+    <eOperations name="resetOrientation" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Exception">
       <eParameters name="newOrientation" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates"/>
     </eOperations>
     <eOperations name="extractOrientationFromMatrix" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianOrientationCoordinates">
@@ -21,7 +21,7 @@
         changeable="false" transient="true" derived="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PoseSensor" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//TransformNode #//PositionSensor #//OrientationSensor">
-    <eOperations name="resetPose" eExceptions="ecore:EDataType platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Exception">
+    <eOperations name="resetPose" eExceptions="ecore:EDataType platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Exception">
       <eParameters name="newPose" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//Pose"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//Pose"

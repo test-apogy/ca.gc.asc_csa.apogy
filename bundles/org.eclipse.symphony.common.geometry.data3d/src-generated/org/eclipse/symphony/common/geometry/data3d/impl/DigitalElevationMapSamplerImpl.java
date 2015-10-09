@@ -35,8 +35,8 @@ import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
 import edu.wlu.cs.levy.CG.KDTree;
 import edu.wlu.cs.levy.CG.KeySizeException;
 

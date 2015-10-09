@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage;
 import ca.gc.space.mrt.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
 

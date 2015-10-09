@@ -5,7 +5,7 @@
  */
 package ca.gc.space.mrt.geometry.paths;
 
-import ca.gc.space.mrt.common.processors.Processor;
+import org.eclipse.symphony.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->

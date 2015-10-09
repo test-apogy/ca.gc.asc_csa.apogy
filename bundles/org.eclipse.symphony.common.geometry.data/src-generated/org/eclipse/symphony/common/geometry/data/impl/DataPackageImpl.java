@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.common.geometry.data.impl;
 
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-
 import java.util.List;
 
 import javax.vecmath.Vector3d;
@@ -34,6 +32,7 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingMode;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data.SamplingShape;
 import org.eclipse.symphony.common.geometry.data.ShapeSamplingMode;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->

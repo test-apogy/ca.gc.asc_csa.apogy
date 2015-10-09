@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.common.geometry.data3d;
 
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -13,6 +11,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,11 +3,9 @@
  */
 package org.eclipse.symphony.common.geometry.data.provider;
 
-import ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 
 /**
  * This is the central singleton for the Data edit plugin.

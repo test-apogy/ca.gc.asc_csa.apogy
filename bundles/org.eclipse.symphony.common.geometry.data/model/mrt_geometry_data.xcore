@@ -11,7 +11,7 @@
 
 package org.eclipse.symphony.common.geometry.data
 
-import ca.gc.space.mrt.common.processors.Processor
+import org.eclipse.symphony.common.processors.Processor
 
 type List<T> wraps java.util.List
 type Vector3d wraps javax.vecmath.Vector3d

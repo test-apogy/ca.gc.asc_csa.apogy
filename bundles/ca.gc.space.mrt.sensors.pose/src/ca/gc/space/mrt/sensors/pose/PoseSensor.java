@@ -79,7 +79,7 @@ public interface PoseSensor extends TransformNode, PositionSensor, OrientationSe
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model exceptions="ca.gc.space.mrt.common.processors.Exception"
+	 * @model exceptions="org.eclipse.symphony.common.processors.Exception"
 	 * @generated
 	 */
 	void resetPose(Pose newPose) throws Exception;

@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.common.geometry.data3d.impl;
 
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -87,6 +85,7 @@ import org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter;
 import org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator;
 import org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator;
 import org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->

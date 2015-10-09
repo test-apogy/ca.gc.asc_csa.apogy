@@ -11,7 +11,7 @@
         changeable="false" transient="true" defaultValueLiteral="0.0" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WayPointPathInterpolator">
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//WayPointPath"/>
       <eTypeArguments eClassifier="#//WayPointPath"/>
     </eGenericSuperTypes>
@@ -30,7 +30,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WayPointPathFilter" abstract="true"
       interface="true">
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eClassifier="#//WayPointPath"/>
       <eTypeArguments eClassifier="#//WayPointPath"/>
     </eGenericSuperTypes>

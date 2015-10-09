@@ -3,9 +3,6 @@
  */
 package org.eclipse.symphony.common.geometry.data25d.util;
 
-import ca.gc.space.mrt.common.processors.Monitorable;
-import ca.gc.space.mrt.common.processors.Processor;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -14,6 +11,8 @@ import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
 import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.eclipse.symphony.common.geometry.data.Polygon;
 import org.eclipse.symphony.common.geometry.data25d.*;
+import org.eclipse.symphony.common.processors.Monitorable;
+import org.eclipse.symphony.common.processors.Processor;
 
 /**
  * <!-- begin-user-doc -->

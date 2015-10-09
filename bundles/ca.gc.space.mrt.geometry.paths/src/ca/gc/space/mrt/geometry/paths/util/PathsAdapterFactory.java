@@ -13,9 +13,9 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.processors.Monitorable;
+import org.eclipse.symphony.common.processors.Processor;
 
-import ca.gc.space.mrt.common.processors.Monitorable;
-import ca.gc.space.mrt.common.processors.Processor;
 import ca.gc.space.mrt.geometry.paths.CatmullRomWayPointPathInterpolator;
 import ca.gc.space.mrt.geometry.paths.MinimumDistanceFilter;
 import ca.gc.space.mrt.geometry.paths.Path;
@@ -387,13 +387,13 @@ public class PathsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.common.processors.Monitorable <em>Monitorable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Monitorable <em>Monitorable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.common.processors.Monitorable
+	 * @see org.eclipse.symphony.common.processors.Monitorable
 	 * @generated
 	 */
 	public Adapter createMonitorableAdapter() {
@@ -401,13 +401,13 @@ public class PathsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.common.processors.Processor <em>Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.processors.Processor <em>Processor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.common.processors.Processor
+	 * @see org.eclipse.symphony.common.processors.Processor
 	 * @generated
 	 */
 	public Adapter createProcessorAdapter() {

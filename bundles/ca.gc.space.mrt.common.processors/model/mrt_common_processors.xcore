@@ -6,10 +6,10 @@
 	      modelName="Processors",
 	      operationReflection="true",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.space.mrt.common.processors/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.common.processors.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.processors/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.processors.edit/src-generated")
 
-package ca.gc.space.mrt.common.processors
+package org.eclipse.symphony.common.processors
 
 @GenModel(documentation="Represent a object for which operation progress can be reported.")
 interface Monitorable

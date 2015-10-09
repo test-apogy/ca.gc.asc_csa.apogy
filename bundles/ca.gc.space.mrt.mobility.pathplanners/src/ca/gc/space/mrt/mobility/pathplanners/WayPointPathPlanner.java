@@ -7,8 +7,8 @@ package ca.gc.space.mrt.mobility.pathplanners;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.processors.Processor;
 
-import ca.gc.space.mrt.common.processors.Processor;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 
 /**
@@ -95,7 +95,7 @@ public interface WayPointPathPlanner extends Processor<CartesianCoordinatesSet, 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" exceptions="ca.gc.space.mrt.common.processors.Exception" currentPositionRequired="true" destinationPositionRequired="true"
+	 * @model required="true" exceptions="org.eclipse.symphony.common.processors.Exception" currentPositionRequired="true" destinationPositionRequired="true"
 	 * @generated
 	 */
 	WayPointPath plan(CartesianPositionCoordinates currentPosition, CartesianPositionCoordinates destinationPosition) throws Exception;

@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.space.mrt.geometry.paths;visibility:=reexport,
- ca.gc.space.mrt.common.processors;visibility:=reexport,
+ org.eclipse.symphony.common.processors;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport
 Bundle-ActivationPolicy: lazy

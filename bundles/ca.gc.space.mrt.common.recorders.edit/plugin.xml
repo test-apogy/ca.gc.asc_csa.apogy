@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_common_recorders -->
       <factory
-            uri="ca.gc.space.mrt.common.recorders"
-            class="ca.gc.space.mrt.common.recorders.provider.RecordersItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.recorders"
+            class="org.eclipse.symphony.common.recorders.provider.RecordersItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

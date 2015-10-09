@@ -63,7 +63,7 @@
     <eOperations name="createCoordinatesSet25D">
       <eGenericType eTypeParameter="#//CoordinatesSet25DFilter/T"/>
     </eOperations>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//Processor">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//Processor">
       <eTypeArguments eTypeParameter="#//CoordinatesSet25DFilter/T"/>
       <eTypeArguments eTypeParameter="#//CoordinatesSet25DFilter/T"/>
     </eGenericSuperTypes>

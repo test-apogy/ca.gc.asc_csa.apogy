@@ -12,8 +12,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
 import ca.gc.space.mrt.geometry.paths.MinimumDistanceFilter;
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;

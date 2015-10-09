@@ -12,8 +12,8 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
 import edu.wlu.cs.levy.CG.KDTree;
 
 /**

@@ -4,8 +4,6 @@
 package org.eclipse.symphony.common.geometry.data3d.provider;
 
 
-import ca.gc.space.mrt.common.processors.provider.ProcessorItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -18,6 +16,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.geometry.data3d.MeshSmoother;
+import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother} object.

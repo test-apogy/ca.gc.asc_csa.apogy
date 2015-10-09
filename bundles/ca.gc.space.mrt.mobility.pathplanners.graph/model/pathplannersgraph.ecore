@@ -37,7 +37,7 @@
     <eGenericSuperTypes eClassifier="#//CostBasedMeshWayPointPathPlanner">
       <eTypeArguments eTypeParameter="#//SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner/PolygonType"/>
     </eGenericSuperTypes>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.common.processors/model/processors.ecore#//VerboseProvider"/>
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.processors/model/processors.ecore#//VerboseProvider"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="SimpleDirectedWeightedGraph" instanceClassName="org.jgrapht.graph.SimpleDirectedWeightedGraph"/>
   <eClassifiers xsi:type="ecore:EClass" name="DirectedGraphBasedMeshWayPointPathPlanner">

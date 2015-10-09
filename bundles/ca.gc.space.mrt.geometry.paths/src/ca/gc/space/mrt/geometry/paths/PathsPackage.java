@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
-import ca.gc.space.mrt.common.processors.ProcessorsPackage;
 import ca.gc.space.topology.TopologyPackage;
 
 /**

@@ -14,8 +14,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
-
-import ca.gc.space.mrt.common.processors.provider.ProcessorItemProvider;
+import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher} object.

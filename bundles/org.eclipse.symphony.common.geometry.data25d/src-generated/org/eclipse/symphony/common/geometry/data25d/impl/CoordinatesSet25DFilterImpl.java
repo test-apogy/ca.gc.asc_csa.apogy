@@ -12,8 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D;
 import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter;
 import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
-
-import ca.gc.space.mrt.common.processors.impl.ProcessorImpl;
+import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
 /**
  * <!-- begin-user-doc -->

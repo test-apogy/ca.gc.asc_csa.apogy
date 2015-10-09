@@ -12,9 +12,9 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.processors.Monitorable;
+import org.eclipse.symphony.common.processors.Processor;
 
-import ca.gc.space.mrt.common.processors.Monitorable;
-import ca.gc.space.mrt.common.processors.Processor;
 import ca.gc.space.mrt.geometry.paths.CatmullRomWayPointPathInterpolator;
 import ca.gc.space.mrt.geometry.paths.MinimumDistanceFilter;
 import ca.gc.space.mrt.geometry.paths.Path;
