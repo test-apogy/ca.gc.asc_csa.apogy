@@ -5,7 +5,6 @@ package org.eclipse.symphony.addons.telecoms.provider;
 
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.topology.provider.NodeItemProvider;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,6 +17,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
 import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern} object.

@@ -5,7 +5,7 @@
  */
 package org.eclipse.symphony.addons.sensors;
 
-import ca.gc.space.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->

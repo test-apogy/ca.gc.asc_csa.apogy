@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fov" nsURI="http:///ca/gc/space/mrt/sensors/fov/model/fov.ecore"
     nsPrefix="ca.gc.space.mrt.sensors.fov">
-  <eClassifiers xsi:type="ecore:EClass" name="FieldOfView" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldOfView" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//Node"/>
   <eClassifiers xsi:type="ecore:EClass" name="DistanceRange">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Defines an distance range by specifying a minimum and maximum distance."/>

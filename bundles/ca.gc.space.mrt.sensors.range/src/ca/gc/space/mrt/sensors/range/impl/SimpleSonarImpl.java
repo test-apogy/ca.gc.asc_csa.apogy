@@ -12,12 +12,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
 import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.SimpleSonar;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

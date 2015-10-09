@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.addons.vehicle;
 
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 
 /**
  * <!-- begin-user-doc -->

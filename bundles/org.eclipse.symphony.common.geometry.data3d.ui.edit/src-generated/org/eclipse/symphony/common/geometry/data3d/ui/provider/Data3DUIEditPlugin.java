@@ -8,9 +8,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
-
-import ca.gc.space.topology.provider.TopologyEditPlugin;
-import ca.gc.space.topology.ui.provider.TopologyUIEditPlugin;
+import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
 
 /**
  * This is the central singleton for the Data3DUI edit plugin.

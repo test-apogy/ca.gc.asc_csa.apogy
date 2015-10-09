@@ -11,8 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
-
-import ca.gc.space.topology.impl.AggregateGroupNodeImpl;
+import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.addons.telecoms.ui.impl;
 
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
 import org.eclipse.symphony.addons.telecoms.ui.SymphonyTelecomToolsUIPackage;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

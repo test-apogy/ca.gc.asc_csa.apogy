@@ -32,12 +32,11 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
-
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
 
 /**
  * <!-- begin-user-doc -->

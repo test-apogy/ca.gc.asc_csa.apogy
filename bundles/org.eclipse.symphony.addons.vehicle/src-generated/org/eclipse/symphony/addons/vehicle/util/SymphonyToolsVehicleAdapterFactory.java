@@ -12,15 +12,15 @@ import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
 import org.eclipse.symphony.addons.Simple3DTool;
 import org.eclipse.symphony.addons.SimpleTool;
 import org.eclipse.symphony.addons.vehicle.*;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.core.PoseCorrector;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -459,13 +459,13 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.Node
+	 * @see org.eclipse.symphony.common.topology.Node
 	 * @generated
 	 */
   public Adapter createNodeAdapter()
@@ -474,13 +474,13 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.GroupNode
+	 * @see org.eclipse.symphony.common.topology.GroupNode
 	 * @generated
 	 */
   public Adapter createGroupNodeAdapter()
@@ -489,13 +489,13 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.AggregateGroupNode
+	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
 	 * @generated
 	 */
   public Adapter createAggregateGroupNodeAdapter()
@@ -504,13 +504,13 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.topology.dynamics.PhysicalBody <em>Physical Body</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody <em>Physical Body</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.topology.dynamics.PhysicalBody
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody
 	 * @generated
 	 */
   public Adapter createPhysicalBodyAdapter()
@@ -519,13 +519,13 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.Node
+	 * @see org.eclipse.symphony.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createTopology_NodeAdapter() {
@@ -632,13 +632,13 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.GroupNode
+	 * @see org.eclipse.symphony.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createTopology_GroupNodeAdapter() {
@@ -646,13 +646,13 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.AggregateGroupNode
+	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createTopology_AggregateGroupNodeAdapter() {

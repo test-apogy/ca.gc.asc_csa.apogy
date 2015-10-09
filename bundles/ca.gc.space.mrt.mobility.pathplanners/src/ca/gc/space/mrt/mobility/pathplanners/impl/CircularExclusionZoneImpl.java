@@ -26,11 +26,11 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFactory;
 
 import ca.gc.space.mrt.mobility.pathplanners.CircularExclusionZone;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyFactory;
 
 /**
  * <!-- begin-user-doc -->

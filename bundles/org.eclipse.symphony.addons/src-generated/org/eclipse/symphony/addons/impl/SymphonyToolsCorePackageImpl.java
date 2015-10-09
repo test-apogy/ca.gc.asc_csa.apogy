@@ -28,13 +28,13 @@ import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->

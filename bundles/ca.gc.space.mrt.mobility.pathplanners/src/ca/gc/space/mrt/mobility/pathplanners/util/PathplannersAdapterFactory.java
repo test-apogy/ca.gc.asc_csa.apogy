@@ -17,6 +17,7 @@ import org.eclipse.symphony.common.geometry.data.SamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.mobility.pathplanners.CircularExclusionZone;
 import ca.gc.space.mrt.mobility.pathplanners.ExclusionZone;
@@ -24,7 +25,6 @@ import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner;
 import ca.gc.space.mrt.mobility.pathplanners.PathPlannersFacade;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
 import ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -252,13 +252,13 @@ public class PathplannersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.Node
+	 * @see org.eclipse.symphony.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter()

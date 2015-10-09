@@ -4,9 +4,9 @@
 
 package ca.gc.space.mrt.sensors.fov.ui
 
-import ca.gc.space.topology.ui.MeshPresentationMode
-import ca.gc.space.topology.ui.NodePresentation
-import ca.gc.space.topology.ui.RGB
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode
+import org.eclipse.symphony.common.topology.ui.NodePresentation
+import org.eclipse.symphony.common.topology.ui.RGB
 
 class FieldOfViewPresentation extends NodePresentation
 {

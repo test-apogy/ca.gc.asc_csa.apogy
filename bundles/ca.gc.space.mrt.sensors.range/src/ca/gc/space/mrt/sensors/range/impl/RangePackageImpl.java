@@ -23,6 +23,7 @@ import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.common.CommonPackage;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
@@ -43,7 +44,6 @@ import ca.gc.space.mrt.sensors.range.SimpleRangeSensor;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScanner;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import ca.gc.space.mrt.sensors.range.SimpleSonar;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

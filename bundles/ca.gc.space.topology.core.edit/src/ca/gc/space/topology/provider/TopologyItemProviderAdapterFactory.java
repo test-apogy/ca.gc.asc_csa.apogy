@@ -4,7 +4,7 @@
  *
  * $Id: TopologyItemProviderAdapterFactory.java,v 1.17.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package ca.gc.space.topology.provider;
+package org.eclipse.symphony.common.topology.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,8 +29,8 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologyAdapterFactory;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologyAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -91,7 +91,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.topology.TransformNode} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.TransformNode} instances.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -99,7 +99,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected TransformNodeItemProvider transformNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.TransformNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.TransformNode}.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -114,7 +114,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.space.topology.TopologyFacade} instances. <!--
+	 * {@link org.eclipse.symphony.common.topology.TopologyFacade} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -122,7 +122,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected TopologyFacadeItemProvider topologyFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.TopologyFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.TopologyFacade}.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -136,7 +136,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.topology.ContentNode} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ContentNode} instances.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -144,7 +144,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected ContentNodeItemProvider contentNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.ContentNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ContentNode}.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -158,7 +158,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.topology.PositionNode} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.PositionNode} instances.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -166,7 +166,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected PositionNodeItemProvider positionNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.PositionNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.PositionNode}.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -180,7 +180,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.topology.RotationNode} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.RotationNode} instances.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -188,7 +188,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected RotationNodeItemProvider rotationNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.RotationNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.RotationNode}.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -202,7 +202,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.topology.Leaf} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.Leaf} instances.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
@@ -210,7 +210,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected LeafItemProvider leafItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.Leaf}. <!--
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.Leaf}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -226,7 +226,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.space.topology.PickAndPlaceNode} instances. <!--
+	 * {@link org.eclipse.symphony.common.topology.PickAndPlaceNode} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -234,7 +234,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected PickAndPlaceNodeItemProvider pickAndPlaceNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.PickAndPlaceNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.PickAndPlaceNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -250,7 +250,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.space.topology.ReferencedContentNode} instances. <!--
+	 * {@link org.eclipse.symphony.common.topology.ReferencedContentNode} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -258,7 +258,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected ReferencedContentNodeItemProvider referencedContentNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.ReferencedContentNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ReferencedContentNode}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -274,7 +274,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.space.topology.AggregateContentNode} instances. <!--
+	 * {@link org.eclipse.symphony.common.topology.AggregateContentNode} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -282,7 +282,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected AggregateContentNodeItemProvider aggregateContentNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.AggregateContentNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.AggregateContentNode}.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
 	 * @generated
@@ -297,7 +297,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.topology.URLNode} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.URLNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -305,7 +305,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected URLNodeItemProvider urlNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.URLNode}. <!--
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.URLNode}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -321,7 +321,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.space.topology.ReferencedGroupNode} instances. <!--
+	 * {@link org.eclipse.symphony.common.topology.ReferencedGroupNode} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -329,7 +329,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected ReferencedGroupNodeItemProvider referencedGroupNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.ReferencedGroupNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ReferencedGroupNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -344,7 +344,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.topology.Link} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.Link} instances.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @generated
@@ -352,7 +352,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected LinkItemProvider linkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.Link}. <!--
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.Link}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -368,7 +368,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link ca.gc.space.topology.AggregateGroupNode} instances. <!--
+	 * {@link org.eclipse.symphony.common.topology.AggregateGroupNode} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
@@ -376,7 +376,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected AggregateGroupNodeItemProvider aggregateGroupNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.AggregateGroupNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.AggregateGroupNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -391,7 +391,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.space.topology.CADNode} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.CADNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -399,7 +399,7 @@ public class TopologyItemProviderAdapterFactory extends TopologyAdapterFactory
 	protected CADNodeItemProvider cadNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link ca.gc.space.topology.CADNode}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.CADNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

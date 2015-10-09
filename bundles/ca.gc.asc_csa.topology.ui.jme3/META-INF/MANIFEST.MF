@@ -6,13 +6,13 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-Activator: ca.gc.asc_csa.topology.ui.jme3.Activator
+Bundle-Activator: org.eclipse.symphony.common.topology.ui.jme3.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ca.gc.asc_csa.topology.ui.jme3,
- ca.gc.asc_csa.topology.ui.jme3.adapters,
- ca.gc.asc_csa.topology.ui.jme3.impl,
- ca.gc.asc_csa.topology.ui.jme3.scene_objects,
- ca.gc.asc_csa.topology.ui.jme3.util
+Export-Package: org.eclipse.symphony.common.topology.ui.jme3,
+ org.eclipse.symphony.common.topology.ui.jme3.adapters,
+ org.eclipse.symphony.common.topology.ui.jme3.impl,
+ org.eclipse.symphony.common.topology.ui.jme3.scene_objects,
+ org.eclipse.symphony.common.topology.ui.jme3.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
@@ -24,7 +24,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.edit;bundle-version="2.9.0",
  org.eclipse.ui;visibility:=reexport,
  javax.media;bundle-version="1.5.2";visibility:=reexport,
- ca.gc.asc_csa.topology.ui.viewer;bundle-version="0.3.0",
+ org.eclipse.symphony.common.topology.ui.viewer;bundle-version="0.3.0",
  ca.gc.asc_csa.eclipse;bundle-version="0.3.0",
  org.apache.commons.collections4;bundle-version="4.4.0",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"

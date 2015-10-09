@@ -14,10 +14,10 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
 import ca.gc.space.mrt.sensors.pose.ui.PoseSensorPresentation;
 import ca.gc.space.mrt.sensors.pose.ui.SensorsPoseUIPackage;
-import ca.gc.space.topology.ui.provider.NodePresentationItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.sensors.pose.ui.PoseSensorPresentation} object.

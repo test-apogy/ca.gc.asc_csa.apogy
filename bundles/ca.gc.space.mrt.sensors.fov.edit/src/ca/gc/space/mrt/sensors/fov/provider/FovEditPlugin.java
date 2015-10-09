@@ -12,8 +12,7 @@ import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
-
-import ca.gc.space.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 /**
  * This is the central singleton for the Fov edit plugin.

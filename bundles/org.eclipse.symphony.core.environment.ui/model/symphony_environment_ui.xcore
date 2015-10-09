@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.environment.RectangularRegion
 import org.eclipse.symphony.core.environment.RectangularRegionProvider
 import org.eclipse.symphony.core.environment.Star
 import org.eclipse.symphony.common.math.Matrix4x4
-import ca.gc.space.topology.ui.NodePresentation
+import org.eclipse.symphony.common.topology.ui.NodePresentation
 import org.eclipse.emf.ecore.EObject
  
 // Types

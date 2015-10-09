@@ -23,10 +23,9 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
-
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 
 /**
  * <!-- begin-user-doc -->

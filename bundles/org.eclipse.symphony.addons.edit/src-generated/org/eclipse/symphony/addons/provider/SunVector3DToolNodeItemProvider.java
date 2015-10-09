@@ -4,8 +4,6 @@
 package org.eclipse.symphony.addons.provider;
 
 
-import ca.gc.space.topology.provider.NodeItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -15,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.SunVector3DToolNode;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.SunVector3DToolNode} object.

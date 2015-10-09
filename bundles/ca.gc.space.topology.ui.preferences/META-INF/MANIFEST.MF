@@ -3,12 +3,12 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.space.topology.ui.preferences;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.space.topology.ui.preferences.Activator
+Bundle-Activator: org.eclipse.symphony.common.topology.ui.preferences.Activator
 Require-Bundle: org.eclipse.ui;visibility:=reexport,
  org.eclipse.core.runtime,
  javax.vecmath;bundle-version="1.5.2"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.space.topology.ui.preferences
+Export-Package: org.eclipse.symphony.common.topology.ui.preferences
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

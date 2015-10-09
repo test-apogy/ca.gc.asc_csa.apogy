@@ -20,10 +20,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.mobility.MobilityPackage;
 import ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform} object.

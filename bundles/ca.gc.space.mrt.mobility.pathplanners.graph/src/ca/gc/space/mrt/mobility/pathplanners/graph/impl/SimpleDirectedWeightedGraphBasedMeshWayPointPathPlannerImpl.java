@@ -35,6 +35,10 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
 import org.eclipse.symphony.common.processors.VerboseProvider;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 import ca.gc.space.mrt.geometry.paths.PathUtilities;
@@ -47,10 +51,6 @@ import ca.gc.space.mrt.mobility.pathplanners.graph.MobilityEdgeFactory;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphFactory;
 import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphPackage;
 import ca.gc.space.mrt.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

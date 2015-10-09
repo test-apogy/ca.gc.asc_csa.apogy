@@ -11,9 +11,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 import org.eclipse.symphony.core.environment.ui.SunPresentation;
-
-import ca.gc.space.topology.ui.provider.NodePresentationItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.SunPresentation} object.

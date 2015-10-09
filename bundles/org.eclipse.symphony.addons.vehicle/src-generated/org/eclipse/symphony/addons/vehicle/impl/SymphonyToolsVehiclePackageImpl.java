@@ -50,15 +50,15 @@ import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
 import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

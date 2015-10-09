@@ -15,8 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
-
-import ca.gc.space.topology.provider.NodeItemProvider;
+import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.actuators.AbstractActuator} object.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ca.gc.space.topology.core.primitives.ui.jme3</name>
+	<name>org.eclipse.symphony.common.topology.addons.primitives.ui.jme3</name>
 	<comment></comment>
 	<projects>
 	</projects>

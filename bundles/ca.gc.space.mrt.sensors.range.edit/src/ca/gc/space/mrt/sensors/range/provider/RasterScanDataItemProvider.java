@@ -24,14 +24,14 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.SensorsFactory;
 import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
 import ca.gc.space.mrt.common.CommonPackage;
 import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.range.RangeFactory;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RasterScanData;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
  * This is the item provider adapter for a

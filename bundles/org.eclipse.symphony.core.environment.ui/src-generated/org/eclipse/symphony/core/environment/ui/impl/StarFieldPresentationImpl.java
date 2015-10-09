@@ -9,13 +9,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
 import org.eclipse.symphony.core.environment.ui.StarFieldSceneObject;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

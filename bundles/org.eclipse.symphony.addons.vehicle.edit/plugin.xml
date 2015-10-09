@@ -35,7 +35,7 @@
             uri="org.eclipse.symphony.addons"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.topology.bindings"
+            uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>
 

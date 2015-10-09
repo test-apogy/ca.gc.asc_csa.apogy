@@ -1,7 +1,7 @@
 package ca.gc.space.mrt.sensors.imaging.ui;
 
-import ca.gc.space.topology.ui.MeshPresentationMode;
-import ca.gc.space.topology.ui.SceneObject;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
 
 public interface ImageSnapshotSceneObject extends SceneObject 
 {		

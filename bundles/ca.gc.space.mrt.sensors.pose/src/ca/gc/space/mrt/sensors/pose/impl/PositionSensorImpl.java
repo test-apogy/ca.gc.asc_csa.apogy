@@ -19,15 +19,15 @@ import org.eclipse.symphony.addons.sensors.SensorsPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.PositionNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
 
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.PositionSensor;
 import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
-import ca.gc.space.topology.PositionNode;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.impl.PositionNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

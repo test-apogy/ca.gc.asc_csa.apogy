@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
@@ -57,7 +58,6 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.experimental.chart.swt.ChartComposite;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

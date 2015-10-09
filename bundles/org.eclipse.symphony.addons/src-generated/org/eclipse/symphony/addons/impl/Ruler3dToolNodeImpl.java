@@ -11,8 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.Ruler3DTool;
 import org.eclipse.symphony.addons.Ruler3dToolNode;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
-
-import ca.gc.space.topology.impl.NodeImpl;
+import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

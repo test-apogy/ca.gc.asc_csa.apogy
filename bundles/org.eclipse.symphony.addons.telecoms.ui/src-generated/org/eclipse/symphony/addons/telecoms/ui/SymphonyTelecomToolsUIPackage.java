@@ -3,10 +3,9 @@
  */
 package org.eclipse.symphony.addons.telecoms.ui;
 
-import ca.gc.space.topology.ui.TopologyUIPackage;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

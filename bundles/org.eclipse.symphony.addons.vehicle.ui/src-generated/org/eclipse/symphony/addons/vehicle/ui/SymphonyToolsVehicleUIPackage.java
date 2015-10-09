@@ -3,10 +3,10 @@
  */
 package org.eclipse.symphony.addons.vehicle.ui;
 
-import ca.gc.space.topology.ui.TopologyUIPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

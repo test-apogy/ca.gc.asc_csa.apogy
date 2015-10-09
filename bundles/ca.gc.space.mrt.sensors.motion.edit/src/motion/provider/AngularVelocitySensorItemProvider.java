@@ -24,8 +24,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.space.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link motion.AngularVelocitySensor} object.

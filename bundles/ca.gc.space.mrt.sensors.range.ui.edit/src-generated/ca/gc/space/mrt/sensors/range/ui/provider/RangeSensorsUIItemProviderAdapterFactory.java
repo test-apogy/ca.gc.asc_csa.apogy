@@ -27,17 +27,17 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.util.TopologyUISwitch;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIFactory;
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIPackage;
 import ca.gc.space.mrt.sensors.range.ui.util.RangeSensorsUIAdapterFactory;
-import ca.gc.space.topology.AggregateContentNode;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.ui.TopologyPresentationRegistry;
-import ca.gc.space.topology.ui.TopologyUIPackage;
-import ca.gc.space.topology.ui.util.TopologyUISwitch;
-import ca.gc.space.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

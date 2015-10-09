@@ -7,8 +7,7 @@ package ca.gc.space.mrt.sensors.pose;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.math.Matrix3x3;
-
-import ca.gc.space.topology.RotationNode;
+import org.eclipse.symphony.common.topology.RotationNode;
 
 
 /**

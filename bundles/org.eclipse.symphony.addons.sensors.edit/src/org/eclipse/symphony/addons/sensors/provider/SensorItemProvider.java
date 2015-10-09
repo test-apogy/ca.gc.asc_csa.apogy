@@ -23,9 +23,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.SensorsFactory;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
-
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.AggregateGroupNodeItemProvider;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.Sensor} object.

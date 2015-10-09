@@ -18,6 +18,7 @@ import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSkyNode;
 import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
@@ -30,7 +31,6 @@ import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
 import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import ca.gc.space.topology.TopologyFacade;
 import ca.gc.space.topology.TransformNode;
-import ca.gc.space.topology.core.primitives.ui.jme3.JME3PrimitivesUtilities;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.plugins.FileLocator;

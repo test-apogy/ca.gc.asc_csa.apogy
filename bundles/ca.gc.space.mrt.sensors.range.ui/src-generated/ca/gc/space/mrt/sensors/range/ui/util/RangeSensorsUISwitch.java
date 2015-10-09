@@ -6,10 +6,11 @@ package ca.gc.space.mrt.sensors.range.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIPackage;
 import ca.gc.space.mrt.sensors.range.ui.RasterScanDataPresentation;
 import ca.gc.space.mrt.sensors.range.ui.SimpleSonarPresentation;
-import ca.gc.space.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

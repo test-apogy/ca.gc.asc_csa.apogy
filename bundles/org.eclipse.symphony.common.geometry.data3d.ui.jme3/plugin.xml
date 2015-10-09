@@ -2,13 +2,13 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.common.geometry.data3d.ui.jme3.adapters.TriangularMeshJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.common.geometry.data3d.ui.jme3.adapters.CartesianCoordinateSetJME3Adapter">
       </Class>

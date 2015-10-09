@@ -1,10 +1,11 @@
 package ca.gc.space.mrt.mobility.pathplanners.ui.adapters;
 
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+
 import ca.gc.space.mrt.mobility.pathplanners.CircularExclusionZone;
 import ca.gc.space.mrt.mobility.pathplanners.ui.CircularExclusionZonePresentation;
 import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIFactory;
 import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
 import ca.gc.space.topology.ui.NodePresentationAdapter;
 
 public class CircularExclusionZonePresentationAdapter implements NodePresentationAdapter

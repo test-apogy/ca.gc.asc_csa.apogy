@@ -16,8 +16,7 @@ import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterSceneObject;
 import org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesConstants;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

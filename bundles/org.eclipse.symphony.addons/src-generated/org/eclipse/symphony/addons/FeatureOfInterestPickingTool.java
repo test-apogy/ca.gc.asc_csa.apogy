@@ -4,9 +4,8 @@
 package org.eclipse.symphony.addons;
 
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.FeatureOfInterestList;
-
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

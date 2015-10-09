@@ -2,27 +2,27 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.space.topology.core.primitives.ui.jme3.adapters.SpherePrimitiveJME3Adapter">
+            Class="org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.adapters.SpherePrimitiveJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.space.topology.core.primitives.ui.jme3.adapters.PointLightJME3Adapter">
+            Class="org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.adapters.PointLightJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.space.topology.core.primitives.ui.jme3.adapters.VectorJME3Adapter">
+            Class="org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.adapters.VectorJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
-            Class="ca.gc.space.topology.core.primitives.ui.jme3.adapters.PickVectorJME3Adapter">
+            Class="org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.adapters.PickVectorJME3Adapter">
       </Class>
    </extension>
 

@@ -16,8 +16,7 @@ import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.addons.sensors.SensorsFactory;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
-
-import ca.gc.space.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

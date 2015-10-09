@@ -3,9 +3,9 @@
  */
 package org.eclipse.symphony.addons.telecoms;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.topology.Node;
 
-import ca.gc.space.topology.Node;
+import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->

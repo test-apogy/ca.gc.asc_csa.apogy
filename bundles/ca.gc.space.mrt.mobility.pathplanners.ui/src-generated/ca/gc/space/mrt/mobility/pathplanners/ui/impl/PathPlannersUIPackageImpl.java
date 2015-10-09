@@ -8,11 +8,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 import ca.gc.space.mrt.mobility.pathplanners.ui.CircularExclusionZonePresentation;
 import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIFactory;
 import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIPackage;
-import ca.gc.space.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

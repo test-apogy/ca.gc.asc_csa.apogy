@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.core.environment.RectangularRegionProvider;
 import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
 import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
@@ -34,9 +35,9 @@ import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
 import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
 import org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.space.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -593,13 +594,13 @@ public class SymphonyEnvironmentUIAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.ui.NodePresentation <em>Node Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.NodePresentation <em>Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.ui.NodePresentation
+	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation
 	 * @generated
 	 */
   public Adapter createNodePresentationAdapter()

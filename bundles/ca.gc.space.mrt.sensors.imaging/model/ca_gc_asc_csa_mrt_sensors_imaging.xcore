@@ -10,7 +10,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Timed
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
 
 import org.eclipse.symphony.common.images.AbstractEImage
-import ca.gc.space.topology.GroupNode
+import org.eclipse.symphony.common.topology.GroupNode
 
 type Color wraps java.awt.Color
 

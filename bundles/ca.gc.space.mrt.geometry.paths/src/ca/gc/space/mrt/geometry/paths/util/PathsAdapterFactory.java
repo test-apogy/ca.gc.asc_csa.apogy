@@ -15,6 +15,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.geometry.paths.CatmullRomWayPointPathInterpolator;
 import ca.gc.space.mrt.geometry.paths.MinimumDistanceFilter;
@@ -27,8 +29,6 @@ import ca.gc.space.mrt.geometry.paths.WayPoint;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.mrt.geometry.paths.WayPointPathFilter;
 import ca.gc.space.mrt.geometry.paths.WayPointPathInterpolator;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -329,13 +329,13 @@ public class PathsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.Node
+	 * @see org.eclipse.symphony.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter()
@@ -344,13 +344,13 @@ public class PathsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.GroupNode
+	 * @see org.eclipse.symphony.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter()

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.space.topology.ui" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.common.topology.ui" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="ca.gc.space.topology.ui" id="ca.gc.space.topology.ui.java3d" name="Java3d Adapter"/>
+         <meta.schema plugin="org.eclipse.symphony.common.topology.ui" id="org.eclipse.symphony.common.topology.ui.java3d" name="Java3d Adapter"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]
@@ -55,7 +55,7 @@
                   
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn=":ca.gc.space.topology.ui.Java3DAdapter"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.common.topology.ui.Java3DAdapter"/>
                </appInfo>
             </annotation>
          </attribute>

@@ -12,10 +12,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.Simple3DTool;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.SymphonyEnvironment;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->

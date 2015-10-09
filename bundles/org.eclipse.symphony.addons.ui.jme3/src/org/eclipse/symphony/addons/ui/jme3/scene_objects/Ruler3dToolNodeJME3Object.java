@@ -18,11 +18,11 @@ import org.eclipse.symphony.addons.Ruler3DTool;
 import org.eclipse.symphony.addons.Ruler3dToolNode;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.ui.Ruler3dToolSceneObject;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
 
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
 import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import ca.gc.space.topology.core.primitives.ui.jme3.JME3PrimitivesUtilities;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

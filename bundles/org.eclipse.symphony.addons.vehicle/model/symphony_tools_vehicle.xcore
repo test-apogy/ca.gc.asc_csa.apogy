@@ -9,15 +9,15 @@ import org.eclipse.symphony.core.invocator.Variable
 import org.eclipse.symphony.core.PoseCorrector
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer
 import org.eclipse.symphony.addons.AbstractTwoPoints3DTool
-import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody
 import org.eclipse.symphony.common.math.Matrix3x3
 import org.eclipse.symphony.common.math.Matrix4x4
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
 import ca.gc.space.mrt.geometry.paths.WayPointPath
 import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner
-import ca.gc.space.topology.AggregateGroupNode
-import ca.gc.space.topology.Node
+import org.eclipse.symphony.common.topology.AggregateGroupNode
+import org.eclipse.symphony.common.topology.Node
 
 
 type Point2d wraps javax.vecmath.Point2d

@@ -14,12 +14,11 @@ import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->

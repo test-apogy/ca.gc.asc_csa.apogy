@@ -15,8 +15,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated topology_ui -->
       <factory
-            uri="ca.gc.space.topology.ui"
-            class="ca.gc.space.topology.ui.provider.TopologyUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.topology.ui"
+            class="org.eclipse.symphony.common.topology.ui.provider.TopologyUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -29,6 +29,6 @@
       <!-- @generated topology_ui -->
       <extender
             uri="ca.gc.space.topology"
-            class="ca.gc.space.topology.ui.provider.TopologyUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.common.topology.ui.provider.TopologyUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 </plugin>

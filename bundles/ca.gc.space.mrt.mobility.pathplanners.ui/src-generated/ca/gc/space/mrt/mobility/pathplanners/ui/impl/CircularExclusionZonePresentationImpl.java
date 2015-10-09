@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 import ca.gc.space.mrt.mobility.pathplanners.ui.CircularExclusionZonePresentation;
 import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIPackage;
 import ca.gc.space.mrt.mobility.pathplanners.ui.scene_objects.CircularExclusionZoneSceneObject;
-import ca.gc.space.topology.ui.MeshPresentationMode;
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.geometry.paths.CatmullRomWayPointPathInterpolator;
 import ca.gc.space.mrt.geometry.paths.MinimumDistanceFilter;
@@ -32,7 +33,6 @@ import ca.gc.space.mrt.geometry.paths.WayPoint;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.mrt.geometry.paths.WayPointPathFilter;
 import ca.gc.space.mrt.geometry.paths.WayPointPathInterpolator;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

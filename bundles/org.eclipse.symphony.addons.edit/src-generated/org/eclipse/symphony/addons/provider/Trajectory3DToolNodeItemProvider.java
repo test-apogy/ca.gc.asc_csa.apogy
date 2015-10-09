@@ -5,8 +5,6 @@ package org.eclipse.symphony.addons.provider;
 
 
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.AggregateGroupNodeItemProvider;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,6 +16,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 
 /**

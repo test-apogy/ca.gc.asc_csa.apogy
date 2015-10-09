@@ -11,19 +11,19 @@
 <plugin>
 
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="ca.gc.space.mrt.sensors.fov.ui.adapters.CircularSectorFieldOfViewPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="ca.gc.space.mrt.sensors.fov.ui.adapters.ConicalFieldOfViewPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="ca.gc.space.mrt.sensors.fov.ui.adapters.RectangularFrustrumFieldOfViewPresentationAdapter">
       </Class>

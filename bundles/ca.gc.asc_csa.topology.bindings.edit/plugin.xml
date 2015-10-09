@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated topology_bindings -->
       <factory
-            uri="ca.gc.asc_csa.topology.bindings"
-            class="ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.topology.bindings"
+            class="org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,7 +24,7 @@
       <!-- @generated topology_bindings -->
       <extender
             uri="ca.gc.space.topology"
-            class="ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

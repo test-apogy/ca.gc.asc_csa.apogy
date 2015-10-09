@@ -10,8 +10,7 @@ import javax.vecmath.Point3d;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.math.Matrix4x4;
-
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +61,7 @@ public interface ContactProvider extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.addons.vehicle.List<ca.gc.asc_csa.topology.dynamics.PhysicalBody>" unique="false" many="false"
+	 * @model dataType="org.eclipse.symphony.addons.vehicle.List<org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody>" unique="false" many="false"
 	 * @generated
 	 */
   List<PhysicalBody> extractContactBodies();
@@ -70,7 +69,7 @@ public interface ContactProvider extends EObject
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @model originalPoseUnique="false" bodyToContactsMapDataType="org.eclipse.symphony.addons.vehicle.Map<ca.gc.asc_csa.topology.dynamics.PhysicalBody, org.eclipse.symphony.addons.vehicle.Point3d>" bodyToContactsMapUnique="false"
+	 * @model originalPoseUnique="false" bodyToContactsMapDataType="org.eclipse.symphony.addons.vehicle.Map<org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody, org.eclipse.symphony.addons.vehicle.Point3d>" bodyToContactsMapUnique="false"
 	 * @generated
 	 */
   void updateContactPoints(Matrix4x4 originalPose, Map<PhysicalBody, Point3d> bodyToContactsMap);

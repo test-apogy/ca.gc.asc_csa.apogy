@@ -3,8 +3,8 @@
  */
 package ca.gc.space.mrt.sensors.range.ui;
 
-import ca.gc.space.topology.ui.MeshPresentationMode;
-import ca.gc.space.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ public interface RasterScanDataPresentation extends NodePresentation {
 	/**
 	 * Returns the value of the '<em><b>Fov Presentation Mode</b></em>' attribute.
 	 * The default value is <code>"WIREFRAME"</code>.
-	 * The literals are from the enumeration {@link ca.gc.space.topology.ui.MeshPresentationMode}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.ui.MeshPresentationMode}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Fov Presentation Mode</em>' attribute isn't clear,
@@ -36,7 +36,7 @@ public interface RasterScanDataPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fov Presentation Mode</em>' attribute.
-	 * @see ca.gc.space.topology.ui.MeshPresentationMode
+	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #setFovPresentationMode(MeshPresentationMode)
 	 * @see ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIPackage#getRasterScanDataPresentation_FovPresentationMode()
 	 * @model default="WIREFRAME" unique="false"
@@ -49,7 +49,7 @@ public interface RasterScanDataPresentation extends NodePresentation {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fov Presentation Mode</em>' attribute.
-	 * @see ca.gc.space.topology.ui.MeshPresentationMode
+	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #getFovPresentationMode()
 	 * @generated
 	 */

@@ -17,9 +17,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 import ca.gc.space.mrt.sensors.fov.FieldOfView;
-import ca.gc.space.topology.provider.NodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.sensors.fov.FieldOfView} object.

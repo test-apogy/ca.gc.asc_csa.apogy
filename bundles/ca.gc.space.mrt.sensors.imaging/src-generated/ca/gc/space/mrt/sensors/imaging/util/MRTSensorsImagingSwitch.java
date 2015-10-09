@@ -7,6 +7,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.sensors.Sensor;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
@@ -16,9 +19,6 @@ import ca.gc.space.mrt.sensors.imaging.ImagingUtilities;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 import ca.gc.space.mrt.sensors.imaging.RectifiedImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

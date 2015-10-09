@@ -26,6 +26,9 @@ import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
@@ -35,9 +38,6 @@ import org.eclipse.symphony.core.invocator.Variable;
 
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->

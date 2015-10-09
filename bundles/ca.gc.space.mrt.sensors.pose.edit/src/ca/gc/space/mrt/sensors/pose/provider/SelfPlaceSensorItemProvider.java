@@ -19,10 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.sensors.pose.PoseFactory;
 import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.sensors.pose.SelfPlaceSensor} object.

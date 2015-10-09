@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.geometry.paths.Path;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.topology.INodeVisitor;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

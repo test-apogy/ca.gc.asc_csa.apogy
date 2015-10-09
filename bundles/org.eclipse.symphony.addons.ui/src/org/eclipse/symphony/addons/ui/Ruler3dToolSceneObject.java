@@ -2,7 +2,7 @@ package org.eclipse.symphony.addons.ui;
 
 import javax.vecmath.Color3f;
 
-import ca.gc.space.topology.ui.SceneObject;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
 
 public interface Ruler3dToolSceneObject extends SceneObject 
 {

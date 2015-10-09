@@ -11,13 +11,13 @@
 <plugin>
 
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="ca.gc.space.mrt.geometry.paths.ui.adapters.WayPointPathPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="ca.gc.space.mrt.geometry.paths.ui.adapters.WayPointPresentationAdapter">
       </Class>
@@ -31,7 +31,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="ca.gc.space.mrt.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
             id="ca.gc.space.mrt.geometry.paths.ui.preferences.MRTPathsPreferencesPage"
             name="Paths">

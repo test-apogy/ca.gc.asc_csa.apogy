@@ -1,13 +1,13 @@
 @GenModel(prefix="TopologyUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="TopologyUI", complianceLevel="6.0")
-@GenModel(modelDirectory="/ca.gc.space.topology.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.space.topology.ui.edit/src-generated")
-@GenModel(testsDirectory="/ca.gc.space.topology.ui.tests/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.ui/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.topology.ui.edit/src-generated")
+@GenModel(testsDirectory="/org.eclipse.symphony.common.topology.ui.tests/src-generated")
 
 
-package ca.gc.space.topology.ui
+package org.eclipse.symphony.common.topology.ui
 
 import org.eclipse.symphony.common.math.Tuple3d
-import ca.gc.space.topology.Node
+import org.eclipse.symphony.common.topology.Node
 
 type List<T> wraps java.util.List
 type RGB wraps org.eclipse.swt.graphics.RGB
@@ -15,7 +15,7 @@ type RGB wraps org.eclipse.swt.graphics.RGB
 type Point3d wraps javax.vecmath.Point3d
 type Vector3f wraps javax.vecmath.Vector3f
 
-type SceneObject wraps ca.gc.space.topology.ui.SceneObject
+type SceneObject wraps org.eclipse.symphony.common.topology.ui.SceneObject
 
 type Notification wraps org.eclipse.emf.common.notify.Notification
 

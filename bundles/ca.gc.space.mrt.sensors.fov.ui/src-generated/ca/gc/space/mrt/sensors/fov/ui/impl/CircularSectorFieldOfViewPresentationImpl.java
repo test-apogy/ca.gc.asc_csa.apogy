@@ -14,13 +14,13 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 
 import ca.gc.space.mrt.sensors.fov.ui.Activator;
 import ca.gc.space.mrt.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
 import ca.gc.space.mrt.sensors.fov.ui.FovUIPackage;
 import ca.gc.space.mrt.sensors.fov.ui.preferences.MRTFOVPreferencesConstants;
 import ca.gc.space.mrt.sensors.fov.ui.scene_objects.CircularSectorFieldOfViewSceneObject;
-import ca.gc.space.topology.ui.MeshPresentationMode;
 
 /**
  * <!-- begin-user-doc -->

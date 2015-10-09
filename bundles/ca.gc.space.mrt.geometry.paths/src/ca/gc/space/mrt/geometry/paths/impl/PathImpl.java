@@ -6,10 +6,10 @@
 package ca.gc.space.mrt.geometry.paths.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 import ca.gc.space.mrt.geometry.paths.Path;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
-import ca.gc.space.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

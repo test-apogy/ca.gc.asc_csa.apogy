@@ -6,11 +6,12 @@ package ca.gc.space.mrt.sensors.pose.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+
 import ca.gc.space.mrt.sensors.pose.ui.OrientationSensorPresentation;
 import ca.gc.space.mrt.sensors.pose.ui.PoseSensorPresentation;
 import ca.gc.space.mrt.sensors.pose.ui.PositionSensorPresentation;
 import ca.gc.space.mrt.sensors.pose.ui.SensorsPoseUIPackage;
-import ca.gc.space.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,10 +3,6 @@
  */
 package org.eclipse.symphony.examples.antenna.symphony.provider;
 
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -31,6 +27,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;

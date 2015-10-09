@@ -4,7 +4,7 @@
  *
  * $Id: AggregateGroupNodeItemProvider.java,v 1.9.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package ca.gc.space.topology.provider;
+package org.eclipse.symphony.common.topology.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,12 +20,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.space.topology.AggregateGroupNode} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.AggregateGroupNode} object.
  * <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * @generated

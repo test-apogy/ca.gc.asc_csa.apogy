@@ -9,6 +9,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.sensors.Sensor;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.PositionNode;
+import org.eclipse.symphony.common.topology.RotationNode;
+import org.eclipse.symphony.common.topology.TransformNode;
 
 import ca.gc.space.mrt.sensors.pose.CSVDataLogger;
 import ca.gc.space.mrt.sensors.pose.InertialMeasurementUnit;
@@ -22,12 +28,6 @@ import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedOrientationSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPoseSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPositionSensor;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.PositionNode;
-import ca.gc.space.topology.RotationNode;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

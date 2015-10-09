@@ -14,10 +14,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
-
-import ca.gc.space.topology.ui.provider.NodePresentationItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation} object.

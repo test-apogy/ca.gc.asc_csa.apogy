@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.addons.vehicle.ui;
 
-import ca.gc.space.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

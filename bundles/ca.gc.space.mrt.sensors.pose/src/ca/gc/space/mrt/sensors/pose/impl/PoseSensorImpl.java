@@ -31,6 +31,9 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
 
 import ca.gc.space.mrt.sensors.pose.Activator;
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;
@@ -39,9 +42,6 @@ import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
 import ca.gc.space.mrt.sensors.pose.PositionSensor;
 import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.TransformNode;
-import ca.gc.space.topology.impl.TransformNodeImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

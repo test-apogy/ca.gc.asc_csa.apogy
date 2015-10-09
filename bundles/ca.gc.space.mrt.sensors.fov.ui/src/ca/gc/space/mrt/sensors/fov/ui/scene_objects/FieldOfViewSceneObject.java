@@ -1,8 +1,8 @@
 package ca.gc.space.mrt.sensors.fov.ui.scene_objects;
 
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 
-import ca.gc.space.topology.ui.MeshPresentationMode;
 import ca.gc.space.topology.ui.SceneObject;
 
 public interface FieldOfViewSceneObject extends SceneObject 

@@ -12,12 +12,12 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.sensors.range.RangeFactory;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RasterScanRangeSensor;
 import ca.gc.space.mrt.sensors.range.RasterScanSettings;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="ca.gc.asc_csa.topology.bindings" xmlns:ca.gc.space.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="org.eclipse.symphony.addons.vehicle" xmi:id="_6dMtoArOEeW4-_ONWXXiAw" name="LanderSymphonySystem">
+<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bindings="org.eclipse.symphony.common.topology.bindings" xmlns:org.eclipse.symphony.common.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmlns:vehicle="org.eclipse.symphony.addons.vehicle" xmi:id="_6dMtoArOEeW4-_ONWXXiAw" name="LanderSymphonySystem">
   <interfaceClass href="org.eclipse.symphony.examples.lander#//Lander"/>
   <typeApiAdapterClass href="org.eclipse.symphony.examples.lander.symphony#//LanderSymphonySystemApiAdapter"/>
   <topologyRoot xmi:id="_6dMtoQrOEeW4-_ONWXXiAw">
-    <originNode xsi:type="ca.gc.space.topology:AggregateGroupNode" xmi:id="_6dMtogrOEeW4-_ONWXXiAw" description="The base of the lander" nodeId="LANDER_SYM_SYS_ROOT">
-      <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dMtowrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the omni antenna" nodeId="LANDER_SYM_SYS_OMNI_ANTENNA">
+    <originNode xsi:type="org.eclipse.symphony.common.topology:AggregateGroupNode" xmi:id="_6dMtogrOEeW4-_ONWXXiAw" description="The base of the lander" nodeId="LANDER_SYM_SYS_ROOT">
+      <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dMtowrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the omni antenna" nodeId="LANDER_SYM_SYS_OMNI_ANTENNA">
         <position xmi:id="_6dMtpArOEeW4-_ONWXXiAw" z="0.5"/>
         <rotationMatrix xmi:id="_6dMtpQrOEeW4-_ONWXXiAw"/>
       </aggregatedChildren>
-      <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dMtpgrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the CAD for the lander" nodeId="LANDER_SYM_SYS_CAD_TRANSFORM">
-        <aggregatedChildren xsi:type="ca.gc.space.topology:URLNode" xmi:id="_6dNUsArOEeW4-_ONWXXiAw" parent="_6dMtpgrOEeW4-_ONWXXiAw" description="The CAD of the lander" nodeId="LANDER_SYM_SYS_LANDER_CAD" url="platform:/plugin/org.eclipse.symphony.examples.lander.symphony/vrml/lander.wrl"/>
+      <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dMtpgrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the CAD for the lander" nodeId="LANDER_SYM_SYS_CAD_TRANSFORM">
+        <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:URLNode" xmi:id="_6dNUsArOEeW4-_ONWXXiAw" parent="_6dMtpgrOEeW4-_ONWXXiAw" description="The CAD of the lander" nodeId="LANDER_SYM_SYS_LANDER_CAD" url="platform:/plugin/org.eclipse.symphony.examples.lander.symphony/vrml/lander.wrl"/>
         <position xmi:id="_6dNUsQrOEeW4-_ONWXXiAw"/>
         <rotationMatrix xmi:id="_6dNUsgrOEeW4-_ONWXXiAw" m11="6.123233995736766E-17" m12="1.0" m21="-1.0" m22="6.123233995736766E-17"/>
       </aggregatedChildren>
-      <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dNUswrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the lander's leg 'A'" nodeId="LANDER_SYM_SYS_LEG_A">
-        <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dNUtArOEeW4-_ONWXXiAw" parent="_6dNUswrOEeW4-_ONWXXiAw" description="The transformation for the joint for leg 'A' of the lander" nodeId="LANDER_SYM_SYS_LEG_A_JOINT">
+      <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dNUswrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the lander's leg 'A'" nodeId="LANDER_SYM_SYS_LEG_A">
+        <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dNUtArOEeW4-_ONWXXiAw" parent="_6dNUswrOEeW4-_ONWXXiAw" description="The transformation for the joint for leg 'A' of the lander" nodeId="LANDER_SYM_SYS_LEG_A_JOINT">
           <aggregatedChildren xsi:type="vehicle:LanderSphericalFoot" xmi:id="_6dNUtQrOEeW4-_ONWXXiAw" parent="_6dNUtArOEeW4-_ONWXXiAw" description="The foot of the lander's leg 'A'" nodeId="LANDER_SYM_SYS_LEG_A_FOOT">
             <physicalProperties xmi:id="_6dNUtgrOEeW4-_ONWXXiAw">
               <inertiaMatrix xmi:id="_6dNUtwrOEeW4-_ONWXXiAw"/>
@@ -27,8 +27,8 @@
         <position xmi:id="_6dNUuwrOEeW4-_ONWXXiAw" y="0.64" z="0.04"/>
         <rotationMatrix xmi:id="_6dNUvArOEeW4-_ONWXXiAw"/>
       </aggregatedChildren>
-      <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dNUvQrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the lander's leg 'B'" nodeId="LANDER_SYM_SYS_LEG_B">
-        <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dNUvgrOEeW4-_ONWXXiAw" parent="_6dNUvQrOEeW4-_ONWXXiAw" description="The transformation for the joint for leg 'B' of the lander" nodeId="LANDER_SYM_SYS_LEG_B_JOINT">
+      <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dNUvQrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the lander's leg 'B'" nodeId="LANDER_SYM_SYS_LEG_B">
+        <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dNUvgrOEeW4-_ONWXXiAw" parent="_6dNUvQrOEeW4-_ONWXXiAw" description="The transformation for the joint for leg 'B' of the lander" nodeId="LANDER_SYM_SYS_LEG_B_JOINT">
           <aggregatedChildren xsi:type="vehicle:LanderSphericalFoot" xmi:id="_6dNUvwrOEeW4-_ONWXXiAw" parent="_6dNUvgrOEeW4-_ONWXXiAw" description="The foot of the lander's leg 'B'" nodeId="LANDER_SYM_SYS_LEG_B_FOOT">
             <physicalProperties xmi:id="_6dNUwArOEeW4-_ONWXXiAw">
               <inertiaMatrix xmi:id="_6dNUwQrOEeW4-_ONWXXiAw"/>
@@ -41,8 +41,8 @@
         <position xmi:id="_6dNUxQrOEeW4-_ONWXXiAw" x="0.554" y="-0.32" z="0.04"/>
         <rotationMatrix xmi:id="_6dNUxgrOEeW4-_ONWXXiAw"/>
       </aggregatedChildren>
-      <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dNUxwrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the lander's leg 'C'" nodeId="LANDER_SYM_SYS_LEG_C">
-        <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dNUyArOEeW4-_ONWXXiAw" parent="_6dNUxwrOEeW4-_ONWXXiAw" description="The transformation for the joint for leg 'C' of the lander" nodeId="LANDER_SYM_SYS_LEG_C_JOINT">
+      <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dNUxwrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the lander's leg 'C'" nodeId="LANDER_SYM_SYS_LEG_C">
+        <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dNUyArOEeW4-_ONWXXiAw" parent="_6dNUxwrOEeW4-_ONWXXiAw" description="The transformation for the joint for leg 'C' of the lander" nodeId="LANDER_SYM_SYS_LEG_C_JOINT">
           <aggregatedChildren xsi:type="vehicle:LanderSphericalFoot" xmi:id="_6dNUyQrOEeW4-_ONWXXiAw" parent="_6dNUyArOEeW4-_ONWXXiAw" description="The foot of the lander's leg 'C'" nodeId="LANDER_SYM_SYS_LEG_C_FOOT">
             <physicalProperties xmi:id="_6dNUygrOEeW4-_ONWXXiAw">
               <inertiaMatrix xmi:id="_6dNUywrOEeW4-_ONWXXiAw"/>
@@ -55,7 +55,7 @@
         <position xmi:id="_6dNUzwrOEeW4-_ONWXXiAw" x="-0.554" y="-0.32" z="0.04"/>
         <rotationMatrix xmi:id="_6dNU0ArOEeW4-_ONWXXiAw"/>
       </aggregatedChildren>
-      <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_6dNU0QrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the thruster" nodeId="LANDER_SYM_SYS_THRUSTER_TRANSFORM">
+      <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_6dNU0QrOEeW4-_ONWXXiAw" parent="_6dMtogrOEeW4-_ONWXXiAw" description="The transformation from the base (root) to the thruster" nodeId="LANDER_SYM_SYS_THRUSTER_TRANSFORM">
         <aggregatedChildren xsi:type="vehicle:Thruster" xmi:id="_6dNU0grOEeW4-_ONWXXiAw" parent="_6dNU0QrOEeW4-_ONWXXiAw" description="The lander's actual thruster " nodeId="LANDER_SYM_SYS_THRUSTER"/>
         <position xmi:id="_6dNU0wrOEeW4-_ONWXXiAw" z="0.3"/>
         <rotationMatrix xmi:id="_6dNU1ArOEeW4-_ONWXXiAw" m11="-1.0" m12="-1.2246467991473532E-16" m21="1.2246467991473532E-16" m22="-1.0"/>

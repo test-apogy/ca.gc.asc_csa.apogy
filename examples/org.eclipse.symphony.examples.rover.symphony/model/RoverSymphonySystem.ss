@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ca.gc.space.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_OeyMoArPEeW4-_ONWXXiAw" name="RoverSymphonySystem" poseProvider="_OeyMpArPEeW4-_ONWXXiAw">
+<core:SymphonySystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.eclipse.symphony.common.topology="http:///ca/gc/space/topology.ecore" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="ca.gc.asc_csa.eclipse.emf.ecore" xmlns:ecore_1="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_OeyMoArPEeW4-_ONWXXiAw" name="RoverSymphonySystem" poseProvider="_OeyMpArPEeW4-_ONWXXiAw">
   <members xmi:id="_OeyMoQrPEeW4-_ONWXXiAw" name="roboticArm">
     <memberType href="platform:/plugin/ca.gc.asc_csa.symphony.examples.robotic_arm/model/RoboticArmSymphonySystem.ss#_LQwxcArPEeW4-_ONWXXiAw"/>
     <typeFeatureRootNode xmi:id="_OeyMogrPEeW4-_ONWXXiAw">
@@ -39,8 +39,8 @@
   <interfaceClass href="org.eclipse.symphony.examples.rover#//Rover"/>
   <typeApiAdapterClass href="org.eclipse.symphony.examples.rover.symphony#//RoverSymphonySystemApiAdapter"/>
   <topologyRoot xmi:id="_OeyztwrPEeW4-_ONWXXiAw">
-    <originNode xsi:type="ca.gc.space.topology:AggregateGroupNode" xmi:id="_OeyzuArPEeW4-_ONWXXiAw" description="The root node for the rover" nodeId="ROVER_SYM_SYS_ROOT">
-      <aggregatedChildren xsi:type="ca.gc.space.topology:TransformNode" xmi:id="_OeyzuQrPEeW4-_ONWXXiAw" parent="_OeyzuArPEeW4-_ONWXXiAw" description="The rover's connection point for a mobile platform" nodeId="ROVER_SYM_SYS_MOBILE_PLATFORM">
+    <originNode xsi:type="org.eclipse.symphony.common.topology:AggregateGroupNode" xmi:id="_OeyzuArPEeW4-_ONWXXiAw" description="The root node for the rover" nodeId="ROVER_SYM_SYS_ROOT">
+      <aggregatedChildren xsi:type="org.eclipse.symphony.common.topology:TransformNode" xmi:id="_OeyzuQrPEeW4-_ONWXXiAw" parent="_OeyzuArPEeW4-_ONWXXiAw" description="The rover's connection point for a mobile platform" nodeId="ROVER_SYM_SYS_MOBILE_PLATFORM">
         <position xmi:id="_OeyzugrPEeW4-_ONWXXiAw"/>
         <rotationMatrix xmi:id="_OeyzuwrPEeW4-_ONWXXiAw"/>
       </aggregatedChildren>

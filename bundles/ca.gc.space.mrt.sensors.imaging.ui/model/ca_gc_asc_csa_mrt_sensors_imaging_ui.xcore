@@ -3,8 +3,8 @@
 @GenModel(editDirectory="/ca.gc.space.mrt.sensors.imaging.ui.edit/src-generated")
 package ca.gc.space.mrt.sensors.imaging.ui
 
-import ca.gc.space.topology.ui.NodePresentation
-import ca.gc.space.topology.ui.MeshPresentationMode
+import org.eclipse.symphony.common.topology.ui.NodePresentation
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 
 class ImageSnapshotPresentation extends NodePresentation
 {

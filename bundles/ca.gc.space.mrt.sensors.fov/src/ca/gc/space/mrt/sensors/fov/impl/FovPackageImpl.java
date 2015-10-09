@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.sensors.fov.AngularSpan;
 import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView;
@@ -27,7 +28,6 @@ import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -12,6 +12,9 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.common.TimeTaggedElement;
 import ca.gc.space.mrt.sensors.fov.FieldOfView;
@@ -32,9 +35,6 @@ import ca.gc.space.mrt.sensors.range.SimpleRangeSensor;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScanner;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import ca.gc.space.mrt.sensors.range.SimpleSonar;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

@@ -6,6 +6,7 @@ package org.eclipse.symphony.core.environment.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.core.environment.RectangularRegionProvider;
 import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
 import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
@@ -33,9 +34,9 @@ import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
 import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
 import org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
+
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.space.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

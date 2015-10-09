@@ -7,8 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.ui.Ruler3dToolNodePresentation;
 import org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

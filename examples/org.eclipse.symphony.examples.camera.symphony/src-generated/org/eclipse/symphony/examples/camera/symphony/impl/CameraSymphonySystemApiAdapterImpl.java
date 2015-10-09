@@ -8,6 +8,8 @@ import javax.vecmath.Matrix4d;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.OperationCall;
@@ -19,8 +21,6 @@ import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraFactor
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
 
 import ca.gc.space.mrt.sensors.fov.FOVFacade;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

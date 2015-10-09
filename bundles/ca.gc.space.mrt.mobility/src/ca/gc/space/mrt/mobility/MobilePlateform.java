@@ -5,7 +5,7 @@
  */
 package ca.gc.space.mrt.mobility;
 
-import ca.gc.space.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
 
 
 /**

@@ -12,8 +12,8 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "ca.gc.space.topology.core" 
-       class = "ca.gc.space.topology.TopologyPackage"
+       uri = "org.eclipse.symphony.common.topology.core" 
+       class = "org.eclipse.symphony.common.topology.TopologyPackage"
        genModel = "model/topology.xcore" /> 
   </extension>
 

@@ -14,6 +14,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
 
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
@@ -24,7 +25,6 @@ import ca.gc.space.mrt.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProject
 import ca.gc.space.mrt.sensors.fov.ui.jme3.utils.ConicalFieldOfViewImageProjectorControl;
 import ca.gc.space.mrt.sensors.fov.ui.jme3.utils.JME3FovUtilities;
 import ca.gc.space.mrt.sensors.fov.ui.scene_objects.ConicalFieldOfViewSceneObject;
-import ca.gc.space.topology.core.primitives.ui.jme3.JME3PrimitivesUtilities;
 import ca.gc.space.topology.ui.MeshPresentationMode;
 
 import com.jme3.asset.AssetManager;

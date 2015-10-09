@@ -7,7 +7,7 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
- ca.gc.space.topology.core;visibility:=reexport,
+ org.eclipse.symphony.common.topology.core;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName

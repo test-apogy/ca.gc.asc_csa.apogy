@@ -4,6 +4,7 @@
 package org.eclipse.symphony.addons.impl;
 
 import javax.vecmath.Color3f;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -20,7 +21,7 @@ import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import ca.gc.space.topology.ui.NodeSelection;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->

@@ -4,8 +4,6 @@
 package org.eclipse.symphony.addons.ui.provider;
 
 
-import ca.gc.space.topology.ui.provider.NodePresentationItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -14,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
+import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation} object.

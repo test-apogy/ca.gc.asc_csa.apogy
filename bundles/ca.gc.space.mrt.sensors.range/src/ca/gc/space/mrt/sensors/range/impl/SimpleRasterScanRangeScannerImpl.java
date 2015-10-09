@@ -8,15 +8,15 @@ package ca.gc.space.mrt.sensors.range.impl;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TransformNode;
 
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RasterScanSettings;
 import ca.gc.space.mrt.sensors.range.SensorsRangeFacade;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScanner;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

@@ -15,6 +15,7 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data.SamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.sensors.fov.AngularSpan;
 import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView;
@@ -25,7 +26,6 @@ import ca.gc.space.mrt.sensors.fov.FieldOfView;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.addons.actuators;
 
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

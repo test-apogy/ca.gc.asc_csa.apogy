@@ -8,12 +8,12 @@ package ca.gc.space.mrt.sensors.range.ui.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIPackage;
 import ca.gc.space.mrt.sensors.range.ui.RasterScanDataPresentation;
 import ca.gc.space.mrt.sensors.range.ui.scene_objects.RasterScanDataSceneObject;
-import ca.gc.space.topology.ui.MeshPresentationMode;
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

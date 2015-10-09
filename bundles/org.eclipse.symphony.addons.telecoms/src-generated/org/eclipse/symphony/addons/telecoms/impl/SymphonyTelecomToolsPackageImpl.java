@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.telecoms.impl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.topology.TopologyPackage;
 
 import javax.vecmath.Color3f;
 
@@ -32,6 +31,7 @@ import org.eclipse.symphony.addons.telecoms.TelecomNodeStatus;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
 import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
 /**

@@ -1,7 +1,7 @@
-ca.gc.space.topology.ui
-ca.gc.space.topology.ui.adapters
-ca.gc.space.topology.ui.editor
-ca.gc.space.topology.ui.impl
-ca.gc.space.topology.ui.util
-ca.gc.space.topology.ui.viewer
-ca.gc.space.topology.ui.wizards
+org.eclipse.symphony.common.topology.ui
+org.eclipse.symphony.common.topology.ui.adapters
+org.eclipse.symphony.common.topology.ui.editor
+org.eclipse.symphony.common.topology.ui.impl
+org.eclipse.symphony.common.topology.ui.util
+org.eclipse.symphony.common.topology.ui.viewer
+org.eclipse.symphony.common.topology.ui.wizards

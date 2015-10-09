@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.mobility.MobilePlateform;
 import ca.gc.space.mrt.mobility.MobilePlateformStatus;
 import ca.gc.space.mrt.mobility.MobilityFactory;
 import ca.gc.space.mrt.mobility.MobilityPackage;
 import ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

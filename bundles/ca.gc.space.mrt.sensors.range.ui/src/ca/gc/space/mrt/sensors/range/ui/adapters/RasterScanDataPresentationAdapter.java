@@ -1,11 +1,12 @@
 package ca.gc.space.mrt.sensors.range.ui.adapters;
 
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+
 import ca.gc.space.mrt.sensors.range.RasterScanData;
 import ca.gc.space.mrt.sensors.range.ui.RangeSensorsUIFactory;
 import ca.gc.space.mrt.sensors.range.ui.RasterScanDataPresentation;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.NodePresentationAdapter;
 
 public class RasterScanDataPresentationAdapter implements NodePresentationAdapter
 {

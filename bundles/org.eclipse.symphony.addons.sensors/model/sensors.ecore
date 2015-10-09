@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sensors" nsURI="http:///ca/gc/space/mrt/sensors/model/sensors.ecore"
     nsPrefix="ca.gc.space.mrt.sensors">
-  <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="../../ca.gc.space.topology.core/model/topology.ecore#//AggregateGroupNode">
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="../../org.eclipse.symphony.common.topology.core/model/topology.ecore#//AggregateGroupNode">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//SensorStatus"
         transient="true" defaultValueLiteral="OFF"/>
   </eClassifiers>
@@ -16,6 +16,6 @@
     <eLiterals name="FAILED" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Referenceable">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceFrame" eType="ecore:EClass ../../ca.gc.space.topology.core/model/topology.ecore#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceFrame" eType="ecore:EClass ../../org.eclipse.symphony.common.topology.core/model/topology.ecore#//Node"/>
   </eClassifiers>
 </ecore:EPackage>

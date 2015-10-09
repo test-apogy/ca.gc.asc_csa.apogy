@@ -7,17 +7,17 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.topology.bindings,
- ca.gc.asc_csa.topology.bindings.impl,
- ca.gc.asc_csa.topology.bindings.util
+Export-Package: org.eclipse.symphony.common.topology.bindings,
+ org.eclipse.symphony.common.topology.bindings.impl,
+ org.eclipse.symphony.common.topology.bindings.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
- ca.gc.space.topology.core;visibility:=reexport,
+ org.eclipse.symphony.common.topology.core;visibility:=reexport,
  org.eclipse.ui;bundle-version="3.6.2",
  ca.gc.asc_csa.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.topology.bindings.Activator
+Bundle-Activator: org.eclipse.symphony.common.topology.bindings.Activator

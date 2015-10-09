@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.asc_csa.topology.ui.jme3" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.common.topology.ui.jme3" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="ca.gc.asc_csa.topology.ui.jme3" id="jme3" name="JME3 Adapter"/>
+         <meta.schema plugin="org.eclipse.symphony.common.topology.ui.jme3" id="jme3" name="JME3 Adapter"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]
@@ -55,7 +55,7 @@
                   
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn=":ca.gc.asc_csa.topology.ui.jme3.JME3Adapter"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter"/>
                </appInfo>
             </annotation>
          </attribute>

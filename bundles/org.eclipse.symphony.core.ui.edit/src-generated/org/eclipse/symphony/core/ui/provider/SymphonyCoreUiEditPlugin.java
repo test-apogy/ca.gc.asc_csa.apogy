@@ -5,11 +5,11 @@ package org.eclipse.symphony.core.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
 import ca.gc.space.topology.provider.TopologyEditPlugin;
 import ca.gc.space.topology.ui.provider.TopologyUIEditPlugin;
 

@@ -10,8 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import ca.gc.space.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

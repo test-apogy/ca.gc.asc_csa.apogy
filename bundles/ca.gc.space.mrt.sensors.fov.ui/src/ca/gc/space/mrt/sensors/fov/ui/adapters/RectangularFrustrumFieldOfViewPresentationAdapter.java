@@ -1,10 +1,11 @@
 package ca.gc.space.mrt.sensors.fov.ui.adapters;
 
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.mrt.sensors.fov.ui.FovUIFactory;
 import ca.gc.space.mrt.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
 import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
 import ca.gc.space.topology.ui.NodePresentationAdapter;
 
 public class RectangularFrustrumFieldOfViewPresentationAdapter implements

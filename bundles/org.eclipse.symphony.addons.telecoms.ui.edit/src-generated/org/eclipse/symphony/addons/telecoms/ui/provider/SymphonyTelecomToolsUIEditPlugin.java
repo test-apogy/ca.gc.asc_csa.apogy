@@ -3,10 +3,10 @@
  */
 package org.eclipse.symphony.addons.telecoms.ui.provider;
 
-import ca.gc.space.topology.provider.TopologyEditPlugin;
-import ca.gc.space.topology.ui.provider.TopologyUIEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
 
 /**
  * This is the central singleton for the SymphonyTelecomToolsUI edit plugin.

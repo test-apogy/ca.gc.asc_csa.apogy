@@ -6,12 +6,13 @@ package ca.gc.space.mrt.sensors.fov.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+
 import ca.gc.space.mrt.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
 import ca.gc.space.mrt.sensors.fov.ui.ConicalFieldOfViewPresentation;
 import ca.gc.space.mrt.sensors.fov.ui.FieldOfViewPresentation;
 import ca.gc.space.mrt.sensors.fov.ui.FovUIPackage;
 import ca.gc.space.mrt.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
-import ca.gc.space.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

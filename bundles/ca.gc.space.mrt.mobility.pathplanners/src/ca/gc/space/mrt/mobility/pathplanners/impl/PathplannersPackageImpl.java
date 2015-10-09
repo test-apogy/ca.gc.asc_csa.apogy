@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.mobility.pathplanners.CircularExclusionZone;
@@ -26,7 +27,6 @@ import ca.gc.space.mrt.mobility.pathplanners.PathPlannersFacade;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersFactory;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
 import ca.gc.space.mrt.mobility.pathplanners.WayPointPathPlanner;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

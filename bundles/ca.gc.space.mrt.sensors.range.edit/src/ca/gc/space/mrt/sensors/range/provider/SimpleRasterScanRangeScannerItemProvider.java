@@ -18,9 +18,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScanner;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScanner} object.

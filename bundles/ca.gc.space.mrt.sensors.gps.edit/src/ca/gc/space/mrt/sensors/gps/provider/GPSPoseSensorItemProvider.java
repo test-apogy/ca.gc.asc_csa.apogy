@@ -19,6 +19,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.common.CommonPackage;
 import ca.gc.space.mrt.sensors.gps.GPSPoseSensor;
@@ -26,7 +27,6 @@ import ca.gc.space.mrt.sensors.gps.GpsFactory;
 import ca.gc.space.mrt.sensors.gps.GpsPackage;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.provider.PoseSensorItemProvider;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.sensors.gps.GPSPoseSensor} object.

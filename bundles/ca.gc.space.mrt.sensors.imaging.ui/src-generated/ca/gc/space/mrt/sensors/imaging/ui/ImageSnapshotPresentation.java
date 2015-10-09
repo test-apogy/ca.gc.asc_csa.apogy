@@ -3,8 +3,8 @@
  */
 package ca.gc.space.mrt.sensors.imaging.ui;
 
-import ca.gc.space.topology.ui.MeshPresentationMode;
-import ca.gc.space.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ public interface ImageSnapshotPresentation extends NodePresentation
 
   /**
 	 * Returns the value of the '<em><b>Presentation Mode</b></em>' attribute.
-	 * The literals are from the enumeration {@link ca.gc.space.topology.ui.MeshPresentationMode}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.ui.MeshPresentationMode}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Presentation Mode</em>' attribute isn't clear,
@@ -38,7 +38,7 @@ public interface ImageSnapshotPresentation extends NodePresentation
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
-	 * @see ca.gc.space.topology.ui.MeshPresentationMode
+	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #setPresentationMode(MeshPresentationMode)
 	 * @see ca.gc.space.mrt.sensors.imaging.ui.MRTSensorsImagingUIPackage#getImageSnapshotPresentation_PresentationMode()
 	 * @model unique="false"
@@ -51,7 +51,7 @@ public interface ImageSnapshotPresentation extends NodePresentation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Presentation Mode</em>' attribute.
-	 * @see ca.gc.space.topology.ui.MeshPresentationMode
+	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #getPresentationMode()
 	 * @generated
 	 */

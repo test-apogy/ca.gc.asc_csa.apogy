@@ -8,8 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
-
-import ca.gc.asc_csa.topology.dynamics.impl.PhysicalBodyImpl;
+import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl;
 
 /**
  * <!-- begin-user-doc -->

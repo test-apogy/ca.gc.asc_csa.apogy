@@ -23,15 +23,15 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.Matrix3x3;
+import org.eclipse.symphony.common.topology.RotationNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
 
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
-import ca.gc.space.topology.RotationNode;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.impl.RotationNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

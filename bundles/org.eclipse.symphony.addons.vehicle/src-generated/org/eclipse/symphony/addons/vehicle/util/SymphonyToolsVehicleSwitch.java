@@ -11,15 +11,15 @@ import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
 import org.eclipse.symphony.addons.Simple3DTool;
 import org.eclipse.symphony.addons.SimpleTool;
 import org.eclipse.symphony.addons.vehicle.*;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.core.PoseCorrector;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

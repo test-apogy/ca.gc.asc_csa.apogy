@@ -101,7 +101,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The ContentNode where the simulated terrain mesh is found. Note that a topology path between this node and the RangeScannerSimulator must exist (both the RangeScannerSimulator and terrain mesh must be part of the same topology)."/>
       </eAnnotations>
-      <eGenericType eClassifier="ecore:EClass platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//ContentNode">
+      <eGenericType eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//ContentNode">
         <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//CartesianTriangularMesh"/>
       </eGenericType>
     </eStructuralFeatures>
@@ -184,7 +184,7 @@
       <eParameters name="rasterScanSettings" eType="#//RasterScanSettings"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RasterScanData" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//AggregateGroupNode platform:/plugin/ca.gc.space.mrt.common/model/mrt_common.ecore#//TimeTaggedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="RasterScanData" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//AggregateGroupNode platform:/plugin/ca.gc.space.mrt.common/model/mrt_common.ecore#//TimeTaggedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rasterScanSettings" eType="#//RasterScanSettings"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scanData" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"

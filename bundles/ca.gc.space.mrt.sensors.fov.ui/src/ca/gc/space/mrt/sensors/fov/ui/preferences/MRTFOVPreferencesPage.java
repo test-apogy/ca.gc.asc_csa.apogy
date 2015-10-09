@@ -11,11 +11,11 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
 import ca.gc.space.mrt.sensors.fov.ui.Activator;
-import ca.gc.space.topology.ui.MeshPresentationMode;
 
 public class MRTFOVPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	

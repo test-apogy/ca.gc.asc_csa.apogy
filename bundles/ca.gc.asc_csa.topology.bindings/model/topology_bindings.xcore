@@ -1,21 +1,21 @@
 @GenModel(prefix="TopologyBindings", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="TopologyBindings", complianceLevel="6.0")
-@GenModel(modelDirectory="/ca.gc.asc_csa.topology.bindings/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.topology.bindings.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.bindings/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.topology.bindings.edit/src-generated")
 
-package ca.gc.asc_csa.topology.bindings
+package org.eclipse.symphony.common.topology.bindings
 
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EEnumLiteral
 
-import ca.gc.space.topology.Node
-import ca.gc.space.topology.GroupNode
-import ca.gc.space.topology.RotationNode
-import ca.gc.space.topology.PositionNode
+import org.eclipse.symphony.common.topology.Node
+import org.eclipse.symphony.common.topology.GroupNode
+import org.eclipse.symphony.common.topology.RotationNode
+import org.eclipse.symphony.common.topology.PositionNode
 
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode
 import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode
 import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter
-import ca.gc.space.topology.TransformNode
+import org.eclipse.symphony.common.topology.TransformNode
 
 type Map<K,V> wraps java.util.Map
 

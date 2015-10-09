@@ -2,19 +2,19 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.EarthSurfaceWorksiteNodeJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.EarthSkyNodeJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.StarFieldJME3Adapter">
       </Class>
@@ -35,13 +35,13 @@
       </page>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.FeatureOfInterestNodeJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.jme3.adapters.CartesianTriangularMeshMapLayerNodeJME3Adapter">
       </Class>

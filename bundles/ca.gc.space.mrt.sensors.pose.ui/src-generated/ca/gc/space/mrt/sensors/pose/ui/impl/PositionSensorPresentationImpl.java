@@ -8,11 +8,11 @@ package ca.gc.space.mrt.sensors.pose.ui.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 import ca.gc.space.mrt.sensors.pose.ui.PositionSensorPresentation;
 import ca.gc.space.mrt.sensors.pose.ui.SensorsPoseUIPackage;
 import ca.gc.space.mrt.sensors.pose.ui.scene_objects.PositionSensorSceneObject;
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

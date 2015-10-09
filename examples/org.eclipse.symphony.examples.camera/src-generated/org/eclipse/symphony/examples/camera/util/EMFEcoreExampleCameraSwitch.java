@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.addons.sensors.Sensor;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.examples.camera.*;
 
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

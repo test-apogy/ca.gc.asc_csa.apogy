@@ -84,7 +84,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesPage"
             id="org.eclipse.symphony.common.geometry.data3d.ui.page3"
             name="Mesh And Point Clouds">

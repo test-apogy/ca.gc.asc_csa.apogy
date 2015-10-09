@@ -7,7 +7,7 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.addons.telecoms.ui.jme3.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- ca.gc.asc_csa.topology.ui.jme3;bundle-version="0.5.0",
+ org.eclipse.symphony.common.topology.ui.jme3;bundle-version="0.5.0",
  org.eclipse.symphony.addons.telecoms.ui;bundle-version="0.4.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

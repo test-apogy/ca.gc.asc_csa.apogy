@@ -7,9 +7,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.math.Matrix3x3;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.core.PoseCorrector;
-
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,7 +79,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 
   /**
 	 * Returns the value of the '<em><b>Contact Bodies</b></em>' reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.topology.dynamics.PhysicalBody}.
+	 * The list contents are of type {@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

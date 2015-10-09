@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
 import org.eclipse.symphony.examples.camera.PTUCamera;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.PTUCamera} object.

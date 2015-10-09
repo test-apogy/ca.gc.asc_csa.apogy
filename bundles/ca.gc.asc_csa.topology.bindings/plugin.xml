@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://ca/gc/asc_csa/topology/bindings/model/topology_bindings.ecore"
-            class="ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage"
+            class="org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage"
             genModel="model/topology_bindings.xcore"/>
    </extension>
 

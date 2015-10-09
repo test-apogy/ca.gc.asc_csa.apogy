@@ -9,8 +9,8 @@ Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.resources;bundle-version="3.8.1",
- ca.gc.space.topology.core,
- ca.gc.space.topology.ui,
+ org.eclipse.symphony.common.topology.core,
+ org.eclipse.symphony.common.topology.ui,
  org.eclipse.symphony.common.geometry.data3d
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

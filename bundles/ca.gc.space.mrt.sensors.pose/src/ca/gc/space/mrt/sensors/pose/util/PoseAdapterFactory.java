@@ -10,6 +10,12 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.sensors.Sensor;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.PositionNode;
+import org.eclipse.symphony.common.topology.RotationNode;
+import org.eclipse.symphony.common.topology.TransformNode;
 
 import ca.gc.space.mrt.sensors.pose.CSVDataLogger;
 import ca.gc.space.mrt.sensors.pose.InertialMeasurementUnit;
@@ -23,12 +29,6 @@ import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedOrientationSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPoseSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPositionSensor;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.PositionNode;
-import ca.gc.space.topology.RotationNode;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -343,13 +343,13 @@ public class PoseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.Node
+	 * @see org.eclipse.symphony.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -357,13 +357,13 @@ public class PoseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.GroupNode <em>Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.GroupNode
+	 * @see org.eclipse.symphony.common.topology.GroupNode
 	 * @generated
 	 */
 	public Adapter createGroupNodeAdapter()
@@ -372,13 +372,13 @@ public class PoseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.AggregateGroupNode
+	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
 	 * @generated
 	 */
 	public Adapter createAggregateGroupNodeAdapter() {
@@ -386,13 +386,13 @@ public class PoseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.PositionNode <em>Position Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.PositionNode <em>Position Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.PositionNode
+	 * @see org.eclipse.symphony.common.topology.PositionNode
 	 * @generated
 	 */
 	public Adapter createPositionNodeAdapter()
@@ -415,13 +415,13 @@ public class PoseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.RotationNode <em>Rotation Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.RotationNode <em>Rotation Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.RotationNode
+	 * @see org.eclipse.symphony.common.topology.RotationNode
 	 * @generated
 	 */
 	public Adapter createRotationNodeAdapter()
@@ -430,13 +430,13 @@ public class PoseAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.TransformNode <em>Transform Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.TransformNode <em>Transform Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.TransformNode
+	 * @see org.eclipse.symphony.common.topology.TransformNode
 	 * @generated
 	 */
 	public Adapter createTransformNodeAdapter()

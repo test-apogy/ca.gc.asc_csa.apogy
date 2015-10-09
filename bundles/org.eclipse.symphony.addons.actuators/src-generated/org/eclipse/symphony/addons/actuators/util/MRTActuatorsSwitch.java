@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

@@ -5,10 +5,9 @@ package org.eclipse.symphony.addons.vehicle.ui.adapters;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIFactory;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.NodePresentationAdapter;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 
 public class WheelPresentationAdapter implements NodePresentationAdapter
 {

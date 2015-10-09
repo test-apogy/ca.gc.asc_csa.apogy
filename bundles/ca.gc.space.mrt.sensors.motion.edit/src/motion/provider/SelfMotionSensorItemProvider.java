@@ -23,8 +23,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
-
-import ca.gc.space.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link motion.SelfMotionSensor} object.

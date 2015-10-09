@@ -10,7 +10,7 @@ import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
-import ca.gc.space.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

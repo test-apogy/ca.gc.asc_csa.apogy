@@ -23,10 +23,10 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_telecoms_ui -->
       <extender
-            uri="ca.gc.space.topology.ui"
+            uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.addons.telecoms.ui.provider.SymphonyTelecomToolsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
-            uri="ca.gc.space.topology"
+            uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.telecoms.ui.provider.SymphonyTelecomToolsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

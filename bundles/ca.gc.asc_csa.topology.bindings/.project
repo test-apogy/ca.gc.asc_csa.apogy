@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ca.gc.asc_csa.topology.bindings</name>
+	<name>org.eclipse.symphony.common.topology.bindings</name>
 	<comment></comment>
 	<projects>
 	</projects>

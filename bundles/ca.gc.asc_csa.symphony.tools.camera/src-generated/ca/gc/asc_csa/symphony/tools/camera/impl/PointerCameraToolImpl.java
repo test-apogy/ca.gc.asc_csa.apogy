@@ -27,6 +27,12 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFactory;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCorePackage;
@@ -48,12 +54,6 @@ import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.mrt.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
 import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.TransformNode;
-import ca.gc.space.topology.core.primitives.PrimitivesFactory;
-import ca.gc.space.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	private AbstractVariableFeatureReferenceListener abstractVariableFeatureReferenceListener = null;
 
 	
-	private ca.gc.space.topology.core.primitives.PickVector vector;
+	private org.eclipse.symphony.common.topology.addons.primitives.PickVector vector;
 	private TransformNode vectorTransformNode = null;	
 	private ImageSnapshot imageSnapshot;	
 	private DecimalFormat distanceFormat = new DecimalFormat("0.00");	
@@ -638,7 +638,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	
 	protected void updateVectorColor(Color3f color)
 	{
-		NodePresentation nodePresentation = ca.gc.space.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(getVector());
+		NodePresentation nodePresentation = org.eclipse.symphony.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(getVector());
 		if(nodePresentation != null)
 		{
 			nodePresentation.setColor(convert(color));
@@ -648,7 +648,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	protected void updateVectorVisibility(boolean visible)
 	{
 		// Sets the visibility of the Vector.
-		NodePresentation nodePresentation = ca.gc.space.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(getVector());				
+		NodePresentation nodePresentation = org.eclipse.symphony.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(getVector());				
 		if(nodePresentation != null)
 		{
 			nodePresentation.setVisible(visible);
@@ -760,7 +760,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		return vectorTransformNode;
 	}
 	
-	protected ca.gc.space.topology.core.primitives.PickVector getVector()
+	protected org.eclipse.symphony.common.topology.addons.primitives.PickVector getVector()
 	{
 		if(vector == null)
 		{

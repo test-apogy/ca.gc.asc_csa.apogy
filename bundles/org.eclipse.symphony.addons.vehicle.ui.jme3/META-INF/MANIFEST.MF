@@ -7,7 +7,7 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.addons.vehicle.ui.jme3.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- ca.gc.asc_csa.topology.ui.jme3,
+ org.eclipse.symphony.common.topology.ui.jme3,
  org.eclipse.symphony.addons.vehicle.ui,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

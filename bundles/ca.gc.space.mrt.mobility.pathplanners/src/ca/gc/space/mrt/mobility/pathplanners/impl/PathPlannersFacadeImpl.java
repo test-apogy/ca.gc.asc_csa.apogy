@@ -10,12 +10,12 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.symphony.common.topology.GroupNode;
 
 import ca.gc.space.mrt.mobility.pathplanners.CircularExclusionZone;
 import ca.gc.space.mrt.mobility.pathplanners.PathPlannersFacade;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersFactory;
 import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
-import ca.gc.space.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc -->

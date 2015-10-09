@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.addons.ui.impl;
 
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage;
 import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

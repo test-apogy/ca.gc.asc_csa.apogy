@@ -10,19 +10,19 @@
 <plugin>
 
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="ca.gc.space.mrt.sensors.pose.ui.adapters.PositionSensorPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="ca.gc.space.mrt.sensors.pose.ui.adapters.OrientationSensorPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="ca.gc.space.mrt.sensors.pose.ui.adapters.PoseSensorPresentationAdapter">
       </Class>

@@ -10,8 +10,7 @@ import java.util.List;
 
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-
-import ca.gc.space.topology.ContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
 
 /**
  * <!-- begin-user-doc -->

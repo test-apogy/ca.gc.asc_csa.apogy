@@ -4,7 +4,7 @@
  *
  * $Id: TopologyEditPlugin.java,v 1.5.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
-package ca.gc.space.topology.provider;
+package org.eclipse.symphony.common.topology.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;

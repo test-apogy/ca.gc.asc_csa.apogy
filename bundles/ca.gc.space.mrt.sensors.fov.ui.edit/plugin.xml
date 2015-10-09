@@ -26,10 +26,10 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated mrt_fov_ui -->
       <extender
-            uri="ca.gc.space.topology.ui"
+            uri="org.eclipse.symphony.common.topology.ui"
             class="ca.gc.space.mrt.sensors.fov.ui.provider.FovUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
-            uri="ca.gc.space.topology"
+            uri="org.eclipse.symphony.common.topology"
             class="ca.gc.space.mrt.sensors.fov.ui.provider.FovUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

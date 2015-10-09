@@ -4,8 +4,6 @@
 package org.eclipse.symphony.core.environment.ui.provider;
 
 
-import ca.gc.space.topology.ui.provider.NodePresentationItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -16,6 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
 

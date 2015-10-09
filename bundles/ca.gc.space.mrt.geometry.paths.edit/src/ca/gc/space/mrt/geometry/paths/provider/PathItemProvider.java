@@ -12,9 +12,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 import ca.gc.space.mrt.geometry.paths.Path;
-import ca.gc.space.topology.provider.NodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.geometry.paths.Path} object.

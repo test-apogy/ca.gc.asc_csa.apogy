@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -135,13 +135,13 @@ public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.Node
+	 * @see org.eclipse.symphony.common.topology.Node
 	 * @generated
 	 */
   public Adapter createNodeAdapter()

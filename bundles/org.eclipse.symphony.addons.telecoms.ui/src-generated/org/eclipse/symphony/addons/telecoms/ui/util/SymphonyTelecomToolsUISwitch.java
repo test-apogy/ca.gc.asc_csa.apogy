@@ -3,12 +3,11 @@
  */
 package org.eclipse.symphony.addons.telecoms.ui.util;
 
-import ca.gc.space.topology.ui.NodePresentation;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.telecoms.ui.*;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

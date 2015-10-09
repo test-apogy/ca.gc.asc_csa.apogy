@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
 import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
 import ca.gc.asc_csa.topology.bindings.impl.AbstractTopologyBindingImpl;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

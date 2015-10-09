@@ -14,6 +14,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.geometry.paths.CatmullRomWayPointPathInterpolator;
 import ca.gc.space.mrt.geometry.paths.MinimumDistanceFilter;
@@ -26,8 +28,6 @@ import ca.gc.space.mrt.geometry.paths.WayPoint;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.mrt.geometry.paths.WayPointPathFilter;
 import ca.gc.space.mrt.geometry.paths.WayPointPathInterpolator;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

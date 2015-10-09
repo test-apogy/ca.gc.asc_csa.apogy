@@ -15,7 +15,7 @@
             genModel="model/symphony_tools_ui.xcore"/>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.ui.adapters.Ruler3dToolNodePresentationAdapter">
       </Class>
@@ -146,7 +146,7 @@
       </menuContribution>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.ui.adapters.SunVector3DToolNodePresentationAdapter">
       </Class>
@@ -167,7 +167,7 @@
       </page>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.ui.adapters.Trajectory3DToolNodePresentationAdapter">
       </Class>

@@ -4,7 +4,7 @@
 
 package ca.gc.space.mrt.sensors.fov.bindings
 
-import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding
 
 import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView
 import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView

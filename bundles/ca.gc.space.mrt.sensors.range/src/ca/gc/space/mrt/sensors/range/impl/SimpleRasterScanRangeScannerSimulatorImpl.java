@@ -26,6 +26,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TransformNode;
 
 import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
@@ -37,10 +41,6 @@ import ca.gc.space.mrt.sensors.range.RayData;
 import ca.gc.space.mrt.sensors.range.SensorsRangeFacade;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScanner;
 import ca.gc.space.mrt.sensors.range.SimpleRasterScanRangeScannerSimulator;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

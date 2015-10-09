@@ -29,15 +29,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 
 import ca.gc.space.mrt.sensors.fov.FovFactory;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.fov.util.FovAdapterFactory;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

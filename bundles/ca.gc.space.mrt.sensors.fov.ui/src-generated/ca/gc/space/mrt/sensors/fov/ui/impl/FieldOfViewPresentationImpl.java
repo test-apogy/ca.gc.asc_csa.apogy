@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 import ca.gc.space.mrt.sensors.fov.ui.Activator;
 import ca.gc.space.mrt.sensors.fov.ui.FieldOfViewPresentation;
 import ca.gc.space.mrt.sensors.fov.ui.FovUIPackage;
 import ca.gc.space.mrt.sensors.fov.ui.scene_objects.FieldOfViewSceneObject;
-import ca.gc.space.topology.ui.MeshPresentationMode;
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

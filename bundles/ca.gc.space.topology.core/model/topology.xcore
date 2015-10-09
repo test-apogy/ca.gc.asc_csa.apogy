@@ -6,17 +6,17 @@
 	      modelName="Topology",
 	      operationReflection="true",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.space.topology.core/src-generated")
-@GenModel(editDirectory="/ca.gc.space.topology.core.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.core/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.topology.core.edit/src-generated")
 
-package ca.gc.space.topology
+package org.eclipse.symphony.common.topology
 
 import org.eclipse.symphony.common.math.Tuple3d
 import org.eclipse.symphony.common.math.Matrix3x3
 
 type Matrix4d wraps javax.vecmath.Matrix4d
 type EClass wraps org.eclipse.emf.ecore.EClass
-type INodeVisitor wraps ca.gc.space.topology.INodeVisitor
+type INodeVisitor wraps org.eclipse.symphony.common.topology.INodeVisitor
 
 interface TopologyProvider
 {

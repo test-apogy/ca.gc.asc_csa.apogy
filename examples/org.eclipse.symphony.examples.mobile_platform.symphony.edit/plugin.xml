@@ -29,7 +29,7 @@
             uri="org.eclipse.symphony.core.environment.ui"
             class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$SymphonyEnvironmentUIChildCreationExtender"/>
       <extender
-            uri="ca.gc.space.topology"
+            uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

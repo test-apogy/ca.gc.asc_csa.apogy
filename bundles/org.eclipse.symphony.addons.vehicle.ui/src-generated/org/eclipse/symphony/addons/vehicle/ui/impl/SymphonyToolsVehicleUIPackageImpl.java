@@ -7,15 +7,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import ca.gc.space.topology.ui.TopologyUIPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIFactory;
 import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

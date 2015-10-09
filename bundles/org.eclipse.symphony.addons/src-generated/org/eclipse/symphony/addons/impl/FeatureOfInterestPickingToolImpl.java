@@ -25,16 +25,15 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
 import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TransformNode;
-import ca.gc.space.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->

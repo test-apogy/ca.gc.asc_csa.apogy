@@ -24,7 +24,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_core -->
       <extender
-            uri="ca.gc.asc_csa.topology.bindings"
+            uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core"

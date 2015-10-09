@@ -10,10 +10,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 import ca.gc.space.mrt.sensors.imaging.RectifiedImageSnapshot;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.sensors.imaging.RectifiedImageSnapshot} object.

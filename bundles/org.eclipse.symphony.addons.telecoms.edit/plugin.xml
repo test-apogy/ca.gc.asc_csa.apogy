@@ -38,7 +38,7 @@
             uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$PathsChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.topology.bindings"
+            uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>
 

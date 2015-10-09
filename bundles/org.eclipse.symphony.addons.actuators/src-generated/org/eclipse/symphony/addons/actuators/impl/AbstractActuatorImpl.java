@@ -9,8 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.ActuatorStatus;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
-
-import ca.gc.space.topology.impl.NodeImpl;
+import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

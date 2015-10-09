@@ -20,7 +20,7 @@
             genModel="model/symphony_tools_telecoms_ui.xcore"/>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.telecoms.ui.adapters.AbstractAntennaRadiationPatternAdapter">
       </Class>

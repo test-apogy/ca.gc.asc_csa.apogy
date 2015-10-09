@@ -15,6 +15,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.mrt.mobility.controllers.Activator;
@@ -24,7 +25,6 @@ import ca.gc.space.mrt.mobility.controllers.PathRecorderSamplingMode;
 import ca.gc.space.mrt.mobility.controllers.WaypointPathRecorder;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
 import ca.gc.space.mrt.sensors.pose.PositionSensor;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

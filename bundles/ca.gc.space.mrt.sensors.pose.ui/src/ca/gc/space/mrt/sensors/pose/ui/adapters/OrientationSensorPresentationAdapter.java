@@ -1,11 +1,12 @@
 package ca.gc.space.mrt.sensors.pose.ui.adapters;
 
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
 import ca.gc.space.mrt.sensors.pose.ui.OrientationSensorPresentation;
 import ca.gc.space.mrt.sensors.pose.ui.SensorsPoseUIFactory;
 import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
 import ca.gc.space.topology.ui.NodePresentationAdapter;
 
 public class OrientationSensorPresentationAdapter implements NodePresentationAdapter

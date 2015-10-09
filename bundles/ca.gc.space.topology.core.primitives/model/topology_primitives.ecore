@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="primitives" nsURI="http:///ca/gc/space/topology/core/primitives/topology_primitives.ecore"
-    nsPrefix="ca.gc.space.topology.core">
-  <eClassifiers xsi:type="ecore:EClass" name="Vector" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node">
+    nsPrefix="org.eclipse.symphony.common.topology.core">
+  <eClassifiers xsi:type="ecore:EClass" name="Vector" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//Node">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xRotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="0.0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yRotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
@@ -19,7 +19,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PickVector" eSuperTypes="#//Vector">
     <eOperations name="isNodeIncludedInIntersection" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eParameters name="node" eType="ecore:EClass platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node"/>
+      <eParameters name="node" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//Node"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeTypesInIntersection"
         upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
@@ -30,7 +30,7 @@
         <details key="documentation" value="The current shortest intersection distance between the ray and a node of one of the included type."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="intersectedNode" eType="ecore:EClass platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intersectedNode" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//Node"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="relativeIntersectionPosition"
         eType="#//Point3d"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="absoluteIntersectionPosition"
@@ -126,7 +126,7 @@
       </eParameters>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Plane" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node">
+  <eClassifiers xsi:type="ecore:EClass" name="Plane" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//Node">
     <eStructuralFeatures xsi:type="ecore:EReference" name="v0" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="v1" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"
@@ -134,12 +134,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WayPoint" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//AggregateGroupNode"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Node"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SpherePrimitive" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//AggregateGroupNode">
+  <eClassifiers xsi:type="ecore:EClass" name="WayPoint" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//AggregateGroupNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SpherePrimitive" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//AggregateGroupNode">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Light" abstract="true" eSuperTypes="platform:/plugin/ca.gc.space.topology.core/model/topology.ecore#//Leaf">
+  <eClassifiers xsi:type="ecore:EClass" name="Light" abstract="true" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//Leaf">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.ecore#//Tuple3d"

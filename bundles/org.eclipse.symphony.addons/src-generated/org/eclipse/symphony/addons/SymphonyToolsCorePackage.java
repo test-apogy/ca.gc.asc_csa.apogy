@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1679,7 +1679,7 @@ public interface SymphonyToolsCorePackage extends EPackage
 	 * The meta object id for the '<em>Node Selection</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.topology.ui.NodeSelection
+	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection
 	 * @see org.eclipse.symphony.addons.impl.SymphonyToolsCorePackageImpl#getNodeSelection()
 	 * @generated
 	 */
@@ -1803,11 +1803,11 @@ public interface SymphonyToolsCorePackage extends EPackage
 	EReference getSimple3DTool_RootNode();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.Simple3DTool#selectionChanged(ca.gc.space.topology.ui.NodeSelection) <em>Selection Changed</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.Simple3DTool#selectionChanged(org.eclipse.symphony.common.topology.ui.NodeSelection) <em>Selection Changed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Selection Changed</em>' operation.
-	 * @see org.eclipse.symphony.addons.Simple3DTool#selectionChanged(ca.gc.space.topology.ui.NodeSelection)
+	 * @see org.eclipse.symphony.addons.Simple3DTool#selectionChanged(org.eclipse.symphony.common.topology.ui.NodeSelection)
 	 * @generated
 	 */
 	EOperation getSimple3DTool__SelectionChanged__NodeSelection();
@@ -2277,12 +2277,12 @@ public interface SymphonyToolsCorePackage extends EPackage
 	EDataType getColor3f();
 
 		/**
-	 * Returns the meta object for data type '{@link ca.gc.space.topology.ui.NodeSelection <em>Node Selection</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.symphony.common.topology.ui.NodeSelection <em>Node Selection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Node Selection</em>'.
-	 * @see ca.gc.space.topology.ui.NodeSelection
-	 * @model instanceClass="ca.gc.space.topology.ui.NodeSelection"
+	 * @see org.eclipse.symphony.common.topology.ui.NodeSelection
+	 * @model instanceClass="org.eclipse.symphony.common.topology.ui.NodeSelection"
 	 * @generated
 	 */
 	EDataType getNodeSelection();
@@ -2814,7 +2814,7 @@ public interface SymphonyToolsCorePackage extends EPackage
 		 * The meta object literal for the '<em>Node Selection</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ca.gc.space.topology.ui.NodeSelection
+		 * @see org.eclipse.symphony.common.topology.ui.NodeSelection
 		 * @see org.eclipse.symphony.addons.impl.SymphonyToolsCorePackageImpl#getNodeSelection()
 		 * @generated
 		 */

@@ -2,7 +2,7 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Canadian Space Agency 2008." modelDirectory="/ca.gc.space.mrt.sensors.pose.ui/src"
     modelPluginID="ca.gc.space.mrt.sensors.pose.ui" modelName="Sensors_pose_ui" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="6.0" usedGenPackages="platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.genmodel#//math platform:/plugin/ca.gc.space.topology.core/model/topology.genmodel#//topology platform:/plugin/ca.gc.space.topology.ui/model/TopologyUi.genmodel#//ui">
+    complianceLevel="6.0" usedGenPackages="platform:/plugin/org.eclipse.symphony.common.math.core/model/Math.genmodel#//math platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.genmodel#//topology platform:/plugin/org.eclipse.symphony.common.topology.ui/model/TopologyUi.genmodel#//ui">
   <foreignModel>sensors_pose_ui.ecore</foreignModel>
   <genPackages prefix="SensorsPoseUi" basePackage="ca.gc.space.mrt.sensors.pose" disposableProviderFactory="true"
       ecorePackage="sensors_pose_ui.ecore#/">

@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import ca.gc.space.mrt.geometry.paths.WayPointPathBinding;
-import ca.gc.space.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

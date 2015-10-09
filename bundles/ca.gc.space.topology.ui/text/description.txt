@@ -152,15 +152,15 @@ Package ui <http:///ca/gc/space/topology/ui.ecore>
     Literal RECEIVE = 3
     Literal CAST_AND_RECEIVE = 4
 
-  DataType PresentationToplogyListener <ca.gc.space.topology.ui.PresentationToplogyListener>
+  DataType PresentationToplogyListener <org.eclipse.symphony.common.topology.ui.PresentationToplogyListener>
 
   DataType WeakReference <java.lang.ref.WeakReference>
 
   DataType Collection <java.util.Collection>
 
-  DataType SceneObject <ca.gc.space.topology.ui.SceneObject>
+  DataType SceneObject <org.eclipse.symphony.common.topology.ui.SceneObject>
 
-  DataType ITopologyViewer <ca.gc.space.topology.ui.ITopologyViewer>
+  DataType ITopologyViewer <org.eclipse.symphony.common.topology.ui.ITopologyViewer>
 
   DataType IProgressMonitor <org.eclipse.core.runtime.IProgressMonitor>
 

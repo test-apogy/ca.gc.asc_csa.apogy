@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

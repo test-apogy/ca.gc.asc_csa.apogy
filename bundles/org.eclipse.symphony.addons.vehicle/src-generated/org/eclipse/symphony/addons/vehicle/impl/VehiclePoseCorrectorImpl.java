@@ -40,16 +40,15 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.impl.PoseCorrectorImpl;
-
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

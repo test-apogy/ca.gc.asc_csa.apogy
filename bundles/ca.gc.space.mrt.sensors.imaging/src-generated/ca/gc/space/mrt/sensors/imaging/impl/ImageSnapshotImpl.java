@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
@@ -24,8 +26,6 @@ import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.ImagingUtilities;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 import ca.gc.space.topology.INodeVisitor;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

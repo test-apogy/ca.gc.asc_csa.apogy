@@ -5,7 +5,7 @@
  */
 package ca.gc.space.mrt.sensors.fov;
 
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.Node;
 
 
 /**

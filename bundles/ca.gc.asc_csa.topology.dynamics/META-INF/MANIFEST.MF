@@ -7,13 +7,13 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: ca.gc.asc_csa.topology.dynamics,
- ca.gc.asc_csa.topology.dynamics.impl,
- ca.gc.asc_csa.topology.dynamics.util
+Export-Package: org.eclipse.symphony.common.topology.addons.dynamics,
+ org.eclipse.symphony.common.topology.addons.dynamics.impl,
+ org.eclipse.symphony.common.topology.addons.dynamics.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  ca.gc.space.topology.core;visibility:=reexport,
- ca.gc.space.topology.core.primitives;visibility:=reexport
+ org.eclipse.symphony.common.topology.addons.primitives;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.topology.dynamics.Activator
+Bundle-Activator: org.eclipse.symphony.common.topology.addons.dynamics.Activator

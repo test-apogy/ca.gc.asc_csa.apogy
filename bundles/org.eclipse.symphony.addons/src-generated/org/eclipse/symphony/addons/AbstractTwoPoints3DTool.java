@@ -6,8 +6,7 @@ package org.eclipse.symphony.addons;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.symphony.common.math.Tuple3d;
-
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

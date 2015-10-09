@@ -13,8 +13,7 @@ import org.eclipse.symphony.addons.vehicle.ui.Activator;
 import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage;
 import org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesConstants;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

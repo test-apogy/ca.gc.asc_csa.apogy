@@ -20,6 +20,9 @@ import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.environment.AstronomyUtils;
 import org.eclipse.symphony.core.environment.AtmosphereUtils;
@@ -28,10 +31,6 @@ import org.eclipse.symphony.core.environment.HorizontalCoordinates;
 import org.eclipse.symphony.core.environment.Sun;
 import org.eclipse.symphony.core.environment.SurfaceWorksite;
 import org.eclipse.symphony.core.invocator.Environment;
-
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodeSelection;
 
 /**
  * <!-- begin-user-doc -->

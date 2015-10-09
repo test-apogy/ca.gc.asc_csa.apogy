@@ -27,6 +27,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 
 import ca.gc.asc_csa.topology.bindings.BindingsList;
 import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
@@ -34,9 +37,6 @@ import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
 import ca.gc.space.mrt.sensors.fov.bindings.MRTFOVBindingsFactory;
 import ca.gc.space.mrt.sensors.fov.bindings.MRTFOVBindingsPackage;
 import ca.gc.space.mrt.sensors.fov.bindings.util.MRTFOVBindingsAdapterFactory;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

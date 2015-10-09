@@ -9,13 +9,13 @@ package ca.gc.space.mrt.mobility.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.mobility.MobilePlateform;
 import ca.gc.space.mrt.mobility.MobilityPackage;
 import ca.gc.space.mrt.mobility.SkidSteeredMobilePlateform;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

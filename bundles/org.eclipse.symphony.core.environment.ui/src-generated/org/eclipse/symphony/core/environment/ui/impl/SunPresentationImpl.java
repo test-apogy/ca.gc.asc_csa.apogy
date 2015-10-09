@@ -4,10 +4,9 @@
 package org.eclipse.symphony.core.environment.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 import org.eclipse.symphony.core.environment.ui.SunPresentation;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -7,7 +7,7 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.core.ui.jme3.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- ca.gc.asc_csa.topology.ui.jme3,
+ org.eclipse.symphony.common.topology.ui.jme3,
  org.eclipse.symphony.core.ui,
  org.eclipse.symphony.core,
  org.eclipse.symphony.common.images,

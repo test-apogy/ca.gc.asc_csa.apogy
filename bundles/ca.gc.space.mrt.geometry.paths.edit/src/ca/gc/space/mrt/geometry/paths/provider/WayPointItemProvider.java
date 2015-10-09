@@ -18,12 +18,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data3d.provider.CartesianPositionCoordinatesItemProvider;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.geometry.paths.PathsFactory;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.geometry.paths.WayPoint;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.geometry.paths.WayPoint} object.

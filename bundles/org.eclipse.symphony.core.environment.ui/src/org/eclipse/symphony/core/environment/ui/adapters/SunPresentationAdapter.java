@@ -1,12 +1,11 @@
 package org.eclipse.symphony.core.environment.ui.adapters;
 
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 import org.eclipse.symphony.core.environment.Sun;
 import org.eclipse.symphony.core.environment.ui.SunPresentation;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.NodePresentationAdapter;
 
 public class SunPresentationAdapter implements NodePresentationAdapter
 {

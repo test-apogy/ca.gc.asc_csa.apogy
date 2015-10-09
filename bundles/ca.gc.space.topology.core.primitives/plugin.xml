@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http:///ca/gc/space/topology/core/primitives/topology_primitives.ecore"
-            class="ca.gc.space.topology.core.primitives.PrimitivesPackage"
+            class="org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage"
             genModel="model/topology_primitives.genmodel"/>
    </extension>
 

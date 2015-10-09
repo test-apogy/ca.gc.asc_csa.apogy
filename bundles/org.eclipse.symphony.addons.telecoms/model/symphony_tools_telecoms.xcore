@@ -13,7 +13,7 @@ package org.eclipse.symphony.addons.telecoms
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Named
 import org.eclipse.symphony.addons.SimpleTool
-import ca.gc.space.topology.Node
+import org.eclipse.symphony.common.topology.Node
 import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer
 
 type Color3f wraps javax.vecmath.Color3f

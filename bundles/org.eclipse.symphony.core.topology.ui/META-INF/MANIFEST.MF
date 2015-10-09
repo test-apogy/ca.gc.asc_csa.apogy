@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.symphony.common.converters,
  ca.gc.asc_csa.topology.ui.viewer,
  org.eclipse.symphony.core.topology,
  org.eclipse.symphony.core.ui,
- ca.gc.asc_csa.topology.ui.jme3,
+ org.eclipse.symphony.common.topology.ui.jme3,
  org.eclipse.emf.edit,
  org.eclipse.core.expressions,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"

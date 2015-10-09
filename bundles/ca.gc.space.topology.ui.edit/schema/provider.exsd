@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.space.topology.ui.edit" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.common.topology.ui.edit" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="ca.gc.space.topology.ui.edit" id="ca.gc.space.topology.ui.edit.provider" name="UI Provider"/>
+         <meta.schema plugin="org.eclipse.symphony.common.topology.ui.edit" id="org.eclipse.symphony.common.topology.ui.edit.provider" name="UI Provider"/>
       </appinfo>
       <documentation>
          [Enter description of this extension point.]

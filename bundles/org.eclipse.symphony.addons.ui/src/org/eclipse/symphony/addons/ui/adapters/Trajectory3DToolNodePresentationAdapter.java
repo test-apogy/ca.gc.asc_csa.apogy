@@ -3,10 +3,9 @@ package org.eclipse.symphony.addons.ui.adapters;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
 import org.eclipse.symphony.addons.ui.SymphonyToolsUIFactory;
 import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.NodePresentationAdapter;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 
 public class Trajectory3DToolNodePresentationAdapter implements NodePresentationAdapter
 {

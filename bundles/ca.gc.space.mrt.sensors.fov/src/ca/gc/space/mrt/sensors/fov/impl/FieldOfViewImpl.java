@@ -6,10 +6,10 @@
 package ca.gc.space.mrt.sensors.fov.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 import ca.gc.space.mrt.sensors.fov.FieldOfView;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
-import ca.gc.space.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

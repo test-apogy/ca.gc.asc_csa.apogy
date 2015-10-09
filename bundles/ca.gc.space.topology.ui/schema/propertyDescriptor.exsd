@@ -55,7 +55,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":ca.gc.space.topology.ui.PropertyDescriptorAdapter"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.common.topology.ui.PropertyDescriptorAdapter"/>
                </appinfo>
             </annotation>
          </attribute>

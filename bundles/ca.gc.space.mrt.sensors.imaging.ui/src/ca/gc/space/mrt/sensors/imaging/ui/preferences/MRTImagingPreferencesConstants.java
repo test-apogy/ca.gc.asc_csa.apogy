@@ -1,8 +1,7 @@
 package ca.gc.space.mrt.sensors.imaging.ui.preferences;
 
 import org.eclipse.swt.graphics.RGB;
-
-import ca.gc.space.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 
 public class MRTImagingPreferencesConstants 
 {

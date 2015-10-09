@@ -4,7 +4,7 @@
 
 package ca.gc.space.mrt.geometry.paths.ui
 
-import ca.gc.space.topology.ui.NodePresentation
+import org.eclipse.symphony.common.topology.ui.NodePresentation
 
 enum PathPresentationMode
 {

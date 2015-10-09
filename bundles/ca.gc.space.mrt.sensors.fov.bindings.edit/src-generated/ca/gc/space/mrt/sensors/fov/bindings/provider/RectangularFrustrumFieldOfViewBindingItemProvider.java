@@ -11,8 +11,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.common.topology.bindings.provider.AbstractTopologyBindingItemProvider;
 
-import ca.gc.asc_csa.topology.bindings.provider.AbstractTopologyBindingItemProvider;
 import ca.gc.space.mrt.sensors.fov.bindings.MRTFOVBindingsPackage;
 import ca.gc.space.mrt.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
 

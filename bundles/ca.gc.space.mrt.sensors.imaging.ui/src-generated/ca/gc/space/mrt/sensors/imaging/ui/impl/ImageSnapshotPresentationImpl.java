@@ -11,14 +11,14 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 import ca.gc.space.mrt.sensors.imaging.ui.Activator;
 import ca.gc.space.mrt.sensors.imaging.ui.ImageSnapshotPresentation;
 import ca.gc.space.mrt.sensors.imaging.ui.ImageSnapshotSceneObject;
 import ca.gc.space.mrt.sensors.imaging.ui.MRTSensorsImagingUIPackage;
 import ca.gc.space.mrt.sensors.imaging.ui.preferences.MRTImagingPreferencesConstants;
-import ca.gc.space.topology.ui.MeshPresentationMode;
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

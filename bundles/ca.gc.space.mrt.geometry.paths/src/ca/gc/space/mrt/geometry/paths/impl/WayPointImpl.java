@@ -17,13 +17,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.geometry.paths.WayPoint;
-import ca.gc.space.topology.GroupNode;
 import ca.gc.space.topology.INodeVisitor;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

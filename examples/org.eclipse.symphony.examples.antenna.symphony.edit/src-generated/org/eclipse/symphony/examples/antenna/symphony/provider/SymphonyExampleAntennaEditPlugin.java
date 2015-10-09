@@ -4,15 +4,15 @@
 package org.eclipse.symphony.examples.antenna.symphony.provider;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
-import ca.gc.asc_csa.topology.bindings.provider.TopologyBindingsEditPlugin;
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
-import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
+import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
+import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 

@@ -1,6 +1,7 @@
 package ca.gc.space.mrt.geometry.paths.ui.jme3.adapters;
 
-import ca.gc.asc_csa.topology.ui.jme3.JME3Adapter;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
+
 import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.topology.ui.jme3.JME3SceneObject;
 import ca.gc.space.mrt.geometry.paths.WayPointPath;

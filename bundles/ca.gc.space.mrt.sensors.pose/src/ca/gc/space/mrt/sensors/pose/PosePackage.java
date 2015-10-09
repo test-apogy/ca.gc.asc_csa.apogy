@@ -11,8 +11,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
-
-import ca.gc.space.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

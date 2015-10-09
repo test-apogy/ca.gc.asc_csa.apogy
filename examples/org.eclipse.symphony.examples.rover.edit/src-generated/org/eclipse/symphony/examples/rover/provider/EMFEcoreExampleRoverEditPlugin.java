@@ -6,7 +6,6 @@ package org.eclipse.symphony.examples.rover.provider;
 import ca.gc.asc_csa.eclipse.emf.ecore.provider.EMFEcoreEditPlugin;
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
 import ca.gc.space.mrt.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
-import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -16,6 +15,7 @@ import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
+import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraEditPlugin;
 import org.eclipse.symphony.examples.mobile_platform.provider.EMFEcoreExampleMobilePlatformEditPlugin;
 import org.eclipse.symphony.examples.robotic_arm.provider.EMFEcoreExampleRoboticArmEditPlugin;

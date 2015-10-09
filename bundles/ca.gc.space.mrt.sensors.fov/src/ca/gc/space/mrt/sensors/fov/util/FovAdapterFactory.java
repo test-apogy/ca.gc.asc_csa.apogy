@@ -15,6 +15,7 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data.SamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
+import org.eclipse.symphony.common.topology.Node;
 
 import ca.gc.space.mrt.sensors.fov.AngularSpan;
 import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView;
@@ -25,7 +26,6 @@ import ca.gc.space.mrt.sensors.fov.FieldOfView;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -272,13 +272,13 @@ public class FovAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.Node
+	 * @see org.eclipse.symphony.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter()

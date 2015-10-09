@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.topology.dynamics.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.topology.addons.dynamics.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.topology.dynamics.ui.Activator
+Bundle-Activator: org.eclipse.symphony.common.topology.addons.dynamics.ui.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- ca.gc.asc_csa.topology.dynamics;visibility:=reexport,
- ca.gc.asc_csa.topology.dynamics.edit,
+ org.eclipse.symphony.common.topology.addons.dynamics;visibility:=reexport,
+ org.eclipse.symphony.common.topology.addons.dynamics.edit,
  org.eclipse.core.databinding,
  org.eclipse.core.databinding.beans,
  org.eclipse.core.databinding.observable,
@@ -32,9 +32,9 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
  jars/swt-grouplayout.jar
-Export-Package: ca.gc.asc_csa.topology.dynamics.ui,
- ca.gc.asc_csa.topology.dynamics.ui.actions,
- ca.gc.asc_csa.topology.dynamics.ui.composites,
- ca.gc.asc_csa.topology.dynamics.ui.views,
+Export-Package: org.eclipse.symphony.common.topology.addons.dynamics.ui,
+ org.eclipse.symphony.common.topology.addons.dynamics.ui.actions,
+ org.eclipse.symphony.common.topology.addons.dynamics.ui.composites,
+ org.eclipse.symphony.common.topology.addons.dynamics.ui.views,
  org.eclipse.wb.swt.layout.grouplayout,
  org.eclipse.wb.swt.widgets.baseline

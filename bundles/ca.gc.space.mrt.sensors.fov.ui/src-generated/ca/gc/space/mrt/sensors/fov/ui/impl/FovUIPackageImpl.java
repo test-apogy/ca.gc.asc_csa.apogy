@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 import ca.gc.space.mrt.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
 import ca.gc.space.mrt.sensors.fov.ui.ConicalFieldOfViewPresentation;
@@ -15,7 +16,6 @@ import ca.gc.space.mrt.sensors.fov.ui.FieldOfViewPresentation;
 import ca.gc.space.mrt.sensors.fov.ui.FovUIFactory;
 import ca.gc.space.mrt.sensors.fov.ui.FovUIPackage;
 import ca.gc.space.mrt.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
-import ca.gc.space.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

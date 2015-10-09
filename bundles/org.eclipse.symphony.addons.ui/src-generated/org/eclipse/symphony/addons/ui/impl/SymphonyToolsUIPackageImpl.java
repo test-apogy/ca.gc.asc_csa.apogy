@@ -11,8 +11,7 @@ import org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation;
 import org.eclipse.symphony.addons.ui.SymphonyToolsUIFactory;
 import org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage;
 import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
-
-import ca.gc.space.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

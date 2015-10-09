@@ -15,10 +15,10 @@ import org.eclipse.symphony.common.geometry.data25d.provider.Data25dEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
+import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 import ca.gc.space.mrt.common.provider.CommonEditPlugin;
 import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
-import ca.gc.space.topology.provider.TopologyEditPlugin;
 
 /**
  * This is the central singleton for the Range edit plugin.

@@ -8,11 +8,11 @@ package ca.gc.space.mrt.mobility.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 import ca.gc.space.mrt.mobility.MobilePlateform;
 import ca.gc.space.mrt.mobility.MobilePlateformStatus;
 import ca.gc.space.mrt.mobility.MobilityPackage;
-import ca.gc.space.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

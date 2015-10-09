@@ -7,11 +7,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestSceneObject;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -30,6 +30,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.util.SymphonyToolsCoreAdapterFactory;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
@@ -43,11 +48,6 @@ import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 import ca.gc.space.mrt.geometry.paths.util.PathsSwitch;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

@@ -6,9 +6,10 @@ package ca.gc.space.mrt.sensors.imaging.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+
 import ca.gc.space.mrt.sensors.imaging.ui.ImageSnapshotPresentation;
 import ca.gc.space.mrt.sensors.imaging.ui.MRTSensorsImagingUIPackage;
-import ca.gc.space.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

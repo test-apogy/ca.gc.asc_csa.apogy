@@ -6,7 +6,7 @@
  */
 package org.eclipse.symphony.addons.sensors.validation;
 
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.Node;
 
 
 /**

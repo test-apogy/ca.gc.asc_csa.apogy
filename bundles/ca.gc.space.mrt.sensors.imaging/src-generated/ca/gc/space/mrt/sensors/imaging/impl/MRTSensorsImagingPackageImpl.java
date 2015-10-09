@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.space.mrt.sensors.fov.FovPackage;
@@ -28,7 +29,6 @@ import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingFactory;
 import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 import ca.gc.space.mrt.sensors.imaging.RectifiedImageSnapshot;
 import ca.gc.space.mrt.sensors.imaging.Zoomable;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

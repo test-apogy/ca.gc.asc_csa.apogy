@@ -3,12 +3,6 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth.provider;
 
-import ca.gc.space.topology.AggregateContentNode;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyPackage;
-
-import ca.gc.space.topology.util.TopologySwitch;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -16,15 +10,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.edit.command.CommandParameter;
-
 import org.eclipse.emf.edit.domain.EditingDomain;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ChildCreationExtenderManager;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -38,29 +27,25 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.WorksitesList;
-
 import org.eclipse.symphony.core.environment.SurfaceWorksite;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
 import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
-
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
-
 import org.eclipse.symphony.core.environment.orbit.earth.util.SymphonyEarthOrbitEnvironmentAdapterFactory;
-
 import org.eclipse.symphony.core.environment.orbit.util.SymphonyOrbitEnvironmentSwitch;
-
 import org.eclipse.symphony.core.environment.util.SymphonyEnvironmentSwitch;
-
 import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 
 /**

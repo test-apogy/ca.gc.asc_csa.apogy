@@ -34,13 +34,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
 
 import ca.gc.space.mrt.sensors.range.Activator;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RangeScannerSimulator;
 import ca.gc.space.mrt.sensors.range.RayData;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyFacade;
 
 import com.sun.j3d.utils.geometry.GeometryInfo;
 import com.sun.j3d.utils.geometry.NormalGenerator;

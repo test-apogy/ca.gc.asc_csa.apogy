@@ -25,12 +25,12 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.SensorsFactory;
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.provider.RotationNodeItemProvider;
 
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;
 import ca.gc.space.mrt.sensors.pose.PoseFactory;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.RotationNodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.sensors.pose.OrientationSensor} object.

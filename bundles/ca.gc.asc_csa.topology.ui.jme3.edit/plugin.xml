@@ -10,8 +10,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated jme3 -->
       <factory
-            uri="ca.gc.asc_csa.topology.ui.jme3"
-            class="ca.gc.asc_csa.topology.ui.jme3.provider.JME3ItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.topology.ui.jme3"
+            class="org.eclipse.symphony.common.topology.ui.jme3.provider.JME3ItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

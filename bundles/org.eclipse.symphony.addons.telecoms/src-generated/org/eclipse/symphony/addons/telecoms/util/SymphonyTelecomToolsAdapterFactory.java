@@ -5,7 +5,6 @@ package org.eclipse.symphony.addons.telecoms.util;
 
 import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.space.topology.Node;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -14,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.AbstractTool;
 import org.eclipse.symphony.addons.SimpleTool;
 import org.eclipse.symphony.addons.telecoms.*;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
 import org.eclipse.symphony.core.environment.ImageMapLayer;
@@ -396,13 +396,13 @@ public class SymphonyTelecomToolsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.topology.Node
+	 * @see org.eclipse.symphony.common.topology.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {

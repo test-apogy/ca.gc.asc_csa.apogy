@@ -11,8 +11,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
-
-import ca.gc.space.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -624,11 +623,11 @@ public interface PathplannersPackage extends EPackage {
 	EClass getPathPlannersFacade();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.PathPlannersFacade#createCircularExclusionZone(double, ca.gc.space.topology.GroupNode) <em>Create Circular Exclusion Zone</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.space.mrt.mobility.pathplanners.PathPlannersFacade#createCircularExclusionZone(double, org.eclipse.symphony.common.topology.GroupNode) <em>Create Circular Exclusion Zone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Circular Exclusion Zone</em>' operation.
-	 * @see ca.gc.space.mrt.mobility.pathplanners.PathPlannersFacade#createCircularExclusionZone(double, ca.gc.space.topology.GroupNode)
+	 * @see ca.gc.space.mrt.mobility.pathplanners.PathPlannersFacade#createCircularExclusionZone(double, org.eclipse.symphony.common.topology.GroupNode)
 	 * @generated
 	 */
 	EOperation getPathPlannersFacade__CreateCircularExclusionZone__double_GroupNode();

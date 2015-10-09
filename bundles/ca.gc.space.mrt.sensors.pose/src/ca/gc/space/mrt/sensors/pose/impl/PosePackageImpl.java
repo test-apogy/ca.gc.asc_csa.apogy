@@ -16,6 +16,7 @@ import org.eclipse.symphony.addons.sensors.SensorsPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 import ca.gc.space.mrt.sensors.pose.CSVDataLogger;
 import ca.gc.space.mrt.sensors.pose.InertialMeasurementUnit;
@@ -30,7 +31,6 @@ import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedOrientationSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPoseSensor;
 import ca.gc.space.mrt.sensors.pose.SimulatedPositionSensor;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

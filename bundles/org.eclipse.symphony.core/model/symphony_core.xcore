@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.ResultsList
 import org.eclipse.symphony.core.invocator.Environment
 import ca.gc.space.topology.Node
 import org.eclipse.symphony.core.invocator.Type
-import ca.gc.asc_csa.topology.bindings.BindingsSet
+import org.eclipse.symphony.common.topology.bindings.BindingsSet
 import org.eclipse.symphony.common.math.Matrix4x4
 import ca.gc.space.topology.GroupNode
 import ca.gc.space.topology.AggregateGroupNode

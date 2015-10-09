@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 import ca.gc.space.mrt.common.CommonPackage;
 import ca.gc.space.mrt.common.TimeTaggedElement;
 import ca.gc.space.mrt.sensors.range.RangePackage;
 import ca.gc.space.mrt.sensors.range.RasterScanData;
 import ca.gc.space.mrt.sensors.range.RasterScanSettings;
-import ca.gc.space.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

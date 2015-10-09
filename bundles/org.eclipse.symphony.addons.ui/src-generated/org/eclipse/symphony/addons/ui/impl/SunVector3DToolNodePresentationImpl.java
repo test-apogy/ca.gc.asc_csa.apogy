@@ -13,8 +13,7 @@ import org.eclipse.symphony.addons.ui.Activator;
 import org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation;
 import org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage;
 import org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesConstants;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

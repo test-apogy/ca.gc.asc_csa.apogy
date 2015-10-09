@@ -8,8 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Thruster;
-
-import ca.gc.space.topology.impl.NodeImpl;
+import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,7 +3,6 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
 
-import ca.gc.space.topology.AggregateContentNode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -28,6 +27,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.util.SymphonyEnvironmentUISwitch;
@@ -37,10 +40,6 @@ import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
 import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformFactory;
 import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.symphony.util.SymphonyExampleMobilePlatformAdapterFactory;
-
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

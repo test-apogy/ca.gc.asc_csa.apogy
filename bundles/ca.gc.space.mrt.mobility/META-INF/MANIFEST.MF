@@ -12,6 +12,6 @@ Export-Package: ca.gc.space.mrt.mobility,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
- ca.gc.space.topology.core;visibility:=reexport
+ org.eclipse.symphony.common.topology.core;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

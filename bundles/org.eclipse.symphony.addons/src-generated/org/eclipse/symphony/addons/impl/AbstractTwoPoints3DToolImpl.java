@@ -17,10 +17,9 @@ import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.util.NodeRelativePoseListener;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.util.NodeRelativePoseListener;
 
 /**
  * <!-- begin-user-doc -->

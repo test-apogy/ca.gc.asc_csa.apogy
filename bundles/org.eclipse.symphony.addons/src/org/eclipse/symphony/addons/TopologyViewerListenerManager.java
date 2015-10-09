@@ -7,11 +7,11 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.addons.Simple3DTool;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
 
 import ca.gc.asc_csa.topology.ui.viewer.TopologyViewerPackage;
 import ca.gc.asc_csa.topology.ui.viewer.TopologyViewerRegistry;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodeSelection;
 
 public class TopologyViewerListenerManager
 {			

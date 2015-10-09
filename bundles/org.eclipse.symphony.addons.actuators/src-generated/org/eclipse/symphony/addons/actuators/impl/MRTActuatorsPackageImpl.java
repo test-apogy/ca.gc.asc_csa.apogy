@@ -15,8 +15,7 @@ import org.eclipse.symphony.addons.actuators.ActuatorStatus;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsFactory;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-
-import ca.gc.space.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

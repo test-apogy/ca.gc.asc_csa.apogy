@@ -11,9 +11,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
 import ca.gc.space.mrt.geometry.paths.ui.WayPointPresentation;
-import ca.gc.space.topology.ui.provider.NodePresentationItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.space.mrt.geometry.paths.ui.WayPointPresentation} object.

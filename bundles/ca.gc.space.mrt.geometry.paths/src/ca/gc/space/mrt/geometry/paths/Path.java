@@ -5,7 +5,7 @@
  */
 package ca.gc.space.mrt.geometry.paths;
 
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

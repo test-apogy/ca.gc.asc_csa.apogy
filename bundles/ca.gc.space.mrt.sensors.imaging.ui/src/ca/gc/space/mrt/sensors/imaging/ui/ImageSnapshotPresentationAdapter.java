@@ -1,9 +1,10 @@
 package ca.gc.space.mrt.sensors.imaging.ui;
 
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+
 import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.NodePresentationAdapter;
 
 public class ImageSnapshotPresentationAdapter implements NodePresentationAdapter
 {
