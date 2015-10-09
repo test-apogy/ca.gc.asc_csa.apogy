@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.mobility.pathplanners.ui.edit;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.mobility.pathplanners.ui.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.PathPlannersUIEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: ca.gc.space.mrt.mobility.pathplanners.ui.provider
+Export-Package: org.eclipse.symphony.addons.mobility.pathplanners.ui.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.space.mrt.mobility.pathplanners.ui;visibility:=reexport,
+ org.eclipse.symphony.addons.mobility.pathplanners.ui;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,

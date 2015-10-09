@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_path_planners_ui -->
       <factory
-            uri="ca.gc.space.mrt.mobility.pathplanners.ui"
-            class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.addons.mobility.pathplanners.ui"
+            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -27,10 +27,10 @@
       <!-- @generated mrt_path_planners_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="ca.gc.space.mrt.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.PathPlannersUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

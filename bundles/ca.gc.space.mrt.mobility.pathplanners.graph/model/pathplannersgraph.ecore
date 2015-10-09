@@ -8,7 +8,7 @@
     </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="costFunctions" upperBound="-1"
         eType="#//DisplacementCostFunction" containment="true"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility.pathplanners/model/pathplanners.ecore#//MeshWayPointPathPlanner">
+    <eGenericSuperTypes eClassifier="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.mobility.pathplanners/model/pathplanners.ecore#//MeshWayPointPathPlanner">
       <eTypeArguments eTypeParameter="#//CostBasedMeshWayPointPathPlanner/PolygonType"/>
     </eGenericSuperTypes>
   </eClassifiers>
@@ -86,7 +86,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExclusionZonesCostFunction" eSuperTypes="#//DisplacementCostFunction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="exclusionZones" upperBound="-1"
-        eType="ecore:EClass platform:/plugin/ca.gc.space.mrt.mobility.pathplanners/model/pathplanners.ecore#//ExclusionZone"/>
+        eType="ecore:EClass platform:/plugin/org.eclipse.symphony.addons.mobility.pathplanners/model/pathplanners.ecore#//ExclusionZone"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DisplacementCostFunction" abstract="true">
     <eOperations name="getCost" lowerBound="1" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble">

@@ -4,8 +4,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated mrt_path_planners_ui -->
       <package
-            uri="ca.gc.space.mrt.mobility.pathplanners.ui"
-            class="ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIPackage"
+            uri="org.eclipse.symphony.addons.mobility.pathplanners.ui"
+            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage"
             genModel="model/mrt_path_planners_ui.xcore"/>
    </extension>
 

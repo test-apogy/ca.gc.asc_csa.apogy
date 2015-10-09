@@ -4,7 +4,7 @@
   <extension
         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
      <Class
-           Class="ca.gc.space.mrt.mobility.pathplanners.ui.jme3.adapters.CircularExclusionZoneJME3Adapter">
+           Class="org.eclipse.symphony.addons.mobility.pathplanners.ui.jme3.adapters.CircularExclusionZoneJME3Adapter">
      </Class>
   </extension>
 </plugin>
