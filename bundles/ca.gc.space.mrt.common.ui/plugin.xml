@@ -12,21 +12,21 @@
    <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
-            id="ca.gc.space.mrt.common.ui.startableobjectContribution"
-            objectClass="ca.gc.space.mrt.common.Startable">
+            id="org.eclipse.symphony.common.obsolete.mrt.ui.startableobjectContribution"
+            objectClass="org.eclipse.symphony.common.obsolete.mrt.Startable">
          <action
-               class="ca.gc.space.mrt.common.ui.extensions.StartableStartAction"
+               class="org.eclipse.symphony.common.obsolete.mrt.ui.extensions.StartableStartAction"
                enablesFor="*"
-               id="ca.gc.space.mrt.common.ui.extensions.StartableStartAction"
+               id="org.eclipse.symphony.common.obsolete.mrt.ui.extensions.StartableStartAction"
                label="Start"
                menubarPath="FileActions"
                style="push"
                tooltip="Starts a startable.">ush">
          </action>
     <action
-          class="ca.gc.space.mrt.common.ui.extensions.StartableStopAction"
+          class="org.eclipse.symphony.common.obsolete.mrt.ui.extensions.StartableStopAction"
           enablesFor="*"
-          id="ca.gc.space.mrt.common.ui.extensions.StartableStopAction"
+          id="org.eclipse.symphony.common.obsolete.mrt.ui.extensions.StartableStopAction"
           label="Stop"
           menubarPath="FileActions"
           style="push"
@@ -37,8 +37,8 @@
    <extension
          point="org.eclipse.core.runtime.adapters">
       <factory
-            adaptableType="ca.gc.space.mrt.common.Startable"
-            class="ca.gc.space.mrt.common.ui.adapters.StartableAdapterFactory">
+            adaptableType="org.eclipse.symphony.common.obsolete.mrt.Startable"
+            class="org.eclipse.symphony.common.obsolete.mrt.ui.adapters.StartableAdapterFactory">
          <adapter
                type="org.eclipse.ui.IActionFilter">
          </adapter>

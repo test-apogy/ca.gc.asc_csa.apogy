@@ -19,9 +19,9 @@ import org.eclipse.symphony.addons.sensors.gps.GPSReading;
 import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
+import org.eclipse.symphony.common.obsolete.mrt.Server;
+import org.eclipse.symphony.common.obsolete.mrt.Startable;
 
-import ca.gc.space.mrt.common.Server;
-import ca.gc.space.mrt.common.Startable;
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
 import ca.gc.space.mrt.sensors.pose.PositionSensor;

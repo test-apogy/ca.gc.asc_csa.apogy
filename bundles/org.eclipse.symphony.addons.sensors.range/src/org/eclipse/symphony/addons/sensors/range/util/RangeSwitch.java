@@ -28,13 +28,12 @@ import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
+import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-
-import ca.gc.space.mrt.common.TimeTaggedElement;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,13 +2,13 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.utils
+Bundle-SymbolicName: org.eclipse.symphony.common.obsolete.mrt.utils
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.space.mrt.utils.Activator
+Bundle-Activator: org.eclipse.symphony.common.obsolete.mrt.utils.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.geometry.data3d,
  org.eclipse.symphony.common.math;visibility:=reexport
 Eclipse-LazyStart: true
-Export-Package: ca.gc.space.mrt.utils
+Export-Package: org.eclipse.symphony.common.obsolete.mrt.utils
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: %providerName

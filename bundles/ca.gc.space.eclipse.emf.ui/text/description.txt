@@ -16,4 +16,4 @@ Package property <http:///ca/gc/space/eclipse/emf/ui/property.ecore>
 
   DataType CellEditor <org.eclipse.jface.viewers.CellEditor>
 
-  DataType PropertyCellEditorProvider <ca.gc.space.eclipse.emf.ui.property.PropertyCellEditorProvider>
+  DataType PropertyCellEditorProvider <org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellEditorProvider>

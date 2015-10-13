@@ -25,8 +25,8 @@ import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
 
-import ca.gc.space.mrt.common.CommonPackage;
 import ca.gc.space.mrt.sensors.pose.PosePackage;
 
 /**

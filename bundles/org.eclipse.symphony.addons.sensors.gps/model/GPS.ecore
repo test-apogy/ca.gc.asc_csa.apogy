@@ -107,7 +107,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="meanSeaLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkSum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GPSPoseSensor" eSuperTypes="platform:/plugin/ca.gc.space.mrt.sensors.pose/model/pose.ecore#//PoseSensor platform:/plugin/ca.gc.space.mrt.common/model/mrt_common.ecore#//Server">
+  <eClassifiers xsi:type="ecore:EClass" name="GPSPoseSensor" eSuperTypes="platform:/plugin/ca.gc.space.mrt.sensors.pose/model/pose.ecore#//PoseSensor platform:/plugin/org.eclipse.symphony.common.obsolete.mrt/model/mrt_common.ecore#//Server">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gps" lowerBound="1" upperBound="3"
         eType="#//MarkedGPS" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="originLatitude" lowerBound="1"

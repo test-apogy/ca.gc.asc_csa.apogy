@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.eclipse.emf
+Bundle-SymbolicName: org.eclipse.symphony.common.obsolete.eclipse.emf
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.space.eclipse.emf.EMFUtilities
+Bundle-Activator: org.eclipse.symphony.common.obsolete.eclipse.emf.EMFUtilities
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore
 Bundle-ActivationPolicy: lazy
-Export-Package: ca.gc.space.eclipse.emf
+Export-Package: org.eclipse.symphony.common.obsolete.eclipse.emf
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

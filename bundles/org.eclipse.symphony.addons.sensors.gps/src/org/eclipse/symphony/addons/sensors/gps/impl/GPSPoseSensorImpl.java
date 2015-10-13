@@ -47,17 +47,17 @@ import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.DefaultListEventDelegate;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.EListAdapter;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.ListEventDelegate;
+import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
+import org.eclipse.symphony.common.obsolete.mrt.Server;
+import org.eclipse.symphony.common.obsolete.mrt.Startable;
 import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GeodeticCalculator;
 import org.gavaghan.geodesy.GeodeticCurve;
 import org.gavaghan.geodesy.GlobalCoordinates;
 
-import ca.gc.space.eclipse.emf.DefaultListEventDelegate;
-import ca.gc.space.eclipse.emf.EListAdapter;
-import ca.gc.space.eclipse.emf.ListEventDelegate;
-import ca.gc.space.mrt.common.CommonPackage;
-import ca.gc.space.mrt.common.Server;
-import ca.gc.space.mrt.common.Startable;
 import ca.gc.space.mrt.sensors.pose.Activator;
 import ca.gc.space.mrt.sensors.pose.impl.PoseSensorImpl;
 

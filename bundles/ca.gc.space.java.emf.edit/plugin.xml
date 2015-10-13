@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http:///ca/gc/space/java/emf.ecore"
-            class="ca.gc.space.java.emf.provider.EmfItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.obsolete.java.emf.provider.EmfItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

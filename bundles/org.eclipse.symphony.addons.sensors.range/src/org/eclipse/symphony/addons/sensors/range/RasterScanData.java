@@ -7,9 +7,8 @@
 package org.eclipse.symphony.addons.sensors.range;
 
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
-
-import ca.gc.space.mrt.common.TimeTaggedElement;
 
 /**
  * <!-- begin-user-doc -->

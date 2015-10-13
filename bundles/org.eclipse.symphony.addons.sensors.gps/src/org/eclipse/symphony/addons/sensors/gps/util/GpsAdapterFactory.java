@@ -20,9 +20,9 @@ import org.eclipse.symphony.addons.sensors.gps.GPSReading;
 import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
+import org.eclipse.symphony.common.obsolete.mrt.Server;
+import org.eclipse.symphony.common.obsolete.mrt.Startable;
 
-import ca.gc.space.mrt.common.Server;
-import ca.gc.space.mrt.common.Startable;
 import ca.gc.space.mrt.sensors.pose.OrientationSensor;
 import ca.gc.space.mrt.sensors.pose.PoseSensor;
 import ca.gc.space.mrt.sensors.pose.PositionSensor;
@@ -464,13 +464,13 @@ public class GpsAdapterFactory extends AdapterFactoryImpl {
 
 	/**
 	 * Creates a new adapter for an object of class '
-	 * {@link ca.gc.space.mrt.common.Startable <em>Startable</em>}'. <!--
+	 * {@link org.eclipse.symphony.common.obsolete.mrt.Startable <em>Startable</em>}'. <!--
 	 * begin-user-doc --> This default implementation returns null so that we
 	 * can easily ignore cases; it's useful to ignore a case when inheritance
 	 * will catch all the cases anyway. <!-- end-user-doc -->
 	 * 
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.common.Startable
+	 * @see org.eclipse.symphony.common.obsolete.mrt.Startable
 	 * @generated
 	 */
 	public Adapter createStartableAdapter() {
@@ -479,13 +479,13 @@ public class GpsAdapterFactory extends AdapterFactoryImpl {
 
 	/**
 	 * Creates a new adapter for an object of class '
-	 * {@link ca.gc.space.mrt.common.Server <em>Server</em>}'. <!--
+	 * {@link org.eclipse.symphony.common.obsolete.mrt.Server <em>Server</em>}'. <!--
 	 * begin-user-doc --> This default implementation returns null so that we
 	 * can easily ignore cases; it's useful to ignore a case when inheritance
 	 * will catch all the cases anyway. <!-- end-user-doc -->
 	 * 
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.common.Server
+	 * @see org.eclipse.symphony.common.obsolete.mrt.Server
 	 * @generated
 	 */
 	public Adapter createServerAdapter() {

@@ -40,10 +40,9 @@ import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.space.mrt.common.CommonPackage;
 
 /**
  * <!-- begin-user-doc -->

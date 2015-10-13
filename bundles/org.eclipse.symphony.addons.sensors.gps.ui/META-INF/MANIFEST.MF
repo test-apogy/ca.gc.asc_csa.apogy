@@ -8,7 +8,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.symphony.addons.sensors.gps,
  org.eclipse.symphony.common.lang.java,
- ca.gc.space.eclipse.emf
+ org.eclipse.symphony.common.obsolete.eclipse.emf
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: %providerName

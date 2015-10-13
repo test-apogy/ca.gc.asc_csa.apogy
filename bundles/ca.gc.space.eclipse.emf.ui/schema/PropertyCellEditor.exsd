@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.space.eclipse.emf.ui">
+<schema targetNamespace="org.eclipse.symphony.common.obsolete.eclipse.emf.ui">
 <annotation>
       <appInfo>
-         <meta.schema plugin="ca.gc.space.eclipse.emf.ui" id="PropertyCellEditor" name="Property Cell Editor"/>
+         <meta.schema plugin="org.eclipse.symphony.common.obsolete.eclipse.emf.ui" id="PropertyCellEditor" name="Property Cell Editor"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]
@@ -72,7 +72,7 @@
                   Reference to the cell editor provider that provides instances of the cell editor.
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn="ca.gc.space.eclipse.emf.ui.property.PropertyCellEditorProvider"/>
+                  <meta.attribute kind="java" basedOn="org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellEditorProvider"/>
                </appInfo>
             </annotation>
          </attribute>

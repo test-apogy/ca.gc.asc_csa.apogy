@@ -27,10 +27,10 @@ import org.eclipse.symphony.addons.sensors.range.RangeFactory;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanData;
 import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
+import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
-import ca.gc.space.mrt.common.CommonPackage;
 import ca.gc.space.mrt.sensors.fov.FovFactory;
 
 /**

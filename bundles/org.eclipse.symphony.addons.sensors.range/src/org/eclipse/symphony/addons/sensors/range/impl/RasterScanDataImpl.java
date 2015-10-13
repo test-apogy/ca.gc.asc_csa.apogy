@@ -17,10 +17,9 @@ import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanData;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
+import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
+import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-
-import ca.gc.space.mrt.common.CommonPackage;
-import ca.gc.space.mrt.common.TimeTaggedElement;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

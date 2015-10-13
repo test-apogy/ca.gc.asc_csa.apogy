@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/ca.gc.space.java.emf/src" editDirectory="/ca.gc.space.java.emf.edit/src"
-    editorDirectory="/ca.gc.space.java.emf.editor/src" modelPluginID="ca.gc.space.java.emf"
+    modelDirectory="/org.eclipse.symphony.common.obsolete.java.emf/src" editDirectory="/org.eclipse.symphony.common.obsolete.java.emf.edit/src"
+    editorDirectory="/org.eclipse.symphony.common.obsolete.java.emf.editor/src" modelPluginID="org.eclipse.symphony.common.obsolete.java.emf"
     modelName="Emf" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
-    copyrightFields="false" editPluginID="ca.gc.space.java.emf.edit">
+    copyrightFields="false" editPluginID="org.eclipse.symphony.common.obsolete.java.emf.edit">
   <foreignModel>java.ecore</foreignModel>
   <genPackages prefix="Emf" basePackage="ca.gc.space.java" disposableProviderFactory="true"
       ecorePackage="java.ecore#/">

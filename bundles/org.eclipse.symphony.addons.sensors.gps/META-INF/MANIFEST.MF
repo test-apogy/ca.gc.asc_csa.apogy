@@ -20,8 +20,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.addons.sensors;visibility:=reexport,
  org.eclipse.symphony.common.topology.core;visibility:=reexport,
  org.gavaghan.geodesy.core,
- ca.gc.space.mrt.common;visibility:=reexport,
- ca.gc.space.eclipse.emf,
+ org.eclipse.symphony.common.obsolete.mrt;visibility:=reexport,
+ org.eclipse.symphony.common.obsolete.eclipse.emf,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.addons.sensors.gps.Activator

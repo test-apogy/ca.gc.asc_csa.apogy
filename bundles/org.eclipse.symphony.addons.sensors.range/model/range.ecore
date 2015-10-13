@@ -184,7 +184,7 @@
       <eParameters name="rasterScanSettings" eType="#//RasterScanSettings"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RasterScanData" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//AggregateGroupNode platform:/plugin/ca.gc.space.mrt.common/model/mrt_common.ecore#//TimeTaggedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="RasterScanData" eSuperTypes="platform:/plugin/org.eclipse.symphony.common.topology.core/model/topology.ecore#//AggregateGroupNode platform:/plugin/org.eclipse.symphony.common.obsolete.mrt/model/mrt_common.ecore#//TimeTaggedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rasterScanSettings" eType="#//RasterScanSettings"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scanData" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data25d/model/data25d.ecore#//VolumetricCoordinatesSet25D"

@@ -7,8 +7,7 @@ import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
-
-import ca.gc.space.eclipse.emf.ui.property.PropertyCellEditorProvider;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellEditorProvider;
 
 
 public class ImageDataPropertyCellViewerContentProvider extends CellEditor implements PropertyCellEditorProvider

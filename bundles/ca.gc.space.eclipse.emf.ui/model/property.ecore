@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="property" nsURI="http:///ca/gc/space/eclipse/emf/ui/property.ecore"
-    nsPrefix="ca.gc.space.eclipse.emf.ui.property">
+    nsPrefix="org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property">
   <eClassifiers xsi:type="ecore:EClass" name="PropertyCellEditorContributor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="target">
       <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
@@ -25,7 +25,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="PropertyCellViewerContentContributors">
     <eStructuralFeatures xsi:type="ecore:EReference" name="list" upperBound="-1" eType="#//PropertyCellViewerContentContributor"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="PropertyCellEditorProvider" instanceClassName="ca.gc.space.eclipse.emf.ui.property.PropertyCellEditorProvider"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="PropertyCellEditorProvider" instanceClassName="org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellEditorProvider"/>
   <eClassifiers xsi:type="ecore:EDataType" name="PropertyCellViewerContentProvider"
-      instanceClassName="ca.gc.space.eclipse.emf.ui.property.PropertyCellViewerContentProvider"/>
+      instanceClassName="org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellViewerContentProvider"/>
 </ecore:EPackage>

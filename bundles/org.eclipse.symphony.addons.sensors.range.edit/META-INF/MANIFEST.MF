@@ -30,6 +30,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology.core.edit;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,
- ca.gc.space.mrt.common;visibility:=reexport,
- ca.gc.space.mrt.common.edit;visibility:=reexport
+ org.eclipse.symphony.common.obsolete.mrt;visibility:=reexport,
+ org.eclipse.symphony.common.obsolete.mrt.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

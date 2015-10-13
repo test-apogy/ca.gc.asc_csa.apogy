@@ -11,8 +11,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.space.mrt.common"
-            class="ca.gc.space.mrt.common.CommonPackage"
+            uri="org.eclipse.symphony.common.obsolete.mrt"
+            class="org.eclipse.symphony.common.obsolete.mrt.CommonPackage"
             genModel="model/mrt_common.xcore"/>
    </extension>
 

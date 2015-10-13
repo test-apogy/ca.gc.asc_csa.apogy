@@ -25,8 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.math.Tuple3d;
-
-import ca.gc.space.eclipse.emf.edit.DoubleItemPropertyDescriptor;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.edit.DoubleItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.math.Tuple3d} object.

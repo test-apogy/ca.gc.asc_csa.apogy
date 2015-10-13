@@ -17,7 +17,7 @@
       </Class>
    </extension>
    <extension
-         point="ca.gc.space.eclipse.emf.ui.PropertyCellViewerContentProvider">
+         point="org.eclipse.symphony.common.obsolete.eclipse.emf.ui.PropertyCellViewerContentProvider">
       <contentProvider
             class="org.eclipse.symphony.addons.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
             id="org.eclipse.symphony.addons.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"

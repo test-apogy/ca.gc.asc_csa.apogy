@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.emf.ecore.generated_package">
       <package
-            class="ca.gc.space.java.emf.EmfPackage"
+            class="org.eclipse.symphony.common.obsolete.java.emf.EmfPackage"
             genModel="model/java.genmodel"
             uri="http:///ca/gc/space/java/emf.ecore">
       </package>

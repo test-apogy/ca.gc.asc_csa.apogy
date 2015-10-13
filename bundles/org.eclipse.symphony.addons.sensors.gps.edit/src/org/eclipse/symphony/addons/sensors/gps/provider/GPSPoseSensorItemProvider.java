@@ -24,9 +24,8 @@ import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.pose.PosePackage;
 import org.eclipse.symphony.addons.sensors.pose.provider.PoseSensorItemProvider;
+import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.space.mrt.common.CommonPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor} object.

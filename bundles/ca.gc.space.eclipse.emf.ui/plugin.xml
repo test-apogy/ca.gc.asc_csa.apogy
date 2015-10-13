@@ -8,7 +8,7 @@
       <!-- @generated emf_ui -->
       <package
             uri="http:///ca/gc/space/eclipse/emf/ui/property.ecore"
-            class="ca.gc.space.eclipse.emf.ui.property.EmfUiPropertyPackage"
+            class="org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.EmfUiPropertyPackage"
             genModel="model/emf_ui.genmodel"/>
    </extension>
 

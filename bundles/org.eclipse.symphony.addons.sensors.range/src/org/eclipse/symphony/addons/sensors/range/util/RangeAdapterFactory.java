@@ -29,13 +29,12 @@ import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
+import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-
-import ca.gc.space.mrt.common.TimeTaggedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -532,13 +531,13 @@ public class RangeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.common.TimeTaggedElement <em>Time Tagged Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement <em>Time Tagged Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.common.TimeTaggedElement
+	 * @see org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement
 	 * @generated
 	 */
 	public Adapter createTimeTaggedElementAdapter() {

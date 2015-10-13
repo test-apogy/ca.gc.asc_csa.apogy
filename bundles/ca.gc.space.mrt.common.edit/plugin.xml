@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated mrt_common -->
       <factory
-            uri="ca.gc.space.mrt.common"
-            class="ca.gc.space.mrt.common.provider.CommonItemProviderAdapterFactory"
+            uri="org.eclipse.symphony.common.obsolete.mrt"
+            class="org.eclipse.symphony.common.obsolete.mrt.provider.CommonItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

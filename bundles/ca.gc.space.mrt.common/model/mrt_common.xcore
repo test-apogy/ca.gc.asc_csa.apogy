@@ -5,10 +5,10 @@
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 	      modelName="Common",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/ca.gc.space.mrt.common/src-generated")
-@GenModel(editDirectory="/ca.gc.space.mrt.common.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.obsolete.mrt/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.obsolete.mrt.edit/src-generated")
 
-package ca.gc.space.mrt.common
+package org.eclipse.symphony.common.obsolete.mrt
 
 type Job wraps org.eclipse.core.runtime.jobs.Job
 

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="ca.gc.space.eclipse.emf.ui">
+<schema targetNamespace="org.eclipse.symphony.common.obsolete.eclipse.emf.ui">
 <annotation>
       <appInfo>
-         <meta.schema plugin="ca.gc.space.eclipse.emf.ui" id="PropertyCellComposite" name="Property Cell Composite"/>
+         <meta.schema plugin="org.eclipse.symphony.common.obsolete.eclipse.emf.ui" id="PropertyCellComposite" name="Property Cell Composite"/>
       </appInfo>
       <documentation>
          Provides composite to visialize specific data (java class) within the ExtendablePropertySheetPage.
@@ -67,7 +67,7 @@
                   
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn="ca.gc.space.eclipse.emf.ui.property.PropertyCellViewerContentProvider"/>
+                  <meta.attribute kind="java" basedOn="org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellViewerContentProvider"/>
                </appInfo>
             </annotation>
          </attribute>
