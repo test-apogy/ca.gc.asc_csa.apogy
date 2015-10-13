@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
+import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
@@ -138,6 +139,21 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 
 		newChildDescriptors.add
 			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 PathsFactory.eINSTANCE.createWayPoint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 PathsFactory.eINSTANCE.createPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 PathsFactory.eINSTANCE.createWayPointPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
 
@@ -150,6 +166,21 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 PathsFactory.eINSTANCE.createWayPoint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 PathsFactory.eINSTANCE.createPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 PathsFactory.eINSTANCE.createWayPointPath()));
 	}
 
 	/**

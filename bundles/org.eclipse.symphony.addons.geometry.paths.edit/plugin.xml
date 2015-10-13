@@ -11,7 +11,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http:///ca/gc/space/mrt/geometry/paths/model/paths.ecore"
+            uri="org.eclipse.symphony.addons.geometry.paths"
             class="org.eclipse.symphony.addons.geometry.paths.provider.PathsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -19,6 +19,16 @@
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated paths -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.geometry.paths.provider.PathsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.geometry.data"
+            class="org.eclipse.symphony.addons.geometry.paths.provider.PathsItemProviderAdapterFactory$DataChildCreationExtender"/>
    </extension>
 
 </plugin>

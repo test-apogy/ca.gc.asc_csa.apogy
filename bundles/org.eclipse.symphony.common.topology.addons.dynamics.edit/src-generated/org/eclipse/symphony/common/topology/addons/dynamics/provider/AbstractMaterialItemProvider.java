@@ -1,5 +1,8 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * <copyright>
+ * </copyright>
+ *
+ * $Id: AbstractMaterialItemProvider.java,v 1.4.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
 package org.eclipse.symphony.common.topology.addons.dynamics.provider;
 
@@ -9,9 +12,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -23,7 +24,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
 
@@ -33,7 +33,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * @generated
  */
-public class AbstractMaterialItemProvider 
+public class AbstractMaterialItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -102,7 +102,6 @@ public class AbstractMaterialItemProvider
 			getString("_UI_AbstractMaterial_type") :
 			getString("_UI_AbstractMaterial_type") + " " + label;
 	}
-	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

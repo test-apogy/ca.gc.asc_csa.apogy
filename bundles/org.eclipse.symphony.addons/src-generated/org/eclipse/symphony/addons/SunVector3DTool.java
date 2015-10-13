@@ -17,6 +17,7 @@ import javax.vecmath.Color3f;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getVectorColor <em>Vector Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getVectorLength <em>Vector Length</em>}</li>
@@ -26,7 +27,6 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool()
  * @model

@@ -26,6 +26,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.util.SymphonyEarthOrbitEnvironmentUIAdapterFactory;
@@ -489,6 +493,188 @@ public class SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory extends S
 					(createChildParameter
 						(EMFEcoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
 						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return SymphonyEarthOrbitEnvironmentUIEditPlugin.INSTANCE;
+		}
+	}
+
+	/**
+	 * A child creation extender for the {@link TopologyPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class TopologyChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends TopologySwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseContentNode(ContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthViewConfiguration()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthViewConfiguration()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
 
 				return null;
 			}

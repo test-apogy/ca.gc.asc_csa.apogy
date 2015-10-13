@@ -10,7 +10,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
@@ -65,7 +64,7 @@ public class WayPointPresentationItemProvider extends NodePresentationItemProvid
 	 */
 	@Override
 	public String getText(Object object) {
-		RGB labelValue = ((WayPointPresentation)object).getColor();
+		Object labelValue = ((WayPointPresentation)object).getColor();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_WayPointPresentation_type") :

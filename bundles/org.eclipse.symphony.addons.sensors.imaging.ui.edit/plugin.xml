@@ -29,6 +29,9 @@
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.addons.sensors.imaging.ui.provider.MRTSensorsImagingUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.provider.MRTSensorsImagingUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

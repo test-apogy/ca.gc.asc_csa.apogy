@@ -45,6 +45,7 @@ import ca.gc.space.mrt.geometry.paths.WayPointPath;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#isPenDown <em>Pen Down</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getVariable <em>Variable</em>}</li>
@@ -54,7 +55,6 @@ import ca.gc.space.mrt.geometry.paths.WayPointPath;
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getPoseProvider <em>Pose Provider</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -140,7 +140,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<WayPointPath> paths;
+	protected EList<org.eclipse.symphony.addons.geometry.paths.WayPointPath> paths;
 
 	/**
 	 * The cached value of the '{@link #getPoseProvider() <em>Pose Provider</em>}' reference.
@@ -352,9 +352,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<WayPointPath> getPaths() {
+	public EList<org.eclipse.symphony.addons.geometry.paths.WayPointPath> getPaths() {
 		if (paths == null) {
-			paths = new EObjectContainmentEList<WayPointPath>(WayPointPath.class, this, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS);
+			paths = new EObjectContainmentEList<org.eclipse.symphony.addons.geometry.paths.WayPointPath>(org.eclipse.symphony.addons.geometry.paths.WayPointPath.class, this, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS);
 		}
 		return paths;
 	}
@@ -580,7 +580,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 				return;
 			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS:
 				getPaths().clear();
-				getPaths().addAll((Collection<? extends WayPointPath>)newValue);
+				getPaths().addAll((Collection<? extends org.eclipse.symphony.addons.geometry.paths.WayPointPath>)newValue);
 				return;
 			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				setPoseProvider((PoseProvider)newValue);

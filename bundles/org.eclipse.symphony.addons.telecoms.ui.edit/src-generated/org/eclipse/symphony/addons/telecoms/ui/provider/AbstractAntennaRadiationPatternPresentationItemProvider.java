@@ -10,7 +10,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
@@ -65,7 +64,7 @@ public class AbstractAntennaRadiationPatternPresentationItemProvider extends Nod
 	 */
 	@Override
 	public String getText(Object object) {
-		RGB labelValue = ((AbstractAntennaRadiationPatternPresentation)object).getColor();
+		Object labelValue = ((AbstractAntennaRadiationPatternPresentation)object).getColor();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_AbstractAntennaRadiationPatternPresentation_type") :

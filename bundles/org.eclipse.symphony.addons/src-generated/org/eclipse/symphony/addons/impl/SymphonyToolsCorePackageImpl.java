@@ -26,13 +26,13 @@ import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
+import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-import ca.gc.space.mrt.geometry.paths.PathsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -186,8 +186,8 @@ public class SymphonyToolsCorePackageImpl extends EPackageImpl implements Sympho
 		isInited = true;
 
 		// Initialize simple dependencies
-		PathsPackage.eINSTANCE.eClass();
 		SymphonyCorePackage.eINSTANCE.eClass();
+		PathsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyToolsCorePackage.createPackageContents();

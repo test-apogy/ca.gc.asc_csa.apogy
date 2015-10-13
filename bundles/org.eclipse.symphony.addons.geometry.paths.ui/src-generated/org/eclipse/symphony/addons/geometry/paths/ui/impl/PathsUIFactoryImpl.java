@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.geometry.paths.ui.*;
 import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
 import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIFactory;
 import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage;

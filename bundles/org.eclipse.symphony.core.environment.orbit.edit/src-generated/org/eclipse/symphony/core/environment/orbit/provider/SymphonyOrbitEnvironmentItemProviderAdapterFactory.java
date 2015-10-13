@@ -26,6 +26,10 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.OrbitModelsList;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentFactory;
@@ -463,6 +467,178 @@ public class SymphonyOrbitEnvironmentItemProviderAdapterFactory extends Symphony
 
 				return null;
 			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return SymphonyOrbitEnvironmentEditPlugin.INSTANCE;
+		}
+	}
+
+	/**
+	 * A child creation extender for the {@link TopologyPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class TopologyChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends TopologySwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseContentNode(ContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createPVACoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createAngularCoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createSpacecraftAttitude()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createSpacecraftState()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createOrbitModel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createOrbitFacade()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createPVACoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createAngularCoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createSpacecraftAttitude()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createSpacecraftState()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createOrbitModel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyOrbitEnvironmentFactory.eINSTANCE.createOrbitFacade()));
+
+				return null;
+			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

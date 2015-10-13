@@ -34,6 +34,9 @@
       <extender
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

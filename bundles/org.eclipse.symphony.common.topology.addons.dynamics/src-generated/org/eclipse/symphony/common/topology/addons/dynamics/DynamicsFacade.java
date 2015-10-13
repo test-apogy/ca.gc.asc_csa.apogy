@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.math.Tuple3d;
 
 import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicsFacadeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +28,8 @@ import org.eclipse.symphony.common.topology.Node;
  */
 public interface DynamicsFacade extends EObject
 {
+	public static final DynamicsFacade INSTANCE = DynamicsFacadeImpl.getInstance();
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,8 +41,6 @@ public interface DynamicsFacade extends EObject
 	 * @generated
 	 */
 	Tuple3d findCenterOfMass(Node root);
-
-	public static final DynamicsFacade INSTANCE = DynamicsFacadeImpl.getInstance();
 	
 	/**
 	 * <!-- begin-user-doc -->

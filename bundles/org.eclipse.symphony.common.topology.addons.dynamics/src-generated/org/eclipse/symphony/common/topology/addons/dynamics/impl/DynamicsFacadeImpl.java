@@ -97,6 +97,7 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public <T extends AbstractPhysicalBodySimulationProperties> T getPhysicalNodeSimulationProperty(PhysicalBody physicalBody, Class<T> propertyType) 
 	{
@@ -115,8 +116,9 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
-	public <T extends AbstractConstraintSimulationProperties> T getConstraintSimulationProperty(AbstractConstraint constraint, Class propertyType) 
+	public <T extends AbstractConstraintSimulationProperties> T getConstraintSimulationProperty(AbstractConstraint constraint, Class<T> propertyType) 
 	{
 		for(AbstractConstraintSimulationProperties property : constraint.getSimulationProperties())
 		{

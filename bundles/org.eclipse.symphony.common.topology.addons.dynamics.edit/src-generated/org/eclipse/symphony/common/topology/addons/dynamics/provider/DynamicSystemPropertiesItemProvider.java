@@ -1,5 +1,8 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * <copyright>
+ * </copyright>
+ *
+ * $Id: DynamicSystemPropertiesItemProvider.java,v 1.10.2.2 2015/02/03 20:01:27 rlarcheveque Exp $
  */
 package org.eclipse.symphony.common.topology.addons.dynamics.provider;
 
@@ -9,18 +12,13 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
 import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
-
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
@@ -29,7 +27,8 @@ import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvi
  * <!-- end-user-doc -->
  * @generated
  */
-public class DynamicSystemPropertiesItemProvider extends AggregateGroupNodeItemProvider {
+public class DynamicSystemPropertiesItemProvider
+	extends AggregateGroupNodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -110,7 +109,6 @@ public class DynamicSystemPropertiesItemProvider extends AggregateGroupNodeItemP
 			getString("_UI_DynamicSystemProperties_type") :
 			getString("_UI_DynamicSystemProperties_type") + " " + label;
 	}
-	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

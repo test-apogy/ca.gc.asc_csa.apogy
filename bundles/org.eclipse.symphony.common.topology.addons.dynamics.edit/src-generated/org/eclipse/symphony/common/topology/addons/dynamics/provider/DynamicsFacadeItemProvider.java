@@ -1,5 +1,8 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * <copyright>
+ * </copyright>
+ *
+ * $Id: DynamicsFacadeItemProvider.java,v 1.3.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
 package org.eclipse.symphony.common.topology.addons.dynamics.provider;
 
@@ -9,9 +12,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -27,7 +28,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DynamicsFacadeItemProvider 
+public class DynamicsFacadeItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -81,7 +82,6 @@ public class DynamicsFacadeItemProvider
 	public String getText(Object object) {
 		return getString("_UI_DynamicsFacade_type");
 	}
-	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

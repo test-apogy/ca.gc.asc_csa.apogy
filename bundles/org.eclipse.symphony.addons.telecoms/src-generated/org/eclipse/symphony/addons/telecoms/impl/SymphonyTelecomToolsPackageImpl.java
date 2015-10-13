@@ -178,7 +178,6 @@ public class SymphonyTelecomToolsPackageImpl extends EPackageImpl implements Sym
 
 		// Initialize simple dependencies
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
-		TopologyPackage.eINSTANCE.eClass();
 		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

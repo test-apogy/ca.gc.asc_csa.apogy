@@ -31,6 +31,9 @@
       <extender
             uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

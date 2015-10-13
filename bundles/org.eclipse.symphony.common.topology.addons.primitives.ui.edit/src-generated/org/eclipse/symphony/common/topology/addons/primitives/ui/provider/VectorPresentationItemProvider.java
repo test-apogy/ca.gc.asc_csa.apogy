@@ -13,7 +13,6 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
@@ -92,7 +91,7 @@ public class VectorPresentationItemProvider extends NodePresentationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		RGB labelValue = ((VectorPresentation)object).getColor();
+		Object labelValue = ((VectorPresentation)object).getColor();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_VectorPresentation_type") :

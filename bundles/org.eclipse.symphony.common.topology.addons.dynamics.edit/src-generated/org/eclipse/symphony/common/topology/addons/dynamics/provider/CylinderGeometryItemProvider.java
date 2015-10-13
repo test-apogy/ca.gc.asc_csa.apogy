@@ -1,5 +1,8 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * <copyright>
+ * </copyright>
+ *
+ * $Id: CylinderGeometryItemProvider.java,v 1.5.2.2 2015/02/03 20:01:26 rlarcheveque Exp $
  */
 package org.eclipse.symphony.common.topology.addons.dynamics.provider;
 
@@ -9,12 +12,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
 
@@ -24,7 +25,8 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * @generated
  */
-public class CylinderGeometryItemProvider extends GeometryItemProvider {
+public class CylinderGeometryItemProvider
+	extends GeometryItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -118,7 +120,6 @@ public class CylinderGeometryItemProvider extends GeometryItemProvider {
 		CylinderGeometry cylinderGeometry = (CylinderGeometry)object;
 		return getString("_UI_CylinderGeometry_type") + " " + cylinderGeometry.getRadius();
 	}
-	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

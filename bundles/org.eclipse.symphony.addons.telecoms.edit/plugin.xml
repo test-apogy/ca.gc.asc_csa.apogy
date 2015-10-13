@@ -31,6 +31,12 @@
       <extender
             uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.addons.geometry.paths"
+            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$PathsChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology.bindings"
+            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

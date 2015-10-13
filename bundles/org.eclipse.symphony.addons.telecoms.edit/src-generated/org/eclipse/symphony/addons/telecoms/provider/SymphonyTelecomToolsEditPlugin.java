@@ -5,6 +5,7 @@ package org.eclipse.symphony.addons.telecoms.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
 import org.eclipse.symphony.addons.provider.SymphonyToolsCoreEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
@@ -54,6 +55,7 @@ public final class SymphonyTelecomToolsEditPlugin extends EMFPlugin {
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
+		     PathsEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,

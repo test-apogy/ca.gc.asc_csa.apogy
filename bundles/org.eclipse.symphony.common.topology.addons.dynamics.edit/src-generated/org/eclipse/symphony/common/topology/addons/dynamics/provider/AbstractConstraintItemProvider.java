@@ -1,5 +1,8 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * <copyright>
+ * </copyright>
+ *
+ * $Id: AbstractConstraintItemProvider.java,v 1.11.2.2 2015/02/03 20:01:27 rlarcheveque Exp $
  */
 package org.eclipse.symphony.common.topology.addons.dynamics.provider;
 
@@ -9,11 +12,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -36,7 +36,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * @generated
  */
-public class AbstractConstraintItemProvider 
+public class AbstractConstraintItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -204,7 +204,6 @@ public class AbstractConstraintItemProvider
 			getString("_UI_AbstractConstraint_type") :
 			getString("_UI_AbstractConstraint_type") + " " + label;
 	}
-	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

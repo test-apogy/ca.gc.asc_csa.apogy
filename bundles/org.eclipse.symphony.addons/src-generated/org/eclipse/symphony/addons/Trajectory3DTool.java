@@ -3,8 +3,8 @@
  */
 package org.eclipse.symphony.addons;
 
-import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.invocator.Variable;
 
@@ -20,6 +20,7 @@ import org.eclipse.symphony.core.invocator.Variable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#isPenDown <em>Pen Down</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#getVariable <em>Variable</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.symphony.core.invocator.Variable;
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#getPoseProvider <em>Pose Provider</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool()
  * @model
@@ -150,7 +150,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 
 	/**
 	 * Returns the value of the '<em><b>Paths</b></em>' containment reference list.
-	 * The list contents are of type {@link ca.gc.space.mrt.geometry.paths.WayPointPath}.
+	 * The list contents are of type {@link org.eclipse.symphony.addons.geometry.paths.WayPointPath}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Paths</em>' containment reference list isn't clear,
