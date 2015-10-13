@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.invocator.AbstractChannel;
 import org.eclipse.symphony.core.invocator.AbstractDisplay;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
@@ -81,8 +82,6 @@ import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
 import org.eclipse.symphony.core.invocator.WatchesList;
 import org.eclipse.symphony.core.invocator.WatchesListsContainer;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 
 /**
  * <!-- begin-user-doc -->

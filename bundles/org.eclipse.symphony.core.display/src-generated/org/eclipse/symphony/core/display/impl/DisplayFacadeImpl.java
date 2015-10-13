@@ -28,8 +28,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Display Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

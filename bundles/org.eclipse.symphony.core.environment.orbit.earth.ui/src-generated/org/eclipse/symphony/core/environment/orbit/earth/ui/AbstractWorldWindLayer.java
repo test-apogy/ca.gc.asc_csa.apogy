@@ -19,11 +19,11 @@ import gov.nasa.worldwind.layers.RenderableLayer;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer <em>Renderable Layer</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getAbstractWorldWindLayer()
  * @model abstract="true"

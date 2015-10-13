@@ -1,8 +1,7 @@
 package org.eclipse.symphony.common.geometry.data3d.ui.preferences;
 
 import org.eclipse.swt.graphics.RGB;
-
-import ca.gc.space.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 
 public class MRTData3DUIPreferencesConstants 
 {

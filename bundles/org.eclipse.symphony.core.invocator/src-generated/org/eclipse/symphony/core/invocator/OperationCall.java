@@ -4,9 +4,8 @@
 package org.eclipse.symphony.core.invocator;
 
 import org.eclipse.emf.ecore.EOperation;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +20,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getEOperation <em>EOperation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}</li>
@@ -28,7 +28,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getEnvironment <em>Environment</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCall()
  * @model

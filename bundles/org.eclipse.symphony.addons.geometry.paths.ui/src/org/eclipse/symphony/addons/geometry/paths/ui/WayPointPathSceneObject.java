@@ -1,8 +1,6 @@
 package org.eclipse.symphony.addons.geometry.paths.ui;
 
-import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
-
-import ca.gc.space.topology.ui.SceneObject;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
 
 public interface WayPointPathSceneObject extends SceneObject 
 {
@@ -17,6 +15,4 @@ public interface WayPointPathSceneObject extends SceneObject
 	public void setPathPresentationMode(PathPresentationMode mode);
 	
 	public PathPresentationMode getPathPresentationMode();
-	
-	
 }

@@ -3,12 +3,11 @@
  */
 package org.eclipse.symphony.examples.satellite.util;
 
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.Zoomable;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
@@ -53,7 +52,7 @@ public class EMFEcoreExampleSatelliteSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -132,7 +131,6 @@ public class EMFEcoreExampleSatelliteSwitch<T> extends Switch<T> {
 				T result = caseSatelliteImager(satelliteImager);
 				if (result == null) result = caseAbstractCamera(satelliteImager);
 				if (result == null) result = caseZoomable(satelliteImager);
-				if (result == null) result = caseNamed(satelliteImager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

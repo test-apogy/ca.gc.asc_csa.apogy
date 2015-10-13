@@ -19,13 +19,13 @@ import org.eclipse.symphony.examples.satellite.ImageOrder;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl#getOrderId <em>Order Id</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl#getPriority <em>Priority</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl#getImageCenter <em>Image Center</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

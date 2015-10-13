@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.topology.bindings;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.topology.bindings;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -15,7 +15,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.topology.core;visibility:=reexport,
+ org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.ui;bundle-version="3.6.2",
  org.eclipse.symphony.common.emf;visibility:=reexport,
  org.eclipse.symphony.common.log;bundle-version="0.3.0"

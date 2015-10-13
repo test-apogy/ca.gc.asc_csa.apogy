@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 
 public class DisplaysListComposite extends Composite 
 {

@@ -20,8 +20,8 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToJulianDayStringConverter;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToSideralTimeStringConverter;
 
-import ca.gc.asc_csa.eclipse.core.databinding.converters.DateToStringConverter;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 public class EarthSkyTimeComposite extends Composite 
 {

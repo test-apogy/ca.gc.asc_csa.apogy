@@ -25,6 +25,9 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.emf.Timed;
+import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.OperationCallPositionedResult;
@@ -35,10 +38,6 @@ import org.eclipse.symphony.core.invocator.OperationCallResult;
 import org.eclipse.symphony.core.invocator.OperationCallResultsList;
 import org.eclipse.symphony.core.invocator.RecordingResultsList;
 import org.eclipse.ui.PlatformUI;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
 
 public class DataProductsListsContainerComposite extends Composite {
 	private DataBindingContext m_currentDataBindings;

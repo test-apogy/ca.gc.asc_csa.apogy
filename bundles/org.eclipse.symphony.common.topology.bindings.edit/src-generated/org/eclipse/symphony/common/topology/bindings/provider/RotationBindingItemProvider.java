@@ -12,8 +12,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.RotationBinding;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.RotationBinding} object.
@@ -185,7 +185,7 @@ public class RotationBindingItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(RotationBinding.class)) {
+		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.RotationBinding.class)) {
 			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

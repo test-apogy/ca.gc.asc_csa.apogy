@@ -3,10 +3,9 @@ package org.eclipse.symphony.addons.mobility.pathplanners.ui.adapters;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIFactory;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentationAdapter;
+import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 
 public class CircularExclusionZonePresentationAdapter implements NodePresentationAdapter
 {

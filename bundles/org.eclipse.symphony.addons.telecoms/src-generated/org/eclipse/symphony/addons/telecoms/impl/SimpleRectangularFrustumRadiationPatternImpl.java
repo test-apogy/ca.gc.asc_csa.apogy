@@ -15,11 +15,11 @@ import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl#getVerticalFieldOfView <em>Vertical Field Of View</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

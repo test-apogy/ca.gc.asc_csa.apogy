@@ -23,23 +23,17 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated emf_ecore_examples_satellite -->
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            uri="org.eclipse.symphony.core.environment"
+            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
-      <extender
-            uri="ca.gc.space.mrt.sensors.imaging"
+            uri="org.eclipse.symphony.addons.sensors.imaging"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$MRTSensorsImagingChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+            uri="org.eclipse.symphony.common.images"
+            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$ImagesCoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
    </extension>
 
 </plugin>

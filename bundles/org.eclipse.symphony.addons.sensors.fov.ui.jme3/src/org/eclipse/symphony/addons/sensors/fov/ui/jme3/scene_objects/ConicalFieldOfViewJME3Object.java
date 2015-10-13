@@ -12,6 +12,9 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
+import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.Activator;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.ConicalFieldOfViewImageProjectorControl;
@@ -20,12 +23,8 @@ import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.ConicalFieldOfVi
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
-import ca.gc.space.mrt.sensors.fov.DistanceRange;
-import ca.gc.space.mrt.sensors.fov.FovPackage;
-import ca.gc.space.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

@@ -20,6 +20,7 @@ import org.eclipse.symphony.examples.mobile_platform.Position;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#isDisposed <em>Disposed</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.symphony.examples.mobile_platform.Position;
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#getRightWheelPosition <em>Right Wheel Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformImpl#getPosition <em>Position</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

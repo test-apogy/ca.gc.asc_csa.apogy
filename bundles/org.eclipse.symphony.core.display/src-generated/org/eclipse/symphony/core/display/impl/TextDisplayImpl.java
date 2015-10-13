@@ -42,10 +42,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.impl.TextDisplayImpl#getDecimalFormat <em>Decimal Format</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -2,14 +2,13 @@
  */
 package org.eclipse.symphony.core.invocator.ui.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUiFacade;
 import org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUiFactory;

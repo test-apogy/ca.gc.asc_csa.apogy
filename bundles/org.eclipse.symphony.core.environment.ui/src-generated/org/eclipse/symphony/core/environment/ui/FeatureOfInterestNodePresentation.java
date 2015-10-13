@@ -12,11 +12,11 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#getPoleHeight <em>Pole Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeatureOfInterestNodePresentation()
  * @model

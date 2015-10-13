@@ -3,11 +3,10 @@ package org.eclipse.symphony.common.geometry.data3d.ui.adapters;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
 import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIFactory;
-
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.NodePresentationAdapter;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 
 public class CartesianCoordinatMeshNodePresentationAdapter implements
 		NodePresentationAdapter {

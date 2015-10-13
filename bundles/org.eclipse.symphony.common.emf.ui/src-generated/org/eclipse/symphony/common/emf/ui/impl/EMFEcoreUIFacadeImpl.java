@@ -23,8 +23,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -63,6 +61,17 @@ public class EMFEcoreUIFacadeImpl extends MinimalEObjectImpl.Container implement
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Color getColorForRange(org.eclipse.symphony.common.emf.Ranges range) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+		/**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated_NOT
@@ -101,7 +110,7 @@ public class EMFEcoreUIFacadeImpl extends MinimalEObjectImpl.Container implement
   {
 		switch (operationID) {
 			case EMFEcoreUIPackage.EMF_ECORE_UI_FACADE___GET_COLOR_FOR_RANGE__RANGES:
-				return getColorForRange((Ranges)arguments.get(0));
+				return getColorForRange((org.eclipse.symphony.common.emf.Ranges)arguments.get(0));
 			case EMFEcoreUIPackage.EMF_ECORE_UI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT:
 				return getDisplayUnits((ETypedElement)arguments.get(0));
 		}

@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -12,6 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformFactory;
 import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;

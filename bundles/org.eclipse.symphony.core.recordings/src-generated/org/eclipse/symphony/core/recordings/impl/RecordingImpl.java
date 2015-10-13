@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -19,14 +18,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.invocator.impl.AbstractResultImpl;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.Recording;
 import org.eclipse.symphony.core.recordings.RecordingResult;
 import org.eclipse.symphony.core.recordings.RecordingTrack;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,6 +32,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingImpl#getRecordingTracks <em>Recording Tracks</em>}</li>
@@ -41,7 +40,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingImpl#getEndDate <em>End Date</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -15,10 +15,10 @@ import org.eclipse.symphony.core.programs.controllers.TimeTrigger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.TimeTriggerImpl#getRefreshPeriod <em>Refresh Period</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

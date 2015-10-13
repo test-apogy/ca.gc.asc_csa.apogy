@@ -10,7 +10,7 @@ Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.symphony.common.topology.core;visibility:=reexport,
+ org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.topology.ui;visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.addons.mobility.pathplanners;visibility:=reexport,

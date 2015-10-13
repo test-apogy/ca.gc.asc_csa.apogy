@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.Position#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.Position#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.Position#getTheta <em>Theta</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getPosition()
  * @model

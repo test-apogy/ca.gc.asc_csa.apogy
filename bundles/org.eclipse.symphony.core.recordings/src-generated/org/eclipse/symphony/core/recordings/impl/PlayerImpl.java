@@ -38,6 +38,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.PlayerImpl#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.PlayerImpl#getTimeSource <em>Time Source</em>}</li>
@@ -46,7 +47,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.PlayerImpl#getDataEndTime <em>Data End Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.PlayerImpl#getPlayBackTime <em>Play Back Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,7 +87,7 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 	 * @generated
 	 * @ordered
 	 */
-	protected TimeSource timeSource;
+	protected org.eclipse.symphony.common.emf.TimeSource timeSource;
 
 
 	
@@ -206,10 +206,10 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TimeSource getTimeSource() {
+	public org.eclipse.symphony.common.emf.TimeSource getTimeSource() {
 		if (timeSource != null && timeSource.eIsProxy()) {
 			InternalEObject oldTimeSource = (InternalEObject)timeSource;
-			timeSource = (TimeSource)eResolveProxy(oldTimeSource);
+			timeSource = (org.eclipse.symphony.common.emf.TimeSource)eResolveProxy(oldTimeSource);
 			if (timeSource != oldTimeSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE, oldTimeSource, timeSource));
@@ -223,8 +223,20 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TimeSource basicGetTimeSource() {
+	public org.eclipse.symphony.common.emf.TimeSource basicGetTimeSource() {
 		return timeSource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTimeSource(org.eclipse.symphony.common.emf.TimeSource newTimeSource) {
+		org.eclipse.symphony.common.emf.TimeSource oldTimeSource = timeSource;
+		timeSource = newTimeSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE, oldTimeSource, timeSource));
 	}
 
 	/**
@@ -251,18 +263,6 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 	}
 	
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTimeSourceGen(TimeSource newTimeSource) {
-		TimeSource oldTimeSource = timeSource;
-		timeSource = newTimeSource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE, oldTimeSource, timeSource));
-	}
-
-		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -400,7 +400,7 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 				setEnabled((Boolean)newValue);
 				return;
 			case EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE:
-				setTimeSource((TimeSource)newValue);
+				setTimeSource((org.eclipse.symphony.common.emf.TimeSource)newValue);
 				return;
 			case EMFEcoreInvocatorRecordingsPackage.PLAYER__RECORDINGS:
 				getRecordings().clear();
@@ -432,7 +432,7 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 				setEnabled(ENABLED_EDEFAULT);
 				return;
 			case EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE:
-				setTimeSource((TimeSource)null);
+				setTimeSource((org.eclipse.symphony.common.emf.TimeSource)null);
 				return;
 			case EMFEcoreInvocatorRecordingsPackage.PLAYER__RECORDINGS:
 				getRecordings().clear();

@@ -9,12 +9,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,13 +21,13 @@ import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getFeatureRoot <em>Feature Root</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -225,11 +224,10 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public NotificationChain basicSetFeatureRoot(ListRootNode newFeatureRoot, NotificationChain msgs)
-  {
+	public NotificationChain basicSetFeatureRoot(ListRootNode newFeatureRoot, NotificationChain msgs) {
 		ListRootNode oldFeatureRoot = featureRoot;
 		featureRoot = newFeatureRoot;
 		if (eNotificationRequired()) {
@@ -239,13 +237,12 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 		return msgs;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setFeatureRoot(ListRootNode newFeatureRoot)
-  {
+	public void setFeatureRoot(ListRootNode newFeatureRoot) {
 		if (newFeatureRoot != featureRoot) {
 			NotificationChain msgs = null;
 			if (featureRoot != null)
@@ -259,7 +256,7 @@ public class VariableFeatureReferenceImpl extends MinimalEObjectImpl.Container i
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT, newFeatureRoot, newFeatureRoot));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

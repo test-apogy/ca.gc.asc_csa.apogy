@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.sensors.fov;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.fov;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Export-Package: org.eclipse.symphony.addons.sensors.fov,
  org.eclipse.symphony.addons.sensors.fov.impl,
  org.eclipse.symphony.addons.sensors.fov.util
-Require-Bundle: org.eclipse.symphony.common.topology.core;visibility:=reexport,
+Require-Bundle: org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
  org.eclipse.core.runtime,

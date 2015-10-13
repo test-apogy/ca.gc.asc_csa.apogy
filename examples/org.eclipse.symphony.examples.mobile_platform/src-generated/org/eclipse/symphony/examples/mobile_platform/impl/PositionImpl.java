@@ -16,12 +16,12 @@ import org.eclipse.symphony.examples.mobile_platform.Position;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.PositionImpl#getTheta <em>Theta</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

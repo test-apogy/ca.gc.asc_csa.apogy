@@ -6,21 +6,14 @@ package org.eclipse.symphony.core.recordings.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.invocator.AbstractChannel;
 import org.eclipse.symphony.core.invocator.AbstractPlayer;
 import org.eclipse.symphony.core.invocator.AbstractRecorder;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.recordings.Channel;
-import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
-import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
-import org.eclipse.symphony.core.recordings.Player;
-import org.eclipse.symphony.core.recordings.Recorder;
-import org.eclipse.symphony.core.recordings.Recording;
-import org.eclipse.symphony.core.recordings.RecordingResult;
-import org.eclipse.symphony.core.recordings.RecordingTrack;
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
+import org.eclipse.symphony.core.recordings.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +55,7 @@ public class EMFEcoreInvocatorRecordingsSwitch<T> extends Switch<T>
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -164,20 +157,34 @@ public class EMFEcoreInvocatorRecordingsSwitch<T> extends Switch<T>
   /**
 	 * Returns the result of interpreting the object as an instance of '<em>Timed</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Timed</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseTimed(Timed object)
-  {
+	public T caseTimed(Timed object) {
 		return null;
 	}
 
-  /**
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Described</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Described</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDescribed(Described object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Recording Result</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -292,36 +299,19 @@ public class EMFEcoreInvocatorRecordingsSwitch<T> extends Switch<T>
   /**
 	 * Returns the result of interpreting the object as an instance of '<em>Named</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Named</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseNamed(Named object)
-  {
+	public T caseNamed(Named object) {
 		return null;
 	}
 
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Described</em>'.
-	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Described</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-  public T caseDescribed(Described object)
-  {
-		return null;
-	}
-
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Channel</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;

@@ -19,14 +19,12 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFactory;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
-
-import ca.gc.asc_csa.topology.ui.viewer.IRenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.viewer.ITopologyViewer;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.TopologyPresentationSet;
-import ca.gc.space.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
+import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.viewer.IRenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
 
 import com.jme3.math.Quaternion;
 import com.jme3.math.Transform;

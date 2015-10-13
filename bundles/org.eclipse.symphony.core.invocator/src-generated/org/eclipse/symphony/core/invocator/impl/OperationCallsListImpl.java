@@ -22,10 +22,10 @@ import org.eclipse.symphony.core.invocator.OperationCallsList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallsListImpl#getOperationCalls <em>Operation Calls</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -3,10 +3,7 @@
  */
 package org.eclipse.symphony.addons.telecoms.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import javax.vecmath.Color3f;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -31,6 +28,7 @@ import org.eclipse.symphony.addons.telecoms.TelecomNodeStatus;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
 import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -179,8 +177,9 @@ public class SymphonyTelecomToolsPackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
+		TopologyPackage.eINSTANCE.eClass();
+		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyTelecomToolsPackage.createPackageContents();

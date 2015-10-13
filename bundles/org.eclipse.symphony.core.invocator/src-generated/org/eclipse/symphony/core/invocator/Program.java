@@ -3,8 +3,9 @@
  */
 package org.eclipse.symphony.core.invocator;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -19,12 +20,12 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Program#getProgramsList <em>Programs List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Program#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Program#getValuesList <em>Values List</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgram()
  * @model abstract="true"

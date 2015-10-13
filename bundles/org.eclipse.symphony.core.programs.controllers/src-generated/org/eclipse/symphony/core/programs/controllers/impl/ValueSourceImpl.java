@@ -23,10 +23,10 @@ import org.eclipse.symphony.core.programs.controllers.ValueSource;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ValueSourceImpl#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

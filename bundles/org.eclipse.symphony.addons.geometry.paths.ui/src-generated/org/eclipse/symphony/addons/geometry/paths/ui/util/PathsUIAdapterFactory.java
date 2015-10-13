@@ -5,12 +5,14 @@ package org.eclipse.symphony.addons.geometry.paths.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.symphony.addons.geometry.paths.ui.*;
+
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
-import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
 
 /**
  * <!-- begin-user-doc -->

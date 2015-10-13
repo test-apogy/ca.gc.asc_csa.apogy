@@ -1,12 +1,11 @@
 package org.eclipse.symphony.core.environment.ui.jme3.adapters;
 
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 import org.eclipse.symphony.core.environment.EarthSkyNode;
 import org.eclipse.symphony.core.environment.ui.jme3.scene_objects.EarthSkyNodeJME3Object;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3SceneObject;
-import ca.gc.space.topology.Node;
 
 public class EarthSkyNodeJME3Adapter implements JME3Adapter {
 

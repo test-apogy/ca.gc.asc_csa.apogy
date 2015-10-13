@@ -4,9 +4,6 @@
 package org.eclipse.symphony.common.topology.bindings.provider;
 
 
-import ca.gc.asc_csa.topology.bindings.EnumerationSwitchBinding;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -15,6 +12,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding} object.

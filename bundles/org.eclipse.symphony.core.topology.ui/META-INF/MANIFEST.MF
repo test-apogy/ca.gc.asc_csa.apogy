@@ -7,7 +7,7 @@ Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.core.topology.ui.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.symphony.common.converters,
- ca.gc.asc_csa.topology.ui.viewer,
+ org.eclipse.symphony.common.topology.ui.viewer,
  org.eclipse.symphony.core.topology,
  org.eclipse.symphony.core.ui,
  org.eclipse.symphony.common.topology.ui.jme3,

@@ -11,8 +11,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.symphony.common.geometry.data3d.las,
  org.eclipse.symphony.common.geometry.data3d,
- ca.gc.space.topology.core,
- ca.gc.space.topology.ui
+ org.eclipse.symphony.common.topology,
+ org.eclipse.symphony.common.topology.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.common.geometry.data3d.las.ui

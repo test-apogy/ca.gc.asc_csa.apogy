@@ -26,7 +26,7 @@ import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.ui.RectangleInsets;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 
 public class NumberVsTimeChartComposite extends AbstractValueVsTimeChartComposite<Number> 
 {	

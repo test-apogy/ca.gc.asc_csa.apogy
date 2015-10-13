@@ -21,13 +21,13 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.Satellite#getMaximumRollRate <em>Maximum Roll Rate</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.Satellite#getMaximumRoll <em>Maximum Roll</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.Satellite#getOrbitModel <em>Orbit Model</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.Satellite#getImager <em>Imager</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatellite()
  * @model abstract="true"

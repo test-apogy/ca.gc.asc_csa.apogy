@@ -16,10 +16,10 @@ import org.eclipse.symphony.core.invocator.ExceptionContainer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ExceptionContainerImpl#getException <em>Exception</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

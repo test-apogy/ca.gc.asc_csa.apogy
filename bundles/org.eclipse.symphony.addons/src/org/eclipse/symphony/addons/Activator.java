@@ -1,6 +1,5 @@
 package org.eclipse.symphony.addons;
 
-import org.eclipse.symphony.addons.Simple3DTool;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
@@ -65,11 +64,12 @@ public class Activator implements BundleActivator
 		getTopologyViewerSelectionListenerManager().unRegisterSimple3DTool(null);
 	}
 
+	// FIXME Should not be in addons.
 	public static TopologyViewerListenerManager getTopologyViewerSelectionListenerManager() 
 	{
 		if(topologyViewerSelectionListenerManager == null)
 		{
-			topologyViewerSelectionListenerManager = new TopologyViewerListenerManager(ca.gc.asc_csa.topology.ui.viewer.Activator.getTopologyViewerRegistry());			
+			topologyViewerSelectionListenerManager = new TopologyViewerListenerManager(org.eclipse.symphony.common.topology.ui.viewer.Activator.getTopologyViewerRegistry());			
 		}
 		return topologyViewerSelectionListenerManager;
 	}

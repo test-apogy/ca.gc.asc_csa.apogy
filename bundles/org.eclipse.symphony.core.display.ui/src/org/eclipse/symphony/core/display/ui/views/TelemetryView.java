@@ -17,7 +17,7 @@ import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.part.ViewPart;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 
 public class TelemetryView extends ViewPart implements ISelectionListener 
 {

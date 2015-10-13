@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.RecordingTrack#getChannel <em>Channel</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.RecordingTrack#getRecording <em>Recording</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.recordings.RecordingTrack#getEndDate <em>End Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.RecordingTrack#getDuration <em>Duration</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage#getRecordingTrack()
  * @model

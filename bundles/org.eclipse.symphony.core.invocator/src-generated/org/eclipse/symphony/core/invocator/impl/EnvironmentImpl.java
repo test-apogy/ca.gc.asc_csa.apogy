@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.ContextsList;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -18,15 +20,13 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.TypesList;
 import org.eclipse.symphony.core.invocator.VariablesList;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Environment</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl#getDescription <em>Description</em>}</li>
@@ -36,7 +36,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl#getContextsList <em>Contexts List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl#getActiveContext <em>Active Context</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

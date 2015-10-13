@@ -5,18 +5,16 @@ package org.eclipse.symphony.core.invocator.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl;
 import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCallResultsList;
 import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.asc_csa.eclipse.emf.ecore.impl.CollectionTimedTimeSourceImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +22,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.impl.CollectionTimedTimeSourceImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListTimeSourceImpl#getOpsCallList <em>Ops Call List</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

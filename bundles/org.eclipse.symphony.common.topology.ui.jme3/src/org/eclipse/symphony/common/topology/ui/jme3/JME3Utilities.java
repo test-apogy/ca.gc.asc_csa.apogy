@@ -12,8 +12,7 @@ import javax.vecmath.Matrix3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.swt.graphics.RGB;
-
-import ca.gc.space.topology.ui.ShadowMode;
+import org.eclipse.symphony.common.topology.ui.ShadowMode;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

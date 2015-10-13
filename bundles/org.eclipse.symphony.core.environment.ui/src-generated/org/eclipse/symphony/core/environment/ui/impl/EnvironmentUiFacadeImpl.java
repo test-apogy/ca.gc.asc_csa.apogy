@@ -48,8 +48,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Environment Ui Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

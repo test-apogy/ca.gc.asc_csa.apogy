@@ -23,6 +23,7 @@ import org.eclipse.symphony.examples.satellite.OrbitalImage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl#getHeight <em>Height</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.symphony.examples.satellite.OrbitalImage;
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl#getImageCenter <em>Image Center</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl#getDownloadSize <em>Download Size</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

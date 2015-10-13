@@ -3,11 +3,9 @@
  */
 package org.eclipse.symphony.core.recordings;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
-
 import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.core.invocator.AbstractPlayer;
 
 /**
@@ -25,6 +23,7 @@ import org.eclipse.symphony.core.invocator.AbstractPlayer;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.Player#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Player#getTimeSource <em>Time Source</em>}</li>
@@ -33,7 +32,6 @@ import org.eclipse.symphony.core.invocator.AbstractPlayer;
  *   <li>{@link org.eclipse.symphony.core.recordings.Player#getDataEndTime <em>Data End Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Player#getPlayBackTime <em>Play Back Time</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage#getPlayer()
  * @model
@@ -94,7 +92,7 @@ public interface Player extends AbstractPlayer
 	 */
 	void setTimeSource(TimeSource value);
 
-		/**
+	/**
 	 * Returns the value of the '<em><b>Recordings</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.core.recordings.Recording}.
 	 * <!-- begin-user-doc -->

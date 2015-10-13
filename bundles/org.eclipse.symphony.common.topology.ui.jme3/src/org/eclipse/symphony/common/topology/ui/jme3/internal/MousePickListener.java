@@ -10,15 +10,14 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.ui.GraphicsContext;
+import org.eclipse.symphony.common.topology.ui.NodeSelection;
+import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
+import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.Activator;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.ui.GraphicsContext;
-import ca.gc.space.topology.ui.NodeSelection;
-import ca.gc.space.topology.ui.TopologyPresentationSet;
-import ca.gc.space.topology.ui.TopologyUIFacade;
 
 import com.jme3.collision.CollisionResult;
 import com.jme3.collision.CollisionResults;

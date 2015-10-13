@@ -5,7 +5,6 @@ package org.eclipse.symphony.examples.satellite.impl;
 
 import java.util.List;
 import java.util.SortedSet;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -15,6 +14,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
@@ -38,8 +38,6 @@ import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
 import org.eclipse.symphony.examples.satellite.SatelliteSimulated;
 import org.eclipse.symphony.examples.satellite.SatelliteStub;
 import org.eclipse.symphony.examples.satellite.SatelliteUtils;
-
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 
 /**
  * <!-- begin-user-doc -->

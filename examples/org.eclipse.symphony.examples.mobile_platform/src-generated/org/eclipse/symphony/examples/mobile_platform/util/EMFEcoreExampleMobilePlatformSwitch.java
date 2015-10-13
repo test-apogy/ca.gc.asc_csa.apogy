@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.examples.mobile_platform.util;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.emf.Disposable;
 import org.eclipse.symphony.examples.mobile_platform.*;
 
 /**
@@ -50,7 +49,7 @@ public class EMFEcoreExampleMobilePlatformSwitch<T> extends Switch<T>
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -193,20 +192,19 @@ public class EMFEcoreExampleMobilePlatformSwitch<T> extends Switch<T>
 		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Disposable</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Disposable</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseDisposable(Disposable object)
-  {
+	public T caseDisposable(Disposable object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

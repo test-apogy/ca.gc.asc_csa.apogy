@@ -19,8 +19,6 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 
-import ca.gc.asc_csa.topology.ui.viewer.Activator;
-
 /**
  * The images provided by the debug plugin.
  */

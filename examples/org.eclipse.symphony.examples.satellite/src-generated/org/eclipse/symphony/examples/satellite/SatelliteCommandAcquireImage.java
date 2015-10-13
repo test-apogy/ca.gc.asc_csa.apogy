@@ -11,10 +11,10 @@ package org.eclipse.symphony.examples.satellite;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage#getImageOrder <em>Image Order</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommandAcquireImage()
  * @model

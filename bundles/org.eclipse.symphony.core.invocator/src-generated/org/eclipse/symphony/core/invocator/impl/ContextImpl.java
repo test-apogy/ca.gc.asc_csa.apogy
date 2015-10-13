@@ -33,6 +33,7 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ContextImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ContextImpl#getContextsList <em>Contexts List</em>}</li>
@@ -42,7 +43,6 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ContextImpl#getInstancesCreationDate <em>Instances Creation Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ContextImpl#getInstancesDisposalDate <em>Instances Disposal Date</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

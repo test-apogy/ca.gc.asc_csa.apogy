@@ -3,9 +3,6 @@
  */
 package org.eclipse.symphony.core.programs.controllers.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -13,6 +10,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
 import org.eclipse.symphony.core.programs.controllers.Trigger;
@@ -23,12 +22,12 @@ import org.eclipse.symphony.core.programs.controllers.Trigger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.TriggerImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.TriggerImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.TriggerImpl#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

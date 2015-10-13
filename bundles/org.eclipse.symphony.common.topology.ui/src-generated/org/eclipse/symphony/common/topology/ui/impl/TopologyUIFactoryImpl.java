@@ -4,10 +4,8 @@
 package org.eclipse.symphony.common.topology.ui.impl;
 
 import java.util.List;
-
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3f;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;

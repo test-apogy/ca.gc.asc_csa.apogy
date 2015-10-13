@@ -5,8 +5,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Ranges;
 
 public class UpdateValueStrategyWithRange extends UpdateValueStrategy 
 {

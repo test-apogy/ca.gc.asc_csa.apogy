@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
 
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 
 public class CameraViewConfigurationListener 
 {

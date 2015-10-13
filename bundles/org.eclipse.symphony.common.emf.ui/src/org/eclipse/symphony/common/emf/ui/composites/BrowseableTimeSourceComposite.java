@@ -23,10 +23,9 @@ import org.eclipse.swt.widgets.DateTime;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Spinner;
 import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.BrowseableTimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
+import org.eclipse.symphony.common.emf.BrowseableTimeSource;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.TimeSource;
 
 public class BrowseableTimeSourceComposite extends AbstractTimeSourceComposite 
 {	

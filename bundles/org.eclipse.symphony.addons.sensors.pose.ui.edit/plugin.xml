@@ -28,9 +28,6 @@
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.addons.sensors.pose.ui.provider.SensorsPoseUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.pose.ui.provider.SensorsPoseUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.core.programs.controllers.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -15,6 +13,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.io.jinput.JInputPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
@@ -40,7 +39,6 @@ import org.eclipse.symphony.core.programs.controllers.ToggleValueSource;
 import org.eclipse.symphony.core.programs.controllers.Trigger;
 import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.ValueSource;
-
 import java.util.List;
 import java.util.TreeSet;
 

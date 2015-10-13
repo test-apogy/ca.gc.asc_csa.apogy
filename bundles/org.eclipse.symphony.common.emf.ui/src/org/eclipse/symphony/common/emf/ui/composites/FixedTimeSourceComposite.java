@@ -13,9 +13,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.DateTime;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.FixedTimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
+import org.eclipse.symphony.common.emf.FixedTimeSource;
+import org.eclipse.symphony.common.emf.TimeSource;
 
 public class FixedTimeSourceComposite extends AbstractTimeSourceComposite 
 {

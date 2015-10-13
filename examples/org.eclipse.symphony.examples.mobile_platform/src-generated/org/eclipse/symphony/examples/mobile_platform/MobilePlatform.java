@@ -3,7 +3,8 @@
  */
 package org.eclipse.symphony.examples.mobile_platform;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
+import org.eclipse.symphony.common.emf.Disposable;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -19,6 +20,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#isDisposed <em>Disposed</em>}</li>
@@ -29,7 +31,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getRightWheelPosition <em>Right Wheel Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.MobilePlatform#getPosition <em>Position</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getMobilePlatform()
  * @model abstract="true"

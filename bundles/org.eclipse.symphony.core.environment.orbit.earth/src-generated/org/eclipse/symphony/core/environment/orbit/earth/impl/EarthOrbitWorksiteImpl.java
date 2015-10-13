@@ -20,11 +20,11 @@ import org.eclipse.symphony.core.environment.orbit.impl.OrbitWorksiteImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getSky <em>Sky</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getEarthLocations <em>Earth Locations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -7,7 +7,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -17,6 +16,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
 import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
@@ -24,15 +25,13 @@ import org.eclipse.symphony.core.environment.orbit.Orbit;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Abstract Orbit Propagator</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getDescription <em>Description</em>}</li>
@@ -42,7 +41,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getValidFromDate <em>Valid From Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

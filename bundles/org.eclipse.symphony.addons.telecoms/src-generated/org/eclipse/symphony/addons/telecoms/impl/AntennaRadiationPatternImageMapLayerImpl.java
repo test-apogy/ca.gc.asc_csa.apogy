@@ -26,12 +26,12 @@ import org.eclipse.symphony.core.environment.impl.LineOfSightImageMapLayerImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.AntennaRadiationPatternImageMapLayerImpl#getBellowCutoffColor <em>Bellow Cutoff Color</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

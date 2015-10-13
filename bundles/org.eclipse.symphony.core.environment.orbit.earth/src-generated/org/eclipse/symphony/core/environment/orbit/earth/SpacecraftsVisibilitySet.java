@@ -6,13 +6,11 @@ package org.eclipse.symphony.core.environment.orbit.earth;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.Updatable;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +19,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getEndTime <em>End Time</em>}</li>
@@ -29,7 +28,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getPasses <em>Passes</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStationToVisibilityMap <em>Ground Station To Visibility Map</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet()
  * @model

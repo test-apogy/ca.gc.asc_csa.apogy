@@ -11,7 +11,8 @@
 
 package org.eclipse.symphony.core.topology.ui.internal;
 
-import ca.gc.space.topology.ui.Activator;
+import org.eclipse.symphony.common.topology.ui.Activator;
+
 
 /**
  * Constants relating to the console plug-in.

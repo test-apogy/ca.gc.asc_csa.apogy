@@ -10,14 +10,12 @@ import javax.vecmath.Tuple3d;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.ui.ShadowMode;
 import org.eclipse.symphony.common.topology.ui.jme3.Activator;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.ShadowMode;
 
 import com.jme3.app.Application;
 import com.jme3.asset.plugins.FileLocator;

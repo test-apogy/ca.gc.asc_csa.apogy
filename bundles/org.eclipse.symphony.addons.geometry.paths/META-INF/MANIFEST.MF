@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.geometry.paths;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.geometry.paths;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -16,7 +16,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
- org.eclipse.symphony.common.topology.core;visibility:=reexport,
+ org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true

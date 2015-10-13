@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='TopologyBindings' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)' modelName='TopologyBindings' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.bindings/src-generated' editDirectory='/org.eclipse.symphony.common.topology.bindings.edit/src-generated' basePackage='ca.gc.asc_csa.topology'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='TopologyBindings' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)' modelName='TopologyBindings' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.bindings/src-generated' editDirectory='/org.eclipse.symphony.common.topology.bindings.edit/src-generated' basePackage='org.eclipse.symphony.common.topology'"
  * @generated
  */
 public interface TopologyBindingsPackage extends EPackage

@@ -1,6 +1,6 @@
 package org.eclipse.symphony.addons.sensors.pose.ui.scene_objects;
 
-import ca.gc.space.topology.ui.SceneObject;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
 
 public interface OrientationSensorSceneObject extends SceneObject 
 {		

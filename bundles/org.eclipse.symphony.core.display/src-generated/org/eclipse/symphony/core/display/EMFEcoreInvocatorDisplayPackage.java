@@ -1123,11 +1123,11 @@ public interface EMFEcoreInvocatorDisplayPackage extends EPackage
   EOperation getAbstractFeatureDisplay__BindControl__Control();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#updateRange(org.eclipse.swt.widgets.Control, ca.gc.asc_csa.eclipse.emf.ecore.Ranges) <em>Update Range</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#updateRange(org.eclipse.swt.widgets.Control, org.eclipse.symphony.common.emf.Ranges) <em>Update Range</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Range</em>' operation.
-	 * @see org.eclipse.symphony.core.display.AbstractFeatureDisplay#updateRange(org.eclipse.swt.widgets.Control, ca.gc.asc_csa.eclipse.emf.ecore.Ranges)
+	 * @see org.eclipse.symphony.core.display.AbstractFeatureDisplay#updateRange(org.eclipse.swt.widgets.Control, org.eclipse.symphony.common.emf.Ranges)
 	 * @generated
 	 */
   EOperation getAbstractFeatureDisplay__UpdateRange__Control_Ranges();

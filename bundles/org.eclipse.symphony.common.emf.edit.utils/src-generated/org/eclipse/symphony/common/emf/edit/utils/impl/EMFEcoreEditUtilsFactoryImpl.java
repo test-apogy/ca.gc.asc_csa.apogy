@@ -3,7 +3,6 @@
 package org.eclipse.symphony.common.emf.edit.utils.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

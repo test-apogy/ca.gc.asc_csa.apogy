@@ -43,11 +43,11 @@ import ca.gc.space.mrt.sensors.fov.FovPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl#getGroundStation <em>Ground Station</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl#getReferenceAltitude <em>Reference Altitude</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

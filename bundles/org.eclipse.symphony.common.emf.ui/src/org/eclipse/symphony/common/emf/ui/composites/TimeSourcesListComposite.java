@@ -10,11 +10,10 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
+import org.eclipse.symphony.common.emf.TimeSource;
+import org.eclipse.symphony.common.emf.TimeSourcesList;
 import org.eclipse.symphony.common.emf.ui.Activator;
 import org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList;
 
 public class TimeSourcesListComposite extends Composite 
 {

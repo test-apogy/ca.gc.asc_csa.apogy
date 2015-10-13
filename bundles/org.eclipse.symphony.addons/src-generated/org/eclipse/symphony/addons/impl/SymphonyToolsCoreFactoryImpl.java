@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.impl;
 
 import javax.vecmath.Color3f;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

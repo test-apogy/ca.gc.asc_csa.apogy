@@ -10,9 +10,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
 import javax.vecmath.Color3f;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -23,6 +21,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ImageAlignment;
@@ -44,15 +44,13 @@ import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.listeners.MapViewConfigurationListener;
 import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Map View Configuration</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl#getDescription <em>Description</em>}</li>
@@ -64,7 +62,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl#getMapImageRectangularRegion <em>Map Image Rectangular Region</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl#getExtent <em>Extent</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

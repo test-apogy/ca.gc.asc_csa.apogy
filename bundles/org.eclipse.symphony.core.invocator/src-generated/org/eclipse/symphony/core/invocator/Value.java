@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core.invocator;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,10 +13,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Value#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getValue()
  * @model

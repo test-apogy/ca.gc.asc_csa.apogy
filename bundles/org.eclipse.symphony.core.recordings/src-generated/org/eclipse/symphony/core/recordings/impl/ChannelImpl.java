@@ -8,13 +8,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.core.invocator.impl.AbstractChannelImpl;
 import org.eclipse.symphony.core.recordings.Channel;
 import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.FixedPeriodValues;
 import org.eclipse.symphony.core.recordings.RecordingPolicy;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,12 +21,12 @@ import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.ChannelImpl#getRecordingPolicy <em>Recording Policy</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.ChannelImpl#getFixedPeriodValues <em>Fixed Period Values</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.ChannelImpl#getFeature <em>Feature</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -176,18 +175,17 @@ public class ChannelImpl extends AbstractChannelImpl implements Channel
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setFeature(AbstractFeatureNode newFeature)
-  {
+	public void setFeature(AbstractFeatureNode newFeature) {
 		AbstractFeatureNode oldFeature = feature;
 		feature = newFeature;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorRecordingsPackage.CHANNEL__FEATURE, oldFeature, feature));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

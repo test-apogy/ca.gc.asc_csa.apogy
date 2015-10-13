@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core.invocator;
 
 import java.util.Date;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +13,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Context#getContextsList <em>Contexts List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Context#getVariableImplementationsList <em>Variable Implementations List</em>}</li>
@@ -22,7 +22,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.Context#getInstancesCreationDate <em>Instances Creation Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContext()
  * @model abstract="true"

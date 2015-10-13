@@ -6,6 +6,7 @@ package org.eclipse.symphony.core.topology.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.core.topology.*;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;

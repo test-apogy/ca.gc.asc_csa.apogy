@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core.invocator;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,13 +19,13 @@ import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchFeatureNodeAdapter()
  * @model
@@ -77,14 +76,14 @@ public interface WatchFeatureNodeAdapter extends EObject
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}' reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Node</em>' reference.
 	 * @see #getFeatureNode()
 	 * @generated
 	 */
-  void setFeatureNode(AbstractFeatureNode value);
+	void setFeatureNode(AbstractFeatureNode value);
 
-  /**
+		/**
 	 * Returns the value of the '<em><b>Current Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -7,18 +7,9 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
-import org.eclipse.symphony.core.display.AbstractPlotDisplay;
-import org.eclipse.symphony.core.display.BooleanDisplay;
-import org.eclipse.symphony.core.display.DisplayFacade;
-import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
-import org.eclipse.symphony.core.display.HistoryData;
-import org.eclipse.symphony.core.display.HistoryDataHandler;
-import org.eclipse.symphony.core.display.NumberVersusTimeHistoryData;
-import org.eclipse.symphony.core.display.NumberVsTimePlotDisplay;
-import org.eclipse.symphony.core.display.TextDisplay;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.core.display.*;
 import org.eclipse.symphony.core.invocator.AbstractDisplay;
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 
 /**
  * <!-- begin-user-doc -->
@@ -280,13 +271,13 @@ public class EMFEcoreInvocatorDisplayAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Described <em>Described</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Described
+	 * @see org.eclipse.symphony.common.emf.Described
 	 * @generated
 	 */
   public Adapter createDescribedAdapter()

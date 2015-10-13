@@ -5,12 +5,10 @@ package org.eclipse.symphony.core.recordings;
 
 import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 
 /**
@@ -20,13 +18,13 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recording#getRecordingTracks <em>Recording Tracks</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recording#getDuration <em>Duration</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recording#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recording#getEndDate <em>End Date</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage#getRecording()
  * @model

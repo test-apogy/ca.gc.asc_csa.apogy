@@ -13,13 +13,13 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.ImageOrder#getOrderId <em>Order Id</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.ImageOrder#getPriority <em>Priority</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.ImageOrder#getImageCenter <em>Image Center</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.ImageOrder#getCommandedZoom <em>Commanded Zoom</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getImageOrder()
  * @model

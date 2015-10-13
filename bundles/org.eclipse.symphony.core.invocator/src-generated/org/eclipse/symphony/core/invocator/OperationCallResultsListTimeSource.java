@@ -3,7 +3,8 @@
  */
 package org.eclipse.symphony.core.invocator;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource;
+import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +19,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallResultsListTimeSource()
  * @model

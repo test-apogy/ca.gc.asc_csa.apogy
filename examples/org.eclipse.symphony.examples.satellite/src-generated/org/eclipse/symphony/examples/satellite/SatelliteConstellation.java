@@ -27,6 +27,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellites <em>Satellites</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStations <em>Ground Stations</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getEndDate <em>End Date</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellation()
  * @model

@@ -10,9 +10,8 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Spinner;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.CurrentTimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
+import org.eclipse.symphony.common.emf.CurrentTimeSource;
+import org.eclipse.symphony.common.emf.TimeSource;
 
 public class CurrentTimeSourceComposite extends AbstractTimeSourceComposite 
 {

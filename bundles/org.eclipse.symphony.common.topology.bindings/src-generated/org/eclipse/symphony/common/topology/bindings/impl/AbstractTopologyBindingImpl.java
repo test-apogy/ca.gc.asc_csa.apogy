@@ -5,7 +5,6 @@ package org.eclipse.symphony.common.topology.bindings.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -15,14 +14,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.common.topology.bindings.Activator;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
@@ -33,6 +31,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#isBinded <em>Binded</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getDescription <em>Description</em>}</li>
@@ -41,7 +40,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getFeatureNode <em>Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getFeatureNodeAdapter <em>Feature Node Adapter</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -137,7 +135,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 * @ordered
 	 */
-  protected FeatureNodeAdapter featureNodeAdapter;
+  protected org.eclipse.symphony.common.emf.FeatureNodeAdapter featureNodeAdapter;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -330,18 +328,17 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setFeatureNode(AbstractFeatureNode newFeatureNode)
-  {
+	public void setFeatureNode(AbstractFeatureNode newFeatureNode) {
 		AbstractFeatureNode oldFeatureNode = featureNode;
 		featureNode = newFeatureNode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE, oldFeatureNode, featureNode));
 	}
 
-  /**
+		/**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated_NOT
@@ -362,11 +359,11 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public FeatureNodeAdapter getFeatureNodeAdapterGen()
+  public org.eclipse.symphony.common.emf.FeatureNodeAdapter getFeatureNodeAdapterGen()
   {
 		if (featureNodeAdapter != null && featureNodeAdapter.eIsProxy()) {
 			InternalEObject oldFeatureNodeAdapter = (InternalEObject)featureNodeAdapter;
-			featureNodeAdapter = (FeatureNodeAdapter)eResolveProxy(oldFeatureNodeAdapter);
+			featureNodeAdapter = (org.eclipse.symphony.common.emf.FeatureNodeAdapter)eResolveProxy(oldFeatureNodeAdapter);
 			if (featureNodeAdapter != oldFeatureNodeAdapter) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER, oldFeatureNodeAdapter, featureNodeAdapter));
@@ -380,7 +377,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public FeatureNodeAdapter basicGetFeatureNodeAdapter()
+  public org.eclipse.symphony.common.emf.FeatureNodeAdapter basicGetFeatureNodeAdapter()
   {
 		return featureNodeAdapter;
 	}

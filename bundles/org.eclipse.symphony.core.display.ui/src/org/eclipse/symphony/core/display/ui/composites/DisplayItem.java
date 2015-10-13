@@ -35,7 +35,7 @@ import org.eclipse.symphony.core.display.ui.Activator;
 import org.eclipse.symphony.core.invocator.AbstractDisplay;
 import org.eclipse.symphony.core.invocator.Context;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 
 public class DisplayItem implements IPropertyChangeListener
 {

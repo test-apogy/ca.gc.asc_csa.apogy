@@ -128,13 +128,13 @@ public interface MRTActuatorsPackage extends EPackage
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int ABSTRACT_ACTUATOR___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
-  /**
+		/**
 	 * The number of operations of the '<em>Abstract Actuator</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -246,13 +246,13 @@ public interface MRTActuatorsPackage extends EPackage
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PAN_TILT_UNIT___ACCEPT__INODEVISITOR = ABSTRACT_ACTUATOR___ACCEPT__INODEVISITOR;
+	int PAN_TILT_UNIT___ACCEPT__INODEVISITOR = ABSTRACT_ACTUATOR___ACCEPT__INODEVISITOR;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Maximum Pan Angle</em>' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

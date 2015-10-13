@@ -4,16 +4,15 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.emf.SelectionBasedTimeSource;
+import org.eclipse.symphony.common.emf.TimeSource;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.SelectionBasedTimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 
 public class SelectionBasedTimeSourceComposite extends AbstractTimeSourceComposite 
 {

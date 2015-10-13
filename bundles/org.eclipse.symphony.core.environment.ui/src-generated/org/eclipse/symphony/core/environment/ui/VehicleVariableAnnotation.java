@@ -15,11 +15,11 @@ package org.eclipse.symphony.core.environment.ui;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleLength <em>Vehicle Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth <em>Vehicle Width</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVehicleVariableAnnotation()
  * @model

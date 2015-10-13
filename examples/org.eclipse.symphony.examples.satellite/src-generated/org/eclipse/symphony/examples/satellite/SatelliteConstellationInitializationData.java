@@ -19,12 +19,12 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getSatelliteData <em>Satellite Data</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getGroundStations <em>Ground Stations</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getPendingImageOrders <em>Pending Image Orders</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellationInitializationData()
  * @model

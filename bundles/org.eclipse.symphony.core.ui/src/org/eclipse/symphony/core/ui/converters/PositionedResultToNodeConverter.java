@@ -3,6 +3,9 @@ package org.eclipse.symphony.core.ui.converters;
 import java.util.Iterator;
 
 import org.eclipse.symphony.common.converters.IConverter;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.SymphonyCorePackage;
@@ -11,10 +14,6 @@ import org.eclipse.symphony.core.SymphonyTopology;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
-
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
 
 public class PositionedResultToNodeConverter implements IConverter{
 

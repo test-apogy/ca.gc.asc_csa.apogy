@@ -25,9 +25,6 @@
             uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
    </extension>

@@ -4,12 +4,10 @@
 package org.eclipse.symphony.core.environment.orbit.earth;
 
 import java.util.Date;
-
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.Updatable;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,6 +16,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getEndTime <em>End Time</em>}</li>
@@ -27,7 +26,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getRightSwathAngle <em>Right Swath Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getCorridor <em>Corridor</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor()
  * @model

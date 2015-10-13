@@ -1,8 +1,7 @@
 package org.eclipse.symphony.common.geometry.data3d.ui;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-
-import ca.gc.space.topology.ContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
 
 /**
  * 

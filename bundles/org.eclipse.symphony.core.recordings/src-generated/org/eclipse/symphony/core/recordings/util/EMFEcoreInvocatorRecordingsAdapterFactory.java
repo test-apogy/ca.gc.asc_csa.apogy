@@ -7,21 +7,14 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.invocator.AbstractChannel;
 import org.eclipse.symphony.core.invocator.AbstractPlayer;
 import org.eclipse.symphony.core.invocator.AbstractRecorder;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.recordings.Channel;
-import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
-import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
-import org.eclipse.symphony.core.recordings.Player;
-import org.eclipse.symphony.core.recordings.Recorder;
-import org.eclipse.symphony.core.recordings.Recording;
-import org.eclipse.symphony.core.recordings.RecordingResult;
-import org.eclipse.symphony.core.recordings.RecordingTrack;
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
+import org.eclipse.symphony.core.recordings.*;
 
 /**
  * <!-- begin-user-doc -->

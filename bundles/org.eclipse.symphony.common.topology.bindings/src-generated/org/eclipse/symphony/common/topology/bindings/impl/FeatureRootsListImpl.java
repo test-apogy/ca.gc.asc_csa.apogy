@@ -4,7 +4,6 @@
 package org.eclipse.symphony.common.topology.bindings.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -12,10 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.emf.TreeRootNode;
 import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +21,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.FeatureRootsListImpl#getFeatureRoots <em>Feature Roots</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

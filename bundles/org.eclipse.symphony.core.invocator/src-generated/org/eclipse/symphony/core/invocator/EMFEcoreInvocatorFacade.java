@@ -4,13 +4,11 @@
 package org.eclipse.symphony.core.invocator;
 
 import java.util.List;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
 
 /**
@@ -28,10 +26,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEMFEcoreInvocatorFacade()
  * @model
@@ -101,13 +99,13 @@ public interface EMFEcoreInvocatorFacade extends EObject
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" abstractFeatureNodeUnique="false"
 	 * @generated
 	 */
-  Watch resolveWatch(AbstractFeatureNode abstractFeatureNode);
+	Watch resolveWatch(AbstractFeatureNode abstractFeatureNode);
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @model unique="false" typeMemberReferenceTreeElementUnique="false"
@@ -117,13 +115,13 @@ public interface EMFEcoreInvocatorFacade extends EObject
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" abstractFeatureNodeUnique="false"
 	 * @generated
 	 */
-  Object getValue(AbstractFeatureNode abstractFeatureNode);
+	Object getValue(AbstractFeatureNode abstractFeatureNode);
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @model unique="false" variableUnique="false"
@@ -273,13 +271,13 @@ public interface EMFEcoreInvocatorFacade extends EObject
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model unique="false" abstractFeatureNodeUnique="false"
 	 * @generated
 	 */
-  String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode);
+	String getFullyQualifiedName(AbstractFeatureNode abstractFeatureNode);
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

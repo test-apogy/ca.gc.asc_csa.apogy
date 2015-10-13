@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToSunHorizontalCoordinatesStringConverter;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToSunIntensityStringConverter;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 public class EarthSkySunComposite extends Composite 
 {

@@ -8,13 +8,13 @@
 <plugin>
 
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.common.geometry.data3d.ui.adapters.CartesianCoordinatMeshNodePresentationAdapter">
       </Class>
    </extension> 
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.common.geometry.data3d.ui.adapters.TriangularMeshPresentationAdapter">
       </Class>

@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.TimeInterval#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.TimeInterval#getEndTime <em>End Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.TimeInterval#getDuration <em>Duration</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getTimeInterval()
  * @model

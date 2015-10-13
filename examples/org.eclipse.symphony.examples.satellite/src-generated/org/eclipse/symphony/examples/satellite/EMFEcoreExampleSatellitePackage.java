@@ -3,14 +3,13 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -658,15 +657,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	int SATELLITE_IMAGER = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__NAME = MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.

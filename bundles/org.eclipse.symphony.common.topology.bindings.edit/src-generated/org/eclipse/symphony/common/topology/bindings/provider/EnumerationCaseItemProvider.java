@@ -7,7 +7,6 @@ package org.eclipse.symphony.common.topology.bindings.provider;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -23,10 +22,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.EnumerationCase;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.space.topology.TopologyFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.EnumerationCase} object.
@@ -179,7 +177,7 @@ public class EnumerationCaseItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(EnumerationCase.class)) {
+		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.EnumerationCase.class)) {
 			case TopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

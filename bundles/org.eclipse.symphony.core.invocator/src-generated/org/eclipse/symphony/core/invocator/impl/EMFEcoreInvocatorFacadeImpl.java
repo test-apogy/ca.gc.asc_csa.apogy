@@ -63,10 +63,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
  * <em><b>Facade</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -242,6 +242,17 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Watch resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode abstractFeatureNode) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -288,6 +299,17 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		}
 
 		return watch;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Object getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode abstractFeatureNode) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -1080,6 +1102,17 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode abstractFeatureNode) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -1391,11 +1424,11 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT:
 				return createAbstractResultValue(arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE:
-				return resolveWatch((AbstractFeatureNode)arguments.get(0));
+				return resolveWatch((org.eclipse.symphony.common.emf.AbstractFeatureNode)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT:
 				return resolveWatch((TypeMemberReferenceTreeElement)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE:
-				return getValue((AbstractFeatureNode)arguments.get(0));
+				return getValue((org.eclipse.symphony.common.emf.AbstractFeatureNode)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE:
 				return getInstance((Variable)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE:
@@ -1425,7 +1458,7 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT:
 				return getFullyQualifiedName((TypeMemberReferenceTreeElement)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE:
-				return getFullyQualifiedName((AbstractFeatureNode)arguments.get(0));
+				return getFullyQualifiedName((org.eclipse.symphony.common.emf.AbstractFeatureNode)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE:
 				return createTypeMemberImplementations((Type)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT:

@@ -15,8 +15,7 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-
-import ca.gc.asc_csa.eclipse.core.databinding.converters.DoubleToStringConverter;
+import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
 
 public class GearRatioConstraintComposite extends Composite {
 

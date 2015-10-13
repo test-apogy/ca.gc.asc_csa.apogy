@@ -3,12 +3,11 @@
  */
 package org.eclipse.symphony.examples.lander.util;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.emf.Disposable;
 import org.eclipse.symphony.examples.lander.*;
 
 /**
@@ -170,13 +169,13 @@ public class EMFEcoreExampleLanderAdapterFactory extends AdapterFactoryImpl
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.eclipse.emf.ecore.Disposable <em>Disposable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Disposable <em>Disposable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Disposable
+	 * @see org.eclipse.symphony.common.emf.Disposable
 	 * @generated
 	 */
 	public Adapter createDisposableAdapter() {

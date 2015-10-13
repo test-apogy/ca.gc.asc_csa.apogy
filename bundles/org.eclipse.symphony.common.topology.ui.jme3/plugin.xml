@@ -11,7 +11,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="ca.gc.space.topology.ui.category"
+            category="org.eclipse.symphony.common.topology.ui.category"
             class="org.eclipse.symphony.common.topology.ui.jme3.views.JME3Topology3DView"
             icon="icons/3d_topology_viewer.png"
             id="ca.gc.asc_csa.topology.ui.jme3.views.TopologyView"
@@ -28,25 +28,25 @@
             genModel="model/jme3.xcore"/>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.GroupNodeJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.TransformNodeJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.URLNodeJME3Adapter">
       </Class>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.DefaultNodeJME3Adapter">
       </Class>
@@ -65,7 +65,7 @@
       </application>
    </extension>
    <extension
-         point="ca.gc.asc_csa.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.jme3.adapters.ReferencedGroupNodeJME3Adapter">
       </Class>

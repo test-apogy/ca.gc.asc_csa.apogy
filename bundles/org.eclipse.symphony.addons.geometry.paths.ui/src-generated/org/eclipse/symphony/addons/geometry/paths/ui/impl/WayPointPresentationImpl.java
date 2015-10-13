@@ -7,7 +7,6 @@
 package org.eclipse.symphony.addons.geometry.paths.ui.impl;
 
 import javax.vecmath.Point3d;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;

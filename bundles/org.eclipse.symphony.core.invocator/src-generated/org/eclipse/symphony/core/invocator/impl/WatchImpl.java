@@ -10,14 +10,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.WatchesList;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
 
 /**
@@ -26,6 +25,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchImpl#getDescription <em>Description</em>}</li>
@@ -34,7 +34,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchImpl#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchImpl#getTreeRootNode <em>Tree Root Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -108,7 +107,7 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
 	 * @generated
 	 * @ordered
 	 */
-  protected TreeRootNode treeRootNode;
+  protected org.eclipse.symphony.common.emf.TreeRootNode treeRootNode;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -365,19 +364,18 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public TreeRootNode getTreeRootNodeGen()
+  public org.eclipse.symphony.common.emf.TreeRootNode getTreeRootNodeGen()
   {
 		return treeRootNode;
 	}
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public NotificationChain basicSetTreeRootNode(TreeRootNode newTreeRootNode, NotificationChain msgs)
-  {
-		TreeRootNode oldTreeRootNode = treeRootNode;
+	public NotificationChain basicSetTreeRootNode(org.eclipse.symphony.common.emf.TreeRootNode newTreeRootNode, NotificationChain msgs) {
+		org.eclipse.symphony.common.emf.TreeRootNode oldTreeRootNode = treeRootNode;
 		treeRootNode = newTreeRootNode;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH__TREE_ROOT_NODE, oldTreeRootNode, newTreeRootNode);
@@ -386,13 +384,12 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
 		return msgs;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setTreeRootNode(TreeRootNode newTreeRootNode)
-  {
+	public void setTreeRootNode(org.eclipse.symphony.common.emf.TreeRootNode newTreeRootNode) {
 		if (newTreeRootNode != treeRootNode) {
 			NotificationChain msgs = null;
 			if (treeRootNode != null)
@@ -406,7 +403,7 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH__TREE_ROOT_NODE, newTreeRootNode, newTreeRootNode));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -509,7 +506,7 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
 				setTypeMemberReferenceTreeElement((TypeMemberReferenceTreeElement)newValue);
 				return;
 			case EMFEcoreInvocatorPackage.WATCH__TREE_ROOT_NODE:
-				setTreeRootNode((TreeRootNode)newValue);
+				setTreeRootNode((org.eclipse.symphony.common.emf.TreeRootNode)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -540,7 +537,7 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
 				setTypeMemberReferenceTreeElement((TypeMemberReferenceTreeElement)null);
 				return;
 			case EMFEcoreInvocatorPackage.WATCH__TREE_ROOT_NODE:
-				setTreeRootNode((TreeRootNode)null);
+				setTreeRootNode((org.eclipse.symphony.common.emf.TreeRootNode)null);
 				return;
 		}
 		super.eUnset(featureID);

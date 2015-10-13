@@ -42,8 +42,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Number Vs Time Plot Display</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

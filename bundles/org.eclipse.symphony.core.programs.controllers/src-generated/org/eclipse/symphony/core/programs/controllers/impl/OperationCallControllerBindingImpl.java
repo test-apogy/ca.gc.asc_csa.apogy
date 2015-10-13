@@ -23,12 +23,12 @@ import org.eclipse.symphony.core.programs.controllers.Trigger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.OperationCallControllerBindingImpl#isCreateResult <em>Create Result</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.OperationCallControllerBindingImpl#isActive <em>Active</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.OperationCallControllerBindingImpl#getTrigger <em>Trigger</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

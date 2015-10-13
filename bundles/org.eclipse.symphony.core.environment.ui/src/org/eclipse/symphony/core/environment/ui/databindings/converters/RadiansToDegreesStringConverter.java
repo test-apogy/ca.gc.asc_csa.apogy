@@ -2,7 +2,7 @@ package org.eclipse.symphony.core.environment.ui.databindings.converters;
 
 import java.text.NumberFormat;
 
-import ca.gc.asc_csa.eclipse.core.databinding.converters.DoubleToStringConverter;
+import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
 
 public class RadiansToDegreesStringConverter extends DoubleToStringConverter 
 {

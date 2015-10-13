@@ -3,7 +3,8 @@
  */
 package org.eclipse.symphony.core.environment.orbit;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
+import org.eclipse.symphony.common.emf.Timed;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -17,12 +18,12 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getCoordinates <em>Coordinates</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getAttitude <em>Attitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getSpacecraftState()
  * @model

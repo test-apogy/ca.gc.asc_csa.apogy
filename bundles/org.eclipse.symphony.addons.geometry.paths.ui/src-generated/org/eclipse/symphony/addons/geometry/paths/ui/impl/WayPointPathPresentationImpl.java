@@ -7,7 +7,6 @@
 package org.eclipse.symphony.addons.geometry.paths.ui.impl;
 
 import javax.vecmath.Point3d;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;

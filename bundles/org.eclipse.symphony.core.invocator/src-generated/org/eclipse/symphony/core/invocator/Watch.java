@@ -3,9 +3,10 @@
  */
 package org.eclipse.symphony.core.invocator;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.emf.TreeRootNode;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -20,13 +21,13 @@ import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getWatchesList <em>Watches List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatch()
  * @model
@@ -135,11 +136,11 @@ public interface Watch extends Named, Described
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tree Root Node</em>' containment reference.
 	 * @see #getTreeRootNode()
 	 * @generated
 	 */
-  void setTreeRootNode(TreeRootNode value);
+	void setTreeRootNode(TreeRootNode value);
 
 } // Watch

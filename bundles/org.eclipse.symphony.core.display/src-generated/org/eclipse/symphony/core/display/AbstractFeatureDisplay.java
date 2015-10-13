@@ -4,14 +4,12 @@
 package org.eclipse.symphony.core.display;
 
 import java.awt.Point;
-
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.core.invocator.AbstractDisplay;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,12 +22,12 @@ import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#getAbstractFeatureNode <em>Abstract Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#getMinimumWidth <em>Minimum Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#getMinimumHeight <em>Minimum Height</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage#getAbstractFeatureDisplay()
  * @model abstract="true"
@@ -56,14 +54,14 @@ public interface AbstractFeatureDisplay extends AbstractDisplay
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#getAbstractFeatureNode <em>Abstract Feature Node</em>}' reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Abstract Feature Node</em>' reference.
 	 * @see #getAbstractFeatureNode()
 	 * @generated
 	 */
-  void setAbstractFeatureNode(AbstractFeatureNode value);
+	void setAbstractFeatureNode(AbstractFeatureNode value);
 
-  /**
+		/**
 	 * Returns the value of the '<em><b>Minimum Width</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
@@ -152,16 +150,16 @@ public interface AbstractFeatureDisplay extends AbstractDisplay
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Makes the Control to change its appearance to display the specified current Ranges.
 	 * <!-- end-model-doc -->
 	 * @model controlDataType="org.eclipse.symphony.core.display.Control" controlUnique="false" rangeUnique="false"
 	 * @generated
 	 */
-  void updateRange(Control control, Ranges range);
+	void updateRange(Control control, Ranges range);
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

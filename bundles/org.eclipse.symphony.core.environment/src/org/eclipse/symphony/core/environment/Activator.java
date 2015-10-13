@@ -7,7 +7,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-import ca.gc.asc_csa.eclipse.EclipseUtils;
+import org.eclipse.symphony.common.EclipseUtils;
 
 public class Activator implements BundleActivator {
 

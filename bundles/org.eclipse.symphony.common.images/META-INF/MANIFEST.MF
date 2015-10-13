@@ -11,9 +11,7 @@ Export-Package: org.eclipse.symphony.common.images,
  org.eclipse.symphony.common.images.converters,
  org.eclipse.symphony.common.images.impl,
  org.eclipse.symphony.common.images.util,
- ca.gc.asc_csa.eclipse.images.core,
- ca.gc.asc_csa.eclipse.images.core.impl,
- ca.gc.asc_csa.eclipse.images.core.util
+ org.eclipse.symphony.common.images.validation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ui;bundle-version="3.6.2",

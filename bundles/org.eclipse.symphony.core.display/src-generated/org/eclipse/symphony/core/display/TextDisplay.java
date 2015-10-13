@@ -15,10 +15,10 @@ package org.eclipse.symphony.core.display;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.TextDisplay#getDecimalFormat <em>Decimal Format</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage#getTextDisplay()
  * @model

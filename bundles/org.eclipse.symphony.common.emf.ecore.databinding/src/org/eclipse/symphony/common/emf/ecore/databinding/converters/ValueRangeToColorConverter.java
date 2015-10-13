@@ -5,8 +5,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Ranges;
 
 
 /**

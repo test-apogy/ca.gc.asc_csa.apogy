@@ -3,11 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -15,13 +11,14 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.invocator.AbstractResultValue;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ResultsList;
-
 import com.google.common.base.Objects;
 
 /**
@@ -30,6 +27,7 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl#getDescription <em>Description</em>}</li>
@@ -38,7 +36,6 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl#getContext <em>Context</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl#getResultValue <em>Result Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

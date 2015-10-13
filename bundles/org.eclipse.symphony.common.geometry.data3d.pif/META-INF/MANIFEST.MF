@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.asc_csa.io.pif;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.geometry.data3d.pif;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.common.geometry.data3d.pif.Activator
 Bundle-ActivationPolicy: lazy

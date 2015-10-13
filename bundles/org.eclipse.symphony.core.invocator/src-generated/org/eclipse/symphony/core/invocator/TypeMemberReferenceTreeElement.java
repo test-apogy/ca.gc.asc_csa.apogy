@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
+import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +13,7 @@ import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getChild <em>Child</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}</li>
@@ -22,7 +22,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getRootElement <em>Root Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isLeaf <em>Leaf</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement()
  * @model
@@ -97,14 +96,14 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getFeatureRootNode <em>Feature Root Node</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Root Node</em>' containment reference.
 	 * @see #getFeatureRootNode()
 	 * @generated
 	 */
-  void setFeatureRootNode(TreeRootNode value);
+	void setFeatureRootNode(TreeRootNode value);
 
-  /**
+		/**
 	 * Returns the value of the '<em><b>Root</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>

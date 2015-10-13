@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
@@ -16,15 +18,13 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ProgramsList;
 import org.eclipse.symphony.core.invocator.ToolsList;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Invocator Session</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl#getDescription <em>Description</em>}</li>
@@ -33,7 +33,6 @@ import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl#getDataProductsListContainer <em>Data Products List Container</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl#getToolsList <em>Tools List</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

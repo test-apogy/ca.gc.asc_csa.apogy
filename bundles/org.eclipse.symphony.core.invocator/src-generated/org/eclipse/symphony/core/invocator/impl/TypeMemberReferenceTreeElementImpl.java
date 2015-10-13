@@ -4,7 +4,6 @@
 package org.eclipse.symphony.core.invocator.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -14,11 +13,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.emf.TreeRootNode;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
-
 import com.google.common.base.Objects;
 
 
@@ -28,6 +25,7 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl#getChild <em>Child</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl#getParent <em>Parent</em>}</li>
@@ -36,7 +34,6 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl#getRootElement <em>Root Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl#isLeaf <em>Leaf</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -183,11 +180,10 @@ public class TypeMemberReferenceTreeElementImpl extends TypeMemberReferenceImpl 
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public NotificationChain basicSetFeatureRootNode(TreeRootNode newFeatureRootNode, NotificationChain msgs)
-  {
+	public NotificationChain basicSetFeatureRootNode(TreeRootNode newFeatureRootNode, NotificationChain msgs) {
 		TreeRootNode oldFeatureRootNode = featureRootNode;
 		featureRootNode = newFeatureRootNode;
 		if (eNotificationRequired()) {
@@ -197,13 +193,12 @@ public class TypeMemberReferenceTreeElementImpl extends TypeMemberReferenceImpl 
 		return msgs;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setFeatureRootNode(TreeRootNode newFeatureRootNode)
-  {
+	public void setFeatureRootNode(TreeRootNode newFeatureRootNode) {
 		if (newFeatureRootNode != featureRootNode) {
 			NotificationChain msgs = null;
 			if (featureRootNode != null)
@@ -217,7 +212,7 @@ public class TypeMemberReferenceTreeElementImpl extends TypeMemberReferenceImpl 
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE, newFeatureRootNode, newFeatureRootNode));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

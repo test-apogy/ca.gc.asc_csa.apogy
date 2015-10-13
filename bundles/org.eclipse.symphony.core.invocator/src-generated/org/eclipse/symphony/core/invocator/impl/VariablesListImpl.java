@@ -26,11 +26,11 @@ import org.eclipse.symphony.core.invocator.VariablesList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariablesListImpl#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariablesListImpl#getVariables <em>Variables</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

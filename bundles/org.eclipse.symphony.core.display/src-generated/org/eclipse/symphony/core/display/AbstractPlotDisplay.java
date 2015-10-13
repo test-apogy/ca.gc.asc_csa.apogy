@@ -17,12 +17,12 @@ package org.eclipse.symphony.core.display;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractPlotDisplay#isRepeatLastValue <em>Repeat Last Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractPlotDisplay#isUseDataBuffering <em>Use Data Buffering</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractPlotDisplay#getHistoryLength <em>History Length</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage#getAbstractPlotDisplay()
  * @model abstract="true"

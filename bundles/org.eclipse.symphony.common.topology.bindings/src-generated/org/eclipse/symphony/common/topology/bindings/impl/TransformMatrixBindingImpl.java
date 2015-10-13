@@ -28,10 +28,10 @@ import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.TransformMatrixBindingImpl#getTransformNode <em>Transform Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
