@@ -6,8 +6,8 @@
  */
 package org.eclipse.symphony.common.topology.addons.dynamics;
 
-import ca.gc.space.topology.AbstractNodeVisitor;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
+import org.eclipse.symphony.common.topology.Node;
 
 public class PhysicalBodyNodeMassVisitor extends AbstractNodeVisitor 
 {

@@ -8,6 +8,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.topology.bindings.BindingsSet;
 import org.eclipse.symphony.core.AssemblyLinksList;
 import org.eclipse.symphony.core.ConnectionPointsList;
 import org.eclipse.symphony.core.PoseProvider;
@@ -16,8 +17,6 @@ import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.invocator.AbstractType;
 import org.eclipse.symphony.core.invocator.impl.TypeImpl;
-
-import ca.gc.asc_csa.topology.bindings.BindingsSet;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

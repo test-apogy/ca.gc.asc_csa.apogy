@@ -20,10 +20,9 @@ import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPoint;
 import org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl;
 import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.space.topology.INodeVisitor;
 
 /**
  * <!-- begin-user-doc -->

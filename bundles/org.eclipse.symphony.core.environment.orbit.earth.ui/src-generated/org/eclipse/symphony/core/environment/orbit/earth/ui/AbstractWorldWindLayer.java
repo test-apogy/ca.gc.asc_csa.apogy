@@ -3,9 +3,9 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth.ui;
 
-import org.eclipse.symphony.core.Updatable;
-
 import gov.nasa.worldwind.layers.RenderableLayer;
+
+import org.eclipse.symphony.core.Updatable;
 
 /**
  * <!-- begin-user-doc -->

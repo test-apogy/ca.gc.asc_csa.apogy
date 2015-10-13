@@ -22,8 +22,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
-
-import ca.gc.space.topology.impl.AggregateGroupNodeImpl;
+import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

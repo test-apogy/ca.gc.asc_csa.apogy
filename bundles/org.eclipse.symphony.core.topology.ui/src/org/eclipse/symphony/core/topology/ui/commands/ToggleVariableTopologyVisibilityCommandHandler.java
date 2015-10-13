@@ -44,7 +44,7 @@ public class ToggleVariableTopologyVisibilityCommandHandler extends AbstractHand
 							Node node = SymphonyTopologyFacade.INSTANCE.getVariableOriginNode(variable);
 							if(node != null)
 							{								
-								NodePresentation nodePresentation = ca.gc.space.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(node);				
+								NodePresentation nodePresentation = org.eclipse.symphony.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(node);				
 								if(nodePresentation != null)
 								{
 									nodePresentation.setVisible(!nodePresentation.isVisible());

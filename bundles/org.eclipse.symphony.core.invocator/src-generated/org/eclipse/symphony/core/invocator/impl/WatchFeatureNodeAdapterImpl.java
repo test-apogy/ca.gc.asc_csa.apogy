@@ -14,6 +14,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.AbstractRootNode;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.EMFEcoreFactory;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -22,13 +28,6 @@ import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
 import org.eclipse.symphony.core.invocator.VariableImplementationsList;
 import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractRootNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -226,8 +225,8 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFeatureNode(org.eclipse.symphony.common.emf.AbstractFeatureNode newFeatureNode) {
-		org.eclipse.symphony.common.emf.AbstractFeatureNode oldFeatureNode = featureNode;
+	public void setFeatureNodeGen(AbstractFeatureNode newFeatureNode) {
+		AbstractFeatureNode oldFeatureNode = featureNode;
 		featureNode = newFeatureNode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));

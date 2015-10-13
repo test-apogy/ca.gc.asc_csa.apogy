@@ -13,8 +13,7 @@ import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBindin
 import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsFactory;
 import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
 import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
-
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -4,6 +4,7 @@
 package org.eclipse.symphony.common.topology.bindings;
 
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;

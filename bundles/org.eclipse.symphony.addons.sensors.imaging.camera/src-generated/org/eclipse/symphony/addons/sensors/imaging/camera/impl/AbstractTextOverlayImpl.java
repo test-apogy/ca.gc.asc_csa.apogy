@@ -17,6 +17,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
@@ -27,8 +28,6 @@ import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**
  * <!-- begin-user-doc -->

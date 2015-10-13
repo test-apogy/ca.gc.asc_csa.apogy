@@ -4,6 +4,7 @@
 package org.eclipse.symphony.core.invocator.impl;
 
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -19,6 +20,7 @@ import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ResultsList;
+
 import com.google.common.base.Objects;
 
 /**

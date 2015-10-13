@@ -6,14 +6,13 @@ import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
-import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
-import ca.gc.space.mrt.sensors.fov.CircularSectorFieldOfView;
-import ca.gc.space.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.math.Quaternion;
 import com.jme3.math.Vector3f;

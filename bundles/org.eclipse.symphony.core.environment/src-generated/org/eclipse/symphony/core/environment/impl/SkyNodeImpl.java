@@ -7,12 +7,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.topology.INodeVisitor;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
 import org.eclipse.symphony.core.environment.Sky;
 import org.eclipse.symphony.core.environment.SkyNode;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.topology.INodeVisitor;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.impl.GroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

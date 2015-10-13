@@ -14,6 +14,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
+import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.Activator;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
@@ -23,9 +25,6 @@ import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
-
-import ca.gc.space.topology.AbstractNodeVisitor;
-import ca.gc.space.topology.INodeVisitor;
 
 /**
  * <!-- begin-user-doc -->

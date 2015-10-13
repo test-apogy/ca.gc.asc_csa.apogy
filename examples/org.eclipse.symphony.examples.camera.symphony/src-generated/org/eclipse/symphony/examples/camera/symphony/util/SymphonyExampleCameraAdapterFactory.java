@@ -13,7 +13,11 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.InitializationData;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.camera.symphony.*;
+import org.eclipse.symphony.examples.camera.symphony.CameraData;
+import org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter;
+import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
+import org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter;
+import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
 
 /**
  * <!-- begin-user-doc -->

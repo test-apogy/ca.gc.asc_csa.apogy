@@ -3,6 +3,7 @@
 package org.eclipse.symphony.common.emf.ui;
 
 import javax.measure.unit.Unit;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.swt.graphics.Color;

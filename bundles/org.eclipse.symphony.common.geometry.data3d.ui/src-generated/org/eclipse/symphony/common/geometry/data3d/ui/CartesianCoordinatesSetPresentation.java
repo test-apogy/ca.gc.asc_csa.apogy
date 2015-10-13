@@ -4,8 +4,7 @@
 package org.eclipse.symphony.common.geometry.data3d.ui;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-
-import ca.gc.space.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->

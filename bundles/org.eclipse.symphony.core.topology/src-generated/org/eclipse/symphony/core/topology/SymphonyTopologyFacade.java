@@ -4,12 +4,11 @@
 package org.eclipse.symphony.core.topology;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.topology.impl.SymphonyTopologyFacadeImpl;
-
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

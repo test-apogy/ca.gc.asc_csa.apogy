@@ -13,7 +13,9 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.InitializationData;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.robotic_arm.symphony.*;
+import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
+import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter;
+import org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRoboticArmPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -5,6 +5,7 @@ package org.eclipse.symphony.core.display.impl;
 
 import java.awt.Point;
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -15,11 +16,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
 import org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
 
 /**
  * <!-- begin-user-doc -->

@@ -4,7 +4,9 @@
 package org.eclipse.symphony.core.environment.orbit.earth.ui.impl;
 
 import gov.nasa.worldwind.layers.RenderableLayer;
+
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

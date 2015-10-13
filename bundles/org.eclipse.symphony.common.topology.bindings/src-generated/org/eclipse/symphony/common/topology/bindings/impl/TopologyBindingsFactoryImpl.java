@@ -11,7 +11,19 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.topology.bindings.*;
+import org.eclipse.symphony.common.topology.bindings.ANGLE_UNITS;
+import org.eclipse.symphony.common.topology.bindings.AXIS;
+import org.eclipse.symphony.common.topology.bindings.BindingsList;
+import org.eclipse.symphony.common.topology.bindings.BindingsSet;
+import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
+import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
+import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
+import org.eclipse.symphony.common.topology.bindings.RotationBinding;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
+import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
 
 /**
  * <!-- begin-user-doc -->

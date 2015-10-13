@@ -4,9 +4,8 @@
 package org.eclipse.symphony.examples.camera;
 
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.Zoomable;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 
 /**
  * <!-- begin-user-doc -->

@@ -12,7 +12,22 @@ import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.satellite.*;
+import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.ImageOrder;
+import org.eclipse.symphony.examples.satellite.OrbitalImage;
+import org.eclipse.symphony.examples.satellite.Satellite;
+import org.eclipse.symphony.examples.satellite.SatelliteCommand;
+import org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage;
+import org.eclipse.symphony.examples.satellite.SatelliteCommandList;
+import org.eclipse.symphony.examples.satellite.SatelliteCommandRoll;
+import org.eclipse.symphony.examples.satellite.SatelliteConstellation;
+import org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData;
+import org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter;
+import org.eclipse.symphony.examples.satellite.SatelliteImager;
+import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
+import org.eclipse.symphony.examples.satellite.SatelliteSimulated;
+import org.eclipse.symphony.examples.satellite.SatelliteStub;
+import org.eclipse.symphony.examples.satellite.SatelliteUtils;
 
 /**
  * <!-- begin-user-doc -->

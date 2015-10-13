@@ -3,14 +3,13 @@
  */
 package org.eclipse.symphony.examples.camera;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 
 /**
  * <!-- begin-user-doc -->

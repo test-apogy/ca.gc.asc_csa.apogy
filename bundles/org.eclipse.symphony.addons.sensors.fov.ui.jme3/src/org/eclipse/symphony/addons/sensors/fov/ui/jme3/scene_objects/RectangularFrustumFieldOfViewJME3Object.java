@@ -12,6 +12,9 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.Activator;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.JME3FovUtilities;
@@ -19,13 +22,9 @@ import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.RectangularFrustrum
 import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.RectangularFrustrumFieldOfViewSceneObject;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
-import ca.gc.space.mrt.sensors.fov.DistanceRange;
-import ca.gc.space.mrt.sensors.fov.FovPackage;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
-import ca.gc.space.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.plugins.FileLocator;
@@ -183,8 +182,6 @@ public class RectangularFrustumFieldOfViewJME3Object extends AbstractFieldOfView
 	
 	@Override
 	public void setShowOutlineOnly(boolean showOutlineOnly) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override

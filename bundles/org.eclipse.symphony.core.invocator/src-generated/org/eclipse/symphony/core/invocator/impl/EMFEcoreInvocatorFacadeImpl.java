@@ -17,6 +17,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
+import org.eclipse.symphony.common.emf.AbstractRootNode;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.AbstractResultValue;
@@ -50,13 +56,6 @@ import org.eclipse.symphony.core.invocator.VariableImplementationsList;
 import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegate;
 import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegateRegistry;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractRootNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -242,17 +241,6 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Watch resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode abstractFeatureNode) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -299,17 +287,6 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		}
 
 		return watch;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Object getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode abstractFeatureNode) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -1099,17 +1076,6 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			return null;
 		}
 
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode abstractFeatureNode) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**

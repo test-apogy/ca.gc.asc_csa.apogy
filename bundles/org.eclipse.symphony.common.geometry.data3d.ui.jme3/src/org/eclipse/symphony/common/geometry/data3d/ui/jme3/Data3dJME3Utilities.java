@@ -11,7 +11,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
-
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.math.Vector2f;

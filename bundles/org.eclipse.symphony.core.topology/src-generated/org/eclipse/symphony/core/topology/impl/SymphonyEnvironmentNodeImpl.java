@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.topology.impl.ReferencedGroupNodeImpl;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.ResultsListNode;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
@@ -26,8 +27,6 @@ import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
-
-import ca.gc.space.topology.impl.ReferencedGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

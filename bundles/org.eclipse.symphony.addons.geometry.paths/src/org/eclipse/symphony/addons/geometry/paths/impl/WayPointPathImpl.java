@@ -18,10 +18,9 @@ import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl;
+import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.space.topology.INodeVisitor;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

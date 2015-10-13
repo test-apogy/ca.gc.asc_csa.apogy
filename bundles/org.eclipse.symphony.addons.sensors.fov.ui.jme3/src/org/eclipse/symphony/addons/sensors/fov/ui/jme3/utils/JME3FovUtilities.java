@@ -3,8 +3,8 @@ package org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Mesh;

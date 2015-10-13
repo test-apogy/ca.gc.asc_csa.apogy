@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.addons.sensors.imaging.camera;
 
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.common.images.AbstractEImage;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**
  * <!-- begin-user-doc -->

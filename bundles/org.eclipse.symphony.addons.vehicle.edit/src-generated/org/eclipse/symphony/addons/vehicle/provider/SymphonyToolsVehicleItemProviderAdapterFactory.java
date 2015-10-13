@@ -29,6 +29,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.SimpleToolList;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.util.PathsSwitch;
 import org.eclipse.symphony.addons.util.SymphonyToolsCoreSwitch;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
@@ -37,19 +39,16 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.bindings.BindingsList;
+import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
-
-import ca.gc.asc_csa.topology.bindings.BindingsList;
-import ca.gc.asc_csa.topology.bindings.EnumerationCase;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
-import ca.gc.space.mrt.geometry.paths.PathsPackage;
-import ca.gc.space.mrt.geometry.paths.util.PathsSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

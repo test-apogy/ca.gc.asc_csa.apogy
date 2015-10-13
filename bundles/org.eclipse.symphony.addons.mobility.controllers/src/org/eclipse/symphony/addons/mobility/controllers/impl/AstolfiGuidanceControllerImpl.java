@@ -26,16 +26,15 @@ import org.eclipse.symphony.addons.mobility.controllers.Activator;
 import org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController;
 import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
+import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
+import org.eclipse.symphony.addons.sensors.pose.util.PoseUtils;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.GeometricUtils;
-
-import ca.gc.space.mrt.sensors.pose.PosePackage;
-import ca.gc.space.mrt.sensors.pose.PoseSensor;
-import ca.gc.space.mrt.sensors.pose.util.PoseUtils;
 
 /**
  * <!-- begin-user-doc -->

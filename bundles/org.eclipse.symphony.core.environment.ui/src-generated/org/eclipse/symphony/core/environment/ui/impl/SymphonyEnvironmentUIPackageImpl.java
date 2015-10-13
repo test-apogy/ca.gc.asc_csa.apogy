@@ -4,9 +4,11 @@
 package org.eclipse.symphony.core.environment.ui.impl;
 
 import java.util.List;
+
 import javax.vecmath.Color3f;
 import javax.vecmath.Point2d;
 import javax.vecmath.Point3f;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;

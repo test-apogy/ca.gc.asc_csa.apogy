@@ -3,12 +3,11 @@ package org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils;
 import java.awt.image.BufferedImage;
 
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 
 import com.jme3.renderer.Camera;
 

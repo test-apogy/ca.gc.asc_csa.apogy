@@ -7,8 +7,7 @@
 package org.eclipse.symphony.common.topology.addons.dynamics;
 
 import org.eclipse.emf.common.util.EList;
-
-import ca.gc.space.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->

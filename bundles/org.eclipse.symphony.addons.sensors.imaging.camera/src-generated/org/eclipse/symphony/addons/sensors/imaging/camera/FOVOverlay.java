@@ -5,8 +5,8 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
 
 import javax.vecmath.Color3f;
 
-import ca.gc.space.mrt.sensors.imaging.AzimuthDirection;
-import ca.gc.space.mrt.sensors.imaging.ElevationDirection;
+import org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection;
+import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
 
 
 /**

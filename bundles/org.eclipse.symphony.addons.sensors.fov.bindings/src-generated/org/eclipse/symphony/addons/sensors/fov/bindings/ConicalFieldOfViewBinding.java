@@ -4,8 +4,7 @@
 package org.eclipse.symphony.addons.sensors.fov.bindings;
 
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-
-import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 
 /**
  * <!-- begin-user-doc -->

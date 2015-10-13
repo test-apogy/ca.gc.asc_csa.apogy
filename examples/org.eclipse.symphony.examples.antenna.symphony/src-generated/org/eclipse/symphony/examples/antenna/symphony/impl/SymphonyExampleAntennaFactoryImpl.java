@@ -8,7 +8,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.antenna.symphony.*;
+import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
+import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter;
+import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaFactory;
+import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage;
 
 /**
  * <!-- begin-user-doc -->

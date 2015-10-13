@@ -11,7 +11,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.lander.*;
+import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderFactory;
+import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.Lander;
+import org.eclipse.symphony.examples.lander.LanderLegExtension;
+import org.eclipse.symphony.examples.lander.LanderSimulated;
+import org.eclipse.symphony.examples.lander.LanderStub;
+import org.eclipse.symphony.examples.lander.Position;
 
 /**
  * <!-- begin-user-doc -->

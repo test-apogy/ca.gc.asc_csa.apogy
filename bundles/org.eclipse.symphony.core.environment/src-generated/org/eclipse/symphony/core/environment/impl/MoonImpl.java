@@ -6,9 +6,9 @@ package org.eclipse.symphony.core.environment.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
 import org.eclipse.symphony.core.environment.Moon;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-import ca.gc.space.topology.impl.GroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

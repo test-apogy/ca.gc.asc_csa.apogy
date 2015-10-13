@@ -5,19 +5,18 @@ package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.addons.geometry.paths.provider.PathEditPlugin;
 import org.eclipse.symphony.addons.provider.SymphonyToolsCoreEditPlugin;
+import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
+import org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
+import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
+import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
-
-import ca.gc.space.mrt.geometry.data.provider.DataEditPlugin;
-import ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin;
-import ca.gc.space.mrt.geometry.paths.provider.PathEditPlugin;
-import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
-import ca.gc.space.mrt.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 
 /**
  * This is the central singleton for the SymphonyCameraTools edit plugin.

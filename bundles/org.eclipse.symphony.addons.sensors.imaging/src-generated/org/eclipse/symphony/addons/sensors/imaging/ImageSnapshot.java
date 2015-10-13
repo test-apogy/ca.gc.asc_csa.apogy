@@ -4,10 +4,9 @@
 package org.eclipse.symphony.addons.sensors.imaging;
 
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.topology.GroupNode;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 
 /**
  * <!-- begin-user-doc -->

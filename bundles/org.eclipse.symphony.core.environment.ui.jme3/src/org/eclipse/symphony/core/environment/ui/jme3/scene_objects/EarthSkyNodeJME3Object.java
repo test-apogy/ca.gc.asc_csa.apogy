@@ -18,19 +18,18 @@ import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSkyNode;
 import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
 import org.eclipse.symphony.core.environment.ui.jme3.Activator;
 import org.eclipse.symphony.core.environment.ui.jme3.preferences.SymphonyEnvironmentUIJME3PreferencesConstants;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TransformNode;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.plugins.FileLocator;

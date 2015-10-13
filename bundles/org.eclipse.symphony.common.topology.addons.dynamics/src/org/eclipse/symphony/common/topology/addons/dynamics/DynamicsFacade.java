@@ -10,9 +10,8 @@ import java.util.Set;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicsFacadeImpl;
-
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

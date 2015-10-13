@@ -25,6 +25,8 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
@@ -33,9 +35,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvir
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.WorldWindUtils;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 
 /**
  * <!-- begin-user-doc -->
@@ -324,8 +323,8 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTimeSource(org.eclipse.symphony.common.emf.Timed newTimeSource) {
-		org.eclipse.symphony.common.emf.Timed oldTimeSource = timeSource;
+	public void setTimeSourceGen(Timed newTimeSource) {
+		Timed oldTimeSource = timeSource;
 		timeSource = newTimeSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));

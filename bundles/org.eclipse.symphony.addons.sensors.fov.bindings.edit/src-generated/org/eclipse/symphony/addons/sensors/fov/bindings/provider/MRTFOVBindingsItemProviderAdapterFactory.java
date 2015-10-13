@@ -32,11 +32,10 @@ import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
 import org.eclipse.symphony.addons.sensors.fov.bindings.util.MRTFOVBindingsAdapterFactory;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.bindings.BindingsList;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
-
-import ca.gc.asc_csa.topology.bindings.BindingsList;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

@@ -2,11 +2,10 @@ package org.eclipse.symphony.addons.telecoms.ui.jme3.adapters;
 
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
 import org.eclipse.symphony.addons.telecoms.ui.jme3.scene_objects.AbstractAntennaRadiationPatternJME3Object;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
-
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
-import org.eclipse.symphony.common.topology.Node;
 
 public class AbstractAntennaRadiationPatternJME3Adapter implements JME3Adapter {
 

@@ -24,9 +24,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.topology.dynamics.ConstraintState;
-import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.topology.dynamics.ConstraintState} object.

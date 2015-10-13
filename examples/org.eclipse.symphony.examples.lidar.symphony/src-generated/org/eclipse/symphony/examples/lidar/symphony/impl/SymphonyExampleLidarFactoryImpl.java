@@ -8,7 +8,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.lidar.symphony.*;
+import org.eclipse.symphony.examples.lidar.symphony.LidarData;
+import org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter;
+import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarFactory;
+import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage;
 
 /**
  * <!-- begin-user-doc -->

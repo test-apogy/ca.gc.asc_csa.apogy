@@ -6,8 +6,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -23,10 +23,9 @@ import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPre
 import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
-
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.ui.SceneObject;
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,10 +3,9 @@
  */
 package org.eclipse.symphony.core;
 
+import org.eclipse.symphony.common.topology.bindings.BindingsSet;
 import org.eclipse.symphony.core.invocator.AbstractType;
 import org.eclipse.symphony.core.invocator.Type;
-
-import ca.gc.asc_csa.topology.bindings.BindingsSet;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

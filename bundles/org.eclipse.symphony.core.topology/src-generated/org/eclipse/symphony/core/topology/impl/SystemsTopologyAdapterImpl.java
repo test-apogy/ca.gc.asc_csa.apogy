@@ -8,11 +8,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
 import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
-
-import ca.gc.space.topology.ReferencedGroupNode;
 
 /**
  * <!-- begin-user-doc -->

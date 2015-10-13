@@ -27,16 +27,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.util.SymphonyCameraToolsAdapterFactory;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ToolsList;
 import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
-
-import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsFactory;
-import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
-import ca.gc.asc_csa.symphony.tools.camera.util.SymphonyCameraToolsAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.AbstractTool;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
@@ -33,8 +34,6 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl;
 import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**
  * <!-- begin-user-doc -->

@@ -24,9 +24,19 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.emf.CurrentTimeSource;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.EMFEcoreFactory;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.TimeSource;
+import org.eclipse.symphony.common.emf.TimeSourcesList;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ReferencedContentNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
@@ -50,17 +60,6 @@ import org.eclipse.symphony.core.invocator.OperationCallResultsList;
 import org.eclipse.symphony.core.invocator.ReferenceResultValue;
 import org.eclipse.symphony.core.invocator.ToolsList;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.CurrentTimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ReferencedContentNode;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

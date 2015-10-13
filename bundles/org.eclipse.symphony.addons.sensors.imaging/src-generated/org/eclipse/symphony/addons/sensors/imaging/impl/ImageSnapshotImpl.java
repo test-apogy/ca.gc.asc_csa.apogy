@@ -19,13 +19,12 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-import ca.gc.space.topology.INodeVisitor;
 
 /**
  * <!-- begin-user-doc -->

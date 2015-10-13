@@ -12,7 +12,9 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.InitializationData;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.lander.symphony.*;
+import org.eclipse.symphony.examples.lander.symphony.LanderData;
+import org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter;
+import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage;
 
 /**
  * <!-- begin-user-doc -->

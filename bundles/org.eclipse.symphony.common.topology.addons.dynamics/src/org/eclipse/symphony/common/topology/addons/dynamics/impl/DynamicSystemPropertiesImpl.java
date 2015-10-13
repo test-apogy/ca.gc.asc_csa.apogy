@@ -18,8 +18,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial;
 import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
-
-import ca.gc.space.topology.impl.AggregateGroupNodeImpl;
+import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

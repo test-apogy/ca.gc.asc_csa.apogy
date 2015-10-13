@@ -18,7 +18,30 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.vehicle.*;
+import org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider;
+import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
+import org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider;
+import org.eclipse.symphony.addons.vehicle.Line3d;
+import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
+import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
+import org.eclipse.symphony.addons.vehicle.OrientationCorrectionMode;
+import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
+import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
+import org.eclipse.symphony.addons.vehicle.Plane;
+import org.eclipse.symphony.addons.vehicle.Segment2D;
+import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.TerrainProfile;
+import org.eclipse.symphony.addons.vehicle.Thruster;
+import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
+import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
+import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
+import org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade;
+import org.eclipse.symphony.addons.vehicle.Wheel;
+import org.eclipse.symphony.addons.vehicle.WheelContactMode;
+import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
+import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
+import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
 
 /**
  * <!-- begin-user-doc -->

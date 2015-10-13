@@ -3,12 +3,11 @@
  */
 package org.eclipse.symphony.core;
 
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.invocator.TypeMember;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

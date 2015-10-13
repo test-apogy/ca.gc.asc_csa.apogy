@@ -8,8 +8,6 @@ package org.eclipse.symphony.addons.mobility.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
-import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -27,11 +25,10 @@ import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathFollower;
 import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
+import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-
-import ca.gc.space.mrt.sensors.pose.PosePackage;
-import ca.gc.space.mrt.sensors.pose.PoseSensor;
 
 /**
  * <!-- begin-user-doc -->

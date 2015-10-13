@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
@@ -48,8 +49,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
-
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc -->

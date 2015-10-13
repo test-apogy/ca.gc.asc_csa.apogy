@@ -3,9 +3,8 @@ package org.eclipse.symphony.addons.sensors.fov.ui.adapters;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
 import org.eclipse.symphony.addons.sensors.fov.ui.FovUIFactory;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
-
 import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 
 public class ConicalFieldOfViewPresentationAdapter implements NodePresentationAdapter

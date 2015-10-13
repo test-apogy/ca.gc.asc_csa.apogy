@@ -20,7 +20,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.symphony.common.databinding.converters.BooleanToDoubleConverter;
 import org.eclipse.symphony.common.databinding.converters.NumberToDoubleConverter;
-import org.eclipse.symphony.common.emf.databinding.converters.EnumeratorToDoubleConverter;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
+import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.DisplayFacade;
@@ -34,9 +35,6 @@ import org.eclipse.symphony.core.display.databindings.UpdateValueStrategyWithRan
 import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.data.time.TimeSeriesDataItem;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 
 /**
  * <!-- begin-user-doc -->

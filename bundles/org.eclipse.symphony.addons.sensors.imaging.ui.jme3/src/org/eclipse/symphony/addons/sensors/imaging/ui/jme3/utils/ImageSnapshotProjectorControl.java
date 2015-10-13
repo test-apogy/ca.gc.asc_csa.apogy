@@ -2,16 +2,15 @@ package org.eclipse.symphony.addons.sensors.imaging.ui.jme3.utils;
 
 import java.awt.image.BufferedImage;
 
+import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
+import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.ImageProjectorControl;
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
+import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
-import ca.gc.space.mrt.sensors.fov.ui.jme3.scene_objects.ProjectorData;
-import ca.gc.space.mrt.sensors.fov.ui.jme3.utils.ImageProjectorControl;
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.mrt.sensors.imaging.RectifiedImageSnapshot;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 
 import com.jme3.post.MultiTextureProjectorRenderer.CombineMode;
 import com.jme3.renderer.Camera;

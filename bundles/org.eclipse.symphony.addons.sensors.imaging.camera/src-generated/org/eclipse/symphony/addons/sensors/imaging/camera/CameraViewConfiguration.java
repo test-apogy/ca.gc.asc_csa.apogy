@@ -6,9 +6,8 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
 import java.util.List;
 
 import org.eclipse.symphony.addons.AbstractTool;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**
  * <!-- begin-user-doc -->

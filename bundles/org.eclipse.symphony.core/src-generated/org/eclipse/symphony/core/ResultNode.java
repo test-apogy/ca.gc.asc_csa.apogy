@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core;
 
-import ca.gc.space.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

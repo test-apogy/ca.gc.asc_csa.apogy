@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.environment;
 
-import ca.gc.space.topology.TransformNode;
+import org.eclipse.symphony.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

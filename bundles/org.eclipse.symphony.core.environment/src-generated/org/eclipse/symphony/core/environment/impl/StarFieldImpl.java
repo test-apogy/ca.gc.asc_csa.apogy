@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.impl.NodeImpl;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.EnvironmentUtilities;
 import org.eclipse.symphony.core.environment.EquatorialCoordinates;
@@ -28,8 +29,6 @@ import org.eclipse.symphony.core.environment.Star;
 import org.eclipse.symphony.core.environment.StarField;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

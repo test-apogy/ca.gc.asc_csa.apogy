@@ -4,14 +4,13 @@
 package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
 
 
-import ca.gc.asc_csa.symphony.tools.camera.ElevationFeatureReference;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
 import org.eclipse.symphony.core.invocator.provider.VariableFeatureReferenceItemProvider;
 
 /**

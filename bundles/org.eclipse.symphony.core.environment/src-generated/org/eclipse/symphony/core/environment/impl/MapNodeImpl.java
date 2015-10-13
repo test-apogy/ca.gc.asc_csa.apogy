@@ -17,18 +17,17 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.INodeVisitor;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ReferencedGroupNode;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.Map;
 import org.eclipse.symphony.core.environment.MapNode;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.topology.INodeVisitor;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ReferencedGroupNode;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.impl.TransformNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

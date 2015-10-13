@@ -12,6 +12,10 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.TimeSource;
+import org.eclipse.symphony.common.emf.TimeSourcesList;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
@@ -19,11 +23,6 @@ import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonyTopology;
 import org.eclipse.symphony.core.WorksitesList;
 import org.eclipse.symphony.core.invocator.impl.EnvironmentImpl;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSourcesList;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

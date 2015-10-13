@@ -11,14 +11,13 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.provider.ReferencedGroupNodeItemProvider;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
-
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.ReferencedGroupNodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode} object.

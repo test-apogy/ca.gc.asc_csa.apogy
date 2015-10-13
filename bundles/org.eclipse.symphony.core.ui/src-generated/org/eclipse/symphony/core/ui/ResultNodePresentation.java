@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.ui;
 
-import ca.gc.space.topology.ui.TransformNodePresentation;
+import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
 
 /**
  * <!-- begin-user-doc -->

@@ -7,7 +7,17 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.topology.bindings.*;
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
+import org.eclipse.symphony.common.topology.bindings.BindingsList;
+import org.eclipse.symphony.common.topology.bindings.BindingsSet;
+import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
+import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
+import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
+import org.eclipse.symphony.common.topology.bindings.RotationBinding;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
+import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
 
 /**
  * <!-- begin-user-doc -->

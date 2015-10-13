@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
@@ -24,9 +26,6 @@ import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFactory;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,12 +2,11 @@ package org.eclipse.symphony.core.environment;
 
 import java.net.URL;
 
+import org.eclipse.symphony.common.EclipseUtils;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-
-import org.eclipse.symphony.common.EclipseUtils;
 
 public class Activator implements BundleActivator {
 

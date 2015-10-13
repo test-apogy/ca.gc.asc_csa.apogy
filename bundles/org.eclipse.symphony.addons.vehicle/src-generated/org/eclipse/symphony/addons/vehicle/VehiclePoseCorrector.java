@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.vehicle;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;

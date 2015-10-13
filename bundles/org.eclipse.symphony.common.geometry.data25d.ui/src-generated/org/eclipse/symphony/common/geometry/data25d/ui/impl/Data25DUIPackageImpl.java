@@ -11,8 +11,7 @@ import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
 import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIFactory;
 import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage;
 import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
-
-import ca.gc.space.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

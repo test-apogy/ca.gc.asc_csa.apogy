@@ -11,8 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import ca.gc.space.mrt.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.PosePackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -4,10 +4,9 @@
 package org.eclipse.symphony.core.environment;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.math.Matrix4x4;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->

@@ -23,6 +23,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
 import org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider;
 import org.eclipse.symphony.addons.vehicle.ContactProvider;
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
@@ -52,13 +54,10 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.space.mrt.geometry.paths.PathsPackage;
-import ca.gc.space.mrt.mobility.pathplanners.PathplannersPackage;
 
 /**
  * <!-- begin-user-doc -->

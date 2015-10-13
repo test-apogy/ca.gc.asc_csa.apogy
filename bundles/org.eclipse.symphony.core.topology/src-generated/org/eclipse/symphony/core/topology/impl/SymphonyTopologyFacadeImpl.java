@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
@@ -18,8 +19,6 @@ import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
-
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

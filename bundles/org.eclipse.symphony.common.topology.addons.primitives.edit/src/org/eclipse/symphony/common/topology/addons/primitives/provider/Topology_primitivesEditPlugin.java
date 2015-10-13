@@ -9,8 +9,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-
-import ca.gc.space.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 /**
  * This is the central singleton for the Topology_primitives edit plugin.

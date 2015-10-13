@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.core.topology;
 
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.PositionedResult;
-
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

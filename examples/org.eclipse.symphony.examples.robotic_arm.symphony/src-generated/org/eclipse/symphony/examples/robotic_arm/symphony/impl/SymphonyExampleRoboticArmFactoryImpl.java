@@ -8,7 +8,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.robotic_arm.symphony.*;
+import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
+import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter;
+import org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRoboticArmFactory;
+import org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRoboticArmPackage;
 
 /**
  * <!-- begin-user-doc -->

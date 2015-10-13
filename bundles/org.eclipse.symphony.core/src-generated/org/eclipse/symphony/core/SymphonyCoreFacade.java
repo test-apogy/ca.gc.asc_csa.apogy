@@ -3,13 +3,13 @@
  */
 package org.eclipse.symphony.core;
 
+import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.impl.SymphonyCoreFacadeImpl;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
-
-import java.util.List;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

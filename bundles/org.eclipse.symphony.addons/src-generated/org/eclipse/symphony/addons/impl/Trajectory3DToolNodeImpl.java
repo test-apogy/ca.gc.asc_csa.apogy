@@ -16,11 +16,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
+import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
+import org.eclipse.symphony.addons.geometry.paths.WayPointPathBinding;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-
-import ca.gc.space.mrt.geometry.paths.PathsFactory;
-import ca.gc.space.mrt.geometry.paths.WayPointPath;
-import ca.gc.space.mrt.geometry.paths.WayPointPathBinding;
 
 /**
  * <!-- begin-user-doc -->

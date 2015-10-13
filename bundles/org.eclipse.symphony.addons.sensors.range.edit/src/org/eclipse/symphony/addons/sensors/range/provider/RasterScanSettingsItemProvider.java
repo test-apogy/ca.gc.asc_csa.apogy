@@ -22,10 +22,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.fov.provider.RectangularFrustrumFieldOfViewItemProvider;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-
-import ca.gc.space.mrt.sensors.fov.provider.RectangularFrustrumFieldOfViewItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings} object.

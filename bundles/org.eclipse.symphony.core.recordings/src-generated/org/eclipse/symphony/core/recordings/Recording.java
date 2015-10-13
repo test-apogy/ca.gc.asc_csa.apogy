@@ -5,6 +5,7 @@ package org.eclipse.symphony.core.recordings;
 
 import java.util.Date;
 import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Named;

@@ -4,6 +4,7 @@
 package org.eclipse.symphony.core.invocator.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.TreeRootNode;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
+
 import com.google.common.base.Objects;
 
 

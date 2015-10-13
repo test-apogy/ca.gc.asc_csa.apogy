@@ -13,7 +13,36 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.sensors.imaging.camera.*;
+import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference;
+import org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
+import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
+import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
+import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
+import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter;
+import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.EdgeFilter;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter;
+import org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
+import org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter;
+import org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy;
+import org.eclipse.symphony.addons.sensors.imaging.camera.InvertFilter;
+import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
+import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
+import org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter;
+import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
+import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
 
 /**
  * <!-- begin-user-doc -->

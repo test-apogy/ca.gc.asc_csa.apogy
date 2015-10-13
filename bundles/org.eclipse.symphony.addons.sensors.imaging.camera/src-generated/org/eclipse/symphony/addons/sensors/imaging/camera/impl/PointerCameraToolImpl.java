@@ -21,6 +21,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
@@ -39,6 +44,7 @@ import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFactory;
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.PoseProvider;
@@ -47,13 +53,6 @@ import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
-
-import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
-import ca.gc.space.mrt.sensors.fov.FovPackage;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
-import ca.gc.space.mrt.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 
 /**
  * <!-- begin-user-doc -->
@@ -710,7 +709,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		else
 		{
 			RectangularFrustrumFieldOfView fov = null;					
-			List<AbstractTopologyBinding> bindings = ca.gc.asc_csa.topology.bindings.Activator.getBindedBindings();
+			List<AbstractTopologyBinding> bindings = org.eclipse.symphony.common.topology.bindings.Activator.getBindedBindings();
 			Iterator<AbstractTopologyBinding> it = bindings.iterator();
 			 		
 			/*

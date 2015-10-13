@@ -20,10 +20,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsFactory;
-import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.asc_csa.topology.dynamics.UniversalConstraint;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.topology.dynamics.UniversalConstraint} object.

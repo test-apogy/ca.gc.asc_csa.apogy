@@ -14,8 +14,7 @@ import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimi
 import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
-
-import ca.gc.space.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -19,7 +19,35 @@ import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
 import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.*;
+import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
+import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
+import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
+import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
+import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList;
+import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStationList;
+import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit;
+import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
+import org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider;
+import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
+import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame;
+import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
+import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
+import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
+import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.TLE;
+import org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator;
+import org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
+import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
+import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
+import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
  * <!-- begin-user-doc -->

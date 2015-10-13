@@ -6,7 +6,17 @@ package org.eclipse.symphony.common.topology.bindings.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.bindings.*;
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
+import org.eclipse.symphony.common.topology.bindings.BindingsList;
+import org.eclipse.symphony.common.topology.bindings.BindingsSet;
+import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
+import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
+import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
+import org.eclipse.symphony.common.topology.bindings.RotationBinding;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
+import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
 
 /**
  * <!-- begin-user-doc -->

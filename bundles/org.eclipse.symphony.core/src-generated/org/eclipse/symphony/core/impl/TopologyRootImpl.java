@@ -9,10 +9,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
-
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

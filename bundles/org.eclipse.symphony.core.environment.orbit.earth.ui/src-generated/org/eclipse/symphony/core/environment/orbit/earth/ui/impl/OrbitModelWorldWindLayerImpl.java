@@ -21,14 +21,13 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.WorldWindUtils;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 
 /**
  * <!-- begin-user-doc -->
@@ -273,7 +272,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTimeSource(org.eclipse.symphony.common.emf.Timed newTimeSource) {
+	public void setTimeSourceGen(org.eclipse.symphony.common.emf.Timed newTimeSource) {
 		org.eclipse.symphony.common.emf.Timed oldTimeSource = timeSource;
 		timeSource = newTimeSource;
 		if (eNotificationRequired())

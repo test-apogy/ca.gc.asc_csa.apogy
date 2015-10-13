@@ -7,6 +7,7 @@
 package org.eclipse.symphony.addons.sensors.gps.impl;
 
 import java.util.ArrayList;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -29,12 +30,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
+import org.eclipse.symphony.addons.sensors.gps.Activator;
 import org.eclipse.symphony.addons.sensors.gps.GPS;
 import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
 import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
+import org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
@@ -57,9 +60,6 @@ import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GeodeticCalculator;
 import org.gavaghan.geodesy.GeodeticCurve;
 import org.gavaghan.geodesy.GlobalCoordinates;
-
-import ca.gc.space.mrt.sensors.pose.Activator;
-import ca.gc.space.mrt.sensors.pose.impl.PoseSensorImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

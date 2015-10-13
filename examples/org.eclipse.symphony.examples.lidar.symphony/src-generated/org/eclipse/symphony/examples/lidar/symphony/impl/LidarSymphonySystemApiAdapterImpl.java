@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.examples.lidar.symphony.impl;
 
-import ca.gc.space.mrt.sensors.fov.FOVFacade;
-
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.examples.lidar.Lidar;

@@ -4,9 +4,6 @@
 package org.eclipse.symphony.core.environment.provider;
 
 
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.AggregateGroupNodeItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -14,6 +11,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;

@@ -28,9 +28,8 @@ import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode
 import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
 import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
 import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
+import org.eclipse.symphony.addons.sensors.pose.PosePackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-
-import ca.gc.space.mrt.sensors.pose.PosePackage;
 
 /**
  * <!-- begin-user-doc -->

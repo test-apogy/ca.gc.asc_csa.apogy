@@ -10,6 +10,9 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeometrySimulationProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
@@ -37,10 +40,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
-
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

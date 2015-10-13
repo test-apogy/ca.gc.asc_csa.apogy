@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.examples.antenna.symphony;
 
+import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.core.SymphonyInitializationData;
-
-import ca.gc.space.mrt.sensors.fov.ConicalFieldOfView;
 
 /**
  * <!-- begin-user-doc -->

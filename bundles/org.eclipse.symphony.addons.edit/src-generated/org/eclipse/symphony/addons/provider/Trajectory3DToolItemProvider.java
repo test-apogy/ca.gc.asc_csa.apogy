@@ -17,9 +17,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
+import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-
-import ca.gc.space.mrt.geometry.paths.PathsFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.Trajectory3DTool} object.

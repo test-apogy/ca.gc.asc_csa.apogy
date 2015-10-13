@@ -12,9 +12,8 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
 
 public class PhysicalBodyNodeCenterOfMassVisitor extends PhysicalBodyNodeMassVisitor 
 {

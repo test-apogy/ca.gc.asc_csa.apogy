@@ -27,6 +27,15 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
@@ -34,16 +43,6 @@ import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
 import org.eclipse.symphony.core.topology.util.SymphonyTopologyAdapterFactory;
 import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
-
-import ca.gc.asc_csa.topology.bindings.EnumerationCase;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
-import ca.gc.space.topology.AggregateContentNode;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

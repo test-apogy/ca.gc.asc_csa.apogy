@@ -5,8 +5,7 @@ package org.eclipse.symphony.addons.sensors.imaging;
 
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->

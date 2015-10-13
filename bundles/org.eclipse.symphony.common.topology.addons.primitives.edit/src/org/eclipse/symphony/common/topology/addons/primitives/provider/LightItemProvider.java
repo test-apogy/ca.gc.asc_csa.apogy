@@ -20,8 +20,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.Light;
 import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
-
-import ca.gc.space.topology.provider.LeafItemProvider;
+import org.eclipse.symphony.common.topology.provider.LeafItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Light} object.

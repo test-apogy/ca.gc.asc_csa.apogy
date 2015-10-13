@@ -7,9 +7,8 @@
 package org.eclipse.symphony.addons.sensors.gps;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.common.obsolete.mrt.Server;
-
-import ca.gc.space.mrt.sensors.pose.PoseSensor;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

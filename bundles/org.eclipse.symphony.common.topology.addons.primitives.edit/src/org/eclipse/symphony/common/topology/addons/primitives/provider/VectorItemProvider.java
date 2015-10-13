@@ -18,8 +18,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.Vector;
-
-import ca.gc.space.topology.provider.NodeItemProvider;
+import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Vector} object.

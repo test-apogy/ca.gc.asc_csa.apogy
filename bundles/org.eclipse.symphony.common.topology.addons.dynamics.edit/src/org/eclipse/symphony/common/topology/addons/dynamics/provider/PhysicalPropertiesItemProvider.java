@@ -26,9 +26,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.MathFactory;
-
-import ca.gc.asc_csa.topology.dynamics.PhysicalProperties;
-import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.topology.dynamics.PhysicalProperties} object.

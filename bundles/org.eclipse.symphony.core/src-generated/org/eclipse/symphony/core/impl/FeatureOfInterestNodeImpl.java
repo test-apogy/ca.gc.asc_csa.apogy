@@ -12,11 +12,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestNode;
 import org.eclipse.symphony.core.SymphonyCorePackage;
-
-import ca.gc.space.topology.impl.TransformNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

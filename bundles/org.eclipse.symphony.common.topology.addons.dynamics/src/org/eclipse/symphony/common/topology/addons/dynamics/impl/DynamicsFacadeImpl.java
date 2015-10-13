@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties;
@@ -22,8 +23,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeCent
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeMassVisitor;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeVisitor;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
-
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

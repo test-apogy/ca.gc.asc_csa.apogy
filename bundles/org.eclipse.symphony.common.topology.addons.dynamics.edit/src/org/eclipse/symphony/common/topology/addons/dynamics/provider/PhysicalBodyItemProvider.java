@@ -21,12 +21,11 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.topology.dynamics.PhysicalBody;
-import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsFactory;
-import ca.gc.asc_csa.topology.dynamics.TopologyDynamicsPackage;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.AggregateGroupNodeItemProvider;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.topology.dynamics.PhysicalBody} object.
