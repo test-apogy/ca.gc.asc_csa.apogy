@@ -2,7 +2,7 @@ package org.eclipse.symphony.common.topology.ui.jme3;
 
 import java.util.List;
 
-import ca.gc.space.topology.ui.SceneObject;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
 
 import com.jme3.app.Application;
 import com.jme3.bounding.BoundingVolume;

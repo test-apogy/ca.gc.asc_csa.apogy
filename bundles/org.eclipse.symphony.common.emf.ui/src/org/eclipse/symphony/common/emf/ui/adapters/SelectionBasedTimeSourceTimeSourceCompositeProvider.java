@@ -1,11 +1,10 @@
 package org.eclipse.symphony.common.emf.ui.adapters;
 
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.emf.SelectionBasedTimeSource;
 import org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider;
 import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
 import org.eclipse.symphony.common.emf.ui.composites.SelectionBasedTimeSourceComposite;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.SelectionBasedTimeSource;
 
 public class SelectionBasedTimeSourceTimeSourceCompositeProvider implements TimeSourceCompositeProvider<SelectionBasedTimeSource> 
 {

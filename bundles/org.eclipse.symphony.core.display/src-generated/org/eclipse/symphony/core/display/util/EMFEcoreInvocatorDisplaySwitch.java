@@ -6,18 +6,9 @@ package org.eclipse.symphony.core.display.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
-import org.eclipse.symphony.core.display.AbstractPlotDisplay;
-import org.eclipse.symphony.core.display.BooleanDisplay;
-import org.eclipse.symphony.core.display.DisplayFacade;
-import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
-import org.eclipse.symphony.core.display.HistoryData;
-import org.eclipse.symphony.core.display.HistoryDataHandler;
-import org.eclipse.symphony.core.display.NumberVersusTimeHistoryData;
-import org.eclipse.symphony.core.display.NumberVsTimePlotDisplay;
-import org.eclipse.symphony.core.display.TextDisplay;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.core.display.*;
 import org.eclipse.symphony.core.invocator.AbstractDisplay;
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
 
 /**
  * <!-- begin-user-doc -->
@@ -303,20 +294,19 @@ public class EMFEcoreInvocatorDisplaySwitch<T> extends Switch<T>
   /**
 	 * Returns the result of interpreting the object as an instance of '<em>Described</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Described</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseDescribed(Described object)
-  {
+	public T caseDescribed(Described object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Display</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

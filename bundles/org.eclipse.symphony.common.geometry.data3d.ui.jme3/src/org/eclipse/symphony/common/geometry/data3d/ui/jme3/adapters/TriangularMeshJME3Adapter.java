@@ -2,12 +2,11 @@ package org.eclipse.symphony.common.geometry.data3d.ui.jme3.adapters;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.ui.jme3.scene_objects.TriangularMeshJM3SceneObject;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3SceneObject;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 
 public class TriangularMeshJME3Adapter implements JME3Adapter {
 

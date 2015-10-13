@@ -3,14 +3,12 @@
  */
 package org.eclipse.symphony.core.environment.orbit.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
-
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
 

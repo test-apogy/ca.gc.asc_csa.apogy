@@ -4,6 +4,11 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.ListFeatureNode;
+import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -12,12 +17,6 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.ListFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
 
 public class AbstractVariableFeatureReferenceListener 
 {

@@ -9,11 +9,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.TreeRootNode;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.TypeMember;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -169,11 +168,10 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public NotificationChain basicSetTypeFeatureRootNode(TreeRootNode newTypeFeatureRootNode, NotificationChain msgs)
-  {
+	public NotificationChain basicSetTypeFeatureRootNode(TreeRootNode newTypeFeatureRootNode, NotificationChain msgs) {
 		TreeRootNode oldTypeFeatureRootNode = typeFeatureRootNode;
 		typeFeatureRootNode = newTypeFeatureRootNode;
 		if (eNotificationRequired()) {
@@ -183,13 +181,12 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
 		return msgs;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setTypeFeatureRootNode(TreeRootNode newTypeFeatureRootNode)
-  {
+	public void setTypeFeatureRootNode(TreeRootNode newTypeFeatureRootNode) {
 		if (newTypeFeatureRootNode != typeFeatureRootNode) {
 			NotificationChain msgs = null;
 			if (typeFeatureRootNode != null)
@@ -203,7 +200,7 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, newTypeFeatureRootNode, newTypeFeatureRootNode));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

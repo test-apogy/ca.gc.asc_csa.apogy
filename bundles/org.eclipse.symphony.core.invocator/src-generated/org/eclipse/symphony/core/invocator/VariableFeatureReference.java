@@ -3,8 +3,9 @@
  */
 package org.eclipse.symphony.core.invocator;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.emf.ListRootNode;
+import org.eclipse.symphony.common.emf.Named;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -100,11 +101,11 @@ public interface VariableFeatureReference extends Named
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getFeatureRoot <em>Feature Root</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Root</em>' containment reference.
 	 * @see #getFeatureRoot()
 	 * @generated
 	 */
-  void setFeatureRoot(ListRootNode value);
+	void setFeatureRoot(ListRootNode value);
 
 } // VariableFeatureReference

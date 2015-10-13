@@ -9,10 +9,9 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import ca.gc.space.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.light.PointLight;
@@ -28,7 +27,7 @@ public class PointLightJME3SceneObject extends DefaultJME3SceneObject<ca.gc.spac
 	
 	private PointLight pointLight;
 	
-	public PointLightJME3SceneObject(ca.gc.space.topology.core.primitives.PointLight topologyNode, JME3RenderEngineDelegate jme3RenderEngineDelegate) 
+	public PointLightJME3SceneObject(org.eclipse.symphony.common.topology.addons.primitives.PointLight topologyNode, JME3RenderEngineDelegate jme3RenderEngineDelegate) 
 	{
 		super(topologyNode, jme3RenderEngineDelegate);
 														

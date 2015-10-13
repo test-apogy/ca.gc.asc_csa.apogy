@@ -5,9 +5,7 @@ package org.eclipse.symphony.common.emf.impl;
 import java.util.Collection;
 import java.util.List;
 import java.util.SortedSet;
-
 import javax.measure.unit.Unit;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;

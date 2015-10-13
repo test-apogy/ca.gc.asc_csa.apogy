@@ -73,7 +73,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-  protected AbstractFeatureNode featureNode;
+  protected org.eclipse.symphony.common.emf.AbstractFeatureNode featureNode;
 
   /**
 	 * The default value of the '{@link #getCurrentValue() <em>Current Value</em>}' attribute.
@@ -198,11 +198,11 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public AbstractFeatureNode getFeatureNode()
+  public org.eclipse.symphony.common.emf.AbstractFeatureNode getFeatureNode()
   {
 		if (featureNode != null && featureNode.eIsProxy()) {
 			InternalEObject oldFeatureNode = (InternalEObject)featureNode;
-			featureNode = (AbstractFeatureNode)eResolveProxy(oldFeatureNode);
+			featureNode = (org.eclipse.symphony.common.emf.AbstractFeatureNode)eResolveProxy(oldFeatureNode);
 			if (featureNode != oldFeatureNode) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
@@ -216,12 +216,24 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public AbstractFeatureNode basicGetFeatureNode()
+  public org.eclipse.symphony.common.emf.AbstractFeatureNode basicGetFeatureNode()
   {
 		return featureNode;
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFeatureNode(org.eclipse.symphony.common.emf.AbstractFeatureNode newFeatureNode) {
+		org.eclipse.symphony.common.emf.AbstractFeatureNode oldFeatureNode = featureNode;
+		featureNode = newFeatureNode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+	}
+
+		/**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated_NOT
@@ -246,19 +258,6 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 	  updateSourceObject();
   }
   
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void setFeatureNodeGen(AbstractFeatureNode newFeatureNode)
-  {
-		AbstractFeatureNode oldFeatureNode = featureNode;
-		featureNode = newFeatureNode;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
-	}
-
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -341,7 +340,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 				setSourceObject((EObject)newValue);
 				return;
 			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
-				setFeatureNode((AbstractFeatureNode)newValue);
+				setFeatureNode((org.eclipse.symphony.common.emf.AbstractFeatureNode)newValue);
 				return;
 			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(newValue);
@@ -366,7 +365,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 				setSourceObject((EObject)null);
 				return;
 			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
-				setFeatureNode((AbstractFeatureNode)null);
+				setFeatureNode((org.eclipse.symphony.common.emf.AbstractFeatureNode)null);
 				return;
 			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(CURRENT_VALUE_EDEFAULT);

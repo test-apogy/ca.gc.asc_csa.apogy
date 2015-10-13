@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='TopologyViewer' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='TopologyViewer' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.ui.viewer/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.viewer.edit/src-generated' basePackage='ca.gc.asc_csa.topology.ui'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='TopologyViewer' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='TopologyViewer' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.ui.viewer/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.viewer.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.ui'"
  * @generated
  */
 public interface TopologyViewerPackage extends EPackage {

@@ -7,13 +7,12 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 
 public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 		ItemPropertyDescriptor {

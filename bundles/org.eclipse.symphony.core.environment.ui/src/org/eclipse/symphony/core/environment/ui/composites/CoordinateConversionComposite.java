@@ -37,8 +37,8 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
-import ca.gc.asc_csa.eclipse.core.databinding.converters.DoubleToStringConverter;
-import ca.gc.asc_csa.eclipse.core.databinding.converters.StringToDoubleConverter;
+import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
+import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
 
 public class CoordinateConversionComposite extends Composite
 {

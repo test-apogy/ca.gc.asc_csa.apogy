@@ -95,7 +95,7 @@
             genModel="model/symphony_core_ui.xcore"/>
    </extension>
    <extension
-         point="ca.gc.space.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.core.ui.ResultNodePresentationAdapter">
       </Class>

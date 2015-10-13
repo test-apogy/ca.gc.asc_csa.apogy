@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.impl;
 
 import javax.vecmath.Color3f;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -27,13 +26,12 @@ import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.space.mrt.geometry.paths.PathsPackage;
 
 /**

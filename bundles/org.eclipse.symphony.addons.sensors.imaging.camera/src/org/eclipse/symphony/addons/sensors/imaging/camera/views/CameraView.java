@@ -28,7 +28,7 @@ import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.progress.UIJob;
 
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 
 public class CameraView extends AbstractView implements ISelectionListener 
 {	

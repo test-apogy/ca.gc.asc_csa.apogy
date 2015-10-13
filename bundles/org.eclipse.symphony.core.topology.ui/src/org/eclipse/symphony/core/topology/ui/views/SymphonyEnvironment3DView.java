@@ -15,6 +15,15 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.common.topology.ui.GraphicsContext;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
+import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
@@ -26,16 +35,6 @@ import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
 import org.eclipse.symphony.core.topology.ui.Activator;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.TransformNode;
-import ca.gc.space.topology.ui.GraphicsContext;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.TopologyPresentationSet;
-import ca.gc.space.topology.ui.TopologyUIFacade;
 
 public class SymphonyEnvironment3DView extends AbstractSymphony3DView 
 {	

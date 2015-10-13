@@ -3,8 +3,8 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth.ui;
 
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 
 /**

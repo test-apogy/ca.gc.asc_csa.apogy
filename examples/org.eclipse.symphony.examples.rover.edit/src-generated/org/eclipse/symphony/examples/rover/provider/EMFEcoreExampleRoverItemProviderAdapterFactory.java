@@ -6,7 +6,6 @@ package org.eclipse.symphony.examples.rover.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -27,6 +26,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
@@ -394,6 +394,36 @@ public class EMFEcoreExampleRoverItemProviderAdapterFactory extends EMFEcoreExam
 				newChildDescriptors.add
 					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleRoverFactory.eINSTANCE.createRoverSimulated()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleRoverFactory.eINSTANCE.createBattery()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleRoverFactory.eINSTANCE.createPowerSystem()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleRoverFactory.eINSTANCE.createRoverStub()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 EMFEcoreExampleRoverFactory.eINSTANCE.createRoverSimulated()));
 
 				return null;

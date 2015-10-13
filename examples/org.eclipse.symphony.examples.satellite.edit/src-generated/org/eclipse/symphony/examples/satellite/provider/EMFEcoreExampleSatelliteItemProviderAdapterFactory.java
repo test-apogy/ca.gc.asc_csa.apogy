@@ -6,7 +6,6 @@ package org.eclipse.symphony.examples.satellite.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -27,31 +26,22 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.images.ImagesAlbum;
+import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.images.util.ImagesCoreSwitch;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.SymphonyCorePackage;
-import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.environment.ImageMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.util.SymphonyEnvironmentSwitch;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
-import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.util.EMFEcoreExampleSatelliteAdapterFactory;
-
-import ca.gc.asc_csa.topology.bindings.EnumerationCase;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import ca.gc.space.mrt.sensors.imaging.util.MRTSensorsImagingSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -574,108 +564,6 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 	}
 
 	/**
-	 * A child creation extender for the {@link SymphonyCorePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends SymphonyCoreSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAssemblyLink(AssemblyLink object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseTopologyRoot(TopologyRoot object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return EMFEcoreExampleSatelliteEditPlugin.INSTANCE;
-		}
-	}
-
-	/**
 	 * A child creation extender for the {@link TopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -714,20 +602,6 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGroupNode(GroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
-
-				return null;
 			}
 			/**
 			 * <!-- begin-user-doc -->
@@ -815,11 +689,76 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 			 * @generated
 			 */
 			@Override
-			public Object caseAggregateGroupNode(AggregateGroupNode object) {
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteStub()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandRoll()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createImageOrder()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteUtils()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationTypeApiAdapter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationInitializationData()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteInitializationData()));
 
 				return null;
 			}
@@ -948,19 +887,19 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 	}
 
 	/**
-	 * A child creation extender for the {@link TopologyBindingsPackage}.
+	 * A child creation extender for the {@link ImagesCorePackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class TopologyBindingsChildCreationExtender implements IChildCreationExtender {
+	public static class ImagesCoreChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends ImagesCoreSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -993,11 +932,11 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 			 * @generated
 			 */
 			@Override
-			public Object caseEnumerationCase(EnumerationCase object) {
+			public Object caseImagesAlbum(ImagesAlbum object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+						(ImagesCorePackage.Literals.IMAGES_ALBUM__IMAGES,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				return null;
 			}
@@ -1127,7 +1066,7 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 	}
 
 	/**
-	 * A child creation extender for the {@link MRTSensorsImagingPackage}.
+	 * A child creation extender for the {@link org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1139,7 +1078,7 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends MRTSensorsImagingSwitch<Object> {
+		protected static class CreationSwitch extends org.eclipse.symphony.addons.sensors.imaging.util.MRTSensorsImagingSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1172,15 +1111,14 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 			 * @generated
 			 */
 			@Override
-			public Object caseImageSnapshot(ImageSnapshot object) {
+			public Object caseImageSnapshot(org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
+						(org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
 						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

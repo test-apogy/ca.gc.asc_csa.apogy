@@ -53,7 +53,7 @@ public interface PrimitivesPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "org.eclipse.symphony.common.topology.core";
+	String eNS_PREFIX = "org.eclipse.symphony.common.topology";
 
 	/**
 	 * The singleton instance of the package.

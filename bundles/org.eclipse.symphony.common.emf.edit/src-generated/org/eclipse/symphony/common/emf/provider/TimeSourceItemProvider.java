@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
 
 /**
@@ -129,7 +129,7 @@ public class TimeSourceItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(TimeSource.class)) {
+		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.TimeSource.class)) {
 			case EMFEcorePackage.TIME_SOURCE__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

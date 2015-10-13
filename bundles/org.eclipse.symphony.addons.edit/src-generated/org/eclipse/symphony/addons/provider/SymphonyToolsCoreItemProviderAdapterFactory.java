@@ -6,7 +6,6 @@ package org.eclipse.symphony.addons.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -30,24 +29,15 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.util.SymphonyToolsCoreAdapterFactory;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
-import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.SymphonyCorePackage;
-import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ToolsList;
 import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
-import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
-
-import ca.gc.asc_csa.topology.bindings.EnumerationCase;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsSwitch;
-import ca.gc.space.mrt.geometry.paths.PathsPackage;
-import ca.gc.space.mrt.geometry.paths.util.PathsSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -535,6 +525,55 @@ public class SymphonyToolsCoreItemProviderAdapterFactory extends SymphonyToolsCo
 			 * @generated
 			 */
 			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsCoreFactory.eINSTANCE.createSimpleToolList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsCoreFactory.eINSTANCE.createRuler3DTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsCoreFactory.eINSTANCE.createFeatureOfInterestPickingTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
 			public Object caseGroupNode(GroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
@@ -577,103 +616,6 @@ public class SymphonyToolsCoreItemProviderAdapterFactory extends SymphonyToolsCo
 
 				return null;
 			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return SymphonyToolsCoreEditPlugin.INSTANCE;
-		}
-	}
-
-		/**
-	 * A child creation extender for the {@link PathsPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class PathsChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends PathsSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGroupNode(GroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
-
-				return null;
-			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -794,129 +736,7 @@ public class SymphonyToolsCoreItemProviderAdapterFactory extends SymphonyToolsCo
 	}
 
 		/**
-	 * A child creation extender for the {@link SymphonyCorePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends SymphonyCoreSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAssemblyLink(AssemblyLink object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseTopologyRoot(TopologyRoot object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return SymphonyToolsCoreEditPlugin.INSTANCE;
-		}
-	}
-
-		/**
-	 * A child creation extender for the {@link TopologyBindingsPackage}.
+	 * A child creation extender for the {@link org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -928,7 +748,7 @@ public class SymphonyToolsCoreItemProviderAdapterFactory extends SymphonyToolsCo
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -961,25 +781,24 @@ public class SymphonyToolsCoreItemProviderAdapterFactory extends SymphonyToolsCo
 			 * @generated
 			 */
 			@Override
-			public Object caseEnumerationCase(EnumerationCase object) {
+			public Object caseEnumerationCase(org.eclipse.symphony.common.topology.bindings.EnumerationCase object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

@@ -5,7 +5,6 @@ package org.eclipse.symphony.core.invocator.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -26,13 +25,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
 
@@ -213,7 +211,7 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
-				 EMFEcoreFactory.eINSTANCE.createListRootNode()));
+				 org.eclipse.symphony.common.emf.EMFEcoreFactory.eINSTANCE.createListRootNode()));
 	}
 
 	protected void collectNewChildDescriptors(

@@ -1,11 +1,10 @@
 package org.eclipse.symphony.common.emf.ui.adapters;
 
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.emf.CurrentTimeSource;
 import org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider;
 import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
 import org.eclipse.symphony.common.emf.ui.composites.CurrentTimeSourceComposite;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.CurrentTimeSource;
 
 public class CurrentTimeSourceTimeSourceCompositeProvider implements TimeSourceCompositeProvider<CurrentTimeSource> 
 {

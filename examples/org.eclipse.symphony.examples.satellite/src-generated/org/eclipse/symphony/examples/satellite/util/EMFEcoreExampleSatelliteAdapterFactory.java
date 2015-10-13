@@ -3,13 +3,12 @@
  */
 package org.eclipse.symphony.examples.satellite.util;
 
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.Zoomable;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
@@ -401,13 +400,13 @@ public class EMFEcoreExampleSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.sensors.imaging.AbstractCamera <em>Abstract Camera</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera <em>Abstract Camera</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.sensors.imaging.AbstractCamera
+	 * @see org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
 	 * @generated
 	 */
 	public Adapter createAbstractCameraAdapter() {
@@ -415,13 +414,13 @@ public class EMFEcoreExampleSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.space.mrt.sensors.imaging.Zoomable <em>Zoomable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable <em>Zoomable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.space.mrt.sensors.imaging.Zoomable
+	 * @see org.eclipse.symphony.addons.sensors.imaging.Zoomable
 	 * @generated
 	 */
 	public Adapter createZoomableAdapter() {

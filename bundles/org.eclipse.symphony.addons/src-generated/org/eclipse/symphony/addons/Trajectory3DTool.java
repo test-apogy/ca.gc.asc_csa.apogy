@@ -3,11 +3,10 @@
  */
 package org.eclipse.symphony.addons;
 
+import ca.gc.space.mrt.geometry.paths.WayPointPath;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.invocator.Variable;
-
-import ca.gc.space.mrt.geometry.paths.WayPointPath;
 
 /**
  * <!-- begin-user-doc -->

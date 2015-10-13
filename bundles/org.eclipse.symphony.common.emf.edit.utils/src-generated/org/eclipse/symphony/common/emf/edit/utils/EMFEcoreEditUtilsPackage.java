@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcoreEditUtils' childCreationExtenders='true' modelName='EMFEcoreEditUtils' modelDirectory='/org.eclipse.symphony.common.emf.edit.utils/src-generated' basePackage='ca.gc.asc_csa.eclipse.emf.ecore.edit'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcoreEditUtils' childCreationExtenders='true' modelName='EMFEcoreEditUtils' modelDirectory='/org.eclipse.symphony.common.emf.edit.utils/src-generated' basePackage='org.eclipse.symphony.common.emf.edit'"
  * @generated
  */
 public interface EMFEcoreEditUtilsPackage extends EPackage

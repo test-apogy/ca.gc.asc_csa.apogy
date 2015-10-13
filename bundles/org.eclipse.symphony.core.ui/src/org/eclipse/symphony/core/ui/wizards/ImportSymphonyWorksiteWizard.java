@@ -11,6 +11,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.AbstractWorksite;
@@ -24,8 +25,6 @@ import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 
 public class ImportSymphonyWorksiteWizard extends Wizard implements INewWizard {
 	private SymphonyWorksiteSelectionWizardPage page;

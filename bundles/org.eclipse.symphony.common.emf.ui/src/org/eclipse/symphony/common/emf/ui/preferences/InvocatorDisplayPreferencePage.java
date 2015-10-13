@@ -14,11 +14,10 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.common.emf.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 
 public class InvocatorDisplayPreferencePage extends PreferencePage implements IWorkbenchPreferencePage
 {	

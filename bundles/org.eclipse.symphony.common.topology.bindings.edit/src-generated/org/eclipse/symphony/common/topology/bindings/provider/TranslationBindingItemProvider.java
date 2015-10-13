@@ -12,7 +12,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.TranslationBinding;
 
 /**
@@ -147,7 +147,7 @@ public class TranslationBindingItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(TranslationBinding.class)) {
+		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.TranslationBinding.class)) {
 			case TopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

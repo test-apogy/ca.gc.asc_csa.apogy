@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.obsolete.mrt.CommonFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Common' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Common' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.obsolete.mrt/src-generated' editDirectory='/org.eclipse.symphony.common.obsolete.mrt.edit/src-generated' basePackage='ca.gc.space.mrt'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Common' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Common' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.obsolete.mrt/src-generated' editDirectory='/org.eclipse.symphony.common.obsolete.mrt.edit/src-generated' basePackage='org.eclipse.symphony.common.obsolete'"
  * @generated
  */
 public interface CommonPackage extends EPackage {
@@ -32,7 +32,7 @@ public interface CommonPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "common";
+	String eNAME = "mrt";
 
 	/**
 	 * The package namespace URI.
@@ -48,7 +48,7 @@ public interface CommonPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "common";
+	String eNS_PREFIX = "mrt";
 
 	/**
 	 * The singleton instance of the package.

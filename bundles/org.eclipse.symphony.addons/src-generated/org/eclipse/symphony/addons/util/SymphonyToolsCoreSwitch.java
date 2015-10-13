@@ -6,26 +6,13 @@ package org.eclipse.symphony.addons.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
-import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.SunVector3DTool;
-import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
-import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.Trajectory3DToolNode;
+import org.eclipse.symphony.addons.*;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->
@@ -390,36 +377,34 @@ public class SymphonyToolsCoreSwitch<T> extends Switch<T>
 		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Named</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Named</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseNamed(Named object)
-  {
+	public T caseNamed(Named object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Described</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Described</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseDescribed(Described object)
-  {
+	public T caseDescribed(Described object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Tools List Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;

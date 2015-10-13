@@ -6,7 +6,6 @@ package org.eclipse.symphony.common.topology.bindings.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -20,10 +19,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
+import org.eclipse.symphony.common.emf.EMFEcoreFactory;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import ca.gc.asc_csa.topology.bindings.FeatureRootsList;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList} object.
@@ -144,7 +142,7 @@ public class FeatureRootsListItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FeatureRootsList.class)) {
+		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.FeatureRootsList.class)) {
 			case TopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

@@ -1,12 +1,11 @@
 package org.eclipse.symphony.common.topology.ui.jme3.adapters;
 
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.GroupNodeJM3SceneObject;
-
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
 
 public class GroupNodeJME3Adapter implements JME3Adapter {
 

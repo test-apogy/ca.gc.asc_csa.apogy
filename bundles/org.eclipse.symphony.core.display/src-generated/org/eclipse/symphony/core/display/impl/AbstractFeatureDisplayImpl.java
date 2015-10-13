@@ -5,7 +5,6 @@ package org.eclipse.symphony.core.display.impl;
 
 import java.awt.Point;
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -15,13 +14,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
 import org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 
 /**
  * <!-- begin-user-doc -->
@@ -138,18 +136,17 @@ public abstract class AbstractFeatureDisplayImpl extends AbstractDisplayImpl imp
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setAbstractFeatureNode(AbstractFeatureNode newAbstractFeatureNode)
-  {
+	public void setAbstractFeatureNode(AbstractFeatureNode newAbstractFeatureNode) {
 		AbstractFeatureNode oldAbstractFeatureNode = abstractFeatureNode;
 		abstractFeatureNode = newAbstractFeatureNode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorDisplayPackage.ABSTRACT_FEATURE_DISPLAY__ABSTRACT_FEATURE_NODE, oldAbstractFeatureNode, abstractFeatureNode));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -230,6 +227,17 @@ public abstract class AbstractFeatureDisplayImpl extends AbstractDisplayImpl imp
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void updateRange(Control control, Ranges range) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+		/**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated_NOT
@@ -246,18 +254,6 @@ public abstract class AbstractFeatureDisplayImpl extends AbstractDisplayImpl imp
 		  return null;
 	  }
   }
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void updateRange(Control control, Ranges range)
-  {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
 
   /**
 	 * <!-- begin-user-doc -->

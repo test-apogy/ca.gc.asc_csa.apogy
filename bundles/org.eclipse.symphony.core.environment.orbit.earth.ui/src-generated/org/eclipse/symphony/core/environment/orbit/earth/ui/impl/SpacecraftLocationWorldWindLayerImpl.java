@@ -12,11 +12,9 @@ import gov.nasa.worldwind.render.BasicShapeAttributes;
 import gov.nasa.worldwind.render.GlobeAnnotation;
 import gov.nasa.worldwind.render.Material;
 import gov.nasa.worldwind.render.SurfaceCircle;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.text.DecimalFormat;
-
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Adapter;
@@ -25,6 +23,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
@@ -32,9 +31,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
-
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 
 /**
@@ -97,7 +94,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	 * @generated
 	 * @ordered
 	 */
-	protected Timed timeSource;
+	protected org.eclipse.symphony.common.emf.Timed timeSource;
 
 	/**
 	 * The default value of the '{@link #isShowGroundProjection() <em>Show Ground Projection</em>}' attribute.
@@ -234,10 +231,10 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Timed getTimeSource() {
+	public org.eclipse.symphony.common.emf.Timed getTimeSource() {
 		if (timeSource != null && timeSource.eIsProxy()) {
 			InternalEObject oldTimeSource = (InternalEObject)timeSource;
-			timeSource = (Timed)eResolveProxy(oldTimeSource);
+			timeSource = (org.eclipse.symphony.common.emf.Timed)eResolveProxy(oldTimeSource);
 			if (timeSource != oldTimeSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
@@ -251,8 +248,20 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Timed basicGetTimeSource() {
+	public org.eclipse.symphony.common.emf.Timed basicGetTimeSource() {
 		return timeSource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTimeSource(org.eclipse.symphony.common.emf.Timed newTimeSource) {
+		org.eclipse.symphony.common.emf.Timed oldTimeSource = timeSource;
+		timeSource = newTimeSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
 	}
 
 	/**
@@ -280,18 +289,6 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 		}
 	}
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTimeSourceGen(Timed newTimeSource) {
-		Timed oldTimeSource = timeSource;
-		timeSource = newTimeSource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
-	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -397,7 +394,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 				setOrbitModel((OrbitModel)newValue);
 				return;
 			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
-				setTimeSource((Timed)newValue);
+				setTimeSource((org.eclipse.symphony.common.emf.Timed)newValue);
 				return;
 			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
 				setShowGroundProjection((Boolean)newValue);
@@ -424,7 +421,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 				setOrbitModel((OrbitModel)null);
 				return;
 			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__TIME_SOURCE:
-				setTimeSource((Timed)null);
+				setTimeSource((org.eclipse.symphony.common.emf.Timed)null);
 				return;
 			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__SHOW_GROUND_PROJECTION:
 				setShowGroundProjection(SHOW_GROUND_PROJECTION_EDEFAULT);
@@ -467,7 +464,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME: return EMFEcorePackage.NAMED__NAME;
+				case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME: return org.eclipse.symphony.common.emf.EMFEcorePackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -483,7 +480,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME;
+				case org.eclipse.symphony.common.emf.EMFEcorePackage.NAMED__NAME: return SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME;
 				default: return -1;
 			}
 		}

@@ -3,8 +3,9 @@
  */
 package org.eclipse.symphony.core.invocator;
 
+import org.eclipse.symphony.common.emf.Named;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+
 
 /**
  * <!-- begin-user-doc -->

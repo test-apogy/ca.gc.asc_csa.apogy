@@ -13,10 +13,9 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.common.geometry.data3d.ui.Activator;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
-
-import ca.gc.space.topology.ui.MeshPresentationMode;
 
 public class MRTData3DUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	

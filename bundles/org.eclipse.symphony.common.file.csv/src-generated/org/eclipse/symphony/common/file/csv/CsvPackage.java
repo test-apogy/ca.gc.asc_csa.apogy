@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.file.csv.CsvFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Csv' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Csv' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.file.csv/src-generated' editDirectory='/org.eclipse.symphony.common.file.csv.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Csv' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Csv' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.file.csv/src-generated' editDirectory='/org.eclipse.symphony.common.file.csv.edit/src-generated' basePackage='org.eclipse.symphony.common.file'"
  * @generated
  */
 public interface CsvPackage extends EPackage {

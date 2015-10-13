@@ -48,6 +48,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -56,8 +57,6 @@ import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 
 /**
  * This class allows to define the implementation {@link EClass} of a {@link VariableImplementation}.

@@ -4,14 +4,12 @@
 package org.eclipse.symphony.core.environment.ui;
 
 import javax.vecmath.Color3f;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
 import org.eclipse.symphony.core.environment.RectangularRegion;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->

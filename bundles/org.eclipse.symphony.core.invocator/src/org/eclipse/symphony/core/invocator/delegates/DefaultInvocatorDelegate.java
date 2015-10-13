@@ -21,8 +21,8 @@ import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Disposable;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 
 public class DefaultInvocatorDelegate implements InvocatorDelegate {
 

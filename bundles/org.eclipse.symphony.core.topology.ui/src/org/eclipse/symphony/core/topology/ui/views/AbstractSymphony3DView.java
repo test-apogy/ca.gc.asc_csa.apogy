@@ -1,10 +1,9 @@
 package org.eclipse.symphony.core.topology.ui.views;
 
 import org.eclipse.swt.widgets.Composite;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.viewer.TopologyViewer;
-import ca.gc.asc_csa.topology.ui.viewer.views.AbstractTopology3DView;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewer;
+import org.eclipse.symphony.common.topology.ui.viewer.views.AbstractTopology3DView;
 
 public abstract class AbstractSymphony3DView extends AbstractTopology3DView
 {

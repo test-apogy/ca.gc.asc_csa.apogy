@@ -6,7 +6,6 @@ package org.eclipse.symphony.common.topology.bindings.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -27,14 +26,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.bindings.util.TopologyBindingsAdapterFactory;
-import ca.gc.space.topology.AggregateContentNode;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsAdapterFactory;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -535,7 +533,6 @@ public class TopologyBindingsItemProviderAdapterFactory extends TopologyBindings
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

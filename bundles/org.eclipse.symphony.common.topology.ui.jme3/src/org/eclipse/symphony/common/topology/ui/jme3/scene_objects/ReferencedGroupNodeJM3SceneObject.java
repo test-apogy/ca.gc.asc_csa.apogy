@@ -2,9 +2,8 @@ package org.eclipse.symphony.common.topology.ui.jme3.scene_objects;
 
 import javax.vecmath.Point3d;
 
+import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-
-import ca.gc.space.topology.ReferencedGroupNode;
 
 public class ReferencedGroupNodeJM3SceneObject extends DefaultJME3SceneObject<ReferencedGroupNode> {
 

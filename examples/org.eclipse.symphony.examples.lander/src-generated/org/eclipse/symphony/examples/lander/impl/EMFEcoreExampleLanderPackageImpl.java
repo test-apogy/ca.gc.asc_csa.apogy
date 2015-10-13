@@ -3,10 +3,7 @@
  */
 package org.eclipse.symphony.examples.lander.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import javax.vecmath.Matrix3d;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -17,6 +14,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderFactory;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
 import org.eclipse.symphony.examples.lander.Lander;

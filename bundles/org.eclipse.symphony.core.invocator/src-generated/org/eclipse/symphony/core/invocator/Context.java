@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core.invocator;
 
 import java.util.Date;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->

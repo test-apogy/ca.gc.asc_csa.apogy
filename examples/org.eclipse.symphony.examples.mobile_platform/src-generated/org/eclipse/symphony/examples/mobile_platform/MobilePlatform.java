@@ -3,7 +3,8 @@
  */
 package org.eclipse.symphony.examples.mobile_platform;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Disposable;
+import org.eclipse.symphony.common.emf.Disposable;
+
 
 /**
  * <!-- begin-user-doc -->

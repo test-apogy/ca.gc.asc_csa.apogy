@@ -4,9 +4,9 @@ import org.eclipse.symphony.addons.Trajectory3DToolNode;
 import org.eclipse.symphony.addons.ui.jme3.scene_objects.Trajectory3DToolNodeJME3Object;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
 
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3SceneObject;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
+import org.eclipse.symphony.common.topology.Node;
 
 public class Trajectory3DToolNodeJME3Adapter implements JME3Adapter {
 

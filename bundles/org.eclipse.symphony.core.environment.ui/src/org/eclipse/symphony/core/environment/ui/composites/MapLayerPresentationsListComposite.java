@@ -36,7 +36,7 @@ import org.eclipse.symphony.core.environment.MapLayerPresentation;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 public class MapLayerPresentationsListComposite extends Composite {
 	private DataBindingContext m_bindingContext;

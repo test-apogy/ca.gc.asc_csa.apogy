@@ -11,8 +11,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.CurrentTimeSource;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.CurrentTimeSource} object.
@@ -129,7 +129,7 @@ public class CurrentTimeSourceItemProvider extends TimeSourceItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(CurrentTimeSource.class)) {
+		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.CurrentTimeSource.class)) {
 			case EMFEcorePackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 			case EMFEcorePackage.CURRENT_TIME_SOURCE__PAUSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

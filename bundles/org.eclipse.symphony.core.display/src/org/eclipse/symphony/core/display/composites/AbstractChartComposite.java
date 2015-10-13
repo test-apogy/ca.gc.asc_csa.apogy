@@ -15,7 +15,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.Plot;
 import org.jfree.experimental.chart.swt.ChartComposite;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 
 public abstract class AbstractChartComposite<T>  extends ChartComposite 
 {

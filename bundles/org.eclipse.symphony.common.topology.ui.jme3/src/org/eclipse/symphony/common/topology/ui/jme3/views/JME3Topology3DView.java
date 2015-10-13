@@ -3,19 +3,17 @@ package org.eclipse.symphony.common.topology.ui.jme3.views;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.common.topology.URLNode;
+import org.eclipse.symphony.common.topology.ui.GraphicsContext;
+import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
-
-import ca.gc.asc_csa.topology.ui.viewer.TopologyViewer;
-import ca.gc.asc_csa.topology.ui.viewer.actions.NewAbstractTopology3DViewAction;
-import ca.gc.asc_csa.topology.ui.viewer.views.AbstractTopology3DView;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.TransformNode;
-import ca.gc.space.topology.URLNode;
-import ca.gc.space.topology.ui.GraphicsContext;
-import ca.gc.space.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewer;
+import org.eclipse.symphony.common.topology.ui.viewer.actions.NewAbstractTopology3DViewAction;
+import org.eclipse.symphony.common.topology.ui.viewer.views.AbstractTopology3DView;
 
 public class JME3Topology3DView extends AbstractTopology3DView 
 {		

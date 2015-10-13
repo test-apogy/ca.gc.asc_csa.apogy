@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ca.gc.space.mrt.sensors.range;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.range;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -20,7 +20,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
  org.eclipse.symphony.addons.sensors;visibility:=reexport,
- org.eclipse.symphony.common.topology.core;visibility:=reexport,
+ org.eclipse.symphony.common.topology;visibility:=reexport,
  javax.media;bundle-version="1.5.2",
  org.eclipse.symphony.common.log;bundle-version="0.3.0"
 Bundle-Activator: org.eclipse.symphony.addons.sensors.range.Activator

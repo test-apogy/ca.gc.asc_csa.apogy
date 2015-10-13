@@ -8,8 +8,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 
 public class EObjectCSVAdapter implements CSVAdapter 
 {

@@ -495,7 +495,7 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.recorders/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.recorders.edit/src-generated",
-			 "basePackage", "ca.gc.space.mrt.common"
+			 "basePackage", "org.eclipse.symphony.common"
 		   });	
 		addAnnotation
 		  (recordingsEClass, 

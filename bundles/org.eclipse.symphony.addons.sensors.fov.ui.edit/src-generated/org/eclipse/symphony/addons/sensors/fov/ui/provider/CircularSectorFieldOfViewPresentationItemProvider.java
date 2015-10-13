@@ -6,13 +6,11 @@ package org.eclipse.symphony.addons.sensors.fov.ui.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.swt.graphics.RGB;
-
-import ca.gc.space.mrt.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
+import org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation} object.

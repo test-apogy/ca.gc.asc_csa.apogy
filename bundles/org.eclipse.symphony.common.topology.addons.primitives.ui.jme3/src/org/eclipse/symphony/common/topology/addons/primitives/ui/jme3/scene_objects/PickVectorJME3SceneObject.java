@@ -13,18 +13,17 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.addons.primitives.PickVector;
+import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Vector;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorSceneObject;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.Activator;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3Application;
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.core.primitives.PickVector;
-import ca.gc.space.topology.core.primitives.PrimitivesPackage;
-import ca.gc.space.topology.core.primitives.Vector;
-import ca.gc.space.topology.core.primitives.ui.VectorSceneObject;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.collision.CollisionResult;

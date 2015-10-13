@@ -463,7 +463,7 @@ public class ProcessorsPackageImpl extends EPackageImpl implements ProcessorsPac
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.processors/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.processors.edit/src-generated",
-			 "basePackage", "ca.gc.space.mrt.common"
+			 "basePackage", "org.eclipse.symphony.common"
 		   });	
 		addAnnotation
 		  (monitorableEClass, 

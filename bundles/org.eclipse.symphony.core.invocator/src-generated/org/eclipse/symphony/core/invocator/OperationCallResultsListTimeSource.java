@@ -3,7 +3,8 @@
  */
 package org.eclipse.symphony.core.invocator;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.CollectionTimedTimeSource;
+import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
+
 
 /**
  * <!-- begin-user-doc -->

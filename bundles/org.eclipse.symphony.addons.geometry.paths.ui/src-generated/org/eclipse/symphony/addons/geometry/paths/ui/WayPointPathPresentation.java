@@ -3,7 +3,8 @@
  */
 package org.eclipse.symphony.addons.geometry.paths.ui;
 
-import ca.gc.space.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+
 
 /**
  * <!-- begin-user-doc -->

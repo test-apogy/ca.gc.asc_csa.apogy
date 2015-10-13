@@ -5,8 +5,7 @@
 package org.eclipse.symphony.common.geometry.data3d.ui.validation;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-
-import ca.gc.space.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 
 /**
  * A sample validator interface for {@link org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation}.

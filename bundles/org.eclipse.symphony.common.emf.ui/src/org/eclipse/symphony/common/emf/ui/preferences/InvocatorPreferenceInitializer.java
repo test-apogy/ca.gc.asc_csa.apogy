@@ -4,9 +4,8 @@ import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.common.emf.ui.Activator;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 
 
 public class InvocatorPreferenceInitializer extends AbstractPreferenceInitializer {

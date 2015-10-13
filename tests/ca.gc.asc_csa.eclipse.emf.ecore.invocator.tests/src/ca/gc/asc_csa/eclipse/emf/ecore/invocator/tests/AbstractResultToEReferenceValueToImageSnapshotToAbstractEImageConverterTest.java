@@ -2,6 +2,8 @@ package ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests;
 
 import java.io.IOException;
 
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
@@ -11,9 +13,6 @@ import org.eclipse.symphony.core.invocator.ReferenceResultValue;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingFactory;
 
 public class AbstractResultToEReferenceValueToImageSnapshotToAbstractEImageConverterTest {
 	

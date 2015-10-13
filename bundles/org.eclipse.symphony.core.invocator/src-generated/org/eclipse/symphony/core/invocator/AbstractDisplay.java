@@ -3,7 +3,8 @@
  */
 package org.eclipse.symphony.core.invocator;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
+import org.eclipse.symphony.common.emf.Described;
+
 
 /**
  * <!-- begin-user-doc -->

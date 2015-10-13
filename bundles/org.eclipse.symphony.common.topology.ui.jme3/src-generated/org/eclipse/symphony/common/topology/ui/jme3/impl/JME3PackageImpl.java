@@ -10,12 +10,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Factory;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Package;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory;
-
-import ca.gc.space.topology.ui.SceneObject;
 
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;

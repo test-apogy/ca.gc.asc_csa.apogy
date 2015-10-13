@@ -20,8 +20,8 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
 
-import ca.gc.asc_csa.eclipse.core.databinding.converters.DoubleToStringConverter;
-import ca.gc.asc_csa.eclipse.core.databinding.converters.StringToDoubleConverter;
+import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
+import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
 
 public class GeographicCoordinatesComposite extends Composite 
 {

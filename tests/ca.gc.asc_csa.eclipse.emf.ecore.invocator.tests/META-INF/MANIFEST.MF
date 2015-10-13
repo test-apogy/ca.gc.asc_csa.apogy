@@ -16,5 +16,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.junit;visibility:=reexport,
  org.eclipse.symphony.common.converters;bundle-version="0.3.0",
  org.eclipse.symphony.common.images;bundle-version="0.3.0",
- ca.gc.space.mrt.sensors.imaging;bundle-version="0.5.0"
+ org.eclipse.symphony.addons.sensors.imaging;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy

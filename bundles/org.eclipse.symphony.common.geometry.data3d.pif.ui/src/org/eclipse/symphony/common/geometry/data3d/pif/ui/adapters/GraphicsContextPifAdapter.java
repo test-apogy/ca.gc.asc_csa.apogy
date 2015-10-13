@@ -12,14 +12,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.pif.PifReader;
-
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.ui.GraphicsContext;
-import ca.gc.space.topology.ui.GraphicsContextAdapter;
-import ca.gc.space.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.ui.GraphicsContext;
+import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
+import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 
 /**
  * 

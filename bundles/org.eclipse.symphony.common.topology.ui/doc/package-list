@@ -1,7 +1,0 @@
-org.eclipse.symphony.common.topology.ui
-org.eclipse.symphony.common.topology.ui.adapters
-org.eclipse.symphony.common.topology.ui.editor
-org.eclipse.symphony.common.topology.ui.impl
-org.eclipse.symphony.common.topology.ui.util
-org.eclipse.symphony.common.topology.ui.viewer
-org.eclipse.symphony.common.topology.ui.wizards

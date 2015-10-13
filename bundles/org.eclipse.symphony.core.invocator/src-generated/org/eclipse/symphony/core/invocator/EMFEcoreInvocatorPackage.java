@@ -9,8 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 /**
  * <!-- begin-user-doc -->

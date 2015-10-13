@@ -14,13 +14,12 @@ import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
 import org.eclipse.symphony.common.geometry.data3d.las.LASReader;
 import org.eclipse.symphony.common.geometry.data3d.las.LasFactory;
-
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.ui.GraphicsContext;
-import ca.gc.space.topology.ui.GraphicsContextAdapter;
-import ca.gc.space.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.ui.GraphicsContext;
+import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
+import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 
 public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 	public static final String SUPPORTED_EXTENSION = "las";

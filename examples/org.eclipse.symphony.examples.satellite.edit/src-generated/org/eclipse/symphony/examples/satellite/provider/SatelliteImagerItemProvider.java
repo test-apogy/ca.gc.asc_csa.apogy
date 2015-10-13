@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.provider.AbstractCameraItemProvider;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteImager;
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import ca.gc.space.mrt.sensors.imaging.provider.AbstractCameraItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.SatelliteImager} object.
@@ -169,10 +169,8 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SatelliteImager)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_SatelliteImager_type") :
-			getString("_UI_SatelliteImager_type") + " " + label;
+		SatelliteImager satelliteImager = (SatelliteImager)object;
+		return getString("_UI_SatelliteImager_type") + " " + satelliteImager.getCurrentZoom();
 	}
 	
 

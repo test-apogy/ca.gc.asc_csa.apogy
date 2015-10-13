@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToMoonHorizontalCoordinatesStringConverter;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 public class EarthSkyMoonComposite extends Composite 
 {

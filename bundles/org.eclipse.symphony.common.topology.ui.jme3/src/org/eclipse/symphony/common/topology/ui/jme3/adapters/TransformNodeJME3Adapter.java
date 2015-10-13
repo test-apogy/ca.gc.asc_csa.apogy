@@ -1,12 +1,11 @@
 package org.eclipse.symphony.common.topology.ui.jme3.adapters;
 
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.TransformNodeJME3SceneObject;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TransformNode;
 
 public class TransformNodeJME3Adapter implements JME3Adapter {
 

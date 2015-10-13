@@ -3,11 +3,9 @@
  */
 package org.eclipse.symphony.core.recordings;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
-
 import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.core.invocator.AbstractPlayer;
 
 /**
@@ -94,7 +92,7 @@ public interface Player extends AbstractPlayer
 	 */
 	void setTimeSource(TimeSource value);
 
-		/**
+	/**
 	 * Returns the value of the '<em><b>Recordings</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.core.recordings.Recording}.
 	 * <!-- begin-user-doc -->

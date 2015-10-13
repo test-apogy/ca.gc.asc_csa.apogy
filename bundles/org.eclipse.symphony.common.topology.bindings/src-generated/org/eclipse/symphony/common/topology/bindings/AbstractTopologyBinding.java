@@ -4,12 +4,10 @@
 package org.eclipse.symphony.common.topology.bindings;
 
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.common.topology.Node;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -181,14 +179,14 @@ public interface AbstractTopologyBinding extends EObject
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNode <em>Feature Node</em>}' reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature Node</em>' reference.
 	 * @see #getFeatureNode()
 	 * @generated
 	 */
-  void setFeatureNode(AbstractFeatureNode value);
+	void setFeatureNode(AbstractFeatureNode value);
 
-  /**
+		/**
 	 * Returns the value of the '<em><b>Feature Node Adapter</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <p>

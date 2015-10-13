@@ -3,7 +3,6 @@
  */
 package org.eclipse.symphony.examples.lander;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -11,6 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 /**
  * <!-- begin-user-doc -->

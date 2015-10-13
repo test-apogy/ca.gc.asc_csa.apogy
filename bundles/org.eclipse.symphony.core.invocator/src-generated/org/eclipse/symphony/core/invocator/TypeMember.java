@@ -3,8 +3,9 @@
  */
 package org.eclipse.symphony.core.invocator;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
+import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.emf.TreeRootNode;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -70,11 +71,11 @@ public interface TypeMember extends Named, AbstractType
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type Feature Root Node</em>' containment reference.
 	 * @see #getTypeFeatureRootNode()
 	 * @generated
 	 */
-  void setTypeFeatureRootNode(TreeRootNode value);
+	void setTypeFeatureRootNode(TreeRootNode value);
 
 } // TypeMember

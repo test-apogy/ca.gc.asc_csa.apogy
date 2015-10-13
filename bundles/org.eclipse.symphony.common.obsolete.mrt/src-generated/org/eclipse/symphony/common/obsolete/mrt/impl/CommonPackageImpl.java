@@ -294,7 +294,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.obsolete.mrt/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.obsolete.mrt.edit/src-generated",
-			 "basePackage", "ca.gc.space.mrt"
+			 "basePackage", "org.eclipse.symphony.common.obsolete"
 		   });
 	}
 

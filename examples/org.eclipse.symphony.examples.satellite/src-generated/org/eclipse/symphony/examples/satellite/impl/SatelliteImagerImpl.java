@@ -6,7 +6,6 @@ package org.eclipse.symphony.examples.satellite.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -16,14 +15,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
+import org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteImager;
-
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import ca.gc.space.mrt.sensors.imaging.Zoomable;
-import ca.gc.space.mrt.sensors.imaging.impl.AbstractCameraImpl;
 
 /**
  * <!-- begin-user-doc -->

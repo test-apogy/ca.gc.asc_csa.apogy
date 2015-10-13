@@ -1,11 +1,10 @@
 package org.eclipse.symphony.common.emf.ui.adapters;
 
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.emf.BrowseableTimeSource;
 import org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider;
 import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
 import org.eclipse.symphony.common.emf.ui.composites.BrowseableTimeSourceComposite;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.BrowseableTimeSource;
 
 public class BrowseableTimeSourceTimeSourceCompositeProvider implements	TimeSourceCompositeProvider<BrowseableTimeSource> 
 {

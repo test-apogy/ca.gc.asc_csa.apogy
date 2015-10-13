@@ -6,7 +6,6 @@ package org.eclipse.symphony.addons.mobility.pathplanners.ui.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -14,10 +13,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
+import org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
-
-import ca.gc.space.mrt.mobility.pathplanners.ui.CircularExclusionZonePresentation;
-import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation} object.

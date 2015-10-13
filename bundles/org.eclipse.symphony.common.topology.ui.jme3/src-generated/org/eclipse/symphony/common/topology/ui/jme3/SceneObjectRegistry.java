@@ -4,9 +4,8 @@
 package org.eclipse.symphony.common.topology.ui.jme3;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.SceneObject;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
 
 import com.jme3.scene.Geometry;
 

@@ -6,12 +6,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.addons.Simple3DTool;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
-
-import ca.gc.asc_csa.topology.ui.viewer.TopologyViewerPackage;
-import ca.gc.asc_csa.topology.ui.viewer.TopologyViewerRegistry;
+import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage;
+import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
 
 public class TopologyViewerListenerManager
 {			

@@ -7,7 +7,6 @@ import java.awt.Point;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.SortedSet;
-
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.ecore.EAttribute;
@@ -23,6 +22,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.AbstractPlotDisplay;
 import org.eclipse.symphony.core.display.BooleanDisplay;
@@ -35,8 +35,6 @@ import org.eclipse.symphony.core.display.NumberVersusTimeHistoryData;
 import org.eclipse.symphony.core.display.NumberVsTimePlotDisplay;
 import org.eclipse.symphony.core.display.TextDisplay;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 
 /**
  * <!-- begin-user-doc -->

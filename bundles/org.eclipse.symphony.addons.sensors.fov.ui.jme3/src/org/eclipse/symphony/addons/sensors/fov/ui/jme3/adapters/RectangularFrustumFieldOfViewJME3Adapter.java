@@ -1,12 +1,11 @@
 package org.eclipse.symphony.addons.sensors.fov.ui.jme3.adapters;
 
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.RectangularFrustumFieldOfViewJME3Object;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3SceneObject;
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 
 public class RectangularFrustumFieldOfViewJME3Adapter implements JME3Adapter {
 

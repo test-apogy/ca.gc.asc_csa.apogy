@@ -3,7 +3,7 @@ package org.eclipse.symphony.addons.sensors.fov.ui.scene_objects;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 
-import ca.gc.space.topology.ui.SceneObject;
+import org.eclipse.symphony.common.topology.ui.SceneObject;
 
 public interface FieldOfViewSceneObject extends SceneObject 
 {

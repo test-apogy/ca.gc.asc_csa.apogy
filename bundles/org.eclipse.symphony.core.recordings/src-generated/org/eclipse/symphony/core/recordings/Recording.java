@@ -5,12 +5,10 @@ package org.eclipse.symphony.core.recordings;
 
 import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 
 /**

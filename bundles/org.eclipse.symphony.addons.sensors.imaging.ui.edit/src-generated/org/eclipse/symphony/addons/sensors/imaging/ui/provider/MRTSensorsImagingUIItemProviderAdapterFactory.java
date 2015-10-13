@@ -6,7 +6,6 @@ package org.eclipse.symphony.addons.sensors.imaging.ui.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -351,54 +350,50 @@ public class MRTSensorsImagingUIItemProviderAdapterFactory extends MRTSensorsIma
 		/**
 	 * A child creation extender for the {@link TopologyPackage}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static class TopologyChildCreationExtender implements IChildCreationExtender
-  {
-    /**
+	public static class TopologyChildCreationExtender implements IChildCreationExtender {
+		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    protected static class CreationSwitch extends TopologySwitch<Object>
-    {
-      /**
+		protected static class CreationSwitch extends TopologySwitch<Object> {
+			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected List<Object> newChildDescriptors;
+			protected List<Object> newChildDescriptors;
 
-      /**
+			/**
 			 * The domain in which to create the children.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected EditingDomain editingDomain;
+			protected EditingDomain editingDomain;
 
-      /**
+			/**
 			 * Creates the a switch for populating child descriptors in the given domain.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
-      {
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
 			}
-      /**
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      @Override
-      public <T> Object caseContentNode(ContentNode<T> object)
-      {
+			@Override
+			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
@@ -407,7 +402,7 @@ public class MRTSensorsImagingUIItemProviderAdapterFactory extends MRTSensorsIma
 				return null;
 			}
  
-      /**
+			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
@@ -421,39 +416,37 @@ public class MRTSensorsImagingUIItemProviderAdapterFactory extends MRTSensorsIma
 
 				return null;
 			}
-						/**
+ 
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected CommandParameter createChildParameter(Object feature, Object child)
-      {
+			protected CommandParameter createChildParameter(Object feature, Object child) {
 				return new CommandParameter(null, feature, child);
 			}
 
-    }
+		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-    {
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
 			ArrayList<Object> result = new ArrayList<Object>();
 			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
 			return result;
 		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public ResourceLocator getResourceLocator()
-    {
+		public ResourceLocator getResourceLocator() {
 			return MRTSensorsImagingUIEditPlugin.INSTANCE;
 		}
-  }
+	}
 
 }

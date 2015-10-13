@@ -15,7 +15,6 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.symphony.core.WorksiteContributor;
-import org.eclipse.symphony.core.invocator.SessionContributor;
 
 public class WorksiteContributorsListComposite extends Composite 
 {

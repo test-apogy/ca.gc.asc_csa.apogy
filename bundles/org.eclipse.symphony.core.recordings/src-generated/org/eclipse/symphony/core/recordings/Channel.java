@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.core.recordings;
 
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.core.invocator.AbstractChannel;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -114,11 +113,11 @@ public interface Channel extends AbstractChannel
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.core.recordings.Channel#getFeature <em>Feature</em>}' reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Feature</em>' reference.
 	 * @see #getFeature()
 	 * @generated
 	 */
-  void setFeature(AbstractFeatureNode value);
+	void setFeature(AbstractFeatureNode value);
 
 } // Channel

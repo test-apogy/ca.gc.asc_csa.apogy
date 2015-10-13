@@ -14,7 +14,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.Visibilit
 import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryComposite;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryRangeComposite;
 
-import ca.gc.asc_csa.eclipse.ui.views.AbstractView;
+import org.eclipse.symphony.common.ui.views.AbstractView;
 
 public class VisibilityPassSpacecraftPositionHistoryView extends AbstractView 
 {	

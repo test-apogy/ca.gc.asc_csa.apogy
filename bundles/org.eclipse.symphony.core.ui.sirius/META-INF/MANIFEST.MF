@@ -9,7 +9,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources,
  org.eclipse.sirius,
  org.eclipse.sirius.common.acceleo.mtl,
- org.eclipse.symphony.common.topology.core,
+ org.eclipse.symphony.common.topology,
  org.eclipse.symphony.core,
  org.eclipse.sirius.diagram
 Bundle-ActivationPolicy: lazy

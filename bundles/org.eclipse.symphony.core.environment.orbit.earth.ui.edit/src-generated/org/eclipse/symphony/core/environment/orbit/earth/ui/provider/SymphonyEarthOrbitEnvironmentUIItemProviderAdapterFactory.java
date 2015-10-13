@@ -6,7 +6,6 @@ package org.eclipse.symphony.core.environment.orbit.earth.ui.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -587,6 +586,7 @@ public class SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory extends S
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

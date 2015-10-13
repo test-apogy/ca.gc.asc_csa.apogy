@@ -12,16 +12,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.PositionNode;
+import org.eclipse.symphony.common.topology.RotationNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.common.topology.ui.adapters.TransformNodeSceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.Activator;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.PositionNode;
-import ca.gc.space.topology.RotationNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.TransformNode;
-import ca.gc.space.topology.ui.adapters.TransformNodeSceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.math.Transform;

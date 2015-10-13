@@ -4,12 +4,10 @@
 package org.eclipse.symphony.core.environment.orbit.earth;
 
 import java.util.Date;
-
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.Updatable;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->

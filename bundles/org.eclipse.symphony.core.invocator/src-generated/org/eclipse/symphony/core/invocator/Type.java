@@ -5,8 +5,7 @@ package org.eclipse.symphony.core.invocator;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
+import org.eclipse.symphony.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.eclipse.symphony.common.file.common.csv;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.file.csv;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -15,5 +15,3 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.eclipse.symphony.common.file.csv.Activator
-

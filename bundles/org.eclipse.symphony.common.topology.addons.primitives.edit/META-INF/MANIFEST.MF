@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,
- ca.gc.space.topology.core;visibility:=reexport,
- ca.gc.space.topology.core.edit;visibility:=reexport,
- ca.gc.asc_csa.eclipse.emf.ecore.ui;bundle-version="0.2.0";visibility:=reexport
+ org.eclipse.symphony.common.topology;visibility:=reexport,
+ org.eclipse.symphony.common.topology.edit;visibility:=reexport,
+ org.eclipse.symphony.common.emf.ui;bundle-version="0.2.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy

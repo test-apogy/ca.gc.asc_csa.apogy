@@ -3,10 +3,10 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.Zoomable;
 import java.util.List;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 
 /**
  * <!-- begin-user-doc -->

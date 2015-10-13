@@ -5,7 +5,6 @@ package org.eclipse.symphony.common.emf.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -13,8 +12,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureListNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
 import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import ca.gc.asc_csa.eclipse.emf.ecore.ListFeatureNode;
@@ -71,7 +69,7 @@ public class AbstractFeatureListNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureListNode_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureListNode_parent_feature", "_UI_AbstractFeatureListNode_type"),
-				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE__PARENT,
+				 org.eclipse.symphony.common.emf.EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE__PARENT,
 				 false,
 				 false,
 				 true,
@@ -93,7 +91,7 @@ public class AbstractFeatureListNodeItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE__CHILD);
+			childrenFeatures.add(org.eclipse.symphony.common.emf.EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE__CHILD);
 		}
 		return childrenFeatures;
 	}
@@ -137,7 +135,7 @@ public class AbstractFeatureListNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractFeatureListNode.class)) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+			case org.eclipse.symphony.common.emf.EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

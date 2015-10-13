@@ -36,12 +36,12 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.emf.edit;visibility:=reexport,
  org.eclipse.symphony.core.environment;visibility:=reexport,
  org.eclipse.symphony.core.environment.edit;visibility:=reexport,
- ca.gc.space.mrt.mobility.pathplanners;visibility:=reexport,
- ca.gc.space.mrt.mobility.pathplanners.edit;visibility:=reexport,
+ org.eclipse.symphony.addons.mobility.pathplanners;visibility:=reexport,
+ org.eclipse.symphony.addons.mobility.pathplanners.edit;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data.edit;visibility:=reexport,
- org.eclipse.symphony.common.topology.core;visibility:=reexport,
- org.eclipse.symphony.common.topology.core.edit;visibility:=reexport
+ org.eclipse.symphony.common.topology;visibility:=reexport,
+ org.eclipse.symphony.common.topology.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

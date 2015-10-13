@@ -6,7 +6,6 @@ package org.eclipse.symphony.common.topology.ui.viewer.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -27,14 +26,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerFactory;
 import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage;
 import org.eclipse.symphony.common.topology.ui.viewer.util.TopologyViewerAdapterFactory;
-
-import ca.gc.space.topology.AggregateContentNode;
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -313,6 +311,7 @@ public class TopologyViewerItemProviderAdapterFactory extends TopologyViewerAdap
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="ca.gc.space.topology.ui.graphicsContextAdapter">
+         point="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter">
       <Class
             Class="org.eclipse.symphony.common.geometry.data3d.pif.ui.adapters.GraphicsContextPifAdapter">
       </Class>

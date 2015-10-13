@@ -3,10 +3,9 @@
  */
 package org.eclipse.symphony.core.environment.orbit.earth.ui;
 
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->

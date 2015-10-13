@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.processors.ProcessorsPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.recorders.RecordersFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Recorders' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Recorders' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.recorders/src-generated' editDirectory='/org.eclipse.symphony.common.recorders.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Recorders' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Recorders' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.recorders/src-generated' editDirectory='/org.eclipse.symphony.common.recorders.edit/src-generated' basePackage='org.eclipse.symphony.common'"
  * @generated
  */
 public interface RecordersPackage extends EPackage {

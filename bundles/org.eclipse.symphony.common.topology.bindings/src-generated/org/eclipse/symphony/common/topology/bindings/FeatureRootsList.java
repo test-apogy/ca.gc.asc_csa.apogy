@@ -5,8 +5,7 @@ package org.eclipse.symphony.common.topology.bindings;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
+import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->

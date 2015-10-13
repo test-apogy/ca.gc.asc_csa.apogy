@@ -7,12 +7,9 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
+import org.eclipse.emf.common.notify.AdapterFactory;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.AdapterFactory;
 
 public class Activator implements BundleActivator {
 

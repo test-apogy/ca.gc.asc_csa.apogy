@@ -15,18 +15,17 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.symphony.common.EclipseUtils;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.URLNode;
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
+import org.eclipse.symphony.common.topology.ui.adapters.URLNodeSceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.Activator;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities.OS;
-
-import ca.gc.asc_csa.eclipse.EclipseUtils;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.URLNode;
-import ca.gc.space.topology.ui.MeshPresentationMode;
-import ca.gc.space.topology.ui.adapters.URLNodeSceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.plugins.FileLocator;
