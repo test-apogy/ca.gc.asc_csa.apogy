@@ -18,8 +18,6 @@ import org.eclipse.symphony.common.geometry.data3d.SphericalPolygon;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Sperical Coordinates Mesh</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

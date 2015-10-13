@@ -16,11 +16,11 @@ import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.rover.symphony.impl.RoverDataImpl#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.symphony.impl.RoverDataImpl#isDisposed <em>Disposed</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

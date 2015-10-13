@@ -1195,9 +1195,9 @@ public class TopologyPackageImpl extends EPackageImpl implements TopologyPackage
 			 "modelName", "Topology",
 			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
-			 "modelDirectory", "/org.eclipse.symphony.common.topology.core/src-generated",
-			 "editDirectory", "/org.eclipse.symphony.common.topology.core.edit/src-generated",
-			 "basePackage", "ca.gc.space"
+			 "modelDirectory", "/org.eclipse.symphony.common.topology/src-generated",
+			 "editDirectory", "/org.eclipse.symphony.common.topology.edit/src-generated",
+			 "basePackage", "org.eclipse.symphony.common"
 		   });	
 		addAnnotation
 		  (getTopologyFacade__CreateRotationNodeXYZ__double_double_double(), 

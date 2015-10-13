@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.common.topology.ui.provider;
 
-import ca.gc.space.topology.AggregateContentNode;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -29,13 +27,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
+import org.eclipse.symphony.common.topology.ContentNode;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.util.TopologyUIAdapterFactory;
-
-import ca.gc.space.topology.ContentNode;
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -560,7 +558,6 @@ public class TopologyUIItemProviderAdapterFactory extends TopologyUIAdapterFacto
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

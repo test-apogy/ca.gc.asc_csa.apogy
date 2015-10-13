@@ -27,13 +27,13 @@ import org.eclipse.symphony.examples.rover.PowerSystem;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl#getBatteries <em>Batteries</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl#getActiveBattery <em>Active Battery</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl#getCurrentVoltage <em>Current Voltage</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.PowerSystemImpl#getCurrentCurrent <em>Current Current</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

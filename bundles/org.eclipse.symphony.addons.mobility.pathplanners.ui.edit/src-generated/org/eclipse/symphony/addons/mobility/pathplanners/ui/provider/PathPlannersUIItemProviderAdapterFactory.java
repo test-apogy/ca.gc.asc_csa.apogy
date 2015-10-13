@@ -27,6 +27,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.ui.util.PathPlannersUIAdapterFactory;
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
@@ -34,10 +37,6 @@ import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.util.TopologyUISwitch;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
-
-import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIFactory;
-import ca.gc.space.mrt.mobility.pathplanners.ui.PathPlannersUIPackage;
-import ca.gc.space.mrt.mobility.pathplanners.ui.util.PathPlannersUIAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -403,6 +402,7 @@ public class PathPlannersUIItemProviderAdapterFactory extends PathPlannersUIAdap
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

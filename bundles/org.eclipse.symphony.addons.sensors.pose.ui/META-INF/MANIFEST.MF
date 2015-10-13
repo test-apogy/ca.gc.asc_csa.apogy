@@ -18,6 +18,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.processors;visibility:=reexport,
  org.eclipse.symphony.common.topology.core;visibility:=reexport,
  org.eclipse.symphony.common.topology.ui;visibility:=reexport,
+ org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.addons.sensors.pose;visibility:=reexport,
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.3",
  org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.0"

@@ -29,6 +29,9 @@
             uri="org.eclipse.symphony.core.environment.ui"
             class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$SymphonyEnvironmentUIChildCreationExtender"/>
       <extender
+            uri="http:///ca/gc/space/topology.ecore"
+            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>

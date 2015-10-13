@@ -20,6 +20,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * <em><b>Matrix4x4</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Matrix4x4Impl#getM00 <em>M00</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Matrix4x4Impl#getM01 <em>M01</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.common.math.impl.Matrix4x4Impl#getM32 <em>M32</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Matrix4x4Impl#getM33 <em>M33</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

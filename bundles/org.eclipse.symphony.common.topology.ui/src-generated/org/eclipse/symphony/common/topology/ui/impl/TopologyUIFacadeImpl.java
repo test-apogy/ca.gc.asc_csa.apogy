@@ -24,15 +24,13 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
-import ca.gc.space.topology.AbstractNodeVisitor;
-import ca.gc.space.topology.INodeVisitor;
+import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
+import org.eclipse.symphony.common.topology.INodeVisitor;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

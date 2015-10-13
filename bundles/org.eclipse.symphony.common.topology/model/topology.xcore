@@ -6,8 +6,8 @@
 	      modelName="Topology",
 	      operationReflection="true",
 	      suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.topology.core/src-generated")
-@GenModel(editDirectory="/org.eclipse.symphony.common.topology.core.edit/src-generated")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.topology/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.topology.edit/src-generated")
 
 package org.eclipse.symphony.common.topology
 

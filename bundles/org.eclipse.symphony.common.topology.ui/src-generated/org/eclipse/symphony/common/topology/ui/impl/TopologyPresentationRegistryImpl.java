@@ -31,7 +31,7 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.internal.MultiNodeListener;
 
-import ca.gc.space.topology.AbstractNodeVisitor;
+import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,11 +39,11 @@ import ca.gc.space.topology.AbstractNodeVisitor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationRegistryImpl#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationRegistryImpl#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -2,7 +2,6 @@
  */
 package org.eclipse.symphony.common.emf.provider;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -25,8 +24,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.util.EMFEcoreAdapterFactory;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.util.EMFEcoreAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.

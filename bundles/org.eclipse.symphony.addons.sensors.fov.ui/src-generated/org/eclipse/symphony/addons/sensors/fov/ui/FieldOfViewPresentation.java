@@ -14,6 +14,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation#getTransparency <em>Transparency</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
@@ -21,7 +22,6 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation#isShowProjection <em>Show Projection</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation#getProjectionColor <em>Projection Color</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage#getFieldOfViewPresentation()
  * @model

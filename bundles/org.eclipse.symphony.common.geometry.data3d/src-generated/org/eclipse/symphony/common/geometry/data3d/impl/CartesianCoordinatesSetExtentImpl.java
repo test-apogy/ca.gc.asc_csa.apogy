@@ -16,6 +16,7 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl#getXMin <em>XMin</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl#getXMax <em>XMax</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl#getYDimension <em>YDimension</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl#getZDimension <em>ZDimension</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

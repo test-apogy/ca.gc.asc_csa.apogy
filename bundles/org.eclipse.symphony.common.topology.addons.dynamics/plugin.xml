@@ -12,9 +12,9 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://ca/gc/asc_csa/topology/dynamics/model/topology_dynamics.ecore"
+            uri="org.eclipse.symphony.common.topology.addons.dynamics"
             class="org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage"
-            genModel="model/topology_dynamics.genmodel"/>
+            genModel="model/topology_dynamics.xcore"/>
    </extension>
 
 </plugin>

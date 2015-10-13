@@ -23,7 +23,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated jme3 -->
       <package
-            uri="ca.gc.asc_csa.topology.ui.jme3"
+            uri="org.eclipse.symphony.common.topology.ui.jme3"
             class="org.eclipse.symphony.common.topology.ui.jme3.JME3Package"
             genModel="model/jme3.xcore"/>
    </extension>

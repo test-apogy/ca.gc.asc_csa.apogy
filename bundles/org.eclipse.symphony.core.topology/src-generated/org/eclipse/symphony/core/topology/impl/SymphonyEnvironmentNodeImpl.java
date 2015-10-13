@@ -35,13 +35,13 @@ import ca.gc.space.topology.impl.ReferencedGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonyEnvironmentNodeImpl#getSymphonyEnvironment <em>Symphony Environment</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonyEnvironmentNodeImpl#getWorksiteNode <em>Worksite Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonyEnvironmentNodeImpl#getResultsListNode <em>Results List Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonyEnvironmentNodeImpl#getSymphonySystemAPIsNode <em>Symphony System AP Is Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

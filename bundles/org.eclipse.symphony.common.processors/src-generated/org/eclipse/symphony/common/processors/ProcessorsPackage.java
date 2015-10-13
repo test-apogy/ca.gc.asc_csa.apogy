@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.processors.ProcessorsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Processors' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Processors' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.processors/src-generated' editDirectory='/org.eclipse.symphony.common.processors.edit/src-generated' basePackage='ca.gc.space.mrt.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Processors' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Processors' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.processors/src-generated' editDirectory='/org.eclipse.symphony.common.processors.edit/src-generated' basePackage='org.eclipse.symphony.common'"
  * @generated
  */
 public interface ProcessorsPackage extends EPackage {

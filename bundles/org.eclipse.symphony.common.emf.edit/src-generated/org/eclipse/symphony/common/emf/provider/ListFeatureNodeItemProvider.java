@@ -105,7 +105,7 @@ public class ListFeatureNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_multiValued_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_multiValued_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
+				 org.eclipse.symphony.common.emf.EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
 				 false,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class ListFeatureNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_index_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_index_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
+				 org.eclipse.symphony.common.emf.EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
 				 true,
 				 false,
 				 false,
@@ -191,10 +191,10 @@ public class ListFeatureNodeItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ListFeatureNode.class)) {
-			case EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
-			case EMFEcorePackage.LIST_FEATURE_NODE__MULTI_VALUED:
-			case EMFEcorePackage.LIST_FEATURE_NODE__INDEX:
+		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.ListFeatureNode.class)) {
+			case org.eclipse.symphony.common.emf.EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case org.eclipse.symphony.common.emf.EMFEcorePackage.LIST_FEATURE_NODE__MULTI_VALUED:
+			case org.eclipse.symphony.common.emf.EMFEcorePackage.LIST_FEATURE_NODE__INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

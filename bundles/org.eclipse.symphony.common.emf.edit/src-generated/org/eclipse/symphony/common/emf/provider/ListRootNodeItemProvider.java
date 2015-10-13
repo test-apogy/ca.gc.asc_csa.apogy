@@ -135,8 +135,8 @@ public class ListRootNodeItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ListRootNode.class)) {
-			case EMFEcorePackage.LIST_ROOT_NODE__SOURCE_CLASS:
+		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.ListRootNode.class)) {
+			case org.eclipse.symphony.common.emf.EMFEcorePackage.LIST_ROOT_NODE__SOURCE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

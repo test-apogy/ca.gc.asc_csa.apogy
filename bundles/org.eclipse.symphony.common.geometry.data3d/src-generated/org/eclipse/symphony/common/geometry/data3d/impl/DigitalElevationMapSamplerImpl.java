@@ -46,10 +46,10 @@ import edu.wlu.cs.levy.CG.KeySizeException;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapSamplerImpl#getTargetResolution <em>Target Resolution</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

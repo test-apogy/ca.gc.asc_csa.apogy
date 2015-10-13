@@ -21,8 +21,6 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>IO</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

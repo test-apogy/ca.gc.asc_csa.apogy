@@ -480,6 +480,7 @@ public class SensorsPoseUIItemProviderAdapterFactory extends SensorsPoseUIAdapte
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

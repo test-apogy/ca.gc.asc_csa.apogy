@@ -371,7 +371,7 @@ public class JME3PackageImpl extends EPackageImpl implements JME3Package {
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.topology.ui.jme3/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.topology.ui.jme3.edit/src-generated",
-			 "basePackage", "ca.gc.asc_csa.topology.ui"
+			 "basePackage", "org.eclipse.symphony.common.topology.ui"
 		   });
 	}
 

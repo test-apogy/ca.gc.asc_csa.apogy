@@ -20,11 +20,11 @@ import ca.gc.space.topology.ReferencedGroupNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.topology.impl.SystemsTopologyAdapterImpl#getDeployment <em>Deployment</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.topology.impl.SystemsTopologyAdapterImpl#getSystemsGroup <em>Systems Group</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

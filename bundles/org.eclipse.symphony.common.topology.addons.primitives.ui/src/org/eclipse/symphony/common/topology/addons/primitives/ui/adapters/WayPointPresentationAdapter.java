@@ -4,9 +4,9 @@ import org.eclipse.symphony.common.topology.addons.primitives.WayPoint;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
 
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.NodePresentationAdapter;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 
 public class WayPointPresentationAdapter implements NodePresentationAdapter {
 

@@ -12,10 +12,10 @@ import org.eclipse.core.runtime.jobs.Job;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.obsolete.mrt.Server#getServerJob <em>Server Job</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.obsolete.mrt.CommonPackage#getServer()
  * @model

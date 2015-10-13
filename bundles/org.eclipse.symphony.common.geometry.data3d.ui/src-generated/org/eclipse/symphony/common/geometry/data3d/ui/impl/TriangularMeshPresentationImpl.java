@@ -33,6 +33,7 @@ import ca.gc.space.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getMesh <em>Mesh</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getPointSize <em>Point Size</em>}</li>
@@ -43,7 +44,6 @@ import ca.gc.space.topology.ui.impl.NodePresentationImpl;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#isUseShading <em>Use Shading</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl#getTextureImage <em>Texture Image</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

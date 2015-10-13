@@ -56,10 +56,10 @@ import ca.gc.space.topology.impl.ReferencedGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.topology.impl.SymphonySystemAPIsNodeImpl#getSymphonyEnvironment <em>Symphony Environment</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

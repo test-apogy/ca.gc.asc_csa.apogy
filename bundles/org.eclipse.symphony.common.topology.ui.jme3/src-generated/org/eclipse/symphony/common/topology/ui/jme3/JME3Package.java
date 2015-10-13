@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.topology.ui.jme3.JME3Factory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='JME3' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)' modelName='JM3' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.topology.ui.jme3/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.jme3.edit/src-generated' basePackage='ca.gc.asc_csa.topology.ui'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='JME3' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)' modelName='JM3' childCreationExtenders='true' extensibleProviderFactory='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.topology.ui.jme3/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.jme3.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.ui'"
  * @generated
  */
 public interface JME3Package extends EPackage {

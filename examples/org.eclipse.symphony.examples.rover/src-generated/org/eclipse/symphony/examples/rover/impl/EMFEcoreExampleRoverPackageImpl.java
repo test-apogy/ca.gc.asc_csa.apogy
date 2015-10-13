@@ -114,8 +114,9 @@ public class EMFEcoreExampleRoverPackageImpl extends EPackageImpl implements EMF
 		isInited = true;
 
 		// Initialize simple dependencies
-		EMFEcoreExampleMobilePlatformPackage.eINSTANCE.eClass();
+		EMFEcorePackage.eINSTANCE.eClass();
 		EMFEcoreExampleRoboticArmPackage.eINSTANCE.eClass();
+		EMFEcoreExampleMobilePlatformPackage.eINSTANCE.eClass();
 		EMFEcoreExampleCameraPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -569,7 +570,7 @@ public class EMFEcoreExampleRoverPackageImpl extends EPackageImpl implements EMF
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.examples.rover/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.examples.rover.edit/src-generated",
-			 "basePackage", "org.eclipse.symphony.common.emf.examples"
+			 "basePackage", "org.eclipse.symphony.examples"
 		   });	
 		addAnnotation
 		  (batteryEClass, 

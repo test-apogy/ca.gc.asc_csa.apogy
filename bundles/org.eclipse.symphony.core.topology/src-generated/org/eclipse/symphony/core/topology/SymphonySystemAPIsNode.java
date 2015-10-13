@@ -14,10 +14,10 @@ import ca.gc.space.topology.ReferencedGroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.topology.SymphonySystemAPIsNode#getSymphonyEnvironment <em>Symphony Environment</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonySystemAPIsNode()
  * @model

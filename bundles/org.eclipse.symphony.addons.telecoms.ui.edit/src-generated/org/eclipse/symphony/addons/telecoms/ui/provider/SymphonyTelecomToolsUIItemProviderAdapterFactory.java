@@ -402,6 +402,7 @@ public class SymphonyTelecomToolsUIItemProviderAdapterFactory extends SymphonyTe
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

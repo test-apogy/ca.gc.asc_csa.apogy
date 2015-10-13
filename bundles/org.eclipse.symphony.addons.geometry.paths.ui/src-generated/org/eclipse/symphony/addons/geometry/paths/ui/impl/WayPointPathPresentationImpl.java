@@ -24,8 +24,7 @@ import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathSceneObject;
 import org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesConstants;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,12 +32,12 @@ import ca.gc.space.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getPointSize <em>Point Size</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.impl.WayPointPathPresentationImpl#getEndPointsRadius <em>End Points Radius</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

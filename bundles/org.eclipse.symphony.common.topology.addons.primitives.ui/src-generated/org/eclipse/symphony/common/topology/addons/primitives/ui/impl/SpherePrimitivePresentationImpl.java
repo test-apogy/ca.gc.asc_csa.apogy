@@ -6,15 +6,12 @@ package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Sphere Primitive Presentation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

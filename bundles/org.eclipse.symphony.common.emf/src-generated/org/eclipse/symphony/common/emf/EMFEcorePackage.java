@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.emf.EMFEcoreFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcore' childCreationExtenders='true' extensibleProviderFactory='true' modelName='EMFEcore' modelDirectory='/org.eclipse.symphony.common.emf/src-generated' editDirectory='/org.eclipse.symphony.common.emf.edit/src-generated' basePackage='ca.gc.asc_csa.eclipse.emf'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcore' childCreationExtenders='true' extensibleProviderFactory='true' modelName='EMFEcore' modelDirectory='/org.eclipse.symphony.common.emf/src-generated' editDirectory='/org.eclipse.symphony.common.emf.edit/src-generated' basePackage='org.eclipse.symphony.common'"
  * @generated
  */
 public interface EMFEcorePackage extends EPackage
@@ -35,7 +35,7 @@ public interface EMFEcorePackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNAME = "ecore";
+  String eNAME = "emf";
 
   /**
 	 * The package namespace URI.
@@ -51,7 +51,7 @@ public interface EMFEcorePackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_PREFIX = "ecore";
+  String eNS_PREFIX = "emf";
 
   /**
 	 * The singleton instance of the package.

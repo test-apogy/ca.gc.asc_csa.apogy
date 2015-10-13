@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * <em><b>Tuple3d</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Tuple3dImpl#getZ <em>Z</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

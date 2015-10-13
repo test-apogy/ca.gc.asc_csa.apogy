@@ -11,10 +11,10 @@ package org.eclipse.symphony.common.topology;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.CADNode#getNodeName <em>Node Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.TopologyPackage#getCADNode()
  * @model

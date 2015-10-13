@@ -12,7 +12,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http:///ca/gc/space/topology/core/primitives/topology_primitives.ecore"
+            uri="org.eclipse.symphony.common.topology.addons.primitives"
             class="org.eclipse.symphony.common.topology.addons.primitives.provider.PrimitivesItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -24,7 +24,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
+            uri="org.eclipse.symphony.common.topology.addons.primitives"
             class="org.eclipse.symphony.common.topology.addons.primitives.provider.PrimitivesItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

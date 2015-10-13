@@ -28,6 +28,7 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.RoverImpl#getRoboticArm <em>Robotic Arm</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.RoverImpl#getMobilePlatform <em>Mobile Platform</em>}</li>
@@ -39,7 +40,6 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.RoverImpl#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.RoverImpl#isDisposed <em>Disposed</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

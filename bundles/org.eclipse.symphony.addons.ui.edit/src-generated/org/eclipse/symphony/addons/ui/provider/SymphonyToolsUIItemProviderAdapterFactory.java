@@ -480,6 +480,7 @@ public class SymphonyToolsUIItemProviderAdapterFactory extends SymphonyToolsUIAd
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

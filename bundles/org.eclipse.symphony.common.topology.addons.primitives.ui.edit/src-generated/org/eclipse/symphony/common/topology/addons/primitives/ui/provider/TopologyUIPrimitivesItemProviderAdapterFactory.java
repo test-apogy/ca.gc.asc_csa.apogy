@@ -387,7 +387,6 @@ public class TopologyUIPrimitivesItemProviderAdapterFactory extends TopologyUIPr
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -518,7 +517,6 @@ public class TopologyUIPrimitivesItemProviderAdapterFactory extends TopologyUIPr
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

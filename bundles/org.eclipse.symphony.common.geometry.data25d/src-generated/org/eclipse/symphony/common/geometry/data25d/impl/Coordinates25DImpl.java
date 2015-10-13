@@ -18,12 +18,12 @@ import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.impl.Coordinates25DImpl#getU <em>U</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.impl.Coordinates25DImpl#getV <em>V</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.impl.Coordinates25DImpl#getW <em>W</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

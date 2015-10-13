@@ -3,6 +3,12 @@
  */
 package org.eclipse.symphony.common.geometry.data3d.ui.provider;
 
+import ca.gc.space.topology.ContentNode;
+import ca.gc.space.topology.TopologyPackage;
+import ca.gc.space.topology.ui.TopologyPresentationRegistry;
+import ca.gc.space.topology.ui.TopologyUIPackage;
+import ca.gc.space.topology.ui.util.TopologyUISwitch;
+import ca.gc.space.topology.util.TopologySwitch;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -30,13 +36,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIFactory;
 import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage;
 import org.eclipse.symphony.common.geometry.data3d.ui.util.Data3DUIAdapterFactory;
-import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.util.TopologyUISwitch;
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -329,26 +328,6 @@ public class Data3DUIItemProviderAdapterFactory extends Data3DUIAdapterFactory i
 
 				return null;
 			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Data3DUIFactory.eINSTANCE.createCartesianCoordinatesSetPresentation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Data3DUIFactory.eINSTANCE.createTriangularMeshPresentation()));
-
-				return null;
-			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -440,7 +419,6 @@ public class Data3DUIItemProviderAdapterFactory extends Data3DUIAdapterFactory i
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

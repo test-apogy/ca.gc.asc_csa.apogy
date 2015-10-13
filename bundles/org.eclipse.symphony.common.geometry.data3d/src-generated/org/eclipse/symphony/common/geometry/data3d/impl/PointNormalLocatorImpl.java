@@ -31,10 +31,10 @@ import edu.wlu.cs.levy.CG.KeySizeException;
  * <em><b>Point Normal Locator</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PointNormalLocatorImpl#getDataSet <em>Data Set</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

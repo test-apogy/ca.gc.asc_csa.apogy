@@ -14,10 +14,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation;
+import org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
-
-import ca.gc.space.mrt.sensors.fov.ui.FieldOfViewPresentation;
-import ca.gc.space.mrt.sensors.fov.ui.FovUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation} object.

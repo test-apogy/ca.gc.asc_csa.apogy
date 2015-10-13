@@ -13,12 +13,12 @@ import org.eclipse.symphony.common.topology.INodeVisitor;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.Node#getParent <em>Parent</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.Node#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.Node#getNodeId <em>Node Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.TopologyPackage#getNode()
  * @model abstract="true"

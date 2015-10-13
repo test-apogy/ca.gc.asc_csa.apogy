@@ -11,11 +11,11 @@ package org.eclipse.symphony.common.geometry.data3d;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getXDimension <em>XDimension</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getYDimension <em>YDimension</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDigitalElevationMap()
  * @model

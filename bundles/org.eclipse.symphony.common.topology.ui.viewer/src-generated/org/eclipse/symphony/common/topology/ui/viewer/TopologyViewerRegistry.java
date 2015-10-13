@@ -15,12 +15,12 @@ import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#isVerbose <em>Verbose</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#getITopologyViewers <em>ITopology Viewers</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#getLatestNodeSelection <em>Latest Node Selection</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage#getTopologyViewerRegistry()
  * @model

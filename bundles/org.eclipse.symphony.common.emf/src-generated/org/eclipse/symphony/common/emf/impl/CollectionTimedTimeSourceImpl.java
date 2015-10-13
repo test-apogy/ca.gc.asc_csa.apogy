@@ -36,6 +36,7 @@ import org.eclipse.symphony.common.log.Logger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#isLoopEnable <em>Loop Enable</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#getTimedsList <em>Timeds List</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.symphony.common.log.Logger;
  *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#getEarliestDate <em>Earliest Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl#getLatestDate <em>Latest Date</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

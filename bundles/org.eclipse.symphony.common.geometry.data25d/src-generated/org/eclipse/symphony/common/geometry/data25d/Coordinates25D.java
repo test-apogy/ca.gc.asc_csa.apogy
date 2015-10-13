@@ -16,12 +16,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getU <em>U</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getV <em>V</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getW <em>W</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getCoordinates25D()
  * @model

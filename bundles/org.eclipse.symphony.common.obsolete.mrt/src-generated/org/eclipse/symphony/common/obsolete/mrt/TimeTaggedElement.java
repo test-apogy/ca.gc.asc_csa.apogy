@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement#getTime <em>Time</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.obsolete.mrt.CommonPackage#getTimeTaggedElement()
  * @model

@@ -120,8 +120,8 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 		isInited = true;
 
 		// Initialize simple dependencies
-		CsvPackage.eINSTANCE.eClass();
 		ProcessorsPackage.eINSTANCE.eClass();
+		CsvPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theRecordersPackage.createPackageContents();
@@ -495,7 +495,7 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.recorders/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.recorders.edit/src-generated",
-			 "basePackage", "ca.gc.space.mrt.common"
+			 "basePackage", "org.eclipse.symphony.common"
 		   });	
 		addAnnotation
 		  (recordingsEClass, 

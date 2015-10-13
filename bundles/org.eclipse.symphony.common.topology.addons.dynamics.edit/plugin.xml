@@ -9,7 +9,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://ca/gc/asc_csa/topology/dynamics/model/topology_dynamics.ecore"
+            uri="org.eclipse.symphony.common.topology.addons,dynamics"
             class="org.eclipse.symphony.common.topology.addons.dynamics.provider.TopologyDynamicsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -21,7 +21,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
+            uri="org.eclipse.symphony.common.topology.addons.dynamics"
             class="org.eclipse.symphony.common.topology.addons.dynamics.provider.TopologyDynamicsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

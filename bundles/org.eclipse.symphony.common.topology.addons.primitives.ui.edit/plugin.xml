@@ -26,11 +26,11 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated topology_primitives_ui -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.topology.addons.primitives.ui.provider.TopologyUIPrimitivesItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.common.topology.addons.primitives.ui.provider.TopologyUIPrimitivesItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.common.topology.addons.primitives.ui.provider.TopologyUIPrimitivesItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

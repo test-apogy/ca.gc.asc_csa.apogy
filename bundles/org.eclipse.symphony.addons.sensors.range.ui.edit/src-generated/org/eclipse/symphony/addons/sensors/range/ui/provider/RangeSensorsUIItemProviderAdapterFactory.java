@@ -441,6 +441,7 @@ public class RangeSensorsUIItemProviderAdapterFactory extends RangeSensorsUIAdap
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

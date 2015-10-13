@@ -3,13 +3,14 @@
  */
 package org.eclipse.symphony.common.geometry.data3d.ui.provider;
 
+import ca.gc.space.math.provider.MathEditPlugin;
+import ca.gc.space.topology.provider.TopologyEditPlugin;
+import ca.gc.space.topology.ui.provider.TopologyUIEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
-import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
 
 /**
  * This is the central singleton for the Data3DUI edit plugin.
@@ -43,11 +44,12 @@ public final class Data3DUIEditPlugin extends EMFPlugin {
 	public Data3DUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     DataEditPlugin.INSTANCE,
+		     TopologyUIEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     TopologyUIEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -18,8 +18,6 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Coordinates Set25 DFilter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

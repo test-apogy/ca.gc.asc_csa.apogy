@@ -6,11 +6,10 @@ package org.eclipse.symphony.addons.geometry.paths.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
-
-import ca.gc.space.topology.ui.NodePresentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +49,7 @@ public class PathsUISwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */

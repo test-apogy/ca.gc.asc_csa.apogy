@@ -441,6 +441,7 @@ public class PathsUIItemProviderAdapterFactory extends PathsUIAdapterFactory imp
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

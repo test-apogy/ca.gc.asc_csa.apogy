@@ -13,7 +13,6 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation;
 import org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
@@ -92,7 +91,7 @@ public class PoseSensorPresentationItemProvider extends NodePresentationItemProv
 	 */
 	@Override
 	public String getText(Object object) {
-		RGB labelValue = ((PoseSensorPresentation)object).getColor();
+		Object labelValue = ((PoseSensorPresentation)object).getColor();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PoseSensorPresentation_type") :

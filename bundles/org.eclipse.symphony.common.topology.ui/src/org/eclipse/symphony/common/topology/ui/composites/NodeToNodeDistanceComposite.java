@@ -314,7 +314,7 @@ public class NodeToNodeDistanceComposite extends Composite
 		double distance = 0.0;
 		if(fromNode != null && this.toNode != null)
 		{
-			distance = TopologyFacade.INSTANCE.getEuclidianDistance(fromNode, toNode);
+			distance = TopologyFacade.INSTANCE.getEuclideanDistance(fromNode, toNode);
 		}
 		
 		return distance;

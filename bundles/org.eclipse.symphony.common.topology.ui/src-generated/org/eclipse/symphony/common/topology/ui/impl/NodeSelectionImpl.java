@@ -24,6 +24,7 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.NodeSelectionImpl#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.NodeSelectionImpl#getSelectedNode <em>Selected Node</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.NodeSelectionImpl#getRelativeIntersectionNormal <em>Relative Intersection Normal</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.NodeSelectionImpl#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

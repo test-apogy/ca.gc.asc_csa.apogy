@@ -14,8 +14,7 @@ import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIFactory;
 import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
-
-import ca.gc.space.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -27,10 +27,10 @@ import edu.wlu.cs.levy.CG.KeySizeException;
  * <em><b>Point Locator</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PointLocatorImpl#getPoints <em>Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %bundleName
-Bundle-SymbolicName: ca.gc.asc_csa.eclipse.ui;singleton:=true
+Bundle-SymbolicName: org.eclipse.symphony.common.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.common.ui.Activator
 Bundle-Vendor: %providerName

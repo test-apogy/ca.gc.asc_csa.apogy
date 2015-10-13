@@ -9,8 +9,8 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
 import java.util.HashSet;
 import java.util.Set;
 
-import ca.gc.space.topology.AbstractNodeVisitor;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
+import org.eclipse.symphony.common.topology.Node;
 
 
 /**

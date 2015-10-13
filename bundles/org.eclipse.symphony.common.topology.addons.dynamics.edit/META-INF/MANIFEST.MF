@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.topology.dynamics.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.common.topology.addons.dynamics.provider.Topology_dynamicsEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.common.topology.addons.dynamics.provider.TopologyDynamicsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
@@ -12,6 +12,9 @@ Export-Package: org.eclipse.symphony.common.topology.addons.dynamics.provider
 Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.topology.dynamics;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
+ org.eclipse.symphony.common.topology;visibility:=reexport,
+ org.eclipse.symphony.common.topology.edit;visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport,
  org.eclipse.symphony.common.topology.addons.primitives;visibility:=reexport,

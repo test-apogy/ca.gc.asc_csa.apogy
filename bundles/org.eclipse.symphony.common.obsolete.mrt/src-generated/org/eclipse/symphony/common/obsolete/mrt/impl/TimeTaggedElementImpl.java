@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.obsolete.mrt.impl.TimeTaggedElementImpl#getTime <em>Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

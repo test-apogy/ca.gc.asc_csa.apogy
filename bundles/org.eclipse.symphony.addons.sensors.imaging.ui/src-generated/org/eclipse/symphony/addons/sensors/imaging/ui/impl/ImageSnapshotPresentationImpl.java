@@ -25,13 +25,13 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#getTransparency <em>Transparency</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#isImageProjectionVisible <em>Image Projection Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.impl.ImageSnapshotPresentationImpl#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
