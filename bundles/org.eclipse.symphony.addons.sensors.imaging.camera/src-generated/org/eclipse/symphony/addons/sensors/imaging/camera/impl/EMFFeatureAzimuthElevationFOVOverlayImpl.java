@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference;
 import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
@@ -22,8 +23,6 @@ import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**
  * <!-- begin-user-doc -->

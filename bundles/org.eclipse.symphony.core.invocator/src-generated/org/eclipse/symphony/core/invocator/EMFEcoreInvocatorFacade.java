@@ -4,12 +4,13 @@
 package org.eclipse.symphony.core.invocator;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl;
-import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
 
 /**
  * <!-- begin-user-doc -->

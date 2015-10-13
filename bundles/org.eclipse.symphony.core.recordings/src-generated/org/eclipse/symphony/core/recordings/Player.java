@@ -4,6 +4,7 @@
 package org.eclipse.symphony.core.recordings;
 
 import java.util.Date;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.core.invocator.AbstractPlayer;

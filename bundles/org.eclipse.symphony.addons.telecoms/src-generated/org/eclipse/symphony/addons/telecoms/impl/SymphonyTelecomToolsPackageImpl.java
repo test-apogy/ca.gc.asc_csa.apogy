@@ -4,6 +4,7 @@
 package org.eclipse.symphony.addons.telecoms.impl;
 
 import javax.vecmath.Color3f;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;

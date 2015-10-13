@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.TreeRootNode;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.WatchesList;
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->

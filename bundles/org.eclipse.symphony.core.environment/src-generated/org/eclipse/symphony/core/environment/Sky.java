@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.environment;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
+import org.eclipse.symphony.common.emf.Timed;
 
 /**
  * <!-- begin-user-doc -->

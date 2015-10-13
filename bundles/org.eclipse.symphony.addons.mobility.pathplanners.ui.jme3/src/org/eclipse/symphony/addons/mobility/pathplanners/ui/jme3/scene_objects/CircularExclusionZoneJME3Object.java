@@ -2,7 +2,6 @@ package org.eclipse.symphony.addons.mobility.pathplanners.ui.jme3.scene_objects;
 
 
 import java.util.ArrayList;
-
 import java.util.List;
 import java.util.concurrent.Callable;
 
@@ -10,17 +9,16 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
+import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.jme3.Activator;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.scene_objects.CircularExclusionZoneSceneObject;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
-import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

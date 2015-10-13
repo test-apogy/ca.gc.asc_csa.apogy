@@ -12,7 +12,6 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
 import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternSceneObject;
-
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;

@@ -17,12 +17,11 @@ import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
 import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
-import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
-import ca.gc.asc_csa.topology.bindings.impl.AbstractTopologyBindingImpl;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
+import org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl;
 
 /**
  * <!-- begin-user-doc -->

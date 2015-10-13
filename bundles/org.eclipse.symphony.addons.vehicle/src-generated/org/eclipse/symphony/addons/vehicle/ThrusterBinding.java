@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.addons.vehicle;
 
-import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 
 /**
  * <!-- begin-user-doc -->

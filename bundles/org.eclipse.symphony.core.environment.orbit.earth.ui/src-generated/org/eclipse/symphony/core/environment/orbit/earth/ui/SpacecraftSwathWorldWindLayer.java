@@ -4,8 +4,8 @@
 package org.eclipse.symphony.core.environment.orbit.earth.ui;
 
 import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
+import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
 
 /**
  * <!-- begin-user-doc -->

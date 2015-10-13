@@ -13,10 +13,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay;
+import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-
-import ca.gc.asc_csa.symphony.tools.camera.ImageFrozenOverlay;
-import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay} object.

@@ -3,8 +3,8 @@
  */
 package org.eclipse.symphony.core.environment;
 
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.examples.camera.symphony.CameraData;
 import org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter;
@@ -16,8 +17,6 @@ import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraFactory;
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
-
-import ca.gc.space.mrt.sensors.fov.FovPackage;
 
 /**
  * <!-- begin-user-doc -->

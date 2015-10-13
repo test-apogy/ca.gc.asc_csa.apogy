@@ -5,6 +5,7 @@ package org.eclipse.symphony.core.invocator.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -25,14 +26,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.EMFEcoreFactory;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.ListRootNode;
+import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.VariableFeatureReference} object.

@@ -16,14 +16,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestNode;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestSceneObject;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

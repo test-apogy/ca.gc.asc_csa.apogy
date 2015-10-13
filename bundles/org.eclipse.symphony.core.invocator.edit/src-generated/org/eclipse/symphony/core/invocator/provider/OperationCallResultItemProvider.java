@@ -7,16 +7,17 @@ package org.eclipse.symphony.core.invocator.provider;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCallResult;
-import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallResult} object.

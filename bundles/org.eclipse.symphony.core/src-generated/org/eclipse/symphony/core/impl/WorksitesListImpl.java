@@ -14,14 +14,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.OrbitModelsList;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.WorksitesList;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

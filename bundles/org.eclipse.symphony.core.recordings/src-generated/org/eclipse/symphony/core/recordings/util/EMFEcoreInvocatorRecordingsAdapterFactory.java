@@ -14,7 +14,14 @@ import org.eclipse.symphony.core.invocator.AbstractChannel;
 import org.eclipse.symphony.core.invocator.AbstractPlayer;
 import org.eclipse.symphony.core.invocator.AbstractRecorder;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.recordings.*;
+import org.eclipse.symphony.core.recordings.Channel;
+import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
+import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
+import org.eclipse.symphony.core.recordings.Player;
+import org.eclipse.symphony.core.recordings.Recorder;
+import org.eclipse.symphony.core.recordings.Recording;
+import org.eclipse.symphony.core.recordings.RecordingResult;
+import org.eclipse.symphony.core.recordings.RecordingTrack;
 
 /**
  * <!-- begin-user-doc -->

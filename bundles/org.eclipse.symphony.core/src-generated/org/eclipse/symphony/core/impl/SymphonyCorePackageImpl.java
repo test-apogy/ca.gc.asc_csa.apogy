@@ -16,7 +16,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.AbstractWorksite;
@@ -49,10 +52,6 @@ import org.eclipse.symphony.core.Updatable;
 import org.eclipse.symphony.core.UserDefinedResult;
 import org.eclipse.symphony.core.WorksitesList;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
-import ca.gc.space.topology.TopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!--

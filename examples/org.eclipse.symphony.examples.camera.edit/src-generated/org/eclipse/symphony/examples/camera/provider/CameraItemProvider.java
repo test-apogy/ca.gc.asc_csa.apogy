@@ -15,13 +15,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.FovFactory;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.provider.AbstractCameraItemProvider;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.examples.camera.Camera;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraFactory;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
-
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import ca.gc.space.mrt.sensors.imaging.provider.AbstractCameraItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.Camera} object.

@@ -7,7 +7,6 @@
 package org.eclipse.symphony.common.topology.ui;
 
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 public interface NodePresentationAdapter extends ObjectAdapter<NodePresentation, Node, Object> {
 

@@ -11,7 +11,19 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.telecoms.*;
+import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
+import org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern;
+import org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
+import org.eclipse.symphony.addons.telecoms.IsotropicAntenna;
+import org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern;
+import org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
+import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsFactory;
+import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.TelecomNode;
+import org.eclipse.symphony.addons.telecoms.TelecomNodeStatus;
+import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
+import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
+import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
 
 /**
  * <!-- begin-user-doc -->

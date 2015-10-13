@@ -9,13 +9,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
+import org.eclipse.symphony.common.topology.ui.impl.TransformNodePresentationImpl;
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
 import org.eclipse.symphony.core.ui.ResultNodeSceneObject;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
 import org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesConstants;
-
-import ca.gc.space.topology.ui.impl.TransformNodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -13,6 +13,10 @@ import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitive
 import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
+<<<<<<< HEAD
+=======
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 /**
  * <!-- begin-user-doc -->

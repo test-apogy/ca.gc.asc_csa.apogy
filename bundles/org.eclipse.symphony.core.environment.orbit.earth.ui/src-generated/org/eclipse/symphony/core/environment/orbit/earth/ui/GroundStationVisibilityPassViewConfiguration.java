@@ -4,11 +4,10 @@
 package org.eclipse.symphony.core.environment.orbit.earth.ui;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
 
 /**
  * <!-- begin-user-doc -->

@@ -27,6 +27,9 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.ConnectionPointsList;
 import org.eclipse.symphony.core.FeatureOfInterest;
@@ -65,10 +68,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.URLImageMapLayer;
 import org.eclipse.symphony.core.environment.Worksite;
 import org.eclipse.symphony.core.invocator.Environment;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

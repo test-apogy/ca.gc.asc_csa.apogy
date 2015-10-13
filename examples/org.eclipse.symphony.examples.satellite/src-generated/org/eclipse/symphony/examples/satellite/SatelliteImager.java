@@ -4,6 +4,7 @@
 package org.eclipse.symphony.examples.satellite;
 
 import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.Zoomable;

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.Activator;
@@ -30,8 +31,11 @@ import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.internal.MultiNodeListener;
+<<<<<<< HEAD
 
 import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
+=======
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 /**
  * <!-- begin-user-doc -->

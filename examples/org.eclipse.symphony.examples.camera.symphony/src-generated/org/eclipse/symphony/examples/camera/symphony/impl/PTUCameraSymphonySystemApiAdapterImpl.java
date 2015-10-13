@@ -6,6 +6,7 @@ package org.eclipse.symphony.examples.camera.symphony.impl;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.Node;
@@ -19,8 +20,6 @@ import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter;
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraFactory;
 import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
-
-import ca.gc.space.mrt.sensors.fov.FOVFacade;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

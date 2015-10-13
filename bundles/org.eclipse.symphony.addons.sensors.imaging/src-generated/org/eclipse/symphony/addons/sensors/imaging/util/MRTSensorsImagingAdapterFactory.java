@@ -14,12 +14,11 @@ import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
+import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed;
 
 /**
  * <!-- begin-user-doc -->

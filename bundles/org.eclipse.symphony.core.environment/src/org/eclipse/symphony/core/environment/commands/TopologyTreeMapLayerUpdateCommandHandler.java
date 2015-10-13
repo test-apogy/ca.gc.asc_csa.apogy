@@ -38,7 +38,7 @@ public class TopologyTreeMapLayerUpdateCommandHandler extends AbstractHandler im
 					public void run(IProgressMonitor monitor) throws InvocationTargetException,	InterruptedException 
 					{						
 						Node node = layer.getAbstractMapLayerNode();
-						NodePresentation nodePresentation = ca.gc.space.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(node);				
+						NodePresentation nodePresentation = org.eclipse.symphony.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(node);				
 						if(nodePresentation != null)
 						{
 							nodePresentation.setVisible(!nodePresentation.isVisible());

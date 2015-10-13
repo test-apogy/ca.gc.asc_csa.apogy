@@ -5,13 +5,12 @@ package org.eclipse.symphony.examples.camera.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.camera.Activator;
 import org.eclipse.symphony.examples.camera.CameraStub;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
-
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 
 /**
  * <!-- begin-user-doc -->

@@ -7,18 +7,17 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection;
+import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
+import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.AzimuthDirection;
-import ca.gc.space.mrt.sensors.imaging.ElevationDirection;
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.mrt.sensors.imaging.ImagingUtilities;
 
 /**
  * <!-- begin-user-doc -->

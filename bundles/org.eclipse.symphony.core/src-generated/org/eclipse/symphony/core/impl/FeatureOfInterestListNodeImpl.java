@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 import org.eclipse.symphony.core.Activator;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
@@ -22,8 +23,6 @@ import org.eclipse.symphony.core.FeatureOfInterestListNode;
 import org.eclipse.symphony.core.FeatureOfInterestNode;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
-
-import ca.gc.space.topology.impl.AggregateGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

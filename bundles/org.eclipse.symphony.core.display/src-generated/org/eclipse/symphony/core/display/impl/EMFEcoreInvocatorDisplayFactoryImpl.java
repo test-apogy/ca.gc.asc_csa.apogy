@@ -7,6 +7,7 @@ import java.awt.Point;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.SortedSet;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.ecore.EClass;

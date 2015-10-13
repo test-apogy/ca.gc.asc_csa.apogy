@@ -5,9 +5,8 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
 
 import javax.vecmath.Color3f;
 
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
-
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->

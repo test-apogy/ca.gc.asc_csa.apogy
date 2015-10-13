@@ -12,12 +12,11 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.invocator.provider.TypeItemProvider;
-
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
 
 /**
  * This is the item provider adapter for a

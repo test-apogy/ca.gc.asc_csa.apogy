@@ -10,10 +10,6 @@ import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.vehicle.Line3d;
-import org.eclipse.symphony.addons.vehicle.Plane;
-import org.eclipse.symphony.addons.vehicle.Segment2D;
-import org.eclipse.symphony.addons.vehicle.TerrainProfile;
 import org.eclipse.symphony.addons.vehicle.impl.WheelVehicleUtilitiesImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 

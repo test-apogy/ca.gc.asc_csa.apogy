@@ -13,15 +13,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersFactory;
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.asc_csa.topology.dynamics.provider.PhysicalBodyItemProvider;
-import ca.gc.space.mrt.geometry.paths.PathsFactory;
-import ca.gc.space.mrt.mobility.pathplanners.PathplannersFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.provider.PhysicalBodyItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.LanderSphericalFoot} object.

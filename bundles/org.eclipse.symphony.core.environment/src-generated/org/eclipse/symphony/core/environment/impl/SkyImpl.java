@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.EnvironmentFacade;
@@ -28,9 +30,6 @@ import org.eclipse.symphony.core.environment.Sun;
 import org.eclipse.symphony.core.environment.SurfaceWorksite;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

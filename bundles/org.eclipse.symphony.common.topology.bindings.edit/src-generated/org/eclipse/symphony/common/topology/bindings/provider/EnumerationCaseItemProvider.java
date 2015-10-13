@@ -7,6 +7,7 @@ package org.eclipse.symphony.common.topology.bindings.provider;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -23,8 +24,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
-import ca.gc.asc_csa.topology.bindings.EnumerationCase;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.EnumerationCase} object.

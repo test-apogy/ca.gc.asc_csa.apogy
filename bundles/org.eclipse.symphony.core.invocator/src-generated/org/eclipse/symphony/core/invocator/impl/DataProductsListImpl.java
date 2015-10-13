@@ -18,6 +18,7 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.OperationCallResultsList;
 import org.eclipse.symphony.core.invocator.RecordingResultsList;
+
 import com.google.common.base.Objects;
 
 /**

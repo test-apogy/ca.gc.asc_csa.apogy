@@ -25,6 +25,10 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.bindings.BindingsSet;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
 import org.eclipse.symphony.core.Activator;
 import org.eclipse.symphony.core.ConnectionPointsList;
 import org.eclipse.symphony.core.SymphonyCoreFacade;
@@ -38,11 +42,6 @@ import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
 import org.eclipse.symphony.core.ui.natures.SymphonyProjectNature;
-
-import ca.gc.asc_csa.topology.bindings.BindingsSet;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.TopologyFactory;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

@@ -4,6 +4,7 @@ package org.eclipse.symphony.common.emf.ui.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
+
 import javax.measure.unit.Unit;
 
 import org.eclipse.emf.common.util.EList;
@@ -12,12 +13,11 @@ import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.common.emf.ui.Activator;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,17 +58,6 @@ public class EMFEcoreUIFacadeImpl extends MinimalEObjectImpl.Container implement
   protected EClass eStaticClass()
   {
 		return EMFEcoreUIPackage.Literals.EMF_ECORE_UI_FACADE;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Color getColorForRange(org.eclipse.symphony.common.emf.Ranges range) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 		/**

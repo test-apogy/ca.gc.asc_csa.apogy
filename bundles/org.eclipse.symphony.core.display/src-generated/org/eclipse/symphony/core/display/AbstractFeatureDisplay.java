@@ -4,6 +4,7 @@
 package org.eclipse.symphony.core.display;
 
 import java.awt.Point;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;

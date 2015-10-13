@@ -7,11 +7,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.environment.Environment;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 
 /**
  * <!-- begin-user-doc -->

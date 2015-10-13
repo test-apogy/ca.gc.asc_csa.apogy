@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -25,9 +27,6 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.camera.Activator;
 import org.eclipse.symphony.examples.camera.CameraSimulated;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
-
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingFactory;
 
 /**
  * <!-- begin-user-doc -->

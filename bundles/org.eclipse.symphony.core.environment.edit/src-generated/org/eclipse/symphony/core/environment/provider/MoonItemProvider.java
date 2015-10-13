@@ -14,13 +14,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
+import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.provider.GroupNodeItemProvider;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.environment.Moon;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.topology.TopologyPackage;
-import ca.gc.space.topology.provider.GroupNodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Moon} object.

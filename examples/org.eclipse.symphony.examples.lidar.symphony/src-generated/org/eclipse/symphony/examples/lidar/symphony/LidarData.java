@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.examples.lidar.symphony;
 
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.core.SymphonyInitializationData;
-
-import ca.gc.space.mrt.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->

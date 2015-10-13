@@ -17,10 +17,21 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.emf.EMFEcoreFactory;
+import org.eclipse.symphony.common.emf.ListFeatureNode;
+import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.ReferencedGroupNode;
+import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
+import org.eclipse.symphony.common.topology.impl.ReferencedGroupNodeImpl;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCorePackage;
@@ -37,18 +48,6 @@ import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.topology.Activator;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.ListFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.ListRootNode;
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsFactory;
-import ca.gc.asc_csa.topology.bindings.TransformMatrixBinding;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.ReferencedGroupNode;
-import ca.gc.space.topology.TopologyFacade;
-import ca.gc.space.topology.TopologyFactory;
-import ca.gc.space.topology.TransformNode;
-import ca.gc.space.topology.impl.ReferencedGroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->

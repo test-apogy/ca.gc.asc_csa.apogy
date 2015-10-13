@@ -3,9 +3,8 @@
  */
 package org.eclipse.symphony.core.topology;
 
+import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.core.SymphonyEnvironment;
-
-import ca.gc.space.topology.ReferencedGroupNode;
 
 /**
  * <!-- begin-user-doc -->

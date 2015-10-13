@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.core.invocator.AbstractChannel;
 import org.eclipse.symphony.core.invocator.AbstractResultValue;
 import org.eclipse.symphony.core.invocator.ChannelsList;
@@ -42,9 +44,6 @@ import org.eclipse.symphony.core.recordings.Recording;
 import org.eclipse.symphony.core.recordings.RecordingPolicy;
 import org.eclipse.symphony.core.recordings.RecordingResult;
 import org.eclipse.symphony.core.recordings.RecordingTrack;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.FeatureNodeAdapter;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

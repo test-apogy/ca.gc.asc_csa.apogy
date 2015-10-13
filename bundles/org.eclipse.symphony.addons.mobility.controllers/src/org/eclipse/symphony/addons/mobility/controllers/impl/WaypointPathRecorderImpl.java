@@ -19,12 +19,11 @@ import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode;
 import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
+import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
+import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.space.mrt.sensors.pose.PoseSensor;
-import ca.gc.space.mrt.sensors.pose.PositionSensor;
 
 /**
  * <!-- begin-user-doc -->

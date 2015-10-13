@@ -14,10 +14,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 import org.eclipse.symphony.core.environment.StarField;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.topology.provider.NodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.StarField} object.

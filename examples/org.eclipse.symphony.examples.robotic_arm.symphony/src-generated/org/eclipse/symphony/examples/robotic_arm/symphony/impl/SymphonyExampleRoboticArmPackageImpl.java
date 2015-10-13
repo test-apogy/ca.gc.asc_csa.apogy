@@ -3,11 +3,11 @@
  */
 package org.eclipse.symphony.examples.robotic_arm.symphony.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
 import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;

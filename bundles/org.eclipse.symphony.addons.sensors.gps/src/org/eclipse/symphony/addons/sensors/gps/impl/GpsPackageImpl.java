@@ -23,11 +23,10 @@ import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
 import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
+import org.eclipse.symphony.addons.sensors.pose.PosePackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
-
-import ca.gc.space.mrt.sensors.pose.PosePackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!--

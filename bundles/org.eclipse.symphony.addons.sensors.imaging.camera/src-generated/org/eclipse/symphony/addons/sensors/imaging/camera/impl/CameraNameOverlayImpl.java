@@ -5,12 +5,11 @@ package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
 
 /**
  * <!-- begin-user-doc -->

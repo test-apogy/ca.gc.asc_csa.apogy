@@ -15,10 +15,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.symphony.common.topology.ui.provider.TransformNodePresentationItemProvider;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
-
-import ca.gc.space.topology.ui.provider.TransformNodePresentationItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.ResultNodePresentation} object.

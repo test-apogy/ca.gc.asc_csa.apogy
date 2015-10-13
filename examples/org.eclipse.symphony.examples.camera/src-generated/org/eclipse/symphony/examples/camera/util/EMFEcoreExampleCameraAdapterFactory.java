@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.examples.camera.util;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -12,13 +10,19 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.addons.sensors.Sensor;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
+import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.examples.camera.*;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.Zoomable;
+import org.eclipse.symphony.examples.camera.Camera;
+import org.eclipse.symphony.examples.camera.CameraSimulated;
+import org.eclipse.symphony.examples.camera.CameraStub;
+import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.PTUCamera;
+import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
+import org.eclipse.symphony.examples.camera.PTUCameraStub;
 
 /**
  * <!-- begin-user-doc -->

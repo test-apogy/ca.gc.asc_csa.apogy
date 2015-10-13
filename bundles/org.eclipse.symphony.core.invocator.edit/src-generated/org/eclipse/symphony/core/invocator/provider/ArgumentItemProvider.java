@@ -17,9 +17,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.Argument;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Argument} object.

@@ -6,6 +6,7 @@ package org.eclipse.symphony.common.emf.provider;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -21,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
+import org.eclipse.symphony.common.emf.TimeSource;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.TimeSource} object.

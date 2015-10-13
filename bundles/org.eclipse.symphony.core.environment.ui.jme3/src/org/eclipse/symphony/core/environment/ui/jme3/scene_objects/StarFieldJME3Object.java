@@ -15,6 +15,8 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import org.eclipse.symphony.core.environment.EnvironmentUtilities;
 import org.eclipse.symphony.core.environment.Star;
 import org.eclipse.symphony.core.environment.StarField;
@@ -22,9 +24,6 @@ import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
 import org.eclipse.symphony.core.environment.ui.StarFieldSceneObject;
 import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

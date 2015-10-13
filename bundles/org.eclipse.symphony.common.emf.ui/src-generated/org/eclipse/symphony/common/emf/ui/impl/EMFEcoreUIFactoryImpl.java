@@ -3,6 +3,7 @@
 package org.eclipse.symphony.common.emf.ui.impl;
 
 import javax.measure.unit.Unit;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

@@ -3,13 +3,12 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
+import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.examples.satellite.impl.SatelliteUtilsImpl;
-
-import java.util.Date;
 
 /**
  * <!-- begin-user-doc -->

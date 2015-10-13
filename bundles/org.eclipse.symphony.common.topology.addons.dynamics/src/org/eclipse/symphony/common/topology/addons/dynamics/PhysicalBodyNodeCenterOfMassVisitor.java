@@ -12,7 +12,10 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
 

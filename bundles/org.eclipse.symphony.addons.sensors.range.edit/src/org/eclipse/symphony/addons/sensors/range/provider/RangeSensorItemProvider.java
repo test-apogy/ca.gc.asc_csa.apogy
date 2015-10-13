@@ -19,12 +19,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
 import org.eclipse.symphony.addons.sensors.range.RangeFactory;
 import org.eclipse.symphony.addons.sensors.range.RangeSensor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.space.mrt.sensors.fov.FovFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.range.RangeSensor} object.

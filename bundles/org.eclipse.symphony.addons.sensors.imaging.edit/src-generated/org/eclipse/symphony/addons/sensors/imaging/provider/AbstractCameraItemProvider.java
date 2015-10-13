@@ -21,9 +21,8 @@ import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera} object.

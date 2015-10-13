@@ -20,7 +20,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.Activator;
+import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl;
+import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
@@ -37,12 +42,6 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-
-import ca.gc.space.mrt.geometry.paths.WayPointPath;
-import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner;
-import ca.gc.space.mrt.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import ca.gc.space.mrt.mobility.pathplanners.graph.PathplannersGraphFactory;
-import ca.gc.space.mrt.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
 
 /**
  * <!-- begin-user-doc -->

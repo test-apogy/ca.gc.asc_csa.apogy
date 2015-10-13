@@ -12,13 +12,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
 
 /**
  * <!-- begin-user-doc -->

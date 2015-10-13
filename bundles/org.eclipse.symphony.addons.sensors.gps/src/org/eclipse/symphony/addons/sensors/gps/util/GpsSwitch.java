@@ -19,19 +19,18 @@ import org.eclipse.symphony.addons.sensors.gps.GPSReading;
 import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
+import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
+import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
+import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
+import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 import org.eclipse.symphony.common.obsolete.mrt.Server;
 import org.eclipse.symphony.common.obsolete.mrt.Startable;
-
-import ca.gc.space.mrt.sensors.pose.OrientationSensor;
-import ca.gc.space.mrt.sensors.pose.PoseSensor;
-import ca.gc.space.mrt.sensors.pose.PositionSensor;
-import ca.gc.space.mrt.sensors.pose.SelfPlaceSensor;
-import ca.gc.space.topology.AggregateGroupNode;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.PositionNode;
-import ca.gc.space.topology.RotationNode;
-import ca.gc.space.topology.TransformNode;
+import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.PositionNode;
+import org.eclipse.symphony.common.topology.RotationNode;
+import org.eclipse.symphony.common.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc --> The <b>Switch</b> for the model's inheritance

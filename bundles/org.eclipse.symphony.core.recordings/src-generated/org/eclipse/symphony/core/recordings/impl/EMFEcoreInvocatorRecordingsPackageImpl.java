@@ -4,11 +4,13 @@
 package org.eclipse.symphony.core.recordings.impl;
 
 import static org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage.ADAPTER;
+
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;

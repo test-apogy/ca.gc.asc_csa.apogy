@@ -19,7 +19,6 @@ import org.eclipse.symphony.addons.Ruler3dToolNode;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.ui.Ruler3dToolSceneObject;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
-
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;

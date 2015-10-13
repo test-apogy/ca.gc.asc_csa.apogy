@@ -14,8 +14,7 @@ import org.eclipse.symphony.addons.geometry.paths.Path;
 import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode;
-
-import ca.gc.space.mrt.sensors.pose.PoseSensor;
+import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 
 /**
  * <!-- begin-user-doc -->

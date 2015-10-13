@@ -3,14 +3,14 @@
  */
 package org.eclipse.symphony.examples.lander.provider;
 
-import ca.gc.space.mrt.geometry.data.provider.DataEditPlugin;
-import ca.gc.space.mrt.geometry.paths.provider.PathEditPlugin;
-import ca.gc.space.mrt.mobility.pathplanners.provider.PathplannersEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.addons.geometry.paths.provider.PathEditPlugin;
+import org.eclipse.symphony.addons.mobility.pathplanners.provider.PathplannersEditPlugin;
 import org.eclipse.symphony.addons.provider.SymphonyToolsCoreEditPlugin;
 import org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
+import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
@@ -64,10 +64,7 @@ public final class EMFEcoreExampleLanderEditPlugin extends EMFPlugin
 		     DataEditPlugin.INSTANCE,
 		     PathplannersEditPlugin.INSTANCE,
 		     PathEditPlugin.INSTANCE,
-		     ca.gc.space.mrt.geometry.data3d.provider.Data3dEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin.INSTANCE,
-		     ca.gc.space.mrt.common.processors.provider.ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

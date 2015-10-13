@@ -7,6 +7,8 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.topology.ui.NodePresentation;
+import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
 import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
@@ -14,8 +16,6 @@ import org.eclipse.symphony.core.ui.ResultNodePresentation;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
-import ca.gc.space.topology.ui.NodePresentation;
-import ca.gc.space.topology.ui.TransformNodePresentation;
 
 /**
  * <!-- begin-user-doc -->

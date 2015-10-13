@@ -5,7 +5,6 @@ import javax.vecmath.Tuple3d;
 
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.ui.ShadowMode;
 
 public interface SceneObject {
 

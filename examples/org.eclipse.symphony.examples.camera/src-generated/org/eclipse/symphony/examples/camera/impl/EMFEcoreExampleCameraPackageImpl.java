@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.examples.camera.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
@@ -10,12 +11,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
 import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.examples.camera.Camera;
 import org.eclipse.symphony.examples.camera.CameraSimulated;
 import org.eclipse.symphony.examples.camera.CameraStub;

@@ -13,7 +13,33 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.*;
+import org.eclipse.symphony.core.AbsolutePoseProvider;
+import org.eclipse.symphony.core.AssemblyLink;
+import org.eclipse.symphony.core.AssemblyLinksList;
+import org.eclipse.symphony.core.ConnectionPoint;
+import org.eclipse.symphony.core.ConnectionPointsList;
+import org.eclipse.symphony.core.FeatureOfInterest;
+import org.eclipse.symphony.core.FeatureOfInterestList;
+import org.eclipse.symphony.core.FeatureOfInterestListNode;
+import org.eclipse.symphony.core.FeatureOfInterestNode;
+import org.eclipse.symphony.core.OperationCallPositionedResult;
+import org.eclipse.symphony.core.OrbitModelsList;
+import org.eclipse.symphony.core.PoseProvider;
+import org.eclipse.symphony.core.Positioned;
+import org.eclipse.symphony.core.PositionedResult;
+import org.eclipse.symphony.core.ResultNode;
+import org.eclipse.symphony.core.ResultsListNode;
+import org.eclipse.symphony.core.SymphonyCoreFacade;
+import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.SymphonyEnvironment;
+import org.eclipse.symphony.core.SymphonyInitializationData;
+import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.SymphonyTopology;
+import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.core.UserDefinedResult;
+import org.eclipse.symphony.core.WorksitesList;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--

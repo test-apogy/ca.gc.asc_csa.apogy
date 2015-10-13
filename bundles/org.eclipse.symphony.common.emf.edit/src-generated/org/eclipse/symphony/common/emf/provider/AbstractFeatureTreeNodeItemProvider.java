@@ -5,6 +5,7 @@ package org.eclipse.symphony.common.emf.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -13,10 +14,10 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.AbstractFeatureTreeNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFactory;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
+import org.eclipse.symphony.common.emf.EMFEcoreFactory;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.TreeFeatureNode;
+import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.AbstractFeatureTreeNode} object.

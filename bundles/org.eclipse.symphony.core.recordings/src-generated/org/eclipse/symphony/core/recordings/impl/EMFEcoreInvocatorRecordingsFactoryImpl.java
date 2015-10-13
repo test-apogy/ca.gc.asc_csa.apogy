@@ -17,7 +17,20 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.core.recordings.*;
+import org.eclipse.symphony.core.recordings.Channel;
+import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFacade;
+import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsFactory;
+import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
+import org.eclipse.symphony.core.recordings.FixedPeriodValues;
+import org.eclipse.symphony.core.recordings.Player;
+import org.eclipse.symphony.core.recordings.PlayerDirection;
+import org.eclipse.symphony.core.recordings.PlayerState;
+import org.eclipse.symphony.core.recordings.Recorder;
+import org.eclipse.symphony.core.recordings.RecorderState;
+import org.eclipse.symphony.core.recordings.Recording;
+import org.eclipse.symphony.core.recordings.RecordingPolicy;
+import org.eclipse.symphony.core.recordings.RecordingResult;
+import org.eclipse.symphony.core.recordings.RecordingTrack;
 
 /**
  * <!-- begin-user-doc -->

@@ -4,9 +4,8 @@
 package org.eclipse.symphony.addons.sensors.imaging.camera;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera;
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 
 /**
  * <!-- begin-user-doc -->

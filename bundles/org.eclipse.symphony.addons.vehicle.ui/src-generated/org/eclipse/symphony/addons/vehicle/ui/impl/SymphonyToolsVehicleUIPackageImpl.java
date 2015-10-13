@@ -3,11 +3,11 @@
  */
 package org.eclipse.symphony.addons.vehicle.ui.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIFactory;

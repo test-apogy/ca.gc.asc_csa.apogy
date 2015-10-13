@@ -15,6 +15,7 @@ import javax.vecmath.Point2d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -41,8 +42,6 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ToolsList;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 
 /**
  * <!-- begin-user-doc -->

@@ -10,16 +10,29 @@ import org.eclipse.symphony.addons.AbstractTool;
 import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
 import org.eclipse.symphony.addons.Simple3DTool;
 import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.vehicle.*;
+import org.eclipse.symphony.addons.vehicle.ContactProvider;
+import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
+import org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider;
+import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
+import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
+import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
+import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
+import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Thruster;
+import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
+import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
+import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
+import org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade;
+import org.eclipse.symphony.addons.vehicle.Wheel;
+import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
+import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
+import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
+import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.core.PoseCorrector;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.asc_csa.topology.bindings.AbstractTopologyBinding;
 
 /**
  * <!-- begin-user-doc -->

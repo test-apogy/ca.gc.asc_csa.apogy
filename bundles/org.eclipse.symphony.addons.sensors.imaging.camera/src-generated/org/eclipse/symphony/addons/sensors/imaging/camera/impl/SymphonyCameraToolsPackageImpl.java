@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReference;
@@ -59,9 +61,6 @@ import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-
-import ca.gc.space.mrt.sensors.fov.FovPackage;
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
 
 /**
  * <!-- begin-user-doc -->

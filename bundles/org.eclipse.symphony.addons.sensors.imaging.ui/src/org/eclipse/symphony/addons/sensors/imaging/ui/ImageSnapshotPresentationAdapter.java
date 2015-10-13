@@ -1,8 +1,6 @@
 package org.eclipse.symphony.addons.sensors.imaging.ui;
 
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation;
-import org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;

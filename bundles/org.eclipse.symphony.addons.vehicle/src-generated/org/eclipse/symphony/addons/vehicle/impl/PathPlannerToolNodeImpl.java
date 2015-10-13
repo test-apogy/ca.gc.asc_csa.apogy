@@ -10,14 +10,13 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
+import org.eclipse.symphony.addons.geometry.paths.WayPointPathBinding;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-
-import ca.gc.space.mrt.geometry.paths.PathsFactory;
-import ca.gc.space.mrt.geometry.paths.WayPointPath;
-import ca.gc.space.mrt.geometry.paths.WayPointPathBinding;
 
 /**
  * <!-- begin-user-doc -->

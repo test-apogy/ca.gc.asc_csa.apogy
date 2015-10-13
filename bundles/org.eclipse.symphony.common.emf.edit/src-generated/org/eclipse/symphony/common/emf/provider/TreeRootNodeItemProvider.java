@@ -14,10 +14,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.asc_csa.eclipse.emf.ecore.TreeRootNode;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.TreeRootNode} object.

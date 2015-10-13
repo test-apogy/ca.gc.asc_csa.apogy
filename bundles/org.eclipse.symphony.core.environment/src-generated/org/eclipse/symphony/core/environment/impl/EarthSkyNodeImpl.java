@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.environment.AstronomyUtils;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSkyNode;
@@ -23,8 +24,6 @@ import org.eclipse.symphony.core.environment.Sky;
 import org.eclipse.symphony.core.environment.StarField;
 import org.eclipse.symphony.core.environment.Sun;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

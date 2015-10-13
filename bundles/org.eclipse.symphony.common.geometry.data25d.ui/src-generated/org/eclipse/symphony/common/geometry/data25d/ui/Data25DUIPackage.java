@@ -6,8 +6,7 @@ package org.eclipse.symphony.common.geometry.data25d.ui;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import ca.gc.space.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

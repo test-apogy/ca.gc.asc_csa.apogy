@@ -6,6 +6,7 @@ package org.eclipse.symphony.core.environment.orbit.earth.impl;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
+
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;

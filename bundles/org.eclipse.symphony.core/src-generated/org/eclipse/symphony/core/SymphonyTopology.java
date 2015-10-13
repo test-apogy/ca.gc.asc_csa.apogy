@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core;
 
 import org.eclipse.emf.ecore.EObject;
-
-import ca.gc.space.topology.GroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

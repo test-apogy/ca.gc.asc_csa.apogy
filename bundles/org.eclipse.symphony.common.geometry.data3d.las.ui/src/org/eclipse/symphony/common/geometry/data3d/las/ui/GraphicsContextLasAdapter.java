@@ -105,7 +105,7 @@ public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 				GroupNode root = TopologyFactory.eINSTANCE
 						.createAggregateGroupNode();
 
-				ContentNode<CartesianCoordinatesSet> pointNode = ca.gc.space.topology.TopologyFacade.INSTANCE
+				ContentNode<CartesianCoordinatesSet> pointNode = org.eclipse.symphony.common.topology.TopologyFacade.INSTANCE
 						.createContentNode(pts);
 
 				root.getChildren().add(pointNode);

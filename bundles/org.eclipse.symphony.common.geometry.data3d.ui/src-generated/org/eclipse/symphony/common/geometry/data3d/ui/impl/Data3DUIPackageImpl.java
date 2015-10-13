@@ -15,8 +15,7 @@ import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIFactory;
 import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage;
 import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
-
-import ca.gc.space.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->

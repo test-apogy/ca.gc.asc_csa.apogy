@@ -3,9 +3,9 @@
  */
 package org.eclipse.symphony.core;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.Named;
-import ca.gc.space.topology.GroupNode;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.topology.GroupNode;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

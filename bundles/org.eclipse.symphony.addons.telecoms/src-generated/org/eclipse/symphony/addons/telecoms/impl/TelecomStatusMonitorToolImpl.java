@@ -3,14 +3,14 @@
  */
 package org.eclipse.symphony.addons.telecoms.impl;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.regex.Pattern;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;

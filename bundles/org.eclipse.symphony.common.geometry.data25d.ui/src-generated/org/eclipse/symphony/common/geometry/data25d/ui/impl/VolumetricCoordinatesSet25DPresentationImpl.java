@@ -10,8 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage;
 import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
-
-import ca.gc.space.topology.ui.impl.NodePresentationImpl;
+import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->

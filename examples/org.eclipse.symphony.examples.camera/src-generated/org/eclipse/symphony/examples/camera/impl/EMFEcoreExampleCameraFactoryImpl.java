@@ -9,7 +9,14 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.camera.*;
+import org.eclipse.symphony.examples.camera.Camera;
+import org.eclipse.symphony.examples.camera.CameraSimulated;
+import org.eclipse.symphony.examples.camera.CameraStub;
+import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraFactory;
+import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.PTUCamera;
+import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
+import org.eclipse.symphony.examples.camera.PTUCameraStub;
 
 /**
  * <!-- begin-user-doc -->

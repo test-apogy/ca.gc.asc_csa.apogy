@@ -12,7 +12,9 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.InitializationData;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.lidar.symphony.*;
+import org.eclipse.symphony.examples.lidar.symphony.LidarData;
+import org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter;
+import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage;
 
 /**
  * <!-- begin-user-doc -->

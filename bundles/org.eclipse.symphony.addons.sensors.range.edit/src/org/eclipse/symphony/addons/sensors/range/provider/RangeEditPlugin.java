@@ -9,16 +9,15 @@ package org.eclipse.symphony.addons.sensors.range.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data25d.provider.Data25dEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
+import org.eclipse.symphony.common.obsolete.mrt.provider.CommonEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
-
-import ca.gc.space.mrt.common.provider.CommonEditPlugin;
-import ca.gc.space.mrt.sensors.fov.provider.FovEditPlugin;
 
 /**
  * This is the central singleton for the Range edit plugin.

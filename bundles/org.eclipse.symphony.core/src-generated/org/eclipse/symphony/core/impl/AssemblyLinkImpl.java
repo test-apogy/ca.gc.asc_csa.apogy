@@ -9,16 +9,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.invocator.TypeMember;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-import ca.gc.space.topology.Node;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

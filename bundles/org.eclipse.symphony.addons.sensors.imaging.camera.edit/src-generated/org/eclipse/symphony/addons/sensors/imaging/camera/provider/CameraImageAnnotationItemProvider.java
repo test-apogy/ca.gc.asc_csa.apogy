@@ -21,10 +21,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
+import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
-
-import ca.gc.asc_csa.symphony.tools.camera.CameraImageAnnotation;
-import ca.gc.asc_csa.symphony.tools.camera.SymphonyCameraToolsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation} object.

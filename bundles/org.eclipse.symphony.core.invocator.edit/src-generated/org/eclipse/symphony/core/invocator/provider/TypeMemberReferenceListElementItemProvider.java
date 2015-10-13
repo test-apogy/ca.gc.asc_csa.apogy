@@ -13,12 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.edit.utils.EMFEcoreEditUtilsFacade;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement} object.

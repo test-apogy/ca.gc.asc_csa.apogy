@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core.environment;
 
 import org.eclipse.emf.common.util.EList;
-
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->

@@ -8,7 +8,16 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.core.display.*;
+import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
+import org.eclipse.symphony.core.display.AbstractPlotDisplay;
+import org.eclipse.symphony.core.display.BooleanDisplay;
+import org.eclipse.symphony.core.display.DisplayFacade;
+import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
+import org.eclipse.symphony.core.display.HistoryData;
+import org.eclipse.symphony.core.display.HistoryDataHandler;
+import org.eclipse.symphony.core.display.NumberVersusTimeHistoryData;
+import org.eclipse.symphony.core.display.NumberVsTimePlotDisplay;
+import org.eclipse.symphony.core.display.TextDisplay;
 import org.eclipse.symphony.core.invocator.AbstractDisplay;
 
 /**

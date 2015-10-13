@@ -7,7 +7,6 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 /**
  * 

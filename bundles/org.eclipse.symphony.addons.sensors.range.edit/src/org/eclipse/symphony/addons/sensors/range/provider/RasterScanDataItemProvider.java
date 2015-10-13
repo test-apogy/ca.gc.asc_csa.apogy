@@ -23,6 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.SensorsFactory;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.addons.sensors.range.RangeFactory;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanData;
@@ -30,8 +31,6 @@ import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
 import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
-
-import ca.gc.space.mrt.sensors.fov.FovFactory;
 
 /**
  * This is the item provider adapter for a

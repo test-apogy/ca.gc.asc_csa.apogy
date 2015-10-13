@@ -6,15 +6,14 @@ package org.eclipse.symphony.core.topology.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.core.topology.*;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
 import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
 import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.ReferencedGroupNode;
 
 /**
  * <!-- begin-user-doc -->

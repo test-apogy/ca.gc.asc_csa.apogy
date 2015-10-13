@@ -3,9 +3,6 @@
  */
 package org.eclipse.symphony.core.impl;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Described;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcorePackage;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -17,6 +14,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.symphony.common.emf.Described;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
 import org.eclipse.symphony.core.SymphonyCorePackage;

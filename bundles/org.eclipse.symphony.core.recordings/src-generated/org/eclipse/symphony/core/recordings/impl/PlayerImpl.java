@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.AbstractResult;
@@ -29,8 +30,6 @@ import org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage;
 import org.eclipse.symphony.core.recordings.Player;
 import org.eclipse.symphony.core.recordings.Recording;
 import org.eclipse.symphony.core.recordings.RecordingResult;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.TimeSource;
 
 /**
  * <!-- begin-user-doc -->
@@ -232,8 +231,8 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTimeSource(org.eclipse.symphony.common.emf.TimeSource newTimeSource) {
-		org.eclipse.symphony.common.emf.TimeSource oldTimeSource = timeSource;
+	public void setTimeSourceGen(TimeSource newTimeSource) {
+		TimeSource oldTimeSource = timeSource;
 		timeSource = newTimeSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE, oldTimeSource, timeSource));

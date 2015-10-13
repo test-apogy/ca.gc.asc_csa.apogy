@@ -25,7 +25,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.databinding.converters.BooleanToStringConverter;
 import org.eclipse.symphony.common.databinding.converters.IntegerToStringConverter;
-import org.eclipse.symphony.common.emf.databinding.EMFReferenceUpdateStrategy;
+import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.common.emf.ui.converters.AbstractNativeToDisplayConverter;
 import org.eclipse.symphony.core.display.DisplayFacade;
@@ -33,8 +33,6 @@ import org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage;
 import org.eclipse.symphony.core.display.TextDisplay;
 import org.eclipse.symphony.core.display.databindings.EnumUpdateValueStrategy;
 import org.eclipse.symphony.core.display.databindings.UpdateValueStrategyWithRange;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.Ranges;
 
 /**
  * <!-- begin-user-doc -->

@@ -14,12 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
 import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage;
-
-import ca.gc.space.mrt.sensors.fov.FovFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData} object.

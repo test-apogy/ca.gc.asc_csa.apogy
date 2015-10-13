@@ -10,13 +10,12 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.environment.impl.EnvironmentFacadeImpl;
 import org.eclipse.symphony.core.invocator.Environment;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

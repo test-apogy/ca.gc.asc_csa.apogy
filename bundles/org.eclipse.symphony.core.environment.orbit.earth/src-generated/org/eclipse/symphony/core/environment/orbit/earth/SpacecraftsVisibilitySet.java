@@ -6,6 +6,7 @@ package org.eclipse.symphony.core.environment.orbit.earth;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Named;

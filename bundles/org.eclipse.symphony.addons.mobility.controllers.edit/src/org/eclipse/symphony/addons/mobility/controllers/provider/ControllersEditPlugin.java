@@ -11,14 +11,13 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.eclipse.symphony.addons.geometry.paths.provider.PathEditPlugin;
 import org.eclipse.symphony.addons.mobility.provider.MobilityEditPlugin;
+import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
-
-import ca.gc.space.mrt.sensors.pose.provider.PoseEditPlugin;
 
 /**
  * This is the central singleton for the Controllers edit plugin.

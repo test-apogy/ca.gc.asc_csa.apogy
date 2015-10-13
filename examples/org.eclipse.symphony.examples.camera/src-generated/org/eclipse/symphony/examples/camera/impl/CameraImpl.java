@@ -12,13 +12,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
+import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
+import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
+import org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl;
 import org.eclipse.symphony.examples.camera.Camera;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
-
-import ca.gc.space.mrt.sensors.imaging.ImageSnapshot;
-import ca.gc.space.mrt.sensors.imaging.MRTSensorsImagingPackage;
-import ca.gc.space.mrt.sensors.imaging.Zoomable;
-import ca.gc.space.mrt.sensors.imaging.impl.AbstractCameraImpl;
 
 /**
  * <!-- begin-user-doc -->

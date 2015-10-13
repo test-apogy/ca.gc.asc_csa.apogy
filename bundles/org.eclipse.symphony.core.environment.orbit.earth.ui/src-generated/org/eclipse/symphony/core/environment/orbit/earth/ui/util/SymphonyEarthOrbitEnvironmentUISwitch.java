@@ -9,7 +9,17 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.Updatable;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.*;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
 
 /**

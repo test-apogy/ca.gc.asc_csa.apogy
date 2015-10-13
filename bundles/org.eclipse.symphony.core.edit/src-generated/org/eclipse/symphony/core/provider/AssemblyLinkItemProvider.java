@@ -23,11 +23,10 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.topology.TopologyFactory;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
-
-import ca.gc.space.topology.TopologyFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.AssemblyLink} object.

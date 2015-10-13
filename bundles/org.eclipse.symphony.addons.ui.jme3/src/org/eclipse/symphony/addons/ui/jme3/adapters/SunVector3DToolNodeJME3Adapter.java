@@ -2,11 +2,10 @@ package org.eclipse.symphony.addons.ui.jme3.adapters;
 
 import org.eclipse.symphony.addons.SunVector3DToolNode;
 import org.eclipse.symphony.addons.ui.jme3.scene_objects.SunVector3DToolNodeJME3Object;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
-
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
-import org.eclipse.symphony.common.topology.Node;
 
 public class SunVector3DToolNodeJME3Adapter implements JME3Adapter {
 

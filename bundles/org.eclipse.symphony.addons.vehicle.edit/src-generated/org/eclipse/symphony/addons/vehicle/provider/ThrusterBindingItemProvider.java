@@ -13,8 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
-
-import ca.gc.asc_csa.topology.bindings.provider.AbstractTopologyBindingItemProvider;
+import org.eclipse.symphony.common.topology.bindings.provider.AbstractTopologyBindingItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.ThrusterBinding} object.

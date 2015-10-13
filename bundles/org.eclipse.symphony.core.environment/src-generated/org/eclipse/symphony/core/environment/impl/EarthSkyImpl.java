@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.AstronomyUtils;
 import org.eclipse.symphony.core.environment.EarthSky;
@@ -30,9 +32,6 @@ import org.eclipse.symphony.core.environment.Moon;
 import org.eclipse.symphony.core.environment.SkyNode;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.TransformNode;
 
 /**
  * <!-- begin-user-doc -->

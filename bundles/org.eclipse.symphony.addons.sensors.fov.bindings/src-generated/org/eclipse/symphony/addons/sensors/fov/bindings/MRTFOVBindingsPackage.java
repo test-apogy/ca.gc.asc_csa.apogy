@@ -6,8 +6,7 @@ package org.eclipse.symphony.addons.sensors.fov.bindings;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import ca.gc.asc_csa.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->

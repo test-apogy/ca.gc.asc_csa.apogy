@@ -22,6 +22,10 @@ import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
+import org.eclipse.symphony.common.emf.AbstractRootNode;
+import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.invocator.AttributeResultValue;
 import org.eclipse.symphony.core.invocator.DataProductsList;
@@ -42,11 +46,6 @@ import org.eclipse.symphony.core.recordings.RecordingResult;
 import org.eclipse.symphony.core.recordings.RecordingTrack;
 import org.eclipse.symphony.core.recordings.csv.CSVAdapter;
 import org.eclipse.symphony.core.recordings.csv.CSVAdaptersRegistry;
-
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractFeatureSpecifier;
-import ca.gc.asc_csa.eclipse.emf.ecore.AbstractRootNode;
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
 
 /**
  * <!-- begin-user-doc -->

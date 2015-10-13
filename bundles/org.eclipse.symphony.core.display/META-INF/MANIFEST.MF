@@ -32,3 +32,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.emf.ui;bundle-version="0.1.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.core.display.Activator
+Import-Package: org.eclipse.symphony.common.emf.databinding,
+ org.eclipse.symphony.common.emf.databinding.converters
