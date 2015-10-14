@@ -37,7 +37,7 @@
    <extension
          point="org.eclipse.ui.views">
       <category
-            id="ca.gc.asc_csa.eclipse.ui.category"
+            id="org.eclipse.symphony.common.ui.category"
             name="ASC/CSA Eclipse Toolbox">
       </category>
    </extension>

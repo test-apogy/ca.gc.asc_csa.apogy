@@ -28,7 +28,7 @@ import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
 import org.eclipse.symphony.addons.sensors.pose.PosePackage;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-import org.eclipse.symphony.addons.sensors.pose.util.PoseUtils;
+import org.eclipse.symphony.addons.sensors.pose.PoseUtils;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.geometry.data3d.Pose;

@@ -125,7 +125,7 @@ public class VehiclePathPlannerToolItemProvider extends PathPlannerToolItemProvi
 		
 		if(vehiclePathPlannerTool.getPlannedPath() != null)
 		{
-			String distanceText = decimalFormat.format(vehiclePathPlannerTool.getPlannedPath().getLenght()) + " m";
+			String distanceText = decimalFormat.format(vehiclePathPlannerTool.getPlannedPath().getLength()) + " m";
 			label += distanceText;
 		}
 		else

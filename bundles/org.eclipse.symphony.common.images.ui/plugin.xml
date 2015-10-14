@@ -8,7 +8,7 @@
             category="org.eclipse.symphony.common.ui.category"
             class="org.eclipse.symphony.common.images.ui.views.ImageView"
             icon="icons/image_view.png"
-            id="ca.gc.asc_csa.eclipse.images.ui.ImageView"
+            id="org.eclipse.symphony.common.images.ui.ImageView"
             name="Image View"
             restorable="true">
          <description>

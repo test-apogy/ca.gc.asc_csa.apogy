@@ -235,7 +235,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 		
 		if(pathPlannerTool.getPlannedPath() != null)
 		{
-			String distanceText = decimalFormat.format(pathPlannerTool.getPlannedPath().getLenght()) + " m";
+			String distanceText = decimalFormat.format(pathPlannerTool.getPlannedPath().getLength()) + " m";
 			label += distanceText;
 		}
 		else

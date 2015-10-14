@@ -4,7 +4,6 @@
 package org.eclipse.symphony.common.geometry.data3d.ui.provider;
 
 
-import ca.gc.space.topology.ui.provider.NodePresentationItemProvider;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,6 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
 import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage;
+import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation} object.

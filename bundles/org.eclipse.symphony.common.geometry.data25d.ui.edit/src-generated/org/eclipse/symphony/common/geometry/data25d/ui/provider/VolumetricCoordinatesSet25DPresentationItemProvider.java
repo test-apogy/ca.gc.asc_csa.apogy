@@ -4,7 +4,6 @@
 package org.eclipse.symphony.common.geometry.data25d.ui.provider;
 
 
-import ca.gc.space.topology.ui.provider.NodePresentationItemProvider;
 import java.util.Collection;
 import java.util.List;
 
@@ -15,6 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage;
 import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
+import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation} object.
