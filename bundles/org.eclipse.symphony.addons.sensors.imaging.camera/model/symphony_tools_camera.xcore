@@ -15,6 +15,8 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
 import org.eclipse.symphony.core.AbsolutePoseProvider
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot
+import org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection
+import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection
 
 type Color3f wraps javax.vecmath.Color3f
 type List<T> wraps java.util.List
