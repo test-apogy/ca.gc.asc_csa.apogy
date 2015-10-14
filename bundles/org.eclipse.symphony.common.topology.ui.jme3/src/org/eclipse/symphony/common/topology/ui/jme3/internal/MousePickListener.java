@@ -60,7 +60,6 @@ public abstract class MousePickListener implements ActionListener
 	private boolean keyBoardInputRegistered = false;	
 	private boolean mouseInputRegistered = false;
 		
-	private boolean enabled = false;		
 	private boolean pickEnabled = false;
 	private boolean busy = false;
 	
@@ -214,7 +213,6 @@ public abstract class MousePickListener implements ActionListener
 			}
 			Logger.INSTANCE.log(Activator.ID, this, "Pick is disabled.", EventSeverity.INFO);
 		}
-		this.enabled = enabled;
 	}
 	
 	public void setPickEnabled(boolean enabled)

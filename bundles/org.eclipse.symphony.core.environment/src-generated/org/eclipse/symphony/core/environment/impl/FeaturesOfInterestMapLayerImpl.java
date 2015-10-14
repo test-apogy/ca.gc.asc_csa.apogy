@@ -40,8 +40,7 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl implements FeaturesOfInterestMapLayer 
 {
 	private FeatureOfInterestListNode featureOfInterestListNode = null;
-	private boolean listIsDirty = true;
-	
+
 	/**
 	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference.
 	 * <!-- begin-user-doc -->

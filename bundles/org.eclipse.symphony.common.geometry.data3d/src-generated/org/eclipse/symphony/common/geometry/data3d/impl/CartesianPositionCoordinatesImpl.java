@@ -34,11 +34,6 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 public class CartesianPositionCoordinatesImpl extends CoordinatesImpl implements
 		CartesianPositionCoordinates {
 	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 3824086703281529760L;
-
-	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 

@@ -5,8 +5,6 @@
  */
 package org.eclipse.symphony.common.obsolete.java.emf.impl;
 
-import static org.eclipse.symphony.common.obsolete.java.emf.EmfPackage.CLASS;
-
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;

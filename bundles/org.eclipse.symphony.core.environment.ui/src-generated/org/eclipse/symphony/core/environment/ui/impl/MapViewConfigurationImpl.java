@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 import javax.vecmath.Color3f;
 
@@ -853,7 +852,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	  		  }
 	  	  };
 	  	  
-	  	  Future<AbstractEImage> futur = executor.submit(worker);
+	  	  executor.submit(worker);
 	  	  	  	  	  	  
 	  	  // Make the executor accepts NO new thread and complete all threads currently working.
 		  executor.shutdown();		  

@@ -11,7 +11,7 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentationAdapter">
       </Class>

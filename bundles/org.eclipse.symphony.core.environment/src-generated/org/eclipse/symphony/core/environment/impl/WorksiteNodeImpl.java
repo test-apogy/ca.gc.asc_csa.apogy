@@ -135,7 +135,6 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {

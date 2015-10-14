@@ -62,8 +62,6 @@ public class NodePresentationListComposite extends Composite
 	
 	private class TopologyPresentationSetContentProvider implements ITreeContentProvider 
 	{
-		private Viewer viewer;
-		
 		@Override
 		public void dispose() {						
 		}
@@ -71,15 +69,14 @@ public class NodePresentationListComposite extends Composite
 		@Override
 		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) 
 		{
-			this.viewer = viewer;
 		}
-
 
 		@Override
 		public Object[] getElements(Object inputElement) 
 		{
 			if(inputElement instanceof List)
 			{
+				@SuppressWarnings("unchecked")
 				List<NodePresentation> list = (List<NodePresentation>) inputElement;
 				NodePresentation[] array = list.toArray(new NodePresentation[list.size()]);
 				return array;

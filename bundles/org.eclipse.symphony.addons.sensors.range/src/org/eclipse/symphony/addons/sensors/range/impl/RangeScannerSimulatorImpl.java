@@ -61,7 +61,6 @@ import com.sun.j3d.utils.geometry.NormalGenerator;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerImpl<InputType> implements RangeScannerSimulator<InputType> 
 {			
 	/**

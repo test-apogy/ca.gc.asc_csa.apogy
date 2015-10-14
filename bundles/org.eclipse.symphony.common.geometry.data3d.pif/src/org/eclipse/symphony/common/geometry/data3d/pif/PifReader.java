@@ -7,10 +7,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
-import javax.vecmath.Color3f;
 import javax.vecmath.Color4b;
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3f;

@@ -11,13 +11,13 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.geometry.paths.ui.adapters.WayPointPathPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.geometry.paths.ui.adapters.WayPointPresentationAdapter">
       </Class>

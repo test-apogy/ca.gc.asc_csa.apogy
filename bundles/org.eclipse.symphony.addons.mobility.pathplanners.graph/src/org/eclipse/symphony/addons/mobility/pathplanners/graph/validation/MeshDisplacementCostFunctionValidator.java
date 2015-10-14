@@ -17,5 +17,5 @@ import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayP
 public interface MeshDisplacementCostFunctionValidator {
 	boolean validate();
 
-	boolean validatePlanner(CostBasedMeshWayPointPathPlanner value);
+	boolean validatePlanner(@SuppressWarnings("rawtypes") CostBasedMeshWayPointPathPlanner value);
 }

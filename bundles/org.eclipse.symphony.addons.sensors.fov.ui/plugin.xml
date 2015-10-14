@@ -11,19 +11,19 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.CircularSectorFieldOfViewPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.ConicalFieldOfViewPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.RectangularFrustrumFieldOfViewPresentationAdapter">
       </Class>

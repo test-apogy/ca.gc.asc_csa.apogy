@@ -103,7 +103,6 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

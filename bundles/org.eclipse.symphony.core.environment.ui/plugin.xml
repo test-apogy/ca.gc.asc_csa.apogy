@@ -7,31 +7,31 @@
 
 <plugin>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.EarthSkyPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.StarFieldPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.SunPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.MoonPresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.EarthSurfaceWorksitePresentationAdapter">
       </Class>
@@ -379,13 +379,13 @@
       </page>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.java3d">
+         point="org.eclipse.symphony.common.topology.ui.Java3d">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.j3d.FeatureOfInterestObjectAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.FeatureOfInterestPresentationAdapter">
       </Class>

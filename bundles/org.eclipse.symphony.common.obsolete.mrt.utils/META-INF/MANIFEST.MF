@@ -8,7 +8,7 @@ Bundle-Activator: org.eclipse.symphony.common.obsolete.mrt.utils.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.geometry.data3d,
  org.eclipse.symphony.common.math;visibility:=reexport
-Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.common.obsolete.mrt.utils
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: %providerName

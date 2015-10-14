@@ -30,7 +30,6 @@ import org.eclipse.symphony.addons.sensors.range.RayData;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class RayDataImpl extends EObjectImpl implements RayData {
 	/**
 	 * The default value of the '{@link #getOrigin() <em>Origin</em>}' attribute.

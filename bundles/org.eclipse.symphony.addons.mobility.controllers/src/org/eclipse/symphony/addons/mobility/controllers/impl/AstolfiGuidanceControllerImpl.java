@@ -3,7 +3,6 @@
  */
 package org.eclipse.symphony.addons.mobility.controllers.impl;
 
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -1456,8 +1455,6 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 				// Computes the required velocities.
 				double nu = getNu();
 				double omega = getOmega();
-				
-				Date  now = new Date();
 				
 				//System.out.println("Time : " + now.getTime() + " nu " + nu + " omega " + omega);
 				

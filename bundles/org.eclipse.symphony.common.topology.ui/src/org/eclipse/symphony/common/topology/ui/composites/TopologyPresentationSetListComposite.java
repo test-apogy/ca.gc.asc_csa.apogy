@@ -63,9 +63,7 @@ public class TopologyPresentationSetListComposite extends Composite
 	}
 	
 	private class TopologyPresentationSetContentProvider implements ITreeContentProvider 
-	{
-		private Viewer viewer;
-		
+	{		
 		@Override
 		public void dispose() {						
 		}
@@ -73,15 +71,14 @@ public class TopologyPresentationSetListComposite extends Composite
 		@Override
 		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) 
 		{
-			this.viewer = viewer;
 		}
-
 
 		@Override
 		public Object[] getElements(Object inputElement) 
 		{
 			if(inputElement instanceof List)
 			{
+				@SuppressWarnings("unchecked")
 				List<TopologyPresentationSet> list = (List<TopologyPresentationSet>) inputElement;
 				TopologyPresentationSet[] array = list.toArray(new TopologyPresentationSet[list.size()]);
 				return array;

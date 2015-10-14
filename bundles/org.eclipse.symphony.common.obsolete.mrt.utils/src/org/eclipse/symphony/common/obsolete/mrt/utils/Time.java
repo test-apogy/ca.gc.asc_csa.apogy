@@ -90,7 +90,6 @@ public class Time {
 	}
 	
 	public static String GetDateFormated(String format, Date date){
-	    Calendar cal = Calendar.getInstance(TimeZone.getDefault());
 	    java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat(format, new Locale("en","CA"));
 	   
 	    // Create the formatter object

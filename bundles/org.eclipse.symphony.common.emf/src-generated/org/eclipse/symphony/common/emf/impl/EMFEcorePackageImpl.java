@@ -2,8 +2,6 @@
  */
 package org.eclipse.symphony.common.emf.impl;
 
-import static org.eclipse.symphony.common.emf.EMFEcorePackage.RESOURCE;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.SortedSet;

@@ -20,7 +20,6 @@ import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
-import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
 import com.jme3.material.RenderState.FaceCullMode;
 import com.jme3.math.ColorRGBA;
@@ -35,7 +34,6 @@ public class CircularExclusionZoneJME3Object extends DefaultJME3SceneObject<Circ
 	private float height = 1.0f;
 	
 	private MeshPresentationMode meshPresentationMode = MeshPresentationMode.WIREFRAME; 
-	private AssetManager assetManager;	
 	private Geometry geometry;
 	
 	private ColorRGBA circularExclusionZone = ColorRGBA.Red;
@@ -49,7 +47,7 @@ public class CircularExclusionZoneJME3Object extends DefaultJME3SceneObject<Circ
 			throw new IllegalArgumentException();
 		}
 				
-		this.assetManager = jme3Application.getAssetManager();
+		jme3Application.getAssetManager();
 		
 		// Call this on viewer thread.
 		jme3Application.enqueue(new Callable<Object>() 

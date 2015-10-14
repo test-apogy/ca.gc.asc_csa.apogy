@@ -5,13 +5,14 @@
  */
 package org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.util;
 
-import java.util.List;
-
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.*;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.EmfUiPropertyPackage;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellEditorContributor;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellEditorContributors;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellViewerContentContributor;
+import org.eclipse.symphony.common.obsolete.eclipse.emf.ui.property.PropertyCellViewerContentContributors;
 
 /**
  * <!-- begin-user-doc -->

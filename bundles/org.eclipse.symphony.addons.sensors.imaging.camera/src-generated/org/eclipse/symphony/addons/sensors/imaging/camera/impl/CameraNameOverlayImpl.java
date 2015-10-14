@@ -3,7 +3,6 @@
  */
 package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
 
-import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay;
@@ -25,7 +24,6 @@ public class CameraNameOverlayImpl extends AbstractTextOverlayImpl implements Ca
 	
 	public static final String DEFAULT_DISPLAYED_TEXT = "<?>";	  
 	private String stringToDisplay = DEFAULT_DISPLAYED_TEXT;
-	private Adapter adapter = null;
 	
   /**
 	 * <!-- begin-user-doc -->

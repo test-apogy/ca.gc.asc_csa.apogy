@@ -26,7 +26,7 @@
       <editor
             id="org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorEditorID"
             name="%_UI_EMFEcoreInvocatorEditor_label"
-            icon="platform:/plugin/ca.gc.asc_csa.symphony.core.ui/icons/symphony_logo_16x16.gif"
+            icon="platform:/plugin/org.eclipse.symphony.core.ui/icons/symphony_logo_16x16.gif"
             extensions="ei, ss, sym"
             class="org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorEditor"
             contributorClass="org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorActionBarContributor">

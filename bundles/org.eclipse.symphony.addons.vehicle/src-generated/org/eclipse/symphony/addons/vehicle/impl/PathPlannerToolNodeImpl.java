@@ -34,7 +34,6 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements PathPlannerToolNode 
 {
 	private Adapter adapter = null;
-	private WayPointPath plannedPathOriginal = null;
 	private WayPointPath plannedPathLocal = null;
 	private WayPointPathBinding binding = null;
 	
@@ -199,7 +198,6 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -268,8 +266,6 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 			binding.setTargetWayPointPath(null);
 			binding.setSourceWayPointPath(null);
 		}
-		
-		plannedPathOriginal = newWayPointPath;
 		
 		if(newWayPointPath != null)
 		{

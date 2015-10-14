@@ -661,13 +661,6 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 			printVerbose("Could not find a polygon for the start position !");
 			throw(new Exception("Could not find a polygon for the start position !"));
 		}
-		else if(endPolygon == null)
-		{
-			printVerbose("Could not find a polygon for the destination position !");
-			throw(new Exception("Could not find a polygon for the destination position !"));
-		}
-			
-		
 		return polygonPath;
 	}
 	

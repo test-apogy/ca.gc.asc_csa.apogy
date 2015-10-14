@@ -76,7 +76,6 @@ public class GraphicsContextPifAdapter implements GraphicsContextAdapter {
 		return ok;
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public GraphicsContext getAdapter(Object obj, Object context) {
 

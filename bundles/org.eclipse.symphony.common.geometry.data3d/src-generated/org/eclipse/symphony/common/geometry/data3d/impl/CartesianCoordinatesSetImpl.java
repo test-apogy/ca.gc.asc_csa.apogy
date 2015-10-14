@@ -34,12 +34,6 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
  */
 public class CartesianCoordinatesSetImpl extends CoordinatesSetImpl<CartesianPositionCoordinates> implements
 		CartesianCoordinatesSet {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7069770794769023332L;
-
 	private int currentPointId = 0;
 
 	/**

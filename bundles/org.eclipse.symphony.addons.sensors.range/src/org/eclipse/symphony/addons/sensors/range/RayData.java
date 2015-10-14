@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-@SuppressWarnings("restriction")
 public interface RayData extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Origin</b></em>' attribute.

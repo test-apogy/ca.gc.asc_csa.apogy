@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.2"?>
 <plugin>
-   <extension-point id="org.eclipse.symphony.common.topology.ui.java3d" name="Java3d Adapter" schema="schema/org.eclipse.symphony.common.topology.ui.java3d.exsd"/>
-   <extension-point id="org.eclipse.symphony.common.topology.ui.presentation" name="Presentation Adapter" schema="schema/org.eclipse.symphony.common.topology.ui.presentation.exsd"/>
-   <extension-point id="propertyDescriptor" name="Property Descriptor" schema="schema/propertyDescriptor.exsd"/>
-   <extension-point id="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter" name="Graphics Context Adapter" schema="schema/org.eclipse.symphony.common.topology.ui.graphicsContextAdapter.exsd"/>
+   <extension-point id="Java3d" name="Java3d Adapter" schema="schema/Java3d.exsd"/>
+   <extension-point id="Presentation" name="Presentation Adapter" schema="schema/Presentation.exsd"/>
+   <extension-point id="propertyDescriptor" name="Property Descriptor" schema="schema/PropertyDescriptor.exsd"/>
+   <extension-point id="GraphicsContextAdapter" name="Graphics Context Adapter" schema="schema/GraphicsContextAdapter.exsd"/>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.GroupNodePresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.TransformNodePresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.DefaultNodePresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.RotationNodePresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.PositionNodePresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.ReferencedGroupNodePresentationAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter">
+         point="org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.VRMLGraphicsContextAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter">
+         point="org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.OBJGraphicsContextAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter">
+         point="org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.TopoFileGraphicsContextAdapter">
       </Class>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter">
+         point="org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.GraphicsContextGraphicsContextAdapter">
       </Class>
@@ -81,7 +81,7 @@
       </initializer>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.presentation">
+         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.ui.adapters.URLNodePresentationAdapter">
       </Class>

@@ -8,7 +8,6 @@ import org.eclipse.symphony.core.SymphonySystem;
 public class SymphonySystem3dViewerComposite extends Composite {
 	
 	private SymphonySystem symphonySystem;
-	private DataBindingContext m_bindingContext;	
 	
 	//private ITopologyViewer topologyViewer;	
 	public SymphonySystem3dViewerComposite(Composite parent, int style) 
