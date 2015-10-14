@@ -1,7 +1,6 @@
 package org.eclipse.symphony.common.topology.ui.jme3;
 
 import java.util.ArrayList;
-
 import java.util.List;
 
 import org.eclipse.core.runtime.CoreException;

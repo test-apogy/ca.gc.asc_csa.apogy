@@ -11,13 +11,13 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
-import ca.gc.asc_csa.topology.ui.jme3.Activator;
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import ca.gc.space.topology.core.primitives.PrimitivesPackage;
-import ca.gc.space.topology.core.primitives.Vector;
-import ca.gc.space.topology.core.primitives.ui.VectorSceneObject;
+import org.eclipse.symphony.common.topology.ui.jme3.Activator;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Vector;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorSceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;

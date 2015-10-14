@@ -6,9 +6,8 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 public class PathPlannerToolNodeJME3Object extends DefaultJME3SceneObject<PathPlannerToolNode>
 {				

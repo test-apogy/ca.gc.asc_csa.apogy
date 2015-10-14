@@ -26,6 +26,7 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.databinding.converters.BooleanToStringConverter;
 import org.eclipse.symphony.common.databinding.converters.IntegerToStringConverter;
 import org.eclipse.symphony.common.emf.Ranges;
+import org.eclipse.symphony.common.emf.databinding.EMFReferenceUpdateStrategy;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.common.emf.ui.converters.AbstractNativeToDisplayConverter;
 import org.eclipse.symphony.core.display.DisplayFacade;

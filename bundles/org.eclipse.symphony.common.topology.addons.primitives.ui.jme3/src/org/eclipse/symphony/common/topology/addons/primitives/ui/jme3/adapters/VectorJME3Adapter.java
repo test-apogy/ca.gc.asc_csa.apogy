@@ -1,12 +1,11 @@
 package org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.adapters;
 
+import org.eclipse.symphony.common.topology.Node;
+import org.eclipse.symphony.common.topology.addons.primitives.Vector;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.scene_objects.VectorJME3SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3SceneObject;
-import ca.gc.space.topology.Node;
-import ca.gc.space.topology.core.primitives.Vector;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 
 public class VectorJME3Adapter implements JME3Adapter {
 

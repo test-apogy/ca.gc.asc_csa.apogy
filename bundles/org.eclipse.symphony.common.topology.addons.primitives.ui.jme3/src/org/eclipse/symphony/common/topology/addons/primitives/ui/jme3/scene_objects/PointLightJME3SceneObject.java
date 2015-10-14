@@ -18,7 +18,7 @@ import com.jme3.light.PointLight;
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 
-public class PointLightJME3SceneObject extends DefaultJME3SceneObject<ca.gc.space.topology.core.primitives.PointLight> 
+public class PointLightJME3SceneObject extends DefaultJME3SceneObject<org.eclipse.symphony.common.topology.addons.primitives.PointLight> 
 {
 	public static float DEFAULT_POINT_LIGHT_RADIUS = 1000.0f;
 		

@@ -20,8 +20,6 @@ type JME3Node wraps com.jme3.scene.Node
 
 type JME3Geometry wraps Geometry
 
-type SceneObject wraps org.eclipse.symphony.common.topology.ui.SceneObject
-
 class JME3TypeFactory 
 {
 	op ColorRGBA createColorRGBA(Color3f color)

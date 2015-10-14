@@ -22,6 +22,7 @@ import org.eclipse.symphony.common.databinding.converters.BooleanToDoubleConvert
 import org.eclipse.symphony.common.databinding.converters.NumberToDoubleConverter;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 import org.eclipse.symphony.common.emf.Ranges;
+import org.eclipse.symphony.common.emf.databinding.converters.EnumeratorToDoubleConverter;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.core.display.AbstractFeatureDisplay;
 import org.eclipse.symphony.core.display.DisplayFacade;

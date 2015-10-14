@@ -2,6 +2,7 @@ package org.eclipse.symphony.addons.vehicle.ui.jme3.adapters;
 
 import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ui.jme3.scene_objects.ThrusterJME3Object;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;

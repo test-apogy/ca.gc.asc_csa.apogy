@@ -13,11 +13,10 @@ import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterSceneObject;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
+import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
+import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import org.eclipse.symphony.core.topology.ui.Activator;
-
-import ca.gc.asc_csa.topology.ui.jme3.JME3RenderEngineDelegate;
-import ca.gc.asc_csa.topology.ui.jme3.JME3Utilities;
-import ca.gc.asc_csa.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.effect.ParticleEmitter;

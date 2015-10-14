@@ -4,6 +4,7 @@ import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.common.topology.TopologyFactory;
 import org.eclipse.symphony.common.topology.TransformNode;

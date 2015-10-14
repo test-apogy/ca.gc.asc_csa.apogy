@@ -10,6 +10,7 @@ import javax.vecmath.Tuple3d;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.ShadowMode;
 import org.eclipse.symphony.common.topology.ui.jme3.Activator;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
