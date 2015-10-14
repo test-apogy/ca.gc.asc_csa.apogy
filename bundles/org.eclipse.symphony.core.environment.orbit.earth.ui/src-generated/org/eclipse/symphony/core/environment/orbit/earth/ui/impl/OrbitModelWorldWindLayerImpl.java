@@ -297,6 +297,18 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setTimeSourceGen(Timed newTimeSource) {
+		Timed oldTimeSource = timeSource;
+		timeSource = newTimeSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
+	}	
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public double getTimeInterval() {
 		return timeInterval;
 	}

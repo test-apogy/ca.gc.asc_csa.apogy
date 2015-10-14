@@ -9,14 +9,13 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.emf.AbstractFeatureNode;
+import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
+import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.common.emf.ecore.databinding.DefaultValueDiff;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
-
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 
 public class WatchFeatureNodeObservableValue extends AbstractObservableValue 
 {
