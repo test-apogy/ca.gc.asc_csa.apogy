@@ -10,7 +10,6 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.eclipse.symphony.common.topology.ui.viewer.provider
 Require-Bundle: org.eclipse.core.runtime,
- ca.gc.asc_csa.topology.ui.viewer;visibility:=reexport,
  org.eclipse.symphony.common.topology.ui.viewer;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
@@ -18,8 +17,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology.ui.edit;visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.topology.edit;visibility:=reexport,
- org.eclipse.symphony.common.topology.core;visibility:=reexport,
- org.eclipse.symphony.common.topology.core.edit;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.topology.ui;visibility:=reexport,
  org.eclipse.symphony.common.topology.ui.edit;visibility:=reexport,

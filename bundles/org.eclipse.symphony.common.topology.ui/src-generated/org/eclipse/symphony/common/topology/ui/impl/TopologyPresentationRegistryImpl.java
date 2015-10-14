@@ -31,11 +31,6 @@ import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.internal.MultiNodeListener;
-<<<<<<< HEAD
-
-import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 /**
  * <!-- begin-user-doc -->

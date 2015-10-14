@@ -8,7 +8,7 @@ package org.eclipse.symphony.addons.mobility.pathplanners.graph.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.addons.geometry.paths.provider.PathEditPlugin;
+import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
 import org.eclipse.symphony.addons.mobility.pathplanners.provider.PathplannersEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
@@ -57,7 +57,7 @@ public final class PathplannersgraphEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     PathplannersEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     PathEditPlugin.INSTANCE,
+		     PathsEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,

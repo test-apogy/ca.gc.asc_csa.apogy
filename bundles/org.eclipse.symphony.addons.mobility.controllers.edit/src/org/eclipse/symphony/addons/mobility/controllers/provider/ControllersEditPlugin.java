@@ -9,7 +9,7 @@ package org.eclipse.symphony.addons.mobility.controllers.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.addons.geometry.paths.provider.PathEditPlugin;
+import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
 import org.eclipse.symphony.addons.mobility.provider.MobilityEditPlugin;
 import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
@@ -64,7 +64,7 @@ public final class ControllersEditPlugin extends EMFPlugin
 		     EcoreEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		     MobilityEditPlugin.INSTANCE,
-		     PathEditPlugin.INSTANCE,
+		     PathsEditPlugin.INSTANCE,
 		     PoseEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,

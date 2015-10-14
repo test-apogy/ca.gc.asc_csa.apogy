@@ -25,12 +25,6 @@ import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
-<<<<<<< HEAD
-
-import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
-import org.eclipse.symphony.common.topology.INodeVisitor;
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 /**
  * <!-- begin-user-doc -->

@@ -18,6 +18,7 @@ import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.symphony.common.topology.ui.Activator;
 
 /**
  * The images provided by the debug plugin.
@@ -35,7 +36,7 @@ public class PluginImages {
 
 	static {
 		String pathSuffix = "icons/full/"; //$NON-NLS-1$		
-		ICON_BASE_URL = Activator.getBundleContext().getBundle()
+		ICON_BASE_URL = Activator.getContext().getBundle()
 				.getEntry(pathSuffix);
 	}
 

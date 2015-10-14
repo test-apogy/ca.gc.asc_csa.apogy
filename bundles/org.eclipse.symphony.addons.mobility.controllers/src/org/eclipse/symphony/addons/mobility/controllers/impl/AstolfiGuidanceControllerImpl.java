@@ -583,7 +583,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		List<CartesianPositionCoordinates> remainingPathPoints = getSmoothedPath().getPoints().subList(indexCurrent, indexLast);
 		WayPointPath remainingPathToDestination = PathsFacade.INSTANCE.createWayPointPath(remainingPathPoints);
 		
-		double remainingPathToDestinationLength=remainingPathToDestination.getLenght() + getRho();
+		double remainingPathToDestinationLength=remainingPathToDestination.getLength() + getRho();
 		
 		//System.out.println("remainingPathToDestinationLength = " +remainingPathToDestinationLength);
 		
