@@ -6,16 +6,12 @@ package org.eclipse.symphony.common.topology.addons.primitives.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelPresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
-<<<<<<< HEAD
-=======
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 /**
  * <!-- begin-user-doc -->

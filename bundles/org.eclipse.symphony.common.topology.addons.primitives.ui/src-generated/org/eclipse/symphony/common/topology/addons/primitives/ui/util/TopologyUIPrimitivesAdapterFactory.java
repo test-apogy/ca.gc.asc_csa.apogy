@@ -4,6 +4,7 @@
 package org.eclipse.symphony.common.topology.addons.primitives.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
+
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
@@ -13,10 +14,6 @@ import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitive
 import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
-<<<<<<< HEAD
-=======
-import org.eclipse.symphony.common.topology.ui.NodePresentation;
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 /**
  * <!-- begin-user-doc -->
