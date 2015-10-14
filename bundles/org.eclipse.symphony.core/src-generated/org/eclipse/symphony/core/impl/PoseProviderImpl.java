@@ -19,10 +19,10 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.PoseProviderImpl#getPoseTransform <em>Pose Transform</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

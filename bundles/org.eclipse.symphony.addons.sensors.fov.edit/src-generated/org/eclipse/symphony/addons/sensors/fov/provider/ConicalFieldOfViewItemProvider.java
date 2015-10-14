@@ -13,12 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
@@ -33,20 +28,7 @@ import org.eclipse.symphony.addons.sensors.fov.FovPackage;
  */
 public class ConicalFieldOfViewItemProvider
 	extends FieldOfViewItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -71,7 +53,6 @@ public class ConicalFieldOfViewItemProvider
 			super.getPropertyDescriptors(object);
 
 			addFieldOfViewAnglePropertyDescriptor(object);
-			addRangePropertyDescriptor(object);
 			addVolumePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -102,29 +83,6 @@ public class ConicalFieldOfViewItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Range feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRangePropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ConicalFieldOfView_range_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ConicalFieldOfView_range_feature", "_UI_ConicalFieldOfView_type"),
-				 FovPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_FOV_INFOPropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Volume feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -143,7 +101,7 @@ public class ConicalFieldOfViewItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_FOV_INFOPropertyCategory"),
+				 null,
 				 null));
 	}
 

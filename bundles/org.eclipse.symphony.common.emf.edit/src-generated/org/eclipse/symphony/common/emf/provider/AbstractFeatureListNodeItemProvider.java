@@ -70,7 +70,7 @@ public class AbstractFeatureListNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureListNode_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureListNode_parent_feature", "_UI_AbstractFeatureListNode_type"),
-				 org.eclipse.symphony.common.emf.EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE__PARENT,
+				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE__PARENT,
 				 false,
 				 false,
 				 true,
@@ -92,7 +92,7 @@ public class AbstractFeatureListNodeItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(org.eclipse.symphony.common.emf.EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE__CHILD);
+			childrenFeatures.add(EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE__CHILD);
 		}
 		return childrenFeatures;
 	}
@@ -136,7 +136,7 @@ public class AbstractFeatureListNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractFeatureListNode.class)) {
-			case org.eclipse.symphony.common.emf.EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

@@ -136,7 +136,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
 	 * @generated
 	 * @ordered
 	 */
-  protected org.eclipse.symphony.common.emf.FeatureNodeAdapter featureNodeAdapter;
+  protected FeatureNodeAdapter featureNodeAdapter;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -360,11 +360,11 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public org.eclipse.symphony.common.emf.FeatureNodeAdapter getFeatureNodeAdapterGen()
+  public FeatureNodeAdapter getFeatureNodeAdapterGen()
   {
 		if (featureNodeAdapter != null && featureNodeAdapter.eIsProxy()) {
 			InternalEObject oldFeatureNodeAdapter = (InternalEObject)featureNodeAdapter;
-			featureNodeAdapter = (org.eclipse.symphony.common.emf.FeatureNodeAdapter)eResolveProxy(oldFeatureNodeAdapter);
+			featureNodeAdapter = (FeatureNodeAdapter)eResolveProxy(oldFeatureNodeAdapter);
 			if (featureNodeAdapter != oldFeatureNodeAdapter) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER, oldFeatureNodeAdapter, featureNodeAdapter));
@@ -378,7 +378,7 @@ public abstract class AbstractTopologyBindingImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public org.eclipse.symphony.common.emf.FeatureNodeAdapter basicGetFeatureNodeAdapter()
+  public FeatureNodeAdapter basicGetFeatureNodeAdapter()
   {
 		return featureNodeAdapter;
 	}

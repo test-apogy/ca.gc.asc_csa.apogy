@@ -11,7 +11,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -33,13 +32,6 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
 public class WayPointItemProvider
 	extends CartesianPositionCoordinatesItemProvider
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -89,7 +81,7 @@ public class WayPointItemProvider
 				 false,
 				 true,
 				 null,
-				 getString("_UI_TOPOLOGY_INFORMATIONPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -112,7 +104,7 @@ public class WayPointItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_TOPOLOGY_INFORMATIONPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -134,7 +126,7 @@ public class WayPointItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_TOPOLOGY_INFORMATIONPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -234,6 +226,11 @@ public class WayPointItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 PathsFactory.eINSTANCE.createWayPoint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 PathsFactory.eINSTANCE.createPath()));
 
 		newChildDescriptors.add
@@ -244,22 +241,7 @@ public class WayPointItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PathsFactory.eINSTANCE.createWayPoint()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
+				 TopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -269,17 +251,17 @@ public class WayPointItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 TopologyFactory.eINSTANCE.createURLNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 TopologyFactory.eINSTANCE.createCADNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 TopologyFactory.eINSTANCE.createContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -294,7 +276,7 @@ public class WayPointItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createURLNode()));
+				 TopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -304,24 +286,27 @@ public class WayPointItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createLink()));
+				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createCADNode()));
-	}
+				 TopologyFactory.eINSTANCE.createPositionNode()));
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return PathsEditPlugin.INSTANCE;
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 TopologyFactory.eINSTANCE.createRotationNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 TopologyFactory.eINSTANCE.createTransformNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
 }

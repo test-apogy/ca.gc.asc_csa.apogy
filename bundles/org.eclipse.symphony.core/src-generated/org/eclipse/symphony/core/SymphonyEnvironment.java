@@ -22,6 +22,7 @@ import org.eclipse.symphony.core.invocator.Environment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.SymphonyEnvironment#getWorksitesList <em>Worksites List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.SymphonyEnvironment#getActiveWorksite <em>Active Worksite</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.symphony.core.invocator.Environment;
  *   <li>{@link org.eclipse.symphony.core.SymphonyEnvironment#getTimeSourcesList <em>Time Sources List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.SymphonyEnvironment#getActiveTimeSource <em>Active Time Source</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyEnvironment()
  * @model

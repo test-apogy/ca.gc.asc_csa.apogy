@@ -19,12 +19,12 @@ import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl#getResourceProject <em>Resource Project</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl#getResourceFile <em>Resource File</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl#getResourceContainer <em>Resource Container</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

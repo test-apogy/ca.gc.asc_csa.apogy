@@ -1390,11 +1390,11 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT:
 				return createAbstractResultValue(arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE:
-				return resolveWatch((org.eclipse.symphony.common.emf.AbstractFeatureNode)arguments.get(0));
+				return resolveWatch((AbstractFeatureNode)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT:
 				return resolveWatch((TypeMemberReferenceTreeElement)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE:
-				return getValue((org.eclipse.symphony.common.emf.AbstractFeatureNode)arguments.get(0));
+				return getValue((AbstractFeatureNode)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE:
 				return getInstance((Variable)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE:
@@ -1424,7 +1424,7 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT:
 				return getFullyQualifiedName((TypeMemberReferenceTreeElement)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE:
-				return getFullyQualifiedName((org.eclipse.symphony.common.emf.AbstractFeatureNode)arguments.get(0));
+				return getFullyQualifiedName((AbstractFeatureNode)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE:
 				return createTypeMemberImplementations((Type)arguments.get(0));
 			case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT:

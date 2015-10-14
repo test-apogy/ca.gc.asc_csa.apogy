@@ -82,7 +82,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	 * @generated
 	 * @ordered
 	 */
-	protected org.eclipse.symphony.common.emf.Timed timeSource;
+	protected Timed timeSource;
 
 	/**
 	 * The default value of the '{@link #getForwardPropagationDuration() <em>Forward Propagation Duration</em>}' attribute.
@@ -297,10 +297,10 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.symphony.common.emf.Timed getTimeSource() {
+	public Timed getTimeSource() {
 		if (timeSource != null && timeSource.eIsProxy()) {
 			InternalEObject oldTimeSource = (InternalEObject)timeSource;
-			timeSource = (org.eclipse.symphony.common.emf.Timed)eResolveProxy(oldTimeSource);
+			timeSource = (Timed)eResolveProxy(oldTimeSource);
 			if (timeSource != oldTimeSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
@@ -314,7 +314,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.symphony.common.emf.Timed basicGetTimeSource() {
+	public Timed basicGetTimeSource() {
 		return timeSource;
 	}
 
@@ -703,7 +703,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 				setOrbitModel((OrbitModel)newValue);
 				return;
 			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
-				setTimeSource((org.eclipse.symphony.common.emf.Timed)newValue);
+				setTimeSource((Timed)newValue);
 				return;
 			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				setForwardPropagationDuration((Double)newValue);
@@ -745,7 +745,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 				setOrbitModel((OrbitModel)null);
 				return;
 			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
-				setTimeSource((org.eclipse.symphony.common.emf.Timed)null);
+				setTimeSource((Timed)null);
 				return;
 			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				setForwardPropagationDuration(FORWARD_PROPAGATION_DURATION_EDEFAULT);

@@ -17,10 +17,10 @@ import org.eclipse.symphony.core.SymphonyTopology;
  * <em><b>Symphony Topology</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonyTopologyImpl#getRootNode <em>Root Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

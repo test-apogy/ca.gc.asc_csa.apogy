@@ -35,6 +35,7 @@ import org.eclipse.symphony.common.log.Logger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl#getFontName <em>Font Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl#getFontSize <em>Font Size</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipse.symphony.common.log.Logger;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl#getVerticalOffset <em>Vertical Offset</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl#getTextColor <em>Text Color</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

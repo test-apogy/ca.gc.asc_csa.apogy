@@ -16,12 +16,12 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.HorizontalCoordinatesImpl#getAltitude <em>Altitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.HorizontalCoordinatesImpl#getAzimuth <em>Azimuth</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.HorizontalCoordinatesImpl#getRadius <em>Radius</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

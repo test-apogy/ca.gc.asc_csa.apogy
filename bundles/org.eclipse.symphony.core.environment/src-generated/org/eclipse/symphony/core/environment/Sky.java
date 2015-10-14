@@ -16,6 +16,7 @@ import org.eclipse.symphony.common.emf.Timed;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSurfaceWorksite <em>Surface Worksite</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSkyNode <em>Sky Node</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.symphony.common.emf.Timed;
  *   <li>{@link org.eclipse.symphony.core.environment.Sky#getSunHorizontalCoordinates <em>Sun Horizontal Coordinates</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.Sky#getStarField <em>Star Field</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSky()
  * @model

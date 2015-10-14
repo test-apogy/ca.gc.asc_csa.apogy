@@ -20,12 +20,12 @@ import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.camera.Camera#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.Camera#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.Camera#isStreamingEnabled <em>Streaming Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage#getCamera()
  * @model abstract="true"

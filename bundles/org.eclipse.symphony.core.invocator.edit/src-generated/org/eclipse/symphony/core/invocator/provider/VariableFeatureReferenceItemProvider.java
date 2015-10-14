@@ -212,7 +212,7 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
-				 org.eclipse.symphony.common.emf.EMFEcoreFactory.eINSTANCE.createListRootNode()));
+				 EMFEcoreFactory.eINSTANCE.createListRootNode()));
 	}
 
 	protected void collectNewChildDescriptors(

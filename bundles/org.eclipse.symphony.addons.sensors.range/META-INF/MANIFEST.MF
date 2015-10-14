@@ -12,6 +12,8 @@ Export-Package: org.eclipse.symphony.addons.sensors.range,
  org.eclipse.symphony.addons.sensors.range.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.symphony.common.obsolete.mrt;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data25d;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,

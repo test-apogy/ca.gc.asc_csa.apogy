@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#getFolder <em>Folder</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#getFilename <em>Filename</em>}</li>
@@ -22,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateDataProducts <em>Create Data Products</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateTools <em>Create Tools</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySessionSettings()
  * @model

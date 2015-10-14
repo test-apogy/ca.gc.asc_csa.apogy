@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging -->
       <package
-            uri="ca.gc.space.mrt.sensors.imaging"
+            uri="org.eclipse.symphony.addons.sensors.imaging"
             class="org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage"
             genModel="model/ca_gc_asc_csa_mrt_sensors_imaging.xcore"/>
    </extension>

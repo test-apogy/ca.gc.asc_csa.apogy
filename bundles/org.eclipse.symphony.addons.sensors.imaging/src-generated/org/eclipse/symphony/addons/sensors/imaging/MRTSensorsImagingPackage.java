@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MRTSensorsImaging' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)' modelName='MRTSensorsImaging' modelDirectory='/org.eclipse.symphony.addons.sensors.imaging/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.imaging.edit/src-generated' basePackage='ca.gc.space.mrt.sensors'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='MRTSensorsImaging' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2013 Copyrights (c)' modelName='MRTSensorsImaging' modelDirectory='/org.eclipse.symphony.addons.sensors.imaging/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.imaging.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
  * @generated
  */
 public interface MRTSensorsImagingPackage extends EPackage

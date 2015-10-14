@@ -151,6 +151,7 @@ public class EMFEcoreExampleSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = caseAbstractCamera(satelliteImager);
 				if (result == null) result = caseZoomable(satelliteImager);
 				if (result == null) result = caseSensor(satelliteImager);
+				if (result == null) result = caseNamed(satelliteImager);
 				if (result == null) result = caseAggregateGroupNode(satelliteImager);
 				if (result == null) result = caseGroupNode(satelliteImager);
 				if (result == null) result = caseNode(satelliteImager);

@@ -23,12 +23,12 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFilterImpl#isEnabled <em>Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

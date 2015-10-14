@@ -713,6 +713,15 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	int SATELLITE_IMAGER__STATUS = MRTSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER__NAME = MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -774,141 +783,6 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int SATELLITE_IMAGER___ACCEPT__INODEVISITOR = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
-
-	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ECLASS = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECLASS;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___EIS_PROXY = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ERESOURCE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ECONTAINER = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ECONTAINING_FEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ECONTAINMENT_FEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ECONTENTS = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___EALL_CONTENTS = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ECROSS_REFERENCES = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___EGET__ESTRUCTURALFEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EGET__ESTRUCTURALFEATURE_1;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___EGET__ESTRUCTURALFEATURE_BOOLEAN = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EGET__ESTRUCTURALFEATURE_BOOLEAN_1;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ESET__ESTRUCTURALFEATURE_OBJECT = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ESET__ESTRUCTURALFEATURE_OBJECT_1;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___EIS_SET__ESTRUCTURALFEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EIS_SET__ESTRUCTURALFEATURE_1;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___EUNSET__ESTRUCTURALFEATURE = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EUNSET__ESTRUCTURALFEATURE_1;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___EINVOKE__EOPERATION_ELIST = MRTSensorsImagingPackage.ABSTRACT_CAMERA___EINVOKE__EOPERATION_ELIST_1;
 
 	/**
 	 * The operation id for the '<em>Take Snapshot</em>' operation.

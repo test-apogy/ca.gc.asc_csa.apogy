@@ -12,9 +12,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http:///ca/gc/space/mrt/sensors/range/model/range.ecore" 
+       uri = "org.eclipse.symphony.addons.sensors.range" 
        class = "org.eclipse.symphony.addons.sensors.range.RangePackage"
-       genModel = "model/range.genmodel" /> 
+       genModel = "model/range.xcore" /> 
   </extension>
 
 </plugin>

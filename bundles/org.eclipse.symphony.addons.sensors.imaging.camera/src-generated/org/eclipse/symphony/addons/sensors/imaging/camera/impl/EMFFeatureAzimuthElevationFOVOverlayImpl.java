@@ -30,11 +30,11 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl#getAzimuthFeatureReference <em>Azimuth Feature Reference</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl#getElevationFeatureReference <em>Elevation Feature Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

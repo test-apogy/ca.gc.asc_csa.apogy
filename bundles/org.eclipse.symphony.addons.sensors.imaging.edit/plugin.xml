@@ -26,7 +26,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging -->
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
+            uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 </plugin>

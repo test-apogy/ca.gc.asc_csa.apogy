@@ -12,12 +12,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.pose.PosePackage;
@@ -32,20 +27,7 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  */
 public class SimulatedPoseSensorItemProvider
 	extends PoseSensorItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -69,13 +51,13 @@ public class SimulatedPoseSensorItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUpdatePeriodPropertyDescriptor(object);
 			addXVelocityPropertyDescriptor(object);
 			addYVelocityPropertyDescriptor(object);
 			addZVelocityPropertyDescriptor(object);
 			addXAngularVelocityPropertyDescriptor(object);
 			addYAngularVelocityPropertyDescriptor(object);
 			addZAngularVelocityPropertyDescriptor(object);
+			addUpdatePeriodPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -281,13 +263,13 @@ public class SimulatedPoseSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimulatedPoseSensor.class)) {
-			case PosePackage.SIMULATED_POSE_SENSOR__UPDATE_PERIOD:
 			case PosePackage.SIMULATED_POSE_SENSOR__XVELOCITY:
 			case PosePackage.SIMULATED_POSE_SENSOR__YVELOCITY:
 			case PosePackage.SIMULATED_POSE_SENSOR__ZVELOCITY:
 			case PosePackage.SIMULATED_POSE_SENSOR__XANGULAR_VELOCITY:
 			case PosePackage.SIMULATED_POSE_SENSOR__YANGULAR_VELOCITY:
 			case PosePackage.SIMULATED_POSE_SENSOR__ZANGULAR_VELOCITY:
+			case PosePackage.SIMULATED_POSE_SENSOR__UPDATE_PERIOD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -321,10 +303,7 @@ public class SimulatedPoseSensorItemProvider
 
 		boolean qualify =
 			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == PosePackage.Literals.POSITION_SENSOR__POSITION_COORDINATES ||
-			childFeature == PosePackage.Literals.ORIENTATION_SENSOR__ORIENTATION_COORDINATES ||
-			childFeature == PosePackage.Literals.POSE_SENSOR__POSE;
+			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		if (qualify) {
 			return getString

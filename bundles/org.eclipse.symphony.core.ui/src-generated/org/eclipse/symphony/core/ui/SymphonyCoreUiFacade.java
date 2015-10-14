@@ -18,13 +18,13 @@ import org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonyProjectNamePrefix <em>Default Symphony Project Name Prefix</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFilename <em>Default Symphony Session Filename</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFilenameExtension <em>Default Symphony Session Filename Extension</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyCoreUiFacade()
  * @model
@@ -119,7 +119,7 @@ public interface SymphonyCoreUiFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.symphony.core.ui.IFile" unique="false" exceptions="ca.gc.asc_csa.eclipse.emf.ecore.Exception" resourceContainerDataType="org.eclipse.symphony.core.ui.IContainer" resourceContainerUnique="false" filenameUnique="false" sessionUnique="false"
+	 * @model dataType="org.eclipse.symphony.core.ui.IFile" unique="false" exceptions="org.eclipse.symphony.common.emf.Exception" resourceContainerDataType="org.eclipse.symphony.core.ui.IContainer" resourceContainerUnique="false" filenameUnique="false" sessionUnique="false"
 	 * @generated
 	 */
 	IFile createSymphonySessionFile(IContainer resourceContainer, String filename, InvocatorSession session) throws Exception;

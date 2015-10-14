@@ -18,6 +18,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getXMin <em>XMin</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getXMax <em>XMax</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getLowerRightCorner <em>Lower Right Corner</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getUpperRightCorner <em>Upper Right Corner</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion()
  * @model

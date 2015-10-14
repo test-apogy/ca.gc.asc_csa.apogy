@@ -4,10 +4,10 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.motion.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.addons.motion.provider.MotionEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.sensors.motion.provider.MotionEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.symphony.addons.motion.provider
+Export-Package: org.eclipse.symphony.addons.sensors.motion.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.addons.sensors.motion;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
@@ -15,6 +15,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.addons.sensors.edit;visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.topology.edit;visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.math.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

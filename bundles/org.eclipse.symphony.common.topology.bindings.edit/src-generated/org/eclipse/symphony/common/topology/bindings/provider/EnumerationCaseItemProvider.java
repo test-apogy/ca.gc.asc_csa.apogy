@@ -178,7 +178,7 @@ public class EnumerationCaseItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.EnumerationCase.class)) {
+		switch (notification.getFeatureID(EnumerationCase.class)) {
 			case TopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

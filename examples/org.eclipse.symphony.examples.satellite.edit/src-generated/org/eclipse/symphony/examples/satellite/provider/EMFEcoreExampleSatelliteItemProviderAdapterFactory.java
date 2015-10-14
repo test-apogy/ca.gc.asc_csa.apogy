@@ -41,12 +41,16 @@ import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.core.AssemblyLink;
+import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.environment.ImageMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.util.SymphonyEnvironmentSwitch;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
+import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.util.EMFEcoreExampleSatelliteAdapterFactory;
@@ -806,6 +810,108 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 					(createChildParameter
 						(EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
 						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteInitializationData()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return EMFEcoreExampleSatelliteEditPlugin.INSTANCE;
+		}
+	}
+
+	/**
+	 * A child creation extender for the {@link SymphonyCorePackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends SymphonyCoreSwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAssemblyLink(AssemblyLink object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseTopologyRoot(TopologyRoot object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
 
 				return null;
 			}

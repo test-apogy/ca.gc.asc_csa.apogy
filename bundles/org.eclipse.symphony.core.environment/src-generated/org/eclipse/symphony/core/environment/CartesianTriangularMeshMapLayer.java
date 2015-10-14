@@ -19,13 +19,13 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#isMeshIsDirty <em>Mesh Is Dirty</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getMapLayerPresentations <em>Map Layer Presentations</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getTextureImage <em>Texture Image</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getCartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshMapLayer()
  * @model

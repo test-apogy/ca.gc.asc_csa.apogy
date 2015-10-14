@@ -12,7 +12,6 @@ import java.util.List;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPathInterpolator;
 import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
@@ -26,13 +25,6 @@ import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 public class WayPointPathInterpolatorItemProvider
 	extends ProcessorItemProvider
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -58,18 +50,6 @@ public class WayPointPathInterpolatorItemProvider
 
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This returns WayPointPathInterpolator.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object)
-	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/WayPointPathInterpolator"));
 	}
 
 	/**
@@ -113,18 +93,6 @@ public class WayPointPathInterpolatorItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return PathsEditPlugin.INSTANCE;
 	}
 
 }

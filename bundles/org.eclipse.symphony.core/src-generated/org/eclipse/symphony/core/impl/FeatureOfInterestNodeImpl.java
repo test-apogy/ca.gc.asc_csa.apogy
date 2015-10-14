@@ -23,10 +23,10 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.FeatureOfInterestNodeImpl#getFeatureOfInterest <em>Feature Of Interest</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

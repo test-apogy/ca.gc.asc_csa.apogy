@@ -12,7 +12,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -35,13 +34,6 @@ public class WayPointPathItemProvider
 {
 	private DecimalFormat decimalFormat = new DecimalFormat("0.00");
 	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -68,7 +60,7 @@ public class WayPointPathItemProvider
 			addParentPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addNodeIdPropertyDescriptor(object);
-			addLenghtPropertyDescriptor(object);
+			addLengthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,7 +84,7 @@ public class WayPointPathItemProvider
 				 false,
 				 true,
 				 null,
-				 getString("_UI_TOPOLOGY_INFORMATIONPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -115,7 +107,7 @@ public class WayPointPathItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_TOPOLOGY_INFORMATIONPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -137,18 +129,17 @@ public class WayPointPathItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_TOPOLOGY_INFORMATIONPropertyCategory"),
+				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Lenght feature.
+	 * This adds a property descriptor for the Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLenghtPropertyDescriptor(Object object)
-	{
+	protected void addLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
@@ -160,7 +151,7 @@ public class WayPointPathItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_PATH_INFOPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -236,18 +227,6 @@ public class WayPointPathItemProvider
 			(createChildParameter
 				(DataPackage.Literals.COORDINATES_SET__POINTS,
 				 PathsFactory.eINSTANCE.createWayPoint()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return PathsEditPlugin.INSTANCE;
 	}
 
 }

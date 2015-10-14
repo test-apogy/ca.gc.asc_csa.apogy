@@ -12,11 +12,11 @@ import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.ResultNodePresentation#getPoleHeight <em>Pole Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.ResultNodePresentation#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getResultNodePresentation()
  * @model

@@ -86,7 +86,7 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 	 * @generated
 	 * @ordered
 	 */
-	protected org.eclipse.symphony.common.emf.TimeSource timeSource;
+	protected TimeSource timeSource;
 
 
 	
@@ -205,10 +205,10 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.symphony.common.emf.TimeSource getTimeSource() {
+	public TimeSource getTimeSource() {
 		if (timeSource != null && timeSource.eIsProxy()) {
 			InternalEObject oldTimeSource = (InternalEObject)timeSource;
-			timeSource = (org.eclipse.symphony.common.emf.TimeSource)eResolveProxy(oldTimeSource);
+			timeSource = (TimeSource)eResolveProxy(oldTimeSource);
 			if (timeSource != oldTimeSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE, oldTimeSource, timeSource));
@@ -222,7 +222,7 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.symphony.common.emf.TimeSource basicGetTimeSource() {
+	public TimeSource basicGetTimeSource() {
 		return timeSource;
 	}
 
@@ -399,7 +399,7 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 				setEnabled((Boolean)newValue);
 				return;
 			case EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE:
-				setTimeSource((org.eclipse.symphony.common.emf.TimeSource)newValue);
+				setTimeSource((TimeSource)newValue);
 				return;
 			case EMFEcoreInvocatorRecordingsPackage.PLAYER__RECORDINGS:
 				getRecordings().clear();
@@ -431,7 +431,7 @@ public class PlayerImpl extends AbstractPlayerImpl implements Player
 				setEnabled(ENABLED_EDEFAULT);
 				return;
 			case EMFEcoreInvocatorRecordingsPackage.PLAYER__TIME_SOURCE:
-				setTimeSource((org.eclipse.symphony.common.emf.TimeSource)null);
+				setTimeSource((TimeSource)null);
 				return;
 			case EMFEcoreInvocatorRecordingsPackage.PLAYER__RECORDINGS:
 				getRecordings().clear();

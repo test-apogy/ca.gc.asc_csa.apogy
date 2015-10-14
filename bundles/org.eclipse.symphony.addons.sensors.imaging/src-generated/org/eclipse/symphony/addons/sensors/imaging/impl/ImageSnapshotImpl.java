@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.sensors.imaging.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,8 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
@@ -24,7 +21,7 @@ import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.impl.NodeImpl;
+import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,28 +29,17 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getFieldOfView <em>Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getImage <em>Image</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class ImageSnapshotImpl extends NodeImpl implements ImageSnapshot
+public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 {
-  /**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-  protected EList<Node> children;
-
   /**
 	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -113,19 +99,6 @@ public class ImageSnapshotImpl extends NodeImpl implements ImageSnapshot
   protected EClass eStaticClass()
   {
 		return MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EList<Node> getChildren()
-  {
-		if (children == null) {
-			children = new EObjectContainmentEList<Node>(Node.class, this, MRTSensorsImagingPackage.IMAGE_SNAPSHOT__CHILDREN);
-		}
-		return children;
 	}
 
   /**
@@ -272,8 +245,6 @@ public class ImageSnapshotImpl extends NodeImpl implements ImageSnapshot
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__CHILDREN:
-				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				return basicSetFieldOfView(null, msgs);
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
@@ -291,8 +262,6 @@ public class ImageSnapshotImpl extends NodeImpl implements ImageSnapshot
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__CHILDREN:
-				return getChildren();
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				return getTime();
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
@@ -313,10 +282,6 @@ public class ImageSnapshotImpl extends NodeImpl implements ImageSnapshot
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__CHILDREN:
-				getChildren().clear();
-				getChildren().addAll((Collection<? extends Node>)newValue);
-				return;
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				setTime((Date)newValue);
 				return;
@@ -339,9 +304,6 @@ public class ImageSnapshotImpl extends NodeImpl implements ImageSnapshot
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__CHILDREN:
-				getChildren().clear();
-				return;
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
@@ -364,8 +326,6 @@ public class ImageSnapshotImpl extends NodeImpl implements ImageSnapshot
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__CHILDREN:
-				return children != null && !children.isEmpty();
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:

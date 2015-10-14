@@ -104,7 +104,7 @@ public class TreeFeatureNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_multiValued_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_multiValued_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 org.eclipse.symphony.common.emf.EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
+				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
 				 false,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class TreeFeatureNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_index_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_index_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 org.eclipse.symphony.common.emf.EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
+				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
 				 true,
 				 false,
 				 false,
@@ -195,10 +195,10 @@ public class TreeFeatureNodeItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.TreeFeatureNode.class)) {
-			case org.eclipse.symphony.common.emf.EMFEcorePackage.TREE_FEATURE_NODE__STRUCTURAL_FEATURE:
-			case org.eclipse.symphony.common.emf.EMFEcorePackage.TREE_FEATURE_NODE__MULTI_VALUED:
-			case org.eclipse.symphony.common.emf.EMFEcorePackage.TREE_FEATURE_NODE__INDEX:
+		switch (notification.getFeatureID(TreeFeatureNode.class)) {
+			case EMFEcorePackage.TREE_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case EMFEcorePackage.TREE_FEATURE_NODE__MULTI_VALUED:
+			case EMFEcorePackage.TREE_FEATURE_NODE__INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
