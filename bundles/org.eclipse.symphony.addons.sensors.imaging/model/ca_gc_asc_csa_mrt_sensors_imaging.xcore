@@ -6,11 +6,10 @@ package org.eclipse.symphony.addons.sensors.imaging
 import org.eclipse.symphony.addons.sensors.Sensor
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
 
-import ca.gc.asc_csa.eclipse.emf.ecore.Timed
-import ca.gc.asc_csa.eclipse.emf.ecore.Named
-
 import org.eclipse.symphony.common.images.AbstractEImage
 import org.eclipse.symphony.common.topology.GroupNode
+import org.eclipse.symphony.common.emf.Named
+import org.eclipse.symphony.common.emf.Timed
 
 type Color wraps java.awt.Color
 

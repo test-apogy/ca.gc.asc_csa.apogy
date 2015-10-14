@@ -5,13 +5,13 @@ package org.eclipse.symphony.core.ui
 
 import org.eclipse.symphony.core.invocator.InvocatorSession
 
-import ca.gc.space.topology.ui.TransformNodePresentation
 import org.eclipse.symphony.core.SymphonySystem
 import org.eclipse.core.resources.IProject
 import org.eclipse.core.resources.IContainer
 import org.eclipse.core.resources.IFile
 import org.eclipse.core.resources.IFolder
 import org.eclipse.symphony.common.emf.Exception
+import org.eclipse.symphony.common.topology.ui.TransformNodePresentation
 
 type IProject wraps IProject
 type IContainer wraps IContainer

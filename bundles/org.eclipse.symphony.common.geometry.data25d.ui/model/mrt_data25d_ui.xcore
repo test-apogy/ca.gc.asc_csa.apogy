@@ -4,8 +4,8 @@
 
 package org.eclipse.symphony.common.geometry.data25d.ui
 
-import ca.gc.space.topology.ui.NodePresentation
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D
+import org.eclipse.symphony.common.topology.ui.NodePresentation
 
 class VolumetricCoordinatesSet25DPresentation extends NodePresentation
 {

@@ -201,7 +201,7 @@ public class URLNodeJME3TopologyObject extends DefaultJME3SceneObject<URLNode> i
 	}
 	
 	@Override
-	public void setShadowMode(final ca.gc.space.topology.ui.ShadowMode shadowMode) 
+	public void setShadowMode(final org.eclipse.symphony.common.topology.ui.ShadowMode shadowMode) 
 	{
 		super.setShadowMode(shadowMode);
 		
@@ -481,9 +481,9 @@ public class URLNodeJME3TopologyObject extends DefaultJME3SceneObject<URLNode> i
 	 */
 	private class ShadowModeSceneGraphVisitor implements SceneGraphVisitor
 	{
-		private ca.gc.space.topology.ui.ShadowMode shadowMode = ca.gc.space.topology.ui.ShadowMode.INHERIT;
+		private org.eclipse.symphony.common.topology.ui.ShadowMode shadowMode = org.eclipse.symphony.common.topology.ui.ShadowMode.INHERIT;
 		
-		public ShadowModeSceneGraphVisitor(ca.gc.space.topology.ui.ShadowMode shadowMode)
+		public ShadowModeSceneGraphVisitor(org.eclipse.symphony.common.topology.ui.ShadowMode shadowMode)
 		{
 			this.shadowMode = shadowMode;
 		}

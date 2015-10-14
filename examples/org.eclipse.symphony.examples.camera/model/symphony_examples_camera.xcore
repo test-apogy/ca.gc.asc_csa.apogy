@@ -11,10 +11,9 @@ package org.eclipse.symphony.examples.camera
 
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
 
-import ca.gc.space.mrt.sensors.imaging.AbstractCamera
-import ca.gc.space.mrt.sensors.imaging.Zoomable
-
 import org.eclipse.symphony.addons.actuators.PanTiltUnit
+import org.eclipse.symphony.addons.sensors.imaging.Zoomable
+import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
 
 type Throwable wraps java.lang.Throwable
 

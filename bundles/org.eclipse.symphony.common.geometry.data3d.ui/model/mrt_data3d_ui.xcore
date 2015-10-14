@@ -12,10 +12,10 @@ package org.eclipse.symphony.common.geometry.data3d.ui
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
-import ca.gc.space.topology.ui.MeshPresentationMode
-import ca.gc.space.topology.ui.NodePresentation
 
 import org.eclipse.symphony.common.images.AbstractEImage
+import org.eclipse.symphony.common.topology.ui.MeshPresentationMode
+import org.eclipse.symphony.common.topology.ui.NodePresentation
 
 class CartesianCoordinatesSetPresentation extends NodePresentation
 {

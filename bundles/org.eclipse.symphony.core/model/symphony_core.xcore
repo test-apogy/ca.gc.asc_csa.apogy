@@ -16,13 +16,9 @@ import org.eclipse.symphony.core.invocator.AbstractResult
 import org.eclipse.symphony.core.invocator.OperationCallResult
 import org.eclipse.symphony.core.invocator.ResultsList
 import org.eclipse.symphony.core.invocator.Environment
-import ca.gc.space.topology.Node
 import org.eclipse.symphony.core.invocator.Type
 import org.eclipse.symphony.common.topology.bindings.BindingsSet
 import org.eclipse.symphony.common.math.Matrix4x4
-import ca.gc.space.topology.GroupNode
-import ca.gc.space.topology.AggregateGroupNode
-import ca.gc.space.topology.TransformNode
 import org.eclipse.symphony.core.invocator.TypeMember
 import org.eclipse.symphony.core.invocator.InvocatorSession
 import org.eclipse.symphony.core.invocator.TypeApiAdapter
@@ -30,6 +26,10 @@ import org.eclipse.symphony.core.invocator.OperationCall
 import org.eclipse.symphony.core.invocator.AbstractType
 import org.eclipse.symphony.core.invocator.InitializationData
 import org.eclipse.symphony.core.invocator.VariableFeatureReference
+import org.eclipse.symphony.common.topology.AggregateGroupNode
+import org.eclipse.symphony.common.topology.TransformNode
+import org.eclipse.symphony.common.topology.Node
+import org.eclipse.symphony.common.topology.GroupNode
 
 /* Types definitions. */
 type Map<K,V> wraps java.util.Map
