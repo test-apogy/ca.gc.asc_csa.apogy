@@ -2,6 +2,7 @@ package org.eclipse.symphony.addons.sensors.imaging.ui.jme3.utils;
 
 import java.awt.image.BufferedImage;
 
+
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.ImageProjectorControl;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;

@@ -7,6 +7,7 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
 
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
