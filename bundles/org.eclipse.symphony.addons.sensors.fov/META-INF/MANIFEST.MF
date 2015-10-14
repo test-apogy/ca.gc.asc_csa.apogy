@@ -6,9 +6,28 @@ Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.fov;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
-Export-Package: org.eclipse.symphony.addons.sensors.fov,
- org.eclipse.symphony.addons.sensors.fov.impl,
- org.eclipse.symphony.addons.sensors.fov.util
+Export-Package: org.eclipse.symphony.addons.sensors.fov;
+  uses:="org.eclipse.emf.ecore,
+   org.eclipse.symphony.common.geometry.data,
+   org.eclipse.symphony.common.math,
+   org.eclipse.symphony.common.topology",
+ org.eclipse.symphony.addons.sensors.fov.impl;
+  uses:="org.eclipse.emf.ecore,
+   org.eclipse.emf.ecore.impl,
+   org.eclipse.emf.common.util,
+   org.eclipse.symphony.common.geometry.data3d,
+   org.eclipse.symphony.addons.sensors.fov,
+   org.eclipse.emf.common.notify,
+   org.eclipse.symphony.common.topology.impl,
+   org.eclipse.symphony.common.math",
+ org.eclipse.symphony.addons.sensors.fov.util;
+  uses:="org.eclipse.emf.ecore,
+   org.eclipse.symphony.addons.sensors.fov,
+   org.eclipse.emf.common.notify,
+   org.eclipse.emf.common.notify.impl,
+   org.eclipse.symphony.common.geometry.data,
+   org.eclipse.emf.ecore.util,
+   org.eclipse.symphony.common.topology"
 Require-Bundle: org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,

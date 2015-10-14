@@ -1,13 +1,11 @@
 /**
  * Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)
  */
-package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
+package org.eclipse.symphony.addons.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
-import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
-import org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
@@ -18,12 +16,12 @@ import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
 /**
- * This is the central singleton for the SymphonyCameraTools edit plugin.
+ * This is the central singleton for the SymphonyToolsCore edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class SymphonyCameraToolsEditPlugin extends EMFPlugin
+public final class SymphonyToolsCoreEditPlugin extends EMFPlugin
 {
   /**
 	 * Keep track of the singleton.
@@ -31,7 +29,7 @@ public final class SymphonyCameraToolsEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static final SymphonyCameraToolsEditPlugin INSTANCE = new SymphonyCameraToolsEditPlugin();
+  public static final SymphonyToolsCoreEditPlugin INSTANCE = new SymphonyToolsCoreEditPlugin();
 
   /**
 	 * Keep track of the singleton.
@@ -47,22 +45,19 @@ public final class SymphonyCameraToolsEditPlugin extends EMFPlugin
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyCameraToolsEditPlugin()
+  public SymphonyToolsCoreEditPlugin()
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     MRTSensorsImagingEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     PathsEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

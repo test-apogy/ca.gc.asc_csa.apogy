@@ -822,7 +822,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		List<WayPointPath> paths = getPaths();
 		for(WayPointPath wayPointPath : paths)
 		{
-			distance += wayPointPath.getLenght();
+			distance += wayPointPath.getLength();
 		}
 		
 		return distance;

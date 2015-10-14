@@ -14,4 +14,7 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
-Export-Package: org.eclipse.symphony.addons.sensors.imaging.ui.jme3
+Export-Package: org.eclipse.symphony.addons.sensors.imaging.ui.jme3,
+ org.eclipse.symphony.addons.sensors.imaging.ui.jme3.adapters,
+ org.eclipse.symphony.addons.sensors.imaging.ui.jme3.scene_objects,
+ org.eclipse.symphony.addons.sensors.imaging.ui.jme3.utils
