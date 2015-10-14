@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
-import org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY;
+import org.eclipse.symphony.addons.sensors.gps.GPSQuality;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 
 /**
@@ -106,7 +106,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GPS_QUALITY QUALITY_EDEFAULT = GPS_QUALITY.INVALID;
+	protected static final GPSQuality QUALITY_EDEFAULT = GPSQuality.INVALID;
 
 	/**
 	 * The cached value of the '{@link #getQuality() <em>Quality</em>}' attribute.
@@ -116,7 +116,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	 * @generated
 	 * @ordered
 	 */
-	protected GPS_QUALITY quality = QUALITY_EDEFAULT;
+	protected GPSQuality quality = QUALITY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTimeStamp() <em>Time Stamp</em>}' attribute.
@@ -305,7 +305,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPS_QUALITY getQuality() {
+	public GPSQuality getQuality() {
 		return quality;
 	}
 
@@ -314,8 +314,8 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setQuality(GPS_QUALITY newQuality) {
-		GPS_QUALITY oldQuality = quality;
+	public void setQuality(GPSQuality newQuality) {
+		GPSQuality oldQuality = quality;
 		quality = newQuality == null ? QUALITY_EDEFAULT : newQuality;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GpsPackage.GPS_READING__QUALITY, oldQuality, quality));
@@ -474,7 +474,7 @@ public class GPSReadingImpl extends MinimalEObjectImpl.Container implements GPSR
 				setElevation((Double)newValue);
 				return;
 			case GpsPackage.GPS_READING__QUALITY:
-				setQuality((GPS_QUALITY)newValue);
+				setQuality((GPSQuality)newValue);
 				return;
 			case GpsPackage.GPS_READING__TIME_STAMP:
 				setTimeStamp((Date)newValue);

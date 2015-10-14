@@ -83,9 +83,9 @@ public class GpsFactoryImpl extends EFactoryImpl implements GpsFactory {
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
 			case GpsPackage.GPS_STATUS:
-				return createGPS_STATUSFromString(eDataType, initialValue);
+				return createGPSStatusFromString(eDataType, initialValue);
 			case GpsPackage.GPS_QUALITY:
-				return createGPS_QUALITYFromString(eDataType, initialValue);
+				return createGPSQualityFromString(eDataType, initialValue);
 			case GpsPackage.EXCEPTION:
 				return createExceptionFromString(eDataType, initialValue);
 			case GpsPackage.IO_EXCEPTION:
@@ -110,9 +110,9 @@ public class GpsFactoryImpl extends EFactoryImpl implements GpsFactory {
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
 			case GpsPackage.GPS_STATUS:
-				return convertGPS_STATUSToString(eDataType, instanceValue);
+				return convertGPSStatusToString(eDataType, instanceValue);
 			case GpsPackage.GPS_QUALITY:
-				return convertGPS_QUALITYToString(eDataType, instanceValue);
+				return convertGPSQualityToString(eDataType, instanceValue);
 			case GpsPackage.EXCEPTION:
 				return convertExceptionToString(eDataType, instanceValue);
 			case GpsPackage.IO_EXCEPTION:
@@ -183,8 +183,8 @@ public class GpsFactoryImpl extends EFactoryImpl implements GpsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPS_STATUS createGPS_STATUSFromString(EDataType eDataType, String initialValue) {
-		GPS_STATUS result = GPS_STATUS.get(initialValue);
+	public GPSStatus createGPSStatusFromString(EDataType eDataType, String initialValue) {
+		GPSStatus result = GPSStatus.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -194,7 +194,7 @@ public class GpsFactoryImpl extends EFactoryImpl implements GpsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGPS_STATUSToString(EDataType eDataType, Object instanceValue) {
+	public String convertGPSStatusToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -203,8 +203,8 @@ public class GpsFactoryImpl extends EFactoryImpl implements GpsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPS_QUALITY createGPS_QUALITYFromString(EDataType eDataType, String initialValue) {
-		GPS_QUALITY result = GPS_QUALITY.get(initialValue);
+	public GPSQuality createGPSQualityFromString(EDataType eDataType, String initialValue) {
+		GPSQuality result = GPSQuality.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -214,7 +214,7 @@ public class GpsFactoryImpl extends EFactoryImpl implements GpsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGPS_QUALITYToString(EDataType eDataType, Object instanceValue) {
+	public String convertGPSQualityToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 
@@ -254,7 +254,7 @@ public class GPSItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		GPS_STATUS labelValue = ((GPS)object).getStatus();
+		GPSStatus labelValue = ((GPS)object).getStatus();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_GPS_type") :

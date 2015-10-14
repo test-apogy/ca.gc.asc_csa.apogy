@@ -34,7 +34,7 @@ import org.eclipse.symphony.addons.sensors.gps.Activator;
 import org.eclipse.symphony.addons.sensors.gps.GPS;
 import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl;
@@ -1181,7 +1181,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 					int featureId = msg.getFeatureID(GPSPoseSensor.class);
 
 					if (featureId == GpsPackage.GPS__STATUS) {
-						if (msg.getNewValue() == GPS_STATUS.RECONNECTING) {
+						if (msg.getNewValue() == GPSStatus.RECONNECTING) {
 							// The gps is trying to reconnect, we fall into
 							// 'busy' state.
 							setStatus(SensorStatus.BUSY);
@@ -1190,9 +1190,9 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 						// If the gps falls into 'RUNNING' state, we verify that
 						// all the gps are in RUNNING state.
 						// If that's the case, we switch into 'READY' state.
-						if (msg.getNewValue() == GPS_STATUS.RUNNING) {
+						if (msg.getNewValue() == GPSStatus.RUNNING) {
 							// We make sure all gps are in RUNNING state.
-							if (verifyAllGpsStatus(GPS_STATUS.RUNNING)) {
+							if (verifyAllGpsStatus(GPSStatus.RUNNING)) {
 								setStatus(SensorStatus.READY);
 							}
 						}
@@ -1211,7 +1211,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	 * @return true if all GPS objects contained in {@link #getGps()} are in
 	 *         state 'expectedStatus'.
 	 */
-	private boolean verifyAllGpsStatus(GPS_STATUS expectedStatus) {
+	private boolean verifyAllGpsStatus(GPSStatus expectedStatus) {
 
 		boolean valid = true;
 

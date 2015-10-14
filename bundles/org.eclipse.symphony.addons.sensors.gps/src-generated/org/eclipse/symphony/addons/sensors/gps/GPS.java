@@ -115,7 +115,7 @@ public interface GPS extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.gps.GPS_STATUS}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.gps.GPSStatus}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Status</em>' attribute isn't clear,
@@ -123,24 +123,24 @@ public interface GPS extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Status</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPS_STATUS
-	 * @see #setStatus(GPS_STATUS)
+	 * @see org.eclipse.symphony.addons.sensors.gps.GPSStatus
+	 * @see #setStatus(GPSStatus)
 	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_Status()
 	 * @model unique="false"
 	 * @generated
 	 */
-	GPS_STATUS getStatus();
+	GPSStatus getStatus();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPS#getStatus <em>Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Status</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPS_STATUS
+	 * @see org.eclipse.symphony.addons.sensors.gps.GPSStatus
 	 * @see #getStatus()
 	 * @generated
 	 */
-	void setStatus(GPS_STATUS value);
+	void setStatus(GPSStatus value);
 
 	/**
 	 * Returns the value of the '<em><b>Update Rate</b></em>' attribute.
@@ -300,7 +300,7 @@ public interface GPS extends EObject {
 	 * Resets the GPS:
 	 * <ul>
 	 * <li>lastFailure is set to <code>null</code></li>
-	 * <li>status is set to GPS_STATUS.STOPPED</li>
+	 * <li>status is set to GPSStatus.STOPPED</li>
 	 * </ul>
 	 * <!-- end-model-doc -->
 	 * @model
@@ -315,7 +315,7 @@ public interface GPS extends EObject {
 	 * Resets the GPS:
 	 * <ul>
 	 * <li>lastFailure is set to <code>null</code></li>
-	 * <li>status is set to GPS_STATUS.STOPPED</li>
+	 * <li>status is set to GPSStatus.STOPPED</li>
 	 * </ul>
 	 * <!-- end-model-doc -->
 	 * @model unique="false"

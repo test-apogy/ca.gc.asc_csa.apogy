@@ -1,7 +1,5 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las.impl;
 
@@ -10,12 +8,16 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.eclipse.symphony.common.geometry.data3d.las.*;
 
 /**
@@ -240,6 +242,42 @@ public class LasFactoryImpl extends EFactoryImpl implements LasFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IProgressMonitor createIProgressMonitorFromString(EDataType eDataType, String initialValue) {
+		return (IProgressMonitor)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIProgressMonitorToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public char[] createCharArrayFromString(EDataType eDataType, String initialValue) {
+		return (char[])super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCharArrayToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public long[] createLongArrayFromString(EDataType eDataType, String initialValue) {
 		return (long[])super.createFromString(initialValue);
 	}
@@ -323,42 +361,6 @@ public class LasFactoryImpl extends EFactoryImpl implements LasFactory {
 	 */
 	public String convertExceptionToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IProgressMonitor createIProgressMonitorFromString(EDataType eDataType, String initialValue) {
-		return (IProgressMonitor)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertIProgressMonitorToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public char[] createCharArrayFromString(EDataType eDataType, String initialValue) {
-		return (char[])super.createFromString(initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertCharArrayToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(instanceValue);
 	}
 
 	/**

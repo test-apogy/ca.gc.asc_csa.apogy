@@ -8,8 +8,10 @@ package org.eclipse.symphony.common.geometry.data3d.las.impl;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
+import java.lang.reflect.InvocationTargetException;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
 import org.eclipse.symphony.common.geometry.data3d.las.LASFacade;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
@@ -21,12 +23,23 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>LAS Facade</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class LASFacadeImpl extends EObjectImpl implements LASFacade {
+public class LASFacadeImpl extends MinimalEObjectImpl.Container implements LASFacade
+{
+	private static LASFacade instance = null;
+	
+	public static LASFacade getInstance()
+	{
+		if (instance == null)
+		{
+			instance = new LASFacadeImpl();
+		}
+		
+		return instance;
+	}
+	
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -141,7 +154,28 @@ public class LASFacadeImpl extends EObjectImpl implements LASFacade {
 			point.setBlue(blue);
 		}
 		
+		input.close();
+		
 		return point;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case LasPackage.LAS_FACADE___CREATE_POINT__INT_BYTE:
+				try {
+					return createPoint((Integer)arguments.get(0), (byte[])arguments.get(1));
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } // LASFacadeImpl

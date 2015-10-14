@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -20,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
 import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
@@ -37,6 +38,7 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
  * <em><b>LAS Reader</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getFile <em>File</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getInputStream <em>Input Stream</em>}</li>
@@ -45,11 +47,10 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getPoints <em>Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class LASReaderImpl extends EObjectImpl implements LASReader {
+public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASReader {
 
 	// Data is little endian.
 	private LittleEndianDataInputStream dataInputStream;
@@ -196,7 +197,7 @@ public class LASReaderImpl extends EObjectImpl implements LASReader {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<VariableLengthRecord> getVlrs() {
+	public EList<VariableLengthRecord> getVlrs() {
 		if (vlrs == null) {
 			vlrs = new EObjectResolvingEList<VariableLengthRecord>(VariableLengthRecord.class, this, LasPackage.LAS_READER__VLRS);
 		}
@@ -262,7 +263,7 @@ public class LASReaderImpl extends EObjectImpl implements LASReader {
 	 * 
 	 * @generated_NOT
 	 */
-	public List<LASPoint> getPoints() {
+	public EList<LASPoint> getPoints() {
 		if (points == null) {
 			points = new EObjectResolvingEList<LASPoint>(LASPoint.class, this,
 					LasPackage.LAS_READER__POINTS) {
@@ -431,6 +432,26 @@ public class LASReaderImpl extends EObjectImpl implements LASReader {
 				return points != null && !points.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case LasPackage.LAS_READER___READ:
+				try {
+					read();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

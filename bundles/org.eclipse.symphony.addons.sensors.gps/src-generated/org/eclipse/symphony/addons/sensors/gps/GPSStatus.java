@@ -14,11 +14,11 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>GPS STATUS</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_STATUS()
+ * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSStatus()
  * @model
  * @generated
  */
-public enum GPS_STATUS implements Enumerator {
+public enum GPSStatus implements Enumerator {
 	/**
 	 * The '<em><b>STOPPED</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -145,13 +145,13 @@ public enum GPS_STATUS implements Enumerator {
 	public static final int CONNECTING_VALUE = 4;
 
 	/**
-	 * An array of all the '<em><b>GPS STATUS</b></em>' enumerators.
+	 * An array of all the '<em><b>GPS Status</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final GPS_STATUS[] VALUES_ARRAY =
-		new GPS_STATUS[] {
+	private static final GPSStatus[] VALUES_ARRAY =
+		new GPSStatus[] {
 			STOPPED,
 			RUNNING,
 			FAILED,
@@ -160,24 +160,24 @@ public enum GPS_STATUS implements Enumerator {
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>GPS STATUS</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>GPS Status</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<GPS_STATUS> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<GPSStatus> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>GPS STATUS</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>GPS Status</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GPS_STATUS get(String literal) {
+	public static GPSStatus get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			GPS_STATUS result = VALUES_ARRAY[i];
+			GPSStatus result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -186,16 +186,16 @@ public enum GPS_STATUS implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>GPS STATUS</b></em>' literal with the specified name.
+	 * Returns the '<em><b>GPS Status</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GPS_STATUS getByName(String name) {
+	public static GPSStatus getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			GPS_STATUS result = VALUES_ARRAY[i];
+			GPSStatus result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -204,14 +204,14 @@ public enum GPS_STATUS implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>GPS STATUS</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>GPS Status</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GPS_STATUS get(int value) {
+	public static GPSStatus get(int value) {
 		switch (value) {
 			case STOPPED_VALUE: return STOPPED;
 			case RUNNING_VALUE: return RUNNING;
@@ -249,7 +249,7 @@ public enum GPS_STATUS implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private GPS_STATUS(int value, String name, String literal) {
+	private GPSStatus(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -293,4 +293,4 @@ public enum GPS_STATUS implements Enumerator {
 		return literal;
 	}
 	
-} //GPS_STATUS
+} //GPSStatus

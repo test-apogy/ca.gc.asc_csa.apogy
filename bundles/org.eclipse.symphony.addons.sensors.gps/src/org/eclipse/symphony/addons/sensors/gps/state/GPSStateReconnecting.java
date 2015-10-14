@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.eclipse.symphony.addons.sensors.gps.Activator;
 import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.common.lang.java.Timer;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -18,7 +18,7 @@ public class GPSStateReconnecting extends GPSState {
 	@Override
 	public void failure(Exception e) {
 		super.failure(e);
-		getGPS().setStatus(GPS_STATUS.FAILED);
+		getGPS().setStatus(GPSStatus.FAILED);
 	}
 
 	@Override
@@ -65,12 +65,12 @@ public class GPSStateReconnecting extends GPSState {
 			}
 
 			if (success) {
-				getGPS().setStatus(GPS_STATUS.RUNNING);
+				getGPS().setStatus(GPSStatus.RUNNING);
 			} else {
 				Logger.INSTANCE.log(Activator.ID, this, "Error while reading from gps: "
 						+ getGPS().getLastFailure().getMessage(), EventSeverity.ERROR);
 				
-				getGPS().setStatus(GPS_STATUS.FAILED);
+				getGPS().setStatus(GPSStatus.FAILED);
 			}
 
 			return success;

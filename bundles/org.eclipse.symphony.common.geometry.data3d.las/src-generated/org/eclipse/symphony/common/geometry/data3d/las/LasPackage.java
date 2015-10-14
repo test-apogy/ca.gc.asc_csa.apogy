@@ -1,7 +1,5 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las;
 
@@ -9,6 +7,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -19,12 +18,14 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Las' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Las' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d.las/src-generated' basePackage='org.eclipse.symphony.common.geometry.data3d'"
  * @generated
  */
 public interface LasPackage extends EPackage {
@@ -42,7 +43,7 @@ public interface LasPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ca/gc/asc_csa/io/las.ecore";
+	String eNS_URI = "org.eclipse.symphony.common.geometry.data3d.las";
 
 	/**
 	 * The package namespace name.
@@ -50,7 +51,7 @@ public interface LasPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ca.gc.asc_csa.io";
+	String eNS_PREFIX = "las";
 
 	/**
 	 * The singleton instance of the package.
@@ -377,6 +378,15 @@ public interface LasPackage extends EPackage {
 	int LAS_HEADER_FEATURE_COUNT = 33;
 
 	/**
+	 * The number of operations of the '<em>LAS Header</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAS_HEADER_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl <em>Variable Length Record</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -439,6 +449,15 @@ public interface LasPackage extends EPackage {
 	 * @ordered
 	 */
 	int VARIABLE_LENGTH_RECORD_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Variable Length Record</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_LENGTH_RECORD_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl <em>LAS Reader</em>}' class.
@@ -512,6 +531,24 @@ public interface LasPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAS_READER_FEATURE_COUNT = 6;
+
+	/**
+	 * The operation id for the '<em>Read</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAS_READER___READ = 0;
+
+	/**
+	 * The number of operations of the '<em>LAS Reader</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAS_READER_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl <em>LAS Point</em>}' class.
@@ -677,6 +714,15 @@ public interface LasPackage extends EPackage {
 	int LAS_POINT_FEATURE_COUNT = 16;
 
 	/**
+	 * The number of operations of the '<em>LAS Point</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAS_POINT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASFacadeImpl <em>LAS Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -694,6 +740,24 @@ public interface LasPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAS_FACADE_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Create Point</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAS_FACADE___CREATE_POINT__INT_BYTE = 0;
+
+	/**
+	 * The number of operations of the '<em>LAS Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAS_FACADE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl <em>LAS Writer</em>}' class.
@@ -814,6 +878,24 @@ public interface LasPackage extends EPackage {
 	int LAS_WRITER_FEATURE_COUNT = 11;
 
 	/**
+	 * The operation id for the '<em>Write</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAS_WRITER___WRITE = 0;
+
+	/**
+	 * The number of operations of the '<em>LAS Writer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAS_WRITER_OPERATION_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -834,6 +916,25 @@ public interface LasPackage extends EPackage {
 	int EDGE_OF_FLIGHT_LINE = 7;
 
 	/**
+	 * The meta object id for the '<em>IProgress Monitor</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.core.runtime.IProgressMonitor
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LasPackageImpl#getIProgressMonitor()
+	 * @generated
+	 */
+	int IPROGRESS_MONITOR = 8;
+
+	/**
+	 * The meta object id for the '<em>Char Array</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LasPackageImpl#getCharArray()
+	 * @generated
+	 */
+	int CHAR_ARRAY = 9;
+
+	/**
 	 * The meta object id for the '<em>Long Array</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -841,7 +942,6 @@ public interface LasPackage extends EPackage {
 	 * @generated
 	 */
 	int LONG_ARRAY = 10;
-
 
 	/**
 	 * The meta object id for the '<em>Input Stream</em>' data type.
@@ -882,26 +982,6 @@ public interface LasPackage extends EPackage {
 	 * @generated
 	 */
 	int EXCEPTION = 14;
-
-	/**
-	 * The meta object id for the '<em>IProgress Monitor</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.core.runtime.IProgressMonitor
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LasPackageImpl#getIProgressMonitor()
-	 * @generated
-	 */
-	int IPROGRESS_MONITOR = 8;
-
-
-	/**
-	 * The meta object id for the '<em>Char Array</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LasPackageImpl#getCharArray()
-	 * @generated
-	 */
-	int CHAR_ARRAY = 9;
 
 
 	/**
@@ -1419,6 +1499,16 @@ public interface LasPackage extends EPackage {
 	EReference getLASReader_Points();
 
 	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#read() <em>Read</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Read</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASReader#read()
+	 * @generated
+	 */
+	EOperation getLASReader__Read();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint <em>LAS Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1615,6 +1705,16 @@ public interface LasPackage extends EPackage {
 	EClass getLASFacade();
 
 	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASFacade#createPoint(int, byte[]) <em>Create Point</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Point</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASFacade#createPoint(int, byte[])
+	 * @generated
+	 */
+	EOperation getLASFacade__CreatePoint__int_byte();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter <em>LAS Writer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1746,6 +1846,16 @@ public interface LasPackage extends EPackage {
 	EAttribute getLASWriter_OutputStream();
 
 	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#write() <em>Write</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Write</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASWriter#write()
+	 * @generated
+	 */
+	EOperation getLASWriter__Write();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1764,6 +1874,27 @@ public interface LasPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getEdgeOfFlightLine();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.core.runtime.IProgressMonitor <em>IProgress Monitor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>IProgress Monitor</em>'.
+	 * @see org.eclipse.core.runtime.IProgressMonitor
+	 * @model instanceClass="org.eclipse.core.runtime.IProgressMonitor"
+	 * @generated
+	 */
+	EDataType getIProgressMonitor();
+
+	/**
+	 * Returns the meta object for data type '<em>Char Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Char Array</em>'.
+	 * @model instanceClass="char[]"
+	 * @generated
+	 */
+	EDataType getCharArray();
 
 	/**
 	 * Returns the meta object for data type '<em>Long Array</em>'.
@@ -1820,27 +1951,6 @@ public interface LasPackage extends EPackage {
 	EDataType getException();
 
 	/**
-	 * Returns the meta object for data type '{@link org.eclipse.core.runtime.IProgressMonitor <em>IProgress Monitor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>IProgress Monitor</em>'.
-	 * @see org.eclipse.core.runtime.IProgressMonitor
-	 * @model instanceClass="org.eclipse.core.runtime.IProgressMonitor"
-	 * @generated
-	 */
-	EDataType getIProgressMonitor();
-
-	/**
-	 * Returns the meta object for data type '<em>Char Array</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Char Array</em>'.
-	 * @model instanceClass="char[]"
-	 * @generated
-	 */
-	EDataType getCharArray();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1855,6 +1965,7 @@ public interface LasPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>
@@ -2245,6 +2356,14 @@ public interface LasPackage extends EPackage {
 		EReference LAS_READER__POINTS = eINSTANCE.getLASReader_Points();
 
 		/**
+		 * The meta object literal for the '<em><b>Read</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LAS_READER___READ = eINSTANCE.getLASReader__Read();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl <em>LAS Point</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2393,6 +2512,14 @@ public interface LasPackage extends EPackage {
 		EClass LAS_FACADE = eINSTANCE.getLASFacade();
 
 		/**
+		 * The meta object literal for the '<em><b>Create Point</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LAS_FACADE___CREATE_POINT__INT_BYTE = eINSTANCE.getLASFacade__CreatePoint__int_byte();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl <em>LAS Writer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2491,6 +2618,14 @@ public interface LasPackage extends EPackage {
 		EAttribute LAS_WRITER__OUTPUT_STREAM = eINSTANCE.getLASWriter_OutputStream();
 
 		/**
+		 * The meta object literal for the '<em><b>Write</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LAS_WRITER___WRITE = eINSTANCE.getLASWriter__Write();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.ScanDirection <em>Scan Direction</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2509,6 +2644,25 @@ public interface LasPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum EDGE_OF_FLIGHT_LINE = eINSTANCE.getEdgeOfFlightLine();
+
+		/**
+		 * The meta object literal for the '<em>IProgress Monitor</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.core.runtime.IProgressMonitor
+		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LasPackageImpl#getIProgressMonitor()
+		 * @generated
+		 */
+		EDataType IPROGRESS_MONITOR = eINSTANCE.getIProgressMonitor();
+
+		/**
+		 * The meta object literal for the '<em>Char Array</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LasPackageImpl#getCharArray()
+		 * @generated
+		 */
+		EDataType CHAR_ARRAY = eINSTANCE.getCharArray();
 
 		/**
 		 * The meta object literal for the '<em>Long Array</em>' data type.
@@ -2558,25 +2712,6 @@ public interface LasPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType EXCEPTION = eINSTANCE.getException();
-
-		/**
-		 * The meta object literal for the '<em>IProgress Monitor</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.core.runtime.IProgressMonitor
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LasPackageImpl#getIProgressMonitor()
-		 * @generated
-		 */
-		EDataType IPROGRESS_MONITOR = eINSTANCE.getIProgressMonitor();
-
-		/**
-		 * The meta object literal for the '<em>Char Array</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LasPackageImpl#getCharArray()
-		 * @generated
-		 */
-		EDataType CHAR_ARRAY = eINSTANCE.getCharArray();
 
 	}
 

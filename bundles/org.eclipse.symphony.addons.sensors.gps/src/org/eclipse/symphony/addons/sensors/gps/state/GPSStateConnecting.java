@@ -3,7 +3,7 @@ package org.eclipse.symphony.addons.sensors.gps.state;
 import java.io.IOException;
 
 import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 
 public class GPSStateConnecting extends GPSState {
 
@@ -14,7 +14,7 @@ public class GPSStateConnecting extends GPSState {
 	@Override
 	public void failure(Exception e) {
 		super.failure(e);
-		getGPS().setStatus(GPS_STATUS.RECONNECTING);
+		getGPS().setStatus(GPSStatus.RECONNECTING);
 		getGPS().reconnect();
 	}
 
@@ -30,7 +30,7 @@ public class GPSStateConnecting extends GPSState {
 				throw new IOException("Failed to connect gps");
 			}
 			getGPS().getDataInterpreter().updateGPS();
-			getGPS().setStatus(GPS_STATUS.RUNNING);
+			getGPS().setStatus(GPSStatus.RUNNING);
 		} catch (IOException e) {
 			failure(e);
 		}

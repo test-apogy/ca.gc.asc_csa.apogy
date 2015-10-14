@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.geometry.data3d.las.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
 import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
@@ -20,6 +20,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl#getY <em>Y</em>}</li>
@@ -38,11 +39,10 @@ import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl#getGreen <em>Green</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl#getBlue <em>Blue</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class LASPointImpl extends EObjectImpl implements LASPoint {
+public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoint {
 	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->

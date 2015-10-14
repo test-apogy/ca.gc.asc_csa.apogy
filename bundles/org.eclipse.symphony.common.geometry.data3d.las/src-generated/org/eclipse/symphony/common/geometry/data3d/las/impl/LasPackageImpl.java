@@ -1,7 +1,5 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las.impl;
 
@@ -10,6 +8,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -17,7 +16,10 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
 import org.eclipse.symphony.common.geometry.data3d.las.LASFacade;
 import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
@@ -30,31 +32,36 @@ import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
 import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!--
- * end-user-doc -->
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
  * @generated
  */
 public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass lasHeaderEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass variableLengthRecordEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass lasReaderEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass lasPointEClass = null;
@@ -74,19 +81,36 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	private EClass lasWriterEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum scanDirectionEEnum = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum edgeOfFlightLineEEnum = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iProgressMonitorEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType charArrayEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType longArrayEDataType = null;
@@ -120,28 +144,15 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	private EDataType exceptionEDataType = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType iProgressMonitorEDataType = null;
-
-	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType charArrayEDataType = null;
-
-	/**
-	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the
-	 * package package URI value.
-	 * <p>
-	 * Note: the correct way to create the package is via the static factory
-	 * method {@link #init init()}, which also performs initialization of the
-	 * package, or returns the registered package, if one already exists. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#eNS_URI
 	 * @see #init()
@@ -152,21 +163,19 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static boolean isInited = false;
 
 	/**
-	 * Creates, registers, and initializes the <b>Package</b> for this model,
-	 * and for any others upon which it depends.
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>
-	 * This method is used to initialize {@link LasPackage#eINSTANCE} when that
-	 * field is accessed. Clients should not invoke it directly. Instead, they
-	 * should simply access that field to obtain the package. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * <p>This method is used to initialize {@link LasPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
@@ -179,6 +188,9 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 		LasPackageImpl theLasPackage = (LasPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof LasPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new LasPackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theLasPackage.createPackageContents();
@@ -196,7 +208,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getLASHeader() {
@@ -204,7 +217,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_FileSignature() {
@@ -212,7 +226,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_FileSourceID() {
@@ -220,7 +235,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_GlobalEncoding() {
@@ -228,7 +244,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_ProjectID_GUID_data_1() {
@@ -236,7 +253,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_ProjectID_GUID_data_2() {
@@ -244,7 +262,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_ProjectID_GUID_data_3() {
@@ -252,7 +271,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_ProjectID_GUID_data_4() {
@@ -260,7 +280,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_VersionMajor() {
@@ -268,7 +289,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_VersionMinor() {
@@ -276,7 +298,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_SystemIdentifier() {
@@ -284,7 +307,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_GeneratingSoftware() {
@@ -292,7 +316,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_FileCreationDayOfYear() {
@@ -300,7 +325,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_FileCreationYear() {
@@ -308,7 +334,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_HeaderSize() {
@@ -316,7 +343,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_OffsetToPointData() {
@@ -324,7 +352,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_NVariableLengthRecords() {
@@ -332,7 +361,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_PointDataFormatID() {
@@ -340,7 +370,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_PointDataRecordLength() {
@@ -348,7 +379,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_NumberOfPointRecords() {
@@ -356,7 +388,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_NumberOfPointsByReturn() {
@@ -364,7 +397,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_XScaleFactor() {
@@ -372,7 +406,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_YScaleFactor() {
@@ -380,7 +415,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_ZScaleFactor() {
@@ -388,7 +424,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_XOffset() {
@@ -396,7 +433,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_YOffset() {
@@ -404,7 +442,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_ZOffset() {
@@ -412,7 +451,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_MaxX() {
@@ -420,7 +460,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_MinX() {
@@ -428,7 +469,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_MaxY() {
@@ -436,7 +478,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_MinY() {
@@ -444,7 +487,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_MaxZ() {
@@ -452,7 +496,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_MinZ() {
@@ -460,7 +505,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASHeader_StartOfWaveformDataPacketRecord() {
@@ -468,7 +514,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getVariableLengthRecord() {
@@ -485,7 +532,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getVariableLengthRecord_UserID() {
@@ -493,7 +541,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getVariableLengthRecord_RecordID() {
@@ -501,7 +550,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getVariableLengthRecord_RecordLenghtAfterHeader() {
@@ -509,7 +559,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getVariableLengthRecord_Description() {
@@ -517,7 +568,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getLASReader() {
@@ -525,7 +577,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASReader_File() {
@@ -533,7 +586,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASReader_InputStream() {
@@ -541,7 +595,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getLASReader_Vlrs() {
@@ -549,7 +604,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASReader_ProgressMonitor() {
@@ -557,7 +613,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getLASReader_Header() {
@@ -565,7 +622,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getLASReader_Points() {
@@ -573,7 +631,17 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getLASReader__Read() {
+		return lasReaderEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getLASPoint() {
@@ -581,7 +649,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_X() {
@@ -589,7 +658,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_Y() {
@@ -597,7 +667,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_Z() {
@@ -605,7 +676,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_Intensity() {
@@ -613,7 +685,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_ReturnNumber() {
@@ -621,7 +694,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_NumberOfReturns() {
@@ -629,7 +703,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_ScanDirection() {
@@ -637,7 +712,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_EdgeOfFlightLine() {
@@ -645,7 +721,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_Classification() {
@@ -653,7 +730,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_ScanAngleRank() {
@@ -661,7 +739,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_UserData() {
@@ -669,7 +748,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_PointSourceId() {
@@ -677,7 +757,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_GpsTime() {
@@ -685,7 +766,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_Red() {
@@ -693,7 +775,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_Green() {
@@ -701,7 +784,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getLASPoint_Blue() {
@@ -715,6 +799,15 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	 */
 	public EClass getLASFacade() {
 		return lasFacadeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getLASFacade__CreatePoint__int_byte() {
+		return lasFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -826,7 +919,17 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getLASWriter__Write() {
+		return lasWriterEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EEnum getScanDirection() {
@@ -834,7 +937,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EEnum getEdgeOfFlightLine() {
@@ -842,7 +946,26 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getIProgressMonitor() {
+		return iProgressMonitorEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getCharArray() {
+		return charArrayEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EDataType getLongArray() {
@@ -886,24 +1009,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getIProgressMonitor() {
-		return iProgressMonitorEDataType;
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getCharArray() {
-		return charArrayEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LasFactory getLasFactory() {
@@ -911,7 +1018,8 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private boolean isCreated = false;
@@ -977,6 +1085,7 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 		createEAttribute(lasReaderEClass, LAS_READER__PROGRESS_MONITOR);
 		createEReference(lasReaderEClass, LAS_READER__HEADER);
 		createEReference(lasReaderEClass, LAS_READER__POINTS);
+		createEOperation(lasReaderEClass, LAS_READER___READ);
 
 		lasPointEClass = createEClass(LAS_POINT);
 		createEAttribute(lasPointEClass, LAS_POINT__X);
@@ -997,6 +1106,7 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 		createEAttribute(lasPointEClass, LAS_POINT__BLUE);
 
 		lasFacadeEClass = createEClass(LAS_FACADE);
+		createEOperation(lasFacadeEClass, LAS_FACADE___CREATE_POINT__INT_BYTE);
 
 		lasWriterEClass = createEClass(LAS_WRITER);
 		createEAttribute(lasWriterEClass, LAS_WRITER__FILE_NAME);
@@ -1010,6 +1120,7 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 		createEAttribute(lasWriterEClass, LAS_WRITER__YOFFSET);
 		createEAttribute(lasWriterEClass, LAS_WRITER__ZOFFSET);
 		createEAttribute(lasWriterEClass, LAS_WRITER__OUTPUT_STREAM);
+		createEOperation(lasWriterEClass, LAS_WRITER___WRITE);
 
 		// Create enums
 		scanDirectionEEnum = createEEnum(SCAN_DIRECTION);
@@ -1026,16 +1137,17 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private boolean isInitialized = false;
 
 	/**
-	 * Complete the initialization of the package and its meta-model. This
-	 * method is guarded to have no affect on any invocation but its first. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void initializePackageContents() {
@@ -1047,105 +1159,108 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
 
-		// Initialize classes and features; add operations and parameters
+		// Initialize classes, features, and operations; add parameters
 		initEClass(lasHeaderEClass, LASHeader.class, "LASHeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLASHeader_FileSignature(), ecorePackage.getEString(), "fileSignature", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_FileSourceID(), ecorePackage.getEInt(), "fileSourceID", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_GlobalEncoding(), ecorePackage.getEInt(), "globalEncoding", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_ProjectID_GUID_data_1(), ecorePackage.getELong(), "projectID_GUID_data_1", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_ProjectID_GUID_data_2(), ecorePackage.getEInt(), "projectID_GUID_data_2", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_ProjectID_GUID_data_3(), ecorePackage.getEInt(), "projectID_GUID_data_3", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_ProjectID_GUID_data_4(), ecorePackage.getEByteArray(), "projectID_GUID_data_4", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_VersionMajor(), ecorePackage.getEInt(), "versionMajor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_VersionMinor(), ecorePackage.getEInt(), "versionMinor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_SystemIdentifier(), ecorePackage.getEString(), "systemIdentifier", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_GeneratingSoftware(), ecorePackage.getEString(), "generatingSoftware", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_FileCreationDayOfYear(), ecorePackage.getEInt(), "fileCreationDayOfYear", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_FileCreationYear(), ecorePackage.getEInt(), "fileCreationYear", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_HeaderSize(), ecorePackage.getEInt(), "headerSize", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_OffsetToPointData(), ecorePackage.getELong(), "offsetToPointData", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_NVariableLengthRecords(), ecorePackage.getELong(), "nVariableLengthRecords", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_PointDataFormatID(), ecorePackage.getEInt(), "pointDataFormatID", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_PointDataRecordLength(), ecorePackage.getEInt(), "pointDataRecordLength", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_NumberOfPointRecords(), ecorePackage.getELong(), "numberOfPointRecords", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_NumberOfPointsByReturn(), this.getLongArray(), "numberOfPointsByReturn", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_XScaleFactor(), ecorePackage.getEDouble(), "xScaleFactor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_YScaleFactor(), ecorePackage.getEDouble(), "yScaleFactor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_ZScaleFactor(), ecorePackage.getEDouble(), "zScaleFactor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_XOffset(), ecorePackage.getEDouble(), "xOffset", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_YOffset(), ecorePackage.getEDouble(), "yOffset", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_ZOffset(), ecorePackage.getEDouble(), "zOffset", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_MaxX(), ecorePackage.getEDouble(), "maxX", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_MinX(), ecorePackage.getEDouble(), "minX", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_MaxY(), ecorePackage.getEDouble(), "maxY", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_MinY(), ecorePackage.getEDouble(), "minY", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_MaxZ(), ecorePackage.getEDouble(), "maxZ", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_MinZ(), ecorePackage.getEDouble(), "minZ", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASHeader_StartOfWaveformDataPacketRecord(), ecorePackage.getELong(), "startOfWaveformDataPacketRecord", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_FileSignature(), theEcorePackage.getEString(), "fileSignature", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_FileSourceID(), theEcorePackage.getEInt(), "fileSourceID", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_GlobalEncoding(), theEcorePackage.getEInt(), "globalEncoding", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_ProjectID_GUID_data_1(), theEcorePackage.getELong(), "projectID_GUID_data_1", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_ProjectID_GUID_data_2(), theEcorePackage.getEInt(), "projectID_GUID_data_2", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_ProjectID_GUID_data_3(), theEcorePackage.getEInt(), "projectID_GUID_data_3", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_ProjectID_GUID_data_4(), theEcorePackage.getEByteArray(), "projectID_GUID_data_4", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_VersionMajor(), theEcorePackage.getEInt(), "versionMajor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_VersionMinor(), theEcorePackage.getEInt(), "versionMinor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_SystemIdentifier(), theEcorePackage.getEString(), "systemIdentifier", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_GeneratingSoftware(), theEcorePackage.getEString(), "generatingSoftware", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_FileCreationDayOfYear(), theEcorePackage.getEInt(), "fileCreationDayOfYear", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_FileCreationYear(), theEcorePackage.getEInt(), "fileCreationYear", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_HeaderSize(), theEcorePackage.getEInt(), "headerSize", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_OffsetToPointData(), theEcorePackage.getELong(), "offsetToPointData", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_NVariableLengthRecords(), theEcorePackage.getELong(), "nVariableLengthRecords", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_PointDataFormatID(), theEcorePackage.getEInt(), "pointDataFormatID", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_PointDataRecordLength(), theEcorePackage.getEInt(), "pointDataRecordLength", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_NumberOfPointRecords(), theEcorePackage.getELong(), "numberOfPointRecords", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_NumberOfPointsByReturn(), this.getLongArray(), "numberOfPointsByReturn", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_XScaleFactor(), theEcorePackage.getEDouble(), "xScaleFactor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_YScaleFactor(), theEcorePackage.getEDouble(), "yScaleFactor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_ZScaleFactor(), theEcorePackage.getEDouble(), "zScaleFactor", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_XOffset(), theEcorePackage.getEDouble(), "xOffset", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_YOffset(), theEcorePackage.getEDouble(), "yOffset", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_ZOffset(), theEcorePackage.getEDouble(), "zOffset", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_MaxX(), theEcorePackage.getEDouble(), "maxX", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_MinX(), theEcorePackage.getEDouble(), "minX", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_MaxY(), theEcorePackage.getEDouble(), "maxY", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_MinY(), theEcorePackage.getEDouble(), "minY", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_MaxZ(), theEcorePackage.getEDouble(), "maxZ", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_MinZ(), theEcorePackage.getEDouble(), "minZ", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASHeader_StartOfWaveformDataPacketRecord(), theEcorePackage.getELong(), "startOfWaveformDataPacketRecord", null, 0, 1, LASHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableLengthRecordEClass, VariableLengthRecord.class, "VariableLengthRecord", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVariableLengthRecord_Reserved(), ecorePackage.getEInt(), "reserved", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVariableLengthRecord_UserID(), ecorePackage.getEString(), "userID", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVariableLengthRecord_RecordID(), ecorePackage.getEInt(), "recordID", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVariableLengthRecord_RecordLenghtAfterHeader(), ecorePackage.getEInt(), "recordLenghtAfterHeader", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVariableLengthRecord_Description(), ecorePackage.getEString(), "description", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariableLengthRecord_Reserved(), theEcorePackage.getEInt(), "reserved", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariableLengthRecord_UserID(), theEcorePackage.getEString(), "userID", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariableLengthRecord_RecordID(), theEcorePackage.getEInt(), "recordID", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariableLengthRecord_RecordLenghtAfterHeader(), theEcorePackage.getEInt(), "recordLenghtAfterHeader", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariableLengthRecord_Description(), theEcorePackage.getEString(), "description", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lasReaderEClass, LASReader.class, "LASReader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLASReader_File(), ecorePackage.getEString(), "file", null, 0, 1, LASReader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASReader_InputStream(), this.getInputStream(), "inputStream", null, 0, 1, LASReader.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASReader_File(), theEcorePackage.getEString(), "file", null, 0, 1, LASReader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASReader_InputStream(), this.getInputStream(), "inputStream", null, 0, 1, LASReader.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLASReader_Vlrs(), this.getVariableLengthRecord(), null, "vlrs", null, 0, -1, LASReader.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASReader_ProgressMonitor(), this.getIProgressMonitor(), "progressMonitor", null, 0, 1, LASReader.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASReader_ProgressMonitor(), this.getIProgressMonitor(), "progressMonitor", null, 0, 1, LASReader.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLASReader_Header(), this.getLASHeader(), null, "header", null, 0, 1, LASReader.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLASReader_Points(), this.getLASPoint(), null, "points", null, 0, -1, LASReader.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = addEOperation(lasReaderEClass, null, "read", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getLASReader__Read(), null, "read", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getIOException());
 
 		initEClass(lasPointEClass, LASPoint.class, "LASPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLASPoint_X(), ecorePackage.getELong(), "x", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_Y(), ecorePackage.getELong(), "y", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_Z(), ecorePackage.getELong(), "z", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_Intensity(), ecorePackage.getEInt(), "intensity", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_ReturnNumber(), ecorePackage.getEByte(), "returnNumber", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_NumberOfReturns(), ecorePackage.getEByte(), "numberOfReturns", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_ScanDirection(), this.getScanDirection(), "scanDirection", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_EdgeOfFlightLine(), this.getEdgeOfFlightLine(), "edgeOfFlightLine", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_Classification(), ecorePackage.getEShort(), "classification", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_ScanAngleRank(), ecorePackage.getEByte(), "scanAngleRank", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_UserData(), ecorePackage.getEShort(), "userData", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_PointSourceId(), ecorePackage.getEInt(), "pointSourceId", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_GpsTime(), ecorePackage.getEDouble(), "gpsTime", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_Red(), ecorePackage.getEInt(), "red", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_Green(), ecorePackage.getEInt(), "green", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASPoint_Blue(), ecorePackage.getEInt(), "blue", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_X(), theEcorePackage.getELong(), "x", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_Y(), theEcorePackage.getELong(), "y", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_Z(), theEcorePackage.getELong(), "z", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_Intensity(), theEcorePackage.getEInt(), "intensity", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_ReturnNumber(), theEcorePackage.getEByte(), "returnNumber", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_NumberOfReturns(), theEcorePackage.getEByte(), "numberOfReturns", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_ScanDirection(), this.getScanDirection(), "scanDirection", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_EdgeOfFlightLine(), this.getEdgeOfFlightLine(), "edgeOfFlightLine", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_Classification(), theEcorePackage.getEShort(), "classification", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_ScanAngleRank(), theEcorePackage.getEByte(), "scanAngleRank", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_UserData(), theEcorePackage.getEShort(), "userData", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_PointSourceId(), theEcorePackage.getEInt(), "pointSourceId", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_GpsTime(), theEcorePackage.getEDouble(), "gpsTime", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_Red(), theEcorePackage.getEInt(), "red", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_Green(), theEcorePackage.getEInt(), "green", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASPoint_Blue(), theEcorePackage.getEInt(), "blue", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lasFacadeEClass, LASFacade.class, "LASFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = addEOperation(lasFacadeEClass, this.getLASPoint(), "createPoint", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "formatID", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEByteArray(), "data", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getLASFacade__CreatePoint__int_byte(), this.getLASPoint(), "createPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "formatID", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEByteArray(), "data", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getIOException());
 
 		initEClass(lasWriterEClass, LASWriter.class, "LASWriter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLASWriter_FileName(), ecorePackage.getEString(), "fileName", null, 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASWriter_ProgressMonitor(), this.getIProgressMonitor(), "progressMonitor", null, 0, 1, LASWriter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLASWriter_Points(), this.getLASPoint(), null, "points", null, 0, -1, LASWriter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getLASWriter_ScaleX(), ecorePackage.getEDouble(), "scaleX", "0.01", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASWriter_ScaleY(), ecorePackage.getEDouble(), "scaleY", "0.01", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASWriter_ScaleZ(), ecorePackage.getEDouble(), "scaleZ", "0.01", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASWriter_FileName(), theEcorePackage.getEString(), "fileName", null, 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASWriter_ProgressMonitor(), this.getIProgressMonitor(), "progressMonitor", null, 0, 1, LASWriter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLASWriter_Points(), this.getLASPoint(), null, "points", null, 0, -1, LASWriter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLASWriter_ScaleX(), theEcorePackage.getEDouble(), "scaleX", "0.01", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASWriter_ScaleY(), theEcorePackage.getEDouble(), "scaleY", "0.01", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASWriter_ScaleZ(), theEcorePackage.getEDouble(), "scaleZ", "0.01", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLASWriter_Header(), this.getLASHeader(), null, "header", null, 0, 1, LASWriter.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASWriter_XOffset(), ecorePackage.getEDouble(), "xOffset", "0.0", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASWriter_YOffset(), ecorePackage.getEDouble(), "yOffset", "0.0", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASWriter_ZOffset(), ecorePackage.getEDouble(), "zOffset", "0.0", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLASWriter_OutputStream(), this.getOutputStream(), "outputStream", null, 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASWriter_XOffset(), theEcorePackage.getEDouble(), "xOffset", "0.0", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASWriter_YOffset(), theEcorePackage.getEDouble(), "yOffset", "0.0", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASWriter_ZOffset(), theEcorePackage.getEDouble(), "zOffset", "0.0", 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLASWriter_OutputStream(), this.getOutputStream(), "outputStream", null, 0, 1, LASWriter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = addEOperation(lasWriterEClass, null, "write", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getLASWriter__Write(), null, "write", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getIOException());
 
 		// Initialize enums and add enum literals
@@ -1168,6 +1283,41 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/GenModel
+		createGenModelAnnotations();
 	}
 
-} // LasPackageImpl
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "prefix", "Las",
+			 "childCreationExtenders", "true",
+			 "extensibleProviderFactory", "true",
+			 "multipleEditorPages", "false",
+			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+			 "modelName", "Las",
+			 "operationReflection", "true",
+			 "suppressGenModelAnnotations", "false",
+			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d.las/src-generated",
+			 "basePackage", "org.eclipse.symphony.common.geometry.data3d"
+		   });	
+		addAnnotation
+		  (getLASWriter_Points(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The LAS point.  The scale \'scaleX\', \'scaleY\', \'scaleZ\' are\napplied to the x, y, z values to obtain the right values."
+		   });
+	}
+
+} //LasPackageImpl

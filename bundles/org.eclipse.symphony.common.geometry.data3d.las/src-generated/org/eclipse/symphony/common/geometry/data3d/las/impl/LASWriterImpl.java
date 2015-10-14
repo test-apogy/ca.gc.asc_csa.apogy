@@ -9,9 +9,9 @@ import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Calendar;
 import java.util.Collection;
-import java.util.List;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Tuple3d;
@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
 import org.eclipse.symphony.common.geometry.data3d.las.LASWriter;
@@ -36,6 +36,7 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataOutputStream;
  * <em><b>LAS Writer</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl#getFileName <em>File Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
@@ -49,11 +50,10 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataOutputStream;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl#getZOffset <em>ZOffset</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl#getOutputStream <em>Output Stream</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class LASWriterImpl extends EObjectImpl implements LASWriter {
+public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWriter {
 
 	public static final int HEADER_SIZE = 235;
 
@@ -312,7 +312,7 @@ public class LASWriterImpl extends EObjectImpl implements LASWriter {
 	 * 
 	 * @generated_NOT
 	 */
-	public List<LASPoint> getPoints() {
+	public EList<LASPoint> getPoints() {
 		if (points == null) {
 			// points = new EObjectResolvingEList<LASPoint>(LASPoint.class,
 			// this,
@@ -1007,6 +1007,26 @@ public class LASWriterImpl extends EObjectImpl implements LASWriter {
 				return OUTPUT_STREAM_EDEFAULT == null ? outputStream != null : !OUTPUT_STREAM_EDEFAULT.equals(outputStream);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case LasPackage.LAS_WRITER___WRITE:
+				try {
+					write();
+					return null;
+				}
+				catch (Throwable throwable) {
+					throw new InvocationTargetException(throwable);
+				}
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

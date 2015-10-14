@@ -1,13 +1,13 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.Switch;
+
 import org.eclipse.symphony.common.geometry.data3d.las.*;
 
 /**
@@ -48,7 +48,7 @@ public class LasSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */

@@ -1,7 +1,7 @@
 package org.eclipse.symphony.addons.sensors.gps.state;
 
 import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 
 /**
  * Implements the <a href="http://en.wikipedia.org/wiki/State_pattern">state
@@ -36,7 +36,7 @@ public abstract class GPSState {
 	}
 
 	public void reset() throws IllegalStateException {
-		getGPS().setStatus(GPS_STATUS.STOPPED);
+		getGPS().setStatus(GPSStatus.STOPPED);
 		getGPS().setLastFailure(null);
 	}
 

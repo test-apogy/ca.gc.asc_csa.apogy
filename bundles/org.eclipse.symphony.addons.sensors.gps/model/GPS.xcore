@@ -21,7 +21,7 @@ type InputStream wraps java.io.InputStream
 type OutputStream wraps java.io.OutputStream
 type Date wraps java.util.Date
 
-enum GPS_STATUS
+enum GPSStatus
 {
 	STOPPED as "STOPPED" = 0
 	RUNNING as "RUNNING" = 1
@@ -30,7 +30,7 @@ enum GPS_STATUS
 	CONNECTING as "CONNECTING" = 4
 }
 
-enum GPS_QUALITY
+enum GPSQuality
 {
 	INVALID as "INVALID" = 0
 	GPS_FIX as "GPS_FIX" = 1
@@ -79,7 +79,7 @@ class GPSReading
 	
 	double elevation
 	
-	GPS_QUALITY quality
+	GPSQuality quality
 	
 	Date timeStamp
 	
@@ -144,7 +144,7 @@ class GPS
 	 */
 	contains GPSReading reading
 	
-	GPS_STATUS status
+	GPSStatus status
 	
 	/*
 	 * The desired update rate at which we want to acquire data.
@@ -188,7 +188,7 @@ class GPS
 	 * Resets the GPS:
 	 * <ul>
 	 * <li>lastFailure is set to <code>null</code></li>
-	 * <li>status is set to GPS_STATUS.STOPPED</li>
+	 * <li>status is set to GPSStatus.STOPPED</li>
 	 * </ul>
 	 */
 	op void reset()
@@ -197,7 +197,7 @@ class GPS
 	 * Resets the GPS:
 	 * <ul>
 	 * <li>lastFailure is set to <code>null</code></li>
-	 * <li>status is set to GPS_STATUS.STOPPED</li>
+	 * <li>status is set to GPSStatus.STOPPED</li>
 	 * </ul>
 	 */
 	op boolean reconnect()

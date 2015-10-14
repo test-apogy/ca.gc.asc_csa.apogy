@@ -1,23 +1,25 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>LAS Reader</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>LAS Reader</b></em>'.
+ * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getFile <em>File</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}</li>
@@ -26,7 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getPoints <em>Points</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader()
  * @model
@@ -34,25 +35,25 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface LASReader extends EObject {
 	/**
-	 * Returns the value of the '<em><b>File</b></em>' attribute. <!--
-	 * begin-user-doc -->
+	 * Returns the value of the '<em><b>File</b></em>' attribute.
+	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>File</em>' attribute isn't clear, there really
-	 * should be more of a description here...
+	 * If the meaning of the '<em>File</em>' attribute isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>File</em>' attribute.
 	 * @see #setFile(String)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_File()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFile();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getFile <em>File</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>File</em>' attribute.
 	 * @see #getFile()
 	 * @generated
@@ -60,26 +61,25 @@ public interface LASReader extends EObject {
 	void setFile(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Input Stream</b></em>' attribute. <!--
-	 * begin-user-doc -->
+	 * Returns the value of the '<em><b>Input Stream</b></em>' attribute.
+	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Stream</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Input Stream</em>' attribute.
 	 * @see #setInputStream(InputStream)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_InputStream()
-	 * @model dataType="ca.gc.space.java.emf.InputStream" transient="true"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.InputStream" transient="true"
 	 * @generated
 	 */
 	InputStream getInputStream();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Input Stream</em>' attribute.
 	 * @see #getInputStream()
 	 * @generated
@@ -91,8 +91,8 @@ public interface LASReader extends EObject {
 	 * The list contents are of type {@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Vlrs</em>' reference list isn't clear, there
-	 * really should be more of a description here...
+	 * If the meaning of the '<em>Vlrs</em>' reference list isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vlrs</em>' reference list.
@@ -100,7 +100,7 @@ public interface LASReader extends EObject {
 	 * @model transient="true"
 	 * @generated
 	 */
-	List<VariableLengthRecord> getVlrs();
+	EList<VariableLengthRecord> getVlrs();
 
 	/**
 	 * Returns the value of the '<em><b>Progress Monitor</b></em>' attribute.
@@ -113,15 +113,15 @@ public interface LASReader extends EObject {
 	 * @return the value of the '<em>Progress Monitor</em>' attribute.
 	 * @see #setProgressMonitor(IProgressMonitor)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_ProgressMonitor()
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.las.IProgressMonitor" transient="true"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.IProgressMonitor" transient="true"
 	 * @generated
 	 */
 	IProgressMonitor getProgressMonitor();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getProgressMonitor <em>Progress Monitor</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Progress Monitor</em>' attribute.
 	 * @see #getProgressMonitor()
 	 * @generated
@@ -129,14 +129,13 @@ public interface LASReader extends EObject {
 	void setProgressMonitor(IProgressMonitor value);
 
 	/**
-	 * Returns the value of the '<em><b>Header</b></em>' reference. <!--
-	 * begin-user-doc -->
+	 * Returns the value of the '<em><b>Header</b></em>' reference.
+	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Header</em>' reference isn't clear, there
-	 * really should be more of a description here...
+	 * If the meaning of the '<em>Header</em>' reference isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Header</em>' reference.
 	 * @see #setHeader(LASHeader)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_Header()
@@ -146,36 +145,34 @@ public interface LASReader extends EObject {
 	LASHeader getHeader();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getHeader
-	 * <em>Header</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
-	 * -->
-	 * 
-	 * @param value
-	 *            the new value of the '<em>Header</em>' reference.
+	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Header</em>' reference.
 	 * @see #getHeader()
 	 * @generated
 	 */
 	void setHeader(LASHeader value);
 
 	/**
-	 * Returns the value of the '<em><b>Points</b></em>' reference list. The
-	 * list contents are of type {@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint}. <!--
-	 * begin-user-doc -->
+	 * Returns the value of the '<em><b>Points</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint}.
+	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Points</em>' reference list isn't clear, there
-	 * really should be more of a description here...
+	 * If the meaning of the '<em>Points</em>' reference list isn't clear,
+	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Points</em>' reference list.
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_Points()
 	 * @model transient="true"
 	 * @generated
 	 */
-	List<LASPoint> getPoints();
+	EList<LASPoint> getPoints();
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.las.IOException"
 	 * @generated
 	 */

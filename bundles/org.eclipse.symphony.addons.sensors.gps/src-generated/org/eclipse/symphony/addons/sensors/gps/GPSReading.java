@@ -112,7 +112,7 @@ public interface GPSReading extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Quality</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.gps.GPSQuality}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Quality</em>' attribute isn't clear,
@@ -120,24 +120,24 @@ public interface GPSReading extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quality</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY
-	 * @see #setQuality(GPS_QUALITY)
+	 * @see org.eclipse.symphony.addons.sensors.gps.GPSQuality
+	 * @see #setQuality(GPSQuality)
 	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_Quality()
 	 * @model unique="false"
 	 * @generated
 	 */
-	GPS_QUALITY getQuality();
+	GPSQuality getQuality();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getQuality <em>Quality</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Quality</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY
+	 * @see org.eclipse.symphony.addons.sensors.gps.GPSQuality
 	 * @see #getQuality()
 	 * @generated
 	 */
-	void setQuality(GPS_QUALITY value);
+	void setQuality(GPSQuality value);
 
 	/**
 	 * Returns the value of the '<em><b>Time Stamp</b></em>' attribute.

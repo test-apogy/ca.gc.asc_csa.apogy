@@ -20,39 +20,39 @@
     <children xmi:type="notation:Node" xmi:id="_gIuXIJ8MEd-a1LtkbZLA8A" type="4010"/>
     <children xmi:type="notation:Node" xmi:id="_gIu-MJ8MEd-a1LtkbZLA8A" type="5008">
       <children xmi:type="notation:Node" xmi:id="_qxg6wJ8MEd-a1LtkbZLA8A" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/INVALID"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/INVALID"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_qxg6wZ8MEd-a1LtkbZLA8A"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="__u8JUZ_wEd-B_5OMPY78gw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/GPS_FIX"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/GPS_FIX"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="__u8JUp_wEd-B_5OMPY78gw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_KF4H8J_xEd-B_5OMPY78gw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/SIMULATION"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/SIMULATION"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_KF4H8Z_xEd-B_5OMPY78gw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_Ar6u8J_xEd-B_5OMPY78gw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/DGPS_FIX"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/DGPS_FIX"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Ar6u8Z_xEd-B_5OMPY78gw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_Ci3CcJ_xEd-B_5OMPY78gw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/PPS_FIX"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/PPS_FIX"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Ci3CcZ_xEd-B_5OMPY78gw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_Euo9gJ_xEd-B_5OMPY78gw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/RTK"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/RTK"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Euo9gZ_xEd-B_5OMPY78gw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_Fibx8J_xEd-B_5OMPY78gw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/FLOAT_RTK"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/FLOAT_RTK"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Fibx8Z_xEd-B_5OMPY78gw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_HqecgJ_xEd-B_5OMPY78gw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/ESTIMATED"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/ESTIMATED"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_HqecgZ_xEd-B_5OMPY78gw"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_JQeJ8J_xEd-B_5OMPY78gw" type="2006">
-        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPS_QUALITY/MANUAL_INPUT"/>
+        <element xmi:type="ecore:EEnumLiteral" href="GPS.ecore#//GPSQuality/MANUAL_INPUT"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_JQeJ8Z_xEd-B_5OMPY78gw"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_gIu-MZ8MEd-a1LtkbZLA8A"/>
@@ -60,7 +60,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_gIu-M58MEd-a1LtkbZLA8A"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_gItwEZ8MEd-a1LtkbZLA8A" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EEnum" href="GPS.ecore#//GPS_QUALITY"/>
+    <element xmi:type="ecore:EEnum" href="GPS.ecore#//GPSQuality"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gItwEp8MEd-a1LtkbZLA8A" x="561" y="22"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_1_nK4J8MEd-a1LtkbZLA8A" type="1001">

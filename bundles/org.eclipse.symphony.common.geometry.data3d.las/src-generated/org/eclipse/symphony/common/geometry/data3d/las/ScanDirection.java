@@ -1,7 +1,5 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las;
 
@@ -95,6 +93,8 @@ public enum ScanDirection implements Enumerator {
 	 * Returns the '<em><b>Scan Direction</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ScanDirection get(String literal) {
@@ -111,6 +111,8 @@ public enum ScanDirection implements Enumerator {
 	 * Returns the '<em><b>Scan Direction</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ScanDirection getByName(String name) {
@@ -127,6 +129,8 @@ public enum ScanDirection implements Enumerator {
 	 * Returns the '<em><b>Scan Direction</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ScanDirection get(int value) {

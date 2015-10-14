@@ -24,8 +24,10 @@ import org.eclipse.symphony.addons.sensors.gps.GPSConnection;
 import org.eclipse.symphony.addons.sensors.gps.GPSDataInterpreter;
 import org.eclipse.symphony.addons.sensors.gps.GPSFacade;
 import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
+import org.eclipse.symphony.addons.sensors.gps.GPSQuality;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
 import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
@@ -104,14 +106,14 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum gpS_STATUSEEnum = null;
+	private EEnum gpsStatusEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum gpS_QUALITYEEnum = null;
+	private EEnum gpsQualityEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -641,8 +643,8 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getGPS_STATUS() {
-		return gpS_STATUSEEnum;
+	public EEnum getGPSStatus() {
+		return gpsStatusEEnum;
 	}
 
 	/**
@@ -650,8 +652,8 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getGPS_QUALITY() {
-		return gpS_QUALITYEEnum;
+	public EEnum getGPSQuality() {
+		return gpsQualityEEnum;
 	}
 
 	/**
@@ -783,8 +785,8 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 		createEOperation(gpsFacadeEClass, GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER);
 
 		// Create enums
-		gpS_STATUSEEnum = createEEnum(GPS_STATUS);
-		gpS_QUALITYEEnum = createEEnum(GPS_QUALITY);
+		gpsStatusEEnum = createEEnum(GPS_STATUS);
+		gpsQualityEEnum = createEEnum(GPS_QUALITY);
 
 		// Create data types
 		exceptionEDataType = createEDataType(EXCEPTION);
@@ -850,7 +852,7 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 		initEAttribute(getGPSReading_Latitude(), theEcorePackage.getEDouble(), "latitude", null, 0, 1, GPSReading.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPSReading_Longitude(), theEcorePackage.getEDouble(), "longitude", null, 0, 1, GPSReading.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPSReading_Elevation(), theEcorePackage.getEDouble(), "elevation", null, 0, 1, GPSReading.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPSReading_Quality(), this.getGPS_QUALITY(), "quality", null, 0, 1, GPSReading.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGPSReading_Quality(), this.getGPSQuality(), "quality", null, 0, 1, GPSReading.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPSReading_TimeStamp(), this.getDate(), "timeStamp", null, 0, 1, GPSReading.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPSReading_NumberOfSatellites(), theEcorePackage.getEInt(), "numberOfSatellites", null, 0, 1, GPSReading.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPSReading_HorizontalDilutionPos(), theEcorePackage.getEDouble(), "horizontalDilutionPos", null, 0, 1, GPSReading.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -869,7 +871,7 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 		initEReference(getGPS_Connection(), this.getGPSConnection(), null, "connection", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGPS_DataInterpreter(), this.getGPSDataInterpreter(), this.getGPSDataInterpreter_Gps(), "dataInterpreter", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGPS_Reading(), this.getGPSReading(), null, "reading", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGPS_Status(), this.getGPS_STATUS(), "status", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGPS_Status(), this.getGPSStatus(), "status", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPS_UpdateRate(), theEcorePackage.getELong(), "updateRate", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPS_LastFailure(), this.getException(), "lastFailure", null, 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGPS_MaxReconnectTime(), theEcorePackage.getEInt(), "maxReconnectTime", "10000", 0, 1, org.eclipse.symphony.addons.sensors.gps.GPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -905,23 +907,23 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 		addEParameter(op, theData3dPackage.getPositionMarker(), "marker", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(gpS_STATUSEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_STATUS.class, "GPS_STATUS");
-		addEEnumLiteral(gpS_STATUSEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_STATUS.STOPPED);
-		addEEnumLiteral(gpS_STATUSEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_STATUS.RUNNING);
-		addEEnumLiteral(gpS_STATUSEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_STATUS.FAILED);
-		addEEnumLiteral(gpS_STATUSEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_STATUS.RECONNECTING);
-		addEEnumLiteral(gpS_STATUSEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_STATUS.CONNECTING);
+		initEEnum(gpsStatusEEnum, GPSStatus.class, "GPSStatus");
+		addEEnumLiteral(gpsStatusEEnum, GPSStatus.STOPPED);
+		addEEnumLiteral(gpsStatusEEnum, GPSStatus.RUNNING);
+		addEEnumLiteral(gpsStatusEEnum, GPSStatus.FAILED);
+		addEEnumLiteral(gpsStatusEEnum, GPSStatus.RECONNECTING);
+		addEEnumLiteral(gpsStatusEEnum, GPSStatus.CONNECTING);
 
-		initEEnum(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.class, "GPS_QUALITY");
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.INVALID);
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.GPS_FIX);
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.DGPS_FIX);
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.PPS_FIX);
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.RTK);
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.FLOAT_RTK);
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.ESTIMATED);
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.MANUAL_INPUT);
-		addEEnumLiteral(gpS_QUALITYEEnum, org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY.SIMULATION);
+		initEEnum(gpsQualityEEnum, GPSQuality.class, "GPSQuality");
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.INVALID);
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.GPS_FIX);
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.DGPS_FIX);
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.PPS_FIX);
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.RTK);
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.FLOAT_RTK);
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.ESTIMATED);
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.MANUAL_INPUT);
+		addEEnumLiteral(gpsQualityEEnum, GPSQuality.SIMULATION);
 
 		// Initialize data types
 		initEDataType(exceptionEDataType, Exception.class, "Exception", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1017,13 +1019,13 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 		  (getGPS__Reset(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Resets the GPS:\n<ul>\n<li>lastFailure is set to <code>null</code></li>\n<li>status is set to GPS_STATUS.STOPPED</li>\n</ul>"
+			 "documentation", "Resets the GPS:\n<ul>\n<li>lastFailure is set to <code>null</code></li>\n<li>status is set to GPSStatus.STOPPED</li>\n</ul>"
 		   });	
 		addAnnotation
 		  (getGPS__Reconnect(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Resets the GPS:\n<ul>\n<li>lastFailure is set to <code>null</code></li>\n<li>status is set to GPS_STATUS.STOPPED</li>\n</ul>"
+			 "documentation", "Resets the GPS:\n<ul>\n<li>lastFailure is set to <code>null</code></li>\n<li>status is set to GPSStatus.STOPPED</li>\n</ul>"
 		   });	
 		addAnnotation
 		  (getGPS_Reading(), 

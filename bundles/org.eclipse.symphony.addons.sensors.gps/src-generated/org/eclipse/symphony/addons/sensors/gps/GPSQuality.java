@@ -14,11 +14,11 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>GPS QUALITY</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_QUALITY()
+ * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSQuality()
  * @model
  * @generated
  */
-public enum GPS_QUALITY implements Enumerator {
+public enum GPSQuality implements Enumerator {
 	/**
 	 * The '<em><b>INVALID</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -245,13 +245,13 @@ public enum GPS_QUALITY implements Enumerator {
 	public static final int SIMULATION_VALUE = 8;
 
 	/**
-	 * An array of all the '<em><b>GPS QUALITY</b></em>' enumerators.
+	 * An array of all the '<em><b>GPS Quality</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final GPS_QUALITY[] VALUES_ARRAY =
-		new GPS_QUALITY[] {
+	private static final GPSQuality[] VALUES_ARRAY =
+		new GPSQuality[] {
 			INVALID,
 			GPS_FIX,
 			DGPS_FIX,
@@ -264,24 +264,24 @@ public enum GPS_QUALITY implements Enumerator {
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>GPS QUALITY</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>GPS Quality</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<GPS_QUALITY> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<GPSQuality> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>GPS QUALITY</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>GPS Quality</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GPS_QUALITY get(String literal) {
+	public static GPSQuality get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			GPS_QUALITY result = VALUES_ARRAY[i];
+			GPSQuality result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -290,16 +290,16 @@ public enum GPS_QUALITY implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>GPS QUALITY</b></em>' literal with the specified name.
+	 * Returns the '<em><b>GPS Quality</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GPS_QUALITY getByName(String name) {
+	public static GPSQuality getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			GPS_QUALITY result = VALUES_ARRAY[i];
+			GPSQuality result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -308,14 +308,14 @@ public enum GPS_QUALITY implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>GPS QUALITY</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>GPS Quality</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static GPS_QUALITY get(int value) {
+	public static GPSQuality get(int value) {
 		switch (value) {
 			case INVALID_VALUE: return INVALID;
 			case GPS_FIX_VALUE: return GPS_FIX;
@@ -357,7 +357,7 @@ public enum GPS_QUALITY implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private GPS_QUALITY(int value, String name, String literal) {
+	private GPSQuality(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -401,4 +401,4 @@ public enum GPS_QUALITY implements Enumerator {
 		return literal;
 	}
 	
-} //GPS_QUALITY
+} //GPSQuality

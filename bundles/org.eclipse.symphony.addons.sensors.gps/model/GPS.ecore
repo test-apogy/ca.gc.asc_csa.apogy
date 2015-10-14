@@ -14,12 +14,12 @@
     </eOperations>
     <eOperations name="reset">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Resets the GPS:&#xA;&lt;ul>&#xA;&lt;li>lastFailure is set to &lt;code>null&lt;/code>&lt;/li>&#xA;&lt;li>status is set to GPS_STATUS.STOPPED&lt;/li>&#xA;&lt;/ul>"/>
+        <details key="documentation" value="Resets the GPS:&#xA;&lt;ul>&#xA;&lt;li>lastFailure is set to &lt;code>null&lt;/code>&lt;/li>&#xA;&lt;li>status is set to GPSStatus.STOPPED&lt;/li>&#xA;&lt;/ul>"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="reconnect" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Resets the GPS:&#xA;&lt;ul>&#xA;&lt;li>lastFailure is set to &lt;code>null&lt;/code>&lt;/li>&#xA;&lt;li>status is set to GPS_STATUS.STOPPED&lt;/li>&#xA;&lt;/ul>"/>
+        <details key="documentation" value="Resets the GPS:&#xA;&lt;ul>&#xA;&lt;li>lastFailure is set to &lt;code>null&lt;/code>&lt;/li>&#xA;&lt;li>status is set to GPSStatus.STOPPED&lt;/li>&#xA;&lt;/ul>"/>
       </eAnnotations>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connection" lowerBound="1"
@@ -32,7 +32,7 @@
         <details key="documentation" value="Gets the latest gps reading.  This call is not blocking.&#xA;Returns &lt;code>null&lt;/code> if no reading is yet available.&#xA;If the gps's state is 'STOPPED' when this method is called, a call to 'start()' is first made."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//GPS_STATUS"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//GPSStatus"
         transient="true" defaultValueLiteral="STOPPED"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateRate" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//ELong">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -62,7 +62,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GPS_QUALITY">
+  <eClassifiers xsi:type="ecore:EEnum" name="GPSQuality">
     <eLiterals name="GPS_FIX" value="1"/>
     <eLiterals name="INVALID" literal="INVALID"/>
     <eLiterals name="DGPS_FIX" value="2"/>
@@ -99,7 +99,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="elevation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         transient="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quality" eType="#//GPS_QUALITY"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quality" eType="#//GPSQuality"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeStamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSatellites" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="horizontalDilutionPos"
@@ -154,7 +154,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="marker" eType="ecore:EClass platform:/plugin/org.eclipse.symphony.common.geometry.data3d/model/data3d.ecore#//PositionMarker"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GPS_STATUS">
+  <eClassifiers xsi:type="ecore:EEnum" name="GPSStatus">
     <eLiterals name="RUNNING" value="1"/>
     <eLiterals name="STOPPED"/>
     <eLiterals name="FAILED" value="2"/>

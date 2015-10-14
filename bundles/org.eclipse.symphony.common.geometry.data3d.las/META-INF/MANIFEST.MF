@@ -12,6 +12,9 @@ Export-Package: org.eclipse.symphony.common.geometry.data3d.las,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.lang.java,
- javax.vecmath;bundle-version="1.5.2"
+ javax.vecmath;bundle-version="1.5.2",
+ org.eclipse.emf.ecore.xcore.lib,
+ org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

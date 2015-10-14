@@ -1,7 +1,7 @@
 package org.eclipse.symphony.addons.sensors.gps.state;
 
 import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 
 public final class GPSStateFactory {
 
@@ -14,19 +14,19 @@ public final class GPSStateFactory {
 		GPSState state = null;
 
 		switch (gps.getStatus().getValue()) {
-		case GPS_STATUS.CONNECTING_VALUE:
+		case GPSStatus.CONNECTING_VALUE:
 			state = new GPSStateConnecting(gps);
 			break;
-		case GPS_STATUS.STOPPED_VALUE:
+		case GPSStatus.STOPPED_VALUE:
 			state = new GPSStateStopped(gps);
 			break;
-		case GPS_STATUS.FAILED_VALUE:
+		case GPSStatus.FAILED_VALUE:
 			state = new GPSStateFailed(gps);
 			break;
-		case GPS_STATUS.RECONNECTING_VALUE:
+		case GPSStatus.RECONNECTING_VALUE:
 			state = new GPSStateReconnecting(gps);
 			break;
-		case GPS_STATUS.RUNNING_VALUE:
+		case GPSStatus.RUNNING_VALUE:
 			state = new GPSStateRunning(gps);
 			break;
 		default:

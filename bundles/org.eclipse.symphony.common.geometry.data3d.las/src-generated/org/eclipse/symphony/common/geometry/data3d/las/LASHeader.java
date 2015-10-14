@@ -1,7 +1,5 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las;
 
@@ -14,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileSignature <em>File Signature</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getFileSourceID <em>File Source ID</em>}</li>
@@ -49,7 +48,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getMinZ <em>Min Z</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader#getStartOfWaveformDataPacketRecord <em>Start Of Waveform Data Packet Record</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader()
  * @model
@@ -67,7 +65,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>File Signature</em>' attribute.
 	 * @see #setFileSignature(String)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_FileSignature()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getFileSignature();
@@ -93,7 +91,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>File Source ID</em>' attribute.
 	 * @see #setFileSourceID(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_FileSourceID()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getFileSourceID();
@@ -119,7 +117,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Global Encoding</em>' attribute.
 	 * @see #setGlobalEncoding(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_GlobalEncoding()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getGlobalEncoding();
@@ -145,7 +143,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Project ID GUID data 1</em>' attribute.
 	 * @see #setProjectID_GUID_data_1(long)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_ProjectID_GUID_data_1()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getProjectID_GUID_data_1();
@@ -171,7 +169,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Project ID GUID data 2</em>' attribute.
 	 * @see #setProjectID_GUID_data_2(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_ProjectID_GUID_data_2()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getProjectID_GUID_data_2();
@@ -197,7 +195,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Project ID GUID data 3</em>' attribute.
 	 * @see #setProjectID_GUID_data_3(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_ProjectID_GUID_data_3()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getProjectID_GUID_data_3();
@@ -223,7 +221,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Project ID GUID data 4</em>' attribute.
 	 * @see #setProjectID_GUID_data_4(byte[])
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_ProjectID_GUID_data_4()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	byte[] getProjectID_GUID_data_4();
@@ -249,7 +247,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Version Major</em>' attribute.
 	 * @see #setVersionMajor(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_VersionMajor()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getVersionMajor();
@@ -275,7 +273,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Version Minor</em>' attribute.
 	 * @see #setVersionMinor(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_VersionMinor()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getVersionMinor();
@@ -301,7 +299,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>System Identifier</em>' attribute.
 	 * @see #setSystemIdentifier(String)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_SystemIdentifier()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSystemIdentifier();
@@ -327,7 +325,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Generating Software</em>' attribute.
 	 * @see #setGeneratingSoftware(String)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_GeneratingSoftware()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getGeneratingSoftware();
@@ -353,7 +351,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>File Creation Day Of Year</em>' attribute.
 	 * @see #setFileCreationDayOfYear(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_FileCreationDayOfYear()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getFileCreationDayOfYear();
@@ -379,7 +377,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>File Creation Year</em>' attribute.
 	 * @see #setFileCreationYear(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_FileCreationYear()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getFileCreationYear();
@@ -405,7 +403,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Header Size</em>' attribute.
 	 * @see #setHeaderSize(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_HeaderSize()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getHeaderSize();
@@ -431,7 +429,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Offset To Point Data</em>' attribute.
 	 * @see #setOffsetToPointData(long)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_OffsetToPointData()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getOffsetToPointData();
@@ -457,7 +455,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>NVariable Length Records</em>' attribute.
 	 * @see #setNVariableLengthRecords(long)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_NVariableLengthRecords()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getNVariableLengthRecords();
@@ -483,7 +481,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Point Data Format ID</em>' attribute.
 	 * @see #setPointDataFormatID(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_PointDataFormatID()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getPointDataFormatID();
@@ -509,7 +507,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Point Data Record Length</em>' attribute.
 	 * @see #setPointDataRecordLength(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_PointDataRecordLength()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getPointDataRecordLength();
@@ -535,7 +533,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Number Of Point Records</em>' attribute.
 	 * @see #setNumberOfPointRecords(long)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_NumberOfPointRecords()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getNumberOfPointRecords();
@@ -561,7 +559,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Number Of Points By Return</em>' attribute.
 	 * @see #setNumberOfPointsByReturn(long[])
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_NumberOfPointsByReturn()
-	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.las.LongArray"
+	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.LongArray"
 	 * @generated
 	 */
 	long[] getNumberOfPointsByReturn();
@@ -587,7 +585,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>XScale Factor</em>' attribute.
 	 * @see #setXScaleFactor(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_XScaleFactor()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getXScaleFactor();
@@ -613,7 +611,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>YScale Factor</em>' attribute.
 	 * @see #setYScaleFactor(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_YScaleFactor()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getYScaleFactor();
@@ -639,7 +637,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>ZScale Factor</em>' attribute.
 	 * @see #setZScaleFactor(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_ZScaleFactor()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getZScaleFactor();
@@ -665,7 +663,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>XOffset</em>' attribute.
 	 * @see #setXOffset(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_XOffset()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getXOffset();
@@ -691,7 +689,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>YOffset</em>' attribute.
 	 * @see #setYOffset(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_YOffset()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getYOffset();
@@ -717,7 +715,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>ZOffset</em>' attribute.
 	 * @see #setZOffset(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_ZOffset()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getZOffset();
@@ -743,7 +741,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Max X</em>' attribute.
 	 * @see #setMaxX(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_MaxX()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getMaxX();
@@ -769,7 +767,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Min X</em>' attribute.
 	 * @see #setMinX(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_MinX()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getMinX();
@@ -795,7 +793,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Max Y</em>' attribute.
 	 * @see #setMaxY(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_MaxY()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getMaxY();
@@ -821,7 +819,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Min Y</em>' attribute.
 	 * @see #setMinY(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_MinY()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getMinY();
@@ -847,7 +845,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Max Z</em>' attribute.
 	 * @see #setMaxZ(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_MaxZ()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getMaxZ();
@@ -873,7 +871,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Min Z</em>' attribute.
 	 * @see #setMinZ(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_MinZ()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getMinZ();
@@ -899,7 +897,7 @@ public interface LASHeader extends EObject {
 	 * @return the value of the '<em>Start Of Waveform Data Packet Record</em>' attribute.
 	 * @see #setStartOfWaveformDataPacketRecord(long)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASHeader_StartOfWaveformDataPacketRecord()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getStartOfWaveformDataPacketRecord();

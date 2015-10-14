@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
@@ -98,7 +98,7 @@ public class MarkedGPSItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		GPS_STATUS labelValue = ((MarkedGPS)object).getStatus();
+		GPSStatus labelValue = ((MarkedGPS)object).getStatus();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MarkedGPS_type") :

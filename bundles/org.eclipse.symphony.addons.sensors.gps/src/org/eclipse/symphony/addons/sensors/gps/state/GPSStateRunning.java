@@ -3,7 +3,7 @@ package org.eclipse.symphony.addons.sensors.gps.state;
 import java.io.IOException;
 
 import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 
 public class GPSStateRunning extends GPSState {
 
@@ -14,7 +14,7 @@ public class GPSStateRunning extends GPSState {
 	@Override
 	public void failure(Exception e) {
 		super.failure(e);
-		getGPS().setStatus(GPS_STATUS.RECONNECTING);
+		getGPS().setStatus(GPSStatus.RECONNECTING);
 		getGPS().reconnect();
 	}
 
@@ -25,7 +25,7 @@ public class GPSStateRunning extends GPSState {
 
 	@Override
 	public void stop() throws IllegalStateException {
-		getGPS().setStatus(GPS_STATUS.STOPPED);
+		getGPS().setStatus(GPSStatus.STOPPED);
 		getGPS().setLastFailure(null);
 	}
 

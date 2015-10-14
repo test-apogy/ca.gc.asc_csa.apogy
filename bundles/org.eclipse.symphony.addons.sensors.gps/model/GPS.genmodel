@@ -6,23 +6,23 @@
   <foreignModel>GPS.ecore</foreignModel>
   <genPackages prefix="Gps" basePackage="ca.gc.space.mrt.sensors" disposableProviderFactory="true"
       ecorePackage="GPS.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="GPS.ecore#//GPS_QUALITY">
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/GPS_FIX"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/INVALID"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/DGPS_FIX"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/PPS_FIX"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/RTK"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/FLOAT_RTK"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/ESTIMATED"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/MANUAL_INPUT"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_QUALITY/SIMULATION"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="GPS.ecore#//GPSQuality">
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/GPS_FIX"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/INVALID"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/DGPS_FIX"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/PPS_FIX"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/RTK"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/FLOAT_RTK"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/ESTIMATED"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/MANUAL_INPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSQuality/SIMULATION"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="GPS.ecore#//GPS_STATUS">
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_STATUS/RUNNING"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_STATUS/STOPPED"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_STATUS/FAILED"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_STATUS/RECONNECTING"/>
-      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPS_STATUS/CONNECTING"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="GPS.ecore#//GPSStatus">
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSStatus/RUNNING"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSStatus/STOPPED"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSStatus/FAILED"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSStatus/RECONNECTING"/>
+      <genEnumLiterals ecoreEnumLiteral="GPS.ecore#//GPSStatus/CONNECTING"/>
     </genEnums>
     <genClasses ecoreClass="GPS.ecore#//GPS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GPS.ecore#//GPS/connection"/>

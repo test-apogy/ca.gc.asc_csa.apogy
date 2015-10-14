@@ -1,7 +1,5 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las;
 
@@ -14,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getY <em>Y</em>}</li>
@@ -32,7 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getGreen <em>Green</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getBlue <em>Blue</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint()
  * @model
@@ -50,7 +48,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(long)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_X()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getX();
@@ -76,7 +74,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(long)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_Y()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getY();
@@ -102,7 +100,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(long)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_Z()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	long getZ();
@@ -128,7 +126,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Intensity</em>' attribute.
 	 * @see #setIntensity(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_Intensity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getIntensity();
@@ -154,7 +152,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Return Number</em>' attribute.
 	 * @see #setReturnNumber(byte)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_ReturnNumber()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	byte getReturnNumber();
@@ -180,7 +178,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Number Of Returns</em>' attribute.
 	 * @see #setNumberOfReturns(byte)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_NumberOfReturns()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	byte getNumberOfReturns();
@@ -208,7 +206,7 @@ public interface LASPoint extends EObject {
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.ScanDirection
 	 * @see #setScanDirection(ScanDirection)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_ScanDirection()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	ScanDirection getScanDirection();
@@ -237,7 +235,7 @@ public interface LASPoint extends EObject {
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine
 	 * @see #setEdgeOfFlightLine(EdgeOfFlightLine)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_EdgeOfFlightLine()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	EdgeOfFlightLine getEdgeOfFlightLine();
@@ -264,7 +262,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Classification</em>' attribute.
 	 * @see #setClassification(short)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_Classification()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	short getClassification();
@@ -290,7 +288,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Scan Angle Rank</em>' attribute.
 	 * @see #setScanAngleRank(byte)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_ScanAngleRank()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	byte getScanAngleRank();
@@ -316,7 +314,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>User Data</em>' attribute.
 	 * @see #setUserData(short)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_UserData()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	short getUserData();
@@ -342,7 +340,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Point Source Id</em>' attribute.
 	 * @see #setPointSourceId(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_PointSourceId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getPointSourceId();
@@ -368,7 +366,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Gps Time</em>' attribute.
 	 * @see #setGpsTime(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_GpsTime()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getGpsTime();
@@ -394,7 +392,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Red</em>' attribute.
 	 * @see #setRed(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_Red()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getRed();
@@ -420,7 +418,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Green</em>' attribute.
 	 * @see #setGreen(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_Green()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getGreen();
@@ -446,7 +444,7 @@ public interface LASPoint extends EObject {
 	 * @return the value of the '<em>Blue</em>' attribute.
 	 * @see #setBlue(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint_Blue()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getBlue();

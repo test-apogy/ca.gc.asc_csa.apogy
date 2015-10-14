@@ -22,7 +22,7 @@ import org.eclipse.symphony.addons.sensors.gps.GPS;
 import org.eclipse.symphony.addons.sensors.gps.GPSConnection;
 import org.eclipse.symphony.addons.sensors.gps.GPSDataInterpreter;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.state.GPSState;
 import org.eclipse.symphony.addons.sensors.gps.state.GPSStateFactory;
@@ -95,7 +95,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GPS_STATUS STATUS_EDEFAULT = GPS_STATUS.STOPPED;
+	protected static final GPSStatus STATUS_EDEFAULT = GPSStatus.STOPPED;
 
 	/**
 	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -104,7 +104,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	 * @generated
 	 * @ordered
 	 */
-	protected GPS_STATUS status = STATUS_EDEFAULT;
+	protected GPSStatus status = STATUS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUpdateRate() <em>Update Rate</em>}' attribute.
@@ -209,7 +209,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	 */
 	protected GPSImpl() {
 		super();
-		status = GPS_STATUS.STOPPED;
+		status = GPSStatus.STOPPED;
 	}
 
 	/**
@@ -313,9 +313,9 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 		// We make sure the gps is running.
 		start();
 
-		if (getStatus() != GPS_STATUS.RUNNING
-				&& getStatus() != GPS_STATUS.RECONNECTING
-				&& getStatus() != GPS_STATUS.CONNECTING) {
+		if (getStatus() != GPSStatus.RUNNING
+				&& getStatus() != GPSStatus.RECONNECTING
+				&& getStatus() != GPSStatus.CONNECTING) {
 			throw new RuntimeException(getLastFailure());
 		}
 
@@ -359,7 +359,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPS_STATUS getStatus() {
+	public GPSStatus getStatus() {
 		return status;
 	}
 
@@ -368,8 +368,8 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 	 * 
 	 * @generated_NOT
 	 */
-	public void setStatus(GPS_STATUS newStatus) {
-		GPS_STATUS oldStatus = status;
+	public void setStatus(GPSStatus newStatus) {
+		GPSStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
@@ -622,7 +622,7 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 				setReading((GPSReading)newValue);
 				return;
 			case GpsPackage.GPS__STATUS:
-				setStatus((GPS_STATUS)newValue);
+				setStatus((GPSStatus)newValue);
 				return;
 			case GpsPackage.GPS__UPDATE_RATE:
 				setUpdateRate((Long)newValue);
@@ -760,8 +760,8 @@ public class GPSImpl extends MinimalEObjectImpl.Container implements GPS {
 
 	/**
 	 * The gps job runs as long as the {@link #status} attribute is set to
-	 * {@link GPS_STATUS#RUNNING}. The job is stopped if an exception occurs.
-	 * Then the status is set to {@link GPS_STATUS#STOPPED}.
+	 * {@link GPSStatus#RUNNING}. The job is stopped if an exception occurs.
+	 * Then the status is set to {@link GPSStatus#STOPPED}.
 	 * 
 	 * @return
 	 */

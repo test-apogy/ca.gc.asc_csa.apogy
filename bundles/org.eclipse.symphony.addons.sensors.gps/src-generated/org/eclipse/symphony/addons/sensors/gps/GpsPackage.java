@@ -945,21 +945,21 @@ public interface GpsPackage extends EPackage {
 	int GPS_FACADE_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.gps.GPS_STATUS <em>GPS STATUS</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.gps.GPSStatus <em>GPS Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPS_STATUS
-	 * @see org.eclipse.symphony.addons.sensors.gps.impl.GpsPackageImpl#getGPS_STATUS()
+	 * @see org.eclipse.symphony.addons.sensors.gps.GPSStatus
+	 * @see org.eclipse.symphony.addons.sensors.gps.impl.GpsPackageImpl#getGPSStatus()
 	 * @generated
 	 */
 	int GPS_STATUS = 8;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY <em>GPS QUALITY</em>}' enum.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.gps.GPSQuality <em>GPS Quality</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY
-	 * @see org.eclipse.symphony.addons.sensors.gps.impl.GpsPackageImpl#getGPS_QUALITY()
+	 * @see org.eclipse.symphony.addons.sensors.gps.GPSQuality
+	 * @see org.eclipse.symphony.addons.sensors.gps.impl.GpsPackageImpl#getGPSQuality()
 	 * @generated
 	 */
 	int GPS_QUALITY = 9;
@@ -1515,24 +1515,24 @@ public interface GpsPackage extends EPackage {
 	EOperation getGPSFacade__CreateMarkedGPS__PositionMarker();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.sensors.gps.GPS_STATUS <em>GPS STATUS</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.sensors.gps.GPSStatus <em>GPS Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GPS STATUS</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPS_STATUS
+	 * @return the meta object for enum '<em>GPS Status</em>'.
+	 * @see org.eclipse.symphony.addons.sensors.gps.GPSStatus
 	 * @generated
 	 */
-	EEnum getGPS_STATUS();
+	EEnum getGPSStatus();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY <em>GPS QUALITY</em>}'.
+	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.sensors.gps.GPSQuality <em>GPS Quality</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GPS QUALITY</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY
+	 * @return the meta object for enum '<em>GPS Quality</em>'.
+	 * @see org.eclipse.symphony.addons.sensors.gps.GPSQuality
 	 * @generated
 	 */
-	EEnum getGPS_QUALITY();
+	EEnum getGPSQuality();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.Exception <em>Exception</em>}'.
@@ -2005,24 +2005,24 @@ public interface GpsPackage extends EPackage {
 		EOperation GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER = eINSTANCE.getGPSFacade__CreateMarkedGPS__PositionMarker();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.gps.GPS_STATUS <em>GPS STATUS</em>}' enum.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.gps.GPSStatus <em>GPS Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.gps.GPS_STATUS
-		 * @see org.eclipse.symphony.addons.sensors.gps.impl.GpsPackageImpl#getGPS_STATUS()
+		 * @see org.eclipse.symphony.addons.sensors.gps.GPSStatus
+		 * @see org.eclipse.symphony.addons.sensors.gps.impl.GpsPackageImpl#getGPSStatus()
 		 * @generated
 		 */
-		EEnum GPS_STATUS = eINSTANCE.getGPS_STATUS();
+		EEnum GPS_STATUS = eINSTANCE.getGPSStatus();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY <em>GPS QUALITY</em>}' enum.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.gps.GPSQuality <em>GPS Quality</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.gps.GPS_QUALITY
-		 * @see org.eclipse.symphony.addons.sensors.gps.impl.GpsPackageImpl#getGPS_QUALITY()
+		 * @see org.eclipse.symphony.addons.sensors.gps.GPSQuality
+		 * @see org.eclipse.symphony.addons.sensors.gps.impl.GpsPackageImpl#getGPSQuality()
 		 * @generated
 		 */
-		EEnum GPS_QUALITY = eINSTANCE.getGPS_QUALITY();
+		EEnum GPS_QUALITY = eINSTANCE.getGPSQuality();
 
 		/**
 		 * The meta object literal for the '<em>Exception</em>' data type.

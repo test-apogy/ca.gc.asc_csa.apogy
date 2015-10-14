@@ -1,7 +1,7 @@
 package org.eclipse.symphony.addons.sensors.gps.state;
 
 import org.eclipse.symphony.addons.sensors.gps.GPS;
-import org.eclipse.symphony.addons.sensors.gps.GPS_STATUS;
+import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 
 public class GPSStateStopped extends GPSState {
 
@@ -11,7 +11,7 @@ public class GPSStateStopped extends GPSState {
 
 	@Override
 	public void start() throws IllegalStateException {
-		getGPS().setStatus(GPS_STATUS.CONNECTING);
+		getGPS().setStatus(GPSStatus.CONNECTING);
 		getGPS().setLastFailure(null);
 	}	
 

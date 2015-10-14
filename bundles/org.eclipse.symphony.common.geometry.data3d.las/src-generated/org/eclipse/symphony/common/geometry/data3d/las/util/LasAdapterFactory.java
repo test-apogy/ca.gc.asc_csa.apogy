@@ -1,14 +1,15 @@
 /**
- * <copyright>
- * </copyright>
- *
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.las.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.symphony.common.geometry.data3d.las.*;
 
 /**
