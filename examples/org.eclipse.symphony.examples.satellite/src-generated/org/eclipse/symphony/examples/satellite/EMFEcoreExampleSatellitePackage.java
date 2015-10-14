@@ -659,6 +659,60 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	int SATELLITE_IMAGER = 8;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER__PARENT = MRTSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER__DESCRIPTION = MRTSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER__NODE_ID = MRTSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER__CHILDREN = MRTSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER__AGGREGATED_CHILDREN = MRTSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER__STATUS = MRTSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
+
+	/**
 	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -711,6 +765,15 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int SATELLITE_IMAGER_FEATURE_COUNT = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE_IMAGER___ACCEPT__INODEVISITOR = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>EClass</em>' operation.

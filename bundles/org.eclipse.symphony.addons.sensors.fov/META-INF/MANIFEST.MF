@@ -33,6 +33,8 @@ Require-Bundle: org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport
 Bundle-ActivationPolicy: lazy

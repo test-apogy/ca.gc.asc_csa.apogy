@@ -29,14 +29,17 @@
             uri="org.eclipse.symphony.addons.sensors.imaging"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$MRTSensorsImagingChildCreationExtender"/>
       <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
             uri="org.eclipse.symphony.common.images"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$ImagesCoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            uri="org.eclipse.symphony.common.topology.bindings"
+            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

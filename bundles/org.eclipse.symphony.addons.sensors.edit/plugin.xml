@@ -11,7 +11,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http:///ca/gc/space/mrt/sensors/model/sensors.ecore"
+            uri="org.eclipse.symphony.addons.sensors"
             class="org.eclipse.symphony.addons.sensors.provider.SensorsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -19,6 +19,13 @@
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated sensors -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.sensors.provider.SensorsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

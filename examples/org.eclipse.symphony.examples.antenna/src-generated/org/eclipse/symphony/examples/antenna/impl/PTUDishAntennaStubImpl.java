@@ -14,8 +14,6 @@ import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>PTU Dish Antenna Stub</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

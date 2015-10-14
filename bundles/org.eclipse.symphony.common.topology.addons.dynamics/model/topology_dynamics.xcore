@@ -64,7 +64,7 @@ class PhysicalBody extends AggregateGroupNode
 	/*
 	 * The list of constraints associated with this body.
 	 */
-	refers ConstraintAttachmentPoint [0..*] constraintAttachmentPoints
+	refers ConstraintAttachmentPoint [0..*] constraintAttachmentPoints opposite physicalBody
 	
 	/*
 	 * The list of simulation properties associated with this body.
@@ -273,7 +273,7 @@ class ConstraintAttachmentPoint
 	/*
 	 * The PhysicalBody to which the AttachmentPoint is attached.
 	 */
-	refers PhysicalBody physicalBody
+	refers PhysicalBody physicalBody opposite constraintAttachmentPoints
 	
 	/*
 	 * The Constraint attached to this attachment point.

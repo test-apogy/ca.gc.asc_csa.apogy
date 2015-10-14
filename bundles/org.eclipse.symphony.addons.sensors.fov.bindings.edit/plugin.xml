@@ -26,7 +26,7 @@
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
+            uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

@@ -20,11 +20,11 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#isInitialized <em>Initialized</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage#getLidarData()
  * @model

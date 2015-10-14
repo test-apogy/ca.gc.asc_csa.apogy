@@ -5,7 +5,9 @@ package org.eclipse.symphony.examples.satellite.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
+import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
@@ -54,11 +56,13 @@ public final class EMFEcoreExampleSatelliteEditPlugin extends EMFPlugin {
 		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     MRTSensorsImagingEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     SensorsEditPlugin.INSTANCE,
 		     SymphonyEarthOrbitEnvironmentEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,

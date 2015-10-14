@@ -9,8 +9,12 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.symphony.addons.actuators.provider.MRTActuatorsEditPlugin;
 
+import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 
+import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
+import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 import org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraEditPlugin;
@@ -55,8 +59,12 @@ public final class EMFEcoreExampleRoverEditPlugin extends EMFPlugin {
 		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
 		     EMFEcoreExampleMobilePlatformEditPlugin.INSTANCE,
 		     EMFEcoreExampleCameraEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     MRTActuatorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

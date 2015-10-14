@@ -27,6 +27,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.util.TopologySwitch;
@@ -346,6 +347,25 @@ public class EMFEcoreExampleLidarItemProviderAdapterFactory extends EMFEcoreExam
 			}
  
       /**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleLidarFactory.eINSTANCE.createLidarStub()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleLidarFactory.eINSTANCE.createLidarSimulated()));
+
+				return null;
+			}
+						/**
 			 * <!-- begin-user-doc -->
        * <!-- end-user-doc -->
 			 * @generated

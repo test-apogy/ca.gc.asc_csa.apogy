@@ -11,7 +11,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http:///ca/gc/space/mrt/sensors/pose/model/pose.ecore"
+            uri="org.eclipse.symphony.addons.sensors.pose"
             class="org.eclipse.symphony.addons.sensors.pose.provider.PoseItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -19,6 +19,13 @@
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated pose -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.sensors.pose.provider.PoseItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
    <extension
          point="org.eclipse.ui.popupMenus">

@@ -25,7 +25,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;

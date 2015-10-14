@@ -30,6 +30,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsFactory;
 import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
 import org.eclipse.symphony.addons.sensors.fov.bindings.util.MRTFOVBindingsAdapterFactory;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.BindingsList;
@@ -380,6 +381,30 @@ public class MRTFOVBindingsItemProviderAdapterFactory extends MRTFOVBindingsAdap
 			}
  
       /**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 MRTFOVBindingsFactory.eINSTANCE.createCircularSectorFieldOfViewBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 MRTFOVBindingsFactory.eINSTANCE.createConicalFieldOfViewBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 MRTFOVBindingsFactory.eINSTANCE.createRectangularFrustrumFieldOfViewBinding()));
+
+				return null;
+			}
+						/**
 			 * <!-- begin-user-doc -->
        * <!-- end-user-doc -->
 			 * @generated

@@ -317,7 +317,7 @@ public class EMFEcoreExampleLidarPackageImpl extends EPackageImpl implements EMF
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.examples.lidar/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.examples.lidar.edit/src-generated",
-			 "basePackage", "ca.gc.asc_csa.eclipse.emf.ecore.examples"
+			 "basePackage", "org.eclipse.symphony.examples"
 		   });	
 		addAnnotation
 		  (lidarEClass, 
