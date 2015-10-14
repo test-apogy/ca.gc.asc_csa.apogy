@@ -15,6 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.provider.AbstractCameraItemProvider;
+import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteImager;
@@ -169,8 +170,10 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		SatelliteImager satelliteImager = (SatelliteImager)object;
-		return getString("_UI_SatelliteImager_type") + " " + satelliteImager.getCurrentZoom();
+		String label = ((SatelliteImager)object).getDescription();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SatelliteImager_type") :
+			getString("_UI_SatelliteImager_type") + " " + label;
 	}
 	
 
@@ -210,8 +213,41 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_IMAGER__IMAGES_ACQUIRED,
 				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
+			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

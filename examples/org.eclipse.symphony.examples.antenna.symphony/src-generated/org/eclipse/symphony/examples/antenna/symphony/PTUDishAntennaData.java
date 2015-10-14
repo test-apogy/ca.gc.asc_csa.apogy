@@ -20,6 +20,7 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#getPanAngle <em>Pan Angle</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isTrackingSun <em>Tracking Sun</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isInitialized <em>Initialized</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage#getPTUDishAntennaData()
  * @model

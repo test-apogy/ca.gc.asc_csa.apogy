@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.Tuple3d;
+import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties;
@@ -22,8 +23,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeCent
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeMassVisitor;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeVisitor;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
-
-import org.eclipse.symphony.common.topology.Node;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,7 +69,6 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	@Override
 	public Tuple3d findCenterOfMass(Node root) 
 	{
 		PhysicalBodyNodeCenterOfMassVisitor visitor = new PhysicalBodyNodeCenterOfMassVisitor();
@@ -84,7 +82,6 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	@Override
 	public double findTotalMass(Node root) 
 	{
 		PhysicalBodyNodeMassVisitor visitor = new PhysicalBodyNodeMassVisitor();		
@@ -97,10 +94,9 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	@Override
 	@SuppressWarnings("unchecked")
 	public <T extends AbstractPhysicalBodySimulationProperties> T getPhysicalNodeSimulationProperty(PhysicalBody physicalBody, Class<T> propertyType) 
-	{
+	{		
 		for(AbstractPhysicalBodySimulationProperties property : physicalBody.getSimulationProperties())
 		{
 			if(propertyType.isAssignableFrom(property.getClass()))
@@ -116,7 +112,6 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	@Override
 	@SuppressWarnings("unchecked")
 	public <T extends AbstractConstraintSimulationProperties> T getConstraintSimulationProperty(AbstractConstraint constraint, Class<T> propertyType) 
 	{
@@ -135,7 +130,6 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	@Override
 	public Set<PhysicalBody> getPhysicalBodies(Node root) 
 	{
 		PhysicalBodyNodeVisitor visitor = new PhysicalBodyNodeVisitor();

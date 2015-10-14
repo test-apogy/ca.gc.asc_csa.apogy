@@ -17,8 +17,6 @@ import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lidar Symphony System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

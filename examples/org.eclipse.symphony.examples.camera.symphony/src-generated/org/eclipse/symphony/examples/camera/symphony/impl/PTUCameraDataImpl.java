@@ -15,11 +15,11 @@ import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackag
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.impl.PTUCameraDataImpl#getPanAngle <em>Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.impl.PTUCameraDataImpl#getTiltAngle <em>Tilt Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

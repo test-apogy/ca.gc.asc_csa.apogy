@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractPhysicalBodySimulationProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry;
@@ -172,7 +172,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	 */
 	public EList<ConstraintAttachmentPoint> getConstraintAttachmentPoints() {
 		if (constraintAttachmentPoints == null) {
-			constraintAttachmentPoints = new EObjectResolvingEList<ConstraintAttachmentPoint>(ConstraintAttachmentPoint.class, this, TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS);
+			constraintAttachmentPoints = new EObjectWithInverseResolvingEList<ConstraintAttachmentPoint>(ConstraintAttachmentPoint.class, this, TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY);
 		}
 		return constraintAttachmentPoints;
 	}
@@ -261,11 +261,28 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConstraintAttachmentPoints()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case TopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
 				return basicSetPhysicalProperties(null, msgs);
+			case TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
+				return ((InternalEList<?>)getConstraintAttachmentPoints()).basicRemove(otherEnd, msgs);
 			case TopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
 				return ((InternalEList<?>)getSimulationProperties()).basicRemove(otherEnd, msgs);
 			case TopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:

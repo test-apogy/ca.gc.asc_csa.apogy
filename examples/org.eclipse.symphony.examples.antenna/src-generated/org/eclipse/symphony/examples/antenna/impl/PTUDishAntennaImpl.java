@@ -18,12 +18,12 @@ import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaImpl#getPanAngle <em>Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaImpl#getTiltAngle <em>Tilt Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaImpl#isTrackingSun <em>Tracking Sun</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

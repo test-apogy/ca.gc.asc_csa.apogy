@@ -17,10 +17,10 @@ import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.antenna.DishAntenna#getFov <em>Fov</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getDishAntenna()
  * @model abstract="true"

@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcoreExampleLidar' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='EMFEcoreExampleLidar' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.lidar/src-generated' editDirectory='/org.eclipse.symphony.examples.lidar.edit/src-generated' basePackage='ca.gc.asc_csa.eclipse.emf.ecore.examples'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcoreExampleLidar' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015' modelName='EMFEcoreExampleLidar' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.examples.lidar/src-generated' editDirectory='/org.eclipse.symphony.examples.lidar.edit/src-generated' basePackage='org.eclipse.symphony.examples'"
  * @generated
  */
 public interface EMFEcoreExampleLidarPackage extends EPackage

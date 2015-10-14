@@ -23,11 +23,11 @@ import org.eclipse.symphony.examples.lidar.Lidar;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lidar.impl.LidarImpl#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lidar.impl.LidarImpl#isInitialized <em>Initialized</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

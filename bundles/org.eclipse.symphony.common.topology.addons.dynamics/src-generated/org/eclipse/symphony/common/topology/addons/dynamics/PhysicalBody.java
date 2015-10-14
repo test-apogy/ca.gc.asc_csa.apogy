@@ -61,6 +61,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	/**
 	 * Returns the value of the '<em><b>Constraint Attachment Points</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -68,7 +69,8 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constraint Attachment Points</em>' reference list.
 	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getPhysicalBody_ConstraintAttachmentPoints()
-	 * @model
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody
+	 * @model opposite="physicalBody"
 	 * @generated
 	 */
 	EList<ConstraintAttachmentPoint> getConstraintAttachmentPoints();

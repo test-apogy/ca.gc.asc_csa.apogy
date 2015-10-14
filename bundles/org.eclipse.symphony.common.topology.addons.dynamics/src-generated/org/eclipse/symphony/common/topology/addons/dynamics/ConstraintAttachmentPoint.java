@@ -34,6 +34,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 public interface ConstraintAttachmentPoint extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Physical Body</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -42,7 +43,8 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * @return the value of the '<em>Physical Body</em>' reference.
 	 * @see #setPhysicalBody(PhysicalBody)
 	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getConstraintAttachmentPoint_PhysicalBody()
-	 * @model
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints
+	 * @model opposite="constraintAttachmentPoints"
 	 * @generated
 	 */
 	PhysicalBody getPhysicalBody();

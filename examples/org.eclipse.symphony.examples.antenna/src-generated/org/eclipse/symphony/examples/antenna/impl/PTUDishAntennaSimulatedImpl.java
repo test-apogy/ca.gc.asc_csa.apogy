@@ -18,8 +18,6 @@ import org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>PTU Dish Antenna Simulated</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

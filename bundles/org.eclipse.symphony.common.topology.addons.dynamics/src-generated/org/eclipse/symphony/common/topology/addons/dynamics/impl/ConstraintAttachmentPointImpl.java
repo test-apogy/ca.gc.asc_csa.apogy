@@ -147,11 +147,33 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPhysicalBody(PhysicalBody newPhysicalBody) {
+	public NotificationChain basicSetPhysicalBody(PhysicalBody newPhysicalBody, NotificationChain msgs) {
 		PhysicalBody oldPhysicalBody = physicalBody;
 		physicalBody = newPhysicalBody;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, oldPhysicalBody, physicalBody));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, oldPhysicalBody, newPhysicalBody);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPhysicalBody(PhysicalBody newPhysicalBody) {
+		if (newPhysicalBody != physicalBody) {
+			NotificationChain msgs = null;
+			if (physicalBody != null)
+				msgs = ((InternalEObject)physicalBody).eInverseRemove(this, TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
+			if (newPhysicalBody != null)
+				msgs = ((InternalEObject)newPhysicalBody).eInverseAdd(this, TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
+			msgs = basicSetPhysicalBody(newPhysicalBody, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, newPhysicalBody, newPhysicalBody));
 	}
 
 	/**
@@ -298,6 +320,10 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
+				if (physicalBody != null)
+					msgs = ((InternalEObject)physicalBody).eInverseRemove(this, TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
+				return basicSetPhysicalBody((PhysicalBody)otherEnd, msgs);
 			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -314,6 +340,8 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
+				return basicSetPhysicalBody(null, msgs);
 			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
 				return basicSetConstraint(null, msgs);
 			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
