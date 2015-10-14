@@ -37,12 +37,12 @@ import org.gavaghan.geodesy.GlobalCoordinates;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSurfaceWorksiteImpl#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSurfaceWorksiteImpl#getXAxisAzimuth <em>XAxis Azimuth</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSurfaceWorksiteImpl#getEarthSky <em>Earth Sky</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

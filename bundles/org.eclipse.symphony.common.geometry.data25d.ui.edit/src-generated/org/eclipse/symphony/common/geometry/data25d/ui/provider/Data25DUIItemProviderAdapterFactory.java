@@ -30,6 +30,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIFactory;
 import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage;
 import org.eclipse.symphony.common.geometry.data25d.ui.util.Data25DUIAdapterFactory;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
@@ -295,6 +296,20 @@ public class Data25DUIItemProviderAdapterFactory extends Data25DUIAdapterFactory
 				newChildDescriptors.add
 					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Data25DUIFactory.eINSTANCE.createVolumetricCoordinatesSet25DPresentation()));
+
+				return null;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 Data25DUIFactory.eINSTANCE.createVolumetricCoordinatesSet25DPresentation()));
 
 				return null;

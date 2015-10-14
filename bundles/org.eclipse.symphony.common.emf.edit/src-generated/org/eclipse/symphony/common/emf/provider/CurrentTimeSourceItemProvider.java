@@ -130,7 +130,7 @@ public class CurrentTimeSourceItemProvider extends TimeSourceItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.CurrentTimeSource.class)) {
+		switch (notification.getFeatureID(CurrentTimeSource.class)) {
 			case EMFEcorePackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 			case EMFEcorePackage.CURRENT_TIME_SOURCE__PAUSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

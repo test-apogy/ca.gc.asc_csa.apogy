@@ -130,7 +130,7 @@ public class TimeSourceItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.TimeSource.class)) {
+		switch (notification.getFeatureID(TimeSource.class)) {
 			case EMFEcorePackage.TIME_SOURCE__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

@@ -182,7 +182,7 @@ public class CollectionTimedTimeSourceItemProvider extends BrowseableTimeSourceI
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.CollectionTimedTimeSource.class)) {
+		switch (notification.getFeatureID(CollectionTimedTimeSource.class)) {
 			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:

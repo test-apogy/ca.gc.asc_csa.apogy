@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Factory;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Package;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
@@ -94,8 +93,6 @@ public class JME3FactoryImpl extends EFactoryImpl implements JME3Factory {
 				return createJME3NodeFromString(eDataType, initialValue);
 			case JME3Package.JME3_GEOMETRY:
 				return createJME3GeometryFromString(eDataType, initialValue);
-			case JME3Package.SCENE_OBJECT:
-				return createSceneObjectFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -123,8 +120,6 @@ public class JME3FactoryImpl extends EFactoryImpl implements JME3Factory {
 				return convertJME3NodeToString(eDataType, instanceValue);
 			case JME3Package.JME3_GEOMETRY:
 				return convertJME3GeometryToString(eDataType, instanceValue);
-			case JME3Package.SCENE_OBJECT:
-				return convertSceneObjectToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -263,24 +258,6 @@ public class JME3FactoryImpl extends EFactoryImpl implements JME3Factory {
 	 * @generated
 	 */
 	public String convertJME3GeometryToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SceneObject createSceneObjectFromString(EDataType eDataType, String initialValue) {
-		return (SceneObject)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertSceneObjectToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

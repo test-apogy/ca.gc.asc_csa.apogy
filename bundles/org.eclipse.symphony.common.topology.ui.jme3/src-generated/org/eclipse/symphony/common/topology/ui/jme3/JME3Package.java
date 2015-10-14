@@ -177,17 +177,6 @@ public interface JME3Package extends EPackage {
 	int JME3_GEOMETRY = 7;
 
 	/**
-	 * The meta object id for the '<em>Scene Object</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.space.topology.ui.SceneObject
-	 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.JME3PackageImpl#getSceneObject()
-	 * @generated
-	 */
-	int SCENE_OBJECT = 8;
-
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory <em>Type Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -293,17 +282,6 @@ public interface JME3Package extends EPackage {
 	 * @generated
 	 */
 	EDataType getJME3Geometry();
-
-	/**
-	 * Returns the meta object for data type '{@link ca.gc.space.topology.ui.SceneObject <em>Scene Object</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Scene Object</em>'.
-	 * @see ca.gc.space.topology.ui.SceneObject
-	 * @model instanceClass="ca.gc.space.topology.ui.SceneObject"
-	 * @generated
-	 */
-	EDataType getSceneObject();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -423,16 +401,6 @@ public interface JME3Package extends EPackage {
 		 * @generated
 		 */
 		EDataType JME3_GEOMETRY = eINSTANCE.getJME3Geometry();
-
-		/**
-		 * The meta object literal for the '<em>Scene Object</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.space.topology.ui.SceneObject
-		 * @see org.eclipse.symphony.common.topology.ui.jme3.impl.JME3PackageImpl#getSceneObject()
-		 * @generated
-		 */
-		EDataType SCENE_OBJECT = eINSTANCE.getSceneObject();
 
 	}
 

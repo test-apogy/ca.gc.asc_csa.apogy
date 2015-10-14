@@ -29,6 +29,7 @@ import org.eclipse.symphony.core.invocator.impl.EnvironmentImpl;
  * <em><b>Symphony Environment</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getWorksitesList <em>Worksites List</em>}</li>
@@ -37,7 +38,6 @@ import org.eclipse.symphony.core.invocator.impl.EnvironmentImpl;
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getTimeSourcesList <em>Time Sources List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl#getActiveTimeSource <em>Active Time Source</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

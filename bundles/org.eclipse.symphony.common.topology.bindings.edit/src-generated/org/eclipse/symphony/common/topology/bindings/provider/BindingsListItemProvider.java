@@ -143,7 +143,7 @@ public class BindingsListItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.BindingsList.class)) {
+		switch (notification.getFeatureID(BindingsList.class)) {
 			case TopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

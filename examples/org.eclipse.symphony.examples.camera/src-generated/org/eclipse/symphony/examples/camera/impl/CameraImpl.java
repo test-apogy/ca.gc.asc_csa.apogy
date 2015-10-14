@@ -25,6 +25,7 @@ import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#getCurrentZoom <em>Current Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#isStreamingEnabled <em>Streaming Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyCameraTools' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='SymphonyCameraTools' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.sensors.imaging.camera/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.imaging.camera.edit/src-generated' basePackage='ca.gc.asc_csa.symphony.tools'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='SymphonyCameraTools' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)' modelName='SymphonyCameraTools' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.addons.sensors.imaging.camera/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.imaging.camera.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors.imaging'"
  * @generated
  */
 public interface SymphonyCameraToolsPackage extends EPackage
@@ -3765,11 +3765,11 @@ public interface SymphonyCameraToolsPackage extends EPackage
   EAttribute getImageFilter_Enabled();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage) <em>Filter</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#filter(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage) <em>Filter</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Filter</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#filter(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage)
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#filter(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage)
 	 * @generated
 	 */
   EOperation getImageFilter__Filter__AbstractCamera_AbstractEImage();
@@ -4026,11 +4026,11 @@ public interface SymphonyCameraToolsPackage extends EPackage
   EClass getDrawnCameraOverlay();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int) <em>Apply Overlay</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay#applyOverlay(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int) <em>Apply Overlay</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Overlay</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay#applyOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int)
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay#applyOverlay(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.common.images.AbstractEImage, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int)
 	 * @generated
 	 */
   EOperation getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int();
@@ -4238,11 +4238,11 @@ public interface SymphonyCameraToolsPackage extends EPackage
   EClass getImageCameraOverlay();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay#getOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int) <em>Get Overlay</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay#getOverlay(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int) <em>Get Overlay</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Overlay</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay#getOverlay(ca.gc.space.mrt.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int)
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageCameraOverlay#getOverlay(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment, int, int)
 	 * @generated
 	 */
   EOperation getImageCameraOverlay__GetOverlay__AbstractCamera_OverlayAlignment_int_int();
@@ -4491,11 +4491,11 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	EClass getToolTipTextProvider();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider#getToolTipText(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.space.mrt.sensors.imaging.ImageSnapshot, int, int, int) <em>Get Tool Tip Text</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider#getToolTipText(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot, int, int, int) <em>Get Tool Tip Text</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Tool Tip Text</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider#getToolTipText(ca.gc.space.mrt.sensors.imaging.AbstractCamera, ca.gc.space.mrt.sensors.imaging.ImageSnapshot, int, int, int)
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider#getToolTipText(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera, org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot, int, int, int)
 	 * @generated
 	 */
 	EOperation getToolTipTextProvider__GetToolTipText__AbstractCamera_ImageSnapshot_int_int_int();
@@ -4522,21 +4522,21 @@ public interface SymphonyCameraToolsPackage extends EPackage
 	EReference getCameraTool_CameraToolList();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#initializeCamera(ca.gc.space.mrt.sensors.imaging.AbstractCamera) <em>Initialize Camera</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#initializeCamera(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera) <em>Initialize Camera</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initialize Camera</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#initializeCamera(ca.gc.space.mrt.sensors.imaging.AbstractCamera)
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#initializeCamera(org.eclipse.symphony.addons.sensors.imaging.AbstractCamera)
 	 * @generated
 	 */
 	EOperation getCameraTool__InitializeCamera__AbstractCamera();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#updateImageSnapshot(ca.gc.space.mrt.sensors.imaging.ImageSnapshot) <em>Update Image Snapshot</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#updateImageSnapshot(org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot) <em>Update Image Snapshot</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Image Snapshot</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#updateImageSnapshot(ca.gc.space.mrt.sensors.imaging.ImageSnapshot)
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#updateImageSnapshot(org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot)
 	 * @generated
 	 */
 	EOperation getCameraTool__UpdateImageSnapshot__ImageSnapshot();

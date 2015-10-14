@@ -30,6 +30,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.util.MRTSensorsImagingAdapterFactory;
+import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
@@ -378,6 +379,30 @@ public class MRTSensorsImagingItemProviderAdapterFactory extends MRTSensorsImagi
 			}
  
       /**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 MRTSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 MRTSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 MRTSensorsImagingFactory.eINSTANCE.createImagingUtilities()));
+
+				return null;
+			}
+						/**
 			 * <!-- begin-user-doc -->
        * <!-- end-user-doc -->
 			 * @generated

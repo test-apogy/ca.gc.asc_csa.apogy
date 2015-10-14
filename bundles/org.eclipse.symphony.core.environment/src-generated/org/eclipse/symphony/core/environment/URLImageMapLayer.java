@@ -16,10 +16,10 @@ package org.eclipse.symphony.core.environment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.URLImageMapLayer#getLegendURL <em>Legend URL</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getURLImageMapLayer()
  * @model

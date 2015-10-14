@@ -45,7 +45,7 @@ public interface EnvironmentUtilities extends EObject
 	 * <!-- begin-model-doc -->
 	 * Methods that parses Right Ascension angle expressed in HH:mm:ss format and return an angle in radians.
 	 * <!-- end-model-doc -->
-	 * @model unique="false" exceptions="ca.gc.asc_csa.eclipse.emf.ecore.Exception" rightAscensionStringUnique="false"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.emf.Exception" rightAscensionStringUnique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
 	 */

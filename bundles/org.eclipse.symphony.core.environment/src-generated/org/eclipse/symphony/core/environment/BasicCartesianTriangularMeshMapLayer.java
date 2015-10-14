@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer#getMesh <em>Mesh</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer()
  * @model

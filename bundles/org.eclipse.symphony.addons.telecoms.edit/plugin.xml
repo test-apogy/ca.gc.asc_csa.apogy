@@ -32,6 +32,9 @@
             uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
       <extender
+            uri="org.eclipse.symphony.core"
+            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
             uri="org.eclipse.symphony.addons.geometry.paths"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$PathsChildCreationExtender"/>
       <extender

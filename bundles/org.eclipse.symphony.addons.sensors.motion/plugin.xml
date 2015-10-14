@@ -12,9 +12,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http:///ca/gc/space/mrt/sensors/motion/model/motion.ecore" 
-       class = "org.eclipse.symphony.addons.motion.MotionPackage"
-       genModel = "model/motion.genmodel" /> 
+       uri = "org.eclipse.symphony.addons.sensors.motion" 
+       class = "org.eclipse.symphony.addons.sensors.motion.MotionPackage"
+       genModel = "model/motion.xcore" /> 
   </extension>
 
 </plugin>

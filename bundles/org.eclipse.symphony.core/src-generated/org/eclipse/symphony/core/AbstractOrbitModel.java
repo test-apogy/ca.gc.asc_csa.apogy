@@ -14,11 +14,11 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.AbstractOrbitModel#getOrbitModelsList <em>Orbit Models List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.AbstractOrbitModel#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getAbstractOrbitModel()
  * @model abstract="true"

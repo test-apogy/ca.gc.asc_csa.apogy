@@ -8073,11 +8073,11 @@ public interface SymphonyEnvironmentPackage extends EPackage
   EOperation getEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getSunVector(ca.gc.space.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sun Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getSunVector(ca.gc.space.topology.Node, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
   EOperation getEnvironmentFacade__GetSunVector__Node_Environment();
@@ -8093,21 +8093,21 @@ public interface SymphonyEnvironmentPackage extends EPackage
   EOperation getEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getMoonVector(ca.gc.space.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Moon Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getMoonVector(ca.gc.space.topology.Node, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
   EOperation getEnvironmentFacade__GetMoonVector__Node_Environment();
 
   /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(ca.gc.space.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(ca.gc.space.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
   EOperation getEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment();

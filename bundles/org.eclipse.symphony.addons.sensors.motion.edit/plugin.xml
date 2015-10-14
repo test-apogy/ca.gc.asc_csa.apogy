@@ -12,14 +12,21 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http:///ca/gc/space/mrt/sensors/org.eclipse.symphony.addons.motion/model/org.eclipse.symphony.addons.motion.ecore"
-            class="org.eclipse.symphony.addons.motion.provider.MotionItemProviderAdapterFactory"
+            uri="http:///ca/gc/space/mrt/sensors/org.eclipse.symphony.addons.sensors.motion/model/org.eclipse.symphony.addons.sensors.motion.ecore"
+            class="org.eclipse.symphony.addons.sensors.motion.provider.MotionItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated motion -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.sensors.motion.provider.MotionItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

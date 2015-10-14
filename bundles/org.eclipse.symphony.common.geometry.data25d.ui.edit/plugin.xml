@@ -26,10 +26,10 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated mrt_data25d_ui -->
       <extender
-            uri="ca.gc.space.topology.ui"
+            uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.common.geometry.data25d.ui.provider.Data25DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
+            uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.common.geometry.data25d.ui.provider.Data25DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

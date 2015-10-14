@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.RescaleFilterImpl#getScale <em>Scale</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

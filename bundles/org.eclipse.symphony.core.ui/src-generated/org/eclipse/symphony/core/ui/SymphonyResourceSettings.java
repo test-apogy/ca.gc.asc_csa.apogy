@@ -19,12 +19,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceProject <em>Resource Project</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceFile <em>Resource File</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceContainer <em>Resource Container</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyResourceSettings()
  * @model

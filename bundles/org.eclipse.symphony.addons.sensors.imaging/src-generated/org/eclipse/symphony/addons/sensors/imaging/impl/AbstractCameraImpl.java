@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl#getLatestImageSnapshot <em>Latest Image Snapshot</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

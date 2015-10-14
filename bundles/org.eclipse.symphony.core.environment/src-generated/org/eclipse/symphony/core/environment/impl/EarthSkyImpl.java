@@ -39,11 +39,11 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSkyImpl#getMoon <em>Moon</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSkyImpl#getMoonHorizontalCoordinates <em>Moon Horizontal Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

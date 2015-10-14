@@ -48,13 +48,13 @@ import org.eclipse.symphony.core.ui.natures.SymphonyProjectNature;
  * <em><b>Facade</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonyProjectNamePrefix <em>Default Symphony Project Name Prefix</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFilename <em>Default Symphony Session Filename</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFilenameExtension <em>Default Symphony Session Filename Extension</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

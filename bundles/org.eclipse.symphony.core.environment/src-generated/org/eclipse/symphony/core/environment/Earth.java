@@ -17,10 +17,10 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.Earth#getRadius <em>Radius</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarth()
  * @model

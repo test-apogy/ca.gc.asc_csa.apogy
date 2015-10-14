@@ -177,7 +177,7 @@ public class BrowseableTimeSourceItemProvider extends TimeSourceItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.BrowseableTimeSource.class)) {
+		switch (notification.getFeatureID(BrowseableTimeSource.class)) {
 			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__START_TIME:
 			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
 			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:

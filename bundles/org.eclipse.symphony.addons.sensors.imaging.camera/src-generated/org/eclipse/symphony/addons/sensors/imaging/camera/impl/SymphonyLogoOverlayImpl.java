@@ -19,8 +19,6 @@ import org.eclipse.symphony.common.images.URLEImage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Symphony Logo Overlay</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

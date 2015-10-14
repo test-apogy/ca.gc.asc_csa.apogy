@@ -139,8 +139,8 @@ public class TreeRootNodeItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.emf.TreeRootNode.class)) {
-			case org.eclipse.symphony.common.emf.EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS:
+		switch (notification.getFeatureID(TreeRootNode.class)) {
+			case EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

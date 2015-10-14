@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl#getContrast <em>Contrast</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ContrastAndBrightnessFilterImpl#getBrightness <em>Brightness</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

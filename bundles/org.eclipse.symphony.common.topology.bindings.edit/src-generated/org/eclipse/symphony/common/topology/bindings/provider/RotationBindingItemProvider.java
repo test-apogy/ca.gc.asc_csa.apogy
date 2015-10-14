@@ -186,7 +186,7 @@ public class RotationBindingItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.RotationBinding.class)) {
+		switch (notification.getFeatureID(RotationBinding.class)) {
 			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

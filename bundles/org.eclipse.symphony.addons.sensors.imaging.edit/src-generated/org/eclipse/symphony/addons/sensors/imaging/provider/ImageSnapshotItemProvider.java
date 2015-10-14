@@ -21,9 +21,8 @@ import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
-import org.eclipse.symphony.common.topology.TopologyFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
-import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
+import org.eclipse.symphony.common.topology.provider.GroupNodeItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot} object.
@@ -32,7 +31,7 @@ import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
  * @generated
  */
 public class ImageSnapshotItemProvider
-  extends NodeItemProvider
+  extends GroupNodeItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -98,7 +97,6 @@ public class ImageSnapshotItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyPackage.Literals.GROUP_NODE__CHILDREN);
 			childrenFeatures.add(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW);
 			childrenFeatures.add(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE);
 		}
@@ -162,7 +160,6 @@ public class ImageSnapshotItemProvider
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__CHILDREN:
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -217,71 +214,6 @@ public class ImageSnapshotItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createLeaf()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createReferencedContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createAggregateContentNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createURLNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createReferencedGroupNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createLink()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter

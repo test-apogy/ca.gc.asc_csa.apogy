@@ -99,7 +99,7 @@ public class EMFEcoreUIFacadeImpl extends MinimalEObjectImpl.Container implement
   {
 		switch (operationID) {
 			case EMFEcoreUIPackage.EMF_ECORE_UI_FACADE___GET_COLOR_FOR_RANGE__RANGES:
-				return getColorForRange((org.eclipse.symphony.common.emf.Ranges)arguments.get(0));
+				return getColorForRange((Ranges)arguments.get(0));
 			case EMFEcoreUIPackage.EMF_ECORE_UI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT:
 				return getDisplayUnits((ETypedElement)arguments.get(0));
 		}

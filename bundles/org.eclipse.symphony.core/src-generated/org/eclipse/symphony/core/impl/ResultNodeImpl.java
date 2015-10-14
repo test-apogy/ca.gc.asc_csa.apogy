@@ -17,10 +17,10 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
  * <em><b>Result Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.ResultNodeImpl#getResult <em>Result</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

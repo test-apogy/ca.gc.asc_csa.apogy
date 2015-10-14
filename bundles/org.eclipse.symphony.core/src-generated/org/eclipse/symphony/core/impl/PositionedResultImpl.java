@@ -19,10 +19,10 @@ import org.eclipse.symphony.core.invocator.impl.AbstractResultImpl;
  * <em><b>Positioned Result</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.PositionedResultImpl#getPose <em>Pose</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

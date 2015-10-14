@@ -143,7 +143,7 @@ public class FeatureRootsListItemProvider
   {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.FeatureRootsList.class)) {
+		switch (notification.getFeatureID(FeatureRootsList.class)) {
 			case TopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode#getTopologyTreeMapLayer <em>Topology Tree Map Layer</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode#getTransientParent <em>Transient Parent</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getTopologyTreeMapLayerNode()
  * @model

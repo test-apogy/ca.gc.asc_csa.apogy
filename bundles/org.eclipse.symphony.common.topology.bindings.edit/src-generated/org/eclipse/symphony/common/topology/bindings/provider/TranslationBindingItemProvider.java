@@ -148,7 +148,7 @@ public class TranslationBindingItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.common.topology.bindings.TranslationBinding.class)) {
+		switch (notification.getFeatureID(TranslationBinding.class)) {
 			case TopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

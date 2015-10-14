@@ -11,15 +11,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.SensorsFactory;
@@ -27,7 +20,6 @@ import org.eclipse.symphony.addons.sensors.SensorsPackage;
 import org.eclipse.symphony.addons.sensors.pose.PoseFactory;
 import org.eclipse.symphony.addons.sensors.pose.PosePackage;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.PositionNodeItemProvider;
 
@@ -39,20 +31,7 @@ import org.eclipse.symphony.common.topology.provider.PositionNodeItemProvider;
  */
 public class PositionSensorItemProvider
 	extends PositionNodeItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -101,7 +80,7 @@ public class PositionSensorItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_SENSOR_INFORMATIONPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -124,40 +103,8 @@ public class PositionSensorItemProvider
 				 false,
 				 false,
 				 null,
-				 getString("_UI_SENSOR_INFORMATIONPropertyCategory"),
+				 null,
 				 null));
-	}
-
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
-	{
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(PosePackage.Literals.POSITION_SENSOR__POSITION_COORDINATES);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child)
-	{
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -203,9 +150,6 @@ public class PositionSensorItemProvider
 			case PosePackage.POSITION_SENSOR__STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case PosePackage.POSITION_SENSOR__POSITION_COORDINATES:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -225,22 +169,12 @@ public class PositionSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createPositionSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createOrientationSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createPoseSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 PoseFactory.eINSTANCE.createSelfPlaceSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 PoseFactory.eINSTANCE.createPositionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -250,12 +184,7 @@ public class PositionSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedPoseSensor()));
+				 PoseFactory.eINSTANCE.createOrientationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -265,22 +194,22 @@ public class PositionSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
+				 PoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createPositionSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createOrientationSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 PoseFactory.eINSTANCE.createPoseSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 PoseFactory.eINSTANCE.createSimulatedPoseSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -290,17 +219,17 @@ public class PositionSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 PoseFactory.eINSTANCE.createPositionSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 PoseFactory.eINSTANCE.createSimulatedPositionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedPoseSensor()));
+				 PoseFactory.eINSTANCE.createOrientationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -310,27 +239,22 @@ public class PositionSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 PoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 PoseFactory.eINSTANCE.createPoseSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 PoseFactory.eINSTANCE.createSimulatedPoseSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SensorsFactory.eINSTANCE.createSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PosePackage.Literals.POSITION_SENSOR__POSITION_COORDINATES,
-				 Data3dFactory.eINSTANCE.createCartesianPositionCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PosePackage.Literals.POSITION_SENSOR__POSITION_COORDINATES,
-				 Data3dFactory.eINSTANCE.createRGBCartesianPositionCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PosePackage.Literals.POSITION_SENSOR__POSITION_COORDINATES,
-				 Data3dFactory.eINSTANCE.createPose()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PosePackage.Literals.POSITION_SENSOR__POSITION_COORDINATES,
-				 Data3dFactory.eINSTANCE.createPositionMarker()));
 	}
 
 	/**
@@ -354,18 +278,6 @@ public class PositionSensorItemProvider
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return PoseEditPlugin.INSTANCE;
 	}
 
 }

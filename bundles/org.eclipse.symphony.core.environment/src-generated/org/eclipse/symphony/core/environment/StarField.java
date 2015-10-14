@@ -17,11 +17,11 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.StarField#getStars <em>Stars</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.StarField#getStarFieldFileName <em>Star Field File Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getStarField()
  * @model

@@ -16,10 +16,10 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthImpl#getRadius <em>Radius</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

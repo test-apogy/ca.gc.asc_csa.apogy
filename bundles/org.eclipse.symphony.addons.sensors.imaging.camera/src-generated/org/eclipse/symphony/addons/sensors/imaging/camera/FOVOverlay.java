@@ -16,6 +16,7 @@ import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay()
  * @model
@@ -201,7 +201,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 
 	/**
 	 * Returns the value of the '<em><b>Azimuth Direction</b></em>' attribute.
-	 * The literals are from the enumeration {@link ca.gc.space.mrt.sensors.imaging.AzimuthDirection}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Azimuth Direction</em>' attribute isn't clear,
@@ -212,7 +212,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 *  The direction of the azimuth.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth Direction</em>' attribute.
-	 * @see ca.gc.space.mrt.sensors.imaging.AzimuthDirection
+	 * @see org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection
 	 * @see #setAzimuthDirection(AzimuthDirection)
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_AzimuthDirection()
 	 * @model unique="false"
@@ -226,7 +226,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Azimuth Direction</em>' attribute.
-	 * @see ca.gc.space.mrt.sensors.imaging.AzimuthDirection
+	 * @see org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection
 	 * @see #getAzimuthDirection()
 	 * @generated
 	 */
@@ -234,7 +234,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 
 	/**
 	 * Returns the value of the '<em><b>Elevation Direction</b></em>' attribute.
-	 * The literals are from the enumeration {@link ca.gc.space.mrt.sensors.imaging.ElevationDirection}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.addons.sensors.imaging.ElevationDirection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Elevation Direction</em>' attribute isn't clear,
@@ -245,7 +245,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 *  The direction of the elevation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation Direction</em>' attribute.
-	 * @see ca.gc.space.mrt.sensors.imaging.ElevationDirection
+	 * @see org.eclipse.symphony.addons.sensors.imaging.ElevationDirection
 	 * @see #setElevationDirection(ElevationDirection)
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_ElevationDirection()
 	 * @model unique="false"
@@ -259,7 +259,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation Direction</em>' attribute.
-	 * @see ca.gc.space.mrt.sensors.imaging.ElevationDirection
+	 * @see org.eclipse.symphony.addons.sensors.imaging.ElevationDirection
 	 * @see #getElevationDirection()
 	 * @generated
 	 */

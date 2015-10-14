@@ -29,8 +29,6 @@ import org.eclipse.symphony.common.images.ImagesCoreFactory;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Imaging Utilities</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

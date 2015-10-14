@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.topology.ui.SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Factory;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Package;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
@@ -83,13 +82,6 @@ public class JME3PackageImpl extends EPackageImpl implements JME3Package {
 	 * @generated
 	 */
 	private EDataType jme3GeometryEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType sceneObjectEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -247,15 +239,6 @@ public class JME3PackageImpl extends EPackageImpl implements JME3Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getSceneObject() {
-		return sceneObjectEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public JME3Factory getJME3Factory() {
 		return (JME3Factory)getEFactoryInstance();
 	}
@@ -291,7 +274,6 @@ public class JME3PackageImpl extends EPackageImpl implements JME3Package {
 		jme3SceneObjectEDataType = createEDataType(JME3_SCENE_OBJECT);
 		jme3NodeEDataType = createEDataType(JME3_NODE);
 		jme3GeometryEDataType = createEDataType(JME3_GEOMETRY);
-		sceneObjectEDataType = createEDataType(SCENE_OBJECT);
 	}
 
 	/**
@@ -340,7 +322,6 @@ public class JME3PackageImpl extends EPackageImpl implements JME3Package {
 		initEDataType(jme3SceneObjectEDataType, JME3SceneObject.class, "JME3SceneObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(jme3NodeEDataType, Node.class, "JME3Node", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(jme3GeometryEDataType, Geometry.class, "JME3Geometry", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(sceneObjectEDataType, SceneObject.class, "SceneObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
