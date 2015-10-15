@@ -36,12 +36,6 @@ import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
 public class ControllersSwitch<T> extends Switch<T>
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -115,6 +109,7 @@ public class ControllersSwitch<T> extends Switch<T>
 			case ControllersPackage.SKID_STEERED_WAY_POINT_PATH_FOLLOWER: {
 				SkidSteeredWayPointPathFollower skidSteeredWayPointPathFollower = (SkidSteeredWayPointPathFollower)theEObject;
 				T result = caseSkidSteeredWayPointPathFollower(skidSteeredWayPointPathFollower);
+				if (result == null) result = caseSkidSteeredPlatformPathFollower(skidSteeredWayPointPathFollower);
 				if (result == null) result = casePathFollower(skidSteeredWayPointPathFollower);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

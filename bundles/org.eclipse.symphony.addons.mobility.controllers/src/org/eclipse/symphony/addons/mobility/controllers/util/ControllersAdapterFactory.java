@@ -32,12 +32,6 @@ import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
 public class ControllersAdapterFactory extends AdapterFactoryImpl
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

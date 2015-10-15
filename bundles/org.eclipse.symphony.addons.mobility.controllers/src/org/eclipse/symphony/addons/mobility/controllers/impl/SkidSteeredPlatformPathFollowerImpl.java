@@ -31,13 +31,6 @@ import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathF
 public class SkidSteeredPlatformPathFollowerImpl<PlateformType extends SkidSteeredMobilePlateform, PathType extends Path> extends PathFollowerImpl<PlateformType, PathType> implements SkidSteeredPlatformPathFollower<PlateformType, PathType>
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The default value of the '{@link #getMaximumAngularVelocity() <em>Maximum Angular Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

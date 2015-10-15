@@ -7,7 +7,6 @@
 package org.eclipse.symphony.addons.mobility.controllers.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -15,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.geometry.paths.Path;
 import org.eclipse.symphony.addons.mobility.MobilePlateform;
 import org.eclipse.symphony.addons.mobility.MobilePlateformStatus;
@@ -47,14 +46,8 @@ import org.eclipse.symphony.common.log.Logger;
  *
  * @generated
  */
-public class PathFollowerImpl<PlatformType extends MobilePlateform, PathType extends Path> extends EObjectImpl implements PathFollower<PlatformType, PathType>
+public class PathFollowerImpl<PlatformType extends MobilePlateform, PathType extends Path> extends MinimalEObjectImpl.Container implements PathFollower<PlatformType, PathType>
 {	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
 	private Adapter plateformAdapter = null;
 	private Adapter poseSensorAdapter = null;
 	

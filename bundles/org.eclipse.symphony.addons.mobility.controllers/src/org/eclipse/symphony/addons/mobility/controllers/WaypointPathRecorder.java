@@ -19,11 +19,5 @@ import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
  */
 public interface WaypointPathRecorder extends PathRecorder<WayPointPath>
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
 
 } // WaypointPathRecorder

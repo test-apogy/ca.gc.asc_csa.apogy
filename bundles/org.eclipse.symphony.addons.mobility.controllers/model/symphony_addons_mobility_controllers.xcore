@@ -1,0 +1,94 @@
+@GenModel(prefix="Controllers", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="Controllers") 
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.controllers/src")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.controllers.edit/src")
+
+package org.eclipse.symphony.addons.mobility.controllers
+
+import org.eclipse.symphony.addons.mobility.MobilePlateform
+import org.eclipse.symphony.addons.geometry.paths.Path
+import org.eclipse.symphony.addons.sensors.pose.PoseSensor
+import org.eclipse.symphony.addons.geometry.paths.WayPointPath
+import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform
+import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
+import org.eclipse.symphony.common.geometry.data3d.Pose
+
+/**
+ * A PathFollower is an entity that makes a MobilePlatform follow a specified Path.
+ * The default implementation of PathFollower listens for changes in the SensorStatus 
+ * of its PoseSensor and the MobilePlateformStatus of its MobilePlateform and pauses 
+ * or resumes the path following accordingly.
+ */
+class PathFollower <PlatformType extends MobilePlateform, PathType extends Path>{
+	op boolean start()
+	op boolean pause()
+	op boolean resume()
+	op boolean stop()
+	
+	op boolean isTransitionValid(PathFollowerState state)
+	
+	refers PathType path
+	refers PlatformType platform
+	refers PoseSensor poseSensor
+	boolean destinationReached
+	
+	PathFollowerState pathFollowerState = "IDLE"
+}
+
+enum PathFollowerState{
+	IDLE = 0,
+	RUNNING = 1,
+	PAUSED = 2,
+	FAILED = -1
+}
+
+class SkidSteeredPlatformPathFollower <PlateformType extends SkidSteeredMobilePlateform, PathType extends Path> extends PathFollower <PlateformType, PathType>{
+	double maximumAngularVelocity
+	double maximumLinearVelocity
+}
+
+class PathRecorder <PathType extends Path>{
+	refers PoseSensor positionSensor
+	double minimumDistanceDelta = "0.1"
+	double minimumTimeDelta = "1.0"
+	
+	PathRecorderSamplingMode samplingMode = "ON_DISTANCE_DELTA"
+	refers PathType recordedPath
+}
+
+enum PathRecorderSamplingMode{
+	ON_DISTANCE_DELTA = 0,
+	ON_TIME_DELTA = 1,
+	ON_TIME_OR_DISTANCE_DELTA = 2
+}
+
+class WaypointPathRecorder extends PathRecorder<WayPointPath>{
+}
+
+class SkidSteeredWayPointPathFollower extends SkidSteeredPlatformPathFollower <SkidSteeredMobilePlateform, WayPointPath>{
+}
+
+class AstolfiGuidanceController extends SkidSteeredPlatformPathFollower <SkidSteeredMobilePlateform, WayPointPath>{
+	refers CartesianPositionCoordinates currentWayPoint
+	refers CartesianPositionCoordinates previousWayPoint
+	refers Pose currentPoseInGuidanceReferenceFrame
+	
+	readonly transient double rho
+	readonly transient volatile derived double phi
+	readonly transient volatile derived double alpha
+	readonly transient volatile derived double yaw
+	readonly transient volatile derived double  nu
+	readonly transient volatile derived double  omega
+	double krho
+	double kphi
+	double kalpha
+	
+	double destinationDistanceThreshold
+	double wayPointDistanceThreshold
+	double kHill
+	double hillThreshold
+	
+	double phiThresholdForReducedVelocity
+	double alphaThresholdForReducedVelocity
+	
+	boolean smoothPathEnabled = "true"
+}

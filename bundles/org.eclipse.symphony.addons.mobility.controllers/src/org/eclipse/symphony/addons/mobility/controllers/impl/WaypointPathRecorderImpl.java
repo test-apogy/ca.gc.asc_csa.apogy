@@ -44,13 +44,6 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
 	protected WaypointPathRecorderImpl()

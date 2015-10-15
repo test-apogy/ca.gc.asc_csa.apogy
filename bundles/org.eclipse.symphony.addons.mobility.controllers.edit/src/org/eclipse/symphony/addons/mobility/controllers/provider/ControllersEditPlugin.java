@@ -8,14 +8,12 @@ package org.eclipse.symphony.addons.mobility.controllers.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
 import org.eclipse.symphony.addons.mobility.provider.MobilityEditPlugin;
 import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
@@ -27,13 +25,6 @@ import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
  */
 public final class ControllersEditPlugin extends EMFPlugin
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -60,16 +51,14 @@ public final class ControllersEditPlugin extends EMFPlugin
 	{
 		super
 		  (new ResourceLocator [] {
+		     PoseEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     EcoreEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     SensorsEditPlugin.INSTANCE,
 		     MobilityEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
-		     PoseEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

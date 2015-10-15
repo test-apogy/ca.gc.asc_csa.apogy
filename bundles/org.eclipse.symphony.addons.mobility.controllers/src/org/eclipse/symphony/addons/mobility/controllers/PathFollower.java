@@ -17,9 +17,11 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
+ * *
  * A PathFollower is an entity that makes a MobilePlatform follow a specified Path.
- * 
- * The default implementation of PathFollower listens for changes in the SensorStatus of its PoseSensor and the MobilePlateformStatus of its MobilePlateform and pauses or resumes the path following accordingly.
+ * The default implementation of PathFollower listens for changes in the SensorStatus
+ * of its PoseSensor and the MobilePlateformStatus of its MobilePlateform and pauses
+ * or resumes the path following accordingly.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -39,13 +41,6 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  */
 public interface PathFollower<PlatformType extends MobilePlateform, PathType extends Path> extends EObject
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * Returns the value of the '<em><b>Path</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -135,7 +130,7 @@ public interface PathFollower<PlatformType extends MobilePlateform, PathType ext
 	 * @return the value of the '<em>Destination Reached</em>' attribute.
 	 * @see #setDestinationReached(boolean)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower_DestinationReached()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isDestinationReached();
@@ -164,7 +159,7 @@ public interface PathFollower<PlatformType extends MobilePlateform, PathType ext
 	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollowerState
 	 * @see #setPathFollowerState(PathFollowerState)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower_PathFollowerState()
-	 * @model default="IDLE"
+	 * @model default="IDLE" unique="false"
 	 * @generated
 	 */
 	PathFollowerState getPathFollowerState();
@@ -183,7 +178,7 @@ public interface PathFollower<PlatformType extends MobilePlateform, PathType ext
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean start();
@@ -191,7 +186,7 @@ public interface PathFollower<PlatformType extends MobilePlateform, PathType ext
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean pause();
@@ -199,7 +194,7 @@ public interface PathFollower<PlatformType extends MobilePlateform, PathType ext
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean resume();
@@ -207,7 +202,7 @@ public interface PathFollower<PlatformType extends MobilePlateform, PathType ext
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean stop();
@@ -215,7 +210,7 @@ public interface PathFollower<PlatformType extends MobilePlateform, PathType ext
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" stateUnique="false"
 	 * @generated
 	 */
 	boolean isTransitionValid(PathFollowerState state);

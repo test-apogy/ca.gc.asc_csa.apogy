@@ -32,13 +32,6 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 public interface PathRecorder<PathType extends Path> extends EObject
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Returns the value of the '<em><b>Recorded Path</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -102,7 +95,7 @@ public interface PathRecorder<PathType extends Path> extends EObject
 	 * @return the value of the '<em>Minimum Distance Delta</em>' attribute.
 	 * @see #setMinimumDistanceDelta(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder_MinimumDistanceDelta()
-	 * @model default="0.1"
+	 * @model default="0.1" unique="false"
 	 * @generated
 	 */
 	double getMinimumDistanceDelta();
@@ -129,7 +122,7 @@ public interface PathRecorder<PathType extends Path> extends EObject
 	 * @return the value of the '<em>Minimum Time Delta</em>' attribute.
 	 * @see #setMinimumTimeDelta(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder_MinimumTimeDelta()
-	 * @model default="1.0"
+	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
 	double getMinimumTimeDelta();
@@ -158,7 +151,7 @@ public interface PathRecorder<PathType extends Path> extends EObject
 	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode
 	 * @see #setSamplingMode(PathRecorderSamplingMode)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder_SamplingMode()
-	 * @model default="ON_DISTANCE_DELTA"
+	 * @model default="ON_DISTANCE_DELTA" unique="false"
 	 * @generated
 	 */
 	PathRecorderSamplingMode getSamplingMode();

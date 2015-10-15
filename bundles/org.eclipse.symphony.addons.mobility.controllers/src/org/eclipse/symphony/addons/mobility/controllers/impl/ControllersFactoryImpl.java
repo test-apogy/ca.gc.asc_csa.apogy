@@ -35,13 +35,6 @@ import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
 public class ControllersFactoryImpl extends EFactoryImpl implements ControllersFactory
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

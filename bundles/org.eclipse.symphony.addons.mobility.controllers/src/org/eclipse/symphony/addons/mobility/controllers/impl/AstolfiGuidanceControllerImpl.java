@@ -5,10 +5,8 @@ package org.eclipse.symphony.addons.mobility.controllers.impl;
 
 import java.util.Iterator;
 import java.util.List;
-
 import javax.media.j3d.Transform3D;
 import javax.vecmath.Point3d;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -68,39 +66,6 @@ import org.eclipse.symphony.common.math.GeometricUtils;
  */
 public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollowerImpl<SkidSteeredMobilePlateform, WayPointPath> implements AstolfiGuidanceController 
 {
-	/**
-	 * The transform that maps the pose of the Pose sensor at the time of
-	 * start() to the origin of the guidance system.
-	 */
-	private Transform3D poseTransformation = new Transform3D();
-
-	/**
-	 * Iterator used to navigate the path.
-	 */
-	protected Iterator<CartesianPositionCoordinates> wayPointIterator = null;
-
-	/**
-	 * The smoothed path.
-	 */
-	protected WayPointPath smoothedPath;
-	
-	private Adapter poseSensorAdapter = null;
-	
-	int i = 0;
-	int j= 0;
-	int k = 0;
-
-	double oldOmega = 0.0;
-	double omegaBeforeBoost = 0.0;
-	double omegaAfterBoost = 0.0;
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * The cached value of the '{@link #getCurrentWayPoint() <em>Current Way Point</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -402,6 +367,32 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 	protected boolean smoothPathEnabled = SMOOTH_PATH_ENABLED_EDEFAULT;
 
 	/**
+	 * The transform that maps the pose of the Pose sensor at the time of
+	 * start() to the origin of the guidance system.
+	 */
+	private Transform3D poseTransformation = new Transform3D();
+
+	/**
+	 * Iterator used to navigate the path.
+	 */
+	protected Iterator<CartesianPositionCoordinates> wayPointIterator = null;
+
+	/**
+	 * The smoothed path.
+	 */
+	protected WayPointPath smoothedPath;
+	
+	private Adapter poseSensorAdapter = null;
+	
+	int i = 0;
+	int j= 0;
+	int k = 0;
+
+	double oldOmega = 0.0;
+	double omegaBeforeBoost = 0.0;
+	double omegaAfterBoost = 0.0;
+	
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -420,16 +411,6 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		return ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER;
 	}
 
-	@Override
-	public void setPath(WayPointPath newPath) {
-	
-		super.setPath(newPath);
-		
-		if ((newPath != null) && (newPath.getPoints().size() == 0)) {
-			Logger.INSTANCE.log(Activator.ID, this, "AstolfiGuidanceControllerImpl : Path set to an empty path !", EventSeverity.ERROR);
-		}
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,6 +525,16 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 			eNotify(new ENotificationImpl(this, Notification.SET, ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME, oldCurrentPoseInGuidanceReferenceFrame, currentPoseInGuidanceReferenceFrame));
 	}
 
+	@Override
+	public void setPath(WayPointPath newPath) {
+	
+		super.setPath(newPath);
+		
+		if ((newPath != null) && (newPath.getPoints().size() == 0)) {
+			Logger.INSTANCE.log(Activator.ID, this, "AstolfiGuidanceControllerImpl : Path set to an empty path !", EventSeverity.ERROR);
+		}
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -744,23 +735,6 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		return applyOmegaSaturation(Math.toRadians(omega));
 	}
 
-	/**
-	 * Applies the maximum angular velocity saturation to a specified angular
-	 * velocity.
-	 * 
-	 * @param omega
-	 *            The specified angular velocity, in rad/s.
-	 * @return The angular velocity, clamped between -maximumAngularVelocity and
-	 *         +maximumAngularVelocity.
-	 */
-	public double applyOmegaSaturation(double omega) {
-		double result = omega;
-		if (Math.abs(omega) > getMaximumAngularVelocity()) {
-			result = Math.signum(omega) * getMaximumAngularVelocity();
-		}
-		return result;
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1210,6 +1184,23 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		result.append(smoothPathEnabled);
 		result.append(')');
 		return result.toString();
+	}
+
+	/**
+	 * Applies the maximum angular velocity saturation to a specified angular
+	 * velocity.
+	 * 
+	 * @param omega
+	 *            The specified angular velocity, in rad/s.
+	 * @return The angular velocity, clamped between -maximumAngularVelocity and
+	 *         +maximumAngularVelocity.
+	 */
+	public double applyOmegaSaturation(double omega) {
+		double result = omega;
+		if (Math.abs(omega) > getMaximumAngularVelocity()) {
+			result = Math.signum(omega) * getMaximumAngularVelocity();
+		}
+		return result;
 	}
 	
 	@Override

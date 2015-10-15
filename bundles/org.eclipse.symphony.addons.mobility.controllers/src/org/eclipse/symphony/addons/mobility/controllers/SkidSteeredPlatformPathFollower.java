@@ -29,13 +29,6 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform;
 public interface SkidSteeredPlatformPathFollower<PlateformType extends SkidSteeredMobilePlateform, PathType extends Path> extends PathFollower<PlateformType, PathType>
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Returns the value of the '<em><b>Maximum Angular Velocity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -46,7 +39,7 @@ public interface SkidSteeredPlatformPathFollower<PlateformType extends SkidSteer
 	 * @return the value of the '<em>Maximum Angular Velocity</em>' attribute.
 	 * @see #setMaximumAngularVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getSkidSteeredPlatformPathFollower_MaximumAngularVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getMaximumAngularVelocity();
@@ -72,7 +65,7 @@ public interface SkidSteeredPlatformPathFollower<PlateformType extends SkidSteer
 	 * @return the value of the '<em>Maximum Linear Velocity</em>' attribute.
 	 * @see #setMaximumLinearVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getSkidSteeredPlatformPathFollower_MaximumLinearVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getMaximumLinearVelocity();

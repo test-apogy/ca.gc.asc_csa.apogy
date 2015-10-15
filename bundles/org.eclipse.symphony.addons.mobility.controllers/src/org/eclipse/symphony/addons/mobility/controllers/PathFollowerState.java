@@ -58,13 +58,6 @@ public enum PathFollowerState implements Enumerator
 	FAILED(-1, "FAILED", "FAILED");
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The '<em><b>IDLE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
