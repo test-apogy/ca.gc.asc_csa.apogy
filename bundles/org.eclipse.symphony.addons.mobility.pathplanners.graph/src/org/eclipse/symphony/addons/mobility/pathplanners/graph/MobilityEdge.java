@@ -30,13 +30,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  */
 public interface MobilityEdge extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Returns the value of the '<em><b>Cost Functions</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction}.
 	 * <!-- begin-user-doc -->
@@ -115,7 +108,7 @@ public interface MobilityEdge extends EObject {
 	 * @return the value of the '<em>Weight</em>' attribute.
 	 * @see #setWeight(double)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdge_Weight()
-	 * @model derived="true"
+	 * @model unique="false" derived="true"
 	 * @generated
 	 */
 	double getWeight();

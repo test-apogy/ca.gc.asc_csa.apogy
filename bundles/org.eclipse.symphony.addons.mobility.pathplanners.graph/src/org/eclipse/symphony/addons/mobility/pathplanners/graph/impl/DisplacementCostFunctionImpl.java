@@ -6,10 +6,9 @@
 package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
@@ -23,14 +22,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  *
  * @generated
  */
-public abstract class DisplacementCostFunctionImpl extends EObjectImpl implements DisplacementCostFunction {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
+public abstract class DisplacementCostFunctionImpl extends MinimalEObjectImpl.Container implements DisplacementCostFunction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

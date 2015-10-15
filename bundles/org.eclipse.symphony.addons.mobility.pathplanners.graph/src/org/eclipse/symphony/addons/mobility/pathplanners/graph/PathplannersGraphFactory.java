@@ -18,13 +18,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  */
 public interface PathplannersGraphFactory extends EFactory {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,15 +62,6 @@ public interface PathplannersGraphFactory extends EFactory {
 	<PolygonType extends CartesianPolygon> SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<PolygonType> createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
 
 	/**
-	 * Returns a new object of class '<em>Mobility Edge Factory</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Mobility Edge Factory</em>'.
-	 * @generated
-	 */
-	MobilityEdgeFactory createMobilityEdgeFactory();
-
-	/**
 	 * Returns a new object of class '<em>Directed Graph Based Mesh Way Point Path Planner</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,6 +78,15 @@ public interface PathplannersGraphFactory extends EFactory {
 	 * @generated
 	 */
 	MobilityEdge createMobilityEdge();
+
+	/**
+	 * Returns a new object of class '<em>Mobility Edge Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Mobility Edge Factory</em>'.
+	 * @generated
+	 */
+	MobilityEdgeFactory createMobilityEdgeFactory();
 
 	/**
 	 * Returns a new object of class '<em>Distance And Slopes Cost Function</em>'.

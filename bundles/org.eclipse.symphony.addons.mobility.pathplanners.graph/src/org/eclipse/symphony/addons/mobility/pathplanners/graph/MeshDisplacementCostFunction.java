@@ -26,13 +26,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  */
 public interface MeshDisplacementCostFunction extends DisplacementCostFunction {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Returns the value of the '<em><b>Planner</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>

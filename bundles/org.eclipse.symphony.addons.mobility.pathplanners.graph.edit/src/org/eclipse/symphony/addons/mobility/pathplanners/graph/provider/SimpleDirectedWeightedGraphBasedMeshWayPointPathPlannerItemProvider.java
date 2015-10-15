@@ -29,13 +29,6 @@ import org.eclipse.symphony.common.processors.ProcessorsPackage;
 public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 	extends CostBasedMeshWayPointPathPlannerItemProvider {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,6 +50,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 			super.getPropertyDescriptors(object);
 
 			addVerbosePropertyDescriptor(object);
+			addSimpleDirectedWeightedGraphPropertyDescriptor(object);
 			addEnablePathSimplificationPropertyDescriptor(object);
 			addRobotWidthForPathSimplicationPropertyDescriptor(object);
 		}
@@ -86,13 +80,34 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Simple Directed Weighted Graph feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSimpleDirectedWeightedGraphPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_simpleDirectedWeightedGraph_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_simpleDirectedWeightedGraph_feature", "_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_type"),
+				 PathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Enable Path Simplification feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEnablePathSimplificationPropertyDescriptor(Object object)
-	{
+	protected void addEnablePathSimplificationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
@@ -114,8 +129,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRobotWidthForPathSimplicationPropertyDescriptor(Object object)
-	{
+	protected void addRobotWidthForPathSimplicationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
@@ -170,6 +184,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 
 		switch (notification.getFeatureID(SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class)) {
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
+			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

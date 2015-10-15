@@ -10,18 +10,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
 import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.*;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
@@ -42,13 +33,6 @@ import org.jgrapht.EdgeFactory;
  * @generated
  */
 public class PathplannersGraphSwitch<T1> extends Switch<T1> {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -99,6 +83,12 @@ public class PathplannersGraphSwitch<T1> extends Switch<T1> {
 				if (result == null) result = caseWayPointPathPlanner(costBasedMeshWayPointPathPlanner);
 				if (result == null) result = caseProcessor(costBasedMeshWayPointPathPlanner);
 				if (result == null) result = caseMonitorable(costBasedMeshWayPointPathPlanner);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PathplannersGraphPackage.DISPLACEMENT_COST_FUNCTION: {
+				DisplacementCostFunction displacementCostFunction = (DisplacementCostFunction)theEObject;
+				T1 result = caseDisplacementCostFunction(displacementCostFunction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -174,12 +164,6 @@ public class PathplannersGraphSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PathplannersGraphPackage.DISPLACEMENT_COST_FUNCTION: {
-				DisplacementCostFunction displacementCostFunction = (DisplacementCostFunction)theEObject;
-				T1 result = caseDisplacementCostFunction(displacementCostFunction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case PathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION: {
 				DistanceAndRoverFootprintCostFunction distanceAndRoverFootprintCostFunction = (DistanceAndRoverFootprintCostFunction)theEObject;
 				T1 result = caseDistanceAndRoverFootprintCostFunction(distanceAndRoverFootprintCostFunction);
@@ -205,6 +189,21 @@ public class PathplannersGraphSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public <PolygonType extends CartesianPolygon> T1 caseCostBasedMeshWayPointPathPlanner(CostBasedMeshWayPointPathPlanner<PolygonType> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Displacement Cost Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Displacement Cost Function</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseDisplacementCostFunction(DisplacementCostFunction object) {
 		return null;
 	}
 
@@ -254,21 +253,6 @@ public class PathplannersGraphSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Mobility Edge Factory</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Mobility Edge Factory</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseMobilityEdgeFactory(MobilityEdgeFactory object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Directed Graph Based Mesh Way Point Path Planner</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -314,6 +298,21 @@ public class PathplannersGraphSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Mobility Edge Factory</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Mobility Edge Factory</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseMobilityEdgeFactory(MobilityEdgeFactory object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Distance And Slopes Cost Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -344,21 +343,6 @@ public class PathplannersGraphSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Displacement Cost Function</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Displacement Cost Function</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseDisplacementCostFunction(DisplacementCostFunction object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Distance And Rover Footprint Cost Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -369,8 +353,7 @@ public class PathplannersGraphSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseDistanceAndRoverFootprintCostFunction(DistanceAndRoverFootprintCostFunction object)
-	{
+	public T1 caseDistanceAndRoverFootprintCostFunction(DistanceAndRoverFootprintCostFunction object) {
 		return null;
 	}
 

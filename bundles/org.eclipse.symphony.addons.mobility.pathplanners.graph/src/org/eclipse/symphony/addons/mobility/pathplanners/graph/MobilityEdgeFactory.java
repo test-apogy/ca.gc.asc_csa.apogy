@@ -27,12 +27,6 @@ import org.jgrapht.EdgeFactory;
  * @generated
  */
 public interface MobilityEdgeFactory extends EObject, EdgeFactory<CartesianPolygon, MobilityEdge> {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
 
 	/**
 	 * Returns the value of the '<em><b>Cost Functions</b></em>' reference list.

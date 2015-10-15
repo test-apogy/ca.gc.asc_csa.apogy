@@ -6,7 +6,6 @@
 package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -33,13 +32,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * @generated
  */
 public class CostBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianPolygon> extends MeshWayPointPathPlannerImpl<PolygonType> implements CostBasedMeshWayPointPathPlanner<PolygonType> {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * The cached value of the '{@link #getCostFunctions() <em>Cost Functions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -40,13 +40,6 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopesCostFunctionImpl implements DistanceAndRoverFootprintCostFunction
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The default value of the '{@link #getRoverFootPrintRadius() <em>Rover Foot Print Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

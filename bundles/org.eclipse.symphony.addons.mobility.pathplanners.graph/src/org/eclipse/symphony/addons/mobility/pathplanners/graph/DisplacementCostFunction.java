@@ -22,14 +22,7 @@ public interface DisplacementCostFunction extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" toRequired="true"
+	 * @model unique="false" fromUnique="false" toUnique="false"
 	 * @generated
 	 */
 	double getCost(CartesianPolygon from, CartesianPolygon to);

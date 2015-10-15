@@ -26,13 +26,6 @@ import org.jgrapht.DirectedGraph;
  */
 public interface DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlanner<PolygonType> {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Returns the value of the '<em><b>Directed Graph</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -45,7 +38,7 @@ public interface DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends C
 	 * @see #unsetDirectedGraph()
 	 * @see #setDirectedGraph(DirectedGraph)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph()
-	 * @model unsettable="true" dataType="org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraph" transient="true"
+	 * @model unique="false" unsettable="true" dataType="org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraph" transient="true"
 	 * @generated
 	 */
 	DirectedGraph getDirectedGraph();

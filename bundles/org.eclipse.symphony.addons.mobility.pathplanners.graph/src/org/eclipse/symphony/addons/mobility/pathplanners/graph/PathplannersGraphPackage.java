@@ -26,16 +26,10 @@ import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='PathplannersGraph' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='PathplannersGraph' modelDirectory='/org.eclipse.symphony.addons.mobility.pathplanners.graph/src' editDirectory='/org.eclipse.symphony.addons.mobility.pathplanners.graph.edit/src' basePackage='org.eclipse.symphony.addons.mobility.pathplanners'"
  * @generated
  */
 public interface PathplannersGraphPackage extends EPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -50,7 +44,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ca/gc/space/mrt/pathplanners/graph/pathplannersgraph.ecore";
+	String eNS_URI = "org.eclipse.symphony.addons.mobility.pathplanners.graph";
 
 	/**
 	 * The package namespace name.
@@ -58,7 +52,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ca.gc.space.mrt.pathplanners";
+	String eNS_PREFIX = "graph";
 
 	/**
 	 * The singleton instance of the package.
@@ -106,15 +100,6 @@ public interface PathplannersGraphPackage extends EPackage {
 	int COST_BASED_MESH_WAY_POINT_PATH_PLANNER__OUTPUT = PathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__OUTPUT;
 
 	/**
-	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = PathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION;
-
-	/**
 	 * The feature id for the '<em><b>Current Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -122,6 +107,15 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @ordered
 	 */
 	int COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_POSITION = PathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__CURRENT_POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = PathplannersPackage.MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION;
 
 	/**
 	 * The feature id for the '<em><b>Mesh</b></em>' reference.
@@ -185,7 +179,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDisplacementCostFunction()
 	 * @generated
 	 */
-	int DISPLACEMENT_COST_FUNCTION = 10;
+	int DISPLACEMENT_COST_FUNCTION = 1;
 
 	/**
 	 * The number of structural features of the '<em>Displacement Cost Function</em>' class.
@@ -222,7 +216,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMeshDisplacementCostFunction()
 	 * @generated
 	 */
-	int MESH_DISPLACEMENT_COST_FUNCTION = 1;
+	int MESH_DISPLACEMENT_COST_FUNCTION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Planner</b></em>' reference.
@@ -268,7 +262,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDistanceOnlyCostFunction()
 	 * @generated
 	 */
-	int DISTANCE_ONLY_COST_FUNCTION = 2;
+	int DISTANCE_ONLY_COST_FUNCTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Planner</b></em>' reference.
@@ -314,7 +308,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner()
 	 * @generated
 	 */
-	int SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER = 3;
+	int SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -344,15 +338,6 @@ public interface PathplannersGraphPackage extends EPackage {
 	int SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__OUTPUT = COST_BASED_MESH_WAY_POINT_PATH_PLANNER__OUTPUT;
 
 	/**
-	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION;
-
-	/**
 	 * The feature id for the '<em><b>Current Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -360,6 +345,15 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_POSITION = COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION;
 
 	/**
 	 * The feature id for the '<em><b>Mesh</b></em>' reference.
@@ -461,16 +455,6 @@ public interface PathplannersGraphPackage extends EPackage {
 	int SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER_OPERATION_COUNT = COST_BASED_MESH_WAY_POINT_PATH_PLANNER_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl <em>Mobility Edge Factory</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMobilityEdgeFactory()
-	 * @generated
-	 */
-	int MOBILITY_EDGE_FACTORY = 7;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DirectedGraphBasedMeshWayPointPathPlannerImpl <em>Directed Graph Based Mesh Way Point Path Planner</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -478,27 +462,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDirectedGraphBasedMeshWayPointPathPlanner()
 	 * @generated
 	 */
-	int DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER = 4;
-
-	/**
-	 * The meta object id for the '<em>Simple Directed Weighted Graph</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.jgrapht.graph.SimpleDirectedWeightedGraph
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getSimpleDirectedWeightedGraph()
-	 * @generated
-	 */
-	int SIMPLE_DIRECTED_WEIGHTED_GRAPH = 12;
-
-	/**
-	 * The meta object id for the '{@link org.jgrapht.EdgeFactory <em>Edge Factory</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.jgrapht.EdgeFactory
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getEdgeFactory()
-	 * @generated
-	 */
-	int EDGE_FACTORY = 5;
+	int DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -528,15 +492,6 @@ public interface PathplannersGraphPackage extends EPackage {
 	int DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__OUTPUT = COST_BASED_MESH_WAY_POINT_PATH_PLANNER__OUTPUT;
 
 	/**
-	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION;
-
-	/**
 	 * The feature id for the '<em><b>Current Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,6 +499,15 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_POSITION = COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = COST_BASED_MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION;
 
 	/**
 	 * The feature id for the '<em><b>Mesh</b></em>' reference.
@@ -609,6 +573,36 @@ public interface PathplannersGraphPackage extends EPackage {
 	int DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER_OPERATION_COUNT = COST_BASED_MESH_WAY_POINT_PATH_PLANNER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '<em>Directed Graph</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.jgrapht.DirectedGraph
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDirectedGraph()
+	 * @generated
+	 */
+	int DIRECTED_GRAPH = 12;
+
+	/**
+	 * The meta object id for the '<em>Simple Directed Weighted Graph</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.jgrapht.graph.SimpleDirectedWeightedGraph
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getSimpleDirectedWeightedGraph()
+	 * @generated
+	 */
+	int SIMPLE_DIRECTED_WEIGHTED_GRAPH = 13;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.EdgeFactoryImpl <em>Edge Factory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.EdgeFactoryImpl
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getEdgeFactory()
+	 * @generated
+	 */
+	int EDGE_FACTORY = 6;
+
+	/**
 	 * The number of structural features of the '<em>Edge Factory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -634,7 +628,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMobilityEdge()
 	 * @generated
 	 */
-	int MOBILITY_EDGE = 6;
+	int MOBILITY_EDGE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Cost Functions</b></em>' reference list.
@@ -691,6 +685,16 @@ public interface PathplannersGraphPackage extends EPackage {
 	int MOBILITY_EDGE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl <em>Mobility Edge Factory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMobilityEdgeFactory()
+	 * @generated
+	 */
+	int MOBILITY_EDGE_FACTORY = 8;
+
+	/**
 	 * The feature id for the '<em><b>Cost Functions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -725,7 +729,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDistanceAndSlopesCostFunction()
 	 * @generated
 	 */
-	int DISTANCE_AND_SLOPES_COST_FUNCTION = 8;
+	int DISTANCE_AND_SLOPES_COST_FUNCTION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Planner</b></em>' reference.
@@ -816,7 +820,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getExclusionZonesCostFunction()
 	 * @generated
 	 */
-	int EXCLUSION_ZONES_COST_FUNCTION = 9;
+	int EXCLUSION_ZONES_COST_FUNCTION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Exclusion Zones</b></em>' reference list.
@@ -973,16 +977,6 @@ public interface PathplannersGraphPackage extends EPackage {
 	int DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION_OPERATION_COUNT = DISTANCE_AND_SLOPES_COST_FUNCTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '<em>Directed Graph</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.jgrapht.DirectedGraph
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDirectedGraph()
-	 * @generated
-	 */
-	int DIRECTED_GRAPH = 13;
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner <em>Cost Based Mesh Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1002,6 +996,26 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCostBasedMeshWayPointPathPlanner_CostFunctions();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction <em>Displacement Cost Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Displacement Cost Function</em>'.
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction
+	 * @generated
+	 */
+	EClass getDisplacementCostFunction();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction#getCost(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, org.eclipse.symphony.common.geometry.data3d.CartesianPolygon) <em>Get Cost</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Cost</em>' operation.
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction#getCost(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, org.eclipse.symphony.common.geometry.data3d.CartesianPolygon)
+	 * @generated
+	 */
+	EOperation getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction <em>Mesh Displacement Cost Function</em>}'.
@@ -1078,27 +1092,6 @@ public interface PathplannersGraphPackage extends EPackage {
 	EAttribute getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_RobotWidthForPathSimplication();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory <em>Mobility Edge Factory</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Mobility Edge Factory</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory
-	 * @generated
-	 */
-	EClass getMobilityEdgeFactory();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory#getCostFunctions <em>Cost Functions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Cost Functions</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory#getCostFunctions()
-	 * @see #getMobilityEdgeFactory()
-	 * @generated
-	 */
-	EReference getMobilityEdgeFactory_CostFunctions();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner <em>Directed Graph Based Mesh Way Point Path Planner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1118,6 +1111,17 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph();
+
+	/**
+	 * Returns the meta object for data type '{@link org.jgrapht.DirectedGraph <em>Directed Graph</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Directed Graph</em>'.
+	 * @see org.jgrapht.DirectedGraph
+	 * @model instanceClass="org.jgrapht.DirectedGraph"
+	 * @generated
+	 */
+	EDataType getDirectedGraph();
 
 	/**
 	 * Returns the meta object for data type '{@link org.jgrapht.graph.SimpleDirectedWeightedGraph <em>Simple Directed Weighted Graph</em>}'.
@@ -1194,6 +1198,27 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMobilityEdge_Weight();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory <em>Mobility Edge Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Mobility Edge Factory</em>'.
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory
+	 * @generated
+	 */
+	EClass getMobilityEdgeFactory();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory#getCostFunctions <em>Cost Functions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Cost Functions</em>'.
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory#getCostFunctions()
+	 * @see #getMobilityEdgeFactory()
+	 * @generated
+	 */
+	EReference getMobilityEdgeFactory_CostFunctions();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction <em>Distance And Slopes Cost Function</em>}'.
@@ -1282,26 +1307,6 @@ public interface PathplannersGraphPackage extends EPackage {
 	EReference getExclusionZonesCostFunction_ExclusionZones();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction <em>Displacement Cost Function</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Displacement Cost Function</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction
-	 * @generated
-	 */
-	EClass getDisplacementCostFunction();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction#getCost(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, org.eclipse.symphony.common.geometry.data3d.CartesianPolygon) <em>Get Cost</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Cost</em>' operation.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction#getCost(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, org.eclipse.symphony.common.geometry.data3d.CartesianPolygon)
-	 * @generated
-	 */
-	EOperation getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction <em>Distance And Rover Footprint Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1345,17 +1350,6 @@ public interface PathplannersGraphPackage extends EPackage {
 	EAttribute getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope();
 
 	/**
-	 * Returns the meta object for data type '{@link org.jgrapht.DirectedGraph <em>Directed Graph</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Directed Graph</em>'.
-	 * @see org.jgrapht.DirectedGraph
-	 * @model instanceClass="org.jgrapht.DirectedGraph"
-	 * @generated
-	 */
-	EDataType getDirectedGraph();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1386,7 +1380,6 @@ public interface PathplannersGraphPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COST_BASED_MESH_WAY_POINT_PATH_PLANNER = eINSTANCE.getCostBasedMeshWayPointPathPlanner();
-
 		/**
 		 * The meta object literal for the '<em><b>Cost Functions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
@@ -1394,235 +1387,6 @@ public interface PathplannersGraphPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS = eINSTANCE.getCostBasedMeshWayPointPathPlanner_CostFunctions();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MeshDisplacementCostFunctionImpl <em>Mesh Displacement Cost Function</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MeshDisplacementCostFunctionImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMeshDisplacementCostFunction()
-		 * @generated
-		 */
-		EClass MESH_DISPLACEMENT_COST_FUNCTION = eINSTANCE.getMeshDisplacementCostFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Planner</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESH_DISPLACEMENT_COST_FUNCTION__PLANNER = eINSTANCE.getMeshDisplacementCostFunction_Planner();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceOnlyCostFunctionImpl <em>Distance Only Cost Function</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceOnlyCostFunctionImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDistanceOnlyCostFunction()
-		 * @generated
-		 */
-		EClass DISTANCE_ONLY_COST_FUNCTION = eINSTANCE.getDistanceOnlyCostFunction();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl <em>Simple Directed Weighted Graph Based Mesh Way Point Path Planner</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner()
-		 * @generated
-		 */
-		EClass SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER = eINSTANCE.getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
-
-		/**
-		 * The meta object literal for the '<em><b>Simple Directed Weighted Graph</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH = eINSTANCE.getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_SimpleDirectedWeightedGraph();
-
-		/**
-		 * The meta object literal for the '<em><b>Enable Path Simplification</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION = eINSTANCE.getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_EnablePathSimplification();
-
-		/**
-		 * The meta object literal for the '<em><b>Robot Width For Path Simplication</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION = eINSTANCE.getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_RobotWidthForPathSimplication();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl <em>Mobility Edge Factory</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMobilityEdgeFactory()
-		 * @generated
-		 */
-		EClass MOBILITY_EDGE_FACTORY = eINSTANCE.getMobilityEdgeFactory();
-
-		/**
-		 * The meta object literal for the '<em><b>Cost Functions</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MOBILITY_EDGE_FACTORY__COST_FUNCTIONS = eINSTANCE.getMobilityEdgeFactory_CostFunctions();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DirectedGraphBasedMeshWayPointPathPlannerImpl <em>Directed Graph Based Mesh Way Point Path Planner</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DirectedGraphBasedMeshWayPointPathPlannerImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDirectedGraphBasedMeshWayPointPathPlanner()
-		 * @generated
-		 */
-		EClass DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER = eINSTANCE.getDirectedGraphBasedMeshWayPointPathPlanner();
-
-		/**
-		 * The meta object literal for the '<em><b>Directed Graph</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH = eINSTANCE.getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph();
-
-		/**
-		 * The meta object literal for the '<em>Simple Directed Weighted Graph</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.jgrapht.graph.SimpleDirectedWeightedGraph
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getSimpleDirectedWeightedGraph()
-		 * @generated
-		 */
-		EDataType SIMPLE_DIRECTED_WEIGHTED_GRAPH = eINSTANCE.getSimpleDirectedWeightedGraph();
-
-		/**
-		 * The meta object literal for the '{@link org.jgrapht.EdgeFactory <em>Edge Factory</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.jgrapht.EdgeFactory
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getEdgeFactory()
-		 * @generated
-		 */
-		EClass EDGE_FACTORY = eINSTANCE.getEdgeFactory();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeImpl <em>Mobility Edge</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMobilityEdge()
-		 * @generated
-		 */
-		EClass MOBILITY_EDGE = eINSTANCE.getMobilityEdge();
-
-		/**
-		 * The meta object literal for the '<em><b>Cost Functions</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MOBILITY_EDGE__COST_FUNCTIONS = eINSTANCE.getMobilityEdge_CostFunctions();
-
-		/**
-		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MOBILITY_EDGE__FROM = eINSTANCE.getMobilityEdge_From();
-
-		/**
-		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MOBILITY_EDGE__TO = eINSTANCE.getMobilityEdge_To();
-
-		/**
-		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MOBILITY_EDGE__WEIGHT = eINSTANCE.getMobilityEdge_Weight();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl <em>Distance And Slopes Cost Function</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDistanceAndSlopesCostFunction()
-		 * @generated
-		 */
-		EClass DISTANCE_AND_SLOPES_COST_FUNCTION = eINSTANCE.getDistanceAndSlopesCostFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Up Slope Cost Factor</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR = eINSTANCE.getDistanceAndSlopesCostFunction_UpSlopeCostFactor();
-
-		/**
-		 * The meta object literal for the '<em><b>Down Slope Cost Factor</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR = eINSTANCE.getDistanceAndSlopesCostFunction_DownSlopeCostFactor();
-
-		/**
-		 * The meta object literal for the '<em><b>Gravity Axis</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS = eINSTANCE.getDistanceAndSlopesCostFunction_GravityAxis();
-
-		/**
-		 * The meta object literal for the '<em><b>Maximum Up Slope</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE = eINSTANCE.getDistanceAndSlopesCostFunction_MaximumUpSlope();
-
-		/**
-		 * The meta object literal for the '<em><b>Maximum Down Slope</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE = eINSTANCE.getDistanceAndSlopesCostFunction_MaximumDownSlope();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.ExclusionZonesCostFunctionImpl <em>Exclusion Zones Cost Function</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.ExclusionZonesCostFunctionImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getExclusionZonesCostFunction()
-		 * @generated
-		 */
-		EClass EXCLUSION_ZONES_COST_FUNCTION = eINSTANCE.getExclusionZonesCostFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Exclusion Zones</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES = eINSTANCE.getExclusionZonesCostFunction_ExclusionZones();
-
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DisplacementCostFunctionImpl <em>Displacement Cost Function</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1632,7 +1396,6 @@ public interface PathplannersGraphPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DISPLACEMENT_COST_FUNCTION = eINSTANCE.getDisplacementCostFunction();
-
 		/**
 		 * The meta object literal for the '<em><b>Get Cost</b></em>' operation.
 		 * <!-- begin-user-doc -->
@@ -1640,41 +1403,77 @@ public interface PathplannersGraphPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation DISPLACEMENT_COST_FUNCTION___GET_COST__CARTESIANPOLYGON_CARTESIANPOLYGON = eINSTANCE.getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon();
-
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl <em>Distance And Rover Footprint Cost Function</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MeshDisplacementCostFunctionImpl <em>Mesh Displacement Cost Function</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDistanceAndRoverFootprintCostFunction()
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MeshDisplacementCostFunctionImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMeshDisplacementCostFunction()
 		 * @generated
 		 */
-		EClass DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION = eINSTANCE.getDistanceAndRoverFootprintCostFunction();
-
+		EClass MESH_DISPLACEMENT_COST_FUNCTION = eINSTANCE.getMeshDisplacementCostFunction();
 		/**
-		 * The meta object literal for the '<em><b>Rover Foot Print Radius</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS = eINSTANCE.getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius();
-
-		/**
-		 * The meta object literal for the '<em><b>Maximum Roughness</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Planner</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS = eINSTANCE.getDistanceAndRoverFootprintCostFunction_MaximumRoughness();
-
+		EReference MESH_DISPLACEMENT_COST_FUNCTION__PLANNER = eINSTANCE.getMeshDisplacementCostFunction_Planner();
 		/**
-		 * The meta object literal for the '<em><b>Maximum Cross Slope</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceOnlyCostFunctionImpl <em>Distance Only Cost Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceOnlyCostFunctionImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDistanceOnlyCostFunction()
+		 * @generated
+		 */
+		EClass DISTANCE_ONLY_COST_FUNCTION = eINSTANCE.getDistanceOnlyCostFunction();
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl <em>Simple Directed Weighted Graph Based Mesh Way Point Path Planner</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner()
+		 * @generated
+		 */
+		EClass SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER = eINSTANCE.getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
+		/**
+		 * The meta object literal for the '<em><b>Simple Directed Weighted Graph</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE = eINSTANCE.getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope();
-
+		EAttribute SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH = eINSTANCE.getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_SimpleDirectedWeightedGraph();
+		/**
+		 * The meta object literal for the '<em><b>Enable Path Simplification</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION = eINSTANCE.getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_EnablePathSimplification();
+		/**
+		 * The meta object literal for the '<em><b>Robot Width For Path Simplication</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION = eINSTANCE.getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_RobotWidthForPathSimplication();
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DirectedGraphBasedMeshWayPointPathPlannerImpl <em>Directed Graph Based Mesh Way Point Path Planner</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DirectedGraphBasedMeshWayPointPathPlannerImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDirectedGraphBasedMeshWayPointPathPlanner()
+		 * @generated
+		 */
+		EClass DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER = eINSTANCE.getDirectedGraphBasedMeshWayPointPathPlanner();
+		/**
+		 * The meta object literal for the '<em><b>Directed Graph</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH = eINSTANCE.getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph();
 		/**
 		 * The meta object literal for the '<em>Directed Graph</em>' data type.
 		 * <!-- begin-user-doc -->
@@ -1684,6 +1483,167 @@ public interface PathplannersGraphPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType DIRECTED_GRAPH = eINSTANCE.getDirectedGraph();
+		/**
+		 * The meta object literal for the '<em>Simple Directed Weighted Graph</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.jgrapht.graph.SimpleDirectedWeightedGraph
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getSimpleDirectedWeightedGraph()
+		 * @generated
+		 */
+		EDataType SIMPLE_DIRECTED_WEIGHTED_GRAPH = eINSTANCE.getSimpleDirectedWeightedGraph();
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.EdgeFactoryImpl <em>Edge Factory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.EdgeFactoryImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getEdgeFactory()
+		 * @generated
+		 */
+		EClass EDGE_FACTORY = eINSTANCE.getEdgeFactory();
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeImpl <em>Mobility Edge</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMobilityEdge()
+		 * @generated
+		 */
+		EClass MOBILITY_EDGE = eINSTANCE.getMobilityEdge();
+		/**
+		 * The meta object literal for the '<em><b>Cost Functions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBILITY_EDGE__COST_FUNCTIONS = eINSTANCE.getMobilityEdge_CostFunctions();
+		/**
+		 * The meta object literal for the '<em><b>From</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBILITY_EDGE__FROM = eINSTANCE.getMobilityEdge_From();
+		/**
+		 * The meta object literal for the '<em><b>To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBILITY_EDGE__TO = eINSTANCE.getMobilityEdge_To();
+		/**
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOBILITY_EDGE__WEIGHT = eINSTANCE.getMobilityEdge_Weight();
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl <em>Mobility Edge Factory</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeFactoryImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getMobilityEdgeFactory()
+		 * @generated
+		 */
+		EClass MOBILITY_EDGE_FACTORY = eINSTANCE.getMobilityEdgeFactory();
+		/**
+		 * The meta object literal for the '<em><b>Cost Functions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOBILITY_EDGE_FACTORY__COST_FUNCTIONS = eINSTANCE.getMobilityEdgeFactory_CostFunctions();
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl <em>Distance And Slopes Cost Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDistanceAndSlopesCostFunction()
+		 * @generated
+		 */
+		EClass DISTANCE_AND_SLOPES_COST_FUNCTION = eINSTANCE.getDistanceAndSlopesCostFunction();
+		/**
+		 * The meta object literal for the '<em><b>Up Slope Cost Factor</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__UP_SLOPE_COST_FACTOR = eINSTANCE.getDistanceAndSlopesCostFunction_UpSlopeCostFactor();
+		/**
+		 * The meta object literal for the '<em><b>Down Slope Cost Factor</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__DOWN_SLOPE_COST_FACTOR = eINSTANCE.getDistanceAndSlopesCostFunction_DownSlopeCostFactor();
+		/**
+		 * The meta object literal for the '<em><b>Gravity Axis</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__GRAVITY_AXIS = eINSTANCE.getDistanceAndSlopesCostFunction_GravityAxis();
+		/**
+		 * The meta object literal for the '<em><b>Maximum Up Slope</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_UP_SLOPE = eINSTANCE.getDistanceAndSlopesCostFunction_MaximumUpSlope();
+		/**
+		 * The meta object literal for the '<em><b>Maximum Down Slope</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTANCE_AND_SLOPES_COST_FUNCTION__MAXIMUM_DOWN_SLOPE = eINSTANCE.getDistanceAndSlopesCostFunction_MaximumDownSlope();
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.ExclusionZonesCostFunctionImpl <em>Exclusion Zones Cost Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.ExclusionZonesCostFunctionImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getExclusionZonesCostFunction()
+		 * @generated
+		 */
+		EClass EXCLUSION_ZONES_COST_FUNCTION = eINSTANCE.getExclusionZonesCostFunction();
+		/**
+		 * The meta object literal for the '<em><b>Exclusion Zones</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES = eINSTANCE.getExclusionZonesCostFunction_ExclusionZones();
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl <em>Distance And Rover Footprint Cost Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndRoverFootprintCostFunctionImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.PathplannersGraphPackageImpl#getDistanceAndRoverFootprintCostFunction()
+		 * @generated
+		 */
+		EClass DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION = eINSTANCE.getDistanceAndRoverFootprintCostFunction();
+		/**
+		 * The meta object literal for the '<em><b>Rover Foot Print Radius</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS = eINSTANCE.getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius();
+		/**
+		 * The meta object literal for the '<em><b>Maximum Roughness</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS = eINSTANCE.getDistanceAndRoverFootprintCostFunction_MaximumRoughness();
+		/**
+		 * The meta object literal for the '<em><b>Maximum Cross Slope</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE = eINSTANCE.getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope();
 
 	}
 

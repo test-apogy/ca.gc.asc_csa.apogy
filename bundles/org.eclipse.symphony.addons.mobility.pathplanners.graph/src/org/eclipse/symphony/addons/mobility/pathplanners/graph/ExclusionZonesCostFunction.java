@@ -26,13 +26,6 @@ import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
  */
 public interface ExclusionZonesCostFunction extends DisplacementCostFunction {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Returns the value of the '<em><b>Exclusion Zones</b></em>' reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone}.
 	 * <!-- begin-user-doc -->

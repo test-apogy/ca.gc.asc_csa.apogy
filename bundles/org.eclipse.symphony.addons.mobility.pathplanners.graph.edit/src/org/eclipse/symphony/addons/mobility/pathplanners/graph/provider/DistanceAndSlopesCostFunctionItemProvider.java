@@ -27,13 +27,6 @@ import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraph
 public class DistanceAndSlopesCostFunctionItemProvider
 	extends MeshDisplacementCostFunctionItemProvider {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

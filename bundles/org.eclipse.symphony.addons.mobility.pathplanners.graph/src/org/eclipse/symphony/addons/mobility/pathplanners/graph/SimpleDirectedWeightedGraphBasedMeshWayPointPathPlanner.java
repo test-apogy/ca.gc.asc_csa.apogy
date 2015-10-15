@@ -29,13 +29,6 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  */
 public interface SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlanner<PolygonType>, VerboseProvider {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Returns the value of the '<em><b>Simple Directed Weighted Graph</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -46,7 +39,7 @@ public interface SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<Polygon
 	 * @return the value of the '<em>Simple Directed Weighted Graph</em>' attribute.
 	 * @see #setSimpleDirectedWeightedGraph(SimpleDirectedWeightedGraph)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_SimpleDirectedWeightedGraph()
-	 * @model dataType="org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraph" transient="true"
+	 * @model unique="false" dataType="org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraph"
 	 * @generated
 	 */
 	SimpleDirectedWeightedGraph getSimpleDirectedWeightedGraph();
@@ -73,7 +66,7 @@ public interface SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<Polygon
 	 * @return the value of the '<em>Enable Path Simplification</em>' attribute.
 	 * @see #setEnablePathSimplification(boolean)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_EnablePathSimplification()
-	 * @model default="true"
+	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isEnablePathSimplification();
@@ -100,7 +93,7 @@ public interface SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<Polygon
 	 * @return the value of the '<em>Robot Width For Path Simplication</em>' attribute.
 	 * @see #setRobotWidthForPathSimplication(double)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_RobotWidthForPathSimplication()
-	 * @model default="0.5"
+	 * @model default="0.5" unique="false"
 	 * @generated
 	 */
 	double getRobotWidthForPathSimplication();

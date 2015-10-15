@@ -6,10 +6,8 @@
 package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
@@ -31,14 +29,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  *
  * @generated
  */
-public class MobilityEdgeFactoryImpl extends EObjectImpl implements MobilityEdgeFactory {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
+public class MobilityEdgeFactoryImpl extends EdgeFactoryImpl<CartesianPolygon, MobilityEdge> implements MobilityEdgeFactory {
 	/**
 	 * The cached value of the '{@link #getCostFunctions() <em>Cost Functions</em>}' reference list.
 	 * <!-- begin-user-doc -->

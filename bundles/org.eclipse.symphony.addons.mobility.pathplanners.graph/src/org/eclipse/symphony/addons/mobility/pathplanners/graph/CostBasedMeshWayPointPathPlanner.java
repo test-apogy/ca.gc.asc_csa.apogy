@@ -26,19 +26,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * @generated
  */
 public interface CostBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends MeshWayPointPathPlanner<PolygonType> {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
 
 	/**
 	 * Returns the value of the '<em><b>Cost Functions</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cost Functions</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Cost Functions</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

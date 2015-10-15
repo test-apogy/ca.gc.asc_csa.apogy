@@ -32,13 +32,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  */
 public class ExclusionZonesCostFunctionImpl extends DisplacementCostFunctionImpl implements ExclusionZonesCostFunction {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The cached value of the '{@link #getExclusionZones() <em>Exclusion Zones</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,7 +40,6 @@ public class ExclusionZonesCostFunctionImpl extends DisplacementCostFunctionImpl
 	 * @ordered
 	 */
 	protected EList<ExclusionZone> exclusionZones;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

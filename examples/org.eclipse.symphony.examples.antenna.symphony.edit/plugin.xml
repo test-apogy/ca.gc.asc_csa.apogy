@@ -21,16 +21,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_examples_antenna_symphony -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_examples_antenna -->
       <extender
             uri="org.eclipse.symphony.core.invocator"

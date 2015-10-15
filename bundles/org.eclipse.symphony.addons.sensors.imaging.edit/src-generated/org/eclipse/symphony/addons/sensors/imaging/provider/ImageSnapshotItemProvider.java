@@ -193,6 +193,11 @@ public class ImageSnapshotItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SensorsFactory.eINSTANCE.createSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 FovFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
@@ -209,11 +214,6 @@ public class ImageSnapshotItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter

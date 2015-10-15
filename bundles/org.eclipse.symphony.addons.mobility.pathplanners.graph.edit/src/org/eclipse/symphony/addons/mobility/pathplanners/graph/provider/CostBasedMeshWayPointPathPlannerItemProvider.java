@@ -8,13 +8,10 @@ package org.eclipse.symphony.addons.mobility.pathplanners.graph.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
@@ -30,13 +27,6 @@ import org.eclipse.symphony.addons.mobility.pathplanners.provider.MeshWayPointPa
  */
 public class CostBasedMeshWayPointPathPlannerItemProvider
 	extends MeshWayPointPathPlannerItemProvider {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -58,31 +48,8 @@ public class CostBasedMeshWayPointPathPlannerItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addCostFunctionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Cost Functions feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCostFunctionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CostBasedMeshWayPointPathPlanner_costFunctions_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CostBasedMeshWayPointPathPlanner_costFunctions_feature", "_UI_CostBasedMeshWayPointPathPlanner_type"),
-				 PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -195,17 +162,6 @@ public class CostBasedMeshWayPointPathPlannerItemProvider
 			(createChildParameter
 				(PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
 				 PathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return PathplannersgraphEditPlugin.INSTANCE;
 	}
 
 }

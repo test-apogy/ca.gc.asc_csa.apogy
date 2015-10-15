@@ -27,13 +27,6 @@ package org.eclipse.symphony.addons.mobility.pathplanners.graph;
 public interface DistanceAndRoverFootprintCostFunction extends DistanceAndSlopesCostFunction
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * Returns the value of the '<em><b>Rover Foot Print Radius</b></em>' attribute.
 	 * The default value is <code>"0.5"</code>.
 	 * <!-- begin-user-doc -->
@@ -45,7 +38,7 @@ public interface DistanceAndRoverFootprintCostFunction extends DistanceAndSlopes
 	 * @return the value of the '<em>Rover Foot Print Radius</em>' attribute.
 	 * @see #setRoverFootPrintRadius(double)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius()
-	 * @model default="0.5"
+	 * @model default="0.5" unique="false"
 	 * @generated
 	 */
 	double getRoverFootPrintRadius();
@@ -72,7 +65,7 @@ public interface DistanceAndRoverFootprintCostFunction extends DistanceAndSlopes
 	 * @return the value of the '<em>Maximum Roughness</em>' attribute.
 	 * @see #setMaximumRoughness(double)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_MaximumRoughness()
-	 * @model default="0.1"
+	 * @model default="0.1" unique="false"
 	 * @generated
 	 */
 	double getMaximumRoughness();
@@ -99,7 +92,7 @@ public interface DistanceAndRoverFootprintCostFunction extends DistanceAndSlopes
 	 * @return the value of the '<em>Maximum Cross Slope</em>' attribute.
 	 * @see #setMaximumCrossSlope(double)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope()
-	 * @model default="0.488"
+	 * @model default="0.488" unique="false"
 	 * @generated
 	 */
 	double getMaximumCrossSlope();

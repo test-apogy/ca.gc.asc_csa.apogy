@@ -11,18 +11,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.*;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
@@ -34,13 +23,6 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * @generated
  */
 public class PathplannersGraphFactoryImpl extends EFactoryImpl implements PathplannersGraphFactory {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
@@ -101,10 +83,10 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
-				return createSimpleDirectedWeightedGraphFromString(eDataType, initialValue);
 			case PathplannersGraphPackage.DIRECTED_GRAPH:
 				return createDirectedGraphFromString(eDataType, initialValue);
+			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+				return createSimpleDirectedWeightedGraphFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -118,10 +100,10 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
-				return convertSimpleDirectedWeightedGraphToString(eDataType, instanceValue);
 			case PathplannersGraphPackage.DIRECTED_GRAPH:
 				return convertDirectedGraphToString(eDataType, instanceValue);
+			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+				return convertSimpleDirectedWeightedGraphToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -172,16 +154,6 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MobilityEdgeFactory createMobilityEdgeFactory() {
-		MobilityEdgeFactoryImpl mobilityEdgeFactory = new MobilityEdgeFactoryImpl();
-		return mobilityEdgeFactory;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public <PolygonType extends CartesianPolygon> DirectedGraphBasedMeshWayPointPathPlanner<PolygonType> createDirectedGraphBasedMeshWayPointPathPlanner() {
 		DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType> directedGraphBasedMeshWayPointPathPlanner = new DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType>();
 		return directedGraphBasedMeshWayPointPathPlanner;
@@ -195,6 +167,16 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	public MobilityEdge createMobilityEdge() {
 		MobilityEdgeImpl mobilityEdge = new MobilityEdgeImpl();
 		return mobilityEdge;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MobilityEdgeFactory createMobilityEdgeFactory() {
+		MobilityEdgeFactoryImpl mobilityEdgeFactory = new MobilityEdgeFactoryImpl();
+		return mobilityEdgeFactory;
 	}
 
 	/**
@@ -222,28 +204,9 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DistanceAndRoverFootprintCostFunction createDistanceAndRoverFootprintCostFunction()
-	{
+	public DistanceAndRoverFootprintCostFunction createDistanceAndRoverFootprintCostFunction() {
 		DistanceAndRoverFootprintCostFunctionImpl distanceAndRoverFootprintCostFunction = new DistanceAndRoverFootprintCostFunctionImpl();
 		return distanceAndRoverFootprintCostFunction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SimpleDirectedWeightedGraph createSimpleDirectedWeightedGraphFromString(EDataType eDataType, String initialValue) {
-		return (SimpleDirectedWeightedGraph)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertSimpleDirectedWeightedGraphToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
@@ -261,6 +224,24 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	 * @generated
 	 */
 	public String convertDirectedGraphToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleDirectedWeightedGraph createSimpleDirectedWeightedGraphFromString(EDataType eDataType, String initialValue) {
+		return (SimpleDirectedWeightedGraph)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSimpleDirectedWeightedGraphToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

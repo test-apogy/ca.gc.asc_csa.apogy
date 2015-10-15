@@ -34,13 +34,6 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
  */
 public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunctionImpl implements DistanceAndSlopesCostFunction {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The default value of the '{@link #getUpSlopeCostFactor() <em>Up Slope Cost Factor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

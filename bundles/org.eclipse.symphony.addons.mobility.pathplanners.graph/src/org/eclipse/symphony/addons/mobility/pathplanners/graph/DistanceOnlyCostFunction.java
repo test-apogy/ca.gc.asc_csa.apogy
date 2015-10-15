@@ -17,11 +17,5 @@ package org.eclipse.symphony.addons.mobility.pathplanners.graph;
  * @generated
  */
 public interface DistanceOnlyCostFunction extends MeshDisplacementCostFunction {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
 
 } // DistanceOnlyCostFunction

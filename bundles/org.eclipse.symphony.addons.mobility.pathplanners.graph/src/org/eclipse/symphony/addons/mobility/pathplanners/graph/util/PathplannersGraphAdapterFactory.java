@@ -11,18 +11,9 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
 import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.*;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
@@ -38,13 +29,6 @@ import org.jgrapht.EdgeFactory;
  * @generated
  */
 public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -97,6 +81,10 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 				return createCostBasedMeshWayPointPathPlannerAdapter();
 			}
 			@Override
+			public Adapter caseDisplacementCostFunction(DisplacementCostFunction object) {
+				return createDisplacementCostFunctionAdapter();
+			}
+			@Override
 			public Adapter caseMeshDisplacementCostFunction(MeshDisplacementCostFunction object) {
 				return createMeshDisplacementCostFunctionAdapter();
 			}
@@ -131,10 +119,6 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseExclusionZonesCostFunction(ExclusionZonesCostFunction object) {
 				return createExclusionZonesCostFunctionAdapter();
-			}
-			@Override
-			public Adapter caseDisplacementCostFunction(DisplacementCostFunction object) {
-				return createDisplacementCostFunctionAdapter();
 			}
 			@Override
 			public Adapter caseDistanceAndRoverFootprintCostFunction(DistanceAndRoverFootprintCostFunction object) {
@@ -195,6 +179,20 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction <em>Displacement Cost Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction
+	 * @generated
+	 */
+	public Adapter createDisplacementCostFunctionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction <em>Mesh Displacement Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -233,20 +231,6 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory <em>Mobility Edge Factory</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory
-	 * @generated
-	 */
-	public Adapter createMobilityEdgeFactoryAdapter() {
 		return null;
 	}
 
@@ -293,6 +277,20 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory <em>Mobility Edge Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory
+	 * @generated
+	 */
+	public Adapter createMobilityEdgeFactoryAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction <em>Distance And Slopes Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -321,20 +319,6 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction <em>Displacement Cost Function</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction
-	 * @generated
-	 */
-	public Adapter createDisplacementCostFunctionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction <em>Distance And Rover Footprint Cost Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -344,8 +328,7 @@ public class PathplannersGraphAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction
 	 * @generated
 	 */
-	public Adapter createDistanceAndRoverFootprintCostFunctionAdapter()
-	{
+	public Adapter createDistanceAndRoverFootprintCostFunctionAdapter() {
 		return null;
 	}
 

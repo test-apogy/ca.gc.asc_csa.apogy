@@ -75,13 +75,6 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	protected static Data3dFacade data3dFacade = Data3dFactory.eINSTANCE.createData3dFacade();
 	
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The default value of the '{@link #isVerbose() <em>Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -163,6 +156,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * @ordered
 	 */
 	protected double robotWidthForPathSimplication = ROBOT_WIDTH_FOR_PATH_SIMPLICATION_EDEFAULT;
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -255,8 +249,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isEnablePathSimplification()
-	{
+	public boolean isEnablePathSimplification() {
 		return enablePathSimplification;
 	}
 
@@ -265,8 +258,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEnablePathSimplification(boolean newEnablePathSimplification)
-	{
+	public void setEnablePathSimplification(boolean newEnablePathSimplification) {
 		boolean oldEnablePathSimplification = enablePathSimplification;
 		enablePathSimplification = newEnablePathSimplification;
 		if (eNotificationRequired())
@@ -278,8 +270,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getRobotWidthForPathSimplication()
-	{
+	public double getRobotWidthForPathSimplication() {
 		return robotWidthForPathSimplication;
 	}
 
@@ -288,8 +279,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRobotWidthForPathSimplication(double newRobotWidthForPathSimplication)
-	{
+	public void setRobotWidthForPathSimplication(double newRobotWidthForPathSimplication) {
 		double oldRobotWidthForPathSimplication = robotWidthForPathSimplication;
 		robotWidthForPathSimplication = newRobotWidthForPathSimplication;
 		if (eNotificationRequired())

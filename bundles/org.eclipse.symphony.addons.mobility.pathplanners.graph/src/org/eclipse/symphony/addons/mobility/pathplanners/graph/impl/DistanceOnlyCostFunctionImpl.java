@@ -26,13 +26,6 @@ public class DistanceOnlyCostFunctionImpl extends MeshDisplacementCostFunctionIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	protected DistanceOnlyCostFunctionImpl() {
 		super();
 	}

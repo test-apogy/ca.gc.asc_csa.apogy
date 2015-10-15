@@ -47,13 +47,6 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass costBasedMeshWayPointPathPlannerEClass = null;
 
 	/**
@@ -61,29 +54,25 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass displacementCostFunctionEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass meshDisplacementCostFunctionEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass distanceOnlyCostFunctionEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mobilityEdgeFactoryEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +99,13 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass mobilityEdgeFactoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass distanceAndSlopesCostFunctionEClass = null;
 
 	/**
@@ -124,13 +120,6 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass displacementCostFunctionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass distanceAndRoverFootprintCostFunctionEClass = null;
 
 	/**
@@ -138,14 +127,13 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType simpleDirectedWeightedGraphEDataType = null;
-
+	private EDataType directedGraphEDataType = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType directedGraphEDataType = null;
+	private EDataType simpleDirectedWeightedGraphEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -234,6 +222,24 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDisplacementCostFunction() {
+		return displacementCostFunctionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon() {
+		return displacementCostFunctionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMeshDisplacementCostFunction() {
 		return meshDisplacementCostFunctionEClass;
 	}
@@ -279,8 +285,7 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_EnablePathSimplification()
-	{
+	public EAttribute getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_EnablePathSimplification() {
 		return (EAttribute)simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -289,27 +294,8 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_RobotWidthForPathSimplication()
-	{
+	public EAttribute getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_RobotWidthForPathSimplication() {
 		return (EAttribute)simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMobilityEdgeFactory() {
-		return mobilityEdgeFactoryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMobilityEdgeFactory_CostFunctions() {
-		return (EReference)mobilityEdgeFactoryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -328,6 +314,15 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 */
 	public EAttribute getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph() {
 		return (EAttribute)directedGraphBasedMeshWayPointPathPlannerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getDirectedGraph() {
+		return directedGraphEDataType;
 	}
 
 	/**
@@ -391,6 +386,24 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 */
 	public EAttribute getMobilityEdge_Weight() {
 		return (EAttribute)mobilityEdgeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMobilityEdgeFactory() {
+		return mobilityEdgeFactoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMobilityEdgeFactory_CostFunctions() {
+		return (EReference)mobilityEdgeFactoryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -470,26 +483,7 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDisplacementCostFunction() {
-		return displacementCostFunctionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon() {
-		return displacementCostFunctionEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDistanceAndRoverFootprintCostFunction()
-	{
+	public EClass getDistanceAndRoverFootprintCostFunction() {
 		return distanceAndRoverFootprintCostFunctionEClass;
 	}
 
@@ -498,8 +492,7 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius()
-	{
+	public EAttribute getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius() {
 		return (EAttribute)distanceAndRoverFootprintCostFunctionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -508,8 +501,7 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDistanceAndRoverFootprintCostFunction_MaximumRoughness()
-	{
+	public EAttribute getDistanceAndRoverFootprintCostFunction_MaximumRoughness() {
 		return (EAttribute)distanceAndRoverFootprintCostFunctionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -518,18 +510,8 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope()
-	{
+	public EAttribute getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope() {
 		return (EAttribute)distanceAndRoverFootprintCostFunctionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getDirectedGraph() {
-		return directedGraphEDataType;
 	}
 
 	/**
@@ -562,6 +544,9 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 		// Create classes and their features
 		costBasedMeshWayPointPathPlannerEClass = createEClass(COST_BASED_MESH_WAY_POINT_PATH_PLANNER);
 		createEReference(costBasedMeshWayPointPathPlannerEClass, COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS);
+
+		displacementCostFunctionEClass = createEClass(DISPLACEMENT_COST_FUNCTION);
+		createEOperation(displacementCostFunctionEClass, DISPLACEMENT_COST_FUNCTION___GET_COST__CARTESIANPOLYGON_CARTESIANPOLYGON);
 
 		meshDisplacementCostFunctionEClass = createEClass(MESH_DISPLACEMENT_COST_FUNCTION);
 		createEReference(meshDisplacementCostFunctionEClass, MESH_DISPLACEMENT_COST_FUNCTION__PLANNER);
@@ -597,17 +582,14 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 		exclusionZonesCostFunctionEClass = createEClass(EXCLUSION_ZONES_COST_FUNCTION);
 		createEReference(exclusionZonesCostFunctionEClass, EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES);
 
-		displacementCostFunctionEClass = createEClass(DISPLACEMENT_COST_FUNCTION);
-		createEOperation(displacementCostFunctionEClass, DISPLACEMENT_COST_FUNCTION___GET_COST__CARTESIANPOLYGON_CARTESIANPOLYGON);
-
 		distanceAndRoverFootprintCostFunctionEClass = createEClass(DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION);
 		createEAttribute(distanceAndRoverFootprintCostFunctionEClass, DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS);
 		createEAttribute(distanceAndRoverFootprintCostFunctionEClass, DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS);
 		createEAttribute(distanceAndRoverFootprintCostFunctionEClass, DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE);
 
 		// Create data types
-		simpleDirectedWeightedGraphEDataType = createEDataType(SIMPLE_DIRECTED_WEIGHTED_GRAPH);
 		directedGraphEDataType = createEDataType(DIRECTED_GRAPH);
+		simpleDirectedWeightedGraphEDataType = createEDataType(SIMPLE_DIRECTED_WEIGHTED_GRAPH);
 	}
 
 	/**
@@ -636,8 +618,8 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 		// Obtain other dependent packages
 		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
 		PathplannersPackage thePathplannersPackage = (PathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(PathplannersPackage.eNS_URI);
-		ProcessorsPackage theProcessorsPackage = (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+		ProcessorsPackage theProcessorsPackage = (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter costBasedMeshWayPointPathPlannerEClass_PolygonType = addETypeParameter(costBasedMeshWayPointPathPlannerEClass, "PolygonType");
@@ -685,6 +667,12 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 		initEClass(costBasedMeshWayPointPathPlannerEClass, CostBasedMeshWayPointPathPlanner.class, "CostBasedMeshWayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCostBasedMeshWayPointPathPlanner_CostFunctions(), this.getDisplacementCostFunction(), null, "costFunctions", null, 0, -1, CostBasedMeshWayPointPathPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(displacementCostFunctionEClass, DisplacementCostFunction.class, "DisplacementCostFunction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = initEOperation(getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon(), theEcorePackage.getEDouble(), "getCost", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theData3dPackage.getCartesianPolygon(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theData3dPackage.getCartesianPolygon(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(meshDisplacementCostFunctionEClass, MeshDisplacementCostFunction.class, "MeshDisplacementCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		g1 = createEGenericType(this.getCostBasedMeshWayPointPathPlanner());
 		g2 = createEGenericType();
@@ -696,48 +684,42 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 		initEClass(distanceOnlyCostFunctionEClass, DistanceOnlyCostFunction.class, "DistanceOnlyCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass, SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class, "SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_SimpleDirectedWeightedGraph(), this.getSimpleDirectedWeightedGraph(), "simpleDirectedWeightedGraph", null, 0, 1, SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_EnablePathSimplification(), theEcorePackage.getEBoolean(), "enablePathSimplification", "true", 0, 1, SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_RobotWidthForPathSimplication(), theEcorePackage.getEDouble(), "robotWidthForPathSimplication", "0.5", 0, 1, SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_SimpleDirectedWeightedGraph(), this.getSimpleDirectedWeightedGraph(), "simpleDirectedWeightedGraph", null, 0, 1, SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_EnablePathSimplification(), theEcorePackage.getEBoolean(), "enablePathSimplification", "true", 0, 1, SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_RobotWidthForPathSimplication(), theEcorePackage.getEDouble(), "robotWidthForPathSimplication", "0.5", 0, 1, SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(directedGraphBasedMeshWayPointPathPlannerEClass, DirectedGraphBasedMeshWayPointPathPlanner.class, "DirectedGraphBasedMeshWayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph(), this.getDirectedGraph(), "directedGraph", null, 0, 1, DirectedGraphBasedMeshWayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDirectedGraphBasedMeshWayPointPathPlanner_DirectedGraph(), this.getDirectedGraph(), "directedGraph", null, 0, 1, DirectedGraphBasedMeshWayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(edgeFactoryEClass, EdgeFactory.class, "EdgeFactory", IS_ABSTRACT, IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEClass(edgeFactoryEClass, EdgeFactory.class, "EdgeFactory", IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(mobilityEdgeEClass, MobilityEdge.class, "MobilityEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobilityEdge_CostFunctions(), this.getDisplacementCostFunction(), null, "costFunctions", null, 0, -1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobilityEdge_From(), theData3dPackage.getCartesianPolygon(), null, "from", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMobilityEdge_To(), theData3dPackage.getCartesianPolygon(), null, "to", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobilityEdge_Weight(), theEcorePackage.getEDouble(), "weight", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobilityEdge_Weight(), theEcorePackage.getEDouble(), "weight", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobilityEdgeFactoryEClass, MobilityEdgeFactory.class, "MobilityEdgeFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobilityEdgeFactory_CostFunctions(), this.getDisplacementCostFunction(), null, "costFunctions", null, 0, -1, MobilityEdgeFactory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(distanceAndSlopesCostFunctionEClass, DistanceAndSlopesCostFunction.class, "DistanceAndSlopesCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDistanceAndSlopesCostFunction_UpSlopeCostFactor(), theEcorePackage.getEDouble(), "upSlopeCostFactor", "1", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDistanceAndSlopesCostFunction_DownSlopeCostFactor(), theEcorePackage.getEDouble(), "downSlopeCostFactor", "1", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDistanceAndSlopesCostFunction_GravityAxis(), theData3dPackage.getCartesianAxis(), "gravityAxis", "Z", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDistanceAndSlopesCostFunction_MaximumUpSlope(), theEcorePackage.getEDouble(), "maximumUpSlope", "0.33", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDistanceAndSlopesCostFunction_MaximumDownSlope(), theEcorePackage.getEDouble(), "maximumDownSlope", "0.33", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndSlopesCostFunction_UpSlopeCostFactor(), theEcorePackage.getEDouble(), "upSlopeCostFactor", "1", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndSlopesCostFunction_DownSlopeCostFactor(), theEcorePackage.getEDouble(), "downSlopeCostFactor", "1", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndSlopesCostFunction_GravityAxis(), theData3dPackage.getCartesianAxis(), "gravityAxis", "Z", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndSlopesCostFunction_MaximumUpSlope(), theEcorePackage.getEDouble(), "maximumUpSlope", "0.33", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndSlopesCostFunction_MaximumDownSlope(), theEcorePackage.getEDouble(), "maximumDownSlope", "0.33", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exclusionZonesCostFunctionEClass, ExclusionZonesCostFunction.class, "ExclusionZonesCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExclusionZonesCostFunction_ExclusionZones(), thePathplannersPackage.getExclusionZone(), null, "exclusionZones", null, 0, -1, ExclusionZonesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(displacementCostFunctionEClass, DisplacementCostFunction.class, "DisplacementCostFunction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		EOperation op = initEOperation(getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon(), theEcorePackage.getEDouble(), "getCost", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPolygon(), "from", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPolygon(), "to", 1, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(distanceAndRoverFootprintCostFunctionEClass, DistanceAndRoverFootprintCostFunction.class, "DistanceAndRoverFootprintCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius(), theEcorePackage.getEDouble(), "roverFootPrintRadius", "0.5", 0, 1, DistanceAndRoverFootprintCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDistanceAndRoverFootprintCostFunction_MaximumRoughness(), theEcorePackage.getEDouble(), "maximumRoughness", "0.1", 0, 1, DistanceAndRoverFootprintCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope(), theEcorePackage.getEDouble(), "maximumCrossSlope", "0.488", 0, 1, DistanceAndRoverFootprintCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius(), theEcorePackage.getEDouble(), "roverFootPrintRadius", "0.5", 0, 1, DistanceAndRoverFootprintCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndRoverFootprintCostFunction_MaximumRoughness(), theEcorePackage.getEDouble(), "maximumRoughness", "0.1", 0, 1, DistanceAndRoverFootprintCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope(), theEcorePackage.getEDouble(), "maximumCrossSlope", "0.488", 0, 1, DistanceAndRoverFootprintCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
-		initEDataType(simpleDirectedWeightedGraphEDataType, SimpleDirectedWeightedGraph.class, "SimpleDirectedWeightedGraph", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(directedGraphEDataType, DirectedGraph.class, "DirectedGraph", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(simpleDirectedWeightedGraphEDataType, SimpleDirectedWeightedGraph.class, "SimpleDirectedWeightedGraph", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

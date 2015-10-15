@@ -28,13 +28,6 @@ import org.jgrapht.DirectedGraph;
  */
 public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlannerImpl<PolygonType> implements DirectedGraphBasedMeshWayPointPathPlanner<PolygonType> {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The default value of the '{@link #getDirectedGraph() <em>Directed Graph</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
