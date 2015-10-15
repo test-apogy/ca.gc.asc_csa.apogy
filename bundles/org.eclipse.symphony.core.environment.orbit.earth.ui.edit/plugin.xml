@@ -23,11 +23,11 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_environment_orbit_earth_ui -->
       <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.core.invocator"
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
    </extension>
 
 </plugin>

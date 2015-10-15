@@ -18,10 +18,13 @@ Require-Bundle: org.eclipse.symphony.addons.mobility;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data;visibility:=reexport,
  org.eclipse.core.runtime;bundle-version="3.4.0",
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
  javax.media;bundle-version="1.5.2";visibility:=reexport,
- org.eclipse.symphony.common.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.log;bundle-version="0.3.0",
+ org.eclipse.xtend.lib;bundle-version="2.7.3"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.addons.mobility.controllers.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

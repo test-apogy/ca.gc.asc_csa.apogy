@@ -43,10 +43,10 @@ public final class SymphonyCoreEditPlugin extends EMFPlugin {
 	public SymphonyCoreEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}

@@ -2,16 +2,17 @@
 <?eclipse version="3.0"?>
 
 <!--
- Canadian Space Agency 2007.
+ Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)
 -->
 
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_addons_mobility -->
       <package
-            uri="http:///ca/gc/space/mrt/mobility/model/mobility.ecore"
+            uri="org.eclipse.symphony.addons.mobility"
             class="org.eclipse.symphony.addons.mobility.MobilityPackage"
-            genModel="model/mobility.genmodel"/>
+            genModel="model/symphony_addons_mobility.xcore"/>
    </extension>
 
 </plugin>

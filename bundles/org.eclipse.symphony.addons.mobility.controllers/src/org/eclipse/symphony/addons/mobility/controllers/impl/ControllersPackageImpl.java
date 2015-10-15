@@ -44,13 +44,6 @@ public class ControllersPackageImpl extends EPackageImpl implements ControllersP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass pathFollowerEClass = null;
 
 	/**
@@ -151,9 +144,9 @@ public class ControllersPackageImpl extends EPackageImpl implements ControllersP
 		isInited = true;
 
 		// Initialize simple dependencies
+		PosePackage.eINSTANCE.eClass();
 		MobilityPackage.eINSTANCE.eClass();
 		PathsPackage.eINSTANCE.eClass();
-		PosePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theControllersPackage.createPackageContents();
@@ -728,7 +721,7 @@ public class ControllersPackageImpl extends EPackageImpl implements ControllersP
 		g2 = createEGenericType(thePathsPackage.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		waypointPathRecorderEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getPathFollower());
+		g1 = createEGenericType(this.getSkidSteeredPlatformPathFollower());
 		g2 = createEGenericType(theMobilityPackage.getSkidSteeredMobilePlateform());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(thePathsPackage.getWayPointPath());
@@ -748,29 +741,29 @@ public class ControllersPackageImpl extends EPackageImpl implements ControllersP
 		g1 = createEGenericType(pathFollowerEClass_PlatformType);
 		initEReference(getPathFollower_Platform(), g1, null, "platform", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPathFollower_PoseSensor(), thePosePackage.getPoseSensor(), null, "poseSensor", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPathFollower_DestinationReached(), theEcorePackage.getEBoolean(), "destinationReached", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPathFollower_PathFollowerState(), this.getPathFollowerState(), "pathFollowerState", "IDLE", 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathFollower_DestinationReached(), theEcorePackage.getEBoolean(), "destinationReached", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathFollower_PathFollowerState(), this.getPathFollowerState(), "pathFollowerState", "IDLE", 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getPathFollower__Start(), theEcorePackage.getEBoolean(), "start", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getPathFollower__Start(), theEcorePackage.getEBoolean(), "start", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getPathFollower__Pause(), theEcorePackage.getEBoolean(), "pause", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getPathFollower__Pause(), theEcorePackage.getEBoolean(), "pause", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getPathFollower__Resume(), theEcorePackage.getEBoolean(), "resume", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getPathFollower__Resume(), theEcorePackage.getEBoolean(), "resume", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getPathFollower__Stop(), theEcorePackage.getEBoolean(), "stop", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getPathFollower__Stop(), theEcorePackage.getEBoolean(), "stop", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		EOperation op = initEOperation(getPathFollower__IsTransitionValid__PathFollowerState(), theEcorePackage.getEBoolean(), "isTransitionValid", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPathFollowerState(), "state", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getPathFollower__IsTransitionValid__PathFollowerState(), theEcorePackage.getEBoolean(), "isTransitionValid", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getPathFollowerState(), "state", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(skidSteeredPlatformPathFollowerEClass, SkidSteeredPlatformPathFollower.class, "SkidSteeredPlatformPathFollower", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSkidSteeredPlatformPathFollower_MaximumAngularVelocity(), theEcorePackage.getEDouble(), "maximumAngularVelocity", null, 0, 1, SkidSteeredPlatformPathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredPlatformPathFollower_MaximumLinearVelocity(), theEcorePackage.getEDouble(), "maximumLinearVelocity", null, 0, 1, SkidSteeredPlatformPathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredPlatformPathFollower_MaximumAngularVelocity(), theEcorePackage.getEDouble(), "maximumAngularVelocity", null, 0, 1, SkidSteeredPlatformPathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredPlatformPathFollower_MaximumLinearVelocity(), theEcorePackage.getEDouble(), "maximumLinearVelocity", null, 0, 1, SkidSteeredPlatformPathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pathRecorderEClass, PathRecorder.class, "PathRecorder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPathRecorder_PositionSensor(), thePosePackage.getPoseSensor(), null, "positionSensor", null, 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPathRecorder_MinimumDistanceDelta(), theEcorePackage.getEDouble(), "minimumDistanceDelta", "0.1", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPathRecorder_MinimumTimeDelta(), theEcorePackage.getEDouble(), "minimumTimeDelta", "1.0", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPathRecorder_SamplingMode(), this.getPathRecorderSamplingMode(), "samplingMode", "ON_DISTANCE_DELTA", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathRecorder_MinimumDistanceDelta(), theEcorePackage.getEDouble(), "minimumDistanceDelta", "0.1", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathRecorder_MinimumTimeDelta(), theEcorePackage.getEDouble(), "minimumTimeDelta", "1.0", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathRecorder_SamplingMode(), this.getPathRecorderSamplingMode(), "samplingMode", "ON_DISTANCE_DELTA", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		g1 = createEGenericType(pathRecorderEClass_PathType);
 		initEReference(getPathRecorder_RecordedPath(), g1, null, "recordedPath", null, 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -782,22 +775,22 @@ public class ControllersPackageImpl extends EPackageImpl implements ControllersP
 		initEReference(getAstolfiGuidanceController_CurrentWayPoint(), theData3dPackage.getCartesianPositionCoordinates(), null, "currentWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAstolfiGuidanceController_PreviousWayPoint(), theData3dPackage.getCartesianPositionCoordinates(), null, "previousWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAstolfiGuidanceController_CurrentPoseInGuidanceReferenceFrame(), theData3dPackage.getPose(), null, "currentPoseInGuidanceReferenceFrame", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Rho(), theEcorePackage.getEDouble(), "rho", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Phi(), theEcorePackage.getEDouble(), "phi", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Alpha(), theEcorePackage.getEDouble(), "alpha", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Yaw(), theEcorePackage.getEDouble(), "yaw", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Nu(), theEcorePackage.getEDouble(), "nu", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Omega(), theEcorePackage.getEDouble(), "omega", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Krho(), theEcorePackage.getEDouble(), "krho", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Kphi(), theEcorePackage.getEDouble(), "kphi", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_Kalpha(), theEcorePackage.getEDouble(), "kalpha", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_DestinationDistanceThreshold(), theEcorePackage.getEDouble(), "destinationDistanceThreshold", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_WayPointDistanceThreshold(), theEcorePackage.getEDouble(), "wayPointDistanceThreshold", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_KHill(), theEcorePackage.getEDouble(), "kHill", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_HillThreshold(), theEcorePackage.getEDouble(), "hillThreshold", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_PhiThresholdForReducedVelocity(), theEcorePackage.getEDouble(), "phiThresholdForReducedVelocity", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_AlphaThresholdForReducedVelocity(), theEcorePackage.getEDouble(), "alphaThresholdForReducedVelocity", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAstolfiGuidanceController_SmoothPathEnabled(), theEcorePackage.getEBoolean(), "smoothPathEnabled", "true", 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Rho(), theEcorePackage.getEDouble(), "rho", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Phi(), theEcorePackage.getEDouble(), "phi", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Alpha(), theEcorePackage.getEDouble(), "alpha", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Yaw(), theEcorePackage.getEDouble(), "yaw", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Nu(), theEcorePackage.getEDouble(), "nu", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Omega(), theEcorePackage.getEDouble(), "omega", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Krho(), theEcorePackage.getEDouble(), "krho", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Kphi(), theEcorePackage.getEDouble(), "kphi", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_Kalpha(), theEcorePackage.getEDouble(), "kalpha", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_DestinationDistanceThreshold(), theEcorePackage.getEDouble(), "destinationDistanceThreshold", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_WayPointDistanceThreshold(), theEcorePackage.getEDouble(), "wayPointDistanceThreshold", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_KHill(), theEcorePackage.getEDouble(), "kHill", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_HillThreshold(), theEcorePackage.getEDouble(), "hillThreshold", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_PhiThresholdForReducedVelocity(), theEcorePackage.getEDouble(), "phiThresholdForReducedVelocity", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_AlphaThresholdForReducedVelocity(), theEcorePackage.getEDouble(), "alphaThresholdForReducedVelocity", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAstolfiGuidanceController_SmoothPathEnabled(), theEcorePackage.getEBoolean(), "smoothPathEnabled", "true", 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(pathFollowerStateEEnum, PathFollowerState.class, "PathFollowerState");
@@ -813,27 +806,6 @@ public class ControllersPackageImpl extends EPackageImpl implements ControllersP
 
 		// Create resource
 		createResource(eNS_URI);
-
-		// Create annotations
-		// http://www.eclipse.org/emf/2002/GenModel
-		createGenModelAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createGenModelAnnotations()
-	{
-		String source = "http://www.eclipse.org/emf/2002/GenModel";		
-		addAnnotation
-		  (pathFollowerEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "A PathFollower is an entity that makes a MobilePlatform follow a specified Path.\n\nThe default implementation of PathFollower listens for changes in the SensorStatus of its PoseSensor and the MobilePlateformStatus of its MobilePlateform and pauses or resumes the path following accordingly."
-		   });
 	}
 
 } //ControllersPackageImpl

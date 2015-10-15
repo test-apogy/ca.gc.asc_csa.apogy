@@ -26,17 +26,11 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.mobility.controllers.ControllersFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Controllers' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)' modelName='Controllers' modelDirectory='/org.eclipse.symphony.addons.mobility.controllers/src' editDirectory='/org.eclipse.symphony.addons.mobility.controllers.edit/src' basePackage='org.eclipse.symphony.addons.mobility'"
  * @generated
  */
 public interface ControllersPackage extends EPackage
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -51,7 +45,7 @@ public interface ControllersPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ca/gc/space/mrt/mobility/controllers/model/controllers.ecore";
+	String eNS_URI = "org.eclipse.symphony.addons.mobility.controllers";
 
 	/**
 	 * The package namespace name.
@@ -59,7 +53,7 @@ public interface ControllersPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "org.eclipse.symphony.addons.mobility";
+	String eNS_PREFIX = "controllers";
 
 	/**
 	 * The singleton instance of the package.
@@ -486,7 +480,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__PATH = PATH_FOLLOWER__PATH;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__PATH = SKID_STEERED_PLATFORM_PATH_FOLLOWER__PATH;
 
 	/**
 	 * The feature id for the '<em><b>Platform</b></em>' reference.
@@ -495,7 +489,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__PLATFORM = PATH_FOLLOWER__PLATFORM;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__PLATFORM = SKID_STEERED_PLATFORM_PATH_FOLLOWER__PLATFORM;
 
 	/**
 	 * The feature id for the '<em><b>Pose Sensor</b></em>' reference.
@@ -504,7 +498,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__POSE_SENSOR = PATH_FOLLOWER__POSE_SENSOR;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__POSE_SENSOR = SKID_STEERED_PLATFORM_PATH_FOLLOWER__POSE_SENSOR;
 
 	/**
 	 * The feature id for the '<em><b>Destination Reached</b></em>' attribute.
@@ -513,7 +507,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__DESTINATION_REACHED = PATH_FOLLOWER__DESTINATION_REACHED;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__DESTINATION_REACHED = SKID_STEERED_PLATFORM_PATH_FOLLOWER__DESTINATION_REACHED;
 
 	/**
 	 * The feature id for the '<em><b>Path Follower State</b></em>' attribute.
@@ -522,7 +516,25 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__PATH_FOLLOWER_STATE = PATH_FOLLOWER__PATH_FOLLOWER_STATE;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__PATH_FOLLOWER_STATE = SKID_STEERED_PLATFORM_PATH_FOLLOWER__PATH_FOLLOWER_STATE;
+
+	/**
+	 * The feature id for the '<em><b>Maximum Angular Velocity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY = SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY;
+
+	/**
+	 * The feature id for the '<em><b>Maximum Linear Velocity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY = SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY;
 
 	/**
 	 * The number of structural features of the '<em>Skid Steered Way Point Path Follower</em>' class.
@@ -531,7 +543,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER_FEATURE_COUNT = PATH_FOLLOWER_FEATURE_COUNT + 0;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER_FEATURE_COUNT = SKID_STEERED_PLATFORM_PATH_FOLLOWER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Start</em>' operation.
@@ -540,7 +552,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___START = PATH_FOLLOWER___START;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___START = SKID_STEERED_PLATFORM_PATH_FOLLOWER___START;
 
 	/**
 	 * The operation id for the '<em>Pause</em>' operation.
@@ -549,7 +561,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___PAUSE = PATH_FOLLOWER___PAUSE;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___PAUSE = SKID_STEERED_PLATFORM_PATH_FOLLOWER___PAUSE;
 
 	/**
 	 * The operation id for the '<em>Resume</em>' operation.
@@ -558,7 +570,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___RESUME = PATH_FOLLOWER___RESUME;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___RESUME = SKID_STEERED_PLATFORM_PATH_FOLLOWER___RESUME;
 
 	/**
 	 * The operation id for the '<em>Stop</em>' operation.
@@ -567,7 +579,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___STOP = PATH_FOLLOWER___STOP;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___STOP = SKID_STEERED_PLATFORM_PATH_FOLLOWER___STOP;
 
 	/**
 	 * The operation id for the '<em>Is Transition Valid</em>' operation.
@@ -576,7 +588,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___IS_TRANSITION_VALID__PATHFOLLOWERSTATE = PATH_FOLLOWER___IS_TRANSITION_VALID__PATHFOLLOWERSTATE;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER___IS_TRANSITION_VALID__PATHFOLLOWERSTATE = SKID_STEERED_PLATFORM_PATH_FOLLOWER___IS_TRANSITION_VALID__PATHFOLLOWERSTATE;
 
 	/**
 	 * The number of operations of the '<em>Skid Steered Way Point Path Follower</em>' class.
@@ -585,7 +597,7 @@ public interface ControllersPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER_OPERATION_COUNT = PATH_FOLLOWER_OPERATION_COUNT + 0;
+	int SKID_STEERED_WAY_POINT_PATH_FOLLOWER_OPERATION_COUNT = SKID_STEERED_PLATFORM_PATH_FOLLOWER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl <em>Astolfi Guidance Controller</em>}' class.

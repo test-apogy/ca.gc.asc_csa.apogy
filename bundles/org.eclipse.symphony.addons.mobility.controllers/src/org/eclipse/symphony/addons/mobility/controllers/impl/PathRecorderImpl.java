@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.geometry.paths.Path;
 import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
@@ -33,15 +33,8 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  *
  * @generated
  */
-public class PathRecorderImpl<PathType extends Path> extends EObjectImpl implements PathRecorder<PathType>
+public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.Container implements PathRecorder<PathType>
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
 	/**
 	 * The cached value of the '{@link #getPositionSensor() <em>Position Sensor</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -231,8 +224,7 @@ public class PathRecorderImpl<PathType extends Path> extends EObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getMinimumDistanceDelta()
-	{
+	public double getMinimumDistanceDelta() {
 		return minimumDistanceDelta;
 	}
 
@@ -241,8 +233,7 @@ public class PathRecorderImpl<PathType extends Path> extends EObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMinimumDistanceDelta(double newMinimumDistanceDelta)
-	{
+	public void setMinimumDistanceDelta(double newMinimumDistanceDelta) {
 		double oldMinimumDistanceDelta = minimumDistanceDelta;
 		minimumDistanceDelta = newMinimumDistanceDelta;
 		if (eNotificationRequired())
@@ -254,8 +245,7 @@ public class PathRecorderImpl<PathType extends Path> extends EObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getMinimumTimeDelta()
-	{
+	public double getMinimumTimeDelta() {
 		return minimumTimeDelta;
 	}
 
@@ -264,8 +254,7 @@ public class PathRecorderImpl<PathType extends Path> extends EObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMinimumTimeDelta(double newMinimumTimeDelta)
-	{
+	public void setMinimumTimeDelta(double newMinimumTimeDelta) {
 		double oldMinimumTimeDelta = minimumTimeDelta;
 		minimumTimeDelta = newMinimumTimeDelta;
 		if (eNotificationRequired())

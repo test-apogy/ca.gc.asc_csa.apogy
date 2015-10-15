@@ -23,15 +23,6 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_telecoms -->
       <extender
-            uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.addons"
-            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.addons.geometry.paths"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$PathsChildCreationExtender"/>
       <extender
@@ -40,6 +31,15 @@
       <extender
             uri="org.eclipse.symphony.core"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.core.environment"
+            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.addons"
+            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology.bindings"
+            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

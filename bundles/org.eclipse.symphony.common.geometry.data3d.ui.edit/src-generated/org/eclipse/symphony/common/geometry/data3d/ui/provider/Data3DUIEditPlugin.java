@@ -45,9 +45,9 @@ public final class Data3DUIEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

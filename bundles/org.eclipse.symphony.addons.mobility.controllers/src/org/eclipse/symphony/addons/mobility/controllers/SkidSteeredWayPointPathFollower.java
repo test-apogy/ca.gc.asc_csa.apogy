@@ -19,13 +19,6 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform;
  * @model
  * @generated
  */
-public interface SkidSteeredWayPointPathFollower extends PathFollower<SkidSteeredMobilePlateform, WayPointPath>
+public interface SkidSteeredWayPointPathFollower extends SkidSteeredPlatformPathFollower<SkidSteeredMobilePlateform, WayPointPath>
 {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
 } // SkidSteeredWayPointPathFollower

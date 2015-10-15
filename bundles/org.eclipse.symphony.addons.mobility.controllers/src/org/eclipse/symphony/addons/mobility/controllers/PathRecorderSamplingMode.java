@@ -53,13 +53,6 @@ public enum PathRecorderSamplingMode implements Enumerator
 	ON_TIME_OR_DISTANCE_DELTA(2, "ON_TIME_OR_DISTANCE_DELTA", "ON_TIME_OR_DISTANCE_DELTA");
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2008.";
-
-	/**
 	 * The '<em><b>ON DISTANCE DELTA</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>

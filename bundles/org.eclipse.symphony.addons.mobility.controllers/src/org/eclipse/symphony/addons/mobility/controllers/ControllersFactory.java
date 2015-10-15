@@ -22,12 +22,6 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform;
 public interface ControllersFactory extends EFactory
 {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
-	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

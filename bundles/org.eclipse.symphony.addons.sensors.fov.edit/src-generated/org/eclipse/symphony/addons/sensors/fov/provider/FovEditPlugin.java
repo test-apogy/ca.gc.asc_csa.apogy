@@ -47,9 +47,9 @@ public final class FovEditPlugin extends EMFPlugin {
 	public FovEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		   });
 	}

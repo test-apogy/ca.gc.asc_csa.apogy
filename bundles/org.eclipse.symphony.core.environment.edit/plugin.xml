@@ -25,11 +25,11 @@
             uri="org.eclipse.symphony.core"
             class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

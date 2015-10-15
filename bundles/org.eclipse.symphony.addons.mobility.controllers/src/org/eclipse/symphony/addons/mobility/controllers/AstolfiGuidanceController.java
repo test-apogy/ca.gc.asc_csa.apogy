@@ -43,12 +43,6 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  * @generated
  */
 public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollower<SkidSteeredMobilePlateform, WayPointPath> {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2008.";
 
 	/**
 	 * Returns the value of the '<em><b>Current Way Point</b></em>' reference.
@@ -138,7 +132,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rho</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Rho()
-	 * @model transient="true" changeable="false"
+	 * @model unique="false" transient="true" changeable="false"
 	 * @generated
 	 */
 	double getRho();
@@ -153,7 +147,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Phi</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Phi()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	double getPhi();
@@ -168,7 +162,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Alpha</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Alpha()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	double getAlpha();
@@ -183,7 +177,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Yaw</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Yaw()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	double getYaw();
@@ -198,7 +192,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nu</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Nu()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	double getNu();
@@ -213,7 +207,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Omega</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Omega()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	double getOmega();
@@ -229,7 +223,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Krho</em>' attribute.
 	 * @see #setKrho(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Krho()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getKrho();
@@ -255,7 +249,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Kphi</em>' attribute.
 	 * @see #setKphi(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Kphi()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getKphi();
@@ -281,7 +275,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Kalpha</em>' attribute.
 	 * @see #setKalpha(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_Kalpha()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getKalpha();
@@ -307,7 +301,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Destination Distance Threshold</em>' attribute.
 	 * @see #setDestinationDistanceThreshold(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_DestinationDistanceThreshold()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getDestinationDistanceThreshold();
@@ -333,7 +327,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Way Point Distance Threshold</em>' attribute.
 	 * @see #setWayPointDistanceThreshold(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_WayPointDistanceThreshold()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getWayPointDistanceThreshold();
@@ -359,7 +353,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>KHill</em>' attribute.
 	 * @see #setKHill(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_KHill()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getKHill();
@@ -385,7 +379,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Hill Threshold</em>' attribute.
 	 * @see #setHillThreshold(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_HillThreshold()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getHillThreshold();
@@ -411,7 +405,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Phi Threshold For Reduced Velocity</em>' attribute.
 	 * @see #setPhiThresholdForReducedVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_PhiThresholdForReducedVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getPhiThresholdForReducedVelocity();
@@ -437,7 +431,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Alpha Threshold For Reduced Velocity</em>' attribute.
 	 * @see #setAlphaThresholdForReducedVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_AlphaThresholdForReducedVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getAlphaThresholdForReducedVelocity();
@@ -464,7 +458,7 @@ public interface AstolfiGuidanceController extends SkidSteeredPlatformPathFollow
 	 * @return the value of the '<em>Smooth Path Enabled</em>' attribute.
 	 * @see #setSmoothPathEnabled(boolean)
 	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController_SmoothPathEnabled()
-	 * @model default="true"
+	 * @model default="true" unique="false"
 	 * @generated
 	 */
 	boolean isSmoothPathEnabled();

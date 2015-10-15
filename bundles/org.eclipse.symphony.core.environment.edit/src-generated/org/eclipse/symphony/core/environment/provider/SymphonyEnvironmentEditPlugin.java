@@ -49,13 +49,13 @@ public final class SymphonyEnvironmentEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

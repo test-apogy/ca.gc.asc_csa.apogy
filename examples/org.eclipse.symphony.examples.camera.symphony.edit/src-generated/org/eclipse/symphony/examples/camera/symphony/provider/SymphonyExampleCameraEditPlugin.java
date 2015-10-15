@@ -52,11 +52,11 @@ public final class SymphonyExampleCameraEditPlugin extends EMFPlugin
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		   });
 	}
