@@ -174,8 +174,8 @@ public class PathsPackageImpl extends EPackageImpl implements PathsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		Data3dPackage.eINSTANCE.eClass();
 		TopologyPackage.eINSTANCE.eClass();
+		Data3dPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thePathsPackage.createPackageContents();
