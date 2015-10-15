@@ -58,11 +58,11 @@ public final class RangeEditPlugin extends EMFPlugin {
 		     Data3dEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
-		     Data25dEditPlugin.INSTANCE,
 		     CommonEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     SensorsEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
+		     Data25dEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -15,6 +15,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
+ * *
  * A path planner that produces a WayPoinPath based on a triangular mesh.
  * <!-- end-model-doc -->
  *
@@ -30,13 +31,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * @generated
  */
 public interface MeshWayPointPathPlanner<T extends CartesianPolygon> extends WayPointPathPlanner {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * Returns the value of the '<em><b>Mesh</b></em>' reference.
 	 * <!-- begin-user-doc -->

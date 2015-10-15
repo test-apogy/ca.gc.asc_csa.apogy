@@ -30,13 +30,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  */
 public class MeshWayPointPathPlannerImpl<T extends CartesianPolygon> extends WayPointPathPlannerImpl implements MeshWayPointPathPlanner<T> {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * The cached value of the '{@link #getMesh() <em>Mesh</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

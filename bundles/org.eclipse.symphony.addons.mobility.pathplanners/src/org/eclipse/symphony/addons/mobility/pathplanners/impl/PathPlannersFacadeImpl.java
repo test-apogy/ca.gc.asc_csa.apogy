@@ -6,10 +6,9 @@
 package org.eclipse.symphony.addons.mobility.pathplanners.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade;
 import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersFactory;
@@ -25,14 +24,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *
  * @generated
  */
-public class PathPlannersFacadeImpl extends EObjectImpl implements PathPlannersFacade {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
+public class PathPlannersFacadeImpl extends MinimalEObjectImpl.Container implements PathPlannersFacade {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -17,7 +17,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Represent an exclusion zone defined as a circle. 
+ * *
+ * Represent an exclusion zone defined as a circle.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -34,23 +35,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
  */
 public interface CircularExclusionZone extends ExclusionZone, CoordinatesSamplingShape<CartesianPositionCoordinates>, PolygonSamplingShape<CartesianPositionCoordinates, CartesianTriangle> {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * Returns the value of the '<em><b>Radius</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The radius of the exclusion zone.
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getCircularExclusionZone_Radius()
-	 * @model required="true"
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getRadius();
@@ -67,7 +58,6 @@ public interface CircularExclusionZone extends ExclusionZone, CoordinatesSamplin
 
 	/**
 	 * Returns the value of the '<em><b>Invert Sampling Shape</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Invert Sampling Shape</em>' attribute isn't clear,
@@ -77,7 +67,7 @@ public interface CircularExclusionZone extends ExclusionZone, CoordinatesSamplin
 	 * @return the value of the '<em>Invert Sampling Shape</em>' attribute.
 	 * @see #setInvertSamplingShape(boolean)
 	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getCircularExclusionZone_InvertSamplingShape()
-	 * @model default="false"
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isInvertSamplingShape();

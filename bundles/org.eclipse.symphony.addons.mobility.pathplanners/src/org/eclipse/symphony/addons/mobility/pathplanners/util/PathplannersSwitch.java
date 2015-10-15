@@ -39,13 +39,6 @@ import org.eclipse.symphony.common.topology.Node;
  */
 public class PathplannersSwitch<T1> extends Switch<T1> {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -22,14 +22,7 @@ public interface PathPlannersFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2007.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
+	 * @model unique="false" radiusUnique="false" parentUnique="false"
 	 * @generated
 	 */
 	CircularExclusionZone createCircularExclusionZone(double radius, GroupNode parent);

@@ -26,16 +26,10 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Pathplanners' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Pathplanners' modelDirectory='/org.eclipse.symphony.addons.mobility.pathplanners/src' editDirectory='/org.eclipse.symphony.addons.mobility.pathplanners.edit/src' basePackage='org.eclipse.symphony.addons.mobility'"
  * @generated
  */
 public interface PathplannersPackage extends EPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -50,7 +44,7 @@ public interface PathplannersPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ca/gc/space/mrt/pathplanners/pathplanners.ecore";
+	String eNS_URI = "org.eclipse.symphony.addons.mobility.pathplanners";
 
 	/**
 	 * The package namespace name.
@@ -58,7 +52,7 @@ public interface PathplannersPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ca.gc.space.mrt.pathplanners";
+	String eNS_PREFIX = "pathplanners";
 
 	/**
 	 * The singleton instance of the package.
@@ -106,22 +100,22 @@ public interface PathplannersPackage extends EPackage {
 	int WAY_POINT_PATH_PLANNER__OUTPUT = ProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
-	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Current Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER__CURRENT_POSITION = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int WAY_POINT_PATH_PLANNER__CURRENT_POSITION = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Way Point Path Planner</em>' class.
@@ -197,15 +191,6 @@ public interface PathplannersPackage extends EPackage {
 	int MESH_WAY_POINT_PATH_PLANNER__OUTPUT = WAY_POINT_PATH_PLANNER__OUTPUT;
 
 	/**
-	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION;
-
-	/**
 	 * The feature id for the '<em><b>Current Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -213,6 +198,15 @@ public interface PathplannersPackage extends EPackage {
 	 * @ordered
 	 */
 	int MESH_WAY_POINT_PATH_PLANNER__CURRENT_POSITION = WAY_POINT_PATH_PLANNER__CURRENT_POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESH_WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION;
 
 	/**
 	 * The feature id for the '<em><b>Mesh</b></em>' reference.
@@ -498,17 +492,6 @@ public interface PathplannersPackage extends EPackage {
 	EClass getWayPointPathPlanner();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Current Destination</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination()
-	 * @see #getWayPointPathPlanner()
-	 * @generated
-	 */
-	EReference getWayPointPathPlanner_CurrentDestination();
-
-	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -518,6 +501,17 @@ public interface PathplannersPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getWayPointPathPlanner_CurrentPosition();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Current Destination</em>'.
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination()
+	 * @see #getWayPointPathPlanner()
+	 * @generated
+	 */
+	EReference getWayPointPathPlanner_CurrentDestination();
 
 	/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#plan(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Plan</em>}' operation.
@@ -665,20 +659,20 @@ public interface PathplannersPackage extends EPackage {
 		EClass WAY_POINT_PATH_PLANNER = eINSTANCE.getWayPointPathPlanner();
 
 		/**
-		 * The meta object literal for the '<em><b>Current Destination</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = eINSTANCE.getWayPointPathPlanner_CurrentDestination();
-
-		/**
 		 * The meta object literal for the '<em><b>Current Position</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference WAY_POINT_PATH_PLANNER__CURRENT_POSITION = eINSTANCE.getWayPointPathPlanner_CurrentPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Current Destination</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = eINSTANCE.getWayPointPathPlanner_CurrentDestination();
 
 		/**
 		 * The meta object literal for the '<em><b>Plan</b></em>' operation.

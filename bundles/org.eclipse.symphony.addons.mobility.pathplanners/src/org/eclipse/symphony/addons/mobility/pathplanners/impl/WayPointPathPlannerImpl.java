@@ -6,7 +6,6 @@
 package org.eclipse.symphony.addons.mobility.pathplanners.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -26,8 +25,8 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.WayPointPathPlannerImpl#getCurrentDestination <em>Current Destination</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.WayPointPathPlannerImpl#getCurrentPosition <em>Current Position</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.WayPointPathPlannerImpl#getCurrentDestination <em>Current Destination</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,11 +34,14 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  */
 public class WayPointPathPlannerImpl extends ProcessorImpl<CartesianCoordinatesSet, WayPointPath> implements WayPointPathPlanner {
 	/**
+	 * The cached value of the '{@link #getCurrentPosition() <em>Current Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #getCurrentPosition()
 	 * @generated
+	 * @ordered
 	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
+	protected CartesianPositionCoordinates currentPosition;
 
 	/**
 	 * The cached value of the '{@link #getCurrentDestination() <em>Current Destination</em>}' reference.
@@ -50,15 +52,6 @@ public class WayPointPathPlannerImpl extends ProcessorImpl<CartesianCoordinatesS
 	 * @ordered
 	 */
 	protected CartesianPositionCoordinates currentDestination;
-	/**
-	 * The cached value of the '{@link #getCurrentPosition() <em>Current Position</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentPosition()
-	 * @generated
-	 * @ordered
-	 */
-	protected CartesianPositionCoordinates currentPosition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,47 +99,6 @@ public class WayPointPathPlannerImpl extends ProcessorImpl<CartesianCoordinatesS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CartesianPositionCoordinates getCurrentDestination()
-	{
-		if (currentDestination != null && currentDestination.eIsProxy()) {
-			InternalEObject oldCurrentDestination = (InternalEObject)currentDestination;
-			currentDestination = (CartesianPositionCoordinates)eResolveProxy(oldCurrentDestination);
-			if (currentDestination != oldCurrentDestination) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION, oldCurrentDestination, currentDestination));
-			}
-		}
-		return currentDestination;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CartesianPositionCoordinates basicGetCurrentDestination()
-	{
-		return currentDestination;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCurrentDestination(CartesianPositionCoordinates newCurrentDestination)
-	{
-		CartesianPositionCoordinates oldCurrentDestination = currentDestination;
-		currentDestination = newCurrentDestination;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION, oldCurrentDestination, currentDestination));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CartesianPositionCoordinates getCurrentPosition()
 	{
 		if (currentPosition != null && currentPosition.eIsProxy()) {
@@ -175,12 +127,49 @@ public class WayPointPathPlannerImpl extends ProcessorImpl<CartesianCoordinatesS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCurrentPosition(CartesianPositionCoordinates newCurrentPosition)
-	{
+	public void setCurrentPosition(CartesianPositionCoordinates newCurrentPosition) {
 		CartesianPositionCoordinates oldCurrentPosition = currentPosition;
 		currentPosition = newCurrentPosition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_POSITION, oldCurrentPosition, currentPosition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CartesianPositionCoordinates getCurrentDestination() {
+		if (currentDestination != null && currentDestination.eIsProxy()) {
+			InternalEObject oldCurrentDestination = (InternalEObject)currentDestination;
+			currentDestination = (CartesianPositionCoordinates)eResolveProxy(oldCurrentDestination);
+			if (currentDestination != oldCurrentDestination) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION, oldCurrentDestination, currentDestination));
+			}
+		}
+		return currentDestination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CartesianPositionCoordinates basicGetCurrentDestination() {
+		return currentDestination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCurrentDestination(CartesianPositionCoordinates newCurrentDestination) {
+		CartesianPositionCoordinates oldCurrentDestination = currentDestination;
+		currentDestination = newCurrentDestination;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION, oldCurrentDestination, currentDestination));
 	}
 
 	/**
@@ -203,12 +192,12 @@ public class WayPointPathPlannerImpl extends ProcessorImpl<CartesianCoordinatesS
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION:
-				if (resolve) return getCurrentDestination();
-				return basicGetCurrentDestination();
 			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_POSITION:
 				if (resolve) return getCurrentPosition();
 				return basicGetCurrentPosition();
+			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION:
+				if (resolve) return getCurrentDestination();
+				return basicGetCurrentDestination();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -222,11 +211,11 @@ public class WayPointPathPlannerImpl extends ProcessorImpl<CartesianCoordinatesS
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION:
-				setCurrentDestination((CartesianPositionCoordinates)newValue);
-				return;
 			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_POSITION:
 				setCurrentPosition((CartesianPositionCoordinates)newValue);
+				return;
+			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION:
+				setCurrentDestination((CartesianPositionCoordinates)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,11 +230,11 @@ public class WayPointPathPlannerImpl extends ProcessorImpl<CartesianCoordinatesS
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION:
-				setCurrentDestination((CartesianPositionCoordinates)null);
-				return;
 			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_POSITION:
 				setCurrentPosition((CartesianPositionCoordinates)null);
+				return;
+			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION:
+				setCurrentDestination((CartesianPositionCoordinates)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -260,10 +249,10 @@ public class WayPointPathPlannerImpl extends ProcessorImpl<CartesianCoordinatesS
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION:
-				return currentDestination != null;
 			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_POSITION:
 				return currentPosition != null;
+			case PathplannersPackage.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION:
+				return currentDestination != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -128,7 +128,7 @@ public class SymphonyToolsVehicleSwitch<T> extends Switch<T>
 			case SymphonyToolsVehiclePackage.THRUSTER: {
 				Thruster thruster = (Thruster)theEObject;
 				T result = caseThruster(thruster);
-				if (result == null) result = caseTopology_Node(thruster);
+				if (result == null) result = caseNode(thruster);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -196,9 +196,9 @@ public class SymphonyToolsVehicleSwitch<T> extends Switch<T>
 			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE: {
 				PathPlannerToolNode pathPlannerToolNode = (PathPlannerToolNode)theEObject;
 				T result = casePathPlannerToolNode(pathPlannerToolNode);
-				if (result == null) result = caseTopology_AggregateGroupNode(pathPlannerToolNode);
-				if (result == null) result = caseTopology_GroupNode(pathPlannerToolNode);
-				if (result == null) result = caseTopology_Node(pathPlannerToolNode);
+				if (result == null) result = caseAggregateGroupNode(pathPlannerToolNode);
+				if (result == null) result = caseGroupNode(pathPlannerToolNode);
+				if (result == null) result = caseNode(pathPlannerToolNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -536,21 +536,6 @@ public class SymphonyToolsVehicleSwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTopology_Node(Node object) {
-		return null;
-	}
-
-		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Topology Binding</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -653,36 +638,6 @@ public class SymphonyToolsVehicleSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseAbstractTwoPoints3DTool(AbstractTwoPoints3DTool object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Group Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Group Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTopology_GroupNode(GroupNode object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Aggregate Group Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Aggregate Group Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTopology_AggregateGroupNode(AggregateGroupNode object) {
 		return null;
 	}
 

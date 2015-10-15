@@ -26,13 +26,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  */
 public class PathplannersFactoryImpl extends EFactoryImpl implements PathplannersFactory {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

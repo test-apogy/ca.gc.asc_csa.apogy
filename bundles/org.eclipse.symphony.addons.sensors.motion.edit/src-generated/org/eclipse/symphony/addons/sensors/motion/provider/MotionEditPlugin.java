@@ -43,8 +43,8 @@ public final class MotionEditPlugin extends EMFPlugin {
 	public MotionEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

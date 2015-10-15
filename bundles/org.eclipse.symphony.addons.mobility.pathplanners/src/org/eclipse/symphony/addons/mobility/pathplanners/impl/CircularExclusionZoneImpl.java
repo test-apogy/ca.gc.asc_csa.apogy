@@ -52,13 +52,6 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	private static CartesianPositionCoordinates center = Data3dFactory.eINSTANCE.createCartesianPositionCoordinates();
 	
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * The default value of the '{@link #getRadius() <em>Radius</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -320,6 +313,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON:

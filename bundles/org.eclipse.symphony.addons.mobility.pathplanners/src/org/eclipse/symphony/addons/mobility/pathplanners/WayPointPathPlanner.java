@@ -16,14 +16,15 @@ import org.eclipse.symphony.common.processors.Processor;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
+ * *
  * A path planner that produces a WayPoinPath.
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,11 +34,30 @@ import org.eclipse.symphony.common.processors.Processor;
  */
 public interface WayPointPathPlanner extends Processor<CartesianCoordinatesSet, WayPointPath> {
 	/**
+	 * Returns the value of the '<em><b>Current Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Current Position</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Current Position</em>' reference.
+	 * @see #setCurrentPosition(CartesianPositionCoordinates)
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getWayPointPathPlanner_CurrentPosition()
+	 * @model transient="true"
 	 * @generated
 	 */
-	String copyright = "Canadian Space Agency 2007.";
+	CartesianPositionCoordinates getCurrentPosition();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Current Position</em>' reference.
+	 * @see #getCurrentPosition()
+	 * @generated
+	 */
+	void setCurrentPosition(CartesianPositionCoordinates value);
 
 	/**
 	 * Returns the value of the '<em><b>Current Destination</b></em>' reference.
@@ -66,35 +86,9 @@ public interface WayPointPathPlanner extends Processor<CartesianCoordinatesSet, 
 	void setCurrentDestination(CartesianPositionCoordinates value);
 
 	/**
-	 * Returns the value of the '<em><b>Current Position</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Current Position</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current Position</em>' reference.
-	 * @see #setCurrentPosition(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getWayPointPathPlanner_CurrentPosition()
-	 * @model transient="true"
-	 * @generated
-	 */
-	CartesianPositionCoordinates getCurrentPosition();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current Position</em>' reference.
-	 * @see #getCurrentPosition()
-	 * @generated
-	 */
-	void setCurrentPosition(CartesianPositionCoordinates value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" exceptions="org.eclipse.symphony.common.processors.Exception" currentPositionRequired="true" destinationPositionRequired="true"
+	 * @model unique="false" exceptions="org.eclipse.symphony.common.processors.Exception" currentPositionUnique="false" destinationPositionUnique="false"
 	 * @generated
 	 */
 	WayPointPath plan(CartesianPositionCoordinates currentPosition, CartesianPositionCoordinates destinationPosition) throws Exception;

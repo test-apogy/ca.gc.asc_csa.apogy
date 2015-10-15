@@ -43,8 +43,8 @@ public final class PrimitivesEditPlugin extends EMFPlugin {
 	public PrimitivesEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EcoreEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     EcoreEditPlugin.INSTANCE,
 		   });
 	}
 

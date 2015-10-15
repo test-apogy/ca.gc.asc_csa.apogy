@@ -39,13 +39,6 @@ public class PathplannersPackageImpl extends EPackageImpl implements Pathplanner
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass wayPointPathPlannerEClass = null;
 
 	/**
@@ -154,7 +147,7 @@ public class PathplannersPackageImpl extends EPackageImpl implements Pathplanner
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWayPointPathPlanner_CurrentDestination()
+	public EReference getWayPointPathPlanner_CurrentPosition()
 	{
 		return (EReference)wayPointPathPlannerEClass.getEStructuralFeatures().get(0);
 	}
@@ -164,8 +157,7 @@ public class PathplannersPackageImpl extends EPackageImpl implements Pathplanner
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWayPointPathPlanner_CurrentPosition()
-	{
+	public EReference getWayPointPathPlanner_CurrentDestination() {
 		return (EReference)wayPointPathPlannerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -297,8 +289,8 @@ public class PathplannersPackageImpl extends EPackageImpl implements Pathplanner
 
 		// Create classes and their features
 		wayPointPathPlannerEClass = createEClass(WAY_POINT_PATH_PLANNER);
-		createEReference(wayPointPathPlannerEClass, WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION);
 		createEReference(wayPointPathPlannerEClass, WAY_POINT_PATH_PLANNER__CURRENT_POSITION);
+		createEReference(wayPointPathPlannerEClass, WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION);
 		createEOperation(wayPointPathPlannerEClass, WAY_POINT_PATH_PLANNER___PLAN__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
 
 		meshWayPointPathPlannerEClass = createEClass(MESH_WAY_POINT_PATH_PLANNER);
@@ -378,12 +370,12 @@ public class PathplannersPackageImpl extends EPackageImpl implements Pathplanner
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(wayPointPathPlannerEClass, WayPointPathPlanner.class, "WayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWayPointPathPlanner_CurrentDestination(), theData3dPackage.getCartesianPositionCoordinates(), null, "currentDestination", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWayPointPathPlanner_CurrentPosition(), theData3dPackage.getCartesianPositionCoordinates(), null, "currentPosition", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWayPointPathPlanner_CurrentDestination(), theData3dPackage.getCartesianPositionCoordinates(), null, "currentDestination", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getWayPointPathPlanner__Plan__CartesianPositionCoordinates_CartesianPositionCoordinates(), thePathsPackage.getWayPointPath(), "plan", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "currentPosition", 1, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "destinationPosition", 1, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getWayPointPathPlanner__Plan__CartesianPositionCoordinates_CartesianPositionCoordinates(), thePathsPackage.getWayPointPath(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "currentPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "destinationPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theProcessorsPackage.getException());
 
 		initEClass(meshWayPointPathPlannerEClass, MeshWayPointPathPlanner.class, "MeshWayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -396,22 +388,22 @@ public class PathplannersPackageImpl extends EPackageImpl implements Pathplanner
 
 		initEClass(exclusionZoneEClass, ExclusionZone.class, "ExclusionZone", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getExclusionZone__IsInside__CartesianPositionCoordinates(), theEcorePackage.getEBoolean(), "isInside", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "point", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getExclusionZone__IsInside__CartesianPositionCoordinates(), theEcorePackage.getEBoolean(), "isInside", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getExclusionZone__Intersects__CartesianPositionCoordinates_CartesianPositionCoordinates(), theEcorePackage.getEBoolean(), "intersects", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "from", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "to", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getExclusionZone__Intersects__CartesianPositionCoordinates_CartesianPositionCoordinates(), theEcorePackage.getEBoolean(), "intersects", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(circularExclusionZoneEClass, CircularExclusionZone.class, "CircularExclusionZone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCircularExclusionZone_Radius(), theEcorePackage.getEDouble(), "radius", null, 1, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCircularExclusionZone_InvertSamplingShape(), theEcorePackage.getEBoolean(), "invertSamplingShape", "false", 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCircularExclusionZone_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCircularExclusionZone_InvertSamplingShape(), theEcorePackage.getEBoolean(), "invertSamplingShape", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pathPlannersFacadeEClass, PathPlannersFacade.class, "PathPlannersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getPathPlannersFacade__CreateCircularExclusionZone__double_GroupNode(), this.getCircularExclusionZone(), "createCircularExclusionZone", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getGroupNode(), "parent", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getPathPlannersFacade__CreateCircularExclusionZone__double_GroupNode(), this.getCircularExclusionZone(), "createCircularExclusionZone", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theTopologyPackage.getGroupNode(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

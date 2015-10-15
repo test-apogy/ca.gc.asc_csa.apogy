@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath
 import org.eclipse.symphony.common.topology.AggregateGroupNode
 import org.eclipse.symphony.common.topology.Node
-import ca.gc.space.mrt.mobility.pathplanners.MeshWayPointPathPlanner
+import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner
 
 
 type Point2d wraps javax.vecmath.Point2d

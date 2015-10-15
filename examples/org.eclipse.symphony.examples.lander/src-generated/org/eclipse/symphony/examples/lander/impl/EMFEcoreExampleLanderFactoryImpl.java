@@ -4,7 +4,6 @@
 package org.eclipse.symphony.examples.lander.impl;
 
 import javax.vecmath.Matrix3d;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
