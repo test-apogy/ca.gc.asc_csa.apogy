@@ -59,7 +59,7 @@ public interface Population extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Standard Deviation</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation_StandardDeviation()
-	 * @model transient="true" changeable="false" derived="true"
+	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	double getStandardDeviation();
@@ -74,7 +74,7 @@ public interface Population extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Average</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation_Average()
-	 * @model transient="true" changeable="false" derived="true"
+	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	double getAverage();
@@ -89,7 +89,7 @@ public interface Population extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sum</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation_Sum()
-	 * @model transient="true" changeable="false" derived="true"
+	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	double getSum();
@@ -104,7 +104,7 @@ public interface Population extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Median</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation_Median()
-	 * @model transient="true" changeable="false" derived="true"
+	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	double getMedian();
@@ -119,7 +119,7 @@ public interface Population extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sum Squared</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation_SumSquared()
-	 * @model transient="true" changeable="false" derived="true"
+	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	double getSumSquared();
@@ -134,7 +134,7 @@ public interface Population extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variance</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation_Variance()
-	 * @model transient="true" changeable="false" derived="true"
+	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
 	double getVariance();
@@ -150,7 +150,7 @@ public interface Population extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation_Min()
-	 * @model default="0.0" transient="true" changeable="false" volatile="true" derived="true"
+	 * @model default="0.0" unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	double getMin();
@@ -166,7 +166,7 @@ public interface Population extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max</em>' attribute.
 	 * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation_Max()
-	 * @model default="0.0" transient="true" changeable="false" volatile="true" derived="true"
+	 * @model default="0.0" unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	double getMax();

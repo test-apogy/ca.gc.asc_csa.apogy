@@ -7,13 +7,12 @@ package org.eclipse.symphony.common.math.statistics.impl;
 
 import java.util.Collection;
 import java.util.Collections;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.symphony.common.math.statistics.Population;
 import org.eclipse.symphony.common.math.statistics.StatisticsPackage;
@@ -38,7 +37,7 @@ import org.eclipse.symphony.common.math.statistics.StatisticsPackage;
  *
  * @generated
  */
-public class PopulationImpl extends EObjectImpl implements Population {
+public class PopulationImpl extends MinimalEObjectImpl.Container implements Population {
 
 	private boolean averageDirty = true;
 	private boolean sumDirty = true;

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.2"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
 <plugin>
-   <extension
-         point="org.eclipse.emf.ecore.generated_package">
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_common_math_statistics -->
       <package
+            uri="org.eclipse.symphony.common.math.statistics"
             class="org.eclipse.symphony.common.math.statistics.StatisticsPackage"
-            genModel="model/statistics.genmodel"
-            uri="http:///ca/gc/space/math/statistics.ecore">
-      </package>
+            genModel="model/symphony_common_math_statistics.xcore"/>
    </extension>
 
 </plugin>

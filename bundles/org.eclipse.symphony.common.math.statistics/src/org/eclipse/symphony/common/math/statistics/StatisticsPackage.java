@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.math.statistics.StatisticsFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel modelDirectory='/org.eclipse.symphony.common.math.statistics/src' basePackage='org.eclipse.symphony.common.math'"
  * @generated
  */
 public interface StatisticsPackage extends EPackage {
@@ -39,7 +40,7 @@ public interface StatisticsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ca/gc/space/math/statistics.ecore";
+	String eNS_URI = "org.eclipse.symphony.common.math.statistics";
 
 	/**
 	 * The package namespace name.
@@ -47,7 +48,7 @@ public interface StatisticsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ca.gc.space.math";
+	String eNS_PREFIX = "statistics";
 
 	/**
 	 * The singleton instance of the package.
@@ -156,6 +157,16 @@ public interface StatisticsPackage extends EPackage {
 	 * @ordered
 	 */
 	int POPULATION_FEATURE_COUNT = 9;
+
+
+	/**
+	 * The number of operations of the '<em>Population</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POPULATION_OPERATION_COUNT = 0;
 
 
 	/**
