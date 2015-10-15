@@ -16,15 +16,6 @@
             Class="org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentationAdapter">
       </Class>
    </extension>
-   <extension
-         point="org.eclipse.symphony.common.obsolete.eclipse.emf.ui.PropertyCellViewerContentProvider">
-      <contentProvider
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
-            id="org.eclipse.symphony.addons.sensors.imaging.ui.celleditors.ImageDataPropertyCellViewerContentProvider"
-            target="org.eclipse.swt.graphics.ImageData">
-      </contentProvider>
-   </extension>
-
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging_ui -->
       <package
