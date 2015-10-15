@@ -22,12 +22,12 @@ import org.eclipse.symphony.common.processors.ProcessorsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorsChainImpl#getIntermediateResult <em>Intermediate Result</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorsChainImpl#getRunningProcessor <em>Running Processor</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorsChainImpl#getProcessors <em>Processors</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

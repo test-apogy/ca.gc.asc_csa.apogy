@@ -8,16 +8,10 @@ package org.eclipse.symphony.addons.mobility.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.MobilityPackage;
@@ -32,20 +26,7 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  */
 public class SkidSteeredMobilePlateformItemProvider
 	extends MobilePlateformItemProvider
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -101,7 +82,7 @@ public class SkidSteeredMobilePlateformItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_COMMANDEDPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -120,11 +101,11 @@ public class SkidSteeredMobilePlateformItemProvider
 				 getString("_UI_SkidSteeredMobilePlateform_actualRightWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlateform_actualRightWheelsVelocity_feature", "_UI_SkidSteeredMobilePlateform_type"),
 				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATEFORM__ACTUAL_RIGHT_WHEELS_VELOCITY,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_TELEMETRYPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -147,7 +128,7 @@ public class SkidSteeredMobilePlateformItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_COMMANDEDPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -166,11 +147,11 @@ public class SkidSteeredMobilePlateformItemProvider
 				 getString("_UI_SkidSteeredMobilePlateform_actualLeftWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlateform_actualLeftWheelsVelocity_feature", "_UI_SkidSteeredMobilePlateform_type"),
 				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATEFORM__ACTUAL_LEFT_WHEELS_VELOCITY,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_TELEMETRYPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -193,7 +174,7 @@ public class SkidSteeredMobilePlateformItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_COMMANDEDPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -212,11 +193,11 @@ public class SkidSteeredMobilePlateformItemProvider
 				 getString("_UI_SkidSteeredMobilePlateform_actualAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlateform_actualAngularVelocity_feature", "_UI_SkidSteeredMobilePlateform_type"),
 				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATEFORM__ACTUAL_ANGULAR_VELOCITY,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_TELEMETRYPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -239,7 +220,7 @@ public class SkidSteeredMobilePlateformItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_COMMANDEDPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -258,11 +239,11 @@ public class SkidSteeredMobilePlateformItemProvider
 				 getString("_UI_SkidSteeredMobilePlateform_actualTranslationVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlateform_actualTranslationVelocity_feature", "_UI_SkidSteeredMobilePlateform_type"),
 				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATEFORM__ACTUAL_TRANSLATION_VELOCITY,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_TELEMETRYPropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -281,11 +262,11 @@ public class SkidSteeredMobilePlateformItemProvider
 				 getString("_UI_SkidSteeredMobilePlateform_effectiveSteeringWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlateform_effectiveSteeringWidth_feature", "_UI_SkidSteeredMobilePlateform_type"),
 				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATEFORM__EFFECTIVE_STEERING_WIDTH,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 getString("_UI_MOBILE_PLATEFORM_CONFIGURATIONPropertyCategory"),
+				 null,
 				 null));
 	}
 

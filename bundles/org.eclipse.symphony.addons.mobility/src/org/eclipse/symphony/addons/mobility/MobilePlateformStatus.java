@@ -63,13 +63,6 @@ public enum MobilePlateformStatus implements Enumerator
 	FAILED(3, "FAILED", "FAILED");
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * The '<em><b>OFF</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>

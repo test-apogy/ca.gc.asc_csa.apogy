@@ -18,10 +18,10 @@ import javax.vecmath.Color3f;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapRuler#getRulerColor <em>Ruler Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapRuler()
  * @model

@@ -24,10 +24,10 @@ import org.eclipse.symphony.core.invocator.VariableImplementationsList;
  * <em><b>Variable Implementations List</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableImplementationsListImpl#getVariableImplementations <em>Variable Implementations</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

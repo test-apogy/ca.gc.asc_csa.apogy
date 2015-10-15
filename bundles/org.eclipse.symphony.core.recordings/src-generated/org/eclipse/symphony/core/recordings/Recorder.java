@@ -25,13 +25,13 @@ import org.eclipse.symphony.core.invocator.DataProductsList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recorder#getDestination <em>Destination</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recorder#getChannelsLists <em>Channels Lists</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recorder#getRecorderState <em>Recorder State</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recorder#getRecording <em>Recording</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage#getRecorder()
  * @model

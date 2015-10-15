@@ -1,0 +1,44 @@
+@GenModel(prefix="Mobility", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="Mobility") 
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility/src")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.edit/src")
+
+package org.eclipse.symphony.addons.mobility
+
+import org.eclipse.symphony.common.topology.AggregateGroupNode
+
+/**
+ * Defines a generic mobile platform.
+ * FIXME: Change Plateform to Platform.
+ */
+class MobilePlateform extends AggregateGroupNode{
+	boolean moving
+	
+	// FIXME: Change Plateform to Platform.
+	MobilePlateformStatus mobilePlateformStatus = "OFF"
+}
+
+/**
+ * FIXME: Change SkidSteeredMobilePlateform to SkidSteeredMobilePlatform
+ */
+class SkidSteeredMobilePlateform extends MobilePlateform{
+	double commandedRightWheelsVelocity
+	double actualRightWheelsVelocity
+	
+	double commandedLeftWheelsVelocity
+	double actualLeftWheelsVelocity
+	
+	double commandedAngularVelocity
+	double actualAngularVelocity
+	
+	double commandedTranslationVelocity
+	double actualTranslationVelocity
+	
+	double effectiveSteeringWidth = "0.5"
+}
+
+enum MobilePlateformStatus{
+	OFF = 0,
+	READY = 1,
+	BUSY = 2,
+	FAILED = 3
+}

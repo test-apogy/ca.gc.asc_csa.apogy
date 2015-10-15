@@ -12,7 +12,6 @@ import javax.vecmath.Color3f;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName <em>Font Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize <em>Font Size</em>}</li>
@@ -20,6 +19,7 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset <em>Vertical Offset</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor <em>Text Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAbstractTextOverlay()
  * @model abstract="true"

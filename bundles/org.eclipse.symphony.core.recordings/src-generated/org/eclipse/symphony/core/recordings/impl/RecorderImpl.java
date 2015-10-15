@@ -50,13 +50,13 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
  * <em><b>Recorder</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecorderImpl#getDestination <em>Destination</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecorderImpl#getChannelsLists <em>Channels Lists</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecorderImpl#getRecorderState <em>Recorder State</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecorderImpl#getRecording <em>Recording</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

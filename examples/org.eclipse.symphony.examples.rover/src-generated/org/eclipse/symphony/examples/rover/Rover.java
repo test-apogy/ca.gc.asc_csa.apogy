@@ -21,7 +21,6 @@ import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getRoboticArm <em>Robotic Arm</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.Rover#getMobilePlatform <em>Mobile Platform</em>}</li>
@@ -33,6 +32,7 @@ import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
  *   <li>{@link org.eclipse.symphony.examples.rover.Rover#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.Rover#isDisposed <em>Disposed</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover()
  * @model abstract="true"

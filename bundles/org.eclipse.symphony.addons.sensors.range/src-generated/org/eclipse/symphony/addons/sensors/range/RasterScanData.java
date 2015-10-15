@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanData#getRasterScanSettings <em>Raster Scan Settings</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanData#getScanData <em>Scan Data</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanData()
  * @model

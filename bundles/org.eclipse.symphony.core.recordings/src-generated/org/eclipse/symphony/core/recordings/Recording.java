@@ -19,13 +19,13 @@ import org.eclipse.symphony.core.invocator.AbstractResult;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recording#getRecordingTracks <em>Recording Tracks</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recording#getDuration <em>Duration</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recording#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Recording#getEndDate <em>End Date</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage#getRecording()
  * @model

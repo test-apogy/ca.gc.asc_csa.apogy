@@ -19,13 +19,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getBatteries <em>Batteries</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getActiveBattery <em>Active Battery</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getCurrentVoltage <em>Current Voltage</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getCurrentCurrent <em>Current Current</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getPowerSystem()
  * @model

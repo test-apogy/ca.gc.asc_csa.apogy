@@ -4,7 +4,6 @@
 package org.eclipse.symphony.common.topology.bindings.impl;
 
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

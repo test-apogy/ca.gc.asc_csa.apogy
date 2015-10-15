@@ -29,12 +29,6 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 public class MobilePlateformImpl extends AggregateGroupNodeImpl implements
 		MobilePlateform {
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * The default value of the '{@link #isMoving() <em>Moving</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isMoving()

@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList#getEarthSurfaceLocations <em>Earth Surface Locations</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthSurfaceLocationList()
  * @model

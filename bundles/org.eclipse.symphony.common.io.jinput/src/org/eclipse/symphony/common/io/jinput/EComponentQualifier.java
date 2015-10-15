@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EComponentQualifier#getEComponentName <em>EComponent Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EComponentQualifier#getEControllerName <em>EController Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponentQualifier()
  * @model

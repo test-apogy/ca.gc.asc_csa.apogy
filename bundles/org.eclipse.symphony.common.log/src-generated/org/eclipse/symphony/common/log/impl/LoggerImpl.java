@@ -20,6 +20,8 @@ import org.osgi.framework.ServiceReference;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Logger</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

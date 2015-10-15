@@ -21,12 +21,12 @@ import org.eclipse.symphony.common.emf.EMFEcorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraImageAnnotationImpl#isVisible <em>Visible</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

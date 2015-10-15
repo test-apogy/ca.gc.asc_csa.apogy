@@ -18,11 +18,11 @@ import org.eclipse.symphony.core.environment.URLMapLayer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.URLImageMapLayerImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.URLImageMapLayerImpl#getLegendURL <em>Legend URL</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -16,7 +16,6 @@ import org.eclipse.symphony.common.obsolete.mrt.Server;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getGps <em>Gps</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginLatitude <em>Origin Latitude</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.symphony.common.obsolete.mrt.Server;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginElevation <em>Origin Elevation</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getMaxInitTime <em>Max Init Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSPoseSensor()
  * @model

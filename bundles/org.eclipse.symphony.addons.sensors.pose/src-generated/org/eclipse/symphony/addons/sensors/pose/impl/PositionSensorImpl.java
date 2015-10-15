@@ -6,7 +6,6 @@
 package org.eclipse.symphony.addons.sensors.pose.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -34,11 +33,11 @@ import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

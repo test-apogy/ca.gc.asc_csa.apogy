@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EComponents#getComponents <em>Components</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EComponents#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EComponents#getEController <em>EController</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponents()
  * @model

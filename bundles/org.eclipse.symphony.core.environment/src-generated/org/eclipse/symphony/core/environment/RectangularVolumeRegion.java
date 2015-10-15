@@ -11,12 +11,12 @@ package org.eclipse.symphony.core.environment;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZMin <em>ZMin</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZMax <em>ZMax</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZDimension <em>ZDimension</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularVolumeRegion()
  * @model

@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.topology.TransformNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getPose <em>Pose</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getDataLogger <em>Data Logger</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPoseSensor()
  * @model

@@ -12,12 +12,12 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getNumberFormat <em>Number Format</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReferenceChangeCount <em>Variable Feature Reference Change Count</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getEMFFeatureOverlay()
  * @model

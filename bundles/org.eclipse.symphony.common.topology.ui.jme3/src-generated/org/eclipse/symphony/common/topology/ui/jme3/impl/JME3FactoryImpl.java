@@ -4,7 +4,6 @@
 package org.eclipse.symphony.common.topology.ui.jme3.impl;
 
 import javax.vecmath.Color3f;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -15,7 +14,6 @@ import org.eclipse.symphony.common.topology.ui.jme3.JME3Factory;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Package;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3SceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory;
-
 import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Geometry;

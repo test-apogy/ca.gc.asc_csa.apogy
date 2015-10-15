@@ -15,6 +15,8 @@ import org.eclipse.symphony.examples.lidar.LidarStub;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lidar Stub</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

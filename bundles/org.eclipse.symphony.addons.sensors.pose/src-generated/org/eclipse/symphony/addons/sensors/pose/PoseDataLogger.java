@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger#getOutputFile <em>Output File</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPoseDataLogger()
  * @model abstract="true"

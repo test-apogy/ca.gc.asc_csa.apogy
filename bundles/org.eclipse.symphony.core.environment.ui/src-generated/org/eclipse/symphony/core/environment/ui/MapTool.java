@@ -18,10 +18,10 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapTool#isActive <em>Active</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapTool()
  * @model abstract="true"

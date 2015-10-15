@@ -22,10 +22,10 @@ import org.eclipse.symphony.core.invocator.Type;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.LocalTypesListImpl#getTypes <em>Types</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

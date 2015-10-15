@@ -12,6 +12,8 @@ import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Moon Presentation</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

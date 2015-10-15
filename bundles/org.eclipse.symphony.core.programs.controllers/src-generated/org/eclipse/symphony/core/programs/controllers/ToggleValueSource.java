@@ -11,11 +11,11 @@ package org.eclipse.symphony.core.programs.controllers;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource#isInitialValue <em>Initial Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource#isCurrentValue <em>Current Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getToggleValueSource()
  * @model

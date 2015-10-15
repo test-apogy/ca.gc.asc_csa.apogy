@@ -66,7 +66,6 @@ import org.gavaghan.geodesy.GlobalCoordinates;
  * <em><b>GPS Pose Sensor</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSPoseSensorImpl#isStarted <em>Started</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSPoseSensorImpl#getServerJob <em>Server Job</em>}</li>
@@ -77,6 +76,7 @@ import org.gavaghan.geodesy.GlobalCoordinates;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSPoseSensorImpl#getOriginElevation <em>Origin Elevation</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSPoseSensorImpl#getMaxInitTime <em>Max Init Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

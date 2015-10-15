@@ -60,13 +60,13 @@ import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureRefe
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getPoseTransform <em>Pose Transform</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getVectorColor <em>Vector Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.PointerCameraToolImpl#getIntersectionDistance <em>Intersection Distance</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

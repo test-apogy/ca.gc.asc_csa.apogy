@@ -30,13 +30,6 @@ public class MobilityPackageImpl extends EPackageImpl implements MobilityPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass mobilePlateformEClass = null;
 
 	/**
@@ -100,7 +93,6 @@ public class MobilityPackageImpl extends EPackageImpl implements MobilityPackage
 		isInited = true;
 
 		// Initialize simple dependencies
-		EcorePackage.eINSTANCE.eClass();
 		TopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -337,19 +329,19 @@ public class MobilityPackageImpl extends EPackageImpl implements MobilityPackage
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mobilePlateformEClass, MobilePlateform.class, "MobilePlateform", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMobilePlateform_Moving(), ecorePackage.getEBoolean(), "moving", null, 0, 1, MobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMobilePlateform_MobilePlateformStatus(), this.getMobilePlateformStatus(), "mobilePlateformStatus", "OFF", 0, 1, MobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobilePlateform_Moving(), theEcorePackage.getEBoolean(), "moving", null, 0, 1, MobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMobilePlateform_MobilePlateformStatus(), this.getMobilePlateformStatus(), "mobilePlateformStatus", "OFF", 0, 1, MobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(skidSteeredMobilePlateformEClass, SkidSteeredMobilePlateform.class, "SkidSteeredMobilePlateform", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSkidSteeredMobilePlateform_CommandedRightWheelsVelocity(), ecorePackage.getEDouble(), "commandedRightWheelsVelocity", null, 1, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredMobilePlateform_ActualRightWheelsVelocity(), theEcorePackage.getEDouble(), "actualRightWheelsVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredMobilePlateform_CommandedLeftWheelsVelocity(), ecorePackage.getEDouble(), "commandedLeftWheelsVelocity", null, 1, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredMobilePlateform_ActualLeftWheelsVelocity(), ecorePackage.getEDouble(), "actualLeftWheelsVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredMobilePlateform_CommandedAngularVelocity(), ecorePackage.getEDouble(), "commandedAngularVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredMobilePlateform_ActualAngularVelocity(), theEcorePackage.getEDouble(), "actualAngularVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredMobilePlateform_CommandedTranslationVelocity(), ecorePackage.getEDouble(), "commandedTranslationVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredMobilePlateform_ActualTranslationVelocity(), theEcorePackage.getEDouble(), "actualTranslationVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkidSteeredMobilePlateform_EffectiveSteeringWidth(), theEcorePackage.getEDouble(), "effectiveSteeringWidth", "0.5", 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_CommandedRightWheelsVelocity(), theEcorePackage.getEDouble(), "commandedRightWheelsVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_ActualRightWheelsVelocity(), theEcorePackage.getEDouble(), "actualRightWheelsVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_CommandedLeftWheelsVelocity(), theEcorePackage.getEDouble(), "commandedLeftWheelsVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_ActualLeftWheelsVelocity(), theEcorePackage.getEDouble(), "actualLeftWheelsVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_CommandedAngularVelocity(), theEcorePackage.getEDouble(), "commandedAngularVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_ActualAngularVelocity(), theEcorePackage.getEDouble(), "actualAngularVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_CommandedTranslationVelocity(), theEcorePackage.getEDouble(), "commandedTranslationVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_ActualTranslationVelocity(), theEcorePackage.getEDouble(), "actualTranslationVelocity", null, 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkidSteeredMobilePlateform_EffectiveSteeringWidth(), theEcorePackage.getEDouble(), "effectiveSteeringWidth", "0.5", 0, 1, SkidSteeredMobilePlateform.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(mobilePlateformStatusEEnum, MobilePlateformStatus.class, "MobilePlateformStatus");

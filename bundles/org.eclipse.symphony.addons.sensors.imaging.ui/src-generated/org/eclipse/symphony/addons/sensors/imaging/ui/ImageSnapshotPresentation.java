@@ -13,13 +13,13 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#getTransparency <em>Transparency</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionVisible <em>Image Projection Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage#getImageSnapshotPresentation()
  * @model

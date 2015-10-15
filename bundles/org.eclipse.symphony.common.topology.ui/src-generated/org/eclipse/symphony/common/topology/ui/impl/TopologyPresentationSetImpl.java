@@ -31,12 +31,12 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationSetImpl#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationSetImpl#getGraphicsContext <em>Graphics Context</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationSetImpl#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

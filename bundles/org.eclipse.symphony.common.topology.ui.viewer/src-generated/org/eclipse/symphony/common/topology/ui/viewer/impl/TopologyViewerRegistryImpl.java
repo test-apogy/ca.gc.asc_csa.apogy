@@ -30,12 +30,12 @@ import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl#isVerbose <em>Verbose</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl#getITopologyViewers <em>ITopology Viewers</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.viewer.impl.TopologyViewerRegistryImpl#getLatestNodeSelection <em>Latest Node Selection</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

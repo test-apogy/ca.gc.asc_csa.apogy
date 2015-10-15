@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.GearRatioConstraintImpl#getForce <em>Force</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

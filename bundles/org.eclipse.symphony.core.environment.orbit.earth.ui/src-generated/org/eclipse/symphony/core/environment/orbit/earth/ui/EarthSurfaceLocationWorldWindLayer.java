@@ -12,11 +12,11 @@ import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getEarthSurfaceLocation <em>Earth Surface Location</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getTargetRadius <em>Target Radius</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getEarthSurfaceLocationWorldWindLayer()
  * @model

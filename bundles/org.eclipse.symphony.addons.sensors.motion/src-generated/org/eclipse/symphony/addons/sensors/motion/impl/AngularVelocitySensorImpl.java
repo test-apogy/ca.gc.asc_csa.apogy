@@ -18,12 +18,12 @@ import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

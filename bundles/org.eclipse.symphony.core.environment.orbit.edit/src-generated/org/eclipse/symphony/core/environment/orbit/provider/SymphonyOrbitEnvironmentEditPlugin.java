@@ -48,14 +48,14 @@ public final class SymphonyOrbitEnvironmentEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

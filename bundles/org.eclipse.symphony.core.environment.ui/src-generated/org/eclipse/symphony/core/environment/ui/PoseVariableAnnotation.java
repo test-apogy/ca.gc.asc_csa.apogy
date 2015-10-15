@@ -16,12 +16,12 @@ import javax.vecmath.Color3f;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorlength <em>Vectorlength</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#getVectorColor <em>Vector Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#isShowPose <em>Show Pose</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getPoseVariableAnnotation()
  * @model

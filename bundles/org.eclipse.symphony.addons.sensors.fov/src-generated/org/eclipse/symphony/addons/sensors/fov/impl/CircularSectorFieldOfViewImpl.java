@@ -22,12 +22,12 @@ import org.eclipse.symphony.addons.sensors.fov.FovPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getRange <em>Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getAngularSpan <em>Angular Span</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.CircularSectorFieldOfViewImpl#getArea <em>Area</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

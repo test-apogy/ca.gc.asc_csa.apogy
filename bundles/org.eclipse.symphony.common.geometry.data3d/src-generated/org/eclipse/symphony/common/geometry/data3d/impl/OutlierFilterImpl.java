@@ -25,10 +25,10 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <em><b>Outlier Filter</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.OutlierFilterImpl#getMaxDistance <em>Max Distance</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

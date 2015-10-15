@@ -15,10 +15,10 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EVirtualComponentImpl#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

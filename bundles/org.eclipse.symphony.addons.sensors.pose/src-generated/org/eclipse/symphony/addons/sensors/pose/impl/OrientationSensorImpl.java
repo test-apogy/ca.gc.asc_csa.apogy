@@ -6,9 +6,7 @@
 package org.eclipse.symphony.addons.sensors.pose.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import javax.vecmath.Vector3d;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
@@ -38,11 +36,11 @@ import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -24,16 +24,10 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.mobility.MobilityFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Mobility' childCreationExtenders='true' extensibleProviderFactory='true' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)' modelName='Mobility' modelDirectory='/org.eclipse.symphony.addons.mobility/src' editDirectory='/org.eclipse.symphony.addons.mobility.edit/src' basePackage='org.eclipse.symphony.addons'"
  * @generated
  */
 public interface MobilityPackage extends EPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -48,7 +42,7 @@ public interface MobilityPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ca/gc/space/mrt/mobility/model/mobility.ecore";
+	String eNS_URI = "org.eclipse.symphony.addons.mobility";
 
 	/**
 	 * The package namespace name.
@@ -56,7 +50,7 @@ public interface MobilityPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ca.gc.space.mrt";
+	String eNS_PREFIX = "mobility";
 
 	/**
 	 * The singleton instance of the package.

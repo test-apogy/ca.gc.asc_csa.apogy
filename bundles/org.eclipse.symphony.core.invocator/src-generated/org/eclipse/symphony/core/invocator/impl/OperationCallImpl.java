@@ -29,7 +29,6 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallImpl#getEOperation <em>EOperation</em>}</li>
@@ -38,6 +37,7 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallImpl#getEnvironment <em>Environment</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

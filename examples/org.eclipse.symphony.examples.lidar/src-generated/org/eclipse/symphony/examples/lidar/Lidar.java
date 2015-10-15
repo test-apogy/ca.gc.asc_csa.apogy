@@ -23,11 +23,11 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lidar.Lidar#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lidar.Lidar#isInitialized <em>Initialized</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage#getLidar()
  * @model abstract="true"

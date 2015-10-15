@@ -34,13 +34,6 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform;
  */
 public class SkidSteeredMobilePlateformImpl extends MobilePlateformImpl implements SkidSteeredMobilePlateform {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * The default value of the '{@link #getCommandedRightWheelsVelocity() <em>Commanded Right Wheels Velocity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

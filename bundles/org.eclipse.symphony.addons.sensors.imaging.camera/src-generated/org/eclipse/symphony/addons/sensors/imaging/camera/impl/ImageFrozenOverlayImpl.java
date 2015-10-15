@@ -19,12 +19,12 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.internal.WatchDog;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl#isFrozen <em>Frozen</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl#getFrozenMessage <em>Frozen Message</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

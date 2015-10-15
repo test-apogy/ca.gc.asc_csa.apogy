@@ -52,11 +52,11 @@ public final class PoseEditPlugin extends EMFPlugin
 	public PoseEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     SensorsEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     SensorsEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		   });
 	}
 

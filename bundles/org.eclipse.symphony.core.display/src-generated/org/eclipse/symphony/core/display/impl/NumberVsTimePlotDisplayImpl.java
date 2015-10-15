@@ -41,6 +41,8 @@ import org.jfree.data.time.TimeSeriesDataItem;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Number Vs Time Plot Display</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

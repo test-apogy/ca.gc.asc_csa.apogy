@@ -11,10 +11,10 @@ package org.eclipse.symphony.addons.sensors.range;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor#getDistanceMeasured <em>Distance Measured</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRangeSensor()
  * @model

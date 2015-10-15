@@ -12,6 +12,8 @@ import org.eclipse.symphony.core.display.HistoryData;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>History Data</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -11,6 +11,8 @@ import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Isotropic Antenna</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

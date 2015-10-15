@@ -18,7 +18,6 @@ import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASHeaderImpl#getFileSignature <em>File Signature</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASHeaderImpl#getFileSourceID <em>File Source ID</em>}</li>
@@ -54,6 +53,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASHeaderImpl#getMinZ <em>Min Z</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASHeaderImpl#getStartOfWaveformDataPacketRecord <em>Start Of Waveform Data Packet Record</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

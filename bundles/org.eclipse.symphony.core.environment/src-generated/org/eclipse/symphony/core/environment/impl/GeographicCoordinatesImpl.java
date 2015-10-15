@@ -16,12 +16,12 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.GeographicCoordinatesImpl#getLongitude <em>Longitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.GeographicCoordinatesImpl#getLatitude <em>Latitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.GeographicCoordinatesImpl#getElevation <em>Elevation</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

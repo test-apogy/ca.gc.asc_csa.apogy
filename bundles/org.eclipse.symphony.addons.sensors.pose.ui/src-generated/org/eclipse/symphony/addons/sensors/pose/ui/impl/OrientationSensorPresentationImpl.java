@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.ui.impl.OrientationSensorPresentationImpl#isFrameVisible <em>Frame Visible</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

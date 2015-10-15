@@ -27,7 +27,6 @@ import org.eclipse.symphony.common.topology.util.NodeRelativePoseListener;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl#getFromAbsolutePosition <em>From Absolute Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl#getFromRelativePosition <em>From Relative Position</em>}</li>
@@ -39,6 +38,7 @@ import org.eclipse.symphony.common.topology.util.NodeRelativePoseListener;
  *   <li>{@link org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl#isToNodeLock <em>To Node Lock</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl#getDistance <em>Distance</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

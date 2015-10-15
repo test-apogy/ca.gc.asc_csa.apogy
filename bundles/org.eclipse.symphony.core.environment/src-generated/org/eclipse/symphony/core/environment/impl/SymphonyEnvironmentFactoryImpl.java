@@ -6,10 +6,8 @@ package org.eclipse.symphony.core.environment.impl;
 import java.util.Date;
 import java.util.List;
 import java.util.SortedSet;
-
 import javax.vecmath.Color3f;
 import javax.vecmath.Point3d;
-
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;

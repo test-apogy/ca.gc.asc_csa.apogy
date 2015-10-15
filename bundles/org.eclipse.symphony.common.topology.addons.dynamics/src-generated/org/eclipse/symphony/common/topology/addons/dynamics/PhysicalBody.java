@@ -18,7 +18,6 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPhysicalProperties <em>Physical Properties</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getPointsOfInterest <em>Points Of Interest</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCollisionGeometry <em>Collision Geometry</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getPhysicalBody()
  * @model

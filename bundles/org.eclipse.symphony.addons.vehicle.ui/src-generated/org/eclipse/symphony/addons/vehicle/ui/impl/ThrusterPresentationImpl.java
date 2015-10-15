@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#getPlumeEnvelopeLenght <em>Plume Envelope Lenght</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

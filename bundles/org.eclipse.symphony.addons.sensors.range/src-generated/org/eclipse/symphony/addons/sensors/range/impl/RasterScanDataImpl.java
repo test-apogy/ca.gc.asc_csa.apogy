@@ -26,12 +26,12 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <em><b>Raster Scan Data</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanDataImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanDataImpl#getRasterScanSettings <em>Raster Scan Settings</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanDataImpl#getScanData <em>Scan Data</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

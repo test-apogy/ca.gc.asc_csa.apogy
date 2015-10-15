@@ -11,12 +11,12 @@ package org.eclipse.symphony.common.geometry.data3d;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getRed <em>Red</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getGreen <em>Green</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getBlue <em>Blue</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRGBCartesianPositionCoordinates()
  * @model

@@ -20,7 +20,6 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getSimulationProperties <em>Simulation Properties</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometry <em>Geometry</em>}</li>
@@ -29,6 +28,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometryId <em>Geometry Id</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCollisionGeometry()
  * @model

@@ -7,8 +7,6 @@ package org.eclipse.symphony.addons.mobility.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 /**
@@ -19,13 +17,6 @@ import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
  */
 public final class MobilityEditPlugin extends EMFPlugin
 {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2007.";
-
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -52,8 +43,6 @@ public final class MobilityEditPlugin extends EMFPlugin
 	{
 		super
 		  (new ResourceLocator [] {
-		     EcoreEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		   });
 	}

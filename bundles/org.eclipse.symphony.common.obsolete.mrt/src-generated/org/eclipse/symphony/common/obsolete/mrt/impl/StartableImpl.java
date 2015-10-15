@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.obsolete.mrt.Startable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.obsolete.mrt.impl.StartableImpl#isStarted <em>Started</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

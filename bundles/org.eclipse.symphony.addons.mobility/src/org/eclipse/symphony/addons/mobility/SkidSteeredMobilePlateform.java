@@ -11,6 +11,11 @@ package org.eclipse.symphony.addons.mobility;
  * A representation of the model object '<em><b>Skid Steered Mobile Plateform</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * FIXME: Change SkidSteeredMobilePlateform to SkidSteeredMobilePlatform
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -32,13 +37,6 @@ package org.eclipse.symphony.addons.mobility;
  */
 public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * Returns the value of the '<em><b>Commanded Right Wheels Velocity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -49,7 +47,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Commanded Right Wheels Velocity</em>' attribute.
 	 * @see #setCommandedRightWheelsVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_CommandedRightWheelsVelocity()
-	 * @model required="true"
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getCommandedRightWheelsVelocity();
@@ -75,7 +73,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Actual Right Wheels Velocity</em>' attribute.
 	 * @see #setActualRightWheelsVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_ActualRightWheelsVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getActualRightWheelsVelocity();
@@ -101,7 +99,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Commanded Left Wheels Velocity</em>' attribute.
 	 * @see #setCommandedLeftWheelsVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_CommandedLeftWheelsVelocity()
-	 * @model required="true"
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getCommandedLeftWheelsVelocity();
@@ -127,7 +125,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Actual Left Wheels Velocity</em>' attribute.
 	 * @see #setActualLeftWheelsVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_ActualLeftWheelsVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getActualLeftWheelsVelocity();
@@ -153,7 +151,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Commanded Angular Velocity</em>' attribute.
 	 * @see #setCommandedAngularVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_CommandedAngularVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getCommandedAngularVelocity();
@@ -179,7 +177,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Actual Angular Velocity</em>' attribute.
 	 * @see #setActualAngularVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_ActualAngularVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getActualAngularVelocity();
@@ -205,7 +203,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Commanded Translation Velocity</em>' attribute.
 	 * @see #setCommandedTranslationVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_CommandedTranslationVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getCommandedTranslationVelocity();
@@ -231,7 +229,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Actual Translation Velocity</em>' attribute.
 	 * @see #setActualTranslationVelocity(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_ActualTranslationVelocity()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	double getActualTranslationVelocity();
@@ -258,7 +256,7 @@ public interface SkidSteeredMobilePlateform extends MobilePlateform {
 	 * @return the value of the '<em>Effective Steering Width</em>' attribute.
 	 * @see #setEffectiveSteeringWidth(double)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getSkidSteeredMobilePlateform_EffectiveSteeringWidth()
-	 * @model default="0.5"
+	 * @model default="0.5" unique="false"
 	 * @generated
 	 */
 	double getEffectiveSteeringWidth();

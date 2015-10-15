@@ -13,6 +13,8 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Leaf</b></em>'. <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -17,10 +17,10 @@ import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PositionMarkerImpl#getIdentifier <em>Identifier</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

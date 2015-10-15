@@ -20,10 +20,10 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.ResultsList#getResults <em>Results</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getResultsList()
  * @model interface="true" abstract="true"

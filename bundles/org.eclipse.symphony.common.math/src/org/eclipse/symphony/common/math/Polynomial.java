@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getDegree <em>Degree</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getCoeffs <em>Coeffs</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getRealRoots <em>Real Roots</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getImaginaryRoots <em>Imaginary Roots</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial()
  * @model

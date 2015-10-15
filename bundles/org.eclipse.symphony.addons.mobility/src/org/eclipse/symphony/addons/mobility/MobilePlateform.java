@@ -14,7 +14,9 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Defines a generic mobile plateform.
+ * *
+ * Defines a generic mobile platform.
+ * FIXME: Change Plateform to Platform.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -31,13 +33,6 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  */
 public interface MobilePlateform extends AggregateGroupNode {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * Returns the value of the '<em><b>Moving</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -48,7 +43,7 @@ public interface MobilePlateform extends AggregateGroupNode {
 	 * @return the value of the '<em>Moving</em>' attribute.
 	 * @see #setMoving(boolean)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getMobilePlateform_Moving()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	boolean isMoving();
@@ -77,7 +72,7 @@ public interface MobilePlateform extends AggregateGroupNode {
 	 * @see org.eclipse.symphony.addons.mobility.MobilePlateformStatus
 	 * @see #setMobilePlateformStatus(MobilePlateformStatus)
 	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getMobilePlateform_MobilePlateformStatus()
-	 * @model default="OFF"
+	 * @model default="OFF" unique="false"
 	 * @generated
 	 */
 	MobilePlateformStatus getMobilePlateformStatus();

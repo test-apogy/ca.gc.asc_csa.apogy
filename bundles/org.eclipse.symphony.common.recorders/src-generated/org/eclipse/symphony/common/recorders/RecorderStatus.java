@@ -145,8 +145,6 @@ public enum RecorderStatus implements Enumerator {
 	 * Returns the '<em><b>Recorder Status</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RecorderStatus get(String literal) {
@@ -163,8 +161,6 @@ public enum RecorderStatus implements Enumerator {
 	 * Returns the '<em><b>Recorder Status</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RecorderStatus getByName(String name) {
@@ -181,8 +177,6 @@ public enum RecorderStatus implements Enumerator {
 	 * Returns the '<em><b>Recorder Status</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static RecorderStatus get(int value) {

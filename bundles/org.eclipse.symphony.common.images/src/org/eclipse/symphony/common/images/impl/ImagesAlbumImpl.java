@@ -23,11 +23,11 @@ import org.eclipse.symphony.common.images.ImagesCorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.images.impl.ImagesAlbumImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.images.impl.ImagesAlbumImpl#getImages <em>Images</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

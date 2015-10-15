@@ -56,11 +56,11 @@ import edu.wlu.cs.levy.CG.KeySizeException;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshDerivedImageMapLayerImpl#getRequiredResolution <em>Required Resolution</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshDerivedImageMapLayerImpl#getCartesianTriangularMeshMapLayer <em>Cartesian Triangular Mesh Map Layer</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -4,7 +4,6 @@
 package org.eclipse.symphony.common.topology.addons.primitives.ui.util;
 
 import org.eclipse.emf.common.notify.Adapter;
-
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;

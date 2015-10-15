@@ -52,20 +52,20 @@ public final class EMFEcoreExampleSatelliteEditPlugin extends EMFPlugin {
 	public EMFEcoreExampleSatelliteEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
 		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     MRTSensorsImagingEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
-		     SymphonyEarthOrbitEnvironmentEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     MRTSensorsImagingEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     SensorsEditPlugin.INSTANCE,
+		     SymphonyEarthOrbitEnvironmentEditPlugin.INSTANCE,
 		   });
 	}
 

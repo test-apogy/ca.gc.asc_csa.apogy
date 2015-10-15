@@ -25,12 +25,12 @@ import org.eclipse.symphony.common.images.URLEImage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getImageSizePolicy <em>Image Size Policy</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.URLImageOverlayImpl#getImage <em>Image</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

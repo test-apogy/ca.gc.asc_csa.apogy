@@ -4,7 +4,6 @@
 package org.eclipse.symphony.core.environment.impl;
 
 import java.net.URL;
-
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -23,11 +22,11 @@ import org.eclipse.symphony.core.environment.URLMapLayer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshURLMapLayerImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshURLMapLayerImpl#getMesh <em>Mesh</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

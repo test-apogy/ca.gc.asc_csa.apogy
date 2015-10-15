@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding#getFov <em>Fov</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage#getCircularSectorFieldOfViewBinding()
  * @model

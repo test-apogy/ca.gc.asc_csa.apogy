@@ -45,10 +45,10 @@ public final class EMFEcoreExampleLidarEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     Data3dEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		   });
 	}

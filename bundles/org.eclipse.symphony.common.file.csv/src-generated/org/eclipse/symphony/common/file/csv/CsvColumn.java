@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumn#getValues <em>Values</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumn#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumn#getDescription <em>Description</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvColumn()
  * @model

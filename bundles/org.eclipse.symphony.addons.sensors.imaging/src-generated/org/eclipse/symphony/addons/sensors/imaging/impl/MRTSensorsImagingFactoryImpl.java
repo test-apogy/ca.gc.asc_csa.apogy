@@ -4,7 +4,6 @@
 package org.eclipse.symphony.addons.sensors.imaging.impl;
 
 import java.awt.Color;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

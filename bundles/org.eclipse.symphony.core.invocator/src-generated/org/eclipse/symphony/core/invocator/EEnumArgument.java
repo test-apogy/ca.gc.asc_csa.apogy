@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EEnumLiteral;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnumLiteral <em>EEnum Literal</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnum <em>EEnum</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEEnumArgument()
  * @model

@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <em><b>Aggregate Content Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.AggregateContentNodeImpl#getAggregateContent <em>Aggregate Content</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

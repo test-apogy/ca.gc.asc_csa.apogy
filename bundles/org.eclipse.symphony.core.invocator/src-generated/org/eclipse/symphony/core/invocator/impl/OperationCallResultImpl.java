@@ -25,12 +25,12 @@ import org.eclipse.symphony.core.invocator.OperationCallResult;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl#getOperationCalls <em>Operation Calls</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl#getOperationCall <em>Operation Call</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl#getExceptionContainer <em>Exception Container</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

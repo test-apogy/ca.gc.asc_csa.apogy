@@ -26,6 +26,8 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Data Facade</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */
@@ -118,6 +120,7 @@ public class DataFacadeImpl extends MinimalEObjectImpl.Container implements Data
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case Data25dPackage.DATA_FACADE___CREATE_COORDINATES25_D__COORDINATES25D:

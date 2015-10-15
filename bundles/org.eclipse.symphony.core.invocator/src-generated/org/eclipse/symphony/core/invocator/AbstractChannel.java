@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractChannel#getChannelsList <em>Channels List</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractChannel()
  * @model abstract="true"

@@ -5,7 +5,6 @@ package org.eclipse.symphony.examples.satellite.impl;
 
 import java.util.List;
 import java.util.SortedSet;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

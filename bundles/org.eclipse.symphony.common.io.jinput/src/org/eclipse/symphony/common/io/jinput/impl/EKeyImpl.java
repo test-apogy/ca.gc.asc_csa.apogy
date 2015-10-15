@@ -11,6 +11,8 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>EKey</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -27,6 +27,8 @@ import org.eclipse.symphony.core.invocator.Watch;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Display Facade</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -22,10 +22,10 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolListImpl#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -24,7 +24,6 @@ import org.eclipse.symphony.core.invocator.ToolsList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl#getDescription <em>Description</em>}</li>
@@ -33,6 +32,7 @@ import org.eclipse.symphony.core.invocator.ToolsList;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl#getDataProductsListContainer <em>Data Products List Container</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl#getToolsList <em>Tools List</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

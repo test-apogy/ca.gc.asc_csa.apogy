@@ -35,12 +35,12 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter;
  * <em><b>Type Api Adapter</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl#getInstance <em>Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl#getElementType <em>Element Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

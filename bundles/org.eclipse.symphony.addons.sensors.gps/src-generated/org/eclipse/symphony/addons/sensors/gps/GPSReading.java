@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getLatitude <em>Latitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getLongitude <em>Longitude</em>}</li>
@@ -26,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getMeanSeaLevel <em>Mean Sea Level</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getCheckSum <em>Check Sum</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading()
  * @model

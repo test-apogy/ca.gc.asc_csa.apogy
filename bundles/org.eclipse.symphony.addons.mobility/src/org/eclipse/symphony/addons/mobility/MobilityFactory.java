@@ -17,13 +17,6 @@ import org.eclipse.emf.ecore.EFactory;
  */
 public interface MobilityFactory extends EFactory {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	String copyright = "Canadian Space Agency 2007.";
-
-	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

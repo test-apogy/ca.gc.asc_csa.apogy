@@ -28,7 +28,6 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#isLastPollResult <em>Last Poll Result</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getName <em>Name</em>}</li>
@@ -39,6 +38,7 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getEComponents <em>EComponents</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerImpl#getControllerCount <em>Controller Count</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
