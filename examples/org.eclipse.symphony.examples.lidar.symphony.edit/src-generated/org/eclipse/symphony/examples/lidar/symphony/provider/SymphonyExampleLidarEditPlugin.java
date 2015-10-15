@@ -47,15 +47,15 @@ public final class SymphonyExampleLidarEditPlugin extends EMFPlugin {
 	public SymphonyExampleLidarEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		   });
 	}
 

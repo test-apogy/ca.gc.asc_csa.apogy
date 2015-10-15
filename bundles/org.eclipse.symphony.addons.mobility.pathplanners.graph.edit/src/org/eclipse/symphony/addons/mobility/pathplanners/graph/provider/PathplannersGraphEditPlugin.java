@@ -45,12 +45,12 @@ public final class PathplannersGraphEditPlugin extends EMFPlugin {
 	public PathplannersGraphEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ProcessorsEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     PathplannersEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     PathsEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

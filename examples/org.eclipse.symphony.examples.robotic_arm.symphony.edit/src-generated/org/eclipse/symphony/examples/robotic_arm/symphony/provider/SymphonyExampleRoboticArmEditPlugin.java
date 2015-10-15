@@ -51,11 +51,11 @@ public final class SymphonyExampleRoboticArmEditPlugin extends EMFPlugin {
 	public SymphonyExampleRoboticArmEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}

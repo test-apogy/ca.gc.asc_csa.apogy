@@ -50,14 +50,14 @@ public final class SymphonyExampleAntennaEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

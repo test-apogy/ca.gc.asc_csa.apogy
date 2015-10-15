@@ -49,15 +49,15 @@ public final class SymphonyExampleCameraEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     ProcessorsEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
 		   });
 	}
 

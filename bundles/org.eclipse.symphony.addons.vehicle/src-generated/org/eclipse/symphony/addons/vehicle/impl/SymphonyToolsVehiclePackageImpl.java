@@ -326,8 +326,8 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		PathplannersPackage.eINSTANCE.eClass();
+		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
 		TopologyDynamicsPackage.eINSTANCE.eClass();
 

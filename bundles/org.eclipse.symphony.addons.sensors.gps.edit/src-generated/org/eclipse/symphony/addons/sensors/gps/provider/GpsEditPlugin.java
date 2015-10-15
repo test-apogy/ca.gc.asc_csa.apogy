@@ -53,12 +53,12 @@ public final class GpsEditPlugin extends EMFPlugin {
 	public GpsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Data3dEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     CommonEditPlugin.INSTANCE,
-		     PoseEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     PoseEditPlugin.INSTANCE,
+		     CommonEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		   });
 	}

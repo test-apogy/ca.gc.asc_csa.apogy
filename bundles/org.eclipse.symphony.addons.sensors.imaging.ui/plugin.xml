@@ -11,19 +11,6 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
-      <Class
-            Class="org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentationAdapter">
-      </Class>
-   </extension>
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging_ui -->
-      <package
-            uri="org.eclipse.symphony.addons.sensors.imaging.ui"
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage"
-            genModel="model/ca_gc_asc_csa_mrt_sensors_imaging_ui.xcore"/>
-   </extension>
-   <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
             class="org.eclipse.symphony.addons.sensors.imaging.ui.preferences.MRTImagingPreferencesInitializer">
@@ -38,11 +25,12 @@
             name="Image Snapshot">
       </page>
    </extension>
-   <extension
-         point="org.eclipse.symphony.common.converters">
-      <new_element
-            Class="org.eclipse.symphony.addons.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
-      </new_element>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging_ui -->
+      <package
+            uri="org.eclipse.symphony.addons.sensors.imaging.ui"
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage"
+            genModel="model/ca_gc_asc_csa_mrt_sensors_imaging_ui.xcore"/>
    </extension>
 
 </plugin>

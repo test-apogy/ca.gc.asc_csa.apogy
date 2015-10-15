@@ -234,11 +234,6 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 FovFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
@@ -255,6 +250,11 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -319,11 +319,6 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 FovFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
@@ -340,6 +335,11 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 SensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
