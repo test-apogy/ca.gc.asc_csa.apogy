@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.SortedSet;
 import javax.measure.unit.Unit;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.symphony.common.emf.*;
 import org.eclipse.symphony.common.emf.BrowseableTimeSource;
 import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
 import org.eclipse.symphony.common.emf.CurrentTimeSource;
@@ -83,6 +85,8 @@ public class EMFEcoreFactoryImpl extends EFactoryImpl implements EMFEcoreFactory
   {
 		switch (eClass.getClassifierID()) {
 			case EMFEcorePackage.EMF_ECORE_FACADE: return createEMFEcoreFacade();
+			case EMFEcorePackage.SERVER: return createServer();
+			case EMFEcorePackage.STARTABLE: return createStartable();
 			case EMFEcorePackage.TIME_SOURCES_LIST: return createTimeSourcesList();
 			case EMFEcorePackage.FIXED_TIME_SOURCE: return createFixedTimeSource();
 			case EMFEcorePackage.CURRENT_TIME_SOURCE: return createCurrentTimeSource();
@@ -134,6 +138,8 @@ public class EMFEcoreFactoryImpl extends EFactoryImpl implements EMFEcoreFactory
 				return createEListFromString(eDataType, initialValue);
 			case EMFEcorePackage.URI:
 				return createURIFromString(eDataType, initialValue);
+			case EMFEcorePackage.JOB:
+				return createJobFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -174,6 +180,8 @@ public class EMFEcoreFactoryImpl extends EFactoryImpl implements EMFEcoreFactory
 				return convertEListToString(eDataType, instanceValue);
 			case EMFEcorePackage.URI:
 				return convertURIToString(eDataType, instanceValue);
+			case EMFEcorePackage.JOB:
+				return convertJobToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -191,6 +199,26 @@ public class EMFEcoreFactoryImpl extends EFactoryImpl implements EMFEcoreFactory
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Server createServer() {
+		ServerImpl server = new ServerImpl();
+		return server;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Startable createStartable() {
+		StartableImpl startable = new StartableImpl();
+		return startable;
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -569,6 +597,24 @@ public class EMFEcoreFactoryImpl extends EFactoryImpl implements EMFEcoreFactory
 	 * @generated
 	 */
 	public String convertURIToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Job createJobFromString(EDataType eDataType, String initialValue) {
+		return (Job)super.createFromString(eDataType, initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertJobToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

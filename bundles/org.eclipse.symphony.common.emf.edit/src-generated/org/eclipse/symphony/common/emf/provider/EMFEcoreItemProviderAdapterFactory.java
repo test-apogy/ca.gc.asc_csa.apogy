@@ -110,6 +110,52 @@ public class EMFEcoreItemProviderAdapterFactory extends EMFEcoreAdapterFactory i
 	}
 
   /**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.Server} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ServerItemProvider serverItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.Server}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createServerAdapter() {
+		if (serverItemProvider == null) {
+			serverItemProvider = new ServerItemProvider(this);
+		}
+
+		return serverItemProvider;
+	}
+
+		/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.Startable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StartableItemProvider startableItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.Startable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStartableAdapter() {
+		if (startableItemProvider == null) {
+			startableItemProvider = new StartableItemProvider(this);
+		}
+
+		return startableItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.TimeSourcesList} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -503,6 +549,8 @@ public class EMFEcoreItemProviderAdapterFactory extends EMFEcoreAdapterFactory i
   public void dispose()
   {
 		if (emfEcoreFacadeItemProvider != null) emfEcoreFacadeItemProvider.dispose();
+		if (serverItemProvider != null) serverItemProvider.dispose();
+		if (startableItemProvider != null) startableItemProvider.dispose();
 		if (timeSourcesListItemProvider != null) timeSourcesListItemProvider.dispose();
 		if (fixedTimeSourceItemProvider != null) fixedTimeSourceItemProvider.dispose();
 		if (currentTimeSourceItemProvider != null) currentTimeSourceItemProvider.dispose();

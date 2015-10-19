@@ -5,21 +5,14 @@ package org.eclipse.symphony.addons.sensors.range.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
 import org.eclipse.symphony.addons.sensors.Sensor;
-
 import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-
 import org.eclipse.symphony.addons.sensors.range.*;
-
-import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
-
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
-
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -240,7 +233,7 @@ public class RangeSwitch<T> extends Switch<T> {
 				RasterScanData rasterScanData = (RasterScanData)theEObject;
 				T result = caseRasterScanData(rasterScanData);
 				if (result == null) result = caseAggregateGroupNode(rasterScanData);
-				if (result == null) result = caseTimeTaggedElement(rasterScanData);
+				if (result == null) result = caseTimed(rasterScanData);
 				if (result == null) result = caseGroupNode(rasterScanData);
 				if (result == null) result = caseNode(rasterScanData);
 				if (result == null) result = defaultCase(theEObject);
@@ -602,17 +595,17 @@ public class RangeSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Time Tagged Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Timed</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Time Tagged Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Timed</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTimeTaggedElement(TimeTaggedElement object) {
+	public T caseTimed(Timed object) {
 		return null;
 	}
 

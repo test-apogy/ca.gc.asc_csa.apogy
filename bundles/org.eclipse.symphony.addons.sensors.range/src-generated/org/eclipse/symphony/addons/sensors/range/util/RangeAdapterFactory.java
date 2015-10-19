@@ -5,23 +5,15 @@ package org.eclipse.symphony.addons.sensors.range.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.symphony.addons.sensors.Sensor;
-
 import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-
 import org.eclipse.symphony.addons.sensors.range.*;
-
-import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
-
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
-
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -175,8 +167,8 @@ public class RangeAdapterFactory extends AdapterFactoryImpl {
 				return createProcessorAdapter();
 			}
 			@Override
-			public Adapter caseTimeTaggedElement(TimeTaggedElement object) {
-				return createTimeTaggedElementAdapter();
+			public Adapter caseTimed(Timed object) {
+				return createTimedAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -521,16 +513,16 @@ public class RangeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement <em>Time Tagged Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement
+	 * @see org.eclipse.symphony.common.emf.Timed
 	 * @generated
 	 */
-	public Adapter createTimeTaggedElementAdapter() {
+	public Adapter createTimedAdapter() {
 		return null;
 	}
 

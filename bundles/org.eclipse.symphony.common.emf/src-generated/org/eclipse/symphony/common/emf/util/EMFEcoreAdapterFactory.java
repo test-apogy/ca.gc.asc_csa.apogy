@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.symphony.common.emf.*;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
@@ -104,6 +105,14 @@ public class EMFEcoreAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseTimed(Timed object) {
 				return createTimedAdapter();
+			}
+			@Override
+			public Adapter caseServer(Server object) {
+				return createServerAdapter();
+			}
+			@Override
+			public Adapter caseStartable(Startable object) {
+				return createStartableAdapter();
 			}
 			@Override
 			public Adapter caseTimeSourcesList(TimeSourcesList object) {
@@ -259,6 +268,34 @@ public class EMFEcoreAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Server <em>Server</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.common.emf.Server
+	 * @generated
+	 */
+	public Adapter createServerAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Startable <em>Startable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.common.emf.Startable
+	 * @generated
+	 */
+	public Adapter createStartableAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.TimeSourcesList <em>Time Sources List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;

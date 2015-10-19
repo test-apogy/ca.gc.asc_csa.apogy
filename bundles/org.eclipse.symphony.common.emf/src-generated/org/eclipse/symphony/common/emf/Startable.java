@@ -1,7 +1,6 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.obsolete.mrt;
+package org.eclipse.symphony.common.emf;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,11 +12,11 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.obsolete.mrt.Startable#isStarted <em>Started</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.emf.Startable#isStarted <em>Started</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.common.obsolete.mrt.CommonPackage#getStartable()
+ * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getStartable()
  * @model
  * @generated
  */
@@ -33,14 +32,14 @@ public interface Startable extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Started</em>' attribute.
 	 * @see #setStarted(boolean)
-	 * @see org.eclipse.symphony.common.obsolete.mrt.CommonPackage#getStartable_Started()
+	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getStartable_Started()
 	 * @model default="false" unique="false" transient="true"
 	 * @generated
 	 */
 	boolean isStarted();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.obsolete.mrt.Startable#isStarted <em>Started</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.common.emf.Startable#isStarted <em>Started</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Started</em>' attribute.

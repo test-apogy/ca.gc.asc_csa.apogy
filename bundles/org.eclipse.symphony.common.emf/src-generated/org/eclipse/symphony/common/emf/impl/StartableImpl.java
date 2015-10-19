@@ -1,14 +1,16 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.obsolete.mrt.impl;
+package org.eclipse.symphony.common.emf.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
-import org.eclipse.symphony.common.obsolete.mrt.Startable;
+
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Startable;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +19,7 @@ import org.eclipse.symphony.common.obsolete.mrt.Startable;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.obsolete.mrt.impl.StartableImpl#isStarted <em>Started</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.emf.impl.StartableImpl#isStarted <em>Started</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,7 +62,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CommonPackage.Literals.STARTABLE;
+		return EMFEcorePackage.Literals.STARTABLE;
 	}
 
 	/**
@@ -81,7 +83,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 		boolean oldStarted = started;
 		started = newStarted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.STARTABLE__STARTED, oldStarted, started));
+			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.STARTABLE__STARTED, oldStarted, started));
 	}
 
 	/**
@@ -92,7 +94,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CommonPackage.STARTABLE__STARTED:
+			case EMFEcorePackage.STARTABLE__STARTED:
 				return isStarted();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +108,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CommonPackage.STARTABLE__STARTED:
+			case EMFEcorePackage.STARTABLE__STARTED:
 				setStarted((Boolean)newValue);
 				return;
 		}
@@ -121,7 +123,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CommonPackage.STARTABLE__STARTED:
+			case EMFEcorePackage.STARTABLE__STARTED:
 				setStarted(STARTED_EDEFAULT);
 				return;
 		}
@@ -136,7 +138,7 @@ public class StartableImpl extends MinimalEObjectImpl.Container implements Start
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CommonPackage.STARTABLE__STARTED:
+			case EMFEcorePackage.STARTABLE__STARTED:
 				return started != STARTED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

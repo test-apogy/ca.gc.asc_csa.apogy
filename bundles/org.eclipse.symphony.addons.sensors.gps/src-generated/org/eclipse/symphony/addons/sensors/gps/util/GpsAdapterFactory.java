@@ -5,23 +5,14 @@ package org.eclipse.symphony.addons.sensors.gps.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.symphony.addons.sensors.Sensor;
-
 import org.eclipse.symphony.addons.sensors.gps.*;
-
 import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
-
-import org.eclipse.symphony.common.obsolete.mrt.Server;
-import org.eclipse.symphony.common.obsolete.mrt.Startable;
-
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -162,11 +153,11 @@ public class GpsAdapterFactory extends AdapterFactoryImpl {
 				return createPoseSensorAdapter();
 			}
 			@Override
-			public Adapter caseStartable(Startable object) {
+			public Adapter caseStartable(org.eclipse.symphony.common.emf.Startable object) {
 				return createStartableAdapter();
 			}
 			@Override
-			public Adapter caseServer(Server object) {
+			public Adapter caseServer(org.eclipse.symphony.common.emf.Server object) {
 				return createServerAdapter();
 			}
 			@Override
@@ -456,13 +447,13 @@ public class GpsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.obsolete.mrt.Startable <em>Startable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Startable <em>Startable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.obsolete.mrt.Startable
+	 * @see org.eclipse.symphony.common.emf.Startable
 	 * @generated
 	 */
 	public Adapter createStartableAdapter() {
@@ -470,13 +461,13 @@ public class GpsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.obsolete.mrt.Server <em>Server</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Server <em>Server</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.obsolete.mrt.Server
+	 * @see org.eclipse.symphony.common.emf.Server
 	 * @generated
 	 */
 	public Adapter createServerAdapter() {

@@ -12,16 +12,16 @@
 package org.eclipse.symphony.addons.sensors.range
 
 import org.eclipse.symphony.addons.sensors.Sensor
-import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
 import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView
-import org.eclipse.symphony.common.processors.Processor
-import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D
+import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView
+import org.eclipse.symphony.common.emf.Timed
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D
+import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh
-import org.eclipse.symphony.common.topology.ContentNode
+import org.eclipse.symphony.common.processors.Processor
 import org.eclipse.symphony.common.topology.AggregateGroupNode
-import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement
+import org.eclipse.symphony.common.topology.ContentNode
 
 type List<T> wraps java.util.List
 type Point3d wraps javax.vecmath.Point3d
@@ -189,7 +189,7 @@ class SimpleRasterScanRangeScannerSimulator extends RangeScannerSimulator<Raster
 	boolean horizonDetectionEnabled
 }
 
-class RasterScanData extends AggregateGroupNode, TimeTaggedElement
+class RasterScanData extends AggregateGroupNode, Timed
 {
 	contains RasterScanSettings rasterScanSettings
 	

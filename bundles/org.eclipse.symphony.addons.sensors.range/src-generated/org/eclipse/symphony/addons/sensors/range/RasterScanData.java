@@ -3,10 +3,8 @@
  */
 package org.eclipse.symphony.addons.sensors.range;
 
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-
-import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
-
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 
 /**
@@ -26,7 +24,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * @model
  * @generated
  */
-public interface RasterScanData extends AggregateGroupNode, TimeTaggedElement {
+public interface RasterScanData extends AggregateGroupNode, Timed {
 	/**
 	 * Returns the value of the '<em><b>Raster Scan Settings</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

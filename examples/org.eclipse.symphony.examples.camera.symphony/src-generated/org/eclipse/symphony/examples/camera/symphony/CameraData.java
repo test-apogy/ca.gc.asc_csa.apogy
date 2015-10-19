@@ -21,12 +21,12 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.CameraData#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.CameraData#getZoom <em>Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.CameraData#isInitialized <em>Initialized</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage#getCameraData()
  * @model

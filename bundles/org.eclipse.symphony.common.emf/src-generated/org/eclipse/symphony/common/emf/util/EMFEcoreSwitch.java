@@ -5,6 +5,7 @@ package org.eclipse.symphony.common.emf.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.symphony.common.emf.*;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
@@ -111,6 +112,19 @@ public class EMFEcoreSwitch<T> extends Switch<T>
 			case EMFEcorePackage.TIMED: {
 				Timed timed = (Timed)theEObject;
 				T result = caseTimed(timed);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EMFEcorePackage.SERVER: {
+				Server server = (Server)theEObject;
+				T result = caseServer(server);
+				if (result == null) result = caseStartable(server);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EMFEcorePackage.STARTABLE: {
+				Startable startable = (Startable)theEObject;
+				T result = caseStartable(startable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -323,6 +337,36 @@ public class EMFEcoreSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Server</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Server</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseServer(Server object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Startable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Startable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStartable(Startable object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Time Sources List</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;

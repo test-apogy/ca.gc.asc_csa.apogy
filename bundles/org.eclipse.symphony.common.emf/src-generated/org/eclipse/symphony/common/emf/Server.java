@@ -1,7 +1,6 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.obsolete.mrt;
+package org.eclipse.symphony.common.emf;
 
 import org.eclipse.core.runtime.jobs.Job;
 
@@ -13,11 +12,11 @@ import org.eclipse.core.runtime.jobs.Job;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.obsolete.mrt.Server#getServerJob <em>Server Job</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.emf.Server#getServerJob <em>Server Job</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.common.obsolete.mrt.CommonPackage#getServer()
+ * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getServer()
  * @model
  * @generated
  */
@@ -31,8 +30,8 @@ public interface Server extends Startable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Server Job</em>' attribute.
-	 * @see org.eclipse.symphony.common.obsolete.mrt.CommonPackage#getServer_ServerJob()
-	 * @model unique="false" dataType="org.eclipse.symphony.common.obsolete.mrt.Job" transient="true" changeable="false"
+	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getServer_ServerJob()
+	 * @model unique="false" dataType="org.eclipse.symphony.common.emf.Job" transient="true" changeable="false"
 	 * @generated
 	 */
 	Job getServerJob();

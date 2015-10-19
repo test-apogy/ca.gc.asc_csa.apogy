@@ -1,12 +1,13 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.obsolete.mrt.impl;
+package org.eclipse.symphony.common.emf.impl;
 
 import org.eclipse.core.runtime.jobs.Job;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
-import org.eclipse.symphony.common.obsolete.mrt.Server;
+
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Server;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +16,7 @@ import org.eclipse.symphony.common.obsolete.mrt.Server;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.symphony.common.obsolete.mrt.impl.ServerImpl#getServerJob <em>Server Job</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.emf.impl.ServerImpl#getServerJob <em>Server Job</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,7 +59,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CommonPackage.Literals.SERVER;
+		return EMFEcorePackage.Literals.SERVER;
 	}
 
 	/**
@@ -78,7 +79,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CommonPackage.SERVER__SERVER_JOB:
+			case EMFEcorePackage.SERVER__SERVER_JOB:
 				return getServerJob();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -92,7 +93,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CommonPackage.SERVER__SERVER_JOB:
+			case EMFEcorePackage.SERVER__SERVER_JOB:
 				return SERVER_JOB_EDEFAULT == null ? serverJob != null : !SERVER_JOB_EDEFAULT.equals(serverJob);
 		}
 		return super.eIsSet(featureID);

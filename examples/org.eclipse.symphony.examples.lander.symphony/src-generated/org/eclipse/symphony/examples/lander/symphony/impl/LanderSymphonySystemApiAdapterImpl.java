@@ -33,6 +33,8 @@ import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackag
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lander Symphony System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

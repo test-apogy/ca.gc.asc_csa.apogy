@@ -4,10 +4,7 @@
 package org.eclipse.symphony.addons.sensors.gps;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
-
-import org.eclipse.symphony.common.obsolete.mrt.Server;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +27,7 @@ import org.eclipse.symphony.common.obsolete.mrt.Server;
  * @model
  * @generated
  */
-public interface GPSPoseSensor extends PoseSensor, Server {
+public interface GPSPoseSensor extends PoseSensor, org.eclipse.symphony.common.emf.Server {
 	/**
 	 * Returns the value of the '<em><b>Gps</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.symphony.addons.sensors.gps.MarkedGPS}.

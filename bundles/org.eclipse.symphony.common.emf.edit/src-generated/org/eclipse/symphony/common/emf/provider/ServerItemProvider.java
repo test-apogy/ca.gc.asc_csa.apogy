@@ -1,7 +1,6 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
-package org.eclipse.symphony.common.obsolete.mrt.provider;
+package org.eclipse.symphony.common.emf.provider;
 
 
 import java.util.Collection;
@@ -9,15 +8,17 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
-import org.eclipse.symphony.common.obsolete.mrt.Server;
+
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Server;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.obsolete.mrt.Server} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.Server} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -62,7 +63,7 @@ public class ServerItemProvider extends StartableItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Server_serverJob_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Server_serverJob_feature", "_UI_Server_type"),
-				 CommonPackage.Literals.SERVER__SERVER_JOB,
+				 EMFEcorePackage.Literals.SERVER__SERVER_JOB,
 				 false,
 				 false,
 				 false,
@@ -107,7 +108,7 @@ public class ServerItemProvider extends StartableItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Server.class)) {
-			case CommonPackage.SERVER__SERVER_JOB:
+			case EMFEcorePackage.SERVER__SERVER_JOB:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

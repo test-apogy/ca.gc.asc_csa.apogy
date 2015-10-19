@@ -6,9 +6,7 @@ package org.eclipse.symphony.addons.sensors.gps.impl;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
 import java.util.Date;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -17,9 +15,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.symphony.addons.sensors.gps.GPSConnection;
 import org.eclipse.symphony.addons.sensors.gps.GPSDataInterpreter;
 import org.eclipse.symphony.addons.sensors.gps.GPSFacade;
@@ -31,12 +27,9 @@ import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
-
 import org.eclipse.symphony.addons.sensors.pose.PosePackage;
-
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-
-import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -197,8 +190,8 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		CommonPackage.eINSTANCE.eClass();
 		PosePackage.eINSTANCE.eClass();
+		EMFEcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theGpsPackage.createPackageContents();
@@ -822,7 +815,7 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		PosePackage thePosePackage = (PosePackage)EPackage.Registry.INSTANCE.getEPackage(PosePackage.eNS_URI);
-		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
+		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
 		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
 
 		// Create type parameters
@@ -831,7 +824,7 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 
 		// Add supertypes to classes
 		gpsPoseSensorEClass.getESuperTypes().add(thePosePackage.getPoseSensor());
-		gpsPoseSensorEClass.getESuperTypes().add(theCommonPackage.getServer());
+		gpsPoseSensorEClass.getESuperTypes().add(theEMFEcorePackage.getServer());
 		markedGPSEClass.getESuperTypes().add(this.getGPS());
 
 		// Initialize classes, features, and operations; add parameters

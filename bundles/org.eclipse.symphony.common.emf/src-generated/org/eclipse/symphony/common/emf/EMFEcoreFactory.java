@@ -32,6 +32,24 @@ public interface EMFEcoreFactory extends EFactory
   EMFEcoreFacade createEMFEcoreFacade();
 
   /**
+	 * Returns a new object of class '<em>Server</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Server</em>'.
+	 * @generated
+	 */
+	Server createServer();
+
+		/**
+	 * Returns a new object of class '<em>Startable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Startable</em>'.
+	 * @generated
+	 */
+	Startable createStartable();
+
+		/**
 	 * Returns a new object of class '<em>Time Sources List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
