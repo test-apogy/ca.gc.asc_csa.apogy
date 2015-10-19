@@ -23,10 +23,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-<<<<<<< HEAD
-=======
-      <!-- @generated mrt_range_ui -->
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.addons.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>

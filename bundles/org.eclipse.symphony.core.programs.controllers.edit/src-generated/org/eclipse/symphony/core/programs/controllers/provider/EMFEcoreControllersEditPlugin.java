@@ -47,10 +47,7 @@ public final class EMFEcoreControllersEditPlugin extends EMFPlugin
 		     EcoreEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-<<<<<<< HEAD
-=======
 		     Jinput_emfEditPlugin.INSTANCE,
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		   });
 	}
 

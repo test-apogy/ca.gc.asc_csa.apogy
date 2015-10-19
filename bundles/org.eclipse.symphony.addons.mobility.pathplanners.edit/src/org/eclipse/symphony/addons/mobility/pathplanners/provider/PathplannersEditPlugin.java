@@ -49,21 +49,11 @@ public final class PathplannersEditPlugin extends EMFPlugin {
 	public PathplannersEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-<<<<<<< HEAD
-		     ProcessorsEditPlugin.INSTANCE,
-=======
 		     TopologyEditPlugin.INSTANCE,
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     PathsEditPlugin.INSTANCE,
-<<<<<<< HEAD
-		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-=======
 		     ProcessorsEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		   });
 	}
 

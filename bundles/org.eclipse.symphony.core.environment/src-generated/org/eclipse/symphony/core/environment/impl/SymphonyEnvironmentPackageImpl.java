@@ -624,17 +624,10 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		isInited = true;
 
 		// Initialize simple dependencies
-<<<<<<< HEAD
-=======
 		Data3dPackage.eINSTANCE.eClass();
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		SymphonyCorePackage.eINSTANCE.eClass();
 		ImagesCorePackage.eINSTANCE.eClass();
-<<<<<<< HEAD
-		Data3dPackage.eINSTANCE.eClass();
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
-
+		
 		// Create package meta-data objects
 		theSymphonyEnvironmentPackage.createPackageContents();
 

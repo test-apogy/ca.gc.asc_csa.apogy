@@ -168,7 +168,6 @@ public class LanderSphericalFootItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-<<<<<<< HEAD
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -184,32 +183,6 @@ public class LanderSphericalFootItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-<<<<<<< HEAD
-				 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
-=======
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -284,8 +257,6 @@ public class LanderSphericalFootItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-<<<<<<< HEAD
-=======
 				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
 
 		newChildDescriptors.add
@@ -301,7 +272,6 @@ public class LanderSphericalFootItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 				 PathplannersFactory.eINSTANCE.createCircularExclusionZone()));
 
 		newChildDescriptors.add
@@ -343,7 +313,6 @@ public class LanderSphericalFootItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-<<<<<<< HEAD
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -359,32 +328,6 @@ public class LanderSphericalFootItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-<<<<<<< HEAD
-				 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
-=======
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -459,8 +402,6 @@ public class LanderSphericalFootItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-<<<<<<< HEAD
-=======
 				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
 
 		newChildDescriptors.add
@@ -476,7 +417,6 @@ public class LanderSphericalFootItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 				 PathplannersFactory.eINSTANCE.createCircularExclusionZone()));
 
 		newChildDescriptors.add

@@ -51,29 +51,14 @@ public final class ControllersEditPlugin extends EMFPlugin
 	{
 		super
 		  (new ResourceLocator [] {
-<<<<<<< HEAD
-		     MobilityEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
-=======
 		     ProcessorsEditPlugin.INSTANCE,
 		     MobilityEditPlugin.INSTANCE,
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     PoseEditPlugin.INSTANCE,
-<<<<<<< HEAD
-		     Data3dEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     SensorsEditPlugin.INSTANCE,
-<<<<<<< HEAD
-=======
 		     Data3dEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		   });
 	}
 

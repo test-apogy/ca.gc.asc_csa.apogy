@@ -145,11 +145,7 @@ public class MRTSensorsImagingPackageImpl extends EPackageImpl implements MRTSen
 		SensorsPackage.eINSTANCE.eClass();
 		ImagesCorePackage.eINSTANCE.eClass();
 		FovPackage.eINSTANCE.eClass();
-<<<<<<< HEAD
-		ImagesCorePackage.eINSTANCE.eClass();
-=======
 		EMFEcorePackage.eINSTANCE.eClass();
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 		// Create package meta-data objects
 		theMRTSensorsImagingPackage.createPackageContents();

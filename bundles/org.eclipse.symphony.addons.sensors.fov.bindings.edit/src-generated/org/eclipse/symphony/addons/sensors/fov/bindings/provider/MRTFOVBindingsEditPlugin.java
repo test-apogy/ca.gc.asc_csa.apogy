@@ -49,15 +49,8 @@ public final class MRTFOVBindingsEditPlugin extends EMFPlugin
 		  (new ResourceLocator [] {
 		     TopologyBindingsEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-<<<<<<< HEAD
-		     TopologyEditPlugin.INSTANCE,
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     EMFEcoreEditPlugin.INSTANCE,
-<<<<<<< HEAD
-=======
 		     TopologyEditPlugin.INSTANCE,
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     DataEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,

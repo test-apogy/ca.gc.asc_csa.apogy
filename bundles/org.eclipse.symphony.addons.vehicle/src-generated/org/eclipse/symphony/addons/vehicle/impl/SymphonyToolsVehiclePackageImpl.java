@@ -326,17 +326,9 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
-<<<<<<< HEAD
-=======
 		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		SymphonyToolsCorePackage.eINSTANCE.eClass();
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		TopologyDynamicsPackage.eINSTANCE.eClass();
-<<<<<<< HEAD
-		SymphonyToolsCorePackage.eINSTANCE.eClass();
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		PathplannersPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

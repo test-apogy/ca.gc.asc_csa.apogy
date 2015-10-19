@@ -117,15 +117,8 @@ public class EMFEcoreExampleRoverPackageImpl extends EPackageImpl implements EMF
 		isInited = true;
 
 		// Initialize simple dependencies
-<<<<<<< HEAD
-=======
 		EMFEcoreExampleMobilePlatformPackage.eINSTANCE.eClass();
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		EMFEcoreExampleRoboticArmPackage.eINSTANCE.eClass();
-<<<<<<< HEAD
-		EMFEcoreExampleMobilePlatformPackage.eINSTANCE.eClass();
-=======
->>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		EMFEcoreExampleCameraPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
