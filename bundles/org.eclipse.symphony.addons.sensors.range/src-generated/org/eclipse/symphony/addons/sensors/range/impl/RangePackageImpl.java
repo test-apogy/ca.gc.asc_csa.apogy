@@ -4,10 +4,8 @@
 package org.eclipse.symphony.addons.sensors.range.impl;
 
 import java.util.List;
-
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -17,13 +15,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.symphony.addons.sensors.SensorsPackage;
-
 import org.eclipse.symphony.addons.sensors.fov.FovPackage;
-
 import org.eclipse.symphony.addons.sensors.range.ContactSensor;
 import org.eclipse.symphony.addons.sensors.range.LineRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.RangeFactory;
@@ -41,15 +35,10 @@ import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
-
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
-
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-
-import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
-
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
-
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
@@ -241,7 +230,7 @@ public class RangePackageImpl extends EPackageImpl implements RangePackage {
 		// Initialize simple dependencies
 		SensorsPackage.eINSTANCE.eClass();
 		Data25dPackage.eINSTANCE.eClass();
-		CommonPackage.eINSTANCE.eClass();
+		EMFEcorePackage.eINSTANCE.eClass();
 		FovPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -846,7 +835,7 @@ public class RangePackageImpl extends EPackageImpl implements RangePackage {
 		Data25dPackage theData25dPackage = (Data25dPackage)EPackage.Registry.INSTANCE.getEPackage(Data25dPackage.eNS_URI);
 		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
 		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
-		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
+		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter rangeScannerEClass_InputType = addETypeParameter(rangeScannerEClass, "InputType");
@@ -893,7 +882,7 @@ public class RangePackageImpl extends EPackageImpl implements RangePackage {
 		g1 = createEGenericType(this.getSimpleRasterScanRangeScanner());
 		simpleRasterScanRangeScannerSimulatorEClass.getEGenericSuperTypes().add(g1);
 		rasterScanDataEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
-		rasterScanDataEClass.getESuperTypes().add(theCommonPackage.getTimeTaggedElement());
+		rasterScanDataEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(rayDataEClass, RayData.class, "RayData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -20,8 +20,8 @@ import org.eclipse.symphony.addons.sensors.fov.FovFactory;
 import org.eclipse.symphony.addons.sensors.range.RangeFactory;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanData;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
-import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
@@ -70,9 +70,9 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TimeTaggedElement_time_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TimeTaggedElement_time_feature", "_UI_TimeTaggedElement_type"),
-				 CommonPackage.Literals.TIME_TAGGED_ELEMENT__TIME,
+				 getString("_UI_Timed_time_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
+				 EMFEcorePackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,

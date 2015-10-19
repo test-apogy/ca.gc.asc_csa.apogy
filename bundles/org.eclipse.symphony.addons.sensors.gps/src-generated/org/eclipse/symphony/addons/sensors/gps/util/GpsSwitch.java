@@ -5,21 +5,13 @@ package org.eclipse.symphony.addons.sensors.gps.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
 import org.eclipse.symphony.addons.sensors.Sensor;
-
 import org.eclipse.symphony.addons.sensors.gps.*;
-
 import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
-
-import org.eclipse.symphony.common.obsolete.mrt.Server;
-import org.eclipse.symphony.common.obsolete.mrt.Startable;
-
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -446,7 +438,7 @@ public class GpsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStartable(Startable object) {
+	public T caseStartable(org.eclipse.symphony.common.emf.Startable object) {
 		return null;
 	}
 
@@ -461,7 +453,7 @@ public class GpsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServer(Server object) {
+	public T caseServer(org.eclipse.symphony.common.emf.Server object) {
 		return null;
 	}
 

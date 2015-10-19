@@ -21,6 +21,8 @@ import org.jfree.chart.annotations.XYShapeAnnotation;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Mobile Platform Symphony System Annotation</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

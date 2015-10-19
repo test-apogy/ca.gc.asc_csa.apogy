@@ -5,7 +5,6 @@ package org.eclipse.symphony.addons.sensors.gps.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -17,7 +16,7 @@ import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
 import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.pose.provider.PoseSensorItemProvider;
-import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
@@ -73,7 +72,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Startable_started_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Startable_started_feature", "_UI_Startable_type"),
-				 CommonPackage.Literals.STARTABLE__STARTED,
+				 EMFEcorePackage.Literals.STARTABLE__STARTED,
 				 true,
 				 false,
 				 false,
@@ -95,7 +94,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Server_serverJob_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Server_serverJob_feature", "_UI_Server_type"),
-				 CommonPackage.Literals.SERVER__SERVER_JOB,
+				 EMFEcorePackage.Literals.SERVER__SERVER_JOB,
 				 false,
 				 false,
 				 false,

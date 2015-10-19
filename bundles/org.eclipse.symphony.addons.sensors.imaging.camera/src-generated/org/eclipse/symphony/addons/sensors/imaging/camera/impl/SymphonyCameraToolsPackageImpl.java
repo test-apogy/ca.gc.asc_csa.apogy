@@ -345,8 +345,8 @@ public class SymphonyCameraToolsPackageImpl extends EPackageImpl implements Symp
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyToolsCorePackage.eINSTANCE.eClass();
 		MRTSensorsImagingPackage.eINSTANCE.eClass();
+		SymphonyToolsCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyCameraToolsPackage.createPackageContents();

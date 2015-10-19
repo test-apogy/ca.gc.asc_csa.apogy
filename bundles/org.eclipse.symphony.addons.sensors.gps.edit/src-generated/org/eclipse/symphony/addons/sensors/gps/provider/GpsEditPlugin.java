@@ -4,21 +4,13 @@
 package org.eclipse.symphony.addons.sensors.gps.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
-
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
-
+import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
-
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
-
-import org.eclipse.symphony.common.obsolete.mrt.provider.CommonEditPlugin;
-
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
-
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 /**
@@ -53,13 +45,13 @@ public final class GpsEditPlugin extends EMFPlugin {
 	public GpsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
-		     CommonEditPlugin.INSTANCE,
+		     PoseEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     PoseEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		   });
 	}
 

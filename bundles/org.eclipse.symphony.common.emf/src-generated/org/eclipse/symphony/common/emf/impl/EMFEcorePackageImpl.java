@@ -9,6 +9,7 @@ import java.util.SortedSet;
 import javax.measure.unit.Unit;
 
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -42,6 +43,8 @@ import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.common.emf.SelectionBasedTimeSource;
+import org.eclipse.symphony.common.emf.Server;
+import org.eclipse.symphony.common.emf.Startable;
 import org.eclipse.symphony.common.emf.TimeDirection;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.TimeSourcesList;
@@ -86,6 +89,20 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
   private EClass timedEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serverEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass startableEClass = null;
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -301,6 +318,13 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
 	 * @generated
 	 */
 	private EDataType uriEDataType = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType jobEDataType = null;
 
 		/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -805,6 +829,42 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getServer() {
+		return serverEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getServer_ServerJob() {
+		return (EAttribute)serverEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStartable() {
+		return startableEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStartable_Started() {
+		return (EAttribute)startableEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1424,6 +1484,15 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getJob() {
+		return jobEDataType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1499,6 +1568,12 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
 
 		timedEClass = createEClass(TIMED);
 		createEAttribute(timedEClass, TIMED__TIME);
+
+		serverEClass = createEClass(SERVER);
+		createEAttribute(serverEClass, SERVER__SERVER_JOB);
+
+		startableEClass = createEClass(STARTABLE);
+		createEAttribute(startableEClass, STARTABLE__STARTED);
 
 		timeSourcesListEClass = createEClass(TIME_SOURCES_LIST);
 		createEReference(timeSourcesListEClass, TIME_SOURCES_LIST__TIME_SOURCES);
@@ -1586,6 +1661,7 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
 		collectionEDataType = createEDataType(COLLECTION);
 		eListEDataType = createEDataType(ELIST);
 		uriEDataType = createEDataType(URI);
+		jobEDataType = createEDataType(JOB);
 	}
 
   /**
@@ -1624,6 +1700,7 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		serverEClass.getESuperTypes().add(this.getStartable());
 		timeSourceEClass.getESuperTypes().add(this.getTimed());
 		timeSourceEClass.getESuperTypes().add(this.getDisposable());
 		fixedTimeSourceEClass.getESuperTypes().add(this.getTimeSource());
@@ -1840,6 +1917,12 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
 		initEClass(timedEClass, Timed.class, "Timed", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTimed_Time(), theEcorePackage.getEDate(), "time", null, 0, 1, Timed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(serverEClass, Server.class, "Server", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getServer_ServerJob(), this.getJob(), "serverJob", null, 0, 1, Server.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(startableEClass, Startable.class, "Startable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStartable_Started(), theEcorePackage.getEBoolean(), "started", "false", 0, 1, Startable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(timeSourcesListEClass, TimeSourcesList.class, "TimeSourcesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTimeSourcesList_TimeSources(), this.getTimeSource(), null, "timeSources", null, 0, -1, TimeSourcesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1945,6 +2028,7 @@ public class EMFEcorePackageImpl extends EPackageImpl implements EMFEcorePackage
 		initEDataType(collectionEDataType, Collection.class, "Collection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(eListEDataType, EList.class, "EList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(uriEDataType, org.eclipse.emf.common.util.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(jobEDataType, Job.class, "Job", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

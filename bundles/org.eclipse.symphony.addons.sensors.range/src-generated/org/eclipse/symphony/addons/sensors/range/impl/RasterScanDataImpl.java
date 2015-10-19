@@ -7,7 +7,6 @@
 package org.eclipse.symphony.addons.sensors.range.impl;
 
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -16,9 +15,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.range.RangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanData;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
+import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
-import org.eclipse.symphony.common.obsolete.mrt.CommonPackage;
-import org.eclipse.symphony.common.obsolete.mrt.TimeTaggedElement;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
@@ -289,9 +288,9 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == TimeTaggedElement.class) {
+		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case RangePackage.RASTER_SCAN_DATA__TIME: return CommonPackage.TIME_TAGGED_ELEMENT__TIME;
+				case RangePackage.RASTER_SCAN_DATA__TIME: return EMFEcorePackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -304,9 +303,9 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == TimeTaggedElement.class) {
+		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.TIME_TAGGED_ELEMENT__TIME: return RangePackage.RASTER_SCAN_DATA__TIME;
+				case EMFEcorePackage.TIMED__TIME: return RangePackage.RASTER_SCAN_DATA__TIME;
 				default: return -1;
 			}
 		}

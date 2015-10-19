@@ -13,7 +13,7 @@ package org.eclipse.symphony.addons.sensors.gps
 
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor
-import org.eclipse.symphony.common.obsolete.mrt.Server
+import org.eclipse.symphony.common.emf.Server
 
 type Exception wraps java.lang.Exception
 type IOException wraps java.io.IOException

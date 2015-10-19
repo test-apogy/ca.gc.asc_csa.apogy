@@ -31,6 +31,7 @@ type Unit wraps javax.measure.unit.Unit
 type Collection<T> wraps java.util.Collection
 type EList<EObject> wraps EList
 type URI wraps URI
+type Job wraps org.eclipse.core.runtime.jobs.Job
 
 /* ------------------------------------------------------------------------------------------
  * 
@@ -175,6 +176,16 @@ interface Described{
 interface Timed
 {
 	EDate time
+}
+
+class Server extends Startable
+{
+	readonly transient Job serverJob
+}
+
+class Startable
+{
+	transient boolean started = "false"
 }
 
 /* -------------------------------------------------------------------------
