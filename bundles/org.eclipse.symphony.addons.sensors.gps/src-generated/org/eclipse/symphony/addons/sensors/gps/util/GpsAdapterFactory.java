@@ -13,6 +13,8 @@ import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
+import org.eclipse.symphony.common.emf.Server;
+import org.eclipse.symphony.common.emf.Startable;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -153,11 +155,11 @@ public class GpsAdapterFactory extends AdapterFactoryImpl {
 				return createPoseSensorAdapter();
 			}
 			@Override
-			public Adapter caseStartable(org.eclipse.symphony.common.emf.Startable object) {
+			public Adapter caseStartable(Startable object) {
 				return createStartableAdapter();
 			}
 			@Override
-			public Adapter caseServer(org.eclipse.symphony.common.emf.Server object) {
+			public Adapter caseServer(Server object) {
 				return createServerAdapter();
 			}
 			@Override

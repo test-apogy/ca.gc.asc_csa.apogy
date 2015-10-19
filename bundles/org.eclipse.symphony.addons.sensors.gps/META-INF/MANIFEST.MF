@@ -23,7 +23,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.addons.sensors;visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.gavaghan.geodesy.core,
- org.eclipse.symphony.common.obsolete.eclipse.emf,
  org.eclipse.symphony.common.log;bundle-version="0.3.0",
  org.eclipse.symphony.common.emf;bundle-version="0.5.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
