@@ -164,11 +164,6 @@
             name="TopologyPresentationRegistryView"
             restorable="true">
       </view>
-      <category
-            id="org.eclipse.symphony.common.topology.ui.category"
-            name="Symphony Common Topology"
-            parentCategory="org.eclipse.symphony.common.ui.category">
-      </category>
    </extension>
    <extension
          point="org.eclipse.ui.commands">

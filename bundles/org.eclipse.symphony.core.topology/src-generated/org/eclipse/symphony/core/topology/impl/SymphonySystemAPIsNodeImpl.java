@@ -446,7 +446,6 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 	  }	
   }
 
-  @SuppressWarnings("rawtypes")
   private void assembleSubSystems(SymphonySystem symphonySystem, Map<SymphonySystem, SymphonySystemApiAdapter> systemToApiAdapterMap)
   {	  	   	  
 	  Logger.INSTANCE.log(Activator.ID, this, "Assembling Sub-System <" + symphonySystem + ">", EventSeverity.INFO);

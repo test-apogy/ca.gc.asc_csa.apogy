@@ -323,8 +323,8 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 		isInited = true;
 
 		// Initialize simple dependencies
-		EMFEcoreInvocatorPackage.eINSTANCE.eClass();
 		TopologyBindingsPackage.eINSTANCE.eClass();
+		EMFEcoreInvocatorPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyCorePackage.createPackageContents();

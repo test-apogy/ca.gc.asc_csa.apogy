@@ -22,7 +22,6 @@ import javax.vecmath.Point3f;
  *         TODO To change the template for this generated type comment go to
  *         Window - Preferences - Java - Code Style - Code Templates
  */
-@SuppressWarnings("restriction")
 public class PifReaderTest {
 
 	@SuppressWarnings("rawtypes")

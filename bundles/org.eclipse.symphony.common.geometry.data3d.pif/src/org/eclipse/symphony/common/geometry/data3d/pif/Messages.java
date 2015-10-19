@@ -2,7 +2,6 @@ package org.eclipse.symphony.common.geometry.data3d.pif;
 
 import org.eclipse.osgi.util.NLS;
 
-@SuppressWarnings("restriction")
 public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.symphony.common.geometry.data3d.pif.messages"; //$NON-NLS-1$
 	public static String PifToXYZ_0;

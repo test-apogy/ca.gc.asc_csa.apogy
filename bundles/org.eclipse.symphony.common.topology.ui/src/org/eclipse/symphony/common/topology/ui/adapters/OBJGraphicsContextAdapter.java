@@ -31,7 +31,6 @@ public class OBJGraphicsContextAdapter implements GraphicsContextAdapter
 		return isAdapter;
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public GraphicsContext getAdapter(Object obj, Object context) 
 	{

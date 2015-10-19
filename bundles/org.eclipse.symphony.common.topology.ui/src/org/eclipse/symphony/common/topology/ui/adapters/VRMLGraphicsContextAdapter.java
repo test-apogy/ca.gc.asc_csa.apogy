@@ -29,7 +29,6 @@ public class VRMLGraphicsContextAdapter implements GraphicsContextAdapter {
 		return isAdapter;
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public GraphicsContext getAdapter(Object obj, Object context) {
 		

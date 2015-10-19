@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.core.ui.category"
+            category="org.eclipse.symphony.ui.category"
             class="org.eclipse.symphony.core.topology.ui.views.SymphonyEnvironment3DView"
             icon="icons/eview16/Symphony3DViewer.gif"
             id="org.eclipse.symphony.core.topology.ui.views.Symphony3DView"
@@ -12,7 +12,7 @@
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.core.ui.category"
+            category="org.eclipse.symphony.ui.category"
             class="org.eclipse.symphony.core.topology.ui.views.SymphonySystem3DView"
             icon="icons/eview16/SymphonySystem3DViewer.gif"
             id="org.eclipse.symphony.core.topology.ui.views.SymphonySystem3DView"

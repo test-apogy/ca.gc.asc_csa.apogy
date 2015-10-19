@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.core.ui.category"
+            category="org.eclipse.symphony.addons.ui.category"
             class="org.eclipse.symphony.addons.telecoms.ui.views.TelecomStatusMonitorToolView"
             id="ca.gc.asc_csa.symphony.tools.network.ui.views.NetworkStatusMonitorView"
             name="Telecom Status Monitor View"

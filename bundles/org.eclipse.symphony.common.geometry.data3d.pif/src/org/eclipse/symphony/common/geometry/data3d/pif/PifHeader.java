@@ -12,7 +12,6 @@ import javax.vecmath.Matrix4d;
 /**
  * Header of the pif file as described by innovmetric.
  */
-@SuppressWarnings("restriction")
 public class PifHeader {
 
 	// The header size in bytes.
