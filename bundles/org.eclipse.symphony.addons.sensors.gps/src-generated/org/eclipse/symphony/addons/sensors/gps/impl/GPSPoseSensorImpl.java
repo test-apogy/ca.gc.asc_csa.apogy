@@ -9,9 +9,11 @@ package org.eclipse.symphony.addons.sensors.gps.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -35,7 +37,12 @@ import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl;
+import org.eclipse.symphony.common.emf.DefaultListEventDelegate;
+import org.eclipse.symphony.common.emf.EListAdapter;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.ListEventDelegate;
+import org.eclipse.symphony.common.emf.Server;
+import org.eclipse.symphony.common.emf.Startable;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
@@ -48,9 +55,6 @@ import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.obsolete.eclipse.emf.DefaultListEventDelegate;
-import org.eclipse.symphony.common.obsolete.eclipse.emf.EListAdapter;
-import org.eclipse.symphony.common.obsolete.eclipse.emf.ListEventDelegate;
 import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GeodeticCalculator;
 import org.gavaghan.geodesy.GeodeticCurve;
@@ -747,13 +751,13 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == org.eclipse.symphony.common.emf.Startable.class) {
+		if (baseClass == Startable.class) {
 			switch (derivedFeatureID) {
 				case GpsPackage.GPS_POSE_SENSOR__STARTED: return EMFEcorePackage.STARTABLE__STARTED;
 				default: return -1;
 			}
 		}
-		if (baseClass == org.eclipse.symphony.common.emf.Server.class) {
+		if (baseClass == Server.class) {
 			switch (derivedFeatureID) {
 				case GpsPackage.GPS_POSE_SENSOR__SERVER_JOB: return EMFEcorePackage.SERVER__SERVER_JOB;
 				default: return -1;
@@ -768,13 +772,13 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == org.eclipse.symphony.common.emf.Startable.class) {
+		if (baseClass == Startable.class) {
 			switch (baseFeatureID) {
 				case EMFEcorePackage.STARTABLE__STARTED: return GpsPackage.GPS_POSE_SENSOR__STARTED;
 				default: return -1;
 			}
 		}
-		if (baseClass == org.eclipse.symphony.common.emf.Server.class) {
+		if (baseClass == Server.class) {
 			switch (baseFeatureID) {
 				case EMFEcorePackage.SERVER__SERVER_JOB: return GpsPackage.GPS_POSE_SENSOR__SERVER_JOB;
 				default: return -1;

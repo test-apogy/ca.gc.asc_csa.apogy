@@ -1,4 +1,4 @@
-package org.eclipse.symphony.common.obsolete.eclipse.emf;
+package org.eclipse.symphony.common.emf;
 
 import java.util.List;
 

@@ -7,8 +7,7 @@ Bundle-Activator: org.eclipse.symphony.addons.sensors.gps.ui.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.symphony.addons.sensors.gps,
- org.eclipse.symphony.common.lang.java,
- org.eclipse.symphony.common.obsolete.eclipse.emf
+ org.eclipse.symphony.common.lang.java
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: %providerName

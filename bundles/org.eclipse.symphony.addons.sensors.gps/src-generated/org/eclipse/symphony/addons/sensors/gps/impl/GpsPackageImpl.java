@@ -190,8 +190,8 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		PosePackage.eINSTANCE.eClass();
 		EMFEcorePackage.eINSTANCE.eClass();
+		PosePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theGpsPackage.createPackageContents();

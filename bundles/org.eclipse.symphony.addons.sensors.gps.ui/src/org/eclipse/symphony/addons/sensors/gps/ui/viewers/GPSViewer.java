@@ -26,9 +26,9 @@ import org.eclipse.symphony.addons.sensors.gps.GPS;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
 import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
 import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
+import org.eclipse.symphony.common.emf.EListAdapter;
+import org.eclipse.symphony.common.emf.ListEventDelegate;
 import org.eclipse.symphony.common.lang.java.Timer;
-import org.eclipse.symphony.common.obsolete.eclipse.emf.EListAdapter;
-import org.eclipse.symphony.common.obsolete.eclipse.emf.ListEventDelegate;
 
 /**
  * This class is a GPS viewer. that displays a {@link GPS} object.
