@@ -3,8 +3,6 @@
  */
 package org.eclipse.symphony.core.recordings.impl;
 
-import static org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage.ADAPTER;
-
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;

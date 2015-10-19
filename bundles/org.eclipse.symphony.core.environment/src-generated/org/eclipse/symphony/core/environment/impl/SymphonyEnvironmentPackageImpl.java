@@ -624,8 +624,8 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyCorePackage.eINSTANCE.eClass();
 		Data3dPackage.eINSTANCE.eClass();
+		SymphonyCorePackage.eINSTANCE.eClass();
 		ImagesCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

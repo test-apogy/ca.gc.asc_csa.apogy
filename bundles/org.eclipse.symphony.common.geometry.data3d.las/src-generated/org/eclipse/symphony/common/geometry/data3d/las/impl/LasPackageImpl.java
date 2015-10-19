@@ -1310,6 +1310,7 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d.las/src-generated",
+			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.las.edit/src-generated",
 			 "basePackage", "org.eclipse.symphony.common.geometry.data3d"
 		   });	
 		addAnnotation

@@ -2,18 +2,17 @@
 <?eclipse version="3.0"?>
 
 <!--
- Canadian Space Agency 2008.
-
- $Id: plugin.xml,v 1.3.4.2 2015/05/21 15:50:20 pallard Exp $
+ Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
 -->
 
 <plugin>
 
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <package 
-       uri = "http:///ca/gc/space/mrt/pathplanners/graph/pathplannersgraph.ecore" 
-       class = "org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage"
-       genModel = "model/pathplannersgraph.genmodel" /> 
-  </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_addons_mobility_pathplanners_graph -->
+      <package
+            uri="org.eclipse.symphony.addons.mobility.pathplanners.graph"
+            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage"
+            genModel="model/symphony_addons_mobility_pathplanners_graph.xcore"/>
+   </extension>
 
 </plugin>

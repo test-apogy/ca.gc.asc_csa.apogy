@@ -260,8 +260,8 @@ public class EMFEcoreControllersPackageImpl extends EPackageImpl implements EMFE
 		isInited = true;
 
 		// Initialize simple dependencies
-		JInputPackage.eINSTANCE.eClass();
 		EMFEcoreInvocatorPackage.eINSTANCE.eClass();
+		JInputPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreControllersPackage.createPackageContents();

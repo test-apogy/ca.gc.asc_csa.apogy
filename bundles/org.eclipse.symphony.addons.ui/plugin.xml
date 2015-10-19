@@ -172,5 +172,12 @@
             Class="org.eclipse.symphony.addons.ui.adapters.Trajectory3DToolNodePresentationAdapter">
       </Class>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.eclipse.symphony.addons.ui.category"
+            name="Symphony Addons">
+      </category>
+   </extension>
 
 </plugin>

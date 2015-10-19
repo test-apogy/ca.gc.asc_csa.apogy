@@ -38,7 +38,7 @@
          point="org.eclipse.ui.views">
       <category
             id="org.eclipse.symphony.common.ui.category"
-            name="ASC/CSA Eclipse Toolbox">
+            name="Symphony Common">
       </category>
    </extension>
    <extension

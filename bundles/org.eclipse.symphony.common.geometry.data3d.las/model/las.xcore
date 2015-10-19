@@ -7,6 +7,7 @@
 	      operationReflection="true",
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d.las/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.las.edit/src-generated")
 
 package org.eclipse.symphony.common.geometry.data3d.las
 

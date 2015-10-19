@@ -619,7 +619,7 @@ public class IO {
 				// Read next line
 				inputLine = inputData.readLine();
 			}
-
+			inputData.close();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
