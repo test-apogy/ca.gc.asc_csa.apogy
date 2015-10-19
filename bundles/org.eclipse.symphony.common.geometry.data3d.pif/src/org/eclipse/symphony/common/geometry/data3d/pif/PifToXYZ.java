@@ -9,7 +9,6 @@ import java.util.List;
 
 import javax.vecmath.Point3f;
 
-@SuppressWarnings("restriction")
 public class PifToXYZ {
 	public static void main(String[] args) {
 

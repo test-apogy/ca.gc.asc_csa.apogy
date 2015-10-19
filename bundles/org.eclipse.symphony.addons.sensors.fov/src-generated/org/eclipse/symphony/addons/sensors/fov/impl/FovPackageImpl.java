@@ -143,8 +143,8 @@ public class FovPackageImpl extends EPackageImpl implements FovPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		Data3dPackage.eINSTANCE.eClass();
 		TopologyPackage.eINSTANCE.eClass();
+		Data3dPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theFovPackage.createPackageContents();

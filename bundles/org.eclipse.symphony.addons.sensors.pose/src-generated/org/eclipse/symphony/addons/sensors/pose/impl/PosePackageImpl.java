@@ -182,8 +182,8 @@ public class PosePackageImpl extends EPackageImpl implements PosePackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		SensorsPackage.eINSTANCE.eClass();
 		Data3dPackage.eINSTANCE.eClass();
+		SensorsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thePosePackage.createPackageContents();
