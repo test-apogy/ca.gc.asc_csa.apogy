@@ -8,6 +8,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated symphony_environment_ui -->
       <factory
             uri="org.eclipse.symphony.core.environment.ui"
             class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory"
@@ -30,15 +31,6 @@
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="http:///ca/gc/space/topology/ui.ecore"
-            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$UiChildCreationExtender"/>
-      <extender
-            uri="http:///ca/gc/space/topology.ecore"
-            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

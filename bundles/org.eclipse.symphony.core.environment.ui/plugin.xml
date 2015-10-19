@@ -39,7 +39,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.core.ui.category"
+            category="org.eclipse.symphony.ui.category"
             class="org.eclipse.symphony.core.environment.ui.views.EarthSkyView"
             icon="icons/earth_sky_view.gif"
             id="org.eclipse.symphony.core.environment.ui.view1"
@@ -47,7 +47,7 @@
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.core.ui.category"
+            category="org.eclipse.symphony.ui.category"
             class="org.eclipse.symphony.core.environment.ui.views.MapView"
             icon="icons/map_view_icon.gif"
             id="org.eclipse.symphony.core.environment.ui.views.MapView"
@@ -377,12 +377,6 @@
             id="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentSkyPreferencesPage"
             name="Sky">
       </page>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Java3d">
-      <Class
-            Class="org.eclipse.symphony.core.environment.ui.j3d.FeatureOfInterestObjectAdapter">
-      </Class>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.Presentation">

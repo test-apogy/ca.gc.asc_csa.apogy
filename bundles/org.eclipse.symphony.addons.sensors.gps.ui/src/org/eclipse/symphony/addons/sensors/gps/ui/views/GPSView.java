@@ -24,7 +24,7 @@ import org.eclipse.ui.part.ViewPart;
 public class GPSView extends ViewPart implements ISelectionListener {
 
 	public static final String ID = "org.eclipse.symphony.addons.sensors.gps.ui.views.GPSView";
-	private IMemento memento;
+//	private IMemento memento;
 	private GPSViewer gpsViewer;
 
 	public GPSView() {
@@ -58,7 +58,7 @@ public class GPSView extends ViewPart implements ISelectionListener {
 	@Override
 	public void init(IViewSite site, IMemento memento) throws PartInitException {
 		init(site);
-		this.memento = memento;
+//		this.memento = memento;
 	}
 
 	@Override
@@ -76,14 +76,14 @@ public class GPSView extends ViewPart implements ISelectionListener {
 		// }
 	}
 
-	private void restoreState() {
-		IMemento selectionMemento = memento.getChild("selection");
-
-		IMemento gpsMemento = selectionMemento.getChild("descriptor");
-
-		if (gpsMemento != null) {
-			// Set selection to this gps.
-		}
-	}
+//	private void restoreState() {
+//		IMemento selectionMemento = memento.getChild("selection");
+//
+//		IMemento gpsMemento = selectionMemento.getChild("descriptor");
+//
+//		if (gpsMemento != null) {
+//			// Set selection to this gps.
+//		}
+//	}
 
 }

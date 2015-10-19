@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import javax.vecmath.Point3d;
-
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -27,9 +25,7 @@ import com.jme3.scene.Mesh.Mode;
 import com.jme3.util.BufferUtils;
 
 public class AbstractAntennaRadiationPatternJME3Object extends DefaultJME3SceneObject<AbstractAntennaRadiationPattern> implements AbstractAntennaRadiationPatternSceneObject
-{					
-	private AbstractAntennaRadiationPattern abstractAntennaRadiationPattern;
-	
+{
 	private boolean useShading = true;
 	private boolean updatingGeometry = false;
 	private AssetManager assetManager;	
@@ -37,7 +33,6 @@ public class AbstractAntennaRadiationPatternJME3Object extends DefaultJME3SceneO
 	private com.jme3.scene.Mesh jme3mMesh = null;
 	// private MeshPresentationMode meshPresentationMode = MeshPresentationMode.SURFACE;
 	
-	private Point3d centroid = null;
 	private ColorRGBA meshColor = getDefaultMeshColor();
 		
 	public AbstractAntennaRadiationPatternJME3Object(AbstractAntennaRadiationPattern abstractAntennaRadiationPattern, JME3RenderEngineDelegate jme3RenderEngineDelegate) 
@@ -49,7 +44,6 @@ public class AbstractAntennaRadiationPatternJME3Object extends DefaultJME3SceneO
 			throw new IllegalArgumentException();
 		}
 		
-		this.abstractAntennaRadiationPattern = abstractAntennaRadiationPattern;
 		this.assetManager = jme3Application.getAssetManager();
 		
 		
@@ -102,9 +96,6 @@ public class AbstractAntennaRadiationPatternJME3Object extends DefaultJME3SceneO
 			if(!updatingGeometry)
 			{
 				updatingGeometry = true;
-				
-				// Invalidate the centroid.
-				centroid = null;
 				
 				// Detach previous geometry if required.
 				if(radiationPatternGeometry != null)

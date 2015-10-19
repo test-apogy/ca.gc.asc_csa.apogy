@@ -35,13 +35,6 @@
       </propertySections>
    </extension>
    <extension
-         point="org.eclipse.ui.views">
-      <category
-            id="org.eclipse.symphony.common.ui.category"
-            name="Symphony Common">
-      </category>
-   </extension>
-   <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
             class="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester"
