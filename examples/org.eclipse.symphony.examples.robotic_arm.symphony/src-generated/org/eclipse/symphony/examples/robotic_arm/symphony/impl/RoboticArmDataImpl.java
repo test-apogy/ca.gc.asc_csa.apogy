@@ -17,6 +17,7 @@ import org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRobotic
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#getSpeed <em>Speed</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRobotic
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#getElbowAngle <em>Elbow Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.impl.RoboticArmDataImpl#getWristAngle <em>Wrist Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

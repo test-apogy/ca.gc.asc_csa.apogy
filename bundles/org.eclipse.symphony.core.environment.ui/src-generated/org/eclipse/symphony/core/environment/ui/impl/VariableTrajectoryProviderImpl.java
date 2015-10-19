@@ -21,11 +21,11 @@ import org.jfree.data.xy.XYSeries;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryProviderImpl#getVariableAnnotation <em>Variable Annotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryProviderImpl#getPoseProvider <em>Pose Provider</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.symphony.examples.antenna.DishAntennaSymphonySystemApiAdapter} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.DishAntennaSymphonySystemApiAdapter} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated

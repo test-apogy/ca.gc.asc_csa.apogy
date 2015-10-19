@@ -30,7 +30,7 @@ class LanderSymphonySystemApiAdapter extends SymphonySystemApiAdapter
  * This class specifies the initialization data that Symphony
  * should be interested in when (re)initializing the PTU dish
  * antenna with the API Adapter (which in this case is
- * {@link ca.gc.asc_csa.symphony.examples.antenna.PTUDishAntennaSymphonySystemApiAdapter})
+ * {@link org.eclipse.symphony.examples.antenna.PTUDishAntennaSymphonySystemApiAdapter})
  */
 class LanderData extends SymphonyInitializationData
 {

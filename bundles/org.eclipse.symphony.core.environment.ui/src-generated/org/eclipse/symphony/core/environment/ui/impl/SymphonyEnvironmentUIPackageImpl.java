@@ -353,8 +353,8 @@ public class SymphonyEnvironmentUIPackageImpl extends EPackageImpl implements Sy
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		TopologyUIPackage.eINSTANCE.eClass();
+		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyEnvironmentUIPackage.createPackageContents();

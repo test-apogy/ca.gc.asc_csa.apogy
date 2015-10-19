@@ -15,10 +15,10 @@ import org.eclipse.symphony.examples.mobile_platform.NamedPosition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.impl.NamedPositionImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

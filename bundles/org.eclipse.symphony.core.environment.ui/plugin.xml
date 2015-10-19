@@ -42,7 +42,7 @@
             category="org.eclipse.symphony.ui.category"
             class="org.eclipse.symphony.core.environment.ui.views.EarthSkyView"
             icon="icons/earth_sky_view.gif"
-            id="org.eclipse.symphony.core.environment.ui.view1"
+            id="org.eclipse.symphony.core.environment.ui.views.EarthSkyView"
             name="Earth Sky"
             restorable="true">
       </view>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="org.eclipse.symphony.core.invocator">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="org.eclipse.symphony.core.environment" xmlns:invocator="org.eclipse.symphony.core.invocator">
   <environment xsi:type="core:SymphonyEnvironment" name="PTU Camera Example" description="This is a sample session, illustrating how to use the PTU camera example" activeContext="//@environment/@contextsList/@contexts.0" time="2015-04-13T08:53:27.536-0400" activeWorksite="//@environment/@worksitesList/@worksites.0" activeTimeSource="//@environment/@timeSourcesList/@timeSources.0">
     <typesList>
       <localTypes/>
@@ -49,13 +49,13 @@
         <eOperation href="org.eclipse.symphony.examples.camera.symphony#//Camera/init"/>
       </operationCalls>
       <operationCalls variable="//@environment/@variablesList/@variables.0" name="Change Zoom">
-        <eOperation href="ca.gc.space.mrt.sensors.imaging#//Zoomable/commandZoom"/>
+        <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList>
           <arguments xsi:type="invocator:EDataTypeArgument" value="1.0"/>
         </argumentsList>
       </operationCalls>
       <operationCalls variable="//@environment/@variablesList/@variables.0" name="Take Snapshot">
-        <eOperation href="ca.gc.space.mrt.sensors.imaging#//AbstractCamera/takeSnapshot"/>
+        <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//AbstractCamera/takeSnapshot"/>
       </operationCalls>
       <operationCalls variable="//@environment/@variablesList/@variables.0" name="Move To Pan / Tilt Angles">
         <eOperation href="org.eclipse.symphony.addons.actuators#//PanTiltUnit/moveToPanTilt"/>

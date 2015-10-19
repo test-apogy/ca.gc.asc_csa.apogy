@@ -16,10 +16,10 @@ import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewItemPresentationImpl#isVisible <em>Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

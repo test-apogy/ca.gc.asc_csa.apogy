@@ -30,13 +30,13 @@ import org.eclipse.symphony.examples.satellite.SatelliteImager;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl#getCurrentZoom <em>Current Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl#getSatellite <em>Satellite</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl#getImagesAcquired <em>Images Acquired</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

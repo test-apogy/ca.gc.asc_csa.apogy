@@ -15,11 +15,12 @@ import org.eclipse.symphony.examples.lander.LanderLegExtension;
  * This class specifies the initialization data that Symphony
  * should be interested in when (re)initializing the PTU dish
  * antenna with the API Adapter (which in this case is
- * {@link ca.gc.asc_csa.symphony.examples.antenna.PTUDishAntennaSymphonySystemApiAdapter})
+ * {@link org.eclipse.symphony.examples.antenna.PTUDishAntennaSymphonySystemApiAdapter})
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isDisposed <em>Disposed</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.symphony.examples.lander.LanderLegExtension;
  *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage#getLanderData()
  * @model

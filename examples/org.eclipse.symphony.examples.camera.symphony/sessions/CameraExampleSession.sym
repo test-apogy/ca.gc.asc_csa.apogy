@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmi:id="_2irY0ArOEeW4-_ONWXXiAw" name="">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="org.eclipse.symphony.core.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmi:id="_2irY0ArOEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:SymphonyEnvironment" xmi:id="_2irY0QrOEeW4-_ONWXXiAw" name="Camera Example" description="This is an example session, illustrating how to use the camera example" activeContext="_2irY2ArOEeW4-_ONWXXiAw" time="2015-04-08T14:45:33.793-0400" activeWorksite="_2ir_4ArOEeW4-_ONWXXiAw" activeTimeSource="_2ism9QrOEeW4-_ONWXXiAw">
     <typesList xmi:id="_2irY0grOEeW4-_ONWXXiAw">
       <localTypes xmi:id="_2irY0wrOEeW4-_ONWXXiAw"/>
@@ -49,10 +49,10 @@
         <eOperation href="org.eclipse.symphony.examples.camera.symphony#//Camera/init"/>
       </operationCalls>
       <operationCalls xmi:id="_2ism-QrOEeW4-_ONWXXiAw" name="Take Snapshot" variable="_2irY1grOEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.space.mrt.sensors.imaging#//AbstractCamera/takeSnapshot"/>
+        <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//AbstractCamera/takeSnapshot"/>
       </operationCalls>
       <operationCalls xmi:id="_2ism-grOEeW4-_ONWXXiAw" name="Change Zoom" variable="_2irY1grOEeW4-_ONWXXiAw">
-        <eOperation href="ca.gc.space.mrt.sensors.imaging#//Zoomable/commandZoom"/>
+        <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_2ism-wrOEeW4-_ONWXXiAw">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_2ism_ArOEeW4-_ONWXXiAw" value="1.0"/>
         </argumentsList>

@@ -34,10 +34,10 @@ import org.jfree.ui.TextAnchor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapRulerImpl#getRulerColor <em>Ruler Color</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

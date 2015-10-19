@@ -219,7 +219,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 			 *       such, the actual implementation is in the PTU dish
 			 *       antenna's Symphony API Adapter.  For more details,
 			 *       please see
-			 *       {@link ca.gc.asc_csa.symphony.examples.antenna.impl.PTUDishAntennaSymphonySystemApiAdapterImpl}
+			 *       {@link org.eclipse.symphony.examples.antenna.impl.PTUDishAntennaSymphonySystemApiAdapterImpl}
 			 */
 		}
 		

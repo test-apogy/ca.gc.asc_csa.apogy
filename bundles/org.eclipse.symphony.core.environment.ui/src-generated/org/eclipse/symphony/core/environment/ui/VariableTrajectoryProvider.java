@@ -17,11 +17,11 @@ import org.eclipse.symphony.core.PoseProvider;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation <em>Variable Annotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getPoseProvider <em>Pose Provider</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVariableTrajectoryProvider()
  * @model abstract="true"

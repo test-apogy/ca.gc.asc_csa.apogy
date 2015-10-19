@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ca.gc.asc_csa.eclipse.images="http://ca/gc/asc_csa/eclipse/images/core/1.0" xmlns:camera="ca.gc.asc_csa.symphony.tools.camera" xmlns:controllers="org.eclipse.symphony.core.invocator.controllers" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="ca.gc.asc_csa.symphony.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmlns:ui="ca.gc.asc_csa.symphony.environment.ui" xmi:id="_P7kTsArPEeW4-_ONWXXiAw" name="">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:images="org.eclipse.symphony.common.images" xmlns:camera="org.eclipse.symphony.addons.sensors.imaging.camera" xmlns:controllers="org.eclipse.symphony.core.invocator.controllers" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="org.eclipse.symphony.core.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmlns:ui="org.eclipse.symphony.core.environment.ui" xmi:id="_P7kTsArPEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:SymphonyEnvironment" xmi:id="_P7kTsQrPEeW4-_ONWXXiAw" name="Rover Example" description="This is an example session, illustrating how to use the rover example" activeContext="_P7kTuArPEeW4-_ONWXXiAw" time="2015-04-14T10:41:51.152-0400" activeWorksite="_CzkhgFGCEeWAhtIVYAHdhA" activeTimeSource="_P7mI4wrPEeW4-_ONWXXiAw">
     <typesList xmi:id="_P7kTsgrPEeW4-_ONWXXiAw">
       <localTypes xmi:id="_P7kTswrPEeW4-_ONWXXiAw"/>
@@ -67,18 +67,18 @@
           </maps>
           <maps xmi:id="_CzkhhVGCEeWAhtIVYAHdhA" name="Image Map Layers">
             <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhhlGCEeWAhtIVYAHdhA" name="Contours 0.2 meter interval" description="Contours map with 0.2 meter altitude interval." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-contour-map-black-20cm-per-line.png">
-              <image xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" xmi:id="_Czkhh1GCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-contour-map-black-20cm-per-line.png"/>
+              <image xsi:type="images:URLEImage" xmi:id="_Czkhh1GCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-contour-map-black-20cm-per-line.png"/>
             </layers>
             <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhiFGCEeWAhtIVYAHdhA" name="Altitude " description="Color Coded Altitude Map at 0.5 meters resolution." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-50cm.png" legendURL="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-legend.png">
-              <image xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" xmi:id="_CzkhiVGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-50cm.png"/>
-              <legend xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" xmi:id="_CzkhilGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-legend.png"/>
+              <image xsi:type="images:URLEImage" xmi:id="_CzkhiVGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-50cm.png"/>
+              <legend xsi:type="images:URLEImage" xmi:id="_CzkhilGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-legend.png"/>
             </layers>
             <layers xsi:type="environment:URLImageMapLayer" xmi:id="_Czkhi1GCEeWAhtIVYAHdhA" name="Slope Map" description="Slope Map showing slopes from 0 to 30 degrees.&#xA;" width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees.png" legendURL="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees-legend.png">
-              <image xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" xmi:id="_CzkhjFGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees.png"/>
-              <legend xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" xmi:id="_CzkhjVGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees-legend.png"/>
+              <image xsi:type="images:URLEImage" xmi:id="_CzkhjFGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees.png"/>
+              <legend xsi:type="images:URLEImage" xmi:id="_CzkhjVGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees-legend.png"/>
             </layers>
             <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhjlGCEeWAhtIVYAHdhA" name="Aerial View" description="CSA AT See from above." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-NGC-MET-seen-from-sky.jpg">
-              <image xsi:type="ca.gc.asc_csa.eclipse.images:URLEImage" xmi:id="_Czkhj1GCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-NGC-MET-seen-from-sky.jpg"/>
+              <image xsi:type="images:URLEImage" xmi:id="_Czkhj1GCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-NGC-MET-seen-from-sky.jpg"/>
             </layers>
           </maps>
           <maps xmi:id="_CzkhkFGCEeWAhtIVYAHdhA" name="Features Of Interest" description="Features of interest fo the CSA Analog Terrain.">
@@ -220,7 +220,7 @@
         <typeMemberReferenceListElement xmi:id="_ivy2UTq0EeW90siL-RZo4A">
           <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.space.mrt.sensors.imaging#//Zoomable/commandZoom"/>
+        <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_kCcJ8Dq0EeW90siL-RZo4A">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_kCcJ8Tq0EeW90siL-RZo4A" value="2.0"/>
         </argumentsList>
@@ -229,7 +229,7 @@
         <typeMemberReferenceListElement xmi:id="_o-jeoTq0EeW90siL-RZo4A">
           <typeMember href="platform:/plugin/org.eclipse.symphony.examples.rover.symphony/model/RoverSymphonySystem.ss#_OeyzsQrPEeW4-_ONWXXiAw"/>
         </typeMemberReferenceListElement>
-        <eOperation href="ca.gc.space.mrt.sensors.imaging#//Zoomable/commandZoom"/>
+        <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//Zoomable/commandZoom"/>
         <argumentsList xmi:id="_o-jeojq0EeW90siL-RZo4A">
           <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_o-jeozq0EeW90siL-RZo4A" value="1.0"/>
         </argumentsList>

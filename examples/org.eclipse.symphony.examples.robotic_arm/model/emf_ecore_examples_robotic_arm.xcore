@@ -210,6 +210,6 @@ class RoboticArmSimulated extends RoboticArm
 {
 	/*
 	 * For specific implementation details,
-	 * see {@link ca.gc.asc_csa.emf.ecore.examples.robotic_arm.impl.RoboticArmSimulatedImpl} 
+	 * see {@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmSimulatedImpl} 
 	 */
 }
