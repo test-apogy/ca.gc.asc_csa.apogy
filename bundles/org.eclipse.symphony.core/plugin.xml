@@ -11,7 +11,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.asc_csa.symphony.core"
+            uri="org.eclipse.symphony.core"
             class="org.eclipse.symphony.core.SymphonyCorePackage"
             genModel="model/symphony_core.xcore"/>
    </extension>

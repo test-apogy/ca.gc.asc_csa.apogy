@@ -17,12 +17,12 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getXAxisAzimuth <em>XAxis Azimuth</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getEarthSky <em>Earth Sky</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSurfaceWorksite()
  * @model

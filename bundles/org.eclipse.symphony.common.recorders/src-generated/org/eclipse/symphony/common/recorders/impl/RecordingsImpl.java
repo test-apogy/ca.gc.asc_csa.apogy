@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.recorders.Recordings;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.RecordingsImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.RecordingsImpl#getRecords <em>Records</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.RecordingsImpl#getTracks <em>Tracks</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -17,6 +17,7 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.impl.SkidSteeredMobilePlateformImpl#getCommandedRightWheelsVelocity <em>Commanded Right Wheels Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.impl.SkidSteeredMobilePlateformImpl#getActualRightWheelsVelocity <em>Actual Right Wheels Velocity</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform;
  *   <li>{@link org.eclipse.symphony.addons.mobility.impl.SkidSteeredMobilePlateformImpl#getActualTranslationVelocity <em>Actual Translation Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.impl.SkidSteeredMobilePlateformImpl#getEffectiveSteeringWidth <em>Effective Steering Width</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

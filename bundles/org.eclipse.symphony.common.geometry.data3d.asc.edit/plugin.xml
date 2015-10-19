@@ -8,7 +8,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated mrt_data3d_asc -->
       <factory
             uri="org.eclipse.symphony.common.geometry.data3d.asc"
             class="org.eclipse.symphony.common.geometry.data3d.asc.provider.Data3DASCItemProviderAdapterFactory"

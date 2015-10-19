@@ -16,6 +16,7 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList <em>Camera View Configuration List</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCamera <em>Camera</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#isSaveImageWithOverlays <em>Save Image With Overlays</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getImageAutoSaveFolderPath <em>Image Auto Save Folder Path</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraViewConfiguration()
  * @model

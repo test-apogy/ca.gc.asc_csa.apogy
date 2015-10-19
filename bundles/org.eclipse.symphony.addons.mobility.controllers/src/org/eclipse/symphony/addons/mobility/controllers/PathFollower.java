@@ -26,6 +26,7 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPath <em>Path</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPlatform <em>Platform</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#isDestinationReached <em>Destination Reached</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPathFollowerState <em>Path Follower State</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower()
  * @model

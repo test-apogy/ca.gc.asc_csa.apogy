@@ -11,7 +11,6 @@
 
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging -->
       <factory
             uri="org.eclipse.symphony.addons.sensors.imaging"
             class="org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingItemProviderAdapterFactory"
@@ -24,7 +23,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging -->
       <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingItemProviderAdapterFactory$TopologyChildCreationExtender"/>

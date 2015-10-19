@@ -22,13 +22,13 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PlaneImpl#getV0 <em>V0</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PlaneImpl#getV1 <em>V1</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PlaneImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PlaneImpl#getHeight <em>Height</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

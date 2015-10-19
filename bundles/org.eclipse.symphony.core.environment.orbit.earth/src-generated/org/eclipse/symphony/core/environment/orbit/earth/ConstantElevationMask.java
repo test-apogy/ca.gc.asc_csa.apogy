@@ -11,10 +11,10 @@ package org.eclipse.symphony.core.environment.orbit.earth;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask#getConstantElevation <em>Constant Elevation</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getConstantElevationMask()
  * @model

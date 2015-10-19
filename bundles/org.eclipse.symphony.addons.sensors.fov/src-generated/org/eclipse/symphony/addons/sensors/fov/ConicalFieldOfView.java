@@ -15,12 +15,12 @@ package org.eclipse.symphony.addons.sensors.fov;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getRange <em>Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle <em>Field Of View Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getVolume <em>Volume</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getConicalFieldOfView()
  * @model

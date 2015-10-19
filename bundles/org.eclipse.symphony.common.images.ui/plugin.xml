@@ -24,8 +24,8 @@
          <propertySection
                class="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection"
                filter="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection"
-               id="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection"
-               tab="ca.gc.asc_csa.eclipse.images.ui.properties.tabs.Image">
+               id="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection"
+               tab="org.eclipse.symphony.common.images.ui.properties.tabs.Image">
          </propertySection>
       </propertySections>
    </extension>
@@ -34,8 +34,8 @@
       <propertyTabs
             contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
-               category="ca.gc.asc_csa.eclipse.images.ui"
-               id="ca.gc.asc_csa.eclipse.images.ui.properties.tabs.Image"
+               category="org.eclipse.symphony.common.images.ui"
+               id="org.eclipse.symphony.common.images.ui.properties.tabs.Image"
                label="Image">
          </propertyTab>
       </propertyTabs>
@@ -45,7 +45,7 @@
       <propertyContributor
             contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyCategory
-               category="ca.gc.asc_csa.eclipse.images.ui">
+               category="org.eclipse.symphony.common.images.ui">
          </propertyCategory>
       </propertyContributor>
    </extension>
@@ -54,35 +54,35 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            id="ca.gc.asc_csa.eclipse.images.ui.commands.SaveAbstractImageToFileCommand"
+            id="org.eclipse.symphony.common.images.ui.commands.SaveAbstractImageToFileCommand"
             name="Save Image To File">
       </command>
       <command
-            id="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomIn"
+            id="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomIn"
             name="Zoom In">
       </command>
       <command
-            id="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomOut"
+            id="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomOut"
             name="Zoom Out">
       </command>
       <command
-            id="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomFit"
+            id="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomFit"
             name="Zoom Fit">
       </command>      
       <command
-            id="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degClockwise"
+            id="org.eclipse.symphony.common.images.ui.commands.ImageCanvasRotate90degClockwise"
             name="Rotate 90 Deg Clockwise">
       </command>
       <command
-            id="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degCounterClockwise"
+            id="org.eclipse.symphony.common.images.ui.commands.ImageCanvasRotate90degCounterClockwise"
             name="Rotate 90 Deg Counter-Clockwise">
       </command>      
       <command
-            id="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasShowOriginal"
+            id="org.eclipse.symphony.common.images.ui.commands.ImageCanvasShowOriginal"
             name="Show Original">
       </command>      
       <command
-            id="ca.gc.asc_csa.eclipse.images.ui.commands.ExportImage"
+            id="org.eclipse.symphony.common.images.ui.commands.ExportImage"
             name="Export Image">
       </command>
    </extension>
@@ -91,9 +91,9 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.SaveAbstractImageToFileCommand"
+               commandId="org.eclipse.symphony.common.images.ui.commands.SaveAbstractImageToFileCommand"
                label="Save To File"
                style="push">
             <visibleWhen
@@ -111,7 +111,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.SaveAbstractImageToFileCommand"
+               commandId="org.eclipse.symphony.common.images.ui.commands.SaveAbstractImageToFileCommand"
                label="Save Image To File"
                style="push">
             <visibleWhen
@@ -129,7 +129,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.SaveAbstractImageToFileCommand"
+               commandId="org.eclipse.symphony.common.images.ui.commands.SaveAbstractImageToFileCommand"
                label="Save Image To File"
                style="push">
             <visibleWhen
@@ -147,7 +147,7 @@
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ExportImage"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ExportImage"
                icon="icons/export_wiz.gif"
                label="Export Image"
                style="push">
@@ -155,7 +155,7 @@
                   checkEnabled="true">
                <test
                      forcePluginActivation="false"
-                     property="ca.gc.asc_csa.eclipse.images.ui.expressions.ImagePropertyTester.canConvertToAbstractEImage"
+                     property="org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester.canConvertToAbstractEImage"
                      value="">
                </test>
             </visibleWhen>
@@ -167,7 +167,7 @@
             allPopups="true"
             locationURI="toolbar:org.eclipse.ui.views.PropertySheet?after=additions">
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomIn"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomIn"
                icon="icons/zoom_in.png"
                label="Zoom In"
                style="push">
@@ -175,12 +175,12 @@
                   checkEnabled="true">
                <test
                      property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
-                     value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
+                     value="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomOut"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomOut"
                icon="icons/zoom_out.png"
                label="Zoom Out"
                style="push">
@@ -188,12 +188,12 @@
                   checkEnabled="true">
                <test
                      property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
-                     value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
+                     value="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>               
          </command>         
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomFit"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomFit"
                icon="icons/zoom_fit.png"
                label="Zoom Fit"
                style="push">
@@ -201,12 +201,12 @@
                   checkEnabled="true">
                <test
                      property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
-                     value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
+                     value="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>                              
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degCounterClockwise"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasRotate90degCounterClockwise"
                icon="icons/rotate_counter_clockwise.png"
                label="Rotate 90 degrees Counter Clockwise"
                style="push">
@@ -214,12 +214,12 @@
                   checkEnabled="true">
                <test
                      property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
-                     value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
+                     value="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>               
          </command>         
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degClockwise"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasRotate90degClockwise"
                icon="icons/rotate_clockwise.png"
                label="Rotate 90 degrees Clockwise"
                style="push">
@@ -227,12 +227,12 @@
                   checkEnabled="true">
                <test
                      property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
-                     value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
+                     value="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>               
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasShowOriginal"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasShowOriginal"
                icon="icons/refresh.png"
                label="Refresh"
                style="push">
@@ -240,12 +240,12 @@
                   checkEnabled="true">
                <test
                      property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
-                     value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
+                     value="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>               
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ExportImage"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ExportImage"
                icon="icons/export_wiz.gif"
                label="Export Image"
                style="push">
@@ -253,7 +253,7 @@
                   checkEnabled="true">
                <test
                      property="org.eclipse.symphony.common.ui.expressions.TabbedPropertySheetPropertyTester.activeSection"
-                     value="ca.gc.asc_csa.eclipse.images.ui.properties.sections.ImageSection">
+                     value="org.eclipse.symphony.common.images.ui.properties.sections.ImageSection">
                </test>
             </visibleWhen>
          </command>      
@@ -262,46 +262,46 @@
       
       <menuContribution
             allPopups="true"
-            locationURI="toolbar:ca.gc.asc_csa.eclipse.images.ui.ImageView?after=additions">
+            locationURI="toolbar:org.eclipse.symphony.common.images.ui.ImageView?after=additions">
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomIn"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomIn"
                icon="icons/zoom_in.png"
                label="Zoom In"
                style="push">
          </command>
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomOut"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomOut"
                icon="icons/zoom_out.png"
                label="Zoom Out"
                style="push">
          </command>         
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomFit"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomFit"
                icon="icons/zoom_fit.png"
                label="Zoom Fit"
                style="push">
          </command>
          <command         
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degCounterClockwise"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasRotate90degCounterClockwise"
                icon="icons/rotate_counter_clockwise.png"
                label="Rotate 90 degrees Counter Clockwise"
                style="push">
          </command>         
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degClockwise"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasRotate90degClockwise"
                icon="icons/rotate_clockwise.png"
                label="Rotate 90 degrees Clockwise"
                style="push">
          </command>    
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasShowOriginal"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasShowOriginal"
                icon="icons/refresh.png"
                label="Refresh"
                style="push">
          </command>
          
          <command
-               commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ExportImage"
+               commandId="org.eclipse.symphony.common.images.ui.commands.ExportImage"
                icon="icons/export_wiz.gif"
                label="Export Image"
                style="push">
@@ -312,32 +312,32 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasZoomInHandler"
-            commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomIn">
+            commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomIn">
       </handler>
       <handler
             class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasZoomOutHandler"
-            commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomOut">
+            commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomOut">
       </handler>      
       <handler
             class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasZoomFitHandler"
-            commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasZoomFit">
+            commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasZoomFit">
       </handler>      
       <handler
             class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasRotate90degClockwiseHandler"
-            commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degClockwise">
+            commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasRotate90degClockwise">
       </handler>
       <handler
             class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasRotate90degCounterClockwiseHandler"
-            commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasRotate90degCounterClockwise">
+            commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasRotate90degCounterClockwise">
       </handler>      
       <handler
             class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasShowOriginalHandler"
-            commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ImageCanvasShowOriginal">
+            commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasShowOriginal">
       </handler>
       
       <handler
             class="org.eclipse.symphony.common.images.ui.handlers.ExportImageHandler"
-            commandId="ca.gc.asc_csa.eclipse.images.ui.commands.ExportImage">
+            commandId="org.eclipse.symphony.common.images.ui.commands.ExportImage">
       </handler>                                          
    </extension>   
    
@@ -345,8 +345,8 @@
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
             class="org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester"
-            id="ca.gc.asc_csa.eclipse.images.ui.expressions.ImagePropertyTester"
-            namespace="ca.gc.asc_csa.eclipse.images.ui.expressions.ImagePropertyTester"
+            id="org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester"
+            namespace="org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester"
             properties="canConvertToAbstractEImage"
             type="java.lang.Object">
       </propertyTester>

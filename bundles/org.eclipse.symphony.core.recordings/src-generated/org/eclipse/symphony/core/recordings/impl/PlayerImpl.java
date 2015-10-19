@@ -37,6 +37,7 @@ import org.eclipse.symphony.core.recordings.RecordingResult;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.PlayerImpl#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.PlayerImpl#getTimeSource <em>Time Source</em>}</li>
@@ -45,7 +46,6 @@ import org.eclipse.symphony.core.recordings.RecordingResult;
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.PlayerImpl#getDataEndTime <em>Data End Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.PlayerImpl#getPlayBackTime <em>Play Back Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -12,10 +12,10 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive#getRadius <em>Radius</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getSpherePrimitive()
  * @model

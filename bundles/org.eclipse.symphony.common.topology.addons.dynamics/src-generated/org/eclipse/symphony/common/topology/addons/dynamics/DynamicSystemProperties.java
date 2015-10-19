@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties#getMaterials <em>Materials</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getDynamicSystemProperties()
  * @model

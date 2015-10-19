@@ -13,10 +13,10 @@ import org.eclipse.symphony.core.invocator.Program;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#getProgram <em>Program</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getAbstractProgramRuntime()
  * @model abstract="true"

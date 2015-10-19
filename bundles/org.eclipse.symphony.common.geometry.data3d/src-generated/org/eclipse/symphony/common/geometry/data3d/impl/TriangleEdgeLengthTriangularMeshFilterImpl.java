@@ -27,12 +27,12 @@ import org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularM
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl#getMinimumRange <em>Minimum Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl#getMaximumRange <em>Maximum Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.TriangleEdgeLengthTriangularMeshFilterImpl#getMaximumEdgeLength <em>Maximum Edge Length</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

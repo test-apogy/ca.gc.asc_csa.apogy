@@ -22,13 +22,13 @@ import org.eclipse.symphony.common.math.GeometricUtils;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl#getMinimumAngle <em>Minimum Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl#getMaximumAngle <em>Maximum Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl#getSpanningAngle <em>Spanning Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl#getCenterAngle <em>Center Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

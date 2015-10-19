@@ -23,6 +23,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl#getXVelocity <em>XVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl#getYVelocity <em>YVelocity</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

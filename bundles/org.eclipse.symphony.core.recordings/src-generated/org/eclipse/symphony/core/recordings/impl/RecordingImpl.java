@@ -33,6 +33,7 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingImpl#getRecordingTracks <em>Recording Tracks</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingImpl#getEndDate <em>End Date</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

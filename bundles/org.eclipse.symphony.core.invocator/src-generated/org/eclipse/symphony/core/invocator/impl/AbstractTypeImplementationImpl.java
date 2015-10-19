@@ -30,6 +30,7 @@ import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
  * <em><b>Abstract Type Implementation</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getTypeMemberImplementations <em>Type Member Implementations</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getImplementationClass <em>Implementation Class</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getAdapterInstance <em>Adapter Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractTypeImplementationImpl#getHandlingType <em>Handling Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -12,11 +12,11 @@ package org.eclipse.symphony.core.environment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.SurfaceWorksite#getSky <em>Sky</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.SurfaceWorksite#getMapsList <em>Maps List</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceWorksite()
  * @model abstract="true"

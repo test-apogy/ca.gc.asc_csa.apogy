@@ -18,8 +18,6 @@ import org.eclipse.symphony.addons.sensors.pose.PosePackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Facade</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

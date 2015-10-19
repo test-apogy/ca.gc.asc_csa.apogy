@@ -22,6 +22,7 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#isBinded <em>Binded</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getDescription <em>Description</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNode <em>Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNodeAdapter <em>Feature Node Adapter</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getAbstractTopologyBinding()
  * @model abstract="true"

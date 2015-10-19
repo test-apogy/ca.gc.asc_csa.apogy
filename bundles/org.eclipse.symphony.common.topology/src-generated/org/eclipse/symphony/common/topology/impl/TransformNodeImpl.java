@@ -32,10 +32,10 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * <em><b>Transform Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.TransformNodeImpl#getRotationMatrix <em>Rotation Matrix</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

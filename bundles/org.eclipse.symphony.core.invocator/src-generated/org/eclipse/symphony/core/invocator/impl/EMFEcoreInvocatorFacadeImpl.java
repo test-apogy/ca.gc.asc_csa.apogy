@@ -62,10 +62,10 @@ import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegateRegistry;
  * <em><b>Facade</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

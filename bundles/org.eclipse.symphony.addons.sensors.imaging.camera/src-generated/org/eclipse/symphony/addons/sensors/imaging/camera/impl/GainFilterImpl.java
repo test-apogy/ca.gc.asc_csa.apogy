@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GainFilterImpl#getGain <em>Gain</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GainFilterImpl#getBias <em>Bias</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

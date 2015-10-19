@@ -12,11 +12,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning#getUnits <em>Units</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning#getTransferFunction <em>Transfer Function</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getUserDefinedInputConditioning()
  * @model

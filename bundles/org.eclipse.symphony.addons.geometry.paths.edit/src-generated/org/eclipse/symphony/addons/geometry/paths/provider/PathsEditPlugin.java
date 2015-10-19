@@ -49,8 +49,8 @@ public final class PathsEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     Data3dEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

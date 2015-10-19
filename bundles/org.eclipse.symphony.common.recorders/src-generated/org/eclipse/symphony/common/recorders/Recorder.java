@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.processors.Monitorable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.recorders.Recorder#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.recorders.RecordersPackage#getRecorder()
  * @model

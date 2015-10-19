@@ -34,7 +34,7 @@
             contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
          <propertyTab
                category="org.eclipse.symphony.core.ui.property.category.Default"
-               id="ca.asc_csa.symphony.system.ui.property.tab.SymphonySystem3dViewer"
+               id="org.eclipse.symphony.core.ui.property.tab.SymphonySystem3dViewer"
                label="3D">
          </propertyTab>
       </propertyTabs>
@@ -50,11 +50,6 @@
    </extension>
    <extension
          point="org.eclipse.ui.newWizards">
-<!--      <category
-            id="org.eclipse.symphony.core.ui"
-            name="Symphony">
-      </category>
--->
       <wizard
             category="org.eclipse.symphony.core.ui"
             class="org.eclipse.symphony.core.ui.wizards.NewSymphonyProjectWizard"
@@ -87,7 +82,7 @@
             genModel="model/symphony_core_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.core.ui.ResultNodePresentationAdapter">
       </Class>
@@ -272,7 +267,7 @@
             name="Symphony">
       </page>
       <page
-            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="org.eclipse.symphony.core.ui.preferences.SymphonyCoreNodesPreferencesPage"
             id="org.eclipse.symphony.core.ui.preferences.SymphonyCoreNodesPreferencesPage"
             name="Results">

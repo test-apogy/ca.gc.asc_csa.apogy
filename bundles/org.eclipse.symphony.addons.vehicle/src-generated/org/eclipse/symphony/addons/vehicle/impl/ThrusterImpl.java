@@ -16,6 +16,7 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl#getMinimumThrust <em>Minimum Thrust</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl#getMaximumThrust <em>Maximum Thrust</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl#getThrustLevel <em>Thrust Level</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl#getPlumeAngle <em>Plume Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

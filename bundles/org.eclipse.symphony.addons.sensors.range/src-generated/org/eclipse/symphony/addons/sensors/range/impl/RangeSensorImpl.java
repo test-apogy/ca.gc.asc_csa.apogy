@@ -15,8 +15,6 @@ import org.eclipse.symphony.addons.sensors.range.RangeSensor;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Sensor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

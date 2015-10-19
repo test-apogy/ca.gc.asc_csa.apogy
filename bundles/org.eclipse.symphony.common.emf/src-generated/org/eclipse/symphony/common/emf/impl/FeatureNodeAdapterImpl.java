@@ -28,13 +28,13 @@ import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl#getSourceObject <em>Source Object</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl#getFeatureNode <em>Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl#getCurrentValue <em>Current Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl#isResolved <em>Resolved</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

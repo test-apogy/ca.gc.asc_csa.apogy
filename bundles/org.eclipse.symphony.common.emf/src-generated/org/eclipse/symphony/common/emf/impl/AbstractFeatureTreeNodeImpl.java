@@ -22,11 +22,11 @@ import org.eclipse.symphony.common.emf.EMFEcorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractFeatureTreeNodeImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractFeatureTreeNodeImpl#getChildren <em>Children</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

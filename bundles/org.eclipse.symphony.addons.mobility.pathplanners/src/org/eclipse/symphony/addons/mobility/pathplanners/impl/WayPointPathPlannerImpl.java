@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.WayPointPathPlannerImpl#getCurrentPosition <em>Current Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.WayPointPathPlannerImpl#getCurrentDestination <em>Current Destination</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

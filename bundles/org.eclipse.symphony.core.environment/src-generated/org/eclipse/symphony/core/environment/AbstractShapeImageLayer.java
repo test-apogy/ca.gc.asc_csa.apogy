@@ -17,12 +17,12 @@ import javax.vecmath.Color3f;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#isShapedFilled <em>Shaped Filled</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#getColor <em>Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#getRequiredResolution <em>Required Resolution</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractShapeImageLayer()
  * @model abstract="true"

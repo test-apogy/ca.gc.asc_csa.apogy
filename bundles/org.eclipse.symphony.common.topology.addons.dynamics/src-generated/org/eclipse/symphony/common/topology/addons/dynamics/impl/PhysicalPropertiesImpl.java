@@ -23,12 +23,12 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getMass <em>Mass</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getInertiaMatrix <em>Inertia Matrix</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalPropertiesImpl#getCenterOfMassLocation <em>Center Of Mass Location</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

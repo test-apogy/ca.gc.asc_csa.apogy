@@ -24,8 +24,6 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Triangular Mesh2 Normal Point Cloud</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

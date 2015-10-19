@@ -12,12 +12,12 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getVerticalResolution <em>Vertical Resolution</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getHorizontalResolution <em>Horizontal Resolution</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getNumberOfPoints <em>Number Of Points</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanSettings()
  * @model

@@ -16,11 +16,11 @@ import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySystemSettingsImpl#getFolder <em>Folder</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySystemSettingsImpl#getFilename <em>Filename</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

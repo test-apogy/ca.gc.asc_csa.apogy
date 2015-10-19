@@ -18,13 +18,13 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.PVACoordinates#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.PVACoordinates#getVelocity <em>Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.PVACoordinates#getAcceleration <em>Acceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.PVACoordinates#getAngularVelocity <em>Angular Velocity</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getPVACoordinates()
  * @model

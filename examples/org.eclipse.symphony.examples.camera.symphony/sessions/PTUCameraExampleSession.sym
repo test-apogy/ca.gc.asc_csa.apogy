@@ -32,7 +32,7 @@
         <mapsList>
           <maps name="MarsYard" description="Simple Mars Yard Map.">
             <transformation/>
-            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSAMarsYardDEM100cm.tri"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
           </maps>
         </mapsList>
         <geographicalCoordinates longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>

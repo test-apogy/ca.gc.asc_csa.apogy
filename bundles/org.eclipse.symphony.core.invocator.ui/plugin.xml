@@ -44,7 +44,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
 
          <command
                commandId="org.eclipse.symphony.core.invocator.ui.commands.VariableInstancesResetCommand"
@@ -352,11 +352,11 @@
    <extension
          point="org.eclipse.ui.newWizards">
       <category
-            id="ca.gc.asc_csa.symphony.core.ui"
+            id="org.eclipse.symphony.core.ui"
             name="Symphony">
       </category>
       <wizard
-            category="ca.gc.asc_csa.symphony.core.ui"
+            category="org.eclipse.symphony.core.ui"
             class="org.eclipse.symphony.core.invocator.ui.wizards.NewOperationCallWizard"
             icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/OperationCall.gif"
             id="org.eclipse.symphony.core.invocator.ui.wizards.NewOperationCallWizard"
@@ -374,18 +374,18 @@
    <extension
          point="org.eclipse.ui.importWizards">
       <category
-            id="ca.gc.asc_csa.symphony.core.ui"
+            id="org.eclipse.symphony.core.ui"
             name="Symphony">
       </category>
    </extension>
    <extension
          point="org.eclipse.ui.exportWizards">
       <category
-            id="ca.gc.asc_csa.symphony.core.ui"
+            id="org.eclipse.symphony.core.ui"
             name="Symphony">
       </category>
       <wizard
-            category="ca.gc.asc_csa.symphony.core.ui"
+            category="org.eclipse.symphony.core.ui"
             class="org.eclipse.symphony.core.invocator.ui.wizards.CopyInitializationDataWizard"
             icon="icons/symphony_logo_16x16.gif"
             id="org.eclipse.symphony.core.invocator.ui.wizards.CopyInitializationDataWizard"

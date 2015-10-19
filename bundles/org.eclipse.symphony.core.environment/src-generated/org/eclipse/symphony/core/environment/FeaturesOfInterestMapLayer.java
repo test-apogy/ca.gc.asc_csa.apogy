@@ -16,10 +16,10 @@ import org.eclipse.symphony.core.FeatureOfInterestList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer#getFeatures <em>Features</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getFeaturesOfInterestMapLayer()
  * @model

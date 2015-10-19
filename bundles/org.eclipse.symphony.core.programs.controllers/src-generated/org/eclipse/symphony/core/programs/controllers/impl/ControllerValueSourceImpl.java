@@ -26,13 +26,13 @@ import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerValueSourceImpl#getComponent <em>Component</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerValueSourceImpl#getEComponentQualifier <em>EComponent Qualifier</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerValueSourceImpl#getConditioning <em>Conditioning</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerValueSourceImpl#getLastValue <em>Last Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

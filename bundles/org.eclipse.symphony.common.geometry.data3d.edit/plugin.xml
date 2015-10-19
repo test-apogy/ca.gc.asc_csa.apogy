@@ -8,9 +8,8 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated data3d -->
       <factory
-            uri="http:///ca/gc/space/mrt/geometry/data3d.ecore"
+            uri="org.eclipse.symphony.common.geometry.data3d"
             class="org.eclipse.symphony.common.geometry.data3d.provider.Data3dItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -21,7 +20,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated mrt_geometry_data3d -->
       <extender
             uri="org.eclipse.symphony.common.geometry.data"
             class="org.eclipse.symphony.common.geometry.data3d.provider.Data3dItemProviderAdapterFactory$DataChildCreationExtender"/>

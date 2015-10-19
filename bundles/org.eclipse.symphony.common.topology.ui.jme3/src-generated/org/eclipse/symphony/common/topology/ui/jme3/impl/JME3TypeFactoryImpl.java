@@ -19,8 +19,6 @@ import com.jme3.math.Vector3f;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Type Factory</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

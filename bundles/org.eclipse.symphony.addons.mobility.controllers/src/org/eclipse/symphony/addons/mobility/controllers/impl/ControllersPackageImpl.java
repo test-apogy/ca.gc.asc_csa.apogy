@@ -145,8 +145,8 @@ public class ControllersPackageImpl extends EPackageImpl implements ControllersP
 
 		// Initialize simple dependencies
 		MobilityPackage.eINSTANCE.eClass();
-		PosePackage.eINSTANCE.eClass();
 		PathsPackage.eINSTANCE.eClass();
+		PosePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theControllersPackage.createPackageContents();

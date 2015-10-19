@@ -30,11 +30,11 @@ import org.eclipse.symphony.core.invocator.OperationCall;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ArgumentsListImpl#getOperationCall <em>Operation Call</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ArgumentsListImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

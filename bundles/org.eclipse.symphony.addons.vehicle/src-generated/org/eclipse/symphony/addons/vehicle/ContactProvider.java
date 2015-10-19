@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ContactProvider#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getContactProvider()
  * @model abstract="true"

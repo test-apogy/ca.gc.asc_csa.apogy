@@ -20,10 +20,10 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <em><b>Link</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.LinkImpl#getNode <em>Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

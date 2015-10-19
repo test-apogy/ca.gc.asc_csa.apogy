@@ -11,8 +11,6 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Basic Context</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

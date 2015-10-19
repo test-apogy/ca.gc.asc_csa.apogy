@@ -8,7 +8,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="ca.gc.asc_csa.eclipse.emf.ecore.edit.utils"
+            uri="org.eclipse.symphony.common.emf.edit.utils"
             class="org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsPackage"
             genModel="model/emf_ecore_edit_utils.xcore"/>
    </extension>

@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getZ <em>Z</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPositionCoordinates()
  * @model

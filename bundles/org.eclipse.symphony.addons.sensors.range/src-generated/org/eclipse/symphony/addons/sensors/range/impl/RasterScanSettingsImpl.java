@@ -19,12 +19,12 @@ import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanSettingsImpl#getVerticalResolution <em>Vertical Resolution</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanSettingsImpl#getHorizontalResolution <em>Horizontal Resolution</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RasterScanSettingsImpl#getNumberOfPoints <em>Number Of Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

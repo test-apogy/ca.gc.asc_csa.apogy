@@ -17,10 +17,10 @@ import java.util.SortedMap;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.NumberVersusTimeHistoryData#getHistoryData <em>History Data</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage#getNumberVersusTimeHistoryData()
  * @model

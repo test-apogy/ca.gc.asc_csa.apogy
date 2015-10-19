@@ -1,10 +1,17 @@
 package org.eclipse.symphony.common.io.jinput;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
+	private static final String LOGGER_NAME = "net.java.games.input"; 
+	private static final Level LOGGER_LEVEL = Level.WARNING;
+	
+	private static Level origLevel;
 	private static BundleContext context;
 	private static EControllerEnvironment eControllerEnvironment = null;
 	
@@ -19,6 +26,11 @@ public class Activator implements BundleActivator {
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
+		
+		Logger logger = Logger.getLogger(LOGGER_NAME);
+		origLevel = logger.getLevel();
+		logger.setLevel(LOGGER_LEVEL);
+		
 		getEControllerEnvironment().startPolling();
 	}
 
@@ -29,6 +41,10 @@ public class Activator implements BundleActivator {
 	@Override
 	public void stop(BundleContext bundleContext) throws Exception {
 		getEControllerEnvironment().stopPolling();
+		
+		Logger logger = Logger.getLogger(LOGGER_NAME);
+		logger.setLevel(origLevel);
+		
 		Activator.context = null;
 	}
 	

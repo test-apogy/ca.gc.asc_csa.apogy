@@ -8,13 +8,10 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.common.geometry.data3d.ui.adapters.CartesianCoordinatMeshNodePresentationAdapter">
       </Class>
-   </extension> 
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.geometry.data3d.ui.adapters.TriangularMeshPresentationAdapter">
       </Class>
@@ -24,11 +21,11 @@
       <command
             description="Saves a CartesianCoordinates To File."
             id="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand"
-            name="Save CartesianCoordinates To File">
+            name="Save Cartesian Coordinates To File">
       </command>
       <command
             description="Saves a Triangular Mesh To File."
-            id="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommandHandler"
+            id="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveTriangularMeshToFileCommand"
             name="Save Mesh To File">
       </command>
    </extension>
@@ -36,7 +33,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.symphony.core.ui.menu?after=additions">
+            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
          <command
                commandId="org.eclipse.symphony.common.geometry.data3d.ui.commands.SaveCartesianCoordinatesSetToFileCommand"
                label="Export Points To File"
@@ -145,7 +142,6 @@
       </handler>
    </extension>
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated mrt_data3d_ui -->
       <package
             uri="org.eclipse.symphony.common.geometry.data3d.ui"
             class="org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage"

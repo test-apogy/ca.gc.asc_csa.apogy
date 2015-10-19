@@ -16,13 +16,13 @@ import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshExtent2DImpl#getMinimumX <em>Minimum X</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshExtent2DImpl#getMinimumY <em>Minimum Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshExtent2DImpl#getMaximumX <em>Maximum X</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshExtent2DImpl#getMaximumY <em>Maximum Y</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

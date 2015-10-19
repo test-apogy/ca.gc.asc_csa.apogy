@@ -17,6 +17,7 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getMinimumThrust <em>Minimum Thrust</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getMaximumThrust <em>Maximum Thrust</em>}</li>
@@ -24,7 +25,6 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getThrustLevel <em>Thrust Level</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getPlumeAngle <em>Plume Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThruster()
  * @model

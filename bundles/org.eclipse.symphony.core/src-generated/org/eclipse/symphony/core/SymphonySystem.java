@@ -21,6 +21,7 @@ import org.eclipse.symphony.core.invocator.Type;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.SymphonySystem#getTopologyRoot <em>Topology Root</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.SymphonySystem#getBindingSet <em>Binding Set</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.symphony.core.invocator.Type;
  *   <li>{@link org.eclipse.symphony.core.SymphonySystem#getPoseProvider <em>Pose Provider</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.SymphonySystem#getPoseProviderInstance <em>Pose Provider Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystem()
  * @model

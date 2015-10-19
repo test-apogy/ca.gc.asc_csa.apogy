@@ -62,23 +62,23 @@
       <worksites xsi:type="environment:EarthSurfaceWorksite" xmi:id="_CzkhgFGCEeWAhtIVYAHdhA" name="CSA Analog Terrain" description="CSA Analog Terrain located at the John H. Chapman Space Center" xAxisAzimuth="179.4">
         <sky xsi:type="environment:EarthSky" xmi:id="_CzkhgVGCEeWAhtIVYAHdhA" time="2015-09-02T10:51:08.006-0400"/>
         <mapsList xmi:id="_CzkhglGCEeWAhtIVYAHdhA">
-          <maps xmi:id="_Czkhg1GCEeWAhtIVYAHdhA" name="CSA Anlog Terrain DEMs">
-            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_CzkhhFGCEeWAhtIVYAHdhA" name="High Resolution" description="CSA Analog Terrain at 0.25 m resolution." url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSAMarsYardDEM200cm.tri"/>
+          <maps xmi:id="_Czkhg1GCEeWAhtIVYAHdhA" name="CSA Analog Terrain DEMs">
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_CzkhhFGCEeWAhtIVYAHdhA" name="High Resolution" description="CSA Analog Terrain at 0.25 m resolution." url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
           </maps>
           <maps xmi:id="_CzkhhVGCEeWAhtIVYAHdhA" name="Image Map Layers">
-            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhhlGCEeWAhtIVYAHdhA" name="Contours 0.2 meter interval" description="Contours map with 0.2 meter altitude interval." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-contour-map-black-20cm-per-line.png">
-              <image xsi:type="images:URLEImage" xmi:id="_Czkhh1GCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-contour-map-black-20cm-per-line.png"/>
+            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhhlGCEeWAhtIVYAHdhA" name="Contours 0.2 meter interval" description="Contours map with 0.2 meter altitude interval." width="60.0" height="120.0" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png">
+              <image xsi:type="images:URLEImage" xmi:id="_Czkhh1GCEeWAhtIVYAHdhA" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png"/>
             </layers>
-            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhiFGCEeWAhtIVYAHdhA" name="Altitude " description="Color Coded Altitude Map at 0.5 meters resolution." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-50cm.png" legendURL="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-legend.png">
-              <image xsi:type="images:URLEImage" xmi:id="_CzkhiVGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-50cm.png"/>
-              <legend xsi:type="images:URLEImage" xmi:id="_CzkhilGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-legend.png"/>
+            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhiFGCEeWAhtIVYAHdhA" name="Altitude " description="Color Coded Altitude Map at 0.5 meters resolution." width="60.0" height="120.0" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-DEM-50cm.png" legendURL="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-DEM-legend.png">
+              <image xsi:type="images:URLEImage" xmi:id="_CzkhiVGCEeWAhtIVYAHdhA" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-DEM-50cm.png"/>
+              <legend xsi:type="images:URLEImage" xmi:id="_CzkhilGCEeWAhtIVYAHdhA" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-DEM-legend.png"/>
             </layers>
-            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_Czkhi1GCEeWAhtIVYAHdhA" name="Slope Map" description="Slope Map showing slopes from 0 to 30 degrees.&#xA;" width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees.png" legendURL="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees-legend.png">
-              <image xsi:type="images:URLEImage" xmi:id="_CzkhjFGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees.png"/>
-              <legend xsi:type="images:URLEImage" xmi:id="_CzkhjVGCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees-legend.png"/>
+            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_Czkhi1GCEeWAhtIVYAHdhA" name="Slope Map" description="Slope Map showing slopes from 0 to 30 degrees.&#xA;" width="60.0" height="120.0" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees.png" legendURL="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees-legend.png">
+              <image xsi:type="images:URLEImage" xmi:id="_CzkhjFGCEeWAhtIVYAHdhA" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees.png"/>
+              <legend xsi:type="images:URLEImage" xmi:id="_CzkhjVGCEeWAhtIVYAHdhA" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees-legend.png"/>
             </layers>
-            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhjlGCEeWAhtIVYAHdhA" name="Aerial View" description="CSA AT See from above." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-NGC-MET-seen-from-sky.jpg">
-              <image xsi:type="images:URLEImage" xmi:id="_Czkhj1GCEeWAhtIVYAHdhA" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-NGC-MET-seen-from-sky.jpg"/>
+            <layers xsi:type="environment:URLImageMapLayer" xmi:id="_CzkhjlGCEeWAhtIVYAHdhA" name="Aerial View" description="CSA AT See from above." width="60.0" height="120.0" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-NGC-MET-seen-from-sky.jpg">
+              <image xsi:type="images:URLEImage" xmi:id="_Czkhj1GCEeWAhtIVYAHdhA" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-NGC-MET-seen-from-sky.jpg"/>
             </layers>
           </maps>
           <maps xmi:id="_CzkhkFGCEeWAhtIVYAHdhA" name="Features Of Interest" description="Features of interest fo the CSA Analog Terrain.">

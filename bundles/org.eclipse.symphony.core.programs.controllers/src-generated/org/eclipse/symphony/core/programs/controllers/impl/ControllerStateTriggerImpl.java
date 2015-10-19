@@ -20,11 +20,11 @@ import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerStateTriggerImpl#isEnablingValue <em>Enabling Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerStateTriggerImpl#getRepeatPeriod <em>Repeat Period</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -26,11 +26,11 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapsListImpl#getMaps <em>Maps</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapsListImpl#getMapsListNode <em>Maps List Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.ui.impl.VolumetricCoordinatesSet25DPresentationImpl#getPointsCloud <em>Points Cloud</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -20,13 +20,13 @@ import Jama.Matrix;
  * <em><b>Polynomial</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.math.impl.PolynomialImpl#getDegree <em>Degree</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.PolynomialImpl#getCoeffs <em>Coeffs</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.PolynomialImpl#getRealRoots <em>Real Roots</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.PolynomialImpl#getImaginaryRoots <em>Imaginary Roots</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshSmootherImpl#getNumberOfIterations <em>Number Of Iterations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

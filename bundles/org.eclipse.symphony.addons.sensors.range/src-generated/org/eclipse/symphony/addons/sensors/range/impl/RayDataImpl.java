@@ -22,11 +22,11 @@ import org.eclipse.symphony.addons.sensors.range.RayData;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RayDataImpl#getOrigin <em>Origin</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RayDataImpl#getDirection <em>Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

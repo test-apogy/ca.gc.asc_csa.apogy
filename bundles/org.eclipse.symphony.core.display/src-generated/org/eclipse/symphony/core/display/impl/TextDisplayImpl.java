@@ -41,10 +41,10 @@ import org.eclipse.symphony.core.display.databindings.UpdateValueStrategyWithRan
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.impl.TextDisplayImpl#getDecimalFormat <em>Decimal Format</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -27,11 +27,11 @@
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.core"
+            class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.addons.geometry.paths"
             class="org.eclipse.symphony.addons.provider.SymphonyToolsCoreItemProviderAdapterFactory$PathsChildCreationExtender"/>

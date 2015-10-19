@@ -8,7 +8,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated mrt_fov_bindings -->
       <factory
             uri="org.eclipse.symphony.addons.sensors.fov.bindings"
             class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory"
@@ -21,13 +20,12 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated mrt_fov_bindings -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

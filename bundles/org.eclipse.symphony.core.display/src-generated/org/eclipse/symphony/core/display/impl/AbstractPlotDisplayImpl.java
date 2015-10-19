@@ -22,12 +22,12 @@ import org.eclipse.symphony.core.display.HistoryDataHandler;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.impl.AbstractPlotDisplayImpl#isRepeatLastValue <em>Repeat Last Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.impl.AbstractPlotDisplayImpl#isUseDataBuffering <em>Use Data Buffering</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.impl.AbstractPlotDisplayImpl#getHistoryLength <em>History Length</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

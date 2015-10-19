@@ -18,12 +18,12 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Variable#getVariablesList <em>Variables List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Variable#getVariableType <em>Variable Type</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Variable#getEnvironment <em>Environment</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariable()
  * @model

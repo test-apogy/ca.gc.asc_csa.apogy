@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getLine1 <em>Line1</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getLine2 <em>Line2</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getRevolutionNumberAtEpoch <em>Revolution Number At Epoch</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getSatelliteNumber <em>Satellite Number</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE()
  * @model

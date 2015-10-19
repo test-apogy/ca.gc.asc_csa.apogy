@@ -17,25 +17,16 @@
             genModel="model/topology_primitives_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.addons.primitives.ui.adapters.LabelPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.addons.primitives.ui.adapters.SpherePrimitivePresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.addons.primitives.ui.adapters.VectorPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.common.topology.addons.primitives.ui.adapters.WayPointPresentationAdapter">
       </Class>

@@ -11,12 +11,12 @@ package org.eclipse.symphony.addons;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.SimpleTool#getToolList <em>Tool List</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.SimpleTool#isActive <em>Active</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.SimpleTool#isDisposed <em>Disposed</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimpleTool()
  * @model abstract="true"

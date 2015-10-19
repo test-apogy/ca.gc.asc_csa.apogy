@@ -25,10 +25,10 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraToolImpl#getCameraToolList <em>Camera Tool List</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

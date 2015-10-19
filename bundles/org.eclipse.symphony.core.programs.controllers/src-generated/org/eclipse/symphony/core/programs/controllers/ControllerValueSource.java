@@ -13,13 +13,13 @@ import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getComponent <em>Component</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getEComponentQualifier <em>EComponent Qualifier</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getConditioning <em>Conditioning</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getLastValue <em>Last Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerValueSource()
  * @model

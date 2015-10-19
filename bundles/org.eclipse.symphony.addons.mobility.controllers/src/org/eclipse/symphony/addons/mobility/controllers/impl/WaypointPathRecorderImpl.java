@@ -29,8 +29,6 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Waypoint Path Recorder</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -21,13 +21,13 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getTypeMemberReferenceListElement <em>Type Member Reference List Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl#getFeatureRoot <em>Feature Root</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -67,7 +67,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="org.eclipse.symphony.core.topology.ui.preferences.SymphonySystem3DViewerUIPreferencesPage"
             id="org.eclipse.symphony.core.topology.ui.preferences.SymphonySystem3DViewerUIPreferencesPage"
             name="Symphony System 3D View">

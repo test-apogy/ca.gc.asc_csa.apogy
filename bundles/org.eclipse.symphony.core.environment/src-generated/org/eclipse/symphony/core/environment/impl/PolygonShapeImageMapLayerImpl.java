@@ -32,8 +32,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Polygon Shape Image Map Layer</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

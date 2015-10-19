@@ -20,11 +20,11 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl#getDisplaysList <em>Displays List</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#isLoopEnable <em>Loop Enable</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getTimedsList <em>Timeds List</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getEarliestDate <em>Earliest Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getLatestDate <em>Latest Date</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCollectionTimedTimeSource()
  * @model

@@ -21,12 +21,12 @@ import org.eclipse.symphony.core.invocator.AbstractChannel;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.Channel#getRecordingPolicy <em>Recording Policy</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Channel#getFixedPeriodValues <em>Fixed Period Values</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Channel#getFeature <em>Feature</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage#getChannel()
  * @model

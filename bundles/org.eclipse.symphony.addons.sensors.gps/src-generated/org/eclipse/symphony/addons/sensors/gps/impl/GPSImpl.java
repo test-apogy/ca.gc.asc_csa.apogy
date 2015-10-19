@@ -33,6 +33,7 @@ import org.eclipse.symphony.common.lang.java.Timer;
  * <em><b>GPS</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getConnection <em>Connection</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getDataInterpreter <em>Data Interpreter</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.symphony.common.lang.java.Timer;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getSpeedKnots <em>Speed Knots</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSImpl#getSpeedKmh <em>Speed Kmh</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

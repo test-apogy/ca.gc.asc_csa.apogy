@@ -24,10 +24,10 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.UniformDistanceWayPointPathInterpolatorImpl#getDistanceInterval <em>Distance Interval</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

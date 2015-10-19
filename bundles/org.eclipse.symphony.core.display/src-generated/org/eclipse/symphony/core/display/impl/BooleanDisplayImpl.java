@@ -24,8 +24,6 @@ import org.eclipse.symphony.core.display.databindings.UpdateValueStrategyWithRan
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Boolean Display</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

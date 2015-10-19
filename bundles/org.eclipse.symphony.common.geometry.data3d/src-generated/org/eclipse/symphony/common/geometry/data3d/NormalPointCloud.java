@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getPoints <em>Points</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getNormals <em>Normals</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getNormalPointCloud()
  * @model

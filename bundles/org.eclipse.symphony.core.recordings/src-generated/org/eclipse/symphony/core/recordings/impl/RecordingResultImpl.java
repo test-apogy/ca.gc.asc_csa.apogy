@@ -20,10 +20,10 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingResultImpl#getRecordingTrack <em>Recording Track</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

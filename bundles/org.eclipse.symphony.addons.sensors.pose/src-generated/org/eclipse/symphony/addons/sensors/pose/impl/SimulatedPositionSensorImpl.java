@@ -20,13 +20,13 @@ import org.eclipse.ui.progress.UIJob;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getXVelocity <em>XVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getYVelocity <em>YVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getZVelocity <em>ZVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

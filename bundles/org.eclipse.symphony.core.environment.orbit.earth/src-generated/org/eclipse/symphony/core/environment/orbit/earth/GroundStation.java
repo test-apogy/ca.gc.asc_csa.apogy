@@ -17,11 +17,11 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation#getFieldOfViewOrientation <em>Field Of View Orientation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getGroundStation()
  * @model

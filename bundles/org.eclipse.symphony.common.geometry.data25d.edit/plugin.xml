@@ -11,7 +11,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http:///ca/gc/space/mrt/geometry/data25d/model/data25d.ecore"
+            uri="org.eclipse.symphony.common.geometry.data25d"
             class="org.eclipse.symphony.common.geometry.data25d.provider.Data25dItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -22,7 +22,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated mrt_geometry_data25d -->
       <extender
             uri="org.eclipse.symphony.common.geometry.data"
             class="org.eclipse.symphony.common.geometry.data25d.provider.Data25dItemProviderAdapterFactory$DataChildCreationExtender"/>

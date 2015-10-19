@@ -23,12 +23,12 @@ import org.eclipse.symphony.core.invocator.AbstractDisplay;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#getAbstractFeatureNode <em>Abstract Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#getMinimumWidth <em>Minimum Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.AbstractFeatureDisplay#getMinimumHeight <em>Minimum Height</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.display.EMFEcoreInvocatorDisplayPackage#getAbstractFeatureDisplay()
  * @model abstract="true"

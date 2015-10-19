@@ -32,7 +32,7 @@
         <mapsList xmi:id="_MjJmYArPEeW4-_ONWXXiAw">
           <maps xmi:id="_MjJmYQrPEeW4-_ONWXXiAw" name="MarsYard" description="Simple Mars Yard Map.">
             <transformation xmi:id="_MjJmYgrPEeW4-_ONWXXiAw"/>
-            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_MjJmYwrPEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSAMarsYardDEM100cm.tri"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_MjJmYwrPEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
           </maps>
         </mapsList>
         <geographicalCoordinates xmi:id="_MjJmZArPEeW4-_ONWXXiAw" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>

@@ -97,6 +97,8 @@ public enum WheelContactMode implements Enumerator
 	 * Returns the '<em><b>Wheel Contact Mode</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static WheelContactMode get(String literal)
@@ -114,6 +116,8 @@ public enum WheelContactMode implements Enumerator
 	 * Returns the '<em><b>Wheel Contact Mode</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static WheelContactMode getByName(String name)
@@ -131,6 +135,8 @@ public enum WheelContactMode implements Enumerator
 	 * Returns the '<em><b>Wheel Contact Mode</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static WheelContactMode get(int value)

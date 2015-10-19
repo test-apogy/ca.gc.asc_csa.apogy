@@ -32,6 +32,7 @@ import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#isBinded <em>Binded</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getDescription <em>Description</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getFeatureNode <em>Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindingImpl#getFeatureNodeAdapter <em>Feature Node Adapter</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

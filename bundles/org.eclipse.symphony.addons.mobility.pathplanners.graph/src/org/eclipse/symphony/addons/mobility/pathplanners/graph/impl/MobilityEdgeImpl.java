@@ -26,13 +26,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeImpl#getCostFunctions <em>Cost Functions</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeImpl#getFrom <em>From</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeImpl#getTo <em>To</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.MobilityEdgeImpl#getWeight <em>Weight</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

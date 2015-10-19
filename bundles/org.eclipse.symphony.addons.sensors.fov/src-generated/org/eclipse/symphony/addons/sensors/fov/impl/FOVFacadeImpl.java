@@ -23,8 +23,6 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>FOV Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

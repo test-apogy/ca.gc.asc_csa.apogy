@@ -20,11 +20,11 @@ import org.eclipse.symphony.core.impl.AbstractOrbitModelImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitModelImpl#getInitialOrbit <em>Initial Orbit</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitModelImpl#getPropagator <em>Propagator</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

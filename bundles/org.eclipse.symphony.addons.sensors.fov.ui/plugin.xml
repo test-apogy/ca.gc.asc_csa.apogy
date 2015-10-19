@@ -11,19 +11,13 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.CircularSectorFieldOfViewPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
-      <Class
-            Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.ConicalFieldOfViewPresentationAdapter">
+            <Class
+      Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.ConicalFieldOfViewPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.fov.ui.adapters.RectangularFrustrumFieldOfViewPresentationAdapter">
       </Class>
@@ -31,7 +25,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
             id="org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesPage"
             name="Field Of View">
@@ -45,7 +39,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated mrt_fov_ui -->
       <package
             uri="org.eclipse.symphony.addons.sensors.fov.ui"
             class="org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage"

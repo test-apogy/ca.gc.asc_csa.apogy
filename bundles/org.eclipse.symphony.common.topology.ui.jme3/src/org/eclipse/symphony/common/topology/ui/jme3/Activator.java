@@ -2,6 +2,8 @@ package org.eclipse.symphony.common.topology.ui.jme3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
@@ -16,13 +18,22 @@ public class Activator implements BundleActivator {
 
 	public static final String ID = "org.eclipse.symphony.common.topology.ui.jme3";
 	
-	public static final String JME3_EXTENSION_POINT_ID = "org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter";
+	public static final String JME3_EXTENSION_POINT_ID = "org.eclipse.symphony.common.topology.ui.jme3.jme3Adapter";
 	private static final String JME3_EXTENSION_POINT_ID_CLASS = "Class";
 
+	private static final String MAIN_JME_LOGGER_NAME = "com.jme3";
+	private static final Level MAIN_JME_LOGGER_LEVEL = Level.WARNING;
+	
+	private static final String OBJ_LOADER_JME_LOGGER_NAME = "com.jme3.scene.plugins.OBJLoader";
+	private static final Level OBJ_LOADER_JME_LOGGER_LEVEL = Level.SEVERE;
+	
 	private static BundleContext context;
 
 	private static Activator plugin;
 
+	private static Level origMainLogLevel;
+	private static Level origObjLoaderLogLevel;
+	
 	private AdapterFactory<JME3Adapter, JME3SceneObject, Node, Object> jme3AdapterFactory;
 
 	public static BundleContext getContext() {
@@ -39,6 +50,8 @@ public class Activator implements BundleActivator {
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
 		Activator.plugin = this;
+		
+		changeLoggerLevels();
 	}
 
 	/*
@@ -49,6 +62,8 @@ public class Activator implements BundleActivator {
 	 */
 	public void stop(BundleContext bundleContext) throws Exception {
 		Activator.context = null;
+		
+		restoreLoggerLevels();
 	}
 
 	public AdapterFactory<JME3Adapter, JME3SceneObject, Node, Object> getJME3AdapterFactory() {
@@ -89,5 +104,22 @@ public class Activator implements BundleActivator {
 
 	public static Activator getDefault() {
 		return plugin;
+	}
+	
+	private static void changeLoggerLevels()
+	{
+		Logger mainLogger = Logger.getLogger(MAIN_JME_LOGGER_NAME);
+		origMainLogLevel = mainLogger.getLevel();
+		mainLogger.setLevel(MAIN_JME_LOGGER_LEVEL);
+		
+		Logger objLoaderLogger = Logger.getLogger(OBJ_LOADER_JME_LOGGER_NAME);
+		origObjLoaderLogLevel = objLoaderLogger.getLevel();
+		objLoaderLogger.setLevel(OBJ_LOADER_JME_LOGGER_LEVEL);
+	}
+	
+	private static void restoreLoggerLevels()
+	{
+		Logger.getLogger(MAIN_JME_LOGGER_NAME).setLevel(origMainLogLevel);
+		Logger.getLogger(OBJ_LOADER_JME_LOGGER_NAME).setLevel(origObjLoaderLogLevel);
 	}
 }

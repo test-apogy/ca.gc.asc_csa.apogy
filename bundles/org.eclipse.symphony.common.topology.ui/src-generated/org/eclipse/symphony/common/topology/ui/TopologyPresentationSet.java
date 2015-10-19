@@ -16,12 +16,12 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry <em>Topology Presentation Registry</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getGraphicsContext <em>Graphics Context</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationSet()
  * @model

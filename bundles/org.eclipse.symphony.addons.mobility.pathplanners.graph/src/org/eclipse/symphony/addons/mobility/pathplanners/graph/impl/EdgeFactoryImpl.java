@@ -15,8 +15,6 @@ import org.jgrapht.EdgeFactory;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Edge Factory</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -27,10 +27,10 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolNodeImpl#getTrajectory3DTool <em>Trajectory3 DTool</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

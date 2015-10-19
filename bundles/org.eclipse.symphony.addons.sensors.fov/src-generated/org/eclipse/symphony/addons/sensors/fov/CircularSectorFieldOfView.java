@@ -16,12 +16,12 @@ package org.eclipse.symphony.addons.sensors.fov;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getRange <em>Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan <em>Angular Span</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getArea <em>Area</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getCircularSectorFieldOfView()
  * @model

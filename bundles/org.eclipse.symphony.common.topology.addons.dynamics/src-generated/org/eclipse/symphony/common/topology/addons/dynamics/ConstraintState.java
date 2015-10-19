@@ -20,12 +20,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getVelocity <em>Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getForce <em>Force</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getConstraintState()
  * @model

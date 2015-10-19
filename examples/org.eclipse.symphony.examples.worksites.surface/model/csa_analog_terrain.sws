@@ -9,11 +9,11 @@
       <layers xsi:type="environment:URLImageMapLayer" name="Contours 0.2 meter interval" description="Contours map with 0.2 meter altitude interval." width="60.0" height="120.0" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png">
         <image xsi:type="images:URLEImage" url="platform:/plugin/CSA-AT-contour-map-black-20cm-per-line.png/data/CSA-AT-contour-map-black-20cm-per-line.png"/>
       </layers>
-      <layers xsi:type="environment:URLImageMapLayer" name="Altitude " description="Color Coded Altitude Map at 0.5 meters resolution." width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-DEM-50cm.png" legendURL="platform:/plugin/CSA-AT-contour-map-black-20cm-per-line.png/data/CSA-AT-DEM-legend.png">
+      <layers xsi:type="environment:URLImageMapLayer" name="Altitude " description="Color Coded Altitude Map at 0.5 meters resolution." width="60.0" height="120.0" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-DEM-50cm.png" legendURL="platform:/plugin/CSA-AT-contour-map-black-20cm-per-line.png/data/CSA-AT-DEM-legend.png">
         <image xsi:type="images:URLEImage" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-DEM-50cm.png"/>
         <legend xsi:type="images:URLEImage" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-DEM-legend.png"/>
       </layers>
-      <layers xsi:type="environment:URLImageMapLayer" name="Slope Map" description="Slope Map showing slopes from 0 to 30 degrees.&#xA;" width="60.0" height="120.0" url="platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-slope-map-0-30-degrees.png" legendURL="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees-legend.png">
+      <layers xsi:type="environment:URLImageMapLayer" name="Slope Map" description="Slope Map showing slopes from 0 to 30 degrees.&#xA;" width="60.0" height="120.0" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees.png" legendURL="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees-legend.png">
         <image xsi:type="images:URLEImage" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees.png"/>
         <legend xsi:type="images:URLEImage" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-slope-map-0-30-degrees-legend.png"/>
       </layers>

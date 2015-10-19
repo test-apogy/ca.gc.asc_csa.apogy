@@ -11,10 +11,10 @@ package org.eclipse.symphony.core.programs.controllers;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.TimeTrigger#getRefreshPeriod <em>Refresh Period</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getTimeTrigger()
  * @model

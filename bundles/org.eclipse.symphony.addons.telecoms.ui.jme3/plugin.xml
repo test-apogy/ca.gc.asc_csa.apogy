@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
   <extension
-         point="org.eclipse.symphony.common.topology.ui.jme3.JME3Adapter">
+         point="org.eclipse.symphony.common.topology.ui.jme3.jme3Adapter">
       <Class
             Class="org.eclipse.symphony.addons.telecoms.ui.jme3.adapters.AbstractAntennaRadiationPatternJME3Adapter">
       </Class>

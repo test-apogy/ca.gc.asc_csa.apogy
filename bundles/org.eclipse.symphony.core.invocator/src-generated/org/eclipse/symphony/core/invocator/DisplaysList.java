@@ -20,11 +20,11 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.DisplaysList#getDisplaysListsContainer <em>Displays Lists Container</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.DisplaysList#getDisplays <em>Displays</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDisplaysList()
  * @model

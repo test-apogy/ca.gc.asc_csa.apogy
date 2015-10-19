@@ -21,13 +21,13 @@ import org.eclipse.symphony.core.environment.WorksiteNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getSymphonyEnvironment <em>Symphony Environment</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getWorksiteNode <em>Worksite Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getResultsListNode <em>Results List Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getSymphonySystemAPIsNode <em>Symphony System AP Is Node</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonyEnvironmentNode()
  * @model

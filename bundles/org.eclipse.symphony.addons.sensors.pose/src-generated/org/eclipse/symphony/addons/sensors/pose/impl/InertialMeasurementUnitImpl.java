@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl#getLinearAcceleration <em>Linear Acceleration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

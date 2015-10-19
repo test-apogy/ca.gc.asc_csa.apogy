@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getPointSize <em>Point Size</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getEndPointsRadius <em>End Points Radius</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage#getWayPointPathPresentation()
  * @model

@@ -17,8 +17,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Displacement Cost Function</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

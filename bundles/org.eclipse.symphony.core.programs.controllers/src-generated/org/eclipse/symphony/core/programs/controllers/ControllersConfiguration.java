@@ -21,10 +21,10 @@ import org.eclipse.symphony.core.invocator.Program;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration#isActive <em>Active</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllersConfiguration()
  * @model

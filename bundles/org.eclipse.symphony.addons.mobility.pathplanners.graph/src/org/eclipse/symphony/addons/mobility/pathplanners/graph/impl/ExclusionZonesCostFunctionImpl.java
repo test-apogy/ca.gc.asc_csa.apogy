@@ -23,10 +23,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.ExclusionZonesCostFunctionImpl#getExclusionZones <em>Exclusion Zones</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

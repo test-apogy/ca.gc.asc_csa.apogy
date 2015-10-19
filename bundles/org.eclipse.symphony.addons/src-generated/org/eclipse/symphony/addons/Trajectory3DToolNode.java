@@ -17,10 +17,10 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DToolNode#getTrajectory3DTool <em>Trajectory3 DTool</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DToolNode()
  * @model

@@ -22,11 +22,11 @@ import org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesConstants
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.ResultNodePresentationImpl#getPoleHeight <em>Pole Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.ResultNodePresentationImpl#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

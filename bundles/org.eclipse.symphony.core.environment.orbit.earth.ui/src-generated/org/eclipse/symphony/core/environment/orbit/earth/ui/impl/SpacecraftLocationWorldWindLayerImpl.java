@@ -42,6 +42,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEn
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#getOrbitModel <em>Orbit Model</em>}</li>
@@ -49,7 +50,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEn
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#isShowGroundProjection <em>Show Ground Projection</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftLocationWorldWindLayerImpl#isShowLatLon <em>Show Lat Lon</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -46,7 +46,6 @@ public class Activator extends AbstractUIPlugin {
 
 	private Map<IFile, WeakReference<TopologyPresentationSet>> fileToPresentationTopologyMap;
 
-	
 	private static TopologyPresentationRegistry topologyPresentationRegistry = null;
 	
 	

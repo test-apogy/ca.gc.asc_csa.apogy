@@ -11,7 +11,6 @@
     
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated mrt_csv -->
       <factory
             uri="org.eclipse.symphony.common.file.csv"
             class="org.eclipse.symphony.common.file.csv.provider.CsvItemProviderAdapterFactory"

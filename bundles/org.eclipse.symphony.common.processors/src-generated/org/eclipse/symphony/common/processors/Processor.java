@@ -15,11 +15,11 @@ package org.eclipse.symphony.common.processors;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.processors.Processor#getInput <em>Input</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.processors.Processor#getOutput <em>Output</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getProcessor()
  * @model abstract="true"

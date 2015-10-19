@@ -14,8 +14,6 @@ import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Self Place Sensor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

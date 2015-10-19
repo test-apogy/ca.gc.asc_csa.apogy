@@ -12,7 +12,6 @@
 
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated mrt_paths_ui -->
       <factory
             uri="org.eclipse.symphony.addons.geometry.paths.ui"
             class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory"
@@ -25,7 +24,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated mrt_paths_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>

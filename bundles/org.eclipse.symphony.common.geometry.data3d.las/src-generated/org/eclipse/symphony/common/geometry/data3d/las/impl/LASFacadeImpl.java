@@ -23,8 +23,6 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>LAS Facade</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

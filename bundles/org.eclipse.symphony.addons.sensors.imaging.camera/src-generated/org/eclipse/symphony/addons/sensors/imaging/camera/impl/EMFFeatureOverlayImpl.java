@@ -34,12 +34,12 @@ import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureRefe
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl#getNumberFormat <em>Number Format</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl#getVariableFeatureReferenceChangeCount <em>Variable Feature Reference Change Count</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

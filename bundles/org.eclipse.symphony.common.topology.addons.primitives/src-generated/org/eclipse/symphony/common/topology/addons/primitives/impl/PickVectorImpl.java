@@ -25,6 +25,7 @@ import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getIntersectionDistance <em>Intersection Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getIntersectedNode <em>Intersected Node</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getNodeTypesInIntersection <em>Node Types In Intersection</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl#getNodeTypesToExcludeFromIntersection <em>Node Types To Exclude From Intersection</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

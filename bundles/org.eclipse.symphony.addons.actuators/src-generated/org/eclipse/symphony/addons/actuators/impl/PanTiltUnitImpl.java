@@ -18,13 +18,13 @@ import org.eclipse.symphony.addons.actuators.PanTiltUnit;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl#getCurrentPanAngle <em>Current Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl#getCurrentTiltAngle <em>Current Tilt Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl#getCommandedPanAngle <em>Commanded Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

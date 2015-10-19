@@ -32,6 +32,7 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingTrackImpl#getChannel <em>Channel</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingTrackImpl#getRecording <em>Recording</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.symphony.core.recordings.RecordingTrack;
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingTrackImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.RecordingTrackImpl#getDuration <em>Duration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

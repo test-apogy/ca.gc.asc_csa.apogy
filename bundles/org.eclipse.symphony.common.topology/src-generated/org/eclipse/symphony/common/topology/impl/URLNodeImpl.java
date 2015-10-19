@@ -18,12 +18,12 @@ import org.eclipse.symphony.common.topology.URLNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.URLNodeImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.URLNodeImpl#getPolygonCount <em>Polygon Count</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.URLNodeImpl#getVertexCount <em>Vertex Count</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

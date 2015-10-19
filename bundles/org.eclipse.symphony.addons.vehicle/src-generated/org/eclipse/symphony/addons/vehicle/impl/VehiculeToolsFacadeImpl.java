@@ -12,8 +12,6 @@ import org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Vehicule Tools Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

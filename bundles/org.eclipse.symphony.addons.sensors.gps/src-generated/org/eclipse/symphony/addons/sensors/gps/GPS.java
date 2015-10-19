@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPS#getConnection <em>Connection</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPS#getDataInterpreter <em>Data Interpreter</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPS#getSpeedKnots <em>Speed Knots</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPS#getSpeedKmh <em>Speed Kmh</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS()
  * @model

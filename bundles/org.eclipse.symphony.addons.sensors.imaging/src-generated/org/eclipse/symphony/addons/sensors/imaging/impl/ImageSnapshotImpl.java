@@ -29,12 +29,12 @@ import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getFieldOfView <em>Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getImage <em>Image</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -23,12 +23,12 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl#getSurface <em>Surface</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl#getNormal <em>Normal</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPolygonImpl#getCentroid <em>Centroid</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

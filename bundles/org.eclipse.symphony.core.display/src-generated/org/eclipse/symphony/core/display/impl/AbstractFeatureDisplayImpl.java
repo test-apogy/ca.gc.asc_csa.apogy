@@ -28,12 +28,12 @@ import org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.impl.AbstractFeatureDisplayImpl#getAbstractFeatureNode <em>Abstract Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.impl.AbstractFeatureDisplayImpl#getMinimumWidth <em>Minimum Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.display.impl.AbstractFeatureDisplayImpl#getMinimumHeight <em>Minimum Height</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

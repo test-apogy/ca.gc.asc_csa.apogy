@@ -18,10 +18,10 @@ import org.eclipse.symphony.addons.sensors.range.RangePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.ContactSensorImpl#isContacted <em>Contacted</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

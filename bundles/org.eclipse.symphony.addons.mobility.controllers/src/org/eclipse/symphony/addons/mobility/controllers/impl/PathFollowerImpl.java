@@ -35,6 +35,7 @@ import org.eclipse.symphony.common.log.Logger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPath <em>Path</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPlatform <em>Platform</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipse.symphony.common.log.Logger;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#isDestinationReached <em>Destination Reached</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPathFollowerState <em>Path Follower State</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

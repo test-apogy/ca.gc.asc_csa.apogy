@@ -15,9 +15,15 @@
             genModel="model/symphony_tools_vehicle_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.vehicle.ui.adapters.WheelPresentationAdapter">
+      </Class>
+      <Class
+            Class="org.eclipse.symphony.addons.vehicle.ui.adapters.LanderSphericalFootPresentationAdapter">
+      </Class>
+      <Class
+            Class="org.eclipse.symphony.addons.vehicle.ui.adapters.ThrusterPresentationAdapter">
       </Class>
    </extension>
    <extension
@@ -29,7 +35,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesPage"
             id="org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesPage"
             name="Vehicules">
@@ -90,18 +96,6 @@
             </visibleWhen>
          </command>
       </menuContribution>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
-      <Class
-            Class="org.eclipse.symphony.addons.vehicle.ui.adapters.LanderSphericalFootPresentationAdapter">
-      </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
-      <Class
-            Class="org.eclipse.symphony.addons.vehicle.ui.adapters.ThrusterPresentationAdapter">
-      </Class>
    </extension>
 
 </plugin>

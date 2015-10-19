@@ -22,12 +22,12 @@ import org.eclipse.symphony.core.AbsolutePoseProvider;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor <em>Vector Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance <em>Intersection Distance</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getPointerCameraTool()
  * @model

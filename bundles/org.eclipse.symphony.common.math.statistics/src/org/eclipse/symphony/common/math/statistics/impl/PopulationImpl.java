@@ -22,6 +22,7 @@ import org.eclipse.symphony.common.math.statistics.StatisticsPackage;
  * <em><b>Population</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getData <em>Data</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getStandardDeviation <em>Standard Deviation</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.symphony.common.math.statistics.StatisticsPackage;
  *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getMin <em>Min</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.statistics.impl.PopulationImpl#getMax <em>Max</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

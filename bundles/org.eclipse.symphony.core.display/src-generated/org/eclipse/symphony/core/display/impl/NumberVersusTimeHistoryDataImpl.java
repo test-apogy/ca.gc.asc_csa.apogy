@@ -17,10 +17,10 @@ import org.eclipse.symphony.core.display.NumberVersusTimeHistoryData;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.display.impl.NumberVersusTimeHistoryDataImpl#getHistoryData <em>History Data</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

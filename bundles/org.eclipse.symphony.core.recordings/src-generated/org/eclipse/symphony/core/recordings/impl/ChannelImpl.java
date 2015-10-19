@@ -21,12 +21,12 @@ import org.eclipse.symphony.core.recordings.RecordingPolicy;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.ChannelImpl#getRecordingPolicy <em>Recording Policy</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.ChannelImpl#getFixedPeriodValues <em>Fixed Period Values</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.impl.ChannelImpl#getFeature <em>Feature</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

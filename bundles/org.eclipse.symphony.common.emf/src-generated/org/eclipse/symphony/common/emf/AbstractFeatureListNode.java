@@ -14,11 +14,11 @@ package org.eclipse.symphony.common.emf;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeatureListNode#getParent <em>Parent</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeatureListNode#getChild <em>Child</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeatureListNode()
  * @model abstract="true"

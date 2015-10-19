@@ -22,12 +22,12 @@ import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.SimpleToolImpl#getToolList <em>Tool List</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.SimpleToolImpl#isActive <em>Active</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.SimpleToolImpl#isDisposed <em>Disposed</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

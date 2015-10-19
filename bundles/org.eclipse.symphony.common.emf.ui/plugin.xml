@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension-point id="TimeSourceCompositeProvider" name="TimeSourceCompositeProvider" schema="schema/TimeSourceCompositeProvider.exsd"/>
+   <extension-point
+         id="timeSourceCompositeProvider"
+         name="Time Source Composite Provider"
+         schema="schema/timeSourceCompositeProvider.exsd">
+   </extension-point>
    <extension
          point="org.eclipse.ui.menus">
       <menuContribution
@@ -100,44 +104,32 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
+            category="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
             class="org.eclipse.symphony.common.emf.ui.preferences.InvocatorDisplayPreferencePage"
             id="org.eclipse.symphony.common.emf.ui.preferences.InvocatorDisplayPreferencePage"
             name="Ranges">
       </page>
       <page
-            category="ca.gc.asc_csa.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
+            category="org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesPage"
             class="org.eclipse.symphony.common.emf.ui.preferences.InvocatorUnitsPreferencePage"
             id="org.eclipse.symphony.common.emf.ui.page1"
             name="Units">
       </page>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider">
+         point="org.eclipse.symphony.common.emf.ui.timeSourceCompositeProvider">
       <Class
             Class="org.eclipse.symphony.common.emf.ui.adapters.BrowseableTimeSourceTimeSourceCompositeProvider">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider">
       <Class
             Class="org.eclipse.symphony.common.emf.ui.adapters.CurrentTimeSourceTimeSourceCompositeProvider">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider">
       <Class
             Class="org.eclipse.symphony.common.emf.ui.adapters.FixedTimeSourceTimeSourceCompositeProvider">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider">
       <Class
             Class="org.eclipse.symphony.common.emf.ui.adapters.SelectionBasedTimeSourceTimeSourceCompositeProvider">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider">
       <Class
             Class="org.eclipse.symphony.common.emf.ui.adapters.CollectionTimeSourceTimeSourceCompositeProvider">
       </Class>

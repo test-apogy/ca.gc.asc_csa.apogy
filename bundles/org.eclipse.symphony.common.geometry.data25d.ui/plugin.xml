@@ -10,7 +10,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated mrt_data25d_ui -->
+   
       <package
             uri="org.eclipse.symphony.common.geometry.data25d.ui"
             class="org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage"

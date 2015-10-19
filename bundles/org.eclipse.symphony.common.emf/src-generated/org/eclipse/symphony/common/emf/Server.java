@@ -11,10 +11,10 @@ import org.eclipse.core.runtime.jobs.Job;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.Server#getServerJob <em>Server Job</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getServer()
  * @model

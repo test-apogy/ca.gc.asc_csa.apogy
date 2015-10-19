@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getLinearStrength <em>Linear Strength</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getAngularStrength <em>Angular Strength</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getRPROConstraint()
  * @model

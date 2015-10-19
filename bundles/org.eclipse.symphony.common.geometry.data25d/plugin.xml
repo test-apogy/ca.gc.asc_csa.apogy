@@ -11,7 +11,7 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "ca.gc.space.mrt.geometry.data25d" 
+       uri = "org.eclipse.symphony.common.geometry.data25d" 
        class = "org.eclipse.symphony.common.geometry.data25d.Data25dPackage"
        genModel = "model/mrt_geometry_data25d.xcore" /> 
   </extension>

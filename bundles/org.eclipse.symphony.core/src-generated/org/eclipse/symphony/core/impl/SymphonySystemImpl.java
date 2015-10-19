@@ -23,6 +23,7 @@ import org.eclipse.symphony.core.invocator.impl.TypeImpl;
  * <em><b>Symphony System</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemImpl#getTopologyRoot <em>Topology Root</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemImpl#getBindingSet <em>Binding Set</em>}</li>
@@ -31,7 +32,6 @@ import org.eclipse.symphony.core.invocator.impl.TypeImpl;
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemImpl#getPoseProvider <em>Pose Provider</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemImpl#getPoseProviderInstance <em>Pose Provider Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

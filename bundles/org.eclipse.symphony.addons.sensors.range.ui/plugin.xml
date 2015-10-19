@@ -10,20 +10,16 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated mrt_range_ui -->
       <package
             uri="org.eclipse.symphony.addons.sensors.range.ui"
             class="org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage"
             genModel="model/mrt_range_ui.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.range.ui.adapters.RasterScanDataPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.range.ui.adapters.SimpleSonarPresentationAdapter">
       </Class>

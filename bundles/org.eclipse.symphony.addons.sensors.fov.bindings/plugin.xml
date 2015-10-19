@@ -8,7 +8,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated mrt_fov_bindings -->
       <package
             uri="org.eclipse.symphony.addons.sensors.fov.bindings"
             class="org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage"

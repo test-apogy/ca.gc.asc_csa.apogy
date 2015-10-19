@@ -11,13 +11,10 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.geometry.paths.ui.adapters.WayPointPathPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.geometry.paths.ui.adapters.WayPointPresentationAdapter">
       </Class>
@@ -39,7 +36,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated mrt_paths_ui -->
       <package
             uri="org.eclipse.symphony.addons.geometry.paths.ui"
             class="org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage"

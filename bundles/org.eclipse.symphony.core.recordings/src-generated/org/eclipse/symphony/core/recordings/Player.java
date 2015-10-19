@@ -24,6 +24,7 @@ import org.eclipse.symphony.core.invocator.AbstractPlayer;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.recordings.Player#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Player#getTimeSource <em>Time Source</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.symphony.core.invocator.AbstractPlayer;
  *   <li>{@link org.eclipse.symphony.core.recordings.Player#getDataEndTime <em>Data End Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.recordings.Player#getPlayBackTime <em>Play Back Time</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.recordings.EMFEcoreInvocatorRecordingsPackage#getPlayer()
  * @model

@@ -26,7 +26,6 @@
       </page>
    </extension>
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated ca_gc_asc_csa_mrt_sensors_imaging_ui -->
       <package
             uri="org.eclipse.symphony.addons.sensors.imaging.ui"
             class="org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage"

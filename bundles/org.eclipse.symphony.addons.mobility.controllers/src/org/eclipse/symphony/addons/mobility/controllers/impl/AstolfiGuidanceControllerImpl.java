@@ -39,6 +39,7 @@ import org.eclipse.symphony.common.math.GeometricUtils;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getCurrentWayPoint <em>Current Way Point</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getPreviousWayPoint <em>Previous Way Point</em>}</li>
@@ -60,7 +61,6 @@ import org.eclipse.symphony.common.math.GeometricUtils;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getAlphaThresholdForReducedVelocity <em>Alpha Threshold For Reduced Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#isSmoothPathEnabled <em>Smooth Path Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner#getMesh <em>Mesh</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getMeshWayPointPathPlanner()
  * @model

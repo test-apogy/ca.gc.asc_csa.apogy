@@ -36,11 +36,11 @@ import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

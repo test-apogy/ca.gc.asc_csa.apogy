@@ -21,6 +21,7 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getSelectedNode <em>Selected Node</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getRelativeIntersectionNormal <em>Relative Intersection Normal</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection()
  * @model

@@ -7,33 +7,24 @@
 
 <plugin>
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.EarthSkyPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.StarFieldPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.SunPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.MoonPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.core.environment.ui.adapters.EarthSurfaceWorksitePresentationAdapter">
+      </Class>
+      <Class
+            Class="org.eclipse.symphony.core.environment.ui.adapters.FeatureOfInterestPresentationAdapter">
       </Class>
    </extension>
    <extension
@@ -178,7 +169,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="true"
-            locationURI="popup:ca.gc.asc_csa.symphony.ui.menu?after=additions">
+            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
          <command
                commandId="org.eclipse.symphony.core.environment.ui.commands.TrajectoryProviderClearCommand"
                label="Clear Trajectory"
@@ -366,23 +357,17 @@
             name="Maps and Map View">
       </page>
       <page
-            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentWorksitePreferencesPage"
             id="org.eclipse.symphony.core.environment.ui.page1"
             name="Earth Surface Worksite">
       </page>
       <page
-            category="ca.gc.asc_csa.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentSkyPreferencesPage"
             id="org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentSkyPreferencesPage"
             name="Sky">
       </page>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
-      <Class
-            Class="org.eclipse.symphony.core.environment.ui.adapters.FeatureOfInterestPresentationAdapter">
-      </Class>
    </extension>
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertySections">

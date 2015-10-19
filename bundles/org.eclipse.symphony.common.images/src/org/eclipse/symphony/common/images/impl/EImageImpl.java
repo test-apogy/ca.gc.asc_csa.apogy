@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.images.ImagesCorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.images.impl.EImageImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.images.impl.EImageImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.images.impl.EImageImpl#getImageContent <em>Image Content</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

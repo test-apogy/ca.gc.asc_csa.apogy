@@ -10,24 +10,17 @@
 <plugin>
 
    <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
+         point="org.eclipse.symphony.common.topology.ui.presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.pose.ui.adapters.PositionSensorPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.pose.ui.adapters.OrientationSensorPresentationAdapter">
       </Class>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.topology.ui.Presentation">
       <Class
             Class="org.eclipse.symphony.addons.sensors.pose.ui.adapters.PoseSensorPresentationAdapter">
       </Class>
-   </extension>
-   
+   </extension>   
     <extension
          point="org.eclipse.ui.views">
     <category
@@ -44,7 +37,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated mrt_sensors_pose_ui -->
       <package
             uri="org.eclipse.symphony.addons.sensors.pose.ui"
             class="org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage"

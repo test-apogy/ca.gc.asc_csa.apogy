@@ -20,10 +20,10 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractMapLayerNodeImpl#getAbstractMapLayer <em>Abstract Map Layer</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

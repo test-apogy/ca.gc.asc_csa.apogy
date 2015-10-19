@@ -16,13 +16,13 @@ import java.util.Date;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getUpdatePeriod <em>Update Period</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getTimeAcceration <em>Time Acceration</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getTimeDirection <em>Time Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getBrowseableTimeSource()
  * @model

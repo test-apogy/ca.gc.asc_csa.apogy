@@ -18,8 +18,6 @@ import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Facade</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
