@@ -38,13 +38,6 @@ public class EComponentItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,7 +63,9 @@ public class EComponentItemProvider
 			addRelativePropertyDescriptor(object);
 			addAnalogPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addPojoComponentPropertyDescriptor(object);
 			addPollDataPropertyDescriptor(object);
+			addEComponentsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -186,6 +181,28 @@ public class EComponentItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Pojo Component feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPojoComponentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EComponent_pojoComponent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_pojoComponent_feature", "_UI_EComponent_type"),
+				 JInputPackage.Literals.ECOMPONENT__POJO_COMPONENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Poll Data feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -203,6 +220,28 @@ public class EComponentItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the EComponents feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEComponentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EComponent_eComponents_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EComponent_eComponents_feature", "_UI_EComponent_type"),
+				 JInputPackage.Literals.ECOMPONENT__ECOMPONENTS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

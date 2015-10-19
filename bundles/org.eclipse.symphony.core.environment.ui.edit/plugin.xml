@@ -29,6 +29,12 @@
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
+<<<<<<< HEAD
+=======
+            uri="org.eclipse.symphony.common.topology.ui"
+            class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+      <extender
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.core.environment.ui.provider.SymphonyEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>

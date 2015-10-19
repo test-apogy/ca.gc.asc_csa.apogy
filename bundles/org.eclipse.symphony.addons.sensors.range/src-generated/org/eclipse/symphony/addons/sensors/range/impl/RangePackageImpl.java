@@ -228,10 +228,19 @@ public class RangePackageImpl extends EPackageImpl implements RangePackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+<<<<<<< HEAD
 		FovPackage.eINSTANCE.eClass();
 		SensorsPackage.eINSTANCE.eClass();
 		Data25dPackage.eINSTANCE.eClass();
+=======
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		EMFEcorePackage.eINSTANCE.eClass();
+<<<<<<< HEAD
+=======
+		SensorsPackage.eINSTANCE.eClass();
+		FovPackage.eINSTANCE.eClass();
+		Data25dPackage.eINSTANCE.eClass();
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 
 		// Create package meta-data objects
 		theRangePackage.createPackageContents();

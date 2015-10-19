@@ -29,6 +29,9 @@
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
+            uri="org.eclipse.symphony.addons"
+            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
+      <extender
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender

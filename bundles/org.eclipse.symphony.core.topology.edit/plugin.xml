@@ -22,6 +22,12 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_topology -->
       <extender
+<<<<<<< HEAD
+=======
+            uri="org.eclipse.symphony.common.topology.bindings"
+            class="org.eclipse.symphony.core.topology.provider.SymphonyTopologyItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+      <extender
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
             uri="org.eclipse.symphony.core"
             class="org.eclipse.symphony.core.topology.provider.SymphonyTopologyItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender

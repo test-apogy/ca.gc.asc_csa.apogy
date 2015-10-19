@@ -45,9 +45,16 @@ public final class Data3DASCEditPlugin extends EMFPlugin {
 	public Data3DASCEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+<<<<<<< HEAD
+=======
+		     ProcessorsEditPlugin.INSTANCE,
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     Data3dEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+<<<<<<< HEAD
 		     ProcessorsEditPlugin.INSTANCE,
+=======
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		   });
 	}
 

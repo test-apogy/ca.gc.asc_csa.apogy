@@ -45,6 +45,10 @@ public final class Data25dEditPlugin extends EMFPlugin {
 	public Data25dEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+<<<<<<< HEAD
+=======
+		     ProcessorsEditPlugin.INSTANCE,
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     DataEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,

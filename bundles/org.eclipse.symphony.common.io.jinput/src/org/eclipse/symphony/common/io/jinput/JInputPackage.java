@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.io.jinput.JInputFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel copyrightText='Copyrights Canadian Space Agency 2012. All rights reserved.' prefix='JInput' modelDirectory='/org.eclipse.symphony.common.io.jinput/src' modelName='Jinput_emf' importerID='org.eclipse.emf.importer.ecore' suppressGenModelAnnotations='false' basePackage='org.eclipse.symphony.common.io'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel copyrightText='Copyrights Canadian Space Agency 2012. All rights reserved.' prefix='JInput' modelName='Jinput_emf' importerID='org.eclipse.emf.importer.ecore' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.io.jinput/src' editDirectory='/org.eclipse.symphony.common.io.jinput.edit/src' basePackage='org.eclipse.symphony.common.io'"
  * @generated
  */
 public interface JInputPackage extends EPackage {

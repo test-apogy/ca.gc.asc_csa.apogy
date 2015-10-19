@@ -28,6 +28,12 @@
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
+<<<<<<< HEAD
+=======
+            uri="org.eclipse.symphony.core"
+            class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>

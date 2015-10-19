@@ -22,6 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.io.jinput.EController;
+import org.eclipse.symphony.common.io.jinput.JInputFactory;
 import org.eclipse.symphony.common.io.jinput.JInputPackage;
 
 /**
@@ -38,13 +39,6 @@ public class EControllerItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -66,14 +60,37 @@ public class EControllerItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addLastPollResultPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addPortNumberPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addPortTypePropertyDescriptor(object);
-			addEComponentsPropertyDescriptor(object);
+			addPojoControllerPropertyDescriptor(object);
 			addControllerCountPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Last Poll Result feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLastPollResultPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EController_lastPollResult_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EController_lastPollResult_feature", "_UI_EController_type"),
+				 JInputPackage.Literals.ECONTROLLER__LAST_POLL_RESULT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -165,23 +182,23 @@ public class EControllerItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the EComponents feature.
+	 * This adds a property descriptor for the Pojo Controller feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEComponentsPropertyDescriptor(Object object) {
+	protected void addPojoControllerPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_EController_eComponents_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EController_eComponents_feature", "_UI_EController_type"),
-				 JInputPackage.Literals.ECONTROLLER__ECOMPONENTS,
+				 getString("_UI_EController_pojoController_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EController_pojoController_feature", "_UI_EController_type"),
+				 JInputPackage.Literals.ECONTROLLER__POJO_CONTROLLER,
 				 true,
 				 false,
-				 true,
-				 null,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -200,7 +217,7 @@ public class EControllerItemProvider
 				 getString("_UI_EController_controllerCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EController_controllerCount_feature", "_UI_EController_type"),
 				 JInputPackage.Literals.ECONTROLLER__CONTROLLER_COUNT,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
@@ -312,6 +329,11 @@ public class EControllerItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(JInputPackage.Literals.ECONTROLLER__ECOMPONENTS,
+				 JInputFactory.eINSTANCE.createEComponents()));
 	}
 
 	/**

@@ -48,10 +48,18 @@ public final class MRTSensorsImagingEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     SensorsEditPlugin.INSTANCE,
+<<<<<<< HEAD
 		     EMFEcoreEditPlugin.INSTANCE,
+=======
+		     DataEditPlugin.INSTANCE,
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     TopologyEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
+<<<<<<< HEAD
 		     DataEditPlugin.INSTANCE,
+=======
+		     EMFEcoreEditPlugin.INSTANCE,
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 		     Data3dEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		   });

@@ -22,14 +22,26 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_core -->
       <extender
+<<<<<<< HEAD
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
+=======
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+<<<<<<< HEAD
+=======
+      <extender
+            uri="org.eclipse.symphony.core.invocator"
+            class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+>>>>>>> branch 'master' of https://RJSchimpel@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
    </extension>
 
 </plugin>
