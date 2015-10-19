@@ -846,10 +846,11 @@ public class JInputPackageImpl extends EPackageImpl implements JInputPackage {
 		   new String[] {
 			 "copyrightText", "Copyrights Canadian Space Agency 2012. All rights reserved.",
 			 "prefix", "JInput",
-			 "modelDirectory", "/org.eclipse.symphony.common.io.jinput/src",
 			 "modelName", "Jinput_emf",
 			 "importerID", "org.eclipse.emf.importer.ecore",
 			 "suppressGenModelAnnotations", "false",
+			 "modelDirectory", "/org.eclipse.symphony.common.io.jinput/src",
+			 "editDirectory", "/org.eclipse.symphony.common.io.jinput.edit/src",
 			 "basePackage", "org.eclipse.symphony.common.io"
 		   });
 	}

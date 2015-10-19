@@ -26,11 +26,11 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated mrt_range_ui -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.common.topology.ui"
             class="org.eclipse.symphony.addons.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.sensors.range.ui.provider.RangeSensorsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -228,10 +228,10 @@ public class RangePackageImpl extends EPackageImpl implements RangePackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		SensorsPackage.eINSTANCE.eClass();
-		Data25dPackage.eINSTANCE.eClass();
 		EMFEcorePackage.eINSTANCE.eClass();
+		SensorsPackage.eINSTANCE.eClass();
 		FovPackage.eINSTANCE.eClass();
+		Data25dPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theRangePackage.createPackageContents();

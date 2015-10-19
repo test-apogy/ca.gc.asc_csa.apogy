@@ -39,13 +39,6 @@ public class EControllerEnvironmentItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +60,7 @@ public class EControllerEnvironmentItemProvider
 			super.getPropertyDescriptors(object);
 
 			addSupportedPropertyDescriptor(object);
+			addRefreshRequestedPropertyDescriptor(object);
 			addPollingCountPropertyDescriptor(object);
 			addPollingJobPropertyDescriptor(object);
 			addPollingProblemPropertyDescriptor(object);
@@ -89,6 +83,28 @@ public class EControllerEnvironmentItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_supported_feature", "_UI_EControllerEnvironment_type"),
 				 JInputPackage.Literals.ECONTROLLER_ENVIRONMENT__SUPPORTED,
 				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Refresh Requested feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRefreshRequestedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EControllerEnvironment_refreshRequested_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_refreshRequested_feature", "_UI_EControllerEnvironment_type"),
+				 JInputPackage.Literals.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,

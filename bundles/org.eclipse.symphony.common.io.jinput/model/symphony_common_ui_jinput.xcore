@@ -1,4 +1,7 @@
-@GenModel(copyrightText="Copyrights Canadian Space Agency 2012. All rights reserved.", prefix="JInput", modelDirectory="/org.eclipse.symphony.common.io.jinput/src", modelName="Jinput_emf", importerID="org.eclipse.emf.importer.ecore", suppressGenModelAnnotations="false")
+@GenModel(copyrightText="Copyrights Canadian Space Agency 2012. All rights reserved.", prefix="JInput",modelName="Jinput_emf", importerID="org.eclipse.emf.importer.ecore", suppressGenModelAnnotations="false") 
+@GenModel(modelDirectory="/org.eclipse.symphony.common.io.jinput/src")
+@GenModel(editDirectory="/org.eclipse.symphony.common.io.jinput.edit/src")
+ 
 package org.eclipse.symphony.common.io.jinput
 
 class EController {

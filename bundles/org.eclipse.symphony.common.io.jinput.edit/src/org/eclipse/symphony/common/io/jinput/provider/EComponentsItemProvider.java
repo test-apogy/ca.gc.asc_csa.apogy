@@ -39,13 +39,6 @@ public class EComponentsItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +60,7 @@ public class EComponentsItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addEControllerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -85,10 +79,32 @@ public class EComponentsItemProvider
 				 getString("_UI_EComponents_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponents_name_feature", "_UI_EComponents_type"),
 				 JInputPackage.Literals.ECOMPONENTS__NAME,
-				 false,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the EController feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEControllerPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EComponents_eController_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EComponents_eController_feature", "_UI_EComponents_type"),
+				 JInputPackage.Literals.ECOMPONENTS__ECONTROLLER,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

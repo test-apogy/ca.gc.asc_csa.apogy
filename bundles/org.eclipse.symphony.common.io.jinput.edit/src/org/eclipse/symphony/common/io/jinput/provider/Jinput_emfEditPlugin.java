@@ -14,13 +14,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
  */
 public final class Jinput_emfEditPlugin extends EMFPlugin {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Copyrights Canadian Space Agency 2012. All rights reserved.";
-
-	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
