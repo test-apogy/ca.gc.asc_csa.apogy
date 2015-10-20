@@ -29,7 +29,7 @@
       <package
             uri="org.eclipse.symphony.addons.sensors.imaging.ui"
             class="org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage"
-            genModel="model/ca_gc_asc_csa_mrt_sensors_imaging_ui.xcore"/>
+            genModel="model/sensors_imaging_ui.xcore"/>
    </extension>
 
 </plugin>

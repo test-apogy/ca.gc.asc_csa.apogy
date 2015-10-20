@@ -1165,7 +1165,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		// Creates a MeshMapLayer.
 		
 		CartesianTriangularMeshURLMapLayer meshLayer = SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer();
-		meshLayer.setUrl("platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSAMarsYardDEM100cm.tri");
+		meshLayer.setUrl("platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri");
 		meshLayer.setName("MarsYardDEM 1.0 meters resolution");
 		meshLayer.setDescription("MarsYard DEM at 1.0 meters resolution");
 		
@@ -1173,7 +1173,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 	
 		// Create Aerial Image map.
 		URLImageMapLayer imageLayer = SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer();
-		imageLayer.setUrl("platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-NGC-MET-seen-from-sky.jpg");
+		imageLayer.setUrl("platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-NGC-MET-seen-from-sky.jpg");
 		imageLayer.setName("Mars Yard Aerial Image.");
 		imageLayer.setDescription("Mars Yard seen from above.");
 		imageLayer.setWidth(60.0);
@@ -1186,7 +1186,8 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		foiLayer.setFeatures(SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestList());
 		foiLayer.setName("CSA AT Features");
 		foiLayer.setDescription("CSA AT Features Of Interest.");
-		String foiURL = "platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSA-AT-FOI.csv";
+		String foiURL = "platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-FOI.csv";
+		
 		try
 		{
 			List<FeatureOfInterest> features = SymphonyCoreFacade.INSTANCE.loadFeatureOfInterestFromFile(foiURL);

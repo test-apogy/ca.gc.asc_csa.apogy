@@ -32,7 +32,6 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  *
  * @generated
  */
-@SuppressWarnings("unchecked")
 public class ThrusterPresentationImpl extends NodePresentationImpl implements ThrusterPresentation
 {
 	protected IPropertyChangeListener preferencesListener = null;

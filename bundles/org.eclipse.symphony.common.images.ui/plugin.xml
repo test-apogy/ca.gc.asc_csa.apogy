@@ -5,7 +5,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category.toolbox"
             class="org.eclipse.symphony.common.images.ui.views.ImageView"
             icon="icons/image_view.png"
             id="org.eclipse.symphony.common.images.ui.ImageView"

@@ -223,7 +223,6 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {

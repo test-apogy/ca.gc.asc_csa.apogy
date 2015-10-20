@@ -1374,7 +1374,6 @@ public class EMFEcoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {

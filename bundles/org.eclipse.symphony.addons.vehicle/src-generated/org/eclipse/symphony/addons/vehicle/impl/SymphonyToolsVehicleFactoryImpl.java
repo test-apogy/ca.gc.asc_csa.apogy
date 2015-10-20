@@ -34,7 +34,7 @@ import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade;
+import org.eclipse.symphony.addons.vehicle.VehicleToolsFacade;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
@@ -97,7 +97,7 @@ public class SymphonyToolsVehicleFactoryImpl extends EFactoryImpl implements Sym
 			case SymphonyToolsVehiclePackage.WHEEL_CONTACT_PROVIDER: return createWheelContactProvider();
 			case SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT: return createLanderSphericalFoot();
 			case SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER: return createLanderSphericalFootContactProvider();
-			case SymphonyToolsVehiclePackage.VEHICULE_TOOLS_FACADE: return createVehiculeToolsFacade();
+			case SymphonyToolsVehiclePackage.VEHICLE_TOOLS_FACADE: return createVehicleToolsFacade();
 			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES: return createWheelVehicleUtilities();
 			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D: return createMeshExtent2D();
 			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL: return createPathPlannerTool();
@@ -288,10 +288,10 @@ public class SymphonyToolsVehicleFactoryImpl extends EFactoryImpl implements Sym
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public VehiculeToolsFacade createVehiculeToolsFacade()
+  public VehicleToolsFacade createVehicleToolsFacade()
   {
-		VehiculeToolsFacadeImpl vehiculeToolsFacade = new VehiculeToolsFacadeImpl();
-		return vehiculeToolsFacade;
+		VehicleToolsFacadeImpl vehicleToolsFacade = new VehicleToolsFacadeImpl();
+		return vehicleToolsFacade;
 	}
 
   /**

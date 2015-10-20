@@ -301,27 +301,27 @@ public class SymphonyToolsVehicleItemProviderAdapterFactory extends SymphonyTool
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.VehicleToolsFacade} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected VehiculeToolsFacadeItemProvider vehiculeToolsFacadeItemProvider;
+	protected VehicleToolsFacadeItemProvider vehicleToolsFacadeItemProvider;
 
-  /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade}.
+		/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.VehicleToolsFacade}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
-  public Adapter createVehiculeToolsFacadeAdapter()
+  public Adapter createVehicleToolsFacadeAdapter()
   {
-		if (vehiculeToolsFacadeItemProvider == null) {
-			vehiculeToolsFacadeItemProvider = new VehiculeToolsFacadeItemProvider(this);
+		if (vehicleToolsFacadeItemProvider == null) {
+			vehicleToolsFacadeItemProvider = new VehicleToolsFacadeItemProvider(this);
 		}
 
-		return vehiculeToolsFacadeItemProvider;
+		return vehicleToolsFacadeItemProvider;
 	}
 
   /**
@@ -587,7 +587,7 @@ public class SymphonyToolsVehicleItemProviderAdapterFactory extends SymphonyTool
 		if (wheelContactProviderItemProvider != null) wheelContactProviderItemProvider.dispose();
 		if (landerSphericalFootItemProvider != null) landerSphericalFootItemProvider.dispose();
 		if (landerSphericalFootContactProviderItemProvider != null) landerSphericalFootContactProviderItemProvider.dispose();
-		if (vehiculeToolsFacadeItemProvider != null) vehiculeToolsFacadeItemProvider.dispose();
+		if (vehicleToolsFacadeItemProvider != null) vehicleToolsFacadeItemProvider.dispose();
 		if (wheelVehicleUtilitiesItemProvider != null) wheelVehicleUtilitiesItemProvider.dispose();
 		if (meshExtent2DItemProvider != null) meshExtent2DItemProvider.dispose();
 		if (pathPlannerToolItemProvider != null) pathPlannerToolItemProvider.dispose();
@@ -1157,7 +1157,7 @@ public class SymphonyToolsVehicleItemProviderAdapterFactory extends SymphonyTool
 				newChildDescriptors.add
 					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyToolsVehicleFactory.eINSTANCE.createVehiculeToolsFacade()));
+						 SymphonyToolsVehicleFactory.eINSTANCE.createVehicleToolsFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1237,7 +1237,7 @@ public class SymphonyToolsVehicleItemProviderAdapterFactory extends SymphonyTool
 				newChildDescriptors.add
 					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyToolsVehicleFactory.eINSTANCE.createVehiculeToolsFacade()));
+						 SymphonyToolsVehicleFactory.eINSTANCE.createVehicleToolsFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter

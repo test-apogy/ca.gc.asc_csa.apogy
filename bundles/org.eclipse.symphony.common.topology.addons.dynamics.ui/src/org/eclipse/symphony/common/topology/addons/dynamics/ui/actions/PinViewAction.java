@@ -10,7 +10,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.ui.views.AbstractPin
 
 public class PinViewAction extends Action {
 
-	private static final String id ="ca.gc.asc_csa.esm.juno.ui.actions.PinViewAction";
+	private static final String ID ="org.eclipse.symphony.common.topology.addons.dynamics.ui.actions.PinViewAction";
 	private String description = "Pins the current selection.";
 	private String toolTipText = "Pins the current selection.";
 	private String text = "Pins the current selection.";	
@@ -37,7 +37,7 @@ public class PinViewAction extends Action {
 
 	public String getId() 
 	{		
-		return id;
+		return ID;
 	}
 
 	public ImageDescriptor getImageDescriptor() 

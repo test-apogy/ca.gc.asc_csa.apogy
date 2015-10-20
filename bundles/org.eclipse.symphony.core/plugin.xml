@@ -6,9 +6,16 @@
 -->
 
 <plugin>
-   <extension-point id="SymphonySystemContributor" name="SymphonySystemContributor" schema="schema/SymphonySystemContributor.exsd"/>
-   <extension-point id="WorksiteProvider" name="WorksiteProvider" schema="schema/WorksiteProvider.exsd"/>
-
+   <extension-point
+   		id="symphonySystemContributor"
+   		name="Symphony System Contributor"
+   		schema="schema/symphonySystemContributor.exsd">
+   </extension-point>
+   <extension-point
+   		id="worksiteProvider"
+   		name="Worksite Provider"
+   		schema="schema/worksiteProvider.exsd">
+   </extension-point>
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.core"

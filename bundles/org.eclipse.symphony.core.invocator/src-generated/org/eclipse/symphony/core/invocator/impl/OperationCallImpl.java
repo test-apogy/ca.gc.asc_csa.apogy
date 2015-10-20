@@ -388,8 +388,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @SuppressWarnings("unchecked")
-		@Override
+  @Override
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {

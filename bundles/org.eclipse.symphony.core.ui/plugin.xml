@@ -3,15 +3,23 @@
 <plugin>
    <extension
          point="org.eclipse.ui.views">
+      <category
+            id="org.eclipse.symphony.core.ui.category"
+            name="ASC/CSA Symphony">
+      </category>
+      <category
+      		id="org.eclipse.symphony.core.ui.category.toolbox"
+      		name="ASC/CSA Eclipse Toolbox">
+      </category>
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.core.ui.views.MovableTrajectoryView"
             id="org.eclipse.symphony.core.ui.views.MovableTrajectoryView"
             name="Movable Trajectory View"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.core.ui.views.SymphonyEnvironmentTimeSourcesView"
             icon="icons/eview16/time_sources_view.gif"
             id="org.eclipse.symphony.core.ui.view1"
@@ -19,7 +27,7 @@
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.core.ui.views.DataProductsListsContainerView"
             icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/DataProductsListsContainer.gif"
             id="org.eclipse.symphony.core.ui.views.DataProductsListsContainerView"

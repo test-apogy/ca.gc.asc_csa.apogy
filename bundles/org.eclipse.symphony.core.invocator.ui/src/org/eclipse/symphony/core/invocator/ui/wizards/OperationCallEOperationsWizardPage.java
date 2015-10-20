@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
 public class OperationCallEOperationsWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.emf.ecore.invocator.ui.wizards.NewOperationEOperationWizardPage";
+	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.OperationCallEOperationsWizardPage";
 	private EOperationsComposite eOperationsComposite;
 	private OperationCall operationCall;
 	private AdapterImpl adapter;

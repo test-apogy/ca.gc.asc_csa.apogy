@@ -722,13 +722,13 @@ public class SymphonyCoreAdapterFactory extends AdapterFactoryImpl {
 
 	/**
 	 * Creates a new adapter for an object of class '
-	 * {@link ca.gc.asc_csa.eclipse.emf.ecore.Named <em>Named</em>}'. <!--
+	 * {@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'. <!--
 	 * begin-user-doc --> This default implementation returns null so that we
 	 * can easily ignore cases; it's useful to ignore a case when inheritance
 	 * will catch all the cases anyway. <!-- end-user-doc -->
 	 * 
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.eclipse.emf.ecore.Named
+	 * @see org.eclipse.symphony.common.emf.Named
 	 * @generated
 	 */
 	public Adapter createNamedAdapter() {

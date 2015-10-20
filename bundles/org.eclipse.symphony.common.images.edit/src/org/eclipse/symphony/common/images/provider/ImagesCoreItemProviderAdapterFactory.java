@@ -39,13 +39,6 @@ import org.eclipse.symphony.common.images.util.ImagesCoreAdapterFactory;
  */
 public class ImagesCoreItemProviderAdapterFactory extends ImagesCoreAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,7 +60,7 @@ public class ImagesCoreItemProviderAdapterFactory extends ImagesCoreAdapterFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(Ca_gc_asc_csa_eclipse_imagesEditPlugin.INSTANCE, ImagesCorePackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ImagesCoreEditPlugin.INSTANCE, ImagesCorePackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.

@@ -30,7 +30,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.core.environment.ui.views.EarthSkyView"
             icon="icons/earth_sky_view.gif"
             id="org.eclipse.symphony.core.environment.ui.views.EarthSkyView"
@@ -38,7 +38,7 @@
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.core.environment.ui.views.MapView"
             icon="icons/map_view_icon.gif"
             id="org.eclipse.symphony.core.environment.ui.views.MapView"

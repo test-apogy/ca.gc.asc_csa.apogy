@@ -47,7 +47,6 @@ import org.eclipse.symphony.common.processors.ProcessorsPackage;
 import org.eclipse.symphony.common.processors.VerboseProvider;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyFactory;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
@@ -685,15 +684,13 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * @param path The path of the folder where to save the data.
 	 * @param fileName The file name to save the data to.
 	 */
-	@SuppressWarnings({ "unused", "unchecked" })
+	@SuppressWarnings("unused")
 	private void savePolygonPath(List<CartesianTriangle> polygonPath, String path, String fileName)
-	{
-		TopologyFacade topologyFacade = TopologyFactory.eINSTANCE.createTopologyFacade();
-				
-		TransformNode root = topologyFacade.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);						
+	{			
+		TransformNode root = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);						
 		Mesh pathMesh = Data3dFacade.INSTANCE.createCartesianTriangularMesh(polygonPath);
 						
-		ContentNode<Mesh> pathNode = topologyFacade.createContentNode(pathMesh); 
+		ContentNode<Mesh> pathNode = TopologyFacade.INSTANCE.createContentNode(pathMesh); 
 		pathNode.setDescription("Polygon Path.");
 		root.getChildren().add(pathNode);	
 		

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.symphony.common.converters">
+      <new_element
+            Class="org.eclipse.symphony.common.emf.databinding.converters.EnumeratorToDoubleConverter">
+      </new_element>
+      <new_element
+            Class="org.eclipse.symphony.common.emf.databinding.converters.ValueRangeToColorConverter">
+      </new_element>
+   </extension>
+
+</plugin>

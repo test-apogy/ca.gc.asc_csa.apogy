@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.emf.ui.composites.NamedComposite;
 
 public class NamedDescribedWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.emf.ecore.invocator.ui.wizards.NewOperationCallNamedDescribedWizardPage";
+	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.NamedDescribedWizardPage";
 	private NamedComposite namedComposite;
 	private DescribedComposite describedComposite;
 	private Adapter adapter; 

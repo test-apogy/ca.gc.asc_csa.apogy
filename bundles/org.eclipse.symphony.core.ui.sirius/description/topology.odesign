@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="symphony_core_ui_sirius" version="8.1.0">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="symphony_core_ui_sirius" version="10.0.0.201505222000">
   <ownedViewpoints name="Topology" modelFileExtension="ss">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="org.eclipse.symphony.core.ui.sirius.diagrams.topology" label="Topology" domainClass="SymphonySystem">
-      <metamodel href="http:///ca/gc/space/topology.ecore#/"/>
       <metamodel href="org.eclipse.symphony.core#/"/>
       <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#/"/>
       <metamodel href="http://www.eclipse.org/sirius/1.1.0#/"/>
-      <metamodel href="http:///ca/gc/space/mrt/sensors/fov/model/fov.ecore#/"/>
-      <metamodel href="ca.gc.asc_csa.symphony.tools.vehicle#/"/>
+      <metamodel href="org.eclipse.symphony.common.topology#/"/>
+      <metamodel href="org.eclipse.symphony.addons.sensors.fov#/"/>
+      <metamodel href="org.eclipse.symphony.addons.vehicle#/"/>
       <defaultLayer name="org.eclipse.symphony.core.ui.sirius.topology.layers.default" label="Topology">
         <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.transform_node" label="Transform Node" preconditionExpression="[self.oclIsTypeOf(TransformNode) = true/]" deletionDescription="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.topology.tools.delete_topology_node']" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="topology.TransformNode">
           <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Transform Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(GroupNode).children->size().toString()).concat(')') /]" sizeComputationExpression="0" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
@@ -101,7 +101,7 @@
           </style>
         </nodeMappings>
         <nodeMappings name="org.eclipse.symphony.core.ui.sirius.topology.nodes.wheel" label="Wheel Node" preconditionExpression="[self.oclIsTypeOf(Wheel) = true/]" labelDirectEdit="//@ownedViewpoints[name='Topology']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.diagrams.topology']/@defaultLayer/@toolSections.2/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.edit_label.node_id']" domainClass="vehicle.Wheel">
-          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Wheel Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(Wheell).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="feature:nodeId" tooltipExpression="['Wheel Node '.concat(self.nodeId).concat(' (').concat(self.oclAsType(Wheel).children->size().toString()).concat(')') /]" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="[(self.nodeId.size().div(2) + 2).min(13).max(8)/]" verticalDiameterComputationExpression="[self.nodeId.size().div(3).min(13).max(8)/]">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>

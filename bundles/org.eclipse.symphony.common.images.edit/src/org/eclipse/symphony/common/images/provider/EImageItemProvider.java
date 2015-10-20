@@ -39,13 +39,6 @@ public class EImageItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
-	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,6 +61,7 @@ public class EImageItemProvider
 
 			addWidthPropertyDescriptor(object);
 			addHeightPropertyDescriptor(object);
+			addImageContentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -113,6 +107,28 @@ public class EImageItemProvider
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 getString("_UI_IMAGE_INFORMATIONPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Image Content feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImageContentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EImage_imageContent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EImage_imageContent_feature", "_UI_EImage_type"),
+				 ImagesCorePackage.Literals.EIMAGE__IMAGE_CONTENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
 				 null));
 	}
 

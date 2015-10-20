@@ -118,7 +118,6 @@ public class DataFacadeImpl extends MinimalEObjectImpl.Container implements Data
 	 * @generated
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case Data25dPackage.DATA_FACADE___CREATE_COORDINATES25_D__COORDINATES25D:

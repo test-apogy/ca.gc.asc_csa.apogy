@@ -4,7 +4,9 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.Iterator;
+import java.util.SimpleTimeZone;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -80,13 +82,18 @@ public class ExportSatelliteCommandListToFile extends AbstractHandler implements
 		DecimalFormat rollFormat = new DecimalFormat("0.00");
 		DecimalFormat zoomFormat = new DecimalFormat("0.0");
 		
+		SimpleDateFormat dateFormat = new SimpleDateFormat();
+		dateFormat.setTimeZone(new SimpleTimeZone(0, "GMT"));
+		dateFormat.applyPattern("dd MMM yyyy HH:mm:ss z");
+		
 		for(SatelliteCommand cmd : commandList.getCommands())
 		{
 			// First column is the satellite
 			csvString += cmd.getSatellite().getName().replace(",", ";") + ",";
 						
 			// Second column is the time
-			csvString += cmd.getCommandStartTime().toGMTString() + ",";
+			// Need this approach as toGMTString() is deprecated
+			csvString += dateFormat.format(cmd.getCommandStartTime()) + ",";
 									
 			if(cmd instanceof SatelliteCommandRoll)
 			{

@@ -14,12 +14,11 @@ import org.eclipse.symphony.core.invocator.ui.composites.VariableFeatureReferenc
 
 public class VariableFeatureReferenceWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.emf.ecore.invocator.ui.wizards.NewOperationCallVariableFeatureReferenceWizardPage";
+	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.VariableFeatureReferenceWizardPage";
 	private VariableFeatureReferenceComposite variableFeatureReferenceComposite; 
 	protected VariableFeatureReference variableFeatureReference;
 	private VariablesList variablesList;
-	protected AdapterImpl adapter; 
-
+	protected AdapterImpl adapter;
 	
 	/**
 	 * Constructor for the WizardPage.

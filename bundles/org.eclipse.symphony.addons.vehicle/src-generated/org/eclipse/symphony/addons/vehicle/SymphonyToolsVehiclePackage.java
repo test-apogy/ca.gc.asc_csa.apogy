@@ -968,34 +968,34 @@ public interface SymphonyToolsVehiclePackage extends EPackage
   int LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER_OPERATION_COUNT = CONTACT_PROVIDER_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.impl.VehiculeToolsFacadeImpl <em>Vehicule Tools Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.impl.VehicleToolsFacadeImpl <em>Vehicle Tools Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.vehicle.impl.VehiculeToolsFacadeImpl
-	 * @see org.eclipse.symphony.addons.vehicle.impl.SymphonyToolsVehiclePackageImpl#getVehiculeToolsFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.addons.vehicle.impl.VehicleToolsFacadeImpl
+	 * @see org.eclipse.symphony.addons.vehicle.impl.SymphonyToolsVehiclePackageImpl#getVehicleToolsFacade()
 	 * @generated
 	 */
-  int VEHICULE_TOOLS_FACADE = 9;
+	int VEHICLE_TOOLS_FACADE = 9;
 
-  /**
-	 * The number of structural features of the '<em>Vehicule Tools Facade</em>' class.
+		/**
+	 * The number of structural features of the '<em>Vehicle Tools Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int VEHICULE_TOOLS_FACADE_FEATURE_COUNT = 0;
-
-  /**
-	 * The number of operations of the '<em>Vehicule Tools Facade</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int VEHICULE_TOOLS_FACADE_OPERATION_COUNT = 0;
+	int VEHICLE_TOOLS_FACADE_FEATURE_COUNT = 0;
 
-  /**
+		/**
+	 * The number of operations of the '<em>Vehicle Tools Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEHICLE_TOOLS_FACADE_OPERATION_COUNT = 0;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.impl.WheelVehicleUtilitiesImpl <em>Wheel Vehicle Utilities</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2308,14 +2308,14 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade <em>Vehicule Tools Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.vehicle.VehicleToolsFacade <em>Vehicle Tools Facade</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Vehicule Tools Facade</em>'.
-	 * @see org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade
+	 * @return the meta object for class '<em>Vehicle Tools Facade</em>'.
+	 * @see org.eclipse.symphony.addons.vehicle.VehicleToolsFacade
 	 * @generated
 	 */
-  EClass getVehiculeToolsFacade();
+  EClass getVehicleToolsFacade();
 
   /**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities <em>Wheel Vehicle Utilities</em>}'.
@@ -3074,16 +3074,16 @@ public interface SymphonyToolsVehiclePackage extends EPackage
     EClass LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER = eINSTANCE.getLanderSphericalFootContactProvider();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.vehicle.impl.VehiculeToolsFacadeImpl <em>Vehicule Tools Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.vehicle.impl.VehicleToolsFacadeImpl <em>Vehicle Tools Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.vehicle.impl.VehiculeToolsFacadeImpl
-		 * @see org.eclipse.symphony.addons.vehicle.impl.SymphonyToolsVehiclePackageImpl#getVehiculeToolsFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.addons.vehicle.impl.VehicleToolsFacadeImpl
+		 * @see org.eclipse.symphony.addons.vehicle.impl.SymphonyToolsVehiclePackageImpl#getVehicleToolsFacade()
 		 * @generated
 		 */
-    EClass VEHICULE_TOOLS_FACADE = eINSTANCE.getVehiculeToolsFacade();
+		EClass VEHICLE_TOOLS_FACADE = eINSTANCE.getVehicleToolsFacade();
 
-    /**
+				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.addons.vehicle.impl.WheelVehicleUtilitiesImpl <em>Wheel Vehicle Utilities</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

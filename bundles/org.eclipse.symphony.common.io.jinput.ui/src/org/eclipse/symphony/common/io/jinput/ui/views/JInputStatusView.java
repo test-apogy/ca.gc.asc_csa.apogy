@@ -20,8 +20,8 @@ import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 
 
-public class JInputStatusView extends ViewPart {
-
+public class JInputStatusView extends ViewPart
+{
 	public static final String ID = "org.eclipse.symphony.common.io.jinput.ui.views.JInputStatusView";
 	
 	
@@ -30,22 +30,30 @@ public class JInputStatusView extends ViewPart {
 	private ExtendedPropertySheetPage propertySheetPage;
 	private ComposedAdapterFactory adapterFactory;
 
-	public JInputStatusView() {
+	public JInputStatusView()
+	{
+		
 	}
 
 	@Override
-	public void createPartControl(final Composite parent) {
+	public void createPartControl(final Composite parent)
+	{
 		parent.setLayout(new FillLayout(SWT.HORIZONTAL));
 		viewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
 		final Tree tree = viewer.getTree();
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 		
-		viewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory){
+		viewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory)
+		{
 			@Override
-			public Object[] getElements(Object object) {
-				if (getParent(object) == null){
+			public Object[] getElements(Object object)
+			{
+				if (getParent(object) == null)
+				{
 					return new Object[]{Activator.getEControllerEnvironment()};
-				}else{
+				}
+				else
+				{
 					return super.getElements(object);
 				}
 			}
@@ -58,14 +66,19 @@ public class JInputStatusView extends ViewPart {
 		viewer.setInput("");
 		
 		//Adapter to refresh viewer from model
-		viewerAdapter = new Adapter() {
+		viewerAdapter = new Adapter()
+		{	
 			@Override
 			public void setTarget(Notifier newTarget) { }
+			
 			@Override
-			public void notifyChanged(Notification notification) {
-				Display.getDefault().asyncExec(new Runnable() {
+			public void notifyChanged(Notification notification)
+			{
+				Display.getDefault().asyncExec(new Runnable()
+				{
 					@Override
-					public void run() {
+					public void run()
+					{
 						if(viewer != null && !tree.isDisposed())
 							viewer.refresh(true);
 					}
@@ -78,9 +91,11 @@ public class JInputStatusView extends ViewPart {
 		};
 		org.eclipse.symphony.common.io.jinput.Activator.getEControllerEnvironment().eAdapters().add(viewerAdapter);
 		
-		parent.addDisposeListener(new DisposeListener() {
+		parent.addDisposeListener(new DisposeListener()
+		{
 			@Override
-			public void widgetDisposed(DisposeEvent e) {
+			public void widgetDisposed(DisposeEvent e)
+			{
 				org.eclipse.symphony.common.io.jinput.Activator.getEControllerEnvironment().eAdapters().remove(viewerAdapter);
 				viewerAdapter = null;
 			}
@@ -91,26 +106,35 @@ public class JInputStatusView extends ViewPart {
 	 * Passing the focus request to the viewer's control.
 	 */
 	@Override
-	public void setFocus() {
+	public void setFocus()
+	{
 		viewer.getControl().setFocus();
 	}
 	
 	
+	@SuppressWarnings({"unchecked", "rawtypes"})
 	@Override
-	public Object getAdapter(@SuppressWarnings("rawtypes") Class key) {
-		if (key.equals(IPropertySheetPage.class)) {
-			if (propertySheetPage == null) {
+	public Object getAdapter(Class key)
+	{
+		if (key.equals(IPropertySheetPage.class))
+		{
+			if (propertySheetPage == null)
+			{
 				propertySheetPage = getPropertySheetPage();
 			}
+			
 			return propertySheetPage;
 		}
-		else {
+		else
+		{
 			return super.getAdapter(key);
 		}
 	}
 	
-	protected ExtendedPropertySheetPage getPropertySheetPage() {
-		if (propertySheetPage == null) {
+	protected ExtendedPropertySheetPage getPropertySheetPage()
+	{
+		if (propertySheetPage == null)
+		{
 			propertySheetPage =	new ExtendedPropertySheetPage(null);
 			propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
 		}

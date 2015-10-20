@@ -44,7 +44,7 @@ import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade;
+import org.eclipse.symphony.addons.vehicle.VehicleToolsFacade;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
@@ -132,12 +132,12 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass vehiculeToolsFacadeEClass = null;
+	private EClass vehicleToolsFacadeEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -326,9 +326,9 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
-		SymphonyToolsCorePackage.eINSTANCE.eClass();
 		TopologyDynamicsPackage.eINSTANCE.eClass();
+		SymphonyToolsCorePackage.eINSTANCE.eClass();
+		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		PathplannersPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -695,9 +695,9 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getVehiculeToolsFacade()
+  public EClass getVehicleToolsFacade()
   {
-		return vehiculeToolsFacadeEClass;
+		return vehicleToolsFacadeEClass;
 	}
 
   /**
@@ -1172,7 +1172,7 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 
 		landerSphericalFootContactProviderEClass = createEClass(LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER);
 
-		vehiculeToolsFacadeEClass = createEClass(VEHICULE_TOOLS_FACADE);
+		vehicleToolsFacadeEClass = createEClass(VEHICLE_TOOLS_FACADE);
 
 		wheelVehicleUtilitiesEClass = createEClass(WHEEL_VEHICLE_UTILITIES);
 		createEOperation(wheelVehicleUtilitiesEClass, WHEEL_VEHICLE_UTILITIES___GET_WHEEL_CENTER_POINT__DOUBLE_DOUBLE_SEGMENT2D);
@@ -1347,7 +1347,7 @@ public class SymphonyToolsVehiclePackageImpl extends EPackageImpl implements Sym
 
 		initEClass(landerSphericalFootContactProviderEClass, LanderSphericalFootContactProvider.class, "LanderSphericalFootContactProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(vehiculeToolsFacadeEClass, VehiculeToolsFacade.class, "VehiculeToolsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(vehicleToolsFacadeEClass, VehicleToolsFacade.class, "VehicleToolsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(wheelVehicleUtilitiesEClass, WheelVehicleUtilities.class, "WheelVehicleUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

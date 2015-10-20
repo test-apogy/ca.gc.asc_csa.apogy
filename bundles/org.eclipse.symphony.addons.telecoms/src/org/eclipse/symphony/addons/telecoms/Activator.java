@@ -7,7 +7,7 @@ public class Activator implements BundleActivator
 {
 	private static BundleContext context;
 
-	public static final String ID = "ca.gc.asc_csa.symphony.tools.camera";
+	public static final String ID = "org.eclipse.symphony.addons.telecoms";
 	
 	// The shared instance
 	private static Activator plugin;	

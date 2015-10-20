@@ -71,7 +71,7 @@
                        ifEmpty="false"
                        operator="or">
                        <instanceof
-                            value="org.eclipse.symphony.addons.vehicle.WheeledVehiculePoseCorrector">
+                            value="org.eclipse.symphony.addons.vehicle.WheeledVehiclePoseCorrector">
                        </instanceof>
                     </iterate>
                 </with>

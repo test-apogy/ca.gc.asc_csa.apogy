@@ -18,7 +18,7 @@
             name="3D Topology Viewer">
       </page>
       <page
-            category="ca.gc.space.topology.ui.preferences.TopologyViewerPreferencesPage"
+            category="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerPreferencesPage"
             class="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerLightingPreferencePage"
             id="ca.gc.space.topology.ui.preferences.TopologyViewerLightingPreferencePage"
             name="Lighting">

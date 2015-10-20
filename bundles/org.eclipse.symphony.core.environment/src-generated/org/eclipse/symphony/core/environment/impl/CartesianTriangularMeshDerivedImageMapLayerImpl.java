@@ -1150,11 +1150,4 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 		}
 	}
 	
-	// file:///home/pallard/workspace/WORKSITES/test.tri
-	
-	//platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.utah/data/Utah-Site-1-2014-DEM-100cm-final-product.tri
-
-	//platform:/plugin/ca.gc.asc_csa.excore.deployments.worksites.csa_analog_terrain/data/CSAMarsYardDEM25cm.tri
-
-	
 } //CartesianTriangularMeshDerivedImageMapLayerImpl

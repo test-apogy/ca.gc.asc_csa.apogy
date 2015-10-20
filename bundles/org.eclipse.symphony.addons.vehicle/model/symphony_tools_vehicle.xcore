@@ -208,7 +208,7 @@ class LanderSphericalFootContactProvider extends ContactProvider
 
 // Others
 
-class VehiculeToolsFacade
+class VehicleToolsFacade
 {	
 }
 

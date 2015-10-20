@@ -13,7 +13,7 @@
       <package
             uri="org.eclipse.symphony.addons.actuators"
             class="org.eclipse.symphony.addons.actuators.MRTActuatorsPackage"
-            genModel="model/ca_gc_asc_csa_mrt_actuators.xcore"/>
+            genModel="model/actuators.xcore"/>
    </extension>
 
 </plugin>

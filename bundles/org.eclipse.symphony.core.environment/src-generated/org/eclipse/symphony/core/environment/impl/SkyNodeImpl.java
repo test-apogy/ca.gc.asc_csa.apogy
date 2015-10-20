@@ -122,7 +122,6 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {

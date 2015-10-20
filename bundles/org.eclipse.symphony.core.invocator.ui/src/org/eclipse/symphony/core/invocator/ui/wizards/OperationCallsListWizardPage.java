@@ -12,7 +12,7 @@ import org.eclipse.symphony.core.invocator.ui.composites.ProgramsListComposite;
 
 public class OperationCallsListWizardPage extends WizardPage {
 
-	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.emf.ecore.invocator.ui.wizards.NewOperationCallProgramsListWizardPage";
+	private final static String WIZARD_PAGE_ID = "org.eclipse.symphony.core.invocator.ui.wizards.OperationCallsListWizardPage";
 	private ProgramsList programsList;
 	private ProgramsListComposite programsListComposite; 
 	

@@ -154,14 +154,16 @@ class EMFEcoreFacade
 /**
  * Named Element.
  */
-interface Named{
+interface Named
+{
 	String name
 }
 
 /**
  * Described Element.
  */
-interface Described{
+interface Described
+{
 	String description
 }
 

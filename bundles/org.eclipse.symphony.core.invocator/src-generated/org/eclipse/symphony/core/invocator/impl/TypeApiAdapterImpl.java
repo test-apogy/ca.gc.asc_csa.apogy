@@ -128,7 +128,6 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	public EObject getInstance() {
 		if (instance != null && instance.eIsProxy()) {
 			InternalEObject oldInstance = (InternalEObject)instance;
@@ -357,7 +356,6 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

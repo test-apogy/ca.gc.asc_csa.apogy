@@ -91,7 +91,7 @@ public class JME3Topology3DView extends AbstractTopology3DView
 		t1.getAggregatedChildren().add(t2);
 		
 		URLNode urlNode = TopologyFactory.eINSTANCE.createURLNode();
-		urlNode.setUrl("file:///home/pallard/workspace/SYMPHONY/ca.gc.asc_csa.symphony.examples.lander/vrml/lander.obj");
+		urlNode.setUrl("platform:/plugin/org.eclipse.symphony.examples.lander.symphony/vrml/lander.obj");
 		t2.getChildren().add(urlNode);
 		
 		count++;

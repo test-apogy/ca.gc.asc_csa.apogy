@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.ui.views.AbstractView;
 public class TelecomStatusMonitorToolView extends AbstractView
 {
 	public final static String partName = "Telecom Status Monitor View";
-	public final static String ID = "gc.ca.asc_csa.symphony.tools.telecoms.ui.views.TelecomStatusMonitorToolView";
+	public final static String ID = "org.eclipse.symphony.addons.telecoms.ui.views.TelecomStatusMonitorToolView";
 	
 	private TelecomStatusMonitorToolComposite statusMonitorToolComposite;
 	

@@ -34,12 +34,12 @@
       <extender
             uri="org.eclipse.symphony.common.images"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$ImagesCoreChildCreationExtender"/>
-	  <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.core"
+            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>

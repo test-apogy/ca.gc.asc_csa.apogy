@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.log.Logger;
 
 public class WorksiteContributorsRegistry 
 {
-	public static final String WORKSITE_CONTRIBUTORS_POINT_ID = "org.eclipse.symphony.core.WorksiteProvider";
+	public static final String WORKSITE_CONTRIBUTORS_POINT_ID = "org.eclipse.symphony.core.worksiteProvider";
 	public static final String WORKSITE_CONTRIBUTORS_NAME_ID = "Name";
 	public static final String WORKSITE_CONTRIBUTORS_DESCRIPTION_ID = "Description";
 	public static final String WORKSITE_CONTRIBUTORS_URI_ID = "URI";

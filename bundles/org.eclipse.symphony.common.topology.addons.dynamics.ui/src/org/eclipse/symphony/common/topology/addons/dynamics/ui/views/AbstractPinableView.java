@@ -11,7 +11,7 @@ import org.eclipse.ui.part.ViewPart;
 
 public abstract class AbstractPinableView<T> extends ViewPart implements ISelectionListener 
 {
-	public static final String ID = "ca.gc.asc_csa.esm.api.ui"; //$NON-NLS-1$
+	public static final String ID = "org.eclipse.symphony.common.topology.addons.dynamics.ui.views.AbstractPinableView";
 
 	private T subject;
 	private boolean pinView = false;

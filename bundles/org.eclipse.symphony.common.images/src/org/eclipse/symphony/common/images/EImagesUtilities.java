@@ -167,7 +167,9 @@ public interface EImagesUtilities extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Gets a sub image from a specified image. Note that the widthOffset and heightOffset are relative to the upper left corner of the image.
+	 * Gets a sub image from a specified image. Note that the
+	 * widthOffset and heightOffset are relative to the upper
+	 * left corner of the image.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.images.Exception" originalImageUnique="false" widthOffsetUnique="false" heightOffsetUnique="false" subImageWidthUnique="false" subImageHeightUnique="false"
 	 * @generated

@@ -23,6 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.images.ImagesAlbum;
+import org.eclipse.symphony.common.images.ImagesCoreFactory;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 
 /**
@@ -39,13 +40,6 @@ public class ImagesAlbumItemProvider
 		ITreeItemContentProvider,
 		IItemLabelProvider,
 		IItemPropertySource {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final String copyright = "Canadian Space Agency 2011";
-
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -68,31 +62,8 @@ public class ImagesAlbumItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addImagesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Images feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addImagesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ImagesAlbum_images_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ImagesAlbum_images_feature", "_UI_ImagesAlbum_type"),
-				 ImagesCorePackage.Literals.IMAGES_ALBUM__IMAGES,
-				 true,
-				 false,
-				 false,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -204,6 +175,16 @@ public class ImagesAlbumItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ImagesCorePackage.Literals.IMAGES_ALBUM__IMAGES,
+				 ImagesCoreFactory.eINSTANCE.createEImage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ImagesCorePackage.Literals.IMAGES_ALBUM__IMAGES,
+				 ImagesCoreFactory.eINSTANCE.createURLEImage()));
 	}
 
 	/**

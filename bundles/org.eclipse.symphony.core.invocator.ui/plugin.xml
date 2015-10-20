@@ -222,7 +222,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category.toolbox"
             class="org.eclipse.symphony.core.invocator.ui.views.OperationCallView"
             icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/OperationCall.gif"
             id="org.eclipse.symphony.core.invocator.ui.views.OperationCallView"
@@ -231,7 +231,7 @@
       </view>
       
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category.toolbox"
             class="org.eclipse.symphony.core.invocator.ui.views.ContextsDefinitionView"
             icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/ContextsList.gif"
             id="org.eclipse.symphony.core.invocator.ui.views.ContextsDefinitionView"
@@ -240,7 +240,7 @@
       </view>      
       
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category.toolbox"
             class="org.eclipse.symphony.core.invocator.ui.views.DocumentationView"
             id="org.eclipse.symphony.core.invocator.ui.views.DocumentationView"
             name="Documentation"
@@ -248,7 +248,7 @@
       </view>      
       
       <view
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category.toolbox"
             class="org.eclipse.symphony.core.invocator.ui.views.InstanceView"
             icon="platform:/plugin/org.eclipse.symphony.core.invocator.edit/icons/full/obj16/Instance.gif"
             id="org.eclipse.symphony.core.invocator.ui.views.InstanceView"

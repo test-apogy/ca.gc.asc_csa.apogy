@@ -10,7 +10,7 @@ import org.eclipse.symphony.common.ui.views.Pinnable;
 
 public class PinViewAction extends Action {
 
-	private static final String id ="ca.gc.asc_csa.symphony.environment.ui.actions.LinkWithSelectionAction";
+	private static final String ID ="org.eclipse.symphony.common.ui.actions.PinViewAction";
 	private String description = "Pins the current selection.";
 	private String toolTipText = "Pins the current selection.";
 	private String text = "Pins the current selection.";	
@@ -37,7 +37,7 @@ public class PinViewAction extends Action {
 
 	public String getId() 
 	{		
-		return id;
+		return ID;
 	}
 
 	public ImageDescriptor getImageDescriptor() 

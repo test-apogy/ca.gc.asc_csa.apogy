@@ -22,7 +22,7 @@ import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade;
+import org.eclipse.symphony.addons.vehicle.VehicleToolsFacade;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
@@ -163,9 +163,9 @@ public class SymphonyToolsVehicleSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SymphonyToolsVehiclePackage.VEHICULE_TOOLS_FACADE: {
-				VehiculeToolsFacade vehiculeToolsFacade = (VehiculeToolsFacade)theEObject;
-				T result = caseVehiculeToolsFacade(vehiculeToolsFacade);
+			case SymphonyToolsVehiclePackage.VEHICLE_TOOLS_FACADE: {
+				VehicleToolsFacade vehicleToolsFacade = (VehicleToolsFacade)theEObject;
+				T result = caseVehicleToolsFacade(vehicleToolsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -363,17 +363,17 @@ public class SymphonyToolsVehicleSwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Vehicule Tools Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Vehicle Tools Facade</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vehicule Tools Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Vehicle Tools Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseVehiculeToolsFacade(VehiculeToolsFacade object)
+  public T caseVehicleToolsFacade(VehicleToolsFacade object)
   {
 		return null;
 	}

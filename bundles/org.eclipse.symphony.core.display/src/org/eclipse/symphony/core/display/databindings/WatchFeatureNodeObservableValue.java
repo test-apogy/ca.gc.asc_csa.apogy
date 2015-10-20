@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.common.emf.ecore.databinding.DefaultValueDiff;
+import org.eclipse.symphony.common.emf.databinding.DefaultValueDiff;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;

@@ -16,6 +16,7 @@ import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.images.provider.ImagesCoreEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
@@ -58,17 +59,17 @@ public final class EMFEcoreExampleRoverEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     EMFEcoreEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
+		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
 		     EMFEcoreExampleMobilePlatformEditPlugin.INSTANCE,
-		     MRTActuatorsEditPlugin.INSTANCE,
+		     EMFEcoreExampleCameraEditPlugin.INSTANCE,
 		     MRTSensorsImagingEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
-		     EMFEcoreExampleCameraEditPlugin.INSTANCE,
+		     MRTActuatorsEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}

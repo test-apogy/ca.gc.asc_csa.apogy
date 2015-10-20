@@ -23,7 +23,7 @@ import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade;
+import org.eclipse.symphony.addons.vehicle.VehicleToolsFacade;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
@@ -132,8 +132,8 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 				return createLanderSphericalFootContactProviderAdapter();
 			}
 			@Override
-			public Adapter caseVehiculeToolsFacade(VehiculeToolsFacade object) {
-				return createVehiculeToolsFacadeAdapter();
+			public Adapter caseVehicleToolsFacade(VehicleToolsFacade object) {
+				return createVehicleToolsFacadeAdapter();
 			}
 			@Override
 			public Adapter caseWheelVehicleUtilities(WheelVehicleUtilities object) {
@@ -359,16 +359,16 @@ public class SymphonyToolsVehicleAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade <em>Vehicule Tools Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.vehicle.VehicleToolsFacade <em>Vehicle Tools Facade</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.vehicle.VehiculeToolsFacade
+	 * @see org.eclipse.symphony.addons.vehicle.VehicleToolsFacade
 	 * @generated
 	 */
-  public Adapter createVehiculeToolsFacadeAdapter()
+  public Adapter createVehicleToolsFacadeAdapter()
   {
 		return null;
 	}

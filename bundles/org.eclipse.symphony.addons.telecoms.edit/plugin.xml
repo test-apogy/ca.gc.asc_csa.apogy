@@ -40,12 +40,6 @@
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.addons.geometry.paths"
-            class="org.eclipse.symphony.addons.telecoms.provider.SymphonyTelecomToolsItemProviderAdapterFactory$PathsChildCreationExtender"/>
    </extension>
 
 </plugin>

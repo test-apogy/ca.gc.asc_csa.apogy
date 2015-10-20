@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.images.ImagesCoreFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel copyrightText='Canadian Space Agency 2011' prefix='ImagesCore' extensibleProviderFactory='true' childCreationExtenders='true' modelDirectory='/org.eclipse.symphony.common.images/src' modelName='Ca_gc_asc_csa_eclipse_images' importerID='org.eclipse.emf.importer.ecore' basePackage='org.eclipse.symphony.common'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel copyrightText='Canadian Space Agency 2011' prefix='ImagesCore' extensibleProviderFactory='true' childCreationExtenders='true' modelName='ImagesCore' importerID='org.eclipse.emf.importer.ecore' modelDirectory='/org.eclipse.symphony.common.images/src' editDirectory='/org.eclipse.symphony.common.images.edit/src' basePackage='org.eclipse.symphony.common'"
  * @generated
  */
 public interface ImagesCorePackage extends EPackage {

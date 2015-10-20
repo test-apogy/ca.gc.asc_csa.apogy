@@ -11,7 +11,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="org.eclipse.symphony.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView"
             icon="icons/CameraView.gif"
             id="org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView"

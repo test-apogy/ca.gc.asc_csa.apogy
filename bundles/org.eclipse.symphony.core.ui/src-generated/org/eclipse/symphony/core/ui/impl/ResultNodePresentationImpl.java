@@ -30,7 +30,6 @@ import org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesConstants
  *
  * @generated
  */
-@SuppressWarnings("unchecked")
 public class ResultNodePresentationImpl extends TransformNodePresentationImpl implements ResultNodePresentation
 {
 	protected IPropertyChangeListener preferencesListener = null;
