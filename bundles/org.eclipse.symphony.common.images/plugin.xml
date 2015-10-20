@@ -29,5 +29,8 @@
       <new_element
             Class="org.eclipse.symphony.common.images.converters.ObjectToBufferedImageConverter">
       </new_element>
+      <new_element
+            Class="org.eclipse.symphony.common.images.converters.EObjectToAbstractEImage">
+      </new_element>
    </extension>
 </plugin>

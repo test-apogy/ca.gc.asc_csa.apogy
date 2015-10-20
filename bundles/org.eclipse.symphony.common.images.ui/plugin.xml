@@ -152,7 +152,7 @@
                label="Export Image"
                style="push">
             <visibleWhen
-                  checkEnabled="true">
+                  checkEnabled="false">
                <test
                      forcePluginActivation="false"
                      property="org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester.canConvertToAbstractEImage"

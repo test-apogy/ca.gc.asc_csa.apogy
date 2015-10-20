@@ -5,10 +5,10 @@ import java.text.DecimalFormat;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.databinding.EMFObservables;
-import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -16,7 +16,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage.Literals;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
 
@@ -172,38 +172,49 @@ public class GeographicCoordinatesComposite extends Composite
 	protected DataBindingContext custom_initDataBindings() 
 	{
 		DataBindingContext bindingContext = new DataBindingContext();
+		
 		//
-		IObservableValue longitudeObserveWidget = SWTObservables.observeText(longitudeText, SWT.FocusOut);
-		IObservableValue xObserveValue = editingDomain == null ? 
-				EMFObservables.observeValue(geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE):
-				EMFEditObservables.observeValue(editingDomain, geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE);
+		IObservableValue longitudeObserveWidget = WidgetProperties.text(SWT.FocusOut).observe(longitudeText);
+		IObservableValue xObserveValue = (editingDomain == null ? 
+				EMFProperties.value(Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(geographicCoordinates):
+				EMFEditProperties.value(editingDomain, Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(geographicCoordinates));
+		
 		UpdateValueStrategy strategy = new UpdateValueStrategy();
 		strategy.setConverter(new DegreeStringToRadiansConverter());
+		
 		UpdateValueStrategy strategy_1 = new UpdateValueStrategy();
 		strategy_1.setConverter(new RadiansToDegreesStringConverter(getDecimalFormat()));
+		
 		bindingContext.bindValue(longitudeObserveWidget, xObserveValue, strategy, strategy_1);
+		
 		//
-		IObservableValue yObserveWidget = SWTObservables.observeText(latitudeText, SWT.FocusOut);
-		IObservableValue yObserveValue = editingDomain == null ? 
-				EMFObservables.observeValue(geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE):
-				EMFEditObservables.observeValue(editingDomain, geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE);
+		IObservableValue yObserveWidget = WidgetProperties.text(SWT.FocusOut).observe(latitudeText);
+		IObservableValue yObserveValue = (editingDomain == null ? 
+				EMFProperties.value(Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(geographicCoordinates):
+				EMFEditProperties.value(editingDomain, Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(geographicCoordinates));
 					
 		UpdateValueStrategy strategy_2 = new UpdateValueStrategy();
 		strategy_2.setConverter(new DegreeStringToRadiansConverter());
+		
 		UpdateValueStrategy strategy_3 = new UpdateValueStrategy();
 		strategy_3.setConverter(new RadiansToDegreesStringConverter(getDecimalFormat()));
+		
 		bindingContext.bindValue(yObserveWidget, yObserveValue, strategy_2, strategy_3);
+		
 		//
-		IObservableValue zObserveWidget = SWTObservables.observeText(elevationText, SWT.FocusOut);
-		IObservableValue zObserveValue = editingDomain == null ? 
-				EMFObservables.observeValue(geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION):
-				EMFEditObservables.observeValue(editingDomain, geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION);
+		IObservableValue zObserveWidget = WidgetProperties.text(SWT.FocusOut).observe(elevationText);
+		IObservableValue zObserveValue = (editingDomain == null ? 
+				EMFProperties.value(Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(geographicCoordinates):
+				EMFEditProperties.value(editingDomain, Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(geographicCoordinates));
 					
 		UpdateValueStrategy strategy_4 = new UpdateValueStrategy();
 		strategy_4.setConverter(new StringToDoubleConverter());
+		
 		UpdateValueStrategy strategy_5 = new UpdateValueStrategy();
 		strategy_5.setConverter(new DoubleToStringConverter(new DecimalFormat("0.000")));
+		
 		bindingContext.bindValue(zObserveWidget, zObserveValue, strategy_4, strategy_5);
+		
 		//
 		return bindingContext;
 	}
@@ -211,36 +222,40 @@ public class GeographicCoordinatesComposite extends Composite
 	protected DataBindingContext initDataBindingsNoEditing() 
 	{
 		DataBindingContext bindingContext = new DataBindingContext();
+		
 		//
-		IObservableValue xObserveWidget = SWTObservables.observeText(longitudeText, SWT.FocusOut);
-		IObservableValue xObserveValue = editingDomain == null ? 
-				EMFObservables.observeValue(geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE):
-				EMFEditObservables.observeValue(editingDomain, geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE);
+		IObservableValue xObserveWidget = WidgetProperties.text(SWT.FocusOut).observe(longitudeText);
+		IObservableValue xObserveValue = (editingDomain == null ? 
+				EMFProperties.value(Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(geographicCoordinates):
+				EMFEditProperties.value(editingDomain, Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(geographicCoordinates));
 		
 		UpdateValueStrategy strategy_1 = new UpdateValueStrategy();
 		strategy_1.setConverter(new RadiansToDegreesStringConverter(getDecimalFormat()));
-		bindingContext.bindValue(xObserveWidget, xObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy_1);
-		//
-		IObservableValue yObserveWidget = SWTObservables.observeText(latitudeText, SWT.FocusOut);
-		IObservableValue yObserveValue = editingDomain == null ? 
-				EMFObservables.observeValue(geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE):
-				EMFEditObservables.observeValue(editingDomain, geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE);
-					
 		
+		bindingContext.bindValue(xObserveWidget, xObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy_1);
+		
+		//
+		IObservableValue yObserveWidget = WidgetProperties.text(SWT.FocusOut).observe(latitudeText);
+		IObservableValue yObserveValue = (editingDomain == null ? 
+				EMFProperties.value(Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(geographicCoordinates):
+				EMFEditProperties.value(editingDomain, Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(geographicCoordinates));
+					
 		UpdateValueStrategy strategy_3 = new UpdateValueStrategy();
 		strategy_3.setConverter(new RadiansToDegreesStringConverter(getDecimalFormat()));
+		
 		bindingContext.bindValue(yObserveWidget, yObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy_3);
+		
 		//
-		IObservableValue zObserveWidget = SWTObservables.observeText(elevationText, SWT.FocusOut);
-		IObservableValue zObserveValue = editingDomain == null ? 
-				EMFObservables.observeValue(geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION):
-				EMFEditObservables.observeValue(editingDomain, geographicCoordinates, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION);
-					
+		IObservableValue zObserveWidget = WidgetProperties.text(SWT.FocusOut).observe(elevationText);
+		IObservableValue zObserveValue = (editingDomain == null ? 
+				EMFProperties.value(Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(geographicCoordinates):
+				EMFEditProperties.value(editingDomain, Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(geographicCoordinates));
 		
 		UpdateValueStrategy strategy_5 = new UpdateValueStrategy();
 		strategy_5.setConverter(new DoubleToStringConverter(new DecimalFormat("0.000")));
+		
 		bindingContext.bindValue(zObserveWidget, zObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy_5);
-		//
+		
 		return bindingContext;
 	}
 }

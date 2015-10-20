@@ -4,8 +4,8 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.databinding.EMFObservables;
-import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -15,7 +15,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals;
 
 public class CylindricalConstraintComposite extends Composite {
 
@@ -73,12 +73,9 @@ public class CylindricalConstraintComposite extends Composite {
 	}
 
 	private DataBindingContext initDataBindings() {
-		IObservableValue enabledObserveWidget = SWTObservables
-				.observeSelection(enabledButton);
-		IObservableValue enabledObserveValue = EMFObservables
-				.observeValue(
-						cylindricalConstraint,
-						org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ENABLED);
+		IObservableValue enabledObserveWidget = WidgetProperties.selection().observe(enabledButton);
+		IObservableValue enabledObserveValue = EMFProperties.value(Literals.ABSTRACT_CONSTRAINT__ENABLED).observe(cylindricalConstraint);
+
 		//
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
@@ -144,12 +141,12 @@ public class CylindricalConstraintComposite extends Composite {
 				public void notifyChanged(org.eclipse.emf.common.notify.Notification msg) 
 				{										
 					// If the angular current state has been changed.
-					if(msg.getFeature() == TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE)
+					if(msg.getFeature() == Literals.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE)
 					{														
 						angularConstraintStateComposite.setConstraintState((ConstraintState)msg.getNewValue(), true);						
 					}
 					// If the linear current state has been changed.
-					else if(msg.getFeature() == TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE)
+					else if(msg.getFeature() == Literals.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE)
 					{
 						linearConstraintStateComposite.setConstraintState((ConstraintState)msg.getNewValue());
 					}										

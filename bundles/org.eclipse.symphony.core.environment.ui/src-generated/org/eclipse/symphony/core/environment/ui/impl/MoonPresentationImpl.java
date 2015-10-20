@@ -15,7 +15,6 @@ import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
  *
  * @generated
  */
-@SuppressWarnings("unchecked")
 public class MoonPresentationImpl extends NodePresentationImpl implements MoonPresentation
 {
   /**

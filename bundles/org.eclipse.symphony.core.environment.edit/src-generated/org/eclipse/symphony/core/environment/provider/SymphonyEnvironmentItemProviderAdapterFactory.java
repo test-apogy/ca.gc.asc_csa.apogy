@@ -59,46 +59,46 @@ import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
  */
 public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvironmentAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
 {
-  /**
+	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ComposedAdapterFactory parentAdapterFactory;
+	protected ComposedAdapterFactory parentAdapterFactory;
 
-  /**
+	/**
 	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected IChangeNotifier changeNotifier = new ChangeNotifier();
+	protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
-  /**
+	/**
 	 * This helps manage the child creation extenders.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(SymphonyEnvironmentEditPlugin.INSTANCE, SymphonyEnvironmentPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(SymphonyEnvironmentEditPlugin.INSTANCE, SymphonyEnvironmentPackage.eNS_URI);
 
-  /**
+	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected Collection<Object> supportedTypes = new ArrayList<Object>();
+	protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
-  /**
+	/**
 	 * This constructs an instance.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyEnvironmentItemProviderAdapterFactory()
-  {
+	public SymphonyEnvironmentItemProviderAdapterFactory()
+	{
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -106,23 +106,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		supportedTypes.add(IItemPropertySource.class);
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EarthSurfaceWorksiteItemProvider earthSurfaceWorksiteItemProvider;
+	protected EarthSurfaceWorksiteItemProvider earthSurfaceWorksiteItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEarthSurfaceWorksiteAdapter()
-  {
+	@Override
+	public Adapter createEarthSurfaceWorksiteAdapter()
+	{
 		if (earthSurfaceWorksiteItemProvider == null) {
 			earthSurfaceWorksiteItemProvider = new EarthSurfaceWorksiteItemProvider(this);
 		}
@@ -130,23 +130,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return earthSurfaceWorksiteItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Environment} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EnvironmentItemProvider environmentItemProvider;
+	protected EnvironmentItemProvider environmentItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Environment}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEnvironmentAdapter()
-  {
+	@Override
+	public Adapter createEnvironmentAdapter()
+	{
 		if (environmentItemProvider == null) {
 			environmentItemProvider = new EnvironmentItemProvider(this);
 		}
@@ -154,23 +154,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return environmentItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.SurfaceEnvironment} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SurfaceEnvironmentItemProvider surfaceEnvironmentItemProvider;
+	protected SurfaceEnvironmentItemProvider surfaceEnvironmentItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.SurfaceEnvironment}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createSurfaceEnvironmentAdapter()
-  {
+	@Override
+	public Adapter createSurfaceEnvironmentAdapter()
+	{
 		if (surfaceEnvironmentItemProvider == null) {
 			surfaceEnvironmentItemProvider = new SurfaceEnvironmentItemProvider(this);
 		}
@@ -178,23 +178,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return surfaceEnvironmentItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EarthSurfaceEnvironment} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EarthSurfaceEnvironmentItemProvider earthSurfaceEnvironmentItemProvider;
+	protected EarthSurfaceEnvironmentItemProvider earthSurfaceEnvironmentItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EarthSurfaceEnvironment}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEarthSurfaceEnvironmentAdapter()
-  {
+	@Override
+	public Adapter createEarthSurfaceEnvironmentAdapter()
+	{
 		if (earthSurfaceEnvironmentItemProvider == null) {
 			earthSurfaceEnvironmentItemProvider = new EarthSurfaceEnvironmentItemProvider(this);
 		}
@@ -202,23 +202,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return earthSurfaceEnvironmentItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Atmosphere} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AtmosphereItemProvider atmosphereItemProvider;
+	protected AtmosphereItemProvider atmosphereItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Atmosphere}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createAtmosphereAdapter()
-  {
+	@Override
+	public Adapter createAtmosphereAdapter()
+	{
 		if (atmosphereItemProvider == null) {
 			atmosphereItemProvider = new AtmosphereItemProvider(this);
 		}
@@ -226,23 +226,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return atmosphereItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.AtmosphereUtils} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AtmosphereUtilsItemProvider atmosphereUtilsItemProvider;
+	protected AtmosphereUtilsItemProvider atmosphereUtilsItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.AtmosphereUtils}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createAtmosphereUtilsAdapter()
-  {
+	@Override
+	public Adapter createAtmosphereUtilsAdapter()
+	{
 		if (atmosphereUtilsItemProvider == null) {
 			atmosphereUtilsItemProvider = new AtmosphereUtilsItemProvider(this);
 		}
@@ -250,23 +250,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return atmosphereUtilsItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EquatorialCoordinates} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EquatorialCoordinatesItemProvider equatorialCoordinatesItemProvider;
+	protected EquatorialCoordinatesItemProvider equatorialCoordinatesItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EquatorialCoordinates}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEquatorialCoordinatesAdapter()
-  {
+	@Override
+	public Adapter createEquatorialCoordinatesAdapter()
+	{
 		if (equatorialCoordinatesItemProvider == null) {
 			equatorialCoordinatesItemProvider = new EquatorialCoordinatesItemProvider(this);
 		}
@@ -274,23 +274,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return equatorialCoordinatesItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.GeographicCoordinates} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected GeographicCoordinatesItemProvider geographicCoordinatesItemProvider;
+	protected GeographicCoordinatesItemProvider geographicCoordinatesItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.GeographicCoordinates}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createGeographicCoordinatesAdapter()
-  {
+	@Override
+	public Adapter createGeographicCoordinatesAdapter()
+	{
 		if (geographicCoordinatesItemProvider == null) {
 			geographicCoordinatesItemProvider = new GeographicCoordinatesItemProvider(this);
 		}
@@ -298,23 +298,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return geographicCoordinatesItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.HorizontalCoordinates} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected HorizontalCoordinatesItemProvider horizontalCoordinatesItemProvider;
+	protected HorizontalCoordinatesItemProvider horizontalCoordinatesItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.HorizontalCoordinates}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createHorizontalCoordinatesAdapter()
-  {
+	@Override
+	public Adapter createHorizontalCoordinatesAdapter()
+	{
 		if (horizontalCoordinatesItemProvider == null) {
 			horizontalCoordinatesItemProvider = new HorizontalCoordinatesItemProvider(this);
 		}
@@ -322,23 +322,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return horizontalCoordinatesItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EclipticCoordinates} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EclipticCoordinatesItemProvider eclipticCoordinatesItemProvider;
+	protected EclipticCoordinatesItemProvider eclipticCoordinatesItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EclipticCoordinates}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEclipticCoordinatesAdapter()
-  {
+	@Override
+	public Adapter createEclipticCoordinatesAdapter()
+	{
 		if (eclipticCoordinatesItemProvider == null) {
 			eclipticCoordinatesItemProvider = new EclipticCoordinatesItemProvider(this);
 		}
@@ -346,23 +346,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return eclipticCoordinatesItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Sky} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SkyItemProvider skyItemProvider;
+	protected SkyItemProvider skyItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Sky}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createSkyAdapter()
-  {
+	@Override
+	public Adapter createSkyAdapter()
+	{
 		if (skyItemProvider == null) {
 			skyItemProvider = new SkyItemProvider(this);
 		}
@@ -370,23 +370,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return skyItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EarthSky} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EarthSkyItemProvider earthSkyItemProvider;
+	protected EarthSkyItemProvider earthSkyItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EarthSky}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEarthSkyAdapter()
-  {
+	@Override
+	public Adapter createEarthSkyAdapter()
+	{
 		if (earthSkyItemProvider == null) {
 			earthSkyItemProvider = new EarthSkyItemProvider(this);
 		}
@@ -394,23 +394,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return earthSkyItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Sun} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SunItemProvider sunItemProvider;
+	protected SunItemProvider sunItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Sun}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createSunAdapter()
-  {
+	@Override
+	public Adapter createSunAdapter()
+	{
 		if (sunItemProvider == null) {
 			sunItemProvider = new SunItemProvider(this);
 		}
@@ -418,7 +418,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return sunItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Earth} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -426,7 +426,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected EarthItemProvider earthItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Earth}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -441,23 +441,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return earthItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Moon} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected MoonItemProvider moonItemProvider;
+	protected MoonItemProvider moonItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Moon}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createMoonAdapter()
-  {
+	@Override
+	public Adapter createMoonAdapter()
+	{
 		if (moonItemProvider == null) {
 			moonItemProvider = new MoonItemProvider(this);
 		}
@@ -465,23 +465,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return moonItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EnvironmentUtilities} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EnvironmentUtilitiesItemProvider environmentUtilitiesItemProvider;
+	protected EnvironmentUtilitiesItemProvider environmentUtilitiesItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EnvironmentUtilities}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEnvironmentUtilitiesAdapter()
-  {
+	@Override
+	public Adapter createEnvironmentUtilitiesAdapter()
+	{
 		if (environmentUtilitiesItemProvider == null) {
 			environmentUtilitiesItemProvider = new EnvironmentUtilitiesItemProvider(this);
 		}
@@ -489,23 +489,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return environmentUtilitiesItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EnvironmentFacade} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EnvironmentFacadeItemProvider environmentFacadeItemProvider;
+	protected EnvironmentFacadeItemProvider environmentFacadeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EnvironmentFacade}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEnvironmentFacadeAdapter()
-  {
+	@Override
+	public Adapter createEnvironmentFacadeAdapter()
+	{
 		if (environmentFacadeItemProvider == null) {
 			environmentFacadeItemProvider = new EnvironmentFacadeItemProvider(this);
 		}
@@ -513,23 +513,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return environmentFacadeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Star} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected StarItemProvider starItemProvider;
+	protected StarItemProvider starItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Star}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createStarAdapter()
-  {
+	@Override
+	public Adapter createStarAdapter()
+	{
 		if (starItemProvider == null) {
 			starItemProvider = new StarItemProvider(this);
 		}
@@ -537,23 +537,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return starItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.StarField} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected StarFieldItemProvider starFieldItemProvider;
+	protected StarFieldItemProvider starFieldItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.StarField}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createStarFieldAdapter()
-  {
+	@Override
+	public Adapter createStarFieldAdapter()
+	{
 		if (starFieldItemProvider == null) {
 			starFieldItemProvider = new StarFieldItemProvider(this);
 		}
@@ -561,23 +561,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return starFieldItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.AstronomyUtils} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AstronomyUtilsItemProvider astronomyUtilsItemProvider;
+	protected AstronomyUtilsItemProvider astronomyUtilsItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.AstronomyUtils}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createAstronomyUtilsAdapter()
-  {
+	@Override
+	public Adapter createAstronomyUtilsAdapter()
+	{
 		if (astronomyUtilsItemProvider == null) {
 			astronomyUtilsItemProvider = new AstronomyUtilsItemProvider(this);
 		}
@@ -585,23 +585,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return astronomyUtilsItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Map} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected MapItemProvider mapItemProvider;
+	protected MapItemProvider mapItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Map}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createMapAdapter()
-  {
+	@Override
+	public Adapter createMapAdapter()
+	{
 		if (mapItemProvider == null) {
 			mapItemProvider = new MapItemProvider(this);
 		}
@@ -609,23 +609,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return mapItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.MapsList} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected MapsListItemProvider mapsListItemProvider;
+	protected MapsListItemProvider mapsListItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.MapsList}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createMapsListAdapter()
-  {
+	@Override
+	public Adapter createMapsListAdapter()
+	{
 		if (mapsListItemProvider == null) {
 			mapsListItemProvider = new MapsListItemProvider(this);
 		}
@@ -633,23 +633,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return mapsListItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.RectangularRegion} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected RectangularRegionItemProvider rectangularRegionItemProvider;
+	protected RectangularRegionItemProvider rectangularRegionItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.RectangularRegion}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createRectangularRegionAdapter()
-  {
+	@Override
+	public Adapter createRectangularRegionAdapter()
+	{
 		if (rectangularRegionItemProvider == null) {
 			rectangularRegionItemProvider = new RectangularRegionItemProvider(this);
 		}
@@ -657,7 +657,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return rectangularRegionItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.RectangularVolumeRegion} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -665,7 +665,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected RectangularVolumeRegionItemProvider rectangularVolumeRegionItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.RectangularVolumeRegion}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -680,23 +680,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return rectangularVolumeRegionItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ImageMapLayerItemProvider imageMapLayerItemProvider;
+	protected ImageMapLayerItemProvider imageMapLayerItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ImageMapLayer}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createImageMapLayerAdapter()
-  {
+	@Override
+	public Adapter createImageMapLayerAdapter()
+	{
 		if (imageMapLayerItemProvider == null) {
 			imageMapLayerItemProvider = new ImageMapLayerItemProvider(this);
 		}
@@ -704,7 +704,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return imageMapLayerItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -712,7 +712,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected ImageMapLayerPresentationItemProvider imageMapLayerPresentationItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -727,23 +727,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return imageMapLayerPresentationItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.URLImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected URLImageMapLayerItemProvider urlImageMapLayerItemProvider;
+	protected URLImageMapLayerItemProvider urlImageMapLayerItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.URLImageMapLayer}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createURLImageMapLayerAdapter()
-  {
+	@Override
+	public Adapter createURLImageMapLayerAdapter()
+	{
 		if (urlImageMapLayerItemProvider == null) {
 			urlImageMapLayerItemProvider = new URLImageMapLayerItemProvider(this);
 		}
@@ -751,7 +751,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return urlImageMapLayerItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.TopologyTreeMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -759,7 +759,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected TopologyTreeMapLayerItemProvider topologyTreeMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.TopologyTreeMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -774,7 +774,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return topologyTreeMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -782,7 +782,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected TopologyTreeMapLayerNodeItemProvider topologyTreeMapLayerNodeItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -797,7 +797,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return topologyTreeMapLayerNodeItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -805,7 +805,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected CartesianTriangularMeshMapLayerItemProvider cartesianTriangularMeshMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -820,7 +820,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return cartesianTriangularMeshMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -828,7 +828,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected CartesianTriangularMeshSlopeImageMapLayerItemProvider cartesianTriangularMeshSlopeImageMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -843,7 +843,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return cartesianTriangularMeshSlopeImageMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -851,7 +851,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected CartesianTriangularMeshDiscreteSlopeImageMapLayerItemProvider cartesianTriangularMeshDiscreteSlopeImageMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -866,7 +866,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return cartesianTriangularMeshDiscreteSlopeImageMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -874,7 +874,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected CartesianTriangularMeshHeightImageMapLayerItemProvider cartesianTriangularMeshHeightImageMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -889,7 +889,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return cartesianTriangularMeshHeightImageMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -897,7 +897,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected LineOfSightImageMapLayerItemProvider lineOfSightImageMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -912,7 +912,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return lineOfSightImageMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -920,7 +920,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected EllipseShapeImageLayerItemProvider ellipseShapeImageLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -935,7 +935,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return ellipseShapeImageLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -943,7 +943,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected RectangleShapeImageLayerItemProvider rectangleShapeImageLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -958,7 +958,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return rectangleShapeImageLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -966,7 +966,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected CartesianCoordinatesPolygonShapeImageMapLayerItemProvider cartesianCoordinatesPolygonShapeImageMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -981,7 +981,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return cartesianCoordinatesPolygonShapeImageMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -989,7 +989,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected GeographicCoordinatesPolygonShapeImageMapLayerItemProvider geographicCoordinatesPolygonShapeImageMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1004,7 +1004,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return geographicCoordinatesPolygonShapeImageMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.SlopeRange} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1012,7 +1012,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected SlopeRangeItemProvider slopeRangeItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.SlopeRange}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1027,7 +1027,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return slopeRangeItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1035,7 +1035,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected BasicCartesianTriangularMeshMapLayerItemProvider basicCartesianTriangularMeshMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1050,23 +1050,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return basicCartesianTriangularMeshMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected CartesianTriangularMeshURLMapLayerItemProvider cartesianTriangularMeshURLMapLayerItemProvider;
+	protected CartesianTriangularMeshURLMapLayerItemProvider cartesianTriangularMeshURLMapLayerItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createCartesianTriangularMeshURLMapLayerAdapter()
-  {
+	@Override
+	public Adapter createCartesianTriangularMeshURLMapLayerAdapter()
+	{
 		if (cartesianTriangularMeshURLMapLayerItemProvider == null) {
 			cartesianTriangularMeshURLMapLayerItemProvider = new CartesianTriangularMeshURLMapLayerItemProvider(this);
 		}
@@ -1074,7 +1074,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return cartesianTriangularMeshURLMapLayerItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1082,7 +1082,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected FeaturesOfInterestMapLayerItemProvider featuresOfInterestMapLayerItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1097,23 +1097,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return featuresOfInterestMapLayerItemProvider;
 	}
 
-		/**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.WorksiteNode} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected WorksiteNodeItemProvider worksiteNodeItemProvider;
+	protected WorksiteNodeItemProvider worksiteNodeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.WorksiteNode}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createWorksiteNodeAdapter()
-  {
+	@Override
+	public Adapter createWorksiteNodeAdapter()
+	{
 		if (worksiteNodeItemProvider == null) {
 			worksiteNodeItemProvider = new WorksiteNodeItemProvider(this);
 		}
@@ -1121,23 +1121,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return worksiteNodeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.SurfaceWorksiteNode} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SurfaceWorksiteNodeItemProvider surfaceWorksiteNodeItemProvider;
+	protected SurfaceWorksiteNodeItemProvider surfaceWorksiteNodeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.SurfaceWorksiteNode}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createSurfaceWorksiteNodeAdapter()
-  {
+	@Override
+	public Adapter createSurfaceWorksiteNodeAdapter()
+	{
 		if (surfaceWorksiteNodeItemProvider == null) {
 			surfaceWorksiteNodeItemProvider = new SurfaceWorksiteNodeItemProvider(this);
 		}
@@ -1145,23 +1145,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return surfaceWorksiteNodeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EarthSurfaceWorksiteNodeItemProvider earthSurfaceWorksiteNodeItemProvider;
+	protected EarthSurfaceWorksiteNodeItemProvider earthSurfaceWorksiteNodeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEarthSurfaceWorksiteNodeAdapter()
-  {
+	@Override
+	public Adapter createEarthSurfaceWorksiteNodeAdapter()
+	{
 		if (earthSurfaceWorksiteNodeItemProvider == null) {
 			earthSurfaceWorksiteNodeItemProvider = new EarthSurfaceWorksiteNodeItemProvider(this);
 		}
@@ -1169,23 +1169,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return earthSurfaceWorksiteNodeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.MapsListNode} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected MapsListNodeItemProvider mapsListNodeItemProvider;
+	protected MapsListNodeItemProvider mapsListNodeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.MapsListNode}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createMapsListNodeAdapter()
-  {
+	@Override
+	public Adapter createMapsListNodeAdapter()
+	{
 		if (mapsListNodeItemProvider == null) {
 			mapsListNodeItemProvider = new MapsListNodeItemProvider(this);
 		}
@@ -1193,23 +1193,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return mapsListNodeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.MapNode} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected MapNodeItemProvider mapNodeItemProvider;
+	protected MapNodeItemProvider mapNodeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.MapNode}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createMapNodeAdapter()
-  {
+	@Override
+	public Adapter createMapNodeAdapter()
+	{
 		if (mapNodeItemProvider == null) {
 			mapNodeItemProvider = new MapNodeItemProvider(this);
 		}
@@ -1217,23 +1217,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return mapNodeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.AbstractMapLayerNode} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected AbstractMapLayerNodeItemProvider abstractMapLayerNodeItemProvider;
+	protected AbstractMapLayerNodeItemProvider abstractMapLayerNodeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.AbstractMapLayerNode}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createAbstractMapLayerNodeAdapter()
-  {
+	@Override
+	public Adapter createAbstractMapLayerNodeAdapter()
+	{
 		if (abstractMapLayerNodeItemProvider == null) {
 			abstractMapLayerNodeItemProvider = new AbstractMapLayerNodeItemProvider(this);
 		}
@@ -1241,23 +1241,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return abstractMapLayerNodeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.SkyNode} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected SkyNodeItemProvider skyNodeItemProvider;
+	protected SkyNodeItemProvider skyNodeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.SkyNode}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createSkyNodeAdapter()
-  {
+	@Override
+	public Adapter createSkyNodeAdapter()
+	{
 		if (skyNodeItemProvider == null) {
 			skyNodeItemProvider = new SkyNodeItemProvider(this);
 		}
@@ -1265,23 +1265,23 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return skyNodeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EarthSkyNode} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EarthSkyNodeItemProvider earthSkyNodeItemProvider;
+	protected EarthSkyNodeItemProvider earthSkyNodeItemProvider;
 
-  /**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EarthSkyNode}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEarthSkyNodeAdapter()
-  {
+	@Override
+	public Adapter createEarthSkyNodeAdapter()
+	{
 		if (earthSkyNodeItemProvider == null) {
 			earthSkyNodeItemProvider = new EarthSkyNodeItemProvider(this);
 		}
@@ -1289,7 +1289,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return earthSkyNodeItemProvider;
 	}
 
-  /**
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1297,7 +1297,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 	 */
 	protected CartesianTriangularMeshMapLayerNodeItemProvider cartesianTriangularMeshMapLayerNodeItemProvider;
 
-		/**
+	/**
 	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1312,59 +1312,59 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return cartesianTriangularMeshMapLayerNodeItemProvider;
 	}
 
-		/**
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public ComposeableAdapterFactory getRootAdapterFactory()
-  {
+	public ComposeableAdapterFactory getRootAdapterFactory()
+	{
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
 
-  /**
+	/**
 	 * This sets the composed adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory)
-  {
+	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory)
+	{
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public boolean isFactoryForType(Object type)
-  {
+	@Override
+	public boolean isFactoryForType(Object type)
+	{
 		return supportedTypes.contains(type) || super.isFactoryForType(type);
 	}
 
-  /**
+	/**
 	 * This implementation substitutes the factory itself as the key for the adapter.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter adapt(Notifier notifier, Object type)
-  {
+	@Override
+	public Adapter adapt(Notifier notifier, Object type)
+	{
 		return super.adapt(notifier, this);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Object adapt(Object object, Object type)
-  {
+	@Override
+	public Object adapt(Object object, Object type)
+	{
 		if (isFactoryForType(type)) {
 			Object adapter = super.adapt(object, type);
 			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
@@ -1375,66 +1375,66 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		return null;
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public List<IChildCreationExtender> getChildCreationExtenders()
-  {
+	public List<IChildCreationExtender> getChildCreationExtenders()
+	{
 		return childCreationExtenderManager.getChildCreationExtenders();
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Collection<?> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-  {
+	public Collection<?> getNewChildDescriptors(Object object, EditingDomain editingDomain)
+	{
 		return childCreationExtenderManager.getNewChildDescriptors(object, editingDomain);
 	}
 
-  /**
+	/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public ResourceLocator getResourceLocator()
-  {
+	public ResourceLocator getResourceLocator()
+	{
 		return childCreationExtenderManager;
 	}
 
-  /**
+	/**
 	 * This adds a listener.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void addListener(INotifyChangedListener notifyChangedListener)
-  {
+	public void addListener(INotifyChangedListener notifyChangedListener)
+	{
 		changeNotifier.addListener(notifyChangedListener);
 	}
 
-  /**
+	/**
 	 * This removes a listener.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void removeListener(INotifyChangedListener notifyChangedListener)
-  {
+	public void removeListener(INotifyChangedListener notifyChangedListener)
+	{
 		changeNotifier.removeListener(notifyChangedListener);
 	}
 
-  /**
+	/**
 	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void fireNotifyChanged(Notification notification)
-  {
+	public void fireNotifyChanged(Notification notification)
+	{
 		changeNotifier.fireNotifyChanged(notification);
 
 		if (parentAdapterFactory != null) {
@@ -1442,14 +1442,14 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		}
 	}
 
-  /**
+	/**
 	 * This disposes all of the item providers created by this factory. 
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void dispose()
-  {
+	public void dispose()
+	{
 		if (earthSurfaceWorksiteItemProvider != null) earthSurfaceWorksiteItemProvider.dispose();
 		if (environmentItemProvider != null) environmentItemProvider.dispose();
 		if (surfaceEnvironmentItemProvider != null) surfaceEnvironmentItemProvider.dispose();
@@ -1503,7 +1503,7 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		if (cartesianTriangularMeshMapLayerNodeItemProvider != null) cartesianTriangularMeshMapLayerNodeItemProvider.dispose();
 	}
 
-  /**
+	/**
 	 * A child creation extender for the {@link TopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1551,78 +1551,78 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			@Override
 			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
- 
+
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -1655,316 +1655,316 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 		}
 	}
 
-		/**
+	/**
 	 * A child creation extender for the {@link TopologyPackage}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static class TopologyChildCreationExtender implements IChildCreationExtender
-  {
-    /**
+	public static class TopologyChildCreationExtender implements IChildCreationExtender
+	{
+		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    protected static class CreationSwitch extends TopologySwitch<Object>
-    {
-      /**
+		protected static class CreationSwitch extends TopologySwitch<Object>
+		{
+			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected List<Object> newChildDescriptors;
+			protected List<Object> newChildDescriptors;
 
-      /**
+			/**
 			 * The domain in which to create the children.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected EditingDomain editingDomain;
+			protected EditingDomain editingDomain;
 
-      /**
+			/**
 			 * Creates the a switch for populating child descriptors in the given domain.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
-      {
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
+			{
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
 			}
-      /**
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      @Override
-      public <T> Object caseContentNode(ContentNode<T> object)
-      {
+			@Override
+			public <T> Object caseContentNode(ContentNode<T> object)
+			{
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphereUtils()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAtmosphereUtils()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+								SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates()));
+								SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEclipticCoordinates()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEclipticCoordinates()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSky()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSky()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentUtilities()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentUtilities()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStar()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStar()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAstronomyUtils()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAstronomyUtils()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMap()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMap()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion()));
+								SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion()));
+								SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
+								SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSlopeRange()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSlopeRange()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
- 
-      /**
+
+			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
@@ -1972,501 +1972,501 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			@Override
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphereUtils()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAtmosphereUtils()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+								SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates()));
+								SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEclipticCoordinates()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEclipticCoordinates()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSky()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSky()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentUtilities()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentUtilities()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStar()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStar()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAstronomyUtils()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAstronomyUtils()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMap()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMap()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion()));
+								SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion()));
+								SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
+								SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSlopeRange()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSlopeRange()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
+								SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
-						/**
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      @Override
-      public Object caseGroupNode(GroupNode object)
-      {
+			@Override
+			public Object caseGroupNode(GroupNode object)
+			{
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
-      /**
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      @Override
-      public Object caseAggregateGroupNode(AggregateGroupNode object)
-      {
+			@Override
+			public Object caseAggregateGroupNode(AggregateGroupNode object)
+			{
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
-      /**
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected CommandParameter createChildParameter(Object feature, Object child)
-      {
+			protected CommandParameter createChildParameter(Object feature, Object child)
+			{
 				return new CommandParameter(null, feature, child);
 			}
 
-    }
+		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-    {
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
+		{
 			ArrayList<Object> result = new ArrayList<Object>();
 			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
 			return result;
 		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public ResourceLocator getResourceLocator()
-    {
+		public ResourceLocator getResourceLocator()
+		{
 			return SymphonyEnvironmentEditPlugin.INSTANCE;
 		}
-  }
+	}
 
-  /**
+	/**
 	 * A child creation extender for the {@link SymphonyCorePackage}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender
-  {
-    /**
+	public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender
+	{
+		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    protected static class CreationSwitch extends SymphonyCoreSwitch<Object>
-    {
-      /**
+		protected static class CreationSwitch extends SymphonyCoreSwitch<Object>
+		{
+			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected List<Object> newChildDescriptors;
+			protected List<Object> newChildDescriptors;
 
-      /**
+			/**
 			 * The domain in which to create the children.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected EditingDomain editingDomain;
+			protected EditingDomain editingDomain;
 
-      /**
+			/**
 			 * Creates the a switch for populating child descriptors in the given domain.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
-      {
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
+			{
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
 			}
-      /**
+			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
@@ -2474,129 +2474,132 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			@Override
 			public Object caseAssemblyLink(AssemblyLink object) {
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
-						/**
-       * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-       * @generated_NOT
-       */
-      @Override
-      public Object caseWorksitesList(WorksitesList object)
-      {    	  
-    	  Object result = caseWorksitesListGen(object);
-    	  
-    	  // Remove CommandParameter associated with the EarthSurfaceWorksite.
-    	  CommandParameter previousCommandParameter = null;
-    	  Iterator<Object> it = newChildDescriptors.iterator();
-    	  while(it.hasNext())
-    	  {
-    		  Object o = it.next();
-    		  if(o instanceof CommandParameter)
-    		  {
-    			  CommandParameter cp = (CommandParameter) o;
-    			  
-    			  if(cp.getValue() instanceof EarthSurfaceWorksite)
-    			  {
-    				  previousCommandParameter = cp;
-    			  }
-    		  }
-    	  }
-    	  newChildDescriptors.remove(previousCommandParameter);
-    	  
-    	  // Create a new command parameter.
-    	  EarthSurfaceWorksite earthSurfaceWorksite = EnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite();
-    	      	       	   
-    	  newChildDescriptors.add(createChildParameter(SymphonyCorePackage.Literals.WORKSITES_LIST__WORKSITES, earthSurfaceWorksite));
-
-    	  return result;
-      }
- 
-      /**
+			
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated_NOT
+			 */
+			@Override
+			public Object caseWorksitesList(WorksitesList object)
+			{    	  
+				Object result = caseWorksitesListGen(object);
+
+				// Remove CommandParameter associated with the EarthSurfaceWorksite.
+				CommandParameter previousCommandParameter = null;
+				Iterator<Object> it = newChildDescriptors.iterator();
+				
+				while(it.hasNext())
+				{
+					Object o = it.next();
+					if(o instanceof CommandParameter)
+					{
+						CommandParameter cp = (CommandParameter) o;
+
+						if(cp.getValue() instanceof EarthSurfaceWorksite)
+						{
+							previousCommandParameter = cp;
+						}
+					}
+				}
+				
+				newChildDescriptors.remove(previousCommandParameter);
+
+				// Create a new command parameter.
+				EarthSurfaceWorksite earthSurfaceWorksite = EnvironmentFacade.INSTANCE.createAndInitializeDefaultCSAWorksite();
+
+				newChildDescriptors.add(createChildParameter(SymphonyCorePackage.Literals.WORKSITES_LIST__WORKSITES, earthSurfaceWorksite));
+
+				return result;
+			}
+
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */      
-      public Object caseWorksitesListGen(WorksitesList object)
-      {
+			public Object caseWorksitesListGen(WorksitesList object)
+			{
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.WORKSITES_LIST__WORKSITES,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
 
 				return null;
 			}
-      
-      /**
+
+			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
@@ -2604,110 +2607,110 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			@Override
 			public Object caseTopologyRoot(TopologyRoot object) {
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-					(createChildParameter
+				(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
-						/**
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected CommandParameter createChildParameter(Object feature, Object child)
-      {
+			protected CommandParameter createChildParameter(Object feature, Object child)
+			{
 				return new CommandParameter(null, feature, child);
 			}
 
-    }
+		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-    {
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
+		{
 			ArrayList<Object> result = new ArrayList<Object>();
 			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
 			return result;
 		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public ResourceLocator getResourceLocator()
-    {
+		public ResourceLocator getResourceLocator()
+		{
 			return SymphonyEnvironmentEditPlugin.INSTANCE;
 		}
-  }
+	}
 
 }

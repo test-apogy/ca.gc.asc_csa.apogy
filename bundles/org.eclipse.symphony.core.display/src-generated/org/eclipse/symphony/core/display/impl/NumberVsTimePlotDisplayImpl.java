@@ -10,7 +10,7 @@ import java.util.TreeMap;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -103,7 +103,8 @@ public class NumberVsTimePlotDisplayImpl extends AbstractPlotDisplayImpl impleme
 						(eStructuralFeature.getEType().getInstanceClass() == long.class) ||
 						(eStructuralFeature.getEType().getInstanceClass() == int.class)))
 				{												
-							IObservableValue observeWidget = PojoObservables.observeValue(control, "currentValue");									
+							IObservableValue observeWidget = PojoProperties.value("currentValue").observe(control);				
+							
 							UpdateValueStrategy strategy = new UpdateValueStrategyWithRange(eStructuralFeature, this, control);
 							strategy.setConverter(new NumberToDoubleConverter());
 							
@@ -111,7 +112,8 @@ public class NumberVsTimePlotDisplayImpl extends AbstractPlotDisplayImpl impleme
 				}
 				else if(eStructuralFeature.getEType().getInstanceClass() == boolean.class)
 				{
-					IObservableValue observeWidget = PojoObservables.observeValue(control, "currentValue");							
+					IObservableValue observeWidget = PojoProperties.value("currentValue").observe(control);
+					
 					UpdateValueStrategy strategy = new UpdateValueStrategyWithRange(eStructuralFeature, this, control);
 					strategy.setConverter(new BooleanToDoubleConverter());
 					
@@ -119,7 +121,8 @@ public class NumberVsTimePlotDisplayImpl extends AbstractPlotDisplayImpl impleme
 				}
 				else if(eStructuralFeature.getEType() instanceof EEnum)
 				{
-					IObservableValue observeWidget = PojoObservables.observeValue(control, "currentValue");							 
+					IObservableValue observeWidget = PojoProperties.value("currentValue").observe(control);
+					
 					UpdateValueStrategy strategy = new UpdateValueStrategyWithRange(eStructuralFeature, this, control);
 					strategy.setConverter(new EnumeratorToDoubleConverter());
 					

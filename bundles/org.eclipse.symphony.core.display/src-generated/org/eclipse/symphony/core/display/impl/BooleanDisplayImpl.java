@@ -5,7 +5,7 @@ package org.eclipse.symphony.core.display.impl;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -76,10 +76,11 @@ public class BooleanDisplayImpl extends AbstractFeatureDisplayImpl implements Bo
 			{
 				if(eStructuralFeature.getEType().getInstanceClass() == boolean.class)
 				{
-					IObservableValue obervedWidget = PojoObservables.observeValue(control, "selection");					
+					IObservableValue observeWidget = PojoProperties.value("selection").observe(control);					
 					
-					UpdateValueStrategyWithRange strategy = new UpdateValueStrategyWithRange(eStructuralFeature, this, control);									
-					bindingContext.bindValue(obervedWidget, observeValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);											
+					UpdateValueStrategyWithRange strategy = new UpdateValueStrategyWithRange(eStructuralFeature, this, control);
+					
+					bindingContext.bindValue(observeWidget, observeValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);											
 				}
 			}
 		}

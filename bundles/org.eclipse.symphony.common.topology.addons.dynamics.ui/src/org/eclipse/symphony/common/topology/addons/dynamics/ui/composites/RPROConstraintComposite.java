@@ -4,8 +4,8 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.databinding.EMFObservables;
-import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -13,7 +13,7 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals;
 
 public class RPROConstraintComposite extends Composite {
 
@@ -21,8 +21,8 @@ public class RPROConstraintComposite extends Composite {
 	private org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint rPROConstraint;
 	private Button enabledButton;
 	
-	private Tuple3dComposite linearStrenghtComposite;
-	private Tuple3dComposite angularStrenghtComposite;
+	private Tuple3dComposite linearStrengthComposite;
+	private Tuple3dComposite angularStrengthComposite;
 	
 	private Adapter constraintStatesAdapter;
 
@@ -43,13 +43,13 @@ public class RPROConstraintComposite extends Composite {
 		enabledButton.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
 				false));
 
-		new Label(this, SWT.NONE).setText("Angular Strenght:");
-		angularStrenghtComposite = new Tuple3dComposite(this, SWT.NONE);		
-		angularStrenghtComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+		new Label(this, SWT.NONE).setText("Angular Strength:");
+		angularStrengthComposite = new Tuple3dComposite(this, SWT.NONE);		
+		angularStrengthComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		
-		new Label(this, SWT.NONE).setText("Linear Strenght:");
-		linearStrenghtComposite = new Tuple3dComposite(this, SWT.NONE);
-		linearStrenghtComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
+		new Label(this, SWT.NONE).setText("Linear Strength:");
+		linearStrengthComposite = new Tuple3dComposite(this, SWT.NONE);
+		linearStrengthComposite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		
 		if (rPROConstraint != null) {
 			m_bindingContext = initDataBindings();
@@ -61,16 +61,15 @@ public class RPROConstraintComposite extends Composite {
 		// Disable the check that prevents subclassing of SWT components
 	}
 
-	private DataBindingContext initDataBindings() {
-		IObservableValue enabledObserveWidget = SWTObservables.observeSelection(enabledButton);
-		IObservableValue enabledObserveValue = EMFObservables.observeValue(	rPROConstraint, org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ENABLED);
-		
-		//
+	private DataBindingContext initDataBindings()
+	{
 		DataBindingContext bindingContext = new DataBindingContext();
-		//
-		bindingContext.bindValue(enabledObserveWidget, enabledObserveValue,
-				null, null);
-		//
+		
+		IObservableValue enabledObserveWidget = WidgetProperties.selection().observe(enabledButton);
+		IObservableValue enabledObserveValue = EMFProperties.value(Literals.ABSTRACT_CONSTRAINT__ENABLED).observe(rPROConstraint);
+		
+		bindingContext.bindValue(enabledObserveWidget, enabledObserveValue,	null, null);
+
 		return bindingContext;
 	}
 
@@ -93,13 +92,13 @@ public class RPROConstraintComposite extends Composite {
 			// Register listener to the new CylindricalConstraint
 			newRPROConstraint.eAdapters().add(getConstraintStatesAdapter());
 			
-			linearStrenghtComposite.setTuple3d(newRPROConstraint.getLinearStrength());
-			angularStrenghtComposite.setTuple3d(newRPROConstraint.getAngularStrength());
+			linearStrengthComposite.setTuple3d(newRPROConstraint.getLinearStrength());
+			angularStrengthComposite.setTuple3d(newRPROConstraint.getAngularStrength());
 		}
 		else
 		{
-			linearStrenghtComposite.setTuple3d(null);
-			angularStrenghtComposite.setTuple3d(null);
+			linearStrengthComposite.setTuple3d(null);
+			angularStrengthComposite.setTuple3d(null);
 		}
 	}
 
@@ -132,14 +131,14 @@ public class RPROConstraintComposite extends Composite {
 				public void notifyChanged(org.eclipse.emf.common.notify.Notification msg) 
 				{										
 					// If the angular current state has been changed.
-					if(msg.getFeature() == TopologyDynamicsPackage.Literals.RPRO_CONSTRAINT__ANGULAR_STRENGTH)
+					if(msg.getFeature() == Literals.RPRO_CONSTRAINT__ANGULAR_STRENGTH)
 					{														
-						angularStrenghtComposite.setTuple3d((org.eclipse.symphony.common.math.Tuple3d) msg.getNewValue());					
+						angularStrengthComposite.setTuple3d((org.eclipse.symphony.common.math.Tuple3d) msg.getNewValue());					
 					}
 					// If the linear current state has been changed.
-					else if(msg.getFeature() == TopologyDynamicsPackage.Literals.RPRO_CONSTRAINT__LINEAR_STRENGTH)
+					else if(msg.getFeature() == Literals.RPRO_CONSTRAINT__LINEAR_STRENGTH)
 					{
-						linearStrenghtComposite.setTuple3d((org.eclipse.symphony.common.math.Tuple3d) msg.getNewValue());	
+						linearStrengthComposite.setTuple3d((org.eclipse.symphony.common.math.Tuple3d) msg.getNewValue());	
 					}										
 				};
 			};

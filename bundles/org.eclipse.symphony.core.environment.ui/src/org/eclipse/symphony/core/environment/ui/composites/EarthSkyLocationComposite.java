@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
@@ -112,25 +112,31 @@ public class EarthSkyLocationComposite extends Composite
 		if(worksite != null)
 		{		
 			// Longitude
-			IObservableValue lblLongitudeValueLabel = PojoObservables.observeValue(longitudeValueLabel, "text");
-			IObservableValue longitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE)).observe(worksite);			
+			IObservableValue lblLongitudeValueLabel = PojoProperties.value("text").observe(longitudeValueLabel);
+			IObservableValue longitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE)).observe(worksite);
+			
 			UpdateValueStrategy longitudeValueStrategy = new UpdateValueStrategy();
 			longitudeValueStrategy.setConverter(new RadiansToDegreesStringConverter(new DecimalFormat(LONGITUDE_FORMAT_STRING)));
+			
 			bindingContext.bindValue(lblLongitudeValueLabel, longitudeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), longitudeValueStrategy);
 	
 			// Latitude
-			IObservableValue lblLatitudeValueLabel = PojoObservables.observeValue(latitudeValueLabel, "text");
-			IObservableValue laltitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE)).observe(worksite);			
+			IObservableValue lblLatitudeValueLabel = PojoProperties.value("text").observe(latitudeValueLabel);
+			IObservableValue laltitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE)).observe(worksite);
+			
 			UpdateValueStrategy latitudeValueStrategy = new UpdateValueStrategy();
 			latitudeValueStrategy.setConverter(new RadiansToDegreesStringConverter(new DecimalFormat(LATITUDE_FORMAT_STRING)));
+			
 			bindingContext.bindValue(lblLatitudeValueLabel, laltitudeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), latitudeValueStrategy);
 
 			// Altitude
-			IObservableValue lblaltitudeValueLabel = PojoObservables.observeValue(altitudeValueLabel, "text");
-			IObservableValue altitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION)).observe(worksite);			
-			UpdateValueStrategy atitudeValueStrategy = new UpdateValueStrategy();
-			atitudeValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat(ALTITUDE_FORMAT_STRING)));
-			bindingContext.bindValue(lblaltitudeValueLabel, altitudeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), atitudeValueStrategy);
+			IObservableValue lblaltitudeValueLabel = PojoProperties.value("text").observe(altitudeValueLabel);
+			IObservableValue altitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION)).observe(worksite);
+			
+			UpdateValueStrategy altitudeValueStrategy = new UpdateValueStrategy();
+			altitudeValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat(ALTITUDE_FORMAT_STRING)));
+			
+			bindingContext.bindValue(lblaltitudeValueLabel, altitudeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), altitudeValueStrategy);
 	
 		}
 		

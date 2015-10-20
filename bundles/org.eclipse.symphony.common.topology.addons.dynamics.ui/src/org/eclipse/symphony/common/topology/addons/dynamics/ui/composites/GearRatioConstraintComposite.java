@@ -4,10 +4,10 @@ import java.text.DecimalFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.databinding.EMFObservables;
-import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -16,6 +16,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals;
 
 public class GearRatioConstraintComposite extends Composite {
 
@@ -57,27 +58,25 @@ public class GearRatioConstraintComposite extends Composite {
 		// Disable the check that prevents subclassing of SWT components
 	}
 
-	private DataBindingContext initDataBindings() {
-		IObservableValue enabledObserveWidget = SWTObservables
-				.observeSelection(enabledButton);
-		IObservableValue enabledObserveValue = EMFObservables
-				.observeValue(
-						gearRatioConstraint,
-						org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ENABLED);
-		// Force
-		IObservableValue forceObserveWidget = PojoObservables.observeValue(forceText, "text");	
-		IObservableValue forceObserveValue = EMFObservables.observeValue(gearRatioConstraint,org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals.GEAR_RATIO_CONSTRAINT__FORCE);
-		UpdateValueStrategy forceUpdateValueStrategy = new UpdateValueStrategy();
-		forceUpdateValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat("0.000")));		
-
-		
-		//
+	private DataBindingContext initDataBindings()
+	{
 		DataBindingContext bindingContext = new DataBindingContext();
-		//
+		
+		// Enabled
+		IObservableValue enabledObserveWidget = WidgetProperties.selection().observe(enabledButton);
+		IObservableValue enabledObserveValue = EMFProperties.value(Literals.ABSTRACT_CONSTRAINT__ENABLED).observe(gearRatioConstraint);
+
 		bindingContext.bindValue(enabledObserveWidget, enabledObserveValue,	null, null);
 		
+		// Force
+		IObservableValue forceObserveWidget = PojoProperties.value("text").observe(forceText);	
+		IObservableValue forceObserveValue = EMFProperties.value(Literals.GEAR_RATIO_CONSTRAINT__FORCE).observe(gearRatioConstraint);
+		
+		UpdateValueStrategy forceUpdateValueStrategy = new UpdateValueStrategy();
+		forceUpdateValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat("0.000")));		
+		
 		bindingContext.bindValue(forceObserveWidget, forceObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), forceUpdateValueStrategy);
-		//
+		
 		return bindingContext;
 	}
 

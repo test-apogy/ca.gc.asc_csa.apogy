@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
@@ -408,7 +408,7 @@ public class BrowseableTimeSourceComposite extends AbstractTimeSourceComposite
 		// Bind startTime if applicable.
 		if(startTimeValueLabel != null)
 		{
-			IObservableValue startTimeLabelValue = PojoObservables.observeValue(startTimeValueLabel, "text");		
+			IObservableValue startTimeLabelValue = PojoProperties.value("text").observe(startTimeValueLabel);		
 			IObservableValue startTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.BROWSEABLE_TIME_SOURCE__START_TIME)).observe(getBrowseableTimeSource());			
 			UpdateValueStrategy startTimeValueStrategy = new UpdateValueStrategy();
 			startTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));

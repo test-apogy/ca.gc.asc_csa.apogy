@@ -7,7 +7,7 @@ import java.text.DecimalFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Notification;
@@ -221,9 +221,11 @@ public class TextDisplayImpl extends AbstractFeatureDisplayImpl implements TextD
 				if(eStructuralFeature.getEType() instanceof EEnum)
 				{
 					// If the item is an ENUM
-					IObservableValue textObserveValue = PojoObservables.observeValue(control, "text");																
+					IObservableValue textObserveValue = PojoProperties.value("text").observe(control);
+					
 					EnumUpdateValueStrategy strategy = new EnumUpdateValueStrategy(eStructuralFeature, this, control);
 					strategy.setConverter(new IntegerToStringConverter());
+					
 					bindingContext.bindValue(textObserveValue, observeValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);
 					
 					// Sets the background to UNKNOWN for now.
@@ -231,7 +233,8 @@ public class TextDisplayImpl extends AbstractFeatureDisplayImpl implements TextD
 				}
 				else if(eStructuralFeature.getEType() instanceof EClass)
 				{					
-					IObservableValue textObserveValue = PojoObservables.observeValue(control, "text");				
+					IObservableValue textObserveValue = PojoProperties.value("text").observe(control);
+					
 					UpdateValueStrategy strategy = new EMFReferenceUpdateStrategy();				
 					bindingContext.bindValue(textObserveValue, observeValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), strategy);
 								
@@ -241,7 +244,8 @@ public class TextDisplayImpl extends AbstractFeatureDisplayImpl implements TextD
 				else
 				{
 					// If the item is a simple type.
-					IObservableValue observeWidget = PojoObservables.observeValue(control, "text");		// SWTObservables.observeText(text, SWT.NONE);															
+					IObservableValue observeWidget = PojoProperties.value("text").observe(control);
+					
 					UpdateValueStrategyWithRange strategy = new UpdateValueStrategyWithRange(eStructuralFeature, this, control);	
 					
 					// Used the appropriate Converter.

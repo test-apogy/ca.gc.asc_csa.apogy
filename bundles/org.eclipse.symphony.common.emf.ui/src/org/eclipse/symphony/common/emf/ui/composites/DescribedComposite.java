@@ -2,10 +2,9 @@ package org.eclipse.symphony.common.emf.ui.composites;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.databinding.EMFObservables;
-import org.eclipse.emf.databinding.edit.EMFEditObservables;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.swt.SWTObservables;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -66,15 +65,14 @@ public class DescribedComposite extends Composite {
 	
 	@SuppressWarnings("unused")
 	private DataBindingContext initDataBindings() {
-		IObservableValue descriptionObserveWidget = SWTObservables.observeText(descriptionText, SWT.Modify);
-		IObservableValue descriptionObserveValue = editingDomain == null ? 
-				EMFObservables.observeValue(described, EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION):
-				EMFEditObservables.observeValue(editingDomain, described, EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION);
+		IObservableValue descriptionObserveWidget = WidgetProperties.text(SWT.Modify).observe(descriptionText);
+		IObservableValue descriptionObserveValue = (editingDomain == null ? 
+				EMFProperties.value(EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION).observe(described):
+				EMFEditProperties.value(editingDomain, EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION).observe(described));
 		//
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
-		bindingContext.bindValue(descriptionObserveWidget,
-				descriptionObserveValue, null, null);
+		bindingContext.bindValue(descriptionObserveWidget, descriptionObserveValue, null, null);
 		//
 		return bindingContext;
 	}
@@ -83,8 +81,8 @@ public class DescribedComposite extends Composite {
 		IObservableValue descriptionObserveWidget = WidgetProperties.text(new int[]{SWT.Modify, SWT.FocusOut, SWT.DefaultSelection}).observeDelayed(500, descriptionText);
 		
 		IObservableValue descriptionObserveValue = editingDomain == null ? 
-				EMFObservables.observeValue(described, EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION):
-				EMFEditObservables.observeValue(editingDomain, described, EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION);
+				EMFProperties.value(EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION).observe(described):
+				EMFEditProperties.value(editingDomain, EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION).observe(described);
 
 		//
 		DataBindingContext bindingContext = new DataBindingContext();

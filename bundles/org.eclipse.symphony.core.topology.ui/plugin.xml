@@ -21,12 +21,6 @@
       </view>
    </extension>
    <extension
-         point="org.eclipse.symphony.common.converters">
-      <new_element
-            Class="org.eclipse.symphony.core.topology.ui.converters.PositionResultToNodeConverter">
-      </new_element>
-   </extension>
-   <extension
          point="org.eclipse.ui.commands">
       <command
             id="org.eclipse.symphony.core.topology.ui.commands.ToggleVariableTopologyVisibilityCommand"

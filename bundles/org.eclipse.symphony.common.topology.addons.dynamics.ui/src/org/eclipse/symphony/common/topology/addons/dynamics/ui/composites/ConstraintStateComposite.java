@@ -4,9 +4,9 @@ import java.text.DecimalFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.databinding.EMFObservables;
+import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -14,6 +14,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals;
 
 public class ConstraintStateComposite extends Composite {
 
@@ -61,38 +62,35 @@ public class ConstraintStateComposite extends Composite {
 
 	private DataBindingContext initDataBindings() 
 	{
+		DataBindingContext bindingContext = new DataBindingContext();
+		
 		// Force
-		IObservableValue forceObserveWidget = PojoObservables.observeValue(forceText, "text");	
-		IObservableValue forceObserveValue = EMFObservables.observeValue(
-						constraintState,
-						org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals.CONSTRAINT_STATE__FORCE);
+		IObservableValue forceObserveWidget = PojoProperties.value("text").observe(forceText);	
+		IObservableValue forceObserveValue = EMFProperties.value(Literals.CONSTRAINT_STATE__FORCE).observe(constraintState);
 		
 		UpdateValueStrategy forceUpdateValueStrategy = new UpdateValueStrategy();
-		forceUpdateValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat("0.000")));		
+		forceUpdateValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat("0.000")));
+		
+		bindingContext.bindValue(forceObserveWidget, forceObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), forceUpdateValueStrategy);
 		
 		// Position
-		IObservableValue positionObserveWidget = PojoObservables.observeValue(positionText, "text");
-		IObservableValue positionObserveValue = EMFObservables.observeValue(
-						constraintState,
-						org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals.CONSTRAINT_STATE__POSITION);
+		IObservableValue positionObserveWidget = PojoProperties.value("text").observe(positionText);
+		IObservableValue positionObserveValue = EMFProperties.value(Literals.CONSTRAINT_STATE__POSITION).observe(constraintState);
+		
 		UpdateValueStrategy positionUpdateValueStrategy = new UpdateValueStrategy();
 		positionUpdateValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat("0.000")));
 		
+		bindingContext.bindValue(positionObserveWidget, positionObserveValue,new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), positionUpdateValueStrategy);
+		
 		// Velocity
-		IObservableValue velocityObserveWidget = PojoObservables.observeValue(velocityText, "text");
-		IObservableValue velocityObserveValue = EMFObservables.observeValue(
-						constraintState,
-						org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals.CONSTRAINT_STATE__VELOCITY);
+		IObservableValue velocityObserveWidget = PojoProperties.value("text").observe(velocityText);
+		IObservableValue velocityObserveValue = EMFProperties.value(Literals.CONSTRAINT_STATE__VELOCITY).observe(constraintState);
+		
 		UpdateValueStrategy velocityUpdateValueStrategy = new UpdateValueStrategy();
 		velocityUpdateValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat("0.000")));
-				
-		//
-		DataBindingContext bindingContext = new DataBindingContext();
-		//
-		bindingContext.bindValue(forceObserveWidget, forceObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), forceUpdateValueStrategy);
-		bindingContext.bindValue(positionObserveWidget, positionObserveValue,new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), positionUpdateValueStrategy);
+		
 		bindingContext.bindValue(velocityObserveWidget, velocityObserveValue,new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), velocityUpdateValueStrategy);
-		//
+		
 		return bindingContext;
 	}
 

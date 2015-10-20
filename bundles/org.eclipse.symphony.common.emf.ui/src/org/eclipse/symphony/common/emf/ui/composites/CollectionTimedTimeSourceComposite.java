@@ -5,7 +5,7 @@ import java.util.Date;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -427,7 +427,7 @@ public class CollectionTimedTimeSourceComposite extends BrowseableTimeSourceComp
 		// Bind StartTime.
 		if(timeLineStartTimeValueLabel != null)
 		{					
-			IObservableValue startTimeLabelValue = PojoObservables.observeValue(timeLineStartTimeValueLabel, "text");		
+			IObservableValue startTimeLabelValue = PojoProperties.value("text").observe(timeLineStartTimeValueLabel);		
 			IObservableValue startTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE)).observe(getTimeSource());			
 			UpdateValueStrategy startTimeValueStrategy = new UpdateValueStrategy();
 			startTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
@@ -437,7 +437,7 @@ public class CollectionTimedTimeSourceComposite extends BrowseableTimeSourceComp
 		// Bind EndTime.
 		if(timeLineEndTimeValueLabel != null)
 		{
-			IObservableValue endTimeLabelValue = PojoObservables.observeValue(timeLineEndTimeValueLabel, "text");		
+			IObservableValue endTimeLabelValue = PojoProperties.value("text").observe(timeLineEndTimeValueLabel);		
 			IObservableValue endTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE)).observe(getTimeSource());			
 			UpdateValueStrategy endTimeValueStrategy = new UpdateValueStrategy();
 			endTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));

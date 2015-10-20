@@ -31,5 +31,11 @@
             class="org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage"
             genModel="model/sensors_imaging_ui.xcore"/>
    </extension>
+   <extension
+         point="org.eclipse.symphony.common.converters">
+      <new_element
+            Class="org.eclipse.symphony.addons.sensors.imaging.ui.converters.ReferenceResultValueToImageSnapshotConverter">
+      </new_element>
+   </extension>
 
 </plugin>

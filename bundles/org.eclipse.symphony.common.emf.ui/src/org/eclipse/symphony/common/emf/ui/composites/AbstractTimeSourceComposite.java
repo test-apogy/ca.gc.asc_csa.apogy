@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
@@ -70,7 +70,7 @@ public abstract class AbstractTimeSourceComposite extends Composite
 		// Bind current time if applicable
 		if(timeSourceTimeValueLabel != null)
 		{
-			IObservableValue timeSourceTimeLabelValue = PojoObservables.observeValue(timeSourceTimeValueLabel, "text");		
+			IObservableValue timeSourceTimeLabelValue = PojoProperties.value("text").observe(timeSourceTimeValueLabel);		
 			IObservableValue timeSourceTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getTimeSource());			
 			UpdateValueStrategy timeSourceTimeValueStrategy = new UpdateValueStrategy();
 			timeSourceTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));

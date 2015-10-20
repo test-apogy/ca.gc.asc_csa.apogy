@@ -4,8 +4,8 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.databinding.EMFObservables;
-import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
@@ -15,7 +15,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals;
+import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
 
 public class UniversalConstraintComposite extends Composite {
 
@@ -70,27 +71,23 @@ public class UniversalConstraintComposite extends Composite {
 		// Disable the check that prevents subclassing of SWT components
 	}
 
-	private DataBindingContext initDataBindings() {
-		IObservableValue enabledObserveWidget = SWTObservables
-				.observeSelection(enabledButton);
-		IObservableValue enabledObserveValue = EMFObservables
-				.observeValue(
-						universalConstraint,
-						org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ENABLED);
-		//
+	private DataBindingContext initDataBindings()
+	{
 		DataBindingContext bindingContext = new DataBindingContext();
-		//
-		bindingContext.bindValue(enabledObserveWidget, enabledObserveValue,
-				null, null);
-		//
+
+		IObservableValue enabledObserveWidget = WidgetProperties.selection().observe(enabledButton);
+		IObservableValue enabledObserveValue = EMFProperties.value(Literals.ABSTRACT_CONSTRAINT__ENABLED).observe(universalConstraint);
+
+		bindingContext.bindValue(enabledObserveWidget, enabledObserveValue,	null, null);
+
 		return bindingContext;
 	}
 
-	public org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint getUniversalConstraint() {
+	public UniversalConstraint getUniversalConstraint() {
 		return universalConstraint;
 	}
 
-	public void setUniversalConstraint(org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint newUniversalConstraint) 
+	public void setUniversalConstraint(UniversalConstraint newUniversalConstraint) 
 	{
 		// Unregister listener from previous CylindricalConstraint
 		if(getUniversalConstraint() != null)
@@ -143,12 +140,12 @@ public class UniversalConstraintComposite extends Composite {
 				public void notifyChanged(org.eclipse.emf.common.notify.Notification msg) 
 				{										
 					// If the angular current state has been changed.
-					if(msg.getFeature() == TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE)
+					if(msg.getFeature() == Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE)
 					{														
 						angular0ConstraintStateComposite.setConstraintState((ConstraintState)msg.getNewValue(), true);						
 					}
 					// If the linear current state has been changed.
-					else if(msg.getFeature() == TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE)
+					else if(msg.getFeature() == Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE)
 					{
 						angular1ConstraintStateComposite.setConstraintState((ConstraintState)msg.getNewValue());
 					}										
