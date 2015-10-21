@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
@@ -118,24 +118,30 @@ public class EarthSkySunComposite extends Composite
 			try
 			{				
 				// Sun azimuth.
-				IObservableValue lblsunAzimuthValueLabel = PojoObservables.observeValue(sunAzimuthValueLabel, "text");		
-				IObservableValue sunAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());			
+				IObservableValue lblsunAzimuthValueLabel = PojoProperties.value("text").observe(sunAzimuthValueLabel);		
+				IObservableValue sunAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				
 				UpdateValueStrategy sunAzimuthValueStrategy = new UpdateValueStrategy();
 				sunAzimuthValueStrategy.setConverter(new DateToSunHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToSunHorizontalCoordinatesStringConverter.COORDS.AZIMUTH));
+				
 				bindingContext.bindValue(lblsunAzimuthValueLabel, sunAzimuthObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), sunAzimuthValueStrategy);
 	
 				// Sun altitude.
-				IObservableValue lblsunElevationValueLabel = PojoObservables.observeValue(sunElevationValueLabel, "text");		
-				IObservableValue sunElevationObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());			
+				IObservableValue lblsunElevationValueLabel = PojoProperties.value("text").observe(sunElevationValueLabel);		
+				IObservableValue sunElevationObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				
 				UpdateValueStrategy sunElevationValueStrategy = new UpdateValueStrategy();
 				sunElevationValueStrategy.setConverter(new DateToSunHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToSunHorizontalCoordinatesStringConverter.COORDS.ALTITUDE));
+				
 				bindingContext.bindValue(lblsunElevationValueLabel, sunElevationObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), sunElevationValueStrategy);
 				
 				// Sun intensity
-				IObservableValue lblsunIntensity = PojoObservables.observeValue(sunIntensityValueLabel, "text");
-				IObservableValue sunIntensityObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());			
+				IObservableValue lblsunIntensity = PojoProperties.value("text").observe(sunIntensityValueLabel);
+				IObservableValue sunIntensityObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				
 				UpdateValueStrategy sunIntensityValueStrategy = new UpdateValueStrategy();
 				sunIntensityValueStrategy.setConverter(new DateToSunIntensityStringConverter(new DecimalFormat(INTENSITY_FORMAT_STRING), geographicCoordinates));
+				
 				bindingContext.bindValue(lblsunIntensity, sunIntensityObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), sunIntensityValueStrategy);
 			}
 			catch(Exception e)

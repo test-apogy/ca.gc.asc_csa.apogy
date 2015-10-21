@@ -27,28 +27,5 @@
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.sensors.pose.provider.PoseItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
-   <extension
-         point="org.eclipse.ui.popupMenus">
-      <objectContribution
-            adaptable="true"
-            id="org.eclipse.symphony.addons.sensors.pose.edit.PositionSensorContribution"
-            objectClass="org.eclipse.symphony.addons.sensors.pose.PositionSensor">
-         <action
-               class="org.eclipse.symphony.addons.sensors.pose.actions.ResetPositionAction"
-               id="org.eclipse.symphony.addons.sensors.pose.edit.action1"
-               label="Reset Position">
-         </action>
-      </objectContribution>
-      <objectContribution
-            adaptable="false"
-            id="org.eclipse.symphony.addons.sensors.pose.edit.OrientationSensoContribution"
-            objectClass="org.eclipse.symphony.addons.sensors.pose.OrientationSensor">
-         <action
-               class="org.eclipse.symphony.addons.sensors.pose.actions.ResetOrientationAction"
-               id="org.eclipse.symphony.addons.sensors.pose.edit.action2"
-               label="Reset Orientation">
-         </action>
-      </objectContribution>
-   </extension>
 
 </plugin>

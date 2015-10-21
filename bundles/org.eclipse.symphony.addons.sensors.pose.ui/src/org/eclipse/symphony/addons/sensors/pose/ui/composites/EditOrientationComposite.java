@@ -1,5 +1,4 @@
-package org.eclipse.symphony.addons.sensors.pose.composites;
-
+package org.eclipse.symphony.addons.sensors.pose.ui.composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
@@ -71,6 +70,7 @@ public class EditOrientationComposite extends Composite
 	public CartesianOrientationCoordinates getNewValues()
 	{		
 		CartesianOrientationCoordinates orientation = Data3dFacade.INSTANCE.createCartesianOrientationCoordinates(orientationSensor.getOrientationCoordinates());
+		
 		try
 		{
 			double xRotation = Math.toRadians(Double.parseDouble(xValueText.getText()));
@@ -80,8 +80,10 @@ public class EditOrientationComposite extends Composite
 			orientation = Data3dFacade.INSTANCE.createCartesianOrientationCoordinates(xRotation, yRotation, zRotation);
 		}
 		catch(Exception e)
-		{			
+		{
+			
 		}
+		
 		return orientation;
 	}
 }

@@ -1,4 +1,4 @@
-package org.eclipse.symphony.addons.sensors.pose.dialogs;
+package org.eclipse.symphony.addons.sensors.pose.ui.dialogs;
 
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
@@ -7,8 +7,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
-import org.eclipse.symphony.addons.sensors.pose.composites.EditPositionComposite;
-import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
+import org.eclipse.symphony.addons.sensors.pose.ui.composites.EditPositionComposite;
+import org.eclipse.symphony.addons.sensors.pose.Activator;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
@@ -51,7 +51,7 @@ public class ResetPositionDialog extends MessageDialog
 				}
 				catch(Exception e)
 				{
-					Logger.INSTANCE.log(PoseEditPlugin.ID, this, "Error occured while reseting position !", EventSeverity.ERROR, e);
+					Logger.INSTANCE.log(Activator.ID, this, "Error occured while reseting position !", EventSeverity.ERROR, e);
 				}
 				break;			
 			}						

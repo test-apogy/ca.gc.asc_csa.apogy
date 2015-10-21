@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -238,7 +238,7 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 		DataBindingContext bindingContext = new DataBindingContext();
 		
 		// Bind SymphonyEnvironment current time to currentTimeLabel.	
-		IObservableValue currentTimeLabelValue = PojoObservables.observeValue(currentTimeValueLabel, "text");		
+		IObservableValue currentTimeLabelValue = PojoProperties.value("text").observe(currentTimeValueLabel);		
 		IObservableValue currentTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getSymphonyEnvironment());			
 		UpdateValueStrategy currentTimeValueStrategy = new UpdateValueStrategy();
 		currentTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(AbstractTimeSourceComposite.DATE_FORMAT_STRING)));

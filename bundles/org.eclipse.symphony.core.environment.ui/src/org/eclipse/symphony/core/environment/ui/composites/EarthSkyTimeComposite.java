@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
@@ -115,36 +115,40 @@ public class EarthSkyTimeComposite extends Composite
 			GeographicCoordinates geographicCoordinates = worksite.getGeographicalCoordinates();
 			
 			// Local Time		
-			IObservableValue lbllocalTimeValueLabel = PojoObservables.observeValue(localTimeValueLabel, "text");		
-			IObservableValue localTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());			
+			IObservableValue lbllocalTimeValueLabel = PojoProperties.value("text").observe(localTimeValueLabel);		
+			IObservableValue localTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+			
 			UpdateValueStrategy localTimeValueStrategy = new UpdateValueStrategy();
 			localTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
+			
 			bindingContext.bindValue(lbllocalTimeValueLabel, localTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), localTimeValueStrategy);
 	
 			// Julian Day
-			IObservableValue lbljulianDayValueLabel = PojoObservables.observeValue(julianDayValueLabel, "text");		
-			IObservableValue julianDayObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());			
+			IObservableValue lbljulianDayValueLabel = PojoProperties.value("text").observe(julianDayValueLabel);		
+			IObservableValue julianDayObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+			
 			UpdateValueStrategy julianDayValueStrategy = new UpdateValueStrategy();
 			julianDayValueStrategy.setConverter(new DateToJulianDayStringConverter(new DecimalFormat(JULIAN_DAY_FORMAT_STRING)));
+			
 			bindingContext.bindValue(lbljulianDayValueLabel, julianDayObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), julianDayValueStrategy);
 	
 			
 			try
 			{			
 				// Sideral Time
-				IObservableValue lblsideralTimeValueLabel = PojoObservables.observeValue(sideralTimeValueLabel, "text");		
-				IObservableValue sideralTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());			
+				IObservableValue lblsideralTimeValueLabel = PojoProperties.value("text").observe(sideralTimeValueLabel);		
+				IObservableValue sideralTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				
 				UpdateValueStrategy sideralTimeValueStrategy = new UpdateValueStrategy();
 				sideralTimeValueStrategy.setConverter(new DateToSideralTimeStringConverter(geographicCoordinates.getLongitude()));
+				
 				bindingContext.bindValue(lblsideralTimeValueLabel, sideralTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), sideralTimeValueStrategy);
-
 			}
 			catch(Exception e)
 			{	
 				e.printStackTrace();
 			}
 		}
-
 		
 		return bindingContext;
 	}

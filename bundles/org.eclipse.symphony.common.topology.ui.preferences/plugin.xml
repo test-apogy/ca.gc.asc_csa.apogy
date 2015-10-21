@@ -14,7 +14,7 @@
          point="org.eclipse.ui.preferencePages">
       <page
             class="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerPreferencesPage"
-            id="ca.gc.space.topology.ui.preferences.TopologyViewerPreferencesPage"
+            id="org.eclipse.symphony.common.topology.ui.preferences.TopologyViewerPreferencesPage"
             name="3D Topology Viewer">
       </page>
       <page

@@ -43,4 +43,62 @@
             genModel="model/mrt_sensors_pose_ui.xcore"/>
    </extension>
 
+   <extension
+   		 point="org.eclipse.ui.commands">
+   	  <command
+   	  		defaultHandler="org.eclipse.symphony.addons.sensors.pose.ui.handlers.ResetPositionCommandHandler"
+   	  		id="org.eclipse.symphony.addons.sensors.pose.ui.commands.ResetPositionCommand"
+   	  		name="Reset Position">
+   	  </command>
+   	  <command
+   	  		defaultHandler="org.eclipse.symphony.addons.sensors.pose.ui.handlers.ResetOrientationCommandHandler"
+   	  		id="org.eclipse.symphony.addons.sensors.pose.ui.commands.ResetOrientationCommand"
+   	  		name="Reset Orientation">
+   	  </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+      	 allPopups="true"
+      	 locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
+      	   <command
+      	   		commandId="org.eclipse.symphony.addons.sensors.pose.ui.commands.ResetPositionCommand"
+      	   		label="Reset Position"
+      	   		style="push">
+      	   	 <visibleWhen
+      	   	 		checkEnabled="false">
+      	   	 	 <with
+      	   	 	 	  variable="activeMenuSelection">
+      	   	 	 	 <iterate
+      	   	 	 	    ifEmpty="false"
+      	   	 	 	    operator="or">
+      	   	 	 	      <instanceof
+      	   	 	 	          value="org.eclipse.symphony.addons.sensors.pose.PositionSensor">
+      	   	 	 	      </instanceof>
+      	   	 	 	 </iterate>
+      	   	 	 </with>
+      	   	 </visibleWhen>
+      	   </command>
+      	   <command
+      	        commandId="org.eclipse.symphony.addons.sensors.pose.ui.commands.ResetOrientationCommand"
+      	        label="Reset Orientation"
+      	        style="push">
+      	      <visibleWhen
+      	             checkEnabled="false">
+      	          <with
+      	               variable="activeMenuSelection">
+      	              <iterate
+      	                 ifEmpty="false"
+      	                 operator="or">
+      	                 <instanceof
+      	                      value="org.eclipse.symphony.addons.sensors.pose.OrientationSensor">
+      	                 </instanceof>
+      	              </iterate>
+      	          </with>
+      	      </visibleWhen>
+      	   </command>
+      </menuContribution>
+   </extension>
+
 </plugin>

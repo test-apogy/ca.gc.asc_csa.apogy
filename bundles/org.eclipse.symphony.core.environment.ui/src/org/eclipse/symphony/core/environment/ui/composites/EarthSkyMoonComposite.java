@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
@@ -98,6 +98,7 @@ public class EarthSkyMoonComposite extends Composite
 		DataBindingContext bindingContext = new DataBindingContext();
 		
 		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getEarthSky().getSurfaceWorksite();
+		
 		if(worksite != null)
 		{
 			GeographicCoordinates geographicCoordinates = worksite.getGeographicalCoordinates();
@@ -105,26 +106,29 @@ public class EarthSkyMoonComposite extends Composite
 			try
 			{			
 				// Moon azimuth.
-				IObservableValue lblmoonAzimuthValueLabel = PojoObservables.observeValue(moonAzimuthValueLabel, "text");		
-				IObservableValue moonAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());			
+				IObservableValue lblmoonAzimuthValueLabel = PojoProperties.value("text").observe(moonAzimuthValueLabel);		
+				IObservableValue moonAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				
 				UpdateValueStrategy moonAzimuthValueStrategy = new UpdateValueStrategy();
 				moonAzimuthValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.COORDS.AZIMUTH));
+				
 				bindingContext.bindValue(lblmoonAzimuthValueLabel, moonAzimuthObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), moonAzimuthValueStrategy);
 	
 				// Moon altitude.
-				IObservableValue lblmoonElevationValueLabel = PojoObservables.observeValue(moonElevationValueLabel, "text");		
-				IObservableValue moonElevationObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());			
+				IObservableValue lblmoonElevationValueLabel = PojoProperties.value("text").observe(moonElevationValueLabel);		
+				IObservableValue moonElevationObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				
 				UpdateValueStrategy moonElevationValueStrategy = new UpdateValueStrategy();
 				moonElevationValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.COORDS.ALTITUDE));
+				
 				bindingContext.bindValue(lblmoonElevationValueLabel, moonElevationObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), moonElevationValueStrategy);
 			}
-			catch(Exception e)
+			catch (Exception e)
 			{	
 				e.printStackTrace();
 			}
 		}
 
-		
 		return bindingContext;
 	}
 }

@@ -14,14 +14,15 @@ Export-Package: org.eclipse.symphony.addons.sensors.pose.ui,
  org.eclipse.symphony.addons.sensors.pose.ui.views
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.symphony.common.log,
  org.eclipse.symphony.common.math;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.topology.ui;visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.addons.sensors.pose;visibility:=reexport,
- org.eclipse.xtext.xbase.lib;bundle-version="2.7.3",
- org.eclipse.emf.ecore.xcore.lib;bundle-version="1.1.0"
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.addons.sensors.pose.ui.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

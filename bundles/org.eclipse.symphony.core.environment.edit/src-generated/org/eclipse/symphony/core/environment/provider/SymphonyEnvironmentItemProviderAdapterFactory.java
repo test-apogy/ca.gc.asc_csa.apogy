@@ -1551,74 +1551,74 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			@Override
 			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
@@ -1707,259 +1707,259 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			public <T> Object caseContentNode(ContentNode<T> object)
 			{
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAtmosphereUtils()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphereUtils()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEclipticCoordinates()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEclipticCoordinates()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSky()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSky()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentUtilities()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentUtilities()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createStar()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStar()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAstronomyUtils()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAstronomyUtils()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMap()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMap()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSlopeRange()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSlopeRange()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
@@ -1972,259 +1972,259 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			@Override
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAtmosphereUtils()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphereUtils()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEclipticCoordinates()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEclipticCoordinates()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSky()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSky()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentUtilities()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentUtilities()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createStar()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStar()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAstronomyUtils()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAstronomyUtils()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMap()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMap()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSlopeRange()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSlopeRange()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
@@ -2237,74 +2237,74 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			public Object caseGroupNode(GroupNode object)
 			{
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
@@ -2317,74 +2317,74 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			public Object caseAggregateGroupNode(AggregateGroupNode object)
 			{
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
@@ -2474,74 +2474,74 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			@Override
 			public Object caseAssemblyLink(AssemblyLink object) {
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}
@@ -2592,9 +2592,9 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			public Object caseWorksitesListGen(WorksitesList object)
 			{
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.WORKSITES_LIST__WORKSITES,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite()));
 
 				return null;
 			}
@@ -2607,74 +2607,74 @@ public class SymphonyEnvironmentItemProviderAdapterFactory extends SymphonyEnvir
 			@Override
 			public Object caseTopologyRoot(TopologyRoot object) {
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 				newChildDescriptors.add
-				(createChildParameter
+					(createChildParameter
 						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-								SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+						 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 				return null;
 			}

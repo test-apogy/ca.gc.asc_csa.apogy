@@ -24,6 +24,16 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated mrt_paths_ui -->
+      <extender
+            uri="org.eclipse.symphony.common.topology.ui"
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>

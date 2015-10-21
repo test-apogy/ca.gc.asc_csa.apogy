@@ -10,22 +10,20 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipse.symphony.addons.sensors.pose.provider
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.symphony.addons.sensors.pose;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.addons.sensors;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data3d;visibility:=reexport,
  org.eclipse.symphony.addons.sensors.edit;visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.topology.edit;visibility:=reexport,
- org.eclipse.symphony.common.geometry.data;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data.edit;visibility:=reexport,
- org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.math.edit;visibility:=reexport,
  org.eclipse.symphony.common.processors;visibility:=reexport,
+ org.eclipse.symphony.common.math.edit;visibility:=reexport,
  org.eclipse.symphony.common.processors.edit;visibility:=reexport,
  org.eclipse.symphony.common.geometry.data3d.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.symphony.common.math;visibility:=reexport,
+ org.eclipse.symphony.common.geometry.data;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
- org.eclipse.emf.common.ui;bundle-version="2.4.0",
- org.eclipse.symphony.common.log;bundle-version="0.3.0"
+ org.eclipse.symphony.addons.sensors.pose;visibility:=reexport
 Bundle-ActivationPolicy: lazy
