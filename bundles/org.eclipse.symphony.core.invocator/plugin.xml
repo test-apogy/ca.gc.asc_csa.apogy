@@ -5,9 +5,18 @@
 -->
 
 <plugin>
-   <extension-point id="InvocatorDelegate" name="InvocatorDelegate" schema="schema/InvocatorDelegate.exsd"/>
-   <extension-point id="TypeContributor" name="TypeContributor" schema="schema/TypeContributor.exsd"/>
-   <extension-point id="SessionProvider" name="SessionProvider" schema="schema/SessionProvider.exsd"/>
+   <extension-point
+           id="invocatorDelegate"
+           name="Invocator Delegate"
+           schema="schema/invocatorDelegate.exsd"/>
+   <extension-point
+           id="typeContributor"
+           name="TypeContributor"
+           schema="schema/typeContributor.exsd"/>
+   <extension-point
+           id="sessionProvider"
+           name="SessionProvider"
+           schema="schema/sessionProvider.exsd"/>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
@@ -24,7 +33,7 @@
    </extension>
 
    <extension
-         point="org.eclipse.symphony.core.invocator.InvocatorDelegate">
+         point="org.eclipse.symphony.core.invocator.invocatorDelegate">
       <element
             invocatorDelegateClass="org.eclipse.symphony.core.invocator.delegates.DefaultInvocatorDelegate">
       </element>

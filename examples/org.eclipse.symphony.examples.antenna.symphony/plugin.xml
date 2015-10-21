@@ -15,13 +15,13 @@
             genModel="model/symphony_examples_antenna_symphony.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.TypeContributor">
+         point="org.eclipse.symphony.core.invocator.typeContributor">
       <Type
             URI="model/PTUDishAntennaSymphonySystem.ss">
       </Type>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.SessionProvider">
+         point="org.eclipse.symphony.core.invocator.sessionProvider">
       <SessionProvider
             Description="Session showing the use of the PTU Dish Antenna example system."
             Name="PTU Dish Antenna Example"

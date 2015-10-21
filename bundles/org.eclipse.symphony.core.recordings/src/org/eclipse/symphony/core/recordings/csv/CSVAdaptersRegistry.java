@@ -16,7 +16,7 @@ import org.eclipse.symphony.core.invocator.Activator;
 
 public class CSVAdaptersRegistry 
 {
-	public static final String CSV_ADAPTER_POINT_ID = "org.eclipse.symphony.core.recordings.CSVAdapter";
+	public static final String CSV_ADAPTER_POINT_ID = "org.eclipse.symphony.core.recordings.csvAdapter";
 	public static final String CSV_ADAPTER_POINT_ID_CLASS = "Class";
 	
 	private static CSVAdaptersRegistry instance = null;

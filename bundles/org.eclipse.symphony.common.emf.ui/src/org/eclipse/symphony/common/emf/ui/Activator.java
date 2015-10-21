@@ -43,7 +43,7 @@ public class Activator extends AbstractUIPlugin
 	// The plug-in ID
 	public static final String ID = "org.eclipse.symphony.common.emf.ui"; //$NON-NLS-1$
 
-	private static final String TIME_SOURCE_COMPOSITE_PROVIDER_POINT_ID = "org.eclipse.symphony.common.emf.ui.TimeSourceCompositeProvider";
+	private static final String TIME_SOURCE_COMPOSITE_PROVIDER_POINT_ID = "org.eclipse.symphony.common.emf.ui.timeSourceCompositeProvider";
 	private static final String TIME_SOURCE_COMPOSITE_PROVIDER_POINT_ID_CLASS = "Class";
 	
 	// The Bundle Context

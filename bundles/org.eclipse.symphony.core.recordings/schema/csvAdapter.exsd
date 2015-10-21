@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.symphony.core.invocator" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.core.recordings" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="org.eclipse.symphony.core.invocator" id="SessionProvider" name="SessionProvider"/>
+         <meta.schema plugin="org.eclipse.symphony.core.recordings" id="csvAdapter" name="CSV Adapter"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]
@@ -17,8 +17,8 @@
          </appInfo>
       </annotation>
       <complexType>
-         <sequence>
-            <element ref="SessionProvider"/>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="Class"/>
          </sequence>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,29 +47,15 @@
       </complexType>
    </element>
 
-   <element name="SessionProvider">
+   <element name="Class">
       <complexType>
-         <attribute name="Name" type="string" use="required">
+         <attribute name="Class" type="string" use="required">
             <annotation>
                <documentation>
-                  Name of the Session.
-               </documentation>
-            </annotation>
-         </attribute>
-         <attribute name="Description" type="string" use="required">
-            <annotation>
-               <documentation>
-                  Description of the Session.
-               </documentation>
-            </annotation>
-         </attribute>
-         <attribute name="URI" type="string" use="required">
-            <annotation>
-               <documentation>
-                  URI that includes the Session definition.
+                  
                </documentation>
                <appInfo>
-                  <meta.attribute kind="resource"/>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.core.recordings.csv.CSVAdapter"/>
                </appInfo>
             </annotation>
          </attribute>

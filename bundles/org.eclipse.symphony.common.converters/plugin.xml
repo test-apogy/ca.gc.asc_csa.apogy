@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension-point id="org.eclipse.symphony.common.converters" name="Converters" schema="schema/org.eclipse.symphony.common.converters.exsd"/>
+   <extension-point
+            id="org.eclipse.symphony.common.converters"
+            name="Converters"
+            schema="schema/converters.exsd"/>
 </plugin>

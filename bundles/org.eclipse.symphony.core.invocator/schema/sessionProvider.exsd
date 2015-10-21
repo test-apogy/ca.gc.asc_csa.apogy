@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.symphony.core.recordings" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.core.invocator" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="org.eclipse.symphony.core.recordings" id="CSVAdapter" name="CSVAdapter"/>
+         <meta.schema plugin="org.eclipse.symphony.core.invocator" id="sessionProvider" name="Session Provider"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]
@@ -17,8 +17,8 @@
          </appInfo>
       </annotation>
       <complexType>
-         <sequence minOccurs="1" maxOccurs="unbounded">
-            <element ref="Class"/>
+         <sequence>
+            <element ref="SessionProvider"/>
          </sequence>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,15 +47,29 @@
       </complexType>
    </element>
 
-   <element name="Class">
+   <element name="SessionProvider">
       <complexType>
-         <attribute name="Class" type="string" use="required">
+         <attribute name="Name" type="string" use="required">
             <annotation>
                <documentation>
-                  
+                  Name of the Session.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="Description" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Description of the Session.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="URI" type="string" use="required">
+            <annotation>
+               <documentation>
+                  URI that includes the Session definition.
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.core.recordings.csv.CSVAdapter"/>
+                  <meta.attribute kind="resource"/>
                </appInfo>
             </annotation>
          </attribute>

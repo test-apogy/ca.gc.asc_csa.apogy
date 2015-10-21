@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.symphony.core.invocator" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.common.converters" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
-      <appInfo>
-         <meta.schema plugin="org.eclipse.symphony.core.invocator" id="InvocatorDelegate" name="InvocatorDelegate"/>
-      </appInfo>
+      <appinfo>
+         <meta.schema plugin="org.eclipse.symphony.common.converters" id="" name="Converters"/>
+      </appinfo>
       <documentation>
          [Enter description of this extension point.]
       </documentation>
@@ -12,13 +12,13 @@
 
    <element name="extension">
       <annotation>
-         <appInfo>
+         <appinfo>
             <meta.element />
-         </appInfo>
+         </appinfo>
       </annotation>
       <complexType>
-         <sequence>
-            <element ref="element"/>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="new_element" minOccurs="1" maxOccurs="unbounded"/>
          </sequence>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -39,64 +39,64 @@
                <documentation>
                   
                </documentation>
-               <appInfo>
+               <appinfo>
                   <meta.attribute translatable="true"/>
-               </appInfo>
+               </appinfo>
             </annotation>
          </attribute>
       </complexType>
    </element>
 
-   <element name="element">
+   <element name="new_element">
       <complexType>
-         <attribute name="invocatorDelegateClass" type="string" use="required">
+         <attribute name="Class" type="string" use="required">
             <annotation>
                <documentation>
-                  
+                  The class implementing IConverter.
                </documentation>
-               <appInfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.core.invocator.delegates.InvocatorDelegate"/>
-               </appInfo>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.common.converters.IConverter"/>
+               </appinfo>
             </annotation>
          </attribute>
       </complexType>
    </element>
 
    <annotation>
-      <appInfo>
+      <appinfo>
          <meta.section type="since"/>
-      </appInfo>
+      </appinfo>
       <documentation>
-         Release 0.1
+         [Enter the first release in which this extension point appears.]
       </documentation>
    </annotation>
 
    <annotation>
-      <appInfo>
+      <appinfo>
          <meta.section type="examples"/>
-      </appInfo>
+      </appinfo>
       <documentation>
-         N/A.
+         [Enter extension point usage example here.]
       </documentation>
    </annotation>
 
    <annotation>
-      <appInfo>
+      <appinfo>
          <meta.section type="apiinfo"/>
-      </appInfo>
+      </appinfo>
       <documentation>
-         N/A.
+         [Enter API information here.]
       </documentation>
    </annotation>
-
 
    <annotation>
-      <appInfo>
-         <meta.section type="copyright"/>
-      </appInfo>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
       <documentation>
-         Agence spatiale canadienne (ASC) / Canadian Space Agency (CSA) 2013 (c)
+         [Enter information about supplied implementation of this extension point.]
       </documentation>
    </annotation>
+
 
 </schema>

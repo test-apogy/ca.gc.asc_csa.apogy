@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="org.eclipse.symphony.core.display" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.eclipse.symphony.core.invocator" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="org.eclipse.symphony.core.display" id="WatchFeatureControlAdapter" name="WatchFeatureControlAdapter"/>
+         <meta.schema plugin="org.eclipse.symphony.core.invocator" id="typeContributor" name="Type Contributor"/>
       </appInfo>
       <documentation>
-         Extension where contribution to the list of WatchFeatureControlAdapter can be made to provide additionnal Control to be used when displaying WatchFeatures.
+         [Enter description of this extension point.]
       </documentation>
    </annotation>
 
@@ -17,8 +17,8 @@
          </appInfo>
       </annotation>
       <complexType>
-         <sequence minOccurs="1" maxOccurs="unbounded">
-            <element ref="new_element"/>
+         <sequence>
+            <element ref="Type"/>
          </sequence>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,15 +47,15 @@
       </complexType>
    </element>
 
-   <element name="new_element">
+   <element name="Type">
       <complexType>
-         <attribute name="Class" type="string" use="required">
+         <attribute name="URI" type="string" use="required">
             <annotation>
                <documentation>
-                  The class implemneting the WatchFeatureControlAdapter.
+                  
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn=":org.eclipse.symphony.core.display.WatchFeatureControlAdapter"/>
+                  <meta.attribute kind="resource"/>
                </appInfo>
             </annotation>
          </attribute>

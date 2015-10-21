@@ -14,7 +14,7 @@ import org.eclipse.symphony.core.invocator.Activator;
 import org.eclipse.symphony.core.invocator.Type;
 
 public class InvocatorDelegateRegistry {
-	public static final String INVOCATOR_DELEGATE_POINT_ID = "org.eclipse.symphony.core.invocator.InvocatorDelegate";
+	public static final String INVOCATOR_DELEGATE_POINT_ID = "org.eclipse.symphony.core.invocator.invocatorDelegate";
 	public static final String INVOCATOR_DELEGATE_POINT_ID_INVOCATOR_DELEGATE_CLASS = "invocatorDelegateClass";
 
 	private static InvocatorDelegateRegistry instance = null;

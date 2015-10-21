@@ -15,7 +15,7 @@
             genModel="model/emf_ecore_examples_satellite.xcore"/>
    </extension>
    <extension
-         point="org.eclipse.symphony.core.invocator.TypeContributor">
+         point="org.eclipse.symphony.core.invocator.typeContributor">
       <Type
             URI="model/SatelliteConstellationExample.ei">
       </Type>

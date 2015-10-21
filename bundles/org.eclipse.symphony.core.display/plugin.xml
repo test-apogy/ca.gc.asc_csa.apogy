@@ -6,7 +6,10 @@
 -->
 
 <plugin>
-   <extension-point id="WatchFeatureControlAdapter" name="WatchFeatureControlAdapter" schema="schema/WatchFeatureControlAdapter.exsd"/>
+   <extension-point
+            id="watchFeatureControlAdapter"
+            name="Watch Feature Control Adapter"
+            schema="schema/watchFeatureControlAdapter.exsd"/>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package

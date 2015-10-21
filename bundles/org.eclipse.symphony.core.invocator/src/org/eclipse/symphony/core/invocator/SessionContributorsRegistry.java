@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.log.Logger;
 
 public class SessionContributorsRegistry 
 {
-	public static final String SESSION_CONTRIBUTORS_POINT_ID = "org.eclipse.symphony.core.invocator.SessionProvider";
+	public static final String SESSION_CONTRIBUTORS_POINT_ID = "org.eclipse.symphony.core.invocator.sessionProvider";
 	public static final String SESSION_CONTRIBUTORS_NAME_ID = "Name";
 	public static final String SESSION_CONTRIBUTORS_DESCRIPTION_ID = "Description";
 	public static final String SESSION_CONTRIBUTORS_URI_ID = "URI";

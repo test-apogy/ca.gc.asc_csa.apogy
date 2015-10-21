@@ -22,16 +22,16 @@
             class="org.eclipse.symphony.core.SymphonyCorePackage"
             genModel="model/symphony_core.xcore"/>
    </extension>
-   <extension
-         point="org.eclipse.symphony.core.invocator.InvocatorDelegate">
-      <element
-            invocatorDelegateClass="org.eclipse.symphony.core.invocator.SymphonyInvocatorDelegate">
-      </element>
-   </extension>
    
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="ss"
             class="org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorResourceFactoryImpl"/>
+   </extension>
+   <extension
+         point="org.eclipse.symphony.core.invocator.invocatorDelegate">
+      <element
+            invocatorDelegateClass="org.eclipse.symphony.core.invocator.SymphonyInvocatorDelegate">
+      </element>
    </extension>
 </plugin>
