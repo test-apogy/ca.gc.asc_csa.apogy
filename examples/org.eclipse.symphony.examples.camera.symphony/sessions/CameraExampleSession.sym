@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:ecore="org.eclipse.symphony.common.emf" xmlns:environment="org.eclipse.symphony.core.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmi:id="_2irY0ArOEeW4-_ONWXXiAw" name="">
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:emf="org.eclipse.symphony.common.emf" xmlns:environment="org.eclipse.symphony.core.environment" xmlns:invocator="org.eclipse.symphony.core.invocator" xmi:id="_2irY0ArOEeW4-_ONWXXiAw" name="">
   <environment xsi:type="core:SymphonyEnvironment" xmi:id="_2irY0QrOEeW4-_ONWXXiAw" name="Camera Example" description="This is an example session, illustrating how to use the camera example" activeContext="_2irY2ArOEeW4-_ONWXXiAw" time="2015-04-08T14:45:33.793-0400" activeWorksite="_2ir_4ArOEeW4-_ONWXXiAw" activeTimeSource="_2ism9QrOEeW4-_ONWXXiAw">
     <typesList xmi:id="_2irY0grOEeW4-_ONWXXiAw">
       <localTypes xmi:id="_2irY0wrOEeW4-_ONWXXiAw"/>
@@ -14,14 +14,14 @@
       <contexts xsi:type="invocator:BasicContext" xmi:id="_2irY2ArOEeW4-_ONWXXiAw" name="Simulated Impl. Context" dataProductsList="_2ism_grOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_2irY2QrOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_2irY2grOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
-            <implementationClass href="org.eclipse.symphony.examples.camera.symphony#//CameraSimulated"/>
+            <implementationClass href="org.eclipse.symphony.examples.camera#//CameraSimulated"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
       <contexts xsi:type="invocator:BasicContext" xmi:id="_2irY2wrOEeW4-_ONWXXiAw" name="Stub Impl. Context" dataProductsList="_2isnAArOEeW4-_ONWXXiAw">
         <variableImplementationsList xmi:id="_2irY3ArOEeW4-_ONWXXiAw">
           <variableImplementations xmi:id="_2irY3QrOEeW4-_ONWXXiAw" variable="_2irY1grOEeW4-_ONWXXiAw">
-            <implementationClass href="org.eclipse.symphony.examples.camera.symphony#//CameraStub"/>
+            <implementationClass href="org.eclipse.symphony.examples.camera#//CameraStub"/>
           </variableImplementations>
         </variableImplementationsList>
       </contexts>
@@ -32,7 +32,7 @@
         <mapsList xmi:id="_2ir_4wrOEeW4-_ONWXXiAw">
           <maps xmi:id="_2ir_5ArOEeW4-_ONWXXiAw" name="MarsYard" description="Simple Mars Yard Map.">
             <transformation xmi:id="_2ism8ArOEeW4-_ONWXXiAw"/>
-            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_2ism8QrOEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." meshIsDirty="false" url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
+            <layers xsi:type="environment:CartesianTriangularMeshURLMapLayer" xmi:id="_2ism8QrOEeW4-_ONWXXiAw" name="MarsYardDEM 1.0 meters resolution" description="Simple Plannar Mars Yard." url="platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri"/>
           </maps>
         </mapsList>
         <geographicalCoordinates xmi:id="_2ism8grOEeW4-_ONWXXiAw" longitude="-1.2809652838639536" latitude="0.7944425755487251" elevation="30.0"/>
@@ -40,13 +40,13 @@
       <orbitsModels xmi:id="_2ism8wrOEeW4-_ONWXXiAw"/>
     </worksitesList>
     <timeSourcesList xmi:id="_2ism9ArOEeW4-_ONWXXiAw">
-      <timeSources xsi:type="ecore:CurrentTimeSource" xmi:id="_2ism9QrOEeW4-_ONWXXiAw" time="2015-04-08T14:45:33.793-0400"/>
+      <timeSources xsi:type="emf:CurrentTimeSource" xmi:id="_2ism9QrOEeW4-_ONWXXiAw" time="2015-04-08T14:45:33.793-0400"/>
     </timeSourcesList>
   </environment>
   <programsList xmi:id="_2ism9grOEeW4-_ONWXXiAw">
     <programs xsi:type="invocator:OperationCallsList" xmi:id="_2ism9wrOEeW4-_ONWXXiAw">
       <operationCalls xmi:id="_2ism-ArOEeW4-_ONWXXiAw" name="Init" variable="_2irY1grOEeW4-_ONWXXiAw">
-        <eOperation href="org.eclipse.symphony.examples.camera.symphony#//Camera/init"/>
+        <eOperation href="org.eclipse.symphony.examples.camera#//Camera/init"/>
       </operationCalls>
       <operationCalls xmi:id="_2ism-QrOEeW4-_ONWXXiAw" name="Take Snapshot" variable="_2irY1grOEeW4-_ONWXXiAw">
         <eOperation href="org.eclipse.symphony.addons.sensors.imaging#//AbstractCamera/takeSnapshot"/>
