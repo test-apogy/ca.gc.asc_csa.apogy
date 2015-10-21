@@ -5,8 +5,12 @@
  */
 package org.eclipse.symphony.common.math.provider;
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
+
+import javax.vecmath.Matrix3d;
+import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -22,17 +26,24 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.math.Matrix3x3;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.math.Matrix3x3} object.
+ * This is the item provider adapter for a {@link ca.gc.space.math.Matrix3x3} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */
 public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 		IEditingDomainItemProvider, IStructuredItemContentProvider,
-		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource 
+		{
+	
+	public static final String DEGREE_STRING = 	"\u00b0";
+	private DecimalFormat orientationFormat = new DecimalFormat("0.0");
+	
 	/**
 	 * This constructs an instance from a factory and a notifier. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -282,9 +293,22 @@ public class Matrix3x3ItemProvider extends ItemProviderAdapter implements
 	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object) 
+	{
 		Matrix3x3 matrix3x3 = (Matrix3x3) object;
-		return getString("_UI_Matrix3x3_type") + " " + matrix3x3.toString();
+		
+		Matrix3d rotation = new Matrix3d(matrix3x3.asMatrix3d());		
+		Vector3d rotationVector = GeometricUtils.extractRotationFromXYZRotMatrix(rotation);
+		
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(getString("_UI_Matrix3x3_type"));
+		
+		// Orientation
+		buffer.append(" (" + orientationFormat.format(Math.toDegrees(rotationVector.getX())) + DEGREE_STRING + ", ");
+		buffer.append(orientationFormat.format(Math.toDegrees(rotationVector.getY())) + DEGREE_STRING + ", ");
+		buffer.append(orientationFormat.format(Math.toDegrees(rotationVector.getZ())) + DEGREE_STRING + ")");
+		
+		return buffer.toString();
 	}
 
 	/**

@@ -1,8 +1,10 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
+ * <copyright>
+ * </copyright>
+ *
+ * $Id: AggregateGroupNodeItemProvider.java,v 1.9.2.2 2015/02/03 20:01:35 rlarcheveque Exp $
  */
 package org.eclipse.symphony.common.topology.provider;
-
 
 import java.util.Collection;
 import java.util.List;
@@ -12,21 +14,22 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.TopologyFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.AggregateGroupNode} object.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc
+ * --> <!-- end-user-doc -->
  * @generated
  */
 public class AggregateGroupNodeItemProvider extends GroupNodeItemProvider {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This constructs an instance from a factory and a notifier. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public AggregateGroupNodeItemProvider(AdapterFactory adapterFactory) {
@@ -34,9 +37,9 @@ public class AggregateGroupNodeItemProvider extends GroupNodeItemProvider {
 	}
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns the property descriptors for the adapted class. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -49,25 +52,28 @@ public class AggregateGroupNodeItemProvider extends GroupNodeItemProvider {
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * This specifies how to implement {@link #getChildren} and is used to
+	 * deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand},
+	 * {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in
+	 * {@link #createCommand}. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(
+			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN);
+			childrenFeatures
+					.add(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN);
 		}
 		return childrenFeatures;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -80,8 +86,8 @@ public class AggregateGroupNodeItemProvider extends GroupNodeItemProvider {
 
 	/**
 	 * This returns AggregateGroupNode.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -91,24 +97,37 @@ public class AggregateGroupNodeItemProvider extends GroupNodeItemProvider {
 
 	/**
 	 * This returns the label text for the adapted class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((AggregateGroupNode)object).getDescription();
-		return label == null || label.length() == 0 ?
-			getString("_UI_AggregateGroupNode_type") :
-			getString("_UI_AggregateGroupNode_type") + " " + label;
+	public String getText(Object object) 
+	{
+		AggregateGroupNode aggregateGroupNode = (AggregateGroupNode)object;
+		String label = null;
+		if(aggregateGroupNode.getNodeId() != null && aggregateGroupNode.getNodeId().length() > 0)
+		{
+			label = aggregateGroupNode.getNodeId();
+		}
+		else
+		{
+			label = getString("_UI_AggregateGroupNode_type");
+		}
+		
+		if(aggregateGroupNode.getChildren().size() > 0)
+		{
+			label += " [" + aggregateGroupNode.getChildren().size() + "]";
+		}
+		
+		return label;		
 	}
-	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -124,14 +143,15 @@ public class AggregateGroupNodeItemProvider extends GroupNodeItemProvider {
 	}
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s
+	 * describing the children that can be created under this object. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(
+			Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add
@@ -206,13 +226,15 @@ public class AggregateGroupNodeItemProvider extends GroupNodeItemProvider {
 	}
 
 	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * This returns the label text for
+	 * {@link org.eclipse.emf.edit.command.CreateChildCommand}. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature,
+			Object child, Collection<?> selection) {
 		Object childFeature = feature;
 		Object childObject = child;
 

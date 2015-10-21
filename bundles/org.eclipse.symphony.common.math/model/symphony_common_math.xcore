@@ -1,4 +1,9 @@
-@GenModel(modelDirectory="/org.eclipse.symphony.common.math/src", extensibleProviderFactory="true", childCreationExtenders="true", modelPluginID="org.eclipse.symphony.common.math", importerID="org.eclipse.emf.importer.ecore")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.math/src",
+		  extensibleProviderFactory="true",
+		  childCreationExtenders="true",
+		  modelPluginID="org.eclipse.symphony.common.math",
+		  importerID="org.eclipse.emf.importer.ecore")
+		  
 package org.eclipse.symphony.common.math
 
 class Matrix4x4 {

@@ -5,11 +5,9 @@
  */
 package org.eclipse.symphony.common.math.provider;
 
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
-
-import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -25,11 +23,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.math.Matrix4x4} object.
+ * This is the item provider adapter for a {@link ca.gc.space.math.Matrix4x4} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */
@@ -37,14 +38,12 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 		IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
-	private NumberFormat formatter = null;
+	public static final String DEGREE_STRING = 	"\u00b0";
+	public static final String METERS_STRING = 	"m";
+	
+	private DecimalFormat positionFormat = new DecimalFormat("0.000");
+	private DecimalFormat orientationFormat = new DecimalFormat("0.0");
 
-	private NumberFormat getFormatter() {
-		if (formatter == null) {
-			formatter = NumberFormat.getInstance();
-		}
-		return formatter;
-	}
 
 	/**
 	 * This constructs an instance from a factory and a notifier. <!--
@@ -456,24 +455,27 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		Matrix4x4 matrix4x4 = (Matrix4x4) object;
+	public String getText(Object object) 
+	{
+		Matrix4x4 matrix4x4 = (Matrix4x4) object;		
 
-		Matrix4d mat = matrix4x4.asMatrix4d();
-
+		Tuple3d position = MathFacade.INSTANCE.extractPosition(matrix4x4);
+		Tuple3d orientation = MathFacade.INSTANCE.extractOrientation(matrix4x4);
+		
 		StringBuffer buffer = new StringBuffer();
 
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++) {
-				buffer.append(getFormatter().format(mat.getElement(i, j)));
-				if (!(i == 3 && j == 3)) {
-					buffer.append(", ");
-				}
-			}
-			if (i != 3) {
-				buffer.append("\n");
-			}
-		}
+		buffer.append(getString("_UI_Matrix4x4_type"));
+		
+		// Position
+		buffer.append(" (" + positionFormat.format(position.getX()) + METERS_STRING + ", ");
+		buffer.append(positionFormat.format(position.getY()) + METERS_STRING + ", ");
+		buffer.append(positionFormat.format(position.getZ()) + METERS_STRING + ")");
+		
+		
+		// Orientation
+		buffer.append(" (" + orientationFormat.format(Math.toDegrees(orientation.getX())) + DEGREE_STRING + ", ");
+		buffer.append(orientationFormat.format(Math.toDegrees(orientation.getY())) + DEGREE_STRING + ", ");
+		buffer.append(orientationFormat.format(Math.toDegrees(orientation.getZ())) + DEGREE_STRING + ")");
 
 		return buffer.toString();
 	}

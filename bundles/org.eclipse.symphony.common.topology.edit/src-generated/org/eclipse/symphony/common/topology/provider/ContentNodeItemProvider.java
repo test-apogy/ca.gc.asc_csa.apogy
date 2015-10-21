@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyFactory;

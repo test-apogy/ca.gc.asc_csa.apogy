@@ -145,7 +145,8 @@ public class Tuple3dItemProvider extends ItemProviderAdapter implements
 	public String getText(Object object) {
 
 		Tuple3d tuple3d = (Tuple3d) object;
-		return "(" + getFormatter().format(tuple3d.getX()) + ", "
+		return getString("_UI_Tuple3d_type") + " (" 
+				+ getFormatter().format(tuple3d.getX()) + ", "
 				+ getFormatter().format(tuple3d.getY()) + ", "
 				+ getFormatter().format(tuple3d.getZ()) + ")";
 	}

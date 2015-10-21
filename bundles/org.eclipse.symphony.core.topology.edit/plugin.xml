@@ -34,7 +34,7 @@
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
-            uri="http:///ca/gc/space/topology.ecore"
+            uri="org.eclipse.symphony.core.topology"
             class="org.eclipse.symphony.core.topology.provider.SymphonyTopologyItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 

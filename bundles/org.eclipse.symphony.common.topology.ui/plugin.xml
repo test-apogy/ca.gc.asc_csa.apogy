@@ -2,19 +2,19 @@
 <?eclipse version="3.2"?>
 <plugin>
    <extension-point
-   		id="java3d"
+   		id="org.eclipse.symphony.common.topology.ui.java3d"
    		name="Java3d Adapter"
    		schema="schema/java3d.exsd"/>
    <extension-point
-   		id="presentation"
+   		id="org.eclipse.symphony.common.topology.ui.presentation"
    		name="Presentation Adapter"
    		schema="schema/presentation.exsd"/>
    <extension-point
-   		id="propertyDescriptor"
+   		id="org.eclipse.symphony.common.topology.ui.propertyDescriptor"
    		name="Property Descriptor"
    		schema="schema/propertyDescriptor.exsd"/>
    <extension-point
-   		id="graphicsContextAdapter"
+   		id="org.eclipse.symphony.common.topology.ui.graphicsContextAdapter"
    		name="Graphics Context Adapter"
    		schema="schema/graphicsContextAdapter.exsd"/>
    <extension

@@ -3,7 +3,7 @@
 <schema targetNamespace="org.eclipse.symphony.common.topology.ui" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="org.eclipse.symphony.common.topology.ui" id="org.eclipse.symphony.common.topology.ui.java3d" name="Java3d Adapter"/>
+         <meta.schema plugin="org.eclipse.symphony.common.topology.ui" id="java3d" name="Java3d Adapter"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]

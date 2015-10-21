@@ -9,7 +9,11 @@
 -->
 
 <plugin>
-   <extension-point id="provider" name="UI Provider" schema="schema/provider.exsd"/>
+   <extension-point
+   			  id="provider"
+   			  name="UI Provider"
+   			  schema="schema/provider.exsd">
+   </extension-point>
 
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
