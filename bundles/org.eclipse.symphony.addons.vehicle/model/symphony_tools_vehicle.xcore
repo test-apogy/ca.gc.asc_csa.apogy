@@ -315,7 +315,7 @@ class PathPlannerTool extends AbstractTwoPoints3DTool
 	refers CartesianTriangularMeshMapLayer meshLayer
 		
 	@GenModel(children="true", notify="true")
-	contains MeshWayPointPathPlanner<?>[0..1] pathPlanner
+	contains MeshWayPointPathPlanner[0..1] pathPlanner
 	
 	@GenModel(children="true", notify="true", property="Readonly")
 	contains WayPointPath[0..1] plannedPath 	
