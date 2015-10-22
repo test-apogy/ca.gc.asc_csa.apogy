@@ -58,19 +58,19 @@ public final class EMFEcoreExampleRoverEditPlugin extends EMFPlugin {
 	public EMFEcoreExampleRoverEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     EMFEcoreExampleCameraEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     MRTSensorsImagingEditPlugin.INSTANCE,
-		     MRTActuatorsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     MRTActuatorsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     ImagesCoreEditPlugin.INSTANCE,
+		     EMFEcoreExampleRoboticArmEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     MRTSensorsImagingEditPlugin.INSTANCE,
+		     SensorsEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		     EMFEcoreExampleMobilePlatformEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
 		   });
 	}
 

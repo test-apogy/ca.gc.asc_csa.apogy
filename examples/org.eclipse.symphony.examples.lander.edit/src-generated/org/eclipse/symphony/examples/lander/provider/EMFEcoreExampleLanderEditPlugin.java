@@ -55,21 +55,21 @@ public final class EMFEcoreExampleLanderEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     ImagesCoreEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     PathplannersEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
+		     TopologyDynamicsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		     SymphonyToolsVehicleEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     TopologyDynamicsEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		   });
 	}
 

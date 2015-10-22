@@ -50,18 +50,18 @@ public final class SymphonyTelecomToolsEditPlugin extends EMFPlugin {
 	public SymphonyTelecomToolsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
-		     ImagesCoreEditPlugin.INSTANCE,
 		     SymphonyToolsCoreEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

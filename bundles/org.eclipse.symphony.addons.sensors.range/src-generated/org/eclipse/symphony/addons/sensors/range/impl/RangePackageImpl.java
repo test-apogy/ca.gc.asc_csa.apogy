@@ -229,9 +229,9 @@ public class RangePackageImpl extends EPackageImpl implements RangePackage {
 
 		// Initialize simple dependencies
 		SensorsPackage.eINSTANCE.eClass();
-		EMFEcorePackage.eINSTANCE.eClass();
-		Data25dPackage.eINSTANCE.eClass();
 		FovPackage.eINSTANCE.eClass();
+		Data25dPackage.eINSTANCE.eClass();
+		EMFEcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theRangePackage.createPackageContents();

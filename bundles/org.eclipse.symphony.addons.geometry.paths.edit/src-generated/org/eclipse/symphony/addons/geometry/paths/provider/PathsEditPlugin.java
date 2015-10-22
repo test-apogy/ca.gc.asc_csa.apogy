@@ -47,10 +47,10 @@ public final class PathsEditPlugin extends EMFPlugin {
 	public PathsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Data3dEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

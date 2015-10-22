@@ -54,20 +54,20 @@ public final class SymphonyToolsVehicleEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     SymphonyToolsCoreEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     PathplannersEditPlugin.INSTANCE,
-		     ImagesCoreEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
-		     TopologyDynamicsEditPlugin.INSTANCE,
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     TopologyDynamicsEditPlugin.INSTANCE,
+		     PathsEditPlugin.INSTANCE,
 		   });
 	}
 
