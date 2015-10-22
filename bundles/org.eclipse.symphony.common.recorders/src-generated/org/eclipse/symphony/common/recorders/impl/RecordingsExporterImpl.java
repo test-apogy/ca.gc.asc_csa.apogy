@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.recorders.RecordingsExporter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.RecordingsExporterImpl#getRecordings <em>Recordings</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

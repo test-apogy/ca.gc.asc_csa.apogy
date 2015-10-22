@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getSurface <em>Surface</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getNormal <em>Normal</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getCentroid <em>Centroid</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPolygon()
  * @model

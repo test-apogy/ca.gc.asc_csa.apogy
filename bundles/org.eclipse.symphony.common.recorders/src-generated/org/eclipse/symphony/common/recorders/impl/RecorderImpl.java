@@ -21,11 +21,11 @@ import org.eclipse.symphony.common.recorders.RecordersPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.RecorderImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.RecorderImpl#getStatus <em>Status</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

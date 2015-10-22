@@ -15,6 +15,8 @@ import org.eclipse.symphony.common.file.csv.CsvValueProvider;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Csv Value Provider</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

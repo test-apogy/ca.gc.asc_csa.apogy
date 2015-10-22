@@ -21,7 +21,6 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <em><b>Points Range Gager</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PointsRangeGagerImpl#getMinX <em>Min X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PointsRangeGagerImpl#getMaxX <em>Max X</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PointsRangeGagerImpl#getMinZ <em>Min Z</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PointsRangeGagerImpl#getMaxZ <em>Max Z</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

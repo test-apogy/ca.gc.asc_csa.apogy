@@ -52,8 +52,8 @@ public final class PathplannersEditPlugin extends EMFPlugin {
 		     ProcessorsEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		   });
 	}
 

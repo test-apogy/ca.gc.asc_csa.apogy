@@ -148,8 +148,6 @@ public enum MobilePlateformStatus implements Enumerator
 	 * Returns the '<em><b>Mobile Plateform Status</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MobilePlateformStatus get(String literal)
@@ -167,8 +165,6 @@ public enum MobilePlateformStatus implements Enumerator
 	 * Returns the '<em><b>Mobile Plateform Status</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MobilePlateformStatus getByName(String name)
@@ -186,8 +182,6 @@ public enum MobilePlateformStatus implements Enumerator
 	 * Returns the '<em><b>Mobile Plateform Status</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static MobilePlateformStatus get(int value)

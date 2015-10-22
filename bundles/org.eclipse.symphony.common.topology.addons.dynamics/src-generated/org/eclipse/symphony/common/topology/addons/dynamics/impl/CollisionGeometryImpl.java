@@ -29,7 +29,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CollisionGeometryImpl#getSimulationProperties <em>Simulation Properties</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CollisionGeometryImpl#getGeometry <em>Geometry</em>}</li>
@@ -38,6 +37,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CollisionGeometryImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CollisionGeometryImpl#getGeometryId <em>Geometry Id</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

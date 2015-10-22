@@ -120,8 +120,8 @@ public class RecordersPackageImpl extends EPackageImpl implements RecordersPacka
 		isInited = true;
 
 		// Initialize simple dependencies
-		ProcessorsPackage.eINSTANCE.eClass();
 		CsvPackage.eINSTANCE.eClass();
+		ProcessorsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theRecordersPackage.createPackageContents();

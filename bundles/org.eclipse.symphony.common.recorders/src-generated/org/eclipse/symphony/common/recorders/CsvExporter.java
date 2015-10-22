@@ -13,12 +13,12 @@ import org.eclipse.symphony.common.file.csv.CsvColumnsSet;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.recorders.CsvExporter#isIncludeColumnDescription <em>Include Column Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.recorders.CsvExporter#isIncludeColumnName <em>Include Column Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.recorders.CsvExporter#getColumnSet <em>Column Set</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.recorders.RecordersPackage#getCsvExporter()
  * @model

@@ -20,16 +20,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated mrt_fov_bindings -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>

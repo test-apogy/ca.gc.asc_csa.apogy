@@ -37,11 +37,11 @@ import org.eclipse.symphony.common.topology.TopologyFactory;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.CircularExclusionZoneImpl#getRadius <em>Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.CircularExclusionZoneImpl#isInvertSamplingShape <em>Invert Sampling Shape</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

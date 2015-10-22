@@ -14,6 +14,8 @@ import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Ambient Light</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

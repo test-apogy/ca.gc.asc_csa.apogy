@@ -14,13 +14,13 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getV0 <em>V0</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getV1 <em>V1</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getHeight <em>Height</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPlane()
  * @model

@@ -26,7 +26,6 @@ import org.eclipse.symphony.common.math.quickhull3d.QuickHull3D;
  * <em><b>Delaunay Mesher</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#getTolerance <em>Tolerance</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#getAlpha <em>Alpha</em>}</li>
@@ -34,6 +33,7 @@ import org.eclipse.symphony.common.math.quickhull3d.QuickHull3D;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#isBoundingTriangulation <em>Bounding Triangulation</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#getMeshingPlane <em>Meshing Plane</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

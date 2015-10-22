@@ -19,11 +19,11 @@ import org.eclipse.symphony.common.file.csv.CsvPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnsSetImpl#getColumns <em>Columns</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnsSetImpl#getName <em>Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

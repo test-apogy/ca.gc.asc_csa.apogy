@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfRow <em>Number Of Row</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNumberOfColumns <em>Number Of Columns</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getCellSize <em>Cell Size</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue <em>No Data Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASCHeaderData()
  * @model

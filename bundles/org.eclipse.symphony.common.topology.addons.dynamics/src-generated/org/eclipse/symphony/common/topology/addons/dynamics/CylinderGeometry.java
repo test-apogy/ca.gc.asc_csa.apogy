@@ -15,11 +15,11 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry#getRadius <em>Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry#getLength <em>Length</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCylinderGeometry()
  * @model

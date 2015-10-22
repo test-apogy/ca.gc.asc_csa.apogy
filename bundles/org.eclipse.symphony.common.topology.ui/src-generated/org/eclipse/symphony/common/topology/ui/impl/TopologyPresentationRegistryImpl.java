@@ -38,11 +38,11 @@ import org.eclipse.symphony.common.topology.ui.internal.MultiNodeListener;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationRegistryImpl#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.TopologyPresentationRegistryImpl#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMin <em>XMin</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getXMax <em>XMax</em>}</li>
@@ -24,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getYDimension <em>YDimension</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension <em>ZDimension</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent()
  * @model

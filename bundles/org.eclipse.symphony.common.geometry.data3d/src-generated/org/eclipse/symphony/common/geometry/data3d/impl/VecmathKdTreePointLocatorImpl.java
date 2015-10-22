@@ -24,6 +24,8 @@ import edu.wlu.cs.levy.CG.KeySizeException;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Vecmath Kd Tree Point Locator</b></em>'. <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

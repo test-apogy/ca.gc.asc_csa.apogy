@@ -21,12 +21,12 @@ import org.eclipse.symphony.addons.sensors.fov.FovPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl#getMinimumDistance <em>Minimum Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl#getMaximumDistance <em>Maximum Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl#getDistance <em>Distance</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

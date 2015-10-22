@@ -21,12 +21,12 @@ import org.eclipse.symphony.common.recorders.RecordersPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.CsvExporterImpl#isIncludeColumnDescription <em>Include Column Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.CsvExporterImpl#isIncludeColumnName <em>Include Column Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.recorders.impl.CsvExporterImpl#getColumnSet <em>Column Set</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

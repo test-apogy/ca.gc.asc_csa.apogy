@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CubeSamplingShapeImpl#getCorner1 <em>Corner1</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CubeSamplingShapeImpl#getCorner2 <em>Corner2</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CubeSamplingShapeImpl#isIncludeJustTouching <em>Include Just Touching</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
