@@ -228,36 +228,6 @@ public class ContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createMathFacade()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createMatrix3x3()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createTuple3d()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createPolynomial()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createMathIO()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEAttribute()));
 
 		newChildDescriptors.add
@@ -329,6 +299,36 @@ public class ContentNodeItemProvider
 			(createChildParameter
 				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createETypeParameter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 MathFactory.eINSTANCE.createMatrix4x4()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 MathFactory.eINSTANCE.createMathFacade()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 MathFactory.eINSTANCE.createMatrix3x3()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 MathFactory.eINSTANCE.createTuple3d()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 MathFactory.eINSTANCE.createPolynomial()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 MathFactory.eINSTANCE.createMathIO()));
 	}
 
 }
