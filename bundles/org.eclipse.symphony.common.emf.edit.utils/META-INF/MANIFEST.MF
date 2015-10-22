@@ -8,6 +8,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.eclipse.symphony.common.emf.edit.utils,
+ org.eclipse.symphony.common.emf.edit.utils.descriptors,
  org.eclipse.symphony.common.emf.edit.utils.impl,
  org.eclipse.symphony.common.emf.edit.utils.util
 Require-Bundle: org.eclipse.core.runtime,

@@ -19,5 +19,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.topology.edit;visibility:=reexport,
- org.eclipse.symphony.common.obsolete.eclipse.emf.edit
+ org.eclipse.ui;bundle-version="3.106.1"
 Bundle-ActivationPolicy: lazy

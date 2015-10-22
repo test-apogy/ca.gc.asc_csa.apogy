@@ -28,6 +28,8 @@ import org.eclipse.symphony.examples.lidar.LidarSimulated;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lidar Simulated</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -21,5 +21,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.topology.edit;visibility:=reexport,
  org.eclipse.symphony.common.math;visibility:=reexport,
- org.eclipse.symphony.common.math.edit;visibility:=reexport
+ org.eclipse.symphony.common.math.edit;visibility:=reexport,
+ org.eclipse.ui;bundle-version="3.106.1"
 Bundle-ActivationPolicy: lazy

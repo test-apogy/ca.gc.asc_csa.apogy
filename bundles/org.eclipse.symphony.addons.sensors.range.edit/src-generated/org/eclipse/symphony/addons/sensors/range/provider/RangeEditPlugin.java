@@ -47,12 +47,12 @@ public final class RangeEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     SensorsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		     Data25dEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}

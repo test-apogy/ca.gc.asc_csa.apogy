@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.processors.ProcessorsPackage;
  * <em><b>Processor</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorImpl#getInput <em>Input</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.processors.impl.ProcessorImpl#getOutput <em>Output</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

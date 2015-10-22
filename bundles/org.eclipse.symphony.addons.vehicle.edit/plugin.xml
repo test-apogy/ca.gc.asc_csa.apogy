@@ -23,20 +23,20 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_vehicle -->
       <extender
-            uri="org.eclipse.symphony.addons.geometry.paths"
-            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$PathsChildCreationExtender"/>
+            uri="org.eclipse.symphony.addons"
+            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.addons"
-            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core"
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.addons.geometry.paths"
+            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$PathsChildCreationExtender"/>
    </extension>
 
 </plugin>

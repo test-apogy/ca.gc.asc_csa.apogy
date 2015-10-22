@@ -40,8 +40,8 @@ public final class RangeSensorsUIEditPlugin extends EMFPlugin {
 	public RangeSensorsUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

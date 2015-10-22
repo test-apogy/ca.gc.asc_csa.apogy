@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getData <em>Data</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getStandardDeviation <em>Standard Deviation</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getMin <em>Min</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.statistics.Population#getMax <em>Max</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.math.statistics.StatisticsPackage#getPopulation()
  * @model

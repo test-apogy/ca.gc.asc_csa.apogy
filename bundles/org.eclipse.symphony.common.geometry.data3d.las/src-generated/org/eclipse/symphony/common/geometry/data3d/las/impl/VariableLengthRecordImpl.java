@@ -18,7 +18,6 @@ import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getReserved <em>Reserved</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getUserID <em>User ID</em>}</li>
@@ -26,6 +25,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getRecordLenghtAfterHeader <em>Record Lenght After Header</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.VariableLengthRecordImpl#getDescription <em>Description</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
