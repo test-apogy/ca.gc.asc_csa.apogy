@@ -14,7 +14,7 @@
       <package
             uri="org.eclipse.symphony.common.topology.addons.dynamics"
             class="org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage"
-            genModel="model/topology_dynamics.xcore"/>
+            genModel="model/symphony_common_topology_addons_dynamics.xcore"/>
    </extension>
 
 </plugin>

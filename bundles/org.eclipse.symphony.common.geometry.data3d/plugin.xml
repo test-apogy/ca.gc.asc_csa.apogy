@@ -12,7 +12,7 @@
     <package 
        uri = "org.eclipse.symphony.common.geometry.data3d" 
        class = "org.eclipse.symphony.common.geometry.data3d.Data3dPackage"
-       genModel = "model/mrt_geometry_data3d.xcore" /> 
+       genModel = "model/symphony_common_geometry_data3d.xcore" /> 
   </extension>
   <extension
         point="org.eclipse.symphony.common.converters">

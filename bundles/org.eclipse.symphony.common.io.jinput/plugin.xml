@@ -12,7 +12,7 @@
       <package
             uri="org.eclipse.symphony.common.io.jinput"
             class="org.eclipse.symphony.common.io.jinput.JInputPackage"
-            genModel="model/symphony_common_ui_jinput.xcore"/>
+            genModel="model/symphony_common_io_jinput.xcore"/>
    </extension>
 
 </plugin>

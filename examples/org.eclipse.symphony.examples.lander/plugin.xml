@@ -12,7 +12,7 @@
       <package
             uri="org.eclipse.symphony.examples.lander"
             class="org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage"
-            genModel="model/emf_ecore_examples_lander.xcore"/>
+            genModel="model/symphony_examples_lander.xcore"/>
    </extension>
 
 </plugin>

@@ -14,7 +14,7 @@
     <package 
        uri = "org.eclipse.symphony.common.topology" 
        class = "org.eclipse.symphony.common.topology.TopologyPackage"
-       genModel = "model/topology.xcore" /> 
+       genModel = "model/symphony_common_topology.xcore" /> 
   </extension>
 
 </plugin>

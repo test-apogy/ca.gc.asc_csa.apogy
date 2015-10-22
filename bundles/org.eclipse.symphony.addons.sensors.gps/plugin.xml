@@ -14,7 +14,7 @@
       <package
             uri="org.eclipse.symphony.addons.sensors.gps"
             class="org.eclipse.symphony.addons.sensors.gps.GpsPackage"
-            genModel="model/GPS.xcore"/>
+            genModel="model/symphony_addons_sensors_gps.xcore"/>
    </extension>
 
 </plugin>

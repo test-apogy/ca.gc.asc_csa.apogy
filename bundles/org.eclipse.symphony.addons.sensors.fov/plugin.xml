@@ -13,7 +13,7 @@
     <package 
        uri = "org.eclipse.symphony.addons.sensors.fov" 
        class = "org.eclipse.symphony.addons.sensors.fov.FovPackage"
-       genModel = "model/fov.xcore" /> 
+       genModel = "model/symphony_addons_sensors_fov.xcore" /> 
   </extension>
 
 </plugin>

@@ -11,7 +11,7 @@
       <package
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage"
-            genModel="model/topology_bindings.xcore"/>
+            genModel="model/symphony_common_topology_bindings.xcore"/>
    </extension>
 
 </plugin>

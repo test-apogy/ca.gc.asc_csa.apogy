@@ -14,7 +14,7 @@
       <package
             uri="org.eclipse.symphony.common.geometry.data25d.ui"
             class="org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage"
-            genModel="model/mrt_data25d_ui.xcore"/>
+            genModel="model/symphony_common_geometry_data25d_ui.xcore"/>
    </extension>
 
 </plugin>

@@ -12,7 +12,7 @@
       <package
             uri="org.eclipse.symphony.examples.satellite"
             class="org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage"
-            genModel="model/emf_ecore_examples_satellite.xcore"/>
+            genModel="model/symphony_examples_satellite.xcore"/>
    </extension>
    <extension
          point="org.eclipse.symphony.core.invocator.typeContributor">

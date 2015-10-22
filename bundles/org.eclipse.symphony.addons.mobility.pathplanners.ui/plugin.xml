@@ -5,7 +5,7 @@
       <package
             uri="org.eclipse.symphony.addons.mobility.pathplanners.ui"
             class="org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage"
-            genModel="model/mrt_path_planners_ui.xcore"/>
+            genModel="model/symphony_addons_mobility_pathplanners_ui.xcore"/>
    </extension>
 
 </plugin>

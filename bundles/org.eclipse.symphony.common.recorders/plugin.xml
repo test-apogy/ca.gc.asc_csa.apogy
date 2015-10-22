@@ -14,7 +14,7 @@
       <package
             uri="org.eclipse.symphony.common.recorders"
             class="org.eclipse.symphony.common.recorders.RecordersPackage"
-            genModel="model/mrt_common_recorders.xcore"/>
+            genModel="model/symphony_common_recorders.xcore"/>
    </extension>
 
 </plugin>

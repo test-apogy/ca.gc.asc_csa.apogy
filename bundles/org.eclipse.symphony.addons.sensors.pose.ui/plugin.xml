@@ -40,7 +40,7 @@
       <package
             uri="org.eclipse.symphony.addons.sensors.pose.ui"
             class="org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage"
-            genModel="model/mrt_sensors_pose_ui.xcore"/>
+            genModel="model/symphony_addons_sensors_pose_ui.xcore"/>
    </extension>
 
    <extension

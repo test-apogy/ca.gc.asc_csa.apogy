@@ -26,7 +26,7 @@
       <package
             uri="org.eclipse.symphony.addons.sensors.imaging.camera"
             class="org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage"
-            genModel="model/symphony_tools_camera.xcore"/>
+            genModel="model/symphony_addons_imaging_camera.xcore"/>
    </extension>
    <extension
          point="org.eclipse.ui.commands">

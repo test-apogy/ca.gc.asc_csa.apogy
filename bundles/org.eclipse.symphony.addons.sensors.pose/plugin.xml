@@ -13,7 +13,7 @@
     <package 
        uri = "org.eclipse.symphony.addons.sensors.pose" 
        class = "org.eclipse.symphony.addons.sensors.pose.PosePackage"
-       genModel = "model/pose.xcore" /> 
+       genModel = "model/symphony_addons_sensors_pose.xcore" /> 
   </extension>
 
 </plugin>

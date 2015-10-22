@@ -145,7 +145,7 @@
       <package
             uri="org.eclipse.symphony.common.geometry.data3d.ui"
             class="org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage"
-            genModel="model/mrt_data3d_ui.xcore"/>
+            genModel="model/symphony_common_geometry_data3d_ui.xcore"/>
    </extension>
 
 </plugin>

@@ -11,7 +11,7 @@
       <package
             uri="org.eclipse.symphony.common.geometry.data3d.asc"
             class="org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage"
-            genModel="model/mrt_data3d_asc.xcore"/>
+            genModel="model/symphony_common_geometry_data3d_asc.xcore"/>
    </extension>
 
 </plugin>

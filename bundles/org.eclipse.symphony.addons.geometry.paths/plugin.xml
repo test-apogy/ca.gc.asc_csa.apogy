@@ -13,7 +13,7 @@
     <package 
        uri = "org.eclipse.symphony.addons.geometry.paths" 
        class = "org.eclipse.symphony.addons.geometry.paths.PathsPackage"
-       genModel = "model/paths.xcore" /> 
+       genModel = "model/symphony_addons_geometry_paths.xcore" /> 
   </extension>
 
 </plugin>

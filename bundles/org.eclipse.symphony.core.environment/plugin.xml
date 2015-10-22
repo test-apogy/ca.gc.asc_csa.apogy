@@ -11,7 +11,7 @@
       <package
             uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage"
-            genModel="model/symphony_environment.xcore"/>
+            genModel="model/symphony_core_environment.xcore"/>
    </extension>
    <extension
          point="org.eclipse.ui.commands">

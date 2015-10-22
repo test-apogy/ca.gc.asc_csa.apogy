@@ -13,7 +13,7 @@
       <package
             uri="org.eclipse.symphony.addons.sensors.imaging"
             class="org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage"
-            genModel="model/sensors_imaging.xcore"/>
+            genModel="model/symphony_addons_sensors_imaging.xcore"/>
    </extension>
    <extension
          point="org.eclipse.symphony.common.converters">

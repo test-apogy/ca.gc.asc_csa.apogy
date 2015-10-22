@@ -53,7 +53,7 @@
       <package
             uri="org.eclipse.symphony.common.topology.ui.viewer"
             class="org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage"
-            genModel="model/topology_viewer.xcore"/>
+            genModel="model/symphony_common_topology_ui_viewer.xcore"/>
    </extension>
 
 </plugin>

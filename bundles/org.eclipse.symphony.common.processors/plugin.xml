@@ -12,6 +12,6 @@
       <package
             uri="org.eclipse.symphony.common.processors"
             class="org.eclipse.symphony.common.processors.ProcessorsPackage"
-            genModel="model/mrt_common_processors.xcore"/>
+            genModel="model/symphony_common_processors.xcore"/>
    </extension>
 </plugin>

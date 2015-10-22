@@ -14,7 +14,7 @@
       <package
             uri="org.eclipse.symphony.common.topology.addons.primitives"
             class="org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage"
-            genModel="model/topology_primitives.xcore"/>
+            genModel="model/symphony_common_topology_addons_primitives.xcore"/>
    </extension>
 
 </plugin>

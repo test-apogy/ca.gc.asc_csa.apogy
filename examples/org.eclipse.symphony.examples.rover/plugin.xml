@@ -11,7 +11,7 @@
       <package
             uri="org.eclipse.symphony.examples.rover"
             class="org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage"
-            genModel="model/emf_ecore_examples_rover.xcore"/>
+            genModel="model/symphony_examples_rover.xcore"/>
    </extension>
 
 </plugin>

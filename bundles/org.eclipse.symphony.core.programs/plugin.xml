@@ -12,7 +12,7 @@
       <package
             uri="org.eclipse.symphony.core.programs"
             class="org.eclipse.symphony.core.programs.InvocatorProgramsPackage"
-            genModel="model/eclipse_emf_ecore_invocator_programs.xcore"/>
+            genModel="model/symphony_core_programs.xcore"/>
    </extension>
 
 </plugin>

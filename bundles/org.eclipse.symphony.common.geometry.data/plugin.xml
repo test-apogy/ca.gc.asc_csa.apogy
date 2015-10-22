@@ -13,7 +13,7 @@
       <package
             uri="org.eclipse.symphony.common.geometry.data"
             class="org.eclipse.symphony.common.geometry.data.DataPackage"
-            genModel="model/mrt_geometry_data.xcore"/>
+            genModel="model/symphony_common_geometry_data.xcore"/>
    </extension>
 
 </plugin>

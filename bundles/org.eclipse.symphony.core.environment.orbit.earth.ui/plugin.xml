@@ -33,7 +33,7 @@
       <package
             uri="org.eclipse.symphony.core.environment.orbit.earth.ui"
             class="org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage"
-            genModel="model/symphony_environment_orbit_earth_ui.xcore"/>
+            genModel="model/symphony_core_environment_orbit_earth_ui.xcore"/>
    </extension>
 
 </plugin>

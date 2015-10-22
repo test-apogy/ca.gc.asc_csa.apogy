@@ -14,7 +14,7 @@
     <package 
        uri = "org.eclipse.symphony.addons.sensors.range" 
        class = "org.eclipse.symphony.addons.sensors.range.RangePackage"
-       genModel = "model/range.xcore" /> 
+       genModel = "model/symphony_addons_sensors_range.xcore" /> 
   </extension>
 
 </plugin>

@@ -10,7 +10,7 @@
          point="org.eclipse.emf.ecore.generated_package">
       <package
             class="org.eclipse.symphony.addons.sensors.SensorsPackage"
-            genModel="model/sensors.xcore"
+            genModel="model/symphony_addons_sensors.xcore"
             uri="org.eclipse.symphony.addons.sensors">
       </package>
    </extension>

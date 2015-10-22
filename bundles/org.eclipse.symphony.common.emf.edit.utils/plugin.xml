@@ -10,7 +10,7 @@
       <package
             uri="org.eclipse.symphony.common.emf.edit.utils"
             class="org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsPackage"
-            genModel="model/emf_ecore_edit_utils.xcore"/>
+            genModel="model/symphony_common_emf_edit_utils.xcore"/>
    </extension>
 
 </plugin>

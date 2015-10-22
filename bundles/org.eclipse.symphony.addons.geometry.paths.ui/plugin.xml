@@ -39,7 +39,7 @@
       <package
             uri="org.eclipse.symphony.addons.geometry.paths.ui"
             class="org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage"
-            genModel="model/mrt_paths_ui.xcore"/>
+            genModel="model/symphony_addons_geometry_paths_ui.xcore"/>
    </extension>
 
 </plugin>

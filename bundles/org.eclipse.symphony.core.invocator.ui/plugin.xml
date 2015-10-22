@@ -400,7 +400,7 @@
       <package
             uri="org.eclipse.symphony.core.invocator.ui"
             class="org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUiPackage"
-            genModel="model/eclipse_emf_ecore_invocator_ui.xcore"/>
+            genModel="model/symphony_core_invocator_ui.xcore"/>
    </extension>
 
 </plugin>

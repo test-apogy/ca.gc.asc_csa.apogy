@@ -12,7 +12,7 @@
       <package
             uri="org.eclipse.symphony.addons.vehicle"
             class="org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage"
-            genModel="model/symphony_tools_vehicle.xcore"/>
+            genModel="model/symphony_addons_vehicle.xcore"/>
    </extension>
 
 </plugin>

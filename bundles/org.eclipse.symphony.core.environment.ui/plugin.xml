@@ -106,7 +106,7 @@
       <package
             uri="org.eclipse.symphony.core.environment.ui"
             class="org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage"
-            genModel="model/symphony_environment_ui.xcore"/>
+            genModel="model/symphony_core_environment_ui.xcore"/>
    </extension>
    <extension
          point="org.eclipse.ui.commands">

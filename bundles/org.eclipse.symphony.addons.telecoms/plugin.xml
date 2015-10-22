@@ -12,7 +12,7 @@
       <package
             uri="org.eclipse.symphony.addons.telecoms"
             class="org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage"
-            genModel="model/symphony_tools_telecoms.xcore"/>
+            genModel="model/symphony_addons_telecoms.xcore"/>
    </extension>
 
 </plugin>

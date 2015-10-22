@@ -11,7 +11,7 @@
       <package
             uri="org.eclipse.symphony.core.topology"
             class="org.eclipse.symphony.core.topology.SymphonyTopologyPackage"
-            genModel="model/symphony_topology.xcore"/>
+            genModel="model/symphony_core_topology.xcore"/>
    </extension>
 
 </plugin>

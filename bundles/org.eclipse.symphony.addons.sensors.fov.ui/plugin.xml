@@ -42,7 +42,7 @@
       <package
             uri="org.eclipse.symphony.addons.sensors.fov.ui"
             class="org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage"
-            genModel="model/mrt_fov_ui.xcore"/>
+            genModel="model/symphony_addons_sensors_fov_ui.xcore"/>
    </extension>
 
 </plugin>

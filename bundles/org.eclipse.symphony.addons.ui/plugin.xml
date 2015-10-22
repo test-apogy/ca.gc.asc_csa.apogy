@@ -12,7 +12,7 @@
       <package
             uri="org.eclipse.symphony.addons.ui"
             class="org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage"
-            genModel="model/symphony_tools_ui.xcore"/>
+            genModel="model/symphony_addons_ui.xcore"/>
    </extension>
    <extension
          point="org.eclipse.symphony.common.topology.ui.presentation">

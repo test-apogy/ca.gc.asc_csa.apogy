@@ -22,7 +22,7 @@
       <package
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage"
-            genModel="model/eclipse_emf_ecore_invocator.xcore"/>
+            genModel="model/symphony_core_invocator.xcore"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">

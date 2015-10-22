@@ -12,7 +12,7 @@
       <package
             uri="org.eclipse.symphony.common.log"
             class="org.eclipse.symphony.common.log.UtilsLogPackage"
-            genModel="model/utils_log.xcore"/>
+            genModel="model/symphony_common_log.xcore"/>
    </extension>
 
 </plugin>

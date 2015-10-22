@@ -13,7 +13,7 @@
     <package 
        uri = "org.eclipse.symphony.common.geometry.data25d" 
        class = "org.eclipse.symphony.common.geometry.data25d.Data25dPackage"
-       genModel = "model/mrt_geometry_data25d.xcore" /> 
+       genModel = "model/symphony_common_geometry_data25d.xcore" /> 
   </extension>
 
 </plugin>
