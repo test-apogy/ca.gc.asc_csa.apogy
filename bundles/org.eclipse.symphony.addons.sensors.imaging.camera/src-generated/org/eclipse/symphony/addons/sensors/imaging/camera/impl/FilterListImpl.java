@@ -26,11 +26,11 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPac
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FilterListImpl#getCameraViewConfiguration <em>Camera View Configuration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FilterListImpl#getImageFilters <em>Image Filters</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

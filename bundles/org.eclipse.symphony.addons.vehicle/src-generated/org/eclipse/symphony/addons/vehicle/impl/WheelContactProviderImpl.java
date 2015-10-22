@@ -33,10 +33,10 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelContactProviderImpl#getContactMode <em>Contact Mode</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

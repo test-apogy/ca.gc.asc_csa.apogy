@@ -12,11 +12,11 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.SurfaceEnvironment#getAtmosphere <em>Atmosphere</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.SurfaceEnvironment#getGravity <em>Gravity</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceEnvironment()
  * @model

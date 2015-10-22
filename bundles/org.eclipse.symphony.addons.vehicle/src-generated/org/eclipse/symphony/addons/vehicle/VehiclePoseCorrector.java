@@ -16,7 +16,6 @@ import org.eclipse.symphony.core.PoseCorrector;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#isInitializing <em>Initializing</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getMeshes <em>Meshes</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.symphony.core.PoseCorrector;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getOrientationCorrection <em>Orientation Correction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getContactProvider <em>Contact Provider</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector()
  * @model

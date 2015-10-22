@@ -22,11 +22,11 @@ import org.eclipse.symphony.core.environment.WorksiteNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SurfaceWorksiteImpl#getSky <em>Sky</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SurfaceWorksiteImpl#getMapsList <em>Maps List</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

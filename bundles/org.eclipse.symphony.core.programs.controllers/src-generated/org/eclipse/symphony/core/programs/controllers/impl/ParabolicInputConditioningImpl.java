@@ -16,11 +16,11 @@ import org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ParabolicInputConditioningImpl#getMinimum <em>Minimum</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ParabolicInputConditioningImpl#getMaximum <em>Maximum</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

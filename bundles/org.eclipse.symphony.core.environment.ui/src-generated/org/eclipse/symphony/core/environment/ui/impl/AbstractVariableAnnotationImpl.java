@@ -29,12 +29,12 @@ import org.eclipse.symphony.core.invocator.listeners.AbstractTypeImplementationL
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl#getVariableInstance <em>Variable Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractVariableAnnotationImpl#getSymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

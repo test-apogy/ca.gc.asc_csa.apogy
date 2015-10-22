@@ -31,7 +31,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapImpl#getDescription <em>Description</em>}</li>
@@ -39,6 +38,7 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapImpl#getLayers <em>Layers</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapImpl#getMapNode <em>Map Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -28,6 +28,8 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lander Spherical Foot Contact Provider</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

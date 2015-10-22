@@ -11,10 +11,10 @@ package org.eclipse.symphony.common.io.jinput;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EVirtualComponent#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEVirtualComponent()
  * @model

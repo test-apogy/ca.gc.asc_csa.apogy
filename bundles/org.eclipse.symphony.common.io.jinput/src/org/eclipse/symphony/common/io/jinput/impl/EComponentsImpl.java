@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentsImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentsImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentsImpl#getEController <em>EController</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

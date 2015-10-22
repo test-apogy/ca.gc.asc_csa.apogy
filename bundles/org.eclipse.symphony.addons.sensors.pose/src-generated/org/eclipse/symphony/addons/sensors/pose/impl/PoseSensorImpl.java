@@ -47,7 +47,6 @@ import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
  * <em><b>Sensor</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
@@ -55,6 +54,7 @@ import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getPose <em>Pose</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getDataLogger <em>Data Logger</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

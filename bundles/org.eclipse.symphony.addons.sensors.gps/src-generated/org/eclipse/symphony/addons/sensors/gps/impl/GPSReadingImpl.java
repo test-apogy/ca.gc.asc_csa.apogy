@@ -22,7 +22,6 @@ import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getLatitude <em>Latitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getLongitude <em>Longitude</em>}</li>
@@ -34,6 +33,7 @@ import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getMeanSeaLevel <em>Mean Sea Level</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSReadingImpl#getCheckSum <em>Check Sum</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

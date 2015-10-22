@@ -15,10 +15,10 @@ package org.eclipse.symphony.addons.telecoms;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern#getApexAngle <em>Apex Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getSimpleConicalRadiationPattern()
  * @model

@@ -19,12 +19,12 @@ import org.eclipse.symphony.core.invocator.Variable;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getVariableInstance <em>Variable Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation#getSymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getAbstractVariableAnnotation()
  * @model abstract="true"

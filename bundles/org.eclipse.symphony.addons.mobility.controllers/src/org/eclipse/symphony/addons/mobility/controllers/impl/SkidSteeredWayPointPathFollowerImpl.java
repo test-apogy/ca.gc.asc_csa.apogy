@@ -13,6 +13,8 @@ import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathF
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Skid Steered Way Point Path Follower</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

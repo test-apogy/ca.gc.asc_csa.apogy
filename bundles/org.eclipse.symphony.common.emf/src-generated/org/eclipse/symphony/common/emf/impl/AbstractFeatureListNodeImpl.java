@@ -17,11 +17,11 @@ import org.eclipse.symphony.common.emf.EMFEcorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractFeatureListNodeImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractFeatureListNodeImpl#getChild <em>Child</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

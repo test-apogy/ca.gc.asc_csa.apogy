@@ -21,11 +21,11 @@ import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.TopologyTreeMapLayerNodeImpl#getTopologyTreeMapLayer <em>Topology Tree Map Layer</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.TopologyTreeMapLayerNodeImpl#getTransientParent <em>Transient Parent</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

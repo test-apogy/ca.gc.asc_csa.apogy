@@ -11,11 +11,11 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getGain <em>Gain</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getBias <em>Bias</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getGainFilter()
  * @model

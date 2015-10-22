@@ -17,13 +17,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getSourceObject <em>Source Object</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#getCurrentValue <em>Current Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getFeatureNodeAdapter()
  * @model

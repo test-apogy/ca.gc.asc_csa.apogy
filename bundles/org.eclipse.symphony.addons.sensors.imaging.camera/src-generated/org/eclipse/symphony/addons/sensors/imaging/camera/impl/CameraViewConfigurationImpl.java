@@ -41,7 +41,6 @@ import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureRefe
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl#getCameraViewConfigurationList <em>Camera View Configuration List</em>}</li>
@@ -57,6 +56,7 @@ import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureRefe
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl#isSaveImageWithOverlays <em>Save Image With Overlays</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl#getImageAutoSaveFolderPath <em>Image Auto Save Folder Path</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

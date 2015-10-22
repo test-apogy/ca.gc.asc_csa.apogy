@@ -22,7 +22,6 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathRecorderImpl#getPositionSensor <em>Position Sensor</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathRecorderImpl#getMinimumDistanceDelta <em>Minimum Distance Delta</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathRecorderImpl#getSamplingMode <em>Sampling Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathRecorderImpl#getRecordedPath <em>Recorded Path</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

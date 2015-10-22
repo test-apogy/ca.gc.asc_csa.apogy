@@ -53,7 +53,6 @@ import org.eclipse.symphony.examples.satellite.SatelliteUtils;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl#getSatellites <em>Satellites</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl#getGroundStations <em>Ground Stations</em>}</li>
@@ -61,6 +60,7 @@ import org.eclipse.symphony.examples.satellite.SatelliteUtils;
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl#getEndDate <em>End Date</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -18,7 +18,6 @@ import org.eclipse.symphony.core.FeatureOfInterestList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsolutePosition <em>Pick Absolute Position</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.symphony.core.FeatureOfInterestList;
  *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativeNormal <em>Pick Relative Normal</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getFeatureOfInterestPickingTool()
  * @model

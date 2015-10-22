@@ -20,10 +20,10 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapToolImpl#isActive <em>Active</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

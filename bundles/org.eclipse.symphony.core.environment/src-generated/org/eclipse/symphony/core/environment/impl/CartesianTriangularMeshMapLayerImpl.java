@@ -53,13 +53,13 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshMapLayerImpl#isMeshIsDirty <em>Mesh Is Dirty</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshMapLayerImpl#getMapLayerPresentations <em>Map Layer Presentations</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshMapLayerImpl#getTextureImage <em>Texture Image</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshMapLayerImpl#getCartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPacka
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitWorksiteImpl#getActiveOrbitModel <em>Active Orbit Model</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

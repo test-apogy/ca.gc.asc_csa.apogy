@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.Atmosphere#getWindSpeed <em>Wind Speed</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.Atmosphere#getWindDirection <em>Wind Direction</em>}</li>
@@ -20,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.Atmosphere#getSurfacePressure <em>Surface Pressure</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.Atmosphere#getSurfaceDensity <em>Surface Density</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAtmosphere()
  * @model

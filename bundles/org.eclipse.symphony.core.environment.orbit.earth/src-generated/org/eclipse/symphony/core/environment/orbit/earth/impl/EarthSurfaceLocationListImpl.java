@@ -26,12 +26,12 @@ import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvir
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthSurfaceLocationListImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthSurfaceLocationListImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthSurfaceLocationListImpl#getEarthSurfaceLocations <em>Earth Surface Locations</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

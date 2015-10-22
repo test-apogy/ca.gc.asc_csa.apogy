@@ -16,12 +16,12 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EquatorialCoordinatesImpl#getRightAscension <em>Right Ascension</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EquatorialCoordinatesImpl#getDeclination <em>Declination</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EquatorialCoordinatesImpl#getRadius <em>Radius</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

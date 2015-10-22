@@ -15,12 +15,12 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularVolumeRegionImpl#getZMin <em>ZMin</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularVolumeRegionImpl#getZMax <em>ZMax</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularVolumeRegionImpl#getZDimension <em>ZDimension</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

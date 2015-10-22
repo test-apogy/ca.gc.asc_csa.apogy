@@ -16,11 +16,11 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumAngularVelocity <em>Maximum Angular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumLinearVelocity <em>Maximum Linear Velocity</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getSkidSteeredPlatformPathFollower()
  * @model

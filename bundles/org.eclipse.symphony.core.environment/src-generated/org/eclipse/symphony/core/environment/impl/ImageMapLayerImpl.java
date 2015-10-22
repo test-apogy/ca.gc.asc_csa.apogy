@@ -29,7 +29,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getHeight <em>Height</em>}</li>
@@ -38,6 +37,7 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getLegend <em>Legend</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerImpl#getResolution <em>Resolution</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -19,11 +19,11 @@ import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ZoomableImpl#getCurrentZoom <em>Current Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ZoomableImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

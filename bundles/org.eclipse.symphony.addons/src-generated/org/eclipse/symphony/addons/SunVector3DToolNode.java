@@ -12,10 +12,10 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.SunVector3DToolNode#getSunVector3DTool <em>Sun Vector3 DTool</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DToolNode()
  * @model

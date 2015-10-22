@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3dToolNodeImpl#getRuler3DTool <em>Ruler3 DTool</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

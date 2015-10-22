@@ -21,13 +21,13 @@ import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvir
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.CorridorPointImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.CorridorPointImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.CorridorPointImpl#getCenter <em>Center</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.CorridorPointImpl#getRight <em>Right</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

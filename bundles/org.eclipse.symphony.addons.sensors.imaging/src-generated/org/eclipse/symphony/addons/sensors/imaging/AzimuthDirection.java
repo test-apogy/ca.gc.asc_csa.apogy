@@ -93,8 +93,6 @@ public enum AzimuthDirection implements Enumerator {
 	 * Returns the '<em><b>Azimuth Direction</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AzimuthDirection get(String literal) {
@@ -111,8 +109,6 @@ public enum AzimuthDirection implements Enumerator {
 	 * Returns the '<em><b>Azimuth Direction</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AzimuthDirection getByName(String name) {
@@ -129,8 +125,6 @@ public enum AzimuthDirection implements Enumerator {
 	 * Returns the '<em><b>Azimuth Direction</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static AzimuthDirection get(int value) {

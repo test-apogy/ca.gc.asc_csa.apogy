@@ -25,6 +25,8 @@ import org.eclipse.symphony.examples.satellite.SatelliteUtils;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Satellite Utils</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

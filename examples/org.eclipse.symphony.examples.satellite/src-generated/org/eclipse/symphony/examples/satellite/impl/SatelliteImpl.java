@@ -26,7 +26,6 @@ import org.eclipse.symphony.examples.satellite.SatelliteImager;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl#getMaximumRollRate <em>Maximum Roll Rate</em>}</li>
@@ -34,6 +33,7 @@ import org.eclipse.symphony.examples.satellite.SatelliteImager;
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl#getOrbitModel <em>Orbit Model</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl#getImager <em>Imager</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -23,13 +23,13 @@ import org.eclipse.symphony.common.emf.TimeDirection;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.BrowseableTimeSourceImpl#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.BrowseableTimeSourceImpl#getUpdatePeriod <em>Update Period</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.BrowseableTimeSourceImpl#getTimeAcceration <em>Time Acceration</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.BrowseableTimeSourceImpl#getTimeDirection <em>Time Direction</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -20,10 +20,10 @@ import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.TopologyTreeMapLayerImpl#getTopologyTreeRoot <em>Topology Tree Root</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

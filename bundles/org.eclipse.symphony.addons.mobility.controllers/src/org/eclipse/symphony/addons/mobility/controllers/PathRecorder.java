@@ -16,7 +16,6 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getPositionSensor <em>Position Sensor</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getMinimumDistanceDelta <em>Minimum Distance Delta</em>}</li>
@@ -24,6 +23,7 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getSamplingMode <em>Sampling Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getRecordedPath <em>Recorded Path</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder()
  * @model
