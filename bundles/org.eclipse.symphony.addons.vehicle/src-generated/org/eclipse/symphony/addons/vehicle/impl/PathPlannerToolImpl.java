@@ -121,7 +121,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected MeshWayPointPathPlanner pathPlanner;
+	protected MeshWayPointPathPlanner<?> pathPlanner;
 
 	/**
 	 * The cached value of the '{@link #getPlannedPath() <em>Planned Path</em>}' containment reference.
@@ -263,7 +263,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	@SuppressWarnings("rawtypes")
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public MeshWayPointPathPlanner getPathPlanner() 
 	{		
 		if(pathPlanner == null)
@@ -284,8 +284,8 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPathPlanner(MeshWayPointPathPlanner newPathPlanner, NotificationChain msgs) {
-		MeshWayPointPathPlanner oldPathPlanner = pathPlanner;
+	public NotificationChain basicSetPathPlanner(MeshWayPointPathPlanner<?> newPathPlanner, NotificationChain msgs) {
+		MeshWayPointPathPlanner<?> oldPathPlanner = pathPlanner;
 		pathPlanner = newPathPlanner;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER, oldPathPlanner, newPathPlanner);
@@ -299,7 +299,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPathPlanner(MeshWayPointPathPlanner newPathPlanner) {
+	public void setPathPlanner(MeshWayPointPathPlanner<?> newPathPlanner) {
 		if (newPathPlanner != pathPlanner) {
 			NotificationChain msgs = null;
 			if (pathPlanner != null)
@@ -512,7 +512,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 				setMeshLayer((CartesianTriangularMeshMapLayer)newValue);
 				return;
 			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
-				setPathPlanner((MeshWayPointPathPlanner)newValue);
+				setPathPlanner((MeshWayPointPathPlanner<?>)newValue);
 				return;
 			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				setPlannedPath((WayPointPath)newValue);
@@ -542,7 +542,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 				setMeshLayer((CartesianTriangularMeshMapLayer)null);
 				return;
 			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
-				setPathPlanner((MeshWayPointPathPlanner)null);
+				setPathPlanner((MeshWayPointPathPlanner<?>)null);
 				return;
 			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				setPlannedPath((WayPointPath)null);

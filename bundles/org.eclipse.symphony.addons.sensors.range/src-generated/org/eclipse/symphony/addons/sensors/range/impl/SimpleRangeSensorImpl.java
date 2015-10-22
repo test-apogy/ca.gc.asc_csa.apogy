@@ -18,10 +18,10 @@ import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.SimpleRangeSensorImpl#getDistanceMeasured <em>Distance Measured</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

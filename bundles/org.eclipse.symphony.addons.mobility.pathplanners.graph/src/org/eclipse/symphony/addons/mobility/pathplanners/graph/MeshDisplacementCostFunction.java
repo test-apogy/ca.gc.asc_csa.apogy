@@ -15,10 +15,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction#getPlanner <em>Planner</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMeshDisplacementCostFunction()
  * @model

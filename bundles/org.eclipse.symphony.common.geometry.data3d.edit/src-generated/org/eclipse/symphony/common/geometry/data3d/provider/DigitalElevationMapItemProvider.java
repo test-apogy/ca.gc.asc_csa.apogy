@@ -112,11 +112,11 @@ public class DigitalElevationMapItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		List labelValue = ((DigitalElevationMap)object).getNormals();
+		List<?> labelValue = ((DigitalElevationMap)object).getNormals();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_DigitalElevationMap_type") :

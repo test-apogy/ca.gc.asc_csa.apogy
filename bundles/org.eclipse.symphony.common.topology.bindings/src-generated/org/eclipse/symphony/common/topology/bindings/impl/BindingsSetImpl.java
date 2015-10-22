@@ -26,11 +26,11 @@ import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsSetImpl#getFeatureRootsList <em>Feature Roots List</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.BindingsSetImpl#getBindingsList <em>Bindings List</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

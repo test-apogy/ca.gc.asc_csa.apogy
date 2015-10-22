@@ -27,7 +27,7 @@ type EClassFilter wraps EClassFilter
 type Number wraps java.lang.Number
 type IFile wraps IFile 
 type Resource wraps Resource
-type Unit wraps javax.measure.unit.Unit
+type Unit wraps javax.measure.unit.Unit<?>
 type Collection<T> wraps java.util.Collection
 type EList<EObject> wraps EList
 type URI wraps URI

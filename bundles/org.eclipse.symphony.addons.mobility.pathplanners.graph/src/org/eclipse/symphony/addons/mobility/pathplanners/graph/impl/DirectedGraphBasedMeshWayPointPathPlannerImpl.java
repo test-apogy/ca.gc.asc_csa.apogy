@@ -19,24 +19,14 @@ import org.jgrapht.DirectedGraph;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DirectedGraphBasedMeshWayPointPathPlannerImpl#getDirectedGraph <em>Directed Graph</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
 public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlannerImpl<PolygonType> implements DirectedGraphBasedMeshWayPointPathPlanner<PolygonType> {
-	/**
-	 * The default value of the '{@link #getDirectedGraph() <em>Directed Graph</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDirectedGraph()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final DirectedGraph DIRECTED_GRAPH_EDEFAULT = null;
-
 	/**
 	 * The cached value of the '{@link #getDirectedGraph() <em>Directed Graph</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -45,7 +35,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	 * @generated
 	 * @ordered
 	 */
-	protected DirectedGraph directedGraph = DIRECTED_GRAPH_EDEFAULT;
+	protected DirectedGraph<?, ?> directedGraph;
 
 	/**
 	 * This is true if the Directed Graph attribute has been set.
@@ -80,7 +70,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DirectedGraph getDirectedGraph() {
+	public DirectedGraph<?, ?> getDirectedGraph() {
 		return directedGraph;
 	}
 
@@ -89,8 +79,8 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDirectedGraph(DirectedGraph newDirectedGraph) {
-		DirectedGraph oldDirectedGraph = directedGraph;
+	public void setDirectedGraph(DirectedGraph<?, ?> newDirectedGraph) {
+		DirectedGraph<?, ?> oldDirectedGraph = directedGraph;
 		directedGraph = newDirectedGraph;
 		boolean oldDirectedGraphESet = directedGraphESet;
 		directedGraphESet = true;
@@ -104,12 +94,12 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	 * @generated
 	 */
 	public void unsetDirectedGraph() {
-		DirectedGraph oldDirectedGraph = directedGraph;
+		DirectedGraph<?, ?> oldDirectedGraph = directedGraph;
 		boolean oldDirectedGraphESet = directedGraphESet;
-		directedGraph = DIRECTED_GRAPH_EDEFAULT;
+		directedGraph = null;
 		directedGraphESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH, oldDirectedGraph, DIRECTED_GRAPH_EDEFAULT, oldDirectedGraphESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH, oldDirectedGraph, null, oldDirectedGraphESet));
 	}
 
 	/**
@@ -140,11 +130,12 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
-				setDirectedGraph((DirectedGraph)newValue);
+				setDirectedGraph((DirectedGraph<?, ?>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

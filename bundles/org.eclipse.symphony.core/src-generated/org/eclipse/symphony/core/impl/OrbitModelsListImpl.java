@@ -26,12 +26,12 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.OrbitModelsListImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.OrbitModelsListImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.OrbitModelsListImpl#getOrbitModels <em>Orbit Models</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

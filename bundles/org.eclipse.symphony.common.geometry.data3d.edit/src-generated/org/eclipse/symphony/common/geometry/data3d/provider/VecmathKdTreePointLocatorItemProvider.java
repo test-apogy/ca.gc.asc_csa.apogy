@@ -62,11 +62,11 @@ public class VecmathKdTreePointLocatorItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		List labelValue = ((VecmathKdTreePointLocator)object).getPoints();
+		List<?> labelValue = ((VecmathKdTreePointLocator)object).getPoints();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_VecmathKdTreePointLocator_type") :

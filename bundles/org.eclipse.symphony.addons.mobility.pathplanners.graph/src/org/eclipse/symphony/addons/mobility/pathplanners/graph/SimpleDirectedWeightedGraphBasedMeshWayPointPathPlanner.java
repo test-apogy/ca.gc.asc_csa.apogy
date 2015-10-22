@@ -16,12 +16,12 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner#getSimpleDirectedWeightedGraph <em>Simple Directed Weighted Graph</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner#isEnablePathSimplification <em>Enable Path Simplification</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner#getRobotWidthForPathSimplication <em>Robot Width For Path Simplication</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner()
  * @model
@@ -42,7 +42,7 @@ public interface SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<Polygon
 	 * @model unique="false" dataType="org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraph"
 	 * @generated
 	 */
-	SimpleDirectedWeightedGraph getSimpleDirectedWeightedGraph();
+	SimpleDirectedWeightedGraph<?, ?> getSimpleDirectedWeightedGraph();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner#getSimpleDirectedWeightedGraph <em>Simple Directed Weighted Graph</em>}' attribute.
@@ -52,7 +52,7 @@ public interface SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<Polygon
 	 * @see #getSimpleDirectedWeightedGraph()
 	 * @generated
 	 */
-	void setSimpleDirectedWeightedGraph(SimpleDirectedWeightedGraph value);
+	void setSimpleDirectedWeightedGraph(SimpleDirectedWeightedGraph<?, ?> value);
 
 	/**
 	 * Returns the value of the '<em><b>Enable Path Simplification</b></em>' attribute.

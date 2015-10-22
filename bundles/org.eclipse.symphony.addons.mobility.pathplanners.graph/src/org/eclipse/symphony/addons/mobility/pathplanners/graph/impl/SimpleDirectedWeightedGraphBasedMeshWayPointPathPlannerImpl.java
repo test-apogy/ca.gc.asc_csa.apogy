@@ -56,13 +56,13 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl#isVerbose <em>Verbose</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl#getSimpleDirectedWeightedGraph <em>Simple Directed Weighted Graph</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl#isEnablePathSimplification <em>Enable Path Simplification</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl#getRobotWidthForPathSimplication <em>Robot Width For Path Simplication</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -94,16 +94,6 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	protected boolean verbose = VERBOSE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSimpleDirectedWeightedGraph() <em>Simple Directed Weighted Graph</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSimpleDirectedWeightedGraph()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final SimpleDirectedWeightedGraph SIMPLE_DIRECTED_WEIGHTED_GRAPH_EDEFAULT = null;
-
-	/**
 	 * The cached value of the '{@link #getSimpleDirectedWeightedGraph() <em>Simple Directed Weighted Graph</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,7 +101,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * @generated
 	 * @ordered
 	 */
-	protected SimpleDirectedWeightedGraph simpleDirectedWeightedGraph = SIMPLE_DIRECTED_WEIGHTED_GRAPH_EDEFAULT;
+	protected SimpleDirectedWeightedGraph<?, ?> simpleDirectedWeightedGraph;
 
 	/**
 	 * The default value of the '{@link #isEnablePathSimplification() <em>Enable Path Simplification</em>}' attribute.
@@ -205,6 +195,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public SimpleDirectedWeightedGraph getSimpleDirectedWeightedGraph() {
 		if(!eIsSet(PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH))
 		{
@@ -227,7 +218,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleDirectedWeightedGraph getSimpleDirectedWeightedGraphGen() {
+	public SimpleDirectedWeightedGraph<?, ?> getSimpleDirectedWeightedGraphGen() {
 		return simpleDirectedWeightedGraph;
 	}
 
@@ -236,8 +227,8 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSimpleDirectedWeightedGraph(SimpleDirectedWeightedGraph newSimpleDirectedWeightedGraph) {
-		SimpleDirectedWeightedGraph oldSimpleDirectedWeightedGraph = simpleDirectedWeightedGraph;
+	public void setSimpleDirectedWeightedGraph(SimpleDirectedWeightedGraph<?, ?> newSimpleDirectedWeightedGraph) {
+		SimpleDirectedWeightedGraph<?, ?> oldSimpleDirectedWeightedGraph = simpleDirectedWeightedGraph;
 		simpleDirectedWeightedGraph = newSimpleDirectedWeightedGraph;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH, oldSimpleDirectedWeightedGraph, simpleDirectedWeightedGraph));
@@ -319,6 +310,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -326,7 +318,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 				setVerbose((Boolean)newValue);
 				return;
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
-				setSimpleDirectedWeightedGraph((SimpleDirectedWeightedGraph)newValue);
+				setSimpleDirectedWeightedGraph((SimpleDirectedWeightedGraph<?, ?>)newValue);
 				return;
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
 				setEnablePathSimplification((Boolean)newValue);
@@ -350,7 +342,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 				setVerbose(VERBOSE_EDEFAULT);
 				return;
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
-				setSimpleDirectedWeightedGraph(SIMPLE_DIRECTED_WEIGHTED_GRAPH_EDEFAULT);
+				setSimpleDirectedWeightedGraph((SimpleDirectedWeightedGraph<?, ?>)null);
 				return;
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
 				setEnablePathSimplification(ENABLE_PATH_SIMPLIFICATION_EDEFAULT);
@@ -373,7 +365,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
 				return verbose != VERBOSE_EDEFAULT;
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
-				return SIMPLE_DIRECTED_WEIGHTED_GRAPH_EDEFAULT == null ? simpleDirectedWeightedGraph != null : !SIMPLE_DIRECTED_WEIGHTED_GRAPH_EDEFAULT.equals(simpleDirectedWeightedGraph);
+				return simpleDirectedWeightedGraph != null;
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
 				return enablePathSimplification != ENABLE_PATH_SIMPLIFICATION_EDEFAULT;
 			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
@@ -545,6 +537,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * This method can be overiden to creates the graph differently.	 
 	 * @return The SimpleDirectedWeightedGraph representing the polygon connectivity.	 
 	 */
+	@SuppressWarnings("rawtypes")
 	protected SimpleDirectedWeightedGraph createGraph() throws Exception
 	{
 		printVerbose("Creating Graph...");
@@ -684,10 +677,10 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 * @param path The path of the folder where to save the data.
 	 * @param fileName The file name to save the data to.
 	 */
-	@SuppressWarnings("unused")
+	@SuppressWarnings({ "unused", "rawtypes" })
 	private void savePolygonPath(List<CartesianTriangle> polygonPath, String path, String fileName)
 	{			
-		TransformNode root = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);						
+		TransformNode root = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);		
 		Mesh pathMesh = Data3dFacade.INSTANCE.createCartesianTriangularMesh(polygonPath);
 						
 		ContentNode<Mesh> pathNode = TopologyFacade.INSTANCE.createContentNode(pathMesh); 
@@ -714,7 +707,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public void setMesh(Mesh newMesh)
+	public void setMesh(@SuppressWarnings("rawtypes") Mesh newMesh)
 	{
 		eUnset(PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH);
 		super.setMesh(newMesh);

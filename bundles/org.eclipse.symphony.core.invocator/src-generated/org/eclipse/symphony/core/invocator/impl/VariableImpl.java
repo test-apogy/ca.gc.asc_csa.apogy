@@ -25,13 +25,13 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableImpl#getVariablesList <em>Variables List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableImpl#getVariableType <em>Variable Type</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableImpl#getEnvironment <em>Environment</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

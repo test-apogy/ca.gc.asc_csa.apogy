@@ -24,13 +24,13 @@ import org.eclipse.symphony.core.invocator.TypeMember;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeImpl#getMembers <em>Members</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeImpl#getInterfaceClass <em>Interface Class</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeImpl#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

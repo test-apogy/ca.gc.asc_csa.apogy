@@ -150,7 +150,7 @@ public interface EMFEcoreFacade extends EObject
 	 * @model dataType="org.eclipse.symphony.common.emf.Unit" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
-  Unit getEngineeringUnits(ETypedElement eTypedElement);
+  Unit<?> getEngineeringUnits(ETypedElement eTypedElement);
 
   /**
 	 * <!-- begin-user-doc -->

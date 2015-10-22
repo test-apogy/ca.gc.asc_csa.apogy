@@ -22,10 +22,10 @@ import org.eclipse.symphony.core.invocator.ValuesList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ValuesListImpl#getValues <em>Values</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

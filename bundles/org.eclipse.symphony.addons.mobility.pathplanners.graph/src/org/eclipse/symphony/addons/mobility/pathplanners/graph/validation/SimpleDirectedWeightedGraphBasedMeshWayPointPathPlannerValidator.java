@@ -17,7 +17,7 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 public interface SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerValidator {
 	boolean validate();
 
-	boolean validateSimpleDirectedWeightedGraph(SimpleDirectedWeightedGraph value);
+	boolean validateSimpleDirectedWeightedGraph(SimpleDirectedWeightedGraph<?,?> value);
 
 	boolean validateEnablePathSimplification(boolean value);
 

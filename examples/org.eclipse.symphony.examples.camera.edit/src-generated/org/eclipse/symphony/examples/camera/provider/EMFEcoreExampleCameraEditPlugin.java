@@ -50,14 +50,14 @@ public final class EMFEcoreExampleCameraEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     ProcessorsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     MRTActuatorsEditPlugin.INSTANCE,
-		     ImagesCoreEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
-		     MRTSensorsImagingEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     MRTSensorsImagingEditPlugin.INSTANCE,
+		     MRTActuatorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
 		   });

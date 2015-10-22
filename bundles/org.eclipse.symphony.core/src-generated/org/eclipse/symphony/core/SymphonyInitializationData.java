@@ -12,10 +12,10 @@ import org.eclipse.symphony.core.invocator.InitializationData;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.SymphonyInitializationData#getInitialPoseTransform <em>Initial Pose Transform</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyInitializationData()
  * @model

@@ -15,10 +15,10 @@ import org.jgrapht.DirectedGraph;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDirectedGraphBasedMeshWayPointPathPlanner()
  * @model
@@ -41,7 +41,7 @@ public interface DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends C
 	 * @model unique="false" unsettable="true" dataType="org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraph" transient="true"
 	 * @generated
 	 */
-	DirectedGraph getDirectedGraph();
+	DirectedGraph<?, ?> getDirectedGraph();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}' attribute.
@@ -53,7 +53,7 @@ public interface DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends C
 	 * @see #getDirectedGraph()
 	 * @generated
 	 */
-	void setDirectedGraph(DirectedGraph value);
+	void setDirectedGraph(DirectedGraph<?, ?> value);
 
 	/**
 	 * Unsets the value of the '{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}' attribute.

@@ -17,12 +17,12 @@ import org.eclipse.symphony.common.topology.RotationNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationNode <em>Rotation Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationAxis <em>Rotation Axis</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationUnits <em>Rotation Units</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getRotationBinding()
  * @model

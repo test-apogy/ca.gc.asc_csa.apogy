@@ -24,11 +24,11 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.PoseCorrectorImpl#getSymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.PoseCorrectorImpl#isEnabled <em>Enabled</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

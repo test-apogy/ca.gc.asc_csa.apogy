@@ -12,10 +12,10 @@ import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.LineRangeScanner#getAngularResolution <em>Angular Resolution</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getLineRangeScanner()
  * @model

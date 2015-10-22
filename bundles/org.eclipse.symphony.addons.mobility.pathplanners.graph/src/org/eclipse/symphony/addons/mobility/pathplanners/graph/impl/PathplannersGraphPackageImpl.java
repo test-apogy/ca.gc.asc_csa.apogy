@@ -718,8 +718,8 @@ public class PathplannersGraphPackageImpl extends EPackageImpl implements Pathpl
 		initEAttribute(getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope(), theEcorePackage.getEDouble(), "maximumCrossSlope", "0.488", 0, 1, DistanceAndRoverFootprintCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
-		initEDataType(directedGraphEDataType, DirectedGraph.class, "DirectedGraph", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(simpleDirectedWeightedGraphEDataType, SimpleDirectedWeightedGraph.class, "SimpleDirectedWeightedGraph", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(directedGraphEDataType, DirectedGraph.class, "DirectedGraph", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "org.jgrapht.DirectedGraph<?, ?>");
+		initEDataType(simpleDirectedWeightedGraphEDataType, SimpleDirectedWeightedGraph.class, "SimpleDirectedWeightedGraph", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "org.jgrapht.graph.SimpleDirectedWeightedGraph<?, ?>");
 
 		// Create resource
 		createResource(eNS_URI);

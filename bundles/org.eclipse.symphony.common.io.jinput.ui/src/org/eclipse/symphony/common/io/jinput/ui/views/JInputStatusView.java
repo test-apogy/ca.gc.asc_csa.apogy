@@ -112,9 +112,8 @@ public class JInputStatusView extends ViewPart
 	}
 	
 	
-	@SuppressWarnings({"unchecked", "rawtypes"})
 	@Override
-	public Object getAdapter(Class key)
+	public Object getAdapter(@SuppressWarnings("rawtypes") Class key)
 	{
 		if (key.equals(IPropertySheetPage.class))
 		{

@@ -140,9 +140,10 @@ public class EMFEcoreUIFactoryImpl extends EFactoryImpl implements EMFEcoreUIFac
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Unit createUnitFromString(EDataType eDataType, String initialValue)
+  @SuppressWarnings("unchecked")
+		public Unit<?> createUnitFromString(EDataType eDataType, String initialValue)
   {
-		return (Unit)super.createFromString(eDataType, initialValue);
+		return (Unit<?>)super.createFromString(initialValue);
 	}
 
   /**
@@ -152,7 +153,7 @@ public class EMFEcoreUIFactoryImpl extends EFactoryImpl implements EMFEcoreUIFac
 	 */
   public String convertUnitToString(EDataType eDataType, Object instanceValue)
   {
-		return super.convertToString(eDataType, instanceValue);
+		return super.convertToString(instanceValue);
 	}
 
   /**

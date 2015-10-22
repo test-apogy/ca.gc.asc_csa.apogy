@@ -344,9 +344,8 @@ public class EMFEcoreFacadeImpl extends MinimalEObjectImpl.Container implements
 		return getAnnotationDetail(eTypedElement, "documentation");
 	}
 
-	@SuppressWarnings("rawtypes")
 	@Override
-	public Unit getEngineeringUnits(ETypedElement eTypedElement) 
+	public Unit<?> getEngineeringUnits(ETypedElement eTypedElement) 
 	{
 		Unit<?> unit = null;
 		

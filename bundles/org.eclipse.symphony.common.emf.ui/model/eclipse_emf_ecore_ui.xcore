@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.ETypedElement
 import org.eclipse.symphony.common.emf.Ranges
 
 type Color wraps org.eclipse.swt.graphics.Color
-type Unit wraps javax.measure.unit.Unit
+type Unit wraps javax.measure.unit.Unit<?>
 
 class EMFEcoreUIFacade
 {	

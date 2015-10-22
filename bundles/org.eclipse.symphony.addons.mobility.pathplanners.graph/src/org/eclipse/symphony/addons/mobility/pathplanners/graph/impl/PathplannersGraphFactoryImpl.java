@@ -214,8 +214,9 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DirectedGraph createDirectedGraphFromString(EDataType eDataType, String initialValue) {
-		return (DirectedGraph)super.createFromString(eDataType, initialValue);
+	@SuppressWarnings("unchecked")
+	public DirectedGraph<?, ?> createDirectedGraphFromString(EDataType eDataType, String initialValue) {
+		return (DirectedGraph<?, ?>)super.createFromString(initialValue);
 	}
 
 	/**
@@ -224,7 +225,7 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	 * @generated
 	 */
 	public String convertDirectedGraphToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
+		return super.convertToString(instanceValue);
 	}
 
 	/**
@@ -232,8 +233,9 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleDirectedWeightedGraph createSimpleDirectedWeightedGraphFromString(EDataType eDataType, String initialValue) {
-		return (SimpleDirectedWeightedGraph)super.createFromString(eDataType, initialValue);
+	@SuppressWarnings("unchecked")
+	public SimpleDirectedWeightedGraph<?, ?> createSimpleDirectedWeightedGraphFromString(EDataType eDataType, String initialValue) {
+		return (SimpleDirectedWeightedGraph<?, ?>)super.createFromString(initialValue);
 	}
 
 	/**
@@ -242,7 +244,7 @@ public class PathplannersGraphFactoryImpl extends EFactoryImpl implements Pathpl
 	 * @generated
 	 */
 	public String convertSimpleDirectedWeightedGraphToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
+		return super.convertToString(instanceValue);
 	}
 
 	/**

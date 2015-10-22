@@ -25,11 +25,11 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_camera -->
       <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

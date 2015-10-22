@@ -28,13 +28,13 @@ import org.eclipse.symphony.core.invocator.ToolsList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ToolsListImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ToolsListImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ToolsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ToolsListImpl#getToolsListContainers <em>Tools List Containers</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

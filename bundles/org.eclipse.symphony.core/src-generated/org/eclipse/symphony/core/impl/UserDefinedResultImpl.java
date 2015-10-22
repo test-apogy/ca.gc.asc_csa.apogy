@@ -17,10 +17,10 @@ import org.eclipse.symphony.core.UserDefinedResult;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.UserDefinedResultImpl#getName <em>Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

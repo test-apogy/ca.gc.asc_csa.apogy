@@ -18,12 +18,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getRecorder <em>Recorder</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getPlayer <em>Player</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getChannelsLists <em>Channels Lists</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRecordingToolsContainer()
  * @model

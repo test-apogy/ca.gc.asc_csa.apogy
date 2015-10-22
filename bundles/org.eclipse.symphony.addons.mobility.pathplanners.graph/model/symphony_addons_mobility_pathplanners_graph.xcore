@@ -13,8 +13,8 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis
 import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone
 
-type DirectedGraph wraps DirectedGraph
-type SimpleDirectedWeightedGraph wraps SimpleDirectedWeightedGraph
+type DirectedGraph wraps DirectedGraph<?,?>
+type SimpleDirectedWeightedGraph wraps SimpleDirectedWeightedGraph<?,?>
 
 class CostBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends MeshWayPointPathPlanner<PolygonType>{
 	contains DisplacementCostFunction[0..*] costFunctions

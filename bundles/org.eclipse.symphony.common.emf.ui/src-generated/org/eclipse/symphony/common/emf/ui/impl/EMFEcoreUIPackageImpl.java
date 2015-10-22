@@ -245,7 +245,7 @@ public class EMFEcoreUIPackageImpl extends EPackageImpl implements EMFEcoreUIPac
 
 		// Initialize data types
 		initEDataType(colorEDataType, Color.class, "Color", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(unitEDataType, Unit.class, "Unit", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(unitEDataType, Unit.class, "Unit", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "javax.measure.unit.Unit<?>");
 
 		// Create resource
 		createResource(eNS_URI);

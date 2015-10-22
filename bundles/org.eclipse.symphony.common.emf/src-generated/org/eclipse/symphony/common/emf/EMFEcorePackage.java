@@ -3028,7 +3028,7 @@ public interface EMFEcorePackage extends EPackage
    * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Unit</em>'.
 	 * @see javax.measure.unit.Unit
-	 * @model instanceClass="javax.measure.unit.Unit"
+	 * @model instanceClass="javax.measure.unit.Unit<?>"
 	 * @generated
 	 */
   EDataType getUnit();

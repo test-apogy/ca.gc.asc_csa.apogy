@@ -22,12 +22,12 @@ import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl#getRecordingToolsContainer <em>Recording Tools Container</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationCaseImpl#getEnumerationLiterals <em>Enumeration Literals</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationCaseImpl#getTopologyRoot <em>Topology Root</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

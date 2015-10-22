@@ -50,7 +50,6 @@ import com.sun.j3d.utils.geometry.NormalGenerator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerSimulatorImpl#getMeshNode <em>Mesh Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerSimulatorImpl#isNoiseEnabled <em>Noise Enabled</em>}</li>
@@ -58,6 +57,7 @@ import com.sun.j3d.utils.geometry.NormalGenerator;
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerSimulatorImpl#getTimeFindingIntersections <em>Time Finding Intersections</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerSimulatorImpl#getTimeGettingSimulatedRays <em>Time Getting Simulated Rays</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

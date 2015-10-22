@@ -1118,7 +1118,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Directed Graph</em>'.
 	 * @see org.jgrapht.DirectedGraph
-	 * @model instanceClass="org.jgrapht.DirectedGraph"
+	 * @model instanceClass="org.jgrapht.DirectedGraph<?, ?>"
 	 * @generated
 	 */
 	EDataType getDirectedGraph();
@@ -1129,7 +1129,7 @@ public interface PathplannersGraphPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Simple Directed Weighted Graph</em>'.
 	 * @see org.jgrapht.graph.SimpleDirectedWeightedGraph
-	 * @model instanceClass="org.jgrapht.graph.SimpleDirectedWeightedGraph"
+	 * @model instanceClass="org.jgrapht.graph.SimpleDirectedWeightedGraph<?, ?>"
 	 * @generated
 	 */
 	EDataType getSimpleDirectedWeightedGraph();

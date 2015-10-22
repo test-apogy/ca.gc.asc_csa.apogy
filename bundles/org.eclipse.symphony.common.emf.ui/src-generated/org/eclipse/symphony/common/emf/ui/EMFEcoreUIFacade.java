@@ -46,6 +46,6 @@ public interface EMFEcoreUIFacade extends EObject
 	 * @model dataType="org.eclipse.symphony.common.emf.ui.Unit" unique="false" eTypedElementUnique="false"
 	 * @generated
 	 */
-  Unit getDisplayUnits(ETypedElement eTypedElement);
+  Unit<?> getDisplayUnits(ETypedElement eTypedElement);
 
 } // EMFEcoreUIFacade

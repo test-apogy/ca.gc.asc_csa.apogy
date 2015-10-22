@@ -17,5 +17,5 @@ import org.jgrapht.DirectedGraph;
 public interface DirectedGraphBasedMeshWayPointPathPlannerValidator {
 	boolean validate();
 
-	boolean validateDirectedGraph(DirectedGraph value);
+	boolean validateDirectedGraph(DirectedGraph<?,?> value);
 }

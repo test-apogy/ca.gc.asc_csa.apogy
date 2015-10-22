@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EParameter;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Argument#getArgumentsList <em>Arguments List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Argument#getOperationCall <em>Operation Call</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getArgument()
  * @model abstract="true"
