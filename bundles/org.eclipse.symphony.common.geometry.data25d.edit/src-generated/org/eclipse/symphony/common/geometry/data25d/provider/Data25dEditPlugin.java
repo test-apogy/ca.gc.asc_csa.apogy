@@ -46,8 +46,8 @@ public final class Data25dEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     ProcessorsEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
 		   });
 	}
 
