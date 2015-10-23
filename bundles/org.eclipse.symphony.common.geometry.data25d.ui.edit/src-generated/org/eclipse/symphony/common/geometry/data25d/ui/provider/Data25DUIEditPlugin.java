@@ -44,11 +44,11 @@ public final class Data25DUIEditPlugin extends EMFPlugin {
 	public Data25DUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     DataEditPlugin.INSTANCE,
-		     Data25dEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     Data25dEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
 		   });
 	}

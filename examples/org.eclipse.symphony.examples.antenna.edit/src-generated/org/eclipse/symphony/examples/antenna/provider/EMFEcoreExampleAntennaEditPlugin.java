@@ -45,11 +45,11 @@ public final class EMFEcoreExampleAntennaEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     FovEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 
