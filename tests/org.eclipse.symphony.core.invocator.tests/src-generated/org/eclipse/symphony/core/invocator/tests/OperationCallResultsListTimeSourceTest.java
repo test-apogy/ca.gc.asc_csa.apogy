@@ -3,12 +3,11 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import junit.framework.TestCase;
-
-import junit.textui.TestRunner;
-
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
+
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

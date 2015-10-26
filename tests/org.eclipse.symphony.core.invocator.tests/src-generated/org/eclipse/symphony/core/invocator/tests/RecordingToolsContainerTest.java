@@ -3,10 +3,10 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import junit.textui.TestRunner;
-
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
+
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

@@ -1,5 +1,5 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)
+ * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
 package org.eclipse.symphony.core.invocator.tests;
 
@@ -8,20 +8,14 @@ import java.io.IOException;
 
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-
 import org.eclipse.emf.ecore.util.Diagnostician;
-
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-
 import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorResourceFactoryImpl;
 
 /**

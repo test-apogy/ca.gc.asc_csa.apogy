@@ -1,14 +1,13 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)
+ * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import junit.framework.TestCase;
-
-import junit.textui.TestRunner;
-
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Watch;
+
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

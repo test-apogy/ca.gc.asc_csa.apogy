@@ -3,9 +3,9 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import junit.framework.TestCase;
-
 import org.eclipse.symphony.core.invocator.AbstractChannel;
+
+import junit.framework.TestCase;
 
 /**
  * <!-- begin-user-doc -->

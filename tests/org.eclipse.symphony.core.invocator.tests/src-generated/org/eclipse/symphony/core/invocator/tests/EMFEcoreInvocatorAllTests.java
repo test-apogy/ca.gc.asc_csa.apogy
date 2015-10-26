@@ -1,5 +1,5 @@
 /**
- * Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)
+ * Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)
  */
 package org.eclipse.symphony.core.invocator.tests;
 
