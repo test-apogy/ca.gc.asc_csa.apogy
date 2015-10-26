@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates#getZ <em>Z</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPositionCoordinates()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPositionCoordinates_X()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_X()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPositionCoordinates_Y()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_Y()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPositionCoordinates_Z()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_Z()
 	 * @model unique="false"
 	 * @generated
 	 */

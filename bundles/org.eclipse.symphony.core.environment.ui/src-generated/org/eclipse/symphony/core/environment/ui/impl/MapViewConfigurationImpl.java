@@ -23,13 +23,13 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ImageAlignment;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.EnvironmentFacade;
 import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
@@ -686,7 +686,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -703,7 +703,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -766,8 +766,8 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	  			  List<ImageMapLayerPresentation> visiblePresentations = EnvironmentFacade.INSTANCE.getVisibleImageMapLayerPresentation(getMapLayers());
 	  			  
 	  			  // Updates size.
-	  			  Tuple3d lowerLeftCorner = MathFactory.eINSTANCE.createTuple3d(); 
-	  			  Tuple3d upperRightCorner = MathFactory.eINSTANCE.createTuple3d(); 
+	  			  Tuple3d lowerLeftCorner = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
+	  			  Tuple3d upperRightCorner = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
 	  			  EnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(visiblePresentations, lowerLeftCorner, upperRightCorner);		  		 
 	  			  
 	  			  // Update MapImage.
@@ -804,8 +804,8 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	  			  // Updates the Map Extent
 	  			  List<RectangularRegionProvider> rectangularRegionProviders = EnvironmentUiFacade.INSTANCE.getVisibleRectangularRegionProvider(MapViewConfigurationImpl.this);
 
-	  			  Tuple3d mapLowerLeftCorner = MathFactory.eINSTANCE.createTuple3d(); 
-	  			  Tuple3d mapUpperRightCorner = MathFactory.eINSTANCE.createTuple3d(); 
+	  			  Tuple3d mapLowerLeftCorner = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
+	  			  Tuple3d mapUpperRightCorner = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
 	  			  EnvironmentFacade.INSTANCE.getRectangularRegionExtent(rectangularRegionProviders, mapLowerLeftCorner, mapUpperRightCorner);
 	  			 
 	  			  if(lowerLeftCorner.getX() < mapLowerLeftCorner.getX())

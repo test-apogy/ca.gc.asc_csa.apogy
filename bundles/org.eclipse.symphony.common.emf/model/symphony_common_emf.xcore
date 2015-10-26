@@ -1,4 +1,7 @@
-@GenModel(prefix="EMFEcore", childCreationExtenders="true", extensibleProviderFactory="true",modelName="EMFEcore")
+@GenModel(prefix="Symphony__CommonEMF",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  modelName="Symphony__CommonEMF")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.emf/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.emf.edit/src-generated")
 

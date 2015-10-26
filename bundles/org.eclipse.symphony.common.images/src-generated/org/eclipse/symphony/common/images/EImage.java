@@ -17,7 +17,7 @@ import java.awt.image.BufferedImage;
  *   <li>{@link org.eclipse.symphony.common.images.EImage#getImageContent <em>Image Content</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.images.ImagesCorePackage#getEImage()
+ * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getEImage()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface EImage extends AbstractEImage {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Content</em>' attribute.
 	 * @see #setImageContent(BufferedImage)
-	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getEImage_ImageContent()
+	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getEImage_ImageContent()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.images.BufferedImage"
 	 * @generated
 	 */

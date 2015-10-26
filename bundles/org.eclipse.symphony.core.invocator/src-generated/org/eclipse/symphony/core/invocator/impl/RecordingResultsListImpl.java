@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.invocator.DataProductsList;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -386,7 +386,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case EMFEcoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -402,7 +402,7 @@ public class RecordingResultsListImpl extends MinimalEObjectImpl.Container imple
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

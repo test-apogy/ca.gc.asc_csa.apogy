@@ -36,7 +36,7 @@ import org.eclipse.symphony.core.environment.MapLayerPresentation;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 public class MapLayerPresentationsListComposite extends Composite {
 	private DataBindingContext m_bindingContext;
@@ -439,7 +439,7 @@ public class MapLayerPresentationsListComposite extends Composite {
 			SetCommand command = new SetCommand(
 					editingDomain,
 					mapLayerPresentation,
-					EMFEcorePackage.Literals.NAMED__NAME,
+					Symphony__CommonEMFPackage.Literals.NAMED__NAME,
 					strValue);
 			editingDomain.getCommandStack().execute(command);
 

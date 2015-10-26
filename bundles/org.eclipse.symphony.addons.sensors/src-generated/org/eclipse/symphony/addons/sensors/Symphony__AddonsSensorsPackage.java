@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -78,7 +78,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int SENSOR__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -87,7 +87,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int SENSOR__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -96,7 +96,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int SENSOR__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -105,7 +105,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int SENSOR__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -114,7 +114,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int SENSOR__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -123,7 +123,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR__STATUS = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int SENSOR__STATUS = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Sensor</em>' class.
@@ -132,7 +132,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int SENSOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -141,7 +141,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int SENSOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Sensor</em>' class.
@@ -150,7 +150,7 @@ public interface Symphony__AddonsSensorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int SENSOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.impl.ReferenceableImpl <em>Referenceable</em>}' class.

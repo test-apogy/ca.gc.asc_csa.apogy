@@ -14,7 +14,7 @@ package org.eclipse.symphony.common.emf;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getTimeSource()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimeSource()
  * @model abstract="true"
  * @generated
  */

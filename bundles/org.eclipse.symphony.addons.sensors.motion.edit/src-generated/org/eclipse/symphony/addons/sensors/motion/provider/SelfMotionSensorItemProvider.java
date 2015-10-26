@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionFactory;
 import org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor} object.
@@ -109,42 +109,42 @@ public class SelfMotionSensorItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 	}
 
@@ -160,8 +160,8 @@ public class SelfMotionSensorItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
+			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		if (qualify) {
 			return getString

@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
@@ -140,7 +140,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 		g2d.dispose();
 		
 		// Updates the image
-		EImage eImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		eImage.setImageContent(bufferedImage);;
 		setImage(eImage);
 	}

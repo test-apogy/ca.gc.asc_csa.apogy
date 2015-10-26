@@ -2,7 +2,7 @@ package org.eclipse.symphony.common.geometry.data3d.ui.adapters;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIFactory;
+import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIFactory;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
@@ -23,7 +23,7 @@ public class CartesianCoordinatMeshNodePresentationAdapter implements
 
 		ContentNode<CartesianCoordinatesSet> cNode = (ContentNode<CartesianCoordinatesSet>) node;
 
-		CartesianCoordinatesSetPresentation presentationNode = Data3DUIFactory.eINSTANCE
+		CartesianCoordinatesSetPresentation presentationNode = Symphony__CommonGeometryData3DUIFactory.eINSTANCE
 				.createCartesianCoordinatesSetPresentation();
 		presentationNode.setNode(cNode);
 

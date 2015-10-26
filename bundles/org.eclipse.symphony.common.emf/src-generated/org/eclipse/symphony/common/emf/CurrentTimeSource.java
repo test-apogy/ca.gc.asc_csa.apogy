@@ -21,7 +21,7 @@ package org.eclipse.symphony.common.emf;
  *   <li>{@link org.eclipse.symphony.common.emf.CurrentTimeSource#isPaused <em>Paused</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCurrentTimeSource()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCurrentTimeSource()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface CurrentTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(int)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCurrentTimeSource_UpdatePeriod()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCurrentTimeSource_UpdatePeriod()
 	 * @model default="1000" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='ms' notify='true' property='Editable'"
 	 * @generated
@@ -63,7 +63,7 @@ public interface CurrentTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Paused</em>' attribute.
 	 * @see #setPaused(boolean)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCurrentTimeSource_Paused()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCurrentTimeSource_Paused()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated

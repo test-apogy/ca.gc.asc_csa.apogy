@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
 import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
@@ -546,7 +546,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -562,7 +562,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION;
 				default: return -1;
 			}
 		}

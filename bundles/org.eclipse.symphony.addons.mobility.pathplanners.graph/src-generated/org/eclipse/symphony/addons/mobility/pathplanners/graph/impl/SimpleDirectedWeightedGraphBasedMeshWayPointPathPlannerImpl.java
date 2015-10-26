@@ -41,9 +41,9 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 import org.eclipse.symphony.common.processors.VerboseProvider;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
@@ -71,7 +71,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	private Adapter costFunctionsAdapter = null;
 	
 	
-	protected static Data3dFacade data3dFacade = Data3dFactory.eINSTANCE.createData3dFacade();
+	protected static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 	
 	/**
 	 * The default value of the '{@link #isVerbose() <em>Verbose</em>}' attribute.
@@ -383,7 +383,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == VerboseProvider.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE: return ProcessorsPackage.VERBOSE_PROVIDER__VERBOSE;
+				case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE: return Symphony__CommonProcessorsPackage.VERBOSE_PROVIDER__VERBOSE;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == VerboseProvider.class) {
 			switch (baseFeatureID) {
-				case ProcessorsPackage.VERBOSE_PROVIDER__VERBOSE: return Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE;
+				case Symphony__CommonProcessorsPackage.VERBOSE_PROVIDER__VERBOSE: return Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE;
 				default: return -1;
 			}
 		}
@@ -415,7 +415,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == VerboseProvider.class) {
 			switch (baseOperationID) {
-				case ProcessorsPackage.VERBOSE_PROVIDER___PRINT_VERBOSE__STRING: return Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER___PRINT_VERBOSE__STRING;
+				case Symphony__CommonProcessorsPackage.VERBOSE_PROVIDER___PRINT_VERBOSE__STRING: return Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER___PRINT_VERBOSE__STRING;
 				default: return -1;
 			}
 		}

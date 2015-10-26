@@ -33,7 +33,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -41,7 +41,7 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFactory;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
@@ -765,8 +765,8 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		{
 			// Creates a vector of lenght 100 along the Z axis.
 			vector =  PrimitivesFactory.eINSTANCE.createPickVector();
-			vector.getNodeTypesInIntersection().add(Data3dPackage.eINSTANCE.getCartesianCoordinatesMesh());
-			vector.getNodeTypesInIntersection().add(TopologyPackage.eINSTANCE.getContentNode());
+			vector.getNodeTypesInIntersection().add(Symphony__CommonGeometryData3DPackage.eINSTANCE.getCartesianCoordinatesMesh());
+			vector.getNodeTypesInIntersection().add(Symphony__CommonTopologyPackage.eINSTANCE.getContentNode());
 			
 			vector.setLength(100);
 			vector.setXRotation(0);

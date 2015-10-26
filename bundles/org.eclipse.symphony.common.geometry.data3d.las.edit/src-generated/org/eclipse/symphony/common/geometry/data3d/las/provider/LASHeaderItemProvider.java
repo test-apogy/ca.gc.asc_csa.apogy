@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
-import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASHeader} object.
@@ -112,7 +112,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_fileSignature_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_fileSignature_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__FILE_SIGNATURE,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__FILE_SIGNATURE,
 				 true,
 				 false,
 				 false,
@@ -134,7 +134,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_fileSourceID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_fileSourceID_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__FILE_SOURCE_ID,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__FILE_SOURCE_ID,
 				 true,
 				 false,
 				 false,
@@ -156,7 +156,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_globalEncoding_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_globalEncoding_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__GLOBAL_ENCODING,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__GLOBAL_ENCODING,
 				 true,
 				 false,
 				 false,
@@ -178,7 +178,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_projectID_GUID_data_1_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_projectID_GUID_data_1_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__PROJECT_ID_GUID_DATA_1,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__PROJECT_ID_GUID_DATA_1,
 				 true,
 				 false,
 				 false,
@@ -200,7 +200,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_projectID_GUID_data_2_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_projectID_GUID_data_2_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__PROJECT_ID_GUID_DATA_2,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__PROJECT_ID_GUID_DATA_2,
 				 true,
 				 false,
 				 false,
@@ -222,7 +222,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_projectID_GUID_data_3_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_projectID_GUID_data_3_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__PROJECT_ID_GUID_DATA_3,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__PROJECT_ID_GUID_DATA_3,
 				 true,
 				 false,
 				 false,
@@ -244,7 +244,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_projectID_GUID_data_4_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_projectID_GUID_data_4_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__PROJECT_ID_GUID_DATA_4,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__PROJECT_ID_GUID_DATA_4,
 				 true,
 				 false,
 				 false,
@@ -266,7 +266,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_versionMajor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_versionMajor_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__VERSION_MAJOR,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__VERSION_MAJOR,
 				 true,
 				 false,
 				 false,
@@ -288,7 +288,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_versionMinor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_versionMinor_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__VERSION_MINOR,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__VERSION_MINOR,
 				 true,
 				 false,
 				 false,
@@ -310,7 +310,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_systemIdentifier_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_systemIdentifier_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__SYSTEM_IDENTIFIER,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__SYSTEM_IDENTIFIER,
 				 true,
 				 false,
 				 false,
@@ -332,7 +332,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_generatingSoftware_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_generatingSoftware_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__GENERATING_SOFTWARE,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__GENERATING_SOFTWARE,
 				 true,
 				 false,
 				 false,
@@ -354,7 +354,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_fileCreationDayOfYear_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_fileCreationDayOfYear_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__FILE_CREATION_DAY_OF_YEAR,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__FILE_CREATION_DAY_OF_YEAR,
 				 true,
 				 false,
 				 false,
@@ -376,7 +376,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_fileCreationYear_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_fileCreationYear_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__FILE_CREATION_YEAR,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__FILE_CREATION_YEAR,
 				 true,
 				 false,
 				 false,
@@ -398,7 +398,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_headerSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_headerSize_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__HEADER_SIZE,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__HEADER_SIZE,
 				 true,
 				 false,
 				 false,
@@ -420,7 +420,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_offsetToPointData_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_offsetToPointData_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__OFFSET_TO_POINT_DATA,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__OFFSET_TO_POINT_DATA,
 				 true,
 				 false,
 				 false,
@@ -442,7 +442,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_nVariableLengthRecords_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_nVariableLengthRecords_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__NVARIABLE_LENGTH_RECORDS,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__NVARIABLE_LENGTH_RECORDS,
 				 true,
 				 false,
 				 false,
@@ -464,7 +464,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_pointDataFormatID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_pointDataFormatID_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__POINT_DATA_FORMAT_ID,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__POINT_DATA_FORMAT_ID,
 				 true,
 				 false,
 				 false,
@@ -486,7 +486,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_pointDataRecordLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_pointDataRecordLength_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__POINT_DATA_RECORD_LENGTH,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__POINT_DATA_RECORD_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -508,7 +508,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_numberOfPointRecords_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_numberOfPointRecords_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__NUMBER_OF_POINT_RECORDS,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__NUMBER_OF_POINT_RECORDS,
 				 true,
 				 false,
 				 false,
@@ -530,7 +530,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_numberOfPointsByReturn_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_numberOfPointsByReturn_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__NUMBER_OF_POINTS_BY_RETURN,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__NUMBER_OF_POINTS_BY_RETURN,
 				 true,
 				 false,
 				 false,
@@ -552,7 +552,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_xScaleFactor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_xScaleFactor_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__XSCALE_FACTOR,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__XSCALE_FACTOR,
 				 true,
 				 false,
 				 false,
@@ -574,7 +574,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_yScaleFactor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_yScaleFactor_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__YSCALE_FACTOR,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__YSCALE_FACTOR,
 				 true,
 				 false,
 				 false,
@@ -596,7 +596,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_zScaleFactor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_zScaleFactor_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__ZSCALE_FACTOR,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__ZSCALE_FACTOR,
 				 true,
 				 false,
 				 false,
@@ -618,7 +618,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_xOffset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_xOffset_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__XOFFSET,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__XOFFSET,
 				 true,
 				 false,
 				 false,
@@ -640,7 +640,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_yOffset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_yOffset_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__YOFFSET,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__YOFFSET,
 				 true,
 				 false,
 				 false,
@@ -662,7 +662,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_zOffset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_zOffset_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__ZOFFSET,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__ZOFFSET,
 				 true,
 				 false,
 				 false,
@@ -684,7 +684,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_maxX_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_maxX_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__MAX_X,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__MAX_X,
 				 true,
 				 false,
 				 false,
@@ -706,7 +706,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_minX_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_minX_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__MIN_X,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__MIN_X,
 				 true,
 				 false,
 				 false,
@@ -728,7 +728,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_maxY_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_maxY_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__MAX_Y,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__MAX_Y,
 				 true,
 				 false,
 				 false,
@@ -750,7 +750,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_minY_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_minY_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__MIN_Y,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__MIN_Y,
 				 true,
 				 false,
 				 false,
@@ -772,7 +772,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_maxZ_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_maxZ_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__MAX_Z,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__MAX_Z,
 				 true,
 				 false,
 				 false,
@@ -794,7 +794,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_minZ_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_minZ_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__MIN_Z,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__MIN_Z,
 				 true,
 				 false,
 				 false,
@@ -816,7 +816,7 @@ public class LASHeaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASHeader_startOfWaveformDataPacketRecord_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASHeader_startOfWaveformDataPacketRecord_feature", "_UI_LASHeader_type"),
-				 LasPackage.Literals.LAS_HEADER__START_OF_WAVEFORM_DATA_PACKET_RECORD,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_HEADER__START_OF_WAVEFORM_DATA_PACKET_RECORD,
 				 true,
 				 false,
 				 false,
@@ -863,39 +863,39 @@ public class LASHeaderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LASHeader.class)) {
-			case LasPackage.LAS_HEADER__FILE_SIGNATURE:
-			case LasPackage.LAS_HEADER__FILE_SOURCE_ID:
-			case LasPackage.LAS_HEADER__GLOBAL_ENCODING:
-			case LasPackage.LAS_HEADER__PROJECT_ID_GUID_DATA_1:
-			case LasPackage.LAS_HEADER__PROJECT_ID_GUID_DATA_2:
-			case LasPackage.LAS_HEADER__PROJECT_ID_GUID_DATA_3:
-			case LasPackage.LAS_HEADER__PROJECT_ID_GUID_DATA_4:
-			case LasPackage.LAS_HEADER__VERSION_MAJOR:
-			case LasPackage.LAS_HEADER__VERSION_MINOR:
-			case LasPackage.LAS_HEADER__SYSTEM_IDENTIFIER:
-			case LasPackage.LAS_HEADER__GENERATING_SOFTWARE:
-			case LasPackage.LAS_HEADER__FILE_CREATION_DAY_OF_YEAR:
-			case LasPackage.LAS_HEADER__FILE_CREATION_YEAR:
-			case LasPackage.LAS_HEADER__HEADER_SIZE:
-			case LasPackage.LAS_HEADER__OFFSET_TO_POINT_DATA:
-			case LasPackage.LAS_HEADER__NVARIABLE_LENGTH_RECORDS:
-			case LasPackage.LAS_HEADER__POINT_DATA_FORMAT_ID:
-			case LasPackage.LAS_HEADER__POINT_DATA_RECORD_LENGTH:
-			case LasPackage.LAS_HEADER__NUMBER_OF_POINT_RECORDS:
-			case LasPackage.LAS_HEADER__NUMBER_OF_POINTS_BY_RETURN:
-			case LasPackage.LAS_HEADER__XSCALE_FACTOR:
-			case LasPackage.LAS_HEADER__YSCALE_FACTOR:
-			case LasPackage.LAS_HEADER__ZSCALE_FACTOR:
-			case LasPackage.LAS_HEADER__XOFFSET:
-			case LasPackage.LAS_HEADER__YOFFSET:
-			case LasPackage.LAS_HEADER__ZOFFSET:
-			case LasPackage.LAS_HEADER__MAX_X:
-			case LasPackage.LAS_HEADER__MIN_X:
-			case LasPackage.LAS_HEADER__MAX_Y:
-			case LasPackage.LAS_HEADER__MIN_Y:
-			case LasPackage.LAS_HEADER__MAX_Z:
-			case LasPackage.LAS_HEADER__MIN_Z:
-			case LasPackage.LAS_HEADER__START_OF_WAVEFORM_DATA_PACKET_RECORD:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__FILE_SIGNATURE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__FILE_SOURCE_ID:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__GLOBAL_ENCODING:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__PROJECT_ID_GUID_DATA_1:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__PROJECT_ID_GUID_DATA_2:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__PROJECT_ID_GUID_DATA_3:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__PROJECT_ID_GUID_DATA_4:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__VERSION_MAJOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__VERSION_MINOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__SYSTEM_IDENTIFIER:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__GENERATING_SOFTWARE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__FILE_CREATION_DAY_OF_YEAR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__FILE_CREATION_YEAR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__HEADER_SIZE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__OFFSET_TO_POINT_DATA:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__NVARIABLE_LENGTH_RECORDS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__POINT_DATA_FORMAT_ID:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__POINT_DATA_RECORD_LENGTH:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__NUMBER_OF_POINT_RECORDS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__NUMBER_OF_POINTS_BY_RETURN:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__XSCALE_FACTOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__YSCALE_FACTOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__ZSCALE_FACTOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__XOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__YOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__ZOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__MAX_X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__MIN_X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__MAX_Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__MIN_Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__MAX_Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__MIN_Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_HEADER__START_OF_WAVEFORM_DATA_PACKET_RECORD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

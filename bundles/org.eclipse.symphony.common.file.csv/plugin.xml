@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.common.file.common.csv"
-            class="org.eclipse.symphony.common.file.csv.CsvPackage"
+            class="org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage"
             genModel="model/symphony_common_file_csv.xcore"/>
    </extension>
 

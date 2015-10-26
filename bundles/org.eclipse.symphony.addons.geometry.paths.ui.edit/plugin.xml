@@ -30,7 +30,7 @@
             class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">

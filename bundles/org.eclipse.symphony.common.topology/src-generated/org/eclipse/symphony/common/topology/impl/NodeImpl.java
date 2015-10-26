@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -91,7 +91,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.NODE;
+		return Symphony__CommonTopologyPackage.Literals.NODE;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			parent = (Node)eResolveProxy(oldParent);
 			if (parent != oldParent) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyPackage.NODE__PARENT, oldParent, parent));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyPackage.NODE__PARENT, oldParent, parent));
 			}
 		}
 		return parent;
@@ -126,7 +126,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		Node oldParent = parent;
 		parent = newParent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.NODE__PARENT, oldParent, parent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.NODE__PARENT, oldParent, parent));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.NODE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.NODE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -164,7 +164,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		String oldNodeId = nodeId;
 		nodeId = newNodeId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.NODE__NODE_ID, oldNodeId, nodeId));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.NODE__NODE_ID, oldNodeId, nodeId));
 	}
 
 	/**
@@ -185,12 +185,12 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.NODE__PARENT:
+			case Symphony__CommonTopologyPackage.NODE__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
-			case TopologyPackage.NODE__DESCRIPTION:
+			case Symphony__CommonTopologyPackage.NODE__DESCRIPTION:
 				return getDescription();
-			case TopologyPackage.NODE__NODE_ID:
+			case Symphony__CommonTopologyPackage.NODE__NODE_ID:
 				return getNodeId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -203,13 +203,13 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.NODE__PARENT:
+			case Symphony__CommonTopologyPackage.NODE__PARENT:
 				setParent((Node)newValue);
 				return;
-			case TopologyPackage.NODE__DESCRIPTION:
+			case Symphony__CommonTopologyPackage.NODE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case TopologyPackage.NODE__NODE_ID:
+			case Symphony__CommonTopologyPackage.NODE__NODE_ID:
 				setNodeId((String)newValue);
 				return;
 		}
@@ -223,13 +223,13 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.NODE__PARENT:
+			case Symphony__CommonTopologyPackage.NODE__PARENT:
 				setParent((Node)null);
 				return;
-			case TopologyPackage.NODE__DESCRIPTION:
+			case Symphony__CommonTopologyPackage.NODE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case TopologyPackage.NODE__NODE_ID:
+			case Symphony__CommonTopologyPackage.NODE__NODE_ID:
 				setNodeId(NODE_ID_EDEFAULT);
 				return;
 		}
@@ -243,11 +243,11 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.NODE__PARENT:
+			case Symphony__CommonTopologyPackage.NODE__PARENT:
 				return parent != null;
-			case TopologyPackage.NODE__DESCRIPTION:
+			case Symphony__CommonTopologyPackage.NODE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case TopologyPackage.NODE__NODE_ID:
+			case Symphony__CommonTopologyPackage.NODE__NODE_ID:
 				return NODE_ID_EDEFAULT == null ? nodeId != null : !NODE_ID_EDEFAULT.equals(nodeId);
 		}
 		return super.eIsSet(featureID);
@@ -261,7 +261,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case TopologyPackage.NODE___ACCEPT__INODEVISITOR:
+			case Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR:
 				accept((INodeVisitor)arguments.get(0));
 				return null;
 		}

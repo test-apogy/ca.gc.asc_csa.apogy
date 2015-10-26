@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.common.geometry.data.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Export-Package: org.eclipse.symphony.common.geometry.data.provider

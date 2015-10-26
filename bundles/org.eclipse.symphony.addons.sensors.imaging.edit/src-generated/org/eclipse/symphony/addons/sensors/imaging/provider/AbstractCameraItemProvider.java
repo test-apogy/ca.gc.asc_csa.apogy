@@ -19,8 +19,8 @@ import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera} object.
@@ -74,7 +74,7 @@ public class AbstractCameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 EMFEcorePackage.Literals.NAMED__NAME,
+				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -190,62 +190,62 @@ public class AbstractCameraItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 	}
 
@@ -262,8 +262,8 @@ public class AbstractCameraItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
+			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		if (qualify) {
 			return getString

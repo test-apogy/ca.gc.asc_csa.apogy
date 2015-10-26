@@ -50,10 +50,10 @@ import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
 import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-import org.eclipse.symphony.common.math.MathPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
@@ -326,7 +326,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyDynamicsPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyDynamicsPackage.eINSTANCE.eClass();
 		Symphony__AddonsPackage.eINSTANCE.eClass();
 		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 		Symphony__AddonsMobilityPathplannersPackage.eINSTANCE.eClass();
@@ -1251,10 +1251,10 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		// Obtain other dependent packages
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		TopologyDynamicsPackage theTopologyDynamicsPackage = (TopologyDynamicsPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyDynamicsPackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonTopologyDynamicsPackage theSymphony__CommonTopologyDynamicsPackage = (Symphony__CommonTopologyDynamicsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyDynamicsPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		TopologyBindingsPackage theTopologyBindingsPackage = (TopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyBindingsPackage.eNS_URI);
 		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
 		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
@@ -1273,52 +1273,52 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
 		// Add supertypes to classes
 		vehiclePoseCorrectorEClass.getESuperTypes().add(theSymphonyCorePackage.getPoseCorrector());
-		wheelEClass.getESuperTypes().add(theTopologyDynamicsPackage.getPhysicalBody());
-		thrusterEClass.getESuperTypes().add(theTopologyPackage.getNode());
+		wheelEClass.getESuperTypes().add(theSymphony__CommonTopologyDynamicsPackage.getPhysicalBody());
+		thrusterEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
 		thrusterBindingEClass.getESuperTypes().add(theTopologyBindingsPackage.getAbstractTopologyBinding());
 		wheelContactProviderEClass.getESuperTypes().add(this.getContactProvider());
-		landerSphericalFootEClass.getESuperTypes().add(theTopologyDynamicsPackage.getPhysicalBody());
+		landerSphericalFootEClass.getESuperTypes().add(theSymphony__CommonTopologyDynamicsPackage.getPhysicalBody());
 		landerSphericalFootContactProviderEClass.getESuperTypes().add(this.getContactProvider());
 		pathPlannerToolEClass.getESuperTypes().add(theSymphony__AddonsPackage.getAbstractTwoPoints3DTool());
-		pathPlannerToolNodeEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
+		pathPlannerToolNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
 		vehiclePathPlannerToolEClass.getESuperTypes().add(this.getPathPlannerTool());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vehiclePoseCorrectorEClass, VehiclePoseCorrector.class, "VehiclePoseCorrector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVehiclePoseCorrector_Initializing(), theEcorePackage.getEBoolean(), "initializing", "false", 0, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVehiclePoseCorrector_Meshes(), this.getMeshNodeEntry(), null, "meshes", null, 0, -1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVehiclePoseCorrector_ContactBodies(), theTopologyDynamicsPackage.getPhysicalBody(), null, "contactBodies", null, 0, -1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVehiclePoseCorrector_ContactBodies(), theSymphony__CommonTopologyDynamicsPackage.getPhysicalBody(), null, "contactBodies", null, 0, -1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehiclePoseCorrector_ZCorrectionMode(), this.getZCorrectionMode(), "zCorrectionMode", null, 0, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehiclePoseCorrector_ZCorrection(), theEcorePackage.getEDouble(), "zCorrection", "0", 0, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehiclePoseCorrector_OrientationCorrectionMode(), this.getOrientationCorrectionMode(), "orientationCorrectionMode", null, 0, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVehiclePoseCorrector_OrientationCorrection(), theMathPackage.getMatrix3x3(), null, "orientationCorrection", null, 0, 1, VehiclePoseCorrector.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVehiclePoseCorrector_OrientationCorrection(), theSymphony__CommonMathPackage.getMatrix3x3(), null, "orientationCorrection", null, 0, 1, VehiclePoseCorrector.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVehiclePoseCorrector_ContactProvider(), this.getContactProvider(), this.getContactProvider_VehiclePoseCorrector(), "contactProvider", null, 1, 1, VehiclePoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getVehiclePoseCorrector__ReInitialize(), null, "reInitialize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		EOperation op = initEOperation(getVehiclePoseCorrector__GetMeshExtent2D__CartesianTriangularMesh(), this.getMeshExtent2D(), "getMeshExtent2D", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getVehiclePoseCorrector__GetClosestNeighbourIteratorProvider__CartesianTriangularMesh(), this.getClosestNeighbourIteratorProvider(), "getClosestNeighbourIteratorProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(meshNodeEntryEClass, MeshNodeEntry.class, "MeshNodeEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMeshNodeEntry_Node(), theTopologyPackage.getNode(), null, "node", null, 0, 1, MeshNodeEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMeshNodeEntry_Mesh(), theData3dPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, MeshNodeEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMeshNodeEntry_Node(), theSymphony__CommonTopologyPackage.getNode(), null, "node", null, 0, 1, MeshNodeEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMeshNodeEntry_Mesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, MeshNodeEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contactProviderEClass, ContactProvider.class, "ContactProvider", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContactProvider_VehiclePoseCorrector(), this.getVehiclePoseCorrector(), this.getVehiclePoseCorrector_ContactProvider(), "vehiclePoseCorrector", null, 0, 1, ContactProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getContactProvider__ExtractContactBodies(), null, "extractContactBodies", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
-		EGenericType g2 = createEGenericType(theTopologyDynamicsPackage.getPhysicalBody());
+		EGenericType g2 = createEGenericType(theSymphony__CommonTopologyDynamicsPackage.getPhysicalBody());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
 		op = initEOperation(getContactProvider__UpdateContactPoints__Matrix4x4_Map(), null, "updateContactPoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getMatrix4x4(), "originalPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "originalPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getMap());
-		g2 = createEGenericType(theTopologyDynamicsPackage.getPhysicalBody());
+		g2 = createEGenericType(theSymphony__CommonTopologyDynamicsPackage.getPhysicalBody());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getPoint3d());
 		g1.getETypeArguments().add(g2);
@@ -1361,7 +1361,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		addEParameter(op, this.getTerrainProfile(), "terrainProfile", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getWheelVehicleUtilities__FindTerrainProfile__CartesianTriangularMesh_Plane(), this.getTerrainProfile(), "findTerrainProfile", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPlane(), "plane", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getWheelVehicleUtilities__FindIntersection__Plane_Line3d(), null, "findIntersection", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1377,7 +1377,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		addEParameter(op, this.getSegment2D(), "segment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getWheelVehicleUtilities__FindMeshExtent2D__CartesianTriangularMesh(), this.getMeshExtent2D(), "findMeshExtent2D", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getWheelVehicleUtilities__IsWithin__Point3d_MeshExtent2D(), theEcorePackage.getEBoolean(), "isWithin", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -58,7 +58,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.AGGREGATE_GROUP_NODE;
+		return Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	public EList<Node> getAggregatedChildren() {
 		if (aggregatedChildren == null) {
 			aggregatedChildren = new EObjectContainmentEList<Node>(Node.class,
-					this, TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN) {
+					this, Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN) {
 				/**
 				 * 
 				 */
@@ -153,7 +153,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				return ((InternalEList<?>)getAggregatedChildren()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -166,7 +166,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				return getAggregatedChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -180,7 +180,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				getAggregatedChildren().clear();
 				getAggregatedChildren().addAll((Collection<? extends Node>)newValue);
 				return;
@@ -195,7 +195,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				getAggregatedChildren().clear();
 				return;
 		}
@@ -209,7 +209,7 @@ public class AggregateGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
+			case Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN:
 				return aggregatedChildren != null && !aggregatedChildren.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.images.ImagesCorePackage#getAbstractEImageProvider()
+ * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getAbstractEImageProvider()
  * @model interface="true" abstract="true"
  * @generated
  */

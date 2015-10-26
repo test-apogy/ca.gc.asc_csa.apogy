@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.OrbitModelsList;
 import org.eclipse.symphony.core.SymphonyCorePackage;
@@ -277,7 +277,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case SymphonyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -293,7 +293,7 @@ public class OrbitModelsListImpl extends MinimalEObjectImpl.Container implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

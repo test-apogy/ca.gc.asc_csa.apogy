@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeatureNode()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeatureNode()
  * @model abstract="true"
  * @generated
  */

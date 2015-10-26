@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.Sky;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -88,7 +88,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 EMFEcorePackage.Literals.TIMED__TIME,
+				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,

@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
@@ -244,7 +244,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 	{
 		if(referencedGroupNode == null)
 		{
-			referencedGroupNode = TopologyFactory.eINSTANCE.createReferencedGroupNode();
+			referencedGroupNode = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
 			referencedGroupNode.setDescription("Map Group Node.");
 			referencedGroupNode.setNodeId("Map Content (" + getMap().getName() + ")");
 			getChildren().add(referencedGroupNode);

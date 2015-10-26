@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data.provider.PolygonItemProvider;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon} object.
@@ -68,7 +68,7 @@ public class CartesianPolygonItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPolygon_surface_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPolygon_surface_feature", "_UI_CartesianPolygon_type"),
-				 Data3dPackage.Literals.CARTESIAN_POLYGON__SURFACE,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__SURFACE,
 				 false,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class CartesianPolygonItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPolygon_normal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPolygon_normal_feature", "_UI_CartesianPolygon_type"),
-				 Data3dPackage.Literals.CARTESIAN_POLYGON__NORMAL,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__NORMAL,
 				 false,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class CartesianPolygonItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPolygon_centroid_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPolygon_centroid_feature", "_UI_CartesianPolygon_type"),
-				 Data3dPackage.Literals.CARTESIAN_POLYGON__CENTROID,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON__CENTROID,
 				 false,
 				 false,
 				 false,
@@ -156,8 +156,8 @@ public class CartesianPolygonItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianPolygon.class)) {
-			case Data3dPackage.CARTESIAN_POLYGON__SURFACE:
-			case Data3dPackage.CARTESIAN_POLYGON__NORMAL:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

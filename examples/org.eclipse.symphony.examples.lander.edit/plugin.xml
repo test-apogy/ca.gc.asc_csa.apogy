@@ -21,6 +21,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_examples_lander -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.examples.lander.provider.EMFEcoreExampleLanderItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated emf_ecore_examples_lander -->
       <extender
             uri="org.eclipse.symphony.common.topology"

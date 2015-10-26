@@ -144,7 +144,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.common.geometry.data3d.ui"
-            class="org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage"
+            class="org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage"
             genModel="model/symphony_common_geometry_data3d_ui.xcore"/>
    </extension>
 

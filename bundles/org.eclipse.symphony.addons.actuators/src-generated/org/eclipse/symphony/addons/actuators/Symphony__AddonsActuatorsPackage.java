@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -78,7 +78,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__PARENT = TopologyPackage.NODE__PARENT;
+  int ABSTRACT_ACTUATOR__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -87,7 +87,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+  int ABSTRACT_ACTUATOR__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -96,7 +96,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__NODE_ID = TopologyPackage.NODE__NODE_ID;
+  int ABSTRACT_ACTUATOR__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Moving</b></em>' attribute.
@@ -105,7 +105,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__MOVING = TopologyPackage.NODE_FEATURE_COUNT + 0;
+  int ABSTRACT_ACTUATOR__MOVING = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Actuator Status</b></em>' attribute.
@@ -114,7 +114,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR__ACTUATOR_STATUS = TopologyPackage.NODE_FEATURE_COUNT + 1;
+  int ABSTRACT_ACTUATOR__ACTUATOR_STATUS = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Abstract Actuator</em>' class.
@@ -123,7 +123,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 2;
+  int ABSTRACT_ACTUATOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 2;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -132,7 +132,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ACTUATOR___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int ABSTRACT_ACTUATOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Abstract Actuator</em>' class.
@@ -141,7 +141,7 @@ public interface Symphony__AddonsActuatorsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_ACTUATOR_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+  int ABSTRACT_ACTUATOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.actuators.impl.PanTiltUnitImpl <em>Pan Tilt Unit</em>}' class.

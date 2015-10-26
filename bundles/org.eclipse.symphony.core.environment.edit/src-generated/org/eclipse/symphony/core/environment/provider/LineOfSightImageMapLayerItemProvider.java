@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -260,7 +260,7 @@ public class LineOfSightImageMapLayerItemProvider extends CartesianTriangularMes
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEnvironmentPackage.Literals.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 	/**

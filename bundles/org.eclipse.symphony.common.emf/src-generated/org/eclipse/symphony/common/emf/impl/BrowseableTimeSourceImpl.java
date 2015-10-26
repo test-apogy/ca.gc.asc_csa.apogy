@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.BrowseableTimeSource;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeDirection;
 
 /**
@@ -139,7 +139,7 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.BROWSEABLE_TIME_SOURCE;
+		return Symphony__CommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE;
 	}
 
 	/**
@@ -179,7 +179,7 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 		Date oldStartTime = startTime;
 		startTime = newStartTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.BROWSEABLE_TIME_SOURCE__START_TIME, oldStartTime, startTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__START_TIME, oldStartTime, startTime));
 	}
 
 	/**
@@ -200,7 +200,7 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 		int oldUpdatePeriod = updatePeriod;
 		updatePeriod = newUpdatePeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
 	}
 
 	/**
@@ -221,7 +221,7 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 		float oldTimeAcceration = timeAcceration;
 		timeAcceration = newTimeAcceration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION, oldTimeAcceration, timeAcceration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION, oldTimeAcceration, timeAcceration));
 	}
 
 	/**
@@ -242,7 +242,7 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 		TimeDirection oldTimeDirection = timeDirection;
 		timeDirection = newTimeDirection == null ? TIME_DIRECTION_EDEFAULT : newTimeDirection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION, oldTimeDirection, timeDirection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION, oldTimeDirection, timeDirection));
 	}
 	
 	@Override
@@ -331,13 +331,13 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__START_TIME:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__START_TIME:
 				return getStartTime();
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
 				return getUpdatePeriod();
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
 				return getTimeAcceration();
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
 				return getTimeDirection();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -351,16 +351,16 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__START_TIME:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__START_TIME:
 				setStartTime((Date)newValue);
 				return;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
 				setUpdatePeriod((Integer)newValue);
 				return;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
 				setTimeAcceration((Float)newValue);
 				return;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
 				setTimeDirection((TimeDirection)newValue);
 				return;
 		}
@@ -375,16 +375,16 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__START_TIME:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__START_TIME:
 				setStartTime(START_TIME_EDEFAULT);
 				return;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
 				setUpdatePeriod(UPDATE_PERIOD_EDEFAULT);
 				return;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
 				setTimeAcceration(TIME_ACCERATION_EDEFAULT);
 				return;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
 				setTimeDirection(TIME_DIRECTION_EDEFAULT);
 				return;
 		}
@@ -399,13 +399,13 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__START_TIME:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__START_TIME:
 				return START_TIME_EDEFAULT == null ? startTime != null : !START_TIME_EDEFAULT.equals(startTime);
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__UPDATE_PERIOD:
 				return updatePeriod != UPDATE_PERIOD_EDEFAULT;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_ACCERATION:
 				return timeAcceration != TIME_ACCERATION_EDEFAULT;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE__TIME_DIRECTION:
 				return timeDirection != TIME_DIRECTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -419,16 +419,16 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE___PLAY_FORWARD:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE___PLAY_FORWARD:
 				playForward();
 				return null;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE___PLAY_REVERSE:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE___PLAY_REVERSE:
 				playReverse();
 				return null;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE___PAUSE:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE___PAUSE:
 				pause();
 				return null;
-			case EMFEcorePackage.BROWSEABLE_TIME_SOURCE___RESET:
+			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE___RESET:
 				reset();
 				return null;
 		}

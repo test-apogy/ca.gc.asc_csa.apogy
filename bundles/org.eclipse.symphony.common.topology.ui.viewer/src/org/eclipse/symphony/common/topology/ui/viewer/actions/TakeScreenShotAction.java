@@ -15,7 +15,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.ui.viewer.Activator;
@@ -52,7 +52,7 @@ public class TakeScreenShotAction extends Action
 		
 		if(image != null)
 		{
-			EImage eImage = ImagesCoreFactory.eINSTANCE.createEImage();
+			EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 			eImage.setImageContent(image);
 			
 			if(eImage != null)

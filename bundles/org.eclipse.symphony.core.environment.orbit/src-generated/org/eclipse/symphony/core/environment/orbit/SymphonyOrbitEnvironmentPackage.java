@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -180,7 +180,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FRAME__NAME = EMFEcorePackage.NAMED__NAME;
+	int ABSTRACT_FRAME__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -189,7 +189,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FRAME__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int ABSTRACT_FRAME__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Frame</em>' class.
@@ -198,7 +198,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FRAME_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_FRAME_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Abstract Frame</em>' class.
@@ -207,7 +207,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_FRAME_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int ABSTRACT_FRAME_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.impl.PVACoordinatesImpl <em>PVA Coordinates</em>}' class.
@@ -519,7 +519,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_ATTITUDE__TIME = EMFEcorePackage.TIMED__TIME;
+	int SPACECRAFT_ATTITUDE__TIME = Symphony__CommonEMFPackage.TIMED__TIME;
 
 	/**
 	 * The feature id for the '<em><b>Orientation</b></em>' containment reference.
@@ -528,7 +528,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_ATTITUDE__ORIENTATION = EMFEcorePackage.TIMED_FEATURE_COUNT + 0;
+	int SPACECRAFT_ATTITUDE__ORIENTATION = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Reference Frame</b></em>' containment reference.
@@ -537,7 +537,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_ATTITUDE__REFERENCE_FRAME = EMFEcorePackage.TIMED_FEATURE_COUNT + 1;
+	int SPACECRAFT_ATTITUDE__REFERENCE_FRAME = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Spacecraft Attitude</em>' class.
@@ -546,7 +546,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_ATTITUDE_FEATURE_COUNT = EMFEcorePackage.TIMED_FEATURE_COUNT + 2;
+	int SPACECRAFT_ATTITUDE_FEATURE_COUNT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Spacecraft Attitude</em>' class.
@@ -555,7 +555,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_ATTITUDE_OPERATION_COUNT = EMFEcorePackage.TIMED_OPERATION_COUNT + 0;
+	int SPACECRAFT_ATTITUDE_OPERATION_COUNT = Symphony__CommonEMFPackage.TIMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.AttitudeProvider <em>Attitude Provider</em>}' class.
@@ -611,7 +611,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_STATE__TIME = EMFEcorePackage.TIMED__TIME;
+	int SPACECRAFT_STATE__TIME = Symphony__CommonEMFPackage.TIMED__TIME;
 
 	/**
 	 * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
@@ -620,7 +620,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_STATE__COORDINATES = EMFEcorePackage.TIMED_FEATURE_COUNT + 0;
+	int SPACECRAFT_STATE__COORDINATES = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Attitude</b></em>' containment reference.
@@ -629,7 +629,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_STATE__ATTITUDE = EMFEcorePackage.TIMED_FEATURE_COUNT + 1;
+	int SPACECRAFT_STATE__ATTITUDE = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Orbit</b></em>' containment reference.
@@ -638,7 +638,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_STATE__ORBIT = EMFEcorePackage.TIMED_FEATURE_COUNT + 2;
+	int SPACECRAFT_STATE__ORBIT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Spacecraft State</em>' class.
@@ -647,7 +647,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_STATE_FEATURE_COUNT = EMFEcorePackage.TIMED_FEATURE_COUNT + 3;
+	int SPACECRAFT_STATE_FEATURE_COUNT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Spacecraft State</em>' class.
@@ -656,7 +656,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_STATE_OPERATION_COUNT = EMFEcorePackage.TIMED_OPERATION_COUNT + 0;
+	int SPACECRAFT_STATE_OPERATION_COUNT = Symphony__CommonEMFPackage.TIMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitImpl <em>Orbit</em>}' class.
@@ -675,7 +675,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT__NAME = EMFEcorePackage.NAMED__NAME;
+	int ORBIT__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -684,7 +684,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int ORBIT__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -693,7 +693,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT__TIME = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ORBIT__TIME = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Reference Frame</b></em>' containment reference.
@@ -702,7 +702,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT__REFERENCE_FRAME = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int ORBIT__REFERENCE_FRAME = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Orbit</em>' class.
@@ -711,7 +711,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int ORBIT_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Orbit</em>' class.
@@ -720,7 +720,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int ORBIT_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl <em>Abstract Orbit Propagator</em>}' class.
@@ -739,7 +739,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__NAME = EMFEcorePackage.NAMED__NAME;
+	int ABSTRACT_ORBIT_PROPAGATOR__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -748,7 +748,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Reference Frame</b></em>' containment reference.
@@ -757,7 +757,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Attitude Provider</b></em>' containment reference list.
@@ -766,7 +766,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Initial Orbit</b></em>' reference.
@@ -775,7 +775,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Valid From Date</b></em>' attribute.
@@ -784,7 +784,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+	int ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Valid To Date</b></em>' attribute.
@@ -793,7 +793,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+	int ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Orbit Propagator</em>' class.
@@ -802,7 +802,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 6;
+	int ABSTRACT_ORBIT_PROPAGATOR_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Propagate</em>' operation.
@@ -811,7 +811,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR___PROPAGATE__DATE = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int ABSTRACT_ORBIT_PROPAGATOR___PROPAGATE__DATE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Spacecraft States</em>' operation.
@@ -820,7 +820,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = EMFEcorePackage.NAMED_OPERATION_COUNT + 1;
+	int ABSTRACT_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Is Date In Valid Range</em>' operation.
@@ -829,7 +829,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = EMFEcorePackage.NAMED_OPERATION_COUNT + 2;
+	int ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Abstract Orbit Propagator</em>' class.
@@ -838,7 +838,7 @@ public interface SymphonyOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 3;
+	int ABSTRACT_ORBIT_PROPAGATOR_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitModelImpl <em>Orbit Model</em>}' class.

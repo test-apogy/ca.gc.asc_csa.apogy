@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.common.geometry.data3d.las"
-            class="org.eclipse.symphony.common.geometry.data3d.las.LasPackage"
+            class="org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage"
             genModel="model/symphony_common_geometry_data3d_las.xcore"/>
    </extension>
 

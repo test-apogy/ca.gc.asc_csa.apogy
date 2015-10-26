@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.geometry.data3d.impl.Data3dFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getData3dFacade()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getData3dFacade()
  * @model
  * @generated
  */

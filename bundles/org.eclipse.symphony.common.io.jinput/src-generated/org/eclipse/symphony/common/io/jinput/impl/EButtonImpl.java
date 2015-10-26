@@ -5,7 +5,7 @@ package org.eclipse.symphony.common.io.jinput.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.io.jinput.EButton;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EButtonImpl extends EComponentImpl implements EButton {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JInputPackage.Literals.EBUTTON;
+		return Symphony__CommonIOJInputPackage.Literals.EBUTTON;
 	}
 
 } //EButtonImpl

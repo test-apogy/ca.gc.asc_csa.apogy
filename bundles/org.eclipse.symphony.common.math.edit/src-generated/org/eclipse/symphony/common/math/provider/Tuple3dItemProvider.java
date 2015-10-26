@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.edit.utils.descriptors.DoubleItemPropertyDescriptor;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
@@ -87,7 +87,7 @@ public class Tuple3dItemProvider extends ItemProviderAdapter implements
 				getString("_UI_Tuple3d_x_feature"), getString(
 						"_UI_PropertyDescriptor_description",
 						"_UI_Tuple3d_x_feature", "_UI_Tuple3d_type"),
-				MathPackage.Literals.TUPLE3D__X, true, false, false,
+				Symphony__CommonMathPackage.Literals.TUPLE3D__X, true, false, false,
 				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
@@ -104,7 +104,7 @@ public class Tuple3dItemProvider extends ItemProviderAdapter implements
 				getString("_UI_Tuple3d_y_feature"), getString(
 						"_UI_PropertyDescriptor_description",
 						"_UI_Tuple3d_y_feature", "_UI_Tuple3d_type"),
-				MathPackage.Literals.TUPLE3D__Y, true, false, false,
+				Symphony__CommonMathPackage.Literals.TUPLE3D__Y, true, false, false,
 				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
@@ -121,7 +121,7 @@ public class Tuple3dItemProvider extends ItemProviderAdapter implements
 				getString("_UI_Tuple3d_z_feature"), getString(
 						"_UI_PropertyDescriptor_description",
 						"_UI_Tuple3d_z_feature", "_UI_Tuple3d_type"),
-				MathPackage.Literals.TUPLE3D__Z, true, false, false,
+				Symphony__CommonMathPackage.Literals.TUPLE3D__Z, true, false, false,
 				ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
@@ -163,9 +163,9 @@ public class Tuple3dItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Tuple3d.class)) {
-			case MathPackage.TUPLE3D__X:
-			case MathPackage.TUPLE3D__Y:
-			case MathPackage.TUPLE3D__Z:
+			case Symphony__CommonMathPackage.TUPLE3D__X:
+			case Symphony__CommonMathPackage.TUPLE3D__Y:
+			case Symphony__CommonMathPackage.TUPLE3D__Z:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

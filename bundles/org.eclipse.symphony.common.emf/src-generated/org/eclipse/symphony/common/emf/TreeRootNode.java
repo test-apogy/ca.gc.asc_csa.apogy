@@ -13,7 +13,7 @@ package org.eclipse.symphony.common.emf;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getTreeRootNode()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTreeRootNode()
  * @model
  * @generated
  */

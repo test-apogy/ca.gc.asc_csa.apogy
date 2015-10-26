@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data.Polygon} object.
@@ -80,7 +80,7 @@ public class PolygonItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Polygon_vertices_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Polygon_vertices_feature", "_UI_Polygon_type"),
-				 DataPackage.Literals.POLYGON__VERTICES,
+				 Symphony__CommonGeometryDataPackage.Literals.POLYGON__VERTICES,
 				 true,
 				 false,
 				 true,

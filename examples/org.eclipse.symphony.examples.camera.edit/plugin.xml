@@ -20,6 +20,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_examples_camera -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated emf_ecore.examples_camera -->
       <extender
             uri="org.eclipse.symphony.common.topology"

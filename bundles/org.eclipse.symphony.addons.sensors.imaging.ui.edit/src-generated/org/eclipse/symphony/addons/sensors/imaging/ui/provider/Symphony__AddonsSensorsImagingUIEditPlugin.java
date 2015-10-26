@@ -5,8 +5,8 @@ package org.eclipse.symphony.addons.sensors.imaging.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
 
 /**
@@ -44,8 +44,8 @@ public final class Symphony__AddonsSensorsImagingUIEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     TopologyUIEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.io.jinput.EVirtualComponent;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EVirtualComponent} object.
@@ -62,7 +62,7 @@ public class EVirtualComponentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EVirtualComponent_currentValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EVirtualComponent_currentValue_feature", "_UI_EVirtualComponent_type"),
-				 JInputPackage.Literals.EVIRTUAL_COMPONENT__CURRENT_VALUE,
+				 Symphony__CommonIOJInputPackage.Literals.EVIRTUAL_COMPONENT__CURRENT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class EVirtualComponentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EVirtualComponent.class)) {
-			case JInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
+			case Symphony__CommonIOJInputPackage.EVIRTUAL_COMPONENT__CURRENT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUiFacade;
 import org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUiFactory;
@@ -196,7 +196,7 @@ public class EMFEcoreInvocatorUiPackageImpl extends EPackageImpl implements EMFE
 
 		// Obtain other dependent packages
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -210,13 +210,13 @@ public class EMFEcoreInvocatorUiPackageImpl extends EPackageImpl implements EMFE
 		EOperation op = initEOperation(getEMFEcoreInvocatorUiFacade__CopyInitializationData__Context_Context(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getContext(), "source", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getContext(), "destination", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theEMFEcorePackage.getException());
+		addEException(op, theSymphony__CommonEMFPackage.getException());
 
 		op = initEOperation(getEMFEcoreInvocatorUiFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getAbstractTypeImplementation(), "source", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getAbstractTypeImplementation(), "destination", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCompoundCommand(), "command", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theEMFEcorePackage.getException());
+		addEException(op, theSymphony__CommonEMFPackage.getException());
 
 		// Initialize data types
 		initEDataType(compoundCommandEDataType, CompoundCommand.class, "CompoundCommand", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

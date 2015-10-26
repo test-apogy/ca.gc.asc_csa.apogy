@@ -16,7 +16,7 @@ package org.eclipse.symphony.common.topology;
  *   <li>{@link org.eclipse.symphony.common.topology.Link#getNode <em>Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getLink()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getLink()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface Link extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(Node)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getLink_Node()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getLink_Node()
 	 * @model
 	 * @generated
 	 */

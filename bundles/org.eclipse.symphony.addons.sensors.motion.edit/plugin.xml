@@ -23,6 +23,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_addons_sensors_motion -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.sensors.motion.provider.Symphony__AddonsSensorsMotionItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated motion -->
       <extender
             uri="org.eclipse.symphony.common.topology"

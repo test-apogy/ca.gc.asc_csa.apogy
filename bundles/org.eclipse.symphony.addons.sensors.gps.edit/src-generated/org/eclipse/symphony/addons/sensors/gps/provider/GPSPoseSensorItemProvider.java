@@ -16,8 +16,8 @@ import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
 import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFactory;
 import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.addons.sensors.pose.provider.PoseSensorItemProvider;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor} object.
@@ -72,7 +72,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Startable_started_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Startable_started_feature", "_UI_Startable_type"),
-				 EMFEcorePackage.Literals.STARTABLE__STARTED,
+				 Symphony__CommonEMFPackage.Literals.STARTABLE__STARTED,
 				 true,
 				 false,
 				 false,
@@ -94,7 +94,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Server_serverJob_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Server_serverJob_feature", "_UI_Server_type"),
-				 EMFEcorePackage.Literals.SERVER__SERVER_JOB,
+				 Symphony__CommonEMFPackage.Literals.SERVER__SERVER_JOB,
 				 false,
 				 false,
 				 false,
@@ -309,12 +309,12 @@ public class GPSPoseSensorItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSPoseSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSPoseSensor()));
 
 		newChildDescriptors.add
@@ -335,8 +335,8 @@ public class GPSPoseSensorItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
+			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		if (qualify) {
 			return getString

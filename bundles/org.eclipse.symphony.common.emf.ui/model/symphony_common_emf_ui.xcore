@@ -1,4 +1,6 @@
-@GenModel(prefix="EMFEcoreUI", childCreationExtenders="true", modelName="EMFEcoreUI")
+@GenModel(prefix="Symphony__CommonEMFUI",
+		  childCreationExtenders="true",
+		  modelName="Symphony__CommonEMFUI")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.emf.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.emf.ui.edit/src-generated")
 
@@ -13,7 +15,10 @@ type Unit wraps javax.measure.unit.Unit<?>
 
 class EMFEcoreUIFacade
 {	
-	@GenModel(documentation="Returns the color currently associated with the specified Ranges. Can be null.")
+	/*
+	 * Returns the color currently associated with the specified
+	 * Ranges. Can be null.
+	 */
 	op Color getColorForRange(Ranges range)	
 	
 	/*

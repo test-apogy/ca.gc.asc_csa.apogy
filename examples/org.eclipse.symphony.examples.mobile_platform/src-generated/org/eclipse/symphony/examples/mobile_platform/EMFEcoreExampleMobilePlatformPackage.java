@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -197,7 +197,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__INITIALIZED = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 0;
+	int MOBILE_PLATFORM__INITIALIZED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -206,7 +206,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__DISPOSED = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 1;
+	int MOBILE_PLATFORM__DISPOSED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Position Error</b></em>' attribute.
@@ -215,7 +215,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM__POSITION_ERROR = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 2;
+  int MOBILE_PLATFORM__POSITION_ERROR = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Linear Velocity</b></em>' attribute.
@@ -224,7 +224,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__LINEAR_VELOCITY = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 3;
+	int MOBILE_PLATFORM__LINEAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
 
 		/**
 	 * The feature id for the '<em><b>Angular Velocity</b></em>' attribute.
@@ -233,7 +233,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__ANGULAR_VELOCITY = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 4;
+	int MOBILE_PLATFORM__ANGULAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Left Wheel Position</b></em>' attribute.
@@ -242,7 +242,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM__LEFT_WHEEL_POSITION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 5;
+  int MOBILE_PLATFORM__LEFT_WHEEL_POSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
 
   /**
 	 * The feature id for the '<em><b>Right Wheel Position</b></em>' attribute.
@@ -251,7 +251,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM__RIGHT_WHEEL_POSITION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 6;
+  int MOBILE_PLATFORM__RIGHT_WHEEL_POSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
 
   /**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -260,7 +260,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM__POSITION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 7;
+  int MOBILE_PLATFORM__POSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
 
 		/**
 	 * The number of structural features of the '<em>Mobile Platform</em>' class.
@@ -269,7 +269,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM_FEATURE_COUNT = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 8;
+  int MOBILE_PLATFORM_FEATURE_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -278,7 +278,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM___DISPOSE = EMFEcorePackage.DISPOSABLE___DISPOSE;
+  int MOBILE_PLATFORM___DISPOSE = Symphony__CommonEMFPackage.DISPOSABLE___DISPOSE;
 
   /**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -287,7 +287,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM___INIT = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 0;
+  int MOBILE_PLATFORM___INIT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Reset Position</em>' operation.
@@ -296,7 +296,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___RESET_POSITION__POSITION = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 1;
+	int MOBILE_PLATFORM___RESET_POSITION__POSITION = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Clear Position Error</em>' operation.
@@ -305,7 +305,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___CLEAR_POSITION_ERROR = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 2;
+	int MOBILE_PLATFORM___CLEAR_POSITION_ERROR = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Stop</em>' operation.
@@ -314,7 +314,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM___STOP = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 3;
+  int MOBILE_PLATFORM___STOP = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
 
   /**
 	 * The operation id for the '<em>Move To</em>' operation.
@@ -323,7 +323,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___MOVE_TO__DOUBLE_DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 4;
+	int MOBILE_PLATFORM___MOVE_TO__DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
 
 		/**
 	 * The operation id for the '<em>Cmd Linear Velocity</em>' operation.
@@ -332,7 +332,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___CMD_LINEAR_VELOCITY__DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 5;
+	int MOBILE_PLATFORM___CMD_LINEAR_VELOCITY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 5;
 
 		/**
 	 * The operation id for the '<em>Cmd Angular Velocity</em>' operation.
@@ -341,7 +341,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___CMD_ANGULAR_VELOCITY__DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 6;
+	int MOBILE_PLATFORM___CMD_ANGULAR_VELOCITY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 6;
 
 		/**
 	 * The operation id for the '<em>Cmd Velocities</em>' operation.
@@ -350,7 +350,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___CMD_VELOCITIES__DOUBLE_DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 7;
+	int MOBILE_PLATFORM___CMD_VELOCITIES__DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 7;
 
 		/**
 	 * The number of operations of the '<em>Mobile Platform</em>' class.
@@ -359,7 +359,7 @@ public interface EMFEcoreExampleMobilePlatformPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MOBILE_PLATFORM_OPERATION_COUNT = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 8;
+  int MOBILE_PLATFORM_OPERATION_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 8;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.mobile_platform.impl.MobilePlatformStubImpl <em>Mobile Platform Stub</em>}' class.

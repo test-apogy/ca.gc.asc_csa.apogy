@@ -6,9 +6,9 @@ package org.eclipse.symphony.common.topology.bindings.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 
 /**
  * This is the central singleton for the TopologyBindings edit plugin.
@@ -44,10 +44,10 @@ public final class TopologyBindingsEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     Symphony__CommonEMFEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.MeshSmoother;
 import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
@@ -64,7 +64,7 @@ public class MeshSmootherItemProvider extends ProcessorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_MeshSmoother_numberOfIterations_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshSmoother_numberOfIterations_feature", "_UI_MeshSmoother_type"),
-				 Data3dPackage.Literals.MESH_SMOOTHER__NUMBER_OF_ITERATIONS,
+				 Symphony__CommonGeometryData3DPackage.Literals.MESH_SMOOTHER__NUMBER_OF_ITERATIONS,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class MeshSmootherItemProvider extends ProcessorItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MeshSmoother.class)) {
-			case Data3dPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
+			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER__NUMBER_OF_ITERATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

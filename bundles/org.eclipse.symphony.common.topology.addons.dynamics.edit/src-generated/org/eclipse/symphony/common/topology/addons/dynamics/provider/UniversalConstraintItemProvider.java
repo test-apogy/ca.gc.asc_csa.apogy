@@ -15,8 +15,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
 
 /**
@@ -64,8 +64,8 @@ public class UniversalConstraintItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -120,8 +120,8 @@ public class UniversalConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UniversalConstraint.class)) {
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -141,13 +141,13 @@ public class UniversalConstraintItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE,
-				 TopologyDynamicsFactory.eINSTANCE.createConstraintState()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createConstraintState()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE,
-				 TopologyDynamicsFactory.eINSTANCE.createConstraintState()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createConstraintState()));
 	}
 
 	/**
@@ -162,8 +162,8 @@ public class UniversalConstraintItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE ||
-			childFeature == TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE;
+			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE ||
+			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE;
 
 		if (qualify) {
 			return getString

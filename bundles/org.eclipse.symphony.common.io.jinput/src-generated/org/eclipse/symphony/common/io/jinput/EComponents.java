@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EComponents#getEController <em>EController</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponents()
+ * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponents()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface EComponents extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponents_Components()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponents_Components()
 	 * @see org.eclipse.symphony.common.io.jinput.EComponent#getEComponents
 	 * @model opposite="eComponents" containment="true" transient="true" changeable="false"
 	 * @generated
@@ -55,7 +55,7 @@ public interface EComponents extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponents_Name()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponents_Name()
 	 * @model default="" unique="false" transient="true"
 	 * @generated
 	 */
@@ -82,7 +82,7 @@ public interface EComponents extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>EController</em>' container reference.
 	 * @see #setEController(EController)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponents_EController()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponents_EController()
 	 * @see org.eclipse.symphony.common.io.jinput.EController#getEComponents
 	 * @model opposite="eComponents"
 	 * @generated

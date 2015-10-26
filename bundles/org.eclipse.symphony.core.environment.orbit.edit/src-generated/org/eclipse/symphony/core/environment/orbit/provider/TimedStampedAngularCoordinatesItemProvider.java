@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
 
@@ -64,7 +64,7 @@ public class TimedStampedAngularCoordinatesItemProvider extends AngularCoordinat
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 EMFEcorePackage.Literals.TIMED__TIME,
+				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,

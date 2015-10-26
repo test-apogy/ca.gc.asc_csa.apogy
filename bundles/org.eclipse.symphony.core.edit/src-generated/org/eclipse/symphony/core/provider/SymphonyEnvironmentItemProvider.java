@@ -13,8 +13,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
@@ -69,7 +69,7 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Timed_time_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Timed_time_feature", "_UI_Timed_type"),
-				 EMFEcorePackage.Literals.TIMED__TIME,
+				 Symphony__CommonEMFPackage.Literals.TIMED__TIME,
 				 true,
 				 false,
 				 false,
@@ -222,7 +222,7 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST,
-				 EMFEcoreFactory.eINSTANCE.createTimeSourcesList()));
+				 Symphony__CommonEMFFactory.eINSTANCE.createTimeSourcesList()));
 	}
 
 }

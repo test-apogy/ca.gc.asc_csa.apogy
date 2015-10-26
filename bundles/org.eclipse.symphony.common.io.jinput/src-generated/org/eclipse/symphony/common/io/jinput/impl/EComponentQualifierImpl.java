@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JInputPackage.Literals.ECOMPONENT_QUALIFIER;
+		return Symphony__CommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 		String oldEComponentName = eComponentName;
 		eComponentName = newEComponentName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME, oldEComponentName, eComponentName));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME, oldEComponentName, eComponentName));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 		String oldEControllerName = eControllerName;
 		eControllerName = newEControllerName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME, oldEControllerName, eControllerName));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME, oldEControllerName, eControllerName));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
 				return getEComponentName();
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				return getEControllerName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
 				setEComponentName((String)newValue);
 				return;
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				setEControllerName((String)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
 				setEComponentName(ECOMPONENT_NAME_EDEFAULT);
 				return;
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				setEControllerName(ECONTROLLER_NAME_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class EComponentQualifierImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
 				return ECOMPONENT_NAME_EDEFAULT == null ? eComponentName != null : !ECOMPONENT_NAME_EDEFAULT.equals(eComponentName);
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				return ECONTROLLER_NAME_EDEFAULT == null ? eControllerName != null : !ECONTROLLER_NAME_EDEFAULT.equals(eControllerName);
 		}
 		return super.eIsSet(featureID);

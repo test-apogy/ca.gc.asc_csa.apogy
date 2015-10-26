@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderFactory;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
 import org.eclipse.symphony.examples.lander.Lander;
@@ -603,7 +603,7 @@ public class EMFEcoreExampleLanderPackageImpl extends EPackageImpl implements EM
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 		Symphony__AddonsVehiclePackage theSymphony__AddonsVehiclePackage = (Symphony__AddonsVehiclePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsVehiclePackage.eNS_URI);
 
 		// Create type parameters
@@ -611,7 +611,7 @@ public class EMFEcoreExampleLanderPackageImpl extends EPackageImpl implements EM
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		landerEClass.getESuperTypes().add(theEMFEcorePackage.getDisposable());
+		landerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDisposable());
 		landerStubEClass.getESuperTypes().add(this.getLander());
 		landerSimulatedEClass.getESuperTypes().add(this.getLander());
 

@@ -6,7 +6,7 @@ package org.eclipse.symphony.common.geometry.data3d.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates;
 
 /**
@@ -104,7 +104,7 @@ public class RGBCartesianPositionCoordinatesImpl extends CartesianPositionCoordi
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Data3dPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES;
+		return Symphony__CommonGeometryData3DPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES;
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class RGBCartesianPositionCoordinatesImpl extends CartesianPositionCoordi
 		byte oldRed = red;
 		red = newRed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED, oldRed, red));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED, oldRed, red));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class RGBCartesianPositionCoordinatesImpl extends CartesianPositionCoordi
 		byte oldGreen = green;
 		green = newGreen;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN, oldGreen, green));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN, oldGreen, green));
 	}
 
 	/**
@@ -173,7 +173,7 @@ public class RGBCartesianPositionCoordinatesImpl extends CartesianPositionCoordi
 		byte oldBlue = blue;
 		blue = newBlue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE, oldBlue, blue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE, oldBlue, blue));
 	}
 
 	/**
@@ -185,11 +185,11 @@ public class RGBCartesianPositionCoordinatesImpl extends CartesianPositionCoordi
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
 				return getRed();
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
 				return getGreen();
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
 				return getBlue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -204,13 +204,13 @@ public class RGBCartesianPositionCoordinatesImpl extends CartesianPositionCoordi
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
 				setRed((Byte)newValue);
 				return;
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
 				setGreen((Byte)newValue);
 				return;
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
 				setBlue((Byte)newValue);
 				return;
 		}
@@ -226,13 +226,13 @@ public class RGBCartesianPositionCoordinatesImpl extends CartesianPositionCoordi
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
 				setRed(RED_EDEFAULT);
 				return;
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
 				setGreen(GREEN_EDEFAULT);
 				return;
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
 				setBlue(BLUE_EDEFAULT);
 				return;
 		}
@@ -248,11 +248,11 @@ public class RGBCartesianPositionCoordinatesImpl extends CartesianPositionCoordi
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
 				return red != RED_EDEFAULT;
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
 				return green != GREEN_EDEFAULT;
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
 				return blue != BLUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

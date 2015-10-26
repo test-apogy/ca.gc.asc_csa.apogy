@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data.DataPackage#getSamplingShape()
+ * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getSamplingShape()
  * @model interface="true" abstract="true"
  * @generated
  */

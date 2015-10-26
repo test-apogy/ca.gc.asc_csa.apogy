@@ -16,8 +16,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DelaunayMesher;
 import org.eclipse.symphony.common.math.quickhull3d.QuickHull3D;
 
@@ -140,7 +140,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.DELAUNAY_MESHER;
+		return Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER;
 	}
 
 	/**
@@ -159,7 +159,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 		double oldTolerance = tolerance;
 		tolerance = newTolerance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.DELAUNAY_MESHER__TOLERANCE, oldTolerance, tolerance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE, oldTolerance, tolerance));
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 		double oldAlpha = alpha;
 		alpha = newAlpha;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.DELAUNAY_MESHER__ALPHA, oldAlpha, alpha));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA, oldAlpha, alpha));
 	}
 
 	/**
@@ -197,7 +197,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 		double oldOffset = offset;
 		offset = newOffset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.DELAUNAY_MESHER__OFFSET, oldOffset, offset));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET, oldOffset, offset));
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 		boolean oldBoundingTriangulation = boundingTriangulation;
 		boundingTriangulation = newBoundingTriangulation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION, oldBoundingTriangulation, boundingTriangulation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION, oldBoundingTriangulation, boundingTriangulation));
 	}
 
 	/**
@@ -226,15 +226,15 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.DELAUNAY_MESHER__TOLERANCE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
 				return getTolerance();
-			case Data3dPackage.DELAUNAY_MESHER__ALPHA:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
 				return getAlpha();
-			case Data3dPackage.DELAUNAY_MESHER__OFFSET:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
 				return getOffset();
-			case Data3dPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
 				return isBoundingTriangulation();
-			case Data3dPackage.DELAUNAY_MESHER__MESHING_PLANE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
 				return getMeshingPlane();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -247,19 +247,19 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.DELAUNAY_MESHER__TOLERANCE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
 				setTolerance((Double)newValue);
 				return;
-			case Data3dPackage.DELAUNAY_MESHER__ALPHA:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
 				setAlpha((Double)newValue);
 				return;
-			case Data3dPackage.DELAUNAY_MESHER__OFFSET:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
 				setOffset((Double)newValue);
 				return;
-			case Data3dPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
 				setBoundingTriangulation((Boolean)newValue);
 				return;
-			case Data3dPackage.DELAUNAY_MESHER__MESHING_PLANE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
 				setMeshingPlane((CartesianPlane)newValue);
 				return;
 		}
@@ -273,19 +273,19 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.DELAUNAY_MESHER__TOLERANCE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
 				setTolerance(TOLERANCE_EDEFAULT);
 				return;
-			case Data3dPackage.DELAUNAY_MESHER__ALPHA:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
 				setAlpha(ALPHA_EDEFAULT);
 				return;
-			case Data3dPackage.DELAUNAY_MESHER__OFFSET:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
 				setOffset(OFFSET_EDEFAULT);
 				return;
-			case Data3dPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
 				setBoundingTriangulation(BOUNDING_TRIANGULATION_EDEFAULT);
 				return;
-			case Data3dPackage.DELAUNAY_MESHER__MESHING_PLANE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
 				setMeshingPlane(MESHING_PLANE_EDEFAULT);
 				return;
 		}
@@ -299,15 +299,15 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.DELAUNAY_MESHER__TOLERANCE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
 				return tolerance != TOLERANCE_EDEFAULT;
-			case Data3dPackage.DELAUNAY_MESHER__ALPHA:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
 				return alpha != ALPHA_EDEFAULT;
-			case Data3dPackage.DELAUNAY_MESHER__OFFSET:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
 				return offset != OFFSET_EDEFAULT;
-			case Data3dPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
 				return boundingTriangulation != BOUNDING_TRIANGULATION_EDEFAULT;
-			case Data3dPackage.DELAUNAY_MESHER__MESHING_PLANE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
 				return meshingPlane != MESHING_PLANE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -368,7 +368,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 						+ (t1 - t0));
 
 		// We only keep the faces facing down.
-		CartesianTriangularMesh mesh = Data3dFactory.eINSTANCE
+		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianTriangularMesh();
 
 		for (CartesianPositionCoordinates point : input.getPoints()) {
@@ -432,7 +432,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 		CartesianPlane oldMeshingPlane = meshingPlane;
 		meshingPlane = newMeshingPlane == null ? MESHING_PLANE_EDEFAULT : newMeshingPlane;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.DELAUNAY_MESHER__MESHING_PLANE, oldMeshingPlane, meshingPlane));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE, oldMeshingPlane, meshingPlane));
 	}
 
 } // DelaunayMesherImpl

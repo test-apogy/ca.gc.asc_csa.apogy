@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.OutlierFilter#getMaxDistance <em>Max Distance</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getOutlierFilter()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getOutlierFilter()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface OutlierFilter extends Processor<CartesianCoordinatesSet, Cartes
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Distance</em>' attribute.
 	 * @see #setMaxDistance(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getOutlierFilter_MaxDistance()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getOutlierFilter_MaxDistance()
 	 * @model unique="false"
 	 * @generated
 	 */

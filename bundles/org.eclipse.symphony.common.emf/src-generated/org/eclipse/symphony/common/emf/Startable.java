@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.emf.Startable#isStarted <em>Started</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getStartable()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getStartable()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface Startable extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Started</em>' attribute.
 	 * @see #setStarted(boolean)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getStartable_Started()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getStartable_Started()
 	 * @model default="false" unique="false" transient="true"
 	 * @generated
 	 */

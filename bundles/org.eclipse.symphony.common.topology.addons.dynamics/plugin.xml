@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.common.topology.addons.dynamics"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage"
+            class="org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage"
             genModel="model/symphony_common_topology_addons_dynamics.xcore"/>
    </extension>
 

@@ -16,7 +16,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
@@ -246,7 +246,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 								if(newSymphonyEnvironment.getSymphonyTopology().getRootNode() == null)
 								{
 									// Updates the deployment of the deployment node to get the topology to update.
-									TransformNode root = TopologyFactory.eINSTANCE.createTransformNode();
+									TransformNode root = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
 									root.setNodeId("UNIVERSE_ROOT");
 									root.setDescription("Root Node of the Symphony Environment");
 									
@@ -267,7 +267,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 							}
 							else
 							{
-								TransformNode root = TopologyFactory.eINSTANCE.createTransformNode();
+								TransformNode root = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
 								root.setNodeId("UNIVERSE_ROOT");
 								root.setDescription("Root Node of the Symphony Environment");
 								GraphicsContext graphicsContext = TopologyUIFacade.INSTANCE.createGraphicsContext(root);

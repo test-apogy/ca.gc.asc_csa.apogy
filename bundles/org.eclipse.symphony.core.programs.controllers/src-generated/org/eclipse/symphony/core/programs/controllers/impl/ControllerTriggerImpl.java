@@ -14,8 +14,8 @@ import org.eclipse.symphony.common.io.jinput.Activator;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
 import org.eclipse.symphony.common.io.jinput.EControllerEnvironment;
-import org.eclipse.symphony.common.io.jinput.JInputFactory;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 
@@ -82,7 +82,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 	  
 	  if(eComponentQualifier == null)
 	  {
-		  eComponentQualifier = JInputFactory.eINSTANCE.createEComponentQualifier();
+		  eComponentQualifier = Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
 		  setComponentQualifier(eComponentQualifier);
 	  }
 	  
@@ -248,7 +248,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 			@Override
 			public void notifyChanged(Notification notification) 
 			{
-				if(notification.getFeatureID(EControllerEnvironment.class) == JInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT)					
+				if(notification.getFeatureID(EControllerEnvironment.class) == Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT)					
 				{
 					EComponent component = Activator.getEControllerEnvironment().resolveEComponent(getComponentQualifier());
 					if(component != null)

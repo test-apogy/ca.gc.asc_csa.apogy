@@ -19,8 +19,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSourcesList;
 
 /**
@@ -74,7 +74,7 @@ public class TimeSourcesListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES);
+			childrenFeatures.add(Symphony__CommonEMFPackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES);
 		}
 		return childrenFeatures;
 	}
@@ -127,7 +127,7 @@ public class TimeSourcesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimeSourcesList.class)) {
-			case EMFEcorePackage.TIME_SOURCES_LIST__TIME_SOURCES:
+			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST__TIME_SOURCES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -147,28 +147,28 @@ public class TimeSourcesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 EMFEcoreFactory.eINSTANCE.createFixedTimeSource()));
+				(Symphony__CommonEMFPackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 Symphony__CommonEMFFactory.eINSTANCE.createFixedTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 EMFEcoreFactory.eINSTANCE.createCurrentTimeSource()));
+				(Symphony__CommonEMFPackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 Symphony__CommonEMFFactory.eINSTANCE.createCurrentTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 EMFEcoreFactory.eINSTANCE.createBrowseableTimeSource()));
+				(Symphony__CommonEMFPackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 Symphony__CommonEMFFactory.eINSTANCE.createBrowseableTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 EMFEcoreFactory.eINSTANCE.createSelectionBasedTimeSource()));
+				(Symphony__CommonEMFPackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 Symphony__CommonEMFFactory.eINSTANCE.createSelectionBasedTimeSource()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
-				 EMFEcoreFactory.eINSTANCE.createCollectionTimedTimeSource()));
+				(Symphony__CommonEMFPackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+				 Symphony__CommonEMFFactory.eINSTANCE.createCollectionTimedTimeSource()));
 	}
 
 	/**

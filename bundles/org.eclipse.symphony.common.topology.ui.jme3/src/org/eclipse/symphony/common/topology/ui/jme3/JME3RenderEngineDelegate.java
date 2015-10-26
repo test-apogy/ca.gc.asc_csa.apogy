@@ -18,7 +18,7 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
@@ -320,8 +320,8 @@ public class JME3RenderEngineDelegate  implements IRenderEngineDelegate
 		try
 		{
 			// First, get the extent of the scene and its center.
-			org.eclipse.symphony.common.math.Tuple3d min = MathFactory.eINSTANCE.createTuple3d(); 
-			org.eclipse.symphony.common.math.Tuple3d max = MathFactory.eINSTANCE.createTuple3d(); 
+			org.eclipse.symphony.common.math.Tuple3d min = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
+			org.eclipse.symphony.common.math.Tuple3d max = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
 			
 			TopologyUIFacade.INSTANCE.findExtent(topologyPresentationSet.getGraphicsContext().getTopology(), topologyPresentationSet, min, max);
 					

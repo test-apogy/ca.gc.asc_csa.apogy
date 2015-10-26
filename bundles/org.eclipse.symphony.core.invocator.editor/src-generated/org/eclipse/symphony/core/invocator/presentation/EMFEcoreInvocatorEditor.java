@@ -91,7 +91,7 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.symphony.common.emf.provider.EMFEcoreItemProviderAdapterFactory;
+import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFItemProviderAdapterFactory;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorItemProviderAdapterFactory;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
@@ -615,7 +615,7 @@ public class EMFEcoreInvocatorEditor
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new EMFEcoreInvocatorItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new EcoreItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new EMFEcoreItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new Symphony__CommonEMFItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

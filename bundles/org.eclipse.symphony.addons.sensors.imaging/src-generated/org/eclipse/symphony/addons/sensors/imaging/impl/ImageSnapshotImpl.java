@@ -16,7 +16,7 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.topology.INodeVisitor;
@@ -345,7 +345,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME: return EMFEcorePackage.TIMED__TIME;
+				case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -362,7 +362,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.TIMED__TIME: return Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME;
+				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME;
 				default: return -1;
 			}
 		}

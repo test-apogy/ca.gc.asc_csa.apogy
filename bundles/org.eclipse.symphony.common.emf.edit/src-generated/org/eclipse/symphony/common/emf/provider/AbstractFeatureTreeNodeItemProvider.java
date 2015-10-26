@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.AbstractFeatureTreeNode;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TreeFeatureNode;
 import org.eclipse.symphony.common.emf.TreeRootNode;
 
@@ -70,7 +70,7 @@ public class AbstractFeatureTreeNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureTreeNode_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureTreeNode_parent_feature", "_UI_AbstractFeatureTreeNode_type"),
-				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_TREE_NODE__PARENT,
+				 Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_TREE_NODE__PARENT,
 				 false,
 				 false,
 				 true,
@@ -92,7 +92,7 @@ public class AbstractFeatureTreeNodeItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcorePackage.Literals.ABSTRACT_FEATURE_TREE_NODE__CHILDREN);
+			childrenFeatures.add(Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_TREE_NODE__CHILDREN);
 		}
 		return childrenFeatures;
 	}
@@ -136,7 +136,7 @@ public class AbstractFeatureTreeNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractFeatureTreeNode.class)) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_TREE_NODE__CHILDREN:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_TREE_NODE__CHILDREN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -163,8 +163,8 @@ public class AbstractFeatureTreeNodeItemProvider
 		  {
 			   newChildDescriptors.add
 			      (createChildParameter
-			        (EMFEcorePackage.Literals.ABSTRACT_FEATURE_TREE_NODE__CHILDREN,
-			         EMFEcoreFactory.eINSTANCE.createTreeFeatureNode()));	
+			        (Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_TREE_NODE__CHILDREN,
+			         Symphony__CommonEMFFactory.eINSTANCE.createTreeFeatureNode()));	
 		  }
 	  }
 	  else if(object instanceof TreeFeatureNode)
@@ -177,8 +177,8 @@ public class AbstractFeatureTreeNodeItemProvider
 		  {	    
 			   newChildDescriptors.add
 			      (createChildParameter
-			        (EMFEcorePackage.Literals.ABSTRACT_FEATURE_TREE_NODE__CHILDREN,
-			         EMFEcoreFactory.eINSTANCE.createTreeFeatureNode()));
+			        (Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_TREE_NODE__CHILDREN,
+			         Symphony__CommonEMFFactory.eINSTANCE.createTreeFeatureNode()));
 		  }
 	  }  
     }

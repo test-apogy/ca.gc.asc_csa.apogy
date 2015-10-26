@@ -22,7 +22,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry#getLength <em>Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCapsuleGeometry()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCapsuleGeometry()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface CapsuleGeometry extends Geometry {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCapsuleGeometry_Radius()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCapsuleGeometry_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -63,7 +63,7 @@ public interface CapsuleGeometry extends Geometry {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Length</em>' attribute.
 	 * @see #setLength(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCapsuleGeometry_Length()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCapsuleGeometry_Length()
 	 * @model unique="false"
 	 * @generated
 	 */

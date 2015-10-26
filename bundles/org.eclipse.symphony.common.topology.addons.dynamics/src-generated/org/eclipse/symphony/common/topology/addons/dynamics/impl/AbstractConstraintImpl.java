@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -139,7 +139,7 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT;
 	}
 
 	/**
@@ -149,7 +149,7 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	 */
 	public EList<ConstraintAttachmentPoint> getAttachmentPoints() {
 		if (attachmentPoints == null) {
-			attachmentPoints = new EObjectContainmentWithInverseEList<ConstraintAttachmentPoint>(ConstraintAttachmentPoint.class, this, TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT);
+			attachmentPoints = new EObjectContainmentWithInverseEList<ConstraintAttachmentPoint>(ConstraintAttachmentPoint.class, this, Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT);
 		}
 		return attachmentPoints;
 	}
@@ -161,7 +161,7 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	 */
 	public EList<AbstractConstraintSimulationProperties> getSimulationProperties() {
 		if (simulationProperties == null) {
-			simulationProperties = new EObjectResolvingEList<AbstractConstraintSimulationProperties>(AbstractConstraintSimulationProperties.class, this, TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES);
+			simulationProperties = new EObjectResolvingEList<AbstractConstraintSimulationProperties>(AbstractConstraintSimulationProperties.class, this, Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES);
 		}
 		return simulationProperties;
 	}
@@ -184,7 +184,7 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -205,7 +205,7 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 		String oldConstaintId = constaintId;
 		constaintId = newConstaintId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID, oldConstaintId, constaintId));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID, oldConstaintId, constaintId));
 	}
 
 	/**
@@ -226,7 +226,7 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 		boolean oldEnabled = enabled;
 		enabled = newEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED, oldEnabled, enabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED, oldEnabled, enabled));
 	}
 
 	/**
@@ -238,7 +238,7 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAttachmentPoints()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -252,7 +252,7 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
 				return ((InternalEList<?>)getAttachmentPoints()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -266,15 +266,15 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
 				return getAttachmentPoints();
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES:
 				return getSimulationProperties();
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
 				return getDescription();
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
 				return getConstaintId();
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
 				return isEnabled();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -289,21 +289,21 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
 				getAttachmentPoints().clear();
 				getAttachmentPoints().addAll((Collection<? extends ConstraintAttachmentPoint>)newValue);
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES:
 				getSimulationProperties().clear();
 				getSimulationProperties().addAll((Collection<? extends AbstractConstraintSimulationProperties>)newValue);
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
 				setConstaintId((String)newValue);
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
 				setEnabled((Boolean)newValue);
 				return;
 		}
@@ -318,19 +318,19 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
 				getAttachmentPoints().clear();
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES:
 				getSimulationProperties().clear();
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
 				setConstaintId(CONSTAINT_ID_EDEFAULT);
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
 				setEnabled(ENABLED_EDEFAULT);
 				return;
 		}
@@ -345,15 +345,15 @@ public abstract class AbstractConstraintImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
 				return attachmentPoints != null && !attachmentPoints.isEmpty();
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES:
 				return simulationProperties != null && !simulationProperties.isEmpty();
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
 				return CONSTAINT_ID_EDEFAULT == null ? constaintId != null : !CONSTAINT_ID_EDEFAULT.equals(constaintId);
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
 				return enabled != ENABLED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

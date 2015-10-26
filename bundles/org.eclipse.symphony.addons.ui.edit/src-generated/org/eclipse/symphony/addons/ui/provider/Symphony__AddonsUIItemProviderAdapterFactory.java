@@ -40,12 +40,12 @@ import org.eclipse.symphony.addons.ui.util.Symphony__AddonsUIAdapterFactory;
 
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 import org.eclipse.symphony.common.topology.ui.util.TopologyUISwitch;
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -401,7 +401,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 	}
 
 	/**
-	 * A child creation extender for the {@link TopologyPackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -413,7 +413,7 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologySwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -449,17 +449,17 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 Symphony__AddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 Symphony__AddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 Symphony__AddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
 
 				return null;
@@ -474,17 +474,17 @@ public class Symphony__AddonsUIItemProviderAdapterFactory extends Symphony__Addo
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 Symphony__AddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 Symphony__AddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 Symphony__AddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
 
 				return null;

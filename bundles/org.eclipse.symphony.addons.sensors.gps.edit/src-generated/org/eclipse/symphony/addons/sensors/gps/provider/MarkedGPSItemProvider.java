@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
 import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.gps.MarkedGPS} object.
@@ -138,7 +138,7 @@ public class MarkedGPSItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__AddonsSensorsGPSPackage.Literals.MARKED_GPS__MARKER,
-				 Data3dFactory.eINSTANCE.createPositionMarker()));
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
 	}
 
 }

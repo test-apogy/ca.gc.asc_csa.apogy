@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphericalPolygon()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalPolygon()
  * @model
  * @generated
  */

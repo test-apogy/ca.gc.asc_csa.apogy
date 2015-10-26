@@ -26,9 +26,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSourcesList;
-import org.eclipse.symphony.common.emf.util.EMFEcoreSwitch;
+import org.eclipse.symphony.common.emf.util.Symphony__CommonEMFSwitch;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorAdapterFactory;
@@ -1454,19 +1454,19 @@ public class EMFEcoreInvocatorItemProviderAdapterFactory extends EMFEcoreInvocat
 	}
 
 		/**
-	 * A child creation extender for the {@link EMFEcorePackage}.
+	 * A child creation extender for the {@link Symphony__CommonEMFPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class EMFEcoreChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonEMFChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends EMFEcoreSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonEMFSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1502,11 +1502,12 @@ public class EMFEcoreInvocatorItemProviderAdapterFactory extends EMFEcoreInvocat
 			public Object caseTimeSourcesList(TimeSourcesList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(EMFEcorePackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
+						(Symphony__CommonEMFPackage.Literals.TIME_SOURCES_LIST__TIME_SOURCES,
 						 EMFEcoreInvocatorFactory.eINSTANCE.createOperationCallResultsListTimeSource()));
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

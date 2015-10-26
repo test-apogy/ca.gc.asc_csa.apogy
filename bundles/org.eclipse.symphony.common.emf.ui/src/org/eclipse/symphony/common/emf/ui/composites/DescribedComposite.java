@@ -14,7 +14,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class DescribedComposite extends Composite {
@@ -67,8 +67,8 @@ public class DescribedComposite extends Composite {
 	private DataBindingContext initDataBindings() {
 		IObservableValue descriptionObserveWidget = WidgetProperties.text(SWT.Modify).observe(descriptionText);
 		IObservableValue descriptionObserveValue = (editingDomain == null ? 
-				EMFProperties.value(EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION).observe(described):
-				EMFEditProperties.value(editingDomain, EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION).observe(described));
+				EMFProperties.value(Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described):
+				EMFEditProperties.value(editingDomain, Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described));
 		//
 		DataBindingContext bindingContext = new DataBindingContext();
 		//
@@ -81,8 +81,8 @@ public class DescribedComposite extends Composite {
 		IObservableValue descriptionObserveWidget = WidgetProperties.text(new int[]{SWT.Modify, SWT.FocusOut, SWT.DefaultSelection}).observeDelayed(500, descriptionText);
 		
 		IObservableValue descriptionObserveValue = editingDomain == null ? 
-				EMFProperties.value(EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION).observe(described):
-				EMFEditProperties.value(editingDomain, EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION).observe(described);
+				EMFProperties.value(Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described):
+				EMFEditProperties.value(editingDomain, Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION).observe(described);
 
 		//
 		DataBindingContext bindingContext = new DataBindingContext();

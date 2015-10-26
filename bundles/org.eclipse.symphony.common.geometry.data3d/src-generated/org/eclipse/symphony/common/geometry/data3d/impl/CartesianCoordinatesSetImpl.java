@@ -18,12 +18,12 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 
 /**
@@ -64,7 +64,7 @@ public class CartesianCoordinatesSetImpl extends CoordinatesSetImpl<CartesianPos
 			@SuppressWarnings("unchecked")
 			public void notifyChanged(Notification notification) {
 				if (notification
-						.getFeatureID(CartesianCoordinatesSet.class) == DataPackage.COORDINATES_SET__POINTS) {
+						.getFeatureID(CartesianCoordinatesSet.class) == Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS) {
 					if (notification.getEventType() == Notification.ADD
 							|| notification.getEventType() == Notification.ADD_MANY) {
 						if (notification.getNewValue() != null) {
@@ -97,7 +97,7 @@ public class CartesianCoordinatesSetImpl extends CoordinatesSetImpl<CartesianPos
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.CARTESIAN_COORDINATES_SET;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET;
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class CartesianCoordinatesSetImpl extends CoordinatesSetImpl<CartesianPos
 	@Override
 	public EList<CartesianPositionCoordinates> getPoints() {
 		if (points == null) {
-			points = new EObjectContainmentEList<CartesianPositionCoordinates>(CartesianPositionCoordinates.class, this, Data3dPackage.CARTESIAN_COORDINATES_SET__POINTS);
+			points = new EObjectContainmentEList<CartesianPositionCoordinates>(CartesianPositionCoordinates.class, this, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET__POINTS);
 		}
 		return points;
 	}
@@ -133,7 +133,7 @@ public class CartesianCoordinatesSetImpl extends CoordinatesSetImpl<CartesianPos
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT:
 				return getExtent();
 		}
 		return super.eInvoke(operationID, arguments);

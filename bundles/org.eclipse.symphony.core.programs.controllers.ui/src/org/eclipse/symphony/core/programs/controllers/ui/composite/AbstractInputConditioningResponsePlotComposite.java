@@ -8,7 +8,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.io.jinput.EVirtualComponent;
-import org.eclipse.symphony.common.io.jinput.JInputFactory;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -149,7 +149,7 @@ public class AbstractInputConditioningResponsePlotComposite extends Composite {
 		{
 			if(this.abstractInputConditioning != null)
 			{
-				EVirtualComponent component = JInputFactory.eINSTANCE.createEVirtualComponent();
+				EVirtualComponent component = Symphony__CommonIOJInputFactory.eINSTANCE.createEVirtualComponent();
 				
 				AbstractInputConditioning conditioning = EcoreUtil.copy(abstractInputConditioning);
 				

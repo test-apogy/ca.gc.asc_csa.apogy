@@ -2,7 +2,7 @@ package org.eclipse.symphony.common.topology.ui.adapters;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.URLNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
@@ -39,12 +39,12 @@ public class OBJGraphicsContextAdapter implements GraphicsContextAdapter
 		if (isAdapterFor(obj))
 		{
 			IFile file = (IFile) obj;
-			URLNode node = TopologyFactory.eINSTANCE.createURLNode();
+			URLNode node = Symphony__CommonTopologyFactory.eINSTANCE.createURLNode();
 			node.setDescription(file.getName());
 			
 			node.setUrl("file://" + file.getLocation().toOSString());
 			
-			GroupNode root = TopologyFactory.eINSTANCE.createGroupNode();
+			GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode();
 			root.getChildren().add(node);
 			
 			grContext = TopologyUIFactory.eINSTANCE.createGraphicsContext();

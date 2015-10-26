@@ -29,11 +29,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsAdapterFactory;
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -441,19 +441,19 @@ public class TopologyBindingsItemProviderAdapterFactory extends TopologyBindings
 	}
 
 	/**
-	 * A child creation extender for the {@link TopologyPackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class TopologyChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologySwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -489,51 +489,52 @@ public class TopologyBindingsItemProviderAdapterFactory extends TopologyBindings
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createRotationBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createBindingsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createBindingsSet()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createTopologyBindingsFacade()));
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
@@ -543,51 +544,52 @@ public class TopologyBindingsItemProviderAdapterFactory extends TopologyBindings
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createRotationBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createBindingsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createBindingsSet()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 TopologyBindingsFactory.eINSTANCE.createTopologyBindingsFacade()));
 
 				return null;
 			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

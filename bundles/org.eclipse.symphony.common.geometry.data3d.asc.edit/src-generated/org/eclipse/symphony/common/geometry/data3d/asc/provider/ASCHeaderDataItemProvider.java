@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData;
-import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage;
+import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData} object.
@@ -82,7 +82,7 @@ public class ASCHeaderDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ASCHeaderData_numberOfRow_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ASCHeaderData_numberOfRow_feature", "_UI_ASCHeaderData_type"),
-				 Data3DASCPackage.Literals.ASC_HEADER_DATA__NUMBER_OF_ROW,
+				 Symphony__CommonGeometryData3DASCPackage.Literals.ASC_HEADER_DATA__NUMBER_OF_ROW,
 				 true,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class ASCHeaderDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ASCHeaderData_numberOfColumns_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ASCHeaderData_numberOfColumns_feature", "_UI_ASCHeaderData_type"),
-				 Data3DASCPackage.Literals.ASC_HEADER_DATA__NUMBER_OF_COLUMNS,
+				 Symphony__CommonGeometryData3DASCPackage.Literals.ASC_HEADER_DATA__NUMBER_OF_COLUMNS,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class ASCHeaderDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ASCHeaderData_xllCenter_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ASCHeaderData_xllCenter_feature", "_UI_ASCHeaderData_type"),
-				 Data3DASCPackage.Literals.ASC_HEADER_DATA__XLL_CENTER,
+				 Symphony__CommonGeometryData3DASCPackage.Literals.ASC_HEADER_DATA__XLL_CENTER,
 				 true,
 				 false,
 				 false,
@@ -148,7 +148,7 @@ public class ASCHeaderDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ASCHeaderData_yllCenter_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ASCHeaderData_yllCenter_feature", "_UI_ASCHeaderData_type"),
-				 Data3DASCPackage.Literals.ASC_HEADER_DATA__YLL_CENTER,
+				 Symphony__CommonGeometryData3DASCPackage.Literals.ASC_HEADER_DATA__YLL_CENTER,
 				 true,
 				 false,
 				 false,
@@ -170,7 +170,7 @@ public class ASCHeaderDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ASCHeaderData_cellSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ASCHeaderData_cellSize_feature", "_UI_ASCHeaderData_type"),
-				 Data3DASCPackage.Literals.ASC_HEADER_DATA__CELL_SIZE,
+				 Symphony__CommonGeometryData3DASCPackage.Literals.ASC_HEADER_DATA__CELL_SIZE,
 				 true,
 				 false,
 				 false,
@@ -192,7 +192,7 @@ public class ASCHeaderDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ASCHeaderData_noDataValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ASCHeaderData_noDataValue_feature", "_UI_ASCHeaderData_type"),
-				 Data3DASCPackage.Literals.ASC_HEADER_DATA__NO_DATA_VALUE,
+				 Symphony__CommonGeometryData3DASCPackage.Literals.ASC_HEADER_DATA__NO_DATA_VALUE,
 				 true,
 				 false,
 				 false,
@@ -237,12 +237,12 @@ public class ASCHeaderDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ASCHeaderData.class)) {
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
-			case Data3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
-			case Data3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
-			case Data3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
-			case Data3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

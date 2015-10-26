@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.MeshLocalizer;
 
 /**
@@ -40,7 +40,7 @@ public class MeshLocalizerImpl extends MinimalEObjectImpl.Container implements M
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.MESH_LOCALIZER;
+		return Symphony__CommonGeometryData3DPackage.Literals.MESH_LOCALIZER;
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class MeshLocalizerImpl extends MinimalEObjectImpl.Container implements M
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.MESH_LOCALIZER___LOCALIZE__CARTESIANTRIANGULARMESH_MATRIX4D_CARTESIANTRIANGULARMESH_MATRIX4D:
+			case Symphony__CommonGeometryData3DPackage.MESH_LOCALIZER___LOCALIZE__CARTESIANTRIANGULARMESH_MATRIX4D_CARTESIANTRIANGULARMESH_MATRIX4D:
 			try {
 				return localize((CartesianTriangularMesh)arguments.get(0), (Matrix4d)arguments.get(1), (CartesianTriangularMesh)arguments.get(2), (Matrix4d)arguments.get(3));
 			} catch (Exception e) {

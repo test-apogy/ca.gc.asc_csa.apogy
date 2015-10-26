@@ -10,7 +10,7 @@ import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 
 import com.jme3.post.MultiTextureProjectorRenderer.CombineMode;
@@ -58,7 +58,7 @@ public class ImageSnapshotProjectorControl extends ImageProjectorControl<ImageSn
 		if(image != null)
 		{
 			// Ensures the image if of the right type.
-			EImage overlayImage = ImagesCoreFactory.eINSTANCE.createEImage();
+			EImage overlayImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 			overlayImage.setImageContent(image.asBufferedImage());
 			AbstractEImage transparentImage = EImagesUtilities.INSTANCE.createTransparentImage(overlayImage.getWidth(), overlayImage.getHeight());				
 			image = EImagesUtilities.INSTANCE.applyOverlay(transparentImage, overlayImage, false);					
@@ -108,7 +108,7 @@ public class ImageSnapshotProjectorControl extends ImageProjectorControl<ImageSn
 			}			
 		}
 
-		EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		filteredImage.setImageContent(rotated);
 		return filteredImage;     	
 	}

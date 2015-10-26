@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.AbstractTool;
 import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.AbstractTool} object.
@@ -83,7 +83,7 @@ public class AbstractToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 EMFEcorePackage.Literals.NAMED__NAME,
+				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class AbstractToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION,
+				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,

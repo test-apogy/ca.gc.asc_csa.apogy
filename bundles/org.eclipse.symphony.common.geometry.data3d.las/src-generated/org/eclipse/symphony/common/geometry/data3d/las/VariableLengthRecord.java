@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getVariableLengthRecord()
+ * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reserved</em>' attribute.
 	 * @see #setReserved(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getVariableLengthRecord_Reserved()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_Reserved()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>User ID</em>' attribute.
 	 * @see #setUserID(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getVariableLengthRecord_UserID()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_UserID()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Record ID</em>' attribute.
 	 * @see #setRecordID(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getVariableLengthRecord_RecordID()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_RecordID()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -114,7 +114,7 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Record Lenght After Header</em>' attribute.
 	 * @see #setRecordLenghtAfterHeader(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getVariableLengthRecord_RecordLenghtAfterHeader()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_RecordLenghtAfterHeader()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -140,7 +140,7 @@ public interface VariableLengthRecord extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getVariableLengthRecord_Description()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_Description()
 	 * @model unique="false"
 	 * @generated
 	 */

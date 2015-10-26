@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.topology;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getPickAndPlaceNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getPickAndPlaceNode()
  * @model
  * @generated
  */

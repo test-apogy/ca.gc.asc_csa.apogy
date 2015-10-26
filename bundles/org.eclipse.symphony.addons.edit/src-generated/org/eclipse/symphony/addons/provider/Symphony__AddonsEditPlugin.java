@@ -6,13 +6,13 @@ package org.eclipse.symphony.addons.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsEditPlugin;
-import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
+import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
+import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
+import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
 import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
 
@@ -50,16 +50,16 @@ public final class Symphony__AddonsEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
+		     Symphony__CommonEMFEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
 		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
+		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
+		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
+		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

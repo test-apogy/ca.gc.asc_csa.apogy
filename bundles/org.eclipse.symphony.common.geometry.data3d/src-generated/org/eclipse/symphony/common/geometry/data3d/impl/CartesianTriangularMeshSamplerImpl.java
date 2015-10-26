@@ -12,8 +12,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSampler;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
  */
 public class CartesianTriangularMeshSamplerImpl extends MeshCoordinatesShapesSamplerImpl<CartesianPositionCoordinates, CartesianTriangle> implements CartesianTriangularMeshSampler
 {
-	private static Data3dFacade data3dFacade = Data3dFactory.eINSTANCE.createData3dFacade();
+	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class CartesianTriangularMeshSamplerImpl extends MeshCoordinatesShapesSam
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Data3dPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SAMPLER;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SAMPLER;
 	}
 
 	@Override
@@ -56,13 +56,13 @@ public class CartesianTriangularMeshSamplerImpl extends MeshCoordinatesShapesSam
 	@Override
 	protected Mesh<CartesianPositionCoordinates, CartesianTriangle> createMesh()
 	{
-		return Data3dFactory.eINSTANCE.createCartesianTriangularMesh();
+		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 	}
 
 	@Override
 	protected CartesianTriangle createPolygon()
 	{		
-		return Data3dFactory.eINSTANCE.createCartesianTriangle();
+		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
 	}
 
 	@Override

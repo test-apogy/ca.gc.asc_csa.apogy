@@ -15,7 +15,7 @@ import org.eclipse.symphony.addons.actuators.ActuatorStatus;
 import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsFactory;
 import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -95,7 +95,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsActuatorsPackage.createPackageContents();
@@ -391,7 +391,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -399,7 +399,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		abstractActuatorEClass.getESuperTypes().add(theTopologyPackage.getNode());
+		abstractActuatorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
 		panTiltUnitEClass.getESuperTypes().add(this.getAbstractActuator());
 
 		// Initialize classes, features, and operations; add parameters

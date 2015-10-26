@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.emf.Described#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getDescribed()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getDescribed()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Described extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getDescribed_Description()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getDescribed_Description()
 	 * @model unique="false"
 	 * @generated
 	 */

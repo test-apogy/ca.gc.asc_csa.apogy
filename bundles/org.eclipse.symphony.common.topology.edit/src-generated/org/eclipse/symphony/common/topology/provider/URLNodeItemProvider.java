@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.URLNode;
 
 /**
@@ -70,7 +70,7 @@ public class URLNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLNode_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLNode_url_feature", "_UI_URLNode_type"),
-				 TopologyPackage.Literals.URL_NODE__URL,
+				 Symphony__CommonTopologyPackage.Literals.URL_NODE__URL,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class URLNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLNode_polygonCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLNode_polygonCount_feature", "_UI_URLNode_type"),
-				 TopologyPackage.Literals.URL_NODE__POLYGON_COUNT,
+				 Symphony__CommonTopologyPackage.Literals.URL_NODE__POLYGON_COUNT,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class URLNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLNode_vertexCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLNode_vertexCount_feature", "_UI_URLNode_type"),
-				 TopologyPackage.Literals.URL_NODE__VERTEX_COUNT,
+				 Symphony__CommonTopologyPackage.Literals.URL_NODE__VERTEX_COUNT,
 				 true,
 				 false,
 				 false,
@@ -184,9 +184,9 @@ public class URLNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLNode.class)) {
-			case TopologyPackage.URL_NODE__URL:
-			case TopologyPackage.URL_NODE__POLYGON_COUNT:
-			case TopologyPackage.URL_NODE__VERTEX_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__URL:
+			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

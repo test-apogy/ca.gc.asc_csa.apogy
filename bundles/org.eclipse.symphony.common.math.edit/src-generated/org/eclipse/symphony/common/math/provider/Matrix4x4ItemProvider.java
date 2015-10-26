@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 
@@ -99,7 +99,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m00_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m00_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M00,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M00,
 				 true,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m01_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m01_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M01,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M01,
 				 true,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m02_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m02_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M02,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M02,
 				 true,
 				 false,
 				 false,
@@ -165,7 +165,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m03_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m03_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M03,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M03,
 				 true,
 				 false,
 				 false,
@@ -187,7 +187,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m10_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m10_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M10,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M10,
 				 true,
 				 false,
 				 false,
@@ -209,7 +209,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m11_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m11_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M11,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M11,
 				 true,
 				 false,
 				 false,
@@ -231,7 +231,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m12_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m12_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M12,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M12,
 				 true,
 				 false,
 				 false,
@@ -253,7 +253,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m13_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m13_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M13,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M13,
 				 true,
 				 false,
 				 false,
@@ -275,7 +275,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m20_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m20_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M20,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M20,
 				 true,
 				 false,
 				 false,
@@ -297,7 +297,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m21_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m21_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M21,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M21,
 				 true,
 				 false,
 				 false,
@@ -319,7 +319,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m22_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m22_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M22,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M22,
 				 true,
 				 false,
 				 false,
@@ -341,7 +341,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m23_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m23_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M23,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M23,
 				 true,
 				 false,
 				 false,
@@ -363,7 +363,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m30_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m30_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M30,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M30,
 				 true,
 				 false,
 				 false,
@@ -385,7 +385,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m31_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m31_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M31,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M31,
 				 true,
 				 false,
 				 false,
@@ -407,7 +407,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m32_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m32_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M32,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M32,
 				 true,
 				 false,
 				 false,
@@ -429,7 +429,7 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Matrix4x4_m33_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Matrix4x4_m33_feature", "_UI_Matrix4x4_type"),
-				 MathPackage.Literals.MATRIX4X4__M33,
+				 Symphony__CommonMathPackage.Literals.MATRIX4X4__M33,
 				 true,
 				 false,
 				 false,
@@ -492,22 +492,22 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Matrix4x4.class)) {
-			case MathPackage.MATRIX4X4__M00:
-			case MathPackage.MATRIX4X4__M01:
-			case MathPackage.MATRIX4X4__M02:
-			case MathPackage.MATRIX4X4__M03:
-			case MathPackage.MATRIX4X4__M10:
-			case MathPackage.MATRIX4X4__M11:
-			case MathPackage.MATRIX4X4__M12:
-			case MathPackage.MATRIX4X4__M13:
-			case MathPackage.MATRIX4X4__M20:
-			case MathPackage.MATRIX4X4__M21:
-			case MathPackage.MATRIX4X4__M22:
-			case MathPackage.MATRIX4X4__M23:
-			case MathPackage.MATRIX4X4__M30:
-			case MathPackage.MATRIX4X4__M31:
-			case MathPackage.MATRIX4X4__M32:
-			case MathPackage.MATRIX4X4__M33:
+			case Symphony__CommonMathPackage.MATRIX4X4__M00:
+			case Symphony__CommonMathPackage.MATRIX4X4__M01:
+			case Symphony__CommonMathPackage.MATRIX4X4__M02:
+			case Symphony__CommonMathPackage.MATRIX4X4__M03:
+			case Symphony__CommonMathPackage.MATRIX4X4__M10:
+			case Symphony__CommonMathPackage.MATRIX4X4__M11:
+			case Symphony__CommonMathPackage.MATRIX4X4__M12:
+			case Symphony__CommonMathPackage.MATRIX4X4__M13:
+			case Symphony__CommonMathPackage.MATRIX4X4__M20:
+			case Symphony__CommonMathPackage.MATRIX4X4__M21:
+			case Symphony__CommonMathPackage.MATRIX4X4__M22:
+			case Symphony__CommonMathPackage.MATRIX4X4__M23:
+			case Symphony__CommonMathPackage.MATRIX4X4__M30:
+			case Symphony__CommonMathPackage.MATRIX4X4__M31:
+			case Symphony__CommonMathPackage.MATRIX4X4__M32:
+			case Symphony__CommonMathPackage.MATRIX4X4__M33:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

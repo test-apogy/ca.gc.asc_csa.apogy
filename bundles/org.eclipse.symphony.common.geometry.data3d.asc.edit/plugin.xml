@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.geometry.data3d.asc"
-            class="org.eclipse.symphony.common.geometry.data3d.asc.provider.Data3DASCItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.geometry.data3d.asc.provider.Symphony__CommonGeometryData3DASCItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

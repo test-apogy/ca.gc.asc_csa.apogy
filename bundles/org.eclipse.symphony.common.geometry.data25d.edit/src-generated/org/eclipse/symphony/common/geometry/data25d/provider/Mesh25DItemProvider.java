@@ -12,11 +12,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.provider.MeshItemProvider;
-import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
 import org.eclipse.symphony.common.geometry.data25d.Mesh25D;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Mesh25D} object.
@@ -111,63 +111,63 @@ public class Mesh25DItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data25dFactory.eINSTANCE.createCoordinates25D()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData25DFactory.eINSTANCE.createCoordinates25D()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createCartesianPositionCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createRGBCartesianPositionCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createRGBCartesianPositionCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createCartesianOrientationCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createSphericalCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createPose()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createPositionMarker()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.MESH__POLYGONS,
-				 Data25dFactory.eINSTANCE.createPolygon25D()));
+				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
+				 Symphony__CommonGeometryData25DFactory.eINSTANCE.createPolygon25D()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.MESH__POLYGONS,
-				 Data3dFactory.eINSTANCE.createCartesianPolygon()));
+				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.MESH__POLYGONS,
-				 Data3dFactory.eINSTANCE.createCartesianTriangle()));
+				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.MESH__POLYGONS,
-				 Data3dFactory.eINSTANCE.createSphericalPolygon()));
+				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalPolygon()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.MESH__POLYGONS,
-				 Data3dFactory.eINSTANCE.createSphericalTriangle()));
+				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalTriangle()));
 	}
 
 }

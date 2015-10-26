@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanData;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
@@ -290,7 +290,7 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME: return EMFEcorePackage.TIMED__TIME;
+				case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -305,7 +305,7 @@ public class RasterScanDataImpl extends AggregateGroupNodeImpl implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.TIMED__TIME: return Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME;
+				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME;
 				default: return -1;
 			}
 		}

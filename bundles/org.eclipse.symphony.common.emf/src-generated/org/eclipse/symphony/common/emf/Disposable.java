@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getDisposable()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getDisposable()
  * @model interface="true" abstract="true"
  * @generated
  */

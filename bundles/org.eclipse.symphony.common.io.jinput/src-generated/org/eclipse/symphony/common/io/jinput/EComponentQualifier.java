@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EComponentQualifier#getEControllerName <em>EController Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponentQualifier()
+ * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponentQualifier()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface EComponentQualifier extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>EComponent Name</em>' attribute.
 	 * @see #setEComponentName(String)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponentQualifier_EComponentName()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponentQualifier_EComponentName()
 	 * @model unique="false" required="true"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface EComponentQualifier extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>EController Name</em>' attribute.
 	 * @see #setEControllerName(String)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponentQualifier_EControllerName()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponentQualifier_EControllerName()
 	 * @model unique="false" required="true"
 	 * @generated
 	 */

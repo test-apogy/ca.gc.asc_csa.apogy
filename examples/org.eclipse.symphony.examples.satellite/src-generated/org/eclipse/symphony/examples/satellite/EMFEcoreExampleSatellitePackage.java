@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**
@@ -81,7 +81,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__NAME = EMFEcorePackage.NAMED__NAME;
+	int SATELLITE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Roll Rate</b></em>' attribute.
@@ -90,7 +90,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__MAXIMUM_ROLL_RATE = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int SATELLITE__MAXIMUM_ROLL_RATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Roll</b></em>' attribute.
@@ -99,7 +99,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__MAXIMUM_ROLL = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int SATELLITE__MAXIMUM_ROLL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Model</b></em>' containment reference.
@@ -108,7 +108,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__ORBIT_MODEL = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int SATELLITE__ORBIT_MODEL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Imager</b></em>' containment reference.
@@ -117,7 +117,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__IMAGER = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int SATELLITE__IMAGER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Satellite</em>' class.
@@ -126,7 +126,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+	int SATELLITE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Roll</em>' operation.
@@ -135,7 +135,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE___ROLL__DOUBLE = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int SATELLITE___ROLL__DOUBLE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Acquire Image</em>' operation.
@@ -144,7 +144,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE___ACQUIRE_IMAGE__DOUBLE = EMFEcorePackage.NAMED_OPERATION_COUNT + 1;
+	int SATELLITE___ACQUIRE_IMAGE__DOUBLE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Download Images</em>' operation.
@@ -153,7 +153,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE___DOWNLOAD_IMAGES__INT = EMFEcorePackage.NAMED_OPERATION_COUNT + 2;
+	int SATELLITE___DOWNLOAD_IMAGES__INT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Enqueue Satellite Command</em>' operation.
@@ -162,7 +162,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND = EMFEcorePackage.NAMED_OPERATION_COUNT + 3;
+	int SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Satellite</em>' class.
@@ -171,7 +171,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 4;
+	int SATELLITE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteSimulatedImpl <em>Satellite Simulated</em>}' class.
@@ -864,7 +864,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__WIDTH = ImagesCorePackage.ABSTRACT_EIMAGE__WIDTH;
+	int ORBITAL_IMAGE__WIDTH = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE__WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -873,7 +873,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__HEIGHT = ImagesCorePackage.ABSTRACT_EIMAGE__HEIGHT;
+	int ORBITAL_IMAGE__HEIGHT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE__HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Order Id</b></em>' attribute.
@@ -882,7 +882,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__ORDER_ID = ImagesCorePackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 0;
+	int ORBITAL_IMAGE__ORDER_ID = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Image Center</b></em>' containment reference.
@@ -891,7 +891,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__IMAGE_CENTER = ImagesCorePackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 1;
+	int ORBITAL_IMAGE__IMAGE_CENTER = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Download Size</b></em>' attribute.
@@ -900,7 +900,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__DOWNLOAD_SIZE = ImagesCorePackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 2;
+	int ORBITAL_IMAGE__DOWNLOAD_SIZE = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Orbital Image</em>' class.
@@ -909,7 +909,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_FEATURE_COUNT = ImagesCorePackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 3;
+	int ORBITAL_IMAGE_FEATURE_COUNT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>As Buffered Image</em>' operation.
@@ -918,7 +918,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE___AS_BUFFERED_IMAGE = ImagesCorePackage.ABSTRACT_EIMAGE___AS_BUFFERED_IMAGE;
+	int ORBITAL_IMAGE___AS_BUFFERED_IMAGE = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE___AS_BUFFERED_IMAGE;
 
 	/**
 	 * The number of operations of the '<em>Orbital Image</em>' class.
@@ -927,7 +927,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_OPERATION_COUNT = ImagesCorePackage.ABSTRACT_EIMAGE_OPERATION_COUNT + 0;
+	int ORBITAL_IMAGE_OPERATION_COUNT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl <em>Satellite Constellation</em>}' class.

@@ -13,7 +13,7 @@ package org.eclipse.symphony.common.emf;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getListFeatureNode()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getListFeatureNode()
  * @model
  * @generated
  */

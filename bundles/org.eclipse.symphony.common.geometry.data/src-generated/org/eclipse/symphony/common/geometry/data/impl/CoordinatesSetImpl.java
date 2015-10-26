@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -71,7 +71,7 @@ public class CoordinatesSetImpl<T extends Coordinates> extends MinimalEObjectImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DataPackage.Literals.COORDINATES_SET;
+		return Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class CoordinatesSetImpl<T extends Coordinates> extends MinimalEObjectImp
 	public EList<T> getPoints() {
 		if (points == null) {
 			points = new EObjectContainmentEList<T>(Coordinates.class, this,
-					DataPackage.COORDINATES_SET__POINTS) {
+					Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS) {
 				@Override
 				protected boolean isUnique() {
 					return false;
@@ -113,7 +113,7 @@ public class CoordinatesSetImpl<T extends Coordinates> extends MinimalEObjectImp
 		List<Vector3d> oldNormals = normals;
 		normals = newNormals;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DataPackage.COORDINATES_SET__NORMALS, oldNormals, normals));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS, oldNormals, normals));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class CoordinatesSetImpl<T extends Coordinates> extends MinimalEObjectImp
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case DataPackage.COORDINATES_SET__POINTS:
+		case Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS:
 			return ((InternalEList<?>) getPoints()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -138,9 +138,9 @@ public class CoordinatesSetImpl<T extends Coordinates> extends MinimalEObjectImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case DataPackage.COORDINATES_SET__POINTS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS:
 				return getPoints();
-			case DataPackage.COORDINATES_SET__NORMALS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS:
 				return getNormals();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -154,11 +154,11 @@ public class CoordinatesSetImpl<T extends Coordinates> extends MinimalEObjectImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case DataPackage.COORDINATES_SET__POINTS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS:
 				getPoints().clear();
 				getPoints().addAll((Collection<? extends T>)newValue);
 				return;
-			case DataPackage.COORDINATES_SET__NORMALS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS:
 				setNormals((List<Vector3d>)newValue);
 				return;
 		}
@@ -172,10 +172,10 @@ public class CoordinatesSetImpl<T extends Coordinates> extends MinimalEObjectImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case DataPackage.COORDINATES_SET__POINTS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS:
 				getPoints().clear();
 				return;
-			case DataPackage.COORDINATES_SET__NORMALS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS:
 				setNormals((List<Vector3d>)null);
 				return;
 		}
@@ -189,9 +189,9 @@ public class CoordinatesSetImpl<T extends Coordinates> extends MinimalEObjectImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case DataPackage.COORDINATES_SET__POINTS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS:
 				return points != null && !points.isEmpty();
-			case DataPackage.COORDINATES_SET__NORMALS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS:
 				return normals != null;
 		}
 		return super.eIsSet(featureID);

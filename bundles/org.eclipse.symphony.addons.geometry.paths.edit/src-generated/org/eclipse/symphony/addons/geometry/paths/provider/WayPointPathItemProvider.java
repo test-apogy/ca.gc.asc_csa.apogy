@@ -19,9 +19,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data3d.provider.CartesianCoordinatesSetItemProvider;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.WayPointPath} object.
@@ -79,7 +79,7 @@ public class WayPointPathItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_parent_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__PARENT,
+				 Symphony__CommonTopologyPackage.Literals.NODE__PARENT,
 				 true,
 				 false,
 				 true,
@@ -102,7 +102,7 @@ public class WayPointPathItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_description_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__DESCRIPTION,
+				 Symphony__CommonTopologyPackage.Literals.NODE__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -124,7 +124,7 @@ public class WayPointPathItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_nodeId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_nodeId_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__NODE_ID,
+				 Symphony__CommonTopologyPackage.Literals.NODE__NODE_ID,
 				 true,
 				 false,
 				 false,
@@ -225,7 +225,7 @@ public class WayPointPathItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
 				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 	}
 

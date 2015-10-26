@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial#getMaterialId <em>Material Id</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getAbstractMaterial()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getAbstractMaterial()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface AbstractMaterial extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Material Id</em>' attribute.
 	 * @see #setMaterialId(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getAbstractMaterial_MaterialId()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getAbstractMaterial_MaterialId()
 	 * @model unique="false"
 	 * @generated
 	 */

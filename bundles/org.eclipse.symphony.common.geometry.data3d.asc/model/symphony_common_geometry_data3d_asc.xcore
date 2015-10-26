@@ -1,4 +1,11 @@
-@GenModel(prefix="Data3DASC", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="Data3DASC", complianceLevel="6.0", suppressGenModelAnnotations="false")
+@GenModel(prefix="Symphony__CommonGeometryData3DASC",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CommonGeometryData3DASC",
+		  complianceLevel="6.0",
+		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d.asc/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated")
 @GenModel(testsDirectory="/org.eclipse.symphony.common.geometry.data3d.asc.tests/src-generated")

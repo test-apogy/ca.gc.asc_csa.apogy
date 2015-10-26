@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.WatchesList;
@@ -382,7 +382,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

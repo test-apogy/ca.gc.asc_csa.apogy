@@ -39,14 +39,14 @@ import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl;
 import org.eclipse.symphony.common.emf.DefaultListEventDelegate;
 import org.eclipse.symphony.common.emf.EListAdapter;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListEventDelegate;
 import org.eclipse.symphony.common.emf.Server;
 import org.eclipse.symphony.common.emf.Startable;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 import org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker;
@@ -753,13 +753,13 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Startable.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED: return EMFEcorePackage.STARTABLE__STARTED;
+				case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED: return Symphony__CommonEMFPackage.STARTABLE__STARTED;
 				default: return -1;
 			}
 		}
 		if (baseClass == Server.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB: return EMFEcorePackage.SERVER__SERVER_JOB;
+				case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB: return Symphony__CommonEMFPackage.SERVER__SERVER_JOB;
 				default: return -1;
 			}
 		}
@@ -774,13 +774,13 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Startable.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.STARTABLE__STARTED: return Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED;
+				case Symphony__CommonEMFPackage.STARTABLE__STARTED: return Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED;
 				default: return -1;
 			}
 		}
 		if (baseClass == Server.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.SERVER__SERVER_JOB: return Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB;
+				case Symphony__CommonEMFPackage.SERVER__SERVER_JOB: return Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB;
 				default: return -1;
 			}
 		}
@@ -821,7 +821,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 		for (int i = 0; i < getGps().size(); i++) {
 			GPSReading reading = getGps().get(i).getReading();
 			Vector3d gpsPosition = convertGpsToXYZ(reading);
-			PositionMarker marker = Data3dFactory.eINSTANCE
+			PositionMarker marker = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createPositionMarker();
 			marker.setX(gpsPosition.getX());
 			marker.setY(gpsPosition.getY());
@@ -851,7 +851,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 
 		Vector3d rollPitchYaw = GeometricUtils
 				.extractRotationFromZYXRotMatrix(roverRotationMatrix);
-		Pose pose1 = Data3dFactory.eINSTANCE.createPose();
+		Pose pose1 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose();
 		pose1.setXRotation(rollPitchYaw.getX());
 		pose1.setYRotation(rollPitchYaw.getY());
 		pose1.setZRotation(rollPitchYaw.getZ());
@@ -864,7 +864,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 
 	private RigidBodyPoseTracker getPoseTracker() {
 		if (rigidBodyPoseTracker == null) {
-			rigidBodyPoseTracker = Data3dFactory.eINSTANCE
+			rigidBodyPoseTracker = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createRigidBodyPoseTracker();
 			// Initialize markers
 			List<PositionMarker> listPositionMarkerAtOrigin = new ArrayList<PositionMarker>();
@@ -999,7 +999,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 			if (reading.getQuality().getValue() > 0) {
 
 				Vector3d xyz = convertGpsToXYZ(reading);
-				pose = Data3dFactory.eINSTANCE.createPose();
+				pose = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose();
 				pose.setX(xyz.getX());
 				pose.setY(xyz.getY());
 				pose.setZ(xyz.getZ());
@@ -1035,7 +1035,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 				Vector3d xyz1 = convertGpsToXYZ(reading1);
 				Vector3d xyz2 = convertGpsToXYZ(reading2);
 
-				pose = Data3dFactory.eINSTANCE.createPose();
+				pose = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose();
 				// set the average as output
 				pose.setX((xyz1.getX() + xyz2.getX()) / 2);
 				pose.setY((xyz1.getY() + xyz2.getY()) / 2);
@@ -1115,7 +1115,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	 */
 	private Pose convertToLocalFrame(Pose pose) {
 
-		Pose localFramePose = Data3dFactory.eINSTANCE.createPose();
+		Pose localFramePose = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose();
 
 		// The pose is with respect to the reference position.
 		Matrix4d refInvert = new Matrix4d();

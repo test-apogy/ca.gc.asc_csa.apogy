@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.orbit.PVACoordinates;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 
@@ -154,22 +154,22 @@ public class PVACoordinatesItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__POSITION,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__VELOCITY,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ACCELERATION,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**

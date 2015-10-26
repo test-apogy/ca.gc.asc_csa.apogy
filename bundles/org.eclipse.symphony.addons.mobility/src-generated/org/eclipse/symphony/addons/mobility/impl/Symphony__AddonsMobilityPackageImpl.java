@@ -16,7 +16,7 @@ import org.eclipse.symphony.addons.mobility.MobilePlatformStatus;
 import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityFactory;
 import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
 import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,7 +93,7 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsMobilityPackage.createPackageContents();
@@ -307,7 +307,7 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -315,7 +315,7 @@ public class Symphony__AddonsMobilityPackageImpl extends EPackageImpl implements
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		mobilePlatformEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
+		mobilePlatformEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
 		skidSteeredMobilePlatformEClass.getESuperTypes().add(this.getMobilePlatform());
 
 		// Initialize classes, features, and operations; add parameters

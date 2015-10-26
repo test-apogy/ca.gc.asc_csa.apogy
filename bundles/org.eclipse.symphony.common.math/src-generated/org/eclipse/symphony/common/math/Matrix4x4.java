@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM33 <em>M33</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4()
+ * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4()
  * @model
  * @generated
  */
@@ -50,7 +50,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M00</em>' attribute.
 	 * @see #setM00(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M00()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M00()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -76,7 +76,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M01</em>' attribute.
 	 * @see #setM01(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M01()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M01()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -102,7 +102,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M02</em>' attribute.
 	 * @see #setM02(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M02()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M02()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -128,7 +128,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M03</em>' attribute.
 	 * @see #setM03(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M03()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M03()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -154,7 +154,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M10</em>' attribute.
 	 * @see #setM10(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M10()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M10()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -181,7 +181,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M11</em>' attribute.
 	 * @see #setM11(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M11()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M11()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -207,7 +207,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M12</em>' attribute.
 	 * @see #setM12(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M12()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M12()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -233,7 +233,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M13</em>' attribute.
 	 * @see #setM13(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M13()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M13()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -259,7 +259,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M20</em>' attribute.
 	 * @see #setM20(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M20()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M20()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -285,7 +285,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M21</em>' attribute.
 	 * @see #setM21(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M21()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M21()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -312,7 +312,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M22</em>' attribute.
 	 * @see #setM22(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M22()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M22()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -338,7 +338,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M23</em>' attribute.
 	 * @see #setM23(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M23()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M23()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -364,7 +364,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M30</em>' attribute.
 	 * @see #setM30(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M30()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M30()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -390,7 +390,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M31</em>' attribute.
 	 * @see #setM31(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M31()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M31()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -416,7 +416,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M32</em>' attribute.
 	 * @see #setM32(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M32()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M32()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -443,7 +443,7 @@ public interface Matrix4x4 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M33</em>' attribute.
 	 * @see #setM33(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4_M33()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix4x4_M33()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

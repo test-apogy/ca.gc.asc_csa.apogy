@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.SphericalTriangle;
 import org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh;
@@ -38,7 +38,7 @@ public class SphericalTriangularMeshImpl extends MeshImpl<SphericalCoordinates, 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.SPHERICAL_TRIANGULAR_MESH;
+		return Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_TRIANGULAR_MESH;
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class SphericalTriangularMeshImpl extends MeshImpl<SphericalCoordinates, 
 	@Override
 	public EList<SphericalTriangle> getPolygons() {
 		if (polygons == null) {
-			polygons = new EObjectContainmentEList<SphericalTriangle>(SphericalTriangle.class, this, Data3dPackage.SPHERICAL_TRIANGULAR_MESH__POLYGONS);
+			polygons = new EObjectContainmentEList<SphericalTriangle>(SphericalTriangle.class, this, Symphony__CommonGeometryData3DPackage.SPHERICAL_TRIANGULAR_MESH__POLYGONS);
 		}
 		return polygons;
 	}

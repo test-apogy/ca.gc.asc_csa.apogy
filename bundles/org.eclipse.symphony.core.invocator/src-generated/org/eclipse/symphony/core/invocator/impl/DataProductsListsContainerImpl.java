@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.DataProductsList;
 import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -382,7 +382,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION;
 				default: return -1;
 			}
 		}

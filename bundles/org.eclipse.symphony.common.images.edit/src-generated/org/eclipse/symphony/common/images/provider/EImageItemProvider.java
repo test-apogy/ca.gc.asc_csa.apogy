@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.images.EImage} object.
@@ -79,7 +79,7 @@ public class EImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_width_feature", "_UI_AbstractEImage_type"),
-				 ImagesCorePackage.Literals.ABSTRACT_EIMAGE__WIDTH,
+				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class EImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_height_feature", "_UI_AbstractEImage_type"),
-				 ImagesCorePackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
+				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class EImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EImage_imageContent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EImage_imageContent_feature", "_UI_EImage_type"),
-				 ImagesCorePackage.Literals.EIMAGE__IMAGE_CONTENT,
+				 Symphony__CommonImagesPackage.Literals.EIMAGE__IMAGE_CONTENT,
 				 true,
 				 false,
 				 false,
@@ -172,9 +172,9 @@ public class EImageItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EImage.class)) {
-			case ImagesCorePackage.EIMAGE__WIDTH:
-			case ImagesCorePackage.EIMAGE__HEIGHT:
-			case ImagesCorePackage.EIMAGE__IMAGE_CONTENT:
+			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
+			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
+			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

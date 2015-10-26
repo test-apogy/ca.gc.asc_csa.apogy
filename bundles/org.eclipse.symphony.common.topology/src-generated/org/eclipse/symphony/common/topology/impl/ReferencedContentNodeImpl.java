@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.ReferencedContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -53,7 +53,7 @@ public class ReferencedContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.REFERENCED_CONTENT_NODE;
+		return Symphony__CommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class ReferencedContentNodeImpl<T> extends ContentNodeImpl<T> implements
 		setReferencedContent(newContent);
 
 		eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-				TopologyPackage.CONTENT_NODE__CONTENT, oldContent, newContent));
+				Symphony__CommonTopologyPackage.CONTENT_NODE__CONTENT, oldContent, newContent));
 
 	}
 
@@ -103,7 +103,7 @@ public class ReferencedContentNodeImpl<T> extends ContentNodeImpl<T> implements
 			referencedContent = (T)eResolveProxy(oldReferencedContent);
 			if (referencedContent != oldReferencedContent) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT, oldReferencedContent, referencedContent));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT, oldReferencedContent, referencedContent));
 			}
 		}
 		return referencedContent;
@@ -125,7 +125,7 @@ public class ReferencedContentNodeImpl<T> extends ContentNodeImpl<T> implements
 		T oldReferencedContent = referencedContent;
 		referencedContent = newReferencedContent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT, oldReferencedContent, referencedContent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT, oldReferencedContent, referencedContent));
 	}
 
 	/**
@@ -135,7 +135,7 @@ public class ReferencedContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT:
+			case Symphony__CommonTopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT:
 				if (resolve) return getReferencedContent();
 				return basicGetReferencedContent();
 		}
@@ -150,7 +150,7 @@ public class ReferencedContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT:
+			case Symphony__CommonTopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT:
 				setReferencedContent((T)newValue);
 				return;
 		}
@@ -164,7 +164,7 @@ public class ReferencedContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT:
+			case Symphony__CommonTopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT:
 				setReferencedContent((T)null);
 				return;
 		}
@@ -178,7 +178,7 @@ public class ReferencedContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT:
+			case Symphony__CommonTopologyPackage.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT:
 				return referencedContent != null;
 		}
 		return super.eIsSet(featureID);

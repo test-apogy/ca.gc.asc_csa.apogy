@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.images.ImagesAlbum#getImages <em>Images</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImagesAlbum()
+ * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImagesAlbum()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface ImagesAlbum extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImagesAlbum_Name()
+	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImagesAlbum_Name()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface ImagesAlbum extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Images</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImagesAlbum_Images()
+	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImagesAlbum_Images()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.Activator;
 import org.eclipse.symphony.common.emf.CurrentTimeSource;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
@@ -98,7 +98,7 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.CURRENT_TIME_SOURCE;
+		return Symphony__CommonEMFPackage.Literals.CURRENT_TIME_SOURCE;
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 		int oldUpdatePeriod = updatePeriod;
 		updatePeriod = newUpdatePeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD, oldUpdatePeriod, updatePeriod));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 		boolean oldPaused = paused;
 		paused = newPaused;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.CURRENT_TIME_SOURCE__PAUSED, oldPaused, paused));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED, oldPaused, paused));
 	}
 
 	/**
@@ -182,9 +182,9 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 				return getUpdatePeriod();
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__PAUSED:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				return isPaused();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -198,10 +198,10 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 				setUpdatePeriod((Integer)newValue);
 				return;
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__PAUSED:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				setPaused((Boolean)newValue);
 				return;
 		}
@@ -216,10 +216,10 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 				setUpdatePeriod(UPDATE_PERIOD_EDEFAULT);
 				return;
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__PAUSED:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				setPaused(PAUSED_EDEFAULT);
 				return;
 		}
@@ -234,9 +234,9 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
 				return updatePeriod != UPDATE_PERIOD_EDEFAULT;
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__PAUSED:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				return paused != PAUSED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -250,10 +250,10 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcorePackage.CURRENT_TIME_SOURCE___PAUSE:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE___PAUSE:
 				pause();
 				return null;
-			case EMFEcorePackage.CURRENT_TIME_SOURCE___RESUME:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE___RESUME:
 				resume();
 				return null;
 		}

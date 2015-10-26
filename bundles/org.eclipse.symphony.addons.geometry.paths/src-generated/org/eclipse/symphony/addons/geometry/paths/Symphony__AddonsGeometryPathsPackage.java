@@ -10,11 +10,9 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
-
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,7 +81,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__X = Data3dPackage.CARTESIAN_POSITION_COORDINATES__X;
+	int WAY_POINT__X = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -92,7 +90,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__Y = Data3dPackage.CARTESIAN_POSITION_COORDINATES__Y;
+	int WAY_POINT__Y = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y;
 
 	/**
 	 * The feature id for the '<em><b>Z</b></em>' attribute.
@@ -101,7 +99,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__Z = Data3dPackage.CARTESIAN_POSITION_COORDINATES__Z;
+	int WAY_POINT__Z = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -110,7 +108,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__PARENT = Data3dPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 0;
+	int WAY_POINT__PARENT = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -119,7 +117,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__DESCRIPTION = Data3dPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 1;
+	int WAY_POINT__DESCRIPTION = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -128,7 +126,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__NODE_ID = Data3dPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 2;
+	int WAY_POINT__NODE_ID = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -137,7 +135,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__CHILDREN = Data3dPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 3;
+	int WAY_POINT__CHILDREN = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Way Point</em>' class.
@@ -146,7 +144,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_FEATURE_COUNT = Data3dPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 4;
+	int WAY_POINT_FEATURE_COUNT = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>As Point3d</em>' operation.
@@ -155,7 +153,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT___AS_POINT3D = Data3dPackage.CARTESIAN_POSITION_COORDINATES___AS_POINT3D;
+	int WAY_POINT___AS_POINT3D = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES___AS_POINT3D;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -164,7 +162,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT___ACCEPT__INODEVISITOR = Data3dPackage.CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 0;
+	int WAY_POINT___ACCEPT__INODEVISITOR = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Way Point</em>' class.
@@ -173,7 +171,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_OPERATION_COUNT = Data3dPackage.CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 1;
+	int WAY_POINT_OPERATION_COUNT = Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.PathImpl <em>Path</em>}' class.
@@ -192,7 +190,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH__PARENT = TopologyPackage.NODE__PARENT;
+	int PATH__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -201,7 +199,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int PATH__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -210,7 +208,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int PATH__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The number of structural features of the '<em>Path</em>' class.
@@ -219,7 +217,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int PATH_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -228,7 +226,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int PATH___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Path</em>' class.
@@ -237,7 +235,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int PATH_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.WayPointPathImpl <em>Way Point Path</em>}' class.
@@ -256,7 +254,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH__POINTS = Data3dPackage.CARTESIAN_COORDINATES_SET__POINTS;
+	int WAY_POINT_PATH__POINTS = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -265,7 +263,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH__NORMALS = Data3dPackage.CARTESIAN_COORDINATES_SET__NORMALS;
+	int WAY_POINT_PATH__NORMALS = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET__NORMALS;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -274,7 +272,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH__PARENT = Data3dPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 0;
+	int WAY_POINT_PATH__PARENT = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -283,7 +281,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH__DESCRIPTION = Data3dPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 1;
+	int WAY_POINT_PATH__DESCRIPTION = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -292,7 +290,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH__NODE_ID = Data3dPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 2;
+	int WAY_POINT_PATH__NODE_ID = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Length</b></em>' attribute.
@@ -301,7 +299,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH__LENGTH = Data3dPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 3;
+	int WAY_POINT_PATH__LENGTH = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Way Point Path</em>' class.
@@ -310,7 +308,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_FEATURE_COUNT = Data3dPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 4;
+	int WAY_POINT_PATH_FEATURE_COUNT = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Extent</em>' operation.
@@ -319,7 +317,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH___GET_EXTENT = Data3dPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT;
+	int WAY_POINT_PATH___GET_EXTENT = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -328,7 +326,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH___ACCEPT__INODEVISITOR = Data3dPackage.CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
+	int WAY_POINT_PATH___ACCEPT__INODEVISITOR = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Start Point</em>' operation.
@@ -337,7 +335,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH___GET_START_POINT = Data3dPackage.CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 1;
+	int WAY_POINT_PATH___GET_START_POINT = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get End Point</em>' operation.
@@ -346,7 +344,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH___GET_END_POINT = Data3dPackage.CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 2;
+	int WAY_POINT_PATH___GET_END_POINT = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Way Point Path</em>' class.
@@ -355,7 +353,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_OPERATION_COUNT = Data3dPackage.CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 3;
+	int WAY_POINT_PATH_OPERATION_COUNT = Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.WayPointPathInterpolatorImpl <em>Way Point Path Interpolator</em>}' class.
@@ -374,7 +372,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_INTERPOLATOR__PROGRESS_MONITOR = ProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int WAY_POINT_PATH_INTERPOLATOR__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -383,7 +381,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_INTERPOLATOR__INPUT = ProcessorsPackage.PROCESSOR__INPUT;
+	int WAY_POINT_PATH_INTERPOLATOR__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -392,7 +390,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_INTERPOLATOR__OUTPUT = ProcessorsPackage.PROCESSOR__OUTPUT;
+	int WAY_POINT_PATH_INTERPOLATOR__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The number of structural features of the '<em>Way Point Path Interpolator</em>' class.
@@ -401,7 +399,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_INTERPOLATOR_FEATURE_COUNT = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int WAY_POINT_PATH_INTERPOLATOR_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -410,7 +408,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_INTERPOLATOR___PROCESS__OBJECT = ProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int WAY_POINT_PATH_INTERPOLATOR___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Way Point Path Interpolator</em>' class.
@@ -419,7 +417,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_INTERPOLATOR_OPERATION_COUNT = ProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int WAY_POINT_PATH_INTERPOLATOR_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.CatmullRomWayPointPathInterpolatorImpl <em>Catmull Rom Way Point Path Interpolator</em>}' class.
@@ -602,7 +600,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_FILTER__PROGRESS_MONITOR = ProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int WAY_POINT_PATH_FILTER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -611,7 +609,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_FILTER__INPUT = ProcessorsPackage.PROCESSOR__INPUT;
+	int WAY_POINT_PATH_FILTER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -620,7 +618,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_FILTER__OUTPUT = ProcessorsPackage.PROCESSOR__OUTPUT;
+	int WAY_POINT_PATH_FILTER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The number of structural features of the '<em>Way Point Path Filter</em>' class.
@@ -629,7 +627,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_FILTER_FEATURE_COUNT = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int WAY_POINT_PATH_FILTER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -638,7 +636,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_FILTER___PROCESS__OBJECT = ProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int WAY_POINT_PATH_FILTER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The number of operations of the '<em>Way Point Path Filter</em>' class.
@@ -647,7 +645,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_FILTER_OPERATION_COUNT = ProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int WAY_POINT_PATH_FILTER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.MinimumDistanceFilterImpl <em>Minimum Distance Filter</em>}' class.

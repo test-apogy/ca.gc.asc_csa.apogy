@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Polynomial;
 
 /**
@@ -82,7 +82,7 @@ public class PolynomialItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Polynomial_degree_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Polynomial_degree_feature", "_UI_Polynomial_type"),
-				 MathPackage.Literals.POLYNOMIAL__DEGREE,
+				 Symphony__CommonMathPackage.Literals.POLYNOMIAL__DEGREE,
 				 false,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class PolynomialItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Polynomial_coeffs_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Polynomial_coeffs_feature", "_UI_Polynomial_type"),
-				 MathPackage.Literals.POLYNOMIAL__COEFFS,
+				 Symphony__CommonMathPackage.Literals.POLYNOMIAL__COEFFS,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class PolynomialItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Polynomial_realRoots_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Polynomial_realRoots_feature", "_UI_Polynomial_type"),
-				 MathPackage.Literals.POLYNOMIAL__REAL_ROOTS,
+				 Symphony__CommonMathPackage.Literals.POLYNOMIAL__REAL_ROOTS,
 				 false,
 				 false,
 				 false,
@@ -148,7 +148,7 @@ public class PolynomialItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Polynomial_imaginaryRoots_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Polynomial_imaginaryRoots_feature", "_UI_Polynomial_type"),
-				 MathPackage.Literals.POLYNOMIAL__IMAGINARY_ROOTS,
+				 Symphony__CommonMathPackage.Literals.POLYNOMIAL__IMAGINARY_ROOTS,
 				 false,
 				 false,
 				 false,
@@ -192,10 +192,10 @@ public class PolynomialItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Polynomial.class)) {
-			case MathPackage.POLYNOMIAL__DEGREE:
-			case MathPackage.POLYNOMIAL__COEFFS:
-			case MathPackage.POLYNOMIAL__REAL_ROOTS:
-			case MathPackage.POLYNOMIAL__IMAGINARY_ROOTS:
+			case Symphony__CommonMathPackage.POLYNOMIAL__DEGREE:
+			case Symphony__CommonMathPackage.POLYNOMIAL__COEFFS:
+			case Symphony__CommonMathPackage.POLYNOMIAL__REAL_ROOTS:
+			case Symphony__CommonMathPackage.POLYNOMIAL__IMAGINARY_ROOTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

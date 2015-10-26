@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PointsRangeGager;
 import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
@@ -72,7 +72,7 @@ public class PointsRangeGagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointsRangeGager_minX_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointsRangeGager_minX_feature", "_UI_PointsRangeGager_type"),
-				 Data3dPackage.Literals.POINTS_RANGE_GAGER__MIN_X,
+				 Symphony__CommonGeometryData3DPackage.Literals.POINTS_RANGE_GAGER__MIN_X,
 				 true,
 				 false,
 				 false,
@@ -94,7 +94,7 @@ public class PointsRangeGagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointsRangeGager_maxX_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointsRangeGager_maxX_feature", "_UI_PointsRangeGager_type"),
-				 Data3dPackage.Literals.POINTS_RANGE_GAGER__MAX_X,
+				 Symphony__CommonGeometryData3DPackage.Literals.POINTS_RANGE_GAGER__MAX_X,
 				 true,
 				 false,
 				 false,
@@ -116,7 +116,7 @@ public class PointsRangeGagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointsRangeGager_minY_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointsRangeGager_minY_feature", "_UI_PointsRangeGager_type"),
-				 Data3dPackage.Literals.POINTS_RANGE_GAGER__MIN_Y,
+				 Symphony__CommonGeometryData3DPackage.Literals.POINTS_RANGE_GAGER__MIN_Y,
 				 true,
 				 false,
 				 false,
@@ -138,7 +138,7 @@ public class PointsRangeGagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointsRangeGager_maxY_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointsRangeGager_maxY_feature", "_UI_PointsRangeGager_type"),
-				 Data3dPackage.Literals.POINTS_RANGE_GAGER__MAX_Y,
+				 Symphony__CommonGeometryData3DPackage.Literals.POINTS_RANGE_GAGER__MAX_Y,
 				 true,
 				 false,
 				 false,
@@ -160,7 +160,7 @@ public class PointsRangeGagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointsRangeGager_minZ_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointsRangeGager_minZ_feature", "_UI_PointsRangeGager_type"),
-				 Data3dPackage.Literals.POINTS_RANGE_GAGER__MIN_Z,
+				 Symphony__CommonGeometryData3DPackage.Literals.POINTS_RANGE_GAGER__MIN_Z,
 				 true,
 				 false,
 				 false,
@@ -182,7 +182,7 @@ public class PointsRangeGagerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointsRangeGager_maxZ_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointsRangeGager_maxZ_feature", "_UI_PointsRangeGager_type"),
-				 Data3dPackage.Literals.POINTS_RANGE_GAGER__MAX_Z,
+				 Symphony__CommonGeometryData3DPackage.Literals.POINTS_RANGE_GAGER__MAX_Z,
 				 true,
 				 false,
 				 false,
@@ -229,12 +229,12 @@ public class PointsRangeGagerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PointsRangeGager.class)) {
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_X:
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_X:
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Y:
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Y:
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Z:
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Z:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -26,7 +26,7 @@
       <!-- @generated symphony_addons_mobility_controllers -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.mobility.controllers.provider.Symphony__AddonsMobilityControllersItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.mobility.controllers.provider.Symphony__AddonsMobilityControllersItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

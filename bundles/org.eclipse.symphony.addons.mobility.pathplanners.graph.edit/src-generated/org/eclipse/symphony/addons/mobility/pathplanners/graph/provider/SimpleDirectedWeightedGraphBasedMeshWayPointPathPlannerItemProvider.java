@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner} object.
@@ -70,7 +70,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VerboseProvider_verbose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VerboseProvider_verbose_feature", "_UI_VerboseProvider_type"),
-				 ProcessorsPackage.Literals.VERBOSE_PROVIDER__VERBOSE,
+				 Symphony__CommonProcessorsPackage.Literals.VERBOSE_PROVIDER__VERBOSE,
 				 true,
 				 false,
 				 false,

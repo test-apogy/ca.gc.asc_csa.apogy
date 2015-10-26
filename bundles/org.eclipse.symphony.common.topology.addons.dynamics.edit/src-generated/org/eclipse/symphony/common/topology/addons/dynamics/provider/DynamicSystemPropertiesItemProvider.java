@@ -15,10 +15,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
@@ -66,8 +66,8 @@ public class DynamicSystemPropertiesItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS);
 		}
 		return childrenFeatures;
 	}
@@ -122,8 +122,8 @@ public class DynamicSystemPropertiesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DynamicSystemProperties.class)) {
-			case TopologyDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
-			case TopologyDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
+			case Symphony__CommonTopologyDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
+			case Symphony__CommonTopologyDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -143,53 +143,53 @@ public class DynamicSystemPropertiesItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 TopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 TopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 TopologyDynamicsFactory.eINSTANCE.createCylindricalConstraint()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createCylindricalConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 TopologyDynamicsFactory.eINSTANCE.createGearRatioConstraint()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createGearRatioConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 TopologyDynamicsFactory.eINSTANCE.createHingeConstraint()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createHingeConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 TopologyDynamicsFactory.eINSTANCE.createPrismaticConstraint()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPrismaticConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 TopologyDynamicsFactory.eINSTANCE.createRPROConstraint()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createRPROConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 TopologyDynamicsFactory.eINSTANCE.createUniversalConstraint()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createUniversalConstraint()));
 	}
 
 	/**
@@ -204,8 +204,8 @@ public class DynamicSystemPropertiesItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
+			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		if (qualify) {
 			return getString

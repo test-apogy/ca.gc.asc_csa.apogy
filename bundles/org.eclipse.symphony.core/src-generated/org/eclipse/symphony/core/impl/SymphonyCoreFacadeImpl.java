@@ -26,8 +26,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.CurrentTimeSource;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.TimeSourcesList;
 import org.eclipse.symphony.common.math.MathFacade;
@@ -207,7 +207,7 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 			environment.setWorksitesList(worksitesList);
 						
 			/** Creates the Timesource.*/
-			TimeSourcesList timeSourcesList = EMFEcoreFactory.eINSTANCE.createTimeSourcesList();
+			TimeSourcesList timeSourcesList = Symphony__CommonEMFFactory.eINSTANCE.createTimeSourcesList();
 			
 			// Fills in the TimeSource List.
 			timeSourcesList.getTimeSources().addAll(getAllAvaibleTimeSource());						
@@ -432,7 +432,7 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	{
 		List<TimeSource> timeSources = new ArrayList<TimeSource>();
 		
-		List<EClass> timeSourceEClass = EMFEcoreFacade.INSTANCE.getAllSubEClasses(EMFEcorePackage.Literals.TIME_SOURCE);
+		List<EClass> timeSourceEClass = EMFEcoreFacade.INSTANCE.getAllSubEClasses(Symphony__CommonEMFPackage.Literals.TIME_SOURCE);
 		
 		for(EClass eClass : timeSourceEClass)
 		{

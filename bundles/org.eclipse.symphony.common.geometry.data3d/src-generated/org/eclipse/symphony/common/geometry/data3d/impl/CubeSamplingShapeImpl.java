@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -97,7 +97,7 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.CUBE_SAMPLING_SHAPE;
+		return Symphony__CommonGeometryData3DPackage.Literals.CUBE_SAMPLING_SHAPE;
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 		boolean oldIncludeJustTouching = includeJustTouching;
 		includeJustTouching = newIncludeJustTouching;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING, oldIncludeJustTouching, includeJustTouching));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING, oldIncludeJustTouching, includeJustTouching));
 	}
 
 	/**
@@ -132,7 +132,7 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 			corner1 = (CartesianPositionCoordinates)eResolveProxy(oldCorner1);
 			if (corner1 != oldCorner1) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER1, oldCorner1, corner1));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER1, oldCorner1, corner1));
 			}
 		}
 		return corner1;
@@ -175,7 +175,7 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 		CartesianPositionCoordinates oldCorner1 = corner1;
 		corner1 = newCorner1;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER1, oldCorner1, corner1));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER1, oldCorner1, corner1));
 	}
 
 	/**
@@ -189,7 +189,7 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 			corner2 = (CartesianPositionCoordinates)eResolveProxy(oldCorner2);
 			if (corner2 != oldCorner2) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER2, oldCorner2, corner2));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER2, oldCorner2, corner2));
 			}
 		}
 		return corner2;
@@ -232,7 +232,7 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 		CartesianPositionCoordinates oldCorner2 = corner2;
 		corner2 = newCorner2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER2, oldCorner2, corner2));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER2, oldCorner2, corner2));
 	}
 
 	/**
@@ -274,13 +274,13 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER1:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER1:
 				if (resolve) return getCorner1();
 				return basicGetCorner1();
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER2:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER2:
 				if (resolve) return getCorner2();
 				return basicGetCorner2();
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				return isIncludeJustTouching();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -294,13 +294,13 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER1:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER1:
 				setCorner1((CartesianPositionCoordinates)newValue);
 				return;
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER2:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER2:
 				setCorner2((CartesianPositionCoordinates)newValue);
 				return;
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				setIncludeJustTouching((Boolean)newValue);
 				return;
 		}
@@ -315,13 +315,13 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER1:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER1:
 				setCorner1((CartesianPositionCoordinates)null);
 				return;
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER2:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER2:
 				setCorner2((CartesianPositionCoordinates)null);
 				return;
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				setIncludeJustTouching(INCLUDE_JUST_TOUCHING_EDEFAULT);
 				return;
 		}
@@ -336,11 +336,11 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER1:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER1:
 				return corner1 != null;
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__CORNER2:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__CORNER2:
 				return corner2 != null;
-			case Data3dPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				return includeJustTouching != INCLUDE_JUST_TOUCHING_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -355,7 +355,7 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == PolygonSamplingShape.class) {
 			switch (baseOperationID) {
-				case DataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return Data3dPackage.CUBE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON;
+				case Symphony__CommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON;
 				default: return -1;
 			}
 		}
@@ -371,9 +371,9 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.CUBE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON:
 				return isPolygonInside((PolygonType)arguments.get(0));
-			case Data3dPackage.CUBE_SAMPLING_SHAPE___IS_INSIDE__COORDINATES:
+			case Symphony__CommonGeometryData3DPackage.CUBE_SAMPLING_SHAPE___IS_INSIDE__COORDINATES:
 				return isInside((CartesianPositionCoordinates)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

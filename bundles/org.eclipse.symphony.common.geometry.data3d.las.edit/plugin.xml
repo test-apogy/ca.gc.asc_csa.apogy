@@ -11,7 +11,7 @@
       <!-- @generated las -->
       <factory
             uri="org.eclipse.symphony.common.geometry.data3d.las"
-            class="org.eclipse.symphony.common.geometry.data3d.las.provider.LasItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.geometry.data3d.las.provider.Symphony__CommonGeometryData3DLASItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

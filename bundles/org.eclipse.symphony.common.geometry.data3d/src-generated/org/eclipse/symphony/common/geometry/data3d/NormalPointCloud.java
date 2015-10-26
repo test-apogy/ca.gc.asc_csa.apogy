@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.NormalPointCloud#getNormals <em>Normals</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getNormalPointCloud()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getNormalPointCloud()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface NormalPointCloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' attribute.
 	 * @see #setPoints(List)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getNormalPointCloud_Points()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getNormalPointCloud_Points()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.Point3d>" many="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface NormalPointCloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Normals</em>' attribute.
 	 * @see #setNormals(List)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getNormalPointCloud_Normals()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getNormalPointCloud_Normals()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.Vector3d>" many="false"
 	 * @generated
 	 */

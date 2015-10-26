@@ -12,8 +12,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class CartesianTriangularMeshPolygonSamplerImpl extends MeshPolygonShapes
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Data3dPackage.Literals.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER;
 	}
 
 	@Override
@@ -54,13 +54,13 @@ public class CartesianTriangularMeshPolygonSamplerImpl extends MeshPolygonShapes
 	@Override
 	protected Mesh<CartesianPositionCoordinates, CartesianTriangle> createMesh()
 	{		
-		return Data3dFactory.eINSTANCE.createCartesianTriangularMesh();
+		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 	}
 
 	@Override
 	protected CartesianTriangle createPolygon()
 	{
-		return Data3dFactory.eINSTANCE.createCartesianTriangle();
+		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
 	}
 
 } //CartesianTriangularMeshPolygonSamplerImpl

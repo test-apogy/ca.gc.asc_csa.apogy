@@ -32,7 +32,7 @@ import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePac
 import org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator;
 import org.eclipse.symphony.addons.sensors.range.RayData;
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
@@ -315,7 +315,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 		// Initialize the output if required
 		if(getOutput() == null)
 		{
-			setOutput(Data25dFactory.eINSTANCE.createVolumetricCoordinatesSet25D());
+			setOutput(Symphony__CommonGeometryData25DFactory.eINSTANCE.createVolumetricCoordinatesSet25D());
 		}
 		
 		// If the sensor is ready, initiate acquisition.

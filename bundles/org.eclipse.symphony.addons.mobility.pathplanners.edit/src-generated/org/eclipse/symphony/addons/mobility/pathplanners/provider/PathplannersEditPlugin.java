@@ -9,14 +9,13 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
 
-import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
+import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
 
-import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
 
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
-
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 
 /**
  * This is the central singleton for the Pathplanners edit plugin.
@@ -50,11 +49,11 @@ public final class PathplannersEditPlugin extends EMFPlugin {
 	public PathplannersEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     MathEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
+		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
+		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
+		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
 		   });
 	}

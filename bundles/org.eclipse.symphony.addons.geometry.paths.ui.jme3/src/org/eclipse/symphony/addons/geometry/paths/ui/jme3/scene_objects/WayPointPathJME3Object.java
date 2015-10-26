@@ -19,7 +19,7 @@ import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathSceneObject;
 import org.eclipse.symphony.addons.geometry.paths.ui.jme3.Activator;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
@@ -627,7 +627,7 @@ public class WayPointPathJME3Object extends DefaultJME3SceneObject<WayPointPath>
 	
 						switch (featureId) 
 						{
-							case Data3dPackage.CARTESIAN_COORDINATES_MESH__POINTS:
+							case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH__POINTS:
 								int eventType = notification.getEventType() ;
 								switch(eventType)
 								{
@@ -690,9 +690,9 @@ public class WayPointPathJME3Object extends DefaultJME3SceneObject<WayPointPath>
 						
 						switch (featureId) 
 						{
-							case Data3dPackage.CARTESIAN_POSITION_COORDINATES__X:
-							case Data3dPackage.CARTESIAN_POSITION_COORDINATES__Y:
-							case Data3dPackage.CARTESIAN_POSITION_COORDINATES__Z:
+							case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
+							case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
+							case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
 							{
 								Job job = new Job("WayPointPathJME3Object : Updating geometry")
 								{

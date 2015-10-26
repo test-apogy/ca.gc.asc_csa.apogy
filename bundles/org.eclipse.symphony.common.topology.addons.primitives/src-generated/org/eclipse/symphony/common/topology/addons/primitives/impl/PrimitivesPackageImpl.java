@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 import org.eclipse.symphony.common.topology.addons.primitives.AmbientLight;
 import org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight;
@@ -187,7 +187,7 @@ public class PrimitivesPackageImpl extends EPackageImpl implements PrimitivesPac
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thePrimitivesPackage.createPackageContents();
@@ -801,22 +801,22 @@ public class PrimitivesPackageImpl extends EPackageImpl implements PrimitivesPac
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		vectorEClass.getESuperTypes().add(theTopologyPackage.getNode());
+		vectorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
 		pickVectorEClass.getESuperTypes().add(this.getVector());
-		planeEClass.getESuperTypes().add(theTopologyPackage.getNode());
-		wayPointEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
-		labelEClass.getESuperTypes().add(theTopologyPackage.getNode());
-		spherePrimitiveEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
-		lightEClass.getESuperTypes().add(theTopologyPackage.getLeaf());
+		planeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		wayPointEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		labelEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		spherePrimitiveEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		lightEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getLeaf());
 		ambientLightEClass.getESuperTypes().add(this.getLight());
 		directionalLightEClass.getESuperTypes().add(this.getLight());
 		pointLightEClass.getESuperTypes().add(this.getLight());
@@ -832,18 +832,18 @@ public class PrimitivesPackageImpl extends EPackageImpl implements PrimitivesPac
 
 		initEClass(pickVectorEClass, PickVector.class, "PickVector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPickVector_IntersectionDistance(), theEcorePackage.getEDouble(), "intersectionDistance", "-1.0", 0, 1, PickVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPickVector_IntersectedNode(), theTopologyPackage.getNode(), null, "intersectedNode", null, 0, 1, PickVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPickVector_IntersectedNode(), theSymphony__CommonTopologyPackage.getNode(), null, "intersectedNode", null, 0, 1, PickVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPickVector_RelativeIntersectionPosition(), this.getPoint3d(), "relativeIntersectionPosition", null, 0, 1, PickVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPickVector_AbsoluteIntersectionPosition(), this.getPoint3d(), "absoluteIntersectionPosition", null, 0, 1, PickVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPickVector_NodeTypesInIntersection(), theEcorePackage.getEClass(), null, "nodeTypesInIntersection", null, 0, -1, PickVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPickVector_NodeTypesToExcludeFromIntersection(), theEcorePackage.getEClass(), null, "nodeTypesToExcludeFromIntersection", null, 0, -1, PickVector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getPickVector__IsNodeIncludedInIntersection__Node(), theEcorePackage.getEBoolean(), "isNodeIncludedInIntersection", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(planeEClass, Plane.class, "Plane", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlane_V0(), theMathPackage.getTuple3d(), null, "v0", null, 0, 1, Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPlane_V1(), theMathPackage.getTuple3d(), null, "v1", null, 0, 1, Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlane_V0(), theSymphony__CommonMathPackage.getTuple3d(), null, "v0", null, 0, 1, Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlane_V1(), theSymphony__CommonMathPackage.getTuple3d(), null, "v1", null, 0, 1, Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlane_Width(), theEcorePackage.getEDouble(), "width", null, 0, 1, Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlane_Height(), theEcorePackage.getEDouble(), "height", null, 0, 1, Plane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -856,21 +856,21 @@ public class PrimitivesPackageImpl extends EPackageImpl implements PrimitivesPac
 
 		initEClass(lightEClass, Light.class, "Light", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLight_Enabled(), theEcorePackage.getEBoolean(), "enabled", "true", 0, 1, Light.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLight_Color(), theMathPackage.getTuple3d(), null, "color", null, 0, 1, Light.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLight_Color(), theSymphony__CommonMathPackage.getTuple3d(), null, "color", null, 0, 1, Light.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ambientLightEClass, AmbientLight.class, "AmbientLight", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(directionalLightEClass, DirectionalLight.class, "DirectionalLight", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDirectionalLight_Direction(), theMathPackage.getTuple3d(), null, "direction", null, 0, 1, DirectionalLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDirectionalLight_Direction(), theSymphony__CommonMathPackage.getTuple3d(), null, "direction", null, 0, 1, DirectionalLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointLightEClass, PointLight.class, "PointLight", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPointLight_Position(), theMathPackage.getTuple3d(), null, "position", null, 0, 1, PointLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPointLight_Attenuation(), theMathPackage.getTuple3d(), null, "attenuation", null, 0, 1, PointLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPointLight_Position(), theSymphony__CommonMathPackage.getTuple3d(), null, "position", null, 0, 1, PointLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPointLight_Attenuation(), theSymphony__CommonMathPackage.getTuple3d(), null, "attenuation", null, 0, 1, PointLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(spotLightEClass, SpotLight.class, "SpotLight", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSpotLight_Concentration(), theEcorePackage.getEFloat(), "concentration", null, 0, 1, SpotLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpotLight_SpreadAngle(), theEcorePackage.getEFloat(), "spreadAngle", null, 0, 1, SpotLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpotLight_Direction(), theMathPackage.getTuple3d(), null, "direction", null, 0, 1, SpotLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpotLight_Direction(), theSymphony__CommonMathPackage.getTuple3d(), null, "direction", null, 0, 1, SpotLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(primitivesFacadeEClass, PrimitivesFacade.class, "PrimitivesFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -894,53 +894,53 @@ public class PrimitivesPackageImpl extends EPackageImpl implements PrimitivesPac
 		addEParameter(op, theEcorePackage.getEDouble(), "height", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreateAmbientLight__Tuple3d(), this.getAmbientLight(), "createAmbientLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d(), this.getAmbientLight(), "createAmbientLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "lightOn", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d(), this.getDirectionalLight(), "createDirectionalLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d(), this.getDirectionalLight(), "createDirectionalLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "lightOn", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreatePointLight__Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "lightOn", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float(), this.getSpotLight(), "createSpotLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "spreadAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "concentration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float(), this.getSpotLight(), "createSpotLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "lightOn", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "speadAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "concentration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

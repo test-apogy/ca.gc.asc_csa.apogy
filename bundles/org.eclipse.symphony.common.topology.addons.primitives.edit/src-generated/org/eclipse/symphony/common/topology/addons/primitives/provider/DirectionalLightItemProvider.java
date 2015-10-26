@@ -15,7 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight;
 import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
 
@@ -140,7 +140,7 @@ public class DirectionalLightItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(PrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**

@@ -30,11 +30,9 @@ import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPathFilter;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPathInterpolator;
 
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
-
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -174,8 +172,8 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		isInited = true;
 
 		// Initialize simple dependencies
-		Data3dPackage.eINSTANCE.eClass();
-		TopologyPackage.eINSTANCE.eClass();
+		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsGeometryPathsPackage.createPackageContents();
@@ -489,10 +487,10 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ProcessorsPackage theProcessorsPackage = (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
+		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -500,12 +498,12 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		wayPointEClass.getESuperTypes().add(theData3dPackage.getCartesianPositionCoordinates());
-		wayPointEClass.getESuperTypes().add(theTopologyPackage.getGroupNode());
-		pathEClass.getESuperTypes().add(theTopologyPackage.getNode());
-		wayPointPathEClass.getESuperTypes().add(theData3dPackage.getCartesianCoordinatesSet());
+		wayPointEClass.getESuperTypes().add(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
+		wayPointEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
+		pathEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		wayPointPathEClass.getESuperTypes().add(theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet());
 		wayPointPathEClass.getESuperTypes().add(this.getPath());
-		EGenericType g1 = createEGenericType(theProcessorsPackage.getProcessor());
+		EGenericType g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
 		EGenericType g2 = createEGenericType(this.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getWayPointPath());
@@ -513,7 +511,7 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		wayPointPathInterpolatorEClass.getEGenericSuperTypes().add(g1);
 		catmullRomWayPointPathInterpolatorEClass.getESuperTypes().add(this.getWayPointPathInterpolator());
 		segmentWayPointPathInterpolatorEClass.getESuperTypes().add(this.getWayPointPathInterpolator());
-		g1 = createEGenericType(theProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getWayPointPath());
@@ -530,9 +528,9 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		initEClass(wayPointPathEClass, WayPointPath.class, "WayPointPath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWayPointPath_Length(), theEcorePackage.getEDouble(), "length", "0.0", 0, 1, WayPointPath.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getWayPointPath__GetStartPoint(), theData3dPackage.getCartesianPositionCoordinates(), "getStartPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getWayPointPath__GetStartPoint(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "getStartPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getWayPointPath__GetEndPoint(), theData3dPackage.getCartesianPositionCoordinates(), "getEndPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getWayPointPath__GetEndPoint(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "getEndPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(wayPointPathInterpolatorEClass, WayPointPathInterpolator.class, "WayPointPathInterpolator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -559,7 +557,7 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 
 		op = initEOperation(getPathsFacade__CreateWayPointPath__List(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(theData3dPackage.getCartesianPositionCoordinates());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "points", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

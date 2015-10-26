@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.SpotLight;
 
@@ -192,7 +192,7 @@ public class SpotLightItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(PrimitivesPackage.Literals.SPOT_LIGHT__DIRECTION,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**

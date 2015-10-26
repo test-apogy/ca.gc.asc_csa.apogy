@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint;
 
 /**
@@ -66,7 +66,7 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.UNIVERSAL_CONSTRAINT;
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 		ConstraintState oldAngular0CurrentState = angular0CurrentState;
 		angular0CurrentState = newAngular0CurrentState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE, oldAngular0CurrentState, newAngular0CurrentState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE, oldAngular0CurrentState, newAngular0CurrentState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -102,14 +102,14 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 		if (newAngular0CurrentState != angular0CurrentState) {
 			NotificationChain msgs = null;
 			if (angular0CurrentState != null)
-				msgs = ((InternalEObject)angular0CurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)angular0CurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE, null, msgs);
 			if (newAngular0CurrentState != null)
-				msgs = ((InternalEObject)newAngular0CurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)newAngular0CurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE, null, msgs);
 			msgs = basicSetAngular0CurrentState(newAngular0CurrentState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE, newAngular0CurrentState, newAngular0CurrentState));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE, newAngular0CurrentState, newAngular0CurrentState));
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 		ConstraintState oldAngular1CurrentState = angular1CurrentState;
 		angular1CurrentState = newAngular1CurrentState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE, oldAngular1CurrentState, newAngular1CurrentState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE, oldAngular1CurrentState, newAngular1CurrentState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -145,14 +145,14 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 		if (newAngular1CurrentState != angular1CurrentState) {
 			NotificationChain msgs = null;
 			if (angular1CurrentState != null)
-				msgs = ((InternalEObject)angular1CurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)angular1CurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE, null, msgs);
 			if (newAngular1CurrentState != null)
-				msgs = ((InternalEObject)newAngular1CurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)newAngular1CurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE, null, msgs);
 			msgs = basicSetAngular1CurrentState(newAngular1CurrentState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE, newAngular1CurrentState, newAngular1CurrentState));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE, newAngular1CurrentState, newAngular1CurrentState));
 	}
 
 	/**
@@ -163,9 +163,9 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
 				return basicSetAngular0CurrentState(null, msgs);
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
 				return basicSetAngular1CurrentState(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -179,9 +179,9 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
 				return getAngular0CurrentState();
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
 				return getAngular1CurrentState();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -195,10 +195,10 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
 				setAngular0CurrentState((ConstraintState)newValue);
 				return;
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
 				setAngular1CurrentState((ConstraintState)newValue);
 				return;
 		}
@@ -213,10 +213,10 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
 				setAngular0CurrentState((ConstraintState)null);
 				return;
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
 				setAngular1CurrentState((ConstraintState)null);
 				return;
 		}
@@ -231,9 +231,9 @@ public class UniversalConstraintImpl extends AbstractConstraintImpl implements U
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR0_CURRENT_STATE:
 				return angular0CurrentState != null;
-			case TopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.UNIVERSAL_CONSTRAINT__ANGULAR1_CURRENT_STATE:
 				return angular1CurrentState != null;
 		}
 		return super.eIsSet(featureID);

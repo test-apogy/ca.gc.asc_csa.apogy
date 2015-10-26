@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
@@ -69,7 +69,7 @@ public class TreeRootNodeItemProvider
        getResourceLocator(),
        getString("_UI_AbstractRootNode_sourceClass_feature"),
        getString("_UI_PropertyDescriptor_description", "_UI_AbstractRootNode_sourceClass_feature", "_UI_AbstractRootNode_type"),
-       EMFEcorePackage.Literals.ABSTRACT_ROOT_NODE__SOURCE_CLASS,
+       Symphony__CommonEMFPackage.Literals.ABSTRACT_ROOT_NODE__SOURCE_CLASS,
        true,
        false,
        true,
@@ -140,7 +140,7 @@ public class TreeRootNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TreeRootNode.class)) {
-			case EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS:
+			case Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

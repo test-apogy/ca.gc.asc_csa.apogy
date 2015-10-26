@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage;
+import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage;
 import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
@@ -62,7 +62,7 @@ public class VolumetricCoordinatesSet25DPresentationItemProvider extends NodePre
 				 getResourceLocator(),
 				 getString("_UI_VolumetricCoordinatesSet25DPresentation_pointsCloud_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VolumetricCoordinatesSet25DPresentation_pointsCloud_feature", "_UI_VolumetricCoordinatesSet25DPresentation_type"),
-				 Data25DUIPackage.Literals.VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__POINTS_CLOUD,
+				 Symphony__CommonGeometryData25DUIPackage.Literals.VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__POINTS_CLOUD,
 				 true,
 				 false,
 				 true,

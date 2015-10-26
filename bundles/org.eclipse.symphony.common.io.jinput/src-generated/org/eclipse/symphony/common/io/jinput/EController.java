@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EController#getControllerCount <em>Controller Count</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController()
+ * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface EController extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Last Poll Result</em>' attribute.
 	 * @see #setLastPollResult(boolean)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_LastPollResult()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController_LastPollResult()
 	 * @model unique="false" transient="true"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface EController extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_Name()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController_Name()
 	 * @model default="" unique="false" changeable="false"
 	 * @generated
 	 */
@@ -82,7 +82,7 @@ public interface EController extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port Number</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_PortNumber()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController_PortNumber()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -97,7 +97,7 @@ public interface EController extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_Type()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController_Type()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -112,7 +112,7 @@ public interface EController extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port Type</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_PortType()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController_PortType()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -128,7 +128,7 @@ public interface EController extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pojo Controller</em>' attribute.
 	 * @see #setPojoController(Controller)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_PojoController()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController_PojoController()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.io.jinput.Controller"
 	 * @generated
 	 */
@@ -155,7 +155,7 @@ public interface EController extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>EComponents</em>' containment reference.
 	 * @see #setEComponents(EComponents)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_EComponents()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController_EComponents()
 	 * @see org.eclipse.symphony.common.io.jinput.EComponents#getEController
 	 * @model opposite="eController" containment="true" required="true" transient="true"
 	 * @generated
@@ -183,7 +183,7 @@ public interface EController extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Controller Count</em>' attribute.
 	 * @see #setControllerCount(int)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEController_ControllerCount()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEController_ControllerCount()
 	 * @model default="-1" unique="false"
 	 * @generated
 	 */

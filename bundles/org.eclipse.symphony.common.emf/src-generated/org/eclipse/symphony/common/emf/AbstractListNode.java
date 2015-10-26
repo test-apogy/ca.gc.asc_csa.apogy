@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractListNode()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractListNode()
  * @model abstract="true"
  * @generated
  */
@@ -33,7 +33,7 @@ public interface AbstractListNode extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Parent</em>' container reference.
    * @see #setParent(AbstractListNode)
-   * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractListNode_Parent()
+   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractListNode_Parent()
    * @see org.eclipse.symphony.common.emf.AbstractListNode#getChild
    * @model opposite="child" transient="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
@@ -61,7 +61,7 @@ public interface AbstractListNode extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Child</em>' containment reference.
    * @see #setChild(AbstractListNode)
-   * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractListNode_Child()
+   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractListNode_Child()
    * @see org.eclipse.symphony.common.emf.AbstractListNode#getParent
    * @model opposite="parent" containment="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

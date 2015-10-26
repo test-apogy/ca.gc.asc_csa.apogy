@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.topology.TopologyProvider#getTopologyRoot <em>Topology Root</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getTopologyProvider()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getTopologyProvider()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -31,7 +31,7 @@ public interface TopologyProvider extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topology Root</em>' reference.
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getTopologyProvider_TopologyRoot()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getTopologyProvider_TopologyRoot()
 	 * @model changeable="false"
 	 * @generated
 	 */

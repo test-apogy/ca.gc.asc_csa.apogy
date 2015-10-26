@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.SymphonyCorePackage;
@@ -353,13 +353,13 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case SymphonyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.ABSTRACT_WORKSITE__TIME: return EMFEcorePackage.TIMED__TIME;
+				case SymphonyCorePackage.ABSTRACT_WORKSITE__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -374,13 +374,13 @@ public abstract class AbstractWorksiteImpl extends MinimalEObjectImpl.Container
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.TIMED__TIME: return SymphonyCorePackage.ABSTRACT_WORKSITE__TIME;
+				case Symphony__CommonEMFPackage.TIMED__TIME: return SymphonyCorePackage.ABSTRACT_WORKSITE__TIME;
 				default: return -1;
 			}
 		}

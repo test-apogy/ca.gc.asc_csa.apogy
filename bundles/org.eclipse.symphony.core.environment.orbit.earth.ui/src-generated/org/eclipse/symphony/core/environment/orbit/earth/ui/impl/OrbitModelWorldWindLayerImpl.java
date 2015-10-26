@@ -21,7 +21,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
@@ -718,7 +718,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 						
 						switch (featureId) 
 						{
-							case EMFEcorePackage.TIMED__TIME:
+							case Symphony__CommonEMFPackage.TIMED__TIME:
 								if(isAutoUpdateEnabled()) updateRenderableLayer();
 							break;
 

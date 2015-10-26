@@ -34,7 +34,7 @@ import org.eclipse.symphony.common.emf.impl.EMFEcoreFacadeImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getEMFEcoreFacade()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getEMFEcoreFacade()
  * @model
  * @generated
  */

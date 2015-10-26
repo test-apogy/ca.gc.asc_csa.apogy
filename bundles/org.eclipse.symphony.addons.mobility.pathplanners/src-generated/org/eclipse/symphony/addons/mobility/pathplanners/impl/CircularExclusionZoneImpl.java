@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data.SamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
@@ -26,10 +26,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,9 +47,9 @@ import org.eclipse.symphony.common.topology.TopologyFactory;
  */
 public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements CircularExclusionZone {
 
-	private static TopologyFacade topologyFacade = TopologyFactory.eINSTANCE.createTopologyFacade();
-	private static Data3dFacade data3dFacade = Data3dFactory.eINSTANCE.createData3dFacade();	
-	private static CartesianPositionCoordinates center = Data3dFactory.eINSTANCE.createCartesianPositionCoordinates();
+	private static TopologyFacade topologyFacade = Symphony__CommonTopologyFactory.eINSTANCE.createTopologyFacade();
+	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();	
+	private static CartesianPositionCoordinates center = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 	
 	/**
 	 * The default value of the '{@link #getRadius() <em>Radius</em>}' attribute.
@@ -294,13 +294,13 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		}
 		if (baseClass == CoordinatesSamplingShape.class) {
 			switch (baseOperationID) {
-				case DataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES: return Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_INSIDE__COORDINATES;
+				case Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES: return Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_INSIDE__COORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == PolygonSamplingShape.class) {
 			switch (baseOperationID) {
-				case DataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON;
+				case Symphony__CommonGeometryDataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON;
 				default: return -1;
 			}
 		}
@@ -383,7 +383,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		else
 		{
 			// Gets the centre's flattened coordinates.
-			CartesianPositionCoordinates flattenedCenter = Data3dFactory.eINSTANCE.createCartesianPositionCoordinates();
+			CartesianPositionCoordinates flattenedCenter = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 			
 			// Gets the point's flattened coordinates of the line.
 			CartesianPositionCoordinates flattenedFrom = projectOntoExclusionZone(from);

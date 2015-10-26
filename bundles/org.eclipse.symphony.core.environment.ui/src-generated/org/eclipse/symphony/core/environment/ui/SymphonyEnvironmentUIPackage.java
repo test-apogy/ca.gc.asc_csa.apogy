@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
@@ -1260,7 +1260,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__NAME = EMFEcorePackage.NAMED__NAME;
+  int MAP_VIEW_CONFIGURATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1269,7 +1269,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int MAP_VIEW_CONFIGURATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Map Layers</b></em>' containment reference list.
@@ -1278,7 +1278,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__MAP_LAYERS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int MAP_VIEW_CONFIGURATION__MAP_LAYERS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Background Color</b></em>' attribute.
@@ -1287,7 +1287,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Map Annotations</b></em>' containment reference list.
@@ -1296,7 +1296,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Default Rectangular Region</b></em>' reference.
@@ -1305,7 +1305,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+	int MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Map Image</b></em>' reference.
@@ -1314,7 +1314,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION__MAP_IMAGE = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+  int MAP_VIEW_CONFIGURATION__MAP_IMAGE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The feature id for the '<em><b>Map Image Rectangular Region</b></em>' reference.
@@ -1323,7 +1323,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION = EMFEcorePackage.NAMED_FEATURE_COUNT + 6;
+	int MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
 		/**
 	 * The feature id for the '<em><b>Extent</b></em>' reference.
@@ -1332,7 +1332,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_VIEW_CONFIGURATION__EXTENT = EMFEcorePackage.NAMED_FEATURE_COUNT + 7;
+	int MAP_VIEW_CONFIGURATION__EXTENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 7;
 
 		/**
 	 * The number of structural features of the '<em>Map View Configuration</em>' class.
@@ -1341,7 +1341,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 8;
+  int MAP_VIEW_CONFIGURATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 8;
 
   /**
 	 * The operation id for the '<em>Force Update</em>' operation.
@@ -1350,7 +1350,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_VIEW_CONFIGURATION___FORCE_UPDATE = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int MAP_VIEW_CONFIGURATION___FORCE_UPDATE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Map View Configuration</em>' class.
@@ -1359,7 +1359,7 @@ public interface SymphonyEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int MAP_VIEW_CONFIGURATION_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 1;
+  int MAP_VIEW_CONFIGURATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewItemPresentationImpl <em>Map View Item Presentation</em>}' class.

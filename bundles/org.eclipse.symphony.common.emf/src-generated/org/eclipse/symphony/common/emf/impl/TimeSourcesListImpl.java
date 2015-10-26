@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.TimeSourcesList;
 
@@ -55,7 +55,7 @@ public class TimeSourcesListImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.TIME_SOURCES_LIST;
+		return Symphony__CommonEMFPackage.Literals.TIME_SOURCES_LIST;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class TimeSourcesListImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<TimeSource> getTimeSources() {
 		if (timeSources == null) {
-			timeSources = new EObjectContainmentEList<TimeSource>(TimeSource.class, this, EMFEcorePackage.TIME_SOURCES_LIST__TIME_SOURCES);
+			timeSources = new EObjectContainmentEList<TimeSource>(TimeSource.class, this, Symphony__CommonEMFPackage.TIME_SOURCES_LIST__TIME_SOURCES);
 		}
 		return timeSources;
 	}
@@ -78,7 +78,7 @@ public class TimeSourcesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCES_LIST__TIME_SOURCES:
+			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST__TIME_SOURCES:
 				return ((InternalEList<?>)getTimeSources()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -92,7 +92,7 @@ public class TimeSourcesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCES_LIST__TIME_SOURCES:
+			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST__TIME_SOURCES:
 				return getTimeSources();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +107,7 @@ public class TimeSourcesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCES_LIST__TIME_SOURCES:
+			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST__TIME_SOURCES:
 				getTimeSources().clear();
 				getTimeSources().addAll((Collection<? extends TimeSource>)newValue);
 				return;
@@ -123,7 +123,7 @@ public class TimeSourcesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCES_LIST__TIME_SOURCES:
+			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST__TIME_SOURCES:
 				getTimeSources().clear();
 				return;
 		}
@@ -138,7 +138,7 @@ public class TimeSourcesListImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCES_LIST__TIME_SOURCES:
+			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST__TIME_SOURCES:
 				return timeSources != null && !timeSources.isEmpty();
 		}
 		return super.eIsSet(featureID);

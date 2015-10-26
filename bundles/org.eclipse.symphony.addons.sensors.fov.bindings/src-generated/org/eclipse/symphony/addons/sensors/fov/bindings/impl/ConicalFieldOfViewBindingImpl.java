@@ -17,7 +17,7 @@ import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
 import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
 import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
 import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
@@ -191,7 +191,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
 			  @Override
 			  public void notifyChanged(Notification notification) 
 			  {
-				  if(notification.getFeatureID(FeatureNodeAdapter.class) == EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
+				  if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
 				  {		
 						if(notification.getOldValue() instanceof ConicalFieldOfView)
 					  	{

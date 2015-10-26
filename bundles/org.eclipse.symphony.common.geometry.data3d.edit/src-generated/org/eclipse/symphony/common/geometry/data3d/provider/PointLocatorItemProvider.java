@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PointLocator;
 
 /**
@@ -79,7 +79,7 @@ public class PointLocatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointLocator_points_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointLocator_points_feature", "_UI_PointLocator_type"),
-				 Data3dPackage.Literals.POINT_LOCATOR__POINTS,
+				 Symphony__CommonGeometryData3DPackage.Literals.POINT_LOCATOR__POINTS,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class PointLocatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PointLocator.class)) {
-			case Data3dPackage.POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR__POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

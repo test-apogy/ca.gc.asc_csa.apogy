@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToJu
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToSideralTimeStringConverter;
 
 import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 public class EarthSkyTimeComposite extends Composite 
 {
@@ -116,7 +116,7 @@ public class EarthSkyTimeComposite extends Composite
 			
 			// Local Time		
 			IObservableValue lbllocalTimeValueLabel = PojoProperties.value("text").observe(localTimeValueLabel);		
-			IObservableValue localTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+			IObservableValue localTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 			
 			UpdateValueStrategy localTimeValueStrategy = new UpdateValueStrategy();
 			localTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
@@ -125,7 +125,7 @@ public class EarthSkyTimeComposite extends Composite
 	
 			// Julian Day
 			IObservableValue lbljulianDayValueLabel = PojoProperties.value("text").observe(julianDayValueLabel);		
-			IObservableValue julianDayObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+			IObservableValue julianDayObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 			
 			UpdateValueStrategy julianDayValueStrategy = new UpdateValueStrategy();
 			julianDayValueStrategy.setConverter(new DateToJulianDayStringConverter(new DecimalFormat(JULIAN_DAY_FORMAT_STRING)));
@@ -137,7 +137,7 @@ public class EarthSkyTimeComposite extends Composite
 			{			
 				// Sideral Time
 				IObservableValue lblsideralTimeValueLabel = PojoProperties.value("text").observe(sideralTimeValueLabel);		
-				IObservableValue sideralTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				IObservableValue sideralTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy sideralTimeValueStrategy = new UpdateValueStrategy();
 				sideralTimeValueStrategy.setConverter(new DateToSideralTimeStringConverter(geographicCoordinates.getLongitude()));

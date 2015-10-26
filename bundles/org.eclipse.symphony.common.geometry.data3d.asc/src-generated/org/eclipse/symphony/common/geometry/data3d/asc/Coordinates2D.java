@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D#getY <em>Y</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D()
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getCoordinates2D()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Coordinates2D extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D_X()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getCoordinates2D_X()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -64,7 +64,7 @@ public interface Coordinates2D extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getCoordinates2D_Y()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getCoordinates2D_Y()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated

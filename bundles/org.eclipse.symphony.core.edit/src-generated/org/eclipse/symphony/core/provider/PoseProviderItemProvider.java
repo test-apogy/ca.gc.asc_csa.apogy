@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 
@@ -157,7 +157,7 @@ public class PoseProviderItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
   /**

@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**
@@ -81,7 +81,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_TOOL__NAME = EMFEcorePackage.NAMED__NAME;
+  int ABSTRACT_TOOL__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -90,7 +90,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_TOOL__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int ABSTRACT_TOOL__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Abstract Tool</em>' class.
@@ -99,7 +99,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_TOOL_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int ABSTRACT_TOOL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Abstract Tool</em>' class.
@@ -108,7 +108,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_TOOL_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int ABSTRACT_TOOL_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 
   /**
@@ -846,7 +846,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE__PARENT = TopologyPackage.NODE__PARENT;
+	int RULER3D_TOOL_NODE__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -855,7 +855,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int RULER3D_TOOL_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -864,7 +864,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int RULER3D_TOOL_NODE__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 		/**
 	 * The feature id for the '<em><b>Ruler3 DTool</b></em>' reference.
@@ -873,7 +873,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE__RULER3_DTOOL = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int RULER3D_TOOL_NODE__RULER3_DTOOL = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Ruler3d Tool Node</em>' class.
@@ -882,7 +882,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 1;
+	int RULER3D_TOOL_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -891,7 +891,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int RULER3D_TOOL_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Ruler3d Tool Node</em>' class.
@@ -900,7 +900,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3D_TOOL_NODE_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int RULER3D_TOOL_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl <em>Feature Of Interest Picking Tool</em>}' class.
@@ -1344,7 +1344,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE__PARENT = TopologyPackage.NODE__PARENT;
+	int SUN_VECTOR3_DTOOL_NODE__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1353,7 +1353,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int SUN_VECTOR3_DTOOL_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -1362,7 +1362,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int SUN_VECTOR3_DTOOL_NODE__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 		/**
 	 * The feature id for the '<em><b>Sun Vector3 DTool</b></em>' reference.
@@ -1371,7 +1371,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Sun Vector3 DTool Node</em>' class.
@@ -1380,7 +1380,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 1;
+	int SUN_VECTOR3_DTOOL_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -1389,7 +1389,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int SUN_VECTOR3_DTOOL_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Sun Vector3 DTool Node</em>' class.
@@ -1398,7 +1398,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SUN_VECTOR3_DTOOL_NODE_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int SUN_VECTOR3_DTOOL_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl <em>Trajectory3 DTool</em>}' class.
@@ -1589,7 +1589,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int TRAJECTORY3_DTOOL_NODE__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1598,7 +1598,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int TRAJECTORY3_DTOOL_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -1607,7 +1607,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int TRAJECTORY3_DTOOL_NODE__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 		/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1616,7 +1616,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int TRAJECTORY3_DTOOL_NODE__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -1625,7 +1625,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int TRAJECTORY3_DTOOL_NODE__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Trajectory3 DTool</b></em>' reference.
@@ -1634,7 +1634,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Trajectory3 DTool Node</em>' class.
@@ -1643,7 +1643,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int TRAJECTORY3_DTOOL_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -1652,7 +1652,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int TRAJECTORY3_DTOOL_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Trajectory3 DTool Node</em>' class.
@@ -1661,7 +1661,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TRAJECTORY3_DTOOL_NODE_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int TRAJECTORY3_DTOOL_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '<em>Color3f</em>' data type.

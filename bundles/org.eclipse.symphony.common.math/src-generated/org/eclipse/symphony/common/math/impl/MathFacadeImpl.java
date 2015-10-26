@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathFactory;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Polynomial;
@@ -52,7 +52,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MathPackage.Literals.MATH_FACADE;
+		return Symphony__CommonMathPackage.Literals.MATH_FACADE;
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	 */
 	public Matrix4x4 createMatrix4x4(Matrix4d matrix) {
 
-		Matrix4x4 result = MathFactory.eINSTANCE.createMatrix4x4();
+		Matrix4x4 result = Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4();
 
 		// Row 0
 		result.setM00(matrix.m00);
@@ -98,7 +98,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	 */
 	public Matrix3x3 createMatrix3x3(Matrix3d matrix) {
 
-		Matrix3x3 result = MathFactory.eINSTANCE.createMatrix3x3();
+		Matrix3x3 result = Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3();
 		// Row 0
 		result.setM00(matrix.m00);
 		result.setM01(matrix.m01);
@@ -123,7 +123,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	 */
 	public Tuple3d createTuple3d(javax.vecmath.Tuple3d tuple) 
 	{
-		org.eclipse.symphony.common.math.Tuple3d result = MathFactory.eINSTANCE.createTuple3d();
+		org.eclipse.symphony.common.math.Tuple3d result = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 
 		result.setX(tuple.x);
 		result.setY(tuple.y);
@@ -138,7 +138,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	 * @generated_NOT
 	 */
 	public org.eclipse.symphony.common.math.Tuple3d createTuple3d(double x, double y, double z) {
-		org.eclipse.symphony.common.math.Tuple3d result = MathFactory.eINSTANCE.createTuple3d();
+		org.eclipse.symphony.common.math.Tuple3d result = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 
 		result.setX(x);
 		result.setY(y);
@@ -153,7 +153,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	 * @generated_NOT
 	 */
 	public Polynomial createPolynomial(double[] coeffs) {
-		Polynomial poly = MathFactory.eINSTANCE.createPolynomial();
+		Polynomial poly = Symphony__CommonMathFactory.eINSTANCE.createPolynomial();
 
 		poly.setCoeffs(coeffs);
 
@@ -190,7 +190,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	 * @generated_NOT
 	 */
 	public Tuple3d extractPosition(Matrix4x4 matrix) {
-		Tuple3d position = MathFactory.eINSTANCE.createTuple3d();
+		Tuple3d position = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		Vector3d v = new Vector3d();
 		matrix.asMatrix4d().get(v);
 		position.setX(v.x);
@@ -206,7 +206,7 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	 */
 	public Tuple3d extractOrientation(Matrix4x4 matrix) 
 	{
-		Tuple3d orientation = MathFactory.eINSTANCE.createTuple3d();
+		Tuple3d orientation = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		Matrix3d rotation = new Matrix3d();
 		rotation.setIdentity();
 		matrix.asMatrix4d().get(rotation);
@@ -227,23 +227,23 @@ public class MathFacadeImpl extends MinimalEObjectImpl.Container implements Math
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MathPackage.MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D:
+			case Symphony__CommonMathPackage.MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D:
 				return createMatrix4x4((Matrix4d)arguments.get(0));
-			case MathPackage.MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D:
+			case Symphony__CommonMathPackage.MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D:
 				return createMatrix3x3((Matrix3d)arguments.get(0));
-			case MathPackage.MATH_FACADE___CREATE_TUPLE3D__TUPLE3D:
+			case Symphony__CommonMathPackage.MATH_FACADE___CREATE_TUPLE3D__TUPLE3D:
 				return createTuple3d((javax.vecmath.Tuple3d)arguments.get(0));
-			case MathPackage.MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonMathPackage.MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE:
 				return createTuple3d((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case MathPackage.MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE:
+			case Symphony__CommonMathPackage.MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE:
 				return createPolynomial((double[])arguments.get(0));
-			case MathPackage.MATH_FACADE___CREATE_IDENTITY_MATRIX4X4:
+			case Symphony__CommonMathPackage.MATH_FACADE___CREATE_IDENTITY_MATRIX4X4:
 				return createIdentityMatrix4x4();
-			case MathPackage.MATH_FACADE___CREATE_IDENTITY_MATRIX3X3:
+			case Symphony__CommonMathPackage.MATH_FACADE___CREATE_IDENTITY_MATRIX3X3:
 				return createIdentityMatrix3x3();
-			case MathPackage.MATH_FACADE___EXTRACT_POSITION__MATRIX4X4:
+			case Symphony__CommonMathPackage.MATH_FACADE___EXTRACT_POSITION__MATRIX4X4:
 				return extractPosition((Matrix4x4)arguments.get(0));
-			case MathPackage.MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4:
+			case Symphony__CommonMathPackage.MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4:
 				return extractOrientation((Matrix4x4)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

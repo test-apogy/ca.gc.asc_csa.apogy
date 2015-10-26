@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.images.ImageSize#getHeight <em>Height</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImageSize()
+ * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImageSize()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ImageSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(int)
-	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImageSize_Width()
+	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImageSize_Width()
 	 * @model default="-1" unique="false"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface ImageSize extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(int)
-	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImageSize_Height()
+	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getImageSize_Height()
 	 * @model default="-1" unique="false"
 	 * @generated
 	 */

@@ -18,7 +18,7 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.ui.jme3.Data3dJME3Utilities;
 import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
 import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
@@ -475,7 +475,7 @@ public class CartesianTriangularMeshMapLayerNodeJM3SceneObject extends DefaultJM
 					int featureId = msg
 							.getFeatureID(CartesianTriangularMesh.class);
 
-					if (featureId == Data3dPackage.CARTESIAN_TRIANGULAR_MESH__POINTS) {
+					if (featureId == Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POINTS) {
 						if (msg.getEventType() == Notification.ADD_MANY
 								|| msg.getEventType() == Notification.REMOVE_MANY) {
 							updateGeometry();
@@ -499,7 +499,7 @@ public class CartesianTriangularMeshMapLayerNodeJM3SceneObject extends DefaultJM
 					int featureId = msg
 							.getFeatureID(CartesianTriangularMesh.class);
 
-					if (featureId == Data3dPackage.CARTESIAN_TRIANGULAR_MESH__POLYGONS) {
+					if (featureId == Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POLYGONS) {
 						if (msg.getEventType() == Notification.ADD_MANY
 								|| msg.getEventType() == Notification.REMOVE_MANY) {
 							updateGeometry();

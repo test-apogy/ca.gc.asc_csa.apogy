@@ -9,8 +9,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
 
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 
 /**
  * This is the central singleton for the Symphony__AddonsSensorsMotion edit plugin.
@@ -45,8 +45,8 @@ public final class Symphony__AddonsSensorsMotionEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

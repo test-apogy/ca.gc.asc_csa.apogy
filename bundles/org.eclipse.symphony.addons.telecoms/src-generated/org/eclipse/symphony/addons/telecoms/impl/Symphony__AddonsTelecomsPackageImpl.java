@@ -29,8 +29,8 @@ import org.eclipse.symphony.addons.telecoms.TelecomNodeStatus;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
 import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
 /**
@@ -686,8 +686,8 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
 
 		// Create type parameters
@@ -696,8 +696,8 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 
 		// Add supertypes to classes
 		telecomStatusMonitorToolListEClass.getESuperTypes().add(theSymphony__AddonsPackage.getSimpleTool());
-		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theTopologyPackage.getNode());
-		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
+		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		isotropicAntennaEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		dipoleAntennaRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		halfWaveDipoleAntennaRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());

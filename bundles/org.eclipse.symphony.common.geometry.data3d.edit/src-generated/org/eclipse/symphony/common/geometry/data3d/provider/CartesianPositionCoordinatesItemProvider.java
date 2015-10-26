@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data.provider.CoordinatesItemProvider;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates} object.
@@ -73,7 +73,7 @@ public class CartesianPositionCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPositionCoordinates_x_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPositionCoordinates_x_feature", "_UI_CartesianPositionCoordinates_type"),
-				 Data3dPackage.Literals.CARTESIAN_POSITION_COORDINATES__X,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POSITION_COORDINATES__X,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class CartesianPositionCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPositionCoordinates_y_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPositionCoordinates_y_feature", "_UI_CartesianPositionCoordinates_type"),
-				 Data3dPackage.Literals.CARTESIAN_POSITION_COORDINATES__Y,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POSITION_COORDINATES__Y,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class CartesianPositionCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianPositionCoordinates_z_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianPositionCoordinates_z_feature", "_UI_CartesianPositionCoordinates_type"),
-				 Data3dPackage.Literals.CARTESIAN_POSITION_COORDINATES__Z,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POSITION_COORDINATES__Z,
 				 true,
 				 false,
 				 false,
@@ -168,9 +168,9 @@ public class CartesianPositionCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianPositionCoordinates.class)) {
-			case Data3dPackage.CARTESIAN_POSITION_COORDINATES__X:
-			case Data3dPackage.CARTESIAN_POSITION_COORDINATES__Y:
-			case Data3dPackage.CARTESIAN_POSITION_COORDINATES__Z:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__X:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Y:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES__Z:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

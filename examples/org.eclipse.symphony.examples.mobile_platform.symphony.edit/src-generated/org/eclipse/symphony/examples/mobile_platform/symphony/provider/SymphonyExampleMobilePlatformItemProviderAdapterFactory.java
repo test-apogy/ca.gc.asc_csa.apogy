@@ -35,9 +35,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
@@ -485,19 +485,19 @@ public class SymphonyExampleMobilePlatformItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * A child creation extender for the {@link TopologyPackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class TopologyChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologySwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -533,17 +533,17 @@ public class SymphonyExampleMobilePlatformItemProviderAdapterFactory extends Sym
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformSymphonySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformData()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformSymphonySystemAnnotation()));
 
 				return null;
@@ -558,17 +558,17 @@ public class SymphonyExampleMobilePlatformItemProviderAdapterFactory extends Sym
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformSymphonySystemApiAdapter()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformData()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformSymphonySystemAnnotation()));
 
 				return null;

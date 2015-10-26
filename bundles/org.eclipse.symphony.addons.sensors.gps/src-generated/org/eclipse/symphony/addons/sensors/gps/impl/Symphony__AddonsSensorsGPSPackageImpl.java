@@ -28,8 +28,8 @@ import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFactory
 import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -191,7 +191,7 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 
 		// Initialize simple dependencies
 		Symphony__AddonsSensorsPosePackage.eINSTANCE.eClass();
-		EMFEcorePackage.eINSTANCE.eClass();
+		Symphony__CommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsGPSPackage.createPackageContents();
@@ -815,8 +815,8 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Symphony__AddonsSensorsPosePackage theSymphony__AddonsSensorsPosePackage = (Symphony__AddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPosePackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -824,7 +824,7 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 
 		// Add supertypes to classes
 		gpsPoseSensorEClass.getESuperTypes().add(theSymphony__AddonsSensorsPosePackage.getPoseSensor());
-		gpsPoseSensorEClass.getESuperTypes().add(theEMFEcorePackage.getServer());
+		gpsPoseSensorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getServer());
 		markedGPSEClass.getESuperTypes().add(this.getGPS());
 
 		// Initialize classes, features, and operations; add parameters
@@ -880,7 +880,7 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		initEOperation(getGPS__Reconnect(), theEcorePackage.getEBoolean(), "reconnect", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(markedGPSEClass, MarkedGPS.class, "MarkedGPS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMarkedGPS_Marker(), theData3dPackage.getPositionMarker(), null, "marker", null, 0, 1, MarkedGPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMarkedGPS_Marker(), theSymphony__CommonGeometryData3DPackage.getPositionMarker(), null, "marker", null, 0, 1, MarkedGPS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gpsRepositoryEClass, GPSRepository.class, "GPSRepository", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGPSRepository_GpsDevices(), this.getGPS(), null, "gpsDevices", null, 0, -1, GPSRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -897,7 +897,7 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		addEParameter(op, theEcorePackage.getEDouble(), "originLongitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getGPSFacade__CreateMarkedGPS__PositionMarker(), this.getMarkedGPS(), "createMarkedGPS", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getPositionMarker(), "marker", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getPositionMarker(), "marker", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(gpsStatusEEnum, GPSStatus.class, "GPSStatus");

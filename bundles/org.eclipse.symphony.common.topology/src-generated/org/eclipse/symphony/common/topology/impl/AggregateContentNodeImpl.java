@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.AggregateContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -52,7 +52,7 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.AGGREGATE_CONTENT_NODE;
+		return Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 		setAggregateContent(newContent);
 
 		eNotify(new ENotificationImpl(this, Notification.SET,
-				TopologyPackage.CONTENT_NODE__CONTENT, oldContent, newContent));
+				Symphony__CommonTopologyPackage.CONTENT_NODE__CONTENT, oldContent, newContent));
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 		T oldAggregateContent = aggregateContent;
 		aggregateContent = newAggregateContent;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT, oldAggregateContent, newAggregateContent);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT, oldAggregateContent, newAggregateContent);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -120,14 +120,14 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 		if (newAggregateContent != aggregateContent) {
 			NotificationChain msgs = null;
 			if (aggregateContent != null)
-				msgs = ((InternalEObject)aggregateContent).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT, null, msgs);
+				msgs = ((InternalEObject)aggregateContent).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT, null, msgs);
 			if (newAggregateContent != null)
-				msgs = ((InternalEObject)newAggregateContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT, null, msgs);
+				msgs = ((InternalEObject)newAggregateContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT, null, msgs);
 			msgs = basicSetAggregateContent(newAggregateContent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT, newAggregateContent, newAggregateContent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT, newAggregateContent, newAggregateContent));
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
+			case Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
 				return basicSetAggregateContent(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -151,7 +151,7 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
+			case Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
 				return getAggregateContent();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -165,7 +165,7 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
+			case Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
 				setAggregateContent((T)newValue);
 				return;
 		}
@@ -179,7 +179,7 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
+			case Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
 				setAggregateContent((T)null);
 				return;
 		}
@@ -193,7 +193,7 @@ public class AggregateContentNodeImpl<T> extends ContentNodeImpl<T> implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
+			case Symphony__CommonTopologyPackage.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT:
 				return aggregateContent != null;
 		}
 		return super.eIsSet(featureID);

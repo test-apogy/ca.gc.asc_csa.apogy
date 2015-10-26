@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractRootNode;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -486,7 +486,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   {
 	  if(featureNodeAdapter == null)
 	  {
-		  featureNodeAdapter = EMFEcoreFactory.eINSTANCE.createFeatureNodeAdapter();
+		  featureNodeAdapter = Symphony__CommonEMFFactory.eINSTANCE.createFeatureNodeAdapter();
 		  featureNodeAdapter.eAdapters().add(getFeatureNodeAdapterAdapter());
 	  }
 	  return featureNodeAdapter;
@@ -503,11 +503,11 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 				{
 					if(notification.getEventType() != Notification.REMOVING_ADAPTER)
 					{
-						if(notification.getFeatureID(FeatureNodeAdapter.class) == EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
+						if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
 						{
 							setCurrentValue(notification.getNewValue());
 						}
-						else if(notification.getFeatureID(FeatureNodeAdapter.class) == EMFEcorePackage.FEATURE_NODE_ADAPTER__RESOLVED)
+						else if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED)
 						{							
 							setResolved(notification.getNewBooleanValue());
 						}

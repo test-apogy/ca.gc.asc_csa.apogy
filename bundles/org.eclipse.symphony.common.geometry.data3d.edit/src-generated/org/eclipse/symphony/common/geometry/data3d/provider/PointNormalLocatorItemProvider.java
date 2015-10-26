@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator} object.
@@ -76,7 +76,7 @@ public class PointNormalLocatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointNormalLocator_dataSet_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointNormalLocator_dataSet_feature", "_UI_PointNormalLocator_type"),
-				 Data3dPackage.Literals.POINT_NORMAL_LOCATOR__DATA_SET,
+				 Symphony__CommonGeometryData3DPackage.Literals.POINT_NORMAL_LOCATOR__DATA_SET,
 				 true,
 				 false,
 				 true,

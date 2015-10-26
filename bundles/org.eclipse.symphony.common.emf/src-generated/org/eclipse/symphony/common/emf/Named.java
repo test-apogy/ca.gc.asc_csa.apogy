@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.emf.Named#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getNamed()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getNamed()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Named extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getNamed_Name()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getNamed_Name()
 	 * @model unique="false"
 	 * @generated
 	 */

@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianPolygon#getCentroid <em>Centroid</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPolygon()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Surface</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPolygon_Surface()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Surface()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -50,7 +50,7 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Normal</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPolygon_Normal()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Normal()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Centroid</em>' reference.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianPolygon_Centroid()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Centroid()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

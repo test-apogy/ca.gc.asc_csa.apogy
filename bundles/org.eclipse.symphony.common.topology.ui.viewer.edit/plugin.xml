@@ -21,6 +21,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_common_topology_ui_viewer -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.common.topology.ui.viewer.provider.TopologyViewerItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated topology_viewer -->
       <extender
             uri="org.eclipse.symphony.common.topology"

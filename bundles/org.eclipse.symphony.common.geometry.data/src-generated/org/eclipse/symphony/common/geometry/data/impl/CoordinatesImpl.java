@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.geometry.data.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class CoordinatesImpl extends MinimalEObjectImpl.Container implements Coo
 	@Override
 	protected EClass eStaticClass()
 	{
-		return DataPackage.Literals.COORDINATES;
+		return Symphony__CommonGeometryDataPackage.Literals.COORDINATES;
 	}
 
 } //CoordinatesImpl

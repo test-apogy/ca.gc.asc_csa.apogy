@@ -8,14 +8,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVEditPlugin;
 import org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
-import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
-import org.eclipse.symphony.common.images.provider.ImagesCoreEditPlugin;
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
+import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
+import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
+import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
+import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 import org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentEditPlugin;
 import org.eclipse.symphony.core.environment.orbit.provider.SymphonyOrbitEnvironmentEditPlugin;
 import org.eclipse.symphony.core.environment.provider.SymphonyEnvironmentEditPlugin;
@@ -54,22 +54,22 @@ public final class EMFEcoreExampleSatelliteEditPlugin extends EMFPlugin {
 	public EMFEcoreExampleSatelliteEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
+		     Symphony__CommonEMFEditPlugin.INSTANCE,
 		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
 		     Symphony__AddonsSensorsImagingEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     ImagesCoreEditPlugin.INSTANCE,
+		     Symphony__CommonImagesEditPlugin.INSTANCE,
 		     SymphonyEarthOrbitEnvironmentEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
 		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
+		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
+		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

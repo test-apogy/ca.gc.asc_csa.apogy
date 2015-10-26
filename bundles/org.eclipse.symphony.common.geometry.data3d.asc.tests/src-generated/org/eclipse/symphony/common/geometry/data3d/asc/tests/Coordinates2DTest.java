@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 import org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D;
-import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCFactory;
+import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public class Coordinates2DTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Data3DASCFactory.eINSTANCE.createCoordinates2D());
+		setFixture(Symphony__CommonGeometryData3DASCFactory.eINSTANCE.createCoordinates2D());
 	}
 
 	/**

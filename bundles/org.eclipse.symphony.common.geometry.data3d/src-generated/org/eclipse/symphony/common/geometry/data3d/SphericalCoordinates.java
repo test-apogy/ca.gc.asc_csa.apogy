@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getR <em>R</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphericalCoordinates()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface SphericalCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Phi</em>' attribute.
 	 * @see #setPhi(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphericalCoordinates_Phi()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_Phi()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface SphericalCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Theta</em>' attribute.
 	 * @see #setTheta(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphericalCoordinates_Theta()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_Theta()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface SphericalCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>R</em>' attribute.
 	 * @see #setR(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphericalCoordinates_R()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_R()
 	 * @model unique="false"
 	 * @generated
 	 */

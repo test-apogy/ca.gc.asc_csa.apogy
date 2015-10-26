@@ -26,8 +26,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -83,7 +83,7 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 EMFEcorePackage.Literals.NAMED__NAME,
+				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -212,7 +212,7 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
-				 EMFEcoreFactory.eINSTANCE.createListRootNode()));
+				 Symphony__CommonEMFFactory.eINSTANCE.createListRootNode()));
 	}
 
 	protected void collectNewChildDescriptors(
@@ -238,7 +238,7 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
 
 			// Create a new Root Node with Source Class Defined.
-			ListRootNode rootNode = EMFEcoreFactory.eINSTANCE
+			ListRootNode rootNode = Symphony__CommonEMFFactory.eINSTANCE
 					.createListRootNode();
 		rootNode.setSourceClass(EMFEcoreInvocatorFacade.INSTANCE
 					.getInstanceClass(variableFeatureReference));

@@ -8,7 +8,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 
 public class MultiNodeListener 
@@ -51,7 +51,7 @@ public class MultiNodeListener
 						int featureId = msg.getFeatureID(GraphicsContext.class);
 						switch (featureId) 
 						{
-							case TopologyPackage.GROUP_NODE__CHILDREN:
+							case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
 							{
 								int eventType = msg.getEventType();
 								switch (eventType) 

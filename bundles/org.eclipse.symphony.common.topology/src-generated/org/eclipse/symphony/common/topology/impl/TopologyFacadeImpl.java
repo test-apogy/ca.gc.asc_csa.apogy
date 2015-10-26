@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.AbstractNodeVisitor;
@@ -37,8 +37,8 @@ import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.ReferencedContentNode;
 import org.eclipse.symphony.common.topology.RotationNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyFactory;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
 
 /**
@@ -73,7 +73,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.TOPOLOGY_FACADE;
+		return Symphony__CommonTopologyPackage.Literals.TOPOLOGY_FACADE;
 	}
 
 	/**
@@ -91,9 +91,9 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated_NOT
 	 */
 	public PositionNode createPositionNode(double x, double y, double z) {
-		PositionNode node = TopologyFactory.eINSTANCE.createPositionNode();
+		PositionNode node = Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode();
 
-		Tuple3d position = MathFactory.eINSTANCE.createTuple3d();
+		Tuple3d position = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 
 		node.setPosition(position);
 
@@ -111,7 +111,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public RotationNode createRotationNodeXYZ(double x, double y, double z) {
 
-		RotationNode node = TopologyFactory.eINSTANCE.createRotationNode();
+		RotationNode node = Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode();
 
 		Matrix3d rotationMatrix = GeometricUtils.packXYZ(x, y, z);
 
@@ -158,7 +158,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated_NOT
 	 */
 	public RotationNode createRotationNodeYZX(double x, double y, double z) {
-		RotationNode node = TopologyFactory.eINSTANCE.createRotationNode();
+		RotationNode node = Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode();
 
 		Matrix3d rotationMatrix = GeometricUtils.packYZX(x, y, z);
 
@@ -175,7 +175,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated_NOT
 	 */
 	public RotationNode createRotationNodeZYX(double x, double y, double z) {
-		RotationNode node = TopologyFactory.eINSTANCE.createRotationNode();
+		RotationNode node = Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode();
 
 		Matrix3d rotationMatrix = GeometricUtils.packZYX(x, y, z);
 
@@ -196,12 +196,12 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 
 		RotationNode rotationNode = createRotationNodeXYZ(rx, ry, rz);
 
-		Tuple3d translation = MathFactory.eINSTANCE.createTuple3d();
+		Tuple3d translation = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		translation.setX(tx);
 		translation.setY(ty);
 		translation.setZ(tz);
 
-		TransformNode trNode = TopologyFactory.eINSTANCE.createTransformNode();
+		TransformNode trNode = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
 		trNode.setRotationMatrix(rotationNode.getRotationMatrix());
 		trNode.setPosition(translation);
 
@@ -218,12 +218,12 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 			double tz, double rx, double ry, double rz) {
 		RotationNode rotationNode = createRotationNodeYZX(rx, ry, rz);
 
-		Tuple3d translation = MathFactory.eINSTANCE.createTuple3d();
+		Tuple3d translation = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		translation.setX(tx);
 		translation.setY(ty);
 		translation.setZ(tz);
 
-		TransformNode trNode = TopologyFactory.eINSTANCE.createTransformNode();
+		TransformNode trNode = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
 		trNode.setRotationMatrix(rotationNode.getRotationMatrix());
 		trNode.setPosition(translation);
 
@@ -239,12 +239,12 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 			double tz, double rx, double ry, double rz) {
 		RotationNode rotationNode = createRotationNodeZYX(rx, ry, rz);
 
-		Tuple3d translation = MathFactory.eINSTANCE.createTuple3d();
+		Tuple3d translation = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		translation.setX(tx);
 		translation.setY(ty);
 		translation.setZ(tz);
 
-		TransformNode trNode = TopologyFactory.eINSTANCE.createTransformNode();
+		TransformNode trNode = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
 		trNode.setRotationMatrix(rotationNode.getRotationMatrix());
 		trNode.setPosition(translation);
 
@@ -258,7 +258,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public TransformNode createTransformNode(Matrix4d matrix) {
 
-		TransformNode tn = TopologyFactory.eINSTANCE.createTransformNode();
+		TransformNode tn = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
 
 		tn.setTransformation(matrix);
 
@@ -272,7 +272,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public PickAndPlaceNode createPickAndPlaceNode(Matrix4d matrix) {
 
-		PickAndPlaceNode pnpn = TopologyFactory.eINSTANCE
+		PickAndPlaceNode pnpn = Symphony__CommonTopologyFactory.eINSTANCE
 				.createPickAndPlaceNode();
 
 		pnpn.setTransformation(matrix);
@@ -299,7 +299,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated_NOT
 	 */
 	public <T> ReferencedContentNode<T> createReferencedContentNode(T content) {
-		ReferencedContentNode<T> contentNode = TopologyFactory.eINSTANCE
+		ReferencedContentNode<T> contentNode = Symphony__CommonTopologyFactory.eINSTANCE
 				.createReferencedContentNode();
 		contentNode.setContent(content);
 
@@ -312,7 +312,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated_NOT
 	 */
 	public <T> AggregateContentNode<T> createAggregateContentNode(T content) {
-		AggregateContentNode<T> contentNode = TopologyFactory.eINSTANCE
+		AggregateContentNode<T> contentNode = Symphony__CommonTopologyFactory.eINSTANCE
 				.createAggregateContentNode();
 		contentNode.setContent(content);
 
@@ -325,7 +325,7 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated_NOT
 	 */
 	public Link createLink(Node node) {
-		Link link = TopologyFactory.eINSTANCE.createLink();
+		Link link = Symphony__CommonTopologyFactory.eINSTANCE.createLink();
 		link.setNode(node);
 
 		return link;
@@ -581,51 +581,51 @@ public class TopologyFacadeImpl extends MinimalEObjectImpl.Container implements 
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_LINK__NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_LINK__NODE:
 				return createLink((Node)arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT:
 				return createContentNode(arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT:
 				return createReferencedContentNode(arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT:
 				return createAggregateContentNode(arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE:
 				return createPositionNode((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE:
 				return createRotationNodeXYZ((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE:
 				return createRotationNodeYZX((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE:
 				return createRotationNodeZYX((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createTransformNodeXYZ((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4), (Double)arguments.get(5));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createTransformNodeYZX((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4), (Double)arguments.get(5));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createTransformNodeZYX((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4), (Double)arguments.get(5));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D:
 				return createTransformNode((Matrix4d)arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D:
 				return createPickAndPlaceNode((Matrix4d)arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE:
 				return expressNodeInRootFrame((Node)arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE:
 				return expressRootInNodeFrame((Node)arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE:
 				return expressInFrame((Node)arguments.get(0), (Node)arguments.get(1));
-			case TopologyPackage.TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE:
 				return findNodesByDescription((String)arguments.get(0), (Node)arguments.get(1));
-			case TopologyPackage.TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE:
 				return findNodesByID((String)arguments.get(0), (Node)arguments.get(1));
-			case TopologyPackage.TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE:
 				return findNodesByType((EClass)arguments.get(0), (Node)arguments.get(1));
-			case TopologyPackage.TOPOLOGY_FACADE___FIND_ROOT__NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___FIND_ROOT__NODE:
 				return findRoot((Node)arguments.get(0));
-			case TopologyPackage.TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE:
 				return getEuclideanDistance((Node)arguments.get(0), (Node)arguments.get(1));
-			case TopologyPackage.TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE:
 				return getGeodesicDistance((Node)arguments.get(0), (Node)arguments.get(1));
-			case TopologyPackage.TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE:
+			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE:
 				printTopology((Node)arguments.get(0));
 				return null;
 		}

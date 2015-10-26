@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 
 /**
@@ -64,7 +64,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.TIME_SOURCE;
+		return Symphony__CommonEMFPackage.Literals.TIME_SOURCE;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.TIME_SOURCE__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.TIME_SOURCE__TIME, oldTime, time));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCE__TIME:
+			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
 				return getTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -137,7 +137,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCE__TIME:
+			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
 				setTime((Date)newValue);
 				return;
 		}
@@ -152,7 +152,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCE__TIME:
+			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
 		}
@@ -167,7 +167,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.TIME_SOURCE__TIME:
+			case Symphony__CommonEMFPackage.TIME_SOURCE__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
 		}
 		return super.eIsSet(featureID);
@@ -182,7 +182,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == Disposable.class) {
 			switch (baseOperationID) {
-				case EMFEcorePackage.DISPOSABLE___DISPOSE: return EMFEcorePackage.TIME_SOURCE___DISPOSE;
+				case Symphony__CommonEMFPackage.DISPOSABLE___DISPOSE: return Symphony__CommonEMFPackage.TIME_SOURCE___DISPOSE;
 				default: return -1;
 			}
 		}
@@ -197,7 +197,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcorePackage.TIME_SOURCE___DISPOSE:
+			case Symphony__CommonEMFPackage.TIME_SOURCE___DISPOSE:
 				dispose();
 				return null;
 		}

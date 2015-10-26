@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
-import org.eclipse.symphony.common.io.jinput.JInputFactory;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
@@ -162,7 +162,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 	  
 	  if(componentQualifier == null)
 	  {
-		  componentQualifier = JInputFactory.eINSTANCE.createEComponentQualifier();
+		  componentQualifier = Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
 		  setEComponentQualifier(componentQualifier);
 	  }
 	  return componentQualifier;

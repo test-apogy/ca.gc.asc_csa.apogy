@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.geometry.data3d.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
 
 /**
@@ -82,7 +82,7 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.DIGITAL_ELEVATION_MAP;
+		return Symphony__CommonGeometryData3DPackage.Literals.DIGITAL_ELEVATION_MAP;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 		int oldXDimension = xDimension;
 		xDimension = newXDimension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.DIGITAL_ELEVATION_MAP__XDIMENSION, oldXDimension, xDimension));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION, oldXDimension, xDimension));
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 		int oldYDimension = yDimension;
 		yDimension = newYDimension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.DIGITAL_ELEVATION_MAP__YDIMENSION, oldYDimension, yDimension));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION, oldYDimension, yDimension));
 	}
 
 	/**
@@ -135,9 +135,9 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
 				return getXDimension();
-			case Data3dPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
 				return getYDimension();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -151,10 +151,10 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
 				setXDimension((Integer)newValue);
 				return;
-			case Data3dPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
 				setYDimension((Integer)newValue);
 				return;
 		}
@@ -169,10 +169,10 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
 				setXDimension(XDIMENSION_EDEFAULT);
 				return;
-			case Data3dPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
 				setYDimension(YDIMENSION_EDEFAULT);
 				return;
 		}
@@ -187,9 +187,9 @@ public class DigitalElevationMapImpl extends CartesianCoordinatesSetImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__XDIMENSION:
 				return xDimension != XDIMENSION_EDEFAULT;
-			case Data3dPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP__YDIMENSION:
 				return yDimension != YDIMENSION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

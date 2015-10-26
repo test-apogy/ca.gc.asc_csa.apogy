@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.SymphonyCorePackage;
@@ -202,13 +202,13 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.FEATURE_OF_INTEREST__NAME: return EMFEcorePackage.NAMED__NAME;
+				case SymphonyCorePackage.FEATURE_OF_INTEREST__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case SymphonyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -224,13 +224,13 @@ public class FeatureOfInterestImpl extends PositionedImpl implements FeatureOfIn
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return SymphonyCorePackage.FEATURE_OF_INTEREST__NAME;
+				case Symphony__CommonEMFPackage.NAMED__NAME: return SymphonyCorePackage.FEATURE_OF_INTEREST__NAME;
 				default: return -1;
 			}
 		}
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION;
 				default: return -1;
 			}
 		}

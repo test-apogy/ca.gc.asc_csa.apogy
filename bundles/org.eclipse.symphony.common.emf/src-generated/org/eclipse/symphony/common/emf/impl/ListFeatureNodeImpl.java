@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 
 /**
@@ -86,7 +86,7 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcorePackage.Literals.LIST_FEATURE_NODE;
+		return Symphony__CommonEMFPackage.Literals.LIST_FEATURE_NODE;
 	}
 
   /**
@@ -101,7 +101,7 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
 			structuralFeature = (EStructuralFeature)eResolveProxy(oldStructuralFeature);
 			if (structuralFeature != oldStructuralFeature) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
 			}
 		}
 		return structuralFeature;
@@ -127,7 +127,7 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
 		EStructuralFeature oldStructuralFeature = structuralFeature;
 		structuralFeature = newStructuralFeature;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
 	}
 
   /**
@@ -167,7 +167,7 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
 		int oldIndex = index;
 		index = newIndex;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.LIST_FEATURE_NODE__INDEX, oldIndex, index));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX, oldIndex, index));
 	}
 
   /**
@@ -179,12 +179,12 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
 				if (resolve) return getStructuralFeature();
 				return basicGetStructuralFeature();
-			case EMFEcorePackage.LIST_FEATURE_NODE__MULTI_VALUED:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED:
 				return isMultiValued();
-			case EMFEcorePackage.LIST_FEATURE_NODE__INDEX:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX:
 				return getIndex();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -199,10 +199,10 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
 				setStructuralFeature((EStructuralFeature)newValue);
 				return;
-			case EMFEcorePackage.LIST_FEATURE_NODE__INDEX:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX:
 				setIndex((Integer)newValue);
 				return;
 		}
@@ -218,10 +218,10 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
 				setStructuralFeature((EStructuralFeature)null);
 				return;
-			case EMFEcorePackage.LIST_FEATURE_NODE__INDEX:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX:
 				setIndex(INDEX_EDEFAULT);
 				return;
 		}
@@ -237,11 +237,11 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE:
 				return structuralFeature != null;
-			case EMFEcorePackage.LIST_FEATURE_NODE__MULTI_VALUED:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED:
 				return isMultiValued() != MULTI_VALUED_EDEFAULT;
-			case EMFEcorePackage.LIST_FEATURE_NODE__INDEX:
+			case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX:
 				return index != INDEX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -257,9 +257,9 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   {
 		if (baseClass == AbstractFeatureSpecifier.class) {
 			switch (derivedFeatureID) {
-				case EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE: return EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE;
-				case EMFEcorePackage.LIST_FEATURE_NODE__MULTI_VALUED: return EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED;
-				case EMFEcorePackage.LIST_FEATURE_NODE__INDEX: return EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__INDEX;
+				case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE: return Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE;
+				case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED: return Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED;
+				case Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX: return Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX;
 				default: return -1;
 			}
 		}
@@ -276,9 +276,9 @@ public class ListFeatureNodeImpl extends AbstractFeatureListNodeImpl implements 
   {
 		if (baseClass == AbstractFeatureSpecifier.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE: return EMFEcorePackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE;
-				case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED: return EMFEcorePackage.LIST_FEATURE_NODE__MULTI_VALUED;
-				case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__INDEX: return EMFEcorePackage.LIST_FEATURE_NODE__INDEX;
+				case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE: return Symphony__CommonEMFPackage.LIST_FEATURE_NODE__STRUCTURAL_FEATURE;
+				case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED: return Symphony__CommonEMFPackage.LIST_FEATURE_NODE__MULTI_VALUED;
+				case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX: return Symphony__CommonEMFPackage.LIST_FEATURE_NODE__INDEX;
 				default: return -1;
 			}
 		}

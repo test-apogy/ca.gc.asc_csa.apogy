@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.processors.Activator;
 import org.eclipse.symphony.common.processors.JobProcessorsChain;
 import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public class JobProcessorsChainImpl<I, O> extends ProcessorsChainImpl<I, O> impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ProcessorsPackage.Literals.JOB_PROCESSORS_CHAIN;
+		return Symphony__CommonProcessorsPackage.Literals.JOB_PROCESSORS_CHAIN;
 	}
 
 	@Override

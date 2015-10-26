@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public class CylinderGeometryImpl extends GeometryImpl implements CylinderGeomet
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.CYLINDER_GEOMETRY;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDER_GEOMETRY;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class CylinderGeometryImpl extends GeometryImpl implements CylinderGeomet
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS, oldRadius, radius));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class CylinderGeometryImpl extends GeometryImpl implements CylinderGeomet
 		double oldLength = length;
 		length = newLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH, oldLength, length));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH, oldLength, length));
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class CylinderGeometryImpl extends GeometryImpl implements CylinderGeomet
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
 				return getRadius();
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
 				return getLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +152,10 @@ public class CylinderGeometryImpl extends GeometryImpl implements CylinderGeomet
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
 				setRadius((Double)newValue);
 				return;
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
 				setLength((Double)newValue);
 				return;
 		}
@@ -170,10 +170,10 @@ public class CylinderGeometryImpl extends GeometryImpl implements CylinderGeomet
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
 				setLength(LENGTH_EDEFAULT);
 				return;
 		}
@@ -188,9 +188,9 @@ public class CylinderGeometryImpl extends GeometryImpl implements CylinderGeomet
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
 				return radius != RADIUS_EDEFAULT;
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
 				return length != LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

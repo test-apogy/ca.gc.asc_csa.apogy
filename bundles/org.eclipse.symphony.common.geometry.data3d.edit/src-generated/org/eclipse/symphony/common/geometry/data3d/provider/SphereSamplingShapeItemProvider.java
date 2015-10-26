@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
 
 /**
@@ -85,7 +85,7 @@ public class SphereSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphereSamplingShape_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphereSamplingShape_radius_feature", "_UI_SphereSamplingShape_type"),
-				 Data3dPackage.Literals.SPHERE_SAMPLING_SHAPE__RADIUS,
+				 Symphony__CommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class SphereSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphereSamplingShape_center_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphereSamplingShape_center_feature", "_UI_SphereSamplingShape_type"),
-				 Data3dPackage.Literals.SPHERE_SAMPLING_SHAPE__CENTER,
+				 Symphony__CommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__CENTER,
 				 true,
 				 false,
 				 true,
@@ -131,7 +131,7 @@ public class SphereSamplingShapeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphereSamplingShape_includeJustTouching_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphereSamplingShape_includeJustTouching_feature", "_UI_SphereSamplingShape_type"),
-				 Data3dPackage.Literals.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING,
+				 Symphony__CommonGeometryData3DPackage.Literals.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING,
 				 true,
 				 false,
 				 false,
@@ -178,8 +178,8 @@ public class SphereSamplingShapeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SphereSamplingShape.class)) {
-			case Data3dPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
-			case Data3dPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
+			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__RADIUS:
+			case Symphony__CommonGeometryData3DPackage.SPHERE_SAMPLING_SHAPE__INCLUDE_JUST_TOUCHING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.topology.impl.TopologyFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getTopologyFacade()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getTopologyFacade()
  * @model
  * @generated
  */

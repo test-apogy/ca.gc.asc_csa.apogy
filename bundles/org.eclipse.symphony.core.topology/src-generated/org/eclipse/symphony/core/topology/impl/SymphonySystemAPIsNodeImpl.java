@@ -17,7 +17,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
 import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
@@ -289,10 +289,10 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   {
 	  TransformMatrixBinding binding = TopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding();
 	  
-	  ListRootNode listRootNode = EMFEcoreFactory.eINSTANCE.createListRootNode();
+	  ListRootNode listRootNode = Symphony__CommonEMFFactory.eINSTANCE.createListRootNode();
 	  listRootNode.setSourceClass(poseProvider.eClass());
 	  
-	  ListFeatureNode listFeatureNode = EMFEcoreFactory.eINSTANCE.createListFeatureNode();	  	 
+	  ListFeatureNode listFeatureNode = Symphony__CommonEMFFactory.eINSTANCE.createListFeatureNode();	  	 
 	  listFeatureNode.setStructuralFeature(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
 	  listRootNode.setChild(listFeatureNode);
 	  
@@ -405,7 +405,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 						  }
 						  						  
 						  // Adds the topology representing the SymphonySystem itself.
-						  ReferencedGroupNode referencedGroupNode = TopologyFactory.eINSTANCE.createReferencedGroupNode();
+						  ReferencedGroupNode referencedGroupNode = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
 						  referencedGroupNode.setNodeId(variableImplementation.getVariable().getName());
 						  if(symphonySystem.getTopologyRoot() != null && symphonySystem.getTopologyRoot().getOriginNode() != null)
 						  {
@@ -419,7 +419,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 							  // DEBUG
 							  if(symphonySystem.getTopologyRoot() != null)
 							  {
-								  symphonySystem.getTopologyRoot().setOriginNode(TopologyFactory.eINSTANCE.createTransformNode());
+								  symphonySystem.getTopologyRoot().setOriginNode(Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode());
 							  }
 							  // DEBUG
 						  }
@@ -508,7 +508,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 //							  }
 							  
 							  // Creates a referenced node to refer the sub-system topology.
-							  ReferencedGroupNode referencedGroupNode = TopologyFactory.eINSTANCE.createReferencedGroupNode();							  
+							  ReferencedGroupNode referencedGroupNode = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();							  
 							  if(subSystem.getTopologyRoot() != null && subSystem.getTopologyRoot().getOriginNode() != null)
 							  {
 								  referencedGroupNode.getChildren().add(subSystem.getTopologyRoot().getOriginNode());

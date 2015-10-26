@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.geometry.data.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.Polygon;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 
@@ -41,7 +41,7 @@ public abstract class PolygonSamplingShapeImpl<CoordinatesType extends Coordinat
 	@Override
 	protected EClass eStaticClass()
 	{
-		return DataPackage.Literals.POLYGON_SAMPLING_SHAPE;
+		return Symphony__CommonGeometryDataPackage.Literals.POLYGON_SAMPLING_SHAPE;
 	}
 
 	/**

@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.io.jinput;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEAxis()
+ * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEAxis()
  * @model
  * @generated
  */

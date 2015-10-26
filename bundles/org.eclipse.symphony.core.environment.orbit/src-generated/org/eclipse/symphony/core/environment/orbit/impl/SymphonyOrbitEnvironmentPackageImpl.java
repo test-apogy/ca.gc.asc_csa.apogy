@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
@@ -718,8 +718,8 @@ public class SymphonyOrbitEnvironmentPackageImpl extends EPackageImpl implements
 		// Obtain other dependent packages
 		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -729,19 +729,19 @@ public class SymphonyOrbitEnvironmentPackageImpl extends EPackageImpl implements
 
 		// Add supertypes to classes
 		orbitWorksiteEClass.getESuperTypes().add(theSymphonyEnvironmentPackage.getWorksite());
-		abstractFrameEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractFrameEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		abstractFrameEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractFrameEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		timedStampedPVACoordinatesEClass.getESuperTypes().add(this.getPVACoordinates());
-		timedStampedPVACoordinatesEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
+		timedStampedPVACoordinatesEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
 		timedStampedAngularCoordinatesEClass.getESuperTypes().add(this.getAngularCoordinates());
-		timedStampedAngularCoordinatesEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
-		spacecraftAttitudeEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
-		spacecraftStateEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
-		orbitEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		orbitEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		orbitEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
-		abstractOrbitPropagatorEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractOrbitPropagatorEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		timedStampedAngularCoordinatesEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		spacecraftAttitudeEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		spacecraftStateEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		orbitEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		orbitEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		orbitEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		abstractOrbitPropagatorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractOrbitPropagatorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		orbitModelEClass.getESuperTypes().add(theSymphonyCorePackage.getAbstractOrbitModel());
 
 		// Initialize classes, features, and operations; add parameters
@@ -751,10 +751,10 @@ public class SymphonyOrbitEnvironmentPackageImpl extends EPackageImpl implements
 		initEClass(abstractFrameEClass, AbstractFrame.class, "AbstractFrame", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(pvaCoordinatesEClass, PVACoordinates.class, "PVACoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPVACoordinates_Position(), theMathPackage.getTuple3d(), null, "position", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPVACoordinates_Velocity(), theMathPackage.getTuple3d(), null, "velocity", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPVACoordinates_Acceleration(), theMathPackage.getTuple3d(), null, "acceleration", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPVACoordinates_AngularVelocity(), theMathPackage.getTuple3d(), null, "angularVelocity", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPVACoordinates_Position(), theSymphony__CommonMathPackage.getTuple3d(), null, "position", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPVACoordinates_Velocity(), theSymphony__CommonMathPackage.getTuple3d(), null, "velocity", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPVACoordinates_Acceleration(), theSymphony__CommonMathPackage.getTuple3d(), null, "acceleration", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPVACoordinates_AngularVelocity(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularVelocity", null, 1, 1, PVACoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timedStampedPVACoordinatesEClass, TimedStampedPVACoordinates.class, "TimedStampedPVACoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -765,9 +765,9 @@ public class SymphonyOrbitEnvironmentPackageImpl extends EPackageImpl implements
 		addEParameter(op, this.getAbstractFrame(), "frame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(angularCoordinatesEClass, AngularCoordinates.class, "AngularCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAngularCoordinates_Rotation(), theMathPackage.getMatrix3x3(), null, "rotation", null, 0, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAngularCoordinates_AngularRate(), theMathPackage.getTuple3d(), null, "angularRate", null, 1, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAngularCoordinates_AngularAcceleration(), theMathPackage.getTuple3d(), null, "angularAcceleration", null, 1, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAngularCoordinates_Rotation(), theSymphony__CommonMathPackage.getMatrix3x3(), null, "rotation", null, 0, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAngularCoordinates_AngularRate(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularRate", null, 1, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAngularCoordinates_AngularAcceleration(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularAcceleration", null, 1, 1, AngularCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timedStampedAngularCoordinatesEClass, TimedStampedAngularCoordinates.class, "TimedStampedAngularCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

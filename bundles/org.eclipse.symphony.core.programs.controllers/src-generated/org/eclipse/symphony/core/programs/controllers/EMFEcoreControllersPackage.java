@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**
@@ -389,7 +389,7 @@ public interface EMFEcoreControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER__NAME = EMFEcorePackage.NAMED__NAME;
+	int TRIGGER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -398,7 +398,7 @@ public interface EMFEcoreControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int TRIGGER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Call Controller Binding</b></em>' container reference.
@@ -407,7 +407,7 @@ public interface EMFEcoreControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER__OPERATION_CALL_CONTROLLER_BINDING = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int TRIGGER__OPERATION_CALL_CONTROLLER_BINDING = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Trigger</em>' class.
@@ -416,7 +416,7 @@ public interface EMFEcoreControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int TRIGGER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Trigger</em>' class.
@@ -425,7 +425,7 @@ public interface EMFEcoreControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int TRIGGER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.controllers.impl.TimeTriggerImpl <em>Time Trigger</em>}' class.

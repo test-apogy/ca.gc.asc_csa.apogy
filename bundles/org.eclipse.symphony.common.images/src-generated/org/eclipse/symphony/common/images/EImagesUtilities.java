@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.images.impl.EImagesUtilitiesImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.images.ImagesCorePackage#getEImagesUtilities()
+ * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getEImagesUtilities()
  * @model
  * @generated
  */

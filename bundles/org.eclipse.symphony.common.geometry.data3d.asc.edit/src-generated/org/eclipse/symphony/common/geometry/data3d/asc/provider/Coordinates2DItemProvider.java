@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D;
-import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage;
+import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.asc.Coordinates2D} object.
@@ -78,7 +78,7 @@ public class Coordinates2DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Coordinates2D_x_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Coordinates2D_x_feature", "_UI_Coordinates2D_type"),
-				 Data3DASCPackage.Literals.COORDINATES2_D__X,
+				 Symphony__CommonGeometryData3DASCPackage.Literals.COORDINATES2_D__X,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class Coordinates2DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Coordinates2D_y_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Coordinates2D_y_feature", "_UI_Coordinates2D_type"),
-				 Data3DASCPackage.Literals.COORDINATES2_D__Y,
+				 Symphony__CommonGeometryData3DASCPackage.Literals.COORDINATES2_D__Y,
 				 true,
 				 false,
 				 false,
@@ -145,8 +145,8 @@ public class Coordinates2DItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Coordinates2D.class)) {
-			case Data3DASCPackage.COORDINATES2_D__X:
-			case Data3DASCPackage.COORDINATES2_D__Y:
+			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__X:
+			case Symphony__CommonGeometryData3DASCPackage.COORDINATES2_D__Y:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

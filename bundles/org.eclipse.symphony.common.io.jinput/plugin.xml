@@ -11,8 +11,9 @@
       <!-- @generated symphony_common_ui_jinput -->
       <package
             uri="org.eclipse.symphony.common.io.jinput"
-            class="org.eclipse.symphony.common.io.jinput.JInputPackage"
+            class="org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage"
             genModel="model/symphony_common_io_jinput.xcore"/>
    </extension>
 
+null
 </plugin>

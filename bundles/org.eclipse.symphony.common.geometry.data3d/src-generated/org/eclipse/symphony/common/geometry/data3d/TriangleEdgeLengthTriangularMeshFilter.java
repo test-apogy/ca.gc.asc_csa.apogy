@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter#getMaximumEdgeLength <em>Maximum Edge Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getTriangleEdgeLengthTriangularMeshFilter()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Range</em>' attribute.
 	 * @see #setMinimumRange(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getTriangleEdgeLengthTriangularMeshFilter_MinimumRange()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MinimumRange()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Range</em>' attribute.
 	 * @see #setMaximumRange(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumRange()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumRange()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Edge Length</em>' attribute.
 	 * @see #setMaximumEdgeLength(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumEdgeLength()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumEdgeLength()
 	 * @model unique="false"
 	 * @generated
 	 */

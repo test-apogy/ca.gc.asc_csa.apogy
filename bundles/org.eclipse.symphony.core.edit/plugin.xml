@@ -26,7 +26,7 @@
             class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
             class="org.eclipse.symphony.core.provider.SymphonyCoreItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>

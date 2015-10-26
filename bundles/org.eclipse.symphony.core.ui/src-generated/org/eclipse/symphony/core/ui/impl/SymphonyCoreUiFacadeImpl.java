@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.bindings.BindingsSet;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
 import org.eclipse.symphony.core.Activator;
@@ -340,7 +340,7 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 				.createSymphonySystem();
 
 		// Adds an empty TopologyRoot
-		AggregateGroupNode rootNode = TopologyFactory.eINSTANCE
+		AggregateGroupNode rootNode = Symphony__CommonTopologyFactory.eINSTANCE
 				.createAggregateGroupNode();
 		TopologyRoot topologyRoot = SymphonyCoreFactory.eINSTANCE
 				.createTopologyRoot();

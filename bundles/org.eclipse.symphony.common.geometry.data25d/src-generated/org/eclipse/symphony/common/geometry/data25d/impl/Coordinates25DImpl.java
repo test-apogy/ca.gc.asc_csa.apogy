@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data.impl.CoordinatesImpl;
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -104,7 +104,7 @@ public class Coordinates25DImpl extends CoordinatesImpl implements Coordinates25
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data25dPackage.Literals.COORDINATES25_D;
+		return Symphony__CommonGeometryData25DPackage.Literals.COORDINATES25_D;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class Coordinates25DImpl extends CoordinatesImpl implements Coordinates25
 		double oldU = u;
 		u = newU;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data25dPackage.COORDINATES25_D__U, oldU, u));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData25DPackage.COORDINATES25_D__U, oldU, u));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class Coordinates25DImpl extends CoordinatesImpl implements Coordinates25
 		double oldV = v;
 		v = newV;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data25dPackage.COORDINATES25_D__V, oldV, v));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData25DPackage.COORDINATES25_D__V, oldV, v));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class Coordinates25DImpl extends CoordinatesImpl implements Coordinates25
 		double oldW = w;
 		w = newW;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data25dPackage.COORDINATES25_D__W, oldW, w));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData25DPackage.COORDINATES25_D__W, oldW, w));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class Coordinates25DImpl extends CoordinatesImpl implements Coordinates25
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data25dPackage.COORDINATES25_D__U:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__U:
 				return getU();
-			case Data25dPackage.COORDINATES25_D__V:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__V:
 				return getV();
-			case Data25dPackage.COORDINATES25_D__W:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__W:
 				return getW();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class Coordinates25DImpl extends CoordinatesImpl implements Coordinates25
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data25dPackage.COORDINATES25_D__U:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__U:
 				setU((Double)newValue);
 				return;
-			case Data25dPackage.COORDINATES25_D__V:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__V:
 				setV((Double)newValue);
 				return;
-			case Data25dPackage.COORDINATES25_D__W:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__W:
 				setW((Double)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public class Coordinates25DImpl extends CoordinatesImpl implements Coordinates25
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data25dPackage.COORDINATES25_D__U:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__U:
 				setU(U_EDEFAULT);
 				return;
-			case Data25dPackage.COORDINATES25_D__V:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__V:
 				setV(V_EDEFAULT);
 				return;
-			case Data25dPackage.COORDINATES25_D__W:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__W:
 				setW(W_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public class Coordinates25DImpl extends CoordinatesImpl implements Coordinates25
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data25dPackage.COORDINATES25_D__U:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__U:
 				return u != U_EDEFAULT;
-			case Data25dPackage.COORDINATES25_D__V:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__V:
 				return v != V_EDEFAULT;
-			case Data25dPackage.COORDINATES25_D__W:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES25_D__W:
 				return w != W_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

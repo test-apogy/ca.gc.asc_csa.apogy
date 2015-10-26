@@ -43,7 +43,7 @@ import org.eclipse.symphony.common.emf.AbstractRootNode;
 import org.eclipse.symphony.common.emf.Activator;
 import org.eclipse.symphony.common.emf.EClassFilter;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.EcoreConstants;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
@@ -87,7 +87,7 @@ public class EMFEcoreFacadeImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.EMF_ECORE_FACADE;
+		return Symphony__CommonEMFPackage.Literals.EMF_ECORE_FACADE;
 	}
 
 	/**
@@ -99,80 +99,80 @@ public class EMFEcoreFacadeImpl extends MinimalEObjectImpl.Container implements
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ALL_AVAILABLE_ECLASSES:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ALL_AVAILABLE_ECLASSES:
 				return getAllAvailableEClasses();
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ALL_SUB_ECLASSES__ECLASS:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ALL_SUB_ECLASSES__ECLASS:
 				return getAllSubEClasses((EClass)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER:
 				return filterEClasses((List<EClass>)arguments.get(0), (EClassFilter)arguments.get(1));
-			case EMFEcorePackage.EMF_ECORE_FACADE___FILTER_ECLASSES__LIST_LIST:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___FILTER_ECLASSES__LIST_LIST:
 				return filterEClasses((List<EClass>)arguments.get(0), (List<EClassFilter>)arguments.get(1));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ECLASS__STRING:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ECLASS__STRING:
 				return getEClass((String)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___SORT_ALPHABETICALLY__LIST:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___SORT_ALPHABETICALLY__LIST:
 				return sortAlphabetically((List<EClass>)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS:
 				return getAllAvailableEOperations((EClass)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST:
 				return sortEOperationsAlphabetically((List<EOperation>)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT:
 				return getDocumentation((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT:
 				return getEngineeringUnitsAsString((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT:
 				return getEngineeringUnits((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT:
 				return getValueUpdateRate((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT:
 				return getWarningOCLExpression((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT:
 				return getAlarmOCLExpression((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT:
 				return getOutOfRangeOCLExpression((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT:
 				return getWarningMinValue((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT:
 				return getWarningMaxValue((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT:
 				return getAlarmMinValue((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT:
 				return getAlarmMaxValue((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT:
 				return getOutOfRangeMinValue((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT:
 				return getOutOfRangeMaxValue((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT:
 				return getRange((ETypedElement)arguments.get(0), arguments.get(1));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT:
 				return getFullDescription((ETypedElement)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE:
 				return getAncestriesString((AbstractFeatureNode)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE:
 				return getFeatureRoot((AbstractFeatureNode)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE:
 				return getAncestries((AbstractFeatureNode)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE:
 				return getDescendants((AbstractFeatureNode)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE:
 				return getChildEStructuralFeatures((AbstractFeatureNode)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE:
 				return resolve((EObject)arguments.get(0), (AbstractFeatureNode)arguments.get(1));
-			case EMFEcorePackage.EMF_ECORE_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT:
 				setValue((EObject)arguments.get(0), (AbstractFeatureNode)arguments.get(1), arguments.get(2));
 				return null;
-			case EMFEcorePackage.EMF_ECORE_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE:
 				return isResolved((EObject)arguments.get(0), (AbstractFeatureNode)arguments.get(1));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_LEAF__LISTROOTNODE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_LEAF__LISTROOTNODE:
 				return getLeaf((ListRootNode)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_FILE__RESOURCE:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_FILE__RESOURCE:
 				return getFile((Resource)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_CONTENT__URI:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_CONTENT__URI:
 				return getContent((URI)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___SORT_TIMED__COLLECTION:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___SORT_TIMED__COLLECTION:
 				return sortTimed((Collection<Timed>)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_TIME_SPAN__COLLECTION:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_TIME_SPAN__COLLECTION:
 				return getTimeSpan((Collection<Timed>)arguments.get(0));
-			case EMFEcorePackage.EMF_ECORE_FACADE___GET_ID__EOBJECT:
+			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE___GET_ID__EOBJECT:
 				return getID((EObject)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

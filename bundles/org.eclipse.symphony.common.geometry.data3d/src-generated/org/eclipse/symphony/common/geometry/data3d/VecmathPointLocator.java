@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#getPoints <em>Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVecmathPointLocator()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVecmathPointLocator()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface VecmathPointLocator extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' attribute.
 	 * @see #setPoints(List)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVecmathPointLocator_Points()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVecmathPointLocator_Points()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.Point3d>" many="false"
 	 * @generated
 	 */

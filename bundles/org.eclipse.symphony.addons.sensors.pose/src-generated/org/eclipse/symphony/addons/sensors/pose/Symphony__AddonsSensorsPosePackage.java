@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -172,7 +172,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__PARENT = TopologyPackage.POSITION_NODE__PARENT;
+	int POSITION_SENSOR__PARENT = Symphony__CommonTopologyPackage.POSITION_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -181,7 +181,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__DESCRIPTION = TopologyPackage.POSITION_NODE__DESCRIPTION;
+	int POSITION_SENSOR__DESCRIPTION = Symphony__CommonTopologyPackage.POSITION_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -190,7 +190,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__NODE_ID = TopologyPackage.POSITION_NODE__NODE_ID;
+	int POSITION_SENSOR__NODE_ID = Symphony__CommonTopologyPackage.POSITION_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -199,7 +199,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__CHILDREN = TopologyPackage.POSITION_NODE__CHILDREN;
+	int POSITION_SENSOR__CHILDREN = Symphony__CommonTopologyPackage.POSITION_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -208,7 +208,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__AGGREGATED_CHILDREN = TopologyPackage.POSITION_NODE__AGGREGATED_CHILDREN;
+	int POSITION_SENSOR__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.POSITION_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' containment reference.
@@ -217,7 +217,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__POSITION = TopologyPackage.POSITION_NODE__POSITION;
+	int POSITION_SENSOR__POSITION = Symphony__CommonTopologyPackage.POSITION_NODE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -226,7 +226,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__STATUS = TopologyPackage.POSITION_NODE_FEATURE_COUNT + 0;
+	int POSITION_SENSOR__STATUS = Symphony__CommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Position Coordinates</b></em>' reference.
@@ -235,7 +235,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR__POSITION_COORDINATES = TopologyPackage.POSITION_NODE_FEATURE_COUNT + 1;
+	int POSITION_SENSOR__POSITION_COORDINATES = Symphony__CommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Position Sensor</em>' class.
@@ -244,7 +244,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_FEATURE_COUNT = TopologyPackage.POSITION_NODE_FEATURE_COUNT + 2;
+	int POSITION_SENSOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.POSITION_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -253,7 +253,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR___ACCEPT__INODEVISITOR = TopologyPackage.POSITION_NODE___ACCEPT__INODEVISITOR;
+	int POSITION_SENSOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.POSITION_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>Reset Position</em>' operation.
@@ -262,7 +262,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = TopologyPackage.POSITION_NODE_OPERATION_COUNT + 0;
+	int POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = Symphony__CommonTopologyPackage.POSITION_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Position Sensor</em>' class.
@@ -271,7 +271,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_OPERATION_COUNT = TopologyPackage.POSITION_NODE_OPERATION_COUNT + 1;
+	int POSITION_SENSOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.POSITION_NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPositionSensorImpl <em>Simulated Position Sensor</em>}' class.
@@ -444,7 +444,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__PARENT = TopologyPackage.ROTATION_NODE__PARENT;
+	int ORIENTATION_SENSOR__PARENT = Symphony__CommonTopologyPackage.ROTATION_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -453,7 +453,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__DESCRIPTION = TopologyPackage.ROTATION_NODE__DESCRIPTION;
+	int ORIENTATION_SENSOR__DESCRIPTION = Symphony__CommonTopologyPackage.ROTATION_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -462,7 +462,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__NODE_ID = TopologyPackage.ROTATION_NODE__NODE_ID;
+	int ORIENTATION_SENSOR__NODE_ID = Symphony__CommonTopologyPackage.ROTATION_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -471,7 +471,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__CHILDREN = TopologyPackage.ROTATION_NODE__CHILDREN;
+	int ORIENTATION_SENSOR__CHILDREN = Symphony__CommonTopologyPackage.ROTATION_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -480,7 +480,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__AGGREGATED_CHILDREN = TopologyPackage.ROTATION_NODE__AGGREGATED_CHILDREN;
+	int ORIENTATION_SENSOR__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.ROTATION_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Rotation Matrix</b></em>' containment reference.
@@ -489,7 +489,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__ROTATION_MATRIX = TopologyPackage.ROTATION_NODE__ROTATION_MATRIX;
+	int ORIENTATION_SENSOR__ROTATION_MATRIX = Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -498,7 +498,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__STATUS = TopologyPackage.ROTATION_NODE_FEATURE_COUNT + 0;
+	int ORIENTATION_SENSOR__STATUS = Symphony__CommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Orientation Coordinates</b></em>' reference.
@@ -507,7 +507,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR__ORIENTATION_COORDINATES = TopologyPackage.ROTATION_NODE_FEATURE_COUNT + 1;
+	int ORIENTATION_SENSOR__ORIENTATION_COORDINATES = Symphony__CommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Orientation Sensor</em>' class.
@@ -516,7 +516,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_FEATURE_COUNT = TopologyPackage.ROTATION_NODE_FEATURE_COUNT + 2;
+	int ORIENTATION_SENSOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.ROTATION_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -525,7 +525,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR___ACCEPT__INODEVISITOR = TopologyPackage.ROTATION_NODE___ACCEPT__INODEVISITOR;
+	int ORIENTATION_SENSOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.ROTATION_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>Reset Orientation</em>' operation.
@@ -534,7 +534,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES = TopologyPackage.ROTATION_NODE_OPERATION_COUNT + 0;
+	int ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES = Symphony__CommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Extract Orientation From Matrix</em>' operation.
@@ -543,7 +543,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = TopologyPackage.ROTATION_NODE_OPERATION_COUNT + 1;
+	int ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = Symphony__CommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Orientation Sensor</em>' class.
@@ -552,7 +552,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_OPERATION_COUNT = TopologyPackage.ROTATION_NODE_OPERATION_COUNT + 2;
+	int ORIENTATION_SENSOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.ROTATION_NODE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.InertialMeasurementUnitImpl <em>Inertial Measurement Unit</em>}' class.
@@ -879,7 +879,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__PARENT = TopologyPackage.TRANSFORM_NODE__PARENT;
+	int POSE_SENSOR__PARENT = Symphony__CommonTopologyPackage.TRANSFORM_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -888,7 +888,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__DESCRIPTION = TopologyPackage.TRANSFORM_NODE__DESCRIPTION;
+	int POSE_SENSOR__DESCRIPTION = Symphony__CommonTopologyPackage.TRANSFORM_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -897,7 +897,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__NODE_ID = TopologyPackage.TRANSFORM_NODE__NODE_ID;
+	int POSE_SENSOR__NODE_ID = Symphony__CommonTopologyPackage.TRANSFORM_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -906,7 +906,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__CHILDREN = TopologyPackage.TRANSFORM_NODE__CHILDREN;
+	int POSE_SENSOR__CHILDREN = Symphony__CommonTopologyPackage.TRANSFORM_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -915,7 +915,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__AGGREGATED_CHILDREN = TopologyPackage.TRANSFORM_NODE__AGGREGATED_CHILDREN;
+	int POSE_SENSOR__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.TRANSFORM_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' containment reference.
@@ -924,7 +924,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__POSITION = TopologyPackage.TRANSFORM_NODE__POSITION;
+	int POSE_SENSOR__POSITION = Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Rotation Matrix</b></em>' containment reference.
@@ -933,7 +933,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__ROTATION_MATRIX = TopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX;
+	int POSE_SENSOR__ROTATION_MATRIX = Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -942,7 +942,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__STATUS = TopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 0;
+	int POSE_SENSOR__STATUS = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Position Coordinates</b></em>' reference.
@@ -951,7 +951,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__POSITION_COORDINATES = TopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 1;
+	int POSE_SENSOR__POSITION_COORDINATES = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Orientation Coordinates</b></em>' reference.
@@ -960,7 +960,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__ORIENTATION_COORDINATES = TopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 2;
+	int POSE_SENSOR__ORIENTATION_COORDINATES = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Pose</b></em>' reference.
@@ -969,7 +969,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__POSE = TopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 3;
+	int POSE_SENSOR__POSE = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Data Logger</b></em>' containment reference.
@@ -978,7 +978,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR__DATA_LOGGER = TopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 4;
+	int POSE_SENSOR__DATA_LOGGER = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Pose Sensor</em>' class.
@@ -987,7 +987,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_FEATURE_COUNT = TopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 5;
+	int POSE_SENSOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -996,7 +996,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___ACCEPT__INODEVISITOR = TopologyPackage.TRANSFORM_NODE___ACCEPT__INODEVISITOR;
+	int POSE_SENSOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.TRANSFORM_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>As Matrix4d</em>' operation.
@@ -1005,7 +1005,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___AS_MATRIX4D = TopologyPackage.TRANSFORM_NODE___AS_MATRIX4D;
+	int POSE_SENSOR___AS_MATRIX4D = Symphony__CommonTopologyPackage.TRANSFORM_NODE___AS_MATRIX4D;
 
 	/**
 	 * The operation id for the '<em>Set Transformation</em>' operation.
@@ -1014,7 +1014,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___SET_TRANSFORMATION__MATRIX4D = TopologyPackage.TRANSFORM_NODE___SET_TRANSFORMATION__MATRIX4D;
+	int POSE_SENSOR___SET_TRANSFORMATION__MATRIX4D = Symphony__CommonTopologyPackage.TRANSFORM_NODE___SET_TRANSFORMATION__MATRIX4D;
 
 	/**
 	 * The operation id for the '<em>Reset Position</em>' operation.
@@ -1023,7 +1023,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = TopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 0;
+	int POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Reset Orientation</em>' operation.
@@ -1032,7 +1032,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES = TopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 1;
+	int POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Extract Orientation From Matrix</em>' operation.
@@ -1041,7 +1041,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = TopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 2;
+	int POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3 = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Reset Pose</em>' operation.
@@ -1050,7 +1050,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR___RESET_POSE__POSE = TopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 3;
+	int POSE_SENSOR___RESET_POSE__POSE = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Pose Sensor</em>' class.
@@ -1059,7 +1059,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_OPERATION_COUNT = TopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 4;
+	int POSE_SENSOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedPoseSensorImpl <em>Simulated Pose Sensor</em>}' class.

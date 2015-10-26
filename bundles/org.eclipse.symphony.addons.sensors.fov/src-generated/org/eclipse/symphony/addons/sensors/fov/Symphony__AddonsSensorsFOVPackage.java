@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,7 +80,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW__PARENT = TopologyPackage.NODE__PARENT;
+	int FIELD_OF_VIEW__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -89,7 +89,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int FIELD_OF_VIEW__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -98,7 +98,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int FIELD_OF_VIEW__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The number of structural features of the '<em>Field Of View</em>' class.
@@ -107,7 +107,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int FIELD_OF_VIEW_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -116,7 +116,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int FIELD_OF_VIEW___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Field Of View</em>' class.
@@ -125,7 +125,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_VIEW_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int FIELD_OF_VIEW_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.DistanceRangeImpl <em>Distance Range</em>}' class.
@@ -563,7 +563,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM = DataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 0;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__TRANSFORM = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Rectangular Frustrum Field Of View</b></em>' reference.
@@ -572,7 +572,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW = DataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 1;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Rectangular Frustrum Field Of View Sampling Shape</em>' class.
@@ -581,7 +581,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_FEATURE_COUNT = DataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 2;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Is Inside</em>' operation.
@@ -590,7 +590,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = DataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_INSIDE__COORDINATES = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES;
 
 	/**
 	 * The operation id for the '<em>Is Polygon Inside</em>' operation.
@@ -599,7 +599,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = DataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 0;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Rectangular Frustrum Field Of View Sampling Shape</em>' class.
@@ -608,7 +608,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_OPERATION_COUNT = DataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.FOVFacadeImpl <em>FOV Facade</em>}' class.

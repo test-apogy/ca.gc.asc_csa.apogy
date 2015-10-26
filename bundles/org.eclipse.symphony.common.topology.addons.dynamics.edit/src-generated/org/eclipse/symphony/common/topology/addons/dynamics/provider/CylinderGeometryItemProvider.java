@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry} object.
@@ -67,7 +67,7 @@ public class CylinderGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CylinderGeometry_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CylinderGeometry_radius_feature", "_UI_CylinderGeometry_type"),
-				 TopologyDynamicsPackage.Literals.CYLINDER_GEOMETRY__RADIUS,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDER_GEOMETRY__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class CylinderGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CylinderGeometry_length_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CylinderGeometry_length_feature", "_UI_CylinderGeometry_type"),
-				 TopologyDynamicsPackage.Literals.CYLINDER_GEOMETRY__LENGTH,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDER_GEOMETRY__LENGTH,
 				 true,
 				 false,
 				 false,
@@ -133,8 +133,8 @@ public class CylinderGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CylinderGeometry.class)) {
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
-			case TopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDER_GEOMETRY__LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

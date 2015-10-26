@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.images.ImagesAlbum;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.images.ImagesAlbum} object.
@@ -79,7 +79,7 @@ public class ImagesAlbumItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImagesAlbum_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImagesAlbum_name_feature", "_UI_ImagesAlbum_type"),
-				 ImagesCorePackage.Literals.IMAGES_ALBUM__NAME,
+				 Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__NAME,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class ImagesAlbumItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ImagesCorePackage.Literals.IMAGES_ALBUM__IMAGES);
+			childrenFeatures.add(Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES);
 		}
 		return childrenFeatures;
 	}
@@ -155,10 +155,10 @@ public class ImagesAlbumItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImagesAlbum.class)) {
-			case ImagesCorePackage.IMAGES_ALBUM__NAME:
+			case Symphony__CommonImagesPackage.IMAGES_ALBUM__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ImagesCorePackage.IMAGES_ALBUM__IMAGES:
+			case Symphony__CommonImagesPackage.IMAGES_ALBUM__IMAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -178,13 +178,13 @@ public class ImagesAlbumItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ImagesCorePackage.Literals.IMAGES_ALBUM__IMAGES,
-				 ImagesCoreFactory.eINSTANCE.createEImage()));
+				(Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
+				 Symphony__CommonImagesFactory.eINSTANCE.createEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ImagesCorePackage.Literals.IMAGES_ALBUM__IMAGES,
-				 ImagesCoreFactory.eINSTANCE.createURLEImage()));
+				(Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
+				 Symphony__CommonImagesFactory.eINSTANCE.createURLEImage()));
 	}
 
 	/**

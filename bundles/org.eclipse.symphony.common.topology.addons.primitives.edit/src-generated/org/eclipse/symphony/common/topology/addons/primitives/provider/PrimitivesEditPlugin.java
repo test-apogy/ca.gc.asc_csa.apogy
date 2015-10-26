@@ -9,8 +9,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 
 /**
  * This is the central singleton for the Primitives edit plugin.
@@ -44,9 +44,9 @@ public final class PrimitivesEditPlugin extends EMFPlugin {
 	public PrimitivesEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
 		   });
 	}
 

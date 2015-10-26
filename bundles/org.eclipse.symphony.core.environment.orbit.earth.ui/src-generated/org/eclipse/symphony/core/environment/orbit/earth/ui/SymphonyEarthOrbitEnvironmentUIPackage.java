@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
@@ -126,7 +126,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION__NAME = EMFEcorePackage.NAMED__NAME;
+	int EARTH_VIEW_CONFIGURATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -135,7 +135,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int EARTH_VIEW_CONFIGURATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
@@ -144,7 +144,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION__LAYERS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int EARTH_VIEW_CONFIGURATION__LAYERS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Earth View Configuration</em>' class.
@@ -153,7 +153,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int EARTH_VIEW_CONFIGURATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Earth View Configuration</em>' class.
@@ -162,7 +162,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_VIEW_CONFIGURATION_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int EARTH_VIEW_CONFIGURATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl <em>Abstract World Wind Layer</em>}' class.
@@ -1025,7 +1025,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME = EMFEcorePackage.NAMED__NAME;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1034,7 +1034,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Configurations List</b></em>' container reference.
@@ -1043,7 +1043,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Visibility Set</b></em>' containment reference.
@@ -1052,7 +1052,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Spacecraft Visibility Pass View Configuration</em>' class.
@@ -1061,7 +1061,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Spacecraft Visibility Pass View Configuration</em>' class.
@@ -1070,7 +1070,7 @@ public interface SymphonyEarthOrbitEnvironmentUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '<em>Renderable Layer</em>' data type.

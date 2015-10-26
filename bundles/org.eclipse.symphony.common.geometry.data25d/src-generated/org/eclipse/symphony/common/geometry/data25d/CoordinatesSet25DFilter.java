@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.processors.Processor;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getCoordinatesSet25DFilter()
+ * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinatesSet25DFilter()
  * @model abstract="true"
  * @generated
  */

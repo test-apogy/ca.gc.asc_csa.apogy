@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.images.ImageSize;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.images.ImageSize} object.
@@ -78,7 +78,7 @@ public class ImageSizeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSize_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSize_width_feature", "_UI_ImageSize_type"),
-				 ImagesCorePackage.Literals.IMAGE_SIZE__WIDTH,
+				 Symphony__CommonImagesPackage.Literals.IMAGE_SIZE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class ImageSizeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSize_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSize_height_feature", "_UI_ImageSize_type"),
-				 ImagesCorePackage.Literals.IMAGE_SIZE__HEIGHT,
+				 Symphony__CommonImagesPackage.Literals.IMAGE_SIZE__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -144,8 +144,8 @@ public class ImageSizeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageSize.class)) {
-			case ImagesCorePackage.IMAGE_SIZE__WIDTH:
-			case ImagesCorePackage.IMAGE_SIZE__HEIGHT:
+			case Symphony__CommonImagesPackage.IMAGE_SIZE__WIDTH:
+			case Symphony__CommonImagesPackage.IMAGE_SIZE__HEIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

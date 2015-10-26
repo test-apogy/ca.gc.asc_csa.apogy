@@ -14,7 +14,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.impl.LASFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASFacade()
+ * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASFacade()
  * @model
  * @generated
  */

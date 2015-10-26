@@ -111,7 +111,7 @@ public class MeshSamplingShapeItemProvider
 	@Override
 	public ResourceLocator getResourceLocator()
 	{
-		return DataEditPlugin.INSTANCE;
+		return Symphony__CommonGeometryDataEditPlugin.INSTANCE;
 	}
 
 }

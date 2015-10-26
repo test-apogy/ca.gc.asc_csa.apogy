@@ -14,7 +14,7 @@ import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePacka
 import org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -127,7 +127,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 
 	private void initialize()
 	{
-		if(getRotationMatrix()== null) setRotationMatrix(MathFactory.eINSTANCE.createMatrix3x3());
+		if(getRotationMatrix()== null) setRotationMatrix(Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3());
 		
 		Thread t = new Thread()
     	{			

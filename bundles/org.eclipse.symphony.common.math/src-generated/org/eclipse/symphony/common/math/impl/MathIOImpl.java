@@ -13,9 +13,9 @@ import javax.vecmath.Matrix4d;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.MathIO;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix4x4;
 
 /**
@@ -39,7 +39,7 @@ public class MathIOImpl extends MinimalEObjectImpl.Container implements MathIO {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MathPackage.Literals.MATH_IO;
+		return Symphony__CommonMathPackage.Literals.MATH_IO;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class MathIOImpl extends MinimalEObjectImpl.Container implements MathIO {
 			lineNumber++;
 		}
 
-		Matrix4x4 trMat = MathFactory.eINSTANCE.createMatrix4x4();
+		Matrix4x4 trMat = Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4();
 
 		trMat.setM00(mat.m00);
 		trMat.setM01(mat.m01);
@@ -158,14 +158,14 @@ public class MathIOImpl extends MinimalEObjectImpl.Container implements MathIO {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MathPackage.MATH_IO___READ_TR_MATRIX__STRING:
+			case Symphony__CommonMathPackage.MATH_IO___READ_TR_MATRIX__STRING:
 				try {
 					return readTrMatrix((String)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case MathPackage.MATH_IO___WRITE_TR_MATRIX__MATRIX4X4_STRING:
+			case Symphony__CommonMathPackage.MATH_IO___WRITE_TR_MATRIX__MATRIX4X4_STRING:
 				try {
 					writeTrMatrix((Matrix4x4)arguments.get(0), (String)arguments.get(1));
 					return null;
@@ -173,7 +173,7 @@ public class MathIOImpl extends MinimalEObjectImpl.Container implements MathIO {
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case MathPackage.MATH_IO___WRITE_TR_MATRIX__MATRIX4D_STRING:
+			case Symphony__CommonMathPackage.MATH_IO___WRITE_TR_MATRIX__MATRIX4D_STRING:
 				try {
 					writeTrMatrix((Matrix4d)arguments.get(0), (String)arguments.get(1));
 					return null;

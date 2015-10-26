@@ -22,8 +22,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMember;
 
@@ -85,7 +85,7 @@ public class TypeMemberItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 EMFEcorePackage.Literals.NAMED__NAME,
+				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -225,7 +225,7 @@ public class TypeMemberItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE,
-				 EMFEcoreFactory.eINSTANCE.createTreeRootNode()));
+				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 
   /**

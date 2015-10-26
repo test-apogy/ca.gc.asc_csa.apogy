@@ -16,7 +16,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.math.provider.MathEditUtils;
@@ -117,7 +117,7 @@ public class RotationMatrixComposite extends Composite {
 	
 	private Tuple3d getOrientationTuple3d() {
 		if (orientationTuple3d == null){
-			orientationTuple3d = MathFactory.eINSTANCE.createTuple3d();
+			orientationTuple3d = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		}
 		return orientationTuple3d;
 	}

@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isPollingProblem <em>Polling Problem</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment()
+ * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface EControllerEnvironment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Supported</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_Supported()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_Supported()
 	 * @model unique="false" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -56,7 +56,7 @@ public interface EControllerEnvironment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Controllers</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_Controllers()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_Controllers()
 	 * @model containment="true" transient="true" changeable="false"
 	 * @generated
 	 */
@@ -73,7 +73,7 @@ public interface EControllerEnvironment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Refresh Requested</em>' attribute.
 	 * @see #setRefreshRequested(boolean)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_RefreshRequested()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_RefreshRequested()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -99,7 +99,7 @@ public interface EControllerEnvironment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polling Count</em>' attribute.
 	 * @see #setPollingCount(long)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_PollingCount()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_PollingCount()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -124,7 +124,7 @@ public interface EControllerEnvironment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polling Job</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_PollingJob()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_PollingJob()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.io.jinput.Job" changeable="false"
 	 * @generated
 	 */
@@ -140,7 +140,7 @@ public interface EControllerEnvironment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polling Problem</em>' attribute.
 	 * @see #setPollingProblem(boolean)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment_PollingProblem()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEControllerEnvironment_PollingProblem()
 	 * @model unique="false"
 	 * @generated
 	 */

@@ -30,10 +30,10 @@
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$Symphony__AddonsSensorsImagingChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.images"
-            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$ImagesCoreChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$Symphony__CommonImagesChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.invocator"
             class="org.eclipse.symphony.examples.satellite.provider.EMFEcoreExampleSatelliteItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>

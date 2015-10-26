@@ -18,7 +18,7 @@ package org.eclipse.symphony.common.geometry.data3d;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getBlue <em>Blue</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRGBCartesianPositionCoordinates()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRGBCartesianPositionCoordinates()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface RGBCartesianPositionCoordinates extends CartesianPositionCoordi
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Red</em>' attribute.
 	 * @see #setRed(byte)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRGBCartesianPositionCoordinates_Red()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRGBCartesianPositionCoordinates_Red()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface RGBCartesianPositionCoordinates extends CartesianPositionCoordi
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Green</em>' attribute.
 	 * @see #setGreen(byte)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRGBCartesianPositionCoordinates_Green()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRGBCartesianPositionCoordinates_Green()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface RGBCartesianPositionCoordinates extends CartesianPositionCoordi
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Blue</em>' attribute.
 	 * @see #setBlue(byte)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRGBCartesianPositionCoordinates_Blue()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRGBCartesianPositionCoordinates_Blue()
 	 * @model unique="false"
 	 * @generated
 	 */

@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
@@ -261,7 +261,7 @@ public class EMFEcoreControllersPackageImpl extends EPackageImpl implements EMFE
 
 		// Initialize simple dependencies
 		EMFEcoreInvocatorPackage.eINSTANCE.eClass();
-		JInputPackage.eINSTANCE.eClass();
+		Symphony__CommonIOJInputPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreControllersPackage.createPackageContents();
@@ -964,8 +964,8 @@ public class EMFEcoreControllersPackageImpl extends EPackageImpl implements EMFE
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		JInputPackage theJInputPackage = (JInputPackage)EPackage.Registry.INSTANCE.getEPackage(JInputPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		Symphony__CommonIOJInputPackage theSymphony__CommonIOJInputPackage = (Symphony__CommonIOJInputPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonIOJInputPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -977,8 +977,8 @@ public class EMFEcoreControllersPackageImpl extends EPackageImpl implements EMFE
 		controllersConfigurationEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getProgram());
 		controllersConfigurationEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getOperationCallContainer());
 		operationCallControllerBindingEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getOperationCall());
-		triggerEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		triggerEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		triggerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		triggerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		timeTriggerEClass.getESuperTypes().add(this.getTrigger());
 		controllerTriggerEClass.getESuperTypes().add(this.getTrigger());
 		controllerEdgeTriggerEClass.getESuperTypes().add(this.getControllerTrigger());
@@ -1032,7 +1032,7 @@ public class EMFEcoreControllersPackageImpl extends EPackageImpl implements EMFE
 		initEAttribute(getTimeTrigger_RefreshPeriod(), theEcorePackage.getELong(), "refreshPeriod", "100", 0, 1, TimeTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerTriggerEClass, ControllerTrigger.class, "ControllerTrigger", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getControllerTrigger_ComponentQualifier(), theJInputPackage.getEComponentQualifier(), null, "componentQualifier", null, 0, 1, ControllerTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getControllerTrigger_ComponentQualifier(), theSymphony__CommonIOJInputPackage.getEComponentQualifier(), null, "componentQualifier", null, 0, 1, ControllerTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerEdgeTriggerEClass, ControllerEdgeTrigger.class, "ControllerEdgeTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getControllerEdgeTrigger_EdgeType(), this.getEdgeType(), "edgeType", null, 0, 1, ControllerEdgeTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1056,15 +1056,15 @@ public class EMFEcoreControllersPackageImpl extends EPackageImpl implements EMFE
 		initEAttribute(getToggleValueSource_CurrentValue(), theEcorePackage.getEBoolean(), "currentValue", null, 0, 1, ToggleValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerValueSourceEClass, ControllerValueSource.class, "ControllerValueSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getControllerValueSource_Component(), theJInputPackage.getEComponent(), null, "component", null, 0, 1, ControllerValueSource.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getControllerValueSource_EComponentQualifier(), theJInputPackage.getEComponentQualifier(), null, "eComponentQualifier", null, 0, 1, ControllerValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getControllerValueSource_Component(), theSymphony__CommonIOJInputPackage.getEComponent(), null, "component", null, 0, 1, ControllerValueSource.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getControllerValueSource_EComponentQualifier(), theSymphony__CommonIOJInputPackage.getEComponentQualifier(), null, "eComponentQualifier", null, 0, 1, ControllerValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getControllerValueSource_Conditioning(), this.getAbstractInputConditioning(), null, "conditioning", null, 0, 1, ControllerValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getControllerValueSource_LastValue(), theEcorePackage.getEJavaObject(), "lastValue", null, 0, 1, ControllerValueSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractInputConditioningEClass, AbstractInputConditioning.class, "AbstractInputConditioning", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getAbstractInputConditioning__ConditionInput__EComponent(), theEcorePackage.getEFloat(), "conditionInput", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theJInputPackage.getEComponent(), "component", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonIOJInputPackage.getEComponent(), "component", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(linearInputConditioningEClass, LinearInputConditioning.class, "LinearInputConditioning", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLinearInputConditioning_Minimum(), theEcorePackage.getEFloat(), "minimum", "-1.0", 0, 1, LinearInputConditioning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

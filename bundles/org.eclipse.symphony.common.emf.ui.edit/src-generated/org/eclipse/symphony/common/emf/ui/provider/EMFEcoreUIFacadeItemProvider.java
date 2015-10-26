@@ -121,7 +121,7 @@ public class EMFEcoreUIFacadeItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return EMFEcoreUIEditPlugin.INSTANCE;
+		return Symphony__CommonEMFUIEditPlugin.INSTANCE;
 	}
 
 }

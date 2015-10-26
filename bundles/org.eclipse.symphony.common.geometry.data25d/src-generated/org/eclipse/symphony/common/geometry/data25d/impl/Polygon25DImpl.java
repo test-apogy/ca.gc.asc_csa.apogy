@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.symphony.common.geometry.data.impl.PolygonImpl;
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
 
 /**
@@ -37,7 +37,7 @@ public class Polygon25DImpl extends PolygonImpl<Coordinates25D> implements Polyg
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data25dPackage.Literals.POLYGON25_D;
+		return Symphony__CommonGeometryData25DPackage.Literals.POLYGON25_D;
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Polygon25DImpl extends PolygonImpl<Coordinates25D> implements Polyg
 	@Override
 	public EList<Coordinates25D> getVertices() {
 		if (vertices == null) {
-			vertices = new EObjectEList<Coordinates25D>(Coordinates25D.class, this, Data25dPackage.POLYGON25_D__VERTICES);
+			vertices = new EObjectEList<Coordinates25D>(Coordinates25D.class, this, Symphony__CommonGeometryData25DPackage.POLYGON25_D__VERTICES);
 		}
 		return vertices;
 	}

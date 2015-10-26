@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation#getNumberOfPoints <em>Number Of Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getCartesianCoordinatesSetPresentation()
+ * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Point Cloud</em>' reference.
 	 * @see #setPointCloud(CartesianCoordinatesSet)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getCartesianCoordinatesSetPresentation_PointCloud()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_PointCloud()
 	 * @model
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Point Size</em>' attribute.
 	 * @see #setPointSize(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getCartesianCoordinatesSetPresentation_PointSize()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_PointSize()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
@@ -87,7 +87,7 @@ public interface CartesianCoordinatesSetPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Points</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getCartesianCoordinatesSetPresentation_NumberOfPoints()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getCartesianCoordinatesSetPresentation_NumberOfPoints()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

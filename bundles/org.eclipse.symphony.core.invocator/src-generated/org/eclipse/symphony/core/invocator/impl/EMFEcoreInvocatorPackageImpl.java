@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractChannel;
 import org.eclipse.symphony.core.invocator.AbstractDisplay;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
@@ -616,7 +616,7 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 		isInited = true;
 
 		// Initialize simple dependencies
-		EMFEcorePackage.eINSTANCE.eClass();
+		Symphony__CommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreInvocatorPackage.createPackageContents();
@@ -3464,76 +3464,76 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		invocatorSessionEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		invocatorSessionEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		environmentEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		environmentEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		dataProductsListsContainerEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		dataProductsListsContainerEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		dataProductsListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		dataProductsListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		toolsListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		toolsListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		typeEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
+		invocatorSessionEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		invocatorSessionEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		environmentEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		environmentEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		dataProductsListsContainerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		dataProductsListsContainerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		dataProductsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		dataProductsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		toolsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		toolsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		typeEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		typeEClass.getESuperTypes().add(this.getAbstractType());
-		typeMemberEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
+		typeMemberEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		typeMemberEClass.getESuperTypes().add(this.getAbstractType());
 		typeMemberReferenceListElementEClass.getESuperTypes().add(this.getTypeMemberReference());
 		typeMemberReferenceTreeElementEClass.getESuperTypes().add(this.getTypeMemberReference());
-		variableEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		contextEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
+		variableEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		contextEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		basicContextEClass.getESuperTypes().add(this.getContext());
 		initializationDataEClass.getESuperTypes().add(this.getAbstractInitializationData());
 		variableImplementationEClass.getESuperTypes().add(this.getAbstractTypeImplementation());
 		typeMemberImplementationEClass.getESuperTypes().add(this.getAbstractTypeImplementation());
-		valueEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		programEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		programEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		valueEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		programEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		programEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		operationCallsListEClass.getESuperTypes().add(this.getProgram());
 		operationCallsListEClass.getESuperTypes().add(this.getOperationCallContainer());
-		variableFeatureReferenceEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
+		variableFeatureReferenceEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		operationCallEClass.getESuperTypes().add(this.getVariableFeatureReference());
-		operationCallEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		operationCallEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		operationCallEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		operationCallEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		eDataTypeArgumentEClass.getESuperTypes().add(this.getArgument());
 		eEnumArgumentEClass.getESuperTypes().add(this.getArgument());
 		eClassArgumentEClass.getESuperTypes().add(this.getArgument());
-		resultsListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		resultsListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		resultsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		resultsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		operationCallResultsListEClass.getESuperTypes().add(this.getResultsList());
 		recordingResultsListEClass.getESuperTypes().add(this.getResultsList());
-		abstractResultEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
-		abstractResultEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		abstractResultEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		abstractResultEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		operationCallResultEClass.getESuperTypes().add(this.getAbstractResult());
 		operationCallResultEClass.getESuperTypes().add(this.getOperationCallContainer());
 		attributeResultValueEClass.getESuperTypes().add(this.getAbstractResultValue());
 		referenceResultValueEClass.getESuperTypes().add(this.getAbstractResultValue());
 		watchesListsContainerEClass.getESuperTypes().add(this.getAbstractToolsListContainer());
-		watchesListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		watchesListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		watchEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		watchEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		watchesListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		watchesListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		watchEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		watchEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		displaysListsContainerEClass.getESuperTypes().add(this.getAbstractToolsListContainer());
-		displaysListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		displaysListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		abstractDisplayEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		displaysListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		displaysListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		abstractDisplayEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		recordingToolsContainerEClass.getESuperTypes().add(this.getAbstractToolsListContainer());
-		channelsListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		channelsListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		abstractChannelEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractChannelEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		abstractRecorderEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractRecorderEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		abstractPlayerEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractPlayerEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		operationCallResultsListTimeSourceEClass.getESuperTypes().add(theEMFEcorePackage.getCollectionTimedTimeSource());
+		channelsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		channelsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		abstractChannelEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractChannelEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		abstractRecorderEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractRecorderEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		abstractPlayerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractPlayerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		operationCallResultsListTimeSourceEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getCollectionTimedTimeSource());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(emfEcoreInvocatorFacadeEClass, EMFEcoreInvocatorFacade.class, "EMFEcoreInvocatorFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3553,13 +3553,13 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEMFEcoreInvocatorFacade__ResolveWatch__AbstractFeatureNode(), this.getWatch(), "resolveWatch", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEMFEcorePackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonEMFPackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEMFEcoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement(), this.getWatch(), "resolveWatch", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTypeMemberReferenceTreeElement(), "typeMemberReferenceTreeElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEMFEcoreInvocatorFacade__GetValue__AbstractFeatureNode(), theEcorePackage.getEJavaObject(), "getValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEMFEcorePackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonEMFPackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEMFEcoreInvocatorFacade__GetInstance__Variable(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3606,11 +3606,11 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 		addEParameter(op, this.getTypeMemberReferenceTreeElement(), "typeMemberReferenceTreeElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEMFEcoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode(), theEcorePackage.getEString(), "getFullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEMFEcorePackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonEMFPackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEMFEcoreInvocatorFacade__CreateTypeMemberImplementations__Type(), null, "createTypeMemberImplementations", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getType(), "variableType", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		EGenericType g1 = createEGenericType(theEMFEcorePackage.getList());
+		EGenericType g1 = createEGenericType(theSymphony__CommonEMFPackage.getList());
 		EGenericType g2 = createEGenericType(this.getTypeMemberImplementation());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
@@ -3641,7 +3641,7 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 
 		op = initEOperation(getEMFEcoreInvocatorFacade__GetAllTypes__Environment(), null, "getAllTypes", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(theEMFEcorePackage.getList());
+		g1 = createEGenericType(theSymphony__CommonEMFPackage.getList());
 		g2 = createEGenericType(this.getType());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
@@ -3718,7 +3718,7 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getELong(), "invocationTime", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "resultValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEMFEcorePackage.getException(), "exception", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonEMFPackage.getException(), "exception", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTypeApiAdapter__Invoke__EObject_OperationCall_boolean(), null, "invoke", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "instance", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3729,7 +3729,7 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 
 		initEClass(typeMemberEClass, TypeMember.class, "TypeMember", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTypeMember_MemberType(), this.getType(), null, "memberType", null, 0, 1, TypeMember.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTypeMember_TypeFeatureRootNode(), theEMFEcorePackage.getTreeRootNode(), null, "typeFeatureRootNode", null, 0, 1, TypeMember.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTypeMember_TypeFeatureRootNode(), theSymphony__CommonEMFPackage.getTreeRootNode(), null, "typeFeatureRootNode", null, 0, 1, TypeMember.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeMemberReferenceEClass, TypeMemberReference.class, "TypeMemberReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTypeMemberReference_TypeMember(), this.getTypeMember(), null, "typeMember", null, 1, 1, TypeMemberReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3746,7 +3746,7 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 		initEClass(typeMemberReferenceTreeElementEClass, TypeMemberReferenceTreeElement.class, "TypeMemberReferenceTreeElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTypeMemberReferenceTreeElement_Child(), this.getTypeMemberReferenceTreeElement(), this.getTypeMemberReferenceTreeElement_Parent(), "child", null, 0, -1, TypeMemberReferenceTreeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTypeMemberReferenceTreeElement_Parent(), this.getTypeMemberReferenceTreeElement(), this.getTypeMemberReferenceTreeElement_Child(), "parent", null, 0, 1, TypeMemberReferenceTreeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTypeMemberReferenceTreeElement_FeatureRootNode(), theEMFEcorePackage.getTreeRootNode(), null, "featureRootNode", null, 0, 1, TypeMemberReferenceTreeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTypeMemberReferenceTreeElement_FeatureRootNode(), theSymphony__CommonEMFPackage.getTreeRootNode(), null, "featureRootNode", null, 0, 1, TypeMemberReferenceTreeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTypeMemberReferenceTreeElement_Root(), theEcorePackage.getEBoolean(), "root", null, 0, 1, TypeMemberReferenceTreeElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getTypeMemberReferenceTreeElement_RootElement(), this.getTypeMemberReferenceTreeElement(), null, "rootElement", null, 0, 1, TypeMemberReferenceTreeElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTypeMemberReferenceTreeElement_Leaf(), theEcorePackage.getEBoolean(), "leaf", null, 0, 1, TypeMemberReferenceTreeElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -3833,7 +3833,7 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 		initEClass(variableFeatureReferenceEClass, VariableFeatureReference.class, "VariableFeatureReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableFeatureReference_Variable(), this.getVariable(), null, "variable", null, 1, 1, VariableFeatureReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariableFeatureReference_TypeMemberReferenceListElement(), this.getTypeMemberReferenceListElement(), null, "typeMemberReferenceListElement", null, 0, 1, VariableFeatureReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariableFeatureReference_FeatureRoot(), theEMFEcorePackage.getListRootNode(), null, "featureRoot", null, 0, 1, VariableFeatureReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariableFeatureReference_FeatureRoot(), theSymphony__CommonEMFPackage.getListRootNode(), null, "featureRoot", null, 0, 1, VariableFeatureReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationCallEClass, OperationCall.class, "OperationCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationCall_EOperation(), theEcorePackage.getEOperation(), null, "eOperation", null, 1, 1, OperationCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3847,7 +3847,7 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 		initEReference(getArgumentsList_Arguments(), this.getArgument(), this.getArgument_ArgumentsList(), "arguments", null, 0, -1, ArgumentsList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getArgumentsList__GetArgumentValues(), null, "getArgumentValues", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(theEMFEcorePackage.getList());
+		g1 = createEGenericType(theSymphony__CommonEMFPackage.getList());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
@@ -3919,11 +3919,11 @@ public class EMFEcoreInvocatorPackageImpl extends EPackageImpl implements EMFEco
 		initEReference(getWatch_WatchesList(), this.getWatchesList(), this.getWatchesList_Watches(), "watchesList", null, 0, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWatch_Variable(), this.getVariable(), null, "variable", null, 1, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWatch_TypeMemberReferenceTreeElement(), this.getTypeMemberReferenceTreeElement(), null, "typeMemberReferenceTreeElement", null, 0, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWatch_TreeRootNode(), theEMFEcorePackage.getTreeRootNode(), null, "treeRootNode", null, 0, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWatch_TreeRootNode(), theSymphony__CommonEMFPackage.getTreeRootNode(), null, "treeRootNode", null, 0, 1, Watch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(watchFeatureNodeAdapterEClass, WatchFeatureNodeAdapter.class, "WatchFeatureNodeAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWatchFeatureNodeAdapter_SourceObject(), theEcorePackage.getEObject(), null, "sourceObject", null, 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWatchFeatureNodeAdapter_FeatureNode(), theEMFEcorePackage.getAbstractFeatureNode(), null, "featureNode", null, 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWatchFeatureNodeAdapter_FeatureNode(), theSymphony__CommonEMFPackage.getAbstractFeatureNode(), null, "featureNode", null, 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWatchFeatureNodeAdapter_CurrentValue(), theEcorePackage.getEJavaObject(), "currentValue", null, 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWatchFeatureNodeAdapter_Resolved(), theEcorePackage.getEBoolean(), "resolved", "false", 0, 1, WatchFeatureNodeAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

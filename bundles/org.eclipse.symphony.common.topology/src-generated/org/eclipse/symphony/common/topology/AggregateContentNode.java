@@ -16,7 +16,7 @@ package org.eclipse.symphony.common.topology;
  *   <li>{@link org.eclipse.symphony.common.topology.AggregateContentNode#getAggregateContent <em>Aggregate Content</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getAggregateContentNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getAggregateContentNode()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface AggregateContentNode<T> extends ContentNode<T> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Aggregate Content</em>' containment reference.
 	 * @see #setAggregateContent(Object)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getAggregateContentNode_AggregateContent()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getAggregateContentNode_AggregateContent()
 	 * @model kind="reference" containment="true"
 	 * @generated
 	 */

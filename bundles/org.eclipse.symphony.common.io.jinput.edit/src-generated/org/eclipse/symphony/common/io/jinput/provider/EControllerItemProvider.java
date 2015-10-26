@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.io.jinput.EController;
-import org.eclipse.symphony.common.io.jinput.JInputFactory;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EController} object.
@@ -85,7 +85,7 @@ public class EControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EController_lastPollResult_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EController_lastPollResult_feature", "_UI_EController_type"),
-				 JInputPackage.Literals.ECONTROLLER__LAST_POLL_RESULT,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__LAST_POLL_RESULT,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class EControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EController_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EController_name_feature", "_UI_EController_type"),
-				 JInputPackage.Literals.ECONTROLLER__NAME,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__NAME,
 				 false,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class EControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EController_portNumber_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EController_portNumber_feature", "_UI_EController_type"),
-				 JInputPackage.Literals.ECONTROLLER__PORT_NUMBER,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__PORT_NUMBER,
 				 false,
 				 false,
 				 false,
@@ -151,7 +151,7 @@ public class EControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EController_type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EController_type_feature", "_UI_EController_type"),
-				 JInputPackage.Literals.ECONTROLLER__TYPE,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__TYPE,
 				 false,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class EControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EController_portType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EController_portType_feature", "_UI_EController_type"),
-				 JInputPackage.Literals.ECONTROLLER__PORT_TYPE,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__PORT_TYPE,
 				 false,
 				 false,
 				 false,
@@ -195,7 +195,7 @@ public class EControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EController_pojoController_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EController_pojoController_feature", "_UI_EController_type"),
-				 JInputPackage.Literals.ECONTROLLER__POJO_CONTROLLER,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__POJO_CONTROLLER,
 				 true,
 				 false,
 				 false,
@@ -217,7 +217,7 @@ public class EControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EController_controllerCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EController_controllerCount_feature", "_UI_EController_type"),
-				 JInputPackage.Literals.ECONTROLLER__CONTROLLER_COUNT,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__CONTROLLER_COUNT,
 				 true,
 				 false,
 				 false,
@@ -238,7 +238,7 @@ public class EControllerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(JInputPackage.Literals.ECONTROLLER__ECOMPONENTS);
+			childrenFeatures.add(Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__ECOMPONENTS);
 		}
 		return childrenFeatures;
 	}
@@ -304,16 +304,16 @@ public class EControllerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EController.class)) {
-			case JInputPackage.ECONTROLLER__LAST_POLL_RESULT:
-			case JInputPackage.ECONTROLLER__NAME:
-			case JInputPackage.ECONTROLLER__PORT_NUMBER:
-			case JInputPackage.ECONTROLLER__TYPE:
-			case JInputPackage.ECONTROLLER__PORT_TYPE:
-			case JInputPackage.ECONTROLLER__POJO_CONTROLLER:
-			case JInputPackage.ECONTROLLER__CONTROLLER_COUNT:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER__LAST_POLL_RESULT:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER__NAME:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER__PORT_NUMBER:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER__TYPE:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER__PORT_TYPE:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER__POJO_CONTROLLER:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER__CONTROLLER_COUNT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case JInputPackage.ECONTROLLER__ECOMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -333,8 +333,8 @@ public class EControllerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(JInputPackage.Literals.ECONTROLLER__ECOMPONENTS,
-				 JInputFactory.eINSTANCE.createEComponents()));
+				(Symphony__CommonIOJInputPackage.Literals.ECONTROLLER__ECOMPONENTS,
+				 Symphony__CommonIOJInputFactory.eINSTANCE.createEComponents()));
 	}
 
 	/**

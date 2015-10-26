@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.math.Polynomial#getImaginaryRoots <em>Imaginary Roots</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial()
+ * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface Polynomial extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Degree</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial_Degree()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial_Degree()
 	 * @model default="0" unique="false" transient="true" changeable="false" volatile="true"
 	 * @generated
 	 */
@@ -54,7 +54,7 @@ public interface Polynomial extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Coeffs</em>' attribute.
 	 * @see #setCoeffs(double[])
-	 * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial_Coeffs()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial_Coeffs()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray"
 	 * @generated
 	 */
@@ -79,7 +79,7 @@ public interface Polynomial extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Real Roots</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial_RealRoots()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial_RealRoots()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface Polynomial extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Imaginary Roots</em>' attribute.
-	 * @see org.eclipse.symphony.common.math.MathPackage#getPolynomial_ImaginaryRoots()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getPolynomial_ImaginaryRoots()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.math.EDoubleArray" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

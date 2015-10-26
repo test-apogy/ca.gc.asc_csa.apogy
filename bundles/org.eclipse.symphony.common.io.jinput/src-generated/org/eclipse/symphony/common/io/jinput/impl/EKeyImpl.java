@@ -5,7 +5,7 @@ package org.eclipse.symphony.common.io.jinput.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.io.jinput.EKey;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EKeyImpl extends EComponentImpl implements EKey {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JInputPackage.Literals.EKEY;
+		return Symphony__CommonIOJInputPackage.Literals.EKEY;
 	}
 
 } //EKeyImpl

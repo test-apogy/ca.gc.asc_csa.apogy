@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TreeRootNode;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
@@ -347,7 +347,7 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
   {
 //	  if(getTreeRootNodeGen() == null)
 //	  {		  
-//		  TreeRootNode root = EMFEcoreFactory.eINSTANCE.createTreeRootNode();
+//		  TreeRootNode root = Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode();
 //		  setTreeRootNode(root);
 //		  
 //		  if(getVariable() != null)
@@ -577,7 +577,7 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.WATCH__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case EMFEcoreInvocatorPackage.WATCH__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -593,7 +593,7 @@ public class WatchImpl extends MinimalEObjectImpl.Container implements Watch
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.WATCH__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.WATCH__DESCRIPTION;
 				default: return -1;
 			}
 		}

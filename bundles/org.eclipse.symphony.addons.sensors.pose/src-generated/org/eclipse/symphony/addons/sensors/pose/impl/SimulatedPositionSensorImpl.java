@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.ui.progress.UIJob;
 
@@ -128,7 +128,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 	
 	private void initialize()
 	{
-		if(getPosition() == null) setPosition(MathFactory.eINSTANCE.createTuple3d());
+		if(getPosition() == null) setPosition(Symphony__CommonMathFactory.eINSTANCE.createTuple3d());
 		
 		Thread t = new Thread()
     	{			
@@ -140,7 +140,7 @@ public class SimulatedPositionSensorImpl extends PositionSensorImpl implements S
 					try
 					{	
 						Tuple3d oldPosition = getPosition();
-						Tuple3d newPosition = MathFactory.eINSTANCE.createTuple3d();
+						Tuple3d newPosition = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 											
 						newPosition.setX(oldPosition.getX() + getXVelocity() * getUpdatePeriod());
 						newPosition.setY(oldPosition.getY() + getYVelocity() * getUpdatePeriod());

@@ -23,8 +23,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Data3DUtils;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PointLocator;
 import org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator;
 import org.eclipse.symphony.common.math.GeometricUtils;
@@ -63,7 +63,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.DATA3_DUTILS;
+		return Symphony__CommonGeometryData3DPackage.Literals.DATA3_DUTILS;
 	}
 
 	/**
@@ -280,7 +280,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 	 */
 	public CartesianTriangularMesh extrude(List<CartesianPositionCoordinates> profilePoints, CartesianAxis extrusionAxis, double extrusionWidth, boolean closeMesh) 
 	{
-		CartesianTriangularMesh mesh = Data3dFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		// Makes two arrays of point, one for each edge of the mesh.
 		List<CartesianPositionCoordinates> edgePositive = new ArrayList<CartesianPositionCoordinates>();				
@@ -380,18 +380,18 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.DATA3_DUTILS___COMPUTE_NORMALS__CARTESIANTRIANGULARMESH:
+			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_NORMALS__CARTESIANTRIANGULARMESH:
 				return computeNormals((CartesianTriangularMesh)arguments.get(0));
-			case Data3dPackage.DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET:
+			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET:
 				return computeCentroid((CartesianCoordinatesSet)arguments.get(0));
-			case Data3dPackage.DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET:
+			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET:
 				computeMinMaxValues((Point3d)arguments.get(0), (Point3d)arguments.get(1), (CartesianCoordinatesSet)arguments.get(2));
 				return null;
-			case Data3dPackage.DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE:
+			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE:
 				return computeCurvatureChange((PointLocator)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2));
-			case Data3dPackage.DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__VECMATHPOINTLOCATOR_INT_DOUBLE:
+			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__VECMATHPOINTLOCATOR_INT_DOUBLE:
 				return computeCurvatureChange((VecmathPointLocator)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2));
-			case Data3dPackage.DATA3_DUTILS___EXTRUDE__LIST_CARTESIANAXIS_DOUBLE_BOOLEAN:
+			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___EXTRUDE__LIST_CARTESIANAXIS_DOUBLE_BOOLEAN:
 				return extrude((List<CartesianPositionCoordinates>)arguments.get(0), (CartesianAxis)arguments.get(1), (Double)arguments.get(2), (Boolean)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);

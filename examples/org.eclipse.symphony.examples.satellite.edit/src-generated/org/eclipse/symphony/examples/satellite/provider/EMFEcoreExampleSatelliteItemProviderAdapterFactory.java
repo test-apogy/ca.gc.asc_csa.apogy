@@ -30,17 +30,17 @@ import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.util.Symphony__AddonsSensorsImagingSwitch;
 import org.eclipse.symphony.common.images.ImagesAlbum;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
-import org.eclipse.symphony.common.images.util.ImagesCoreSwitch;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import org.eclipse.symphony.common.images.util.Symphony__CommonImagesSwitch;
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
@@ -755,19 +755,19 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 	}
 
 	/**
-	 * A child creation extender for the {@link ImagesCorePackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class ImagesCoreChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends ImagesCoreSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -800,11 +800,186 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 			 * @generated
 			 */
 			@Override
-			public Object caseImagesAlbum(ImagesAlbum object) {
+			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ImagesCorePackage.Literals.IMAGES_ALBUM__IMAGES,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteStub()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandRoll()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createImageOrder()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteUtils()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationTypeApiAdapter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationInitializationData()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteInitializationData()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteStub()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommand()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandRoll()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createImageOrder()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteUtils()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationTypeApiAdapter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationInitializationData()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteInitializationData()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseGroupNode(GroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAggregateGroupNode(AggregateGroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
 
 				return null;
 			}
@@ -1123,19 +1298,19 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 	}
 
 	/**
-	 * A child creation extender for the {@link TopologyPackage}.
+	 * A child creation extender for the {@link Symphony__CommonImagesPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class TopologyChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonImagesChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologySwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonImagesSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1168,188 +1343,15 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 			 * @generated
 			 */
 			@Override
-			public <T> Object caseContentNode(ContentNode<T> object) {
+			public Object caseImagesAlbum(ImagesAlbum object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteStub()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommand()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandRoll()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createImageOrder()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonImagesPackage.Literals.IMAGES_ALBUM__IMAGES,
 						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteUtils()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationTypeApiAdapter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationInitializationData()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteInitializationData()));
 
 				return null;
 			}
  
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteStub()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommand()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandRoll()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createImageOrder()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteUtils()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationTypeApiAdapter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationInitializationData()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteInitializationData()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGroupNode(GroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAggregateGroupNode(AggregateGroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
-
-				return null;
-			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

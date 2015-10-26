@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix3x3;
 
 /**
@@ -230,7 +230,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MathPackage.Literals.MATRIX3X3;
+		return Symphony__CommonMathPackage.Literals.MATRIX3X3;
 	}
 
 	/**
@@ -249,7 +249,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM00 = m00;
 		m00 = newM00;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M00, oldM00, m00));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M00, oldM00, m00));
 	}
 
 	/**
@@ -268,7 +268,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM01 = m01;
 		m01 = newM01;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M01, oldM01, m01));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M01, oldM01, m01));
 	}
 
 	/**
@@ -287,7 +287,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM02 = m02;
 		m02 = newM02;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M02, oldM02, m02));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M02, oldM02, m02));
 	}
 
 	/**
@@ -306,7 +306,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM10 = m10;
 		m10 = newM10;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M10, oldM10, m10));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M10, oldM10, m10));
 	}
 
 	/**
@@ -325,7 +325,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM11 = m11;
 		m11 = newM11;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M11, oldM11, m11));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M11, oldM11, m11));
 	}
 
 	/**
@@ -344,7 +344,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM12 = m12;
 		m12 = newM12;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M12, oldM12, m12));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M12, oldM12, m12));
 	}
 
 	/**
@@ -363,7 +363,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM20 = m20;
 		m20 = newM20;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M20, oldM20, m20));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M20, oldM20, m20));
 	}
 
 	/**
@@ -382,7 +382,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM21 = m21;
 		m21 = newM21;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M21, oldM21, m21));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M21, oldM21, m21));
 	}
 
 	/**
@@ -401,7 +401,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 		double oldM22 = m22;
 		m22 = newM22;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MathPackage.MATRIX3X3__M22, oldM22, m22));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonMathPackage.MATRIX3X3__M22, oldM22, m22));
 	}
 
 	/**
@@ -424,23 +424,23 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MathPackage.MATRIX3X3__M00:
+			case Symphony__CommonMathPackage.MATRIX3X3__M00:
 				return getM00();
-			case MathPackage.MATRIX3X3__M01:
+			case Symphony__CommonMathPackage.MATRIX3X3__M01:
 				return getM01();
-			case MathPackage.MATRIX3X3__M02:
+			case Symphony__CommonMathPackage.MATRIX3X3__M02:
 				return getM02();
-			case MathPackage.MATRIX3X3__M10:
+			case Symphony__CommonMathPackage.MATRIX3X3__M10:
 				return getM10();
-			case MathPackage.MATRIX3X3__M11:
+			case Symphony__CommonMathPackage.MATRIX3X3__M11:
 				return getM11();
-			case MathPackage.MATRIX3X3__M12:
+			case Symphony__CommonMathPackage.MATRIX3X3__M12:
 				return getM12();
-			case MathPackage.MATRIX3X3__M20:
+			case Symphony__CommonMathPackage.MATRIX3X3__M20:
 				return getM20();
-			case MathPackage.MATRIX3X3__M21:
+			case Symphony__CommonMathPackage.MATRIX3X3__M21:
 				return getM21();
-			case MathPackage.MATRIX3X3__M22:
+			case Symphony__CommonMathPackage.MATRIX3X3__M22:
 				return getM22();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -453,31 +453,31 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MathPackage.MATRIX3X3__M00:
+			case Symphony__CommonMathPackage.MATRIX3X3__M00:
 				setM00((Double)newValue);
 				return;
-			case MathPackage.MATRIX3X3__M01:
+			case Symphony__CommonMathPackage.MATRIX3X3__M01:
 				setM01((Double)newValue);
 				return;
-			case MathPackage.MATRIX3X3__M02:
+			case Symphony__CommonMathPackage.MATRIX3X3__M02:
 				setM02((Double)newValue);
 				return;
-			case MathPackage.MATRIX3X3__M10:
+			case Symphony__CommonMathPackage.MATRIX3X3__M10:
 				setM10((Double)newValue);
 				return;
-			case MathPackage.MATRIX3X3__M11:
+			case Symphony__CommonMathPackage.MATRIX3X3__M11:
 				setM11((Double)newValue);
 				return;
-			case MathPackage.MATRIX3X3__M12:
+			case Symphony__CommonMathPackage.MATRIX3X3__M12:
 				setM12((Double)newValue);
 				return;
-			case MathPackage.MATRIX3X3__M20:
+			case Symphony__CommonMathPackage.MATRIX3X3__M20:
 				setM20((Double)newValue);
 				return;
-			case MathPackage.MATRIX3X3__M21:
+			case Symphony__CommonMathPackage.MATRIX3X3__M21:
 				setM21((Double)newValue);
 				return;
-			case MathPackage.MATRIX3X3__M22:
+			case Symphony__CommonMathPackage.MATRIX3X3__M22:
 				setM22((Double)newValue);
 				return;
 		}
@@ -491,31 +491,31 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MathPackage.MATRIX3X3__M00:
+			case Symphony__CommonMathPackage.MATRIX3X3__M00:
 				setM00(M00_EDEFAULT);
 				return;
-			case MathPackage.MATRIX3X3__M01:
+			case Symphony__CommonMathPackage.MATRIX3X3__M01:
 				setM01(M01_EDEFAULT);
 				return;
-			case MathPackage.MATRIX3X3__M02:
+			case Symphony__CommonMathPackage.MATRIX3X3__M02:
 				setM02(M02_EDEFAULT);
 				return;
-			case MathPackage.MATRIX3X3__M10:
+			case Symphony__CommonMathPackage.MATRIX3X3__M10:
 				setM10(M10_EDEFAULT);
 				return;
-			case MathPackage.MATRIX3X3__M11:
+			case Symphony__CommonMathPackage.MATRIX3X3__M11:
 				setM11(M11_EDEFAULT);
 				return;
-			case MathPackage.MATRIX3X3__M12:
+			case Symphony__CommonMathPackage.MATRIX3X3__M12:
 				setM12(M12_EDEFAULT);
 				return;
-			case MathPackage.MATRIX3X3__M20:
+			case Symphony__CommonMathPackage.MATRIX3X3__M20:
 				setM20(M20_EDEFAULT);
 				return;
-			case MathPackage.MATRIX3X3__M21:
+			case Symphony__CommonMathPackage.MATRIX3X3__M21:
 				setM21(M21_EDEFAULT);
 				return;
-			case MathPackage.MATRIX3X3__M22:
+			case Symphony__CommonMathPackage.MATRIX3X3__M22:
 				setM22(M22_EDEFAULT);
 				return;
 		}
@@ -529,23 +529,23 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MathPackage.MATRIX3X3__M00:
+			case Symphony__CommonMathPackage.MATRIX3X3__M00:
 				return m00 != M00_EDEFAULT;
-			case MathPackage.MATRIX3X3__M01:
+			case Symphony__CommonMathPackage.MATRIX3X3__M01:
 				return m01 != M01_EDEFAULT;
-			case MathPackage.MATRIX3X3__M02:
+			case Symphony__CommonMathPackage.MATRIX3X3__M02:
 				return m02 != M02_EDEFAULT;
-			case MathPackage.MATRIX3X3__M10:
+			case Symphony__CommonMathPackage.MATRIX3X3__M10:
 				return m10 != M10_EDEFAULT;
-			case MathPackage.MATRIX3X3__M11:
+			case Symphony__CommonMathPackage.MATRIX3X3__M11:
 				return m11 != M11_EDEFAULT;
-			case MathPackage.MATRIX3X3__M12:
+			case Symphony__CommonMathPackage.MATRIX3X3__M12:
 				return m12 != M12_EDEFAULT;
-			case MathPackage.MATRIX3X3__M20:
+			case Symphony__CommonMathPackage.MATRIX3X3__M20:
 				return m20 != M20_EDEFAULT;
-			case MathPackage.MATRIX3X3__M21:
+			case Symphony__CommonMathPackage.MATRIX3X3__M21:
 				return m21 != M21_EDEFAULT;
-			case MathPackage.MATRIX3X3__M22:
+			case Symphony__CommonMathPackage.MATRIX3X3__M22:
 				return m22 != M22_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -559,7 +559,7 @@ public class Matrix3x3Impl extends MinimalEObjectImpl.Container implements Matri
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MathPackage.MATRIX3X3___AS_MATRIX3D:
+			case Symphony__CommonMathPackage.MATRIX3X3___AS_MATRIX3D:
 				return asMatrix3d();
 		}
 		return super.eInvoke(operationID, arguments);

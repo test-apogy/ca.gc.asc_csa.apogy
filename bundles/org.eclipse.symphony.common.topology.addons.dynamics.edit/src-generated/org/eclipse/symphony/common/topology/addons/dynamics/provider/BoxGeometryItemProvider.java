@@ -15,9 +15,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry} object.
@@ -64,7 +64,7 @@ public class BoxGeometryItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.BOX_GEOMETRY__DIMENSION);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.BOX_GEOMETRY__DIMENSION);
 		}
 		return childrenFeatures;
 	}
@@ -116,7 +116,7 @@ public class BoxGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BoxGeometry.class)) {
-			case TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
+			case Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -136,8 +136,8 @@ public class BoxGeometryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.BOX_GEOMETRY__DIMENSION,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.BOX_GEOMETRY__DIMENSION,
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 }

@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#getDataSet <em>Data Set</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointNormalLocator()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointNormalLocator()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface PointNormalLocator extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Set</em>' reference.
 	 * @see #setDataSet(NormalPointCloud)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointNormalLocator_DataSet()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointNormalLocator_DataSet()
 	 * @model
 	 * @generated
 	 */

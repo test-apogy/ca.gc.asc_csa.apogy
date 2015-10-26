@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.GROUP_NODE;
+		return Symphony__CommonTopologyPackage.Literals.GROUP_NODE;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	 */
 	public EList<Node> getChildren() {
 		if (children == null) {
-			children = new EObjectContainmentEList<Node>(Node.class, this, TopologyPackage.GROUP_NODE__CHILDREN);
+			children = new EObjectContainmentEList<Node>(Node.class, this, Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN);
 		}
 		return children;
 	}
@@ -78,7 +78,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyPackage.GROUP_NODE__CHILDREN:
+			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
 				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -92,7 +92,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.GROUP_NODE__CHILDREN:
+			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
 				return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +107,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.GROUP_NODE__CHILDREN:
+			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
 				getChildren().clear();
 				getChildren().addAll((Collection<? extends Node>)newValue);
 				return;
@@ -123,7 +123,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.GROUP_NODE__CHILDREN:
+			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
 				getChildren().clear();
 				return;
 		}
@@ -138,7 +138,7 @@ public class GroupNodeImpl extends NodeImpl implements GroupNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.GROUP_NODE__CHILDREN:
+			case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN:
 				return children != null && !children.isEmpty();
 		}
 		return super.eIsSet(featureID);

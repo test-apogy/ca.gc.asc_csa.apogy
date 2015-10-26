@@ -12,7 +12,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.CurrentTimeSource;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.CurrentTimeSource} object.
@@ -61,7 +61,7 @@ public class CurrentTimeSourceItemProvider extends TimeSourceItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_CurrentTimeSource_updatePeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CurrentTimeSource_updatePeriod_feature", "_UI_CurrentTimeSource_type"),
-				 EMFEcorePackage.Literals.CURRENT_TIME_SOURCE__UPDATE_PERIOD,
+				 Symphony__CommonEMFPackage.Literals.CURRENT_TIME_SOURCE__UPDATE_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -83,7 +83,7 @@ public class CurrentTimeSourceItemProvider extends TimeSourceItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_CurrentTimeSource_paused_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CurrentTimeSource_paused_feature", "_UI_CurrentTimeSource_type"),
-				 EMFEcorePackage.Literals.CURRENT_TIME_SOURCE__PAUSED,
+				 Symphony__CommonEMFPackage.Literals.CURRENT_TIME_SOURCE__PAUSED,
 				 false,
 				 false,
 				 false,
@@ -130,8 +130,8 @@ public class CurrentTimeSourceItemProvider extends TimeSourceItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CurrentTimeSource.class)) {
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
-			case EMFEcorePackage.CURRENT_TIME_SOURCE__PAUSED:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__UPDATE_PERIOD:
+			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE__PAUSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

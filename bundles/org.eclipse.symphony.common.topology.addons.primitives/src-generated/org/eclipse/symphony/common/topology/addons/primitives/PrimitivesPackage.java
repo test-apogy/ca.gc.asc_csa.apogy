@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,7 +79,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR__PARENT = TopologyPackage.NODE__PARENT;
+	int VECTOR__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -88,7 +88,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int VECTOR__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -97,7 +97,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int VECTOR__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>XRotation</b></em>' attribute.
@@ -106,7 +106,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR__XROTATION = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int VECTOR__XROTATION = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>YRotation</b></em>' attribute.
@@ -115,7 +115,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR__YROTATION = TopologyPackage.NODE_FEATURE_COUNT + 1;
+	int VECTOR__YROTATION = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>ZRotation</b></em>' attribute.
@@ -124,7 +124,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR__ZROTATION = TopologyPackage.NODE_FEATURE_COUNT + 2;
+	int VECTOR__ZROTATION = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Length</b></em>' attribute.
@@ -133,7 +133,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR__LENGTH = TopologyPackage.NODE_FEATURE_COUNT + 3;
+	int VECTOR__LENGTH = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>End Point</b></em>' attribute.
@@ -142,7 +142,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR__END_POINT = TopologyPackage.NODE_FEATURE_COUNT + 4;
+	int VECTOR__END_POINT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Vector</em>' class.
@@ -151,7 +151,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 5;
+	int VECTOR_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -160,7 +160,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int VECTOR___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Vector</em>' class.
@@ -169,7 +169,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int VECTOR_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PickVectorImpl <em>Pick Vector</em>}' class.
@@ -360,7 +360,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE__PARENT = TopologyPackage.NODE__PARENT;
+	int PLANE__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -369,7 +369,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int PLANE__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -378,7 +378,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int PLANE__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>V0</b></em>' containment reference.
@@ -387,7 +387,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE__V0 = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int PLANE__V0 = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>V1</b></em>' containment reference.
@@ -396,7 +396,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE__V1 = TopologyPackage.NODE_FEATURE_COUNT + 1;
+	int PLANE__V1 = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -405,7 +405,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE__WIDTH = TopologyPackage.NODE_FEATURE_COUNT + 2;
+	int PLANE__WIDTH = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -414,7 +414,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE__HEIGHT = TopologyPackage.NODE_FEATURE_COUNT + 3;
+	int PLANE__HEIGHT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Plane</em>' class.
@@ -423,7 +423,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 4;
+	int PLANE_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -432,7 +432,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int PLANE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Plane</em>' class.
@@ -441,7 +441,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANE_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int PLANE_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.WayPointImpl <em>Way Point</em>}' class.
@@ -460,7 +460,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int WAY_POINT__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -469,7 +469,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int WAY_POINT__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -478,7 +478,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int WAY_POINT__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -487,7 +487,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int WAY_POINT__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -496,7 +496,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int WAY_POINT__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The number of structural features of the '<em>Way Point</em>' class.
@@ -505,7 +505,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int WAY_POINT_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -514,7 +514,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int WAY_POINT___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Way Point</em>' class.
@@ -523,7 +523,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int WAY_POINT_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.LabelImpl <em>Label</em>}' class.
@@ -542,7 +542,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__PARENT = TopologyPackage.NODE__PARENT;
+	int LABEL__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -551,7 +551,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int LABEL__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -560,7 +560,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int LABEL__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The number of structural features of the '<em>Label</em>' class.
@@ -569,7 +569,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int LABEL_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -578,7 +578,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int LABEL___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Label</em>' class.
@@ -587,7 +587,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int LABEL_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.SpherePrimitiveImpl <em>Sphere Primitive</em>}' class.
@@ -606,7 +606,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int SPHERE_PRIMITIVE__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -615,7 +615,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int SPHERE_PRIMITIVE__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -624,7 +624,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int SPHERE_PRIMITIVE__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -633,7 +633,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int SPHERE_PRIMITIVE__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -642,7 +642,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int SPHERE_PRIMITIVE__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Radius</b></em>' attribute.
@@ -651,7 +651,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE__RADIUS = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int SPHERE_PRIMITIVE__RADIUS = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Sphere Primitive</em>' class.
@@ -660,7 +660,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int SPHERE_PRIMITIVE_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -669,7 +669,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int SPHERE_PRIMITIVE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Sphere Primitive</em>' class.
@@ -678,7 +678,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPHERE_PRIMITIVE_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int SPHERE_PRIMITIVE_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.LightImpl <em>Light</em>}' class.
@@ -697,7 +697,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIGHT__PARENT = TopologyPackage.LEAF__PARENT;
+	int LIGHT__PARENT = Symphony__CommonTopologyPackage.LEAF__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -706,7 +706,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIGHT__DESCRIPTION = TopologyPackage.LEAF__DESCRIPTION;
+	int LIGHT__DESCRIPTION = Symphony__CommonTopologyPackage.LEAF__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -715,7 +715,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIGHT__NODE_ID = TopologyPackage.LEAF__NODE_ID;
+	int LIGHT__NODE_ID = Symphony__CommonTopologyPackage.LEAF__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -724,7 +724,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIGHT__ENABLED = TopologyPackage.LEAF_FEATURE_COUNT + 0;
+	int LIGHT__ENABLED = Symphony__CommonTopologyPackage.LEAF_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' containment reference.
@@ -733,7 +733,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIGHT__COLOR = TopologyPackage.LEAF_FEATURE_COUNT + 1;
+	int LIGHT__COLOR = Symphony__CommonTopologyPackage.LEAF_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Light</em>' class.
@@ -742,7 +742,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIGHT_FEATURE_COUNT = TopologyPackage.LEAF_FEATURE_COUNT + 2;
+	int LIGHT_FEATURE_COUNT = Symphony__CommonTopologyPackage.LEAF_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -751,7 +751,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIGHT___ACCEPT__INODEVISITOR = TopologyPackage.LEAF___ACCEPT__INODEVISITOR;
+	int LIGHT___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.LEAF___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Light</em>' class.
@@ -760,7 +760,7 @@ public interface PrimitivesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIGHT_OPERATION_COUNT = TopologyPackage.LEAF_OPERATION_COUNT + 0;
+	int LIGHT_OPERATION_COUNT = Symphony__CommonTopologyPackage.LEAF_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.AmbientLightImpl <em>Ambient Light</em>}' class.

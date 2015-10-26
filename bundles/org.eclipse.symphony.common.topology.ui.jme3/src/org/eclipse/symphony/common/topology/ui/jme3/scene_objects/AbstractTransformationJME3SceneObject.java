@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.adapters.TransformNodeSceneObject;
 import org.eclipse.symphony.common.topology.ui.jme3.Activator;
@@ -132,7 +132,7 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 		if(notification.getNotifier() instanceof TransformNode)
 		{
 			int featureId = notification.getFeatureID(TransformNode.class);									
-			if (featureId == TopologyPackage.TRANSFORM_NODE__POSITION) 
+			if (featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION) 
 			{
 				// Unregister from previous position
 				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Tuple3d)
@@ -150,7 +150,7 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 					newValue.eAdapters().add(this);
 				}
 			}
-			else if(featureId == TopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
+			else if(featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
 			{
 				// Unregister from previous matrix
 				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
@@ -172,7 +172,7 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 		else if(notification.getNotifier() instanceof RotationNode)
 		{
 			int featureId = notification.getFeatureID(RotationNode.class);									
-			if (featureId == TopologyPackage.ROTATION_NODE__ROTATION_MATRIX) 
+			if (featureId == Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX) 
 			{
 				// Unregister from previous matrix
 				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Matrix3x3)
@@ -194,7 +194,7 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 		else if(notification.getNotifier() instanceof PositionNode)
 		{
 			int featureId = notification.getFeatureID(PositionNode.class);									
-			if (featureId == TopologyPackage.POSITION_NODE__POSITION) 
+			if (featureId == Symphony__CommonTopologyPackage.POSITION_NODE__POSITION) 
 			{
 				// Unregister from previous position
 				if(notification.getOldValue() instanceof org.eclipse.symphony.common.math.Tuple3d)

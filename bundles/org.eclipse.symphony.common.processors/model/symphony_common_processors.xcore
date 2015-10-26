@@ -1,25 +1,37 @@
-@GenModel(prefix="Processors",
+@GenModel(prefix="Symphony__CommonProcessors",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Processors",
+	      modelName="Symphony__CommonProcessors",
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.processors/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.processors.edit/src-generated")
 
 package org.eclipse.symphony.common.processors
 
-@GenModel(documentation="Represent a object for which operation progress can be reported.")
+type IProgressMonitor wraps org.eclipse.core.runtime.IProgressMonitor
+type Exception wraps Exception
+
+interface VerboseProvider
+{
+	boolean verbose
+
+	op void printVerbose(String message)
+}
+
+/*
+ * Represent a object for which operation progress can be reported.
+ */
 interface Monitorable
 {
 	@GenModel(property="None")
 	transient IProgressMonitor progressMonitor
 }
 
-type IProgressMonitor wraps org.eclipse.core.runtime.IProgressMonitor
-
-@GenModel(documentation="Defines an object that can process an input to get an output.")
+/*
+ * Defines an object that can process an input to get an output.
+ */
 abstract class Processor<I , O> extends Monitorable
 {
 	transient I input
@@ -28,8 +40,6 @@ abstract class Processor<I , O> extends Monitorable
 
 	op O process(I input) throws Exception
 }
-
-type Exception wraps Exception
 
 class ProcessorsChain<I , O> extends Processor < I , O >
 {
@@ -43,11 +53,4 @@ class ProcessorsChain<I , O> extends Processor < I , O >
 class JobProcessorsChain<I , O> extends ProcessorsChain < I , O >
 {
 
-}
-
-interface VerboseProvider
-{
-	boolean verbose
-
-	op void printVerbose(String message)
 }

@@ -14,7 +14,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 
 public abstract class AbstractTimeSourceComposite extends Composite 
@@ -71,7 +71,7 @@ public abstract class AbstractTimeSourceComposite extends Composite
 		if(timeSourceTimeValueLabel != null)
 		{
 			IObservableValue timeSourceTimeLabelValue = PojoProperties.value("text").observe(timeSourceTimeValueLabel);		
-			IObservableValue timeSourceTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getTimeSource());			
+			IObservableValue timeSourceTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getTimeSource());			
 			UpdateValueStrategy timeSourceTimeValueStrategy = new UpdateValueStrategy();
 			timeSourceTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
 			bindingContext.bindValue(timeSourceTimeLabelValue, timeSourceTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), timeSourceTimeValueStrategy);

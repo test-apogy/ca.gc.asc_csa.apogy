@@ -17,7 +17,7 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.lidar.Activator;
@@ -234,7 +234,7 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 		else
 		{
 			// Create a coordinate set to store the results of the scan
-			CartesianCoordinatesSet cartesianCoordinatesSet = Data3dFactory.eINSTANCE.createCartesianCoordinatesSet();
+			CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 			// Log the start of the scan
 			String message = LOG_PREFIX +
@@ -291,7 +291,7 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 		else
 		{
 			// Create a coordinate set to store the results of the scan
-			final CartesianCoordinatesSet cartesianCoordinatesSet = Data3dFactory.eINSTANCE.createCartesianCoordinatesSet();
+			final CartesianCoordinatesSet cartesianCoordinatesSet = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 			// Create a custom job which will spawn a thread and run the scan asynchronously
 			Job job = new Job(LOG_PREFIX.substring(0, LOG_PREFIX.length()-2))

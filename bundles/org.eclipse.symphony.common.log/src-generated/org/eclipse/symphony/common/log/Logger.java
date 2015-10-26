@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.log.impl.LoggerImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.log.UtilsLogPackage#getLogger()
+ * @see org.eclipse.symphony.common.log.Symphony__CommonLogPackage#getLogger()
  * @model
  * @generated
  */

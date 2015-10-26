@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.core.environment.ImageMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -253,22 +253,22 @@ public class ImageMapLayerItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
-				 ImagesCoreFactory.eINSTANCE.createEImage()));
+				 Symphony__CommonImagesFactory.eINSTANCE.createEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
-				 ImagesCoreFactory.eINSTANCE.createURLEImage()));
+				 Symphony__CommonImagesFactory.eINSTANCE.createURLEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
-				 ImagesCoreFactory.eINSTANCE.createEImage()));
+				 Symphony__CommonImagesFactory.eINSTANCE.createEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
-				 ImagesCoreFactory.eINSTANCE.createURLEImage()));
+				 Symphony__CommonImagesFactory.eINSTANCE.createURLEImage()));
 	}
 
   /**

@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  *   <li>{@link org.eclipse.symphony.common.topology.RotationNode#getRotationMatrix <em>Rotation Matrix</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getRotationNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getRotationNode()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface RotationNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rotation Matrix</em>' containment reference.
 	 * @see #setRotationMatrix(Matrix3x3)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getRotationNode_RotationMatrix()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getRotationNode_RotationMatrix()
 	 * @model containment="true"
 	 * @generated
 	 */

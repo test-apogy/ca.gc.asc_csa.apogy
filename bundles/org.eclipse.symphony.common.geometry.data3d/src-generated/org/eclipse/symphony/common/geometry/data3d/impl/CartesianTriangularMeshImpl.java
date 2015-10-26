@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 
 /**
@@ -42,7 +42,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.CARTESIAN_TRIANGULAR_MESH;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_TRIANGULAR_MESH;
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	@Override
 	public EList<CartesianTriangle> getPolygons() {
 		if (polygons == null) {
-			polygons = new EObjectContainmentEList<CartesianTriangle>(CartesianTriangle.class, this, Data3dPackage.CARTESIAN_TRIANGULAR_MESH__POLYGONS);
+			polygons = new EObjectContainmentEList<CartesianTriangle>(CartesianTriangle.class, this, Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH__POLYGONS);
 		}
 		return polygons;
 	}
@@ -78,7 +78,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == CartesianCoordinatesSet.class) {
 			switch (baseOperationID) {
-				case Data3dPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT: return Data3dPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT;
+				case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT: return Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT;
 				default: return -1;
 			}
 		}
@@ -93,7 +93,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT:
 				return getExtent();
 		}
 		return super.eInvoke(operationID, arguments);

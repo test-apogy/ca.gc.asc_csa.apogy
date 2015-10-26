@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.processors.VerboseProvider#isVerbose <em>Verbose</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getVerboseProvider()
+ * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getVerboseProvider()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -32,7 +32,7 @@ public interface VerboseProvider extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Verbose</em>' attribute.
 	 * @see #setVerbose(boolean)
-	 * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getVerboseProvider_Verbose()
+	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getVerboseProvider_Verbose()
 	 * @model unique="false"
 	 * @generated
 	 */

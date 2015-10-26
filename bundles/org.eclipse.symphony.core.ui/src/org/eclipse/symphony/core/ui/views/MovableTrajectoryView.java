@@ -11,7 +11,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
@@ -209,7 +209,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 						// Events from Deployment
 						if(msg.getNotifier() instanceof Named)							
 						{														
-							if(msg.getFeatureID(PoseProvider.class) == EMFEcorePackage.NAMED__NAME)						
+							if(msg.getFeatureID(PoseProvider.class) == Symphony__CommonEMFPackage.NAMED__NAME)						
 							{							
 								updatePartName(msg.getNewStringValue());
 							}														

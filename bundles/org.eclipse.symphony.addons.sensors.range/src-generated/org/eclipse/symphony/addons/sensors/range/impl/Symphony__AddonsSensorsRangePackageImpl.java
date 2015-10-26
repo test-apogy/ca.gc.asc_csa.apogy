@@ -35,11 +35,11 @@ import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -230,8 +230,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		// Initialize simple dependencies
 		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
 		Symphony__AddonsSensorsPackage.eINSTANCE.eClass();
-		Data25dPackage.eINSTANCE.eClass();
-		EMFEcorePackage.eINSTANCE.eClass();
+		Symphony__CommonGeometryData25DPackage.eINSTANCE.eClass();
+		Symphony__CommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsRangePackage.createPackageContents();
@@ -831,11 +831,11 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Symphony__AddonsSensorsPackage theSymphony__AddonsSensorsPackage = (Symphony__AddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPackage.eNS_URI);
-		ProcessorsPackage theProcessorsPackage = (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
-		Data25dPackage theData25dPackage = (Data25dPackage)EPackage.Registry.INSTANCE.getEPackage(Data25dPackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
+		Symphony__CommonGeometryData25DPackage theSymphony__CommonGeometryData25DPackage = (Symphony__CommonGeometryData25DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData25DPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter rangeScannerEClass_InputType = addETypeParameter(rangeScannerEClass, "InputType");
@@ -854,10 +854,10 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		simpleLineRangeScannerEClass.getESuperTypes().add(this.getLineRangeScanner());
 		EGenericType g1 = createEGenericType(this.getRangeSensor());
 		rangeScannerEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
 		EGenericType g2 = createEGenericType(rangeScannerEClass_InputType);
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theData25dPackage.getVolumetricCoordinatesSet25D());
+		g2 = createEGenericType(theSymphony__CommonGeometryData25DPackage.getVolumetricCoordinatesSet25D());
 		g1.getETypeArguments().add(g2);
 		rangeScannerEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getRangeScanner());
@@ -868,10 +868,10 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		g2 = createEGenericType(this.getRasterScanSettings());
 		g1.getETypeArguments().add(g2);
 		rasterScanRangeSensorEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theProcessorsPackage.getProcessor());
+		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getRasterScanSettings());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theData25dPackage.getVolumetricCoordinatesSet25D());
+		g2 = createEGenericType(theSymphony__CommonGeometryData25DPackage.getVolumetricCoordinatesSet25D());
 		g1.getETypeArguments().add(g2);
 		rasterScanRangeSensorEClass.getEGenericSuperTypes().add(g1);
 		simpleRasterScanRangeScannerEClass.getESuperTypes().add(this.getRasterScanRangeSensor());
@@ -881,8 +881,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		simpleRasterScanRangeScannerSimulatorEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getSimpleRasterScanRangeScanner());
 		simpleRasterScanRangeScannerSimulatorEClass.getEGenericSuperTypes().add(g1);
-		rasterScanDataEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
-		rasterScanDataEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
+		rasterScanDataEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		rasterScanDataEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(rayDataEClass, RayData.class, "RayData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -919,8 +919,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		initEClass(rangeScannerEClass, RangeScanner.class, "RangeScanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(rangeScannerSimulatorEClass, RangeScannerSimulator.class, "RangeScannerSimulator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		g1 = createEGenericType(theTopologyPackage.getContentNode());
-		g2 = createEGenericType(theData3dPackage.getCartesianTriangularMesh());
+		g1 = createEGenericType(theSymphony__CommonTopologyPackage.getContentNode());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh());
 		g1.getETypeArguments().add(g2);
 		initEReference(getRangeScannerSimulator_MeshNode(), g1, null, "meshNode", null, 0, 1, RangeScannerSimulator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRangeScannerSimulator_NoiseEnabled(), theEcorePackage.getEBoolean(), "noiseEnabled", null, 0, 1, RangeScannerSimulator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -928,7 +928,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		initEAttribute(getRangeScannerSimulator_TimeFindingIntersections(), theEcorePackage.getELong(), "timeFindingIntersections", null, 0, 1, RangeScannerSimulator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRangeScannerSimulator_TimeGettingSimulatedRays(), theEcorePackage.getELong(), "timeGettingSimulatedRays", null, 0, 1, RangeScannerSimulator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getRangeScannerSimulator__GetCroppedMesh(), theData3dPackage.getCartesianTriangularMesh(), "getCroppedMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getRangeScannerSimulator__GetCroppedMesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "getCroppedMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		EOperation op = initEOperation(getRangeScannerSimulator__GetSimulatedRays(), null, "getSimulatedRays", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
@@ -947,7 +947,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		addEParameter(op, this.getRayData(), "cleanRayData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRayData(), "noisyRayData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getRangeScannerSimulator__CreateCoordinates25D__RayData_double(), theData25dPackage.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getRangeScannerSimulator__CreateCoordinates25D__RayData_double(), theSymphony__CommonGeometryData25DPackage.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRayData(), "rayData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "range", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -965,7 +965,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 
 		initEClass(rasterScanDataEClass, RasterScanData.class, "RasterScanData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRasterScanData_RasterScanSettings(), this.getRasterScanSettings(), null, "rasterScanSettings", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRasterScanData_ScanData(), theData25dPackage.getVolumetricCoordinatesSet25D(), null, "scanData", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRasterScanData_ScanData(), theSymphony__CommonGeometryData25DPackage.getVolumetricCoordinatesSet25D(), null, "scanData", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sensorsRangeFacadeEClass, SensorsRangeFacade.class, "SensorsRangeFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

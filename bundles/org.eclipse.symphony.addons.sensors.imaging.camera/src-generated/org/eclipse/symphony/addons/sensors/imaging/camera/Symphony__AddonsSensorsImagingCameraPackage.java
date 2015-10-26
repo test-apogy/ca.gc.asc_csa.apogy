@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**
@@ -419,7 +419,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER__NAME = EMFEcorePackage.NAMED__NAME;
+  int IMAGE_FILTER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -428,7 +428,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int IMAGE_FILTER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
@@ -437,7 +437,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER__ENABLED = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int IMAGE_FILTER__ENABLED = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Image Filter</em>' class.
@@ -446,7 +446,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int IMAGE_FILTER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The operation id for the '<em>Filter</em>' operation.
@@ -455,7 +455,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER___FILTER__ABSTRACTCAMERA_ABSTRACTEIMAGE = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int IMAGE_FILTER___FILTER__ABSTRACTCAMERA_ABSTRACTEIMAGE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -464,7 +464,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FILTER___DISPOSE = EMFEcorePackage.NAMED_OPERATION_COUNT + 1;
+	int IMAGE_FILTER___DISPOSE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 		/**
 	 * The number of operations of the '<em>Image Filter</em>' class.
@@ -473,7 +473,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_FILTER_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 2;
+  int IMAGE_FILTER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 2;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.GrayScaleFilterImpl <em>Gray Scale Filter</em>}' class.
@@ -1057,7 +1057,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION__NAME = EMFEcorePackage.NAMED__NAME;
+	int CAMERA_IMAGE_ANNOTATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1066,7 +1066,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int CAMERA_IMAGE_ANNOTATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1075,7 +1075,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION__VISIBLE = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int CAMERA_IMAGE_ANNOTATION__VISIBLE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Camera Image Annotation</em>' class.
@@ -1084,7 +1084,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int CAMERA_IMAGE_ANNOTATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -1093,7 +1093,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION___DISPOSE = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int CAMERA_IMAGE_ANNOTATION___DISPOSE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Camera Image Annotation</em>' class.
@@ -1102,7 +1102,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_IMAGE_ANNOTATION_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 1;
+	int CAMERA_IMAGE_ANNOTATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayListImpl <em>Camera Overlay List</em>}' class.

@@ -5,7 +5,7 @@ package org.eclipse.symphony.examples.mobile_platform.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
+import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreExampleMobilePlatform edit plugin.
@@ -41,7 +41,7 @@ public final class EMFEcoreExampleMobilePlatformEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
+		     Symphony__CommonEMFEditPlugin.INSTANCE,
 		   });
 	}
 

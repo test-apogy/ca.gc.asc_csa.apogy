@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeatureTreeNode#getChildren <em>Children</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeatureTreeNode()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeatureTreeNode()
  * @model abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface AbstractFeatureTreeNode extends AbstractFeatureNode
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Parent</em>' container reference.
 	 * @see #setParent(AbstractFeatureTreeNode)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeatureTreeNode_Parent()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeatureTreeNode_Parent()
 	 * @see org.eclipse.symphony.common.emf.AbstractFeatureTreeNode#getChildren
 	 * @model opposite="children" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
@@ -65,7 +65,7 @@ public interface AbstractFeatureTreeNode extends AbstractFeatureNode
 	 * The children node(s) of this TreeNode.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Children</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeatureTreeNode_Children()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeatureTreeNode_Children()
 	 * @see org.eclipse.symphony.common.emf.AbstractFeatureTreeNode#getParent
 	 * @model opposite="parent" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

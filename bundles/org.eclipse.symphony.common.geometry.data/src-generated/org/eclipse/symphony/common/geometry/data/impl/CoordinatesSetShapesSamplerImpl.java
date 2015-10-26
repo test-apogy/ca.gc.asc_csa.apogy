@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.ShapeSamplingMode;
 import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
@@ -84,7 +84,7 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	@Override
 	protected EClass eStaticClass()
 	{
-		return DataPackage.Literals.COORDINATES_SET_SHAPES_SAMPLER;
+		return Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET_SHAPES_SAMPLER;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public EList<CoordinatesSamplingShape<T>> getCoordinatesSamplingShapes()
 	{
 		if (coordinatesSamplingShapes == null) {
-			coordinatesSamplingShapes = new EObjectResolvingEList<CoordinatesSamplingShape<T>>(CoordinatesSamplingShape.class, this, DataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES);
+			coordinatesSamplingShapes = new EObjectResolvingEList<CoordinatesSamplingShape<T>>(CoordinatesSamplingShape.class, this, Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES);
 		}
 		return coordinatesSamplingShapes;
 	}
@@ -142,7 +142,7 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 		ShapeSamplingMode oldShapeSamplingMode = shapeSamplingMode;
 		shapeSamplingMode = newShapeSamplingMode == null ? SHAPE_SAMPLING_MODE_EDEFAULT : newShapeSamplingMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE, oldShapeSamplingMode, shapeSamplingMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE, oldShapeSamplingMode, shapeSamplingMode));
 	}
 
 	/**
@@ -154,9 +154,9 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case DataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				return getCoordinatesSamplingShapes();
-			case DataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				return getShapeSamplingMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -172,11 +172,11 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case DataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				getCoordinatesSamplingShapes().clear();
 				getCoordinatesSamplingShapes().addAll((Collection<? extends CoordinatesSamplingShape<T>>)newValue);
 				return;
-			case DataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				setShapeSamplingMode((ShapeSamplingMode)newValue);
 				return;
 		}
@@ -192,10 +192,10 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case DataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				getCoordinatesSamplingShapes().clear();
 				return;
-			case DataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				setShapeSamplingMode(SHAPE_SAMPLING_MODE_EDEFAULT);
 				return;
 		}
@@ -211,9 +211,9 @@ public class CoordinatesSetShapesSamplerImpl<T extends Coordinates> extends Proc
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case DataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				return coordinatesSamplingShapes != null && !coordinatesSamplingShapes.isEmpty();
-			case DataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				return shapeSamplingMode != SHAPE_SAMPLING_MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

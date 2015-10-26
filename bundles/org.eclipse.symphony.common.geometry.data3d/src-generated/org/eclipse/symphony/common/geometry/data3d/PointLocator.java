@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#getPoints <em>Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointLocator()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointLocator()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface PointLocator extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' attribute.
 	 * @see #setPoints(List)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointLocator_Points()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointLocator_Points()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" many="false"
 	 * @generated
 	 */

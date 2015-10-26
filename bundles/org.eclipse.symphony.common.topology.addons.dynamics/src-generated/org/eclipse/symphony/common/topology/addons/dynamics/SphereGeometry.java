@@ -20,7 +20,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getSphereGeometry()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getSphereGeometry()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface SphereGeometry extends Geometry {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getSphereGeometry_Radius()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getSphereGeometry_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 
 /**
@@ -68,7 +68,7 @@ public class PositionMarkerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PositionMarker_identifier_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PositionMarker_identifier_feature", "_UI_PositionMarker_type"),
-				 Data3dPackage.Literals.POSITION_MARKER__IDENTIFIER,
+				 Symphony__CommonGeometryData3DPackage.Literals.POSITION_MARKER__IDENTIFIER,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class PositionMarkerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PositionMarker.class)) {
-			case Data3dPackage.POSITION_MARKER__IDENTIFIER:
+			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER__IDENTIFIER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

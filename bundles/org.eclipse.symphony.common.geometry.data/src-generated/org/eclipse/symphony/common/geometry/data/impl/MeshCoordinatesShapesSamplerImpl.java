@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler;
 import org.eclipse.symphony.common.geometry.data.Polygon;
@@ -111,7 +111,7 @@ public abstract class MeshCoordinatesShapesSamplerImpl<CoordinatesType extends C
 	@Override
 	protected EClass eStaticClass()
 	{
-		return DataPackage.Literals.MESH_COORDINATES_SHAPES_SAMPLER;
+		return Symphony__CommonGeometryDataPackage.Literals.MESH_COORDINATES_SHAPES_SAMPLER;
 	}
 
 	/**
@@ -144,7 +144,7 @@ public abstract class MeshCoordinatesShapesSamplerImpl<CoordinatesType extends C
 	public EList<CoordinatesSamplingShape<CoordinatesType>> getCoordinatesSamplingShapes()
 	{
 		if (coordinatesSamplingShapes == null) {
-			coordinatesSamplingShapes = new EObjectResolvingEList<CoordinatesSamplingShape<CoordinatesType>>(CoordinatesSamplingShape.class, this, DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES);
+			coordinatesSamplingShapes = new EObjectResolvingEList<CoordinatesSamplingShape<CoordinatesType>>(CoordinatesSamplingShape.class, this, Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES);
 		}
 		return coordinatesSamplingShapes;
 	}
@@ -169,7 +169,7 @@ public abstract class MeshCoordinatesShapesSamplerImpl<CoordinatesType extends C
 		ShapeSamplingMode oldShapeSamplingMode = shapeSamplingMode;
 		shapeSamplingMode = newShapeSamplingMode == null ? SHAPE_SAMPLING_MODE_EDEFAULT : newShapeSamplingMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE, oldShapeSamplingMode, shapeSamplingMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE, oldShapeSamplingMode, shapeSamplingMode));
 	}
 
 	/**
@@ -192,7 +192,7 @@ public abstract class MeshCoordinatesShapesSamplerImpl<CoordinatesType extends C
 		PolygonSamplingMode oldPolygonSamplingMode = polygonSamplingMode;
 		polygonSamplingMode = newPolygonSamplingMode == null ? POLYGON_SAMPLING_MODE_EDEFAULT : newPolygonSamplingMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE, oldPolygonSamplingMode, polygonSamplingMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE, oldPolygonSamplingMode, polygonSamplingMode));
 	}
 
 	/**
@@ -204,11 +204,11 @@ public abstract class MeshCoordinatesShapesSamplerImpl<CoordinatesType extends C
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				return getCoordinatesSamplingShapes();
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				return getShapeSamplingMode();
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
 				return getPolygonSamplingMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -224,14 +224,14 @@ public abstract class MeshCoordinatesShapesSamplerImpl<CoordinatesType extends C
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				getCoordinatesSamplingShapes().clear();
 				getCoordinatesSamplingShapes().addAll((Collection<? extends CoordinatesSamplingShape<CoordinatesType>>)newValue);
 				return;
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				setShapeSamplingMode((ShapeSamplingMode)newValue);
 				return;
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
 				setPolygonSamplingMode((PolygonSamplingMode)newValue);
 				return;
 		}
@@ -247,13 +247,13 @@ public abstract class MeshCoordinatesShapesSamplerImpl<CoordinatesType extends C
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				getCoordinatesSamplingShapes().clear();
 				return;
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				setShapeSamplingMode(SHAPE_SAMPLING_MODE_EDEFAULT);
 				return;
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
 				setPolygonSamplingMode(POLYGON_SAMPLING_MODE_EDEFAULT);
 				return;
 		}
@@ -269,11 +269,11 @@ public abstract class MeshCoordinatesShapesSamplerImpl<CoordinatesType extends C
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES:
 				return coordinatesSamplingShapes != null && !coordinatesSamplingShapes.isEmpty();
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				return shapeSamplingMode != SHAPE_SAMPLING_MODE_EDEFAULT;
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
 				return polygonSamplingMode != POLYGON_SAMPLING_MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

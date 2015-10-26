@@ -10,7 +10,7 @@
       <!-- @generated symphony_common_math -->
       <package
             uri="org.eclipse.symphony.common.math"
-            class="org.eclipse.symphony.common.math.MathPackage"
+            class="org.eclipse.symphony.common.math.Symphony__CommonMathPackage"
             genModel="model/symphony_common_math.xcore"/>
    </extension>
 

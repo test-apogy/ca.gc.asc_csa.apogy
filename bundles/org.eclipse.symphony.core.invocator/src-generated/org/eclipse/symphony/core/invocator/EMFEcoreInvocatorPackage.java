@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -404,7 +404,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__NAME = EMFEcorePackage.NAMED__NAME;
+  int INVOCATOR_SESSION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -413,7 +413,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int INVOCATOR_SESSION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
@@ -422,7 +422,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__ENVIRONMENT = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int INVOCATOR_SESSION__ENVIRONMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Programs List</b></em>' containment reference.
@@ -431,7 +431,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__PROGRAMS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int INVOCATOR_SESSION__PROGRAMS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Data Products List Container</b></em>' containment reference.
@@ -440,7 +440,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Tools List</b></em>' containment reference.
@@ -449,7 +449,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION__TOOLS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+  int INVOCATOR_SESSION__TOOLS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of structural features of the '<em>Invocator Session</em>' class.
@@ -458,7 +458,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+  int INVOCATOR_SESSION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of operations of the '<em>Invocator Session</em>' class.
@@ -467,7 +467,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INVOCATOR_SESSION_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int INVOCATOR_SESSION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl <em>Environment</em>}' class.
@@ -486,7 +486,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__NAME = EMFEcorePackage.NAMED__NAME;
+  int ENVIRONMENT__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -495,7 +495,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int ENVIRONMENT__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' container reference.
@@ -504,7 +504,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__INVOCATOR_SESSION = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int ENVIRONMENT__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Types List</b></em>' containment reference.
@@ -513,7 +513,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__TYPES_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int ENVIRONMENT__TYPES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Variables List</b></em>' containment reference.
@@ -522,7 +522,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__VARIABLES_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int ENVIRONMENT__VARIABLES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Contexts List</b></em>' containment reference.
@@ -531,7 +531,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__CONTEXTS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+  int ENVIRONMENT__CONTEXTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Active Context</b></em>' reference.
@@ -540,7 +540,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT__ACTIVE_CONTEXT = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+  int ENVIRONMENT__ACTIVE_CONTEXT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of structural features of the '<em>Environment</em>' class.
@@ -549,7 +549,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 6;
+  int ENVIRONMENT_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
   /**
 	 * The number of operations of the '<em>Environment</em>' class.
@@ -558,7 +558,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int ENVIRONMENT_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl <em>Data Products Lists Container</em>}' class.
@@ -577,7 +577,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER__NAME = EMFEcorePackage.NAMED__NAME;
+  int DATA_PRODUCTS_LISTS_CONTAINER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -586,7 +586,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' container reference.
@@ -595,7 +595,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Data Products List</b></em>' containment reference list.
@@ -604,7 +604,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Data Products Lists Container</em>' class.
@@ -613,7 +613,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int DATA_PRODUCTS_LISTS_CONTAINER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Data Products Lists Container</em>' class.
@@ -622,7 +622,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LISTS_CONTAINER_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int DATA_PRODUCTS_LISTS_CONTAINER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.DataProductsListImpl <em>Data Products List</em>}' class.
@@ -641,7 +641,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+  int DATA_PRODUCTS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -650,7 +650,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int DATA_PRODUCTS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Data Products Lists Container</b></em>' container reference.
@@ -659,7 +659,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Operation Call Results List</b></em>' containment reference.
@@ -668,7 +668,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Recording Results List</b></em>' containment reference.
@@ -677,7 +677,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -686,7 +686,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_PRODUCTS_LIST__INVOCATOR_SESSION = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+	int DATA_PRODUCTS_LIST__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 		/**
 	 * The number of structural features of the '<em>Data Products List</em>' class.
@@ -695,7 +695,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+  int DATA_PRODUCTS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of operations of the '<em>Data Products List</em>' class.
@@ -704,7 +704,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DATA_PRODUCTS_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int DATA_PRODUCTS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ToolsListImpl <em>Tools List</em>}' class.
@@ -723,7 +723,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+  int TOOLS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -732,7 +732,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int TOOLS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' container reference.
@@ -741,7 +741,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST__INVOCATOR_SESSION = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int TOOLS_LIST__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Tools List Containers</b></em>' containment reference list.
@@ -750,7 +750,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST__TOOLS_LIST_CONTAINERS = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int TOOLS_LIST__TOOLS_LIST_CONTAINERS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Tools List</em>' class.
@@ -759,7 +759,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int TOOLS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Tools List</em>' class.
@@ -768,7 +768,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TOOLS_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int TOOLS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl <em>Abstract Tools List Container</em>}' class.
@@ -972,7 +972,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE__NAME = EMFEcorePackage.NAMED__NAME;
+  int TYPE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
@@ -981,7 +981,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE__MEMBERS = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int TYPE__MEMBERS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Interface Class</b></em>' reference.
@@ -990,7 +990,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE__INTERFACE_CLASS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int TYPE__INTERFACE_CLASS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Type Api Adapter Class</b></em>' reference.
@@ -999,7 +999,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE__TYPE_API_ADAPTER_CLASS = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int TYPE__TYPE_API_ADAPTER_CLASS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -1008,7 +1008,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int TYPE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Type</em>' class.
@@ -1017,7 +1017,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int TYPE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl <em>Type Api Adapter</em>}' class.
@@ -1163,7 +1163,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER__NAME = EMFEcorePackage.NAMED__NAME;
+  int TYPE_MEMBER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Member Type</b></em>' reference.
@@ -1172,7 +1172,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER__MEMBER_TYPE = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int TYPE_MEMBER__MEMBER_TYPE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Type Feature Root Node</b></em>' containment reference.
@@ -1181,7 +1181,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Type Member</em>' class.
@@ -1190,7 +1190,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int TYPE_MEMBER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Type Member</em>' class.
@@ -1199,7 +1199,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TYPE_MEMBER_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int TYPE_MEMBER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceImpl <em>Type Member Reference</em>}' class.
@@ -1492,7 +1492,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE__NAME = EMFEcorePackage.NAMED__NAME;
+  int VARIABLE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Variables List</b></em>' container reference.
@@ -1501,7 +1501,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE__VARIABLES_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int VARIABLE__VARIABLES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Variable Type</b></em>' reference.
@@ -1510,7 +1510,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE__VARIABLE_TYPE = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int VARIABLE__VARIABLE_TYPE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -1519,7 +1519,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE__ENVIRONMENT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int VARIABLE__ENVIRONMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -1528,7 +1528,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int VARIABLE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -1537,7 +1537,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int VARIABLE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ContextsListImpl <em>Contexts List</em>}' class.
@@ -1602,7 +1602,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__NAME = EMFEcorePackage.NAMED__NAME;
+  int CONTEXT__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Contexts List</b></em>' container reference.
@@ -1611,7 +1611,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__CONTEXTS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int CONTEXT__CONTEXTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Variable Implementations List</b></em>' containment reference.
@@ -1620,7 +1620,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -1629,7 +1629,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__ENVIRONMENT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int CONTEXT__ENVIRONMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Data Products List</b></em>' reference.
@@ -1638,7 +1638,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__DATA_PRODUCTS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int CONTEXT__DATA_PRODUCTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Instances Creation Date</b></em>' attribute.
@@ -1647,7 +1647,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__INSTANCES_CREATION_DATE = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+  int CONTEXT__INSTANCES_CREATION_DATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Instances Disposal Date</b></em>' attribute.
@@ -1656,7 +1656,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT__INSTANCES_DISPOSAL_DATE = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+  int CONTEXT__INSTANCES_DISPOSAL_DATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of structural features of the '<em>Context</em>' class.
@@ -1665,7 +1665,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 6;
+  int CONTEXT_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
   /**
 	 * The number of operations of the '<em>Context</em>' class.
@@ -1674,7 +1674,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONTEXT_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int CONTEXT_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.BasicContextImpl <em>Basic Context</em>}' class.
@@ -2259,7 +2259,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VALUE__NAME = EMFEcorePackage.NAMED__NAME;
+  int VALUE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -2268,7 +2268,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VALUE__VALUE = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int VALUE__VALUE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Value</em>' class.
@@ -2277,7 +2277,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VALUE_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int VALUE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Value</em>' class.
@@ -2286,7 +2286,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VALUE_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int VALUE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.ProgramsListImpl <em>Programs List</em>}' class.
@@ -2351,7 +2351,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__NAME = EMFEcorePackage.NAMED__NAME;
+  int PROGRAM__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2360,7 +2360,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int PROGRAM__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Programs List</b></em>' container reference.
@@ -2369,7 +2369,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__PROGRAMS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int PROGRAM__PROGRAMS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -2378,7 +2378,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM__INVOCATOR_SESSION = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int PROGRAM__INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Values List</b></em>' containment reference.
@@ -2387,7 +2387,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__VALUES_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int PROGRAM__VALUES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 		/**
 	 * The number of structural features of the '<em>Program</em>' class.
@@ -2396,7 +2396,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+  int PROGRAM_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of operations of the '<em>Program</em>' class.
@@ -2405,7 +2405,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PROGRAM_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int PROGRAM_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.OperationCallContainer <em>Operation Call Container</em>}' class.
@@ -2561,7 +2561,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_REFERENCE__NAME = EMFEcorePackage.NAMED__NAME;
+	int VARIABLE_FEATURE_REFERENCE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -2570,7 +2570,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE__VARIABLE = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int VARIABLE_FEATURE_REFERENCE__VARIABLE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Type Member Reference List Element</b></em>' containment reference.
@@ -2579,7 +2579,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Feature Root</b></em>' containment reference.
@@ -2588,7 +2588,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Variable Feature Reference</em>' class.
@@ -2597,7 +2597,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Variable Feature Reference</em>' class.
@@ -2606,7 +2606,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallImpl <em>Operation Call</em>}' class.
@@ -3090,7 +3090,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+  int RESULTS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3099,7 +3099,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int RESULTS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Results</b></em>' containment reference list.
@@ -3108,7 +3108,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST__RESULTS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int RESULTS_LIST__RESULTS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Results List</em>' class.
@@ -3117,7 +3117,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int RESULTS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The operation id for the '<em>Get Invocator Session</em>' operation.
@@ -3126,7 +3126,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST___GET_INVOCATOR_SESSION = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int RESULTS_LIST___GET_INVOCATOR_SESSION = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Results List</em>' class.
@@ -3135,7 +3135,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RESULTS_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 1;
+  int RESULTS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListImpl <em>Operation Call Results List</em>}' class.
@@ -3318,7 +3318,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT__TIME = EMFEcorePackage.TIMED__TIME;
+  int ABSTRACT_RESULT__TIME = Symphony__CommonEMFPackage.TIMED__TIME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3327,7 +3327,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_RESULT__DESCRIPTION = EMFEcorePackage.TIMED_FEATURE_COUNT + 0;
+	int ABSTRACT_RESULT__DESCRIPTION = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Results List</b></em>' container reference.
@@ -3336,7 +3336,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_RESULT__RESULTS_LIST = EMFEcorePackage.TIMED_FEATURE_COUNT + 1;
+	int ABSTRACT_RESULT__RESULTS_LIST = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Invocator Session</b></em>' reference.
@@ -3345,7 +3345,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_RESULT__INVOCATOR_SESSION = EMFEcorePackage.TIMED_FEATURE_COUNT + 2;
+	int ABSTRACT_RESULT__INVOCATOR_SESSION = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
@@ -3354,7 +3354,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT__CONTEXT = EMFEcorePackage.TIMED_FEATURE_COUNT + 3;
+  int ABSTRACT_RESULT__CONTEXT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Result Value</b></em>' containment reference.
@@ -3363,7 +3363,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT__RESULT_VALUE = EMFEcorePackage.TIMED_FEATURE_COUNT + 4;
+  int ABSTRACT_RESULT__RESULT_VALUE = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of structural features of the '<em>Abstract Result</em>' class.
@@ -3372,7 +3372,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT_FEATURE_COUNT = EMFEcorePackage.TIMED_FEATURE_COUNT + 5;
+  int ABSTRACT_RESULT_FEATURE_COUNT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of operations of the '<em>Abstract Result</em>' class.
@@ -3381,7 +3381,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RESULT_OPERATION_COUNT = EMFEcorePackage.TIMED_OPERATION_COUNT + 0;
+  int ABSTRACT_RESULT_OPERATION_COUNT = Symphony__CommonEMFPackage.TIMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractResultValueImpl <em>Abstract Result Value</em>}' class.
@@ -3767,7 +3767,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+  int WATCHES_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3776,7 +3776,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int WATCHES_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Watches Lists Container</b></em>' container reference.
@@ -3785,7 +3785,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST__WATCHES_LISTS_CONTAINER = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int WATCHES_LIST__WATCHES_LISTS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Watches</b></em>' containment reference list.
@@ -3794,7 +3794,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST__WATCHES = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int WATCHES_LIST__WATCHES = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Watches List</em>' class.
@@ -3803,7 +3803,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int WATCHES_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Watches List</em>' class.
@@ -3812,7 +3812,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCHES_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int WATCHES_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.WatchImpl <em>Watch</em>}' class.
@@ -3831,7 +3831,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int WATCH__NAME = EMFEcorePackage.NAMED__NAME;
+	int WATCH__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3840,7 +3840,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int WATCH__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Watches List</b></em>' container reference.
@@ -3849,7 +3849,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__WATCHES_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int WATCH__WATCHES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -3858,7 +3858,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__VARIABLE = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int WATCH__VARIABLE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Type Member Reference Tree Element</b></em>' containment reference.
@@ -3867,7 +3867,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int WATCH__TYPE_MEMBER_REFERENCE_TREE_ELEMENT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Tree Root Node</b></em>' containment reference.
@@ -3876,7 +3876,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH__TREE_ROOT_NODE = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+  int WATCH__TREE_ROOT_NODE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
   /**
 	 * The number of structural features of the '<em>Watch</em>' class.
@@ -3885,7 +3885,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+  int WATCH_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
   /**
 	 * The number of operations of the '<em>Watch</em>' class.
@@ -3894,7 +3894,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WATCH_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int WATCH_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl <em>Watch Feature Node Adapter</em>}' class.
@@ -4023,7 +4023,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+  int DISPLAYS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4032,7 +4032,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int DISPLAYS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Displays Lists Container</b></em>' container reference.
@@ -4041,7 +4041,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+  int DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Displays</b></em>' containment reference list.
@@ -4050,7 +4050,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST__DISPLAYS = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int DISPLAYS_LIST__DISPLAYS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Displays List</em>' class.
@@ -4059,7 +4059,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+  int DISPLAYS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
   /**
 	 * The number of operations of the '<em>Displays List</em>' class.
@@ -4068,7 +4068,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int DISPLAYS_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int DISPLAYS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractDisplayImpl <em>Abstract Display</em>}' class.
@@ -4087,7 +4087,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_DISPLAY__DESCRIPTION = EMFEcorePackage.DESCRIBED__DESCRIPTION;
+  int ABSTRACT_DISPLAY__DESCRIPTION = Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Displays List</b></em>' container reference.
@@ -4096,7 +4096,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_DISPLAY__DISPLAYS_LIST = EMFEcorePackage.DESCRIBED_FEATURE_COUNT + 0;
+  int ABSTRACT_DISPLAY__DISPLAYS_LIST = Symphony__CommonEMFPackage.DESCRIBED_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Abstract Display</em>' class.
@@ -4105,7 +4105,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_DISPLAY_FEATURE_COUNT = EMFEcorePackage.DESCRIBED_FEATURE_COUNT + 1;
+  int ABSTRACT_DISPLAY_FEATURE_COUNT = Symphony__CommonEMFPackage.DESCRIBED_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Abstract Display</em>' class.
@@ -4114,7 +4114,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_DISPLAY_OPERATION_COUNT = EMFEcorePackage.DESCRIBED_OPERATION_COUNT + 0;
+  int ABSTRACT_DISPLAY_OPERATION_COUNT = Symphony__CommonEMFPackage.DESCRIBED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.RecordingToolsContainerImpl <em>Recording Tools Container</em>}' class.
@@ -4197,7 +4197,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+	int CHANNELS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4206,7 +4206,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int CHANNELS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Channels</b></em>' containment reference list.
@@ -4215,7 +4215,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST__CHANNELS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int CHANNELS_LIST__CHANNELS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
@@ -4224,7 +4224,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST__RECORDING_TOOLS_CONTAINER = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int CHANNELS_LIST__RECORDING_TOOLS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The number of structural features of the '<em>Channels List</em>' class.
@@ -4233,7 +4233,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int CHANNELS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 		/**
 	 * The number of operations of the '<em>Channels List</em>' class.
@@ -4242,7 +4242,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CHANNELS_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int CHANNELS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractChannelImpl <em>Abstract Channel</em>}' class.
@@ -4261,7 +4261,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL__NAME = EMFEcorePackage.NAMED__NAME;
+	int ABSTRACT_CHANNEL__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4270,7 +4270,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int ABSTRACT_CHANNEL__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Channels List</b></em>' container reference.
@@ -4279,7 +4279,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL__CHANNELS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_CHANNEL__CHANNELS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Abstract Channel</em>' class.
@@ -4288,7 +4288,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int ABSTRACT_CHANNEL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The number of operations of the '<em>Abstract Channel</em>' class.
@@ -4297,7 +4297,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CHANNEL_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int ABSTRACT_CHANNEL_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractRecorderImpl <em>Abstract Recorder</em>}' class.
@@ -4316,7 +4316,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RECORDER__NAME = EMFEcorePackage.NAMED__NAME;
+  int ABSTRACT_RECORDER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4325,7 +4325,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RECORDER__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int ABSTRACT_RECORDER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
@@ -4334,7 +4334,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_RECORDER__RECORDING_TOOLS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Abstract Recorder</em>' class.
@@ -4343,7 +4343,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RECORDER_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int ABSTRACT_RECORDER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Abstract Recorder</em>' class.
@@ -4352,7 +4352,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_RECORDER_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int ABSTRACT_RECORDER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.AbstractPlayerImpl <em>Abstract Player</em>}' class.
@@ -4371,7 +4371,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_PLAYER__NAME = EMFEcorePackage.NAMED__NAME;
+  int ABSTRACT_PLAYER__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4380,7 +4380,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_PLAYER__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+  int ABSTRACT_PLAYER__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Recording Tools Container</b></em>' container reference.
@@ -4389,7 +4389,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Abstract Player</em>' class.
@@ -4398,7 +4398,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_PLAYER_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+  int ABSTRACT_PLAYER_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Abstract Player</em>' class.
@@ -4407,7 +4407,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ABSTRACT_PLAYER_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+  int ABSTRACT_PLAYER_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListTimeSourceImpl <em>Operation Call Results List Time Source</em>}' class.
@@ -4426,7 +4426,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIME;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME;
 
 		/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -4435,7 +4435,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__START_TIME = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__START_TIME;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__START_TIME = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__START_TIME;
 
 		/**
 	 * The feature id for the '<em><b>Update Period</b></em>' attribute.
@@ -4444,7 +4444,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__UPDATE_PERIOD = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__UPDATE_PERIOD;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__UPDATE_PERIOD = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__UPDATE_PERIOD;
 
 		/**
 	 * The feature id for the '<em><b>Time Acceration</b></em>' attribute.
@@ -4453,7 +4453,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME_ACCERATION = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIME_ACCERATION;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME_ACCERATION = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME_ACCERATION;
 
 		/**
 	 * The feature id for the '<em><b>Time Direction</b></em>' attribute.
@@ -4462,7 +4462,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME_DIRECTION = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIME_DIRECTION;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME_DIRECTION = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME_DIRECTION;
 
 		/**
 	 * The feature id for the '<em><b>Loop Enable</b></em>' attribute.
@@ -4471,7 +4471,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__LOOP_ENABLE = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__LOOP_ENABLE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE;
 
 		/**
 	 * The feature id for the '<em><b>Timeds List</b></em>' reference list.
@@ -4480,7 +4480,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIMEDS_LIST = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIMEDS_LIST = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST;
 
 		/**
 	 * The feature id for the '<em><b>Current Timed Element</b></em>' reference.
@@ -4489,7 +4489,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__CURRENT_TIMED_ELEMENT = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__CURRENT_TIMED_ELEMENT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT;
 
 		/**
 	 * The feature id for the '<em><b>Earliest Date</b></em>' attribute.
@@ -4498,7 +4498,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__EARLIEST_DATE = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__EARLIEST_DATE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE;
 
 		/**
 	 * The feature id for the '<em><b>Latest Date</b></em>' attribute.
@@ -4507,7 +4507,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__LATEST_DATE = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__LATEST_DATE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE;
 
 		/**
 	 * The feature id for the '<em><b>Ops Call List</b></em>' reference.
@@ -4516,7 +4516,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE_FEATURE_COUNT + 0;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Operation Call Results List Time Source</em>' class.
@@ -4525,7 +4525,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_FEATURE_COUNT = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE_FEATURE_COUNT + 1;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_FEATURE_COUNT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -4534,7 +4534,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___DISPOSE = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___DISPOSE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___DISPOSE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Play Forward</em>' operation.
@@ -4543,7 +4543,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PLAY_FORWARD = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___PLAY_FORWARD;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PLAY_FORWARD = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PLAY_FORWARD;
 
 		/**
 	 * The operation id for the '<em>Play Reverse</em>' operation.
@@ -4552,7 +4552,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PLAY_REVERSE = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___PLAY_REVERSE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PLAY_REVERSE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PLAY_REVERSE;
 
 		/**
 	 * The operation id for the '<em>Pause</em>' operation.
@@ -4561,7 +4561,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PAUSE = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___PAUSE;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___PAUSE = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___PAUSE;
 
 		/**
 	 * The operation id for the '<em>Reset</em>' operation.
@@ -4570,7 +4570,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___RESET = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___RESET;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___RESET = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___RESET;
 
 		/**
 	 * The operation id for the '<em>Jump To Next</em>' operation.
@@ -4579,7 +4579,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___JUMP_TO_NEXT = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_NEXT;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___JUMP_TO_NEXT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_NEXT;
 
 		/**
 	 * The operation id for the '<em>Jump To Previous</em>' operation.
@@ -4588,7 +4588,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___JUMP_TO_PREVIOUS = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_PREVIOUS;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE___JUMP_TO_PREVIOUS = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_PREVIOUS;
 
 		/**
 	 * The number of operations of the '<em>Operation Call Results List Time Source</em>' class.
@@ -4597,7 +4597,7 @@ public interface EMFEcoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_OPERATION_COUNT = EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE_OPERATION_COUNT + 0;
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_OPERATION_COUNT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '<em>Throwable</em>' data type.

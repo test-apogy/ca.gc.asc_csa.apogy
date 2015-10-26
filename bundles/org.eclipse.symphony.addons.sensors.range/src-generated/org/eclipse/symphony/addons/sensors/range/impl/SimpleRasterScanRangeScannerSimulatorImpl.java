@@ -34,7 +34,7 @@ import org.eclipse.symphony.common.geometry.data25d.DataFacade;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -454,7 +454,7 @@ public class SimpleRasterScanRangeScannerSimulatorImpl extends RangeScannerSimul
 		Matrix4d laserToMesh = TopologyFacade.INSTANCE.expressInFrame(this, getMeshNode());	
 				
 		// Sample the terrain to retain only polygon that are partially or fully within the maximum range.
-		CartesianTriangularMeshPolygonSampler meshSampler = Data3dFactory.eINSTANCE.createCartesianTriangularMeshPolygonSampler();				
+		CartesianTriangularMeshPolygonSampler meshSampler = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMeshPolygonSampler();				
 		
 		// Setup the sampling shape.
 		RectangularFrustrumFieldOfViewSamplingShape<CartesianTriangle> samplingShape = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfViewSamplingShape();

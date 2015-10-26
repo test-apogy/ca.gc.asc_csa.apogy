@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -54,7 +54,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.REFERENCED_GROUP_NODE;
+		return Symphony__CommonTopologyPackage.Literals.REFERENCED_GROUP_NODE;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	public EList<Node> getReferencedChildren() {
 		if (referencedChildren == null) {
 			referencedChildren = new EObjectResolvingEList<Node>(Node.class,
-					this, TopologyPackage.REFERENCED_GROUP_NODE__CHILDREN) {
+					this, Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__CHILDREN) {
 				/**
 						 * 
 						 */
@@ -147,7 +147,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
+			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
 				return getReferencedChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,7 +161,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
+			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
 				getReferencedChildren().clear();
 				getReferencedChildren().addAll((Collection<? extends Node>)newValue);
 				return;
@@ -176,7 +176,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
+			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
 				getReferencedChildren().clear();
 				return;
 		}
@@ -190,7 +190,7 @@ public class ReferencedGroupNodeImpl extends GroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
+			case Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN:
 				return referencedChildren != null && !referencedChildren.isEmpty();
 		}
 		return super.eIsSet(featureID);

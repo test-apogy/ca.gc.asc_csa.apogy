@@ -15,7 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.ReferencedContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ReferencedContentNode} object.
@@ -64,7 +64,7 @@ public class ReferencedContentNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ReferencedContentNode_referencedContent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ReferencedContentNode_referencedContent_feature", "_UI_ReferencedContentNode_type"),
-				 TopologyPackage.Literals.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT,
+				 Symphony__CommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE__REFERENCED_CONTENT,
 				 true,
 				 false,
 				 true,

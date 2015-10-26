@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.images.AbstractEImage#getHeight <em>Height</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.images.ImagesCorePackage#getAbstractEImage()
+ * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getAbstractEImage()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface AbstractEImage extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(int)
-	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getAbstractEImage_Width()
+	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getAbstractEImage_Width()
 	 * @model default="-1" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_INFORMATION'"
 	 * @generated
@@ -64,7 +64,7 @@ public interface AbstractEImage extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(int)
-	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getAbstractEImage_Height()
+	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getAbstractEImage_Height()
 	 * @model default="-1" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGE_INFORMATION'"
 	 * @generated

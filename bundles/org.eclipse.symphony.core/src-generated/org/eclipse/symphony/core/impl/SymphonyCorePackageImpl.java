@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.math.MathPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.AbstractOrbitModel;
@@ -1281,11 +1281,11 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		TopologyBindingsPackage theTopologyBindingsPackage = (TopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyBindingsPackage.eNS_URI);
 
 		// Create type parameters
@@ -1298,48 +1298,48 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 
 		// Add supertypes to classes
 		symphonyEnvironmentEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getEnvironment());
-		symphonyEnvironmentEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
+		symphonyEnvironmentEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
 		symphonySystemEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getType());
 		symphonySystemApiAdapterEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getTypeApiAdapter());
 		symphonySystemApiAdapterEClass.getESuperTypes().add(this.getPoseProvider());
-		connectionPointEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		connectionPointEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		assemblyLinkEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		assemblyLinkEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		connectionPointEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		connectionPointEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		assemblyLinkEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		assemblyLinkEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		absolutePoseProviderEClass.getESuperTypes().add(this.getPoseProvider());
 		symphonyInitializationDataEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getInitializationData());
-		worksitesListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		worksitesListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		abstractWorksiteEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractWorksiteEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		abstractWorksiteEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
-		orbitModelsListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		orbitModelsListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		abstractOrbitModelEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractOrbitModelEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		worksitesListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		worksitesListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		abstractWorksiteEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractWorksiteEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		abstractWorksiteEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		orbitModelsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		orbitModelsListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		abstractOrbitModelEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractOrbitModelEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		featureOfInterestEClass.getESuperTypes().add(this.getPositioned());
-		featureOfInterestEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		featureOfInterestEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		featureOfInterestListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		featureOfInterestListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		featureOfInterestEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		featureOfInterestEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		featureOfInterestListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		featureOfInterestListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		positionedResultEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractResult());
 		positionedResultEClass.getESuperTypes().add(this.getPositioned());
 		operationCallPositionedResultEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getOperationCallResult());
 		operationCallPositionedResultEClass.getESuperTypes().add(this.getPositionedResult());
 		userDefinedResultEClass.getESuperTypes().add(this.getPositionedResult());
-		userDefinedResultEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		userDefinedResultEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		resultNodeEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
-		resultsListNodeEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
-		featureOfInterestNodeEClass.getESuperTypes().add(theTopologyPackage.getTransformNode());
-		featureOfInterestListNodeEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
+		userDefinedResultEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		userDefinedResultEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		resultNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		resultsListNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		featureOfInterestNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getTransformNode());
+		featureOfInterestListNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(symphonyCoreFacadeEClass, SymphonyCoreFacade.class, "SymphonyCoreFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphonyCoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4(), theMathPackage.getMatrix4x4(), "computeAbsolutePoseMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphonyCoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4(), theSymphony__CommonMathPackage.getMatrix4x4(), "computeAbsolutePoseMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getSymphonySystem(), "symphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getMatrix4x4(), "relativePose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "relativePose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getSymphonyCoreFacade__CreateResultNode__PositionedResult(), this.getResultNode(), "createResultNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPositionedResult(), "result", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1374,11 +1374,11 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 		initEReference(getSymphonyEnvironment_WorksitesList(), this.getWorksitesList(), null, "worksitesList", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSymphonyEnvironment_ActiveWorksite(), this.getAbstractWorksite(), null, "activeWorksite", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSymphonyEnvironment_SymphonyTopology(), this.getSymphonyTopology(), null, "symphonyTopology", null, 0, 1, SymphonyEnvironment.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getSymphonyEnvironment_TimeSourcesList(), theEMFEcorePackage.getTimeSourcesList(), null, "timeSourcesList", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSymphonyEnvironment_ActiveTimeSource(), theEMFEcorePackage.getTimeSource(), null, "activeTimeSource", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSymphonyEnvironment_TimeSourcesList(), theSymphony__CommonEMFPackage.getTimeSourcesList(), null, "timeSourcesList", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSymphonyEnvironment_ActiveTimeSource(), theSymphony__CommonEMFPackage.getTimeSource(), null, "activeTimeSource", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(symphonyTopologyEClass, SymphonyTopology.class, "SymphonyTopology", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSymphonyTopology_RootNode(), theTopologyPackage.getGroupNode(), null, "rootNode", null, 0, 1, SymphonyTopology.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getSymphonyTopology_RootNode(), theSymphony__CommonTopologyPackage.getGroupNode(), null, "rootNode", null, 0, 1, SymphonyTopology.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(symphonySystemEClass, SymphonySystem.class, "SymphonySystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSymphonySystem_TopologyRoot(), this.getTopologyRoot(), null, "topologyRoot", null, 0, 1, SymphonySystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1392,7 +1392,7 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 		initEReference(getSymphonySystemApiAdapter_PoseCorrector(), this.getPoseCorrector(), this.getPoseCorrector_SymphonySystemApiAdapter(), "poseCorrector", null, 0, 1, SymphonySystemApiAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSymphonySystemApiAdapter_SymphonySystem(), this.getSymphonySystem(), null, "symphonySystem", null, 0, 1, SymphonySystemApiAdapter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getSymphonySystemApiAdapter__CreateResultMatrix__OperationCall(), theMathPackage.getMatrix4x4(), "createResultMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphonySystemApiAdapter__CreateResultMatrix__OperationCall(), theSymphony__CommonMathPackage.getMatrix4x4(), "createResultMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(connectionPointsListEClass, ConnectionPointsList.class, "ConnectionPointsList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1401,14 +1401,14 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 
 		initEClass(connectionPointEClass, ConnectionPoint.class, "ConnectionPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnectionPoint_PointsList(), this.getConnectionPointsList(), this.getConnectionPointsList_ConnectionPoints(), "pointsList", null, 1, 1, ConnectionPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnectionPoint_Node(), theTopologyPackage.getGroupNode(), null, "node", null, 0, 1, ConnectionPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionPoint_Node(), theSymphony__CommonTopologyPackage.getGroupNode(), null, "node", null, 0, 1, ConnectionPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assemblyLinkEClass, AssemblyLink.class, "AssemblyLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssemblyLink_ParentTypeMember(), theEMFEcoreInvocatorPackage.getTypeMember(), null, "parentTypeMember", null, 0, 1, AssemblyLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssemblyLink_SubSystemTypeMember(), theEMFEcoreInvocatorPackage.getTypeMember(), null, "subSystemTypeMember", null, 1, 1, AssemblyLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssemblyLink_ParentConnectionPoint(), this.getConnectionPoint(), null, "parentConnectionPoint", null, 1, 1, AssemblyLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssemblyLink_TransformationMatrix(), theMathPackage.getMatrix4x4(), null, "transformationMatrix", null, 0, 1, AssemblyLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssemblyLink_GeometryNode(), theTopologyPackage.getNode(), null, "geometryNode", null, 0, 1, AssemblyLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssemblyLink_TransformationMatrix(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transformationMatrix", null, 0, 1, AssemblyLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssemblyLink_GeometryNode(), theSymphony__CommonTopologyPackage.getNode(), null, "geometryNode", null, 0, 1, AssemblyLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssemblyLink_ParentInstance(), this.getSymphonySystem(), null, "parentInstance", null, 0, 1, AssemblyLink.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssemblyLink_SubSystemInstance(), this.getSymphonySystem(), null, "subSystemInstance", null, 0, 1, AssemblyLink.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1416,7 +1416,7 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 		initEReference(getAssemblyLinksList_AssemblyLinks(), this.getAssemblyLink(), null, "assemblyLinks", null, 0, -1, AssemblyLinksList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(poseProviderEClass, PoseProvider.class, "PoseProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPoseProvider_PoseTransform(), theMathPackage.getMatrix4x4(), null, "poseTransform", null, 0, 1, PoseProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPoseProvider_PoseTransform(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "poseTransform", null, 0, 1, PoseProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(absolutePoseProviderEClass, AbsolutePoseProvider.class, "AbsolutePoseProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1424,11 +1424,11 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 		initEReference(getPoseCorrector_SymphonySystemApiAdapter(), this.getSymphonySystemApiAdapter(), this.getSymphonySystemApiAdapter_PoseCorrector(), "symphonySystemApiAdapter", null, 0, 1, PoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPoseCorrector_Enabled(), theEcorePackage.getEBoolean(), "enabled", "false", 0, 1, PoseCorrector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getPoseCorrector__ApplyCorrection__Matrix4x4(), theMathPackage.getMatrix4x4(), "applyCorrection", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getMatrix4x4(), "originalPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getPoseCorrector__ApplyCorrection__Matrix4x4(), theSymphony__CommonMathPackage.getMatrix4x4(), "applyCorrection", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "originalPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(symphonyInitializationDataEClass, SymphonyInitializationData.class, "SymphonyInitializationData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSymphonyInitializationData_InitialPoseTransform(), theMathPackage.getMatrix4x4(), null, "initialPoseTransform", null, 0, 1, SymphonyInitializationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSymphonyInitializationData_InitialPoseTransform(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "initialPoseTransform", null, 0, 1, SymphonyInitializationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(worksitesListEClass, WorksitesList.class, "WorksitesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWorksitesList_Worksites(), this.getAbstractWorksite(), this.getAbstractWorksite_WorksitesList(), "worksites", null, 0, -1, WorksitesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1445,7 +1445,7 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 		initEReference(getAbstractOrbitModel_VariableFeatureReference(), theEMFEcoreInvocatorPackage.getVariableFeatureReference(), null, "variableFeatureReference", null, 0, 1, AbstractOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(positionedEClass, Positioned.class, "Positioned", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPositioned_Pose(), theMathPackage.getMatrix4x4(), null, "pose", null, 1, 1, Positioned.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPositioned_Pose(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "pose", null, 1, 1, Positioned.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featureOfInterestEClass, FeatureOfInterest.class, "FeatureOfInterest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1453,12 +1453,12 @@ public class SymphonyCorePackageImpl extends EPackageImpl implements
 		initEReference(getFeatureOfInterestList_FeaturesOfInterest(), this.getFeatureOfInterest(), null, "featuresOfInterest", null, 0, -1, FeatureOfInterestList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(topologyRootEClass, TopologyRoot.class, "TopologyRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTopologyRoot_OriginNode(), theTopologyPackage.getNode(), null, "originNode", null, 0, 1, TopologyRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyRoot_OriginNode(), theSymphony__CommonTopologyPackage.getNode(), null, "originNode", null, 0, 1, TopologyRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(positionedResultEClass, PositionedResult.class, "PositionedResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(operationCallPositionedResultEClass, OperationCallPositionedResult.class, "OperationCallPositionedResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOperationCallPositionedResult_RelativePose(), theMathPackage.getMatrix4x4(), null, "relativePose", null, 1, 1, OperationCallPositionedResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationCallPositionedResult_RelativePose(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "relativePose", null, 1, 1, OperationCallPositionedResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userDefinedResultEClass, UserDefinedResult.class, "UserDefinedResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

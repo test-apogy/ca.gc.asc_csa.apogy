@@ -7,8 +7,8 @@ package org.eclipse.symphony.common.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.RasterPointCloud;
 import org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet;
 import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
@@ -37,7 +37,7 @@ public class RasterPointCloudToCartesianCoordinatesSetImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET;
+		return Symphony__CommonGeometryData3DPackage.Literals.RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class RasterPointCloudToCartesianCoordinatesSetImpl extends
 			throw new IllegalArgumentException("Input is null");
 		}
 
-		CartesianCoordinatesSet points = Data3dFactory.eINSTANCE
+		CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianCoordinatesSet();
 
 		for (int i = 0; i < input.getRows(); i++) {

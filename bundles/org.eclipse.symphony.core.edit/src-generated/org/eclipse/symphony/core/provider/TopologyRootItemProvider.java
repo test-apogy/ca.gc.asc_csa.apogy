@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
@@ -163,72 +163,72 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createLink()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createLeaf()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createURLNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createCADNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createReferencedContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createAggregateContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createReferencedGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
 	/**

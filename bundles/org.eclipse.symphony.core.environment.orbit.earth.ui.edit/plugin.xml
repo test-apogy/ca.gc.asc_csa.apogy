@@ -27,7 +27,7 @@
             class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">

@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties#getMaterials <em>Materials</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getDynamicSystemProperties()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getDynamicSystemProperties()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface DynamicSystemProperties extends AggregateGroupNode {
 	 * The list of AbstractConstraint used with a Dynamic System.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constraints</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getDynamicSystemProperties_Constraints()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getDynamicSystemProperties_Constraints()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -53,7 +53,7 @@ public interface DynamicSystemProperties extends AggregateGroupNode {
 	 * The list of AbstractMaterial used in the world.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Materials</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getDynamicSystemProperties_Materials()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getDynamicSystemProperties_Materials()
 	 * @model containment="true"
 	 * @generated
 	 */

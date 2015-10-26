@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
 import org.eclipse.symphony.common.geometry.data3d.PointNormalLocator;
 
@@ -65,7 +65,7 @@ public class PointNormalLocatorImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.POINT_NORMAL_LOCATOR;
+		return Symphony__CommonGeometryData3DPackage.Literals.POINT_NORMAL_LOCATOR;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class PointNormalLocatorImpl extends MinimalEObjectImpl.Container impleme
 			dataSet = (NormalPointCloud)eResolveProxy(oldDataSet);
 			if (dataSet != oldDataSet) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Data3dPackage.POINT_NORMAL_LOCATOR__DATA_SET, oldDataSet, dataSet));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR__DATA_SET, oldDataSet, dataSet));
 			}
 		}
 		return dataSet;
@@ -100,7 +100,7 @@ public class PointNormalLocatorImpl extends MinimalEObjectImpl.Container impleme
 		NormalPointCloud oldDataSet = dataSet;
 		dataSet = newDataSet;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.POINT_NORMAL_LOCATOR__DATA_SET, oldDataSet, dataSet));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR__DATA_SET, oldDataSet, dataSet));
 	}
 
 	/**
@@ -270,7 +270,7 @@ public class PointNormalLocatorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.POINT_NORMAL_LOCATOR__DATA_SET:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR__DATA_SET:
 				if (resolve) return getDataSet();
 				return basicGetDataSet();
 		}
@@ -284,7 +284,7 @@ public class PointNormalLocatorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.POINT_NORMAL_LOCATOR__DATA_SET:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR__DATA_SET:
 				setDataSet((NormalPointCloud)newValue);
 				return;
 		}
@@ -298,7 +298,7 @@ public class PointNormalLocatorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.POINT_NORMAL_LOCATOR__DATA_SET:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR__DATA_SET:
 				setDataSet((NormalPointCloud)null);
 				return;
 		}
@@ -312,7 +312,7 @@ public class PointNormalLocatorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.POINT_NORMAL_LOCATOR__DATA_SET:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR__DATA_SET:
 				return dataSet != null;
 		}
 		return super.eIsSet(featureID);
@@ -326,17 +326,17 @@ public class PointNormalLocatorImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT__POINT3D_VECTOR3D:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT__POINT3D_VECTOR3D:
 				return findClosestPoint((Point3d)arguments.get(0), (Vector3d)arguments.get(1));
-			case Data3dPackage.POINT_NORMAL_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D:
 				return findPointsWithinRadius((Double)arguments.get(0), (Point3d)arguments.get(1), (Vector3d)arguments.get(2));
-			case Data3dPackage.POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINTS__INT_POINT3D_VECTOR3D:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINTS__INT_POINT3D_VECTOR3D:
 				return findClosestNPoints((Integer)arguments.get(0), (Point3d)arguments.get(1), (Vector3d)arguments.get(2));
-			case Data3dPackage.POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D_VECTOR3D:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D_VECTOR3D:
 				return findClosestPointId((Point3d)arguments.get(0), (Vector3d)arguments.get(1));
-			case Data3dPackage.POINT_NORMAL_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D:
 				return findPointIdsWithinRadius((Double)arguments.get(0), (Point3d)arguments.get(1), (Vector3d)arguments.get(2));
-			case Data3dPackage.POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINT_IDS__INT_POINT3D_VECTOR3D:
+			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINT_IDS__INT_POINT3D_VECTOR3D:
 				return findClosestNPointIds((Integer)arguments.get(0), (Point3d)arguments.get(1), (Vector3d)arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);

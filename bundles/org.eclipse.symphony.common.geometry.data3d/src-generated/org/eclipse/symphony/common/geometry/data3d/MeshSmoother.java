@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother#getNumberOfIterations <em>Number Of Iterations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getMeshSmoother()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getMeshSmoother()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface MeshSmoother extends Processor<CartesianCoordinatesSet, Cartesi
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Iterations</em>' attribute.
 	 * @see #setNumberOfIterations(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getMeshSmoother_NumberOfIterations()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getMeshSmoother_NumberOfIterations()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */

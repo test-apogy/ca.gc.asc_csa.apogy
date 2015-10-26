@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler;
 import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
@@ -71,7 +71,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_resolutionX_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VoxelBased3DPointCloudResampler_resolutionX_feature", "_UI_VoxelBased3DPointCloudResampler_type"),
-				 Data3dPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X,
+				 Symphony__CommonGeometryData3DPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X,
 				 true,
 				 false,
 				 false,
@@ -93,7 +93,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_resolutionY_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VoxelBased3DPointCloudResampler_resolutionY_feature", "_UI_VoxelBased3DPointCloudResampler_type"),
-				 Data3dPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y,
+				 Symphony__CommonGeometryData3DPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y,
 				 true,
 				 false,
 				 false,
@@ -115,7 +115,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_resolutionZ_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VoxelBased3DPointCloudResampler_resolutionZ_feature", "_UI_VoxelBased3DPointCloudResampler_type"),
-				 Data3dPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z,
+				 Symphony__CommonGeometryData3DPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z,
 				 true,
 				 false,
 				 false,
@@ -137,7 +137,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_minimumNumberOfPointPerVoxel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VoxelBased3DPointCloudResampler_minimumNumberOfPointPerVoxel_feature", "_UI_VoxelBased3DPointCloudResampler_type"),
-				 Data3dPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL,
+				 Symphony__CommonGeometryData3DPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL,
 				 true,
 				 false,
 				 false,
@@ -159,7 +159,7 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VoxelBased3DPointCloudResampler_tileResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VoxelBased3DPointCloudResampler_tileResolution_feature", "_UI_VoxelBased3DPointCloudResampler_type"),
-				 Data3dPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION,
+				 Symphony__CommonGeometryData3DPackage.Literals.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -206,11 +206,11 @@ public class VoxelBased3DPointCloudResamplerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VoxelBased3DPointCloudResampler.class)) {
-			case Data3dPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
-			case Data3dPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
-			case Data3dPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
-			case Data3dPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
-			case Data3dPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
+			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_X:
+			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Y:
+			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__RESOLUTION_Z:
+			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL:
+			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToMoonHorizontalCoordinatesStringConverter;
 
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 public class EarthSkyMoonComposite extends Composite 
 {
@@ -107,7 +107,7 @@ public class EarthSkyMoonComposite extends Composite
 			{			
 				// Moon azimuth.
 				IObservableValue lblmoonAzimuthValueLabel = PojoProperties.value("text").observe(moonAzimuthValueLabel);		
-				IObservableValue moonAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				IObservableValue moonAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy moonAzimuthValueStrategy = new UpdateValueStrategy();
 				moonAzimuthValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.COORDS.AZIMUTH));
@@ -116,7 +116,7 @@ public class EarthSkyMoonComposite extends Composite
 	
 				// Moon altitude.
 				IObservableValue lblmoonElevationValueLabel = PojoProperties.value("text").observe(moonElevationValueLabel);		
-				IObservableValue moonElevationObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				IObservableValue moonElevationObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy moonElevationValueStrategy = new UpdateValueStrategy();
 				moonElevationValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.COORDS.ALTITUDE));

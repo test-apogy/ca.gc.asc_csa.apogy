@@ -23,7 +23,7 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -131,7 +131,7 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 				@Override
 				public void notifyChanged(Notification msg)
 				{
-					if(msg.getFeatureID(PositionSensor.class) == TopologyPackage.POSITION_NODE__POSITION)
+					if(msg.getFeatureID(PositionSensor.class) == Symphony__CommonTopologyPackage.POSITION_NODE__POSITION)
 					{
 						CartesianPositionCoordinates newPoint = getPositionSensor().getPositionCoordinates();
 						if(isSampleOnDistanceDeltaRequired(newPoint))

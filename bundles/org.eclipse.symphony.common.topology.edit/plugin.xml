@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.topology.provider.TopologyItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

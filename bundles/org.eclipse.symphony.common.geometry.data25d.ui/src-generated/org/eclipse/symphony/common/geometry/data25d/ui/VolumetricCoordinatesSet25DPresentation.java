@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation#getPointsCloud <em>Points Cloud</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage#getVolumetricCoordinatesSet25DPresentation()
+ * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage#getVolumetricCoordinatesSet25DPresentation()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface VolumetricCoordinatesSet25DPresentation extends NodePresentatio
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points Cloud</em>' reference.
 	 * @see #setPointsCloud(VolumetricCoordinatesSet25D)
-	 * @see org.eclipse.symphony.common.geometry.data25d.ui.Data25DUIPackage#getVolumetricCoordinatesSet25DPresentation_PointsCloud()
+	 * @see org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage#getVolumetricCoordinatesSet25DPresentation_PointsCloud()
 	 * @model
 	 * @generated
 	 */

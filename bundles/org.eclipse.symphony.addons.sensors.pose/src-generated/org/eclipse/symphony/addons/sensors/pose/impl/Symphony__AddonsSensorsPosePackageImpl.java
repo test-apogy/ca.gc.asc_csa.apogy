@@ -31,11 +31,11 @@ import org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor;
 import org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor;
 
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -183,7 +183,7 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 
 		// Initialize simple dependencies
 		Symphony__AddonsSensorsPackage.eINSTANCE.eClass();
-		Data3dPackage.eINSTANCE.eClass();
+		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsPosePackage.createPackageContents();
@@ -677,10 +677,10 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 
 		// Obtain other dependent packages
 		Symphony__AddonsSensorsPackage theSymphony__AddonsSensorsPackage = (Symphony__AddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -688,14 +688,14 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 
 		// Add supertypes to classes
 		selfPlaceSensorEClass.getESuperTypes().add(theSymphony__AddonsSensorsPackage.getSensor());
-		positionSensorEClass.getESuperTypes().add(theTopologyPackage.getPositionNode());
+		positionSensorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getPositionNode());
 		positionSensorEClass.getESuperTypes().add(this.getSelfPlaceSensor());
 		simulatedPositionSensorEClass.getESuperTypes().add(this.getPositionSensor());
-		orientationSensorEClass.getESuperTypes().add(theTopologyPackage.getRotationNode());
+		orientationSensorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getRotationNode());
 		orientationSensorEClass.getESuperTypes().add(this.getSelfPlaceSensor());
 		inertialMeasurementUnitEClass.getESuperTypes().add(this.getOrientationSensor());
 		simulatedOrientationSensorEClass.getESuperTypes().add(this.getOrientationSensor());
-		poseSensorEClass.getESuperTypes().add(theTopologyPackage.getTransformNode());
+		poseSensorEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getTransformNode());
 		poseSensorEClass.getESuperTypes().add(this.getPositionSensor());
 		poseSensorEClass.getESuperTypes().add(this.getOrientationSensor());
 		simulatedPoseSensorEClass.getESuperTypes().add(this.getPoseSensor());
@@ -705,10 +705,10 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		initEClass(selfPlaceSensorEClass, SelfPlaceSensor.class, "SelfPlaceSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(positionSensorEClass, PositionSensor.class, "PositionSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPositionSensor_PositionCoordinates(), theData3dPackage.getCartesianPositionCoordinates(), null, "positionCoordinates", null, 0, 1, PositionSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getPositionSensor_PositionCoordinates(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "positionCoordinates", null, 0, 1, PositionSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getPositionSensor__ResetPosition__CartesianPositionCoordinates(), null, "resetPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "newPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "newPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
 		initEClass(simulatedPositionSensorEClass, SimulatedPositionSensor.class, "SimulatedPositionSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -718,18 +718,18 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		initEAttribute(getSimulatedPositionSensor_UpdatePeriod(), theEcorePackage.getEDouble(), "updatePeriod", "1.0", 0, 1, SimulatedPositionSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orientationSensorEClass, OrientationSensor.class, "OrientationSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrientationSensor_OrientationCoordinates(), theData3dPackage.getCartesianOrientationCoordinates(), null, "orientationCoordinates", null, 0, 1, OrientationSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getOrientationSensor_OrientationCoordinates(), theSymphony__CommonGeometryData3DPackage.getCartesianOrientationCoordinates(), null, "orientationCoordinates", null, 0, 1, OrientationSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getOrientationSensor__ResetOrientation__CartesianOrientationCoordinates(), null, "resetOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianOrientationCoordinates(), "newOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianOrientationCoordinates(), "newOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getOrientationSensor__ExtractOrientationFromMatrix__Matrix3x3(), theData3dPackage.getCartesianOrientationCoordinates(), "extractOrientationFromMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getMatrix3x3(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getOrientationSensor__ExtractOrientationFromMatrix__Matrix3x3(), theSymphony__CommonGeometryData3DPackage.getCartesianOrientationCoordinates(), "extractOrientationFromMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getMatrix3x3(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(inertialMeasurementUnitEClass, InertialMeasurementUnit.class, "InertialMeasurementUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInertialMeasurementUnit_AngularVelocity(), theMathPackage.getTuple3d(), null, "angularVelocity", null, 0, 1, InertialMeasurementUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInertialMeasurementUnit_LinearAcceleration(), theMathPackage.getTuple3d(), null, "linearAcceleration", null, 0, 1, InertialMeasurementUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInertialMeasurementUnit_AngularVelocity(), theSymphony__CommonMathPackage.getTuple3d(), null, "angularVelocity", null, 0, 1, InertialMeasurementUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInertialMeasurementUnit_LinearAcceleration(), theSymphony__CommonMathPackage.getTuple3d(), null, "linearAcceleration", null, 0, 1, InertialMeasurementUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simulatedOrientationSensorEClass, SimulatedOrientationSensor.class, "SimulatedOrientationSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSimulatedOrientationSensor_XAngularVelocity(), theEcorePackage.getEDouble(), "xAngularVelocity", null, 0, 1, SimulatedOrientationSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -738,11 +738,11 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		initEAttribute(getSimulatedOrientationSensor_UpdatePeriod(), theEcorePackage.getEDouble(), "updatePeriod", "1.0", 0, 1, SimulatedOrientationSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(poseSensorEClass, PoseSensor.class, "PoseSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPoseSensor_Pose(), theData3dPackage.getPose(), null, "pose", null, 0, 1, PoseSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getPoseSensor_Pose(), theSymphony__CommonGeometryData3DPackage.getPose(), null, "pose", null, 0, 1, PoseSensor.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getPoseSensor_DataLogger(), this.getPoseDataLogger(), null, "dataLogger", null, 0, 1, PoseSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getPoseSensor__ResetPose__Pose(), null, "resetPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getPose(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getPose(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
 		initEClass(simulatedPoseSensorEClass, SimulatedPoseSensor.class, "SimulatedPoseSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -758,7 +758,7 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 		initEAttribute(getPoseDataLogger_OutputFile(), theEcorePackage.getEString(), "outputFile", null, 0, 1, PoseDataLogger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getPoseDataLogger__LogPose__Pose(), null, "logPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getPose(), "pose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getPose(), "pose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getIOException());
 
 		initEClass(csvDataLoggerEClass, CSVDataLogger.class, "CSVDataLogger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

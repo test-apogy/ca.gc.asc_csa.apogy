@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 import org.eclipse.symphony.common.images.URLEImage;
 
 /**
@@ -79,7 +79,7 @@ public class URLEImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_width_feature", "_UI_AbstractEImage_type"),
-				 ImagesCorePackage.Literals.ABSTRACT_EIMAGE__WIDTH,
+				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class URLEImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_height_feature", "_UI_AbstractEImage_type"),
-				 ImagesCorePackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
+				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class URLEImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLEImage_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLEImage_url_feature", "_UI_URLEImage_type"),
-				 ImagesCorePackage.Literals.URLE_IMAGE__URL,
+				 Symphony__CommonImagesPackage.Literals.URLE_IMAGE__URL,
 				 true,
 				 false,
 				 false,
@@ -171,9 +171,9 @@ public class URLEImageItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLEImage.class)) {
-			case ImagesCorePackage.URLE_IMAGE__WIDTH:
-			case ImagesCorePackage.URLE_IMAGE__HEIGHT:
-			case ImagesCorePackage.URLE_IMAGE__URL:
+			case Symphony__CommonImagesPackage.URLE_IMAGE__WIDTH:
+			case Symphony__CommonImagesPackage.URLE_IMAGE__HEIGHT:
+			case Symphony__CommonImagesPackage.URLE_IMAGE__URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

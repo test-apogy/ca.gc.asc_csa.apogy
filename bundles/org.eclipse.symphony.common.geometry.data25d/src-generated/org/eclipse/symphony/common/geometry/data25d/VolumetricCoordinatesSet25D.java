@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getVolumetricCoordinatesSet25D()
+ * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getVolumetricCoordinatesSet25D()
  * @model
  * @generated
  */

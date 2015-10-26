@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.symphony.common.topology.CADNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.CADNode} object.
@@ -67,7 +67,7 @@ public class CADNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CADNode_nodeName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CADNode_nodeName_feature", "_UI_CADNode_type"),
-				 TopologyPackage.Literals.CAD_NODE__NODE_NAME,
+				 Symphony__CommonTopologyPackage.Literals.CAD_NODE__NODE_NAME,
 				 true,
 				 false,
 				 false,
@@ -122,7 +122,7 @@ public class CADNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CADNode.class)) {
-			case TopologyPackage.CAD_NODE__NODE_NAME:
+			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

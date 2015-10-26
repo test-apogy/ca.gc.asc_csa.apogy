@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.topology.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.Leaf;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -31,7 +31,7 @@ public class LeafImpl extends NodeImpl implements Leaf {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.LEAF;
+		return Symphony__CommonTopologyPackage.Literals.LEAF;
 	}
 
 } // LeafImpl

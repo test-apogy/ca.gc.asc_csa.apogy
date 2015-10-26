@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator;
 
 import edu.wlu.cs.levy.CG.KDTree;
@@ -51,7 +51,7 @@ public class VecmathKdTreePointLocatorImpl extends VecmathPointLocatorImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.VECMATH_KD_TREE_POINT_LOCATOR;
+		return Symphony__CommonGeometryData3DPackage.Literals.VECMATH_KD_TREE_POINT_LOCATOR;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class VecmathKdTreePointLocatorImpl extends VecmathPointLocatorImpl imple
 		isDirty = true;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Data3dPackage.VECMATH_KD_TREE_POINT_LOCATOR__POINTS,
+					Symphony__CommonGeometryData3DPackage.VECMATH_KD_TREE_POINT_LOCATOR__POINTS,
 					oldPoints, points));
 	}
 

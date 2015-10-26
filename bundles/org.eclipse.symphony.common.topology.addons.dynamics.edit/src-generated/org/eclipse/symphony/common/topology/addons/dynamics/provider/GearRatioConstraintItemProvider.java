@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint} object.
@@ -66,7 +66,7 @@ public class GearRatioConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GearRatioConstraint_force_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GearRatioConstraint_force_feature", "_UI_GearRatioConstraint_type"),
-				 TopologyDynamicsPackage.Literals.GEAR_RATIO_CONSTRAINT__FORCE,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.GEAR_RATIO_CONSTRAINT__FORCE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class GearRatioConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GearRatioConstraint.class)) {
-			case TopologyDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
+			case Symphony__CommonTopologyDynamicsPackage.GEAR_RATIO_CONSTRAINT__FORCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

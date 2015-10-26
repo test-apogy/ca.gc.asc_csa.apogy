@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
@@ -69,7 +69,7 @@ public class PhysicalBodyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PhysicalBody_constraintAttachmentPoints_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalBody_constraintAttachmentPoints_feature", "_UI_PhysicalBody_type"),
-				 TopologyDynamicsPackage.Literals.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS,
 				 true,
 				 false,
 				 true,
@@ -90,11 +90,11 @@ public class PhysicalBodyItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__PHYSICAL_PROPERTIES);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__SIMULATION_PROPERTIES);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__POINTS_OF_INTEREST);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__COLLISION_GEOMETRY);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__PHYSICAL_PROPERTIES);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__SIMULATION_PROPERTIES);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__POINTS_OF_INTEREST);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__COLLISION_GEOMETRY);
 		}
 		return childrenFeatures;
 	}
@@ -149,11 +149,11 @@ public class PhysicalBodyItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PhysicalBody.class)) {
-			case TopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
-			case TopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
-			case TopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
-			case TopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
-			case TopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
+			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
+			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -173,43 +173,43 @@ public class PhysicalBodyItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 TopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 TopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
+				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__PHYSICAL_PROPERTIES,
-				 TopologyDynamicsFactory.eINSTANCE.createPhysicalProperties()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__PHYSICAL_PROPERTIES,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPhysicalProperties()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE,
-				 TopologyDynamicsFactory.eINSTANCE.createKinematicState()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createKinematicState()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__POINTS_OF_INTEREST,
-				 TopologyDynamicsFactory.eINSTANCE.createPointOfInterest()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__POINTS_OF_INTEREST,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPointOfInterest()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.PHYSICAL_BODY__COLLISION_GEOMETRY,
-				 TopologyDynamicsFactory.eINSTANCE.createCollisionGeometry()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY__COLLISION_GEOMETRY,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createCollisionGeometry()));
 	}
 
 	/**
@@ -224,8 +224,8 @@ public class PhysicalBodyItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
+			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		if (qualify) {
 			return getString

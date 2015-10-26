@@ -29,7 +29,7 @@ import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathF
 import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
 import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -688,7 +688,7 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
 		Symphony__AddonsSensorsPosePackage theSymphony__AddonsSensorsPosePackage = (Symphony__AddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPosePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter pathFollowerEClass_PlatformType = addETypeParameter(pathFollowerEClass, "PlatformType");
@@ -771,9 +771,9 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		initEClass(skidSteeredWayPointPathFollowerEClass, SkidSteeredWayPointPathFollower.class, "SkidSteeredWayPointPathFollower", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(astolfiGuidanceControllerEClass, AstolfiGuidanceController.class, "AstolfiGuidanceController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAstolfiGuidanceController_CurrentWayPoint(), theData3dPackage.getCartesianPositionCoordinates(), null, "currentWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAstolfiGuidanceController_PreviousWayPoint(), theData3dPackage.getCartesianPositionCoordinates(), null, "previousWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAstolfiGuidanceController_CurrentPoseInGuidanceReferenceFrame(), theData3dPackage.getPose(), null, "currentPoseInGuidanceReferenceFrame", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAstolfiGuidanceController_CurrentWayPoint(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAstolfiGuidanceController_PreviousWayPoint(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "previousWayPoint", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAstolfiGuidanceController_CurrentPoseInGuidanceReferenceFrame(), theSymphony__CommonGeometryData3DPackage.getPose(), null, "currentPoseInGuidanceReferenceFrame", null, 0, 1, AstolfiGuidanceController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAstolfiGuidanceController_Rho(), theEcorePackage.getEDouble(), "rho", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAstolfiGuidanceController_Phi(), theEcorePackage.getEDouble(), "phi", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAstolfiGuidanceController_Alpha(), theEcorePackage.getEDouble(), "alpha", null, 0, 1, AstolfiGuidanceController.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);

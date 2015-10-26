@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent#getZDimension <em>ZDimension</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XMin</em>' attribute.
 	 * @see #setXMin(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_XMin()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XMin()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XMax</em>' attribute.
 	 * @see #setXMax(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_XMax()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XMax()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -92,7 +92,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YMin</em>' attribute.
 	 * @see #setYMin(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_YMin()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YMin()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -118,7 +118,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YMax</em>' attribute.
 	 * @see #setYMax(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_YMax()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YMax()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -144,7 +144,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZMin</em>' attribute.
 	 * @see #setZMin(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_ZMin()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZMin()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -170,7 +170,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZMax</em>' attribute.
 	 * @see #setZMax(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_ZMax()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZMax()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -195,7 +195,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XDimension</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_XDimension()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -210,7 +210,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YDimension</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_YDimension()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -225,7 +225,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZDimension</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetExtent_ZDimension()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

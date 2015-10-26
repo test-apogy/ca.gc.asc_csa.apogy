@@ -29,8 +29,8 @@ import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFacto
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.EdgeFactory;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
@@ -616,10 +616,10 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
 		Symphony__AddonsMobilityPathplannersPackage theSymphony__AddonsMobilityPathplannersPackage = (Symphony__AddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPathplannersPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ProcessorsPackage theProcessorsPackage = (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
+		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter costBasedMeshWayPointPathPlannerEClass_PolygonType = addETypeParameter(costBasedMeshWayPointPathPlannerEClass, "PolygonType");
@@ -629,11 +629,11 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		addETypeParameter(edgeFactoryEClass, "E");
 
 		// Set bounds for type parameters
-		EGenericType g1 = createEGenericType(theData3dPackage.getCartesianPolygon());
+		EGenericType g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
 		costBasedMeshWayPointPathPlannerEClass_PolygonType.getEBounds().add(g1);
-		g1 = createEGenericType(theData3dPackage.getCartesianPolygon());
+		g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
 		simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass_PolygonType.getEBounds().add(g1);
-		g1 = createEGenericType(theData3dPackage.getCartesianPolygon());
+		g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
 		directedGraphBasedMeshWayPointPathPlannerEClass_PolygonType.getEBounds().add(g1);
 
 		// Add supertypes to classes
@@ -647,14 +647,14 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		g2 = createEGenericType(simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass_PolygonType);
 		g1.getETypeArguments().add(g2);
 		simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theProcessorsPackage.getVerboseProvider());
+		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getVerboseProvider());
 		simpleDirectedWeightedGraphBasedMeshWayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getCostBasedMeshWayPointPathPlanner());
 		g2 = createEGenericType(directedGraphBasedMeshWayPointPathPlannerEClass_PolygonType);
 		g1.getETypeArguments().add(g2);
 		directedGraphBasedMeshWayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getEdgeFactory());
-		g2 = createEGenericType(theData3dPackage.getCartesianPolygon());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getMobilityEdge());
 		g1.getETypeArguments().add(g2);
@@ -670,14 +670,14 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		initEClass(displacementCostFunctionEClass, DisplacementCostFunction.class, "DisplacementCostFunction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = initEOperation(getDisplacementCostFunction__GetCost__CartesianPolygon_CartesianPolygon(), theEcorePackage.getEDouble(), "getCost", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPolygon(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPolygon(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPolygon(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPolygon(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(meshDisplacementCostFunctionEClass, MeshDisplacementCostFunction.class, "MeshDisplacementCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		g1 = createEGenericType(this.getCostBasedMeshWayPointPathPlanner());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
-		EGenericType g3 = createEGenericType(theData3dPackage.getCartesianPolygon());
+		EGenericType g3 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
 		g2.setEUpperBound(g3);
 		initEReference(getMeshDisplacementCostFunction_Planner(), g1, null, "planner", null, 0, 1, MeshDisplacementCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -695,8 +695,8 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 
 		initEClass(mobilityEdgeEClass, MobilityEdge.class, "MobilityEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMobilityEdge_CostFunctions(), this.getDisplacementCostFunction(), null, "costFunctions", null, 0, -1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobilityEdge_From(), theData3dPackage.getCartesianPolygon(), null, "from", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMobilityEdge_To(), theData3dPackage.getCartesianPolygon(), null, "to", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobilityEdge_From(), theSymphony__CommonGeometryData3DPackage.getCartesianPolygon(), null, "from", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMobilityEdge_To(), theSymphony__CommonGeometryData3DPackage.getCartesianPolygon(), null, "to", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMobilityEdge_Weight(), theEcorePackage.getEDouble(), "weight", null, 0, 1, MobilityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(mobilityEdgeFactoryEClass, MobilityEdgeFactory.class, "MobilityEdgeFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -705,7 +705,7 @@ public class Symphony__AddonsMobilityPathplannersGraphPackageImpl extends EPacka
 		initEClass(distanceAndSlopesCostFunctionEClass, DistanceAndSlopesCostFunction.class, "DistanceAndSlopesCostFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDistanceAndSlopesCostFunction_UpSlopeCostFactor(), theEcorePackage.getEDouble(), "upSlopeCostFactor", "1", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDistanceAndSlopesCostFunction_DownSlopeCostFactor(), theEcorePackage.getEDouble(), "downSlopeCostFactor", "1", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDistanceAndSlopesCostFunction_GravityAxis(), theData3dPackage.getCartesianAxis(), "gravityAxis", "Z", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDistanceAndSlopesCostFunction_GravityAxis(), theSymphony__CommonGeometryData3DPackage.getCartesianAxis(), "gravityAxis", "Z", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDistanceAndSlopesCostFunction_MaximumUpSlope(), theEcorePackage.getEDouble(), "maximumUpSlope", "0.33", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDistanceAndSlopesCostFunction_MaximumDownSlope(), theEcorePackage.getEDouble(), "maximumDownSlope", "0.33", 0, 1, DistanceAndSlopesCostFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

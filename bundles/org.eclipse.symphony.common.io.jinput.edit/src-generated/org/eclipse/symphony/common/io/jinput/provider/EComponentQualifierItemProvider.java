@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.io.jinput.Activator;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
 import org.eclipse.symphony.common.io.jinput.EController;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EComponentQualifier} object.
@@ -82,7 +82,7 @@ public class EComponentQualifierItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponentQualifier_eComponentName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponentQualifier_eComponentName_feature", "_UI_EComponentQualifier_type"),
-				 JInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME,
+				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class EComponentQualifierItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EComponentQualifier_eControllerName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EComponentQualifier_eControllerName_feature", "_UI_EComponentQualifier_type"),
-				 JInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME,
+				 Symphony__CommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME,
 				 true,
 				 false,
 				 false,
@@ -202,8 +202,8 @@ public class EComponentQualifierItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EComponentQualifier.class)) {
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
-			case JInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -23,7 +23,7 @@ import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagin
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -342,7 +342,7 @@ public class ImagingUtilitiesImpl extends MinimalEObjectImpl.Container implement
 			}
 		}		
 				
-		EImage result = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage result = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		result.setImageContent(image);		
 		g2d.dispose(); 
 				

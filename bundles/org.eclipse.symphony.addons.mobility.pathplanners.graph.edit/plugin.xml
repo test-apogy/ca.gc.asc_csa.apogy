@@ -25,7 +25,7 @@
       <!-- @generated symphony_addons_mobility_pathplanners_graph -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.provider.Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.provider.Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

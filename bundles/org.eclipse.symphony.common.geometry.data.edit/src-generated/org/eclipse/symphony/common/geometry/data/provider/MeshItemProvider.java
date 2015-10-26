@@ -14,8 +14,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.DataFactory;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataFactory;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.Mesh;
 
 /**
@@ -67,7 +67,7 @@ public class MeshItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(DataPackage.Literals.MESH__POLYGONS);
+			childrenFeatures.add(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS);
 		}
 		return childrenFeatures;
 	}
@@ -128,7 +128,7 @@ public class MeshItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Mesh.class)) {
-			case DataPackage.MESH__POLYGONS:
+			case Symphony__CommonGeometryDataPackage.MESH__POLYGONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -149,8 +149,8 @@ public class MeshItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.MESH__POLYGONS,
-				 DataFactory.eINSTANCE.createPolygon()));
+				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
+				 Symphony__CommonGeometryDataFactory.eINSTANCE.createPolygon()));
 	}
 
 }

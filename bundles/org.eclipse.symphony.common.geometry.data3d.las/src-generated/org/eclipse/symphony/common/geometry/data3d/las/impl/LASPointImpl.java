@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
-import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
 import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
 
 /**
@@ -379,7 +379,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return LasPackage.Literals.LAS_POINT;
+		return Symphony__CommonGeometryData3DLASPackage.Literals.LAS_POINT;
 	}
 
 	/**
@@ -400,7 +400,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		long oldX = x;
 		x = newX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__X, oldX, x));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__X, oldX, x));
 	}
 
 	/**
@@ -421,7 +421,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		long oldY = y;
 		y = newY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__Y, oldY, y));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Y, oldY, y));
 	}
 
 	/**
@@ -442,7 +442,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		long oldZ = z;
 		z = newZ;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__Z, oldZ, z));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Z, oldZ, z));
 	}
 
 	/**
@@ -463,7 +463,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		int oldIntensity = intensity;
 		intensity = newIntensity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__INTENSITY, oldIntensity, intensity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__INTENSITY, oldIntensity, intensity));
 	}
 
 	/**
@@ -484,7 +484,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		byte oldReturnNumber = returnNumber;
 		returnNumber = newReturnNumber;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__RETURN_NUMBER, oldReturnNumber, returnNumber));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RETURN_NUMBER, oldReturnNumber, returnNumber));
 	}
 
 	/**
@@ -505,7 +505,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		byte oldNumberOfReturns = numberOfReturns;
 		numberOfReturns = newNumberOfReturns;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__NUMBER_OF_RETURNS, oldNumberOfReturns, numberOfReturns));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__NUMBER_OF_RETURNS, oldNumberOfReturns, numberOfReturns));
 	}
 
 	/**
@@ -526,7 +526,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		ScanDirection oldScanDirection = scanDirection;
 		scanDirection = newScanDirection == null ? SCAN_DIRECTION_EDEFAULT : newScanDirection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__SCAN_DIRECTION, oldScanDirection, scanDirection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_DIRECTION, oldScanDirection, scanDirection));
 	}
 
 	/**
@@ -547,7 +547,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		EdgeOfFlightLine oldEdgeOfFlightLine = edgeOfFlightLine;
 		edgeOfFlightLine = newEdgeOfFlightLine == null ? EDGE_OF_FLIGHT_LINE_EDEFAULT : newEdgeOfFlightLine;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE, oldEdgeOfFlightLine, edgeOfFlightLine));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE, oldEdgeOfFlightLine, edgeOfFlightLine));
 	}
 
 	/**
@@ -568,7 +568,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		short oldClassification = classification;
 		classification = newClassification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__CLASSIFICATION, oldClassification, classification));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__CLASSIFICATION, oldClassification, classification));
 	}
 
 	/**
@@ -589,7 +589,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		byte oldScanAngleRank = scanAngleRank;
 		scanAngleRank = newScanAngleRank;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__SCAN_ANGLE_RANK, oldScanAngleRank, scanAngleRank));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_ANGLE_RANK, oldScanAngleRank, scanAngleRank));
 	}
 
 	/**
@@ -610,7 +610,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		short oldUserData = userData;
 		userData = newUserData;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__USER_DATA, oldUserData, userData));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__USER_DATA, oldUserData, userData));
 	}
 
 	/**
@@ -631,7 +631,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		int oldPointSourceId = pointSourceId;
 		pointSourceId = newPointSourceId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__POINT_SOURCE_ID, oldPointSourceId, pointSourceId));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__POINT_SOURCE_ID, oldPointSourceId, pointSourceId));
 	}
 
 	/**
@@ -652,7 +652,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		double oldGpsTime = gpsTime;
 		gpsTime = newGpsTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__GPS_TIME, oldGpsTime, gpsTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GPS_TIME, oldGpsTime, gpsTime));
 	}
 
 	/**
@@ -673,7 +673,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		int oldRed = red;
 		red = newRed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__RED, oldRed, red));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RED, oldRed, red));
 	}
 
 	/**
@@ -694,7 +694,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		int oldGreen = green;
 		green = newGreen;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__GREEN, oldGreen, green));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GREEN, oldGreen, green));
 	}
 
 	/**
@@ -715,7 +715,7 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 		int oldBlue = blue;
 		blue = newBlue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_POINT__BLUE, oldBlue, blue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_POINT__BLUE, oldBlue, blue));
 	}
 
 	/**
@@ -726,37 +726,37 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LasPackage.LAS_POINT__X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__X:
 				return getX();
-			case LasPackage.LAS_POINT__Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Y:
 				return getY();
-			case LasPackage.LAS_POINT__Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Z:
 				return getZ();
-			case LasPackage.LAS_POINT__INTENSITY:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__INTENSITY:
 				return getIntensity();
-			case LasPackage.LAS_POINT__RETURN_NUMBER:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RETURN_NUMBER:
 				return getReturnNumber();
-			case LasPackage.LAS_POINT__NUMBER_OF_RETURNS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__NUMBER_OF_RETURNS:
 				return getNumberOfReturns();
-			case LasPackage.LAS_POINT__SCAN_DIRECTION:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_DIRECTION:
 				return getScanDirection();
-			case LasPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
 				return getEdgeOfFlightLine();
-			case LasPackage.LAS_POINT__CLASSIFICATION:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__CLASSIFICATION:
 				return getClassification();
-			case LasPackage.LAS_POINT__SCAN_ANGLE_RANK:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_ANGLE_RANK:
 				return getScanAngleRank();
-			case LasPackage.LAS_POINT__USER_DATA:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__USER_DATA:
 				return getUserData();
-			case LasPackage.LAS_POINT__POINT_SOURCE_ID:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__POINT_SOURCE_ID:
 				return getPointSourceId();
-			case LasPackage.LAS_POINT__GPS_TIME:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GPS_TIME:
 				return getGpsTime();
-			case LasPackage.LAS_POINT__RED:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RED:
 				return getRed();
-			case LasPackage.LAS_POINT__GREEN:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GREEN:
 				return getGreen();
-			case LasPackage.LAS_POINT__BLUE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__BLUE:
 				return getBlue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -770,52 +770,52 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LasPackage.LAS_POINT__X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__X:
 				setX((Long)newValue);
 				return;
-			case LasPackage.LAS_POINT__Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Y:
 				setY((Long)newValue);
 				return;
-			case LasPackage.LAS_POINT__Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Z:
 				setZ((Long)newValue);
 				return;
-			case LasPackage.LAS_POINT__INTENSITY:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__INTENSITY:
 				setIntensity((Integer)newValue);
 				return;
-			case LasPackage.LAS_POINT__RETURN_NUMBER:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RETURN_NUMBER:
 				setReturnNumber((Byte)newValue);
 				return;
-			case LasPackage.LAS_POINT__NUMBER_OF_RETURNS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__NUMBER_OF_RETURNS:
 				setNumberOfReturns((Byte)newValue);
 				return;
-			case LasPackage.LAS_POINT__SCAN_DIRECTION:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_DIRECTION:
 				setScanDirection((ScanDirection)newValue);
 				return;
-			case LasPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
 				setEdgeOfFlightLine((EdgeOfFlightLine)newValue);
 				return;
-			case LasPackage.LAS_POINT__CLASSIFICATION:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__CLASSIFICATION:
 				setClassification((Short)newValue);
 				return;
-			case LasPackage.LAS_POINT__SCAN_ANGLE_RANK:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_ANGLE_RANK:
 				setScanAngleRank((Byte)newValue);
 				return;
-			case LasPackage.LAS_POINT__USER_DATA:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__USER_DATA:
 				setUserData((Short)newValue);
 				return;
-			case LasPackage.LAS_POINT__POINT_SOURCE_ID:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__POINT_SOURCE_ID:
 				setPointSourceId((Integer)newValue);
 				return;
-			case LasPackage.LAS_POINT__GPS_TIME:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GPS_TIME:
 				setGpsTime((Double)newValue);
 				return;
-			case LasPackage.LAS_POINT__RED:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RED:
 				setRed((Integer)newValue);
 				return;
-			case LasPackage.LAS_POINT__GREEN:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GREEN:
 				setGreen((Integer)newValue);
 				return;
-			case LasPackage.LAS_POINT__BLUE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__BLUE:
 				setBlue((Integer)newValue);
 				return;
 		}
@@ -830,52 +830,52 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LasPackage.LAS_POINT__X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__X:
 				setX(X_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Y:
 				setY(Y_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Z:
 				setZ(Z_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__INTENSITY:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__INTENSITY:
 				setIntensity(INTENSITY_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__RETURN_NUMBER:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RETURN_NUMBER:
 				setReturnNumber(RETURN_NUMBER_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__NUMBER_OF_RETURNS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__NUMBER_OF_RETURNS:
 				setNumberOfReturns(NUMBER_OF_RETURNS_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__SCAN_DIRECTION:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_DIRECTION:
 				setScanDirection(SCAN_DIRECTION_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
 				setEdgeOfFlightLine(EDGE_OF_FLIGHT_LINE_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__CLASSIFICATION:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__CLASSIFICATION:
 				setClassification(CLASSIFICATION_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__SCAN_ANGLE_RANK:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_ANGLE_RANK:
 				setScanAngleRank(SCAN_ANGLE_RANK_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__USER_DATA:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__USER_DATA:
 				setUserData(USER_DATA_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__POINT_SOURCE_ID:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__POINT_SOURCE_ID:
 				setPointSourceId(POINT_SOURCE_ID_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__GPS_TIME:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GPS_TIME:
 				setGpsTime(GPS_TIME_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__RED:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RED:
 				setRed(RED_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__GREEN:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GREEN:
 				setGreen(GREEN_EDEFAULT);
 				return;
-			case LasPackage.LAS_POINT__BLUE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__BLUE:
 				setBlue(BLUE_EDEFAULT);
 				return;
 		}
@@ -890,37 +890,37 @@ public class LASPointImpl extends MinimalEObjectImpl.Container implements LASPoi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LasPackage.LAS_POINT__X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__X:
 				return x != X_EDEFAULT;
-			case LasPackage.LAS_POINT__Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Y:
 				return y != Y_EDEFAULT;
-			case LasPackage.LAS_POINT__Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__Z:
 				return z != Z_EDEFAULT;
-			case LasPackage.LAS_POINT__INTENSITY:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__INTENSITY:
 				return intensity != INTENSITY_EDEFAULT;
-			case LasPackage.LAS_POINT__RETURN_NUMBER:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RETURN_NUMBER:
 				return returnNumber != RETURN_NUMBER_EDEFAULT;
-			case LasPackage.LAS_POINT__NUMBER_OF_RETURNS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__NUMBER_OF_RETURNS:
 				return numberOfReturns != NUMBER_OF_RETURNS_EDEFAULT;
-			case LasPackage.LAS_POINT__SCAN_DIRECTION:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_DIRECTION:
 				return scanDirection != SCAN_DIRECTION_EDEFAULT;
-			case LasPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__EDGE_OF_FLIGHT_LINE:
 				return edgeOfFlightLine != EDGE_OF_FLIGHT_LINE_EDEFAULT;
-			case LasPackage.LAS_POINT__CLASSIFICATION:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__CLASSIFICATION:
 				return classification != CLASSIFICATION_EDEFAULT;
-			case LasPackage.LAS_POINT__SCAN_ANGLE_RANK:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__SCAN_ANGLE_RANK:
 				return scanAngleRank != SCAN_ANGLE_RANK_EDEFAULT;
-			case LasPackage.LAS_POINT__USER_DATA:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__USER_DATA:
 				return userData != USER_DATA_EDEFAULT;
-			case LasPackage.LAS_POINT__POINT_SOURCE_ID:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__POINT_SOURCE_ID:
 				return pointSourceId != POINT_SOURCE_ID_EDEFAULT;
-			case LasPackage.LAS_POINT__GPS_TIME:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GPS_TIME:
 				return gpsTime != GPS_TIME_EDEFAULT;
-			case LasPackage.LAS_POINT__RED:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__RED:
 				return red != RED_EDEFAULT;
-			case LasPackage.LAS_POINT__GREEN:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__GREEN:
 				return green != GREEN_EDEFAULT;
-			case LasPackage.LAS_POINT__BLUE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT__BLUE:
 				return blue != BLUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

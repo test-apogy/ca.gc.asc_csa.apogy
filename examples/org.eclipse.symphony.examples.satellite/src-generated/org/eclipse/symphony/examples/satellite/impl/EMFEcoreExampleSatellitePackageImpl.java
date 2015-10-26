@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
@@ -907,12 +907,12 @@ public class EMFEcoreExampleSatellitePackageImpl extends EPackageImpl implements
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		SymphonyOrbitEnvironmentPackage theSymphonyOrbitEnvironmentPackage = (SymphonyOrbitEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyOrbitEnvironmentPackage.eNS_URI);
 		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
 		Symphony__AddonsSensorsImagingPackage theSymphony__AddonsSensorsImagingPackage = (Symphony__AddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingPackage.eNS_URI);
-		ImagesCorePackage theImagesCorePackage = (ImagesCorePackage)EPackage.Registry.INSTANCE.getEPackage(ImagesCorePackage.eNS_URI);
+		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
 		SymphonyEarthOrbitEnvironmentPackage theSymphonyEarthOrbitEnvironmentPackage = (SymphonyEarthOrbitEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEarthOrbitEnvironmentPackage.eNS_URI);
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
 
@@ -923,14 +923,14 @@ public class EMFEcoreExampleSatellitePackageImpl extends EPackageImpl implements
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		satelliteEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
+		satelliteEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		satelliteSimulatedEClass.getESuperTypes().add(this.getSatellite());
 		satelliteStubEClass.getESuperTypes().add(this.getSatellite());
 		satelliteCommandRollEClass.getESuperTypes().add(this.getSatelliteCommand());
 		satelliteCommandAcquireImageEClass.getESuperTypes().add(this.getSatelliteCommand());
 		satelliteImagerEClass.getESuperTypes().add(theSymphony__AddonsSensorsImagingPackage.getAbstractCamera());
 		satelliteImagerEClass.getESuperTypes().add(theSymphony__AddonsSensorsImagingPackage.getZoomable());
-		orbitalImageEClass.getESuperTypes().add(theImagesCorePackage.getAbstractEImage());
+		orbitalImageEClass.getESuperTypes().add(theSymphony__CommonImagesPackage.getAbstractEImage());
 		satelliteConstellationTypeApiAdapterEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getTypeApiAdapter());
 		satelliteConstellationInitializationDataEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractInitializationData());
 		satelliteInitializationDataEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractInitializationData());

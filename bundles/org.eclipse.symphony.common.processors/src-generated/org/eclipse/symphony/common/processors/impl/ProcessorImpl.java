@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -84,7 +84,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ProcessorsPackage.Literals.PROCESSOR;
+		return Symphony__CommonProcessorsPackage.Literals.PROCESSOR;
 	}
 
 	/**
@@ -108,7 +108,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 		IProgressMonitor oldProgressMonitor = progressMonitor;
 		progressMonitor = newProgressMonitor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProcessorsPackage.PROCESSOR__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 		I oldInput = input;
 		input = newInput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProcessorsPackage.PROCESSOR__INPUT, oldInput, input));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonProcessorsPackage.PROCESSOR__INPUT, oldInput, input));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 		O oldOutput = output;
 		output = newOutput;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProcessorsPackage.PROCESSOR__OUTPUT, oldOutput, output));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT, oldOutput, output));
 	}
 
 	/**
@@ -166,11 +166,11 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
 				return getProgressMonitor();
-			case ProcessorsPackage.PROCESSOR__INPUT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
 				return getInput();
-			case ProcessorsPackage.PROCESSOR__OUTPUT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
 				return getOutput();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -184,13 +184,13 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
 				setProgressMonitor((IProgressMonitor)newValue);
 				return;
-			case ProcessorsPackage.PROCESSOR__INPUT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
 				setInput((I)newValue);
 				return;
-			case ProcessorsPackage.PROCESSOR__OUTPUT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
 				setOutput((O)newValue);
 				return;
 		}
@@ -204,13 +204,13 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
 				setProgressMonitor(PROGRESS_MONITOR_EDEFAULT);
 				return;
-			case ProcessorsPackage.PROCESSOR__INPUT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
 				setInput((I)null);
 				return;
-			case ProcessorsPackage.PROCESSOR__OUTPUT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
 				setOutput((O)null);
 				return;
 		}
@@ -224,11 +224,11 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR:
 				return PROGRESS_MONITOR_EDEFAULT == null ? progressMonitor != null : !PROGRESS_MONITOR_EDEFAULT.equals(progressMonitor);
-			case ProcessorsPackage.PROCESSOR__INPUT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT:
 				return input != null;
-			case ProcessorsPackage.PROCESSOR__OUTPUT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT:
 				return output != null;
 		}
 		return super.eIsSet(featureID);
@@ -245,7 +245,7 @@ public abstract class ProcessorImpl<I, O> extends MinimalEObjectImpl.Container
 	{
 		switch (operationID)
 		{
-			case ProcessorsPackage.PROCESSOR___PROCESS__OBJECT:
+			case Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT:
 				try
 				{
 					return process((I)arguments.get(0));

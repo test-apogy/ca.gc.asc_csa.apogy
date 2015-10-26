@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet#getNormals <em>Normals</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSet()
+ * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSet()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface CoordinatesSet<T extends Coordinates> extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSet_Points()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSet_Points()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
@@ -54,7 +54,7 @@ public interface CoordinatesSet<T extends Coordinates> extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Normals</em>' attribute.
 	 * @see #setNormals(List)
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSet_Normals()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSet_Normals()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data.List<org.eclipse.symphony.common.geometry.data.Vector3d>" many="false" transient="true"
 	 * @generated
 	 */

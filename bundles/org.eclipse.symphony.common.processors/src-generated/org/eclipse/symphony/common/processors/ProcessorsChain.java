@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.common.processors.ProcessorsChain#getProcessors <em>Processors</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getProcessorsChain()
+ * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessorsChain()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ProcessorsChain<I, O> extends Processor<I, O> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Intermediate Result</em>' attribute.
 	 * @see #setIntermediateResult(Object)
-	 * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getProcessorsChain_IntermediateResult()
+	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessorsChain_IntermediateResult()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface ProcessorsChain<I, O> extends Processor<I, O> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Running Processor</em>' reference.
 	 * @see #setRunningProcessor(Processor)
-	 * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getProcessorsChain_RunningProcessor()
+	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessorsChain_RunningProcessor()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface ProcessorsChain<I, O> extends Processor<I, O> {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Processors</em>' reference list.
-	 * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getProcessorsChain_Processors()
+	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessorsChain_Processors()
 	 * @model
 	 * @generated
 	 */

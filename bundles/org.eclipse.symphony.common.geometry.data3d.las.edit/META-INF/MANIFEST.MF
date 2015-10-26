@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.common.geometry.data3d.las.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.common.geometry.data3d.las.provider.LasEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.common.geometry.data3d.las.provider.Symphony__CommonGeometryData3DLASEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

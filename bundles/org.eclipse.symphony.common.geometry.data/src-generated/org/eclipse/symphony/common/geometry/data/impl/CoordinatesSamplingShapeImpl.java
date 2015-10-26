@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public abstract class CoordinatesSamplingShapeImpl<T extends Coordinates> extend
 	@Override
 	protected EClass eStaticClass()
 	{
-		return DataPackage.Literals.COORDINATES_SAMPLING_SHAPE;
+		return Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SAMPLING_SHAPE;
 	}
 
 	/**

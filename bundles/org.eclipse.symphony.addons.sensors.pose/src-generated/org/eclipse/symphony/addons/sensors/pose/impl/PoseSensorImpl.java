@@ -31,14 +31,14 @@ import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
 
@@ -157,7 +157,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	 */
 	public CartesianPositionCoordinates getPositionCoordinates() {
 		if (positionCoordinates == null) {
-			positionCoordinates = Data3dFactory.eINSTANCE
+			positionCoordinates = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createCartesianPositionCoordinates();
 		}
 		return positionCoordinates;
@@ -179,7 +179,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	 */
 	public CartesianOrientationCoordinates getOrientationCoordinates() {
 		if (orientationCoordinates == null) {
-			orientationCoordinates = Data3dFactory.eINSTANCE
+			orientationCoordinates = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createCartesianOrientationCoordinates();
 		}
 		return orientationCoordinates;
@@ -201,7 +201,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	 */
 	public Pose getPose() {
 		if (pose == null) {
-			pose = Data3dFactory.eINSTANCE.createPose();
+			pose = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose();
 
 			// Adds adapter for position and orienatation if not already there.
 			if (!eAdapters().contains(getPositionAdapter()))
@@ -575,7 +575,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 			positionAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(TransformNode.class) == TopologyPackage.TRANSFORM_NODE__POSITION) {
+					if (msg.getFeatureID(TransformNode.class) == Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION) {
 						// Updates the current Orientation data with the new
 						// values.
 						Tuple3d newPose = (Tuple3d) msg.getNewValue();
@@ -601,7 +601,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 			orientationAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(TransformNode.class) == TopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX) {
+					if (msg.getFeatureID(TransformNode.class) == Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX) {
 						// Extracts the rotation from the rotation matrix.
 						CartesianOrientationCoordinates newOrientation = extractOrientationFromMatrix((Matrix3x3) msg
 								.getNewValue());

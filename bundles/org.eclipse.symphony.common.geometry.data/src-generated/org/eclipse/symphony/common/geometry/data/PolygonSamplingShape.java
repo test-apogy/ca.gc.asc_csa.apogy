@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.geometry.data;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data.DataPackage#getPolygonSamplingShape()
+ * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getPolygonSamplingShape()
  * @model interface="true" abstract="true"
  * @generated
  */

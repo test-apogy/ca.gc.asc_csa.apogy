@@ -18,7 +18,7 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.ui.jme3.Activator;
 import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
 import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
@@ -299,7 +299,7 @@ public class CartesianCoordinatesSetJME3Object<T extends CartesianCoordinatesSet
 
 					switch (featureId) 
 					{
-						case Data3dPackage.CARTESIAN_COORDINATES_SET__POINTS:
+						case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET__POINTS:
 							int eventType = notification.getEventType() ;
 							switch(eventType)
 							{

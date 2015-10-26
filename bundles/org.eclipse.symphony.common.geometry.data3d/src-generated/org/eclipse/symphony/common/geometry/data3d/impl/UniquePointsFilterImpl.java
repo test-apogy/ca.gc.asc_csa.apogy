@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter;
 import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
@@ -39,7 +39,7 @@ public class UniquePointsFilterImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.UNIQUE_POINTS_FILTER;
+		return Symphony__CommonGeometryData3DPackage.Literals.UNIQUE_POINTS_FILTER;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class UniquePointsFilterImpl extends
 
 		KDTree kdTree = new KDTree(3);
 
-		CartesianCoordinatesSet output = Data3dFactory.eINSTANCE
+		CartesianCoordinatesSet output = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianCoordinatesSet();
 
 		for (CartesianPositionCoordinates point : input.getPoints()) {

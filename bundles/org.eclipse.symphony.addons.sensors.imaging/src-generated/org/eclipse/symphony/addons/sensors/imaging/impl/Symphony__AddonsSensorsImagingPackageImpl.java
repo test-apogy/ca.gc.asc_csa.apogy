@@ -25,9 +25,9 @@ import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagin
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -143,9 +143,9 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 
 		// Initialize simple dependencies
 		Symphony__AddonsSensorsPackage.eINSTANCE.eClass();
-		EMFEcorePackage.eINSTANCE.eClass();
+		Symphony__CommonEMFPackage.eINSTANCE.eClass();
 		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
-		ImagesCorePackage.eINSTANCE.eClass();
+		Symphony__CommonImagesPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsImagingPackage.createPackageContents();
@@ -482,10 +482,10 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 
 		// Obtain other dependent packages
 		Symphony__AddonsSensorsPackage theSymphony__AddonsSensorsPackage = (Symphony__AddonsSensorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
-		ImagesCorePackage theImagesCorePackage = (ImagesCorePackage)EPackage.Registry.INSTANCE.getEPackage(ImagesCorePackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -494,9 +494,9 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 
 		// Add supertypes to classes
 		abstractCameraEClass.getESuperTypes().add(theSymphony__AddonsSensorsPackage.getSensor());
-		abstractCameraEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		imageSnapshotEClass.getESuperTypes().add(theTopologyPackage.getGroupNode());
-		imageSnapshotEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
+		abstractCameraEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		imageSnapshotEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
+		imageSnapshotEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
 		rectifiedImageSnapshotEClass.getESuperTypes().add(this.getImageSnapshot());
 
 		// Initialize classes, features, and operations; add parameters
@@ -509,7 +509,7 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 
 		initEClass(imageSnapshotEClass, ImageSnapshot.class, "ImageSnapshot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImageSnapshot_FieldOfView(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fieldOfView", null, 0, 1, ImageSnapshot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getImageSnapshot_Image(), theImagesCorePackage.getAbstractEImage(), null, "image", null, 0, 1, ImageSnapshot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImageSnapshot_Image(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "image", null, 0, 1, ImageSnapshot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getImageSnapshot__ConvertToHorizontalAngle__int(), theEcorePackage.getEDouble(), "convertToHorizontalAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "horizontalPixelPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -519,7 +519,7 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 
 		initEClass(rectifiedImageSnapshotEClass, RectifiedImageSnapshot.class, "RectifiedImageSnapshot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getRectifiedImageSnapshot__GetRectifiedImage(), theImagesCorePackage.getAbstractEImage(), "getRectifiedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getRectifiedImageSnapshot__GetRectifiedImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getRectifiedImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(zoomableEClass, Zoomable.class, "Zoomable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getZoomable_CurrentZoom(), theEcorePackage.getEDouble(), "currentZoom", "1.0", 0, 1, Zoomable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -542,7 +542,7 @@ public class Symphony__AddonsSensorsImagingPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getImageSnapshot(), "imageSnapshot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "verticalPixelPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getImagingUtilities__GetAzimuthElevationOverlay__int_int_double_double_double_double_AzimuthDirection_ElevationDirection_int_String_int_Color_Color_int(), theImagesCorePackage.getAbstractEImage(), "getAzimuthElevationOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getImagingUtilities__GetAzimuthElevationOverlay__int_int_double_double_double_double_AzimuthDirection_ElevationDirection_int_String_int_Color_Color_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getAzimuthElevationOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "imageWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "imageHeight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "panAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);

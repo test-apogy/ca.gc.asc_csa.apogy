@@ -16,7 +16,7 @@ import org.eclipse.core.runtime.jobs.Job;
  *   <li>{@link org.eclipse.symphony.common.emf.Server#getServerJob <em>Server Job</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getServer()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getServer()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface Server extends Startable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Server Job</em>' attribute.
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getServer_ServerJob()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getServer_ServerJob()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.emf.Job" transient="true" changeable="false"
 	 * @generated
 	 */

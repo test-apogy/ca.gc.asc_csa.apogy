@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.common.io.jinput.EComponents;
 import org.eclipse.symphony.common.io.jinput.EController;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,7 +80,7 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JInputPackage.Literals.ECOMPONENTS;
+		return Symphony__CommonIOJInputPackage.Literals.ECOMPONENTS;
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public EList<EComponent> getComponents() {
 		if (components == null) {
-			components = new EObjectContainmentWithInverseEList<EComponent>(EComponent.class, this, JInputPackage.ECOMPONENTS__COMPONENTS, JInputPackage.ECOMPONENT__ECOMPONENTS);
+			components = new EObjectContainmentWithInverseEList<EComponent>(EComponent.class, this, Symphony__CommonIOJInputPackage.ECOMPONENTS__COMPONENTS, Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS);
 		}
 		return components;
 	}
@@ -116,7 +116,7 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JInputPackage.ECOMPONENTS__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECOMPONENTS__NAME, oldName, name));
 	}
 
 
@@ -126,7 +126,7 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	 * @generated
 	 */
 	public EController getEController() {
-		if (eContainerFeatureID() != JInputPackage.ECOMPONENTS__ECONTROLLER) return null;
+		if (eContainerFeatureID() != Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER) return null;
 		return (EController)eContainer();
 	}
 
@@ -136,7 +136,7 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	 * @generated
 	 */
 	public EController basicGetEController() {
-		if (eContainerFeatureID() != JInputPackage.ECOMPONENTS__ECONTROLLER) return null;
+		if (eContainerFeatureID() != Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER) return null;
 		return (EController)eInternalContainer();
 	}
 
@@ -146,7 +146,7 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	 * @generated
 	 */
 	public NotificationChain basicSetEController(EController newEController, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newEController, JInputPackage.ECOMPONENTS__ECONTROLLER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newEController, Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER, msgs);
 		return msgs;
 	}
 
@@ -156,19 +156,19 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	 * @generated
 	 */
 	public void setEController(EController newEController) {
-		if (newEController != eInternalContainer() || (eContainerFeatureID() != JInputPackage.ECOMPONENTS__ECONTROLLER && newEController != null)) {
+		if (newEController != eInternalContainer() || (eContainerFeatureID() != Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER && newEController != null)) {
 			if (EcoreUtil.isAncestor(this, newEController))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newEController != null)
-				msgs = ((InternalEObject)newEController).eInverseAdd(this, JInputPackage.ECONTROLLER__ECOMPONENTS, EController.class, msgs);
+				msgs = ((InternalEObject)newEController).eInverseAdd(this, Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS, EController.class, msgs);
 			msgs = basicSetEController(newEController, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JInputPackage.ECOMPONENTS__ECONTROLLER, newEController, newEController));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER, newEController, newEController));
 	}
 
 	/**
@@ -180,9 +180,9 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENTS__COMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComponents()).basicAdd(otherEnd, msgs);
-			case JInputPackage.ECOMPONENTS__ECONTROLLER:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetEController((EController)otherEnd, msgs);
@@ -198,9 +198,9 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENTS__COMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__COMPONENTS:
 				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
-			case JInputPackage.ECOMPONENTS__ECONTROLLER:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER:
 				return basicSetEController(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -214,8 +214,8 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case JInputPackage.ECOMPONENTS__ECONTROLLER:
-				return eInternalContainer().eInverseRemove(this, JInputPackage.ECONTROLLER__ECOMPONENTS, EController.class, msgs);
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER:
+				return eInternalContainer().eInverseRemove(this, Symphony__CommonIOJInputPackage.ECONTROLLER__ECOMPONENTS, EController.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -228,11 +228,11 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENTS__COMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__COMPONENTS:
 				return getComponents();
-			case JInputPackage.ECOMPONENTS__NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__NAME:
 				return getName();
-			case JInputPackage.ECOMPONENTS__ECONTROLLER:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER:
 				if (resolve) return getEController();
 				return basicGetEController();
 		}
@@ -247,10 +247,10 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENTS__NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__NAME:
 				setName((String)newValue);
 				return;
-			case JInputPackage.ECOMPONENTS__ECONTROLLER:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER:
 				setEController((EController)newValue);
 				return;
 		}
@@ -265,10 +265,10 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENTS__NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case JInputPackage.ECOMPONENTS__ECONTROLLER:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER:
 				setEController((EController)null);
 				return;
 		}
@@ -283,11 +283,11 @@ public class EComponentsImpl extends MinimalEObjectImpl.Container implements ECo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENTS__COMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__COMPONENTS:
 				return components != null && !components.isEmpty();
-			case JInputPackage.ECOMPONENTS__NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case JInputPackage.ECOMPONENTS__ECONTROLLER:
+			case Symphony__CommonIOJInputPackage.ECOMPONENTS__ECONTROLLER:
 				return basicGetEController() != null;
 		}
 		return super.eIsSet(featureID);

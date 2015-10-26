@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -105,7 +105,7 @@ public class ConstraintStateImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.CONSTRAINT_STATE;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_STATE;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class ConstraintStateImpl extends MinimalEObjectImpl.Container implements
 		double oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_STATE__POSITION, oldPosition, position));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__POSITION, oldPosition, position));
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class ConstraintStateImpl extends MinimalEObjectImpl.Container implements
 		double oldVelocity = velocity;
 		velocity = newVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY, oldVelocity, velocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY, oldVelocity, velocity));
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class ConstraintStateImpl extends MinimalEObjectImpl.Container implements
 		double oldForce = force;
 		force = newForce;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_STATE__FORCE, oldForce, force));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__FORCE, oldForce, force));
 	}
 
 	/**
@@ -179,11 +179,11 @@ public class ConstraintStateImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
 				return getPosition();
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
 				return getVelocity();
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
 				return getForce();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -197,13 +197,13 @@ public class ConstraintStateImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
 				setPosition((Double)newValue);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
 				setVelocity((Double)newValue);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
 				setForce((Double)newValue);
 				return;
 		}
@@ -218,13 +218,13 @@ public class ConstraintStateImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
 				setPosition(POSITION_EDEFAULT);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
 				setVelocity(VELOCITY_EDEFAULT);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
 				setForce(FORCE_EDEFAULT);
 				return;
 		}
@@ -239,11 +239,11 @@ public class ConstraintStateImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
 				return position != POSITION_EDEFAULT;
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
 				return velocity != VELOCITY_EDEFAULT;
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
 				return force != FORCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.file.csv.CsvColumn;
-import org.eclipse.symphony.common.file.csv.CsvPackage;
+import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.file.csv.CsvColumn} object.
@@ -79,7 +79,7 @@ public class CsvColumnItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumn_values_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumn_values_feature", "_UI_CsvColumn_type"),
-				 CsvPackage.Literals.CSV_COLUMN__VALUES,
+				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN__VALUES,
 				 true,
 				 false,
 				 true,
@@ -101,7 +101,7 @@ public class CsvColumnItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumn_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumn_name_feature", "_UI_CsvColumn_type"),
-				 CsvPackage.Literals.CSV_COLUMN__NAME,
+				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN__NAME,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class CsvColumnItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumn_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumn_description_feature", "_UI_CsvColumn_type"),
-				 CsvPackage.Literals.CSV_COLUMN__DESCRIPTION,
+				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -170,8 +170,8 @@ public class CsvColumnItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CsvColumn.class)) {
-			case CsvPackage.CSV_COLUMN__NAME:
-			case CsvPackage.CSV_COLUMN__DESCRIPTION:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

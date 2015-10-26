@@ -8,10 +8,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
-
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,7 +78,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER__PROGRESS_MONITOR = ProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
+	int WAY_POINT_PATH_PLANNER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' attribute.
@@ -89,7 +87,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER__INPUT = ProcessorsPackage.PROCESSOR__INPUT;
+	int WAY_POINT_PATH_PLANNER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' attribute.
@@ -98,7 +96,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER__OUTPUT = ProcessorsPackage.PROCESSOR__OUTPUT;
+	int WAY_POINT_PATH_PLANNER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Current Position</b></em>' reference.
@@ -107,7 +105,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER__CURRENT_POSITION = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
+	int WAY_POINT_PATH_PLANNER__CURRENT_POSITION = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Current Destination</b></em>' reference.
@@ -116,7 +114,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
+	int WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Way Point Path Planner</em>' class.
@@ -125,7 +123,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER_FEATURE_COUNT = ProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
+	int WAY_POINT_PATH_PLANNER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -134,7 +132,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER___PROCESS__OBJECT = ProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
+	int WAY_POINT_PATH_PLANNER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
 
 	/**
 	 * The operation id for the '<em>Plan</em>' operation.
@@ -143,7 +141,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER___PLAN__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = ProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
+	int WAY_POINT_PATH_PLANNER___PLAN__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Way Point Path Planner</em>' class.
@@ -152,7 +150,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WAY_POINT_PATH_PLANNER_OPERATION_COUNT = ProcessorsPackage.PROCESSOR_OPERATION_COUNT + 1;
+	int WAY_POINT_PATH_PLANNER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.MeshWayPointPathPlannerImpl <em>Mesh Way Point Path Planner</em>}' class.
@@ -271,7 +269,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXCLUSION_ZONE__PARENT = TopologyPackage.NODE__PARENT;
+	int EXCLUSION_ZONE__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -280,7 +278,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXCLUSION_ZONE__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int EXCLUSION_ZONE__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -289,7 +287,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXCLUSION_ZONE__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int EXCLUSION_ZONE__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The number of structural features of the '<em>Exclusion Zone</em>' class.
@@ -298,7 +296,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXCLUSION_ZONE_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int EXCLUSION_ZONE_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -307,7 +305,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXCLUSION_ZONE___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int EXCLUSION_ZONE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>Is Inside</em>' operation.
@@ -316,7 +314,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXCLUSION_ZONE___IS_INSIDE__CARTESIANPOSITIONCOORDINATES = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int EXCLUSION_ZONE___IS_INSIDE__CARTESIANPOSITIONCOORDINATES = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Intersects</em>' operation.
@@ -325,7 +323,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXCLUSION_ZONE___INTERSECTS__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = TopologyPackage.NODE_OPERATION_COUNT + 1;
+	int EXCLUSION_ZONE___INTERSECTS__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Exclusion Zone</em>' class.
@@ -334,7 +332,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXCLUSION_ZONE_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 2;
+	int EXCLUSION_ZONE_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.CircularExclusionZoneImpl <em>Circular Exclusion Zone</em>}' class.

@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation#getTextureImage <em>Texture Image</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation()
+ * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' reference.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation_Mesh()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation_Mesh()
 	 * @model transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -58,7 +58,7 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Point Size</em>' attribute.
 	 * @see #setPointSize(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation_PointSize()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation_PointSize()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
@@ -83,7 +83,7 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Points</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation_NumberOfPoints()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation_NumberOfPoints()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -98,7 +98,7 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Polygons</em>' attribute.
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation_NumberOfPolygons()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation_NumberOfPolygons()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -117,7 +117,7 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #setPresentationMode(MeshPresentationMode)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation_PresentationMode()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation_PresentationMode()
 	 * @model default="SURFACE" unique="false"
 	 * @generated
 	 */
@@ -144,7 +144,7 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transparency</em>' attribute.
 	 * @see #setTransparency(float)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation_Transparency()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation_Transparency()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -171,7 +171,7 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Use Shading</em>' attribute.
 	 * @see #setUseShading(boolean)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation_UseShading()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation_UseShading()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -197,11 +197,12 @@ public interface TriangularMeshPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * An image to be used as a texture.
-	 * Note that the image will be applied using the relative coordinates of the mesh (i.e. relative to its minimum x and Y).
+	 * Note that the image will be applied using the relative
+	 * coordinates of the mesh (i.e. relative to its minimum X and Y).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Texture Image</em>' reference.
 	 * @see #setTextureImage(AbstractEImage)
-	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation_TextureImage()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage#getTriangularMeshPresentation_TextureImage()
 	 * @model transient="true"
 	 * @generated
 	 */

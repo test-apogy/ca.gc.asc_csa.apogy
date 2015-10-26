@@ -20,7 +20,7 @@ package org.eclipse.symphony.common.geometry.data3d;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getMeshingPlane <em>Meshing Plane</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDelaunayMesher()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDelaunayMesher()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface DelaunayMesher extends CartesianPositionCoordinatesMesher {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tolerance</em>' attribute.
 	 * @see #setTolerance(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDelaunayMesher_Tolerance()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDelaunayMesher_Tolerance()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface DelaunayMesher extends CartesianPositionCoordinatesMesher {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Alpha</em>' attribute.
 	 * @see #setAlpha(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDelaunayMesher_Alpha()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDelaunayMesher_Alpha()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface DelaunayMesher extends CartesianPositionCoordinatesMesher {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Offset</em>' attribute.
 	 * @see #setOffset(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDelaunayMesher_Offset()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDelaunayMesher_Offset()
 	 * @model default="0.75" unique="false"
 	 * @generated
 	 */
@@ -114,7 +114,7 @@ public interface DelaunayMesher extends CartesianPositionCoordinatesMesher {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bounding Triangulation</em>' attribute.
 	 * @see #setBoundingTriangulation(boolean)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDelaunayMesher_BoundingTriangulation()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDelaunayMesher_BoundingTriangulation()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -142,7 +142,7 @@ public interface DelaunayMesher extends CartesianPositionCoordinatesMesher {
 	 * @return the value of the '<em>Meshing Plane</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianPlane
 	 * @see #setMeshingPlane(CartesianPlane)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDelaunayMesher_MeshingPlane()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDelaunayMesher_MeshingPlane()
 	 * @model unique="false"
 	 * @generated
 	 */

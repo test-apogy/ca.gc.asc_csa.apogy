@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * *
  * Ranges Definition
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getRanges()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getRanges()
  * @model
  * @generated
  */

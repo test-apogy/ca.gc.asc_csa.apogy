@@ -1,4 +1,10 @@
-@GenModel(prefix="Data25DUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="Data25DUI", complianceLevel="6.0")
+@GenModel(prefix="Symphony__CommonGeometryData25DUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CommonGeometryData25DUI",
+		  complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data25d.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data25d.ui.edit/src-generated")
 

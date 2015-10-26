@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 
@@ -339,7 +339,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__PARENT = TopologyDynamicsPackage.PHYSICAL_BODY__PARENT;
+  int WHEEL__PARENT = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -348,7 +348,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__DESCRIPTION = TopologyDynamicsPackage.PHYSICAL_BODY__DESCRIPTION;
+  int WHEEL__DESCRIPTION = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -357,7 +357,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__NODE_ID = TopologyDynamicsPackage.PHYSICAL_BODY__NODE_ID;
+  int WHEEL__NODE_ID = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -366,7 +366,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__CHILDREN = TopologyDynamicsPackage.PHYSICAL_BODY__CHILDREN;
+  int WHEEL__CHILDREN = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -375,7 +375,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__AGGREGATED_CHILDREN = TopologyDynamicsPackage.PHYSICAL_BODY__AGGREGATED_CHILDREN;
+  int WHEEL__AGGREGATED_CHILDREN = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__AGGREGATED_CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Physical Properties</b></em>' containment reference.
@@ -384,7 +384,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__PHYSICAL_PROPERTIES = TopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES;
+  int WHEEL__PHYSICAL_PROPERTIES = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES;
 
   /**
 	 * The feature id for the '<em><b>Constraint Attachment Points</b></em>' reference list.
@@ -393,7 +393,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__CONSTRAINT_ATTACHMENT_POINTS = TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS;
+  int WHEEL__CONSTRAINT_ATTACHMENT_POINTS = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS;
 
   /**
 	 * The feature id for the '<em><b>Simulation Properties</b></em>' containment reference list.
@@ -402,7 +402,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__SIMULATION_PROPERTIES = TopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES;
+  int WHEEL__SIMULATION_PROPERTIES = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES;
 
   /**
 	 * The feature id for the '<em><b>Center Of Mass Kinematic State</b></em>' containment reference.
@@ -411,7 +411,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__CENTER_OF_MASS_KINEMATIC_STATE = TopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE;
+  int WHEEL__CENTER_OF_MASS_KINEMATIC_STATE = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE;
 
   /**
 	 * The feature id for the '<em><b>Points Of Interest</b></em>' containment reference list.
@@ -420,7 +420,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__POINTS_OF_INTEREST = TopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST;
+  int WHEEL__POINTS_OF_INTEREST = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST;
 
   /**
 	 * The feature id for the '<em><b>Collision Geometry</b></em>' containment reference list.
@@ -429,7 +429,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__COLLISION_GEOMETRY = TopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY;
+  int WHEEL__COLLISION_GEOMETRY = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY;
 
   /**
 	 * The feature id for the '<em><b>Radius</b></em>' attribute.
@@ -438,7 +438,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__RADIUS = TopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 0;
+  int WHEEL__RADIUS = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Lenght</b></em>' attribute.
@@ -447,7 +447,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__LENGHT = TopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 1;
+  int WHEEL__LENGHT = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 1;
 
   /**
 	 * The number of structural features of the '<em>Wheel</em>' class.
@@ -456,7 +456,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL_FEATURE_COUNT = TopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 2;
+  int WHEEL_FEATURE_COUNT = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 2;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -465,7 +465,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL___ACCEPT__INODEVISITOR = TopologyDynamicsPackage.PHYSICAL_BODY___ACCEPT__INODEVISITOR;
+  int WHEEL___ACCEPT__INODEVISITOR = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY___ACCEPT__INODEVISITOR;
 
   /**
 	 * The number of operations of the '<em>Wheel</em>' class.
@@ -474,7 +474,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL_OPERATION_COUNT = TopologyDynamicsPackage.PHYSICAL_BODY_OPERATION_COUNT + 0;
+  int WHEEL_OPERATION_COUNT = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl <em>Thruster</em>}' class.
@@ -493,7 +493,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER__PARENT = TopologyPackage.NODE__PARENT;
+  int THRUSTER__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -502,7 +502,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+  int THRUSTER__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -511,7 +511,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER__NODE_ID = TopologyPackage.NODE__NODE_ID;
+  int THRUSTER__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Minimum Thrust</b></em>' attribute.
@@ -520,7 +520,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER__MINIMUM_THRUST = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int THRUSTER__MINIMUM_THRUST = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Maximum Thrust</b></em>' attribute.
@@ -529,7 +529,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER__MAXIMUM_THRUST = TopologyPackage.NODE_FEATURE_COUNT + 1;
+	int THRUSTER__MAXIMUM_THRUST = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Current Thrust</b></em>' attribute.
@@ -538,7 +538,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER__CURRENT_THRUST = TopologyPackage.NODE_FEATURE_COUNT + 2;
+	int THRUSTER__CURRENT_THRUST = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Thrust Level</b></em>' attribute.
@@ -547,7 +547,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER__THRUST_LEVEL = TopologyPackage.NODE_FEATURE_COUNT + 3;
+  int THRUSTER__THRUST_LEVEL = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 3;
 
 		/**
 	 * The feature id for the '<em><b>Plume Angle</b></em>' attribute.
@@ -556,7 +556,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER__PLUME_ANGLE = TopologyPackage.NODE_FEATURE_COUNT + 4;
+  int THRUSTER__PLUME_ANGLE = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 4;
 
   /**
 	 * The number of structural features of the '<em>Thruster</em>' class.
@@ -565,7 +565,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 5;
+  int THRUSTER_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 5;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -574,7 +574,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+  int THRUSTER___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
   /**
 	 * The number of operations of the '<em>Thruster</em>' class.
@@ -583,7 +583,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 0;
+  int THRUSTER_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterBindingImpl <em>Thruster Binding</em>}' class.
@@ -784,7 +784,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__PARENT = TopologyDynamicsPackage.PHYSICAL_BODY__PARENT;
+  int LANDER_SPHERICAL_FOOT__PARENT = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -793,7 +793,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__DESCRIPTION = TopologyDynamicsPackage.PHYSICAL_BODY__DESCRIPTION;
+  int LANDER_SPHERICAL_FOOT__DESCRIPTION = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -802,7 +802,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__NODE_ID = TopologyDynamicsPackage.PHYSICAL_BODY__NODE_ID;
+  int LANDER_SPHERICAL_FOOT__NODE_ID = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -811,7 +811,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__CHILDREN = TopologyDynamicsPackage.PHYSICAL_BODY__CHILDREN;
+  int LANDER_SPHERICAL_FOOT__CHILDREN = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -820,7 +820,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__AGGREGATED_CHILDREN = TopologyDynamicsPackage.PHYSICAL_BODY__AGGREGATED_CHILDREN;
+  int LANDER_SPHERICAL_FOOT__AGGREGATED_CHILDREN = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__AGGREGATED_CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Physical Properties</b></em>' containment reference.
@@ -829,7 +829,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__PHYSICAL_PROPERTIES = TopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES;
+  int LANDER_SPHERICAL_FOOT__PHYSICAL_PROPERTIES = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES;
 
   /**
 	 * The feature id for the '<em><b>Constraint Attachment Points</b></em>' reference list.
@@ -838,7 +838,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__CONSTRAINT_ATTACHMENT_POINTS = TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS;
+  int LANDER_SPHERICAL_FOOT__CONSTRAINT_ATTACHMENT_POINTS = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS;
 
   /**
 	 * The feature id for the '<em><b>Simulation Properties</b></em>' containment reference list.
@@ -847,7 +847,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__SIMULATION_PROPERTIES = TopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES;
+  int LANDER_SPHERICAL_FOOT__SIMULATION_PROPERTIES = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES;
 
   /**
 	 * The feature id for the '<em><b>Center Of Mass Kinematic State</b></em>' containment reference.
@@ -856,7 +856,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__CENTER_OF_MASS_KINEMATIC_STATE = TopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE;
+  int LANDER_SPHERICAL_FOOT__CENTER_OF_MASS_KINEMATIC_STATE = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE;
 
   /**
 	 * The feature id for the '<em><b>Points Of Interest</b></em>' containment reference list.
@@ -865,7 +865,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__POINTS_OF_INTEREST = TopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST;
+  int LANDER_SPHERICAL_FOOT__POINTS_OF_INTEREST = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST;
 
   /**
 	 * The feature id for the '<em><b>Collision Geometry</b></em>' containment reference list.
@@ -874,7 +874,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__COLLISION_GEOMETRY = TopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY;
+  int LANDER_SPHERICAL_FOOT__COLLISION_GEOMETRY = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY;
 
   /**
 	 * The feature id for the '<em><b>Radius</b></em>' attribute.
@@ -883,7 +883,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT__RADIUS = TopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 0;
+  int LANDER_SPHERICAL_FOOT__RADIUS = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Lander Spherical Foot</em>' class.
@@ -892,7 +892,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_FEATURE_COUNT = TopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 1;
+  int LANDER_SPHERICAL_FOOT_FEATURE_COUNT = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -901,7 +901,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT___ACCEPT__INODEVISITOR = TopologyDynamicsPackage.PHYSICAL_BODY___ACCEPT__INODEVISITOR;
+  int LANDER_SPHERICAL_FOOT___ACCEPT__INODEVISITOR = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY___ACCEPT__INODEVISITOR;
 
   /**
 	 * The number of operations of the '<em>Lander Spherical Foot</em>' class.
@@ -910,7 +910,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_OPERATION_COUNT = TopologyDynamicsPackage.PHYSICAL_BODY_OPERATION_COUNT + 0;
+  int LANDER_SPHERICAL_FOOT_OPERATION_COUNT = Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.impl.LanderSphericalFootContactProviderImpl <em>Lander Spherical Foot Contact Provider</em>}' class.
@@ -1438,7 +1438,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int PATH_PLANNER_TOOL_NODE__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1447,7 +1447,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int PATH_PLANNER_TOOL_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -1456,7 +1456,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int PATH_PLANNER_TOOL_NODE__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 		/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1465,7 +1465,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int PATH_PLANNER_TOOL_NODE__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -1474,7 +1474,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int PATH_PLANNER_TOOL_NODE__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		/**
 	 * The feature id for the '<em><b>Path Planner Tool</b></em>' reference.
@@ -1483,7 +1483,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Path Planner Tool Node</em>' class.
@@ -1492,7 +1492,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int PATH_PLANNER_TOOL_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -1501,7 +1501,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int PATH_PLANNER_TOOL_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 		/**
 	 * The number of operations of the '<em>Path Planner Tool Node</em>' class.
@@ -1510,7 +1510,7 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_NODE_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int PATH_PLANNER_TOOL_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePathPlannerToolImpl <em>Vehicle Path Planner Tool</em>}' class.

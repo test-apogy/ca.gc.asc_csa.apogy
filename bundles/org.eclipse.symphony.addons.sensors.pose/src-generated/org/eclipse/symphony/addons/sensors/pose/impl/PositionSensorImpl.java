@@ -19,12 +19,12 @@ import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePacka
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyFactory;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
 
 /**
@@ -45,7 +45,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 
 	private Adapter positionAdapter = null;	
 	
-	protected TopologyFacade topologyFacade = TopologyFactory.eINSTANCE.createTopologyFacade();
+	protected TopologyFacade topologyFacade = Symphony__CommonTopologyFactory.eINSTANCE.createTopologyFacade();
 	
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -130,7 +130,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	{
 		if(positionCoordinates == null)
 		{			
-			positionCoordinates = Data3dFactory.eINSTANCE.createCartesianPositionCoordinates();					
+			positionCoordinates = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();					
 		}
 		return positionCoordinates;
 	}
@@ -317,7 +317,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 				@Override
 				public void notifyChanged(Notification msg)
 				{				
-					if(msg.getFeatureID(PositionNode.class) == TopologyPackage.POSITION_NODE__POSITION)
+					if(msg.getFeatureID(PositionNode.class) == Symphony__CommonTopologyPackage.POSITION_NODE__POSITION)
 					{
 						// Updates the current Orientation data with the new values.
 						Tuple3d newPose = (Tuple3d) msg.getNewValue();

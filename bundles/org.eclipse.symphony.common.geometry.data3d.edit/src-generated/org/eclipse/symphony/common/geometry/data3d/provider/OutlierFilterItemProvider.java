@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.OutlierFilter;
 import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
@@ -67,7 +67,7 @@ public class OutlierFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OutlierFilter_maxDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OutlierFilter_maxDistance_feature", "_UI_OutlierFilter_type"),
-				 Data3dPackage.Literals.OUTLIER_FILTER__MAX_DISTANCE,
+				 Symphony__CommonGeometryData3DPackage.Literals.OUTLIER_FILTER__MAX_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class OutlierFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OutlierFilter.class)) {
-			case Data3dPackage.OUTLIER_FILTER__MAX_DISTANCE:
+			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER__MAX_DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

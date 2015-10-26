@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler;
 import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
@@ -72,7 +72,7 @@ public class MeshPolygonShapesSamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshPolygonShapesSampler_polygonSamplingShapes_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshPolygonShapesSampler_polygonSamplingShapes_feature", "_UI_MeshPolygonShapesSampler_type"),
-				 DataPackage.Literals.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES,
+				 Symphony__CommonGeometryDataPackage.Literals.MESH_POLYGON_SHAPES_SAMPLER__POLYGON_SAMPLING_SHAPES,
 				 true,
 				 false,
 				 true,
@@ -95,7 +95,7 @@ public class MeshPolygonShapesSamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshPolygonShapesSampler_shapeSamplingMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshPolygonShapesSampler_shapeSamplingMode_feature", "_UI_MeshPolygonShapesSampler_type"),
-				 DataPackage.Literals.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE,
+				 Symphony__CommonGeometryDataPackage.Literals.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE,
 				 true,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class MeshPolygonShapesSamplerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MeshPolygonShapesSampler.class)) {
-			case DataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_POLYGON_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

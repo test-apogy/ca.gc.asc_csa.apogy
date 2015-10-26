@@ -21,7 +21,7 @@ import org.eclipse.symphony.addons.geometry.paths.WayPoint;
 import org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 
 /**
@@ -359,15 +359,15 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	{
 		if (baseClass == Node.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT: return TopologyPackage.NODE__PARENT;
-				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION: return TopologyPackage.NODE__DESCRIPTION;
-				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID: return TopologyPackage.NODE__NODE_ID;
+				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT: return Symphony__CommonTopologyPackage.NODE__PARENT;
+				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION: return Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
+				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID: return Symphony__CommonTopologyPackage.NODE__NODE_ID;
 				default: return -1;
 			}
 		}
 		if (baseClass == GroupNode.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN: return TopologyPackage.GROUP_NODE__CHILDREN;
+				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN: return Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN;
 				default: return -1;
 			}
 		}
@@ -384,15 +384,15 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	{
 		if (baseClass == Node.class) {
 			switch (baseFeatureID) {
-				case TopologyPackage.NODE__PARENT: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT;
-				case TopologyPackage.NODE__DESCRIPTION: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION;
-				case TopologyPackage.NODE__NODE_ID: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID;
+				case Symphony__CommonTopologyPackage.NODE__PARENT: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT;
+				case Symphony__CommonTopologyPackage.NODE__DESCRIPTION: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION;
+				case Symphony__CommonTopologyPackage.NODE__NODE_ID: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID;
 				default: return -1;
 			}
 		}
 		if (baseClass == GroupNode.class) {
 			switch (baseFeatureID) {
-				case TopologyPackage.GROUP_NODE__CHILDREN: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN;
+				case Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN;
 				default: return -1;
 			}
 		}
@@ -408,7 +408,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == Node.class) {
 			switch (baseOperationID) {
-				case TopologyPackage.NODE___ACCEPT__INODEVISITOR: return Symphony__AddonsGeometryPathsPackage.WAY_POINT___ACCEPT__INODEVISITOR;
+				case Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR: return Symphony__AddonsGeometryPathsPackage.WAY_POINT___ACCEPT__INODEVISITOR;
 				default: return -1;
 			}
 		}

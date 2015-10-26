@@ -32,8 +32,8 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensor
 import org.eclipse.symphony.addons.sensors.imaging.camera.util.Symphony__AddonsSensorsImagingCameraAdapterFactory;
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ToolsList;
 import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
@@ -875,364 +875,6 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 	}
 
   /**
-	 * A child creation extender for the {@link TopologyPackage}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public static class TopologyChildCreationExtender implements IChildCreationExtender
-  {
-    /**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    protected static class CreationSwitch extends TopologySwitch<Object>
-    {
-      /**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      protected List<Object> newChildDescriptors;
-
-      /**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      protected EditingDomain editingDomain;
-
-      /**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
-      {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-      /**
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      @Override
-      public <T> Object caseContentNode(ContentNode<T> object)
-      {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewUtilities()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createSymphonyLogoOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createToolTipTextProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
-
-				return null;
-			}
- 
-      /**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewUtilities()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createSymphonyLogoOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createToolTipTextProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
-
-				return null;
-			}
-						/**
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      protected CommandParameter createChildParameter(Object feature, Object child)
-      {
-				return new CommandParameter(null, feature, child);
-			}
-
-    }
-
-    /**
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-    {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-    /**
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    public ResourceLocator getResourceLocator()
-    {
-			return Symphony__AddonsSensorsImagingCameraEditPlugin.INSTANCE;
-		}
-  }
-
-  /**
 	 * A child creation extender for the {@link EMFEcoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1325,5 +967,357 @@ public class Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory exte
 			return Symphony__AddonsSensorsImagingCameraEditPlugin.INSTANCE;
 		}
   }
+
+		/**
+	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseContentNode(ContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewUtilities()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createSymphonyLogoOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createToolTipTextProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewUtilities()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfigurationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createSymphonyLogoOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createToolTipTextProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return Symphony__AddonsSensorsImagingCameraEditPlugin.INSTANCE;
+		}
+	}
 
 }

@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
 import org.eclipse.symphony.common.geometry.data25d.Data25DIO;
-import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 import org.eclipse.symphony.common.geometry.data25d.DataFacade;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 
@@ -44,7 +44,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data25dPackage.Literals.DATA25_DIO;
+		return Symphony__CommonGeometryData25DPackage.Literals.DATA25_DIO;
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 	 */
 	public VolumetricCoordinatesSet25D loadXYZ(String fileName)
 			throws IOException {
-		VolumetricCoordinatesSet25D data = Data25dFactory.eINSTANCE
+		VolumetricCoordinatesSet25D data = Symphony__CommonGeometryData25DFactory.eINSTANCE
 				.createVolumetricCoordinatesSet25D();
 		// Disable point uniqueness for performance reasons.
 		data.setEnforceUniqueness(false);
@@ -161,7 +161,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data25dPackage.DATA25_DIO___SAVE_XYZ__VOLUMETRICCOORDINATESSET25D_STRING:
+			case Symphony__CommonGeometryData25DPackage.DATA25_DIO___SAVE_XYZ__VOLUMETRICCOORDINATESSET25D_STRING:
 				try {
 					saveXYZ((VolumetricCoordinatesSet25D)arguments.get(0), (String)arguments.get(1));
 					return null;
@@ -169,7 +169,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case Data25dPackage.DATA25_DIO___LOAD_XYZ__STRING:
+			case Symphony__CommonGeometryData25DPackage.DATA25_DIO___LOAD_XYZ__STRING:
 				try {
 					return loadXYZ((String)arguments.get(0));
 				}

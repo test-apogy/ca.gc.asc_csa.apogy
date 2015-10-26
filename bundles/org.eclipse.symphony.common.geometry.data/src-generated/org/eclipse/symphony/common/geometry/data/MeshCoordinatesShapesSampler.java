@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler#getPolygonSamplingMode <em>Polygon Sampling Mode</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data.DataPackage#getMeshCoordinatesShapesSampler()
+ * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getMeshCoordinatesShapesSampler()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface MeshCoordinatesShapesSampler<CoordinatesType extends Coordinate
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Coordinates Sampling Shapes</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getMeshCoordinatesShapesSampler_CoordinatesSamplingShapes()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getMeshCoordinatesShapesSampler_CoordinatesSamplingShapes()
 	 * @model
 	 * @generated
 	 */
@@ -54,7 +54,7 @@ public interface MeshCoordinatesShapesSampler<CoordinatesType extends Coordinate
 	 * @return the value of the '<em>Shape Sampling Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data.ShapeSamplingMode
 	 * @see #setShapeSamplingMode(ShapeSamplingMode)
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getMeshCoordinatesShapesSampler_ShapeSamplingMode()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getMeshCoordinatesShapesSampler_ShapeSamplingMode()
 	 * @model default="UNION" unique="false" required="true"
 	 * @generated
 	 */
@@ -84,7 +84,7 @@ public interface MeshCoordinatesShapesSampler<CoordinatesType extends Coordinate
 	 * @return the value of the '<em>Polygon Sampling Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data.PolygonSamplingMode
 	 * @see #setPolygonSamplingMode(PolygonSamplingMode)
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getMeshCoordinatesShapesSampler_PolygonSamplingMode()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getMeshCoordinatesShapesSampler_PolygonSamplingMode()
 	 * @model default="AT_LEAST_ONE_VERTEX" unique="false" required="true"
 	 * @generated
 	 */

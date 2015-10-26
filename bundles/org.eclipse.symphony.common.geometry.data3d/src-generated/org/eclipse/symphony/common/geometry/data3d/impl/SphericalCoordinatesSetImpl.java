@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinatesSet;
 
@@ -37,7 +37,7 @@ public class SphericalCoordinatesSetImpl extends CoordinatesSetImpl<SphericalCoo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.SPHERICAL_COORDINATES_SET;
+		return Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_COORDINATES_SET;
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class SphericalCoordinatesSetImpl extends CoordinatesSetImpl<SphericalCoo
 	@Override
 	public EList<SphericalCoordinates> getPoints() {
 		if (points == null) {
-			points = new EObjectContainmentEList<SphericalCoordinates>(SphericalCoordinates.class, this, Data3dPackage.SPHERICAL_COORDINATES_SET__POINTS);
+			points = new EObjectContainmentEList<SphericalCoordinates>(SphericalCoordinates.class, this, Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES_SET__POINTS);
 		}
 		return points;
 	}

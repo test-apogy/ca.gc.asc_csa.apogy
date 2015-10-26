@@ -23,6 +23,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_common_topology_addons_primitives -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.common.topology.addons.primitives.provider.PrimitivesItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="org.eclipse.symphony.common.topology.addons.primitives"
             class="org.eclipse.symphony.common.topology.addons.primitives.provider.PrimitivesItemProviderAdapterFactory$TopologyChildCreationExtender"/>

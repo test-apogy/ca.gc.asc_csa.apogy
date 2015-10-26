@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.common.emf"
-            class="org.eclipse.symphony.common.emf.EMFEcorePackage"
+            class="org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage"
             genModel="model/symphony_common_emf.xcore"/>
    </extension>
 

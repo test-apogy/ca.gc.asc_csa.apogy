@@ -21,7 +21,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint#getAngular1CurrentState <em>Angular1 Current State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getUniversalConstraint()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getUniversalConstraint()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface UniversalConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular0 Current State</em>' containment reference.
 	 * @see #setAngular0CurrentState(ConstraintState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getUniversalConstraint_Angular0CurrentState()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getUniversalConstraint_Angular0CurrentState()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface UniversalConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular1 Current State</em>' containment reference.
 	 * @see #setAngular1CurrentState(ConstraintState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getUniversalConstraint_Angular1CurrentState()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getUniversalConstraint_Angular1CurrentState()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

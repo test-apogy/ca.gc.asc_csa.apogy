@@ -9,7 +9,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraintSimulationProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class AbstractConstraintSimulationPropertiesImpl extends Minimal
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT_SIMULATION_PROPERTIES;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT_SIMULATION_PROPERTIES;
 	}
 
 } //AbstractConstraintSimulationPropertiesImpl

@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 
 /**
@@ -123,7 +123,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcorePackage.Literals.FEATURE_NODE_ADAPTER;
+		return Symphony__CommonEMFPackage.Literals.FEATURE_NODE_ADAPTER;
 	}
 
   /**
@@ -138,7 +138,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 			sourceObject = eResolveProxy(oldSourceObject);
 			if (sourceObject != oldSourceObject) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcorePackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
 			}
 		}
 		return sourceObject;
@@ -200,7 +200,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		EObject oldSourceObject = sourceObject;
 		sourceObject = newSourceObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
 	}
 
   /**
@@ -215,7 +215,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 			featureNode = (AbstractFeatureNode)eResolveProxy(oldFeatureNode);
 			if (featureNode != oldFeatureNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcorePackage.FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
 			}
 		}
 		return featureNode;
@@ -283,7 +283,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		AbstractFeatureNode oldFeatureNode = featureNode;
 		featureNode = newFeatureNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
 	}
   
   /**
@@ -306,7 +306,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		Object oldCurrentValue = currentValue;
 		currentValue = newCurrentValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE, oldCurrentValue, currentValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE, oldCurrentValue, currentValue));
 	}
 
   /**
@@ -329,7 +329,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		boolean oldResolved = resolved;
 		resolved = newResolved;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.FEATURE_NODE_ADAPTER__RESOLVED, oldResolved, resolved));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED, oldResolved, resolved));
 	}
 
   /**
@@ -341,15 +341,15 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				if (resolve) return getSourceObject();
 				return basicGetSourceObject();
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				if (resolve) return getFeatureNode();
 				return basicGetFeatureNode();
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				return getCurrentValue();
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				return isResolved();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -364,16 +364,16 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				setSourceObject((EObject)newValue);
 				return;
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)newValue);
 				return;
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(newValue);
 				return;
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				setResolved((Boolean)newValue);
 				return;
 		}
@@ -389,16 +389,16 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				setSourceObject((EObject)null);
 				return;
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)null);
 				return;
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(CURRENT_VALUE_EDEFAULT);
 				return;
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				setResolved(RESOLVED_EDEFAULT);
 				return;
 		}
@@ -414,13 +414,13 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				return sourceObject != null;
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				return featureNode != null;
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				return CURRENT_VALUE_EDEFAULT == null ? currentValue != null : !CURRENT_VALUE_EDEFAULT.equals(currentValue);
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				return resolved != RESOLVED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

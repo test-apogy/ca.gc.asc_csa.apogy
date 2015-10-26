@@ -13,7 +13,7 @@ import org.eclipse.osgi.framework.log.FrameworkLogEntry;
 import org.eclipse.symphony.common.log.Activator;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.log.UtilsLogPackage;
+import org.eclipse.symphony.common.log.Symphony__CommonLogPackage;
 import org.osgi.framework.ServiceReference;
 
 /**
@@ -58,7 +58,7 @@ public class LoggerImpl extends MinimalEObjectImpl.Container implements Logger {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UtilsLogPackage.Literals.LOGGER;
+		return Symphony__CommonLogPackage.Literals.LOGGER;
 	}
 
 	/**
@@ -124,19 +124,19 @@ public class LoggerImpl extends MinimalEObjectImpl.Container implements Logger {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UtilsLogPackage.LOGGER___LOG__STRING_STRING_EVENTSEVERITY:
+			case Symphony__CommonLogPackage.LOGGER___LOG__STRING_STRING_EVENTSEVERITY:
 				log((String)arguments.get(0), (String)arguments.get(1), (EventSeverity)arguments.get(2));
 				return null;
-			case UtilsLogPackage.LOGGER___LOG__STRING_OBJECT_STRING_EVENTSEVERITY:
+			case Symphony__CommonLogPackage.LOGGER___LOG__STRING_OBJECT_STRING_EVENTSEVERITY:
 				log((String)arguments.get(0), arguments.get(1), (String)arguments.get(2), (EventSeverity)arguments.get(3));
 				return null;
-			case UtilsLogPackage.LOGGER___LOG__STRING_STRING_EVENTSEVERITY_THROWABLE:
+			case Symphony__CommonLogPackage.LOGGER___LOG__STRING_STRING_EVENTSEVERITY_THROWABLE:
 				log((String)arguments.get(0), (String)arguments.get(1), (EventSeverity)arguments.get(2), (Throwable)arguments.get(3));
 				return null;
-			case UtilsLogPackage.LOGGER___LOG__STRING_OBJECT_STRING_EVENTSEVERITY_THROWABLE:
+			case Symphony__CommonLogPackage.LOGGER___LOG__STRING_OBJECT_STRING_EVENTSEVERITY_THROWABLE:
 				log((String)arguments.get(0), arguments.get(1), (String)arguments.get(2), (EventSeverity)arguments.get(3), (Throwable)arguments.get(4));
 				return null;
-			case UtilsLogPackage.LOGGER___GET_LOG:
+			case Symphony__CommonLogPackage.LOGGER___GET_LOG:
 				return getLog();
 		}
 		return super.eInvoke(operationID, arguments);

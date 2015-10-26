@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.PositionNode} object.
@@ -65,7 +65,7 @@ public class PositionNodeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyPackage.Literals.POSITION_NODE__POSITION);
+			childrenFeatures.add(Symphony__CommonTopologyPackage.Literals.POSITION_NODE__POSITION);
 		}
 		return childrenFeatures;
 	}
@@ -134,7 +134,7 @@ public class PositionNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PositionNode.class)) {
-			case TopologyPackage.POSITION_NODE__POSITION:
+			case Symphony__CommonTopologyPackage.POSITION_NODE__POSITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -154,8 +154,8 @@ public class PositionNodeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.POSITION_NODE__POSITION,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				(Symphony__CommonTopologyPackage.Literals.POSITION_NODE__POSITION,
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**
@@ -170,8 +170,8 @@ public class PositionNodeItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
+			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 		if (qualify) {
 			return getString

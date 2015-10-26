@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,7 +86,7 @@ public abstract class AbstractFeatureSpecifierImpl extends MinimalEObjectImpl.Co
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER;
+		return Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER;
 	}
 
   /**
@@ -101,7 +101,7 @@ public abstract class AbstractFeatureSpecifierImpl extends MinimalEObjectImpl.Co
 			structuralFeature = (EStructuralFeature)eResolveProxy(oldStructuralFeature);
 			if (structuralFeature != oldStructuralFeature) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
 			}
 		}
 		return structuralFeature;
@@ -127,7 +127,7 @@ public abstract class AbstractFeatureSpecifierImpl extends MinimalEObjectImpl.Co
 		EStructuralFeature oldStructuralFeature = structuralFeature;
 		structuralFeature = newStructuralFeature;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE, oldStructuralFeature, structuralFeature));
 	}
 
   /**
@@ -162,7 +162,7 @@ public abstract class AbstractFeatureSpecifierImpl extends MinimalEObjectImpl.Co
 		int oldIndex = index;
 		index = newIndex;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__INDEX, oldIndex, index));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX, oldIndex, index));
 	}
 
   /**
@@ -174,12 +174,12 @@ public abstract class AbstractFeatureSpecifierImpl extends MinimalEObjectImpl.Co
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
 				if (resolve) return getStructuralFeature();
 				return basicGetStructuralFeature();
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED:
 				return isMultiValued();
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
 				return getIndex();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -194,10 +194,10 @@ public abstract class AbstractFeatureSpecifierImpl extends MinimalEObjectImpl.Co
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
 				setStructuralFeature((EStructuralFeature)newValue);
 				return;
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
 				setIndex((Integer)newValue);
 				return;
 		}
@@ -213,10 +213,10 @@ public abstract class AbstractFeatureSpecifierImpl extends MinimalEObjectImpl.Co
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
 				setStructuralFeature((EStructuralFeature)null);
 				return;
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
 				setIndex(INDEX_EDEFAULT);
 				return;
 		}
@@ -232,11 +232,11 @@ public abstract class AbstractFeatureSpecifierImpl extends MinimalEObjectImpl.Co
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE:
 				return structuralFeature != null;
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED:
 				return isMultiValued() != MULTI_VALUED_EDEFAULT;
-			case EMFEcorePackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER__INDEX:
 				return index != INDEX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

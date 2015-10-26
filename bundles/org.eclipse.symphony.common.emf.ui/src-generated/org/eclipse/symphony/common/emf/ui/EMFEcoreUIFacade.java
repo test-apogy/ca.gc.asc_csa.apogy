@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.emf.ui.impl.EMFEcoreUIFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.ui.EMFEcoreUIPackage#getEMFEcoreUIFacade()
+ * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage#getEMFEcoreUIFacade()
  * @model
  * @generated
  */
@@ -26,7 +26,8 @@ public interface EMFEcoreUIFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the color currently associated with the specified Ranges. Can be null.
+	 * Returns the color currently associated with the specified
+	 * Ranges. Can be null.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.emf.ui.Color" unique="false" rangeUnique="false"
 	 * @generated

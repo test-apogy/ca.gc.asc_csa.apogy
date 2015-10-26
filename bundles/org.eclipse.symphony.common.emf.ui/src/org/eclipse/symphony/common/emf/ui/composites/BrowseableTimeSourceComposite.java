@@ -24,7 +24,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Spinner;
 import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
 import org.eclipse.symphony.common.emf.BrowseableTimeSource;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 
 public class BrowseableTimeSourceComposite extends AbstractTimeSourceComposite 
@@ -409,7 +409,7 @@ public class BrowseableTimeSourceComposite extends AbstractTimeSourceComposite
 		if(startTimeValueLabel != null)
 		{
 			IObservableValue startTimeLabelValue = PojoProperties.value("text").observe(startTimeValueLabel);		
-			IObservableValue startTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.BROWSEABLE_TIME_SOURCE__START_TIME)).observe(getBrowseableTimeSource());			
+			IObservableValue startTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.BROWSEABLE_TIME_SOURCE__START_TIME)).observe(getBrowseableTimeSource());			
 			UpdateValueStrategy startTimeValueStrategy = new UpdateValueStrategy();
 			startTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(DATE_FORMAT_STRING)));
 			bindingContext.bindValue(startTimeLabelValue, startTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), startTimeValueStrategy);

@@ -25,9 +25,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties} object.
@@ -82,7 +82,7 @@ public class PhysicalPropertiesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PhysicalProperties_mass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalProperties_mass_feature", "_UI_PhysicalProperties_type"),
-				 TopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__MASS,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__MASS,
 				 true,
 				 false,
 				 false,
@@ -103,8 +103,8 @@ public class PhysicalPropertiesItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__INERTIA_MATRIX);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__INERTIA_MATRIX);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION);
 		}
 		return childrenFeatures;
 	}
@@ -157,11 +157,11 @@ public class PhysicalPropertiesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PhysicalProperties.class)) {
-			case TopologyDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
+			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_PROPERTIES__MASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TopologyDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
-			case TopologyDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
+			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_PROPERTIES__INERTIA_MATRIX:
+			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,13 +181,13 @@ public class PhysicalPropertiesItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__INERTIA_MATRIX,
-				 MathFactory.eINSTANCE.createMatrix3x3()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__INERTIA_MATRIX,
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_PROPERTIES__CENTER_OF_MASS_LOCATION,
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**

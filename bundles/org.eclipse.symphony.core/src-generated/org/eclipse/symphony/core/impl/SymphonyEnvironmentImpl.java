@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.TimeSourcesList;
 import org.eclipse.symphony.common.emf.Timed;
@@ -529,7 +529,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME: return EMFEcorePackage.TIMED__TIME;
+				case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -545,7 +545,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.TIMED__TIME: return SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME;
+				case Symphony__CommonEMFPackage.TIMED__TIME: return SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME;
 				default: return -1;
 			}
 		}
@@ -581,7 +581,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 					{
 						int featureId = msg.getFeatureID(TimeSource.class);
 						
-						if(featureId == EMFEcorePackage.TIMED__TIME)
+						if(featureId == Symphony__CommonEMFPackage.TIMED__TIME)
 						{
 							if(msg.getNewValue() instanceof Date)
 							{

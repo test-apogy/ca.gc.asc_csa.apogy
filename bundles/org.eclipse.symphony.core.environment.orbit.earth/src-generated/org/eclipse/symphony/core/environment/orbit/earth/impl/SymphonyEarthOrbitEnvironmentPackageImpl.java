@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
@@ -2253,8 +2253,8 @@ public class SymphonyEarthOrbitEnvironmentPackageImpl extends EPackageImpl imple
 		SymphonyOrbitEnvironmentPackage theSymphonyOrbitEnvironmentPackage = (SymphonyOrbitEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyOrbitEnvironmentPackage.eNS_URI);
 		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
 
 		// Create type parameters
@@ -2280,22 +2280,22 @@ public class SymphonyEarthOrbitEnvironmentPackageImpl extends EPackageImpl imple
 		keplerianEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
 		tleEarthOrbitPropagatorEClass.getESuperTypes().add(this.getEarthOrbitPropagator());
 		urlBasedTLEEarthOrbitPropagatorEClass.getESuperTypes().add(this.getTLEEarthOrbitPropagator());
-		earthSurfaceLocationEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		earthSurfaceLocationEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		earthSurfaceLocationListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		earthSurfaceLocationListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		earthSurfaceLocationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		earthSurfaceLocationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		earthSurfaceLocationListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		earthSurfaceLocationListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		groundStationEClass.getESuperTypes().add(this.getEarthSurfaceLocation());
-		groundStationListEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		groundStationListEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		visibilityPassSpacecraftPositionEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
-		spacecraftsVisibilitySetEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		spacecraftsVisibilitySetEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		groundStationListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		groundStationListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		visibilityPassSpacecraftPositionEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		spacecraftsVisibilitySetEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		spacecraftsVisibilitySetEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		spacecraftsVisibilitySetEClass.getESuperTypes().add(theSymphonyCorePackage.getUpdatable());
-		corridorPointEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
-		corridorEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		corridorEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		spacecraftSwathCorridorEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		spacecraftSwathCorridorEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		corridorPointEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
+		corridorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		corridorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		spacecraftSwathCorridorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		spacecraftSwathCorridorEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		spacecraftSwathCorridorEClass.getESuperTypes().add(theSymphonyCorePackage.getUpdatable());
 
 		// Initialize classes, features, and operations; add parameters
@@ -2421,7 +2421,7 @@ public class SymphonyEarthOrbitEnvironmentPackageImpl extends EPackageImpl imple
 		initEReference(getEarthSurfaceLocationList_EarthSurfaceLocations(), this.getEarthSurfaceLocation(), null, "earthSurfaceLocations", null, 0, -1, EarthSurfaceLocationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groundStationEClass, GroundStation.class, "GroundStation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGroundStation_FieldOfViewOrientation(), theMathPackage.getMatrix3x3(), null, "fieldOfViewOrientation", null, 0, 1, GroundStation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGroundStation_FieldOfViewOrientation(), theSymphony__CommonMathPackage.getMatrix3x3(), null, "fieldOfViewOrientation", null, 0, 1, GroundStation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGroundStation_ElevationMask(), this.getElevationMask(), null, "elevationMask", null, 0, 1, GroundStation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groundStationListEClass, GroundStationList.class, "GroundStationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2538,11 +2538,11 @@ public class SymphonyEarthOrbitEnvironmentPackageImpl extends EPackageImpl imple
 		op = initEOperation(getEarthOrbitFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates(), theSymphonyOrbitEnvironmentPackage.getTimedStampedAngularCoordinates(), "createTimedStampedAngularCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitTimeStampedAngularCoordinates(), "oreKitTimeStampedAngularCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateMatrix3x3__Rotation(), theMathPackage.getMatrix3x3(), "createMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEarthOrbitFacade__CreateMatrix3x3__Rotation(), theSymphony__CommonMathPackage.getMatrix3x3(), "createMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRotation(), "rotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEarthOrbitFacade__CreateRotation__Matrix3x3(), this.getRotation(), "createRotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getMatrix3x3(), "matrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getMatrix3x3(), "matrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEarthOrbitFacade__CreateKeplerianOrbit__EarthOrbitPropagator(), this.getKeplerianEarthOrbit(), "createKeplerianOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthOrbitPropagator(), "earthOrbitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);

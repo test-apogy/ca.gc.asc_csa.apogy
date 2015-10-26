@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry} object.
@@ -66,7 +66,7 @@ public class SphereGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphereGeometry_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphereGeometry_radius_feature", "_UI_SphereGeometry_type"),
-				 TopologyDynamicsPackage.Literals.SPHERE_GEOMETRY__RADIUS,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.SPHERE_GEOMETRY__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class SphereGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SphereGeometry.class)) {
-			case TopologyDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -5,7 +5,7 @@ package org.eclipse.symphony.common.io.jinput.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.io.jinput.EAxis;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EAxisImpl extends EComponentImpl implements EAxis {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JInputPackage.Literals.EAXIS;
+		return Symphony__CommonIOJInputPackage.Literals.EAXIS;
 	}
 
 } //EAxisImpl

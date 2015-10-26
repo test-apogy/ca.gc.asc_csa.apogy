@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -224,7 +224,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER__ROBOTIC_ARM = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 0;
+  int ROVER__ROBOTIC_ARM = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Mobile Platform</b></em>' reference.
@@ -233,7 +233,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER__MOBILE_PLATFORM = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 1;
+  int ROVER__MOBILE_PLATFORM = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Arm Camera</b></em>' reference.
@@ -242,7 +242,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__ARM_CAMERA = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 2;
+	int ROVER__ARM_CAMERA = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Center Camera</b></em>' reference.
@@ -251,7 +251,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__CENTER_CAMERA = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 3;
+	int ROVER__CENTER_CAMERA = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
 
 		/**
 	 * The feature id for the '<em><b>Power System</b></em>' containment reference.
@@ -260,7 +260,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__POWER_SYSTEM = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 4;
+	int ROVER__POWER_SYSTEM = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Linear Velocity</b></em>' attribute.
@@ -269,7 +269,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__LINEAR_VELOCITY = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 5;
+	int ROVER__LINEAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
 
 		/**
 	 * The feature id for the '<em><b>Angular Velocity</b></em>' attribute.
@@ -278,7 +278,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__ANGULAR_VELOCITY = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 6;
+	int ROVER__ANGULAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
 
 		/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -287,7 +287,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__INITIALIZED = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 7;
+	int ROVER__INITIALIZED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -296,7 +296,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER__DISPOSED = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 8;
+	int ROVER__DISPOSED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
 
 		/**
 	 * The number of structural features of the '<em>Rover</em>' class.
@@ -305,7 +305,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_FEATURE_COUNT = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 9;
+  int ROVER_FEATURE_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 9;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -314,7 +314,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___DISPOSE = EMFEcorePackage.DISPOSABLE___DISPOSE;
+	int ROVER___DISPOSE = Symphony__CommonEMFPackage.DISPOSABLE___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -323,7 +323,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER___INIT = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 0;
+  int ROVER___INIT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
 
   /**
 	 * The operation id for the '<em>Cmd Linear Velocity</em>' operation.
@@ -332,7 +332,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_LINEAR_VELOCITY__DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 1;
+	int ROVER___CMD_LINEAR_VELOCITY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Cmd Angular Velocity</em>' operation.
@@ -341,7 +341,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_ANGULAR_VELOCITY__DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 2;
+	int ROVER___CMD_ANGULAR_VELOCITY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Cmd Velocities</em>' operation.
@@ -350,7 +350,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 3;
+	int ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
 
 		/**
 	 * The number of operations of the '<em>Rover</em>' class.
@@ -359,7 +359,7 @@ public interface EMFEcoreExampleRoverPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int ROVER_OPERATION_COUNT = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 4;
+  int ROVER_OPERATION_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.rover.impl.RoverStubImpl <em>Rover Stub</em>}' class.

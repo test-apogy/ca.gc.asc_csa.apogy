@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.geometry.data3d;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianTriangle()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianTriangle()
  * @model
  * @generated
  */

@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.common.topology.ReferencedGroupNode#getReferencedChildren <em>Referenced Children</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getReferencedGroupNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getReferencedGroupNode()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface ReferencedGroupNode extends GroupNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Referenced Children</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getReferencedGroupNode_ReferencedChildren()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getReferencedGroupNode_ReferencedChildren()
 	 * @model
 	 * @generated
 	 */

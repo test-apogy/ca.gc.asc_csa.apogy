@@ -31,11 +31,11 @@ import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
@@ -846,405 +846,6 @@ public class SymphonyCoreItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * A child creation extender for the {@link TopologyPackage}. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public static class TopologyChildCreationExtender implements
-			IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc --> <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends TopologySwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc
-			 * --> <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc --> <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors,
-					EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-
-			/**
-			 * <!-- begin-user-doc --> <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public <T> Object caseContentNode(ContentNode<T> object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonyCoreFacade()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonyEnvironment()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonyTopology()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonySystem()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonySystemApiAdapter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createConnectionPointsList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createConnectionPoint()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createAssemblyLink()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createAssemblyLinksList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createPoseProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createAbsolutePoseProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonyInitializationData()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createWorksitesList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createOrbitModelsList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createPositioned()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterest()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createTopologyRoot()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createPositionedResult()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createOperationCallPositionedResult()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createUserDefinedResult()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-				return null;
-			}
-
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonyCoreFacade()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonyEnvironment()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonyTopology()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonySystem()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonySystemApiAdapter()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createConnectionPointsList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createConnectionPoint()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createAssemblyLink()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createAssemblyLinksList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createPoseProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createAbsolutePoseProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createSymphonyInitializationData()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createWorksitesList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createOrbitModelsList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createPositioned()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterest()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestList()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createTopologyRoot()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createPositionedResult()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createOperationCallPositionedResult()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createUserDefinedResult()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-				return null;
-			}
-
-			/**
-			 * <!-- begin-user-doc --> <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGroupNode(GroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-				return null;
-			}
-
-			/**
-			 * <!-- begin-user-doc --> <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseAggregateGroupNode(AggregateGroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-				return null;
-			}
-
-			/**
-			 * <!-- begin-user-doc --> <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature,
-					Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc --> <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object,
-				EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc --> <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return SymphonyCoreEditPlugin.INSTANCE;
-		}
-	}
-
-	/**
 	 * A child creation extender for the {@link TopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1457,6 +1058,408 @@ public class SymphonyCoreItemProviderAdapterFactory extends
 
 		/**
 		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return SymphonyCoreEditPlugin.INSTANCE;
+		}
+	}
+
+	/**
+	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseContentNode(ContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonyCoreFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonyEnvironment()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonyTopology()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonySystem()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonySystemApiAdapter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createConnectionPointsList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createConnectionPoint()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createAssemblyLink()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createAssemblyLinksList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createPoseProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createAbsolutePoseProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonyInitializationData()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createWorksitesList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createOrbitModelsList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createPositioned()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterest()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createTopologyRoot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createPositionedResult()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createOperationCallPositionedResult()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createUserDefinedResult()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonyCoreFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonyEnvironment()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonyTopology()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonySystem()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonySystemApiAdapter()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createConnectionPointsList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createConnectionPoint()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createAssemblyLink()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createAssemblyLinksList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createPoseProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createAbsolutePoseProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createSymphonyInitializationData()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createWorksitesList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createOrbitModelsList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createPositioned()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterest()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createTopologyRoot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createPositionedResult()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createOperationCallPositionedResult()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createUserDefinedResult()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseGroupNode(GroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAggregateGroupNode(AggregateGroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		public ResourceLocator getResourceLocator() {

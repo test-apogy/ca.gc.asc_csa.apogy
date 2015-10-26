@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler#getTargetResolution <em>Target Resolution</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDigitalElevationMapSampler()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMapSampler()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface DigitalElevationMapSampler extends Processor<DigitalElevationMa
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Resolution</em>' attribute.
 	 * @see #setTargetResolution(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDigitalElevationMapSampler_TargetResolution()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMapSampler_TargetResolution()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

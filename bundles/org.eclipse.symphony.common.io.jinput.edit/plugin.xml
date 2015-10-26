@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.io.jinput"
-            class="org.eclipse.symphony.common.io.jinput.provider.JInputItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.io.jinput.provider.Symphony__CommonIOJInputItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -19,4 +19,5 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
+null
 </plugin>

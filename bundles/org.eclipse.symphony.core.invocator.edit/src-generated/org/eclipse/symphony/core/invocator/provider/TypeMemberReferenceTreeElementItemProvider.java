@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
@@ -166,7 +166,7 @@ public class TypeMemberReferenceTreeElementItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE,
-				 EMFEcoreFactory.eINSTANCE.createTreeRootNode()));
+				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 
 }

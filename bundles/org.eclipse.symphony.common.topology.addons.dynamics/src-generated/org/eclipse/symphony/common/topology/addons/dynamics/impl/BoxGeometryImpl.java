@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class BoxGeometryImpl extends GeometryImpl implements BoxGeometry {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.BOX_GEOMETRY;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.BOX_GEOMETRY;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class BoxGeometryImpl extends GeometryImpl implements BoxGeometry {
 		Tuple3d oldDimension = dimension;
 		dimension = newDimension;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION, oldDimension, newDimension);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION, oldDimension, newDimension);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -91,14 +91,14 @@ public class BoxGeometryImpl extends GeometryImpl implements BoxGeometry {
 		if (newDimension != dimension) {
 			NotificationChain msgs = null;
 			if (dimension != null)
-				msgs = ((InternalEObject)dimension).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION, null, msgs);
+				msgs = ((InternalEObject)dimension).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION, null, msgs);
 			if (newDimension != null)
-				msgs = ((InternalEObject)newDimension).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION, null, msgs);
+				msgs = ((InternalEObject)newDimension).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION, null, msgs);
 			msgs = basicSetDimension(newDimension, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION, newDimension, newDimension));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION, newDimension, newDimension));
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class BoxGeometryImpl extends GeometryImpl implements BoxGeometry {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
+			case Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
 				return basicSetDimension(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -123,7 +123,7 @@ public class BoxGeometryImpl extends GeometryImpl implements BoxGeometry {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
+			case Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
 				return getDimension();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -137,7 +137,7 @@ public class BoxGeometryImpl extends GeometryImpl implements BoxGeometry {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
+			case Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
 				setDimension((Tuple3d)newValue);
 				return;
 		}
@@ -152,7 +152,7 @@ public class BoxGeometryImpl extends GeometryImpl implements BoxGeometry {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
+			case Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
 				setDimension((Tuple3d)null);
 				return;
 		}
@@ -167,7 +167,7 @@ public class BoxGeometryImpl extends GeometryImpl implements BoxGeometry {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
+			case Symphony__CommonTopologyDynamicsPackage.BOX_GEOMETRY__DIMENSION:
 				return dimension != null;
 		}
 		return super.eIsSet(featureID);

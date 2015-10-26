@@ -6,7 +6,7 @@
 package org.eclipse.symphony.common.geometry.data3d.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.SphericalTriangle;
 
 /**
@@ -33,7 +33,7 @@ public class SphericalTriangleImpl extends SphericalPolygonImpl implements Spher
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.SPHERICAL_TRIANGLE;
+		return Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_TRIANGLE;
 	}
 
 } //SphericalTriangleImpl

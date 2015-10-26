@@ -6,7 +6,7 @@ import org.eclipse.core.runtime.jobs.Job;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Server;
 
 /**
@@ -59,7 +59,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.SERVER;
+		return Symphony__CommonEMFPackage.Literals.SERVER;
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcorePackage.SERVER__SERVER_JOB:
+			case Symphony__CommonEMFPackage.SERVER__SERVER_JOB:
 				return getServerJob();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -93,7 +93,7 @@ public class ServerImpl extends StartableImpl implements Server {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.SERVER__SERVER_JOB:
+			case Symphony__CommonEMFPackage.SERVER__SERVER_JOB:
 				return SERVER_JOB_EDEFAULT == null ? serverJob != null : !SERVER_JOB_EDEFAULT.equals(serverJob);
 		}
 		return super.eIsSet(featureID);

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Link;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -51,7 +51,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.LINK;
+		return Symphony__CommonTopologyPackage.Literals.LINK;
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class LinkImpl extends NodeImpl implements Link {
 			node = (Node)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyPackage.LINK__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyPackage.LINK__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -95,7 +95,7 @@ public class LinkImpl extends NodeImpl implements Link {
 
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					TopologyPackage.LINK__NODE, oldNode, node));
+					Symphony__CommonTopologyPackage.LINK__NODE, oldNode, node));
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.LINK__NODE:
+			case Symphony__CommonTopologyPackage.LINK__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
 		}
@@ -119,7 +119,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.LINK__NODE:
+			case Symphony__CommonTopologyPackage.LINK__NODE:
 				setNode((Node)newValue);
 				return;
 		}
@@ -133,7 +133,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.LINK__NODE:
+			case Symphony__CommonTopologyPackage.LINK__NODE:
 				setNode((Node)null);
 				return;
 		}
@@ -147,7 +147,7 @@ public class LinkImpl extends NodeImpl implements Link {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.LINK__NODE:
+			case Symphony__CommonTopologyPackage.LINK__NODE:
 				return node != null;
 		}
 		return super.eIsSet(featureID);

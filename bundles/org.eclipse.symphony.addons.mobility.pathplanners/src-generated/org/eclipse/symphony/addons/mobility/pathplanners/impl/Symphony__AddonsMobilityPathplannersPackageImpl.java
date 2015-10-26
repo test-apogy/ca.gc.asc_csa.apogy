@@ -22,10 +22,10 @@ import org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -332,68 +332,68 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		ProcessorsPackage theProcessorsPackage = (ProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessorsPackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
+		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
 		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
-		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonGeometryDataPackage theSymphony__CommonGeometryDataPackage = (Symphony__CommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryDataPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter meshWayPointPathPlannerEClass_T = addETypeParameter(meshWayPointPathPlannerEClass, "T");
 
 		// Set bounds for type parameters
-		EGenericType g1 = createEGenericType(theData3dPackage.getCartesianPolygon());
+		EGenericType g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
 		meshWayPointPathPlannerEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
-		g1 = createEGenericType(theProcessorsPackage.getProcessor());
-		EGenericType g2 = createEGenericType(theData3dPackage.getCartesianCoordinatesSet());
+		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
+		EGenericType g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(theSymphony__AddonsGeometryPathsPackage.getWayPointPath());
 		g1.getETypeArguments().add(g2);
 		wayPointPathPlannerEClass.getEGenericSuperTypes().add(g1);
 		meshWayPointPathPlannerEClass.getESuperTypes().add(this.getWayPointPathPlanner());
-		exclusionZoneEClass.getESuperTypes().add(theTopologyPackage.getNode());
+		exclusionZoneEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
 		g1 = createEGenericType(this.getExclusionZone());
 		circularExclusionZoneEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theDataPackage.getCoordinatesSamplingShape());
-		g2 = createEGenericType(theData3dPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getCoordinatesSamplingShape());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		circularExclusionZoneEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theDataPackage.getPolygonSamplingShape());
-		g2 = createEGenericType(theData3dPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getPolygonSamplingShape());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theData3dPackage.getCartesianTriangle());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianTriangle());
 		g1.getETypeArguments().add(g2);
 		circularExclusionZoneEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(wayPointPathPlannerEClass, WayPointPathPlanner.class, "WayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWayPointPathPlanner_CurrentPosition(), theData3dPackage.getCartesianPositionCoordinates(), null, "currentPosition", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWayPointPathPlanner_CurrentDestination(), theData3dPackage.getCartesianPositionCoordinates(), null, "currentDestination", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWayPointPathPlanner_CurrentPosition(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentPosition", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWayPointPathPlanner_CurrentDestination(), theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), null, "currentDestination", null, 0, 1, WayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getWayPointPathPlanner__Plan__CartesianPositionCoordinates_CartesianPositionCoordinates(), theSymphony__AddonsGeometryPathsPackage.getWayPointPath(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "currentPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "destinationPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theProcessorsPackage.getException());
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "currentPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "destinationPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, theSymphony__CommonProcessorsPackage.getException());
 
 		initEClass(meshWayPointPathPlannerEClass, MeshWayPointPathPlanner.class, "MeshWayPointPathPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		g1 = createEGenericType(theDataPackage.getMesh());
-		g2 = createEGenericType(theData3dPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getMesh());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(theData3dPackage.getCartesianPolygon());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
 		g1.getETypeArguments().add(g2);
 		initEReference(getMeshWayPointPathPlanner_Mesh(), g1, null, "mesh", null, 0, 1, MeshWayPointPathPlanner.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(exclusionZoneEClass, ExclusionZone.class, "ExclusionZone", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getExclusionZone__IsInside__CartesianPositionCoordinates(), theEcorePackage.getEBoolean(), "isInside", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getExclusionZone__Intersects__CartesianPositionCoordinates_CartesianPositionCoordinates(), theEcorePackage.getEBoolean(), "intersects", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianPositionCoordinates(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "from", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates(), "to", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(circularExclusionZoneEClass, CircularExclusionZone.class, "CircularExclusionZone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCircularExclusionZone_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -403,7 +403,7 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 
 		op = initEOperation(getPathPlannersFacade__CreateCircularExclusionZone__double_GroupNode(), this.getCircularExclusionZone(), "createCircularExclusionZone", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getGroupNode(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getGroupNode(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

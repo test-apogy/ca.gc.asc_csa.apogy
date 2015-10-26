@@ -6,7 +6,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.URLNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
@@ -77,7 +77,7 @@ public class JME3Topology3DView extends AbstractTopology3DView
 		
 	private Node createTestTopology()
 	{
-		AggregateGroupNode root = TopologyFactory.eINSTANCE.createAggregateGroupNode();
+		AggregateGroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode();
 		
 		TransformNode t1 = TopologyFacade.INSTANCE.createTransformNodeXYZ(10, 5, 5,0, 0, 0);
 		root.getAggregatedChildren().add(t1);
@@ -90,7 +90,7 @@ public class JME3Topology3DView extends AbstractTopology3DView
 		TransformNode t2 = TopologyFacade.INSTANCE.createTransformNodeXYZ(x, 5, 5,0, 0, 0);
 		t1.getAggregatedChildren().add(t2);
 		
-		URLNode urlNode = TopologyFactory.eINSTANCE.createURLNode();
+		URLNode urlNode = Symphony__CommonTopologyFactory.eINSTANCE.createURLNode();
 		urlNode.setUrl("platform:/plugin/org.eclipse.symphony.examples.lander.symphony/vrml/lander.obj");
 		t2.getChildren().add(urlNode);
 		

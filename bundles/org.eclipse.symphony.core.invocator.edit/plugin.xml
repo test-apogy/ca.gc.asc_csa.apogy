@@ -20,6 +20,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_core_invocator -->
+      <extender
+            uri="org.eclipse.symphony.common.emf"
+            class="org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorItemProviderAdapterFactory$Symphony__CommonEMFChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated eclipse_emf_ecore_invocator -->
       <extender
             uri="org.eclipse.symphony.common.emf"

@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -113,7 +113,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT;
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 			physicalBody = (PhysicalBody)eResolveProxy(oldPhysicalBody);
 			if (physicalBody != oldPhysicalBody) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, oldPhysicalBody, physicalBody));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, oldPhysicalBody, physicalBody));
 			}
 		}
 		return physicalBody;
@@ -151,7 +151,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 		PhysicalBody oldPhysicalBody = physicalBody;
 		physicalBody = newPhysicalBody;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, oldPhysicalBody, newPhysicalBody);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, oldPhysicalBody, newPhysicalBody);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -166,14 +166,14 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 		if (newPhysicalBody != physicalBody) {
 			NotificationChain msgs = null;
 			if (physicalBody != null)
-				msgs = ((InternalEObject)physicalBody).eInverseRemove(this, TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
+				msgs = ((InternalEObject)physicalBody).eInverseRemove(this, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
 			if (newPhysicalBody != null)
-				msgs = ((InternalEObject)newPhysicalBody).eInverseAdd(this, TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
+				msgs = ((InternalEObject)newPhysicalBody).eInverseAdd(this, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
 			msgs = basicSetPhysicalBody(newPhysicalBody, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, newPhysicalBody, newPhysicalBody));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY, newPhysicalBody, newPhysicalBody));
 	}
 
 	/**
@@ -182,7 +182,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	public AbstractConstraint getConstraint() {
-		if (eContainerFeatureID() != TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT) return null;
+		if (eContainerFeatureID() != Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT) return null;
 		return (AbstractConstraint)eContainer();
 	}
 
@@ -192,7 +192,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	public AbstractConstraint basicGetConstraint() {
-		if (eContainerFeatureID() != TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT) return null;
+		if (eContainerFeatureID() != Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT) return null;
 		return (AbstractConstraint)eInternalContainer();
 	}
 
@@ -202,7 +202,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	public NotificationChain basicSetConstraint(AbstractConstraint newConstraint, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newConstraint, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newConstraint, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT, msgs);
 		return msgs;
 	}
 
@@ -212,19 +212,19 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	public void setConstraint(AbstractConstraint newConstraint) {
-		if (newConstraint != eInternalContainer() || (eContainerFeatureID() != TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT && newConstraint != null)) {
+		if (newConstraint != eInternalContainer() || (eContainerFeatureID() != Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT && newConstraint != null)) {
 			if (EcoreUtil.isAncestor(this, newConstraint))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newConstraint != null)
-				msgs = ((InternalEObject)newConstraint).eInverseAdd(this, TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS, AbstractConstraint.class, msgs);
+				msgs = ((InternalEObject)newConstraint).eInverseAdd(this, Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS, AbstractConstraint.class, msgs);
 			msgs = basicSetConstraint(newConstraint, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT, newConstraint, newConstraint));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT, newConstraint, newConstraint));
 	}
 
 	/**
@@ -245,7 +245,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 		Matrix4x4 oldTransform = transform;
 		transform = newTransform;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM, oldTransform, newTransform);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM, oldTransform, newTransform);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -260,14 +260,14 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 		if (newTransform != transform) {
 			NotificationChain msgs = null;
 			if (transform != null)
-				msgs = ((InternalEObject)transform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)transform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM, null, msgs);
 			if (newTransform != null)
-				msgs = ((InternalEObject)newTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)newTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM, null, msgs);
 			msgs = basicSetTransform(newTransform, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM, newTransform, newTransform));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM, newTransform, newTransform));
 	}
 
 	/**
@@ -288,7 +288,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -309,7 +309,7 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 		String oldPointId = pointId;
 		pointId = newPointId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID, oldPointId, pointId));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID, oldPointId, pointId));
 	}
 
 	/**
@@ -320,11 +320,11 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
 				if (physicalBody != null)
-					msgs = ((InternalEObject)physicalBody).eInverseRemove(this, TopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
+					msgs = ((InternalEObject)physicalBody).eInverseRemove(this, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, PhysicalBody.class, msgs);
 				return basicSetPhysicalBody((PhysicalBody)otherEnd, msgs);
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetConstraint((AbstractConstraint)otherEnd, msgs);
@@ -340,11 +340,11 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
 				return basicSetPhysicalBody(null, msgs);
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
 				return basicSetConstraint(null, msgs);
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
 				return basicSetTransform(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -358,8 +358,8 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
-				return eInternalContainer().eInverseRemove(this, TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS, AbstractConstraint.class, msgs);
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
+				return eInternalContainer().eInverseRemove(this, Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS, AbstractConstraint.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -372,17 +372,17 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
 				if (resolve) return getPhysicalBody();
 				return basicGetPhysicalBody();
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
 				if (resolve) return getConstraint();
 				return basicGetConstraint();
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
 				return getTransform();
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
 				return getDescription();
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
 				return getPointId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -396,19 +396,19 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
 				setPhysicalBody((PhysicalBody)newValue);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
 				setConstraint((AbstractConstraint)newValue);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
 				setTransform((Matrix4x4)newValue);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
 				setPointId((String)newValue);
 				return;
 		}
@@ -423,19 +423,19 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
 				setPhysicalBody((PhysicalBody)null);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
 				setConstraint((AbstractConstraint)null);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
 				setTransform((Matrix4x4)null);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
 				setPointId(POINT_ID_EDEFAULT);
 				return;
 		}
@@ -450,15 +450,15 @@ public class ConstraintAttachmentPointImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY:
 				return physicalBody != null;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT:
 				return basicGetConstraint() != null;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
 				return transform != null;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
 				return POINT_ID_EDEFAULT == null ? pointId != null : !POINT_ID_EDEFAULT.equals(pointId);
 		}
 		return super.eIsSet(featureID);

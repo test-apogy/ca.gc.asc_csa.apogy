@@ -6,13 +6,13 @@ package org.eclipse.symphony.addons.sensors.fov.bindings.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVEditPlugin;
-import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
-import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
-import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
+import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
+import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
+import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 
 /**
  * This is the central singleton for the Symphony__AddonsSensorsFOVBindings edit plugin.
@@ -50,12 +50,12 @@ public final class Symphony__AddonsSensorsFOVBindingsEditPlugin extends EMFPlugi
 		  (new ResourceLocator [] {
 		     TopologyBindingsEditPlugin.INSTANCE,
 		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
+		     Symphony__CommonEMFEditPlugin.INSTANCE,
+		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
+		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

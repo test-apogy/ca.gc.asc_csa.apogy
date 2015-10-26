@@ -30,7 +30,7 @@
             class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$SymphonyEnvironmentUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">

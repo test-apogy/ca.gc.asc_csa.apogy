@@ -32,7 +32,7 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.Activator;
@@ -677,7 +677,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 			progressMonitor.worked(height);
 		}
 		
-		EImage eImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		eImage.setImageContent(bufferedImage);
 		
 		return eImage;

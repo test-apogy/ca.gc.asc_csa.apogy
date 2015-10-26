@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -208,7 +208,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT__PARENT = TopologyPackage.GROUP_NODE__PARENT;
+  int IMAGE_SNAPSHOT__PARENT = Symphony__CommonTopologyPackage.GROUP_NODE__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -217,7 +217,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT__DESCRIPTION = TopologyPackage.GROUP_NODE__DESCRIPTION;
+  int IMAGE_SNAPSHOT__DESCRIPTION = Symphony__CommonTopologyPackage.GROUP_NODE__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -226,7 +226,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT__NODE_ID = TopologyPackage.GROUP_NODE__NODE_ID;
+  int IMAGE_SNAPSHOT__NODE_ID = Symphony__CommonTopologyPackage.GROUP_NODE__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -235,7 +235,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT__CHILDREN = TopologyPackage.GROUP_NODE__CHILDREN;
+  int IMAGE_SNAPSHOT__CHILDREN = Symphony__CommonTopologyPackage.GROUP_NODE__CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -244,7 +244,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT__TIME = TopologyPackage.GROUP_NODE_FEATURE_COUNT + 0;
+  int IMAGE_SNAPSHOT__TIME = Symphony__CommonTopologyPackage.GROUP_NODE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Field Of View</b></em>' containment reference.
@@ -253,7 +253,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT__FIELD_OF_VIEW = TopologyPackage.GROUP_NODE_FEATURE_COUNT + 1;
+  int IMAGE_SNAPSHOT__FIELD_OF_VIEW = Symphony__CommonTopologyPackage.GROUP_NODE_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Image</b></em>' containment reference.
@@ -262,7 +262,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT__IMAGE = TopologyPackage.GROUP_NODE_FEATURE_COUNT + 2;
+  int IMAGE_SNAPSHOT__IMAGE = Symphony__CommonTopologyPackage.GROUP_NODE_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Image Snapshot</em>' class.
@@ -271,7 +271,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT_FEATURE_COUNT = TopologyPackage.GROUP_NODE_FEATURE_COUNT + 3;
+  int IMAGE_SNAPSHOT_FEATURE_COUNT = Symphony__CommonTopologyPackage.GROUP_NODE_FEATURE_COUNT + 3;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -280,7 +280,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT___ACCEPT__INODEVISITOR = TopologyPackage.GROUP_NODE___ACCEPT__INODEVISITOR;
+  int IMAGE_SNAPSHOT___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.GROUP_NODE___ACCEPT__INODEVISITOR;
 
   /**
 	 * The operation id for the '<em>Convert To Horizontal Angle</em>' operation.
@@ -289,7 +289,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_SNAPSHOT___CONVERT_TO_HORIZONTAL_ANGLE__INT = TopologyPackage.GROUP_NODE_OPERATION_COUNT + 0;
+	int IMAGE_SNAPSHOT___CONVERT_TO_HORIZONTAL_ANGLE__INT = Symphony__CommonTopologyPackage.GROUP_NODE_OPERATION_COUNT + 0;
 
 		/**
 	 * The operation id for the '<em>Convert To Vertical Angle</em>' operation.
@@ -298,7 +298,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_SNAPSHOT___CONVERT_TO_VERTICAL_ANGLE__INT = TopologyPackage.GROUP_NODE_OPERATION_COUNT + 1;
+	int IMAGE_SNAPSHOT___CONVERT_TO_VERTICAL_ANGLE__INT = Symphony__CommonTopologyPackage.GROUP_NODE_OPERATION_COUNT + 1;
 
 		/**
 	 * The number of operations of the '<em>Image Snapshot</em>' class.
@@ -307,7 +307,7 @@ public interface Symphony__AddonsSensorsImagingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int IMAGE_SNAPSHOT_OPERATION_COUNT = TopologyPackage.GROUP_NODE_OPERATION_COUNT + 2;
+  int IMAGE_SNAPSHOT_OPERATION_COUNT = Symphony__CommonTopologyPackage.GROUP_NODE_OPERATION_COUNT + 2;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.impl.RectifiedImageSnapshotImpl <em>Rectified Image Snapshot</em>}' class.

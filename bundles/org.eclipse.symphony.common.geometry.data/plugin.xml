@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.common.geometry.data"
-            class="org.eclipse.symphony.common.geometry.data.DataPackage"
+            class="org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage"
             genModel="model/symphony_common_geometry_data.xcore"/>
    </extension>
 

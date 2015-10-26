@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Startable;
 
 /**
@@ -79,7 +79,7 @@ public class StartableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Startable_started_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Startable_started_feature", "_UI_Startable_type"),
-				 EMFEcorePackage.Literals.STARTABLE__STARTED,
+				 Symphony__CommonEMFPackage.Literals.STARTABLE__STARTED,
 				 true,
 				 false,
 				 false,
@@ -124,7 +124,7 @@ public class StartableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Startable.class)) {
-			case EMFEcorePackage.STARTABLE__STARTED:
+			case Symphony__CommonEMFPackage.STARTABLE__STARTED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -21,13 +21,13 @@ import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePacka
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.topology.RotationNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyFactory;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
 
 /**
@@ -47,7 +47,7 @@ import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
 public class OrientationSensorImpl extends RotationNodeImpl implements OrientationSensor
 {
 	private Adapter orientationAdapter = null;		
-	protected TopologyFacade topologyFacade = TopologyFactory.eINSTANCE.createTopologyFacade();
+	protected TopologyFacade topologyFacade = Symphony__CommonTopologyFactory.eINSTANCE.createTopologyFacade();
 
 	
 	/**
@@ -132,7 +132,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	{
 		if(orientationCoordinates == null)
 		{
-			orientationCoordinates =  Data3dFactory.eINSTANCE.createCartesianOrientationCoordinates();				
+			orientationCoordinates =  Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates();				
 		}
 		return orientationCoordinates;
 	}
@@ -333,7 +333,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 				@Override
 				public void notifyChanged(Notification msg)
 				{				
-					if(msg.getFeatureID(RotationNode.class) == TopologyPackage.ROTATION_NODE__ROTATION_MATRIX)
+					if(msg.getFeatureID(RotationNode.class) == Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX)
 					{
 						// Extracts the rotation from the rotation matrix.
 						CartesianOrientationCoordinates newOrientation = extractOrientationFromMatrix((Matrix3x3) msg.getNewValue());

@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -124,7 +124,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__PARENT = TopologyPackage.REFERENCED_GROUP_NODE__PARENT;
+  int SYMPHONY_ENVIRONMENT_NODE__PARENT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -133,7 +133,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__DESCRIPTION = TopologyPackage.REFERENCED_GROUP_NODE__DESCRIPTION;
+  int SYMPHONY_ENVIRONMENT_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -142,7 +142,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__NODE_ID = TopologyPackage.REFERENCED_GROUP_NODE__NODE_ID;
+  int SYMPHONY_ENVIRONMENT_NODE__NODE_ID = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -151,7 +151,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__CHILDREN = TopologyPackage.REFERENCED_GROUP_NODE__CHILDREN;
+  int SYMPHONY_ENVIRONMENT_NODE__CHILDREN = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Referenced Children</b></em>' reference list.
@@ -160,7 +160,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__REFERENCED_CHILDREN = TopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN;
+  int SYMPHONY_ENVIRONMENT_NODE__REFERENCED_CHILDREN = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Symphony Environment</b></em>' reference.
@@ -169,7 +169,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT = TopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 0;
+  int SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Worksite Node</b></em>' reference.
@@ -178,7 +178,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE = TopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 1;
+  int SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Results List Node</b></em>' reference.
@@ -187,7 +187,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE = TopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 2;
+  int SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Symphony System AP Is Node</b></em>' reference.
@@ -196,7 +196,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE = TopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 3;
+  int SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 3;
 
   /**
 	 * The number of structural features of the '<em>Symphony Environment Node</em>' class.
@@ -205,7 +205,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE_FEATURE_COUNT = TopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 4;
+  int SYMPHONY_ENVIRONMENT_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 4;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -214,7 +214,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE___ACCEPT__INODEVISITOR = TopologyPackage.REFERENCED_GROUP_NODE___ACCEPT__INODEVISITOR;
+  int SYMPHONY_ENVIRONMENT_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE___ACCEPT__INODEVISITOR;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -223,7 +223,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE___DISPOSE = TopologyPackage.REFERENCED_GROUP_NODE_OPERATION_COUNT + 0;
+  int SYMPHONY_ENVIRONMENT_NODE___DISPOSE = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_OPERATION_COUNT + 0;
 
   /**
 	 * The number of operations of the '<em>Symphony Environment Node</em>' class.
@@ -232,7 +232,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_ENVIRONMENT_NODE_OPERATION_COUNT = TopologyPackage.REFERENCED_GROUP_NODE_OPERATION_COUNT + 1;
+  int SYMPHONY_ENVIRONMENT_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_OPERATION_COUNT + 1;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.topology.impl.SymphonySystemAPIsNodeImpl <em>Symphony System AP Is Node</em>}' class.
@@ -251,7 +251,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE__PARENT = TopologyPackage.REFERENCED_GROUP_NODE__PARENT;
+  int SYMPHONY_SYSTEM_AP_IS_NODE__PARENT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -260,7 +260,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE__DESCRIPTION = TopologyPackage.REFERENCED_GROUP_NODE__DESCRIPTION;
+  int SYMPHONY_SYSTEM_AP_IS_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -269,7 +269,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE__NODE_ID = TopologyPackage.REFERENCED_GROUP_NODE__NODE_ID;
+  int SYMPHONY_SYSTEM_AP_IS_NODE__NODE_ID = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -278,7 +278,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE__CHILDREN = TopologyPackage.REFERENCED_GROUP_NODE__CHILDREN;
+  int SYMPHONY_SYSTEM_AP_IS_NODE__CHILDREN = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Referenced Children</b></em>' reference list.
@@ -287,7 +287,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE__REFERENCED_CHILDREN = TopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN;
+  int SYMPHONY_SYSTEM_AP_IS_NODE__REFERENCED_CHILDREN = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN;
 
   /**
 	 * The feature id for the '<em><b>Symphony Environment</b></em>' reference.
@@ -296,7 +296,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT = TopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 0;
+  int SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Symphony System AP Is Node</em>' class.
@@ -305,7 +305,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE_FEATURE_COUNT = TopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 1;
+  int SYMPHONY_SYSTEM_AP_IS_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -314,7 +314,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE___ACCEPT__INODEVISITOR = TopologyPackage.REFERENCED_GROUP_NODE___ACCEPT__INODEVISITOR;
+  int SYMPHONY_SYSTEM_AP_IS_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE___ACCEPT__INODEVISITOR;
 
   /**
 	 * The number of operations of the '<em>Symphony System AP Is Node</em>' class.
@@ -323,7 +323,7 @@ public interface SymphonyTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_SYSTEM_AP_IS_NODE_OPERATION_COUNT = TopologyPackage.REFERENCED_GROUP_NODE_OPERATION_COUNT + 0;
+  int SYMPHONY_SYSTEM_AP_IS_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.topology.impl.SymphonyTopologyFacadeImpl <em>Facade</em>}' class.

@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getData3DIO()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getData3DIO()
  * @model
  * @generated
  */

@@ -26,7 +26,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.Node} object.
@@ -83,7 +83,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_parent_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__PARENT,
+				 Symphony__CommonTopologyPackage.Literals.NODE__PARENT,
 				 true,
 				 false,
 				 true,
@@ -105,7 +105,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_description_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__DESCRIPTION,
+				 Symphony__CommonTopologyPackage.Literals.NODE__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class NodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_nodeId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_nodeId_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__NODE_ID,
+				 Symphony__CommonTopologyPackage.Literals.NODE__NODE_ID,
 				 true,
 				 false,
 				 false,
@@ -172,8 +172,8 @@ public class NodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Node.class)) {
-			case TopologyPackage.NODE__DESCRIPTION:
-			case TopologyPackage.NODE__NODE_ID:
+			case Symphony__CommonTopologyPackage.NODE__DESCRIPTION:
+			case Symphony__CommonTopologyPackage.NODE__NODE_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

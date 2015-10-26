@@ -16,7 +16,7 @@ package org.eclipse.symphony.common.io.jinput;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EVirtualComponent#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEVirtualComponent()
+ * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEVirtualComponent()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface EVirtualComponent extends EComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(float)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEVirtualComponent_CurrentValue()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEVirtualComponent_CurrentValue()
 	 * @model unique="false"
 	 * @generated
 	 */

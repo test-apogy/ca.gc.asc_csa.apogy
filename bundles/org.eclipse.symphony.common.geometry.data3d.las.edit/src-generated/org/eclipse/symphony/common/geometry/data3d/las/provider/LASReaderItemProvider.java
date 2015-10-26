@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.symphony.common.geometry.data3d.las.LASReader;
-import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASReader} object.
@@ -85,7 +85,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_file_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_file_feature", "_UI_LASReader_type"),
-				 LasPackage.Literals.LAS_READER__FILE,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__FILE,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_inputStream_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_inputStream_feature", "_UI_LASReader_type"),
-				 LasPackage.Literals.LAS_READER__INPUT_STREAM,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__INPUT_STREAM,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_vlrs_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_vlrs_feature", "_UI_LASReader_type"),
-				 LasPackage.Literals.LAS_READER__VLRS,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__VLRS,
 				 true,
 				 false,
 				 true,
@@ -151,7 +151,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_progressMonitor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_progressMonitor_feature", "_UI_LASReader_type"),
-				 LasPackage.Literals.LAS_READER__PROGRESS_MONITOR,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__PROGRESS_MONITOR,
 				 true,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_header_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_header_feature", "_UI_LASReader_type"),
-				 LasPackage.Literals.LAS_READER__HEADER,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__HEADER,
 				 true,
 				 false,
 				 true,
@@ -195,7 +195,7 @@ public class LASReaderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LASReader_points_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LASReader_points_feature", "_UI_LASReader_type"),
-				 LasPackage.Literals.LAS_READER__POINTS,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.LAS_READER__POINTS,
 				 true,
 				 false,
 				 true,
@@ -242,9 +242,9 @@ public class LASReaderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LASReader.class)) {
-			case LasPackage.LAS_READER__FILE:
-			case LasPackage.LAS_READER__INPUT_STREAM:
-			case LasPackage.LAS_READER__PROGRESS_MONITOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__FILE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__INPUT_STREAM:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_READER__PROGRESS_MONITOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -18,7 +18,7 @@ import org.eclipse.symphony.addons.sensors.range.RangeScanner;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 import org.eclipse.symphony.common.processors.Monitorable;
 import org.eclipse.symphony.common.processors.Processor;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -254,14 +254,14 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Monitorable.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR: return ProcessorsPackage.MONITORABLE__PROGRESS_MONITOR;
+				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR: return Symphony__CommonProcessorsPackage.MONITORABLE__PROGRESS_MONITOR;
 				default: return -1;
 			}
 		}
 		if (baseClass == Processor.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT: return ProcessorsPackage.PROCESSOR__INPUT;
-				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT: return ProcessorsPackage.PROCESSOR__OUTPUT;
+				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT: return Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
+				case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT: return Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
 				default: return -1;
 			}
 		}
@@ -277,14 +277,14 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Monitorable.class) {
 			switch (baseFeatureID) {
-				case ProcessorsPackage.MONITORABLE__PROGRESS_MONITOR: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR;
+				case Symphony__CommonProcessorsPackage.MONITORABLE__PROGRESS_MONITOR: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR;
 				default: return -1;
 			}
 		}
 		if (baseClass == Processor.class) {
 			switch (baseFeatureID) {
-				case ProcessorsPackage.PROCESSOR__INPUT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT;
-				case ProcessorsPackage.PROCESSOR__OUTPUT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT;
+				case Symphony__CommonProcessorsPackage.PROCESSOR__INPUT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT;
+				case Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT;
 				default: return -1;
 			}
 		}
@@ -305,7 +305,7 @@ public class RangeScannerImpl<InputType> extends RangeSensorImpl implements Rang
 		}
 		if (baseClass == Processor.class) {
 			switch (baseOperationID) {
-				case ProcessorsPackage.PROCESSOR___PROCESS__OBJECT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER___PROCESS__OBJECT;
+				case Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT: return Symphony__AddonsSensorsRangePackage.RANGE_SCANNER___PROCESS__OBJECT;
 				default: return -1;
 			}
 		}

@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
@@ -704,7 +704,7 @@ public class SymphonyEarthOrbitEnvironmentUIPackageImpl extends EPackageImpl imp
 
 		// Obtain other dependent packages
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		SymphonyOrbitEnvironmentPackage theSymphonyOrbitEnvironmentPackage = (SymphonyOrbitEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyOrbitEnvironmentPackage.eNS_URI);
@@ -718,18 +718,18 @@ public class SymphonyEarthOrbitEnvironmentUIPackageImpl extends EPackageImpl imp
 
 		// Add supertypes to classes
 		earthViewConfigurationListEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractToolsListContainer());
-		earthViewConfigurationEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		earthViewConfigurationEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		earthViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		earthViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		abstractWorldWindLayerEClass.getESuperTypes().add(theSymphonyCorePackage.getUpdatable());
 		spacecraftLocationWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
-		spacecraftLocationWorldWindLayerEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
+		spacecraftLocationWorldWindLayerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		orbitModelWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		spacecraftSwathWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		earthSurfaceLocationWorldWindLayerEClass.getESuperTypes().add(this.getAbstractWorldWindLayer());
 		groundStationWorldWindLayerEClass.getESuperTypes().add(this.getEarthSurfaceLocationWorldWindLayer());
 		spacecraftVisibilityPassViewConfigurationListEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractToolsListContainer());
-		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		spacecraftVisibilityPassViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(earthViewConfigurationListEClass, EarthViewConfigurationList.class, "EarthViewConfigurationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -746,13 +746,13 @@ public class SymphonyEarthOrbitEnvironmentUIPackageImpl extends EPackageImpl imp
 
 		initEClass(spacecraftLocationWorldWindLayerEClass, SpacecraftLocationWorldWindLayer.class, "SpacecraftLocationWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpacecraftLocationWorldWindLayer_OrbitModel(), theSymphonyOrbitEnvironmentPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpacecraftLocationWorldWindLayer_TimeSource(), theEMFEcorePackage.getTimed(), null, "timeSource", null, 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftLocationWorldWindLayer_TimeSource(), theSymphony__CommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftLocationWorldWindLayer_ShowGroundProjection(), theEcorePackage.getEBoolean(), "showGroundProjection", "true", 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftLocationWorldWindLayer_ShowLatLon(), theEcorePackage.getEBoolean(), "showLatLon", "true", 0, 1, SpacecraftLocationWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orbitModelWorldWindLayerEClass, OrbitModelWorldWindLayer.class, "OrbitModelWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrbitModelWorldWindLayer_OrbitModel(), theSymphonyOrbitEnvironmentPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOrbitModelWorldWindLayer_TimeSource(), theEMFEcorePackage.getTimed(), null, "timeSource", null, 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOrbitModelWorldWindLayer_TimeSource(), theSymphony__CommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitModelWorldWindLayer_TimeInterval(), theEcorePackage.getEDouble(), "timeInterval", "600.0", 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitModelWorldWindLayer_ForwardPropagationDuration(), theEcorePackage.getEDouble(), "forwardPropagationDuration", "43200.0", 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOrbitModelWorldWindLayer_BackwardPropagationDuration(), theEcorePackage.getEDouble(), "backwardPropagationDuration", "43200.0", 0, 1, OrbitModelWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -761,7 +761,7 @@ public class SymphonyEarthOrbitEnvironmentUIPackageImpl extends EPackageImpl imp
 
 		initEClass(spacecraftSwathWorldWindLayerEClass, SpacecraftSwathWorldWindLayer.class, "SpacecraftSwathWorldWindLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpacecraftSwathWorldWindLayer_OrbitModel(), theSymphonyOrbitEnvironmentPackage.getOrbitModel(), null, "orbitModel", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpacecraftSwathWorldWindLayer_TimeSource(), theEMFEcorePackage.getTimed(), null, "timeSource", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpacecraftSwathWorldWindLayer_TimeSource(), theSymphony__CommonEMFPackage.getTimed(), null, "timeSource", null, 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_ForwardPropagationDuration(), theEcorePackage.getEDouble(), "forwardPropagationDuration", "43200.0", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_BackwardPropagationDuration(), theEcorePackage.getEDouble(), "backwardPropagationDuration", "43200.0", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpacecraftSwathWorldWindLayer_TimeInterval(), theEcorePackage.getEDouble(), "timeInterval", "600.0", 0, 1, SpacecraftSwathWorldWindLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

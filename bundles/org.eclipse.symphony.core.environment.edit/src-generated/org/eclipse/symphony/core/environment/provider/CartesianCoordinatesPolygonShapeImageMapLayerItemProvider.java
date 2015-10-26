@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -144,7 +144,7 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerItemProvider extends P
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEnvironmentPackage.Literals.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**

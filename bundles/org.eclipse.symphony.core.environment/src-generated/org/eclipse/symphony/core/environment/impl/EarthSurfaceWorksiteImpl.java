@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.EarthSky;
@@ -288,7 +288,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	 */
 	public Tuple3d convertToXYZPosition(GeographicCoordinates geographicalCoordinates) 
 	{
-		Tuple3d result = MathFactory.eINSTANCE.createTuple3d();
+		Tuple3d result = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		
 		GlobalCoordinates origin = new GlobalCoordinates(Math.toDegrees(getGeographicalCoordinates().getLatitude()), 
 														 Math.toDegrees(getGeographicalCoordinates().getLongitude()));

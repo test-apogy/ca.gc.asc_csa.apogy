@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.topology.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.PickAndPlaceNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class PickAndPlaceNodeImpl extends TransformNodeImpl implements PickAndPl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.PICK_AND_PLACE_NODE;
+		return Symphony__CommonTopologyPackage.Literals.PICK_AND_PLACE_NODE;
 	}
 
 } //PickAndPlaceNodeImpl

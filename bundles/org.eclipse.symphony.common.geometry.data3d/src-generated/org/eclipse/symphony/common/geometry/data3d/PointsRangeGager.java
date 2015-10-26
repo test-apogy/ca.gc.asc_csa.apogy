@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxZ <em>Max Z</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointsRangeGager()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointsRangeGager()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface PointsRangeGager extends Processor<CartesianCoordinatesSet, Car
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min X</em>' attribute.
 	 * @see #setMinX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointsRangeGager_MinX()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointsRangeGager_MinX()
 	 * @model default="-1.0" unique="false"
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface PointsRangeGager extends Processor<CartesianCoordinatesSet, Car
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max X</em>' attribute.
 	 * @see #setMaxX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointsRangeGager_MaxX()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointsRangeGager_MaxX()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -92,7 +92,7 @@ public interface PointsRangeGager extends Processor<CartesianCoordinatesSet, Car
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min Y</em>' attribute.
 	 * @see #setMinY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointsRangeGager_MinY()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointsRangeGager_MinY()
 	 * @model default="-1.0" unique="false"
 	 * @generated
 	 */
@@ -119,7 +119,7 @@ public interface PointsRangeGager extends Processor<CartesianCoordinatesSet, Car
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Y</em>' attribute.
 	 * @see #setMaxY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointsRangeGager_MaxY()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointsRangeGager_MaxY()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -146,7 +146,7 @@ public interface PointsRangeGager extends Processor<CartesianCoordinatesSet, Car
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min Z</em>' attribute.
 	 * @see #setMinZ(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointsRangeGager_MinZ()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointsRangeGager_MinZ()
 	 * @model default="-1.0" unique="false"
 	 * @generated
 	 */
@@ -173,7 +173,7 @@ public interface PointsRangeGager extends Processor<CartesianCoordinatesSet, Car
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Z</em>' attribute.
 	 * @see #setMaxZ(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointsRangeGager_MaxZ()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPointsRangeGager_MaxZ()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

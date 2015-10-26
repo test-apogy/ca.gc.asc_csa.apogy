@@ -46,7 +46,7 @@ public interface INodeVisitor
 	 * 
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(Class)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getNodeVisitor_Type()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNodeVisitor_Type()
 	 * @model dataType="ca.gc.space.java.emf.Class<T>"
 	 * @generated
 	 */

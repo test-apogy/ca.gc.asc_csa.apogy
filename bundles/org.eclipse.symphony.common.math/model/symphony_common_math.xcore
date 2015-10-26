@@ -1,9 +1,9 @@
-@GenModel(prefix="Math",
+@GenModel(prefix="Symphony__CommonMath",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Math",
+	      modelName="Symphony__CommonMath",
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.math/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.math.edit/src-generated")

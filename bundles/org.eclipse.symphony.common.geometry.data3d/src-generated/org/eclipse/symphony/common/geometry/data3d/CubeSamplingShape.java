@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCubeSamplingShape()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Corner1</em>' reference.
 	 * @see #setCorner1(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCubeSamplingShape_Corner1()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_Corner1()
 	 * @model
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Corner2</em>' reference.
 	 * @see #setCorner2(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCubeSamplingShape_Corner2()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_Corner2()
 	 * @model
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Include Just Touching</em>' attribute.
 	 * @see #setIncludeJustTouching(boolean)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCubeSamplingShape_IncludeJustTouching()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_IncludeJustTouching()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */

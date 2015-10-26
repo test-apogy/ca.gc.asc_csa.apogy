@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 
 /**
@@ -83,7 +83,7 @@ public class FeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureNodeAdapter_sourceObject_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureNodeAdapter_sourceObject_feature", "_UI_FeatureNodeAdapter_type"),
-				 EMFEcorePackage.Literals.FEATURE_NODE_ADAPTER__SOURCE_OBJECT,
+				 Symphony__CommonEMFPackage.Literals.FEATURE_NODE_ADAPTER__SOURCE_OBJECT,
 				 true,
 				 false,
 				 true,
@@ -106,7 +106,7 @@ public class FeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureNodeAdapter_featureNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureNodeAdapter_featureNode_feature", "_UI_FeatureNodeAdapter_type"),
-				 EMFEcorePackage.Literals.FEATURE_NODE_ADAPTER__FEATURE_NODE,
+				 Symphony__CommonEMFPackage.Literals.FEATURE_NODE_ADAPTER__FEATURE_NODE,
 				 true,
 				 false,
 				 true,
@@ -129,7 +129,7 @@ public class FeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureNodeAdapter_currentValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureNodeAdapter_currentValue_feature", "_UI_FeatureNodeAdapter_type"),
-				 EMFEcorePackage.Literals.FEATURE_NODE_ADAPTER__CURRENT_VALUE,
+				 Symphony__CommonEMFPackage.Literals.FEATURE_NODE_ADAPTER__CURRENT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -152,7 +152,7 @@ public class FeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureNodeAdapter_resolved_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureNodeAdapter_resolved_feature", "_UI_FeatureNodeAdapter_type"),
-				 EMFEcorePackage.Literals.FEATURE_NODE_ADAPTER__RESOLVED,
+				 Symphony__CommonEMFPackage.Literals.FEATURE_NODE_ADAPTER__RESOLVED,
 				 true,
 				 false,
 				 false,
@@ -202,8 +202,8 @@ public class FeatureNodeAdapterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeatureNodeAdapter.class)) {
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
-			case EMFEcorePackage.FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

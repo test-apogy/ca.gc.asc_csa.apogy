@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Server;
 
 /**
@@ -63,7 +63,7 @@ public class ServerItemProvider extends StartableItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Server_serverJob_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Server_serverJob_feature", "_UI_Server_type"),
-				 EMFEcorePackage.Literals.SERVER__SERVER_JOB,
+				 Symphony__CommonEMFPackage.Literals.SERVER__SERVER_JOB,
 				 false,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class ServerItemProvider extends StartableItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Server.class)) {
-			case EMFEcorePackage.SERVER__SERVER_JOB:
+			case Symphony__CommonEMFPackage.SERVER__SERVER_JOB:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

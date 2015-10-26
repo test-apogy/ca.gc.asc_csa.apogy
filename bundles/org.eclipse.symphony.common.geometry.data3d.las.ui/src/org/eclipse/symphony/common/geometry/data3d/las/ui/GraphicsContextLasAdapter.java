@@ -9,14 +9,14 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
 import org.eclipse.symphony.common.geometry.data3d.las.LASReader;
-import org.eclipse.symphony.common.geometry.data3d.las.LasFactory;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFactory;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
@@ -54,7 +54,7 @@ public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 
 			// We import the file
 			try {
-				LASReader reader = LasFactory.eINSTANCE.createLASReader();
+				LASReader reader = Symphony__CommonGeometryData3DLASFactory.eINSTANCE.createLASReader();
 				reader.setFile(file.getLocation().toOSString());
 
 				if (context instanceof IProgressMonitor) {
@@ -82,7 +82,7 @@ public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 				double zScale = header.getZScaleFactor();
 
 				// We convert the points into a cartesian coordinates set
-				CartesianCoordinatesSet pts = Data3dFactory.eINSTANCE
+				CartesianCoordinatesSet pts = Symphony__CommonGeometryData3DFactory.eINSTANCE
 						.createCartesianCoordinatesSet();
 
 				List<CartesianPositionCoordinates> pointList = new ArrayList<CartesianPositionCoordinates>(
@@ -102,7 +102,7 @@ public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 				pts.getPoints().addAll(pointList);
 
 				// We create a topology
-				GroupNode root = TopologyFactory.eINSTANCE
+				GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE
 						.createAggregateGroupNode();
 
 				ContentNode<CartesianCoordinatesSet> pointNode = org.eclipse.symphony.common.topology.TopologyFacade.INSTANCE

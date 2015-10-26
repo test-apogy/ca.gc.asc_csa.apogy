@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int MOBILE_PLATFORM__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -86,7 +86,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int MOBILE_PLATFORM__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -95,7 +95,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int MOBILE_PLATFORM__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -104,7 +104,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int MOBILE_PLATFORM__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -113,7 +113,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int MOBILE_PLATFORM__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Moving</b></em>' attribute.
@@ -122,7 +122,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__MOVING = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int MOBILE_PLATFORM__MOVING = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Mobile Platform Status</b></em>' attribute.
@@ -131,7 +131,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Mobile Platform</em>' class.
@@ -140,7 +140,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 2;
+	int MOBILE_PLATFORM_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -149,7 +149,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int MOBILE_PLATFORM___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Mobile Platform</em>' class.
@@ -158,7 +158,7 @@ public interface Symphony__AddonsMobilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int MOBILE_PLATFORM_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.impl.SkidSteeredMobilePlatformImpl <em>Skid Steered Mobile Platform</em>}' class.

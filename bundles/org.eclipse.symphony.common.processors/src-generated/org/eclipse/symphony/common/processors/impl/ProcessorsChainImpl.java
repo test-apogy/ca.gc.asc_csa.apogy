@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.processors.Processor;
 import org.eclipse.symphony.common.processors.ProcessorsChain;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ProcessorsPackage.Literals.PROCESSORS_CHAIN;
+		return Symphony__CommonProcessorsPackage.Literals.PROCESSORS_CHAIN;
 	}
 	
 	/**
@@ -112,7 +112,7 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 		Object oldIntermediateResult = intermediateResult;
 		intermediateResult = newIntermediateResult;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT, oldIntermediateResult, intermediateResult));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT, oldIntermediateResult, intermediateResult));
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 	 */
 	public EList<Processor<?, ?>> getProcessors() {
 		if (processors == null) {
-			processors = new EObjectResolvingEList<Processor<?, ?>>(Processor.class, this, ProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS);
+			processors = new EObjectResolvingEList<Processor<?, ?>>(Processor.class, this, Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS);
 		}
 		return processors;
 	}
@@ -138,7 +138,7 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 			runningProcessor = (Processor<?, ?>)eResolveProxy(oldRunningProcessor);
 			if (runningProcessor != oldRunningProcessor) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR, oldRunningProcessor, runningProcessor));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR, oldRunningProcessor, runningProcessor));
 			}
 		}
 		return runningProcessor;
@@ -162,7 +162,7 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 		Processor<?, ?> oldRunningProcessor = runningProcessor;
 		runningProcessor = newRunningProcessor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR, oldRunningProcessor, runningProcessor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR, oldRunningProcessor, runningProcessor));
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -228,12 +228,12 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
 				return getIntermediateResult();
-			case ProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR:
 				if (resolve) return getRunningProcessor();
 				return basicGetRunningProcessor();
-			case ProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS:
 				return getProcessors();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -248,13 +248,13 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
 				setIntermediateResult(newValue);
 				return;
-			case ProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR:
 				setRunningProcessor((Processor<?, ?>)newValue);
 				return;
-			case ProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS:
 				getProcessors().clear();
 				getProcessors().addAll((Collection<? extends Processor<?, ?>>)newValue);
 				return;
@@ -270,13 +270,13 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
 				setIntermediateResult(INTERMEDIATE_RESULT_EDEFAULT);
 				return;
-			case ProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR:
 				setRunningProcessor((Processor<?, ?>)null);
 				return;
-			case ProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS:
 				getProcessors().clear();
 				return;
 		}
@@ -291,11 +291,11 @@ public class ProcessorsChainImpl <I,O> extends ProcessorImpl<I, O> implements Pr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
 				return INTERMEDIATE_RESULT_EDEFAULT == null ? intermediateResult != null : !INTERMEDIATE_RESULT_EDEFAULT.equals(intermediateResult);
-			case ProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__RUNNING_PROCESSOR:
 				return runningProcessor != null;
-			case ProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__PROCESSORS:
 				return processors != null && !processors.isEmpty();
 		}
 		return super.eIsSet(featureID);

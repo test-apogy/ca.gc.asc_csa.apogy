@@ -18,7 +18,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.common.EclipseUtils;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.URLNode;
 import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 import org.eclipse.symphony.common.topology.ui.adapters.URLNodeSceneObject;
@@ -412,7 +412,7 @@ public class URLNodeJME3TopologyObject extends DefaultJME3SceneObject<URLNode> i
 			{
 				public void notifyChanged(org.eclipse.emf.common.notify.Notification msg) 
 				{
-					if (msg.getFeatureID(URLNode.class) == TopologyPackage.URL_NODE__URL) 
+					if (msg.getFeatureID(URLNode.class) == Symphony__CommonTopologyPackage.URL_NODE__URL) 
 					{
 						Job job = new Job("Loadding <" + getTopologyNode().getUrl() + ">.")
 						{

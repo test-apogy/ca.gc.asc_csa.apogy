@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PointLocator;
 
 import edu.wlu.cs.levy.CG.KDTree;
@@ -61,7 +61,7 @@ public class PointLocatorImpl extends MinimalEObjectImpl.Container implements Po
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.POINT_LOCATOR;
+		return Symphony__CommonGeometryData3DPackage.Literals.POINT_LOCATOR;
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class PointLocatorImpl extends MinimalEObjectImpl.Container implements Po
 		points = newPoints;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Data3dPackage.POINT_LOCATOR__POINTS, oldPoints, points));
+					Symphony__CommonGeometryData3DPackage.POINT_LOCATOR__POINTS, oldPoints, points));
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class PointLocatorImpl extends MinimalEObjectImpl.Container implements Po
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR__POINTS:
 				return getPoints();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -177,7 +177,7 @@ public class PointLocatorImpl extends MinimalEObjectImpl.Container implements Po
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR__POINTS:
 				setPoints((List<CartesianPositionCoordinates>)newValue);
 				return;
 		}
@@ -191,7 +191,7 @@ public class PointLocatorImpl extends MinimalEObjectImpl.Container implements Po
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR__POINTS:
 				setPoints((List<CartesianPositionCoordinates>)null);
 				return;
 		}
@@ -205,7 +205,7 @@ public class PointLocatorImpl extends MinimalEObjectImpl.Container implements Po
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR__POINTS:
 				return points != null;
 		}
 		return super.eIsSet(featureID);
@@ -219,9 +219,9 @@ public class PointLocatorImpl extends MinimalEObjectImpl.Container implements Po
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES:
+			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES:
 				return findClosestPoint((CartesianPositionCoordinates)arguments.get(0));
-			case Data3dPackage.POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_CARTESIANPOSITIONCOORDINATES:
+			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_CARTESIANPOSITIONCOORDINATES:
 				return findPointsWithinRadius((Double)arguments.get(0), (CartesianPositionCoordinates)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

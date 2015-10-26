@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
@@ -228,7 +228,7 @@ public class EarthSurfaceWorksiteItemProvider
 			  if(earthSky.getTime() == null)
 			  {
 				  Date now = new Date();				  
-				  compoundCommand.append(new SetCommand(domain, (EObject) value, EMFEcorePackage.Literals.TIMED__TIME, now));
+				  compoundCommand.append(new SetCommand(domain, (EObject) value, Symphony__CommonEMFPackage.Literals.TIMED__TIME, now));
 			  }
 		  }
 	  }

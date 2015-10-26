@@ -16,7 +16,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensor
 import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.images.URLEImage;
 
 /**
@@ -121,7 +121,7 @@ public class URLImageOverlayImpl extends ImageCameraOverlayImpl implements URLIm
 		
 		try
 		{
-			URLEImage urlEImage = ImagesCoreFactory.eINSTANCE.createURLEImage();
+			URLEImage urlEImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
 			urlEImage.setUrl(newUrl);
 			setImage(urlEImage);
 		}

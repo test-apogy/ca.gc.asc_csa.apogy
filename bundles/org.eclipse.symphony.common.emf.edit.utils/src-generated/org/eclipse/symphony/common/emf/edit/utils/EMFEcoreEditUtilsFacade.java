@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.emf.edit.utils.impl.EMFEcoreEditUtilsFacadeIm
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsPackage#getEMFEcoreEditUtilsFacade()
+ * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage#getEMFEcoreEditUtilsFacade()
  * @model
  * @generated
  */

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.emf.TimeSourcesList#getTimeSources <em>Time Sources</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getTimeSourcesList()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimeSourcesList()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface TimeSourcesList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Sources</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getTimeSourcesList_TimeSources()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimeSourcesList_TimeSources()
 	 * @model containment="true"
 	 * @generated
 	 */

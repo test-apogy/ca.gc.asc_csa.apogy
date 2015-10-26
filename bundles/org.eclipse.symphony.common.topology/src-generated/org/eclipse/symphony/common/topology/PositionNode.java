@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.PositionNode#getPosition <em>Position</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getPositionNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getPositionNode()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface PositionNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getPositionNode_Position()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getPositionNode_Position()
 	 * @model containment="true"
 	 * @generated
 	 */

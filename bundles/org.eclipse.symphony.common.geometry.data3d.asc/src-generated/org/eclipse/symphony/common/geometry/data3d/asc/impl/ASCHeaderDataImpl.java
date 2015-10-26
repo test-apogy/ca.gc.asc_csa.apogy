@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData;
-import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage;
+import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -165,7 +165,7 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3DASCPackage.Literals.ASC_HEADER_DATA;
+		return Symphony__CommonGeometryData3DASCPackage.Literals.ASC_HEADER_DATA;
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 		int oldNumberOfRow = numberOfRow;
 		numberOfRow = newNumberOfRow;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW, oldNumberOfRow, numberOfRow));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW, oldNumberOfRow, numberOfRow));
 	}
 
 	/**
@@ -207,7 +207,7 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 		int oldNumberOfColumns = numberOfColumns;
 		numberOfColumns = newNumberOfColumns;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS, oldNumberOfColumns, numberOfColumns));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS, oldNumberOfColumns, numberOfColumns));
 	}
 
 	/**
@@ -228,7 +228,7 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 		double oldXllCenter = xllCenter;
 		xllCenter = newXllCenter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3DASCPackage.ASC_HEADER_DATA__XLL_CENTER, oldXllCenter, xllCenter));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__XLL_CENTER, oldXllCenter, xllCenter));
 	}
 
 	/**
@@ -249,7 +249,7 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 		double oldYllCenter = yllCenter;
 		yllCenter = newYllCenter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3DASCPackage.ASC_HEADER_DATA__YLL_CENTER, oldYllCenter, yllCenter));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__YLL_CENTER, oldYllCenter, yllCenter));
 	}
 
 	/**
@@ -270,7 +270,7 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 		double oldCellSize = cellSize;
 		cellSize = newCellSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3DASCPackage.ASC_HEADER_DATA__CELL_SIZE, oldCellSize, cellSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__CELL_SIZE, oldCellSize, cellSize));
 	}
 
 	/**
@@ -291,7 +291,7 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 		double oldNoDataValue = noDataValue;
 		noDataValue = newNoDataValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE, oldNoDataValue, noDataValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE, oldNoDataValue, noDataValue));
 	}
 
 	/**
@@ -302,17 +302,17 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
 				return getNumberOfRow();
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
 				return getNumberOfColumns();
-			case Data3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
 				return getXllCenter();
-			case Data3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
 				return getYllCenter();
-			case Data3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
 				return getCellSize();
-			case Data3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
 				return getNoDataValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -326,22 +326,22 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
 				setNumberOfRow((Integer)newValue);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
 				setNumberOfColumns((Integer)newValue);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
 				setXllCenter((Double)newValue);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
 				setYllCenter((Double)newValue);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
 				setCellSize((Double)newValue);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
 				setNoDataValue((Double)newValue);
 				return;
 		}
@@ -356,22 +356,22 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
 				setNumberOfRow(NUMBER_OF_ROW_EDEFAULT);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
 				setNumberOfColumns(NUMBER_OF_COLUMNS_EDEFAULT);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
 				setXllCenter(XLL_CENTER_EDEFAULT);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
 				setYllCenter(YLL_CENTER_EDEFAULT);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
 				setCellSize(CELL_SIZE_EDEFAULT);
 				return;
-			case Data3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
 				setNoDataValue(NO_DATA_VALUE_EDEFAULT);
 				return;
 		}
@@ -386,17 +386,17 @@ public class ASCHeaderDataImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_ROW:
 				return numberOfRow != NUMBER_OF_ROW_EDEFAULT;
-			case Data3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NUMBER_OF_COLUMNS:
 				return numberOfColumns != NUMBER_OF_COLUMNS_EDEFAULT;
-			case Data3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__XLL_CENTER:
 				return xllCenter != XLL_CENTER_EDEFAULT;
-			case Data3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__YLL_CENTER:
 				return yllCenter != YLL_CENTER_EDEFAULT;
-			case Data3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__CELL_SIZE:
 				return cellSize != CELL_SIZE_EDEFAULT;
-			case Data3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
+			case Symphony__CommonGeometryData3DASCPackage.ASC_HEADER_DATA__NO_DATA_VALUE:
 				return noDataValue != NO_DATA_VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -25,9 +25,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint} object.
@@ -85,7 +85,7 @@ public class ConstraintAttachmentPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintAttachmentPoint_physicalBody_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintAttachmentPoint_physicalBody_feature", "_UI_ConstraintAttachmentPoint_type"),
-				 TopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY,
 				 true,
 				 false,
 				 true,
@@ -107,7 +107,7 @@ public class ConstraintAttachmentPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintAttachmentPoint_constraint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintAttachmentPoint_constraint_feature", "_UI_ConstraintAttachmentPoint_type"),
-				 TopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__CONSTRAINT,
 				 true,
 				 false,
 				 true,
@@ -129,7 +129,7 @@ public class ConstraintAttachmentPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintAttachmentPoint_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintAttachmentPoint_description_feature", "_UI_ConstraintAttachmentPoint_type"),
-				 TopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -151,7 +151,7 @@ public class ConstraintAttachmentPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintAttachmentPoint_pointId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintAttachmentPoint_pointId_feature", "_UI_ConstraintAttachmentPoint_type"),
-				 TopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__POINT_ID,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__POINT_ID,
 				 true,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class ConstraintAttachmentPointItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -227,11 +227,11 @@ public class ConstraintAttachmentPointItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstraintAttachmentPoint.class)) {
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__POINT_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -251,8 +251,8 @@ public class ConstraintAttachmentPointItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_ATTACHMENT_POINT__TRANSFORM,
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 	/**

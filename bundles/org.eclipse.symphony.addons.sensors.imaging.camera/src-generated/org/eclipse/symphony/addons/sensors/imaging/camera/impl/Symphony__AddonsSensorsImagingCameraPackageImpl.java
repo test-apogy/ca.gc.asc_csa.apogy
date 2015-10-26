@@ -57,8 +57,8 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensor
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
 import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
@@ -1638,8 +1638,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
 		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
 		Symphony__AddonsSensorsImagingPackage theSymphony__AddonsSensorsImagingPackage = (Symphony__AddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		ImagesCorePackage theImagesCorePackage = (ImagesCorePackage)EPackage.Registry.INSTANCE.getEPackage(ImagesCorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
 		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 
@@ -1652,8 +1652,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		cameraViewConfigurationListEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractToolsListContainer());
 		cameraViewConfigurationEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getVariableFeatureReference());
 		cameraViewConfigurationEClass.getESuperTypes().add(theSymphony__AddonsPackage.getAbstractTool());
-		imageFilterEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		imageFilterEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		imageFilterEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		imageFilterEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		grayScaleFilterEClass.getESuperTypes().add(this.getImageFilter());
 		edgeFilterEClass.getESuperTypes().add(this.getImageFilter());
 		contrastAndBrightnessFilterEClass.getESuperTypes().add(this.getImageFilter());
@@ -1661,8 +1661,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		gainFilterEClass.getESuperTypes().add(this.getImageFilter());
 		invertFilterEClass.getESuperTypes().add(this.getImageFilter());
 		rescaleFilterEClass.getESuperTypes().add(this.getImageFilter());
-		cameraImageAnnotationEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		cameraImageAnnotationEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		cameraImageAnnotationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		cameraImageAnnotationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		cameraOverlayEClass.getESuperTypes().add(this.getCameraImageAnnotation());
 		drawnCameraOverlayEClass.getESuperTypes().add(this.getCameraOverlay());
 		abstractTextOverlayEClass.getESuperTypes().add(this.getDrawnCameraOverlay());
@@ -1725,9 +1725,9 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEClass(imageFilterEClass, ImageFilter.class, "ImageFilter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImageFilter_Enabled(), theEcorePackage.getEBoolean(), "enabled", "true", 0, 1, ImageFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = initEOperation(getImageFilter__Filter__AbstractCamera_AbstractEImage(), theImagesCorePackage.getAbstractEImage(), "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getImageFilter__Filter__AbstractCamera_AbstractEImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theImagesCorePackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getImageFilter__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1766,9 +1766,9 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 
 		initEClass(drawnCameraOverlayEClass, DrawnCameraOverlay.class, "DrawnCameraOverlay", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int(), theImagesCorePackage.getAbstractEImage(), "applyOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getDrawnCameraOverlay__ApplyOverlay__AbstractCamera_AbstractEImage_OverlayAlignment_int_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "applyOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theImagesCorePackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOverlayAlignment(), "overlayAlignment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "overlayWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "overlayHeight", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1799,7 +1799,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 
 		initEClass(imageCameraOverlayEClass, ImageCameraOverlay.class, "ImageCameraOverlay", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getImageCameraOverlay__GetOverlay__AbstractCamera_OverlayAlignment_int_int(), theImagesCorePackage.getAbstractEImage(), "getOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getImageCameraOverlay__GetOverlay__AbstractCamera_OverlayAlignment_int_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getOverlay", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__AddonsSensorsImagingPackage.getAbstractCamera(), "camera", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOverlayAlignment(), "overlayAlignment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "overlayWidth", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1808,7 +1808,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEClass(urlImageOverlayEClass, URLImageOverlay.class, "URLImageOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getURLImageOverlay_Url(), theEcorePackage.getEString(), "url", null, 0, 1, URLImageOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getURLImageOverlay_ImageSizePolicy(), this.getImageSizePolicy(), "imageSizePolicy", null, 0, 1, URLImageOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getURLImageOverlay_Image(), theImagesCorePackage.getAbstractEImage(), null, "image", null, 0, 1, URLImageOverlay.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getURLImageOverlay_Image(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "image", null, 0, 1, URLImageOverlay.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(symphonyLogoOverlayEClass, SymphonyLogoOverlay.class, "SymphonyLogoOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1859,13 +1859,13 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEOperation(getCameraTool__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getCameraTool__MouseMoved__AbstractEImage_int_int_int(), null, "mouseMoved", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theImagesCorePackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "mouseButton", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getCameraTool__PositionSelected__AbstractEImage_int_int_int(), null, "positionSelected", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theImagesCorePackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonImagesPackage.getAbstractEImage(), "cameraImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "mouseButton", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);

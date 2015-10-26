@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry#getGeometryId <em>Geometry Id</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCollisionGeometry()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCollisionGeometry()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface CollisionGeometry extends EObject {
 	 * Simulation specific collision geometry properties.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Simulation Properties</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCollisionGeometry_SimulationProperties()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCollisionGeometry_SimulationProperties()
 	 * @model
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Geometry</em>' containment reference.
 	 * @see #setGeometry(Geometry)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCollisionGeometry_Geometry()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCollisionGeometry_Geometry()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -84,7 +84,7 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Transform</em>' containment reference.
 	 * @see #setTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCollisionGeometry_Transform()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCollisionGeometry_Transform()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -109,7 +109,7 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Material</em>' reference.
 	 * @see #setMaterial(AbstractMaterial)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCollisionGeometry_Material()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCollisionGeometry_Material()
 	 * @model
 	 * @generated
 	 */
@@ -134,7 +134,7 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCollisionGeometry_Description()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCollisionGeometry_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -159,7 +159,7 @@ public interface CollisionGeometry extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Geometry Id</em>' attribute.
 	 * @see #setGeometryId(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getCollisionGeometry_GeometryId()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCollisionGeometry_GeometryId()
 	 * @model unique="false"
 	 * @generated
 	 */

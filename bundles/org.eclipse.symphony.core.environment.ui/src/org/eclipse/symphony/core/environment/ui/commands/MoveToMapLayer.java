@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -175,7 +175,7 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		meshLayer.setDescription(getDescription(positionedResult));
 		
 		// Creates a mesh .
-		CartesianTriangularMesh mesh = Data3dFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 		
 		// Copies the coordinatesSet point to the mesh.
 		for(CartesianPositionCoordinates point : coordinatesSet.getPoints())

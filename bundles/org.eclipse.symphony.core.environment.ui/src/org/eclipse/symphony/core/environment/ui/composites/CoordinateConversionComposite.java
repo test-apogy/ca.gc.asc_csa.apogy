@@ -23,7 +23,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.SymphonyEnvironment;
@@ -247,8 +247,8 @@ public class CoordinateConversionComposite extends Composite
 				IObservableValue txtXObsVal = WidgetProperties.text(SWT.Modify).observe(txtX);
 				
 				IObservableValue modelXObsVal = (objDomain == null ?
-												 EMFProperties.value(MathPackage.Literals.MATRIX4X4__M03).observe(position.getPose()) :
-												 EMFEditProperties.value(objDomain, MathPackage.Literals.MATRIX4X4__M03).observe(position.getPose()));
+												 EMFProperties.value(Symphony__CommonMathPackage.Literals.MATRIX4X4__M03).observe(position.getPose()) :
+												 EMFEditProperties.value(objDomain, Symphony__CommonMathPackage.Literals.MATRIX4X4__M03).observe(position.getPose()));
 				
 				UpdateValueStrategy txtToModelXUpdateStrategy = new UpdateValueStrategy();
 				txtToModelXUpdateStrategy.setConverter(new StringToDoubleConverter());
@@ -266,8 +266,8 @@ public class CoordinateConversionComposite extends Composite
 				IObservableValue txtYObsVal = WidgetProperties.text(SWT.Modify).observe(txtY);
 				
 				IObservableValue modelYObsVal = (objDomain == null ?
-												 EMFProperties.value(MathPackage.Literals.MATRIX4X4__M13).observe(position.getPose()) :
-												 EMFEditProperties.value(objDomain, MathPackage.Literals.MATRIX4X4__M13).observe(position.getPose()));
+												 EMFProperties.value(Symphony__CommonMathPackage.Literals.MATRIX4X4__M13).observe(position.getPose()) :
+												 EMFEditProperties.value(objDomain, Symphony__CommonMathPackage.Literals.MATRIX4X4__M13).observe(position.getPose()));
 				
 				UpdateValueStrategy txtToModelYUpdateStrategy = new UpdateValueStrategy();
 				txtToModelYUpdateStrategy.setConverter(new StringToDoubleConverter());
@@ -285,8 +285,8 @@ public class CoordinateConversionComposite extends Composite
 				IObservableValue txtZObsVal = WidgetProperties.text(SWT.Modify).observe(txtZ); 
 				
 				IObservableValue modelZObsVal = (objDomain == null ?
-												 EMFProperties.value(MathPackage.Literals.MATRIX4X4__M23).observe(position.getPose()) :
-											     EMFEditProperties.value(objDomain, MathPackage.Literals.MATRIX4X4__M23).observe(position.getPose()));
+												 EMFProperties.value(Symphony__CommonMathPackage.Literals.MATRIX4X4__M23).observe(position.getPose()) :
+											     EMFEditProperties.value(objDomain, Symphony__CommonMathPackage.Literals.MATRIX4X4__M23).observe(position.getPose()));
 				
 				UpdateValueStrategy txtToModelZUpdateStrategy = new UpdateValueStrategy();
 				txtToModelZUpdateStrategy.setConverter(new StringToDoubleConverter());

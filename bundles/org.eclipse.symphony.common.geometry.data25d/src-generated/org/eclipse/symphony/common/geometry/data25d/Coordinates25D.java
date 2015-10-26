@@ -11,7 +11,8 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Represent "2.5 D" geometry where u and v are the independent variables and w the dependent variable.
+ * Represent 2.5D geometry where u and v are the
+ * independent variables and w the dependent variable.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -23,7 +24,7 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.Coordinates25D#getW <em>W</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getCoordinates25D()
+ * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinates25D()
  * @model
  * @generated
  */
@@ -38,7 +39,7 @@ public interface Coordinates25D extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>U</em>' attribute.
 	 * @see #setU(double)
-	 * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getCoordinates25D_U()
+	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinates25D_U()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -64,7 +65,7 @@ public interface Coordinates25D extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>V</em>' attribute.
 	 * @see #setV(double)
-	 * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getCoordinates25D_V()
+	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinates25D_V()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -90,7 +91,7 @@ public interface Coordinates25D extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>W</em>' attribute.
 	 * @see #setW(double)
-	 * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getCoordinates25D_W()
+	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getCoordinates25D_W()
 	 * @model unique="false"
 	 * @generated
 	 */

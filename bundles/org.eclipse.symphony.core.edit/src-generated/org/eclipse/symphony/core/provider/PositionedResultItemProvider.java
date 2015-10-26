@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.provider.AbstractResultItemProvider;
@@ -164,7 +164,7 @@ public class PositionedResultItemProvider extends
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.POSITIONED__POSE,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 }

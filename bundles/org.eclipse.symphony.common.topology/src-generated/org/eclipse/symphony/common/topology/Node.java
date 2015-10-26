@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.topology.INodeVisitor;
  *   <li>{@link org.eclipse.symphony.common.topology.Node#getNodeId <em>Node Id</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNode()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent</em>' reference.
 	 * @see #setParent(Node)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getNode_Parent()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNode_Parent()
 	 * @model
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getNode_Description()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNode_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -87,7 +87,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Id</em>' attribute.
 	 * @see #setNodeId(String)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getNode_NodeId()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getNode_NodeId()
 	 * @model unique="false"
 	 * @generated
 	 */

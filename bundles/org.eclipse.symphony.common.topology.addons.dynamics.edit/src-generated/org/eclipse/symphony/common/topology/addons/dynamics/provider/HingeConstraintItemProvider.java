@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint} object.
@@ -64,7 +64,7 @@ public class HingeConstraintItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.HINGE_CONSTRAINT__ANGULAR_CURRENT_STATE);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.HINGE_CONSTRAINT__ANGULAR_CURRENT_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -119,7 +119,7 @@ public class HingeConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(HingeConstraint.class)) {
-			case TopologyDynamicsPackage.HINGE_CONSTRAINT__ANGULAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.HINGE_CONSTRAINT__ANGULAR_CURRENT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,8 +139,8 @@ public class HingeConstraintItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.HINGE_CONSTRAINT__ANGULAR_CURRENT_STATE,
-				 TopologyDynamicsFactory.eINSTANCE.createConstraintState()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.HINGE_CONSTRAINT__ANGULAR_CURRENT_STATE,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createConstraintState()));
 	}
 
 }

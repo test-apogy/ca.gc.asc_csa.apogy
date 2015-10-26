@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcorePackage.Literals.ABSTRACT_FEATURE_LIST_NODE;
+		return Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_LIST_NODE;
 	}
 
   /**
@@ -65,7 +65,7 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
 	 */
   public AbstractFeatureListNode getParent()
   {
-		if (eContainerFeatureID() != EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT) return null;
+		if (eContainerFeatureID() != Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT) return null;
 		return (AbstractFeatureListNode)eContainer();
 	}
 
@@ -76,7 +76,7 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
 	 */
   public AbstractFeatureListNode basicGetParent()
   {
-		if (eContainerFeatureID() != EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT) return null;
+		if (eContainerFeatureID() != Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT) return null;
 		return (AbstractFeatureListNode)eInternalContainer();
 	}
 
@@ -87,7 +87,7 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
 	 */
   public NotificationChain basicSetParent(AbstractFeatureListNode newParent, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newParent, EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newParent, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT, msgs);
 		return msgs;
 	}
 
@@ -98,19 +98,19 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
 	 */
   public void setParent(AbstractFeatureListNode newParent)
   {
-		if (newParent != eInternalContainer() || (eContainerFeatureID() != EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT && newParent != null)) {
+		if (newParent != eInternalContainer() || (eContainerFeatureID() != Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, AbstractFeatureListNode.class, msgs);
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, AbstractFeatureListNode.class, msgs);
 			msgs = basicSetParent(newParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT, newParent, newParent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT, newParent, newParent));
 	}
 
   /**
@@ -133,7 +133,7 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
 		AbstractFeatureListNode oldChild = child;
 		child = newChild;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, oldChild, newChild);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, oldChild, newChild);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -149,14 +149,14 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
 		if (newChild != child) {
 			NotificationChain msgs = null;
 			if (child != null)
-				msgs = ((InternalEObject)child).eInverseRemove(this, EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT, AbstractFeatureListNode.class, msgs);
+				msgs = ((InternalEObject)child).eInverseRemove(this, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT, AbstractFeatureListNode.class, msgs);
 			if (newChild != null)
-				msgs = ((InternalEObject)newChild).eInverseAdd(this, EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT, AbstractFeatureListNode.class, msgs);
+				msgs = ((InternalEObject)newChild).eInverseAdd(this, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT, AbstractFeatureListNode.class, msgs);
 			msgs = basicSetChild(newChild, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, newChild, newChild));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, newChild, newChild));
 	}
 
   /**
@@ -168,13 +168,13 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetParent((AbstractFeatureListNode)otherEnd, msgs);
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 				if (child != null)
-					msgs = ((InternalEObject)child).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, null, msgs);
+					msgs = ((InternalEObject)child).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, null, msgs);
 				return basicSetChild((AbstractFeatureListNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -189,9 +189,9 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
 				return basicSetParent(null, msgs);
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 				return basicSetChild(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -206,8 +206,8 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
-				return eInternalContainer().eInverseRemove(this, EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, AbstractFeatureListNode.class, msgs);
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
+				return eInternalContainer().eInverseRemove(this, Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD, AbstractFeatureListNode.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -221,10 +221,10 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 				return getChild();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -239,10 +239,10 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
 				setParent((AbstractFeatureListNode)newValue);
 				return;
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 				setChild((AbstractFeatureListNode)newValue);
 				return;
 		}
@@ -258,10 +258,10 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
 				setParent((AbstractFeatureListNode)null);
 				return;
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 				setChild((AbstractFeatureListNode)null);
 				return;
 		}
@@ -277,9 +277,9 @@ public abstract class AbstractFeatureListNodeImpl extends AbstractFeatureNodeImp
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__PARENT:
 				return basicGetParent() != null;
-			case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+			case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 				return child != null;
 		}
 		return super.eIsSet(featureID);

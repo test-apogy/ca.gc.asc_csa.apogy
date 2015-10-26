@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data.Mesh;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphericalTriangularMesh()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalTriangularMesh()
  * @model
  * @generated
  */

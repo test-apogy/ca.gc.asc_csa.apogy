@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumn#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvColumn()
+ * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumn()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface CsvColumn extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' reference.
 	 * @see #setValues(Map.Entry)
-	 * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvColumn_Values()
+	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumn_Values()
 	 * @model mapType="org.eclipse.symphony.common.file.csv.CsvColumnValuesMap<org.eclipse.emf.ecore.EIntegerObject, org.eclipse.emf.ecore.EJavaObject>"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface CsvColumn extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvColumn_Name()
+	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumn_Name()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface CsvColumn extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvColumn_Description()
+	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumn_Description()
 	 * @model unique="false"
 	 * @generated
 	 */

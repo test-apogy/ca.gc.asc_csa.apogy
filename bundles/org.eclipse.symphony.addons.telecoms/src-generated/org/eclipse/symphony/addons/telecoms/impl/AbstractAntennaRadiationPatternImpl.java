@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
 import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
@@ -167,7 +167,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME: return EMFEcorePackage.NAMED__NAME;
+				case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -183,7 +183,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME;
+				case Symphony__CommonEMFPackage.NAMED__NAME: return Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME;
 				default: return -1;
 			}
 		}

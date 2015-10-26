@@ -27,7 +27,7 @@
             class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__AddonsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>

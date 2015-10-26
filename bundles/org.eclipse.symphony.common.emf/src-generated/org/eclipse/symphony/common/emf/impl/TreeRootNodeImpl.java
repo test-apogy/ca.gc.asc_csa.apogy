@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
@@ -53,7 +53,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcorePackage.Literals.TREE_ROOT_NODE;
+		return Symphony__CommonEMFPackage.Literals.TREE_ROOT_NODE;
 	}
 
   /**
@@ -68,7 +68,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
 			sourceClass = (EClass)eResolveProxy(oldSourceClass);
 			if (sourceClass != oldSourceClass) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS, oldSourceClass, sourceClass));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS, oldSourceClass, sourceClass));
 			}
 		}
 		return sourceClass;
@@ -94,7 +94,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
 		EClass oldSourceClass = sourceClass;
 		sourceClass = newSourceClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS, oldSourceClass, sourceClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS, oldSourceClass, sourceClass));
 	}
 
   /**
@@ -106,7 +106,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS:
+			case Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS:
 				if (resolve) return getSourceClass();
 				return basicGetSourceClass();
 		}
@@ -122,7 +122,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS:
+			case Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS:
 				setSourceClass((EClass)newValue);
 				return;
 		}
@@ -138,7 +138,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS:
+			case Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS:
 				setSourceClass((EClass)null);
 				return;
 		}
@@ -154,7 +154,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS:
+			case Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS:
 				return sourceClass != null;
 		}
 		return super.eIsSet(featureID);
@@ -170,7 +170,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
   {
 		if (baseClass == AbstractRootNode.class) {
 			switch (derivedFeatureID) {
-				case EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS: return EMFEcorePackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS;
+				case Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS: return Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS;
 				default: return -1;
 			}
 		}
@@ -187,7 +187,7 @@ public class TreeRootNodeImpl extends AbstractFeatureTreeNodeImpl implements Tre
   {
 		if (baseClass == AbstractRootNode.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS: return EMFEcorePackage.TREE_ROOT_NODE__SOURCE_CLASS;
+				case Symphony__CommonEMFPackage.ABSTRACT_ROOT_NODE__SOURCE_CLASS: return Symphony__CommonEMFPackage.TREE_ROOT_NODE__SOURCE_CLASS;
 				default: return -1;
 			}
 		}

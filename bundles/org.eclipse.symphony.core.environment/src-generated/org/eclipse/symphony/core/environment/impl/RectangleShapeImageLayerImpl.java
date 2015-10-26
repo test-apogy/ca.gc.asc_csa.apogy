@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.environment.RectangleShapeImageLayer;
@@ -345,7 +345,7 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 		g2d.dispose();
 		
 		// Updates the image
-		EImage eImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		eImage.setImageContent(bufferedImage);;
 		setImage(eImage);
 	}

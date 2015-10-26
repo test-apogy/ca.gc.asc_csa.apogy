@@ -28,11 +28,11 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.util.TopologyUISwitch;
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
 import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.util.SymphonyEnvironmentUIAdapterFactory;
@@ -868,19 +868,19 @@ public class SymphonyEnvironmentUIItemProviderAdapterFactory extends SymphonyEnv
   }
 
 		/**
-	 * A child creation extender for the {@link TopologyPackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class TopologyChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologySwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -916,87 +916,87 @@ public class SymphonyEnvironmentUIItemProviderAdapterFactory extends SymphonyEnv
 			public <T> Object caseContentNode(ContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createEnvironmentUiUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createEnvironmentUiFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapRuler()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
 
 				return null;
@@ -1011,87 +1011,87 @@ public class SymphonyEnvironmentUIItemProviderAdapterFactory extends SymphonyEnv
 			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createSunPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createMoonPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createEnvironmentUiUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createEnvironmentUiFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapViewConfigurationList()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createMapRuler()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 SymphonyEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
 
 				return null;

@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates;
 
 /**
@@ -65,7 +65,7 @@ public class RGBCartesianPositionCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RGBCartesianPositionCoordinates_red_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RGBCartesianPositionCoordinates_red_feature", "_UI_RGBCartesianPositionCoordinates_type"),
-				 Data3dPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__RED,
+				 Symphony__CommonGeometryData3DPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__RED,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class RGBCartesianPositionCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RGBCartesianPositionCoordinates_green_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RGBCartesianPositionCoordinates_green_feature", "_UI_RGBCartesianPositionCoordinates_type"),
-				 Data3dPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__GREEN,
+				 Symphony__CommonGeometryData3DPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__GREEN,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class RGBCartesianPositionCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RGBCartesianPositionCoordinates_blue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RGBCartesianPositionCoordinates_blue_feature", "_UI_RGBCartesianPositionCoordinates_type"),
-				 Data3dPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__BLUE,
+				 Symphony__CommonGeometryData3DPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__BLUE,
 				 true,
 				 false,
 				 false,
@@ -153,9 +153,9 @@ public class RGBCartesianPositionCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RGBCartesianPositionCoordinates.class)) {
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
-			case Data3dPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
+			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

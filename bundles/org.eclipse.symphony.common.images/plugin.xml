@@ -11,7 +11,7 @@
       <!-- @generated symphony_common_images -->
       <package
             uri="org.eclipse.symphony.common.images"
-            class="org.eclipse.symphony.common.images.ImagesCorePackage"
+            class="org.eclipse.symphony.common.images.Symphony__CommonImagesPackage"
             genModel="model/symphony_common_images.xcore"/>
    </extension>
    

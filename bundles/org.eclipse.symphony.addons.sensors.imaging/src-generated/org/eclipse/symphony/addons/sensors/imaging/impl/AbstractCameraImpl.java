@@ -15,7 +15,7 @@ import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Named;
 
 /**
@@ -256,7 +256,7 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME: return EMFEcorePackage.NAMED__NAME;
+				case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -273,7 +273,7 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
+				case Symphony__CommonEMFPackage.NAMED__NAME: return Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
 				default: return -1;
 			}
 		}

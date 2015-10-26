@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.common.geometry.data3d.asc"
-            class="org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage"
+            class="org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage"
             genModel="model/symphony_common_geometry_data3d_asc.xcore"/>
    </extension>
 

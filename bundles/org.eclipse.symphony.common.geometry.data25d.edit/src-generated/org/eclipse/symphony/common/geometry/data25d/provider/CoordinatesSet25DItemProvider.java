@@ -15,12 +15,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.provider.CoordinatesSetItemProvider;
 import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D;
-import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D} object.
@@ -72,7 +72,7 @@ public class CoordinatesSet25DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CoordinatesSet25D_enforceUniqueness_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CoordinatesSet25D_enforceUniqueness_feature", "_UI_CoordinatesSet25D_type"),
-				 Data25dPackage.Literals.COORDINATES_SET25_D__ENFORCE_UNIQUENESS,
+				 Symphony__CommonGeometryData25DPackage.Literals.COORDINATES_SET25_D__ENFORCE_UNIQUENESS,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class CoordinatesSet25DItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CoordinatesSet25D.class)) {
-			case Data25dPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -144,38 +144,38 @@ public class CoordinatesSet25DItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data25dFactory.eINSTANCE.createCoordinates25D()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData25DFactory.eINSTANCE.createCoordinates25D()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createCartesianPositionCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createRGBCartesianPositionCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createRGBCartesianPositionCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createCartesianOrientationCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createSphericalCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createPose()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 Data3dFactory.eINSTANCE.createPositionMarker()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
 	}
 
 }

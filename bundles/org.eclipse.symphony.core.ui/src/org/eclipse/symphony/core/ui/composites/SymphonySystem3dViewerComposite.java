@@ -59,7 +59,7 @@ public class SymphonySystem3dViewerComposite extends Composite {
 //				
 //				if (symphonySystem != null) 
 //				{
-//					ReferencedGroupNode rgn = TopologyFactory.eINSTANCE.createReferencedGroupNode();
+//					ReferencedGroupNode rgn = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
 //					root.getChildren().add(rgn);
 //					
 //					// FIXME : Do not make a copy after bug#1429 in Link and ReferenceGroupNode is fixed.

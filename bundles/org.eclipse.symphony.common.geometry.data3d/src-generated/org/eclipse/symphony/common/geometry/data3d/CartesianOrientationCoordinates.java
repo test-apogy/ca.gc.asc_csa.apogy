@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation <em>ZRotation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianOrientationCoordinates()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XRotation</em>' attribute.
 	 * @see #setXRotation(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianOrientationCoordinates_XRotation()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_XRotation()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YRotation</em>' attribute.
 	 * @see #setYRotation(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianOrientationCoordinates_YRotation()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_YRotation()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZRotation</em>' attribute.
 	 * @see #setZRotation(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianOrientationCoordinates_ZRotation()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_ZRotation()
 	 * @model unique="false"
 	 * @generated
 	 */

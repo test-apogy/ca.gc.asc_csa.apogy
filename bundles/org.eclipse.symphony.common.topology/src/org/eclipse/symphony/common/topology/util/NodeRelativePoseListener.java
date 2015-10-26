@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.RotationNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
 
 public class NodeRelativePoseListener 
@@ -139,12 +139,12 @@ public class NodeRelativePoseListener
 					if(msg.getNotifier() instanceof TransformNode)
 					{			
 						int featureId = msg.getFeatureID(TransformNode.class);
-						if(featureId == TopologyPackage.TRANSFORM_NODE__POSITION ||
-						   featureId == TopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
+						if(featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION ||
+						   featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX)
 						{
 							relativePoseChanged(computeNewPose());
 						}
-						else if(featureId == TopologyPackage.TRANSFORM_NODE__PARENT)
+						else if(featureId == Symphony__CommonTopologyPackage.TRANSFORM_NODE__PARENT)
 						{
 							updateNodeList();
 							relativePoseChanged(computeNewPose());
@@ -153,11 +153,11 @@ public class NodeRelativePoseListener
 					else if(msg.getNotifier() instanceof PositionNode)
 					{			
 						int featureId = msg.getFeatureID(PositionNode.class);
-						if(featureId == TopologyPackage.POSITION_NODE__POSITION)
+						if(featureId == Symphony__CommonTopologyPackage.POSITION_NODE__POSITION)
 						{
 							relativePoseChanged(computeNewPose());
 						}
-						else if(featureId == TopologyPackage.POSITION_NODE__PARENT)
+						else if(featureId == Symphony__CommonTopologyPackage.POSITION_NODE__PARENT)
 						{
 							updateNodeList();
 							relativePoseChanged(computeNewPose());
@@ -166,11 +166,11 @@ public class NodeRelativePoseListener
 					else if(msg.getNotifier() instanceof RotationNode)
 					{			
 						int featureId = msg.getFeatureID(RotationNode.class);
-						if(featureId == TopologyPackage.ROTATION_NODE__ROTATION_MATRIX)
+						if(featureId == Symphony__CommonTopologyPackage.ROTATION_NODE__ROTATION_MATRIX)
 						{
 							relativePoseChanged(computeNewPose());
 						}
-						else if(featureId == TopologyPackage.ROTATION_NODE__PARENT)
+						else if(featureId == Symphony__CommonTopologyPackage.ROTATION_NODE__PARENT)
 						{
 							updateNodeList();
 							relativePoseChanged(computeNewPose());

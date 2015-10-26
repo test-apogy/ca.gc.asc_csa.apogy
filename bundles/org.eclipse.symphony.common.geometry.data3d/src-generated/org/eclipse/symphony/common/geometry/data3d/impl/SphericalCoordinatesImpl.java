@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data.impl.CoordinatesImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
 
 /**
@@ -104,7 +104,7 @@ public class SphericalCoordinatesImpl extends CoordinatesImpl implements Spheric
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.SPHERICAL_COORDINATES;
+		return Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_COORDINATES;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class SphericalCoordinatesImpl extends CoordinatesImpl implements Spheric
 		double oldPhi = phi;
 		phi = newPhi;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.SPHERICAL_COORDINATES__PHI, oldPhi, phi));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__PHI, oldPhi, phi));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class SphericalCoordinatesImpl extends CoordinatesImpl implements Spheric
 		double oldTheta = theta;
 		theta = newTheta;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.SPHERICAL_COORDINATES__THETA, oldTheta, theta));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__THETA, oldTheta, theta));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class SphericalCoordinatesImpl extends CoordinatesImpl implements Spheric
 		double oldR = r;
 		r = newR;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.SPHERICAL_COORDINATES__R, oldR, r));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__R, oldR, r));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class SphericalCoordinatesImpl extends CoordinatesImpl implements Spheric
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.SPHERICAL_COORDINATES__PHI:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__PHI:
 				return getPhi();
-			case Data3dPackage.SPHERICAL_COORDINATES__THETA:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__THETA:
 				return getTheta();
-			case Data3dPackage.SPHERICAL_COORDINATES__R:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__R:
 				return getR();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class SphericalCoordinatesImpl extends CoordinatesImpl implements Spheric
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.SPHERICAL_COORDINATES__PHI:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__PHI:
 				setPhi((Double)newValue);
 				return;
-			case Data3dPackage.SPHERICAL_COORDINATES__THETA:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__THETA:
 				setTheta((Double)newValue);
 				return;
-			case Data3dPackage.SPHERICAL_COORDINATES__R:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__R:
 				setR((Double)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public class SphericalCoordinatesImpl extends CoordinatesImpl implements Spheric
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.SPHERICAL_COORDINATES__PHI:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__PHI:
 				setPhi(PHI_EDEFAULT);
 				return;
-			case Data3dPackage.SPHERICAL_COORDINATES__THETA:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__THETA:
 				setTheta(THETA_EDEFAULT);
 				return;
-			case Data3dPackage.SPHERICAL_COORDINATES__R:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__R:
 				setR(R_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public class SphericalCoordinatesImpl extends CoordinatesImpl implements Spheric
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.SPHERICAL_COORDINATES__PHI:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__PHI:
 				return phi != PHI_EDEFAULT;
-			case Data3dPackage.SPHERICAL_COORDINATES__THETA:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__THETA:
 				return theta != THETA_EDEFAULT;
-			case Data3dPackage.SPHERICAL_COORDINATES__R:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__R:
 				return r != R_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

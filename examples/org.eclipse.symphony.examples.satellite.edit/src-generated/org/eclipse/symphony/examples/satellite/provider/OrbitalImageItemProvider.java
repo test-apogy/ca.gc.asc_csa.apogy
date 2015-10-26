@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
@@ -83,7 +83,7 @@ public class OrbitalImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_width_feature", "_UI_AbstractEImage_type"),
-				 ImagesCorePackage.Literals.ABSTRACT_EIMAGE__WIDTH,
+				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class OrbitalImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractEImage_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractEImage_height_feature", "_UI_AbstractEImage_type"),
-				 ImagesCorePackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
+				 Symphony__CommonImagesPackage.Literals.ABSTRACT_EIMAGE__HEIGHT,
 				 true,
 				 false,
 				 false,

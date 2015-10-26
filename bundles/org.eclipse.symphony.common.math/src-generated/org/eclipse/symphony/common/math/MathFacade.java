@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.math.impl.MathFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.math.MathPackage#getMathFacade()
+ * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMathFacade()
  * @model
  * @generated
  */

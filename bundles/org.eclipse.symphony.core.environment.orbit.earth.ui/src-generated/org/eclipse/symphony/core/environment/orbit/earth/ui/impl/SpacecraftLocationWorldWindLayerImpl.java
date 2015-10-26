@@ -25,7 +25,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
@@ -466,7 +466,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME: return EMFEcorePackage.NAMED__NAME;
+				case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -482,7 +482,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME;
+				case Symphony__CommonEMFPackage.NAMED__NAME: return SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_LOCATION_WORLD_WIND_LAYER__NAME;
 				default: return -1;
 			}
 		}
@@ -618,7 +618,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 						
 						switch (featureId) 
 						{
-							case EMFEcorePackage.TIMED__TIME:
+							case Symphony__CommonEMFPackage.TIMED__TIME:
 								if(isAutoUpdateEnabled()) update();
 							break;
 

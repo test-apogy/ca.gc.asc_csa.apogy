@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
-import org.eclipse.symphony.common.math.MathPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
@@ -625,8 +625,8 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 
 		// Initialize simple dependencies
 		SymphonyCorePackage.eINSTANCE.eClass();
-		ImagesCorePackage.eINSTANCE.eClass();
-		Data3dPackage.eINSTANCE.eClass();
+		Symphony__CommonImagesPackage.eINSTANCE.eClass();
+		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyEnvironmentPackage.createPackageContents();
@@ -3588,12 +3588,12 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		// Obtain other dependent packages
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
-		ImagesCorePackage theImagesCorePackage = (ImagesCorePackage)EPackage.Registry.INSTANCE.getEPackage(ImagesCorePackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
+		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -3605,22 +3605,22 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		worksiteEClass.getESuperTypes().add(theSymphonyCorePackage.getAbstractWorksite());
 		surfaceWorksiteEClass.getESuperTypes().add(this.getWorksite());
 		earthSurfaceWorksiteEClass.getESuperTypes().add(this.getSurfaceWorksite());
-		environmentEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		environmentEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		environmentEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		environmentEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		surfaceEnvironmentEClass.getESuperTypes().add(this.getEnvironment());
 		earthSurfaceEnvironmentEClass.getESuperTypes().add(this.getSurfaceEnvironment());
-		skyEClass.getESuperTypes().add(theEMFEcorePackage.getTimed());
+		skyEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
 		earthSkyEClass.getESuperTypes().add(this.getSky());
-		sunEClass.getESuperTypes().add(theTopologyPackage.getGroupNode());
-		earthEClass.getESuperTypes().add(theTopologyPackage.getGroupNode());
-		moonEClass.getESuperTypes().add(theTopologyPackage.getGroupNode());
-		starFieldEClass.getESuperTypes().add(theTopologyPackage.getNode());
-		mapEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		mapEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		abstractMapLayerEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractMapLayerEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
-		mapLayerPresentationEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		mapLayerPresentationEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		sunEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
+		earthEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
+		moonEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
+		starFieldEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
+		mapEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		mapEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		abstractMapLayerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractMapLayerEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
+		mapLayerPresentationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		mapLayerPresentationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		urlMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
 		rectangularRegionEClass.getESuperTypes().add(this.getRegion());
 		rectangularVolumeRegionEClass.getESuperTypes().add(this.getRectangularRegion());
@@ -3632,14 +3632,14 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		urlImageMapLayerEClass.getESuperTypes().add(this.getImageMapLayer());
 		urlImageMapLayerEClass.getESuperTypes().add(this.getURLMapLayer());
 		topologyTreeMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
-		topologyTreeMapLayerNodeEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
+		topologyTreeMapLayerNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
 		cartesianTriangularMeshMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
 		cartesianTriangularMeshDerivedImageMapLayerEClass.getESuperTypes().add(this.getImageMapLayer());
 		cartesianTriangularMeshSlopeImageMapLayerEClass.getESuperTypes().add(this.getCartesianTriangularMeshDerivedImageMapLayer());
 		cartesianTriangularMeshDiscreteSlopeImageMapLayerEClass.getESuperTypes().add(this.getCartesianTriangularMeshSlopeImageMapLayer());
 		cartesianTriangularMeshHeightImageMapLayerEClass.getESuperTypes().add(this.getCartesianTriangularMeshDerivedImageMapLayer());
-		slopeRangeEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		slopeRangeEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		slopeRangeEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		slopeRangeEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		lineOfSightImageMapLayerEClass.getESuperTypes().add(this.getCartesianTriangularMeshDerivedImageMapLayer());
 		abstractShapeImageLayerEClass.getESuperTypes().add(this.getImageMapLayer());
 		ellipseShapeImageLayerEClass.getESuperTypes().add(this.getAbstractShapeImageLayer());
@@ -3652,13 +3652,13 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		cartesianTriangularMeshURLMapLayerEClass.getESuperTypes().add(this.getURLMapLayer());
 		featuresOfInterestMapLayerEClass.getESuperTypes().add(this.getAbstractMapLayer());
 		featuresOfInterestMapLayerEClass.getESuperTypes().add(this.getRectangularRegionProvider());
-		worksiteNodeEClass.getESuperTypes().add(theTopologyPackage.getGroupNode());
+		worksiteNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
 		surfaceWorksiteNodeEClass.getESuperTypes().add(this.getWorksiteNode());
 		earthSurfaceWorksiteNodeEClass.getESuperTypes().add(this.getSurfaceWorksiteNode());
-		mapsListNodeEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
-		mapNodeEClass.getESuperTypes().add(theTopologyPackage.getTransformNode());
-		abstractMapLayerNodeEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
-		skyNodeEClass.getESuperTypes().add(theTopologyPackage.getGroupNode());
+		mapsListNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		mapNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getTransformNode());
+		abstractMapLayerNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
+		skyNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getGroupNode());
 		earthSkyNodeEClass.getESuperTypes().add(this.getSkyNode());
 		cartesianTriangularMeshMapLayerNodeEClass.getESuperTypes().add(this.getAbstractMapLayerNode());
 
@@ -3678,16 +3678,16 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		initEReference(getEarthSurfaceWorksite_EarthSky(), this.getEarthSky(), null, "earthSky", null, 1, 1, EarthSurfaceWorksite.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getEarthSurfaceWorksite__ConvertToGeographicCoordinates__Tuple3d(), this.getGeographicCoordinates(), "convertToGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthSurfaceWorksite__ConvertToXYZPosition__GeographicCoordinates(), theMathPackage.getTuple3d(), "convertToXYZPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEarthSurfaceWorksite__ConvertToXYZPosition__GeographicCoordinates(), theSymphony__CommonMathPackage.getTuple3d(), "convertToXYZPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getGeographicCoordinates(), "geographicalCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(environmentEClass, Environment.class, "Environment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(surfaceEnvironmentEClass, SurfaceEnvironment.class, "SurfaceEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSurfaceEnvironment_Atmosphere(), this.getAtmosphere(), null, "atmosphere", null, 0, 1, SurfaceEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSurfaceEnvironment_Gravity(), theMathPackage.getTuple3d(), null, "gravity", null, 0, 1, SurfaceEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSurfaceEnvironment_Gravity(), theSymphony__CommonMathPackage.getTuple3d(), null, "gravity", null, 0, 1, SurfaceEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(earthSurfaceEnvironmentEClass, EarthSurfaceEnvironment.class, "EarthSurfaceEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3768,7 +3768,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 
 		op = initEOperation(getEnvironmentUtilities__ParseRightAscension__String(), theEcorePackage.getEFloat(), "parseRightAscension", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "rightAscensionString", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, theEMFEcorePackage.getException());
+		addEException(op, theSymphony__CommonEMFPackage.getException());
 
 		op = initEOperation(getEnvironmentUtilities__ParseDegMinSec__String(), theEcorePackage.getEFloat(), "parseDegMinSec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "degMinSecAngleString", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3804,58 +3804,58 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		addEParameter(op, theEcorePackage.getEDouble(), "rightAscension", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "declination", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getEnvironmentFacade__GetMarsYardTransformNode(), theTopologyPackage.getTransformNode(), "getMarsYardTransformNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getEnvironmentFacade__GetMarsYardTransformNode(), theSymphony__CommonTopologyPackage.getTransformNode(), "getMarsYardTransformNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment(), this.getEarthSurfaceEnvironment(), "createAndInitializeEarthSurfaceEnvironment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getEnvironmentFacade__CreateAndInitializeEarthAtmosphere(), this.getAtmosphere(), "createAndInitializeEarthAtmosphere", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment(), theMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getSymphonySystem(), "symphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetSunVector__Node_Environment(), theMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetSunVector__Node_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment(), theMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getSymphonySystem(), "symphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetMoonVector__Node_Environment(), theMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetMoonVector__Node_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment(), theMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getSymphonySystem(), "targetSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getConnectionPoint(), "connectionPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment(), theMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getSymphonySystem(), "sourceSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getSymphonySystem(), "targetSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getConnectionPoint(), "connectionPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_String_Environment(), theMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_String_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getSymphonySystem(), "sourceSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getSymphonySystem(), "targetSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "connectionPointName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetVector__SymphonySystem_String_String_String_Environment(), theMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetVector__SymphonySystem_String_String_String_Environment(), theSymphony__CommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyCorePackage.getSymphonySystem(), "sourceSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "targetSystemfullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "connectionPointName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEMFEcoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__CreateEImage__List(), theImagesCorePackage.getAbstractEImage(), "createEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__CreateEImage__List(), theSymphony__CommonImagesPackage.getAbstractEImage(), "createEImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
@@ -3866,7 +3866,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		op = initEOperation(getEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion(), null, "getAbsoluteRectangularRegionCorners", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegion", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(theMathPackage.getTuple3d());
+		g2 = createEGenericType(theSymphony__CommonMathPackage.getTuple3d());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
@@ -3880,13 +3880,13 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 
 		op = initEOperation(getEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d(), null, "getRectangularRegionExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegionProvider(), "rectangularRegionProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d(), null, "getRectangularRegionImageExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegionImage(), "rectangularRegionImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d(), null, "getRectangularRegionExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
@@ -3895,8 +3895,8 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		g3 = createEGenericType(this.getRectangularRegionProvider());
 		g2.setEUpperBound(g3);
 		addEParameter(op, g1, "rectangularRegionProviders", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d(), null, "getRectangularRegionImageExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
@@ -3905,8 +3905,8 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		g3 = createEGenericType(this.getRectangularRegionImage());
 		g2.setEUpperBound(g3);
 		addEParameter(op, g1, "rectangularRegionImages", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion(), theEcorePackage.getEBoolean(), "fitsInside", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegionA", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3915,22 +3915,22 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		op = initEOperation(getEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4(), theEcorePackage.getEBoolean(), "intersects", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegionA", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRectangularRegion(), "rectangularRegionB", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getMatrix4x4(), "transformAToB", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "transformAToB", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d(), null, "getImageMapLayerPresentationExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getImageMapLayerPresentation(), "imageMapLayerPresentation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d(), null, "getImageMapLayerPresentationExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getImageMapLayerPresentation());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "imageMapLayerPresentations", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "lowerLeftCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "upperRightCorner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentFacade__GetImageMapLayerPresentationImage__List(), theImagesCorePackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentFacade__GetImageMapLayerPresentationImage__List(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getImageMapLayerPresentation());
 		g1.getETypeArguments().add(g2);
@@ -3953,7 +3953,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		initEOperation(op, g1);
 
 		op = initEOperation(getEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh(), this.getRectangularVolumeRegion(), "getRectangularVolumeRegion", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theData3dPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(starEClass, Star.class, "Star", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStar_Magnitude(), theEcorePackage.getEFloat(), "magnitude", null, 0, 1, Star.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4059,7 +4059,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		addEParameter(op, theEcorePackage.getEDouble(), "observerLatitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mapEClass, Map.class, "Map", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMap_Transformation(), theMathPackage.getMatrix4x4(), null, "transformation", null, 0, 1, Map.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMap_Transformation(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transformation", null, 0, 1, Map.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMap_Layers(), this.getAbstractMapLayer(), this.getAbstractMapLayer_Map(), "layers", null, 0, -1, Map.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMap_MapNode(), this.getMapNode(), null, "mapNode", null, 1, 1, Map.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
@@ -4079,7 +4079,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		initEAttribute(getURLMapLayer_Url(), theEcorePackage.getEString(), "url", null, 0, 1, URLMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(regionEClass, Region.class, "Region", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRegion_Transformation(), theMathPackage.getMatrix4x4(), null, "transformation", null, 0, 1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRegion_Transformation(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transformation", null, 0, 1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rectangularRegionEClass, RectangularRegion.class, "RectangularRegion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRectangularRegion_XMin(), theEcorePackage.getEDouble(), "xMin", "0.0", 0, 1, RectangularRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4088,10 +4088,10 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		initEAttribute(getRectangularRegion_YMax(), theEcorePackage.getEDouble(), "yMax", "0.0", 0, 1, RectangularRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRectangularRegion_XDimension(), theEcorePackage.getEDouble(), "xDimension", null, 0, 1, RectangularRegion.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRectangularRegion_YDimension(), theEcorePackage.getEDouble(), "yDimension", null, 0, 1, RectangularRegion.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRectangularRegion_LowerLeftCorner(), theMathPackage.getTuple3d(), null, "lowerLeftCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRectangularRegion_UpperLeftCorner(), theMathPackage.getTuple3d(), null, "upperLeftCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRectangularRegion_LowerRightCorner(), theMathPackage.getTuple3d(), null, "lowerRightCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getRectangularRegion_UpperRightCorner(), theMathPackage.getTuple3d(), null, "upperRightCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularRegion_LowerLeftCorner(), theSymphony__CommonMathPackage.getTuple3d(), null, "lowerLeftCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularRegion_UpperLeftCorner(), theSymphony__CommonMathPackage.getTuple3d(), null, "upperLeftCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularRegion_LowerRightCorner(), theSymphony__CommonMathPackage.getTuple3d(), null, "lowerRightCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularRegion_UpperRightCorner(), theSymphony__CommonMathPackage.getTuple3d(), null, "upperRightCorner", null, 1, 1, RectangularRegion.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(rectangularVolumeRegionEClass, RectangularVolumeRegion.class, "RectangularVolumeRegion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRectangularVolumeRegion_ZMin(), theEcorePackage.getEDouble(), "zMin", "0.0", 0, 1, RectangularVolumeRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4104,7 +4104,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 
 		initEClass(rectangularRegionImageEClass, RectangularRegionImage.class, "RectangularRegionImage", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getRectangularRegionImage__GetRegionImage(), theImagesCorePackage.getAbstractEImage(), "getRegionImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getRectangularRegionImage__GetRegionImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getRegionImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getRectangularRegionImage__GetResolution(), theEcorePackage.getEDouble(), "getResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -4112,8 +4112,8 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		initEAttribute(getImageMapLayer_Width(), theEcorePackage.getEDouble(), "width", "0.0", 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageMapLayer_Height(), theEcorePackage.getEDouble(), "height", "0.0", 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageMapLayer_Opaque(), theEcorePackage.getEBoolean(), "opaque", "true", 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getImageMapLayer_Image(), theImagesCorePackage.getAbstractEImage(), null, "image", null, 1, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getImageMapLayer_Legend(), theImagesCorePackage.getAbstractEImage(), null, "legend", null, 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImageMapLayer_Image(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "image", null, 1, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImageMapLayer_Legend(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "legend", null, 0, 1, ImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageMapLayer_Resolution(), theEcorePackage.getEDouble(), "resolution", null, 0, 1, ImageMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getImageMapLayer__UpdateImage__IProgressMonitor(), null, "updateImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -4134,15 +4134,15 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 
 		initEClass(topologyTreeMapLayerNodeEClass, TopologyTreeMapLayerNode.class, "TopologyTreeMapLayerNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTopologyTreeMapLayerNode_TopologyTreeMapLayer(), this.getTopologyTreeMapLayer(), this.getTopologyTreeMapLayer_TopologyTreeRoot(), "topologyTreeMapLayer", null, 0, 1, TopologyTreeMapLayerNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTopologyTreeMapLayerNode_TransientParent(), theTopologyPackage.getNode(), null, "transientParent", null, 0, 1, TopologyTreeMapLayerNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTopologyTreeMapLayerNode_TransientParent(), theSymphony__CommonTopologyPackage.getNode(), null, "transientParent", null, 0, 1, TopologyTreeMapLayerNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cartesianTriangularMeshMapLayerEClass, CartesianTriangularMeshMapLayer.class, "CartesianTriangularMeshMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCartesianTriangularMeshMapLayer_MeshIsDirty(), theEcorePackage.getEBoolean(), "meshIsDirty", "true", 0, 1, CartesianTriangularMeshMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCartesianTriangularMeshMapLayer_MapLayerPresentations(), this.getMapLayerPresentation(), null, "mapLayerPresentations", null, 0, -1, CartesianTriangularMeshMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCartesianTriangularMeshMapLayer_TextureImage(), theImagesCorePackage.getAbstractEImage(), null, "textureImage", null, 0, 1, CartesianTriangularMeshMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCartesianTriangularMeshMapLayer_TextureImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "textureImage", null, 0, 1, CartesianTriangularMeshMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCartesianTriangularMeshMapLayer_CartesianTriangularMeshMapLayerNode(), this.getCartesianTriangularMeshMapLayerNode(), null, "cartesianTriangularMeshMapLayerNode", null, 0, 1, CartesianTriangularMeshMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getCartesianTriangularMeshMapLayer__GetCurrentMesh(), theData3dPackage.getCartesianTriangularMesh(), "getCurrentMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getCartesianTriangularMeshMapLayer__GetCurrentMesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), "getCurrentMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCartesianTriangularMeshMapLayer__ForceUpdateTextureImage(), null, "forceUpdateTextureImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -4171,7 +4171,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		initEClass(lineOfSightImageMapLayerEClass, LineOfSightImageMapLayer.class, "LineOfSightImageMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLineOfSightImageMapLayer_LineOfSightAvailableColor(), this.getColor3f(), "lineOfSightAvailableColor", "0.0,1.0,0.0", 0, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLineOfSightImageMapLayer_LineOfSightNotAvailableColor(), this.getColor3f(), "lineOfSightNotAvailableColor", "1.0,0.0,0.0", 0, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLineOfSightImageMapLayer_ObserverPose(), theMathPackage.getMatrix4x4(), null, "observerPose", null, 1, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLineOfSightImageMapLayer_ObserverPose(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "observerPose", null, 1, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLineOfSightImageMapLayer_TargetHeightAboveGround(), theEcorePackage.getEDouble(), "targetHeightAboveGround", "1.0", 0, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLineOfSightImageMapLayer_UseHeightPerpendicularToGround(), theEcorePackage.getEBoolean(), "useHeightPerpendicularToGround", "false", 0, 1, LineOfSightImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4194,21 +4194,21 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 
 		op = initEOperation(getPolygonShapeImageMapLayer__GetVertices(), null, "getVertices", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(theMathPackage.getTuple3d());
+		g2 = createEGenericType(theSymphony__CommonMathPackage.getTuple3d());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
 		initEClass(cartesianCoordinatesPolygonShapeImageMapLayerEClass, CartesianCoordinatesPolygonShapeImageMapLayer.class, "CartesianCoordinatesPolygonShapeImageMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCartesianCoordinatesPolygonShapeImageMapLayer_PolygonVertices(), theMathPackage.getTuple3d(), null, "polygonVertices", null, 0, -1, CartesianCoordinatesPolygonShapeImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCartesianCoordinatesPolygonShapeImageMapLayer_PolygonVertices(), theSymphony__CommonMathPackage.getTuple3d(), null, "polygonVertices", null, 0, -1, CartesianCoordinatesPolygonShapeImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(geographicCoordinatesPolygonShapeImageMapLayerEClass, GeographicCoordinatesPolygonShapeImageMapLayer.class, "GeographicCoordinatesPolygonShapeImageMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGeographicCoordinatesPolygonShapeImageMapLayer_PolygonVerticesGeographicCoordinates(), this.getGeographicCoordinates(), null, "polygonVerticesGeographicCoordinates", null, 0, -1, GeographicCoordinatesPolygonShapeImageMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(basicCartesianTriangularMeshMapLayerEClass, BasicCartesianTriangularMeshMapLayer.class, "BasicCartesianTriangularMeshMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBasicCartesianTriangularMeshMapLayer_Mesh(), theData3dPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, BasicCartesianTriangularMeshMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBasicCartesianTriangularMeshMapLayer_Mesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, BasicCartesianTriangularMeshMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cartesianTriangularMeshURLMapLayerEClass, CartesianTriangularMeshURLMapLayer.class, "CartesianTriangularMeshURLMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCartesianTriangularMeshURLMapLayer_Mesh(), theData3dPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, CartesianTriangularMeshURLMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCartesianTriangularMeshURLMapLayer_Mesh(), theSymphony__CommonGeometryData3DPackage.getCartesianTriangularMesh(), null, "mesh", null, 0, 1, CartesianTriangularMeshURLMapLayer.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featuresOfInterestMapLayerEClass, FeaturesOfInterestMapLayer.class, "FeaturesOfInterestMapLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFeaturesOfInterestMapLayer_Features(), theSymphonyCorePackage.getFeatureOfInterestList(), null, "features", null, 1, 1, FeaturesOfInterestMapLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4219,7 +4219,7 @@ public class SymphonyEnvironmentPackageImpl extends EPackageImpl implements Symp
 		initEClass(surfaceWorksiteNodeEClass, SurfaceWorksiteNode.class, "SurfaceWorksiteNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(earthSurfaceWorksiteNodeEClass, EarthSurfaceWorksiteNode.class, "EarthSurfaceWorksiteNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEarthSurfaceWorksiteNode_SkyTransformNode(), theTopologyPackage.getTransformNode(), null, "skyTransformNode", null, 0, 1, EarthSurfaceWorksiteNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEarthSurfaceWorksiteNode_SkyTransformNode(), theSymphony__CommonTopologyPackage.getTransformNode(), null, "skyTransformNode", null, 0, 1, EarthSurfaceWorksiteNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mapsListNodeEClass, MapsListNode.class, "MapsListNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMapsListNode_MapsList(), this.getMapsList(), null, "mapsList", null, 0, 1, MapsListNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

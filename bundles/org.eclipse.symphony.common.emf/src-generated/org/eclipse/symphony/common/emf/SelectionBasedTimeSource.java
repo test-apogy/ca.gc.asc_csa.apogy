@@ -14,7 +14,7 @@ package org.eclipse.symphony.common.emf;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getSelectionBasedTimeSource()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getSelectionBasedTimeSource()
  * @model
  * @generated
  */

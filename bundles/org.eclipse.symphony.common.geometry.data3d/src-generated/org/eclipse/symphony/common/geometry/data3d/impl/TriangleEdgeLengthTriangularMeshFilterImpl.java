@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter;
 
@@ -113,7 +113,7 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER;
+		return Symphony__CommonGeometryData3DPackage.Literals.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER;
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 		double oldMinimumRange = minimumRange;
 		minimumRange = newMinimumRange;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE, oldMinimumRange, minimumRange));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE, oldMinimumRange, minimumRange));
 	}
 
 	/**
@@ -155,7 +155,7 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 		double oldMaximumRange = maximumRange;
 		maximumRange = newMaximumRange;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE, oldMaximumRange, maximumRange));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE, oldMaximumRange, maximumRange));
 	}
 
 	/**
@@ -176,7 +176,7 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 		double oldMaximumEdgeLength = maximumEdgeLength;
 		maximumEdgeLength = newMaximumEdgeLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH, oldMaximumEdgeLength, maximumEdgeLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH, oldMaximumEdgeLength, maximumEdgeLength));
 	}
 
 	/**
@@ -233,11 +233,11 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
 				return getMinimumRange();
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
 				return getMaximumRange();
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
 				return getMaximumEdgeLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -251,13 +251,13 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
 				setMinimumRange((Double)newValue);
 				return;
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
 				setMaximumRange((Double)newValue);
 				return;
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
 				setMaximumEdgeLength((Double)newValue);
 				return;
 		}
@@ -272,13 +272,13 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
 				setMinimumRange(MINIMUM_RANGE_EDEFAULT);
 				return;
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
 				setMaximumRange(MAXIMUM_RANGE_EDEFAULT);
 				return;
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
 				setMaximumEdgeLength(MAXIMUM_EDGE_LENGTH_EDEFAULT);
 				return;
 		}
@@ -293,11 +293,11 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MINIMUM_RANGE:
 				return minimumRange != MINIMUM_RANGE_EDEFAULT;
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_RANGE:
 				return maximumRange != MAXIMUM_RANGE_EDEFAULT;
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER__MAXIMUM_EDGE_LENGTH:
 				return maximumEdgeLength != MAXIMUM_EDGE_LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -311,7 +311,7 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER___FILTER__CARTESIANTRIANGULARMESH:
+			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER___FILTER__CARTESIANTRIANGULARMESH:
 				return filter((CartesianTriangularMesh)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

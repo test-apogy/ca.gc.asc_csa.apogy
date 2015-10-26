@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.Light;
 import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
 import org.eclipse.symphony.common.topology.provider.LeafItemProvider;
@@ -158,7 +158,7 @@ public class LightItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(PrimitivesPackage.Literals.LIGHT__COLOR,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 }

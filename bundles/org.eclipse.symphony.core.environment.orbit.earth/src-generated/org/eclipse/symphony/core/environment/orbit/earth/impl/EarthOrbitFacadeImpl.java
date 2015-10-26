@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
@@ -426,7 +426,7 @@ public class EarthOrbitFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public Matrix3x3 createMatrix3x3(Rotation rotation) 
 	{
-		Matrix3x3 matrix3x3 = MathFactory.eINSTANCE.createMatrix3x3();		
+		Matrix3x3 matrix3x3 = Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3();		
 		
 		Matrix3d rot = new Matrix3d();
 		double[][] m = rotation.getMatrix();

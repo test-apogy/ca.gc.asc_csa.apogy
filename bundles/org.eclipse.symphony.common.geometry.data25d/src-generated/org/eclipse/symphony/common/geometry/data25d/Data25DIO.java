@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getData25DIO()
+ * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getData25DIO()
  * @model
  * @generated
  */

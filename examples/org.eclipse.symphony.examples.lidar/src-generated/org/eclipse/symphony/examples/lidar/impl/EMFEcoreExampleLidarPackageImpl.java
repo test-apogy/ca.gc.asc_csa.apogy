@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarFactory;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
 import org.eclipse.symphony.examples.lidar.Lidar;
@@ -259,7 +259,7 @@ public class EMFEcoreExampleLidarPackageImpl extends EPackageImpl implements EMF
 		// Obtain other dependent packages
 		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -276,11 +276,11 @@ public class EMFEcoreExampleLidarPackageImpl extends EPackageImpl implements EMF
 
 		initEOperation(getLidar__Init(), theEcorePackage.getEBoolean(), "init", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		EOperation op = initEOperation(getLidar__AcquireScan__double_double(), theData3dPackage.getCartesianCoordinatesSet(), "acquireScan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getLidar__AcquireScan__double_double(), theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet(), "acquireScan", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "horizontalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "verticalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getLidar__AcquireScanNonBlocking__double_double(), theData3dPackage.getCartesianCoordinatesSet(), "acquireScanNonBlocking", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getLidar__AcquireScanNonBlocking__double_double(), theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet(), "acquireScanNonBlocking", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "horizontalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "verticalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

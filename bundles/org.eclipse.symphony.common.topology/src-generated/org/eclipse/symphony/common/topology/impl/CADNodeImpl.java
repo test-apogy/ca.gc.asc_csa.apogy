@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.CADNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.CAD_NODE;
+		return Symphony__CommonTopologyPackage.Literals.CAD_NODE;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 		String oldNodeName = nodeName;
 		nodeName = newNodeName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.CAD_NODE__NODE_NAME, oldNodeName, nodeName));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME, oldNodeName, nodeName));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.CAD_NODE__NODE_NAME:
+			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
 				return getNodeName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.CAD_NODE__NODE_NAME:
+			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
 				setNodeName((String)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.CAD_NODE__NODE_NAME:
+			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
 				setNodeName(NODE_NAME_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class CADNodeImpl extends URLNodeImpl implements CADNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.CAD_NODE__NODE_NAME:
+			case Symphony__CommonTopologyPackage.CAD_NODE__NODE_NAME:
 				return NODE_NAME_EDEFAULT == null ? nodeName != null : !NODE_NAME_EDEFAULT.equals(nodeName);
 		}
 		return super.eIsSet(featureID);

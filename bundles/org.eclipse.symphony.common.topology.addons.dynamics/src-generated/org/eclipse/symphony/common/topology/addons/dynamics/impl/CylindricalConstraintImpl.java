@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
 import org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT;
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 		ConstraintState oldAngularCurrentState = angularCurrentState;
 		angularCurrentState = newAngularCurrentState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE, oldAngularCurrentState, newAngularCurrentState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE, oldAngularCurrentState, newAngularCurrentState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -102,14 +102,14 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 		if (newAngularCurrentState != angularCurrentState) {
 			NotificationChain msgs = null;
 			if (angularCurrentState != null)
-				msgs = ((InternalEObject)angularCurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)angularCurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE, null, msgs);
 			if (newAngularCurrentState != null)
-				msgs = ((InternalEObject)newAngularCurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)newAngularCurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE, null, msgs);
 			msgs = basicSetAngularCurrentState(newAngularCurrentState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE, newAngularCurrentState, newAngularCurrentState));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE, newAngularCurrentState, newAngularCurrentState));
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 		ConstraintState oldLinearCurrentState = linearCurrentState;
 		linearCurrentState = newLinearCurrentState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE, oldLinearCurrentState, newLinearCurrentState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE, oldLinearCurrentState, newLinearCurrentState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -145,14 +145,14 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 		if (newLinearCurrentState != linearCurrentState) {
 			NotificationChain msgs = null;
 			if (linearCurrentState != null)
-				msgs = ((InternalEObject)linearCurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)linearCurrentState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE, null, msgs);
 			if (newLinearCurrentState != null)
-				msgs = ((InternalEObject)newLinearCurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE, null, msgs);
+				msgs = ((InternalEObject)newLinearCurrentState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE, null, msgs);
 			msgs = basicSetLinearCurrentState(newLinearCurrentState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE, newLinearCurrentState, newLinearCurrentState));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE, newLinearCurrentState, newLinearCurrentState));
 	}
 
 	/**
@@ -163,9 +163,9 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
 				return basicSetAngularCurrentState(null, msgs);
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
 				return basicSetLinearCurrentState(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -179,9 +179,9 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
 				return getAngularCurrentState();
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
 				return getLinearCurrentState();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -195,10 +195,10 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
 				setAngularCurrentState((ConstraintState)newValue);
 				return;
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
 				setLinearCurrentState((ConstraintState)newValue);
 				return;
 		}
@@ -213,10 +213,10 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
 				setAngularCurrentState((ConstraintState)null);
 				return;
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
 				setLinearCurrentState((ConstraintState)null);
 				return;
 		}
@@ -231,9 +231,9 @@ public class CylindricalConstraintImpl extends AbstractConstraintImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
 				return angularCurrentState != null;
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
 				return linearCurrentState != null;
 		}
 		return super.eIsSet(featureID);

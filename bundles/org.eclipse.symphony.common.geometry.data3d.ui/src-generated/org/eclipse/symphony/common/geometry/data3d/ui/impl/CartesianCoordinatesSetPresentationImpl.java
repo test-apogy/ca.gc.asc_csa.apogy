@@ -15,10 +15,10 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3DUtils;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.ui.Activator;
 import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage;
+import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
 import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
 import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
 import org.eclipse.symphony.common.math.MathFacade;
@@ -119,7 +119,7 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION;
+		return Symphony__CommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION;
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 			pointCloud = (CartesianCoordinatesSet)eResolveProxy(oldPointCloud);
 			if (pointCloud != oldPointCloud) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD, oldPointCloud, pointCloud));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD, oldPointCloud, pointCloud));
 			}
 		}
 		return pointCloud;
@@ -170,7 +170,7 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 		CartesianCoordinatesSet oldPointCloud = pointCloud;
 		pointCloud = newPointCloud;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD, oldPointCloud, pointCloud));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD, oldPointCloud, pointCloud));
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 		int oldPointSize = pointSize;
 		pointSize = newPointSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE, oldPointSize, pointSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE, oldPointSize, pointSize));
 	}
 
 	/**
@@ -219,12 +219,12 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
 				if (resolve) return getPointCloud();
 				return basicGetPointCloud();
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
 				return getPointSize();
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
 				return getNumberOfPoints();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -238,10 +238,10 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
 				setPointCloud((CartesianCoordinatesSet)newValue);
 				return;
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
 				setPointSize((Integer)newValue);
 				return;
 		}
@@ -256,10 +256,10 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
 				setPointCloud((CartesianCoordinatesSet)null);
 				return;
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
 				setPointSize(POINT_SIZE_EDEFAULT);
 				return;
 		}
@@ -274,11 +274,11 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD:
 				return pointCloud != null;
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
 				return pointSize != POINT_SIZE_EDEFAULT;
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
 				return numberOfPoints != NUMBER_OF_POINTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -304,7 +304,7 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 		
 	@Override
 	public Tuple3d basicGetCentroid() {
-		Data3DUtils utils = Data3dFactory.eINSTANCE.createData3DUtils();
+		Data3DUtils utils = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3DUtils();
 
 		CartesianPositionCoordinates centroid = utils.computeCentroid(getPointCloud());
 
@@ -344,7 +344,7 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 				
 				switch (featureID) 
 				{
-					case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
+					case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
 						pointsSceneObject.setPointSize(getPointSize());
 					break;
 														

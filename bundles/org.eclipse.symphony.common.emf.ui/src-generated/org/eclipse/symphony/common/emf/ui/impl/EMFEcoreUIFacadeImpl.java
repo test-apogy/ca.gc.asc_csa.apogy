@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.common.emf.ui.Activator;
 import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIPackage;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +57,7 @@ public class EMFEcoreUIFacadeImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreUIPackage.Literals.EMF_ECORE_UI_FACADE;
+		return Symphony__CommonEMFUIPackage.Literals.EMF_ECORE_UI_FACADE;
 	}
 
 		/**
@@ -98,9 +98,9 @@ public class EMFEcoreUIFacadeImpl extends MinimalEObjectImpl.Container implement
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case EMFEcoreUIPackage.EMF_ECORE_UI_FACADE___GET_COLOR_FOR_RANGE__RANGES:
+			case Symphony__CommonEMFUIPackage.EMF_ECORE_UI_FACADE___GET_COLOR_FOR_RANGE__RANGES:
 				return getColorForRange((Ranges)arguments.get(0));
-			case EMFEcoreUIPackage.EMF_ECORE_UI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT:
+			case Symphony__CommonEMFUIPackage.EMF_ECORE_UI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT:
 				return getDisplayUnits((ETypedElement)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -14,7 +14,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.geometry.data3d.ui"
-            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Symphony__CommonGeometryData3DUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -26,10 +26,10 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Symphony__CommonGeometryData3DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Data3DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.common.geometry.data3d.ui.provider.Symphony__CommonGeometryData3DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

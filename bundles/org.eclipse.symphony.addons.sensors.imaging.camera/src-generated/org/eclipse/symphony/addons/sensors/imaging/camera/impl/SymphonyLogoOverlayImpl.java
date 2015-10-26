@@ -12,7 +12,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensor
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.images.URLEImage;
 
 /**
@@ -113,7 +113,7 @@ public class SymphonyLogoOverlayImpl extends ImageCameraOverlayImpl implements S
   {
 	  if(logoImage == null)
 	  {
-		  URLEImage urlImage = ImagesCoreFactory.eINSTANCE.createURLEImage();
+		  URLEImage urlImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
 		  urlImage.setUrl("platform:/plugin/org.eclipse.symphony.addons.sensors.imaging.camera/images/SymphonyLogo.gif");		  		  
 		  logoImage = urlImage;
 	  }

@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianCoordinatesSetShapeSampler()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetShapeSampler()
  * @model
  * @generated
  */

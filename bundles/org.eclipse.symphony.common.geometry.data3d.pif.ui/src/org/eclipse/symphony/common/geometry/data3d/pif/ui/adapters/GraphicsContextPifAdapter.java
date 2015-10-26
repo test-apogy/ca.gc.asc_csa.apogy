@@ -10,12 +10,12 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.pif.PifReader;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
@@ -92,7 +92,7 @@ public class GraphicsContextPifAdapter implements GraphicsContextAdapter {
 				List<Point3f> points = reader.getPoints();
 
 				// We convert the points into a cartesian coordinates set
-				CartesianCoordinatesSet pts = Data3dFactory.eINSTANCE
+				CartesianCoordinatesSet pts = Symphony__CommonGeometryData3DFactory.eINSTANCE
 						.createCartesianCoordinatesSet();
 
 				List<CartesianPositionCoordinates> pointList = new ArrayList<CartesianPositionCoordinates>(
@@ -108,7 +108,7 @@ public class GraphicsContextPifAdapter implements GraphicsContextAdapter {
 				pts.getPoints().addAll(pointList);
 
 				// We create a topology
-				GroupNode root = TopologyFactory.eINSTANCE.createGroupNode();
+				GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode();
 
 				ContentNode<CartesianCoordinatesSet> pointNode = TopologyFacade.INSTANCE
 						.createContentNode(pts);

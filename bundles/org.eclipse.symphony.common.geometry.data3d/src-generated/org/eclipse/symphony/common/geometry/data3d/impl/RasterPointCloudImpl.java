@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.RasterPointCloud;
 
 /**
@@ -84,7 +84,7 @@ public class RasterPointCloudImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.RASTER_POINT_CLOUD;
+		return Symphony__CommonGeometryData3DPackage.Literals.RASTER_POINT_CLOUD;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class RasterPointCloudImpl extends MinimalEObjectImpl.Container implement
 		rows = newRows;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Data3dPackage.RASTER_POINT_CLOUD__ROWS, oldRows, rows));
+					Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__ROWS, oldRows, rows));
 	}
 
 	/**
@@ -142,7 +142,7 @@ public class RasterPointCloudImpl extends MinimalEObjectImpl.Container implement
 		columns = newColumns;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Data3dPackage.RASTER_POINT_CLOUD__COLUMNS, oldColumns,
+					Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__COLUMNS, oldColumns,
 					columns));
 	}
 
@@ -211,9 +211,9 @@ public class RasterPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.RASTER_POINT_CLOUD__ROWS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__ROWS:
 				return getRows();
-			case Data3dPackage.RASTER_POINT_CLOUD__COLUMNS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__COLUMNS:
 				return getColumns();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -226,10 +226,10 @@ public class RasterPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.RASTER_POINT_CLOUD__ROWS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__ROWS:
 				setRows((Integer)newValue);
 				return;
-			case Data3dPackage.RASTER_POINT_CLOUD__COLUMNS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__COLUMNS:
 				setColumns((Integer)newValue);
 				return;
 		}
@@ -243,10 +243,10 @@ public class RasterPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.RASTER_POINT_CLOUD__ROWS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__ROWS:
 				setRows(ROWS_EDEFAULT);
 				return;
-			case Data3dPackage.RASTER_POINT_CLOUD__COLUMNS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__COLUMNS:
 				setColumns(COLUMNS_EDEFAULT);
 				return;
 		}
@@ -260,9 +260,9 @@ public class RasterPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.RASTER_POINT_CLOUD__ROWS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__ROWS:
 				return rows != ROWS_EDEFAULT;
-			case Data3dPackage.RASTER_POINT_CLOUD__COLUMNS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__COLUMNS:
 				return columns != COLUMNS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -276,9 +276,9 @@ public class RasterPointCloudImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.RASTER_POINT_CLOUD___GET_POINT__INT_INT:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD___GET_POINT__INT_INT:
 				return getPoint((Integer)arguments.get(0), (Integer)arguments.get(1));
-			case Data3dPackage.RASTER_POINT_CLOUD___SET_POINT__INT_INT_CARTESIANPOSITIONCOORDINATES:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD___SET_POINT__INT_INT_CARTESIANPOSITIONCOORDINATES:
 				setPoint((Integer)arguments.get(0), (Integer)arguments.get(1), (CartesianPositionCoordinates)arguments.get(2));
 				return null;
 		}

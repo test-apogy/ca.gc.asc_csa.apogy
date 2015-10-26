@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getOutputStream <em>Output Stream</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter()
+ * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter()
  * @model
  * @generated
  */
@@ -49,7 +49,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>File Name</em>' attribute.
 	 * @see #setFileName(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_FileName()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_FileName()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -75,7 +75,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Progress Monitor</em>' attribute.
 	 * @see #setProgressMonitor(IProgressMonitor)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_ProgressMonitor()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ProgressMonitor()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.IProgressMonitor" transient="true"
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface LASWriter extends EObject {
 	 * applied to the x, y, z values to obtain the right values.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Points</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_Points()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_Points()
 	 * @model transient="true" ordered="false"
 	 * @generated
 	 */
@@ -118,7 +118,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scale X</em>' attribute.
 	 * @see #setScaleX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_ScaleX()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ScaleX()
 	 * @model default="0.01" unique="false"
 	 * @generated
 	 */
@@ -145,7 +145,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scale Y</em>' attribute.
 	 * @see #setScaleY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_ScaleY()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ScaleY()
 	 * @model default="0.01" unique="false"
 	 * @generated
 	 */
@@ -172,7 +172,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scale Z</em>' attribute.
 	 * @see #setScaleZ(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_ScaleZ()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ScaleZ()
 	 * @model default="0.01" unique="false"
 	 * @generated
 	 */
@@ -197,7 +197,7 @@ public interface LASWriter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Header</em>' reference.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_Header()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_Header()
 	 * @model transient="true" changeable="false"
 	 * @generated
 	 */
@@ -214,7 +214,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XOffset</em>' attribute.
 	 * @see #setXOffset(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_XOffset()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_XOffset()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -241,7 +241,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YOffset</em>' attribute.
 	 * @see #setYOffset(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_YOffset()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_YOffset()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -268,7 +268,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZOffset</em>' attribute.
 	 * @see #setZOffset(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_ZOffset()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_ZOffset()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -294,7 +294,7 @@ public interface LASWriter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output Stream</em>' attribute.
 	 * @see #setOutputStream(OutputStream)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter_OutputStream()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASWriter_OutputStream()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.OutputStream"
 	 * @generated
 	 */

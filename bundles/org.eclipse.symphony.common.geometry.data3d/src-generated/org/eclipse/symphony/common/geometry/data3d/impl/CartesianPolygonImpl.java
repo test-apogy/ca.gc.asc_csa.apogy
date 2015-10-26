@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.symphony.common.geometry.data.impl.PolygonImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 
 /**
@@ -69,7 +69,7 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.CARTESIAN_POLYGON;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_POLYGON;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	@Override
 	public EList<CartesianPositionCoordinates> getVertices() {
 		if (vertices == null) {
-			vertices = new EObjectEList<CartesianPositionCoordinates>(CartesianPositionCoordinates.class, this, Data3dPackage.CARTESIAN_POLYGON__VERTICES);
+			vertices = new EObjectEList<CartesianPositionCoordinates>(CartesianPositionCoordinates.class, this, Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__VERTICES);
 		}
 		return vertices;
 	}
@@ -131,11 +131,11 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.CARTESIAN_POLYGON__SURFACE:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
 				return getSurface();
-			case Data3dPackage.CARTESIAN_POLYGON__NORMAL:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
 				return getNormal();
-			case Data3dPackage.CARTESIAN_POLYGON__CENTROID:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__CENTROID:
 				if (resolve) return getCentroid();
 				return basicGetCentroid();
 		}
@@ -150,11 +150,11 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.CARTESIAN_POLYGON__SURFACE:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__SURFACE:
 				return getSurface() != SURFACE_EDEFAULT;
-			case Data3dPackage.CARTESIAN_POLYGON__NORMAL:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__NORMAL:
 				return NORMAL_EDEFAULT == null ? getNormal() != null : !NORMAL_EDEFAULT.equals(getNormal());
-			case Data3dPackage.CARTESIAN_POLYGON__CENTROID:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POLYGON__CENTROID:
 				return basicGetCentroid() != null;
 		}
 		return super.eIsSet(featureID);

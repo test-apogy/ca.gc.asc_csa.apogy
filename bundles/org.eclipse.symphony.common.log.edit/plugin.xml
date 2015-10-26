@@ -11,7 +11,7 @@
       <!-- @generated utils_log -->
       <factory
             uri="org.eclipse.symphony.common.log"
-            class="org.eclipse.symphony.common.log.provider.UtilsLogItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.log.provider.Symphony__CommonLogItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

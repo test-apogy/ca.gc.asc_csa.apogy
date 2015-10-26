@@ -5,7 +5,7 @@ package org.eclipse.symphony.common.emf.impl;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FixedTimeSource;
 
 /**
@@ -32,7 +32,7 @@ public class FixedTimeSourceImpl extends TimeSourceImpl implements FixedTimeSour
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.FIXED_TIME_SOURCE;
+		return Symphony__CommonEMFPackage.Literals.FIXED_TIME_SOURCE;
 	}
 
 	@Override

@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.math.Tuple3d#getZ <em>Z</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.MathPackage#getTuple3d()
+ * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getTuple3d()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface Tuple3d extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getTuple3d_X()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getTuple3d_X()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface Tuple3d extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getTuple3d_Y()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getTuple3d_Y()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface Tuple3d extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getTuple3d_Z()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getTuple3d_Z()
 	 * @model unique="false"
 	 * @generated
 	 */

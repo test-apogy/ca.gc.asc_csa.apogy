@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.ASCHeaderData#getNoDataValue <em>No Data Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASCHeaderData()
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Row</em>' attribute.
 	 * @see #setNumberOfRow(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASCHeaderData_NumberOfRow()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_NumberOfRow()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Columns</em>' attribute.
 	 * @see #setNumberOfColumns(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASCHeaderData_NumberOfColumns()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_NumberOfColumns()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Xll Center</em>' attribute.
 	 * @see #setXllCenter(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASCHeaderData_XllCenter()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_XllCenter()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -123,7 +123,7 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Yll Center</em>' attribute.
 	 * @see #setYllCenter(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASCHeaderData_YllCenter()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_YllCenter()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -150,7 +150,7 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cell Size</em>' attribute.
 	 * @see #setCellSize(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASCHeaderData_CellSize()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_CellSize()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -178,7 +178,7 @@ public interface ASCHeaderData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>No Data Value</em>' attribute.
 	 * @see #setNoDataValue(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASCHeaderData_NoDataValue()
+	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_NoDataValue()
 	 * @model default="-9999" unique="false"
 	 * @generated
 	 */

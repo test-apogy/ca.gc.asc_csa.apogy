@@ -26,8 +26,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint} object.
@@ -85,7 +85,7 @@ public class AbstractConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractConstraint_simulationProperties_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstraint_simulationProperties_feature", "_UI_AbstractConstraint_type"),
-				 TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__SIMULATION_PROPERTIES,
 				 true,
 				 false,
 				 true,
@@ -107,7 +107,7 @@ public class AbstractConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractConstraint_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstraint_description_feature", "_UI_AbstractConstraint_type"),
-				 TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__DESCRIPTION,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class AbstractConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractConstraint_constaintId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstraint_constaintId_feature", "_UI_AbstractConstraint_type"),
-				 TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__CONSTAINT_ID,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__CONSTAINT_ID,
 				 true,
 				 false,
 				 false,
@@ -151,7 +151,7 @@ public class AbstractConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractConstraint_enabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractConstraint_enabled_feature", "_UI_AbstractConstraint_type"),
-				 TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ENABLED,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ENABLED,
 				 true,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class AbstractConstraintItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS);
 		}
 		return childrenFeatures;
 	}
@@ -216,12 +216,12 @@ public class AbstractConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractConstraint.class)) {
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__CONSTAINT_ID:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case TopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -241,8 +241,8 @@ public class AbstractConstraintItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS,
-				 TopologyDynamicsFactory.eINSTANCE.createConstraintAttachmentPoint()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_CONSTRAINT__ATTACHMENT_POINTS,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createConstraintAttachmentPoint()));
 	}
 
 	/**

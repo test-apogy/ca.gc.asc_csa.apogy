@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToSunHorizontalCoordinatesStringConverter;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DateToSunIntensityStringConverter;
 
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 public class EarthSkySunComposite extends Composite 
 {
@@ -119,7 +119,7 @@ public class EarthSkySunComposite extends Composite
 			{				
 				// Sun azimuth.
 				IObservableValue lblsunAzimuthValueLabel = PojoProperties.value("text").observe(sunAzimuthValueLabel);		
-				IObservableValue sunAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				IObservableValue sunAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy sunAzimuthValueStrategy = new UpdateValueStrategy();
 				sunAzimuthValueStrategy.setConverter(new DateToSunHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToSunHorizontalCoordinatesStringConverter.COORDS.AZIMUTH));
@@ -128,7 +128,7 @@ public class EarthSkySunComposite extends Composite
 	
 				// Sun altitude.
 				IObservableValue lblsunElevationValueLabel = PojoProperties.value("text").observe(sunElevationValueLabel);		
-				IObservableValue sunElevationObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				IObservableValue sunElevationObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy sunElevationValueStrategy = new UpdateValueStrategy();
 				sunElevationValueStrategy.setConverter(new DateToSunHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToSunHorizontalCoordinatesStringConverter.COORDS.ALTITUDE));
@@ -137,7 +137,7 @@ public class EarthSkySunComposite extends Composite
 				
 				// Sun intensity
 				IObservableValue lblsunIntensity = PojoProperties.value("text").observe(sunIntensityValueLabel);
-				IObservableValue sunIntensityObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getEarthSky());
+				IObservableValue sunIntensityObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy sunIntensityValueStrategy = new UpdateValueStrategy();
 				sunIntensityValueStrategy.setConverter(new DateToSunIntensityStringConverter(new DecimalFormat(INTENSITY_FORMAT_STRING), geographicCoordinates));

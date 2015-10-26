@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.math.Matrix3x3#getM22 <em>M22</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3()
+ * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M00</em>' attribute.
 	 * @see #setM00(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M00()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M00()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M01</em>' attribute.
 	 * @see #setM01(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M01()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M01()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -95,7 +95,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M02</em>' attribute.
 	 * @see #setM02(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M02()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M02()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -121,7 +121,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M10</em>' attribute.
 	 * @see #setM10(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M10()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M10()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -148,7 +148,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M11</em>' attribute.
 	 * @see #setM11(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M11()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M11()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -174,7 +174,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M12</em>' attribute.
 	 * @see #setM12(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M12()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M12()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -200,7 +200,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M20</em>' attribute.
 	 * @see #setM20(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M20()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M20()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -226,7 +226,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M21</em>' attribute.
 	 * @see #setM21(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M21()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M21()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -253,7 +253,7 @@ public interface Matrix3x3 extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>M22</em>' attribute.
 	 * @see #setM22(double)
-	 * @see org.eclipse.symphony.common.math.MathPackage#getMatrix3x3_M22()
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMatrix3x3_M22()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

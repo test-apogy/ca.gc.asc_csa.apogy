@@ -123,7 +123,7 @@ public class SamplingShapeItemProvider
 	@Override
 	public ResourceLocator getResourceLocator()
 	{
-		return DataEditPlugin.INSTANCE;
+		return Symphony__CommonGeometryDataEditPlugin.INSTANCE;
 	}
 
 }

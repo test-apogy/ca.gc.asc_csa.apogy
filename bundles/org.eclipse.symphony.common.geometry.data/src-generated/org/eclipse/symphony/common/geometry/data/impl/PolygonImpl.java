@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.Polygon;
 
 /**
@@ -58,7 +58,7 @@ public class PolygonImpl<T extends Coordinates> extends MinimalEObjectImpl.Conta
 	@Override
 	protected EClass eStaticClass()
 	{
-		return DataPackage.Literals.POLYGON;
+		return Symphony__CommonGeometryDataPackage.Literals.POLYGON;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class PolygonImpl<T extends Coordinates> extends MinimalEObjectImpl.Conta
 	public EList<T> getVertices()
 	{
 		if (vertices == null) {
-			vertices = new EObjectEList<T>(Coordinates.class, this, DataPackage.POLYGON__VERTICES);
+			vertices = new EObjectEList<T>(Coordinates.class, this, Symphony__CommonGeometryDataPackage.POLYGON__VERTICES);
 		}
 		return vertices;
 	}
@@ -83,7 +83,7 @@ public class PolygonImpl<T extends Coordinates> extends MinimalEObjectImpl.Conta
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case DataPackage.POLYGON__VERTICES:
+			case Symphony__CommonGeometryDataPackage.POLYGON__VERTICES:
 				return getVertices();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -99,7 +99,7 @@ public class PolygonImpl<T extends Coordinates> extends MinimalEObjectImpl.Conta
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case DataPackage.POLYGON__VERTICES:
+			case Symphony__CommonGeometryDataPackage.POLYGON__VERTICES:
 				getVertices().clear();
 				getVertices().addAll((Collection<? extends T>)newValue);
 				return;
@@ -116,7 +116,7 @@ public class PolygonImpl<T extends Coordinates> extends MinimalEObjectImpl.Conta
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case DataPackage.POLYGON__VERTICES:
+			case Symphony__CommonGeometryDataPackage.POLYGON__VERTICES:
 				getVertices().clear();
 				return;
 		}
@@ -132,7 +132,7 @@ public class PolygonImpl<T extends Coordinates> extends MinimalEObjectImpl.Conta
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case DataPackage.POLYGON__VERTICES:
+			case Symphony__CommonGeometryDataPackage.POLYGON__VERTICES:
 				return vertices != null && !vertices.isEmpty();
 		}
 		return super.eIsSet(featureID);

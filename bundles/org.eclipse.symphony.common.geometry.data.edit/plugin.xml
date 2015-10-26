@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.geometry.data.edit"
-            class="org.eclipse.symphony.common.geometry.data.provider.DataItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

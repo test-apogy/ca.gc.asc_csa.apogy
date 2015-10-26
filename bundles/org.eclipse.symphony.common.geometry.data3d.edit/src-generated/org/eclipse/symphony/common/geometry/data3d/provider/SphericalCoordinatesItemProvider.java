@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data.provider.CoordinatesItemProvider;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
 
 /**
@@ -68,7 +68,7 @@ public class SphericalCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphericalCoordinates_phi_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphericalCoordinates_phi_feature", "_UI_SphericalCoordinates_type"),
-				 Data3dPackage.Literals.SPHERICAL_COORDINATES__PHI,
+				 Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_COORDINATES__PHI,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class SphericalCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphericalCoordinates_theta_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphericalCoordinates_theta_feature", "_UI_SphericalCoordinates_type"),
-				 Data3dPackage.Literals.SPHERICAL_COORDINATES__THETA,
+				 Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_COORDINATES__THETA,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class SphericalCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SphericalCoordinates_r_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SphericalCoordinates_r_feature", "_UI_SphericalCoordinates_type"),
-				 Data3dPackage.Literals.SPHERICAL_COORDINATES__R,
+				 Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_COORDINATES__R,
 				 true,
 				 false,
 				 false,
@@ -156,9 +156,9 @@ public class SphericalCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SphericalCoordinates.class)) {
-			case Data3dPackage.SPHERICAL_COORDINATES__PHI:
-			case Data3dPackage.SPHERICAL_COORDINATES__THETA:
-			case Data3dPackage.SPHERICAL_COORDINATES__R:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__PHI:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__THETA:
+			case Symphony__CommonGeometryData3DPackage.SPHERICAL_COORDINATES__R:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

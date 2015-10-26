@@ -25,7 +25,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensor
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
@@ -446,7 +446,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
   
 	  if(text != null && text.length() > 0)
 	  {		  		
-		  EImage result = ImagesCoreFactory.eINSTANCE.createEImage();
+		  EImage result = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		  result.setImageContent(cameraImage.asBufferedImage());
 		  
 		  // Setup to write text on image.

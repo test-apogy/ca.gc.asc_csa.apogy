@@ -14,7 +14,7 @@ import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 
 /**
@@ -291,7 +291,7 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -308,7 +308,7 @@ public abstract class ImageFilterImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION;
 				default: return -1;
 			}
 		}

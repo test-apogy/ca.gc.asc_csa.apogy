@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.common.emf.CollectionTimedTimeSource#getLatestDate <em>Latest Date</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCollectionTimedTimeSource()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Loop Enable</em>' attribute.
 	 * @see #setLoopEnable(boolean)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCollectionTimedTimeSource_LoopEnable()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_LoopEnable()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * The collection of Timed elements.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Timeds List</em>' reference list.
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCollectionTimedTimeSource_TimedsList()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_TimedsList()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -83,7 +83,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Timed Element</em>' reference.
 	 * @see #setCurrentTimedElement(Timed)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCollectionTimedTimeSource_CurrentTimedElement()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_CurrentTimedElement()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -109,7 +109,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Earliest Date</em>' attribute.
 	 * @see #setEarliestDate(Date)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCollectionTimedTimeSource_EarliestDate()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_EarliestDate()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -135,7 +135,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Latest Date</em>' attribute.
 	 * @see #setLatestDate(Date)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCollectionTimedTimeSource_LatestDate()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCollectionTimedTimeSource_LatestDate()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated

@@ -24,7 +24,7 @@ import java.util.Date;
  *   <li>{@link org.eclipse.symphony.common.emf.BrowseableTimeSource#getTimeDirection <em>Time Direction</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getBrowseableTimeSource()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(Date)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getBrowseableTimeSource_StartTime()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource_StartTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -65,7 +65,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(int)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getBrowseableTimeSource_UpdatePeriod()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource_UpdatePeriod()
 	 * @model default="1000" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='ms' notify='true' property='Editable'"
 	 * @generated
@@ -92,7 +92,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Acceration</em>' attribute.
 	 * @see #setTimeAcceration(float)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getBrowseableTimeSource_TimeAcceration()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource_TimeAcceration()
 	 * @model default="10.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -120,7 +120,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * @return the value of the '<em>Time Direction</em>' attribute.
 	 * @see org.eclipse.symphony.common.emf.TimeDirection
 	 * @see #setTimeDirection(TimeDirection)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getBrowseableTimeSource_TimeDirection()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getBrowseableTimeSource_TimeDirection()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated

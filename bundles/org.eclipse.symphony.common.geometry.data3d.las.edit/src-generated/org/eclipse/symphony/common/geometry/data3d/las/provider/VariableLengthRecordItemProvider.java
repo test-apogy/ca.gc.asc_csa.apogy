@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
 import org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord;
 
 /**
@@ -84,7 +84,7 @@ public class VariableLengthRecordItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VariableLengthRecord_reserved_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableLengthRecord_reserved_feature", "_UI_VariableLengthRecord_type"),
-				 LasPackage.Literals.VARIABLE_LENGTH_RECORD__RESERVED,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD__RESERVED,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class VariableLengthRecordItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VariableLengthRecord_userID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableLengthRecord_userID_feature", "_UI_VariableLengthRecord_type"),
-				 LasPackage.Literals.VARIABLE_LENGTH_RECORD__USER_ID,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD__USER_ID,
 				 true,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class VariableLengthRecordItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VariableLengthRecord_recordID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableLengthRecord_recordID_feature", "_UI_VariableLengthRecord_type"),
-				 LasPackage.Literals.VARIABLE_LENGTH_RECORD__RECORD_ID,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD__RECORD_ID,
 				 true,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class VariableLengthRecordItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VariableLengthRecord_recordLenghtAfterHeader_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableLengthRecord_recordLenghtAfterHeader_feature", "_UI_VariableLengthRecord_type"),
-				 LasPackage.Literals.VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER,
 				 true,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class VariableLengthRecordItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VariableLengthRecord_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableLengthRecord_description_feature", "_UI_VariableLengthRecord_type"),
-				 LasPackage.Literals.VARIABLE_LENGTH_RECORD__DESCRIPTION,
+				 Symphony__CommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -217,11 +217,11 @@ public class VariableLengthRecordItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VariableLengthRecord.class)) {
-			case LasPackage.VARIABLE_LENGTH_RECORD__RESERVED:
-			case LasPackage.VARIABLE_LENGTH_RECORD__USER_ID:
-			case LasPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
-			case LasPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER:
-			case LasPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
+			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
+			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
+			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
+			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER:
+			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

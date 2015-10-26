@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.Region;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -145,7 +145,7 @@ public class RegionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEnvironmentPackage.Literals.REGION__TRANSFORMATION,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
   /**

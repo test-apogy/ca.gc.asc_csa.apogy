@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.Activator;
@@ -364,7 +364,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public Tuple3d basicGetCentroid() 
 	{
-		Tuple3d tuple = MathFactory.eINSTANCE.createTuple3d();
+		Tuple3d tuple = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		tuple.setX(0.0);
 		tuple.setY(0.0);
 		tuple.setZ(0.0);
@@ -392,7 +392,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 		Tuple3d tuple = null;
 
 		if (getSceneObject() != null && getSceneObject().getMin() != null) {
-			tuple = MathFactory.eINSTANCE.createTuple3d();
+			tuple = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 
 			javax.vecmath.Tuple3d min = getSceneObject().getMin();
 
@@ -424,7 +424,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 		Tuple3d tuple = null;
 
 		if (getSceneObject() != null && getSceneObject().getMax() != null) {
-			tuple = MathFactory.eINSTANCE.createTuple3d();
+			tuple = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 			javax.vecmath.Tuple3d max = getSceneObject().getMax();
 
 			tuple.setX(max.x);

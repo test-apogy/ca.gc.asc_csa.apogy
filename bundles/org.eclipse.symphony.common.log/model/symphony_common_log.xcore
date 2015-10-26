@@ -1,4 +1,8 @@
-@GenModel(prefix="UtilsLog", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="UtilsLog")
+@GenModel(prefix="Symphony__CommonLog",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CommonLog")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.log/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.log.edit/src-generated")
 
@@ -12,7 +16,8 @@ type FrameworkLog wraps org.eclipse.osgi.framework.log.FrameworkLog
  * Event Severity.
  * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
  */
-enum EventSeverity{
+enum EventSeverity
+{
 	OK = 0,
 	INFO = 1,
 	WARNING = 2,
@@ -24,7 +29,8 @@ enum EventSeverity{
  * This class provides methods to log messages into the OSGI Log Framework.
  * @see org.eclipse.osgi.framework.log.FrameworkLogEntry  
  */
-class Logger{
+class Logger
+{
 	/**
 	 * Log message.
 	 * @param bundleId Bundle unique identifier.  Refers to the bundle that contains the object that logs the message.

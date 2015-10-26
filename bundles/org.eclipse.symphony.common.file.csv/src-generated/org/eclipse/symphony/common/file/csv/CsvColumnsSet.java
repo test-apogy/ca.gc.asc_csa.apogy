@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.file.csv.CsvColumnsSet#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvColumnsSet()
+ * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumnsSet()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface CsvColumnsSet extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Columns</em>' attribute.
 	 * @see #setColumns(Map)
-	 * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvColumnsSet_Columns()
+	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumnsSet_Columns()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.file.csv.CsvColumnMap" transient="true"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface CsvColumnsSet extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvColumnsSet_Name()
+	 * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvColumnsSet_Name()
 	 * @model unique="false"
 	 * @generated
 	 */

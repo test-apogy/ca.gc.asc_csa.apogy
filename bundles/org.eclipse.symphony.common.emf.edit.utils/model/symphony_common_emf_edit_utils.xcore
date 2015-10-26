@@ -1,13 +1,14 @@
-@GenModel(prefix="EMFEcoreEditUtils",
+@GenModel(prefix="Symphony__CommonEMFEditUtils",
 	      childCreationExtenders="true",
-	      modelName="EMFEcoreEditUtils")
+	      modelName="Symphony__CommonEMFEditUtils")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.emf.edit.utils/src-generated")
 
 package org.eclipse.symphony.common.emf.edit.utils
 
 type CollectionObject wraps java.util.Collection<Object>
 
-class EMFEcoreEditUtilsFacade{
+class EMFEcoreEditUtilsFacade
+{
 	op String getText(Object object)
 	op void removeChildDescriptor(CollectionObject newChildDescriptors, Object feature)
 }

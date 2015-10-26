@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
@@ -1527,11 +1527,11 @@ public class SymphonyEnvironmentUIPackageImpl extends EPackageImpl implements Sy
 		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
-		ImagesCorePackage theImagesCorePackage = (ImagesCorePackage)EPackage.Registry.INSTANCE.getEPackage(ImagesCorePackage.eNS_URI);
+		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -1546,8 +1546,8 @@ public class SymphonyEnvironmentUIPackageImpl extends EPackageImpl implements Sy
 		moonPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
 		featureOfInterestNodePresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
 		mapViewConfigurationListEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractToolsListContainer());
-		mapViewConfigurationEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		mapViewConfigurationEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		mapViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		mapViewConfigurationEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		mapAnnotationEClass.getESuperTypes().add(this.getMapViewItemPresentation());
 		mapToolEClass.getESuperTypes().add(this.getMapAnnotation());
 		mapRulerEClass.getESuperTypes().add(this.getMapTool());
@@ -1618,7 +1618,7 @@ public class SymphonyEnvironmentUIPackageImpl extends EPackageImpl implements Sy
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getEnvironmentUiFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), theImagesCorePackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentUiFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMapViewConfiguration(), "mapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphonyEnvironmentPackage.getRectangularRegion(), "mapViewExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "maximumImageSizePixels", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1649,7 +1649,7 @@ public class SymphonyEnvironmentUIPackageImpl extends EPackageImpl implements Sy
 		initEAttribute(getMapViewConfiguration_BackgroundColor(), this.getColor3f(), "backgroundColor", "1.0,1.0,1.0", 0, 1, MapViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMapViewConfiguration_MapAnnotations(), this.getMapAnnotation(), null, "mapAnnotations", null, 0, -1, MapViewConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMapViewConfiguration_DefaultRectangularRegion(), theSymphonyEnvironmentPackage.getRectangularRegion(), null, "defaultRectangularRegion", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMapViewConfiguration_MapImage(), theImagesCorePackage.getAbstractEImage(), null, "mapImage", null, 0, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getMapViewConfiguration_MapImage(), theSymphony__CommonImagesPackage.getAbstractEImage(), null, "mapImage", null, 0, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getMapViewConfiguration_MapImageRectangularRegion(), theSymphonyEnvironmentPackage.getRectangularRegion(), null, "mapImageRectangularRegion", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getMapViewConfiguration_Extent(), theSymphonyEnvironmentPackage.getRectangularRegion(), null, "extent", null, 1, 1, MapViewConfiguration.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
@@ -1724,7 +1724,7 @@ public class SymphonyEnvironmentUIPackageImpl extends EPackageImpl implements Sy
 		initEReference(getAbstractVariableAnnotation_SymphonySystemApiAdapter(), theSymphonyCorePackage.getSymphonySystemApiAdapter(), null, "symphonySystemApiAdapter", null, 0, 1, AbstractVariableAnnotation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getAbstractVariableAnnotation__UpdatePose__Matrix4x4(), null, "updatePose", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getMatrix4x4(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(poseVariableAnnotationEClass, PoseVariableAnnotation.class, "PoseVariableAnnotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPoseVariableAnnotation_Vectorlength(), theEcorePackage.getEDouble(), "vectorlength", "10.0", 0, 1, PoseVariableAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

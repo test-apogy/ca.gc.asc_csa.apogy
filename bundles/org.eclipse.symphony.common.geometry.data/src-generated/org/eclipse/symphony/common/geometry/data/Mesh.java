@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.common.geometry.data.Mesh#getPolygons <em>Polygons</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data.DataPackage#getMesh()
+ * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getMesh()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface Mesh<CoordinatesType extends Coordinates, PolygonType extends P
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygons</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getMesh_Polygons()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getMesh_Polygons()
 	 * @model containment="true"
 	 * @generated
 	 */

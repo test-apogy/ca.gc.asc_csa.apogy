@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker#getPositionMarkersAtOrigin <em>Position Markers At Origin</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRigidBodyPoseTracker()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRigidBodyPoseTracker()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface RigidBodyPoseTracker extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position Markers At Origin</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRigidBodyPoseTracker_PositionMarkersAtOrigin()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRigidBodyPoseTracker_PositionMarkersAtOrigin()
 	 * @model changeable="false" derived="true"
 	 * @generated
 	 */
@@ -49,7 +49,14 @@ public interface RigidBodyPoseTracker extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This method computes the 3D rigid body transformation between two 3D data sets. First, the rotation matrix is computed using the Singular Values Decomposition (SVD) approach. Then, translation composent is computed. Finally, rotation and translation components are packed into an homogenous 4x4 matrix. Note : at least 3 markers are required to solve the 3D pose. If more than 3 markers are specified, the best fit (minimizing the root meaning squarre error) will be found.
+	 * This method computes the 3D rigid body transformation between two 3D
+	 * data sets. First, the rotation matrix is computed using the Singular
+	 * Values Decomposition (SVD) approach. Then, translation composent is
+	 * computed. Finally, rotation and translation components are packed into
+	 * an homogenous 4x4 matrix.
+	 * Note: At least 3 markers are required to solve the 3D pose. If more than
+	 * 3 markers are specified, the best fit (minimizing the root meaning square
+	 * error) will be found.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.Point3d" unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.Exception" markerPositionsToTrackDataType="org.eclipse.symphony.common.geometry.data3d.EList<org.eclipse.symphony.common.geometry.data3d.PositionMarker>" markerPositionsToTrackUnique="false" markerPositionsToTrackMany="false"
 	 * @generated

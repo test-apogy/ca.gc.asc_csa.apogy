@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 import org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker;
 
@@ -66,7 +66,7 @@ public class RigidBodyPoseTrackerImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.RIGID_BODY_POSE_TRACKER;
+		return Symphony__CommonGeometryData3DPackage.Literals.RIGID_BODY_POSE_TRACKER;
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class RigidBodyPoseTrackerImpl extends MinimalEObjectImpl.Container imple
 	public EList<PositionMarker> getPositionMarkersAtOrigin() 
 	{
 		if (positionMarkersAtOrigin == null) {
-			positionMarkersAtOrigin = new EObjectResolvingEList<PositionMarker>(PositionMarker.class, this, Data3dPackage.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN);
+			positionMarkersAtOrigin = new EObjectResolvingEList<PositionMarker>(PositionMarker.class, this, Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN);
 		}
 		
 		EList<PositionMarker> localCopy = positionMarkersAtOrigin;
@@ -112,21 +112,21 @@ public class RigidBodyPoseTrackerImpl extends MinimalEObjectImpl.Container imple
 		}
 	
 		
-		CartesianCoordinatesSet markerPositionsAtOrigin = Data3dFactory.eINSTANCE.createCartesianCoordinatesSet();
-		CartesianCoordinatesSet markerPositionsToTrack = Data3dFactory.eINSTANCE.createCartesianCoordinatesSet();
-		CartesianPositionCoordinates tmpPos1 = Data3dFactory.eINSTANCE.createCartesianPositionCoordinates();
-		CartesianPositionCoordinates tmpPos2 = Data3dFactory.eINSTANCE.createCartesianPositionCoordinates();
+		CartesianCoordinatesSet markerPositionsAtOrigin = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet markerPositionsToTrack = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
+		CartesianPositionCoordinates tmpPos1 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
+		CartesianPositionCoordinates tmpPos2 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 		
 		for (int i = 0; i < positionMarkersAtOrigin.size(); i++) {
 			for (int j = 0; j < listOfMarkerPositionsToTrack.size(); j++) {
 				if (positionMarkersAtOrigin.get(i).getIdentifier()==listOfMarkerPositionsToTrack.get(j).getIdentifier()) {
-					tmpPos1 = Data3dFactory.eINSTANCE.createCartesianPositionCoordinates();
+					tmpPos1 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 					tmpPos1.setX(positionMarkersAtOrigin.get(i).getX());
 					tmpPos1.setY(positionMarkersAtOrigin.get(i).getY());
 					tmpPos1.setZ(positionMarkersAtOrigin.get(i).getZ()); 
 					markerPositionsAtOrigin.getPoints().add(tmpPos1);
 					
-					tmpPos2 = Data3dFactory.eINSTANCE.createCartesianPositionCoordinates();
+					tmpPos2 = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 					tmpPos2.setX(listOfMarkerPositionsToTrack.get(j).getX());
 					tmpPos2.setY(listOfMarkerPositionsToTrack.get(j).getY());
 					tmpPos2.setZ(listOfMarkerPositionsToTrack.get(j).getZ());
@@ -155,7 +155,7 @@ public class RigidBodyPoseTrackerImpl extends MinimalEObjectImpl.Container imple
 	public void addPositionMarkers(List<PositionMarker> marker) throws Exception {
 
 		if (positionMarkersAtOrigin == null) {
-			positionMarkersAtOrigin = new EObjectResolvingEList<PositionMarker>(PositionMarker.class, this, Data3dPackage.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN);
+			positionMarkersAtOrigin = new EObjectResolvingEList<PositionMarker>(PositionMarker.class, this, Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN);
 		}
 		for (int i = 0; i < marker.size(); i++) {
 			positionMarkersAtOrigin.add(marker.get(i));
@@ -301,7 +301,7 @@ public class RigidBodyPoseTrackerImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN:
+			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN:
 				return getPositionMarkersAtOrigin();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -315,7 +315,7 @@ public class RigidBodyPoseTrackerImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN:
+			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN:
 				return positionMarkersAtOrigin != null && !positionMarkersAtOrigin.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -330,14 +330,14 @@ public class RigidBodyPoseTrackerImpl extends MinimalEObjectImpl.Container imple
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__ELIST:
+			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__ELIST:
 			try {
 				return computeTransformation((EList<PositionMarker>)arguments.get(0));
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			case Data3dPackage.RIGID_BODY_POSE_TRACKER___ADD_POSITION_MARKERS__LIST:
+			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER___ADD_POSITION_MARKERS__LIST:
 			try {
 				addPositionMarkers((List<PositionMarker>)arguments.get(0));
 			} catch (Exception e) {
@@ -345,7 +345,7 @@ public class RigidBodyPoseTrackerImpl extends MinimalEObjectImpl.Container imple
 				e.printStackTrace();
 			}
 				return null;
-			case Data3dPackage.RIGID_BODY_POSE_TRACKER___REMOVE_POSITION_MARKERS__LIST:
+			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER___REMOVE_POSITION_MARKERS__LIST:
 				removePositionMarkers((List<PositionMarker>)arguments.get(0));
 				return null;
 		}

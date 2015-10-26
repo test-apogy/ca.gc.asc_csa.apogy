@@ -11,7 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D;
 import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
 /**
@@ -41,7 +41,7 @@ public abstract class CoordinatesSet25DFilterImpl<T extends CoordinatesSet25D> e
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Data25dPackage.Literals.COORDINATES_SET25_DFILTER;
+		return Symphony__CommonGeometryData25DPackage.Literals.COORDINATES_SET25_DFILTER;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public abstract class CoordinatesSet25DFilterImpl<T extends CoordinatesSet25D> e
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data25dPackage.COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D:
 				return createCoordinatesSet25D();
 		}
 		return super.eInvoke(operationID, arguments);

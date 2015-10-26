@@ -21,7 +21,7 @@ package org.eclipse.symphony.common.processors;
  *   <li>{@link org.eclipse.symphony.common.processors.Processor#getOutput <em>Output</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getProcessor()
+ * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessor()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Processor<I, O> extends Monitorable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input</em>' attribute.
 	 * @see #setInput(Object)
-	 * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getProcessor_Input()
+	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessor_Input()
 	 * @model unique="false" transient="true"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface Processor<I, O> extends Monitorable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output</em>' attribute.
 	 * @see #setOutput(Object)
-	 * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getProcessor_Output()
+	 * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getProcessor_Output()
 	 * @model unique="false" transient="true"
 	 * @generated
 	 */

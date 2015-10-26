@@ -36,8 +36,8 @@ import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ImageAlignment;
 import org.eclipse.symphony.common.images.ImageSize;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 import com.jhlabs.image.ContrastFilter;
 import com.jhlabs.image.EdgeFilter;
 import com.jhlabs.image.ExposureFilter;
@@ -84,7 +84,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ImagesCorePackage.Literals.EIMAGES_UTILITIES;
+		return Symphony__CommonImagesPackage.Literals.EIMAGES_UTILITIES;
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public AbstractEImage copy(AbstractEImage originalImage) 
 	{
-		EImage copy = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage copy = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		
 		if(originalImage.asBufferedImage() != null)
 		{
@@ -127,7 +127,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 		grayscaleFilter.setDimensions(width, height);		
 		grayscaleFilter.filter(sourceImage, destinationImage);
 				
-		EImage grayScaleImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage grayScaleImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		grayScaleImage.setImageContent(destinationImage);
 		
 		return grayScaleImage;		
@@ -169,7 +169,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 		Graphics2D g2d = result.createGraphics(); 
 		g2d.drawImage(image, 0, 0, null);		
 		
-		EImage scaledImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage scaledImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		scaledImage.setImageContent(result);
 		
 		g2d.dispose();
@@ -199,7 +199,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 	    g.setColor(new Color(red, green, blue, alpha));
 	    g.fillRect(0, 0, width, height);
 	    	    
-	    EImage eImage = ImagesCoreFactory.eINSTANCE.createEImage();
+	    EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 	    eImage.setImageContent(bufferedImage);
 	    return eImage;
 	}	
@@ -217,7 +217,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
 		g2d.drawImage(originalImage.asBufferedImage(),0,0,null);
 	    
-		EImage eImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 	    eImage.setImageContent(bufferedImage);
 	    return eImage;			    
 	}
@@ -239,7 +239,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				
 		filter.filter(sourceImage, destinationImage);
 		
-		EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		filteredImage.setImageContent(destinationImage);
 		return filteredImage;	}
 
@@ -263,7 +263,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				
 		filter.filter(sourceImage, destinationImage);
 		
-		EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		filteredImage.setImageContent(destinationImage);
 		return filteredImage;
 	}
@@ -287,7 +287,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				
 		filter.filter(sourceImage, destinationImage);
 		
-		EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		filteredImage.setImageContent(destinationImage);
 		return filteredImage;
 	}
@@ -309,7 +309,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				
 		filter.filter(sourceImage, destinationImage);
 		
-		EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		filteredImage.setImageContent(destinationImage);
 		return filteredImage;
 	}
@@ -333,7 +333,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				
 		filter.filter(sourceImage, destinationImage);
 		
-		EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		filteredImage.setImageContent(destinationImage);
 		return filteredImage;
 	}
@@ -358,7 +358,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				
 		filter.filter(sourceImage, destinationImage);
 		
-		EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		filteredImage.setImageContent(destinationImage);
 		return filteredImage;
 	}
@@ -389,7 +389,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
         g.drawString(text, x, y);
         g.dispose();
         
-        EImage image = ImagesCoreFactory.eINSTANCE.createEImage();
+        EImage image = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
         image.setImageContent(img);
         
 		return image;
@@ -450,7 +450,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 			g2d.drawImage(originalImage.asBufferedImage(), 0, 0, null);
 			g2d.drawImage(overlay, 0, 0, null);
 			
-			EImage resultImage = ImagesCoreFactory.eINSTANCE.createEImage();
+			EImage resultImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 			resultImage.setImageContent(result);
 			
 			g2d.dispose();
@@ -481,7 +481,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				
 		flipFilter.filter(sourceImage, destinationImage);
 						
-		EImage flippedImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage flippedImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		flippedImage.setImageContent(destinationImage);
 		return flippedImage;
 	}
@@ -503,7 +503,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				
 		flipFilter.filter(sourceImage, destinationImage);
 		
-		EImage flippedImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage flippedImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		flippedImage.setImageContent(destinationImage);
 		return flippedImage;
 	}
@@ -515,7 +515,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public ImageSize getAllEncompassingImageSize(List<? extends AbstractEImage> images) 
 	{
-		ImageSize imageSize = ImagesCoreFactory.eINSTANCE.createImageSize();
+		ImageSize imageSize = Symphony__CommonImagesFactory.eINSTANCE.createImageSize();
 		
 		for(AbstractEImage image : images)
 		{
@@ -632,7 +632,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 		g2d.drawImage(imageBCopy.asBufferedImage(), imageOffsetX, imageOffsetY, null);
 		g2d.dispose();
 		
-		EImage resultImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage resultImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		resultImage.setImageContent(result);
 		
 		g2d.dispose();
@@ -678,7 +678,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 			g2d.dispose();
 		}
 		
-		EImage resultImage = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage resultImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		resultImage.setImageContent(result);
 				
 		return resultImage;		
@@ -699,7 +699,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 									
 			g2d.drawImage(originalImage.asBufferedImage(), 0, 0, subImageWidth, subImageHeight, widthOffset, heightOffset, widthOffset+subImageWidth, heightOffset+subImageWidth, null);
 			
-			EImage resultImage = ImagesCoreFactory.eINSTANCE.createEImage();
+			EImage resultImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 			resultImage.setImageContent(result);
 						
 			g2d.dispose();
@@ -742,7 +742,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 		    g.drawImage(sourceImage, affineTransform, null);
 		    g.dispose();
 			
-			EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+			EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 			filteredImage.setImageContent(rot);
 			return filteredImage;
 	    }
@@ -755,7 +755,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 		    g.drawImage(sourceImage, xform, null);
 		    g.dispose();
 	
-			EImage filteredImage = ImagesCoreFactory.eINSTANCE.createEImage();
+			EImage filteredImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 			filteredImage.setImageContent(rot);
 			return filteredImage;
 	    }
@@ -864,19 +864,19 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImagesCorePackage.EIMAGES_UTILITIES___COPY__ABSTRACTEIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___COPY__ABSTRACTEIMAGE:
 				return copy((AbstractEImage)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___CONVERT_TO_GRAY_SCALE__ABSTRACTEIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___CONVERT_TO_GRAY_SCALE__ABSTRACTEIMAGE:
 				return convertToGrayScale((AbstractEImage)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___RESIZE__ABSTRACTEIMAGE_DOUBLE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___RESIZE__ABSTRACTEIMAGE_DOUBLE:
 				return resize((AbstractEImage)arguments.get(0), (Double)arguments.get(1));
-			case ImagesCorePackage.EIMAGES_UTILITIES___RESIZE__ABSTRACTEIMAGE_DOUBLE_DOUBLE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___RESIZE__ABSTRACTEIMAGE_DOUBLE_DOUBLE:
 				return resize((AbstractEImage)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case ImagesCorePackage.EIMAGES_UTILITIES___RESIZE__ABSTRACTEIMAGE_INT_INT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___RESIZE__ABSTRACTEIMAGE_INT_INT:
 				return resize((AbstractEImage)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2));
-			case ImagesCorePackage.EIMAGES_UTILITIES___CREATE_TRANSPARENT_IMAGE__INT_INT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___CREATE_TRANSPARENT_IMAGE__INT_INT:
 				return createTransparentImage((Integer)arguments.get(0), (Integer)arguments.get(1));
-			case ImagesCorePackage.EIMAGES_UTILITIES___SAVE_IMAGE_AS_JPEG__STRING_ABSTRACTEIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___SAVE_IMAGE_AS_JPEG__STRING_ABSTRACTEIMAGE:
 				try {
 					saveImageAsJPEG((String)arguments.get(0), (AbstractEImage)arguments.get(1));
 					return null;
@@ -884,7 +884,7 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ImagesCorePackage.EIMAGES_UTILITIES___SAVE_IMAGE_AS_PNG__STRING_ABSTRACTEIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___SAVE_IMAGE_AS_PNG__STRING_ABSTRACTEIMAGE:
 				try {
 					saveImageAsPNG((String)arguments.get(0), (AbstractEImage)arguments.get(1));
 					return null;
@@ -892,52 +892,52 @@ public class EImagesUtilitiesImpl extends MinimalEObjectImpl.Container implement
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ImagesCorePackage.EIMAGES_UTILITIES___APPLY_OVERLAY__ABSTRACTEIMAGE_ABSTRACTEIMAGE_BOOLEAN:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___APPLY_OVERLAY__ABSTRACTEIMAGE_ABSTRACTEIMAGE_BOOLEAN:
 				return applyOverlay((AbstractEImage)arguments.get(0), (AbstractEImage)arguments.get(1), (Boolean)arguments.get(2));
-			case ImagesCorePackage.EIMAGES_UTILITIES___FLIP_HORIZONTAL__ABSTRACTEIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___FLIP_HORIZONTAL__ABSTRACTEIMAGE:
 				return flipHorizontal((AbstractEImage)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___FLIP_VERTICAL__ABSTRACTEIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___FLIP_VERTICAL__ABSTRACTEIMAGE:
 				return flipVertical((AbstractEImage)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___ROTATE__ABSTRACTEIMAGE_DOUBLE_BOOLEAN:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___ROTATE__ABSTRACTEIMAGE_DOUBLE_BOOLEAN:
 				return rotate((AbstractEImage)arguments.get(0), (Double)arguments.get(1), (Boolean)arguments.get(2));
-			case ImagesCorePackage.EIMAGES_UTILITIES___TRANSLATE__ABSTRACTEIMAGE_INT_INT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___TRANSLATE__ABSTRACTEIMAGE_INT_INT:
 				return translate((AbstractEImage)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2));
-			case ImagesCorePackage.EIMAGES_UTILITIES___GET_ALL_ENCOMPASSING_IMAGE_SIZE__LIST:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___GET_ALL_ENCOMPASSING_IMAGE_SIZE__LIST:
 				return getAllEncompassingImageSize((List<? extends AbstractEImage>)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___SUPER_POSE_IMAGES__LIST_BOOLEAN_IMAGEALIGNMENT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___SUPER_POSE_IMAGES__LIST_BOOLEAN_IMAGEALIGNMENT:
 				return superPoseImages((List<? extends AbstractEImage>)arguments.get(0), (Boolean)arguments.get(1), (ImageAlignment)arguments.get(2));
-			case ImagesCorePackage.EIMAGES_UTILITIES___SUPER_POSE_IMAGES__ABSTRACTEIMAGE_ABSTRACTEIMAGE_BOOLEAN_IMAGEALIGNMENT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___SUPER_POSE_IMAGES__ABSTRACTEIMAGE_ABSTRACTEIMAGE_BOOLEAN_IMAGEALIGNMENT:
 				return superPoseImages((AbstractEImage)arguments.get(0), (AbstractEImage)arguments.get(1), (Boolean)arguments.get(2), (ImageAlignment)arguments.get(3));
-			case ImagesCorePackage.EIMAGES_UTILITIES___ADD_BORDER__ABSTRACTEIMAGE_INT_INT_INT_INT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___ADD_BORDER__ABSTRACTEIMAGE_INT_INT_INT_INT:
 				return addBorder((AbstractEImage)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
-			case ImagesCorePackage.EIMAGES_UTILITIES___GET_SUB_IMAGE__ABSTRACTEIMAGE_INT_INT_INT_INT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___GET_SUB_IMAGE__ABSTRACTEIMAGE_INT_INT_INT_INT:
 				try {
 					return getSubImage((AbstractEImage)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case ImagesCorePackage.EIMAGES_UTILITIES___CONVERT_TO_BUFFERED_IMAGE__IMAGEDATA:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___CONVERT_TO_BUFFERED_IMAGE__IMAGEDATA:
 				return convertToBufferedImage((ImageData)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___CONVERT_TO_IMAGE_DATA__BUFFEREDIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___CONVERT_TO_IMAGE_DATA__BUFFEREDIMAGE:
 				return convertToImageData((BufferedImage)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___CREATE_UNIFORM_COLOR_IMAGE__INT_INT_INT_INT_INT_INT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___CREATE_UNIFORM_COLOR_IMAGE__INT_INT_INT_INT_INT_INT:
 				return createUniformColorImage((Integer)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (Integer)arguments.get(5));
-			case ImagesCorePackage.EIMAGES_UTILITIES___APPLY_ALPHA__ABSTRACTEIMAGE_FLOAT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___APPLY_ALPHA__ABSTRACTEIMAGE_FLOAT:
 				return applyAlpha((AbstractEImage)arguments.get(0), (Float)arguments.get(1));
-			case ImagesCorePackage.EIMAGES_UTILITIES___APPLY_EDGE_FILTER__ABSTRACTEIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___APPLY_EDGE_FILTER__ABSTRACTEIMAGE:
 				return applyEdgeFilter((AbstractEImage)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___APPLY_CONTRAST_AND_BRIGHTNESS_FILTER__ABSTRACTEIMAGE_DOUBLE_DOUBLE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___APPLY_CONTRAST_AND_BRIGHTNESS_FILTER__ABSTRACTEIMAGE_DOUBLE_DOUBLE:
 				return applyContrastAndBrightnessFilter((AbstractEImage)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case ImagesCorePackage.EIMAGES_UTILITIES___APPLY_EXPOSURE_FILTER__ABSTRACTEIMAGE_DOUBLE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___APPLY_EXPOSURE_FILTER__ABSTRACTEIMAGE_DOUBLE:
 				return applyExposureFilter((AbstractEImage)arguments.get(0), (Double)arguments.get(1));
-			case ImagesCorePackage.EIMAGES_UTILITIES___APPLY_INVERT_FILTER__ABSTRACTEIMAGE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___APPLY_INVERT_FILTER__ABSTRACTEIMAGE:
 				return applyInvertFilter((AbstractEImage)arguments.get(0));
-			case ImagesCorePackage.EIMAGES_UTILITIES___APPLY_RESCALE_FILTER__ABSTRACTEIMAGE_DOUBLE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___APPLY_RESCALE_FILTER__ABSTRACTEIMAGE_DOUBLE:
 				return applyRescaleFilter((AbstractEImage)arguments.get(0), (Double)arguments.get(1));
-			case ImagesCorePackage.EIMAGES_UTILITIES___APPLY_GAIN_FILTER__ABSTRACTEIMAGE_DOUBLE_DOUBLE:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___APPLY_GAIN_FILTER__ABSTRACTEIMAGE_DOUBLE_DOUBLE:
 				return applyGainFilter((AbstractEImage)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case ImagesCorePackage.EIMAGES_UTILITIES___CREATE_TEXT_IMAGE__STRING_FONT_COLOR_COLOR_INT:
+			case Symphony__CommonImagesPackage.EIMAGES_UTILITIES___CREATE_TEXT_IMAGE__STRING_FONT_COLOR_COLOR_INT:
 				return createTextImage((String)arguments.get(0), (Font)arguments.get(1), (Color)arguments.get(2), (Color)arguments.get(3), (Integer)arguments.get(4));
 		}
 		return super.eInvoke(operationID, arguments);

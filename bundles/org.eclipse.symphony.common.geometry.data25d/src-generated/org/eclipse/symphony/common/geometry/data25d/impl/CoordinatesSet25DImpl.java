@@ -15,12 +15,12 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl;
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
 import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -75,7 +75,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data25dPackage.Literals.COORDINATES_SET25_D;
+		return Symphony__CommonGeometryData25DPackage.Literals.COORDINATES_SET25_D;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Data25dPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS,
+					Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS,
 					oldEnforceUniqueness, enforceUniqueness));
 
 	}
@@ -117,7 +117,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data25dPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				return isEnforceUniqueness();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data25dPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				setEnforceUniqueness((Boolean)newValue);
 				return;
 		}
@@ -144,7 +144,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data25dPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				setEnforceUniqueness(ENFORCE_UNIQUENESS_EDEFAULT);
 				return;
 		}
@@ -158,7 +158,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data25dPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
+			case Symphony__CommonGeometryData25DPackage.COORDINATES_SET25_D__ENFORCE_UNIQUENESS:
 				return enforceUniqueness != ENFORCE_UNIQUENESS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -218,7 +218,7 @@ public class CoordinatesSet25DImpl extends CoordinatesSetImpl<Coordinates25D>
 				@SuppressWarnings("unchecked")
 				@Override
 				public void notifyChanged(Notification notification) {
-					if (notification.getFeatureID(Mesh.class) == DataPackage.COORDINATES_SET__POINTS) {
+					if (notification.getFeatureID(Mesh.class) == Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS) {
 						if (notification.getEventType() == Notification.ADD
 								|| notification.getEventType() == Notification.ADD_MANY) {
 

@@ -92,7 +92,7 @@
       <!-- @generated eclipse_emf_ecore_ui -->
       <package
             uri="org.eclipse.symphony.common.emf.ui"
-            class="org.eclipse.symphony.common.emf.ui.EMFEcoreUIPackage"
+            class="org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage"
             genModel="model/symphony_common_emf_ui.xcore"/>
    </extension>
    <extension

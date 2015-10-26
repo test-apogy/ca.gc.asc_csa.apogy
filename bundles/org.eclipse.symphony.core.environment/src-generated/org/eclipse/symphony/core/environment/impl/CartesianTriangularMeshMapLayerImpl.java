@@ -26,11 +26,11 @@ import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.MathFacade;
@@ -67,7 +67,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 {
 	protected boolean verbose = false;
 	
-	protected CartesianTriangularMesh emptyMesh = Data3dFactory.eINSTANCE.createCartesianTriangularMesh();
+	protected CartesianTriangularMesh emptyMesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 	protected boolean textureImageIsDirty = true;
 
 	private EContentAdapter meshTextureAdapter = null;
@@ -637,7 +637,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 				    g.drawImage(scaledLayerImage.asBufferedImage(), translationTransform, null);
 				    g.dispose();
 								    
-				    EImage layerMeshImage = ImagesCoreFactory.eINSTANCE.createEImage();
+				    EImage layerMeshImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 				    layerMeshImage.setImageContent(bufferedImage);
 				    				    
 				    // Adds the resulting image on top of the mesh image.

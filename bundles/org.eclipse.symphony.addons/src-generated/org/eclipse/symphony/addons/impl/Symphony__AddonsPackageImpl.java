@@ -28,9 +28,9 @@ import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.math.MathPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -912,11 +912,11 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
 		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
 
@@ -925,19 +925,19 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		abstractToolEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
-		abstractToolEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
+		abstractToolEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
+		abstractToolEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		simpleToolListEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractToolsListContainer());
 		simpleToolEClass.getESuperTypes().add(this.getAbstractTool());
 		simple3DToolEClass.getESuperTypes().add(this.getSimpleTool());
 		abstractTwoPoints3DToolEClass.getESuperTypes().add(this.getSimple3DTool());
 		ruler3DToolEClass.getESuperTypes().add(this.getAbstractTwoPoints3DTool());
-		ruler3dToolNodeEClass.getESuperTypes().add(theTopologyPackage.getNode());
+		ruler3dToolNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
 		featureOfInterestPickingToolEClass.getESuperTypes().add(this.getSimple3DTool());
 		sunVector3DToolEClass.getESuperTypes().add(this.getAbstractTwoPoints3DTool());
-		sunVector3DToolNodeEClass.getESuperTypes().add(theTopologyPackage.getNode());
+		sunVector3DToolNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
 		trajectory3DToolEClass.getESuperTypes().add(this.getSimple3DTool());
-		trajectory3DToolNodeEClass.getESuperTypes().add(theTopologyPackage.getAggregateGroupNode());
+		trajectory3DToolNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractToolEClass, AbstractTool.class, "AbstractTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -954,24 +954,24 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 
 		initEClass(simple3DToolEClass, Simple3DTool.class, "Simple3DTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSimple3DTool_Visible(), theEcorePackage.getEBoolean(), "visible", "true", 0, 1, Simple3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSimple3DTool_RootNode(), theTopologyPackage.getNode(), null, "rootNode", null, 0, 1, Simple3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimple3DTool_RootNode(), theSymphony__CommonTopologyPackage.getNode(), null, "rootNode", null, 0, 1, Simple3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getSimple3DTool__SelectionChanged__NodeSelection(), null, "selectionChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNodeSelection(), "nodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(abstractTwoPoints3DToolEClass, AbstractTwoPoints3DTool.class, "AbstractTwoPoints3DTool", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractTwoPoints3DTool_FromAbsolutePosition(), theMathPackage.getTuple3d(), null, "fromAbsolutePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_FromRelativePosition(), theMathPackage.getTuple3d(), null, "fromRelativePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_FromNode(), theTopologyPackage.getNode(), null, "fromNode", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_FromAbsolutePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "fromAbsolutePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_FromRelativePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "fromRelativePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_FromNode(), theSymphony__CommonTopologyPackage.getNode(), null, "fromNode", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractTwoPoints3DTool_FromNodeLock(), theEcorePackage.getEBoolean(), "fromNodeLock", "false", 0, 1, AbstractTwoPoints3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_ToAbsolutePosition(), theMathPackage.getTuple3d(), null, "toAbsolutePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_ToRelativePosition(), theMathPackage.getTuple3d(), null, "toRelativePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractTwoPoints3DTool_ToNode(), theTopologyPackage.getNode(), null, "toNode", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_ToAbsolutePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "toAbsolutePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_ToRelativePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "toRelativePosition", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTwoPoints3DTool_ToNode(), theSymphony__CommonTopologyPackage.getNode(), null, "toNode", null, 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractTwoPoints3DTool_ToNodeLock(), theEcorePackage.getEBoolean(), "toNodeLock", "false", 0, 1, AbstractTwoPoints3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractTwoPoints3DTool_Distance(), theEcorePackage.getEDouble(), "distance", "0", 0, 1, AbstractTwoPoints3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getAbstractTwoPoints3DTool__PointsRelativePoseChanged__Matrix4d(), null, "pointsRelativePoseChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getMatrix4d(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4d(), "newPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(ruler3DToolEClass, Ruler3DTool.class, "Ruler3DTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRuler3DTool_RulerColor(), this.getColor3f(), "rulerColor", "0.0,1.0,0.0", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -989,11 +989,11 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 
 		initEClass(featureOfInterestPickingToolEClass, FeatureOfInterestPickingTool.class, "FeatureOfInterestPickingTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFeatureOfInterestPickingTool_FeatureOfInterestList(), theSymphonyCorePackage.getFeatureOfInterestList(), null, "featureOfInterestList", null, 0, 1, FeatureOfInterestPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickAbsolutePosition(), theMathPackage.getTuple3d(), null, "pickAbsolutePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickRelativePosition(), theMathPackage.getTuple3d(), null, "pickRelativePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickedNode(), theTopologyPackage.getNode(), null, "pickedNode", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickAbsoluteNormal(), theMathPackage.getTuple3d(), null, "pickAbsoluteNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureOfInterestPickingTool_PickRelativeNormal(), theMathPackage.getTuple3d(), null, "pickRelativeNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickAbsolutePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickAbsolutePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickRelativePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickRelativePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickedNode(), theSymphony__CommonTopologyPackage.getNode(), null, "pickedNode", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickAbsoluteNormal(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickAbsoluteNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_PickRelativeNormal(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickRelativeNormal", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sunVector3DToolEClass, SunVector3DTool.class, "SunVector3DTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSunVector3DTool_VectorColor(), this.getColor3f(), "vectorColor", "1.0,1.0,0.0", 0, 1, SunVector3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

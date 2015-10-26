@@ -1,9 +1,9 @@
-@GenModel(prefix="JInput",
+@GenModel(prefix="Symphony__CommonIOJInput",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="JInput",
+	      modelName="Symphony__CommonIOJInput",
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.io.jinput/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.io.jinput.edit/src-generated")
@@ -24,6 +24,7 @@ class EController
 	Controller pojoController
 	contains transient EComponents[1] eComponents opposite eController
 	int controllerCount = "-1"
+	
 	op boolean poll()
 }
 
@@ -38,6 +39,7 @@ class EControllerEnvironment
 	op void refresh()
 	op void startPolling()
 	op void stopPolling()
+	
 	op EController resolveController(String controllerName)
 	op EComponent resolveEComponent(String componentName , EController eController)
 	op EComponent resolveEComponent(EComponentQualifier eComponentQualifier)

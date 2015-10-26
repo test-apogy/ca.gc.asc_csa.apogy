@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
 
@@ -475,7 +475,7 @@ public class EMFEcoreExampleRoverPackageImpl extends EPackageImpl implements EMF
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 		EMFEcoreExampleRoboticArmPackage theEMFEcoreExampleRoboticArmPackage = (EMFEcoreExampleRoboticArmPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreExampleRoboticArmPackage.eNS_URI);
 		EMFEcoreExampleMobilePlatformPackage theEMFEcoreExampleMobilePlatformPackage = (EMFEcoreExampleMobilePlatformPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreExampleMobilePlatformPackage.eNS_URI);
 		EMFEcoreExampleCameraPackage theEMFEcoreExampleCameraPackage = (EMFEcoreExampleCameraPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreExampleCameraPackage.eNS_URI);
@@ -485,7 +485,7 @@ public class EMFEcoreExampleRoverPackageImpl extends EPackageImpl implements EMF
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		roverEClass.getESuperTypes().add(theEMFEcorePackage.getDisposable());
+		roverEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDisposable());
 		roverStubEClass.getESuperTypes().add(this.getRover());
 		roverSimulatedEClass.getESuperTypes().add(this.getRover());
 

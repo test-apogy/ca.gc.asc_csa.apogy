@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator;
 
 /**
@@ -56,7 +56,7 @@ public class VecmathPointLocatorImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.VECMATH_POINT_LOCATOR;
+		return Symphony__CommonGeometryData3DPackage.Literals.VECMATH_POINT_LOCATOR;
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class VecmathPointLocatorImpl extends MinimalEObjectImpl.Container implem
 		List<Point3d> oldPoints = points;
 		points = newPoints;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.VECMATH_POINT_LOCATOR__POINTS, oldPoints, points));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR__POINTS, oldPoints, points));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class VecmathPointLocatorImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.VECMATH_POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR__POINTS:
 				return getPoints();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -169,7 +169,7 @@ public class VecmathPointLocatorImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.VECMATH_POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR__POINTS:
 				setPoints((List<Point3d>)newValue);
 				return;
 		}
@@ -184,7 +184,7 @@ public class VecmathPointLocatorImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.VECMATH_POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR__POINTS:
 				setPoints((List<Point3d>)null);
 				return;
 		}
@@ -199,7 +199,7 @@ public class VecmathPointLocatorImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.VECMATH_POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR__POINTS:
 				return points != null;
 		}
 		return super.eIsSet(featureID);
@@ -213,17 +213,17 @@ public class VecmathPointLocatorImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT__POINT3D:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT__POINT3D:
 				return findClosestPoint((Point3d)arguments.get(0));
-			case Data3dPackage.VECMATH_POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D:
 				return findPointsWithinRadius((Double)arguments.get(0), (Point3d)arguments.get(1));
-			case Data3dPackage.VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D:
 				return findClosestPointId((Point3d)arguments.get(0));
-			case Data3dPackage.VECMATH_POINT_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D:
 				return findPointIdsWithinRadius((Double)arguments.get(0), (Point3d)arguments.get(1));
-			case Data3dPackage.VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINTS__POINT3D_INT:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINTS__POINT3D_INT:
 				return findClosestNPoints((Point3d)arguments.get(0), (Integer)arguments.get(1));
-			case Data3dPackage.VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINT_IDS__POINT3D_INT:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINT_IDS__POINT3D_INT:
 				return findClosestNPointIds((Point3d)arguments.get(0), (Integer)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

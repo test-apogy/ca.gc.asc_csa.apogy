@@ -18,7 +18,7 @@ package org.eclipse.symphony.common.topology;
  *   <li>{@link org.eclipse.symphony.common.topology.URLNode#getVertexCount <em>Vertex Count</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getURLNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getURLNode()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface URLNode extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getURLNode_Url()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getURLNode_Url()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface URLNode extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygon Count</em>' attribute.
 	 * @see #setPolygonCount(int)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getURLNode_PolygonCount()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getURLNode_PolygonCount()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface URLNode extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vertex Count</em>' attribute.
 	 * @see #setVertexCount(int)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getURLNode_VertexCount()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getURLNode_VertexCount()
 	 * @model unique="false"
 	 * @generated
 	 */

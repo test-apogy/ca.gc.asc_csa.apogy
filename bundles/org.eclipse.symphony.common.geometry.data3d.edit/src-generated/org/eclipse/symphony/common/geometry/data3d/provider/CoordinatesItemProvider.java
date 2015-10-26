@@ -122,7 +122,7 @@ public class CoordinatesItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return Data3dEditPlugin.INSTANCE;
+		return Symphony__CommonGeometryData3DEditPlugin.INSTANCE;
 	}
 
 }

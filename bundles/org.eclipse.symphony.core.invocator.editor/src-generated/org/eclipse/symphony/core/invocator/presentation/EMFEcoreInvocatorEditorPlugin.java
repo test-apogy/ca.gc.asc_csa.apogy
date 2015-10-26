@@ -7,7 +7,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
+import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
 
 /**
  * This is the central singleton for the EMFEcoreInvocator editor plugin.
@@ -44,7 +44,7 @@ public final class EMFEcoreInvocatorEditorPlugin extends EMFPlugin
 		super
 			(new ResourceLocator [] {
 				EcoreEditPlugin.INSTANCE,
-				EMFEcoreEditPlugin.INSTANCE,
+				Symphony__CommonEMFEditPlugin.INSTANCE,
 			});
 	}
 

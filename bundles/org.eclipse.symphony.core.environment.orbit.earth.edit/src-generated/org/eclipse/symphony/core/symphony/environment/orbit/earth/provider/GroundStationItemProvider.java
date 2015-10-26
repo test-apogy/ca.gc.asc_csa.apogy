@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
@@ -140,7 +140,7 @@ public class GroundStationItemProvider extends EarthSurfaceLocationItemProvider 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEarthOrbitEnvironmentPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION,
-				 MathFactory.eINSTANCE.createMatrix3x3()));
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3()));
 
 		newChildDescriptors.add
 			(createChildParameter

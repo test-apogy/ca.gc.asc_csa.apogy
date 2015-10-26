@@ -27,7 +27,7 @@ import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePacka
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PoseUtils;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -1247,7 +1247,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 				// Initialise the path iterator.
 				wayPointIterator = getSmoothedPath().getPoints().listIterator();
 
-				setPreviousWayPoint(Data3dFactory.eINSTANCE
+				setPreviousWayPoint(Symphony__CommonGeometryData3DFactory.eINSTANCE
 						.createCartesianPositionCoordinates()); // First point
 				// is always
 				// origin
@@ -1259,7 +1259,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 			// position to the origin.
 			poseTransformation = PoseUtils
 					.getTransformFromSensorFrameToNewPose(getPoseSensor()
-							.getPose(), Data3dFactory.eINSTANCE.createPose());
+							.getPose(), Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose());
 
 			// Calls the start from super to effect the mode change.
 			return super.start();

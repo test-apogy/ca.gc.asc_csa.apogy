@@ -14,7 +14,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
 import org.eclipse.symphony.common.databinding.converters.StringToDoubleConverter;
-import org.eclipse.symphony.common.math.MathPackage.Literals;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage.Literals;
 
 public class Matrix3x3Composite extends Composite
 {

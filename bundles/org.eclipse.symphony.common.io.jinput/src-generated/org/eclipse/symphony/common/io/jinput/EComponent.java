@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EComponent#getEComponents <em>EComponents</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent()
+ * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface EComponent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dead Zone</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_DeadZone()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent_DeadZone()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -55,7 +55,7 @@ public interface EComponent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Identifier</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_Identifier()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent_Identifier()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface EComponent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relative</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_Relative()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent_Relative()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface EComponent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Analog</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_Analog()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent_Analog()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -100,7 +100,7 @@ public interface EComponent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_Name()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent_Name()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -116,7 +116,7 @@ public interface EComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pojo Component</em>' attribute.
 	 * @see #setPojoComponent(Component)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_PojoComponent()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent_PojoComponent()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.io.jinput.Component"
 	 * @generated
 	 */
@@ -141,7 +141,7 @@ public interface EComponent extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Poll Data</em>' attribute.
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_PollData()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent_PollData()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -158,7 +158,7 @@ public interface EComponent extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>EComponents</em>' container reference.
 	 * @see #setEComponents(EComponents)
-	 * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEComponent_EComponents()
+	 * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEComponent_EComponents()
 	 * @see org.eclipse.symphony.common.io.jinput.EComponents#getComponents
 	 * @model opposite="components"
 	 * @generated

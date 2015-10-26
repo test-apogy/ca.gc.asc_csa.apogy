@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState} object.
@@ -82,7 +82,7 @@ public class ConstraintStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintState_position_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintState_position_feature", "_UI_ConstraintState_type"),
-				 TopologyDynamicsPackage.Literals.CONSTRAINT_STATE__POSITION,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_STATE__POSITION,
 				 true,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class ConstraintStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintState_velocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintState_velocity_feature", "_UI_ConstraintState_type"),
-				 TopologyDynamicsPackage.Literals.CONSTRAINT_STATE__VELOCITY,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_STATE__VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class ConstraintStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstraintState_force_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstraintState_force_feature", "_UI_ConstraintState_type"),
-				 TopologyDynamicsPackage.Literals.CONSTRAINT_STATE__FORCE,
+				 Symphony__CommonTopologyDynamicsPackage.Literals.CONSTRAINT_STATE__FORCE,
 				 true,
 				 false,
 				 false,
@@ -170,9 +170,9 @@ public class ConstraintStateItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstraintState.class)) {
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
-			case TopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__POSITION:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__VELOCITY:
+			case Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_STATE__FORCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

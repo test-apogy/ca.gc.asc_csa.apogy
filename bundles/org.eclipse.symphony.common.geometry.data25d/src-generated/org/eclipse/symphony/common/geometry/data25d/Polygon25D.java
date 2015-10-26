@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getPolygon25D()
+ * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getPolygon25D()
  * @model
  * @generated
  */

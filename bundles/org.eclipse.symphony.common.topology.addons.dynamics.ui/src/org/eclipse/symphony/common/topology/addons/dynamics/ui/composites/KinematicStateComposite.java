@@ -13,7 +13,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.math.ui.composites.Tuple3dComposite;
 import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 public class KinematicStateComposite extends Composite {
 	@SuppressWarnings("unused")
@@ -161,27 +161,27 @@ public class KinematicStateComposite extends Composite {
 					Tuple3dComposite compositeToUpdate = null;
 
 					switch (featureId) {
-					case TopologyDynamicsPackage.KINEMATIC_STATE__POSITION:
+					case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dPosition;
 						break;
-					case TopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
+					case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dOrientation;
 						break;
-					case TopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
+					case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dAngularAcceleration;
 						break;
-					case TopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
+					case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dAngularVelocity;
 						break;
-					case TopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
+					case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dLinearAcceleration;
 						break;
-					case TopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
+					case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
 						newValue = (Tuple3d) msg.getNewValue();
 						compositeToUpdate = tuple3dLinearVelocity;
 						break;

@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphereSamplingShape()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphereSamplingShape_Radius()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_Radius()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Center</em>' reference.
 	 * @see #setCenter(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphereSamplingShape_Center()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_Center()
 	 * @model
 	 * @generated
 	 */
@@ -89,7 +89,7 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Include Just Touching</em>' attribute.
 	 * @see #setIncludeJustTouching(boolean)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphereSamplingShape_IncludeJustTouching()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_IncludeJustTouching()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */

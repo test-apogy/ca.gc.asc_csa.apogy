@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.file.csv.CsvColumn;
-import org.eclipse.symphony.common.file.csv.CsvPackage;
+import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,7 +96,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CsvPackage.Literals.CSV_COLUMN;
+		return Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN;
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 			values = (Map.Entry<Integer, Object>)eResolveProxy(oldValues);
 			if (values != oldValues) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CsvPackage.CSV_COLUMN__VALUES, oldValues, values));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES, oldValues, values));
 			}
 		}
 		return values;
@@ -135,7 +135,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 		Map.Entry<Integer, Object> oldValues = values;
 		values = newValues;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsvPackage.CSV_COLUMN__VALUES, oldValues, values));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES, oldValues, values));
 	}
 
 	/**
@@ -156,7 +156,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsvPackage.CSV_COLUMN__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME, oldName, name));
 	}
 
 	/**
@@ -177,7 +177,7 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsvPackage.CSV_COLUMN__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -188,12 +188,12 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsvPackage.CSV_COLUMN__VALUES:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES:
 				if (resolve) return getValues();
 				return basicGetValues();
-			case CsvPackage.CSV_COLUMN__NAME:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
 				return getName();
-			case CsvPackage.CSV_COLUMN__DESCRIPTION:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -208,13 +208,13 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsvPackage.CSV_COLUMN__VALUES:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES:
 				setValues((Map.Entry<Integer, Object>)newValue);
 				return;
-			case CsvPackage.CSV_COLUMN__NAME:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
 				setName((String)newValue);
 				return;
-			case CsvPackage.CSV_COLUMN__DESCRIPTION:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -229,13 +229,13 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsvPackage.CSV_COLUMN__VALUES:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES:
 				setValues((Map.Entry<Integer, Object>)null);
 				return;
-			case CsvPackage.CSV_COLUMN__NAME:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case CsvPackage.CSV_COLUMN__DESCRIPTION:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -250,11 +250,11 @@ public class CsvColumnImpl extends MinimalEObjectImpl.Container implements CsvCo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsvPackage.CSV_COLUMN__VALUES:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__VALUES:
 				return values != null;
-			case CsvPackage.CSV_COLUMN__NAME:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case CsvPackage.CSV_COLUMN__DESCRIPTION:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);

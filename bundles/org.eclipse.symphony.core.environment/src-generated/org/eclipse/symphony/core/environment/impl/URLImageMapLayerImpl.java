@@ -6,7 +6,7 @@ package org.eclipse.symphony.core.environment.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.images.URLEImage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.URLImageMapLayer;
@@ -109,7 +109,7 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
 	  setUrlGen(newUrl);
 	  
 	  // Tries to load the image data.
-	  URLEImage urlEImage = ImagesCoreFactory.eINSTANCE.createURLEImage();
+	  URLEImage urlEImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
 	  urlEImage.setUrl(newUrl);	  
 	  
 	  setImage(urlEImage);
@@ -148,7 +148,7 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
 	  setLegendURLGen(newLegendURL);
 	  
 	  // Tries to load the image data.
-	  URLEImage urlEImage = ImagesCoreFactory.eINSTANCE.createURLEImage();
+	  URLEImage urlEImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
 	  urlEImage.setUrl(newLegendURL);	
 	  
 	  // Forces the image to be loaded.

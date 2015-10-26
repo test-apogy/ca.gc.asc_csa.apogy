@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.RasterPointCloud;
 
 /**
@@ -80,7 +80,7 @@ public class RasterPointCloudItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RasterPointCloud_rows_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterPointCloud_rows_feature", "_UI_RasterPointCloud_type"),
-				 Data3dPackage.Literals.RASTER_POINT_CLOUD__ROWS,
+				 Symphony__CommonGeometryData3DPackage.Literals.RASTER_POINT_CLOUD__ROWS,
 				 true,
 				 false,
 				 false,
@@ -102,7 +102,7 @@ public class RasterPointCloudItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RasterPointCloud_columns_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterPointCloud_columns_feature", "_UI_RasterPointCloud_type"),
-				 Data3dPackage.Literals.RASTER_POINT_CLOUD__COLUMNS,
+				 Symphony__CommonGeometryData3DPackage.Literals.RASTER_POINT_CLOUD__COLUMNS,
 				 true,
 				 false,
 				 false,
@@ -146,8 +146,8 @@ public class RasterPointCloudItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RasterPointCloud.class)) {
-			case Data3dPackage.RASTER_POINT_CLOUD__ROWS:
-			case Data3dPackage.RASTER_POINT_CLOUD__COLUMNS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__ROWS:
+			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD__COLUMNS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

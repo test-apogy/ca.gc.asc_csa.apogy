@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-model-doc -->
  * Represents the various mode that can be used to generate the elevation in the DigitalElevationMap from the .asc file.
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getAltitudeMode()
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getAltitudeMode()
  * @model
  * @generated
  */

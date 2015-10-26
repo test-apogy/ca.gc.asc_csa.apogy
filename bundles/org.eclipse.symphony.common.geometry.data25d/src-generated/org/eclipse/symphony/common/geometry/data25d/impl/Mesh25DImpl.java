@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 import org.eclipse.symphony.common.geometry.data25d.Mesh25D;
 import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
 
@@ -38,7 +38,7 @@ public class Mesh25DImpl extends MeshImpl<Coordinates25D, Polygon25D> implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data25dPackage.Literals.MESH25_D;
+		return Symphony__CommonGeometryData25DPackage.Literals.MESH25_D;
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class Mesh25DImpl extends MeshImpl<Coordinates25D, Polygon25D> implements
 	@Override
 	public EList<Polygon25D> getPolygons() {
 		if (polygons == null) {
-			polygons = new EObjectContainmentEList<Polygon25D>(Polygon25D.class, this, Data25dPackage.MESH25_D__POLYGONS);
+			polygons = new EObjectContainmentEList<Polygon25D>(Polygon25D.class, this, Symphony__CommonGeometryData25DPackage.MESH25_D__POLYGONS);
 		}
 		return polygons;
 	}

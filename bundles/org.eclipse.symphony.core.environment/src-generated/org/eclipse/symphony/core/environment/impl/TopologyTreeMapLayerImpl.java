@@ -198,7 +198,7 @@ public class TopologyTreeMapLayerImpl extends AbstractMapLayerImpl implements To
 		{
 			  abstractMapLayerNode = SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode();	
 			  
-//			  ReferencedGroupNode referencedGroupNode = TopologyFactory.eINSTANCE.createReferencedGroupNode();			  
+//			  ReferencedGroupNode referencedGroupNode = Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode();			  
 //			  referencedGroupNode.setNodeId(getName());			  
 //			  
 //			  

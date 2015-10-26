@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.io.jinput;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEKey()
+ * @see org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage#getEKey()
  * @model
  * @generated
  */

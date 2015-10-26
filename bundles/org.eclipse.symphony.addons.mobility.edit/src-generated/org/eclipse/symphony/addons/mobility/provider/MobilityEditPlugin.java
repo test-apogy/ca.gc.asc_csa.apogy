@@ -7,8 +7,8 @@ package org.eclipse.symphony.addons.mobility.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.common.math.provider.MathEditPlugin;
-import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
+import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
+import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 
 /**
  * This is the central singleton for the Mobility edit plugin.
@@ -44,8 +44,8 @@ public final class MobilityEditPlugin extends EMFPlugin
 	{
 		super
 		  (new ResourceLocator [] {
-		     MathEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
+		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		   });
 	}
 

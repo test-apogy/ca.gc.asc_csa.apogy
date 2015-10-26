@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.symphony.common.geometry.data.impl.PolygonImpl;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.SphericalPolygon;
 
@@ -37,7 +37,7 @@ public class SphericalPolygonImpl extends PolygonImpl<SphericalCoordinates> impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.SPHERICAL_POLYGON;
+		return Symphony__CommonGeometryData3DPackage.Literals.SPHERICAL_POLYGON;
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class SphericalPolygonImpl extends PolygonImpl<SphericalCoordinates> impl
 	@Override
 	public EList<SphericalCoordinates> getVertices() {
 		if (vertices == null) {
-			vertices = new EObjectEList<SphericalCoordinates>(SphericalCoordinates.class, this, Data3dPackage.SPHERICAL_POLYGON__VERTICES);
+			vertices = new EObjectEList<SphericalCoordinates>(SphericalCoordinates.class, this, Symphony__CommonGeometryData3DPackage.SPHERICAL_POLYGON__VERTICES);
 		}
 		return vertices;
 	}

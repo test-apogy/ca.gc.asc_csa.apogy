@@ -43,7 +43,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
@@ -855,10 +855,10 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		  
 		  // Gets the list of nodes that are part of the system topology.
 		  Node systemRoot = getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();
-		  List<Node> systemNodes = TopologyFacade.INSTANCE.findNodesByType(TopologyPackage.Literals.NODE, systemRoot);
+		  List<Node> systemNodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.NODE, systemRoot);
 		  		  
-		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(TopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
-		  nodes.addAll(TopologyFacade.INSTANCE.findNodesByType(TopologyPackage.Literals.CONTENT_NODE, root));
+		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
+		  nodes.addAll(TopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE, root));
 		  nodes.addAll(TopologyFacade.INSTANCE.findNodesByType(SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
 		  
 		  for(Node node : nodes)

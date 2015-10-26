@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.ImagesCorePackage;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -105,7 +105,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ImagesCorePackage.Literals.EIMAGE;
+		return Symphony__CommonImagesPackage.Literals.EIMAGE;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImagesCorePackage.EIMAGE__WIDTH, oldWidth, width));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.EIMAGE__WIDTH, oldWidth, width));
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 		int oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImagesCorePackage.EIMAGE__HEIGHT, oldHeight, height));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.EIMAGE__HEIGHT, oldHeight, height));
 	}
 
 	/**
@@ -189,7 +189,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 		BufferedImage oldImageContent = imageContent;
 		imageContent = newImageContent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImagesCorePackage.EIMAGE__IMAGE_CONTENT, oldImageContent, imageContent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT, oldImageContent, imageContent));
 	}	
 	
 	/**
@@ -210,11 +210,11 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ImagesCorePackage.EIMAGE__WIDTH:
+			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
 				return getWidth();
-			case ImagesCorePackage.EIMAGE__HEIGHT:
+			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
 				return getHeight();
-			case ImagesCorePackage.EIMAGE__IMAGE_CONTENT:
+			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				return getImageContent();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -228,13 +228,13 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ImagesCorePackage.EIMAGE__WIDTH:
+			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
 				setWidth((Integer)newValue);
 				return;
-			case ImagesCorePackage.EIMAGE__HEIGHT:
+			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
 				setHeight((Integer)newValue);
 				return;
-			case ImagesCorePackage.EIMAGE__IMAGE_CONTENT:
+			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				setImageContent((BufferedImage)newValue);
 				return;
 		}
@@ -249,13 +249,13 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ImagesCorePackage.EIMAGE__WIDTH:
+			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
-			case ImagesCorePackage.EIMAGE__HEIGHT:
+			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
-			case ImagesCorePackage.EIMAGE__IMAGE_CONTENT:
+			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				setImageContent(IMAGE_CONTENT_EDEFAULT);
 				return;
 		}
@@ -270,11 +270,11 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ImagesCorePackage.EIMAGE__WIDTH:
+			case Symphony__CommonImagesPackage.EIMAGE__WIDTH:
 				return width != WIDTH_EDEFAULT;
-			case ImagesCorePackage.EIMAGE__HEIGHT:
+			case Symphony__CommonImagesPackage.EIMAGE__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
-			case ImagesCorePackage.EIMAGE__IMAGE_CONTENT:
+			case Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT:
 				return IMAGE_CONTENT_EDEFAULT == null ? imageContent != null : !IMAGE_CONTENT_EDEFAULT.equals(imageContent);
 		}
 		return super.eIsSet(featureID);
@@ -288,7 +288,7 @@ public class EImageImpl extends MinimalEObjectImpl.Container implements EImage {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImagesCorePackage.EIMAGE___AS_BUFFERED_IMAGE:
+			case Symphony__CommonImagesPackage.EIMAGE___AS_BUFFERED_IMAGE:
 				return asBufferedImage();
 		}
 		return super.eInvoke(operationID, arguments);

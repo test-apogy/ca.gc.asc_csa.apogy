@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsPackage;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -47,7 +47,7 @@ public class EMFEcoreEditUtilsFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreEditUtilsPackage.Literals.EMF_ECORE_EDIT_UTILS_FACADE;
+		return Symphony__CommonEMFEditUtilsPackage.Literals.EMF_ECORE_EDIT_UTILS_FACADE;
 	}
 
 	/**
@@ -98,9 +98,9 @@ public class EMFEcoreEditUtilsFacadeImpl extends MinimalEObjectImpl.Container
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreEditUtilsPackage.EMF_ECORE_EDIT_UTILS_FACADE___GET_TEXT__OBJECT:
+			case Symphony__CommonEMFEditUtilsPackage.EMF_ECORE_EDIT_UTILS_FACADE___GET_TEXT__OBJECT:
 				return getText(arguments.get(0));
-			case EMFEcoreEditUtilsPackage.EMF_ECORE_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT:
+			case Symphony__CommonEMFEditUtilsPackage.EMF_ECORE_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT:
 				removeChildDescriptor((Collection<Object>)arguments.get(0), arguments.get(1));
 				return null;
 		}

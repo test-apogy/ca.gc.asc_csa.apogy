@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 
@@ -166,7 +166,7 @@ public class FeatureRootsListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS,
-				 EMFEcoreFactory.eINSTANCE.createTreeRootNode()));
+				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 
   /**

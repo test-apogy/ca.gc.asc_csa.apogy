@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DelaunayMesher;
 
 /**
@@ -70,7 +70,7 @@ public class DelaunayMesherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DelaunayMesher_tolerance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_tolerance_feature", "_UI_DelaunayMesher_type"),
-				 Data3dPackage.Literals.DELAUNAY_MESHER__TOLERANCE,
+				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__TOLERANCE,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class DelaunayMesherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DelaunayMesher_alpha_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_alpha_feature", "_UI_DelaunayMesher_type"),
-				 Data3dPackage.Literals.DELAUNAY_MESHER__ALPHA,
+				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__ALPHA,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class DelaunayMesherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DelaunayMesher_offset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_offset_feature", "_UI_DelaunayMesher_type"),
-				 Data3dPackage.Literals.DELAUNAY_MESHER__OFFSET,
+				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__OFFSET,
 				 true,
 				 false,
 				 false,
@@ -136,7 +136,7 @@ public class DelaunayMesherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DelaunayMesher_boundingTriangulation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_boundingTriangulation_feature", "_UI_DelaunayMesher_type"),
-				 Data3dPackage.Literals.DELAUNAY_MESHER__BOUNDING_TRIANGULATION,
+				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__BOUNDING_TRIANGULATION,
 				 true,
 				 false,
 				 false,
@@ -158,7 +158,7 @@ public class DelaunayMesherItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DelaunayMesher_meshingPlane_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_meshingPlane_feature", "_UI_DelaunayMesher_type"),
-				 Data3dPackage.Literals.DELAUNAY_MESHER__MESHING_PLANE,
+				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__MESHING_PLANE,
 				 true,
 				 false,
 				 false,
@@ -205,11 +205,11 @@ public class DelaunayMesherItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DelaunayMesher.class)) {
-			case Data3dPackage.DELAUNAY_MESHER__TOLERANCE:
-			case Data3dPackage.DELAUNAY_MESHER__ALPHA:
-			case Data3dPackage.DELAUNAY_MESHER__OFFSET:
-			case Data3dPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
-			case Data3dPackage.DELAUNAY_MESHER__MESHING_PLANE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
+			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

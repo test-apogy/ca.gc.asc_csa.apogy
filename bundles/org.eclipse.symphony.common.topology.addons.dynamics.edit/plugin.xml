@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.topology.addons,dynamics"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.provider.TopologyDynamicsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.topology.addons.dynamics.provider.Symphony__CommonTopologyDynamicsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -20,9 +20,16 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_common_topology_addons_dynamics -->
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.common.topology.addons.dynamics.provider.Symphony__CommonTopologyDynamicsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="org.eclipse.symphony.common.topology.addons.dynamics"
-            class="org.eclipse.symphony.common.topology.addons.dynamics.provider.TopologyDynamicsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.common.topology.addons.dynamics.provider.Symphony__CommonTopologyDynamicsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

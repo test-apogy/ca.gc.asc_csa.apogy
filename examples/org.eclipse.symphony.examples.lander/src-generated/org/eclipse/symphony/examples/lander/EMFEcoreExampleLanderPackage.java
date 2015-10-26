@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -144,7 +144,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__POSITION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 0;
+  int LANDER__POSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Thruster</b></em>' containment reference.
@@ -153,7 +153,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__THRUSTER = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 1;
+	int LANDER__THRUSTER = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Leg AExtension</b></em>' attribute.
@@ -162,7 +162,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_AEXTENSION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 2;
+  int LANDER__LEG_AEXTENSION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Leg BExtension</b></em>' attribute.
@@ -171,7 +171,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_BEXTENSION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 3;
+  int LANDER__LEG_BEXTENSION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Leg CExtension</b></em>' attribute.
@@ -180,7 +180,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_CEXTENSION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 4;
+  int LANDER__LEG_CEXTENSION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Leg APosition</b></em>' attribute.
@@ -189,7 +189,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_APOSITION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 5;
+  int LANDER__LEG_APOSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 5;
 
 		/**
 	 * The feature id for the '<em><b>Leg BPosition</b></em>' attribute.
@@ -198,7 +198,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_BPOSITION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 6;
+  int LANDER__LEG_BPOSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 6;
 
 		/**
 	 * The feature id for the '<em><b>Leg CPosition</b></em>' attribute.
@@ -207,7 +207,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__LEG_CPOSITION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 7;
+  int LANDER__LEG_CPOSITION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 7;
 
 		/**
 	 * The feature id for the '<em><b>XAngular Velocity</b></em>' attribute.
@@ -216,7 +216,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__XANGULAR_VELOCITY = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 8;
+  int LANDER__XANGULAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 8;
 
   /**
 	 * The feature id for the '<em><b>YAngular Velocity</b></em>' attribute.
@@ -225,7 +225,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER__YANGULAR_VELOCITY = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 9;
+  int LANDER__YANGULAR_VELOCITY = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 9;
 
   /**
 	 * The feature id for the '<em><b>Mass</b></em>' attribute.
@@ -234,7 +234,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__MASS = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 10;
+	int LANDER__MASS = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 10;
 
 		/**
 	 * The feature id for the '<em><b>Gravitational Pull</b></em>' attribute.
@@ -243,7 +243,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__GRAVITATIONAL_PULL = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 11;
+	int LANDER__GRAVITATIONAL_PULL = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 11;
 
 		/**
 	 * The feature id for the '<em><b>Changing Legs</b></em>' attribute.
@@ -252,7 +252,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_LEGS = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 12;
+	int LANDER__CHANGING_LEGS = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 12;
 
 		/**
 	 * The feature id for the '<em><b>Changing Attitude</b></em>' attribute.
@@ -261,7 +261,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_ATTITUDE = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 13;
+	int LANDER__CHANGING_ATTITUDE = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 13;
 
 		/**
 	 * The feature id for the '<em><b>Changing Location</b></em>' attribute.
@@ -270,7 +270,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__CHANGING_LOCATION = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 14;
+	int LANDER__CHANGING_LOCATION = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 14;
 
 		/**
 	 * The feature id for the '<em><b>Flying Enabled</b></em>' attribute.
@@ -279,7 +279,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__FLYING_ENABLED = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 15;
+	int LANDER__FLYING_ENABLED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 15;
 
 		/**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
@@ -288,7 +288,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__INITIALIZED = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 16;
+	int LANDER__INITIALIZED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 16;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -297,7 +297,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER__DISPOSED = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 17;
+	int LANDER__DISPOSED = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 17;
 
 		/**
 	 * The number of structural features of the '<em>Lander</em>' class.
@@ -306,7 +306,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_FEATURE_COUNT = EMFEcorePackage.DISPOSABLE_FEATURE_COUNT + 18;
+  int LANDER_FEATURE_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_FEATURE_COUNT + 18;
 
   /**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -315,7 +315,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___DISPOSE = EMFEcorePackage.DISPOSABLE___DISPOSE;
+	int LANDER___DISPOSE = Symphony__CommonEMFPackage.DISPOSABLE___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -324,7 +324,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___INIT = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 0;
+	int LANDER___INIT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 0;
 
 		/**
 	 * The operation id for the '<em>Command Leg Position</em>' operation.
@@ -333,7 +333,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___COMMAND_LEG_POSITION__LANDERLEGEXTENSION_LANDERLEGEXTENSION_LANDERLEGEXTENSION = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 1;
+	int LANDER___COMMAND_LEG_POSITION__LANDERLEGEXTENSION_LANDERLEGEXTENSION_LANDERLEGEXTENSION = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 1;
 
 		/**
 	 * The operation id for the '<em>Move To</em>' operation.
@@ -342,7 +342,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___MOVE_TO__DOUBLE_DOUBLE_DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 2;
+	int LANDER___MOVE_TO__DOUBLE_DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 2;
 
 		/**
 	 * The operation id for the '<em>Change Attitude</em>' operation.
@@ -351,7 +351,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___CHANGE_ATTITUDE__DOUBLE_DOUBLE_DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 3;
+	int LANDER___CHANGE_ATTITUDE__DOUBLE_DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 3;
 
 		/**
 	 * The operation id for the '<em>Reset Attitude</em>' operation.
@@ -360,7 +360,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___RESET_ATTITUDE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 4;
+	int LANDER___RESET_ATTITUDE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 4;
 
 		/**
 	 * The operation id for the '<em>Command Angular Velocities</em>' operation.
@@ -369,7 +369,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___COMMAND_ANGULAR_VELOCITIES__DOUBLE_DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 5;
+	int LANDER___COMMAND_ANGULAR_VELOCITIES__DOUBLE_DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 5;
 
 		/**
 	 * The operation id for the '<em>Command Thrust</em>' operation.
@@ -378,7 +378,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER___COMMAND_THRUST__DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 6;
+  int LANDER___COMMAND_THRUST__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 6;
 
   /**
 	 * The operation id for the '<em>Change Thrust By</em>' operation.
@@ -387,7 +387,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___CHANGE_THRUST_BY__DOUBLE = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 7;
+	int LANDER___CHANGE_THRUST_BY__DOUBLE = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 7;
 
 		/**
 	 * The operation id for the '<em>Start Flying</em>' operation.
@@ -396,7 +396,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___START_FLYING__BOOLEAN = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 8;
+	int LANDER___START_FLYING__BOOLEAN = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 8;
 
 		/**
 	 * The operation id for the '<em>Stop Flying</em>' operation.
@@ -405,7 +405,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER___STOP_FLYING = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 9;
+	int LANDER___STOP_FLYING = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 9;
 
 		/**
 	 * The number of operations of the '<em>Lander</em>' class.
@@ -414,7 +414,7 @@ public interface EMFEcoreExampleLanderPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_OPERATION_COUNT = EMFEcorePackage.DISPOSABLE_OPERATION_COUNT + 10;
+  int LANDER_OPERATION_COUNT = Symphony__CommonEMFPackage.DISPOSABLE_OPERATION_COUNT + 10;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.lander.impl.LanderStubImpl <em>Lander Stub</em>}' class.

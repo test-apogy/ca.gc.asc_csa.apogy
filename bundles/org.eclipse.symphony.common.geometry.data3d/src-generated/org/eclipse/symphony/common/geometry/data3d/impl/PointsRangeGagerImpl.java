@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PointsRangeGager;
 import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
@@ -167,7 +167,7 @@ public class PointsRangeGagerImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.POINTS_RANGE_GAGER;
+		return Symphony__CommonGeometryData3DPackage.Literals.POINTS_RANGE_GAGER;
 	}
 
 	/**
@@ -208,7 +208,7 @@ public class PointsRangeGagerImpl extends
 		double oldMinX = minX;
 		minX = newMinX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.POINTS_RANGE_GAGER__MIN_X, oldMinX, minX));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_X, oldMinX, minX));
 	}
 
 	/**
@@ -227,7 +227,7 @@ public class PointsRangeGagerImpl extends
 		double oldMaxX = maxX;
 		maxX = newMaxX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.POINTS_RANGE_GAGER__MAX_X, oldMaxX, maxX));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_X, oldMaxX, maxX));
 	}
 
 	/**
@@ -246,7 +246,7 @@ public class PointsRangeGagerImpl extends
 		double oldMinY = minY;
 		minY = newMinY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.POINTS_RANGE_GAGER__MIN_Y, oldMinY, minY));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Y, oldMinY, minY));
 	}
 
 	/**
@@ -265,7 +265,7 @@ public class PointsRangeGagerImpl extends
 		double oldMaxY = maxY;
 		maxY = newMaxY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.POINTS_RANGE_GAGER__MAX_Y, oldMaxY, maxY));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Y, oldMaxY, maxY));
 	}
 
 	/**
@@ -284,7 +284,7 @@ public class PointsRangeGagerImpl extends
 		double oldMinZ = minZ;
 		minZ = newMinZ;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.POINTS_RANGE_GAGER__MIN_Z, oldMinZ, minZ));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Z, oldMinZ, minZ));
 	}
 
 	/**
@@ -303,7 +303,7 @@ public class PointsRangeGagerImpl extends
 		double oldMaxZ = maxZ;
 		maxZ = newMaxZ;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.POINTS_RANGE_GAGER__MAX_Z, oldMaxZ, maxZ));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Z, oldMaxZ, maxZ));
 	}
 
 	/**
@@ -313,17 +313,17 @@ public class PointsRangeGagerImpl extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_X:
 				return getMinX();
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_X:
 				return getMaxX();
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Y:
 				return getMinY();
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Y:
 				return getMaxY();
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Z:
 				return getMinZ();
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Z:
 				return getMaxZ();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -336,22 +336,22 @@ public class PointsRangeGagerImpl extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_X:
 				setMinX((Double)newValue);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_X:
 				setMaxX((Double)newValue);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Y:
 				setMinY((Double)newValue);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Y:
 				setMaxY((Double)newValue);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Z:
 				setMinZ((Double)newValue);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Z:
 				setMaxZ((Double)newValue);
 				return;
 		}
@@ -365,22 +365,22 @@ public class PointsRangeGagerImpl extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_X:
 				setMinX(MIN_X_EDEFAULT);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_X:
 				setMaxX(MAX_X_EDEFAULT);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Y:
 				setMinY(MIN_Y_EDEFAULT);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Y:
 				setMaxY(MAX_Y_EDEFAULT);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Z:
 				setMinZ(MIN_Z_EDEFAULT);
 				return;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Z:
 				setMaxZ(MAX_Z_EDEFAULT);
 				return;
 		}
@@ -394,17 +394,17 @@ public class PointsRangeGagerImpl extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_X:
 				return minX != MIN_X_EDEFAULT;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_X:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_X:
 				return maxX != MAX_X_EDEFAULT;
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Y:
 				return minY != MIN_Y_EDEFAULT;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Y:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Y:
 				return maxY != MAX_Y_EDEFAULT;
-			case Data3dPackage.POINTS_RANGE_GAGER__MIN_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MIN_Z:
 				return minZ != MIN_Z_EDEFAULT;
-			case Data3dPackage.POINTS_RANGE_GAGER__MAX_Z:
+			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER__MAX_Z:
 				return maxZ != MAX_Z_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -455,7 +455,7 @@ public class PointsRangeGagerImpl extends
 			throw new IllegalArgumentException("Illegal input (null)");
 		}
 
-		CartesianCoordinatesSet output = Data3dFactory.eINSTANCE
+		CartesianCoordinatesSet output = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianCoordinatesSet();
 
 		for (CartesianPositionCoordinates point : input.getPoints()) {

@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.file.csv.CsvPackage;
+import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
 
 /**
  * This is the item provider adapter for a {@link java.util.Map.Entry} object.
@@ -78,7 +78,7 @@ public class CsvColumnValuesMapItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumnValuesMap_value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumnValuesMap_value_feature", "_UI_CsvColumnValuesMap_type"),
-				 CsvPackage.Literals.CSV_COLUMN_VALUES_MAP__VALUE,
+				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN_VALUES_MAP__VALUE,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class CsvColumnValuesMapItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CsvColumnValuesMap_key_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CsvColumnValuesMap_key_feature", "_UI_CsvColumnValuesMap_type"),
-				 CsvPackage.Literals.CSV_COLUMN_VALUES_MAP__KEY,
+				 Symphony__CommonFileCSVPackage.Literals.CSV_COLUMN_VALUES_MAP__KEY,
 				 true,
 				 false,
 				 false,
@@ -145,8 +145,8 @@ public class CsvColumnValuesMapItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Map.Entry.class)) {
-			case CsvPackage.CSV_COLUMN_VALUES_MAP__KEY:
-			case CsvPackage.CSV_COLUMN_VALUES_MAP__VALUE:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN_VALUES_MAP__KEY:
+			case Symphony__CommonFileCSVPackage.CSV_COLUMN_VALUES_MAP__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

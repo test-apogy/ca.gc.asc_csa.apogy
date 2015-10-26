@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.io.jinput.EControllerEnvironment;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment} object.
@@ -82,7 +82,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_supported_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_supported_feature", "_UI_EControllerEnvironment_type"),
-				 JInputPackage.Literals.ECONTROLLER_ENVIRONMENT__SUPPORTED,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__SUPPORTED,
 				 false,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_refreshRequested_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_refreshRequested_feature", "_UI_EControllerEnvironment_type"),
-				 JInputPackage.Literals.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED,
 				 true,
 				 false,
 				 false,
@@ -126,7 +126,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_pollingCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_pollingCount_feature", "_UI_EControllerEnvironment_type"),
-				 JInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_COUNT,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_COUNT,
 				 true,
 				 false,
 				 false,
@@ -148,7 +148,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_pollingJob_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_pollingJob_feature", "_UI_EControllerEnvironment_type"),
-				 JInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_JOB,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_JOB,
 				 false,
 				 false,
 				 false,
@@ -170,7 +170,7 @@ public class EControllerEnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EControllerEnvironment_pollingProblem_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EControllerEnvironment_pollingProblem_feature", "_UI_EControllerEnvironment_type"),
-				 JInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM,
+				 Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM,
 				 true,
 				 false,
 				 false,
@@ -191,7 +191,7 @@ public class EControllerEnvironmentItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(JInputPackage.Literals.ECONTROLLER_ENVIRONMENT__CONTROLLERS);
+			childrenFeatures.add(Symphony__CommonIOJInputPackage.Literals.ECONTROLLER_ENVIRONMENT__CONTROLLERS);
 		}
 		return childrenFeatures;
 	}
@@ -243,14 +243,14 @@ public class EControllerEnvironmentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EControllerEnvironment.class)) {
-			case JInputPackage.ECONTROLLER_ENVIRONMENT__SUPPORTED:
-			case JInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
-			case JInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
-			case JInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_JOB:
-			case JInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__SUPPORTED:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__REFRESH_REQUESTED:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_COUNT:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_JOB:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__POLLING_PROBLEM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case JInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
+			case Symphony__CommonIOJInputPackage.ECONTROLLER_ENVIRONMENT__CONTROLLERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

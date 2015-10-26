@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 
 /**
@@ -75,7 +75,7 @@ public class PoseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianOrientationCoordinates_xRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_xRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-				 Data3dPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__XROTATION,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__XROTATION,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class PoseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianOrientationCoordinates_yRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_yRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-				 Data3dPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__YROTATION,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__YROTATION,
 				 true,
 				 false,
 				 false,
@@ -142,7 +142,7 @@ public class PoseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CartesianOrientationCoordinates_zRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_zRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-				 Data3dPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION,
+				 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION,
 				 true,
 				 false,
 				 false,
@@ -198,9 +198,9 @@ public class PoseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Pose.class)) {
-			case Data3dPackage.POSE__XROTATION:
-			case Data3dPackage.POSE__YROTATION:
-			case Data3dPackage.POSE__ZROTATION:
+			case Symphony__CommonGeometryData3DPackage.POSE__XROTATION:
+			case Symphony__CommonGeometryData3DPackage.POSE__YROTATION:
+			case Symphony__CommonGeometryData3DPackage.POSE__ZROTATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

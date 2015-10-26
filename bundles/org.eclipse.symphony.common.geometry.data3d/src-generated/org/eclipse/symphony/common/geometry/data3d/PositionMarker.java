@@ -16,7 +16,7 @@ package org.eclipse.symphony.common.geometry.data3d;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PositionMarker#getIdentifier <em>Identifier</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPositionMarker()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPositionMarker()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface PositionMarker extends CartesianPositionCoordinates {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Identifier</em>' attribute.
 	 * @see #setIdentifier(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPositionMarker_Identifier()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPositionMarker_Identifier()
 	 * @model unique="false"
 	 * @generated
 	 */

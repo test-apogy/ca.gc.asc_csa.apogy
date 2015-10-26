@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.file.csv.CsvPackage#getCsvValueProvider()
+ * @see org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage#getCsvValueProvider()
  * @model
  * @generated
  */

@@ -7,7 +7,7 @@ import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
@@ -153,7 +153,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME: return EMFEcorePackage.TIMED__TIME;
+				case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -169,7 +169,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.TIMED__TIME: return SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME;
+				case Symphony__CommonEMFPackage.TIMED__TIME: return SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME;
 				default: return -1;
 			}
 		}

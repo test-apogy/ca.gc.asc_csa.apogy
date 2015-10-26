@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * Event Severity.
  * @see org.eclipse.osgi.framework.log.FrameworkLogEntry
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.common.log.UtilsLogPackage#getEventSeverity()
+ * @see org.eclipse.symphony.common.log.Symphony__CommonLogPackage#getEventSeverity()
  * @model
  * @generated
  */

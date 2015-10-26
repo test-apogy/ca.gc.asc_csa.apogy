@@ -16,7 +16,7 @@ package org.eclipse.symphony.common.images;
  *   <li>{@link org.eclipse.symphony.common.images.URLEImage#getUrl <em>Url</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.images.ImagesCorePackage#getURLEImage()
+ * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getURLEImage()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface URLEImage extends AbstractEImage {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.common.images.ImagesCorePackage#getURLEImage_Url()
+	 * @see org.eclipse.symphony.common.images.Symphony__CommonImagesPackage#getURLEImage_Url()
 	 * @model unique="false"
 	 * @generated
 	 */

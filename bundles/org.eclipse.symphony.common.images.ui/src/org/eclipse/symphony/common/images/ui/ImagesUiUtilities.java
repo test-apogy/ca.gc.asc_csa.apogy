@@ -11,7 +11,7 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.ui.progress.UIJob;
 
 public class ImagesUiUtilities {
@@ -34,7 +34,7 @@ public class ImagesUiUtilities {
 		{			
 			try
 			{				
-				EImage image = ImagesCoreFactory.eINSTANCE.createEImage();				
+				EImage image = Symphony__CommonImagesFactory.eINSTANCE.createEImage();				
 				image.setImageContent(EImagesUtilities.INSTANCE.convertToBufferedImage(imageData));
 				if(filename.endsWith(".jpg"))
 				{

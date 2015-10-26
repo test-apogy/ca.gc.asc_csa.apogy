@@ -32,7 +32,7 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.ContextsList;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
@@ -243,7 +243,7 @@ public class ContextsListComposite extends Composite {
 		ViewerSupport.bind(contextsListViewer, EMFObservables.observeList(
 				contextsList,
 				EMFEcoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
-				EMFProperties.value(EMFEcorePackage.Literals.NAMED__NAME));
+				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
 
 		/**
 		 * Set the default selection to the active context if any or the first

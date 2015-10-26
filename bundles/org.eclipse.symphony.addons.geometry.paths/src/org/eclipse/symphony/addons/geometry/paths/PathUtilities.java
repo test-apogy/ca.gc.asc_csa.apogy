@@ -12,12 +12,12 @@ import javax.vecmath.Vector3d;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 
 public class PathUtilities {
 	
-	private static Data3dFacade data3dFacade = Data3dFactory.eINSTANCE.createData3dFacade(); 	
+	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade(); 	
 	
 	/**
 	 * Appends two paths to form one.

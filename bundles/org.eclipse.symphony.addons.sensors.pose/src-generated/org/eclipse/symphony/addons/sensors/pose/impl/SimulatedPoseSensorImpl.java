@@ -14,7 +14,7 @@ import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePacka
 import org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
@@ -191,8 +191,8 @@ public class SimulatedPoseSensorImpl extends PoseSensorImpl implements Simulated
 
 	private void initialize()
 	{
-		if(getRotationMatrix()== null) setRotationMatrix(MathFactory.eINSTANCE.createMatrix3x3());
-		if(getPosition()== null) setPosition( MathFactory.eINSTANCE.createTuple3d());
+		if(getRotationMatrix()== null) setRotationMatrix(Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3());
+		if(getPosition()== null) setPosition( Symphony__CommonMathFactory.eINSTANCE.createTuple3d());
 		
 		Thread t = new Thread()
     	{			
@@ -214,7 +214,7 @@ public class SimulatedPoseSensorImpl extends PoseSensorImpl implements Simulated
 												
 						// Update position.
 						Tuple3d oldPosition = getPosition();
-						Tuple3d newPosition = MathFactory.eINSTANCE.createTuple3d();
+						Tuple3d newPosition = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 											
 						newPosition.setX(oldPosition.getX() + getXVelocity() * getUpdatePeriod());
 						newPosition.setY(oldPosition.getY() + getYVelocity() * getUpdatePeriod());

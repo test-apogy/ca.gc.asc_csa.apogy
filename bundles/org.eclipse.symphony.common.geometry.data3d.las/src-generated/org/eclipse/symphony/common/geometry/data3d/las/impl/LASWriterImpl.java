@@ -25,8 +25,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
 import org.eclipse.symphony.common.geometry.data3d.las.LASWriter;
-import org.eclipse.symphony.common.geometry.data3d.las.LasFactory;
-import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFactory;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
 import org.eclipse.symphony.common.lang.java.io.LittleEndianDataOutputStream;
 
 /**
@@ -264,7 +264,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return LasPackage.Literals.LAS_WRITER;
+		return Symphony__CommonGeometryData3DLASPackage.Literals.LAS_WRITER;
 	}
 
 	/**
@@ -283,7 +283,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		String oldFileName = fileName;
 		fileName = newFileName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__FILE_NAME, oldFileName, fileName));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__FILE_NAME, oldFileName, fileName));
 	}
 
 	/**
@@ -302,7 +302,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		IProgressMonitor oldProgressMonitor = progressMonitor;
 		progressMonitor = newProgressMonitor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__PROGRESS_MONITOR, oldProgressMonitor, progressMonitor));
 	}
 
 	/**
@@ -314,7 +314,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		if (points == null) {
 			// points = new EObjectResolvingEList<LASPoint>(LASPoint.class,
 			// this,
-			// LasPackage.LAS_WRITER__POINTS) {
+			// Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__POINTS) {
 			// protected boolean isUnique() {
 			// return false;
 			// }
@@ -340,7 +340,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		double oldScaleX = scaleX;
 		scaleX = newScaleX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__SCALE_X, oldScaleX, scaleX));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_X, oldScaleX, scaleX));
 	}
 
 	/**
@@ -359,7 +359,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		double oldScaleY = scaleY;
 		scaleY = newScaleY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__SCALE_Y, oldScaleY, scaleY));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Y, oldScaleY, scaleY));
 	}
 
 	/**
@@ -378,7 +378,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		double oldScaleZ = scaleZ;
 		scaleZ = newScaleZ;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__SCALE_Z, oldScaleZ, scaleZ));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Z, oldScaleZ, scaleZ));
 	}
 
 	/**
@@ -391,7 +391,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 			header = (LASHeader)eResolveProxy(oldHeader);
 			if (header != oldHeader) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LasPackage.LAS_WRITER__HEADER, oldHeader, header));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__HEADER, oldHeader, header));
 			}
 		}
 		return header;
@@ -421,7 +421,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		double oldXOffset = xOffset;
 		xOffset = newXOffset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__XOFFSET, oldXOffset, xOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__XOFFSET, oldXOffset, xOffset));
 	}
 
 	/**
@@ -440,7 +440,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		double oldYOffset = yOffset;
 		yOffset = newYOffset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__YOFFSET, oldYOffset, yOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__YOFFSET, oldYOffset, yOffset));
 	}
 
 	/**
@@ -459,7 +459,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		double oldZOffset = zOffset;
 		zOffset = newZOffset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__ZOFFSET, oldZOffset, zOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__ZOFFSET, oldZOffset, zOffset));
 	}
 
 	/**
@@ -478,7 +478,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 		OutputStream oldOutputStream = outputStream;
 		outputStream = newOutputStream;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LasPackage.LAS_WRITER__OUTPUT_STREAM, oldOutputStream, outputStream));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__OUTPUT_STREAM, oldOutputStream, outputStream));
 	}
 
 	/**
@@ -717,7 +717,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 			throw new IllegalArgumentException();
 		}
 
-		header = LasFactory.eINSTANCE.createLASHeader();
+		header = Symphony__CommonGeometryData3DLASFactory.eINSTANCE.createLASHeader();
 
 		header.setFileSignature("LASF");
 
@@ -863,28 +863,28 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LasPackage.LAS_WRITER__FILE_NAME:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__FILE_NAME:
 				return getFileName();
-			case LasPackage.LAS_WRITER__PROGRESS_MONITOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__PROGRESS_MONITOR:
 				return getProgressMonitor();
-			case LasPackage.LAS_WRITER__POINTS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__POINTS:
 				return getPoints();
-			case LasPackage.LAS_WRITER__SCALE_X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_X:
 				return getScaleX();
-			case LasPackage.LAS_WRITER__SCALE_Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Y:
 				return getScaleY();
-			case LasPackage.LAS_WRITER__SCALE_Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Z:
 				return getScaleZ();
-			case LasPackage.LAS_WRITER__HEADER:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__HEADER:
 				if (resolve) return getHeader();
 				return basicGetHeader();
-			case LasPackage.LAS_WRITER__XOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__XOFFSET:
 				return getXOffset();
-			case LasPackage.LAS_WRITER__YOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__YOFFSET:
 				return getYOffset();
-			case LasPackage.LAS_WRITER__ZOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__ZOFFSET:
 				return getZOffset();
-			case LasPackage.LAS_WRITER__OUTPUT_STREAM:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__OUTPUT_STREAM:
 				return getOutputStream();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -898,35 +898,35 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LasPackage.LAS_WRITER__FILE_NAME:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__FILE_NAME:
 				setFileName((String)newValue);
 				return;
-			case LasPackage.LAS_WRITER__PROGRESS_MONITOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__PROGRESS_MONITOR:
 				setProgressMonitor((IProgressMonitor)newValue);
 				return;
-			case LasPackage.LAS_WRITER__POINTS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__POINTS:
 				getPoints().clear();
 				getPoints().addAll((Collection<? extends LASPoint>)newValue);
 				return;
-			case LasPackage.LAS_WRITER__SCALE_X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_X:
 				setScaleX((Double)newValue);
 				return;
-			case LasPackage.LAS_WRITER__SCALE_Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Y:
 				setScaleY((Double)newValue);
 				return;
-			case LasPackage.LAS_WRITER__SCALE_Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Z:
 				setScaleZ((Double)newValue);
 				return;
-			case LasPackage.LAS_WRITER__XOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__XOFFSET:
 				setXOffset((Double)newValue);
 				return;
-			case LasPackage.LAS_WRITER__YOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__YOFFSET:
 				setYOffset((Double)newValue);
 				return;
-			case LasPackage.LAS_WRITER__ZOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__ZOFFSET:
 				setZOffset((Double)newValue);
 				return;
-			case LasPackage.LAS_WRITER__OUTPUT_STREAM:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__OUTPUT_STREAM:
 				setOutputStream((OutputStream)newValue);
 				return;
 		}
@@ -940,34 +940,34 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LasPackage.LAS_WRITER__FILE_NAME:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__FILE_NAME:
 				setFileName(FILE_NAME_EDEFAULT);
 				return;
-			case LasPackage.LAS_WRITER__PROGRESS_MONITOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__PROGRESS_MONITOR:
 				setProgressMonitor(PROGRESS_MONITOR_EDEFAULT);
 				return;
-			case LasPackage.LAS_WRITER__POINTS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__POINTS:
 				getPoints().clear();
 				return;
-			case LasPackage.LAS_WRITER__SCALE_X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_X:
 				setScaleX(SCALE_X_EDEFAULT);
 				return;
-			case LasPackage.LAS_WRITER__SCALE_Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Y:
 				setScaleY(SCALE_Y_EDEFAULT);
 				return;
-			case LasPackage.LAS_WRITER__SCALE_Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Z:
 				setScaleZ(SCALE_Z_EDEFAULT);
 				return;
-			case LasPackage.LAS_WRITER__XOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__XOFFSET:
 				setXOffset(XOFFSET_EDEFAULT);
 				return;
-			case LasPackage.LAS_WRITER__YOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__YOFFSET:
 				setYOffset(YOFFSET_EDEFAULT);
 				return;
-			case LasPackage.LAS_WRITER__ZOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__ZOFFSET:
 				setZOffset(ZOFFSET_EDEFAULT);
 				return;
-			case LasPackage.LAS_WRITER__OUTPUT_STREAM:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__OUTPUT_STREAM:
 				setOutputStream(OUTPUT_STREAM_EDEFAULT);
 				return;
 		}
@@ -981,27 +981,27 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LasPackage.LAS_WRITER__FILE_NAME:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__FILE_NAME:
 				return FILE_NAME_EDEFAULT == null ? fileName != null : !FILE_NAME_EDEFAULT.equals(fileName);
-			case LasPackage.LAS_WRITER__PROGRESS_MONITOR:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__PROGRESS_MONITOR:
 				return PROGRESS_MONITOR_EDEFAULT == null ? progressMonitor != null : !PROGRESS_MONITOR_EDEFAULT.equals(progressMonitor);
-			case LasPackage.LAS_WRITER__POINTS:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__POINTS:
 				return points != null && !points.isEmpty();
-			case LasPackage.LAS_WRITER__SCALE_X:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_X:
 				return scaleX != SCALE_X_EDEFAULT;
-			case LasPackage.LAS_WRITER__SCALE_Y:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Y:
 				return scaleY != SCALE_Y_EDEFAULT;
-			case LasPackage.LAS_WRITER__SCALE_Z:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__SCALE_Z:
 				return scaleZ != SCALE_Z_EDEFAULT;
-			case LasPackage.LAS_WRITER__HEADER:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__HEADER:
 				return header != null;
-			case LasPackage.LAS_WRITER__XOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__XOFFSET:
 				return xOffset != XOFFSET_EDEFAULT;
-			case LasPackage.LAS_WRITER__YOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__YOFFSET:
 				return yOffset != YOFFSET_EDEFAULT;
-			case LasPackage.LAS_WRITER__ZOFFSET:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__ZOFFSET:
 				return zOffset != ZOFFSET_EDEFAULT;
-			case LasPackage.LAS_WRITER__OUTPUT_STREAM:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER__OUTPUT_STREAM:
 				return OUTPUT_STREAM_EDEFAULT == null ? outputStream != null : !OUTPUT_STREAM_EDEFAULT.equals(outputStream);
 		}
 		return super.eIsSet(featureID);
@@ -1015,7 +1015,7 @@ public class LASWriterImpl extends MinimalEObjectImpl.Container implements LASWr
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case LasPackage.LAS_WRITER___WRITE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER___WRITE:
 				try {
 					write();
 					return null;

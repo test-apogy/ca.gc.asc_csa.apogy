@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 
 public class FeatureNodeObservableValue extends AbstractObservableValue 
@@ -121,7 +121,7 @@ public class FeatureNodeObservableValue extends AbstractObservableValue
 	{
 		if(featureNodeAdapter == null)
 		{
-			featureNodeAdapter = EMFEcoreFactory.eINSTANCE.createFeatureNodeAdapter();	
+			featureNodeAdapter = Symphony__CommonEMFFactory.eINSTANCE.createFeatureNodeAdapter();	
 			featureNodeAdapter.eAdapters().add(getAdapter());
 		}
 		
@@ -137,7 +137,7 @@ public class FeatureNodeObservableValue extends AbstractObservableValue
 					@Override
 					public void notifyChanged(Notification notification) 
 					{
-						if(notification.getFeatureID(FeatureNodeAdapter.class) == EMFEcorePackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
+						if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__CURRENT_VALUE)
 						{						
 							final Object oldValue = notification.getOldValue();
 							final Object newValue = notification.getNewValue();
@@ -153,7 +153,7 @@ public class FeatureNodeObservableValue extends AbstractObservableValue
 								}
 							});							
 						}
-						else if(notification.getFeatureID(FeatureNodeAdapter.class) == EMFEcorePackage.FEATURE_NODE_ADAPTER__RESOLVED)
+						else if(notification.getFeatureID(FeatureNodeAdapter.class) == Symphony__CommonEMFPackage.FEATURE_NODE_ADAPTER__RESOLVED)
 						{							
 							if(notification.getOldBooleanValue() != notification.getNewBooleanValue())
 							{

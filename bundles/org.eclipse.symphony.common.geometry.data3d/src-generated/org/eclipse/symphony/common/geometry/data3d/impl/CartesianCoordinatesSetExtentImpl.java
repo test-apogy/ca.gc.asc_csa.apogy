@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -198,7 +198,7 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_EXTENT;
 	}
 
 	/**
@@ -219,7 +219,7 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 		double oldXMin = xMin;
 		xMin = newXMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN, oldXMin, xMin));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN, oldXMin, xMin));
 	}
 
 	/**
@@ -240,7 +240,7 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 		double oldXMax = xMax;
 		xMax = newXMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX, oldXMax, xMax));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX, oldXMax, xMax));
 	}
 
 	/**
@@ -261,7 +261,7 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 		double oldYMin = yMin;
 		yMin = newYMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN, oldYMin, yMin));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN, oldYMin, yMin));
 	}
 
 	/**
@@ -282,7 +282,7 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 		double oldYMax = yMax;
 		yMax = newYMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX, oldYMax, yMax));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX, oldYMax, yMax));
 	}
 
 	/**
@@ -303,7 +303,7 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 		double oldZMin = zMin;
 		zMin = newZMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN, oldZMin, zMin));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN, oldZMin, zMin));
 	}
 
 	/**
@@ -324,7 +324,7 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 		double oldZMax = zMax;
 		zMax = newZMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX, oldZMax, zMax));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX, oldZMax, zMax));
 	}
 
 	/**
@@ -363,23 +363,23 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
 				return getXMin();
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
 				return getXMax();
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
 				return getYMin();
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
 				return getYMax();
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
 				return getZMin();
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
 				return getZMax();
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XDIMENSION:
 				return getXDimension();
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YDIMENSION:
 				return getYDimension();
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION:
 				return getZDimension();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -393,22 +393,22 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
 				setXMin((Double)newValue);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
 				setXMax((Double)newValue);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
 				setYMin((Double)newValue);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
 				setYMax((Double)newValue);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
 				setZMin((Double)newValue);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
 				setZMax((Double)newValue);
 				return;
 		}
@@ -423,22 +423,22 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
 				setXMin(XMIN_EDEFAULT);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
 				setXMax(XMAX_EDEFAULT);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
 				setYMin(YMIN_EDEFAULT);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
 				setYMax(YMAX_EDEFAULT);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
 				setZMin(ZMIN_EDEFAULT);
 				return;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
 				setZMax(ZMAX_EDEFAULT);
 				return;
 		}
@@ -453,23 +453,23 @@ public class CartesianCoordinatesSetExtentImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMIN:
 				return xMin != XMIN_EDEFAULT;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XMAX:
 				return xMax != XMAX_EDEFAULT;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMIN:
 				return yMin != YMIN_EDEFAULT;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YMAX:
 				return yMax != YMAX_EDEFAULT;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMIN:
 				return zMin != ZMIN_EDEFAULT;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZMAX:
 				return zMax != ZMAX_EDEFAULT;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__XDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__XDIMENSION:
 				return getXDimension() != XDIMENSION_EDEFAULT;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__YDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__YDIMENSION:
 				return getYDimension() != YDIMENSION_EDEFAULT;
-			case Data3dPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT__ZDIMENSION:
 				return getZDimension() != ZDIMENSION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

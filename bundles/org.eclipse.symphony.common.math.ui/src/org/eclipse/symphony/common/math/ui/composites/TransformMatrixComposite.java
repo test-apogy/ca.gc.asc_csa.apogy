@@ -16,8 +16,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
-import org.eclipse.symphony.common.math.MathFactory;
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.math.provider.MathEditUtils;
@@ -130,7 +130,7 @@ public class TransformMatrixComposite extends Composite {
 	
 	private Tuple3d getPositionTuple3d() {
 		if (positionTuple3d == null){
-			positionTuple3d = MathFactory.eINSTANCE.createTuple3d();			
+			positionTuple3d = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();			
 		}
 		return positionTuple3d;
 	}
@@ -151,30 +151,30 @@ public class TransformMatrixComposite extends Composite {
 							
 							switch (msg.getFeatureID(Tuple3d.class)){
 							
-							case MathPackage.TUPLE3D__X:
+							case Symphony__CommonMathPackage.TUPLE3D__X:
 								if (editingDomain == null){
 									getMatrix().setM03(getPositionTuple3d().getX());
 								}else{
 									editingDomain.getCommandStack().execute(
-											SetCommand.create(editingDomain, getMatrix(), MathPackage.Literals.MATRIX4X4__M03, positionTuple3d.getX()));
+											SetCommand.create(editingDomain, getMatrix(), Symphony__CommonMathPackage.Literals.MATRIX4X4__M03, positionTuple3d.getX()));
 								}							
 								break;
 								
-							case MathPackage.TUPLE3D__Y:
+							case Symphony__CommonMathPackage.TUPLE3D__Y:
 								if (editingDomain == null){
 									getMatrix().setM13(getPositionTuple3d().getY());
 								}else{
 									editingDomain.getCommandStack().execute(
-											SetCommand.create(editingDomain, getMatrix(), MathPackage.Literals.MATRIX4X4__M13, positionTuple3d.getY()));
+											SetCommand.create(editingDomain, getMatrix(), Symphony__CommonMathPackage.Literals.MATRIX4X4__M13, positionTuple3d.getY()));
 								}							
 								break;
 								
-							case MathPackage.TUPLE3D__Z:
+							case Symphony__CommonMathPackage.TUPLE3D__Z:
 								if (editingDomain == null){
 									getMatrix().setM23(getPositionTuple3d().getZ());
 								}else{
 									editingDomain.getCommandStack().execute(
-											SetCommand.create(editingDomain, getMatrix(), MathPackage.Literals.MATRIX4X4__M23, positionTuple3d.getZ()));
+											SetCommand.create(editingDomain, getMatrix(), Symphony__CommonMathPackage.Literals.MATRIX4X4__M23, positionTuple3d.getZ()));
 								}							
 								break;							
 							}
@@ -192,7 +192,7 @@ public class TransformMatrixComposite extends Composite {
 	
 	private Tuple3d getOrientationTuple3d() {
 		if (orientationTuple3d == null){
-			orientationTuple3d = MathFactory.eINSTANCE.createTuple3d();
+			orientationTuple3d = Symphony__CommonMathFactory.eINSTANCE.createTuple3d();
 		}
 		return orientationTuple3d;
 	}

@@ -1,7 +1,7 @@
 package org.eclipse.symphony.common.geometry.data3d.ui.adapters;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIFactory;
+import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIFactory;
 import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -22,7 +22,7 @@ public class TriangularMeshPresentationAdapter implements
 			throw new IllegalArgumentException();
 		}
 
-		TriangularMeshPresentation presentation = Data3DUIFactory.eINSTANCE.createTriangularMeshPresentation();
+		TriangularMeshPresentation presentation = Symphony__CommonGeometryData3DUIFactory.eINSTANCE.createTriangularMeshPresentation();
 
 		ContentNode<CartesianTriangularMesh> cNode = (ContentNode<CartesianTriangularMesh>) node;
 

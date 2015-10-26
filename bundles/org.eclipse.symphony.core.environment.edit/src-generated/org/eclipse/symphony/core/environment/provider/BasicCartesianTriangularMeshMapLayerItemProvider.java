@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -162,7 +162,7 @@ public class BasicCartesianTriangularMeshMapLayerItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH,
-				 Data3dFactory.eINSTANCE.createCartesianTriangularMesh()));
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh()));
 	}
 
 }

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.emf.FeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getFeatureNodeAdapter()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface FeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source Object</em>' reference.
 	 * @see #setSourceObject(EObject)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getFeatureNodeAdapter_SourceObject()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter_SourceObject()
 	 * @model
 	 * @generated
 	 */
@@ -73,7 +73,7 @@ public interface FeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Node</em>' reference.
 	 * @see #setFeatureNode(AbstractFeatureNode)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getFeatureNodeAdapter_FeatureNode()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter_FeatureNode()
 	 * @model
 	 * @generated
 	 */
@@ -99,7 +99,7 @@ public interface FeatureNodeAdapter extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(Object)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getFeatureNodeAdapter_CurrentValue()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter_CurrentValue()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -129,7 +129,7 @@ public interface FeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Resolved</em>' attribute.
 	 * @see #setResolved(boolean)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getFeatureNodeAdapter_Resolved()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getFeatureNodeAdapter_Resolved()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */

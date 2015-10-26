@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.MeshCoordinatesShapesSampler;
 import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
@@ -73,7 +73,7 @@ public class MeshCoordinatesShapesSamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshCoordinatesShapesSampler_coordinatesSamplingShapes_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshCoordinatesShapesSampler_coordinatesSamplingShapes_feature", "_UI_MeshCoordinatesShapesSampler_type"),
-				 DataPackage.Literals.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES,
+				 Symphony__CommonGeometryDataPackage.Literals.MESH_COORDINATES_SHAPES_SAMPLER__COORDINATES_SAMPLING_SHAPES,
 				 true,
 				 false,
 				 true,
@@ -96,7 +96,7 @@ public class MeshCoordinatesShapesSamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshCoordinatesShapesSampler_shapeSamplingMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshCoordinatesShapesSampler_shapeSamplingMode_feature", "_UI_MeshCoordinatesShapesSampler_type"),
-				 DataPackage.Literals.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE,
+				 Symphony__CommonGeometryDataPackage.Literals.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class MeshCoordinatesShapesSamplerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshCoordinatesShapesSampler_polygonSamplingMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshCoordinatesShapesSampler_polygonSamplingMode_feature", "_UI_MeshCoordinatesShapesSampler_type"),
-				 DataPackage.Literals.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE,
+				 Symphony__CommonGeometryDataPackage.Literals.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE,
 				 true,
 				 false,
 				 false,
@@ -157,8 +157,8 @@ public class MeshCoordinatesShapesSamplerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MeshCoordinatesShapesSampler.class)) {
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
-			case DataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__SHAPE_SAMPLING_MODE:
+			case Symphony__CommonGeometryDataPackage.MESH_COORDINATES_SHAPES_SAMPLER__POLYGON_SAMPLING_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

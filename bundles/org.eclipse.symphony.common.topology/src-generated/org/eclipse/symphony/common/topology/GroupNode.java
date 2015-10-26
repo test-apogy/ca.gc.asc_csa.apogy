@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.common.topology.GroupNode#getChildren <em>Children</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getGroupNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getGroupNode()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface GroupNode extends Node {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Children</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getGroupNode_Children()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getGroupNode_Children()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -11,7 +11,8 @@ import org.eclipse.symphony.common.processors.Processor;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This processor sub-samples a point cloud using a voxel approach based on an implementation of J. Bakambu from MDA.
+ * This processor sub-samples a point cloud using a voxel
+ * approach based on an implementation of J. Bakambu from MDA.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -25,7 +26,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution <em>Tile Resolution</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVoxelBased3DPointCloudResampler()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler()
  * @model
  * @generated
  */
@@ -41,7 +42,7 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resolution X</em>' attribute.
 	 * @see #setResolutionX(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVoxelBased3DPointCloudResampler_ResolutionX()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionX()
 	 * @model default="0.1" unique="false"
 	 * @generated
 	 */
@@ -68,7 +69,7 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resolution Y</em>' attribute.
 	 * @see #setResolutionY(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVoxelBased3DPointCloudResampler_ResolutionY()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionY()
 	 * @model default="0.1" unique="false"
 	 * @generated
 	 */
@@ -95,7 +96,7 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resolution Z</em>' attribute.
 	 * @see #setResolutionZ(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVoxelBased3DPointCloudResampler_ResolutionZ()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_ResolutionZ()
 	 * @model default="0.05" unique="false"
 	 * @generated
 	 */
@@ -122,7 +123,7 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Number Of Point Per Voxel</em>' attribute.
 	 * @see #setMinimumNumberOfPointPerVoxel(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVoxelBased3DPointCloudResampler_MinimumNumberOfPointPerVoxel()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_MinimumNumberOfPointPerVoxel()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
@@ -149,7 +150,7 @@ public interface VoxelBased3DPointCloudResampler extends Processor<CartesianCoor
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tile Resolution</em>' attribute.
 	 * @see #setTileResolution(double)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVoxelBased3DPointCloudResampler_TileResolution()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getVoxelBased3DPointCloudResampler_TileResolution()
 	 * @model default="5.0" unique="false"
 	 * @generated
 	 */

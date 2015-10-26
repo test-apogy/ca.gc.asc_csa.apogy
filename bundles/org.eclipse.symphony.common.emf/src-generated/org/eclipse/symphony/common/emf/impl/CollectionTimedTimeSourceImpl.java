@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.emf.Activator;
 import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeDirection;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -150,7 +150,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.COLLECTION_TIMED_TIME_SOURCE;
+		return Symphony__CommonEMFPackage.Literals.COLLECTION_TIMED_TIME_SOURCE;
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		boolean oldLoopEnable = loopEnable;
 		loopEnable = newLoopEnable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE, oldLoopEnable, loopEnable));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE, oldLoopEnable, loopEnable));
 	}
 
 	/**
@@ -181,7 +181,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	 */
 	public EList<Timed> getTimedsList() {
 		if (timedsList == null) {
-			timedsList = new EObjectResolvingEList<Timed>(Timed.class, this, EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST);
+			timedsList = new EObjectResolvingEList<Timed>(Timed.class, this, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST);
 		}
 		return timedsList;
 	}
@@ -197,7 +197,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 			currentTimedElement = (Timed)eResolveProxy(oldCurrentTimedElement);
 			if (currentTimedElement != oldCurrentTimedElement) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT, oldCurrentTimedElement, currentTimedElement));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT, oldCurrentTimedElement, currentTimedElement));
 			}
 		}
 		return currentTimedElement;
@@ -221,7 +221,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		Timed oldCurrentTimedElement = currentTimedElement;
 		currentTimedElement = newCurrentTimedElement;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT, oldCurrentTimedElement, currentTimedElement));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT, oldCurrentTimedElement, currentTimedElement));
 	}
 
 	/**
@@ -242,7 +242,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		Date oldEarliestDate = earliestDate;
 		earliestDate = newEarliestDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE, oldEarliestDate, earliestDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE, oldEarliestDate, earliestDate));
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		Date oldLatestDate = latestDate;
 		latestDate = newLatestDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE, oldLatestDate, latestDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE, oldLatestDate, latestDate));
 	}
 
 	@Override
@@ -367,16 +367,16 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 				return isLoopEnable();
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 				return getTimedsList();
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
 				if (resolve) return getCurrentTimedElement();
 				return basicGetCurrentTimedElement();
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 				return getEarliestDate();
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				return getLatestDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -391,20 +391,20 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 				setLoopEnable((Boolean)newValue);
 				return;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 				getTimedsList().clear();
 				getTimedsList().addAll((Collection<? extends Timed>)newValue);
 				return;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
 				setCurrentTimedElement((Timed)newValue);
 				return;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 				setEarliestDate((Date)newValue);
 				return;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				setLatestDate((Date)newValue);
 				return;
 		}
@@ -419,19 +419,19 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 				setLoopEnable(LOOP_ENABLE_EDEFAULT);
 				return;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 				getTimedsList().clear();
 				return;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
 				setCurrentTimedElement((Timed)null);
 				return;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 				setEarliestDate(EARLIEST_DATE_EDEFAULT);
 				return;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				setLatestDate(LATEST_DATE_EDEFAULT);
 				return;
 		}
@@ -446,15 +446,15 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LOOP_ENABLE:
 				return loopEnable != LOOP_ENABLE_EDEFAULT;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 				return timedsList != null && !timedsList.isEmpty();
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__CURRENT_TIMED_ELEMENT:
 				return currentTimedElement != null;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__EARLIEST_DATE:
 				return EARLIEST_DATE_EDEFAULT == null ? earliestDate != null : !EARLIEST_DATE_EDEFAULT.equals(earliestDate);
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__LATEST_DATE:
 				return LATEST_DATE_EDEFAULT == null ? latestDate != null : !LATEST_DATE_EDEFAULT.equals(latestDate);
 		}
 		return super.eIsSet(featureID);
@@ -468,10 +468,10 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_NEXT:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_NEXT:
 				jumpToNext();
 				return null;
-			case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_PREVIOUS:
+			case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE___JUMP_TO_PREVIOUS:
 				jumpToPrevious();
 				return null;
 		}
@@ -625,7 +625,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 						
 						switch (featureId) 
 						{
-							case EMFEcorePackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
+							case Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIMEDS_LIST:
 							{
 								// Initialize the current timed element and time.
 								SortedSet<Timed> sorted = getTimeSortedTimedElements();

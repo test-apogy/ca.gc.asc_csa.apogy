@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 
@@ -201,72 +201,72 @@ public class EnumerationCaseItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createLink()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createLeaf()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createURLNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createCADNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createReferencedContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createAggregateContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createReferencedGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
   /**

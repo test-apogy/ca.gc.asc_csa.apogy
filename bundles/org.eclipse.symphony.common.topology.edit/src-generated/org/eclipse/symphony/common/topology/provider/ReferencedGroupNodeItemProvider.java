@@ -15,7 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ReferencedGroupNode} object.
@@ -64,7 +64,7 @@ public class ReferencedGroupNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ReferencedGroupNode_referencedChildren_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ReferencedGroupNode_referencedChildren_feature", "_UI_ReferencedGroupNode_type"),
-				 TopologyPackage.Literals.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN,
+				 Symphony__CommonTopologyPackage.Literals.REFERENCED_GROUP_NODE__REFERENCED_CHILDREN,
 				 true,
 				 false,
 				 true,

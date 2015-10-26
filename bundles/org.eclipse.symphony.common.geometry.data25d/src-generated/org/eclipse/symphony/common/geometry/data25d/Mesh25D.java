@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data.Mesh;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getMesh25D()
+ * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getMesh25D()
  * @model
  * @generated
  */

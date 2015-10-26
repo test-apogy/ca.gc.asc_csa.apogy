@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPresentation;
-import org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage;
+import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
@@ -66,7 +66,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetPresentation_pointCloud_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetPresentation_pointCloud_feature", "_UI_CartesianCoordinatesSetPresentation_type"),
-				 Data3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD,
+				 Symphony__CommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD,
 				 true,
 				 false,
 				 true,
@@ -88,7 +88,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetPresentation_pointSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetPresentation_pointSize_feature", "_UI_CartesianCoordinatesSetPresentation_type"),
-				 Data3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE,
+				 Symphony__CommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 				 getResourceLocator(),
 				 getString("_UI_CartesianCoordinatesSetPresentation_numberOfPoints_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianCoordinatesSetPresentation_numberOfPoints_feature", "_UI_CartesianCoordinatesSetPresentation_type"),
-				 Data3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS,
+				 Symphony__CommonGeometryData3DUIPackage.Literals.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS,
 				 false,
 				 false,
 				 false,
@@ -158,8 +158,8 @@ public class CartesianCoordinatesSetPresentationItemProvider extends NodePresent
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianCoordinatesSetPresentation.class)) {
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
-			case Data3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE:
+			case Symphony__CommonGeometryData3DUIPackage.CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

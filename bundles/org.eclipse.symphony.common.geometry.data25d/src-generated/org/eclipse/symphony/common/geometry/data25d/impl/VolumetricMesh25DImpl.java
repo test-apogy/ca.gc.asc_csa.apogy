@@ -6,7 +6,7 @@
 package org.eclipse.symphony.common.geometry.data25d.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D;
 
 /**
@@ -36,7 +36,7 @@ public class VolumetricMesh25DImpl extends Mesh25DImpl implements VolumetricMesh
 	@Override
 	protected EClass eStaticClass()
 	{
-		return Data25dPackage.Literals.VOLUMETRIC_MESH25_D;
+		return Symphony__CommonGeometryData25DPackage.Literals.VOLUMETRIC_MESH25_D;
 	}
 
 } //VolumetricMesh25DImpl

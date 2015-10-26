@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.invocator.provider.InitializationDataItemProvider;
@@ -135,7 +135,7 @@ public class SymphonyInitializationDataItemProvider extends
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
 }

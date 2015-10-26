@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.common.topology.AggregateGroupNode#getAggregatedChildren <em>Aggregated Children</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getAggregateGroupNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getAggregateGroupNode()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface AggregateGroupNode extends GroupNode {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Aggregated Children</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getAggregateGroupNode_AggregatedChildren()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getAggregateGroupNode_AggregatedChildren()
 	 * @model containment="true"
 	 * @generated
 	 */

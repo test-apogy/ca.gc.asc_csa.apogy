@@ -20,8 +20,8 @@ import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsF
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPoint;
 import org.eclipse.symphony.common.geometry.data3d.provider.CartesianPositionCoordinatesItemProvider;
-import org.eclipse.symphony.common.topology.TopologyFactory;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.WayPoint} object.
@@ -76,7 +76,7 @@ public class WayPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_parent_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__PARENT,
+				 Symphony__CommonTopologyPackage.Literals.NODE__PARENT,
 				 true,
 				 false,
 				 true,
@@ -99,7 +99,7 @@ public class WayPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_description_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__DESCRIPTION,
+				 Symphony__CommonTopologyPackage.Literals.NODE__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ public class WayPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Node_nodeId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Node_nodeId_feature", "_UI_Node_type"),
-				 TopologyPackage.Literals.NODE__NODE_ID,
+				 Symphony__CommonTopologyPackage.Literals.NODE__NODE_ID,
 				 true,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ public class WayPointItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyPackage.Literals.GROUP_NODE__CHILDREN);
+			childrenFeatures.add(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN);
 		}
 		return childrenFeatures;
 	}
@@ -225,88 +225,88 @@ public class WayPointItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createLink()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createLeaf()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createURLNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createCADNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createContentNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createReferencedContentNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createAggregateContentNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createGroupNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createReferencedGroupNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
+				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
 }

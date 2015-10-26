@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getPoints <em>Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader()
+ * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface LASReader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>File</em>' attribute.
 	 * @see #setFile(String)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_File()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_File()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface LASReader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Stream</em>' attribute.
 	 * @see #setInputStream(InputStream)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_InputStream()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_InputStream()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.InputStream" transient="true"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface LASReader extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vlrs</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_Vlrs()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_Vlrs()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -112,7 +112,7 @@ public interface LASReader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Progress Monitor</em>' attribute.
 	 * @see #setProgressMonitor(IProgressMonitor)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_ProgressMonitor()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_ProgressMonitor()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.las.IProgressMonitor" transient="true"
 	 * @generated
 	 */
@@ -138,7 +138,7 @@ public interface LASReader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Header</em>' reference.
 	 * @see #setHeader(LASHeader)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_Header()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_Header()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -164,7 +164,7 @@ public interface LASReader extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader_Points()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getLASReader_Points()
 	 * @model transient="true"
 	 * @generated
 	 */

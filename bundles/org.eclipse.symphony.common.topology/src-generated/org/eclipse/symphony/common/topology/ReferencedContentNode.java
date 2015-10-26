@@ -16,7 +16,7 @@ package org.eclipse.symphony.common.topology;
  *   <li>{@link org.eclipse.symphony.common.topology.ReferencedContentNode#getReferencedContent <em>Referenced Content</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getReferencedContentNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getReferencedContentNode()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface ReferencedContentNode<T> extends ContentNode<T> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Referenced Content</em>' reference.
 	 * @see #setReferencedContent(Object)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getReferencedContentNode_ReferencedContent()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getReferencedContentNode_ReferencedContent()
 	 * @model kind="reference"
 	 * @generated
 	 */

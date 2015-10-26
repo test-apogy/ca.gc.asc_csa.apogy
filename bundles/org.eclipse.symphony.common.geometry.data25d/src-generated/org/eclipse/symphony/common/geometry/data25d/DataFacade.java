@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getDataFacade()
+ * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getDataFacade()
  * @model
  * @generated
  */

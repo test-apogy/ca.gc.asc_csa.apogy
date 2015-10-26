@@ -34,8 +34,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
@@ -73,7 +73,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.DATA3D_FACADE;
+		return Symphony__CommonGeometryData3DPackage.Literals.DATA3D_FACADE;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianPositionCoordinates createCartesianPositionCoordinates(
 			double x, double y, double z) {
-		CartesianPositionCoordinates coord = Data3dFactory.eINSTANCE
+		CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianPositionCoordinates();
 
 		coord.setX(x);
@@ -100,7 +100,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianOrientationCoordinates createCartesianOrientationCoordinates(
 			double xRotation, double yRotation, double zRotation) {
-		CartesianOrientationCoordinates coord = Data3dFactory.eINSTANCE
+		CartesianOrientationCoordinates coord = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianOrientationCoordinates();
 
 		coord.setXRotation(xRotation);
@@ -117,7 +117,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public SphericalCoordinates createSphericalCoordinates(double phi,
 			double theta, double r) {
-		SphericalCoordinates coord = Data3dFactory.eINSTANCE
+		SphericalCoordinates coord = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createSphericalCoordinates();
 
 		coord.setPhi(phi);
@@ -134,7 +134,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public Pose createPose(double x, double y, double z, double xRotation,
 			double yRotation, double zRotation) {
-		Pose pose = Data3dFactory.eINSTANCE.createPose();
+		Pose pose = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose();
 		pose.setX(x);
 		pose.setY(y);
 		pose.setZ(z);
@@ -164,7 +164,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public Pose createPose(CartesianPositionCoordinates position,
 			CartesianOrientationCoordinates orientation) {
-		Pose pose = Data3dFactory.eINSTANCE.createPose();
+		Pose pose = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose();
 
 		pose.setX(position.getX());
 		pose.setY(position.getY());
@@ -186,7 +186,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 			CartesianPositionCoordinates v1, CartesianPositionCoordinates v2,
 			CartesianPositionCoordinates v3) {
 
-		CartesianPolygon polygon = Data3dFactory.eINSTANCE
+		CartesianPolygon polygon = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianPolygon();
 		polygon.getVertices().add(v1);
 		polygon.getVertices().add(v2);
@@ -202,7 +202,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianPositionCoordinates createCartesianPositionCoordinates(
 			CartesianPositionCoordinates coordinates) {
-		CartesianPositionCoordinates coord = Data3dFactory.eINSTANCE
+		CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianPositionCoordinates();
 
 		coord.setX(coordinates.getX());
@@ -219,7 +219,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianOrientationCoordinates createCartesianOrientationCoordinates(
 			CartesianOrientationCoordinates coordinates) {
-		CartesianOrientationCoordinates coord = Data3dFactory.eINSTANCE
+		CartesianOrientationCoordinates coord = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianOrientationCoordinates();
 
 		coord.setXRotation(coordinates.getXRotation());
@@ -248,7 +248,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	public CartesianTriangle createCartesianTriangle(
 			CartesianPositionCoordinates v1, CartesianPositionCoordinates v2,
 			CartesianPositionCoordinates v3) {
-		CartesianTriangle triangle = Data3dFactory.eINSTANCE
+		CartesianTriangle triangle = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianTriangle();
 		triangle.getVertices().add(v1);
 		triangle.getVertices().add(v2);
@@ -264,7 +264,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public <T extends CartesianPolygon> CartesianTriangle createCartesianTriangle(
 			T polygon) throws IllegalArgumentException {
-		CartesianTriangle triangle = Data3dFactory.eINSTANCE
+		CartesianTriangle triangle = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianTriangle();
 
 		if (polygon.getVertices().size() != 3) {
@@ -284,7 +284,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	public CartesianCoordinatesSet applyTransform(
 			CartesianCoordinatesSet points, Matrix4d trMatrix) {
 
-		CartesianCoordinatesSet trPoints = Data3dFactory.eINSTANCE
+		CartesianCoordinatesSet trPoints = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianCoordinatesSet();
 
 		List<CartesianPositionCoordinates> pointList = new ArrayList<CartesianPositionCoordinates>();
@@ -312,14 +312,14 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianCoordinatesMesh createCartesianCoordinatesMesh(
 			List<CartesianPolygon> polygons) {
-		CartesianCoordinatesMesh mesh = Data3dFactory.eINSTANCE
+		CartesianCoordinatesMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianCoordinatesMesh();
 
 		TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates> originalToCopyMap = new TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates>(
 				new Geometry3dUtilities.CartesianPositionCoordinatesDistanceComparator());
 		for (CartesianPolygon polygon : polygons) {
 			// Creates a new polygon.
-			CartesianPolygon polygonCopy = Data3dFactory.eINSTANCE
+			CartesianPolygon polygonCopy = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createCartesianPolygon();
 			mesh.getPolygons().add(polygonCopy);
 
@@ -355,14 +355,14 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianTriangularMesh createCartesianTriangularMesh(
 			List<CartesianTriangle> polygons) {
-		CartesianTriangularMesh mesh = Data3dFactory.eINSTANCE
+		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianTriangularMesh();
 
 		TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates> originalToCopyMap = new TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates>(
 				new Geometry3dUtilities.CartesianPositionCoordinatesDistanceComparator());
 		for (CartesianPolygon polygon : polygons) {
 			// Creates a new polygon.
-			CartesianTriangle polygonCopy = Data3dFactory.eINSTANCE
+			CartesianTriangle polygonCopy = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createCartesianTriangle();
 			mesh.getPolygons().add(polygonCopy);
 
@@ -445,7 +445,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 		List<CartesianTriangle> triangles = new ArrayList<CartesianTriangle>();
 
 		for (CartesianTriangle tri : mesh.getPolygons()) {
-			CartesianTriangle newTri = Data3dFactory.eINSTANCE
+			CartesianTriangle newTri = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createCartesianTriangle();
 			for (CartesianPositionCoordinates triPoint : tri.getVertices()) {
 				int id = pointToIdMap.get(triPoint);
@@ -456,7 +456,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 			triangles.add(newTri);
 		}
 
-		CartesianTriangularMesh trMesh = Data3dFactory.eINSTANCE
+		CartesianTriangularMesh trMesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianTriangularMesh();
 
 		trMesh.getPoints().addAll(trPoints);
@@ -547,7 +547,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 			trPoints.add(pi);
 		}
 
-		NormalPointCloud trPointCloud = Data3dFactory.eINSTANCE
+		NormalPointCloud trPointCloud = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createNormalPointCloud();
 		trPointCloud.setNormals(trNormals);
 		trPointCloud.setPoints(trPoints);
@@ -562,14 +562,14 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianCoordinatesMesh createCartesianCoordinatesMesh(
 			CartesianTriangularMesh cartesianTriangularMesh) {
-		CartesianCoordinatesMesh ccmesh = Data3dFactory.eINSTANCE
+		CartesianCoordinatesMesh ccmesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianCoordinatesMesh();
 
 		TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates> originalToCopyMap = new TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates>(
 				new Geometry3dUtilities.CartesianPositionCoordinatesDistanceComparator());
 		for (CartesianTriangle polygon : cartesianTriangularMesh.getPolygons()) {
 			// Creates a new polygon.
-			CartesianPolygon polygonCopy = Data3dFactory.eINSTANCE
+			CartesianPolygon polygonCopy = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createCartesianPolygon();
 			ccmesh.getPolygons().add(polygonCopy);
 
@@ -605,7 +605,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianTriangularMesh createCartesianTriangularMesh(CartesianTriangularMesh cartesianTriangularMesh) 
 	{
-		CartesianTriangularMesh trimesh = Data3dFactory.eINSTANCE.createCartesianTriangularMesh();
+		CartesianTriangularMesh trimesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 
 		TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates> originalToCopyMap = new TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates>(
 				new Geometry3dUtilities.CartesianPositionCoordinatesDistanceComparator());
@@ -627,7 +627,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 		for (CartesianPolygon polygon : cartesianTriangularMesh.getPolygons()) 
 		{
 			// Creates a new polygon.
-			CartesianTriangle polygonCopy = Data3dFactory.eINSTANCE.createCartesianTriangle();
+			CartesianTriangle polygonCopy = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle();
 
 			// Copies the vertex and keep a reference to the original.
 			for (CartesianPositionCoordinates point : polygon.getVertices()) 
@@ -702,7 +702,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 * @generated_NOT
 	 */
 	public PointNormalLocator createPointNormalLocator(NormalPointCloud input) {
-		PointNormalLocator locator = Data3dFactory.eINSTANCE
+		PointNormalLocator locator = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createPointNormalLocator();
 		locator.setDataSet(input);
 
@@ -741,7 +741,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 		int xDimension = map.keySet().size();
 
 		// Creates the DigitalElevationMap.
-		DigitalElevationMap result = Data3dFactory.eINSTANCE
+		DigitalElevationMap result = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createDigitalElevationMap();
 		result.setXDimension(xDimension);
 		result.setYDimension(yDimension);
@@ -767,7 +767,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	 */
 	public CartesianTriangularMesh concatenateTriangularMeshes(
 			EList<CartesianTriangularMesh> listOfTriangularMeshes) {
-		CartesianTriangularMesh contatenatedMesh = Data3dFactory.eINSTANCE
+		CartesianTriangularMesh contatenatedMesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianTriangularMesh();
 
 		TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates> originalToCopyMap = new TreeMap<CartesianPositionCoordinates, CartesianPositionCoordinates>(
@@ -778,7 +778,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 			for (CartesianPolygon polygon : triMesh.getPolygons()) {
 
 				// Creates a new polygon.
-				CartesianTriangle polygonCopy = Data3dFactory.eINSTANCE
+				CartesianTriangle polygonCopy = Symphony__CommonGeometryData3DFactory.eINSTANCE
 						.createCartesianTriangle();
 
 				// Copies the vertex and keep a reference to the original.
@@ -831,56 +831,56 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
 				return createCartesianPositionCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
 				return createCartesianOrientationCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Data3dPackage.DATA3D_FACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE:
 				return createSphericalCoordinates((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case Data3dPackage.DATA3D_FACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createPose((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4), (Double)arguments.get(5));
-			case Data3dPackage.DATA3D_FACADE___CREATE_POSE__POSE:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_POSE__POSE:
 				return createPose((Pose)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES:
 				return createPose((CartesianPositionCoordinates)arguments.get(0), (CartesianOrientationCoordinates)arguments.get(1));
-			case Data3dPackage.DATA3D_FACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD:
 				return createPointNormalLocator((NormalPointCloud)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET:
 				return createDigitalElevationMap((CartesianCoordinatesSet)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
 				return createCartesianPolygon((CartesianPositionCoordinates)arguments.get(0), (CartesianPositionCoordinates)arguments.get(1), (CartesianPositionCoordinates)arguments.get(2));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES:
 				return createCartesianPositionCoordinates((CartesianPositionCoordinates)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES:
 				return createCartesianOrientationCoordinates((CartesianOrientationCoordinates)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH:
 				return createCartesianCoordinatesMesh((CartesianCoordinatesMesh)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
 				return createCartesianTriangle((CartesianPositionCoordinates)arguments.get(0), (CartesianPositionCoordinates)arguments.get(1), (CartesianPositionCoordinates)arguments.get(2));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON:
 				return createCartesianTriangle((CartesianPolygon)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST:
 				return createCartesianCoordinatesMesh((List<CartesianPolygon>)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH:
 				return createCartesianCoordinatesMesh((CartesianTriangularMesh)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST:
 				return createCartesianTriangularMesh((List<CartesianTriangle>)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH:
 				return createCartesianTriangularMesh((CartesianTriangularMesh)arguments.get(0));
-			case Data3dPackage.DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D:
 				return applyTransform((CartesianCoordinatesSet)arguments.get(0), (Matrix4d)arguments.get(1));
-			case Data3dPackage.DATA3D_FACADE___APPLY_TRANSFORM__LIST_MATRIX4D:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___APPLY_TRANSFORM__LIST_MATRIX4D:
 				return applyTransform((List<CartesianPositionCoordinates>)arguments.get(0), (Matrix4d)arguments.get(1));
-			case Data3dPackage.DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D:
 				return applyTransform((CartesianTriangularMesh)arguments.get(0), (Matrix4d)arguments.get(1));
-			case Data3dPackage.DATA3D_FACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D:
 				return applyTransformInt((CartesianTriangularMesh)arguments.get(0), (Matrix4d)arguments.get(1));
-			case Data3dPackage.DATA3D_FACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D:
 				return applyTransform((NormalPointCloud)arguments.get(0), (Matrix4d)arguments.get(1));
-			case Data3dPackage.DATA3D_FACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE:
 				updateCartesianCoordinatesSet((CartesianCoordinatesSet)arguments.get(0), (double[][])arguments.get(1));
 				return null;
-			case Data3dPackage.DATA3D_FACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST:
+			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST:
 				return concatenateTriangularMeshes((EList<CartesianTriangularMesh>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -908,7 +908,7 @@ public class Data3dFacadeImpl extends MinimalEObjectImpl.Container implements Da
 	public CartesianCoordinatesSet createCartesianCoordinatesSet(
 			List<Point3d> points) {
 
-		CartesianCoordinatesSet pointSet = Data3dFactory.eINSTANCE
+		CartesianCoordinatesSet pointSet = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianCoordinatesSet();
 
 		for (Point3d point : points) {

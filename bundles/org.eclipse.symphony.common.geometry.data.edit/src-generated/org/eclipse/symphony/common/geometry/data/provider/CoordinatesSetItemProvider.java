@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
-import org.eclipse.symphony.common.geometry.data.DataFactory;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataFactory;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data.CoordinatesSet} object.
@@ -84,7 +84,7 @@ public class CoordinatesSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CoordinatesSet_normals_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CoordinatesSet_normals_feature", "_UI_CoordinatesSet_type"),
-				 DataPackage.Literals.COORDINATES_SET__NORMALS,
+				 Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__NORMALS,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class CoordinatesSetItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(DataPackage.Literals.COORDINATES_SET__POINTS);
+			childrenFeatures.add(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS);
 		}
 		return childrenFeatures;
 	}
@@ -167,10 +167,10 @@ public class CoordinatesSetItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CoordinatesSet.class)) {
-			case DataPackage.COORDINATES_SET__NORMALS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case DataPackage.COORDINATES_SET__POINTS:
+			case Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,8 +191,8 @@ public class CoordinatesSetItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 DataFactory.eINSTANCE.createCoordinates()));
+				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
+				 Symphony__CommonGeometryDataFactory.eINSTANCE.createCoordinates()));
 	}
 
 	/**

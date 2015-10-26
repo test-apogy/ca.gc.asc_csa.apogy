@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.geometry.data.provider.CoordinatesItemProvider;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates} object.
@@ -76,7 +76,7 @@ public class CartesianOrientationCoordinatesItemProvider
 						 getResourceLocator(),
 						 getString("_UI_CartesianOrientationCoordinates_xRotation_feature"),
 						 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_xRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-						 Data3dPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__XROTATION,
+						 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__XROTATION,
 						 true,
 						 false,
 						 false,
@@ -110,7 +110,7 @@ public class CartesianOrientationCoordinatesItemProvider
 						 getResourceLocator(),
 						 getString("_UI_CartesianOrientationCoordinates_yRotation_feature"),
 						 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_yRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-						 Data3dPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__YROTATION,
+						 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__YROTATION,
 						 true,
 						 false,
 						 false,
@@ -143,7 +143,7 @@ public class CartesianOrientationCoordinatesItemProvider
 						 getResourceLocator(),
 						 getString("_UI_CartesianOrientationCoordinates_zRotation_feature"),
 						 getString("_UI_PropertyDescriptor_description", "_UI_CartesianOrientationCoordinates_zRotation_feature", "_UI_CartesianOrientationCoordinates_type"),
-						 Data3dPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION,
+						 Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION,
 						 true,
 						 false,
 						 false,
@@ -203,9 +203,9 @@ public class CartesianOrientationCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianOrientationCoordinates.class)) {
-			case Data3dPackage.CARTESIAN_ORIENTATION_COORDINATES__XROTATION:
-			case Data3dPackage.CARTESIAN_ORIENTATION_COORDINATES__YROTATION:
-			case Data3dPackage.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__XROTATION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__YROTATION:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES__ZROTATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

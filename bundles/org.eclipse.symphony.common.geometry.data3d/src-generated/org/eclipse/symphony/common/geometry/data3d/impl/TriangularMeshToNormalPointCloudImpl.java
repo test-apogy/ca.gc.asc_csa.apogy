@@ -14,8 +14,8 @@ import javax.vecmath.Vector3d;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
 import org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator;
 import org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud;
@@ -44,7 +44,7 @@ public class TriangularMeshToNormalPointCloudImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD;
+		return Symphony__CommonGeometryData3DPackage.Literals.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class TriangularMeshToNormalPointCloudImpl extends
 	public NormalPointCloud process(CartesianTriangularMesh input)
 			throws Exception {
 
-		NormalPointCloud output = Data3dFactory.eINSTANCE
+		NormalPointCloud output = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createNormalPointCloud();
 
 		List<Vector3d> normals = null;
@@ -89,7 +89,7 @@ public class TriangularMeshToNormalPointCloudImpl extends
 		if (input.getNormals() == null
 				|| input.getNormals().size() != input.getPoints().size()) {
 			// We compute the normals.
-			TriangularMeshNormalsCalculator normalsCalculator = Data3dFactory.eINSTANCE
+			TriangularMeshNormalsCalculator normalsCalculator = Symphony__CommonGeometryData3DFactory.eINSTANCE
 					.createTriangularMeshNormalsCalculator();
 			input = normalsCalculator.process(input);
 		}

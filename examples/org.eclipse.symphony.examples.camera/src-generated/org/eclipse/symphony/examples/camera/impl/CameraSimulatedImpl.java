@@ -21,7 +21,7 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
 import org.eclipse.symphony.common.images.EImage;
-import org.eclipse.symphony.common.images.ImagesCoreFactory;
+import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.camera.Activator;
@@ -597,7 +597,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 		}
 		
 		// Create an EImage and use the extracted BufferedImage (if the read was successful)
-		EImage image = ImagesCoreFactory.eINSTANCE.createEImage();
+		EImage image = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
 		image.setImageContent(bufferedImage);
 		
 		// Return the new EImage

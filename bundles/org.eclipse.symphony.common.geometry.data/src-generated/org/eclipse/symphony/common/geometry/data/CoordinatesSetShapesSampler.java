@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSetShapesSampler()
+ * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSetShapesSampler()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface CoordinatesSetShapesSampler<T extends Coordinates> extends Proc
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Coordinates Sampling Shapes</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSetShapesSampler_CoordinatesSamplingShapes()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSetShapesSampler_CoordinatesSamplingShapes()
 	 * @model
 	 * @generated
 	 */
@@ -53,7 +53,7 @@ public interface CoordinatesSetShapesSampler<T extends Coordinates> extends Proc
 	 * @return the value of the '<em>Shape Sampling Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data.ShapeSamplingMode
 	 * @see #setShapeSamplingMode(ShapeSamplingMode)
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSetShapesSampler_ShapeSamplingMode()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSetShapesSampler_ShapeSamplingMode()
 	 * @model default="UNION" unique="false" required="true"
 	 * @generated
 	 */

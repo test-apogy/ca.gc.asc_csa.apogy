@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.io.jinput.JInputFactory;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
 import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
 import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
 
@@ -134,6 +134,6 @@ public class ControllerTriggerItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER,
-				 JInputFactory.eINSTANCE.createEComponentQualifier()));
+				 Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier()));
 	}
 }

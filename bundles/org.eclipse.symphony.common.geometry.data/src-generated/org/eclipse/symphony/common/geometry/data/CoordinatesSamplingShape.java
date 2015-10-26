@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.geometry.data;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSamplingShape()
+ * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getCoordinatesSamplingShape()
  * @model interface="true" abstract="true"
  * @generated
  */

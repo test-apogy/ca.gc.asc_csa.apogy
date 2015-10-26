@@ -1,9 +1,9 @@
-@GenModel(prefix="Data3d",
+@GenModel(prefix="Symphony__CommonGeometryData3D",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Data3d",
+	      modelName="Symphony__CommonGeometryData3D",
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.edit/src-generated")
@@ -386,7 +386,10 @@ class MeshSmoother extends Processor<CartesianCoordinatesSet, CartesianTriangula
 	int numberOfIterations = "1"
 }
 
-@GenModel(documentation="This processor sub-samples a point cloud using a voxel approach based on an implementation of J. Bakambu from MDA.")
+/*
+ * This processor sub-samples a point cloud using a voxel
+ * approach based on an implementation of J. Bakambu from MDA.
+ */
 class VoxelBased3DPointCloudResampler extends Processor<CartesianCoordinatesSet, CartesianCoordinatesSet>
 {
 	double resolutionX = "0.1"
@@ -404,7 +407,16 @@ class RigidBodyPoseTracker
 {
 	refers readonly derived PositionMarker [0..*] positionMarkersAtOrigin
 
-	@GenModel(documentation="This method computes the 3D rigid body transformation between two 3D data sets. First, the rotation matrix is computed using the Singular Values Decomposition (SVD) approach. Then, translation composent is computed. Finally, rotation and translation components are packed into an homogenous 4x4 matrix. Note : at least 3 markers are required to solve the 3D pose. If more than 3 markers are specified, the best fit (minimizing the root meaning squarre error) will be found.")	
+	/*
+	 * This method computes the 3D rigid body transformation between two 3D
+	 * data sets. First, the rotation matrix is computed using the Singular
+	 * Values Decomposition (SVD) approach. Then, translation composent is
+	 * computed. Finally, rotation and translation components are packed into
+	 * an homogenous 4x4 matrix.
+	 * Note: At least 3 markers are required to solve the 3D pose. If more than
+	 * 3 markers are specified, the best fit (minimizing the root meaning square
+	 * error) will be found.
+	 */
 	op Point3d computeTransformation(EList<PositionMarker> markerPositionsToTrack) throws Exception
 	
 	op Matrix4d computeTransformation(List<PositionMarker> markerPositionsToTrack) throws Exception

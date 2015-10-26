@@ -53,8 +53,8 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.EMFEcoreFactory;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -296,7 +296,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 		ViewerSupport.bind(variablesViewer, EMFObservables.observeList(
 				variables,
 				EMFEcoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES),
-				EMFProperties.value(EMFEcorePackage.Literals.NAMED__NAME));
+				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
 
 		/**
 		 * Variable Selection Binding.
@@ -344,7 +344,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 		};
 		ViewerSupport.bind(typeMemberViewer, variableFeatureReference,
 				typeMemberChildrenProperty,
-				EMFProperties.value(EMFEcorePackage.Literals.NAMED__NAME));
+				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
 
 		/**
 		 * Sets Type Member Selection.
@@ -551,12 +551,12 @@ public class VariableFeatureReferenceComposite extends Composite {
 	private ListRootNode createListRootNode(EStructuralFeature[] features) {
 		ListRootNode listRootNode = null;
 		if (features.length > 0) {
-			listRootNode = EMFEcoreFactory.eINSTANCE.createListRootNode();
+			listRootNode = Symphony__CommonEMFFactory.eINSTANCE.createListRootNode();
 			listRootNode.setSourceClass(EMFEcoreInvocatorFacade.INSTANCE
 					.getInstanceClass(variableFeatureReference));
 			AbstractFeatureListNode parentNode = listRootNode;
 			for (int i = 0; i < features.length; i++) {
-				ListFeatureNode node = EMFEcoreFactory.eINSTANCE
+				ListFeatureNode node = Symphony__CommonEMFFactory.eINSTANCE
 						.createListFeatureNode();
 				node.setStructuralFeature(features[i]);
 				parentNode.setChild(node);

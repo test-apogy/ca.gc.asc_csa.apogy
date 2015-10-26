@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.processors;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.processors.ProcessorsPackage#getJobProcessorsChain()
+ * @see org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage#getJobProcessorsChain()
  * @model
  * @generated
  */

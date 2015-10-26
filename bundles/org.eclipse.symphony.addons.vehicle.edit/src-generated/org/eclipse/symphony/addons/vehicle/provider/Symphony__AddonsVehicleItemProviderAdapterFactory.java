@@ -39,12 +39,12 @@ import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.BindingsList;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
-import org.eclipse.symphony.common.topology.util.TopologySwitch;
+import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
@@ -748,6 +748,298 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
   }
 
   /**
+	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class Symphony__CommonTopologyChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends Symphony__CommonTopologySwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseContentNode(ContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshNodeEntry()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehicleToolsFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelVehicleUtilities()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshExtent2D()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshNodeEntry()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehicleToolsFacade()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelVehicleUtilities()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshExtent2D()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseGroupNode(GroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseAggregateGroupNode(AggregateGroupNode object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
+		}
+	}
+
+		/**
 	 * A child creation extender for the {@link TopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1010,22 +1302,22 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseGroupNode(GroupNode object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				return null;
@@ -1062,305 +1354,5 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
 		}
 	}
-
-		/**
-	 * A child creation extender for the {@link TopologyPackage}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public static class TopologyChildCreationExtender implements IChildCreationExtender
-  {
-    /**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    protected static class CreationSwitch extends TopologySwitch<Object>
-    {
-      /**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      protected List<Object> newChildDescriptors;
-
-      /**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      protected EditingDomain editingDomain;
-
-      /**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
-      {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-      /**
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      @Override
-      public <T> Object caseContentNode(ContentNode<T> object)
-      {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshNodeEntry()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehicleToolsFacade()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelVehicleUtilities()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshExtent2D()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
-
-				return null;
-			}
- 
-      /**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public <T> Object caseAggregateContentNode(AggregateContentNode<T> object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshNodeEntry()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehicleToolsFacade()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelVehicleUtilities()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createMeshExtent2D()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerTool()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
-
-				return null;
-			}
-						/**
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      @Override
-      public Object caseGroupNode(GroupNode object)
-      {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
-
-				return null;
-			}
- 
-      /**
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      @Override
-      public Object caseAggregateGroupNode(AggregateGroupNode object)
-      {
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
-
-				return null;
-			}
- 
-      /**
-			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
-			 * @generated
-			 */
-      protected CommandParameter createChildParameter(Object feature, Object child)
-      {
-				return new CommandParameter(null, feature, child);
-			}
-
-    }
-
-    /**
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-    {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-    /**
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    public ResourceLocator getResourceLocator()
-    {
-			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
-		}
-  }
 
 }

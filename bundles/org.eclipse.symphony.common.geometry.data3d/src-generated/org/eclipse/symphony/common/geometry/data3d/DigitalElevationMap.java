@@ -17,7 +17,7 @@ package org.eclipse.symphony.common.geometry.data3d;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap#getYDimension <em>YDimension</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDigitalElevationMap()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMap()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface DigitalElevationMap extends CartesianCoordinatesSet {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XDimension</em>' attribute.
 	 * @see #setXDimension(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDigitalElevationMap_XDimension()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMap_XDimension()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -58,7 +58,7 @@ public interface DigitalElevationMap extends CartesianCoordinatesSet {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YDimension</em>' attribute.
 	 * @see #setYDimension(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDigitalElevationMap_YDimension()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMap_YDimension()
 	 * @model unique="false"
 	 * @generated
 	 */

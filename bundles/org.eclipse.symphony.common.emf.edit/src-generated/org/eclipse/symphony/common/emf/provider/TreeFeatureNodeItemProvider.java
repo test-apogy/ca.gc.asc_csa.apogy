@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TreeFeatureNode;
 
 /**
@@ -71,7 +71,7 @@ public class TreeFeatureNodeItemProvider
        getResourceLocator(),
        getString("_UI_AbstractFeatureSpecifier_structuralFeature_feature"),
        getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_structuralFeature_feature", "_UI_AbstractFeatureSpecifier_type"),
-       EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE,
+       Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__STRUCTURAL_FEATURE,
        true,
        false,
        true,
@@ -104,7 +104,7 @@ public class TreeFeatureNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_multiValued_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_multiValued_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
+				 Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED,
 				 false,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class TreeFeatureNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractFeatureSpecifier_index_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractFeatureSpecifier_index_feature", "_UI_AbstractFeatureSpecifier_type"),
-				 EMFEcorePackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
+				 Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_SPECIFIER__INDEX,
 				 true,
 				 false,
 				 false,
@@ -196,9 +196,9 @@ public class TreeFeatureNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TreeFeatureNode.class)) {
-			case EMFEcorePackage.TREE_FEATURE_NODE__STRUCTURAL_FEATURE:
-			case EMFEcorePackage.TREE_FEATURE_NODE__MULTI_VALUED:
-			case EMFEcorePackage.TREE_FEATURE_NODE__INDEX:
+			case Symphony__CommonEMFPackage.TREE_FEATURE_NODE__STRUCTURAL_FEATURE:
+			case Symphony__CommonEMFPackage.TREE_FEATURE_NODE__MULTI_VALUED:
+			case Symphony__CommonEMFPackage.TREE_FEATURE_NODE__INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

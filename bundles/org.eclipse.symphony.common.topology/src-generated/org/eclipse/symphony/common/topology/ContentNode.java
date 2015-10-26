@@ -16,7 +16,7 @@ package org.eclipse.symphony.common.topology;
  *   <li>{@link org.eclipse.symphony.common.topology.ContentNode#getContent <em>Content</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getContentNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getContentNode()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface ContentNode<T> extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Content</em>' containment reference.
 	 * @see #setContent(Object)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getContentNode_Content()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getContentNode_Content()
 	 * @model kind="reference" containment="true"
 	 * @generated
 	 */

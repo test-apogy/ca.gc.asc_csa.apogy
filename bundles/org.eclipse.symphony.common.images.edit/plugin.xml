@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.images"
-            class="org.eclipse.symphony.common.images.provider.ImagesCoreItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.images.provider.Symphony__CommonImagesItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

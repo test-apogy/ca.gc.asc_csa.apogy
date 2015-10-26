@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.emf.Timed#getTime <em>Time</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getTimed()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimed()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface Timed extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time</em>' attribute.
 	 * @see #setTime(Date)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getTimed_Time()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getTimed_Time()
 	 * @model unique="false"
 	 * @generated
 	 */

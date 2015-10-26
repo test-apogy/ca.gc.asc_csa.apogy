@@ -21,9 +21,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.math.MathFactory;
-import org.eclipse.symphony.common.topology.TopologyFactory;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
@@ -85,7 +85,7 @@ public class AssemblyLinkItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Named_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Named_name_feature", "_UI_Named_type"),
-				 EMFEcorePackage.Literals.NAMED__NAME,
+				 Symphony__CommonEMFPackage.Literals.NAMED__NAME,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class AssemblyLinkItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_Described_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Described_description_feature", "_UI_Described_type"),
-				 EMFEcorePackage.Literals.DESCRIBED__DESCRIPTION,
+				 Symphony__CommonEMFPackage.Literals.DESCRIBED__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -359,7 +359,7 @@ public class AssemblyLinkItemProvider extends ItemProviderAdapter implements
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__TRANSFORMATION_MATRIX,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -384,72 +384,72 @@ public class AssemblyLinkItemProvider extends ItemProviderAdapter implements
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createLink()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createLeaf()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createURLNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createCADNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createReferencedContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createAggregateContentNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createReferencedGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createAggregateGroupNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createPositionNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createRotationNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createTransformNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-				 TopologyFactory.eINSTANCE.createPickAndPlaceNode()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 
 	/**

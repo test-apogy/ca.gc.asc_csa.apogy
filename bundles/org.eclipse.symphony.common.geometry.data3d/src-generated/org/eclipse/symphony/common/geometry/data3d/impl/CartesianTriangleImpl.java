@@ -13,7 +13,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -87,6 +87,6 @@ public class CartesianTriangleImpl extends CartesianPolygonImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.CARTESIAN_TRIANGLE;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_TRIANGLE;
 	}
 } // CartesianTriangleImpl

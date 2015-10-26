@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.geometry.data3d"
-            class="org.eclipse.symphony.common.geometry.data3d.provider.Data3dItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -20,9 +20,16 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_common_geometry_data3d -->
       <extender
             uri="org.eclipse.symphony.common.geometry.data"
-            class="org.eclipse.symphony.common.geometry.data3d.provider.Data3dItemProviderAdapterFactory$DataChildCreationExtender"/>
+            class="org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DItemProviderAdapterFactory$Symphony__CommonGeometryDataChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <extender
+            uri="org.eclipse.symphony.common.geometry.data"
+            class="org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DItemProviderAdapterFactory$DataChildCreationExtender"/>
    </extension>
 
 </plugin>

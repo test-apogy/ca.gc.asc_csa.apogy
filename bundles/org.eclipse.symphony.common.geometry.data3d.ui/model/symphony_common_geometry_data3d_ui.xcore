@@ -1,9 +1,9 @@
-@GenModel(prefix="Data3DUI",
+@GenModel(prefix="Symphony__CommonGeometryData3DUI",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-	      modelName="Data3DUI",
+	      modelName="Symphony__CommonGeometryData3DUI",
 	      complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.ui.edit/src-generated")
@@ -44,7 +44,8 @@ class TriangularMeshPresentation extends NodePresentation
 	
 	/*
 	 * An image to be used as a texture. 
-	 * Note that the image will be applied using the relative coordinates of the mesh (i.e. relative to its minimum x and Y).
+	 * Note that the image will be applied using the relative
+	 * coordinates of the mesh (i.e. relative to its minimum X and Y).
 	 */
 	refers transient AbstractEImage textureImage
 }

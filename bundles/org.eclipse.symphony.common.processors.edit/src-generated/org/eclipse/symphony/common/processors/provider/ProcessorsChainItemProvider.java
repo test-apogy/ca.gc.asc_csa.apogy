@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.processors.ProcessorsChain;
-import org.eclipse.symphony.common.processors.ProcessorsPackage;
+import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.processors.ProcessorsChain} object.
@@ -65,7 +65,7 @@ public class ProcessorsChainItemProvider extends ProcessorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ProcessorsChain_intermediateResult_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessorsChain_intermediateResult_feature", "_UI_ProcessorsChain_type"),
-				 ProcessorsPackage.Literals.PROCESSORS_CHAIN__INTERMEDIATE_RESULT,
+				 Symphony__CommonProcessorsPackage.Literals.PROCESSORS_CHAIN__INTERMEDIATE_RESULT,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class ProcessorsChainItemProvider extends ProcessorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ProcessorsChain_runningProcessor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessorsChain_runningProcessor_feature", "_UI_ProcessorsChain_type"),
-				 ProcessorsPackage.Literals.PROCESSORS_CHAIN__RUNNING_PROCESSOR,
+				 Symphony__CommonProcessorsPackage.Literals.PROCESSORS_CHAIN__RUNNING_PROCESSOR,
 				 true,
 				 false,
 				 true,
@@ -109,7 +109,7 @@ public class ProcessorsChainItemProvider extends ProcessorItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_ProcessorsChain_processors_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessorsChain_processors_feature", "_UI_ProcessorsChain_type"),
-				 ProcessorsPackage.Literals.PROCESSORS_CHAIN__PROCESSORS,
+				 Symphony__CommonProcessorsPackage.Literals.PROCESSORS_CHAIN__PROCESSORS,
 				 true,
 				 false,
 				 true,
@@ -157,7 +157,7 @@ public class ProcessorsChainItemProvider extends ProcessorItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ProcessorsChain.class)) {
-			case ProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
+			case Symphony__CommonProcessorsPackage.PROCESSORS_CHAIN__INTERMEDIATE_RESULT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

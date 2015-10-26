@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getColumns <em>Columns</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRasterPointCloud()
+ * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRasterPointCloud()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface RasterPointCloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rows</em>' attribute.
 	 * @see #setRows(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRasterPointCloud_Rows()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRasterPointCloud_Rows()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface RasterPointCloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Columns</em>' attribute.
 	 * @see #setColumns(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRasterPointCloud_Columns()
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRasterPointCloud_Columns()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */

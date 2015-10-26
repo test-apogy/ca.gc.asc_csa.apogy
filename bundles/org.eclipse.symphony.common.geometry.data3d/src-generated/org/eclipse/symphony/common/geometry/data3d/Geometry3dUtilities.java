@@ -38,7 +38,7 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
 public class Geometry3dUtilities
 {
 
-	private static Data3dFacade data3dFacade = Data3dFactory.eINSTANCE.createData3dFacade();
+	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 
 	/**
 	 * Returns the axis that is perpendicular to the specified reference plane.
@@ -528,7 +528,7 @@ public class Geometry3dUtilities
 			
 			List<CartesianPositionCoordinates> flattenedVertices = getFlattenCoordinates(getPerpendicularPlane(axis), polygon.getVertices());						
 			
-			CartesianPolygon flattenPolygon = Data3dFactory.eINSTANCE.createCartesianPolygon();
+			CartesianPolygon flattenPolygon = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
 			flattenPolygon.getVertices().addAll(flattenedVertices);
 			
 			if(isInsidePolygon(flattenedPoint, flattenPolygon))
@@ -618,7 +618,7 @@ public class Geometry3dUtilities
 			CartesianPositionCoordinates flattenedPoint = getFlattenCoordinate(getPerpendicularPlane(axis), point);
 			List<CartesianPositionCoordinates> flattenedVertices = getFlattenCoordinates(getPerpendicularPlane(axis), polygon.getVertices());						
 			
-			CartesianPolygon flattenPolygon = Data3dFactory.eINSTANCE.createCartesianPolygon();
+			CartesianPolygon flattenPolygon = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
 			flattenPolygon.getVertices().addAll(flattenedVertices);
 			
 			if(isInsidePolygon(flattenedPoint, flattenPolygon))
@@ -685,7 +685,7 @@ public class Geometry3dUtilities
 	 */
 	public static CartesianCoordinatesMesh getProjectedCartesianCoordinatesMeshOnPlane(CartesianCoordinatesMesh mesh, CartesianPolygon projectionPlanePolygon)
 	{
-		Data3dFacade data3d = Data3dFactory.eINSTANCE.createData3dFacade();
+		Data3dFacade data3d = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 		
 		CartesianCoordinatesMesh newMesh = data3d.createCartesianCoordinatesMesh(mesh);
 		Iterator<CartesianPositionCoordinates> iterator = newMesh.getPoints().iterator();
@@ -710,7 +710,7 @@ public class Geometry3dUtilities
 	 */
 	public static CartesianTriangularMesh getProjectedCartesianTriangularMeshOnPlane(CartesianTriangularMesh mesh, CartesianPolygon projectionPlanePolygon)
 	{
-		Data3dFacade data3d = Data3dFactory.eINSTANCE.createData3dFacade();
+		Data3dFacade data3d = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 		
 		CartesianTriangularMesh newMesh = data3d.createCartesianTriangularMesh(mesh.getPolygons());
 		
@@ -2459,7 +2459,7 @@ public class Geometry3dUtilities
     public static CartesianPolygon createTransformedPolygon(Matrix4d transformationMatrix, CartesianPolygon polygon)
     {
     	/* Create an empty polygon */
-    	CartesianPolygon transformedData = Data3dFactory.eINSTANCE.createCartesianPolygon();
+    	CartesianPolygon transformedData = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon();
     	
     	/* Create a copy of the CartesianPositionCoordinates as a Point3d list */
     	List<Point3d> points = getPoint3dList(polygon.getVertices());
@@ -2482,7 +2482,7 @@ public class Geometry3dUtilities
     public static CartesianCoordinatesMesh createTransformedCartesianCoordinateMesh(Matrix4d transformationMatrix, CartesianCoordinatesMesh mesh)
     {
     	/* Create a copy of the mesh */
-    	Data3dFacade data3d = Data3dFactory.eINSTANCE.createData3dFacade();
+    	Data3dFacade data3d = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
     	CartesianCoordinatesMesh transformedMesh = data3d.createCartesianCoordinatesMesh(mesh);
     	
     	/* Create a copy of the CartesianPositionCoordinates as a Point3d list */
@@ -2509,7 +2509,7 @@ public class Geometry3dUtilities
     
     public static CartesianCoordinatesSet createTransformedCartesianCoordinatesSet(Matrix4d transformationMatrix, CartesianCoordinatesSet cartesianCoordinatesSet)
     {
-    	CartesianCoordinatesSet result = Data3dFactory.eINSTANCE.createCartesianCoordinatesSet();
+    	CartesianCoordinatesSet result = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
     	
     	// Creates a list of point on which the transformation will be applied.
 		List<Point3d> points = Geometry3dUtilities.getPoint3dList(cartesianCoordinatesSet.getPoints());
@@ -2536,7 +2536,7 @@ public class Geometry3dUtilities
     public static CartesianTriangularMesh createTransformedCartesianTriangularMesh(Matrix4d transformationMatrix, CartesianTriangularMesh mesh)
     {
     	/* Create a copy of the mesh */
-    	Data3dFacade data3d = Data3dFactory.eINSTANCE.createData3dFacade();
+    	Data3dFacade data3d = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
     	CartesianTriangularMesh transformedMesh = data3d.createCartesianTriangularMesh(mesh);
     	
     	/* Create a copy of the CartesianPositionCoordinates as a Point3d list */
@@ -2571,7 +2571,7 @@ public class Geometry3dUtilities
     {	
     	Point3d point = new Point3d(coord.getX(), coord.getY(), coord.getZ()); 
     	transformationMatrix.transform(point);
-    	return Data3dFactory.eINSTANCE.createData3dFacade().createCartesianPositionCoordinates(point.x, point.y, point.z);
+    	return Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade().createCartesianPositionCoordinates(point.x, point.y, point.z);
     }
     
     /**
@@ -2599,7 +2599,7 @@ public class Geometry3dUtilities
      */
     public static CartesianPolygon createNormalizedPolygonOfPlane(CartesianPlane plane)
     {
-    	Data3dFacade data3d = Data3dFactory.eINSTANCE.createData3dFacade();
+    	Data3dFacade data3d = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 		
 		CartesianAxis axis = Geometry3dUtilities.getPerpendicularAxis(plane);
 		
@@ -2647,7 +2647,7 @@ public class Geometry3dUtilities
 			if(p.getZ() > zMax) zMax = p.getZ();
 		}
 		
-		CartesianCoordinatesSetExtent extent = Data3dFactory.eINSTANCE.createCartesianCoordinatesSetExtent();
+		CartesianCoordinatesSetExtent extent = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSetExtent();
 		extent.setXMin(xMin);
 		extent.setXMax(xMax);
 		extent.setYMin(yMin);
@@ -2704,7 +2704,7 @@ public class Geometry3dUtilities
 
 		public CartesianPositionCoordinatesDistanceComparator()
 		{
-			this(Data3dFactory.eINSTANCE.createCartesianPositionCoordinates());
+			this(Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates());
 		}
 		
 		public CartesianPositionCoordinatesDistanceComparator(CartesianPositionCoordinates centerPoint)

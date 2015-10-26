@@ -19,8 +19,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.math.MathPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
@@ -217,7 +217,7 @@ public class TopologyUIPackageImpl extends EPackageImpl implements TopologyUIPac
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theTopologyUIPackage.createPackageContents();
@@ -941,9 +941,9 @@ public class TopologyUIPackageImpl extends EPackageImpl implements TopologyUIPac
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(listEDataType, "T");
@@ -962,23 +962,23 @@ public class TopologyUIPackageImpl extends EPackageImpl implements TopologyUIPac
 		initEReference(getTopologyPresentationRegistry_NodePresentationList(), this.getNodePresentation(), null, "nodePresentationList", null, 0, -1, TopologyPresentationRegistry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getTopologyPresentationRegistry__CreateTopologyPresentationSet__Node(), this.getTopologyPresentationSet(), "createTopologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTopologyPresentationRegistry__Release__TopologyPresentationSet(), null, "release", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTopologyPresentationRegistry__GetPresentationNode__Node(), this.getNodePresentation(), "getPresentationNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(graphicsContextEClass, GraphicsContext.class, "GraphicsContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGraphicsContext_Topology(), theTopologyPackage.getNode(), null, "topology", null, 0, 1, GraphicsContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGraphicsContext_Topology(), theSymphony__CommonTopologyPackage.getNode(), null, "topology", null, 0, 1, GraphicsContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGraphicsContext_TopologyPresentationSet(), this.getTopologyPresentationSet(), this.getTopologyPresentationSet_GraphicsContext(), "topologyPresentationSet", null, 0, 1, GraphicsContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getGraphicsContext__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(nodeSelectionEClass, NodeSelection.class, "NodeSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNodeSelection_TopologyPresentationSet(), this.getTopologyPresentationSet(), null, "topologyPresentationSet", null, 0, 1, NodeSelection.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodeSelection_SelectedNode(), theTopologyPackage.getNode(), null, "selectedNode", null, 0, 1, NodeSelection.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeSelection_SelectedNode(), theSymphony__CommonTopologyPackage.getNode(), null, "selectedNode", null, 0, 1, NodeSelection.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNodeSelection_NodePresentation(), this.getNodePresentation(), null, "nodePresentation", null, 0, 1, NodeSelection.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeSelection_RelativeIntersectionPoint(), this.getPoint3d(), "relativeIntersectionPoint", null, 0, 1, NodeSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodeSelection_AbsoluteIntersectionPoint(), this.getPoint3d(), "absoluteIntersectionPoint", null, 0, 1, NodeSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -991,24 +991,24 @@ public class TopologyUIPackageImpl extends EPackageImpl implements TopologyUIPac
 		initEReference(getTopologyPresentationSet_NodePresentationList(), this.getNodePresentation(), this.getNodePresentation_TopologyPresentationSet(), "nodePresentationList", null, 0, -1, TopologyPresentationSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getTopologyPresentationSet__GetPresentationNode__Node(), this.getNodePresentation(), "getPresentationNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTopologyPresentationSet__GetNodes(), null, "getNodes", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
-		EGenericType g2 = createEGenericType(theTopologyPackage.getNode());
+		EGenericType g2 = createEGenericType(theSymphony__CommonTopologyPackage.getNode());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
 		initEClass(nodePresentationEClass, NodePresentation.class, "NodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNodePresentation_TopologyPresentationSet(), this.getTopologyPresentationSet(), this.getTopologyPresentationSet_NodePresentationList(), "topologyPresentationSet", null, 0, -1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodePresentation_Node(), theTopologyPackage.getNode(), null, "node", null, 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodePresentation_Node(), theSymphony__CommonTopologyPackage.getNode(), null, "node", null, 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_Color(), this.getRGB(), "color", null, 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_Visible(), theEcorePackage.getEBoolean(), "visible", "true", 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_ShadowMode(), this.getShadowMode(), "shadowMode", null, 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_UseInBoundingCalculation(), theEcorePackage.getEBoolean(), "useInBoundingCalculation", "true", 0, 1, NodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNodePresentation_Centroid(), theMathPackage.getTuple3d(), null, "centroid", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getNodePresentation_Min(), theMathPackage.getTuple3d(), null, "min", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getNodePresentation_Max(), theMathPackage.getTuple3d(), null, "max", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getNodePresentation_Centroid(), theSymphony__CommonMathPackage.getTuple3d(), null, "centroid", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getNodePresentation_Min(), theSymphony__CommonMathPackage.getTuple3d(), null, "min", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getNodePresentation_Max(), theSymphony__CommonMathPackage.getTuple3d(), null, "max", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_XRange(), theEcorePackage.getEDouble(), "xRange", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_YRange(), theEcorePackage.getEDouble(), "yRange", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNodePresentation_ZRange(), theEcorePackage.getEDouble(), "zRange", null, 0, 1, NodePresentation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -1034,13 +1034,13 @@ public class TopologyUIPackageImpl extends EPackageImpl implements TopologyUIPac
 		initEClass(topologyUIFacadeEClass, TopologyUIFacade.class, "TopologyUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getTopologyUIFacade__CreateGraphicsContext__Node(), this.getGraphicsContext(), "createGraphicsContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d(), null, "findExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "min", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theMathPackage.getTuple3d(), "max", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "min", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "max", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1049,7 +1049,7 @@ public class TopologyUIPackageImpl extends EPackageImpl implements TopologyUIPac
 
 		op = initEOperation(getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "relativePosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVector3f(), "relativeNormal", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

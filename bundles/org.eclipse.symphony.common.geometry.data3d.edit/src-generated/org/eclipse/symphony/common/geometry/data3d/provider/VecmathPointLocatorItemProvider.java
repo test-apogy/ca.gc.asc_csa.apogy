@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator;
 
 /**
@@ -77,7 +77,7 @@ public class VecmathPointLocatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VecmathPointLocator_points_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VecmathPointLocator_points_feature", "_UI_VecmathPointLocator_type"),
-				 Data3dPackage.Literals.VECMATH_POINT_LOCATOR__POINTS,
+				 Symphony__CommonGeometryData3DPackage.Literals.VECMATH_POINT_LOCATOR__POINTS,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class VecmathPointLocatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VecmathPointLocator.class)) {
-			case Data3dPackage.VECMATH_POINT_LOCATOR__POINTS:
+			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR__POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -6,7 +6,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.core.invocator.Context;
@@ -425,7 +425,7 @@ public class AbstractVariableFeatureReferenceListener
 						int featureID = msg.getFeatureID(AbstractFeatureListNode.class);
 						switch(featureID)
 						{
-							case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
+							case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:
 								
 								// Un-register from the previous child.
 								if(msg.getOldValue() instanceof ListFeatureNode)
@@ -462,7 +462,7 @@ public class AbstractVariableFeatureReferenceListener
 						int featureID = msg.getFeatureID(ListRootNode.class);
 						switch(featureID)
 						{
-							case EMFEcorePackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:																								
+							case Symphony__CommonEMFPackage.ABSTRACT_FEATURE_LIST_NODE__CHILD:																								
 								update();
 								listRootNodeChanged();
 							break;							

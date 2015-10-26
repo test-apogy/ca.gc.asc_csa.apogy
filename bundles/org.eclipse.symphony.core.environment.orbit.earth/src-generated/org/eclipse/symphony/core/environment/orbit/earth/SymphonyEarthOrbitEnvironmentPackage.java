@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 
@@ -1789,7 +1789,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION__NAME = EMFEcorePackage.NAMED__NAME;
+	int EARTH_SURFACE_LOCATION__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1798,7 +1798,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int EARTH_SURFACE_LOCATION__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Geographical Coordinates</b></em>' containment reference.
@@ -1807,7 +1807,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Earth Surface Location</em>' class.
@@ -1816,7 +1816,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int EARTH_SURFACE_LOCATION_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Earth Surface Location</em>' class.
@@ -1825,7 +1825,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int EARTH_SURFACE_LOCATION_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthSurfaceLocationListImpl <em>Earth Surface Location List</em>}' class.
@@ -1844,7 +1844,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+	int EARTH_SURFACE_LOCATION_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1853,7 +1853,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int EARTH_SURFACE_LOCATION_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Earth Surface Locations</b></em>' containment reference list.
@@ -1862,7 +1862,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Earth Surface Location List</em>' class.
@@ -1871,7 +1871,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int EARTH_SURFACE_LOCATION_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Earth Surface Location List</em>' class.
@@ -1880,7 +1880,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_SURFACE_LOCATION_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int EARTH_SURFACE_LOCATION_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationImpl <em>Ground Station</em>}' class.
@@ -1972,7 +1972,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUND_STATION_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+	int GROUND_STATION_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1981,7 +1981,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUND_STATION_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int GROUND_STATION_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Ground Stations</b></em>' containment reference list.
@@ -1990,7 +1990,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUND_STATION_LIST__GROUND_STATIONS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int GROUND_STATION_LIST__GROUND_STATIONS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Ground Station List</em>' class.
@@ -1999,7 +1999,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUND_STATION_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int GROUND_STATION_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Ground Station List</em>' class.
@@ -2008,7 +2008,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUND_STATION_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int GROUND_STATION_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassImpl <em>Visibility Pass</em>}' class.
@@ -2191,7 +2191,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION__TIME = EMFEcorePackage.TIMED__TIME;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION__TIME = Symphony__CommonEMFPackage.TIMED__TIME;
 
 	/**
 	 * The feature id for the '<em><b>Azimuth</b></em>' attribute.
@@ -2200,7 +2200,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH = EMFEcorePackage.TIMED_FEATURE_COUNT + 0;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
@@ -2209,7 +2209,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION = EMFEcorePackage.TIMED_FEATURE_COUNT + 1;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Range</b></em>' attribute.
@@ -2218,7 +2218,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE = EMFEcorePackage.TIMED_FEATURE_COUNT + 2;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Range Rate</b></em>' attribute.
@@ -2227,7 +2227,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE = EMFEcorePackage.TIMED_FEATURE_COUNT + 3;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Spacecraft Cross Track Angle</b></em>' attribute.
@@ -2236,7 +2236,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE = EMFEcorePackage.TIMED_FEATURE_COUNT + 4;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Visibility Pass Spacecraft Position</em>' class.
@@ -2245,7 +2245,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION_FEATURE_COUNT = EMFEcorePackage.TIMED_FEATURE_COUNT + 5;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_FEATURE_COUNT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Visibility Pass Spacecraft Position</em>' class.
@@ -2254,7 +2254,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION_OPERATION_COUNT = EMFEcorePackage.TIMED_OPERATION_COUNT + 0;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_OPERATION_COUNT = Symphony__CommonEMFPackage.TIMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftsVisibilitySetImpl <em>Spacecrafts Visibility Set</em>}' class.
@@ -2273,7 +2273,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__NAME = EMFEcorePackage.NAMED__NAME;
+	int SPACECRAFTS_VISIBILITY_SET__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2282,7 +2282,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int SPACECRAFTS_VISIBILITY_SET__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Updating</b></em>' attribute.
@@ -2291,7 +2291,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__UPDATING = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int SPACECRAFTS_VISIBILITY_SET__UPDATING = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Auto Update Enabled</b></em>' attribute.
@@ -2300,7 +2300,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -2309,7 +2309,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__START_TIME = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int SPACECRAFTS_VISIBILITY_SET__START_TIME = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>End Time</b></em>' attribute.
@@ -2318,7 +2318,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__END_TIME = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+	int SPACECRAFTS_VISIBILITY_SET__END_TIME = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Models</b></em>' reference list.
@@ -2327,7 +2327,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+	int SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Ground Stations</b></em>' reference list.
@@ -2336,7 +2336,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS = EMFEcorePackage.NAMED_FEATURE_COUNT + 6;
+	int SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Passes</b></em>' containment reference list.
@@ -2345,7 +2345,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__PASSES = EMFEcorePackage.NAMED_FEATURE_COUNT + 7;
+	int SPACECRAFTS_VISIBILITY_SET__PASSES = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Ground Station To Visibility Map</b></em>' attribute.
@@ -2354,7 +2354,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP = EMFEcorePackage.NAMED_FEATURE_COUNT + 8;
+	int SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Spacecrafts Visibility Set</em>' class.
@@ -2363,7 +2363,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 9;
+	int SPACECRAFTS_VISIBILITY_SET_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Get Default Auto Update Enabled</em>' operation.
@@ -2372,7 +2372,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET___GET_DEFAULT_AUTO_UPDATE_ENABLED = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int SPACECRAFTS_VISIBILITY_SET___GET_DEFAULT_AUTO_UPDATE_ENABLED = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Update</em>' operation.
@@ -2381,7 +2381,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET___UPDATE = EMFEcorePackage.NAMED_OPERATION_COUNT + 1;
+	int SPACECRAFTS_VISIBILITY_SET___UPDATE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Spacecrafts Visibility Set</em>' class.
@@ -2390,7 +2390,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFTS_VISIBILITY_SET_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 2;
+	int SPACECRAFTS_VISIBILITY_SET_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.CorridorPointImpl <em>Corridor Point</em>}' class.
@@ -2409,7 +2409,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR_POINT__TIME = EMFEcorePackage.TIMED__TIME;
+	int CORRIDOR_POINT__TIME = Symphony__CommonEMFPackage.TIMED__TIME;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2418,7 +2418,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR_POINT__LEFT = EMFEcorePackage.TIMED_FEATURE_COUNT + 0;
+	int CORRIDOR_POINT__LEFT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Center</b></em>' containment reference.
@@ -2427,7 +2427,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR_POINT__CENTER = EMFEcorePackage.TIMED_FEATURE_COUNT + 1;
+	int CORRIDOR_POINT__CENTER = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -2436,7 +2436,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR_POINT__RIGHT = EMFEcorePackage.TIMED_FEATURE_COUNT + 2;
+	int CORRIDOR_POINT__RIGHT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Corridor Point</em>' class.
@@ -2445,7 +2445,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR_POINT_FEATURE_COUNT = EMFEcorePackage.TIMED_FEATURE_COUNT + 3;
+	int CORRIDOR_POINT_FEATURE_COUNT = Symphony__CommonEMFPackage.TIMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Corridor Point</em>' class.
@@ -2454,7 +2454,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR_POINT_OPERATION_COUNT = EMFEcorePackage.TIMED_OPERATION_COUNT + 0;
+	int CORRIDOR_POINT_OPERATION_COUNT = Symphony__CommonEMFPackage.TIMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.CorridorImpl <em>Corridor</em>}' class.
@@ -2473,7 +2473,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR__NAME = EMFEcorePackage.NAMED__NAME;
+	int CORRIDOR__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2482,7 +2482,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int CORRIDOR__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -2491,7 +2491,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR__POINTS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int CORRIDOR__POINTS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Corridor</em>' class.
@@ -2500,7 +2500,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int CORRIDOR_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Corridor</em>' class.
@@ -2509,7 +2509,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CORRIDOR_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int CORRIDOR_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftSwathCorridorImpl <em>Spacecraft Swath Corridor</em>}' class.
@@ -2528,7 +2528,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__NAME = EMFEcorePackage.NAMED__NAME;
+	int SPACECRAFT_SWATH_CORRIDOR__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2537,7 +2537,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Updating</b></em>' attribute.
@@ -2546,7 +2546,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__UPDATING = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int SPACECRAFT_SWATH_CORRIDOR__UPDATING = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Auto Update Enabled</b></em>' attribute.
@@ -2555,7 +2555,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -2564,7 +2564,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__START_TIME = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int SPACECRAFT_SWATH_CORRIDOR__START_TIME = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>End Time</b></em>' attribute.
@@ -2573,7 +2573,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__END_TIME = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+	int SPACECRAFT_SWATH_CORRIDOR__END_TIME = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Time Interval</b></em>' attribute.
@@ -2582,7 +2582,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+	int SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Model</b></em>' reference.
@@ -2591,7 +2591,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL = EMFEcorePackage.NAMED_FEATURE_COUNT + 6;
+	int SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Left Swath Angle</b></em>' attribute.
@@ -2600,7 +2600,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE = EMFEcorePackage.NAMED_FEATURE_COUNT + 7;
+	int SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Right Swath Angle</b></em>' attribute.
@@ -2609,7 +2609,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE = EMFEcorePackage.NAMED_FEATURE_COUNT + 8;
+	int SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Corridor</b></em>' containment reference.
@@ -2618,7 +2618,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR__CORRIDOR = EMFEcorePackage.NAMED_FEATURE_COUNT + 9;
+	int SPACECRAFT_SWATH_CORRIDOR__CORRIDOR = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Spacecraft Swath Corridor</em>' class.
@@ -2627,7 +2627,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 10;
+	int SPACECRAFT_SWATH_CORRIDOR_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Get Default Auto Update Enabled</em>' operation.
@@ -2636,7 +2636,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR___GET_DEFAULT_AUTO_UPDATE_ENABLED = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int SPACECRAFT_SWATH_CORRIDOR___GET_DEFAULT_AUTO_UPDATE_ENABLED = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Update</em>' operation.
@@ -2645,7 +2645,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR___UPDATE = EMFEcorePackage.NAMED_OPERATION_COUNT + 1;
+	int SPACECRAFT_SWATH_CORRIDOR___UPDATE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Spacecraft Swath Corridor</em>' class.
@@ -2654,7 +2654,7 @@ public interface SymphonyEarthOrbitEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 2;
+	int SPACECRAFT_SWATH_CORRIDOR_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitFacadeImpl <em>Earth Orbit Facade</em>}' class.

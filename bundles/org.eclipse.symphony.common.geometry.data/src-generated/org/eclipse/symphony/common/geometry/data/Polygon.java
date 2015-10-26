@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data.Polygon#getVertices <em>Vertices</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.geometry.data.DataPackage#getPolygon()
+ * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getPolygon()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Polygon<T extends Coordinates> extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vertices</em>' reference list.
-	 * @see org.eclipse.symphony.common.geometry.data.DataPackage#getPolygon_Vertices()
+	 * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getPolygon_Vertices()
 	 * @model resolveProxies="false" ordered="false"
 	 * @generated
 	 */

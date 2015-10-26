@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.math.MathFactory;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.orbit.AngularCoordinates;
 import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
 
@@ -152,17 +152,17 @@ public class AngularCoordinatesItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ROTATION,
-				 MathFactory.eINSTANCE.createMatrix3x3()));
+				 Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
 	/**

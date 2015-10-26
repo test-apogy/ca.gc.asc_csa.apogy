@@ -6,7 +6,7 @@ package org.eclipse.symphony.common.emf.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class AbstractFeatureNodeImpl extends MinimalEObjectImpl.Contain
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcorePackage.Literals.ABSTRACT_FEATURE_NODE;
+		return Symphony__CommonEMFPackage.Literals.ABSTRACT_FEATURE_NODE;
 	}
 
 } //AbstractFeatureNodeImpl

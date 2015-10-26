@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 import org.jgrapht.EdgeFactory;
 import org.jgrapht.Graph;
@@ -24,7 +24,7 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 public class GraphUtilities {
 
-	private static Data3dFacade data3dFacade = Data3dFactory.eINSTANCE.createData3dFacade();
+	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 	
 	/**
 	 * Create a SimpleDirectedWeightedGraph that represents the connectivity of a CartesianCoordinatesMesh.

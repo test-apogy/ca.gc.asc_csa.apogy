@@ -11,7 +11,7 @@ import javax.vecmath.Matrix4d;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getTransformNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getTransformNode()
  * @model
  * @generated
  */

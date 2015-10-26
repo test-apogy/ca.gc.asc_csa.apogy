@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.geometry.data25d;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getVolumetricMesh25D()
+ * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage#getVolumetricMesh25D()
  * @model
  * @generated
  */

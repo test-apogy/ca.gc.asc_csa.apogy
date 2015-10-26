@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.common.io.jinput.EComponents;
-import org.eclipse.symphony.common.io.jinput.JInputPackage;
+import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -132,7 +132,7 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JInputPackage.Literals.ECOMPONENT;
+		return Symphony__CommonIOJInputPackage.Literals.ECOMPONENT;
 	}
 
 	/**
@@ -205,7 +205,7 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 		Component oldPojoComponent = pojoComponent;
 		pojoComponent = newPojoComponent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JInputPackage.ECOMPONENT__POJO_COMPONENT, oldPojoComponent, pojoComponent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECOMPONENT__POJO_COMPONENT, oldPojoComponent, pojoComponent));
 	}
 
 	/**
@@ -224,7 +224,7 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	 * @generated
 	 */
 	public EComponents getEComponents() {
-		if (eContainerFeatureID() != JInputPackage.ECOMPONENT__ECOMPONENTS) return null;
+		if (eContainerFeatureID() != Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS) return null;
 		return (EComponents)eContainer();
 	}
 
@@ -234,7 +234,7 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	 * @generated
 	 */
 	public EComponents basicGetEComponents() {
-		if (eContainerFeatureID() != JInputPackage.ECOMPONENT__ECOMPONENTS) return null;
+		if (eContainerFeatureID() != Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS) return null;
 		return (EComponents)eInternalContainer();
 	}
 
@@ -244,7 +244,7 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	 * @generated
 	 */
 	public NotificationChain basicSetEComponents(EComponents newEComponents, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newEComponents, JInputPackage.ECOMPONENT__ECOMPONENTS, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newEComponents, Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS, msgs);
 		return msgs;
 	}
 
@@ -254,19 +254,19 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	 * @generated
 	 */
 	public void setEComponents(EComponents newEComponents) {
-		if (newEComponents != eInternalContainer() || (eContainerFeatureID() != JInputPackage.ECOMPONENT__ECOMPONENTS && newEComponents != null)) {
+		if (newEComponents != eInternalContainer() || (eContainerFeatureID() != Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS && newEComponents != null)) {
 			if (EcoreUtil.isAncestor(this, newEComponents))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newEComponents != null)
-				msgs = ((InternalEObject)newEComponents).eInverseAdd(this, JInputPackage.ECOMPONENTS__COMPONENTS, EComponents.class, msgs);
+				msgs = ((InternalEObject)newEComponents).eInverseAdd(this, Symphony__CommonIOJInputPackage.ECOMPONENTS__COMPONENTS, EComponents.class, msgs);
 			msgs = basicSetEComponents(newEComponents, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, JInputPackage.ECOMPONENT__ECOMPONENTS, newEComponents, newEComponents));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS, newEComponents, newEComponents));
 	}
 
 	/**
@@ -277,7 +277,7 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT__ECOMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetEComponents((EComponents)otherEnd, msgs);
@@ -293,7 +293,7 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT__ECOMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS:
 				return basicSetEComponents(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -307,8 +307,8 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case JInputPackage.ECOMPONENT__ECOMPONENTS:
-				return eInternalContainer().eInverseRemove(this, JInputPackage.ECOMPONENTS__COMPONENTS, EComponents.class, msgs);
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS:
+				return eInternalContainer().eInverseRemove(this, Symphony__CommonIOJInputPackage.ECOMPONENTS__COMPONENTS, EComponents.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -321,21 +321,21 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT__DEAD_ZONE:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__DEAD_ZONE:
 				return getDeadZone();
-			case JInputPackage.ECOMPONENT__IDENTIFIER:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__IDENTIFIER:
 				return getIdentifier();
-			case JInputPackage.ECOMPONENT__RELATIVE:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__RELATIVE:
 				return isRelative();
-			case JInputPackage.ECOMPONENT__ANALOG:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ANALOG:
 				return isAnalog();
-			case JInputPackage.ECOMPONENT__NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__NAME:
 				return getName();
-			case JInputPackage.ECOMPONENT__POJO_COMPONENT:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__POJO_COMPONENT:
 				return getPojoComponent();
-			case JInputPackage.ECOMPONENT__POLL_DATA:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__POLL_DATA:
 				return getPollData();
-			case JInputPackage.ECOMPONENT__ECOMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS:
 				if (resolve) return getEComponents();
 				return basicGetEComponents();
 		}
@@ -350,10 +350,10 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT__POJO_COMPONENT:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__POJO_COMPONENT:
 				setPojoComponent((Component)newValue);
 				return;
-			case JInputPackage.ECOMPONENT__ECOMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS:
 				setEComponents((EComponents)newValue);
 				return;
 		}
@@ -368,10 +368,10 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT__POJO_COMPONENT:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__POJO_COMPONENT:
 				setPojoComponent(POJO_COMPONENT_EDEFAULT);
 				return;
-			case JInputPackage.ECOMPONENT__ECOMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS:
 				setEComponents((EComponents)null);
 				return;
 		}
@@ -386,21 +386,21 @@ public class EComponentImpl extends MinimalEObjectImpl.Container implements ECom
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case JInputPackage.ECOMPONENT__DEAD_ZONE:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__DEAD_ZONE:
 				return getDeadZone() != DEAD_ZONE_EDEFAULT;
-			case JInputPackage.ECOMPONENT__IDENTIFIER:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__IDENTIFIER:
 				return IDENTIFIER_EDEFAULT == null ? getIdentifier() != null : !IDENTIFIER_EDEFAULT.equals(getIdentifier());
-			case JInputPackage.ECOMPONENT__RELATIVE:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__RELATIVE:
 				return isRelative() != RELATIVE_EDEFAULT;
-			case JInputPackage.ECOMPONENT__ANALOG:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ANALOG:
 				return isAnalog() != ANALOG_EDEFAULT;
-			case JInputPackage.ECOMPONENT__NAME:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__NAME:
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-			case JInputPackage.ECOMPONENT__POJO_COMPONENT:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__POJO_COMPONENT:
 				return POJO_COMPONENT_EDEFAULT == null ? pojoComponent != null : !POJO_COMPONENT_EDEFAULT.equals(pojoComponent);
-			case JInputPackage.ECOMPONENT__POLL_DATA:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__POLL_DATA:
 				return getPollData() != POLL_DATA_EDEFAULT;
-			case JInputPackage.ECOMPONENT__ECOMPONENTS:
+			case Symphony__CommonIOJInputPackage.ECOMPONENT__ECOMPONENTS:
 				return basicGetEComponents() != null;
 		}
 		return super.eIsSet(featureID);

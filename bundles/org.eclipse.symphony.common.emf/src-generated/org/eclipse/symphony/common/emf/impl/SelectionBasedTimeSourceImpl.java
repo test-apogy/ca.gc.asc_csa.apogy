@@ -7,7 +7,7 @@ import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.SelectionBasedTimeSource;
 import org.eclipse.symphony.common.emf.Timed;
 
@@ -35,7 +35,7 @@ public class SelectionBasedTimeSourceImpl extends TimeSourceImpl implements Sele
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcorePackage.Literals.SELECTION_BASED_TIME_SOURCE;
+		return Symphony__CommonEMFPackage.Literals.SELECTION_BASED_TIME_SOURCE;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class SelectionBasedTimeSourceImpl extends TimeSourceImpl implements Sele
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcorePackage.SELECTION_BASED_TIME_SOURCE___SET_SELECTION__TIMED:
+			case Symphony__CommonEMFPackage.SELECTION_BASED_TIME_SOURCE___SET_SELECTION__TIMED:
 				setSelection((Timed)arguments.get(0));
 				return null;
 		}

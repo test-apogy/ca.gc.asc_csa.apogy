@@ -111,7 +111,7 @@ public class CoordinatesSamplingShapeItemProvider
 	@Override
 	public ResourceLocator getResourceLocator()
 	{
-		return DataEditPlugin.INSTANCE;
+		return Symphony__CommonGeometryDataEditPlugin.INSTANCE;
 	}
 
 }

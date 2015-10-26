@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.file.csv.CsvPackage;
+import org.eclipse.symphony.common.file.csv.Symphony__CommonFileCSVPackage;
 import org.eclipse.symphony.common.file.csv.CsvValueProvider;
 
 /**
@@ -35,7 +35,7 @@ public class CsvValueProviderImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CsvPackage.Literals.CSV_VALUE_PROVIDER;
+		return Symphony__CommonFileCSVPackage.Literals.CSV_VALUE_PROVIDER;
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class CsvValueProviderImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case CsvPackage.CSV_VALUE_PROVIDER___GET_STRING_VALUE__OBJECT:
+			case Symphony__CommonFileCSVPackage.CSV_VALUE_PROVIDER___GET_STRING_VALUE__OBJECT:
 				return getStringValue(arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

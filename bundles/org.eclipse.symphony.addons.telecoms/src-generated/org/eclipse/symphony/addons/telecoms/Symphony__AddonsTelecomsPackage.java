@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
 /**
@@ -408,7 +408,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN__PARENT = TopologyPackage.NODE__PARENT;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN__PARENT = Symphony__CommonTopologyPackage.NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -417,7 +417,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN__DESCRIPTION = TopologyPackage.NODE__DESCRIPTION;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN__DESCRIPTION = Symphony__CommonTopologyPackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -426,7 +426,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN__NODE_ID = TopologyPackage.NODE__NODE_ID;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN__NODE_ID = Symphony__CommonTopologyPackage.NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -435,7 +435,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME = TopologyPackage.NODE_FEATURE_COUNT + 0;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Antenna Radiation Pattern</em>' class.
@@ -444,7 +444,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_FEATURE_COUNT = TopologyPackage.NODE_FEATURE_COUNT + 1;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_FEATURE_COUNT = Symphony__CommonTopologyPackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -453,7 +453,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN___ACCEPT__INODEVISITOR = TopologyPackage.NODE___ACCEPT__INODEVISITOR;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>Compute Gain</em>' operation.
@@ -462,7 +462,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN___COMPUTE_GAIN__DOUBLE_DOUBLE = TopologyPackage.NODE_OPERATION_COUNT + 0;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN___COMPUTE_GAIN__DOUBLE_DOUBLE = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Abstract Antenna Radiation Pattern</em>' class.
@@ -471,7 +471,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT = TopologyPackage.NODE_OPERATION_COUNT + 1;
+	int ABSTRACT_ANTENNA_RADIATION_PATTERN_OPERATION_COUNT = Symphony__CommonTopologyPackage.NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.IsotropicAntennaImpl <em>Isotropic Antenna</em>}' class.

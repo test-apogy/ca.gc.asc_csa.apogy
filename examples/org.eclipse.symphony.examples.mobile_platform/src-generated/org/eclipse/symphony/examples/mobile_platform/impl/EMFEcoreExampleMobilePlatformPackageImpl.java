@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformFactory;
 import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
@@ -111,7 +111,7 @@ public class EMFEcoreExampleMobilePlatformPackageImpl extends EPackageImpl imple
 		isInited = true;
 
 		// Initialize simple dependencies
-		EMFEcorePackage.eINSTANCE.eClass();
+		Symphony__CommonEMFPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleMobilePlatformPackage.createPackageContents();
@@ -454,7 +454,7 @@ public class EMFEcoreExampleMobilePlatformPackageImpl extends EPackageImpl imple
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
+		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -462,7 +462,7 @@ public class EMFEcoreExampleMobilePlatformPackageImpl extends EPackageImpl imple
 
 		// Add supertypes to classes
 		namedPositionEClass.getESuperTypes().add(this.getPosition());
-		mobilePlatformEClass.getESuperTypes().add(theEMFEcorePackage.getDisposable());
+		mobilePlatformEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDisposable());
 		mobilePlatformStubEClass.getESuperTypes().add(this.getMobilePlatform());
 		mobilePlatformSimulatedEClass.getESuperTypes().add(this.getMobilePlatform());
 

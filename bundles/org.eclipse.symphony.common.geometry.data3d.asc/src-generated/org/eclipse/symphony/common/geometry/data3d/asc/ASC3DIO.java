@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage#getASC3DIO()
+ * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASC3DIO()
  * @model
  * @generated
  */

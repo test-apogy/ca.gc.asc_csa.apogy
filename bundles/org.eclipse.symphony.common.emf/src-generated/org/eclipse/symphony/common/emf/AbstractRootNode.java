@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractRootNode#getSourceClass <em>Source Class</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractRootNode()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractRootNode()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface AbstractRootNode extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source Class</em>' reference.
 	 * @see #setSourceClass(EClass)
-	 * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractRootNode_SourceClass()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractRootNode_SourceClass()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated

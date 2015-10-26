@@ -11,8 +11,8 @@ import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetShapesSample
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetShapeSampler;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
  * @generated
  */
 public class CartesianCoordinatesSetShapeSamplerImpl extends CoordinatesSetShapesSamplerImpl<CartesianPositionCoordinates> implements CartesianCoordinatesSetShapeSampler {
-	private static Data3dFacade data3dFacade = Data3dFactory.eINSTANCE.createData3dFacade();
+	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -40,13 +40,13 @@ public class CartesianCoordinatesSetShapeSamplerImpl extends CoordinatesSetShape
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER;
 	}
 	
 	@Override
 	protected CoordinatesSet<CartesianPositionCoordinates> createCoordinatesSet(CoordinatesSet<CartesianPositionCoordinates> input)
 	{
-		return Data3dFactory.eINSTANCE.createCartesianCoordinatesSet();
+		return Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 	}
 	
 	@Override

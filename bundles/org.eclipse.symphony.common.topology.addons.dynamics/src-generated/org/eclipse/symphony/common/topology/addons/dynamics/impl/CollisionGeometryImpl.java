@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.AbstractCollisionGeo
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial;
 import org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry;
 import org.eclipse.symphony.common.topology.addons.dynamics.Geometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -138,7 +138,7 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyDynamicsPackage.Literals.COLLISION_GEOMETRY;
+		return Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY;
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<AbstractCollisionGeometrySimulationProperties> getSimulationProperties() {
 		if (simulationProperties == null) {
-			simulationProperties = new EObjectResolvingEList<AbstractCollisionGeometrySimulationProperties>(AbstractCollisionGeometrySimulationProperties.class, this, TopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES);
+			simulationProperties = new EObjectResolvingEList<AbstractCollisionGeometrySimulationProperties>(AbstractCollisionGeometrySimulationProperties.class, this, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES);
 		}
 		return simulationProperties;
 	}
@@ -171,7 +171,7 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 		Geometry oldGeometry = geometry;
 		geometry = newGeometry;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY, oldGeometry, newGeometry);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY, oldGeometry, newGeometry);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -186,14 +186,14 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 		if (newGeometry != geometry) {
 			NotificationChain msgs = null;
 			if (geometry != null)
-				msgs = ((InternalEObject)geometry).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY, null, msgs);
+				msgs = ((InternalEObject)geometry).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY, null, msgs);
 			if (newGeometry != null)
-				msgs = ((InternalEObject)newGeometry).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY, null, msgs);
+				msgs = ((InternalEObject)newGeometry).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY, null, msgs);
 			msgs = basicSetGeometry(newGeometry, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY, newGeometry, newGeometry));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY, newGeometry, newGeometry));
 	}
 
 	/**
@@ -214,7 +214,7 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 		Matrix4x4 oldTransform = transform;
 		transform = newTransform;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM, oldTransform, newTransform);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM, oldTransform, newTransform);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -229,14 +229,14 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 		if (newTransform != transform) {
 			NotificationChain msgs = null;
 			if (transform != null)
-				msgs = ((InternalEObject)transform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)transform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM, null, msgs);
 			if (newTransform != null)
-				msgs = ((InternalEObject)newTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)newTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM, null, msgs);
 			msgs = basicSetTransform(newTransform, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM, newTransform, newTransform));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM, newTransform, newTransform));
 	}
 
 	/**
@@ -250,7 +250,7 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 			material = (AbstractMaterial)eResolveProxy(oldMaterial);
 			if (material != oldMaterial) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL, oldMaterial, material));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL, oldMaterial, material));
 			}
 		}
 		return material;
@@ -274,7 +274,7 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 		AbstractMaterial oldMaterial = material;
 		material = newMaterial;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL, oldMaterial, material));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL, oldMaterial, material));
 	}
 
 	/**
@@ -295,7 +295,7 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -316,7 +316,7 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 		String oldGeometryId = geometryId;
 		geometryId = newGeometryId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID, oldGeometryId, geometryId));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID, oldGeometryId, geometryId));
 	}
 
 	/**
@@ -327,9 +327,9 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
 				return basicSetGeometry(null, msgs);
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
 				return basicSetTransform(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -343,18 +343,18 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES:
 				return getSimulationProperties();
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
 				return getGeometry();
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
 				return getTransform();
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL:
 				if (resolve) return getMaterial();
 				return basicGetMaterial();
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
 				return getDescription();
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
 				return getGeometryId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -369,23 +369,23 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES:
 				getSimulationProperties().clear();
 				getSimulationProperties().addAll((Collection<? extends AbstractCollisionGeometrySimulationProperties>)newValue);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
 				setGeometry((Geometry)newValue);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
 				setTransform((Matrix4x4)newValue);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL:
 				setMaterial((AbstractMaterial)newValue);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
 				setGeometryId((String)newValue);
 				return;
 		}
@@ -400,22 +400,22 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES:
 				getSimulationProperties().clear();
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
 				setGeometry((Geometry)null);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
 				setTransform((Matrix4x4)null);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL:
 				setMaterial((AbstractMaterial)null);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
 				setGeometryId(GEOMETRY_ID_EDEFAULT);
 				return;
 		}
@@ -430,17 +430,17 @@ public class CollisionGeometryImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__SIMULATION_PROPERTIES:
 				return simulationProperties != null && !simulationProperties.isEmpty();
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
 				return geometry != null;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
 				return transform != null;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__MATERIAL:
 				return material != null;
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case TopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
+			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
 				return GEOMETRY_ID_EDEFAULT == null ? geometryId != null : !GEOMETRY_ID_EDEFAULT.equals(geometryId);
 		}
 		return super.eIsSet(featureID);

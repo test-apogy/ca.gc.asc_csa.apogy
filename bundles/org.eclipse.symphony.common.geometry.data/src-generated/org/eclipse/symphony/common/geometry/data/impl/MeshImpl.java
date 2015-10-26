@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.eclipse.symphony.common.geometry.data.Polygon;
 
@@ -79,7 +79,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DataPackage.Literals.MESH;
+		return Symphony__CommonGeometryDataPackage.Literals.MESH;
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 	public EList<PolygonType> getPolygons() {
 		if (polygons == null) {
 			polygons = new EObjectContainmentEList<PolygonType>(Polygon.class,
-					this, DataPackage.MESH__POLYGONS) {
+					this, Symphony__CommonGeometryDataPackage.MESH__POLYGONS) {
 				@Override
 				protected boolean isUnique() {
 					return false;
@@ -172,7 +172,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case DataPackage.MESH__POLYGONS:
+			case Symphony__CommonGeometryDataPackage.MESH__POLYGONS:
 				return ((InternalEList<?>)getPolygons()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -185,7 +185,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case DataPackage.MESH__POLYGONS:
+			case Symphony__CommonGeometryDataPackage.MESH__POLYGONS:
 				return getPolygons();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -199,7 +199,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case DataPackage.MESH__POLYGONS:
+			case Symphony__CommonGeometryDataPackage.MESH__POLYGONS:
 				getPolygons().clear();
 				getPolygons().addAll((Collection<? extends PolygonType>)newValue);
 				return;
@@ -214,7 +214,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case DataPackage.MESH__POLYGONS:
+			case Symphony__CommonGeometryDataPackage.MESH__POLYGONS:
 				getPolygons().clear();
 				return;
 		}
@@ -228,7 +228,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case DataPackage.MESH__POLYGONS:
+			case Symphony__CommonGeometryDataPackage.MESH__POLYGONS:
 				return polygons != null && !polygons.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -244,11 +244,11 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case DataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON:
+			case Symphony__CommonGeometryDataPackage.MESH___GET_POLYGON_NEIGHBOURS__POLYGON:
 				return getPolygonNeighbours((PolygonType)arguments.get(0));
-			case DataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES:
+			case Symphony__CommonGeometryDataPackage.MESH___GET_POINT_NEIGHBOURS__COORDINATES:
 				return getPointNeighbours((CoordinatesType)arguments.get(0));
-			case DataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES:
+			case Symphony__CommonGeometryDataPackage.MESH___GET_POLYGONS_SHARING_POINT__COORDINATES:
 				return getPolygonsSharingPoint((CoordinatesType)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -368,7 +368,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 				@SuppressWarnings("unchecked")
 				@Override
 				public void notifyChanged(Notification notification) {
-					if (notification.getFeatureID(Mesh.class) == DataPackage.MESH__POLYGONS) {
+					if (notification.getFeatureID(Mesh.class) == Symphony__CommonGeometryDataPackage.MESH__POLYGONS) {
 						if (notification.getEventType() == Notification.ADD
 								|| notification.getEventType() == Notification.ADD_MANY) {
 							// if (notification.getNewValue() != null) {
@@ -408,7 +408,7 @@ public class MeshImpl<CoordinatesType extends Coordinates, PolygonType extends P
 						}
 					}
 
-					if (notification.getFeatureID(Mesh.class) == DataPackage.MESH__POINTS) {
+					if (notification.getFeatureID(Mesh.class) == Symphony__CommonGeometryDataPackage.MESH__POINTS) {
 						if (notification.getEventType() == Notification.REMOVE
 								|| notification.getEventType() == Notification.REMOVE_MANY) {
 							if (notification.getNewValue() != null) {

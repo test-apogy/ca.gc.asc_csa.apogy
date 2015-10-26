@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 
 /**
@@ -671,7 +671,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_POINT__NAME = EMFEcorePackage.NAMED__NAME;
+	int CONNECTION_POINT__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -680,7 +680,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_POINT__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int CONNECTION_POINT__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Points List</b></em>' container reference.
@@ -689,7 +689,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_POINT__POINTS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int CONNECTION_POINT__POINTS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -698,7 +698,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_POINT__NODE = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int CONNECTION_POINT__NODE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Connection Point</em>' class.
@@ -707,7 +707,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_POINT_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int CONNECTION_POINT_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Connection Point</em>' class.
@@ -716,7 +716,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_POINT_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int CONNECTION_POINT_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.AssemblyLinkImpl <em>Assembly Link</em>}' class.
@@ -735,7 +735,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__NAME = EMFEcorePackage.NAMED__NAME;
+	int ASSEMBLY_LINK__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -744,7 +744,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int ASSEMBLY_LINK__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent Type Member</b></em>' reference.
@@ -753,7 +753,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__PARENT_TYPE_MEMBER = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ASSEMBLY_LINK__PARENT_TYPE_MEMBER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Sub System Type Member</b></em>' reference.
@@ -762,7 +762,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Parent Connection Point</b></em>' reference.
@@ -771,7 +771,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__PARENT_CONNECTION_POINT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int ASSEMBLY_LINK__PARENT_CONNECTION_POINT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Transformation Matrix</b></em>' containment reference.
@@ -780,7 +780,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__TRANSFORMATION_MATRIX = EMFEcorePackage.NAMED_FEATURE_COUNT + 4;
+	int ASSEMBLY_LINK__TRANSFORMATION_MATRIX = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Geometry Node</b></em>' containment reference.
@@ -789,7 +789,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__GEOMETRY_NODE = EMFEcorePackage.NAMED_FEATURE_COUNT + 5;
+	int ASSEMBLY_LINK__GEOMETRY_NODE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Parent Instance</b></em>' reference.
@@ -798,7 +798,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__PARENT_INSTANCE = EMFEcorePackage.NAMED_FEATURE_COUNT + 6;
+	int ASSEMBLY_LINK__PARENT_INSTANCE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Sub System Instance</b></em>' reference.
@@ -807,7 +807,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE = EMFEcorePackage.NAMED_FEATURE_COUNT + 7;
+	int ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Assembly Link</em>' class.
@@ -816,7 +816,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 8;
+	int ASSEMBLY_LINK_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Assembly Link</em>' class.
@@ -825,7 +825,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_LINK_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int ASSEMBLY_LINK_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.AssemblyLinksListImpl <em>Assembly Links List</em>}' class.
@@ -1047,7 +1047,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSITES_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+	int WORKSITES_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1056,7 +1056,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSITES_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int WORKSITES_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Worksites</b></em>' containment reference list.
@@ -1065,7 +1065,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSITES_LIST__WORKSITES = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int WORKSITES_LIST__WORKSITES = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Orbits Models</b></em>' containment reference.
@@ -1074,7 +1074,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSITES_LIST__ORBITS_MODELS = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int WORKSITES_LIST__ORBITS_MODELS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Worksites List</em>' class.
@@ -1083,7 +1083,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSITES_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int WORKSITES_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Worksites List</em>' class.
@@ -1092,7 +1092,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSITES_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int WORKSITES_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.AbstractWorksiteImpl <em>Abstract Worksite</em>}' class.
@@ -1111,7 +1111,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORKSITE__NAME = EMFEcorePackage.NAMED__NAME;
+	int ABSTRACT_WORKSITE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1120,7 +1120,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORKSITE__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int ABSTRACT_WORKSITE__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1129,7 +1129,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORKSITE__TIME = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_WORKSITE__TIME = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Worksites List</b></em>' container reference.
@@ -1138,7 +1138,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORKSITE__WORKSITES_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int ABSTRACT_WORKSITE__WORKSITES_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Worksite</em>' class.
@@ -1147,7 +1147,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORKSITE_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int ABSTRACT_WORKSITE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Abstract Worksite</em>' class.
@@ -1156,7 +1156,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_WORKSITE_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int ABSTRACT_WORKSITE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.OrbitModelsListImpl <em>Orbit Models List</em>}' class.
@@ -1175,7 +1175,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODELS_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+	int ORBIT_MODELS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1184,7 +1184,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODELS_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int ORBIT_MODELS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Models</b></em>' containment reference list.
@@ -1193,7 +1193,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODELS_LIST__ORBIT_MODELS = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ORBIT_MODELS_LIST__ORBIT_MODELS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Orbit Models List</em>' class.
@@ -1202,7 +1202,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODELS_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int ORBIT_MODELS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Orbit Models List</em>' class.
@@ -1211,7 +1211,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_MODELS_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int ORBIT_MODELS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl <em>Abstract Orbit Model</em>}' class.
@@ -1230,7 +1230,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL__NAME = EMFEcorePackage.NAMED__NAME;
+	int ABSTRACT_ORBIT_MODEL__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1239,7 +1239,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int ABSTRACT_ORBIT_MODEL__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Models List</b></em>' container reference.
@@ -1248,7 +1248,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Variable Feature Reference</b></em>' reference.
@@ -1257,7 +1257,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Abstract Orbit Model</em>' class.
@@ -1266,7 +1266,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 3;
+	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Abstract Orbit Model</em>' class.
@@ -1275,7 +1275,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int ABSTRACT_ORBIT_MODEL_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.PositionedImpl <em>Positioned</em>}' class.
@@ -1396,7 +1396,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST__NAME = EMFEcorePackage.NAMED__NAME;
+	int FEATURE_OF_INTEREST_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1405,7 +1405,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST__DESCRIPTION = EMFEcorePackage.NAMED_FEATURE_COUNT + 0;
+	int FEATURE_OF_INTEREST_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Features Of Interest</b></em>' containment reference list.
@@ -1414,7 +1414,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST = EMFEcorePackage.NAMED_FEATURE_COUNT + 1;
+	int FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Feature Of Interest List</em>' class.
@@ -1423,7 +1423,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_FEATURE_COUNT = EMFEcorePackage.NAMED_FEATURE_COUNT + 2;
+	int FEATURE_OF_INTEREST_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Feature Of Interest List</em>' class.
@@ -1432,7 +1432,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_OPERATION_COUNT = EMFEcorePackage.NAMED_OPERATION_COUNT + 0;
+	int FEATURE_OF_INTEREST_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Origin Node</b></em>' containment reference.
@@ -1805,7 +1805,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int RESULT_NODE__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1814,7 +1814,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int RESULT_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -1823,7 +1823,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int RESULT_NODE__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1832,7 +1832,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int RESULT_NODE__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -1841,7 +1841,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int RESULT_NODE__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Result</b></em>' reference.
@@ -1850,7 +1850,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE__RESULT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int RESULT_NODE__RESULT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Result Node</em>' class.
@@ -1859,7 +1859,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int RESULT_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -1868,7 +1868,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int RESULT_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Result Node</em>' class.
@@ -1877,7 +1877,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int RESULT_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.ResultsListNodeImpl <em>Results List Node</em>}' class.
@@ -1896,7 +1896,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int RESULTS_LIST_NODE__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1905,7 +1905,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int RESULTS_LIST_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -1914,7 +1914,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int RESULTS_LIST_NODE__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1923,7 +1923,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int RESULTS_LIST_NODE__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -1932,7 +1932,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int RESULTS_LIST_NODE__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Results List</b></em>' reference.
@@ -1941,7 +1941,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE__RESULTS_LIST = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int RESULTS_LIST_NODE__RESULTS_LIST = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Results List Node</em>' class.
@@ -1950,7 +1950,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int RESULTS_LIST_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -1959,7 +1959,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int RESULTS_LIST_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Results List Node</em>' class.
@@ -1968,7 +1968,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESULTS_LIST_NODE_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int RESULTS_LIST_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.FeatureOfInterestNodeImpl <em>Feature Of Interest Node</em>}' class.
@@ -1987,7 +1987,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE__PARENT = TopologyPackage.TRANSFORM_NODE__PARENT;
+	int FEATURE_OF_INTEREST_NODE__PARENT = Symphony__CommonTopologyPackage.TRANSFORM_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1996,7 +1996,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE__DESCRIPTION = TopologyPackage.TRANSFORM_NODE__DESCRIPTION;
+	int FEATURE_OF_INTEREST_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.TRANSFORM_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -2005,7 +2005,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE__NODE_ID = TopologyPackage.TRANSFORM_NODE__NODE_ID;
+	int FEATURE_OF_INTEREST_NODE__NODE_ID = Symphony__CommonTopologyPackage.TRANSFORM_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -2014,7 +2014,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE__CHILDREN = TopologyPackage.TRANSFORM_NODE__CHILDREN;
+	int FEATURE_OF_INTEREST_NODE__CHILDREN = Symphony__CommonTopologyPackage.TRANSFORM_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -2023,7 +2023,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE__AGGREGATED_CHILDREN = TopologyPackage.TRANSFORM_NODE__AGGREGATED_CHILDREN;
+	int FEATURE_OF_INTEREST_NODE__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.TRANSFORM_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' containment reference.
@@ -2032,7 +2032,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE__POSITION = TopologyPackage.TRANSFORM_NODE__POSITION;
+	int FEATURE_OF_INTEREST_NODE__POSITION = Symphony__CommonTopologyPackage.TRANSFORM_NODE__POSITION;
 
 	/**
 	 * The feature id for the '<em><b>Rotation Matrix</b></em>' containment reference.
@@ -2041,7 +2041,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE__ROTATION_MATRIX = TopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX;
+	int FEATURE_OF_INTEREST_NODE__ROTATION_MATRIX = Symphony__CommonTopologyPackage.TRANSFORM_NODE__ROTATION_MATRIX;
 
 	/**
 	 * The feature id for the '<em><b>Feature Of Interest</b></em>' reference.
@@ -2050,7 +2050,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST = TopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 0;
+	int FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Feature Of Interest Node</em>' class.
@@ -2059,7 +2059,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_FEATURE_COUNT = TopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 1;
+	int FEATURE_OF_INTEREST_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.TRANSFORM_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -2068,7 +2068,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE___ACCEPT__INODEVISITOR = TopologyPackage.TRANSFORM_NODE___ACCEPT__INODEVISITOR;
+	int FEATURE_OF_INTEREST_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.TRANSFORM_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>As Matrix4d</em>' operation.
@@ -2077,7 +2077,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE___AS_MATRIX4D = TopologyPackage.TRANSFORM_NODE___AS_MATRIX4D;
+	int FEATURE_OF_INTEREST_NODE___AS_MATRIX4D = Symphony__CommonTopologyPackage.TRANSFORM_NODE___AS_MATRIX4D;
 
 	/**
 	 * The operation id for the '<em>Set Transformation</em>' operation.
@@ -2086,7 +2086,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE___SET_TRANSFORMATION__MATRIX4D = TopologyPackage.TRANSFORM_NODE___SET_TRANSFORMATION__MATRIX4D;
+	int FEATURE_OF_INTEREST_NODE___SET_TRANSFORMATION__MATRIX4D = Symphony__CommonTopologyPackage.TRANSFORM_NODE___SET_TRANSFORMATION__MATRIX4D;
 
 	/**
 	 * The number of operations of the '<em>Feature Of Interest Node</em>' class.
@@ -2095,7 +2095,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_NODE_OPERATION_COUNT = TopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 0;
+	int FEATURE_OF_INTEREST_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.TRANSFORM_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.FeatureOfInterestListNodeImpl <em>Feature Of Interest List Node</em>}' class.
@@ -2114,7 +2114,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE__PARENT = TopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
+	int FEATURE_OF_INTEREST_LIST_NODE__PARENT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2123,7 +2123,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE__DESCRIPTION = TopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
+	int FEATURE_OF_INTEREST_LIST_NODE__DESCRIPTION = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -2132,7 +2132,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE__NODE_ID = TopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
+	int FEATURE_OF_INTEREST_LIST_NODE__NODE_ID = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -2141,7 +2141,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE__CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
+	int FEATURE_OF_INTEREST_LIST_NODE__CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -2150,7 +2150,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE__AGGREGATED_CHILDREN = TopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+	int FEATURE_OF_INTEREST_LIST_NODE__AGGREGATED_CHILDREN = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Feature Of Interest List</b></em>' reference.
@@ -2159,7 +2159,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
+	int FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Feature Of Interest List Node</em>' class.
@@ -2168,7 +2168,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE_FEATURE_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
+	int FEATURE_OF_INTEREST_LIST_NODE_FEATURE_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -2177,7 +2177,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE___ACCEPT__INODEVISITOR = TopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
+	int FEATURE_OF_INTEREST_LIST_NODE___ACCEPT__INODEVISITOR = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The number of operations of the '<em>Feature Of Interest List Node</em>' class.
@@ -2186,7 +2186,7 @@ public interface SymphonyCorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE_OPERATION_COUNT = TopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
+	int FEATURE_OF_INTEREST_LIST_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.UpdatableImpl <em>Updatable</em>}' class.

@@ -54,7 +54,7 @@ public class Activator implements BundleActivator {
 	 */
 	public static EControllerEnvironment getEControllerEnvironment() {
 		if (eControllerEnvironment == null)
-			eControllerEnvironment = JInputFactory.eINSTANCE.createEControllerEnvironment();
+			eControllerEnvironment = Symphony__CommonIOJInputFactory.eINSTANCE.createEControllerEnvironment();
 		return eControllerEnvironment;
 	}
 }

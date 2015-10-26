@@ -9,7 +9,7 @@ package org.eclipse.symphony.common.topology.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.URLNode;
 
 /**
@@ -104,7 +104,7 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyPackage.Literals.URL_NODE;
+		return Symphony__CommonTopologyPackage.Literals.URL_NODE;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.URL_NODE__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.URL_NODE__URL, oldUrl, url));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 		int oldPolygonCount = polygonCount;
 		polygonCount = newPolygonCount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.URL_NODE__POLYGON_COUNT, oldPolygonCount, polygonCount));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT, oldPolygonCount, polygonCount));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 		int oldVertexCount = vertexCount;
 		vertexCount = newVertexCount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyPackage.URL_NODE__VERTEX_COUNT, oldVertexCount, vertexCount));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT, oldVertexCount, vertexCount));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyPackage.URL_NODE__URL:
+			case Symphony__CommonTopologyPackage.URL_NODE__URL:
 				return getUrl();
-			case TopologyPackage.URL_NODE__POLYGON_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
 				return getPolygonCount();
-			case TopologyPackage.URL_NODE__VERTEX_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				return getVertexCount();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyPackage.URL_NODE__URL:
+			case Symphony__CommonTopologyPackage.URL_NODE__URL:
 				setUrl((String)newValue);
 				return;
-			case TopologyPackage.URL_NODE__POLYGON_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
 				setPolygonCount((Integer)newValue);
 				return;
-			case TopologyPackage.URL_NODE__VERTEX_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				setVertexCount((Integer)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.URL_NODE__URL:
+			case Symphony__CommonTopologyPackage.URL_NODE__URL:
 				setUrl(URL_EDEFAULT);
 				return;
-			case TopologyPackage.URL_NODE__POLYGON_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
 				setPolygonCount(POLYGON_COUNT_EDEFAULT);
 				return;
-			case TopologyPackage.URL_NODE__VERTEX_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				setVertexCount(VERTEX_COUNT_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public class URLNodeImpl extends LeafImpl implements URLNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyPackage.URL_NODE__URL:
+			case Symphony__CommonTopologyPackage.URL_NODE__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-			case TopologyPackage.URL_NODE__POLYGON_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__POLYGON_COUNT:
 				return polygonCount != POLYGON_COUNT_EDEFAULT;
-			case TopologyPackage.URL_NODE__VERTEX_COUNT:
+			case Symphony__CommonTopologyPackage.URL_NODE__VERTEX_COUNT:
 				return vertexCount != VERTEX_COUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

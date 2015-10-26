@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint} object.
@@ -64,8 +64,8 @@ public class CylindricalConstraintItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE);
-			childrenFeatures.add(TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE);
+			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -120,8 +120,8 @@ public class CylindricalConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CylindricalConstraint.class)) {
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
-			case TopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE:
+			case Symphony__CommonTopologyDynamicsPackage.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -141,13 +141,13 @@ public class CylindricalConstraintItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE,
-				 TopologyDynamicsFactory.eINSTANCE.createConstraintState()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createConstraintState()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE,
-				 TopologyDynamicsFactory.eINSTANCE.createConstraintState()));
+				(Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE,
+				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createConstraintState()));
 	}
 
 	/**
@@ -162,8 +162,8 @@ public class CylindricalConstraintItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE ||
-			childFeature == TopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE;
+			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__ANGULAR_CURRENT_STATE ||
+			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.CYLINDRICAL_CONSTRAINT__LINEAR_CURRENT_STATE;
 
 		if (qualify) {
 			return getString

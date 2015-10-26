@@ -21,7 +21,7 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
 import org.eclipse.symphony.common.emf.ui.composites.TimeSourcesListComposite;
@@ -239,7 +239,7 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 		
 		// Bind SymphonyEnvironment current time to currentTimeLabel.	
 		IObservableValue currentTimeLabelValue = PojoProperties.value("text").observe(currentTimeValueLabel);		
-		IObservableValue currentTimeObserveValue = EMFProperties.value(FeaturePath.fromList(EMFEcorePackage.Literals.TIMED__TIME)).observe(getSymphonyEnvironment());			
+		IObservableValue currentTimeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getSymphonyEnvironment());			
 		UpdateValueStrategy currentTimeValueStrategy = new UpdateValueStrategy();
 		currentTimeValueStrategy.setConverter(new DateToStringConverter(new SimpleDateFormat(AbstractTimeSourceComposite.DATE_FORMAT_STRING)));
 		bindingContext.bindValue(currentTimeLabelValue, currentTimeObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), currentTimeValueStrategy);

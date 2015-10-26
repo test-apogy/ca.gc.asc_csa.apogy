@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.math.MathPackage#getMathIO()
+ * @see org.eclipse.symphony.common.math.Symphony__CommonMathPackage#getMathIO()
  * @model
  * @generated
  */

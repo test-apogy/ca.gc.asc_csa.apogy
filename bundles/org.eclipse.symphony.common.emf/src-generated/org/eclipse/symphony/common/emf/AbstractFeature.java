@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeature()
+ * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeature()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface AbstractFeature extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Structural Feature</em>' reference.
    * @see #setStructuralFeature(EStructuralFeature)
-   * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeature_StructuralFeature()
+   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeature_StructuralFeature()
    * @model required="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
    * @generated
@@ -60,7 +60,7 @@ public interface AbstractFeature extends EObject
    * Whether or not this FeatureNode refers to a multi-valued feature.
    * <!-- end-model-doc -->
    * @return the value of the '<em>Multi Valued</em>' attribute.
-   * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeature_MultiValued()
+   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeature_MultiValued()
    * @model default="false" unique="false" transient="true" changeable="false" volatile="true" derived="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
    * @generated
@@ -77,7 +77,7 @@ public interface AbstractFeature extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Index</em>' attribute.
    * @see #setIndex(int)
-   * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeature_Index()
+   * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getAbstractFeature_Index()
    * @model default="-1" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
    * @generated

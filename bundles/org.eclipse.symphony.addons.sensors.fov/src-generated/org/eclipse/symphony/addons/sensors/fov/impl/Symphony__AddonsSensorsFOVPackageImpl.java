@@ -25,13 +25,13 @@ import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape;
 
-import org.eclipse.symphony.common.geometry.data.DataPackage;
+import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
 
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
-import org.eclipse.symphony.common.math.MathPackage;
+import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -143,8 +143,8 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyPackage.eINSTANCE.eClass();
-		Data3dPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyPackage.eINSTANCE.eClass();
+		Symphony__CommonGeometryData3DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsFOVPackage.createPackageContents();
@@ -612,30 +612,30 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
+		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
-		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
-		MathPackage theMathPackage = (MathPackage)EPackage.Registry.INSTANCE.getEPackage(MathPackage.eNS_URI);
+		Symphony__CommonGeometryData3DPackage theSymphony__CommonGeometryData3DPackage = (Symphony__CommonGeometryData3DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData3DPackage.eNS_URI);
+		Symphony__CommonGeometryDataPackage theSymphony__CommonGeometryDataPackage = (Symphony__CommonGeometryDataPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryDataPackage.eNS_URI);
+		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter rectangularFrustrumFieldOfViewSamplingShapeEClass_PolygonType = addETypeParameter(rectangularFrustrumFieldOfViewSamplingShapeEClass, "PolygonType");
 
 		// Set bounds for type parameters
-		EGenericType g1 = createEGenericType(theData3dPackage.getCartesianPolygon());
+		EGenericType g1 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPolygon());
 		rectangularFrustrumFieldOfViewSamplingShapeEClass_PolygonType.getEBounds().add(g1);
 
 		// Add supertypes to classes
-		fieldOfViewEClass.getESuperTypes().add(theTopologyPackage.getNode());
+		fieldOfViewEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getNode());
 		rectangularFrustrumFieldOfViewEClass.getESuperTypes().add(this.getFieldOfView());
 		conicalFieldOfViewEClass.getESuperTypes().add(this.getFieldOfView());
 		circularSectorFieldOfViewEClass.getESuperTypes().add(this.getFieldOfView());
-		g1 = createEGenericType(theDataPackage.getCoordinatesSamplingShape());
-		EGenericType g2 = createEGenericType(theData3dPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getCoordinatesSamplingShape());
+		EGenericType g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		rectangularFrustrumFieldOfViewSamplingShapeEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theDataPackage.getPolygonSamplingShape());
-		g2 = createEGenericType(theData3dPackage.getCartesianPositionCoordinates());
+		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getPolygonSamplingShape());
+		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(rectangularFrustrumFieldOfViewSamplingShapeEClass_PolygonType);
 		g1.getETypeArguments().add(g2);
@@ -678,7 +678,7 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		initEAttribute(getCircularSectorFieldOfView_Area(), theEcorePackage.getEDouble(), "area", null, 0, 1, CircularSectorFieldOfView.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(rectangularFrustrumFieldOfViewSamplingShapeEClass, RectangularFrustrumFieldOfViewSamplingShape.class, "RectangularFrustrumFieldOfViewSamplingShape", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRectangularFrustrumFieldOfViewSamplingShape_Transform(), theMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, RectangularFrustrumFieldOfViewSamplingShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRectangularFrustrumFieldOfViewSamplingShape_Transform(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "transform", null, 0, 1, RectangularFrustrumFieldOfViewSamplingShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView(), this.getRectangularFrustrumFieldOfView(), null, "rectangularFrustrumFieldOfView", null, 0, 1, RectangularFrustrumFieldOfViewSamplingShape.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fovFacadeEClass, FOVFacade.class, "FOVFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

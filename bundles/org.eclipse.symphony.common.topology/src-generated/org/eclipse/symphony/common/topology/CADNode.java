@@ -16,7 +16,7 @@ package org.eclipse.symphony.common.topology;
  *   <li>{@link org.eclipse.symphony.common.topology.CADNode#getNodeName <em>Node Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.TopologyPackage#getCADNode()
+ * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getCADNode()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface CADNode extends URLNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Name</em>' attribute.
 	 * @see #setNodeName(String)
-	 * @see org.eclipse.symphony.common.topology.TopologyPackage#getCADNode_NodeName()
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getCADNode_NodeName()
 	 * @model unique="false"
 	 * @generated
 	 */

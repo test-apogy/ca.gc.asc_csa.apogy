@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
 import org.eclipse.symphony.common.geometry.data3d.las.LASFacade;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
-import org.eclipse.symphony.common.geometry.data3d.las.LasFactory;
-import org.eclipse.symphony.common.geometry.data3d.las.LasPackage;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFactory;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage;
 import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
 import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
 
@@ -54,7 +54,7 @@ public class LASFacadeImpl extends MinimalEObjectImpl.Container implements LASFa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return LasPackage.Literals.LAS_FACADE;
+		return Symphony__CommonGeometryData3DLASPackage.Literals.LAS_FACADE;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class LASFacadeImpl extends MinimalEObjectImpl.Container implements LASFa
 			throw new IllegalArgumentException("Invalid point format");
 		}
 
-		LASPoint point = LasFactory.eINSTANCE.createLASPoint();
+		LASPoint point = Symphony__CommonGeometryData3DLASFactory.eINSTANCE.createLASPoint();
 
 		// Every point format has at least the 0 format
 		ByteArrayInputStream bai = new ByteArrayInputStream(data);		
@@ -167,7 +167,7 @@ public class LASFacadeImpl extends MinimalEObjectImpl.Container implements LASFa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case LasPackage.LAS_FACADE___CREATE_POINT__INT_BYTE:
+			case Symphony__CommonGeometryData3DLASPackage.LAS_FACADE___CREATE_POINT__INT_BYTE:
 				try {
 					return createPoint((Integer)arguments.get(0), (byte[])arguments.get(1));
 				}

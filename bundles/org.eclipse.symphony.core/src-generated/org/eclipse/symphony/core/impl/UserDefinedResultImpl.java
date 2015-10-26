@@ -6,7 +6,7 @@ package org.eclipse.symphony.core.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.emf.EMFEcorePackage;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.UserDefinedResult;
@@ -150,7 +150,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.USER_DEFINED_RESULT__NAME: return EMFEcorePackage.NAMED__NAME;
+				case SymphonyCorePackage.USER_DEFINED_RESULT__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -166,7 +166,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return SymphonyCorePackage.USER_DEFINED_RESULT__NAME;
+				case Symphony__CommonEMFPackage.NAMED__NAME: return SymphonyCorePackage.USER_DEFINED_RESULT__NAME;
 				default: return -1;
 			}
 		}

@@ -15,7 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.Link;
-import org.eclipse.symphony.common.topology.TopologyPackage;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.Link} object.
@@ -64,7 +64,7 @@ public class LinkItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Link_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Link_node_feature", "_UI_Link_type"),
-				 TopologyPackage.Literals.LINK__NODE,
+				 Symphony__CommonTopologyPackage.Literals.LINK__NODE,
 				 true,
 				 false,
 				 true,

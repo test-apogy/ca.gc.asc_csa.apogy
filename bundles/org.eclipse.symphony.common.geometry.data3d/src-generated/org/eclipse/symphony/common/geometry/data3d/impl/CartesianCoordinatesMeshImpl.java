@@ -14,7 +14,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -42,7 +42,7 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Data3dPackage.Literals.CARTESIAN_COORDINATES_MESH;
+		return Symphony__CommonGeometryData3DPackage.Literals.CARTESIAN_COORDINATES_MESH;
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	@Override
 	public EList<CartesianPolygon> getPolygons() {
 		if (polygons == null) {
-			polygons = new EObjectContainmentEList<CartesianPolygon>(CartesianPolygon.class, this, Data3dPackage.CARTESIAN_COORDINATES_MESH__POLYGONS);
+			polygons = new EObjectContainmentEList<CartesianPolygon>(CartesianPolygon.class, this, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH__POLYGONS);
 		}
 		return polygons;
 	}
@@ -79,7 +79,7 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == CartesianCoordinatesSet.class) {
 			switch (baseOperationID) {
-				case Data3dPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT: return Data3dPackage.CARTESIAN_COORDINATES_MESH___GET_EXTENT;
+				case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT: return Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH___GET_EXTENT;
 				default: return -1;
 			}
 		}
@@ -94,7 +94,7 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Data3dPackage.CARTESIAN_COORDINATES_MESH___GET_EXTENT:
+			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH___GET_EXTENT:
 				return getExtent();
 		}
 		return super.eInvoke(operationID, arguments);
