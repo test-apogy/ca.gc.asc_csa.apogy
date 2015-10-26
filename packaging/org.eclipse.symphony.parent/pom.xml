@@ -227,7 +227,6 @@
 		<module>../../bundles/org.eclipse.symphony.core.environment.orbit.earth.ui</module>
 		<module>../../bundles/org.eclipse.symphony.core.environment.orbit.earth.ui.edit</module>
 		<module>../../bundles/org.eclipse.symphony.core.environment.orbit.edit</module>
-		<module>../../bundles/org.eclipse.symphony.core.environment.orbit</module>
 		<module>../../bundles/org.eclipse.symphony.core.environment.ui</module>
 		<module>../../bundles/org.eclipse.symphony.core.environment.ui.edit</module>
 		<module>../../bundles/org.eclipse.symphony.core.environment.ui.jme3</module>
@@ -301,11 +300,11 @@
 		<module>../../examples/org.eclipse.symphony.examples.worksites.surface</module>
 		
 		<!-- Tests -->
-		<module>../../bundles/org.eclipse.symphony.common.converters.tests</module>
-		<module>../../bundles/org.eclipse.symphony.common.geometry.data3d.asc.tests</module>
-		<module>../../bundles/org.eclipse.symphony.common.log.tests</module>
-		<module>../../bundles/org.eclipse.symphony.common.topology.ui.tests</module>		
-		<module>../../bundles/org.eclipse.symphony.core.invocator.tests</module>		
+		<module>../../tests/org.eclipse.symphony.common.converters.tests</module>
+		<module>../../tests/org.eclipse.symphony.common.geometry.data3d.asc.tests</module>
+		<module>../../tests/org.eclipse.symphony.common.log.tests</module>
+		<module>../../tests/org.eclipse.symphony.common.topology.ui.tests</module>		
+		<module>../../tests/org.eclipse.symphony.core.invocator.tests</module>		
 				
 		<!-- Doc -->
 		<module>../../doc/org.eclipse.symphony.doc</module>
