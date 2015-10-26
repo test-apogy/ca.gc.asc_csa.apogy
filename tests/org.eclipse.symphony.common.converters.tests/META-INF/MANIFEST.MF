@@ -5,6 +5,7 @@ Bundle-SymbolicName: org.eclipse.symphony.common.converters.tests;singleton:=tru
 Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.common.converters.tests.Activator
 Bundle-Vendor: %pluginProvider
+Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.junit,

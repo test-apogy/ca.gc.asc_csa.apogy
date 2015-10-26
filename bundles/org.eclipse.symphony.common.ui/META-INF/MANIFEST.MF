@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: %bundleName
+Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.common.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.common.ui.Activator
@@ -15,7 +15,7 @@ Require-Bundle: org.eclipse.ui;visibility:=reexport,
  org.eclipse.core.expressions;bundle-version="3.4.600"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Bundle-Localization: bundle
+Bundle-Localization: plugin
 Export-Package: org.eclipse.symphony.common.ui,
  org.eclipse.symphony.common.ui.actions,
  org.eclipse.symphony.common.ui.expressions,
