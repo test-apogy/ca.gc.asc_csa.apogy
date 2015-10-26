@@ -42,7 +42,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.WorldWindUtils
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl#getOrbitModel <em>Orbit Model</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl#getTimeSource <em>Time Source</em>}</li>
@@ -55,6 +54,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.WorldWindUtils
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl#getForwardSpacecraftSwathCorridor <em>Forward Spacecraft Swath Corridor</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.SpacecraftSwathWorldWindLayerImpl#getBackwardSpacecraftSwathCorridor <em>Backward Spacecraft Swath Corridor</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -31,7 +31,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintImpl#getAttachmentPoints <em>Attachment Points</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintImpl#getSimulationProperties <em>Simulation Properties</em>}</li>
@@ -39,6 +38,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintImpl#getConstaintId <em>Constaint Id</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.AbstractConstraintImpl#isEnabled <em>Enabled</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

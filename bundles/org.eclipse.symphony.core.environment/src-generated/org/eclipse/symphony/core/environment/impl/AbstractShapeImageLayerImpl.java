@@ -18,12 +18,12 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractShapeImageLayerImpl#isShapedFilled <em>Shaped Filled</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractShapeImageLayerImpl#getColor <em>Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractShapeImageLayerImpl#getRequiredResolution <em>Required Resolution</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

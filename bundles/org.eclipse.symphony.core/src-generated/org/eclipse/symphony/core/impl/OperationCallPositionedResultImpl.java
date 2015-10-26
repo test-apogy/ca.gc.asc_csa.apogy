@@ -21,11 +21,11 @@ import org.eclipse.symphony.core.invocator.impl.OperationCallResultImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.OperationCallPositionedResultImpl#getPose <em>Pose</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.OperationCallPositionedResultImpl#getRelativePose <em>Relative Pose</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

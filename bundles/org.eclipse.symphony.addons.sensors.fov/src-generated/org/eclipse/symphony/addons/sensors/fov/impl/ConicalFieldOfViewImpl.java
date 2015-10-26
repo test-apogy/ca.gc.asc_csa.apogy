@@ -21,12 +21,12 @@ import org.eclipse.symphony.addons.sensors.fov.FovPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getRange <em>Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getFieldOfViewAngle <em>Field Of View Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.ConicalFieldOfViewImpl#getVolume <em>Volume</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

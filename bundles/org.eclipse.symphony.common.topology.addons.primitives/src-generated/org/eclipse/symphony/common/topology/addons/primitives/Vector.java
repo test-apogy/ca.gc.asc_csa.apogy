@@ -14,7 +14,6 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Vector#getXRotation <em>XRotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Vector#getYRotation <em>YRotation</em>}</li>
@@ -22,6 +21,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Vector#getLength <em>Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Vector#getEndPoint <em>End Point</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getVector()
  * @model

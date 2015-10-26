@@ -17,6 +17,8 @@ import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Polygon25 D</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

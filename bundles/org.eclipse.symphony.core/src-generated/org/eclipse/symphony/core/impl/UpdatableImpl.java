@@ -19,11 +19,11 @@ import org.eclipse.symphony.core.Updatable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.UpdatableImpl#isUpdating <em>Updating</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.UpdatableImpl#isAutoUpdateEnabled <em>Auto Update Enabled</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

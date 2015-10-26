@@ -20,10 +20,10 @@ import org.eclipse.symphony.core.invocator.Argument;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument#getValueSource <em>Value Source</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getBindedEDataTypeArgument()
  * @model

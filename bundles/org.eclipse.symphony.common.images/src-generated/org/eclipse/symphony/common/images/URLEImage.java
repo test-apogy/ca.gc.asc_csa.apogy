@@ -11,10 +11,10 @@ package org.eclipse.symphony.common.images;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.images.URLEImage#getUrl <em>Url</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.images.ImagesCorePackage#getURLEImage()
  * @model

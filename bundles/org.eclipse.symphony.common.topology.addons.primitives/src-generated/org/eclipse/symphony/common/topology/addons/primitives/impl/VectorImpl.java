@@ -23,7 +23,6 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getXRotation <em>XRotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getYRotation <em>YRotation</em>}</li>
@@ -31,6 +30,7 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getLength <em>Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.VectorImpl#getEndPoint <em>End Point</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

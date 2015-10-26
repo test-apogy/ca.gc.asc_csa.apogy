@@ -18,7 +18,6 @@ import org.eclipse.symphony.common.topology.ContentNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getMeshNode <em>Mesh Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#isNoiseEnabled <em>Noise Enabled</em>}</li>
@@ -26,6 +25,7 @@ import org.eclipse.symphony.common.topology.ContentNode;
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeFindingIntersections <em>Time Finding Intersections</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeGettingSimulatedRays <em>Time Getting Simulated Rays</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeScannerSimulator()
  * @model abstract="true"

@@ -23,12 +23,12 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <em><b>Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.NodeImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.NodeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.NodeImpl#getNodeId <em>Node Id</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

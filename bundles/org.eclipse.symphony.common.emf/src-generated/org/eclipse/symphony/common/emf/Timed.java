@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.Timed#getTime <em>Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getTimed()
  * @model interface="true" abstract="true"

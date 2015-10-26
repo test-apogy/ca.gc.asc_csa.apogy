@@ -31,12 +31,12 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangleShapeImageLayerImpl#getRectangleWidth <em>Rectangle Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangleShapeImageLayerImpl#getRectangleHeight <em>Rectangle Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangleShapeImageLayerImpl#isShowCenterLines <em>Show Center Lines</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

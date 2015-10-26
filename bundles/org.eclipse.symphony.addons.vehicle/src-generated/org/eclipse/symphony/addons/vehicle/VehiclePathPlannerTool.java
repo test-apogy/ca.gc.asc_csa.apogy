@@ -12,10 +12,10 @@ import org.eclipse.symphony.core.invocator.Variable;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool#getVariable <em>Variable</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePathPlannerTool()
  * @model

@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.invocator.impl.InitializationDataImpl;
  * <em><b>Symphony Initialization Data</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl#getInitialPoseTransform <em>Initial Pose Transform</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -26,10 +26,10 @@ import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.SimpleToolListImpl#getSimpleTools <em>Simple Tools</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

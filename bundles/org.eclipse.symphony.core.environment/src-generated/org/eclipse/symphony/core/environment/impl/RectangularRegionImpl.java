@@ -17,7 +17,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getXMin <em>XMin</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getXMax <em>XMax</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getLowerRightCorner <em>Lower Right Corner</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.RectangularRegionImpl#getUpperRightCorner <em>Upper Right Corner</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

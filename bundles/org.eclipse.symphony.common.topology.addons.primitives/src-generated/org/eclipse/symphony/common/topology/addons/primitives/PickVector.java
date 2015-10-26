@@ -18,7 +18,6 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getIntersectionDistance <em>Intersection Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getIntersectedNode <em>Intersected Node</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getNodeTypesInIntersection <em>Node Types In Intersection</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PickVector#getNodeTypesToExcludeFromIntersection <em>Node Types To Exclude From Intersection</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPickVector()
  * @model

@@ -11,7 +11,6 @@ package org.eclipse.symphony.addons.sensors.pose;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getXVelocity <em>XVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getYVelocity <em>YVelocity</em>}</li>
@@ -21,6 +20,7 @@ package org.eclipse.symphony.addons.sensors.pose;
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedPoseSensor()
  * @model

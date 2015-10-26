@@ -27,12 +27,12 @@ import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl#getRadius <em>Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl#getCenter <em>Center</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphereSamplingShapeImpl#isIncludeJustTouching <em>Include Just Touching</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

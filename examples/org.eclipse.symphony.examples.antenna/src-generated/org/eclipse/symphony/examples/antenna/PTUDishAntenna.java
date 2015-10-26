@@ -19,12 +19,12 @@ package org.eclipse.symphony.examples.antenna;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#getPanAngle <em>Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#getTiltAngle <em>Tilt Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#isTrackingSun <em>Tracking Sun</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getPTUDishAntenna()
  * @model abstract="true"

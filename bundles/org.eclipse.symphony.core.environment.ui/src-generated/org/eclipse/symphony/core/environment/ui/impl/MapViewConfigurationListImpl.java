@@ -22,10 +22,10 @@ import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationListImpl#getMapViewConfigurations <em>Map View Configurations</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

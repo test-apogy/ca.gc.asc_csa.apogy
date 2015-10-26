@@ -18,12 +18,12 @@ import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getXAcceleration <em>XAcceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getYAcceleration <em>YAcceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearAccelerationSensorImpl#getZAcceleration <em>ZAcceleration</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

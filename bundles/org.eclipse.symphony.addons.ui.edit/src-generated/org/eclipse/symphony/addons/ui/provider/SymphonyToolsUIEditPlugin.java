@@ -41,8 +41,8 @@ public final class SymphonyToolsUIEditPlugin extends EMFPlugin {
 	public SymphonyToolsUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyUIEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     TopologyUIEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		   });
 	}

@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Type#getMembers <em>Members</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Type#getInterfaceClass <em>Interface Class</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Type#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getType()
  * @model

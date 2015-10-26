@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getXRotation <em>XRotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getYRotation <em>YRotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates#getZRotation <em>ZRotation</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCartesianOrientationCoordinates()
  * @model

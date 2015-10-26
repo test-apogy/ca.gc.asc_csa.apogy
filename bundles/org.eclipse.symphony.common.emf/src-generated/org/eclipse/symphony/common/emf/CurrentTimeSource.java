@@ -15,11 +15,11 @@ package org.eclipse.symphony.common.emf;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.CurrentTimeSource#getUpdatePeriod <em>Update Period</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.CurrentTimeSource#isPaused <em>Paused</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getCurrentTimeSource()
  * @model

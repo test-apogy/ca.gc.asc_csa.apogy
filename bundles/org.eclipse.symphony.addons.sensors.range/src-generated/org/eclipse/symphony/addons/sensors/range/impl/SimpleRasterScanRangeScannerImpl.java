@@ -21,6 +21,8 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Simple Raster Scan Range Scanner</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

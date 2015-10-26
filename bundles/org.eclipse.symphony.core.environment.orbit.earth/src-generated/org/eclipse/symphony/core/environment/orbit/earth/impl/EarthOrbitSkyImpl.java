@@ -25,12 +25,12 @@ import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvir
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitSkyImpl#getEarthOrbitWorksite <em>Earth Orbit Worksite</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitSkyImpl#getMoon <em>Moon</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitSkyImpl#getEarth <em>Earth</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

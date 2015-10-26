@@ -51,12 +51,12 @@ import org.orekit.utils.PVCoordinates;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getTimeInterval <em>Time Interval</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getVisibilityPass <em>Visibility Pass</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionHistoryImpl#getPositions <em>Positions</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

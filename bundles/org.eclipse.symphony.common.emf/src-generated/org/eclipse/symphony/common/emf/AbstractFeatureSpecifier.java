@@ -16,12 +16,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeatureSpecifier#getStructuralFeature <em>Structural Feature</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeatureSpecifier#isMultiValued <em>Multi Valued</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeatureSpecifier#getIndex <em>Index</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeatureSpecifier()
  * @model abstract="true"

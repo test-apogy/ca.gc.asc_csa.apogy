@@ -16,13 +16,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getCostFunctions <em>Cost Functions</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getFrom <em>From</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getTo <em>To</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getWeight <em>Weight</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdge()
  * @model

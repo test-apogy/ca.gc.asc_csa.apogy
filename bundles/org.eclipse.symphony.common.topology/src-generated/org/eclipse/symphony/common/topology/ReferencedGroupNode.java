@@ -12,10 +12,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ReferencedGroupNode#getReferencedChildren <em>Referenced Children</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.TopologyPackage#getReferencedGroupNode()
  * @model

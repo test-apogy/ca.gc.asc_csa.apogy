@@ -32,10 +32,10 @@ import Jama.SingularValueDecomposition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.RigidBodyPoseTrackerImpl#getPositionMarkersAtOrigin <em>Position Markers At Origin</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

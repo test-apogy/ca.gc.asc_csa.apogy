@@ -12,7 +12,6 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#isAxisVisible <em>Axis Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getAxisLength <em>Axis Length</em>}</li>
@@ -23,6 +22,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneGridSize <em>Plane Grid Size</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize <em>Plane Size</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation()
  * @model

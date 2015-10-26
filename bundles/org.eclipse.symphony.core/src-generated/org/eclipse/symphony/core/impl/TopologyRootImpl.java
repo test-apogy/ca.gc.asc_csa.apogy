@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.TopologyRoot;
  * <em><b>Topology Root</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.TopologyRootImpl#getOriginNode <em>Origin Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

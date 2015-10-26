@@ -32,7 +32,7 @@ import org.eclipse.symphony.common.math.MathPackage;
 import org.eclipse.symphony.common.math.Matrix3x3;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.space.math.Matrix3x3} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.math.Matrix3x3} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */

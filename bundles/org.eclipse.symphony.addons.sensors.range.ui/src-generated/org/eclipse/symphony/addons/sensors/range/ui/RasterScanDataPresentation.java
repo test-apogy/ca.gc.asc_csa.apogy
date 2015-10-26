@@ -13,12 +13,12 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#getFovPresentationMode <em>Fov Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#isFovVisible <em>Fov Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#isDataVisible <em>Data Visible</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage#getRasterScanDataPresentation()
  * @model

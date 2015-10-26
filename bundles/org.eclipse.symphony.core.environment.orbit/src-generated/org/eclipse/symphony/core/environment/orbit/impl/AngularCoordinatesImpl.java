@@ -20,12 +20,12 @@ import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPacka
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AngularCoordinatesImpl#getRotation <em>Rotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AngularCoordinatesImpl#getAngularRate <em>Angular Rate</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AngularCoordinatesImpl#getAngularAcceleration <em>Angular Acceleration</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -28,11 +28,11 @@ import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioni
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.UserDefinedInputConditioningImpl#getUnits <em>Units</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.UserDefinedInputConditioningImpl#getTransferFunction <em>Transfer Function</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

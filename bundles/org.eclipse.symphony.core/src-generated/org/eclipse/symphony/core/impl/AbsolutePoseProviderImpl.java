@@ -11,6 +11,8 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Absolute Pose Provider</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

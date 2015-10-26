@@ -18,6 +18,8 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Exclusion Zone</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

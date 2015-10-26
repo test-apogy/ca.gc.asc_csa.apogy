@@ -25,7 +25,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl#getPhysicalBody <em>Physical Body</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl#getConstraint <em>Constraint</em>}</li>
@@ -33,6 +32,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.ConstraintAttachmentPointImpl#getPointId <em>Point Id</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

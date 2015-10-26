@@ -16,7 +16,6 @@ import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay()
  * @model

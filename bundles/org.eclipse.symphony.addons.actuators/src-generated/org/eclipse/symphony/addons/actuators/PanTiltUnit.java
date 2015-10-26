@@ -11,13 +11,13 @@ package org.eclipse.symphony.addons.actuators;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentPanAngle <em>Current Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCurrentTiltAngle <em>Current Tilt Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedPanAngle <em>Commanded Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getPanTiltUnit()
  * @model abstract="true"

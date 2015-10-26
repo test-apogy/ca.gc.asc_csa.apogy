@@ -22,13 +22,13 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
  * <em><b>Connection Point</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.ConnectionPointImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.ConnectionPointImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.ConnectionPointImpl#getPointsList <em>Points List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.ConnectionPointImpl#getNode <em>Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

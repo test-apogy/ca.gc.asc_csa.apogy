@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.ContextsList#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.ContextsList#getContexts <em>Contexts</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContextsList()
  * @model

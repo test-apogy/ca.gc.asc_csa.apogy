@@ -16,7 +16,6 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNumberOfRow <em>Number Of Row</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNumberOfColumns <em>Number Of Columns</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getCellSize <em>Cell Size</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.ASCHeaderDataImpl#getNoDataValue <em>No Data Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

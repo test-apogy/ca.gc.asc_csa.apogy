@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.file.csv.CsvPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnValuesMapImpl#getTypedKey <em>Key</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnValuesMapImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

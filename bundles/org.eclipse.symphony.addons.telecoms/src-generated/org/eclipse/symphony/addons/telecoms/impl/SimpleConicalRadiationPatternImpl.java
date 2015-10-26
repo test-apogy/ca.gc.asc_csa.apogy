@@ -15,10 +15,10 @@ import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.SimpleConicalRadiationPatternImpl#getApexAngle <em>Apex Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

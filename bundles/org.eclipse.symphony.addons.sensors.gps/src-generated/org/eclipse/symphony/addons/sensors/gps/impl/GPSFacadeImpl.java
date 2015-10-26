@@ -20,6 +20,8 @@ import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>GPS Facade</b></em>'. <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

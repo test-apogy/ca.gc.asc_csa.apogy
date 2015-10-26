@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteCommand#getSatellite <em>Satellite</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteCommand#getCommandStartTime <em>Command Start Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommand()
  * @model

@@ -17,11 +17,11 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.MapLayerPresentation#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.MapLayerPresentation#getMapLayer <em>Map Layer</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapLayerPresentation()
  * @model abstract="true"

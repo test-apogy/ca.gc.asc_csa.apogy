@@ -19,12 +19,12 @@ import org.eclipse.symphony.core.environment.RectangularRegionProvider;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestRadius <em>Feature Of Interest Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation()
  * @model

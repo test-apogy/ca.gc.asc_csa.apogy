@@ -13,7 +13,6 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getOrbitModel <em>Orbit Model</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#getTimeSource <em>Time Source</em>}</li>
@@ -23,6 +22,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowGroundTrace <em>Show Ground Trace</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowOrbit <em>Show Orbit</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer()
  * @model

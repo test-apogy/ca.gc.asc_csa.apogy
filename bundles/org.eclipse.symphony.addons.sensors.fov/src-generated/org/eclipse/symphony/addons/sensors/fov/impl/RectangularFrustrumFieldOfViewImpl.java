@@ -21,13 +21,13 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getRange <em>Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getHorizontalFieldOfViewAngle <em>Horizontal Field Of View Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getVerticalFieldOfViewAngle <em>Vertical Field Of View Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewImpl#getVolume <em>Volume</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

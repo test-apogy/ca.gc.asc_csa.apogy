@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.SlopeRange#getSlopeLowerBound <em>Slope Lower Bound</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.SlopeRange#getSlopeUpperBound <em>Slope Upper Bound</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.SlopeRange#getColor <em>Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSlopeRange()
  * @model

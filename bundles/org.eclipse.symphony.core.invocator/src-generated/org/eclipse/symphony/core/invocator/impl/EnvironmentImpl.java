@@ -26,7 +26,6 @@ import org.eclipse.symphony.core.invocator.VariablesList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl#getDescription <em>Description</em>}</li>
@@ -36,6 +35,7 @@ import org.eclipse.symphony.core.invocator.VariablesList;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl#getContextsList <em>Contexts List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EnvironmentImpl#getActiveContext <em>Active Context</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

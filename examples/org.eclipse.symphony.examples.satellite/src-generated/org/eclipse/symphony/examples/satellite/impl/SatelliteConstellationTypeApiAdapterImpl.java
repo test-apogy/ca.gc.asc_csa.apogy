@@ -26,6 +26,8 @@ import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Satellite Constellation Type Api Adapter</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl#getFovPresentationMode <em>Fov Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl#isFovVisible <em>Fov Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl#isDataVisible <em>Data Visible</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

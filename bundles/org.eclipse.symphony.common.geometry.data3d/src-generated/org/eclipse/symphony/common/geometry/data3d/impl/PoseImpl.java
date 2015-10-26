@@ -18,12 +18,12 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl#getXRotation <em>XRotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl#getYRotation <em>YRotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.PoseImpl#getZRotation <em>ZRotation</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

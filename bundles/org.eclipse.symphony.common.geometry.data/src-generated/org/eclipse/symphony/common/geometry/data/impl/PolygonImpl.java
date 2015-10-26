@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.PolygonImpl#getVertices <em>Vertices</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

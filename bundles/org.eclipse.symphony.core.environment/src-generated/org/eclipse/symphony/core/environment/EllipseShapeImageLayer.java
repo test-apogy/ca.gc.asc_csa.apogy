@@ -16,12 +16,12 @@ package org.eclipse.symphony.core.environment;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#getEllipseWidth <em>Ellipse Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#getEllipseHeight <em>Ellipse Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEllipseShapeImageLayer()
  * @model

@@ -13,12 +13,12 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner1 <em>Corner1</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#getCorner2 <em>Corner2</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape#isIncludeJustTouching <em>Include Just Touching</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getCubeSamplingShape()
  * @model

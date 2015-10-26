@@ -147,8 +147,8 @@ public class SymphonyCoreUiPackageImpl extends EPackageImpl implements SymphonyC
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyCorePackage.eINSTANCE.eClass();
 		TopologyUIPackage.eINSTANCE.eClass();
+		SymphonyCorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyCoreUiPackage.createPackageContents();

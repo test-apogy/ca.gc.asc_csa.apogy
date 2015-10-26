@@ -44,12 +44,12 @@ import org.jfree.ui.TextAnchor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl#getFeaturesOfInterestMapLayer <em>Features Of Interest Map Layer</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl#getFeatureOfInterestRadius <em>Feature Of Interest Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.FeaturesOfInterestMapLayerPresentationImpl#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

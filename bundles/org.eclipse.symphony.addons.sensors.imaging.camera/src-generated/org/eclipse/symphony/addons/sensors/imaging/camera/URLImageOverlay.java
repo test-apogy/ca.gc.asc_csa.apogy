@@ -13,12 +13,12 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getUrl <em>Url</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy <em>Image Size Policy</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImage <em>Image</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getURLImageOverlay()
  * @model

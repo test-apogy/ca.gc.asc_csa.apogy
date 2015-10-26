@@ -16,11 +16,11 @@ import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.CustomInputConditioningPointImpl#getInputValue <em>Input Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.CustomInputConditioningPointImpl#getOutputValue <em>Output Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

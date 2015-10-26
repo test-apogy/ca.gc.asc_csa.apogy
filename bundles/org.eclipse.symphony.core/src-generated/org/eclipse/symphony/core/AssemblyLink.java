@@ -15,7 +15,6 @@ import org.eclipse.symphony.core.invocator.TypeMember;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.AssemblyLink#getParentTypeMember <em>Parent Type Member</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.AssemblyLink#getSubSystemTypeMember <em>Sub System Type Member</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.symphony.core.invocator.TypeMember;
  *   <li>{@link org.eclipse.symphony.core.AssemblyLink#getParentInstance <em>Parent Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.AssemblyLink#getSubSystemInstance <em>Sub System Instance</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink()
  * @model

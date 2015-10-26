@@ -31,12 +31,12 @@ import edu.wlu.cs.levy.CG.KDTree;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#isAutoScale <em>Auto Scale</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#getMinimumSlope <em>Minimum Slope</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.CartesianTriangularMeshSlopeImageMapLayerImpl#getMaximumSlope <em>Maximum Slope</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -11,10 +11,10 @@ package org.eclipse.symphony.addons.vehicle;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.WheelContactProvider#getContactMode <em>Contact Mode</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getWheelContactProvider()
  * @model

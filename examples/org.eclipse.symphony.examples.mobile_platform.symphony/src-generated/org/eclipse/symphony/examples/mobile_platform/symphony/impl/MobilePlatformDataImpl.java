@@ -16,13 +16,13 @@ import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMob
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformDataImpl#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformDataImpl#isDisposed <em>Disposed</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformDataImpl#getLinearVelocity <em>Linear Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.impl.MobilePlatformDataImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

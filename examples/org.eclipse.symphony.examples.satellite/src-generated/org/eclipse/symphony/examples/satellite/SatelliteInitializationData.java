@@ -18,11 +18,11 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteInitializationData#getSatellite <em>Satellite</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteInitializationData#getOrbitModel <em>Orbit Model</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteInitializationData()
  * @model

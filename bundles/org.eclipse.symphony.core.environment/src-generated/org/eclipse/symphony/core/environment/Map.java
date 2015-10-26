@@ -15,12 +15,12 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.Map#getTransformation <em>Transformation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.Map#getLayers <em>Layers</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.Map#getMapNode <em>Map Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMap()
  * @model

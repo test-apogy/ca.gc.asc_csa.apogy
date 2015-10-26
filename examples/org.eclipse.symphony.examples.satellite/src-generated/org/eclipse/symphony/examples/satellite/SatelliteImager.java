@@ -21,11 +21,11 @@ import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteImager#getSatellite <em>Satellite</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteImager#getImagesAcquired <em>Images Acquired</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteImager()
  * @model
