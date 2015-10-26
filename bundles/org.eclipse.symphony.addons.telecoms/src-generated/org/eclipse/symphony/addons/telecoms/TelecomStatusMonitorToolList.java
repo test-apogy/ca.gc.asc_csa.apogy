@@ -18,10 +18,10 @@ import org.eclipse.symphony.addons.SimpleTool;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomStatusMonitorToolList()
  * @model

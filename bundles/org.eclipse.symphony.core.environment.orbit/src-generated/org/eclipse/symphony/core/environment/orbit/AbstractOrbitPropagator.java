@@ -21,7 +21,6 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getReferenceFrame <em>Reference Frame</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getAttitudeProvider <em>Attitude Provider</em>}</li>
@@ -29,6 +28,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getValidFromDate <em>Valid From Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAbstractOrbitPropagator()
  * @model abstract="true"

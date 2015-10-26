@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.topology.Leaf;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Light#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Light#getColor <em>Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getLight()
  * @model abstract="true"

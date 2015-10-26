@@ -36,10 +36,10 @@ import org.eclipse.symphony.core.invocator.ResultsList;
  * <em><b>Results List Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.ResultsListNodeImpl#getResultsList <em>Results List</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -44,7 +44,6 @@ import org.eclipse.symphony.core.invocator.Variable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#isPenDown <em>Pen Down</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getVariable <em>Variable</em>}</li>
@@ -54,6 +53,7 @@ import org.eclipse.symphony.core.invocator.Variable;
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getPoseProvider <em>Pose Provider</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Trajectory3DToolImpl#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -13,10 +13,10 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.SimpleToolList#getSimpleTools <em>Simple Tools</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleToolList()
  * @model

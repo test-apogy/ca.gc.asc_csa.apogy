@@ -20,7 +20,6 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getEndTime <em>End Time</em>}</li>
@@ -29,6 +28,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getPasses <em>Passes</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStationToVisibilityMap <em>Ground Station To Visibility Map</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet()
  * @model

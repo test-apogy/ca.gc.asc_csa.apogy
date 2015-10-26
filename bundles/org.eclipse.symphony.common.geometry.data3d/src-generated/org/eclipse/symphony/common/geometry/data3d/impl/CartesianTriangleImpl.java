@@ -18,6 +18,8 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Cartesian Triangle</b></em>'. <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

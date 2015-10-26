@@ -23,13 +23,13 @@ import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.SpacecraftStateImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.SpacecraftStateImpl#getCoordinates <em>Coordinates</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.SpacecraftStateImpl#getAttitude <em>Attitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.SpacecraftStateImpl#getOrbit <em>Orbit</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

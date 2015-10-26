@@ -19,7 +19,6 @@ import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
  * <em><b>Robotic Arm</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmImpl#getTurretAngle <em>Turret Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmImpl#getShoulderAngle <em>Shoulder Angle</em>}</li>
@@ -29,6 +28,7 @@ import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmImpl#isArmMoving <em>Arm Moving</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.impl.RoboticArmImpl#getSpeed <em>Speed</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

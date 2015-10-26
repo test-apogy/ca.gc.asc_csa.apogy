@@ -12,7 +12,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getUpSlopeCostFactor <em>Up Slope Cost Factor</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getDownSlopeCostFactor <em>Down Slope Cost Factor</em>}</li>
@@ -20,6 +19,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumUpSlope <em>Maximum Up Slope</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction#getMaximumDownSlope <em>Maximum Down Slope</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndSlopesCostFunction()
  * @model

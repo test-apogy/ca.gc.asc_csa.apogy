@@ -51,6 +51,8 @@ import com.jhlabs.image.RescaleFilter;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>EImages Utilities</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

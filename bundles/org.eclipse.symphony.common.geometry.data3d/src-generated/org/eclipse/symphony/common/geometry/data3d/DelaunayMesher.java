@@ -11,7 +11,6 @@ package org.eclipse.symphony.common.geometry.data3d;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getTolerance <em>Tolerance</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getAlpha <em>Alpha</em>}</li>
@@ -19,6 +18,7 @@ package org.eclipse.symphony.common.geometry.data3d;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#isBoundingTriangulation <em>Bounding Triangulation</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getMeshingPlane <em>Meshing Plane</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getDelaunayMesher()
  * @model

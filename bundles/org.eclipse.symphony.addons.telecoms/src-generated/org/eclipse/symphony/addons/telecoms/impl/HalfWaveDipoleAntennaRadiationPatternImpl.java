@@ -11,6 +11,8 @@ import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Half Wave Dipole Antenna Radiation Pattern</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

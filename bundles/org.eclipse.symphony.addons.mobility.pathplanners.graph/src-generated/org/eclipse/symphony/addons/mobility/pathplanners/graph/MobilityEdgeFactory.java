@@ -18,10 +18,10 @@ import org.jgrapht.EdgeFactory;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory#getCostFunctions <em>Cost Functions</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdgeFactory()
  * @model superTypes="org.eclipse.symphony.addons.mobility.pathplanners.graph.EdgeFactory<org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge>"

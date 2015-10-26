@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.images.AbstractEImage#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.images.AbstractEImage#getHeight <em>Height</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.images.ImagesCorePackage#getAbstractEImage()
  * @model interface="true" abstract="true"

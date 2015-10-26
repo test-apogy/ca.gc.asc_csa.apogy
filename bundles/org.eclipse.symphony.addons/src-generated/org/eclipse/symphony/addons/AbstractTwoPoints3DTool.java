@@ -19,7 +19,6 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromAbsolutePosition <em>From Absolute Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getFromRelativePosition <em>From Relative Position</em>}</li>
@@ -31,6 +30,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#isToNodeLock <em>To Node Lock</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.AbstractTwoPoints3DTool#getDistance <em>Distance</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool()
  * @model abstract="true"

@@ -11,12 +11,12 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen <em>Frozen</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage <em>Frozen Message</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageFrozenOverlay()
  * @model

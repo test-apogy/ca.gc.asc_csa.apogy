@@ -12,10 +12,10 @@ import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ThrusterBinding#getThruster <em>Thruster</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThrusterBinding()
  * @model

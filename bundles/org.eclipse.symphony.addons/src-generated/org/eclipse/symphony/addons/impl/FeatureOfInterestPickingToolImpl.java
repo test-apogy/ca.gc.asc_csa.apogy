@@ -41,7 +41,6 @@ import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreatio
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getPickAbsolutePosition <em>Pick Absolute Position</em>}</li>
@@ -50,6 +49,7 @@ import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreatio
  *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getPickAbsoluteNormal <em>Pick Absolute Normal</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.FeatureOfInterestPickingToolImpl#getPickRelativeNormal <em>Pick Relative Normal</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

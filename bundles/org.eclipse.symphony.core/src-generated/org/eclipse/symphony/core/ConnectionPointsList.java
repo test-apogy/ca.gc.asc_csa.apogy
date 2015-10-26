@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ConnectionPointsList#getSymphonySystem <em>Symphony System</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ConnectionPointsList#getConnectionPoints <em>Connection Points</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getConnectionPointsList()
  * @model

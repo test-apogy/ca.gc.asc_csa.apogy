@@ -26,11 +26,11 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicSystemPropertiesImpl#getMaterials <em>Materials</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

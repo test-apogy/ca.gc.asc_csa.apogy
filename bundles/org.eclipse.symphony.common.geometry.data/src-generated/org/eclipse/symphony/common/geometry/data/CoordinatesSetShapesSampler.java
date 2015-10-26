@@ -13,11 +13,11 @@ import org.eclipse.symphony.common.processors.Processor;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler#getCoordinatesSamplingShapes <em>Coordinates Sampling Shapes</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSetShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSetShapesSampler()
  * @model

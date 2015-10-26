@@ -34,11 +34,11 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.MultiEObjectsA
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl#getEarthSurfaceLocation <em>Earth Surface Location</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthSurfaceLocationWorldWindLayerImpl#getTargetRadius <em>Target Radius</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

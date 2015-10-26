@@ -24,10 +24,10 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <em><b>Aggregate Group Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl#getAggregatedChildren <em>Aggregated Children</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

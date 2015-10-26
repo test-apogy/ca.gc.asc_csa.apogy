@@ -20,11 +20,11 @@ import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathF
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl#getMaximumAngularVelocity <em>Maximum Angular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.SkidSteeredPlatformPathFollowerImpl#getMaximumLinearVelocity <em>Maximum Linear Velocity</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

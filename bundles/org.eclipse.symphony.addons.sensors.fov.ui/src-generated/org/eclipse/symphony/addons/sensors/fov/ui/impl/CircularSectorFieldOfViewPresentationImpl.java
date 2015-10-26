@@ -25,6 +25,8 @@ import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Circular Sector Field Of View Presentation</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -21,10 +21,10 @@ import org.eclipse.symphony.core.programs.InvocatorProgramsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.impl.AbstractProgramRuntimeImpl#getProgram <em>Program</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

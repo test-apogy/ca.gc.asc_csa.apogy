@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getFeatureRootsList <em>Feature Roots List</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getBindingsList <em>Bindings List</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getBindingsSet()
  * @model

@@ -11,11 +11,11 @@ package org.eclipse.symphony.common.topology.ui;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#isAxisVisible <em>Axis Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLenght <em>Axis Lenght</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getPositionNodePresentation()
  * @model

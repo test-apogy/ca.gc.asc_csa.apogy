@@ -24,12 +24,12 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getTransparency <em>Transparency</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.impl.CircularExclusionZonePresentationImpl#getHeight <em>Height</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

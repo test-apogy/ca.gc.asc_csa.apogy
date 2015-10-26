@@ -35,7 +35,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.WorldWindUtils
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl#getOrbitModel <em>Orbit Model</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl#getTimeSource <em>Time Source</em>}</li>
@@ -45,6 +44,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.WorldWindUtils
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl#isShowGroundTrace <em>Show Ground Trace</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.OrbitModelWorldWindLayerImpl#isShowOrbit <em>Show Orbit</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

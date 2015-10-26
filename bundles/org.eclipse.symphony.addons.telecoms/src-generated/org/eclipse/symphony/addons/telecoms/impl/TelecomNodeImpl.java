@@ -21,7 +21,6 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getStatusMonitorTool <em>Status Monitor Tool</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#isEnabled <em>Enabled</em>}</li>
@@ -37,6 +36,7 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getPacketLoss <em>Packet Loss</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomNodeImpl#getStatus <em>Status</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -23,13 +23,13 @@ import org.jfree.data.xy.XYSeries;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getLatestPosition <em>Latest Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getAzimuthAngle <em>Azimuth Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryLength <em>Trajectory Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryColor <em>Trajectory Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getTrajectoryProvider()
  * @model abstract="true"

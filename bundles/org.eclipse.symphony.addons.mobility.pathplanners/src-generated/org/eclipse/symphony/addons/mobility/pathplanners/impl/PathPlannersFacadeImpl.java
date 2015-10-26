@@ -19,6 +19,8 @@ import org.eclipse.symphony.common.topology.GroupNode;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Path Planners Facade</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

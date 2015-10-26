@@ -13,10 +13,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.WayPointPath#getLength <em>Length</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getWayPointPath()
  * @model

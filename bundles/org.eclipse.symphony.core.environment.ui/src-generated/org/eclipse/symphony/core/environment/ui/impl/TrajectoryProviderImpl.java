@@ -27,13 +27,13 @@ import org.jfree.data.xy.XYSeries;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl#getLatestPosition <em>Latest Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl#getAzimuthAngle <em>Azimuth Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl#getTrajectoryLength <em>Trajectory Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.TrajectoryProviderImpl#getTrajectoryColor <em>Trajectory Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

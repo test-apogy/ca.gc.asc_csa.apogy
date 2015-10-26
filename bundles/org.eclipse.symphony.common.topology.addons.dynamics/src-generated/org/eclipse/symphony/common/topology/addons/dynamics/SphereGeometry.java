@@ -15,10 +15,10 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry#getRadius <em>Radius</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getSphereGeometry()
  * @model

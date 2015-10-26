@@ -16,7 +16,6 @@ import org.eclipse.symphony.common.processors.Processor;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionX <em>Resolution X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getResolutionY <em>Resolution Y</em>}</li>
@@ -24,6 +23,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler#getTileResolution <em>Tile Resolution</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getVoxelBased3DPointCloudResampler()
  * @model

@@ -18,12 +18,12 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getParentNode <em>Parent Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getCases <em>Cases</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getActiveCase <em>Active Case</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationSwitchBinding()
  * @model

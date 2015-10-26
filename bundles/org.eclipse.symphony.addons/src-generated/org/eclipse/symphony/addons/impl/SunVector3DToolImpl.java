@@ -38,7 +38,6 @@ import org.eclipse.symphony.core.invocator.Environment;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getVectorColor <em>Vector Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getVectorLength <em>Vector Length</em>}</li>
@@ -48,6 +47,7 @@ import org.eclipse.symphony.core.invocator.Environment;
  *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getCurrentSunIntensityPercentage <em>Current Sun Intensity Percentage</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.SunVector3DToolImpl#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

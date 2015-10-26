@@ -19,13 +19,13 @@ import org.eclipse.symphony.common.emf.AbstractFeatureNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getSourceObject <em>Source Object</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getFeatureNode <em>Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#getCurrentValue <em>Current Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchFeatureNodeAdapter()
  * @model

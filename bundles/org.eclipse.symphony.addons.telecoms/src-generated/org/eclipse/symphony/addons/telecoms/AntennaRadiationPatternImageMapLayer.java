@@ -14,12 +14,12 @@ import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getAntennaRadiationPattern <em>Antenna Radiation Pattern</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getSignalStrengthCutoff <em>Signal Strength Cutoff</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer#getBellowCutoffColor <em>Bellow Cutoff Color</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getAntennaRadiationPatternImageMapLayer()
  * @model

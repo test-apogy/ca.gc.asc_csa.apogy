@@ -12,10 +12,10 @@ import java.awt.image.BufferedImage;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.images.EImage#getImageContent <em>Image Content</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.images.ImagesCorePackage#getEImage()
  * @model

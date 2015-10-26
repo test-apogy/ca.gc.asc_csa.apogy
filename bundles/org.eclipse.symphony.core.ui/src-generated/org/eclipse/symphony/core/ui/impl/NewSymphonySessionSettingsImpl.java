@@ -21,7 +21,6 @@ import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#getFolder <em>Folder</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#getFilename <em>Filename</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
  *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#isCreateDataProducts <em>Create Data Products</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonySessionSettingsImpl#isCreateTools <em>Create Tools</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

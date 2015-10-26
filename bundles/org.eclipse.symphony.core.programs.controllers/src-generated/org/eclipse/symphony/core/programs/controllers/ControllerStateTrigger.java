@@ -11,11 +11,11 @@ package org.eclipse.symphony.core.programs.controllers;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger#isEnablingValue <em>Enabling Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger#getRepeatPeriod <em>Repeat Period</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerStateTrigger()
  * @model

@@ -24,10 +24,10 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.LineRangeScannerImpl#getAngularResolution <em>Angular Resolution</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

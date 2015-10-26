@@ -21,11 +21,11 @@ import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PointLightImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PointLightImpl#getAttenuation <em>Attenuation</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

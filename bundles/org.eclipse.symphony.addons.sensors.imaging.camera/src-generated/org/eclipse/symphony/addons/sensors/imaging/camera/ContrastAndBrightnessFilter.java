@@ -11,11 +11,11 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getContrast <em>Contrast</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getBrightness <em>Brightness</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getContrastAndBrightnessFilter()
  * @model

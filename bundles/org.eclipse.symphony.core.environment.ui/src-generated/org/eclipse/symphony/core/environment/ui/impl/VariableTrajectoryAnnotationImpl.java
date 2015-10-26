@@ -35,7 +35,6 @@ import org.jfree.data.xy.XYSeries;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getLatestPosition <em>Latest Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getAzimuthAngle <em>Azimuth Angle</em>}</li>
@@ -43,6 +42,7 @@ import org.jfree.data.xy.XYSeries;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getTrajectoryColor <em>Trajectory Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VariableTrajectoryAnnotationImpl#getTrajectoryProvider <em>Trajectory Provider</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

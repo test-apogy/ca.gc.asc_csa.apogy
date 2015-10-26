@@ -28,11 +28,11 @@ import org.eclipse.symphony.common.geometry.data.DataPackage;
  * <em><b>Coordinates Set</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl#getPoints <em>Points</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl#getNormals <em>Normals</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

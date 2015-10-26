@@ -22,12 +22,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getAltitude <em>Altitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getAzimuth <em>Azimuth</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getRadius <em>Radius</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getHorizontalCoordinates()
  * @model

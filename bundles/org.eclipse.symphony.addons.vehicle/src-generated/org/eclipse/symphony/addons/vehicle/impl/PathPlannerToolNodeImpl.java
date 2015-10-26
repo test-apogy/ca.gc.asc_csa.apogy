@@ -24,10 +24,10 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolNodeImpl#getPathPlannerTool <em>Path Planner Tool</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

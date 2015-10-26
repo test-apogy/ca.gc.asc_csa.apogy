@@ -25,12 +25,12 @@ import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.RotationBindingImpl#getRotationNode <em>Rotation Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.RotationBindingImpl#getRotationAxis <em>Rotation Axis</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.RotationBindingImpl#getRotationUnits <em>Rotation Units</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

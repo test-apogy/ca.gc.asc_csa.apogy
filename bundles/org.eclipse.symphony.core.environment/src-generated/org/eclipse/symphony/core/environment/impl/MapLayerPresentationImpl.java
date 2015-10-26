@@ -20,13 +20,13 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapLayerPresentationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapLayerPresentationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapLayerPresentationImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.MapLayerPresentationImpl#getMapLayer <em>Map Layer</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

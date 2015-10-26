@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates#getRotation <em>Rotation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates#getAngularRate <em>Angular Rate</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates#getAngularAcceleration <em>Angular Acceleration</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAngularCoordinates()
  * @model

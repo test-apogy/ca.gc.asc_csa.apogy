@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.topology.ui.NodeSelection;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.Simple3DTool#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Simple3DTool#getRootNode <em>Root Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimple3DTool()
  * @model abstract="true"

@@ -17,11 +17,11 @@ import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite#getSky <em>Sky</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite#getEarthLocations <em>Earth Locations</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitWorksite()
  * @model

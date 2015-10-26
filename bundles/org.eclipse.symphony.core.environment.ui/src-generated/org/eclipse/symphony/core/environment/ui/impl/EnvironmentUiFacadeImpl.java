@@ -47,6 +47,8 @@ import org.jfree.data.xy.XYSeries;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Environment Ui Facade</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

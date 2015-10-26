@@ -11,10 +11,10 @@ package org.eclipse.symphony.addons.geometry.paths;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator#getMaximumDistanceInterval <em>Maximum Distance Interval</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getSegmentWayPointPathInterpolator()
  * @model

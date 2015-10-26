@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getFile <em>File</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getInputStream <em>Input Stream</em>}</li>
@@ -28,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getHeader <em>Header</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASReader#getPoints <em>Points</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASReader()
  * @model

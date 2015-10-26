@@ -32,12 +32,12 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl#getCoordinatesSamplingShapes <em>Coordinates Sampling Shapes</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl#getShapeSamplingMode <em>Shape Sampling Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSamplerImpl#getPolygonSamplingMode <em>Polygon Sampling Mode</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -15,10 +15,10 @@ package org.eclipse.symphony.core.environment;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation#getAlpha <em>Alpha</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayerPresentation()
  * @model

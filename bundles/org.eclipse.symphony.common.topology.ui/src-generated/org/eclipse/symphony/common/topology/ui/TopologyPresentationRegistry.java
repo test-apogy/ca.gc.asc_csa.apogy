@@ -20,11 +20,11 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList <em>Topology Presentation Set List</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationRegistry()
  * @model

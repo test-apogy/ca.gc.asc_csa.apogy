@@ -32,7 +32,6 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getResolutionX <em>Resolution X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getResolutionY <em>Resolution Y</em>}</li>
@@ -40,6 +39,7 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getMinimumNumberOfPointPerVoxel <em>Minimum Number Of Point Per Voxel</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.VoxelBased3DPointCloudResamplerImpl#getTileResolution <em>Tile Resolution</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

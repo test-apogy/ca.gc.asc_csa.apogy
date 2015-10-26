@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getRows <em>Rows</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getColumns <em>Columns</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getRasterPointCloud()
  * @model

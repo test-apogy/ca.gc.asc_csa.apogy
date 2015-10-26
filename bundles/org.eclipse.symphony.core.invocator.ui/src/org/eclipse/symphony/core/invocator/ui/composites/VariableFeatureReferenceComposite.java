@@ -569,7 +569,11 @@ public class VariableFeatureReferenceComposite extends Composite {
 	@Override
 	public void dispose() {
 		super.dispose();
-		variableFeatureReference.eAdapters().remove(getVariableFeatureReferenceAdapter());
+		
+		if (variableFeatureReference != null){
+			variableFeatureReference.eAdapters().remove(getVariableFeatureReferenceAdapter());
+		}
+		
 		if (m_bindingContext != null) {
 			m_bindingContext.dispose();
 			m_bindingContext = null;

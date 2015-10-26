@@ -25,7 +25,6 @@ import org.orekit.time.AbsoluteDate;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.KeplerianEarthOrbitImpl#getSemiMajorAxis <em>Semi Major Axis</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.KeplerianEarthOrbitImpl#getEccentricity <em>Eccentricity</em>}</li>
@@ -35,6 +34,7 @@ import org.orekit.time.AbsoluteDate;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.KeplerianEarthOrbitImpl#getMeanAnomaly <em>Mean Anomaly</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.KeplerianEarthOrbitImpl#getTrueAnomaly <em>True Anomaly</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

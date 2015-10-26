@@ -18,10 +18,10 @@ import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.antenna.impl.DishAntennaImpl#getFov <em>Fov</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

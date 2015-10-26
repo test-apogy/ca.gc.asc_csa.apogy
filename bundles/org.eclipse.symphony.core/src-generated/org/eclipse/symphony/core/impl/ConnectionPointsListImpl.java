@@ -25,11 +25,11 @@ import org.eclipse.symphony.core.SymphonySystem;
  * <em><b>Connection Points List</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.ConnectionPointsListImpl#getSymphonySystem <em>Symphony System</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.ConnectionPointsListImpl#getConnectionPoints <em>Connection Points</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

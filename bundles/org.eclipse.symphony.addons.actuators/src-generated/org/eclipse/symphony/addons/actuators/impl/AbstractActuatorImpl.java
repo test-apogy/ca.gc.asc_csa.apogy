@@ -17,11 +17,11 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.actuators.impl.AbstractActuatorImpl#isMoving <em>Moving</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.actuators.impl.AbstractActuatorImpl#getActuatorStatus <em>Actuator Status</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

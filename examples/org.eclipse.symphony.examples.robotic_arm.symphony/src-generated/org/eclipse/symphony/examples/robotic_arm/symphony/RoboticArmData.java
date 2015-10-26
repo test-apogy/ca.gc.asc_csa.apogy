@@ -21,7 +21,6 @@ import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getSpeed <em>Speed</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getElbowAngle <em>Elbow Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData#getWristAngle <em>Wrist Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRoboticArmPackage#getRoboticArmData()
  * @model

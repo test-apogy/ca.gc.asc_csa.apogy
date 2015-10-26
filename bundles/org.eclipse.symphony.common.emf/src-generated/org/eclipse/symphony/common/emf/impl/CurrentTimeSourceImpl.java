@@ -25,11 +25,11 @@ import org.eclipse.symphony.common.log.Logger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.CurrentTimeSourceImpl#getUpdatePeriod <em>Update Period</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.CurrentTimeSourceImpl#isPaused <em>Paused</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

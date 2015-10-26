@@ -15,10 +15,10 @@ import org.eclipse.symphony.examples.satellite.SatelliteCommandRoll;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandRollImpl#getTargetRollAngle <em>Target Roll Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

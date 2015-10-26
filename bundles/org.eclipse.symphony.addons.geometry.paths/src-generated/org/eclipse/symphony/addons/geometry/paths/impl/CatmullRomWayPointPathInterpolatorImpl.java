@@ -26,12 +26,12 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.CatmullRomWayPointPathInterpolatorImpl#getTension <em>Tension</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.CatmullRomWayPointPathInterpolatorImpl#getMaximumWayPointsDistance <em>Maximum Way Points Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.CatmullRomWayPointPathInterpolatorImpl#getEndControlPointGenerationMode <em>End Control Point Generation Mode</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

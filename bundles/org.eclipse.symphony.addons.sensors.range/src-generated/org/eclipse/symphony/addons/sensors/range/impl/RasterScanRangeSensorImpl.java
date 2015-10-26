@@ -22,6 +22,8 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Raster Scan Range Sensor</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getMass <em>Mass</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getInertiaMatrix <em>Inertia Matrix</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getCenterOfMassLocation <em>Center Of Mass Location</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getPhysicalProperties()
  * @model

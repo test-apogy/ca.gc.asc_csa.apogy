@@ -14,6 +14,8 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Edge Filter</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

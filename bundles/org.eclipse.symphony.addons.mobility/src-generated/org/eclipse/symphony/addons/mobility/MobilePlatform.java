@@ -12,11 +12,11 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.MobilePlatform#isMoving <em>Moving</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.MobilePlatform#getMobilePlatformStatus <em>Mobile Platform Status</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getMobilePlatform()
  * @model

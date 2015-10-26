@@ -24,7 +24,6 @@ import org.eclipse.symphony.core.environment.RectangularRegion;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapLayers <em>Map Layers</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getBackgroundColor <em>Background Color</em>}</li>
@@ -34,6 +33,7 @@ import org.eclipse.symphony.core.environment.RectangularRegion;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getMapImageRectangularRegion <em>Map Image Rectangular Region</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getExtent <em>Extent</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration()
  * @model

@@ -20,7 +20,6 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getTypesList <em>Types List</em>}</li>
@@ -28,6 +27,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getContextsList <em>Contexts List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getActiveContext <em>Active Context</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEnvironment()
  * @model

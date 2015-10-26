@@ -49,7 +49,6 @@ import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#isBusy <em>Busy</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#isAutoPathPlanEnabled <em>Auto Path Plan Enabled</em>}</li>
@@ -58,6 +57,7 @@ import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#getPlannedPath <em>Planned Path</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolImpl#getPathPlannerToolNode <em>Path Planner Tool Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

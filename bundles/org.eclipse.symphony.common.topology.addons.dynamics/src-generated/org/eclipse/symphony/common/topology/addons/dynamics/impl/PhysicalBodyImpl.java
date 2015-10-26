@@ -30,7 +30,6 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl#getPhysicalProperties <em>Physical Properties</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl#getConstraintAttachmentPoints <em>Constraint Attachment Points</em>}</li>
@@ -39,6 +38,7 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl#getPointsOfInterest <em>Points Of Interest</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl#getCollisionGeometry <em>Collision Geometry</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

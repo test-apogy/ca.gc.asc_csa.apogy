@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.images.ImagesCorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.images.impl.ImageSizeImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.images.impl.ImageSizeImpl#getHeight <em>Height</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

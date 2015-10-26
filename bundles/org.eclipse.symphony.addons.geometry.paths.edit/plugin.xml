@@ -22,6 +22,16 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_addons_geometry_paths -->
+      <extender
+            uri="org.eclipse.symphony.common.geometry.data"
+            class="org.eclipse.symphony.addons.geometry.paths.provider.PathsItemProviderAdapterFactory$DataChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.addons.geometry.paths.provider.PathsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated paths -->
       <extender
             uri="org.eclipse.symphony.common.topology"

@@ -26,7 +26,6 @@ import org.eclipse.symphony.examples.camera.PTUCameraStub;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl#isMoving <em>Moving</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl#getActuatorStatus <em>Actuator Status</em>}</li>
@@ -35,6 +34,7 @@ import org.eclipse.symphony.examples.camera.PTUCameraStub;
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl#getCommandedPanAngle <em>Commanded Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.PTUCameraStubImpl#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

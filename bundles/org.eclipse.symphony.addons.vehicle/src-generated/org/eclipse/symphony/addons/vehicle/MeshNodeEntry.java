@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry#getNode <em>Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry#getMesh <em>Mesh</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshNodeEntry()
  * @model

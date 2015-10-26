@@ -37,7 +37,6 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#isSupported <em>Supported</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#getControllers <em>Controllers</em>}</li>
@@ -46,6 +45,7 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#getPollingJob <em>Polling Job</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EControllerEnvironmentImpl#isPollingProblem <em>Polling Problem</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

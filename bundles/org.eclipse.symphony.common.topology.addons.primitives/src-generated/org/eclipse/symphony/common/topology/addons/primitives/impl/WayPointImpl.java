@@ -15,6 +15,8 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Way Point</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */
