@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.emf.EMFEcorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractRootNodeImpl#getSourceClass <em>Source Class</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

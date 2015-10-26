@@ -19,6 +19,8 @@ import org.eclipse.symphony.common.processors.ProcessorsPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Job Processors Chain</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

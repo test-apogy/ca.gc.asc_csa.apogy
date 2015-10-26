@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getReserved <em>Reserved</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getUserID <em>User ID</em>}</li>
@@ -20,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLenghtAfterHeader <em>Record Lenght After Header</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getVariableLengthRecord()
  * @model

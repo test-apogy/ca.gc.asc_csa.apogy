@@ -21,11 +21,11 @@ import org.eclipse.symphony.core.invocator.Variable;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.ProgramFacade#getSession <em>Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.ProgramFacade#getVariables <em>Variables</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getProgramFacade()
  * @model

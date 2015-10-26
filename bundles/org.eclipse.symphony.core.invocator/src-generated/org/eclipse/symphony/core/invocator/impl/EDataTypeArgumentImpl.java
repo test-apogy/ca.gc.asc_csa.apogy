@@ -17,10 +17,10 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EDataTypeArgumentImpl#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

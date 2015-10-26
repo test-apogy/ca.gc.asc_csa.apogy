@@ -12,10 +12,10 @@ import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerTrigger#getComponentQualifier <em>Component Qualifier</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerTrigger()
  * @model abstract="true"

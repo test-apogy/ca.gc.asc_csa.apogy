@@ -20,10 +20,10 @@ import org.eclipse.symphony.core.environment.WorksiteNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.WorksiteNodeImpl#getWorksite <em>Worksite</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

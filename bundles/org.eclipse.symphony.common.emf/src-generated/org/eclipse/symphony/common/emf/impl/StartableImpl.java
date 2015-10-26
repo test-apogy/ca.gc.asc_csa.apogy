@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.emf.Startable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.StartableImpl#isStarted <em>Started</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

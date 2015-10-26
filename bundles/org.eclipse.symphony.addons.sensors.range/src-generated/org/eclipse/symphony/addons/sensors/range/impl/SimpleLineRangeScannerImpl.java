@@ -17,6 +17,8 @@ import org.eclipse.symphony.addons.sensors.range.SimpleLineRangeScanner;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Simple Line Range Scanner</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

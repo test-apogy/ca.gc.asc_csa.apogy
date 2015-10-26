@@ -15,10 +15,10 @@ package org.eclipse.symphony.addons.telecoms;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern#getUrl <em>Url</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getURlBasedAntennaRadiationPattern()
  * @model

@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.eclipse.emf.ecore.invocator.tests;
+package org.eclipse.symphony.core.invocator.tests;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

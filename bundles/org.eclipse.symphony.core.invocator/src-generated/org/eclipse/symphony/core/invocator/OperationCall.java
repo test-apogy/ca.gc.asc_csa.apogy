@@ -20,7 +20,6 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getEOperation <em>EOperation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList <em>Arguments List</em>}</li>
@@ -28,6 +27,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getEnvironment <em>Environment</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCall()
  * @model

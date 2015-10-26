@@ -34,7 +34,6 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataOutputStream;
  * <em><b>LAS Writer</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl#getFileName <em>File Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
@@ -48,6 +47,7 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataOutputStream;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl#getZOffset <em>ZOffset</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl#getOutputStream <em>Output Stream</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

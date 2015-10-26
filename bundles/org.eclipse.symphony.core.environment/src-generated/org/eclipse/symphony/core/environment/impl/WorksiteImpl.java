@@ -26,12 +26,12 @@ import org.eclipse.symphony.core.impl.AbstractWorksiteImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.WorksiteImpl#getWorksiteNode <em>Worksite Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.WorksiteImpl#getOrbitsModels <em>Orbits Models</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.WorksiteImpl#getEnvironment <em>Environment</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -21,11 +21,11 @@ import org.eclipse.symphony.core.impl.UpdatableImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.AbstractWorldWindLayerImpl#getRenderableLayer <em>Renderable Layer</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

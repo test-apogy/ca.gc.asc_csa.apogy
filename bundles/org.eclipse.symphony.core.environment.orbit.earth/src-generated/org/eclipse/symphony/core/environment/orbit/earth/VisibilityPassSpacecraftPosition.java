@@ -13,7 +13,6 @@ import org.eclipse.symphony.common.emf.Timed;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getAzimuth <em>Azimuth</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getElevation <em>Elevation</em>}</li>
@@ -21,6 +20,7 @@ import org.eclipse.symphony.common.emf.Timed;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getRangeRate <em>Range Rate</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition#getSpacecraftCrossTrackAngle <em>Spacecraft Cross Track Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassSpacecraftPosition()
  * @model

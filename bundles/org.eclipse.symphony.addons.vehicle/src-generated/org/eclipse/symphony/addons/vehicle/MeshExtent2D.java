@@ -12,13 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMinimumX <em>Minimum X</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMinimumY <em>Minimum Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMaximumX <em>Maximum X</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMaximumY <em>Maximum Y</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshExtent2D()
  * @model

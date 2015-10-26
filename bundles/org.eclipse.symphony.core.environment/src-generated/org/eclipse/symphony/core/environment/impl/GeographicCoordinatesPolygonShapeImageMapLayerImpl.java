@@ -26,10 +26,10 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.GeographicCoordinatesPolygonShapeImageMapLayerImpl#getPolygonVerticesGeographicCoordinates <em>Polygon Vertices Geographic Coordinates</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

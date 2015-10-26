@@ -17,7 +17,6 @@ import javax.vecmath.Color3f;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getRulerColor <em>Ruler Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getExtremitiesRadius <em>Extremities Radius</em>}</li>
@@ -29,6 +28,7 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLenght <em>Major Tick Lenght</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getRuler3dToolNode <em>Ruler3d Tool Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool()
  * @model

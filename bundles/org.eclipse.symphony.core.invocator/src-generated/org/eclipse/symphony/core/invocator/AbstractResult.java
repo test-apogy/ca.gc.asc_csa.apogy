@@ -18,13 +18,13 @@ import org.eclipse.symphony.common.emf.Timed;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractResult#getResultsList <em>Results List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractResult#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractResult#getContext <em>Context</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractResult#getResultValue <em>Result Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractResult()
  * @model abstract="true"

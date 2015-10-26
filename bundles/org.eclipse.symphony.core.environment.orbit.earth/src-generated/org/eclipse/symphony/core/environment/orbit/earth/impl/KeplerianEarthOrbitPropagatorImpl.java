@@ -18,6 +18,8 @@ import org.orekit.propagation.analytical.KeplerianPropagator;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Keplerian Earth Orbit Propagator</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

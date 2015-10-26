@@ -14,6 +14,8 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Camera Name Overlay</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

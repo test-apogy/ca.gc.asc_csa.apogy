@@ -20,10 +20,10 @@ import org.eclipse.symphony.common.emf.Timed;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.Orbit#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbit()
  * @model abstract="true"

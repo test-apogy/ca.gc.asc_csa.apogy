@@ -18,6 +18,8 @@ import com.csvreader.CsvWriter;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>CSV Data Logger</b></em>'. <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

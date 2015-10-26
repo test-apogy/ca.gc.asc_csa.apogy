@@ -18,11 +18,11 @@ import org.eclipse.symphony.core.AbstractOrbitModel;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.OrbitModel#getInitialOrbit <em>Initial Orbit</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbitModel()
  * @model

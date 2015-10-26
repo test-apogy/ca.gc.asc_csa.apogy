@@ -54,7 +54,7 @@ public class SymphonySystem3dViewerComposite extends Composite {
 //				}
 //				
 //				// Initialize a GraphicsContext to be sent to the TopologyViewer
-//				GraphicsContext graphicsContext = ca.gc.space.topology.ui.UiFactory.eINSTANCE.createGraphicsContext();
+//				GraphicsContext graphicsContext = topology.ui.UiFactory.eINSTANCE.createGraphicsContext();
 //				GroupNode root = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);		
 //				
 //				if (symphonySystem != null) 

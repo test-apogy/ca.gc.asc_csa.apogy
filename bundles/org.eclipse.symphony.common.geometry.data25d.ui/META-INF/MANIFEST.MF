@@ -7,6 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Export-Package: org.eclipse.symphony.common.geometry.data25d.ui,
+ org.eclipse.symphony.common.geometry.data25d.ui.adapters,
  org.eclipse.symphony.common.geometry.data25d.ui.impl,
  org.eclipse.symphony.common.geometry.data25d.ui.util
 Require-Bundle: org.eclipse.core.runtime,

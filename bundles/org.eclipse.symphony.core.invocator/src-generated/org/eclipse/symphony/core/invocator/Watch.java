@@ -21,13 +21,13 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getWatchesList <em>Watches List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatch()
  * @model

@@ -20,12 +20,12 @@ import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.BatteryImpl#isActive <em>Active</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.BatteryImpl#getVoltage <em>Voltage</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.impl.BatteryImpl#getCurrent <em>Current</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

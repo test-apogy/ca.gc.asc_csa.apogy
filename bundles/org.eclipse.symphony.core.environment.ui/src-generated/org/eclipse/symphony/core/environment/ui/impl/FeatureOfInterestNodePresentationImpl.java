@@ -18,11 +18,11 @@ import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl#getPoleHeight <em>Pole Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.FeatureOfInterestNodePresentationImpl#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

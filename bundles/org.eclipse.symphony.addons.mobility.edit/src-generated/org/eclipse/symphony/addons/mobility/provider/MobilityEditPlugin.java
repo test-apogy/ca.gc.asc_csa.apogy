@@ -44,8 +44,8 @@ public final class MobilityEditPlugin extends EMFPlugin
 	{
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
 		   });
 	}
 

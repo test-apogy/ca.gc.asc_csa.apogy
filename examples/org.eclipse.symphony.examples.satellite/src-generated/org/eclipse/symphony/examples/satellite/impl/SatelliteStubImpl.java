@@ -11,6 +11,8 @@ import org.eclipse.symphony.examples.satellite.SatelliteStub;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Satellite Stub</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

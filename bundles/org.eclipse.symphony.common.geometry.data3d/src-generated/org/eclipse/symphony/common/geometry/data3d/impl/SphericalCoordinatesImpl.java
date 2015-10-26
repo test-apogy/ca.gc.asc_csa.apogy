@@ -18,12 +18,12 @@ import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesImpl#getPhi <em>Phi</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesImpl#getTheta <em>Theta</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.SphericalCoordinatesImpl#getR <em>R</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

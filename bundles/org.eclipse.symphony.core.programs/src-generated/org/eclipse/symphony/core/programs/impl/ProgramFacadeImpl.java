@@ -21,11 +21,11 @@ import org.eclipse.symphony.core.programs.ProgramFacade;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.impl.ProgramFacadeImpl#getSession <em>Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.impl.ProgramFacadeImpl#getVariables <em>Variables</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

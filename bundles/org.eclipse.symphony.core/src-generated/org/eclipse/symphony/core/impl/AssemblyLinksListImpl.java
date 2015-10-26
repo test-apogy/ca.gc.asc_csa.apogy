@@ -21,10 +21,10 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
  * <em><b>Assembly Links List</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.AssemblyLinksListImpl#getAssemblyLinks <em>Assembly Links</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

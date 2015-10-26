@@ -15,6 +15,8 @@ import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvir
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Elevation Mask</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

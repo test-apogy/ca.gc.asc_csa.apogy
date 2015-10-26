@@ -35,13 +35,13 @@ import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl#getSourceObject <em>Source Object</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl#getFeatureNode <em>Feature Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl#getCurrentValue <em>Current Value</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchFeatureNodeAdapterImpl#isResolved <em>Resolved</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -16,6 +16,8 @@ import org.orekit.orbits.Orbit;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Earth Orbit</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

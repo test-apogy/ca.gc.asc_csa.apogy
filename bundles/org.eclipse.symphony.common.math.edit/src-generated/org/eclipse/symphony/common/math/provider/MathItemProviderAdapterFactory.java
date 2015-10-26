@@ -350,11 +350,11 @@ public class MathItemProviderAdapterFactory extends MathAdapterFactory implement
 	 * @generated
 	 */
 	public void dispose() {
-		if (matrix4x4ItemProvider != null) matrix4x4ItemProvider.dispose();
-		if (mathFacadeItemProvider != null) mathFacadeItemProvider.dispose();
-		if (matrix3x3ItemProvider != null) matrix3x3ItemProvider.dispose();
 		if (tuple3dItemProvider != null) tuple3dItemProvider.dispose();
+		if (matrix3x3ItemProvider != null) matrix3x3ItemProvider.dispose();
+		if (matrix4x4ItemProvider != null) matrix4x4ItemProvider.dispose();
 		if (polynomialItemProvider != null) polynomialItemProvider.dispose();
+		if (mathFacadeItemProvider != null) mathFacadeItemProvider.dispose();
 		if (mathIOItemProvider != null) mathIOItemProvider.dispose();
 	}
 

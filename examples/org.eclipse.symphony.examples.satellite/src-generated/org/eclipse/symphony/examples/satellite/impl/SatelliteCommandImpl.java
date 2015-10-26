@@ -20,11 +20,11 @@ import org.eclipse.symphony.examples.satellite.SatelliteCommand;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandImpl#getSatellite <em>Satellite</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandImpl#getCommandStartTime <em>Command Start Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

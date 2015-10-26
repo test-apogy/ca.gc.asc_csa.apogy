@@ -24,10 +24,10 @@ import org.orekit.propagation.analytical.tle.TLEPropagator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.TLEEarthOrbitPropagatorImpl#getTle <em>Tle</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -51,7 +51,6 @@ import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentU
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl#getDescription <em>Description</em>}</li>
@@ -63,6 +62,7 @@ import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentU
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl#getMapImageRectangularRegion <em>Map Image Rectangular Region</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationImpl#getExtent <em>Extent</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

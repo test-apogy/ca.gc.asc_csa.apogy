@@ -18,11 +18,11 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EEnumArgumentImpl#getEEnumLiteral <em>EEnum Literal</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.EEnumArgumentImpl#getEEnum <em>EEnum</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

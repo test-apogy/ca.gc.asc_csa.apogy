@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ExposureFilterImpl#getExposure <em>Exposure</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

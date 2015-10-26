@@ -15,10 +15,10 @@ package org.eclipse.symphony.core.environment;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.URLMapLayer#getUrl <em>Url</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getURLMapLayer()
  * @model abstract="true"

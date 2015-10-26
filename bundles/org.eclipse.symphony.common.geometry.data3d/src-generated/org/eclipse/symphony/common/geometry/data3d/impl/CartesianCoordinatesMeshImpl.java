@@ -22,6 +22,8 @@ import java.lang.reflect.InvocationTargetException;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Cartesian Coordinates Mesh</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

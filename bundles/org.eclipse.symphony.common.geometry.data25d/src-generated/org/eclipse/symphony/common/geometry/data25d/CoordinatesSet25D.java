@@ -12,10 +12,10 @@ import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D#isEnforceUniqueness <em>Enforce Uniqueness</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data25d.Data25dPackage#getCoordinatesSet25D()
  * @model

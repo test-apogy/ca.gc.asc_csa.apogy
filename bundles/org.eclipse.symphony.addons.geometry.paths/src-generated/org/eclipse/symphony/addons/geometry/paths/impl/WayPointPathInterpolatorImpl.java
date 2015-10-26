@@ -15,6 +15,8 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Way Point Path Interpolator</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

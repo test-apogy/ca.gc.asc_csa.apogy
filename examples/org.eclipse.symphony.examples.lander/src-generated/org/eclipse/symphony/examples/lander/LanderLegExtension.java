@@ -178,8 +178,6 @@ public enum LanderLegExtension implements Enumerator
 	 * Returns the '<em><b>Lander Leg Extension</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static LanderLegExtension get(String literal)
@@ -197,8 +195,6 @@ public enum LanderLegExtension implements Enumerator
 	 * Returns the '<em><b>Lander Leg Extension</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static LanderLegExtension getByName(String name)
@@ -216,8 +212,6 @@ public enum LanderLegExtension implements Enumerator
 	 * Returns the '<em><b>Lander Leg Extension</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static LanderLegExtension get(int value)

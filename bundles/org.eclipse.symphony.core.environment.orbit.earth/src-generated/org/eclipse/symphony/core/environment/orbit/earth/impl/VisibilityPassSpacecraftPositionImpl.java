@@ -18,7 +18,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraf
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getAzimuth <em>Azimuth</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraf
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getRangeRate <em>Range Rate</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassSpacecraftPositionImpl#getSpacecraftCrossTrackAngle <em>Spacecraft Cross Track Angle</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.images.ImagesAlbum#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.images.ImagesAlbum#getImages <em>Images</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.images.ImagesCorePackage#getImagesAlbum()
  * @model

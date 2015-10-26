@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.asc.impl.Coordinates2DImpl#getY <em>Y</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

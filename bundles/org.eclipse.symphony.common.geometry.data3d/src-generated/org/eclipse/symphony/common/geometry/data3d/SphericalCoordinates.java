@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getPhi <em>Phi</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getTheta <em>Theta</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates#getR <em>R</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getSphericalCoordinates()
  * @model

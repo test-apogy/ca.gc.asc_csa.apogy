@@ -39,13 +39,13 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl#getTelecomNodes <em>Telecom Nodes</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl#getStatusMonitorToolList <em>Status Monitor Tool List</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl#isRunning <em>Running</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolImpl#isDisposed <em>Disposed</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -14,10 +14,10 @@ import org.jgrapht.DirectedGraph;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner#getDirectedGraph <em>Directed Graph</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDirectedGraphBasedMeshWayPointPathPlanner()
  * @model

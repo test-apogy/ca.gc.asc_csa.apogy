@@ -40,12 +40,12 @@ import org.jfree.ui.TextAnchor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl#getVectorlength <em>Vectorlength</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl#getVectorColor <em>Vector Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl#isShowPose <em>Show Pose</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

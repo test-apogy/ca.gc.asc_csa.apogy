@@ -21,11 +21,11 @@ import org.eclipse.symphony.common.geometry.data3d.RasterPointCloud;
  * <em><b>Raster Point Cloud</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudImpl#getRows <em>Rows</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudImpl#getColumns <em>Columns</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

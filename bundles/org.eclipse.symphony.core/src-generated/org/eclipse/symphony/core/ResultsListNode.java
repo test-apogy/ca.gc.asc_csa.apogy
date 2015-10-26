@@ -16,10 +16,10 @@ import org.eclipse.symphony.core.invocator.ResultsList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ResultsListNode#getResultsList <em>Results List</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getResultsListNode()
  * @model

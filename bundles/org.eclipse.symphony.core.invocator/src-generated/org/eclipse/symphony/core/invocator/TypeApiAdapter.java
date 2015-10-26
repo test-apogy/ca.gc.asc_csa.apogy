@@ -17,12 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getInstance <em>Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getElementType <em>Element Type</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeApiAdapter()
  * @model

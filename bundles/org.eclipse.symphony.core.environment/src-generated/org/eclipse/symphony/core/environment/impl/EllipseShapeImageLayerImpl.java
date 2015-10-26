@@ -31,12 +31,12 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EllipseShapeImageLayerImpl#getEllipseWidth <em>Ellipse Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EllipseShapeImageLayerImpl#getEllipseHeight <em>Ellipse Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EllipseShapeImageLayerImpl#isShowCenterLines <em>Show Center Lines</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

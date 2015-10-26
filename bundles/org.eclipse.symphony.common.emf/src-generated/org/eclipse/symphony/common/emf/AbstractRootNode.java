@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractRootNode#getSourceClass <em>Source Class</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractRootNode()
  * @model abstract="true"

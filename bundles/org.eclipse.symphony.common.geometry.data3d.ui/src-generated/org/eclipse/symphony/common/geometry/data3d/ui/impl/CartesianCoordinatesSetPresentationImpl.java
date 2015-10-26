@@ -33,12 +33,12 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.CartesianCoordinatesSetPresentationImpl#getPointCloud <em>Point Cloud</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.CartesianCoordinatesSetPresentationImpl#getPointSize <em>Point Size</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.CartesianCoordinatesSetPresentationImpl#getNumberOfPoints <em>Number Of Points</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

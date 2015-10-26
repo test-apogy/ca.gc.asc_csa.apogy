@@ -18,7 +18,6 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayer#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayer#getHeight <em>Height</em>}</li>
@@ -27,6 +26,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayer#getLegend <em>Legend</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayer#getResolution <em>Resolution</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayer()
  * @model

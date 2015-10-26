@@ -13,12 +13,12 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getLeft <em>Left</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getCenter <em>Center</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getRight <em>Right</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCorridorPoint()
  * @model

@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.Program#getProgramsList <em>Programs List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Program#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Program#getValuesList <em>Values List</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgram()
  * @model abstract="true"

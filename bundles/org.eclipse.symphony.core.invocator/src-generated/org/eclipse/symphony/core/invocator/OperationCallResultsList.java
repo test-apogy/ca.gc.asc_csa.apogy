@@ -11,11 +11,11 @@ package org.eclipse.symphony.core.invocator;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResultsList#getDataProductsList <em>Data Products List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResultsList#getInvocatorSession <em>Invocator Session</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallResultsList()
  * @model

@@ -47,13 +47,13 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.SimpleRasterScanRangeScannerSimulatorImpl#getRangeNoiseAmplitude <em>Range Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.SimpleRasterScanRangeScannerSimulatorImpl#getAzimuthNoiseAmplitude <em>Azimuth Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.SimpleRasterScanRangeScannerSimulatorImpl#getElevationNoiseAmplitude <em>Elevation Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.SimpleRasterScanRangeScannerSimulatorImpl#isHorizonDetectionEnabled <em>Horizon Detection Enabled</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -14,6 +14,8 @@ import org.eclipse.symphony.examples.rover.RoverStub;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Rover Stub</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

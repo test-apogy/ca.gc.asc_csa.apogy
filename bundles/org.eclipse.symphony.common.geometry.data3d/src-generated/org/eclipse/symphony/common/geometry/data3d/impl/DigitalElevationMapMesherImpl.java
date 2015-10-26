@@ -23,6 +23,8 @@ import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Digital Elevation Map Mesher</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

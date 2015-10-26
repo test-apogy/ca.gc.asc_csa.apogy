@@ -15,11 +15,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeatureTreeNode#getParent <em>Parent</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.AbstractFeatureTreeNode#getChildren <em>Children</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.emf.EMFEcorePackage#getAbstractFeatureTreeNode()
  * @model abstract="true"

@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <em><b>Mobile Plateform</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.impl.MobilePlatformImpl#isMoving <em>Moving</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.impl.MobilePlatformImpl#getMobilePlatformStatus <em>Mobile Platform Status</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

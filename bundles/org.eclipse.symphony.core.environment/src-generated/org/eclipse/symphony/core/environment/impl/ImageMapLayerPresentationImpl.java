@@ -25,10 +25,10 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.ImageMapLayerPresentationImpl#getAlpha <em>Alpha</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

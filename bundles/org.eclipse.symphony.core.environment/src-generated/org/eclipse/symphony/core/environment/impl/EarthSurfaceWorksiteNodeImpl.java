@@ -26,10 +26,10 @@ import org.eclipse.symphony.core.environment.Worksite;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EarthSurfaceWorksiteNodeImpl#getSkyTransformNode <em>Sky Transform Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -16,12 +16,12 @@ import org.eclipse.symphony.core.programs.TimeInterval;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl#getEndTime <em>End Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl#getDuration <em>Duration</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

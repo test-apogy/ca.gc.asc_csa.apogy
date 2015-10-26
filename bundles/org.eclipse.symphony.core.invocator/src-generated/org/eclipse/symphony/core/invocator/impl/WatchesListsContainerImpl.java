@@ -21,10 +21,10 @@ import org.eclipse.symphony.core.invocator.WatchesListsContainer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchesListsContainerImpl#getWatches <em>Watches</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.emf.TimeSourcesList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.TimeSourcesListImpl#getTimeSources <em>Time Sources</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

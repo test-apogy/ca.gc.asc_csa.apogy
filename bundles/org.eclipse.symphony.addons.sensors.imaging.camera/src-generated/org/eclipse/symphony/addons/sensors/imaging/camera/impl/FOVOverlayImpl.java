@@ -33,7 +33,6 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl#getLineWidth <em>Line Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl#getPositiveValuesColor <em>Positive Values Color</em>}</li>
@@ -44,6 +43,7 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl#getAzimuthDirection <em>Azimuth Direction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl#getElevationDirection <em>Elevation Direction</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

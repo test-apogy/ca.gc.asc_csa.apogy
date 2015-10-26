@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isSupported <em>Supported</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getControllers <em>Controllers</em>}</li>
@@ -25,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#getPollingJob <em>Polling Job</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.EControllerEnvironment#isPollingProblem <em>Polling Problem</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.io.jinput.JInputPackage#getEControllerEnvironment()
  * @model

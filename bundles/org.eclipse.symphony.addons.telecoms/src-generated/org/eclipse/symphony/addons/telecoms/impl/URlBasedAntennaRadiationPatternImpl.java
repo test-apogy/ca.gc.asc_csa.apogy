@@ -15,10 +15,10 @@ import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.URlBasedAntennaRadiationPatternImpl#getUrl <em>Url</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

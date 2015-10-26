@@ -20,7 +20,6 @@ import org.eclipse.symphony.core.invocator.Variable;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#isPenDown <em>Pen Down</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#getVariable <em>Variable</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.symphony.core.invocator.Variable;
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#getPoseProvider <em>Pose Provider</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool()
  * @model

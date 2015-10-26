@@ -17,6 +17,8 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Tool Tip Text Provider</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

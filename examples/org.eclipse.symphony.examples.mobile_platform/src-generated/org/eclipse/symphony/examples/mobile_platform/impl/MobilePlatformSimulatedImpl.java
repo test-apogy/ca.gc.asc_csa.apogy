@@ -25,6 +25,8 @@ import org.eclipse.symphony.examples.mobile_platform.Position;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Mobile Platform Simulated</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

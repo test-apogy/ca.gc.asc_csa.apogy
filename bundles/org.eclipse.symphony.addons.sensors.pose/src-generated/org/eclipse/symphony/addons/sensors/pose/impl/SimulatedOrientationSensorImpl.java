@@ -22,13 +22,13 @@ import org.eclipse.symphony.common.math.MathFactory;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.SimulatedOrientationSensorImpl#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

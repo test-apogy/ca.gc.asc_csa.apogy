@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.invocator.ReferenceResultValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ReferenceResultValueImpl#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

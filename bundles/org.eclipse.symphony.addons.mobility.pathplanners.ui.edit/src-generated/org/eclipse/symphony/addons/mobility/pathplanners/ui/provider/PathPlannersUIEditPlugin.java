@@ -41,8 +41,8 @@ public final class PathPlannersUIEditPlugin extends EMFPlugin {
 	public PathPlannersUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyUIEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     TopologyUIEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		   });
 	}

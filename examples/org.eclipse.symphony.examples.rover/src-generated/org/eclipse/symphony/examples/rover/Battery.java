@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.rover.Battery#isActive <em>Active</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.Battery#getVoltage <em>Voltage</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.rover.Battery#getCurrent <em>Current</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getBattery()
  * @model

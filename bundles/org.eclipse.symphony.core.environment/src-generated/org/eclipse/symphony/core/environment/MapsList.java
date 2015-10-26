@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.MapsList#getMaps <em>Maps</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.MapsList#getMapsListNode <em>Maps List Node</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapsList()
  * @model

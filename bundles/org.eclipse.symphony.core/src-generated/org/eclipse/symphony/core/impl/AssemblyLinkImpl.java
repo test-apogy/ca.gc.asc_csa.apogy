@@ -24,7 +24,6 @@ import org.eclipse.symphony.core.invocator.TypeMember;
  * <em><b>Assembly Link</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.AssemblyLinkImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.AssemblyLinkImpl#getDescription <em>Description</em>}</li>
@@ -36,6 +35,7 @@ import org.eclipse.symphony.core.invocator.TypeMember;
  *   <li>{@link org.eclipse.symphony.core.impl.AssemblyLinkImpl#getParentInstance <em>Parent Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.AssemblyLinkImpl#getSubSystemInstance <em>Sub System Instance</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

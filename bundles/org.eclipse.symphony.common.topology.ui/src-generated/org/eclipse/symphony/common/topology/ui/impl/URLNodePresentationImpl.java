@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.ui.preferences.PreferencesConstants;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl#isAxisVisible <em>Axis Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl#getAxisLenght <em>Axis Lenght</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

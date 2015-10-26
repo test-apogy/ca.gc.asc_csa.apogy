@@ -20,10 +20,10 @@ import org.eclipse.symphony.core.SymphonyCorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.PositionedImpl#getPose <em>Pose</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

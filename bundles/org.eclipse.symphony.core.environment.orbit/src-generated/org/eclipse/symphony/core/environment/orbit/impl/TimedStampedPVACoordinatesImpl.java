@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.TimedStampedPVACoordinatesImpl#getTime <em>Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

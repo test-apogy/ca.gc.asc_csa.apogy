@@ -52,15 +52,15 @@ public final class ControllersEditPlugin extends EMFPlugin
 	{
 		super
 		  (new ResourceLocator [] {
-		     MobilityEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
-		     PoseEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
+		     MobilityEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     PathsEditPlugin.INSTANCE,
+		     PoseEditPlugin.INSTANCE,
 		   });
 	}
 

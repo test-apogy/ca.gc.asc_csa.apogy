@@ -17,7 +17,6 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getCurrentWayPoint <em>Current Way Point</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getPreviousWayPoint <em>Previous Way Point</em>}</li>
@@ -39,6 +38,7 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#getAlphaThresholdForReducedVelocity <em>Alpha Threshold For Reduced Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController#isSmoothPathEnabled <em>Smooth Path Enabled</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getAstolfiGuidanceController()
  * @model

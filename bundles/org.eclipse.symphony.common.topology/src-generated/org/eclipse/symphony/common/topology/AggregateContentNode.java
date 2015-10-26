@@ -11,10 +11,10 @@ package org.eclipse.symphony.common.topology;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.AggregateContentNode#getAggregateContent <em>Aggregate Content</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.common.topology.TopologyPackage#getAggregateContentNode()
  * @model

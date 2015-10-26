@@ -19,7 +19,6 @@ import org.orekit.orbits.KeplerianOrbit;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getSemiMajorAxis <em>Semi Major Axis</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getEccentricity <em>Eccentricity</em>}</li>
@@ -29,6 +28,7 @@ import org.orekit.orbits.KeplerianOrbit;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getMeanAnomaly <em>Mean Anomaly</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getTrueAnomaly <em>True Anomaly</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit()
  * @model

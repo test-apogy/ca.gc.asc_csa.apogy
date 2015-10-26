@@ -44,10 +44,10 @@ import org.jgrapht.traverse.BreadthFirstIterator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ContactProviderImpl#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

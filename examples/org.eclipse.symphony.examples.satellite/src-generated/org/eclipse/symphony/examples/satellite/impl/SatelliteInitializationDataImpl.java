@@ -20,11 +20,11 @@ import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl#getSatellite <em>Satellite</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl#getOrbitModel <em>Orbit Model</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
