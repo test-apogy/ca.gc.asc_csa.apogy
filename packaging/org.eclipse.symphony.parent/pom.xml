@@ -248,6 +248,7 @@
 		<module>../../bundles/org.eclipse.symphony.core.ui.edit</module>
 		<module>../../bundles/org.eclipse.symphony.core.ui.jme3</module>
 		<module>../../bundles/org.eclipse.symphony.core.ui.sirius</module>
+		
 		<module>../../bundles/org.eclipse.symphony.ui</module>		
 		<module>../../bundles/org.eclipse.symphony.feature</module>
 		<module>../../bundles/org.eclipse.symphony.repository</module>
