@@ -6,6 +6,7 @@ package org.eclipse.symphony.common.topology.provider;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 
 /**
  * This is the central singleton for the Topology edit plugin.
@@ -39,6 +40,7 @@ public final class TopologyEditPlugin extends EMFPlugin {
 	public TopologyEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

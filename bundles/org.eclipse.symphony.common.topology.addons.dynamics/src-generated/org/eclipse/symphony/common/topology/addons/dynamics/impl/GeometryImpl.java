@@ -15,8 +15,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Geometry</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.Updatable#isUpdating <em>Updating</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.Updatable#isAutoUpdateEnabled <em>Auto Update Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getUpdatable()
  * @model abstract="true"

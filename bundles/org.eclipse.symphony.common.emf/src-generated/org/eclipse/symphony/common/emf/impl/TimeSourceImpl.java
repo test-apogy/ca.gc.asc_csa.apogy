@@ -20,10 +20,10 @@ import org.eclipse.symphony.common.emf.TimeSource;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.TimeSourceImpl#getTime <em>Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

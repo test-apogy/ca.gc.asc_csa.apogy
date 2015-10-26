@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl#isDetectedRangeVisible <em>Detected Range Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

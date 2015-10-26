@@ -1,6 +1,10 @@
-@GenModel(prefix="PathplannersGraph", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="PathplannersGraph") 
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.pathplanners.graph/src")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.pathplanners.graph.edit/src")
+@GenModel(prefix="PathplannersGraph",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="PathplannersGraph")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.pathplanners.graph/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.pathplanners.graph.edit/src-generated")
 
 package org.eclipse.symphony.addons.mobility.pathplanners.graph
 
@@ -16,36 +20,46 @@ import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone
 type DirectedGraph wraps DirectedGraph<?,?>
 type SimpleDirectedWeightedGraph wraps SimpleDirectedWeightedGraph<?,?>
 
-class CostBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends MeshWayPointPathPlanner<PolygonType>{
+class CostBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends MeshWayPointPathPlanner<PolygonType>
+{
 	contains DisplacementCostFunction[0..*] costFunctions
 } 
 
-abstract class DisplacementCostFunction{
+abstract class DisplacementCostFunction
+{
 	op double getCost(CartesianPolygon from, CartesianPolygon to)
 }
 
-class MeshDisplacementCostFunction extends DisplacementCostFunction{
+class MeshDisplacementCostFunction extends DisplacementCostFunction
+{
 	refers CostBasedMeshWayPointPathPlanner<? extends CartesianPolygon> planner
 }
 
-class DistanceOnlyCostFunction extends MeshDisplacementCostFunction{
+class DistanceOnlyCostFunction extends MeshDisplacementCostFunction
+{
+	
 }
 
-class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlanner<PolygonType>, VerboseProvider{
+class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlanner<PolygonType>, VerboseProvider
+{
 	SimpleDirectedWeightedGraph simpleDirectedWeightedGraph 
 	
 	boolean enablePathSimplification = "true"
 	double robotWidthForPathSimplication = "0.5"
 }
 
-class DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlanner<PolygonType>{
+class DirectedGraphBasedMeshWayPointPathPlanner<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlanner<PolygonType>
+{
 	transient unsettable DirectedGraph directedGraph
 }
 
-abstract class EdgeFactory <V, E> wraps EdgeFactory{	
+abstract class EdgeFactory <V, E> wraps EdgeFactory
+{
+		
 }
 
-class MobilityEdge{
+class MobilityEdge
+{
 	refers DisplacementCostFunction[0..*] costFunctions
 	
 	refers CartesianPolygon from
@@ -53,11 +67,13 @@ class MobilityEdge{
 	derived double weight
 }
 
-class MobilityEdgeFactory extends EdgeFactory<CartesianPolygon, MobilityEdge>{
+class MobilityEdgeFactory extends EdgeFactory<CartesianPolygon, MobilityEdge>
+{
 	refers DisplacementCostFunction[0..*] costFunctions
 }
 
-class DistanceAndSlopesCostFunction extends MeshDisplacementCostFunction{
+class DistanceAndSlopesCostFunction extends MeshDisplacementCostFunction
+{
 	double upSlopeCostFactor = "1"
 	double downSlopeCostFactor = "1"
 	
@@ -67,11 +83,13 @@ class DistanceAndSlopesCostFunction extends MeshDisplacementCostFunction{
 	double maximumDownSlope = "0.33"
 }
 
-class ExclusionZonesCostFunction extends DisplacementCostFunction{
+class ExclusionZonesCostFunction extends DisplacementCostFunction
+{
 	refers ExclusionZone[0..*] exclusionZones
 }
 
-class DistanceAndRoverFootprintCostFunction extends DistanceAndSlopesCostFunction{
+class DistanceAndRoverFootprintCostFunction extends DistanceAndSlopesCostFunction
+{
 	double roverFootPrintRadius = "0.5"
 	double maximumRoughness = "0.1"
 	double maximumCrossSlope = "0.488"

@@ -12,10 +12,10 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation#getCutOffMagnitude <em>Cut Off Magnitude</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getStarFieldPresentation()
  * @model

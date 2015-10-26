@@ -12,10 +12,10 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation#getLineWidth <em>Line Width</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage#getVectorPresentation()
  * @model

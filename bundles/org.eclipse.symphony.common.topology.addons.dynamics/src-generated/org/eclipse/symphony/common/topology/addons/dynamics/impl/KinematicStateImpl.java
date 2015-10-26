@@ -22,6 +22,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.KinematicStateImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.KinematicStateImpl#getOrientation <em>Orientation</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.KinematicStateImpl#getLinearAcceleration <em>Linear Acceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.KinematicStateImpl#getAngularAcceleration <em>Angular Acceleration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

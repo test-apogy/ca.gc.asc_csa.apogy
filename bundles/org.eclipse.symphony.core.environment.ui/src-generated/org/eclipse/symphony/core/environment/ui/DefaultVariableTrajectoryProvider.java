@@ -16,11 +16,11 @@ package org.eclipse.symphony.core.environment.ui;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getDistanceThreshold <em>Distance Threshold</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold <em>Azimuth Threshold</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getDefaultVariableTrajectoryProvider()
  * @model

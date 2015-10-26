@@ -1,4 +1,11 @@
-@GenModel(prefix="SymphonyToolsCore", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)", modelName="SymphonyToolsCore", complianceLevel="6.0", suppressGenModelAnnotations="false")
+@GenModel(prefix="SymphonyToolsCore",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)",
+		  modelName="SymphonyToolsCore",
+		  complianceLevel="6.0",
+		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.addons.edit/src-generated")
 

@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.GraphicsContextImpl#getTopology <em>Topology</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.GraphicsContextImpl#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

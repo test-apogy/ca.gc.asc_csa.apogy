@@ -42,6 +42,7 @@ import edu.wlu.cs.levy.CG.KDTree;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.LineOfSightImageMapLayerImpl#getLineOfSightAvailableColor <em>Line Of Sight Available Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.LineOfSightImageMapLayerImpl#getLineOfSightNotAvailableColor <em>Line Of Sight Not Available Color</em>}</li>
@@ -49,7 +50,6 @@ import edu.wlu.cs.levy.CG.KDTree;
  *   <li>{@link org.eclipse.symphony.core.environment.impl.LineOfSightImageMapLayerImpl#getTargetHeightAboveGround <em>Target Height Above Ground</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.LineOfSightImageMapLayerImpl#isUseHeightPerpendicularToGround <em>Use Height Perpendicular To Ground</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

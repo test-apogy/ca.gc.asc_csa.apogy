@@ -33,11 +33,11 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl#getTransform <em>Transform</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.RectangularFrustrumFieldOfViewSamplingShapeImpl#getRectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

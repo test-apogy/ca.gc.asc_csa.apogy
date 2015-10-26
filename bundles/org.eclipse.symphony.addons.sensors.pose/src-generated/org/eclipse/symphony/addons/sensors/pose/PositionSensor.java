@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.topology.PositionNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PositionSensor#getPositionCoordinates <em>Position Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPositionSensor()
  * @model

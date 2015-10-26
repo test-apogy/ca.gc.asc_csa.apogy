@@ -27,10 +27,10 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseDataLoggerImpl#getOutputFile <em>Output File</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

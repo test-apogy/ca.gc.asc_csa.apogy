@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.TranslationBindingImpl#getPositionNode <em>Position Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.TranslationBindingImpl#getTranslationAxis <em>Translation Axis</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -74,8 +74,8 @@ public class Data25DUIPackageImpl extends EPackageImpl implements Data25DUIPacka
 		isInited = true;
 
 		// Initialize simple dependencies
-		Data25dPackage.eINSTANCE.eClass();
 		TopologyUIPackage.eINSTANCE.eClass();
+		Data25dPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theData25DUIPackage.createPackageContents();

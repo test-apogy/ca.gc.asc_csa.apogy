@@ -33,8 +33,6 @@ import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMob
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Mobile Platform Symphony System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

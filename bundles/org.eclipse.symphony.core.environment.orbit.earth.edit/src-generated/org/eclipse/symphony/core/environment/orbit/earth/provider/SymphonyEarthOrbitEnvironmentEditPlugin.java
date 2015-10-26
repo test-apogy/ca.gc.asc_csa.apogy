@@ -9,6 +9,7 @@ import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.images.provider.ImagesCoreEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
@@ -49,17 +50,18 @@ public final class SymphonyEarthOrbitEnvironmentEditPlugin extends EMFPlugin {
 	public SymphonyEarthOrbitEnvironmentEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ImagesCoreEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getStatusMonitorTool <em>Status Monitor Tool</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomNode#isEnabled <em>Enabled</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getPacketLoss <em>Packet Loss</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomNode#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomNode()
  * @model

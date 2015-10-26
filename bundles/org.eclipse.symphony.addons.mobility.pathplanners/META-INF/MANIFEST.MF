@@ -8,8 +8,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Export-Package: org.eclipse.symphony.addons.mobility.pathplanners,
  org.eclipse.symphony.addons.mobility.pathplanners.impl,
- org.eclipse.symphony.addons.mobility.pathplanners.util,
- org.eclipse.symphony.addons.mobility.pathplanners.validation
+ org.eclipse.symphony.addons.mobility.pathplanners.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.xtext.xbase.lib,

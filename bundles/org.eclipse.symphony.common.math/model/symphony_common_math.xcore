@@ -1,84 +1,119 @@
-@GenModel(modelDirectory="/org.eclipse.symphony.common.math/src",
-		  extensibleProviderFactory="true",
-		  childCreationExtenders="true",
-		  modelPluginID="org.eclipse.symphony.common.math",
-		  importerID="org.eclipse.emf.importer.ecore")
+@GenModel(prefix="Math",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="Math",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.math/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.math.edit/src-generated")
 		  
 package org.eclipse.symphony.common.math
 
-class Matrix4x4 {
+type EDoubleArray wraps double[]
+type Matrix3d wraps javax.vecmath.Matrix3d
+type Matrix4d wraps javax.vecmath.Matrix4d
+type VecmathTuple3d wraps javax.vecmath.Tuple3d
+type Exception wraps Exception
+
+class Tuple3d
+{
+	double x
+	double y
+	double z
+
+	op VecmathTuple3d asTuple3d()
+}
+
+class Matrix3x3
+{
+	double m00 = "1.0"
+	double m01
+	double m02
+
+	double m10
+	double m11 = "1.0"
+	double m12
+
+	double m20
+	double m21
+	double m22 = "1.0"
+
+	op Matrix3d asMatrix3d()
+}
+
+class Matrix4x4
+{
 	double m00 = "1.0"
 	double m01
 	double m02
 	double m03
+
 	double m10
 	double m11 = "1.0"
 	double m12
 	double m13
+
 	double m20
 	double m21
 	double m22 = "1.0"
 	double m23
+
 	double m30
 	double m31
 	double m32
 	double m33 = "1.0"
+
 	op Matrix4d asMatrix4d()
 }
 
-class MathFacade {
-	op Matrix4x4 createMatrix4x4(Matrix4d matrix)
-	op Matrix3x3 createMatrix3x3(Matrix3d matrix)
-	op Tuple3d createTuple3d(VecmathTuple3d tuple)
-	op Tuple3d createTuple3d(double x , double y , double z)
-	op Polynomial createPolynomial(@GenModel(documentation="The coefficients of the polynomial, sorted in increasing order.\ncoeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0]")
-	EDoubleArray coeffs)
-	op Matrix4x4 createIdentityMatrix4x4()
-	op Matrix3x3 createIdentityMatrix3x3()
-	op Tuple3d extractPosition(Matrix4x4 matrix)
-	op Tuple3d extractOrientation(Matrix4x4 matrix)
-}
-
-class Matrix3x3 {
-	double m00 = "1.0"
-	double m01
-	double m02
-	double m10
-	double m11 = "1.0"
-	double m12
-	double m20
-	double m21
-	double m22 = "1.0"
-	op Matrix3d asMatrix3d()
-}
-
-class Tuple3d {
-	double x
-	double y
-	double z
-	op VecmathTuple3d asTuple3d()
-}
-
-class Polynomial {
+class Polynomial
+{
 	readonly transient volatile int degree = "0"
-	@GenModel(documentation="The coefficients of the polynomial, sorted in increasing order.\ncoeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0].\n\nFor instance: polynomial 3*x^2 + 5*x + 2, the coefficients would be:\ncoeffs = { 2, 5, 3 }.")
+	
+	/*
+	 * The coefficients of the polynomial, sorted in increasing order.
+	 * coeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0].
+	 * 
+	 * For instance: polynomial 3*x^2 + 5*x + 2, the coefficients would be:
+	 * coeffs = { 2, 5, 3 }.
+	 */
 	EDoubleArray coeffs
+	
 	readonly transient derived EDoubleArray realRoots
+	
 	readonly transient derived EDoubleArray imaginaryRoots
 }
 
-class MathIO {
-	op Matrix4x4 readTrMatrix(String fileName) throws Exception
-	op void writeTrMatrix(Matrix4x4 trMatrix , String fileName) throws Exception
-	op void writeTrMatrix(Matrix4d trMatrix , String fileName) throws Exception
+class MathFacade
+{
+	op Matrix4x4 createMatrix4x4(Matrix4d matrix)
+	
+	op Matrix3x3 createMatrix3x3(Matrix3d matrix)
+	
+	op Tuple3d createTuple3d(VecmathTuple3d tuple)
+	
+	op Tuple3d createTuple3d(double x , double y , double z)
+	
+	/*
+	 * @param coeffs The coefficients of the polynomial, sorted in increasing order.\ncoeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0]
+	 */
+	op Polynomial createPolynomial(EDoubleArray coeffs)
+	
+	op Matrix4x4 createIdentityMatrix4x4()
+	
+	op Matrix3x3 createIdentityMatrix3x3()
+	
+	op Tuple3d extractPosition(Matrix4x4 matrix)
+	
+	op Tuple3d extractOrientation(Matrix4x4 matrix)
 }
 
-type EDoubleArray wraps double[]
-
-type Matrix3d wraps javax.vecmath.Matrix3d
-
-type Matrix4d wraps javax.vecmath.Matrix4d
-
-type VecmathTuple3d wraps javax.vecmath.Tuple3d
-
-type Exception wraps Exception
+class MathIO
+{
+	op Matrix4x4 readTrMatrix(String fileName) throws Exception
+	
+	op void writeTrMatrix(Matrix4x4 trMatrix , String fileName) throws Exception
+	
+	op void writeTrMatrix(Matrix4d trMatrix , String fileName) throws Exception
+}

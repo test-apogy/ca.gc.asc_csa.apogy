@@ -11,13 +11,13 @@ package org.eclipse.symphony.addons.sensors.range;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getRangeNoiseAmplitude <em>Range Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getAzimuthNoiseAmplitude <em>Azimuth Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getElevationNoiseAmplitude <em>Elevation Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#isHorizonDetectionEnabled <em>Horizon Detection Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRasterScanRangeScannerSimulator()
  * @model

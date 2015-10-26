@@ -20,6 +20,7 @@ import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl#getY <em>Y</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.symphony.common.geometry.data3d.las.ScanDirection;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl#getGreen <em>Green</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASPointImpl#getBlue <em>Blue</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -20,6 +20,7 @@ import org.eclipse.symphony.examples.lander.LanderLegExtension;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#isDisposed <em>Disposed</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.symphony.examples.lander.LanderLegExtension;
  *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.symphony.LanderData#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage#getLanderData()
  * @model

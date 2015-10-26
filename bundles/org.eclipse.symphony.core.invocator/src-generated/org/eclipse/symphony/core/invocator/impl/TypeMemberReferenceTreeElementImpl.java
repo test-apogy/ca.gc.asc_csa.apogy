@@ -27,6 +27,7 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl#getChild <em>Child</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl#getParent <em>Parent</em>}</li>
@@ -35,7 +36,6 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl#getRootElement <em>Root Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceTreeElementImpl#isLeaf <em>Leaf</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

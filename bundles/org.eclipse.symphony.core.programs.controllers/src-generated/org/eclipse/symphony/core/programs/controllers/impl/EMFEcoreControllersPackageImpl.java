@@ -1124,7 +1124,7 @@ public class EMFEcoreControllersPackageImpl extends EPackageImpl implements EMFE
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
-			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)",
+			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "EMFEcoreControllers",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.core.programs.controllers/src-generated",

@@ -22,12 +22,12 @@ import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvir
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthSurfaceLocationImpl#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

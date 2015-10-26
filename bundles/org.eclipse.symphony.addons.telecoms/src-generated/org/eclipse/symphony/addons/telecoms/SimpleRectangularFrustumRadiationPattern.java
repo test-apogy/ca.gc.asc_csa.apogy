@@ -15,11 +15,11 @@ package org.eclipse.symphony.addons.telecoms;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView <em>Vertical Field Of View</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getSimpleRectangularFrustumRadiationPattern()
  * @model

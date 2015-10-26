@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSRepository#getGpsDevices <em>Gps Devices</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSRepository()
  * @model interface="true" abstract="true"

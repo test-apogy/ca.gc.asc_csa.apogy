@@ -1,4 +1,11 @@
-@GenModel(prefix="TopologyViewer", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="TopologyViewer", complianceLevel="6.0")
+@GenModel(prefix="TopologyViewer",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="TopologyViewer",
+		  complianceLevel="6.0")
+		  
 @GenModel(modelDirectory="/org.eclipse.symphony.common.topology.ui.viewer/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.topology.ui.viewer.edit/src-generated")
 

@@ -11,6 +11,7 @@ import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data25d.provider.Data25dEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
@@ -46,14 +47,15 @@ public final class RangeEditPlugin extends EMFPlugin {
 	public RangeEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     DataEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     Data25dEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
+		     Data25dEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

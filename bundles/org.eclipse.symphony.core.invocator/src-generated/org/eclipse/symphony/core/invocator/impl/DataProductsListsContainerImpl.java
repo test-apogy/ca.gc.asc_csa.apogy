@@ -28,13 +28,13 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.DataProductsListsContainerImpl#getDataProductsList <em>Data Products List</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

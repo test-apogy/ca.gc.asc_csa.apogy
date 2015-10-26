@@ -15,8 +15,6 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Rectified Image Snapshot</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

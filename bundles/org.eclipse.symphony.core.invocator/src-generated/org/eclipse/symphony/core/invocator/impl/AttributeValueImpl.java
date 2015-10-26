@@ -16,10 +16,10 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AttributeValueImpl#getObject <em>Object</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

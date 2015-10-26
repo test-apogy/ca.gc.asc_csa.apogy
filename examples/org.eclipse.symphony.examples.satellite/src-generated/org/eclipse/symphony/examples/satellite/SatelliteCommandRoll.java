@@ -11,10 +11,10 @@ package org.eclipse.symphony.examples.satellite;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteCommandRoll#getTargetRollAngle <em>Target Roll Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommandRoll()
  * @model

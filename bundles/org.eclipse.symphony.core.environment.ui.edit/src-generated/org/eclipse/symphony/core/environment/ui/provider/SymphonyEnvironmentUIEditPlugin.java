@@ -9,6 +9,7 @@ import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.images.provider.ImagesCoreEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
@@ -51,17 +52,18 @@ public final class SymphonyEnvironmentUIEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     ImagesCoreEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

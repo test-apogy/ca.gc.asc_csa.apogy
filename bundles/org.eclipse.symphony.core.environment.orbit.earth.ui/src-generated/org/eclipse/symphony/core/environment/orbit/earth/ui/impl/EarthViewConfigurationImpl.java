@@ -29,12 +29,12 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEn
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.EarthViewConfigurationImpl#getLayers <em>Layers</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

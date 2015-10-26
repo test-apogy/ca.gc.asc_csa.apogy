@@ -28,13 +28,13 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl#getDisplaysListsContainer <em>Displays Lists Container</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.DisplaysListImpl#getDisplays <em>Displays</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

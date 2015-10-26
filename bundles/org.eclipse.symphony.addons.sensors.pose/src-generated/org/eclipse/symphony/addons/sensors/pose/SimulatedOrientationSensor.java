@@ -11,13 +11,13 @@ package org.eclipse.symphony.addons.sensors.pose;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedOrientationSensor()
  * @model

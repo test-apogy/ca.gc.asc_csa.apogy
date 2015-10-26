@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getTurretAngle <em>Turret Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getShoulderAngle <em>Shoulder Angle</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#isArmMoving <em>Arm Moving</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getSpeed <em>Speed</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm()
  * @model abstract="true"

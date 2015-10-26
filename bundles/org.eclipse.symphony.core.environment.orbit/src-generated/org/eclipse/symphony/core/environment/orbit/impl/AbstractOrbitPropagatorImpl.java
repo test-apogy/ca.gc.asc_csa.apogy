@@ -31,6 +31,7 @@ import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPacka
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getDescription <em>Description</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPacka
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getValidFromDate <em>Valid From Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

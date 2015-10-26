@@ -53,6 +53,7 @@ import org.orekit.utils.PVCoordinates;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftSwathCorridorImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftSwathCorridorImpl#getDescription <em>Description</em>}</li>
@@ -66,7 +67,6 @@ import org.orekit.utils.PVCoordinates;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftSwathCorridorImpl#getRightSwathAngle <em>Right Swath Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftSwathCorridorImpl#getCorridor <em>Corridor</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

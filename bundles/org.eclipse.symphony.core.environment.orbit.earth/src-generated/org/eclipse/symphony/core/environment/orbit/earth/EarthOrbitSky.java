@@ -19,12 +19,12 @@ import org.eclipse.symphony.core.environment.Sky;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky#getEarthOrbitWorksite <em>Earth Orbit Worksite</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky#getMoon <em>Moon</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky#getEarth <em>Earth</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitSky()
  * @model

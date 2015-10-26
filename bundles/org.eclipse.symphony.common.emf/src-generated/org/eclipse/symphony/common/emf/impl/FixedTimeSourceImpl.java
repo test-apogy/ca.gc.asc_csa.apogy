@@ -12,8 +12,6 @@ import org.eclipse.symphony.common.emf.FixedTimeSource;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Fixed Time Source</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

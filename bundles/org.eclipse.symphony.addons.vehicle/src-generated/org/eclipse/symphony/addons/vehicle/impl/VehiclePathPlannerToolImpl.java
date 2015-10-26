@@ -26,10 +26,10 @@ import org.eclipse.symphony.core.invocator.VariableImplementation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePathPlannerToolImpl#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -21,6 +21,22 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_core_environment_orbit_earth -->
+      <extender
+            uri="org.eclipse.symphony.core.environment.orbit"
+            class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$SymphonyOrbitEnvironmentChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.core"
+            class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.core.environment"
+            class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.core.environment.orbit.earth.provider.SymphonyEarthOrbitEnvironmentItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_environment_orbit_earth -->
       <extender
             uri="org.eclipse.symphony.common.topology"

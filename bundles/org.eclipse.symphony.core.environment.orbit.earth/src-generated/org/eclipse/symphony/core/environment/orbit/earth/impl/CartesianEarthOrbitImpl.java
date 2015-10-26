@@ -22,10 +22,10 @@ import org.orekit.orbits.CartesianOrbit;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.CartesianEarthOrbitImpl#getPvaCoordinates <em>Pva Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

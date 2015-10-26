@@ -50,8 +50,6 @@ import org.orekit.utils.IERSConventions;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Earth Orbit Propagator</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

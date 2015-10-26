@@ -18,12 +18,12 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getOrderId <em>Order Id</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getImageCenter <em>Image Center</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getDownloadSize <em>Download Size</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getOrbitalImage()
  * @model

@@ -19,8 +19,6 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Label Presentation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

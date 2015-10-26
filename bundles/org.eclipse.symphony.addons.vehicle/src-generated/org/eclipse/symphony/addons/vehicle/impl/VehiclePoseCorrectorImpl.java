@@ -56,6 +56,7 @@ import org.eclipse.symphony.core.impl.PoseCorrectorImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePoseCorrectorImpl#isInitializing <em>Initializing</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePoseCorrectorImpl#getMeshes <em>Meshes</em>}</li>
@@ -66,7 +67,6 @@ import org.eclipse.symphony.core.impl.PoseCorrectorImpl;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePoseCorrectorImpl#getOrientationCorrection <em>Orientation Correction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePoseCorrectorImpl#getContactProvider <em>Contact Provider</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

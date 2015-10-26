@@ -15,11 +15,11 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot#getFieldOfView <em>Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot#getImage <em>Image</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getImageSnapshot()
  * @model

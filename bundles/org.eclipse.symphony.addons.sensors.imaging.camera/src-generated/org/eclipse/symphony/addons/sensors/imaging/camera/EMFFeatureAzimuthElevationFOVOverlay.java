@@ -11,11 +11,11 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getAzimuthFeatureReference <em>Azimuth Feature Reference</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay#getElevationFeatureReference <em>Elevation Feature Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getEMFFeatureAzimuthElevationFOVOverlay()
  * @model

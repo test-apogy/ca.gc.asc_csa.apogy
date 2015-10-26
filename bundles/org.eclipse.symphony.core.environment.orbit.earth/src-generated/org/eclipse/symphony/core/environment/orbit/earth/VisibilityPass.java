@@ -20,6 +20,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getOrbitModel <em>Orbit Model</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getSurfaceLocation <em>Surface Location</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getPositionHistory <em>Position History</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getDuration <em>Duration</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPass()
  * @model

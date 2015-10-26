@@ -17,11 +17,11 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.PoseCorrector#getSymphonySystemApiAdapter <em>Symphony System Api Adapter</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.PoseCorrector#isEnabled <em>Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getPoseCorrector()
  * @model abstract="true"

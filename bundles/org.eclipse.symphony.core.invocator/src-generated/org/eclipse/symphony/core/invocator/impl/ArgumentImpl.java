@@ -28,11 +28,11 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ArgumentImpl#getArgumentsList <em>Arguments List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ArgumentImpl#getOperationCall <em>Operation Call</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

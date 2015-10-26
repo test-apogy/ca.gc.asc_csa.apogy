@@ -5,6 +5,7 @@ package org.eclipse.symphony.addons.sensors.imaging.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
 
@@ -44,6 +45,7 @@ public final class MRTSensorsImagingUIEditPlugin extends EMFPlugin
 		  (new ResourceLocator [] {
 		     TopologyUIEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

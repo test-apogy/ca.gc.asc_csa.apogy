@@ -5,6 +5,7 @@ package org.eclipse.symphony.common.topology.ui.viewer.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
 
@@ -40,8 +41,9 @@ public final class TopologyViewerEditPlugin extends EMFPlugin {
 	public TopologyViewerEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

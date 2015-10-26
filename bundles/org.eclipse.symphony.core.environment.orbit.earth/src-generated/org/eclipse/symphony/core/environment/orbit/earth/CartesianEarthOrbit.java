@@ -13,10 +13,10 @@ import org.orekit.orbits.CartesianOrbit;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit#getPvaCoordinates <em>Pva Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCartesianEarthOrbit()
  * @model

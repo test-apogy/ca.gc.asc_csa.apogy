@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImp
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getRadius <em>Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getLenght <em>Lenght</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

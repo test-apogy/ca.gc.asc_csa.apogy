@@ -15,11 +15,11 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint#getAngular0CurrentState <em>Angular0 Current State</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.UniversalConstraint#getAngular1CurrentState <em>Angular1 Current State</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getUniversalConstraint()
  * @model

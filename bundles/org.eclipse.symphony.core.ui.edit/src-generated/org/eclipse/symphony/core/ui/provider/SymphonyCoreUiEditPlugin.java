@@ -6,6 +6,7 @@ package org.eclipse.symphony.core.ui.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
@@ -45,11 +46,12 @@ public final class SymphonyCoreUiEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     TopologyUIEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     TopologyUIEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}
 

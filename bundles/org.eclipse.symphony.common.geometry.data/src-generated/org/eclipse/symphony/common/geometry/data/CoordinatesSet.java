@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet#getPoints <em>Points</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.CoordinatesSet#getNormals <em>Normals</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data.DataPackage#getCoordinatesSet()
  * @model

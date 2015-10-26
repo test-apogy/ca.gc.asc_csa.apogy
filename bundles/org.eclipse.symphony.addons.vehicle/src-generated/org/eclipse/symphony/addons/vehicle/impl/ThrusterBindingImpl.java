@@ -27,10 +27,10 @@ import org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindin
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterBindingImpl#getThruster <em>Thruster</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

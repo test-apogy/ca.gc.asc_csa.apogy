@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinate
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.TimedStampedAngularCoordinatesImpl#getTime <em>Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

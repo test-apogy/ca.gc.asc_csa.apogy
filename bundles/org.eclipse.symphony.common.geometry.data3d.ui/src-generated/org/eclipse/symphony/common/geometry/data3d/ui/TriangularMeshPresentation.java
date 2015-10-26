@@ -15,6 +15,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation#getMesh <em>Mesh</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation#getPointSize <em>Point Size</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation#isUseShading <em>Use Shading</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation#getTextureImage <em>Texture Image</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.ui.Data3DUIPackage#getTriangularMeshPresentation()
  * @model

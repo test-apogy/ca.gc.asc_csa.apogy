@@ -19,8 +19,6 @@ import edu.wlu.cs.levy.CG.KDTree;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Unique Points Filter</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

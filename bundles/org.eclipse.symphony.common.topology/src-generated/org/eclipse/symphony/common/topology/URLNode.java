@@ -11,12 +11,12 @@ package org.eclipse.symphony.common.topology;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.URLNode#getUrl <em>Url</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.URLNode#getPolygonCount <em>Polygon Count</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.URLNode#getVertexCount <em>Vertex Count</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.TopologyPackage#getURLNode()
  * @model

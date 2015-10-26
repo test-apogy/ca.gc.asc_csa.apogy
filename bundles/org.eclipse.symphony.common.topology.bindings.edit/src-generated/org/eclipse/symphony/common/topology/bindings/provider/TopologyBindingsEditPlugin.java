@@ -7,6 +7,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 /**
@@ -44,8 +45,9 @@ public final class TopologyBindingsEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

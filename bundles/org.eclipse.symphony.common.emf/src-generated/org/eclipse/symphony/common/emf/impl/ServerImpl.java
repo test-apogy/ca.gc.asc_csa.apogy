@@ -15,10 +15,10 @@ import org.eclipse.symphony.common.emf.Server;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.ServerImpl#getServerJob <em>Server Job</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

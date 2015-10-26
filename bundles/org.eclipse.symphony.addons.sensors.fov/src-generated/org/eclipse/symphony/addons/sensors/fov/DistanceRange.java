@@ -16,12 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMinimumDistance <em>Minimum Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMaximumDistance <em>Maximum Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getDistance <em>Distance</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getDistanceRange()
  * @model

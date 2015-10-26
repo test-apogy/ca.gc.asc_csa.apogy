@@ -25,11 +25,11 @@ import org.jfree.ui.TextAnchor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VehicleVariableAnnotationImpl#getVehicleLength <em>Vehicle Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.VehicleVariableAnnotationImpl#getVehicleWidth <em>Vehicle Width</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

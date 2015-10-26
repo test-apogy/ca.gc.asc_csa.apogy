@@ -32,12 +32,12 @@ import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationSwitchBindingImpl#getParentNode <em>Parent Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationSwitchBindingImpl#getCases <em>Cases</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.EnumerationSwitchBindingImpl#getActiveCase <em>Active Case</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

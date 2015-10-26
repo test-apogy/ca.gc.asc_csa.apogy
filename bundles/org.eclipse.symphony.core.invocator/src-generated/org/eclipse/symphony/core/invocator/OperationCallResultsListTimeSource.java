@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallResultsListTimeSource()
  * @model

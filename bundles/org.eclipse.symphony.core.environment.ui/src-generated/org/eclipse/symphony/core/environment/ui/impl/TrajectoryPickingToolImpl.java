@@ -13,8 +13,6 @@ import org.jfree.data.xy.XYDataItem;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Trajectory Picking Tool</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -24,6 +24,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraf
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassImpl#getOrbitModel <em>Orbit Model</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassImpl#getSurfaceLocation <em>Surface Location</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraf
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassImpl#getPositionHistory <em>Position History</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.VisibilityPassImpl#getDuration <em>Duration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

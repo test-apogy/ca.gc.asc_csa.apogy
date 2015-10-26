@@ -28,11 +28,11 @@ import org.jfree.data.xy.XYDataItem;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl#getDistanceThreshold <em>Distance Threshold</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.DefaultVariableTrajectoryProviderImpl#getAzimuthThreshold <em>Azimuth Threshold</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

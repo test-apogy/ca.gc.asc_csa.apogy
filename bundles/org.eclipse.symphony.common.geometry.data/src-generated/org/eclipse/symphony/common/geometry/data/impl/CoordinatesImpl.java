@@ -14,8 +14,6 @@ import org.eclipse.symphony.common.geometry.data.DataPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Coordinates</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

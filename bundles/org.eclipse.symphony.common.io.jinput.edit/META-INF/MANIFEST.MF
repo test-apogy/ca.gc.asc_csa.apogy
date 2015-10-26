@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.common.io.jinput.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.common.io.jinput.provider.Jinput_emfEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.common.io.jinput.provider.JInputEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

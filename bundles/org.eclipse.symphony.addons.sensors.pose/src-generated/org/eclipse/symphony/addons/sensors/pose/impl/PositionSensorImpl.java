@@ -33,11 +33,11 @@ import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

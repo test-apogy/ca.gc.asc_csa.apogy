@@ -5,6 +5,7 @@ package org.eclipse.symphony.addons.telecoms.ui.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
 
@@ -42,6 +43,7 @@ public final class SymphonyTelecomToolsUIEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     TopologyUIEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

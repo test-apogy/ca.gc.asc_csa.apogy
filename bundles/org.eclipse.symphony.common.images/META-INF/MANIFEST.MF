@@ -10,8 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.eclipse.symphony.common.images,
  org.eclipse.symphony.common.images.converters,
  org.eclipse.symphony.common.images.impl,
- org.eclipse.symphony.common.images.util,
- org.eclipse.symphony.common.images.validation
+ org.eclipse.symphony.common.images.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ui;bundle-version="3.6.2",

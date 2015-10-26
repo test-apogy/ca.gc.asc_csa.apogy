@@ -9,6 +9,7 @@ import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
@@ -49,15 +50,16 @@ public final class SymphonyToolsCoreEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     ProcessorsEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

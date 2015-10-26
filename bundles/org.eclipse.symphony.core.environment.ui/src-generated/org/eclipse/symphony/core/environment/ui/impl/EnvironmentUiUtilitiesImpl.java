@@ -20,8 +20,6 @@ import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Environment Ui Utilities</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

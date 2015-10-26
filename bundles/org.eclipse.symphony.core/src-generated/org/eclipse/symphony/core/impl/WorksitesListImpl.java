@@ -27,13 +27,13 @@ import org.eclipse.symphony.core.WorksitesList;
  * <em><b>Worksites List</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.WorksitesListImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.WorksitesListImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.WorksitesListImpl#getWorksites <em>Worksites</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.WorksitesListImpl#getOrbitsModels <em>Orbits Models</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

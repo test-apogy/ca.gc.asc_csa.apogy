@@ -32,10 +32,10 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
  * <em><b>Mesh</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.impl.MeshImpl#getPolygons <em>Polygons</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

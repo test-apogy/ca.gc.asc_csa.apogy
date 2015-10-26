@@ -1,11 +1,12 @@
-@GenModel(copyrightText="Canadian Space Agency 2011",
-		  prefix="ImagesCore",
-		  extensibleProviderFactory="true",
-		  childCreationExtenders="true",
-		  modelName="ImagesCore",
-		  importerID="org.eclipse.emf.importer.ecore")
-@GenModel(modelDirectory="/org.eclipse.symphony.common.images/src")
-@GenModel(editDirectory="/org.eclipse.symphony.common.images.edit/src")
+@GenModel(prefix="ImagesCore",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="ImagesCore",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.images/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.images.edit/src-generated")
 		  
 package org.eclipse.symphony.common.images
 

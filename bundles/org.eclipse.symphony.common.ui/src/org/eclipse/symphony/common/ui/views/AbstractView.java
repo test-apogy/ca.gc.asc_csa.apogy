@@ -212,7 +212,8 @@ public abstract class AbstractView extends ViewPart implements ISelectionListene
 		return ExtendedTabbedPropertySheetPage.PROPERTY_CONTRIBUTOR_ID;
 	}
 	
-	public Object getAdapter(@SuppressWarnings("rawtypes") Class key)
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public Object getAdapter( Class key)
 	{
 		if (key.equals(IPropertySheetPage.class))
 		{

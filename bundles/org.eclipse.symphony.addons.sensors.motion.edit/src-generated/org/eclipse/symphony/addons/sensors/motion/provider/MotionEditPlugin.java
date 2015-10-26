@@ -9,6 +9,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
 
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 /**
@@ -43,8 +44,9 @@ public final class MotionEditPlugin extends EMFPlugin {
 	public MotionEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

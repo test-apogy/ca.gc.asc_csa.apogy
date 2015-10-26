@@ -23,10 +23,10 @@ import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.OperationCallResultsListTimeSourceImpl#getOpsCallList <em>Ops Call List</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

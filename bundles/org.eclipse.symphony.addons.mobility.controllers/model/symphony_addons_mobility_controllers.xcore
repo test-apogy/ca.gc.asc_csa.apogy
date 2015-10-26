@@ -1,14 +1,18 @@
-@GenModel(prefix="Controllers", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="Controllers") 
-@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.controllers/src")
-@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.controllers.edit/src")
+@GenModel(prefix="Controllers",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)",
+		  modelName="Controllers")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.controllers/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.controllers.edit/src-generated")
 
 package org.eclipse.symphony.addons.mobility.controllers
 
-import org.eclipse.symphony.addons.mobility.MobilePlateform
+import org.eclipse.symphony.addons.mobility.MobilePlatform
 import org.eclipse.symphony.addons.geometry.paths.Path
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath
-import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlateform
+import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates
 import org.eclipse.symphony.common.geometry.data3d.Pose
 
@@ -18,7 +22,8 @@ import org.eclipse.symphony.common.geometry.data3d.Pose
  * of its PoseSensor and the MobilePlateformStatus of its MobilePlateform and pauses 
  * or resumes the path following accordingly.
  */
-class PathFollower <PlatformType extends MobilePlateform, PathType extends Path>{
+class PathFollower <PlatformType extends MobilePlatform, PathType extends Path>
+{
 	op boolean start()
 	op boolean pause()
 	op boolean resume()
@@ -34,19 +39,22 @@ class PathFollower <PlatformType extends MobilePlateform, PathType extends Path>
 	PathFollowerState pathFollowerState = "IDLE"
 }
 
-enum PathFollowerState{
+enum PathFollowerState
+{
 	IDLE = 0,
 	RUNNING = 1,
 	PAUSED = 2,
 	FAILED = -1
 }
 
-class SkidSteeredPlatformPathFollower <PlateformType extends SkidSteeredMobilePlateform, PathType extends Path> extends PathFollower <PlateformType, PathType>{
+class SkidSteeredPlatformPathFollower <PlateformType extends SkidSteeredMobilePlatform, PathType extends Path> extends PathFollower <PlateformType, PathType>
+{
 	double maximumAngularVelocity
 	double maximumLinearVelocity
 }
 
-class PathRecorder <PathType extends Path>{
+class PathRecorder <PathType extends Path>
+{
 	refers PoseSensor positionSensor
 	double minimumDistanceDelta = "0.1"
 	double minimumTimeDelta = "1.0"
@@ -55,19 +63,25 @@ class PathRecorder <PathType extends Path>{
 	refers PathType recordedPath
 }
 
-enum PathRecorderSamplingMode{
+enum PathRecorderSamplingMode
+{
 	ON_DISTANCE_DELTA = 0,
 	ON_TIME_DELTA = 1,
 	ON_TIME_OR_DISTANCE_DELTA = 2
 }
 
-class WaypointPathRecorder extends PathRecorder<WayPointPath>{
+class WaypointPathRecorder extends PathRecorder<WayPointPath>
+{
+	
 }
 
-class SkidSteeredWayPointPathFollower extends SkidSteeredPlatformPathFollower <SkidSteeredMobilePlateform, WayPointPath>{
+class SkidSteeredWayPointPathFollower extends SkidSteeredPlatformPathFollower <SkidSteeredMobilePlatform, WayPointPath>
+{
+	
 }
 
-class AstolfiGuidanceController extends SkidSteeredPlatformPathFollower <SkidSteeredMobilePlateform, WayPointPath>{
+class AstolfiGuidanceController extends SkidSteeredPlatformPathFollower <SkidSteeredMobilePlatform, WayPointPath>
+{
 	refers CartesianPositionCoordinates currentWayPoint
 	refers CartesianPositionCoordinates previousWayPoint
 	refers Pose currentPoseInGuidanceReferenceFrame

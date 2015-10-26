@@ -20,10 +20,10 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <em><b>Referenced Content Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.ReferencedContentNodeImpl#getReferencedContent <em>Referenced Content</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

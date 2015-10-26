@@ -16,13 +16,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMinimumAngle <em>Minimum Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getMaximumAngle <em>Maximum Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getSpanningAngle <em>Spanning Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.AngularSpan#getCenterAngle <em>Center Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getAngularSpan()
  * @model

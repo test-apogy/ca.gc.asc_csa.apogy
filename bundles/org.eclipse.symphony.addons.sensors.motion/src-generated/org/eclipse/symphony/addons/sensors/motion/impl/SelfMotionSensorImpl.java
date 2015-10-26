@@ -15,8 +15,6 @@ import org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Self Motion Sensor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

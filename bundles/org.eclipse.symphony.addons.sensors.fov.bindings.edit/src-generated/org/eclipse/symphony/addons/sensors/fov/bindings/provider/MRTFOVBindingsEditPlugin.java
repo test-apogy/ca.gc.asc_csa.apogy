@@ -9,6 +9,7 @@ import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
@@ -47,13 +48,14 @@ public final class MRTFOVBindingsEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     FovEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

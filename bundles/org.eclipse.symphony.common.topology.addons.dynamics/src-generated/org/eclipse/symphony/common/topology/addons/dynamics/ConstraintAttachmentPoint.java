@@ -18,6 +18,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody <em>Physical Body</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint <em>Constraint</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId <em>Point Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getConstraintAttachmentPoint()
  * @model

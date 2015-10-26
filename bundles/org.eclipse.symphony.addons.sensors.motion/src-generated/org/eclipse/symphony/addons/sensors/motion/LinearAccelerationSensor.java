@@ -11,12 +11,12 @@ package org.eclipse.symphony.addons.sensors.motion;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearAccelerationSensor()
  * @model

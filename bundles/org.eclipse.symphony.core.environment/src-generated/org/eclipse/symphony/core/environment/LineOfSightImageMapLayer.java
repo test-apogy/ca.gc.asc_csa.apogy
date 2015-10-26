@@ -19,6 +19,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer#getLineOfSightAvailableColor <em>Line Of Sight Available Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer#getLineOfSightNotAvailableColor <em>Line Of Sight Not Available Color</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer#getTargetHeightAboveGround <em>Target Height Above Ground</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer#isUseHeightPerpendicularToGround <em>Use Height Perpendicular To Ground</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getLineOfSightImageMapLayer()
  * @model

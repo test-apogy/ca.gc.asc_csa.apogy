@@ -1,7 +1,16 @@
-@GenModel(modelDirectory="/org.eclipse.symphony.common.math.statistics/src")
+@GenModel(prefix="Statistics",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="Statistics",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.math.statistics/src-generated")
+
 package org.eclipse.symphony.common.math.statistics
 
-class Population {
+class Population
+{
 	double[] data
 	readonly transient derived double standardDeviation
 	readonly transient derived double average

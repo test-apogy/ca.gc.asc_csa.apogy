@@ -9,6 +9,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
@@ -50,10 +51,11 @@ public final class SymphonyExampleRoverEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     SymphonyCoreEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     EMFEcoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     EMFEcoreEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -45,6 +45,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftsVisibilitySetImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftsVisibilitySetImpl#getDescription <em>Description</em>}</li>
@@ -57,7 +58,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftsVisibilitySetImpl#getPasses <em>Passes</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.SpacecraftsVisibilitySetImpl#getGroundStationToVisibilityMap <em>Ground Station To Visibility Map</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

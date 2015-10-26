@@ -23,13 +23,13 @@ import java.util.Date;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitImpl#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

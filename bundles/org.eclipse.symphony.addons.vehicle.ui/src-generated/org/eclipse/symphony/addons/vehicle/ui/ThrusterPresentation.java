@@ -12,11 +12,11 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLenght <em>Plume Envelope Lenght</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage#getThrusterPresentation()
  * @model

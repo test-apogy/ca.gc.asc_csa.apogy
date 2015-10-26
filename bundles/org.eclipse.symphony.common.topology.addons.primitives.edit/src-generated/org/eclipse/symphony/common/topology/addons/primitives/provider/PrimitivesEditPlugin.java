@@ -9,6 +9,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 /**
@@ -45,6 +46,7 @@ public final class PrimitivesEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     TopologyEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.file.csv.CsvPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl#getValues <em>Values</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.file.csv.impl.CsvColumnImpl#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

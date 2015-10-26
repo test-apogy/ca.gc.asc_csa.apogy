@@ -25,10 +25,10 @@ import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerTriggerImpl#getComponentQualifier <em>Component Qualifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

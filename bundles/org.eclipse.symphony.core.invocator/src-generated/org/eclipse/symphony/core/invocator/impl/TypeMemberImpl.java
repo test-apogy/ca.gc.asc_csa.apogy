@@ -20,12 +20,12 @@ import org.eclipse.symphony.core.invocator.TypeMember;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberImpl#getMemberType <em>Member Type</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberImpl#getTypeFeatureRootNode <em>Type Feature Root Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -18,10 +18,10 @@ import org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandAcquireImageImpl#getImageOrder <em>Image Order</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

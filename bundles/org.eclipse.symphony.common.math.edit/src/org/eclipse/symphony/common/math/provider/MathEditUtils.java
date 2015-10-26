@@ -8,12 +8,14 @@ import org.eclipse.symphony.common.math.MathUtils;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
 
-public class MathEditUtils {
-
+public class MathEditUtils
+{
 	/** 
 	 * Contains only static members.
 	 */
-	private MathEditUtils() {
+	private MathEditUtils()
+	{
+		
 	}
 	
 	/**
@@ -23,10 +25,14 @@ public class MathEditUtils {
 	 * @param orientation Orientation matrix.
 	 * @param editingDomain Editing Domain.
 	 */	
-	public static void updateOrientation(Matrix4x4 matrix, Matrix3x3 orientation, EditingDomain editingDomain){
-		if (editingDomain == null){
+	public static void updateOrientation(Matrix4x4 matrix, Matrix3x3 orientation, EditingDomain editingDomain)
+	{
+		if (editingDomain == null)
+		{
 			MathUtils.updateOrientation(matrix, orientation);
-		}else{
+		}
+		else
+		{
 			CompoundCommand command = new CompoundCommand();			
 			
 			command.append(SetCommand.create(editingDomain, matrix, MathPackage.Literals.MATRIX4X4__M00, orientation.getM00()));

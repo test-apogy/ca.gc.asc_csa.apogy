@@ -36,6 +36,7 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl#getNode <em>Node</em>}</li>
@@ -51,7 +52,6 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl#getZRange <em>ZRange</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl#getSceneObject <em>Scene Object</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

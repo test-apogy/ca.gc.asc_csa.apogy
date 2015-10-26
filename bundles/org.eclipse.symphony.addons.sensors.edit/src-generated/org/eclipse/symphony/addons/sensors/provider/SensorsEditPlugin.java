@@ -7,6 +7,7 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 
 /**
@@ -42,6 +43,7 @@ public final class SensorsEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     TopologyEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

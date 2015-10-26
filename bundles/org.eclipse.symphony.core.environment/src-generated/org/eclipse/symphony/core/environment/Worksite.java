@@ -14,12 +14,12 @@ import org.eclipse.symphony.core.AbstractWorksite;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.Worksite#getWorksiteNode <em>Worksite Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.Worksite#getOrbitsModels <em>Orbits Models</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.Worksite#getEnvironment <em>Environment</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getWorksite()
  * @model abstract="true"

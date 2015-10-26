@@ -12,10 +12,10 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.Sensor#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.sensors.SensorsPackage#getSensor()
  * @model

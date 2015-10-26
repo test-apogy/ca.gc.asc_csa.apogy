@@ -26,12 +26,12 @@ import org.eclipse.symphony.common.processors.ProcessorsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerImpl#getProgressMonitor <em>Progress Monitor</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerImpl#getInput <em>Input</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerImpl#getOutput <em>Output</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

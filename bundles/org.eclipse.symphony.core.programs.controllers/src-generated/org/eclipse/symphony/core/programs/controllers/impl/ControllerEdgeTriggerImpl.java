@@ -16,10 +16,10 @@ import org.eclipse.symphony.core.programs.controllers.EdgeType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerEdgeTriggerImpl#getEdgeType <em>Edge Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

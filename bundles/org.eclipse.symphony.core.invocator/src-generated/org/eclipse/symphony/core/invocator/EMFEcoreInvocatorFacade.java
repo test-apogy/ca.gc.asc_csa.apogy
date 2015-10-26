@@ -27,10 +27,10 @@ import org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEMFEcoreInvocatorFacade()
  * @model

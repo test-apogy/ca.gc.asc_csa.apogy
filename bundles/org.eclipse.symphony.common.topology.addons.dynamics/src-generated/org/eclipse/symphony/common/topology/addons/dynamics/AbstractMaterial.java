@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractMaterial#getMaterialId <em>Material Id</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getAbstractMaterial()
  * @model abstract="true"

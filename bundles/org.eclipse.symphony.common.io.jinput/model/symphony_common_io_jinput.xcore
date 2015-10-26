@@ -1,10 +1,21 @@
-@GenModel(copyrightText="Copyrights Canadian Space Agency 2012. All rights reserved.", prefix="JInput",modelName="Jinput_emf", importerID="org.eclipse.emf.importer.ecore", suppressGenModelAnnotations="false") 
-@GenModel(modelDirectory="/org.eclipse.symphony.common.io.jinput/src")
-@GenModel(editDirectory="/org.eclipse.symphony.common.io.jinput.edit/src")
+@GenModel(prefix="JInput",
+	      childCreationExtenders="true",
+	      extensibleProviderFactory="true",
+	      multipleEditorPages="false",
+	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+	      modelName="JInput",
+	      suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.common.io.jinput/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.common.io.jinput.edit/src-generated")
  
 package org.eclipse.symphony.common.io.jinput
 
-class EController {
+type Job wraps org.eclipse.core.runtime.jobs.Job
+type Component wraps net.java.games.input.Component
+type Controller wraps net.java.games.input.Controller
+
+class EController
+{
 	transient boolean lastPollResult
 	readonly String name = ""
 	readonly transient volatile derived int portNumber
@@ -16,7 +27,8 @@ class EController {
 	op boolean poll()
 }
 
-class EControllerEnvironment {
+class EControllerEnvironment
+{
 	readonly volatile derived boolean supported
 	contains readonly transient EController[] controllers
 	boolean refreshRequested = "true"
@@ -31,7 +43,8 @@ class EControllerEnvironment {
 	op EComponent resolveEComponent(EComponentQualifier eComponentQualifier)
 }
 
-class EComponent {
+class EComponent
+{
 	readonly transient volatile derived float deadZone
 	readonly transient volatile derived String identifier
 	readonly transient volatile derived boolean relative
@@ -42,32 +55,35 @@ class EComponent {
 	container transient EComponents eComponents opposite components
 }
 
-class EComponents {
+class EComponents
+{
 	contains readonly transient EComponent[] components opposite eComponents
 	transient String name = ""
 	container transient EController eController opposite eComponents
 }
 
-class EButton extends EComponent {
+class EButton extends EComponent
+{
+	
 }
 
-class EAxis extends EComponent {
+class EAxis extends EComponent
+{
+	
 }
 
-class EKey extends EComponent {
+class EKey extends EComponent
+{
+	
 }
 
-class EComponentQualifier {
+class EComponentQualifier
+{
 	String[1] eComponentName
 	String[1] eControllerName
 }
 
-type Job wraps org.eclipse.core.runtime.jobs.Job
-
-type Component wraps net.java.games.input.Component
-
-type Controller wraps net.java.games.input.Controller
-
-class EVirtualComponent extends EComponent {
+class EVirtualComponent extends EComponent
+{
 	float currentValue
 }

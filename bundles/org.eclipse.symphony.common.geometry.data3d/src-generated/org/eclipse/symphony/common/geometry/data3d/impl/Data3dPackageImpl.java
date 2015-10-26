@@ -3512,7 +3512,6 @@ public class Data3dPackageImpl extends EPackageImpl implements Data3dPackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Data3d",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.edit/src-generated",

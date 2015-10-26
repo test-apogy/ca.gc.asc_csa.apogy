@@ -21,11 +21,11 @@ import org.eclipse.symphony.core.invocator.TypesList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypesListImpl#getLocalTypes <em>Local Types</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypesListImpl#getRegisteredTypes <em>Registered Types</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

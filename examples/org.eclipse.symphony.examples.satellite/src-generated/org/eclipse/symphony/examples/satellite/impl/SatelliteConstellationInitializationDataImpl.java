@@ -24,12 +24,12 @@ import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl#getSatelliteData <em>Satellite Data</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl#getGroundStations <em>Ground Stations</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl#getPendingImageOrders <em>Pending Image Orders</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -9,6 +9,7 @@ import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
@@ -49,15 +50,16 @@ public final class SymphonyExampleAntennaEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
 		     SymphonyCoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

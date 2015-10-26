@@ -21,12 +21,12 @@ import org.eclipse.symphony.common.topology.addons.primitives.SpotLight;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.SpotLightImpl#getConcentration <em>Concentration</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.SpotLightImpl#getSpreadAngle <em>Spread Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.SpotLightImpl#getDirection <em>Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

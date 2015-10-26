@@ -8,6 +8,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data25d.provider.Data25dEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.TopologyEditPlugin;
 import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
@@ -44,12 +45,13 @@ public final class Data25DUIEditPlugin extends EMFPlugin {
 	public Data25DUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyEditPlugin.INSTANCE,
-		     Data25dEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     Data25dEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -16,6 +16,7 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AtmosphereImpl#getWindSpeed <em>Wind Speed</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AtmosphereImpl#getWindDirection <em>Wind Direction</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AtmosphereImpl#getSurfacePressure <em>Surface Pressure</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AtmosphereImpl#getSurfaceDensity <em>Surface Density</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

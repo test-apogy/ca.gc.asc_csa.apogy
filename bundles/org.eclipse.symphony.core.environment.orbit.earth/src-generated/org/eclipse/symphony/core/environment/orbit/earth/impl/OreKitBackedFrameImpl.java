@@ -16,8 +16,6 @@ import org.orekit.frames.Frame;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Ore Kit Backed Frame</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

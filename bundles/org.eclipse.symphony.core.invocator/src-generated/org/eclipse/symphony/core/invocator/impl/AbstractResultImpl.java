@@ -29,6 +29,7 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl#getDescription <em>Description</em>}</li>
@@ -37,7 +38,6 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl#getContext <em>Context</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.AbstractResultImpl#getResultValue <em>Result Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcoreControllers' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2012 Copyrights (c)' modelName='EMFEcoreControllers' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.core.programs.controllers/src-generated' editDirectory='/org.eclipse.symphony.core.programs.controllers.edit/src-generated' basePackage='org.eclipse.symphony.core.programs'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='EMFEcoreControllers' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='EMFEcoreControllers' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.core.programs.controllers/src-generated' editDirectory='/org.eclipse.symphony.core.programs.controllers.edit/src-generated' basePackage='org.eclipse.symphony.core.programs'"
  * @generated
  */
 public interface EMFEcoreControllersPackage extends EPackage {

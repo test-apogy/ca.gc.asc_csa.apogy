@@ -303,12 +303,7 @@ public class ContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createMathFacade()));
+				 MathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -318,12 +313,17 @@ public class ContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 MathFactory.eINSTANCE.createMatrix4x4()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 MathFactory.eINSTANCE.createPolynomial()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 MathFactory.eINSTANCE.createMathFacade()));
 
 		newChildDescriptors.add
 			(createChildParameter

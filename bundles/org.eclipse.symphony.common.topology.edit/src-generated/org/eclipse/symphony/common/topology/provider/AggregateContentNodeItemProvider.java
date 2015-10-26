@@ -302,12 +302,7 @@ public class AggregateContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-				 MathFactory.eINSTANCE.createMatrix4x4()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-				 MathFactory.eINSTANCE.createMathFacade()));
+				 MathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -317,12 +312,17 @@ public class AggregateContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-				 MathFactory.eINSTANCE.createTuple3d()));
+				 MathFactory.eINSTANCE.createMatrix4x4()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 				 MathFactory.eINSTANCE.createPolynomial()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+				 MathFactory.eINSTANCE.createMathFacade()));
 
 		newChildDescriptors.add
 			(createChildParameter

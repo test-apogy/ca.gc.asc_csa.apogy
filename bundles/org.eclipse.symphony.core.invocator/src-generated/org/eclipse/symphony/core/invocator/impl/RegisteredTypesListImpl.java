@@ -28,10 +28,10 @@ import org.eclipse.symphony.core.invocator.TypeContributorsRegistry;
  * <em><b>Registered Types List</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.RegisteredTypesListImpl#getTypes <em>Types</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

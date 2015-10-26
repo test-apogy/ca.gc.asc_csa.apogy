@@ -13,6 +13,7 @@ import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.images.provider.ImagesCoreEditPlugin;
+import org.eclipse.symphony.common.math.provider.MathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.ProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.addons.dynamics.provider.TopologyDynamicsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
@@ -55,21 +56,22 @@ public final class EMFEcoreExampleLanderEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     ProcessorsEditPlugin.INSTANCE,
-		     SymphonyToolsVehicleEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
-		     PathplannersEditPlugin.INSTANCE,
-		     ImagesCoreEditPlugin.INSTANCE,
-		     TopologyDynamicsEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
+		     SymphonyToolsVehicleEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     TopologyDynamicsEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     PathplannersEditPlugin.INSTANCE,
+		     PathsEditPlugin.INSTANCE,
+		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
 		   });
 	}
 
