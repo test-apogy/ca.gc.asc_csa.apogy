@@ -16,4 +16,20 @@
       [Enter License Description here.]
    </license>
 
+   <includes
+         id="org.eclipse.symphony.addons.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.symphony.common.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.symphony.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.symphony.examples.feature"
+         version="0.0.0"/>
+
 </feature>
