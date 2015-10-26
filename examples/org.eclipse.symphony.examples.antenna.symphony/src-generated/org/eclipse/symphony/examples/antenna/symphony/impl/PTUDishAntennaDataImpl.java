@@ -19,6 +19,7 @@ import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPack
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl#getPanAngle <em>Pan Angle</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPack
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl#isTrackingSun <em>Tracking Sun</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.impl.PTUDishAntennaDataImpl#isInitialized <em>Initialized</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

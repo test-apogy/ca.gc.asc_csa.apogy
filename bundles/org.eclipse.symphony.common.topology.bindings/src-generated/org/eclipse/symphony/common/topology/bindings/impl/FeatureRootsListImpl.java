@@ -22,10 +22,10 @@ import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.impl.FeatureRootsListImpl#getFeatureRoots <em>Feature Roots</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

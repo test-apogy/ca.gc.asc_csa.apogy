@@ -17,8 +17,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView} object.
@@ -71,7 +71,7 @@ public class CircularSectorFieldOfViewItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CircularSectorFieldOfView_area_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularSectorFieldOfView_area_feature", "_UI_CircularSectorFieldOfView_type"),
-				 FovPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA,
+				 Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA,
 				 false,
 				 false,
 				 false,
@@ -93,8 +93,8 @@ public class CircularSectorFieldOfViewItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FovPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE);
-			childrenFeatures.add(FovPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN);
+			childrenFeatures.add(Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE);
+			childrenFeatures.add(Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN);
 		}
 		return childrenFeatures;
 	}
@@ -163,11 +163,11 @@ public class CircularSectorFieldOfViewItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CircularSectorFieldOfView.class)) {
-			case FovPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA:
+			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__AREA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case FovPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
-			case FovPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
+			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE:
+			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -188,13 +188,13 @@ public class CircularSectorFieldOfViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FovPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE,
-				 FovFactory.eINSTANCE.createDistanceRange()));
+				(Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE,
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FovPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN,
-				 FovFactory.eINSTANCE.createAngularSpan()));
+				(Symphony__AddonsSensorsFOVPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN,
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createAngularSpan()));
 	}
 
 }

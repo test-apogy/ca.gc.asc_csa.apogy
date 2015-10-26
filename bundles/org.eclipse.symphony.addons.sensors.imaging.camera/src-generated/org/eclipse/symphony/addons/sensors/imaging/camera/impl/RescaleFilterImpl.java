@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 
@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.RescaleFilterImpl#getScale <em>Scale</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,7 +65,7 @@ public class RescaleFilterImpl extends ImageFilterImpl implements RescaleFilter
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.RESCALE_FILTER;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.RESCALE_FILTER;
 	}
 
   /**
@@ -88,7 +88,7 @@ public class RescaleFilterImpl extends ImageFilterImpl implements RescaleFilter
 		double oldScale = scale;
 		scale = newScale;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.RESCALE_FILTER__SCALE, oldScale, scale));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.RESCALE_FILTER__SCALE, oldScale, scale));
 	}
 
   /**
@@ -100,7 +100,7 @@ public class RescaleFilterImpl extends ImageFilterImpl implements RescaleFilter
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.RESCALE_FILTER__SCALE:
+			case Symphony__AddonsSensorsImagingCameraPackage.RESCALE_FILTER__SCALE:
 				return getScale();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class RescaleFilterImpl extends ImageFilterImpl implements RescaleFilter
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.RESCALE_FILTER__SCALE:
+			case Symphony__AddonsSensorsImagingCameraPackage.RESCALE_FILTER__SCALE:
 				setScale((Double)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public class RescaleFilterImpl extends ImageFilterImpl implements RescaleFilter
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.RESCALE_FILTER__SCALE:
+			case Symphony__AddonsSensorsImagingCameraPackage.RESCALE_FILTER__SCALE:
 				setScale(SCALE_EDEFAULT);
 				return;
 		}
@@ -147,7 +147,7 @@ public class RescaleFilterImpl extends ImageFilterImpl implements RescaleFilter
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.RESCALE_FILTER__SCALE:
+			case Symphony__AddonsSensorsImagingCameraPackage.RESCALE_FILTER__SCALE:
 				return scale != SCALE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

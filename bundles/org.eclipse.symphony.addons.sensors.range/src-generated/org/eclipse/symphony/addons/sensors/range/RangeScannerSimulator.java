@@ -18,6 +18,7 @@ import org.eclipse.symphony.common.topology.ContentNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getMeshNode <em>Mesh Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#isNoiseEnabled <em>Noise Enabled</em>}</li>
@@ -25,9 +26,8 @@ import org.eclipse.symphony.common.topology.ContentNode;
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeFindingIntersections <em>Time Finding Intersections</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator#getTimeGettingSimulatedRays <em>Time Getting Simulated Rays</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeScannerSimulator()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator()
  * @model abstract="true"
  * @generated
  */
@@ -44,7 +44,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mesh Node</em>' reference.
 	 * @see #setMeshNode(ContentNode)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeScannerSimulator_MeshNode()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_MeshNode()
 	 * @model
 	 * @generated
 	 */
@@ -71,7 +71,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Noise Enabled</em>' attribute.
 	 * @see #setNoiseEnabled(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeScannerSimulator_NoiseEnabled()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_NoiseEnabled()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Cropping Mesh</em>' attribute.
 	 * @see #setTimeCroppingMesh(long)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeScannerSimulator_TimeCroppingMesh()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_TimeCroppingMesh()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -122,7 +122,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Finding Intersections</em>' attribute.
 	 * @see #setTimeFindingIntersections(long)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeScannerSimulator_TimeFindingIntersections()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_TimeFindingIntersections()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -147,7 +147,7 @@ public interface RangeScannerSimulator<InputType> extends RangeScanner<InputType
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Getting Simulated Rays</em>' attribute.
 	 * @see #setTimeGettingSimulatedRays(long)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeScannerSimulator_TimeGettingSimulatedRays()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScannerSimulator_TimeGettingSimulatedRays()
 	 * @model unique="false"
 	 * @generated
 	 */

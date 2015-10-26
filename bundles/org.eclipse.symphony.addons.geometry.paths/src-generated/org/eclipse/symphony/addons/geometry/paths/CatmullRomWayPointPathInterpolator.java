@@ -17,12 +17,12 @@ package org.eclipse.symphony.addons.geometry.paths;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getTension <em>Tension</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getMaximumWayPointsDistance <em>Maximum Way Points Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getEndControlPointGenerationMode <em>End Control Point Generation Mode</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator()
  * @model

@@ -11,14 +11,14 @@ package org.eclipse.symphony.addons.sensors.motion;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getXVelocity <em>XVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getYVelocity <em>YVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor#getZVelocity <em>ZVelocity</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearVelocitySensor()
+ * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearVelocitySensor()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XVelocity</em>' attribute.
 	 * @see #setXVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearVelocitySensor_XVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearVelocitySensor_XVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YVelocity</em>' attribute.
 	 * @see #setYVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearVelocitySensor_YVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearVelocitySensor_YVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface LinearVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZVelocity</em>' attribute.
 	 * @see #setZVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearVelocitySensor_ZVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearVelocitySensor_ZVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */

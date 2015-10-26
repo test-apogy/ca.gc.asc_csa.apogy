@@ -12,6 +12,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMinX <em>Min X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxX <em>Max X</em>}</li>
@@ -20,7 +21,6 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMinZ <em>Min Z</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxZ <em>Max Z</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Data3dPackage#getPointsRangeGager()
  * @model

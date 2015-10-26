@@ -11,15 +11,15 @@ package org.eclipse.symphony.addons.sensors.pose;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getXVelocity <em>XVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getYVelocity <em>YVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getZVelocity <em>ZVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedPositionSensor()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface SimulatedPositionSensor extends PositionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XVelocity</em>' attribute.
 	 * @see #setXVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedPositionSensor_XVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor_XVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface SimulatedPositionSensor extends PositionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YVelocity</em>' attribute.
 	 * @see #setYVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedPositionSensor_YVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor_YVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface SimulatedPositionSensor extends PositionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZVelocity</em>' attribute.
 	 * @see #setZVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedPositionSensor_ZVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor_ZVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -113,7 +113,7 @@ public interface SimulatedPositionSensor extends PositionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedPositionSensor_UpdatePeriod()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedPositionSensor_UpdatePeriod()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage#getTrajectory3DToolNodePresentation()
+ * @see org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage#getTrajectory3DToolNodePresentation()
  * @model
  * @generated
  */

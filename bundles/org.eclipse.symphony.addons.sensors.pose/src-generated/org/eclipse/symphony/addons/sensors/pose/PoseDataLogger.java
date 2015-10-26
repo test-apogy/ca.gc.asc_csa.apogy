@@ -16,12 +16,12 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger#getOutputFile <em>Output File</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPoseDataLogger()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseDataLogger()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface PoseDataLogger extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output File</em>' attribute.
 	 * @see #setOutputFile(String)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPoseDataLogger_OutputFile()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseDataLogger_OutputFile()
 	 * @model unique="false"
 	 * @generated
 	 */

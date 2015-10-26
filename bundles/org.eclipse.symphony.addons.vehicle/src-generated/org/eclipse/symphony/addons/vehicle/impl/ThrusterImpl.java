@@ -6,7 +6,7 @@ package org.eclipse.symphony.addons.vehicle.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
@@ -16,6 +16,7 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl#getMinimumThrust <em>Minimum Thrust</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl#getMaximumThrust <em>Maximum Thrust</em>}</li>
@@ -23,7 +24,6 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl#getThrustLevel <em>Thrust Level</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl#getPlumeAngle <em>Plume Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -147,7 +147,7 @@ public class ThrusterImpl extends NodeImpl implements Thruster
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.THRUSTER;
+		return Symphony__AddonsVehiclePackage.Literals.THRUSTER;
 	}
 
   /**
@@ -187,7 +187,7 @@ public class ThrusterImpl extends NodeImpl implements Thruster
 		double oldMinimumThrust = minimumThrust;
 		minimumThrust = newMinimumThrust;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.THRUSTER__MINIMUM_THRUST, oldMinimumThrust, minimumThrust));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.THRUSTER__MINIMUM_THRUST, oldMinimumThrust, minimumThrust));
 	}
 
 		/**
@@ -227,7 +227,7 @@ public class ThrusterImpl extends NodeImpl implements Thruster
 		double oldMaximumThrust = maximumThrust;
 		maximumThrust = newMaximumThrust;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.THRUSTER__MAXIMUM_THRUST, oldMaximumThrust, maximumThrust));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.THRUSTER__MAXIMUM_THRUST, oldMaximumThrust, maximumThrust));
 	}
 
 		/**
@@ -271,7 +271,7 @@ public class ThrusterImpl extends NodeImpl implements Thruster
 		double oldCurrentThrust = currentThrust;
 		currentThrust = newCurrentThrust;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.THRUSTER__CURRENT_THRUST, oldCurrentThrust, currentThrust));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.THRUSTER__CURRENT_THRUST, oldCurrentThrust, currentThrust));
 	}
 
 		/**
@@ -294,7 +294,7 @@ public class ThrusterImpl extends NodeImpl implements Thruster
 		double oldPlumeAngle = plumeAngle;
 		plumeAngle = newPlumeAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.THRUSTER__PLUME_ANGLE, oldPlumeAngle, plumeAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE, oldPlumeAngle, plumeAngle));
 	}
 
   /**
@@ -317,7 +317,7 @@ public class ThrusterImpl extends NodeImpl implements Thruster
 		double oldThrustLevel = thrustLevel;
 		thrustLevel = newThrustLevel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.THRUSTER__THRUST_LEVEL, oldThrustLevel, thrustLevel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL, oldThrustLevel, thrustLevel));
 	}
 
   /**
@@ -329,15 +329,15 @@ public class ThrusterImpl extends NodeImpl implements Thruster
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.THRUSTER__MINIMUM_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__MINIMUM_THRUST:
 				return getMinimumThrust();
-			case SymphonyToolsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
 				return getMaximumThrust();
-			case SymphonyToolsVehiclePackage.THRUSTER__CURRENT_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__CURRENT_THRUST:
 				return getCurrentThrust();
-			case SymphonyToolsVehiclePackage.THRUSTER__THRUST_LEVEL:
+			case Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
 				return getThrustLevel();
-			case SymphonyToolsVehiclePackage.THRUSTER__PLUME_ANGLE:
+			case Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
 				return getPlumeAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -352,19 +352,19 @@ public class ThrusterImpl extends NodeImpl implements Thruster
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.THRUSTER__MINIMUM_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__MINIMUM_THRUST:
 				setMinimumThrust((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
 				setMaximumThrust((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.THRUSTER__CURRENT_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__CURRENT_THRUST:
 				setCurrentThrust((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.THRUSTER__THRUST_LEVEL:
+			case Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
 				setThrustLevel((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.THRUSTER__PLUME_ANGLE:
+			case Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
 				setPlumeAngle((Double)newValue);
 				return;
 		}
@@ -380,19 +380,19 @@ public class ThrusterImpl extends NodeImpl implements Thruster
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.THRUSTER__MINIMUM_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__MINIMUM_THRUST:
 				setMinimumThrust(MINIMUM_THRUST_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
 				setMaximumThrust(MAXIMUM_THRUST_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.THRUSTER__CURRENT_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__CURRENT_THRUST:
 				setCurrentThrust(CURRENT_THRUST_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.THRUSTER__THRUST_LEVEL:
+			case Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
 				setThrustLevel(THRUST_LEVEL_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.THRUSTER__PLUME_ANGLE:
+			case Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
 				setPlumeAngle(PLUME_ANGLE_EDEFAULT);
 				return;
 		}
@@ -408,15 +408,15 @@ public class ThrusterImpl extends NodeImpl implements Thruster
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.THRUSTER__MINIMUM_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__MINIMUM_THRUST:
 				return minimumThrust != MINIMUM_THRUST_EDEFAULT;
-			case SymphonyToolsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
 				return maximumThrust != MAXIMUM_THRUST_EDEFAULT;
-			case SymphonyToolsVehiclePackage.THRUSTER__CURRENT_THRUST:
+			case Symphony__AddonsVehiclePackage.THRUSTER__CURRENT_THRUST:
 				return currentThrust != CURRENT_THRUST_EDEFAULT;
-			case SymphonyToolsVehiclePackage.THRUSTER__THRUST_LEVEL:
+			case Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
 				return thrustLevel != THRUST_LEVEL_EDEFAULT;
-			case SymphonyToolsVehiclePackage.THRUSTER__PLUME_ANGLE:
+			case Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
 				return plumeAngle != PLUME_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

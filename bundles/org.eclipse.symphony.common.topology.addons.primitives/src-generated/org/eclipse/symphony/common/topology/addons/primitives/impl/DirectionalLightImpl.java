@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.DirectionalLightImpl#getDirection <em>Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

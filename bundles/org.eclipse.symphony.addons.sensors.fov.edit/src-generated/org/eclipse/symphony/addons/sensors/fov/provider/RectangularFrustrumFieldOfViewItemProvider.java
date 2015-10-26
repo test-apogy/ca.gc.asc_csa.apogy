@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
@@ -72,7 +72,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 				getResourceLocator(),
 				getString("_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_horizontalFieldOfViewAngle_feature", "_UI_RectangularFrustrumFieldOfView_type"),
-				FovPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE,
+				Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE,
 				true, 
 				false,
 				false, 
@@ -96,7 +96,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 				getResourceLocator(),
 				getString("_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_verticalFieldOfViewAngle_feature", "_UI_RectangularFrustrumFieldOfView_type"),
-				FovPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE,
+				Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE,
 				true, 
 				false,
 				false, 
@@ -121,7 +121,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularFrustrumFieldOfView_volume_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularFrustrumFieldOfView_volume_feature", "_UI_RectangularFrustrumFieldOfView_type"),
-				 FovPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME,
+				 Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME,
 				 false,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ public class RectangularFrustrumFieldOfViewItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FovPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE);
+			childrenFeatures.add(Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE);
 		}
 		return childrenFeatures;
 	}
@@ -210,12 +210,12 @@ public class RectangularFrustrumFieldOfViewItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RectangularFrustrumFieldOfView.class)) {
-			case FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
-			case FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
-			case FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME:
+			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VOLUME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -236,8 +236,8 @@ public class RectangularFrustrumFieldOfViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FovPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE,
-				 FovFactory.eINSTANCE.createDistanceRange()));
+				(Symphony__AddonsSensorsFOVPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE,
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
 	}
 
 }

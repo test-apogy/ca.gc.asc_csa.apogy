@@ -12,16 +12,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.sensors.gps.GPSFacade;
 import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
-import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
-import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFactory;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>GPS Facade</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -53,7 +51,7 @@ public class GPSFacadeImpl extends MinimalEObjectImpl.Container implements GPSFa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GpsPackage.Literals.GPS_FACADE;
+		return Symphony__AddonsSensorsGPSPackage.Literals.GPS_FACADE;
 	}
 
 	/**
@@ -64,7 +62,7 @@ public class GPSFacadeImpl extends MinimalEObjectImpl.Container implements GPSFa
 	public GPSPoseSensor createGPSPoseSensor(double originLatitude,
 			double originLongitude) {
 
-		GPSPoseSensor sensor = GpsFactory.eINSTANCE.createGPSPoseSensor();
+		GPSPoseSensor sensor = Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSPoseSensor();
 		sensor.setOriginLatitude(originLatitude);
 		sensor.setOriginLongitude(originLongitude);
 
@@ -77,7 +75,7 @@ public class GPSFacadeImpl extends MinimalEObjectImpl.Container implements GPSFa
 	 * @generated_NOT
 	 */
 	public MarkedGPS createMarkedGPS(PositionMarker marker) {
-		MarkedGPS markedGPS = GpsFactory.eINSTANCE.createMarkedGPS();
+		MarkedGPS markedGPS = Symphony__AddonsSensorsGPSFactory.eINSTANCE.createMarkedGPS();
 
 		markedGPS.setMarker(marker);
 
@@ -92,9 +90,9 @@ public class GPSFacadeImpl extends MinimalEObjectImpl.Container implements GPSFa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case GpsPackage.GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE:
 				return createGPSPoseSensor((Double)arguments.get(0), (Double)arguments.get(1));
-			case GpsPackage.GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER:
+			case Symphony__AddonsSensorsGPSPackage.GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER:
 				return createMarkedGPS((PositionMarker)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

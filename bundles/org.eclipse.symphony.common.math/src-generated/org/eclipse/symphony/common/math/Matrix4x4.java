@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM00 <em>M00</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM01 <em>M01</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM32 <em>M32</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.Matrix4x4#getM33 <em>M33</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.math.MathPackage#getMatrix4x4()
  * @model

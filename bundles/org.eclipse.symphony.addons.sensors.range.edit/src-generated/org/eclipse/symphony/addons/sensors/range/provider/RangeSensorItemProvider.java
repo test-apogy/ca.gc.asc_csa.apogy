@@ -12,9 +12,9 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
-import org.eclipse.symphony.addons.sensors.range.RangeFactory;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFactory;
 import org.eclipse.symphony.addons.sensors.range.RangeSensor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -110,162 +110,162 @@ public class RangeSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanSettings()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createContactSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createContactSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleSonar()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleSonar()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createLineRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanData()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanData()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanSettings()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createContactSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createContactSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleSonar()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleSonar()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createLineRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanData()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanData()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 	}
 
 	/**

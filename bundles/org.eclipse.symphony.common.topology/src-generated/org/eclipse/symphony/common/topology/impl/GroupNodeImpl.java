@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.impl.GroupNodeImpl#getChildren <em>Children</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

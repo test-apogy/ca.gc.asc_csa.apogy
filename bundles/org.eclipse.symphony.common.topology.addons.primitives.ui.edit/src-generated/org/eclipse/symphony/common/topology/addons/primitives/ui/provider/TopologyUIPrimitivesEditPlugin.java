@@ -41,9 +41,9 @@ public final class TopologyUIPrimitivesEditPlugin extends EMFPlugin {
 	public TopologyUIPrimitivesEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     MathEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
 		     TopologyUIEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
 		   });
 	}
 

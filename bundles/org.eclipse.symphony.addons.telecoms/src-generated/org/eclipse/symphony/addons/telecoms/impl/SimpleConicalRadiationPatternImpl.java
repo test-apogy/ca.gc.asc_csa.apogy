@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,10 +15,10 @@ import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.SimpleConicalRadiationPatternImpl#getApexAngle <em>Apex Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -62,7 +62,7 @@ public class SimpleConicalRadiationPatternImpl extends AbstractAntennaRadiationP
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyTelecomToolsPackage.Literals.SIMPLE_CONICAL_RADIATION_PATTERN;
+		return Symphony__AddonsTelecomsPackage.Literals.SIMPLE_CONICAL_RADIATION_PATTERN;
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class SimpleConicalRadiationPatternImpl extends AbstractAntennaRadiationP
 		double oldApexAngle = apexAngle;
 		apexAngle = newApexAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTelecomToolsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE, oldApexAngle, apexAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE, oldApexAngle, apexAngle));
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class SimpleConicalRadiationPatternImpl extends AbstractAntennaRadiationP
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
 				return getApexAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -119,7 +119,7 @@ public class SimpleConicalRadiationPatternImpl extends AbstractAntennaRadiationP
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
 				setApexAngle((Double)newValue);
 				return;
 		}
@@ -134,7 +134,7 @@ public class SimpleConicalRadiationPatternImpl extends AbstractAntennaRadiationP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
 				setApexAngle(APEX_ANGLE_EDEFAULT);
 				return;
 		}
@@ -149,7 +149,7 @@ public class SimpleConicalRadiationPatternImpl extends AbstractAntennaRadiationP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
 				return apexAngle != APEX_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
-import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFactory;
 
@@ -61,7 +61,7 @@ public class MarkedGPSItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GpsPackage.Literals.MARKED_GPS__MARKER);
+			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.MARKED_GPS__MARKER);
 		}
 		return childrenFeatures;
 	}
@@ -117,7 +117,7 @@ public class MarkedGPSItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MarkedGPS.class)) {
-			case GpsPackage.MARKED_GPS__MARKER:
+			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,7 +137,7 @@ public class MarkedGPSItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GpsPackage.Literals.MARKED_GPS__MARKER,
+				(Symphony__AddonsSensorsGPSPackage.Literals.MARKED_GPS__MARKER,
 				 Data3dFactory.eINSTANCE.createPositionMarker()));
 	}
 

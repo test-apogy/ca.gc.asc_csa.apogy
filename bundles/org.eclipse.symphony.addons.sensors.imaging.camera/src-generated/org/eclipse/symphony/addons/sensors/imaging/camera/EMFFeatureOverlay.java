@@ -12,14 +12,14 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getNumberFormat <em>Number Format</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay#getVariableFeatureReferenceChangeCount <em>Variable Feature Reference Change Count</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getEMFFeatureOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getEMFFeatureOverlay()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface EMFFeatureOverlay extends AbstractTextOverlay
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Feature Reference</em>' containment reference.
 	 * @see #setVariableFeatureReference(VariableFeatureReference)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getEMFFeatureOverlay_VariableFeatureReference()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getEMFFeatureOverlay_VariableFeatureReference()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -62,7 +62,7 @@ public interface EMFFeatureOverlay extends AbstractTextOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Number Format</em>' attribute.
 	 * @see #setNumberFormat(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getEMFFeatureOverlay_NumberFormat()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getEMFFeatureOverlay_NumberFormat()
 	 * @model default="0.00" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -89,7 +89,7 @@ public interface EMFFeatureOverlay extends AbstractTextOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variable Feature Reference Change Count</em>' attribute.
 	 * @see #setVariableFeatureReferenceChangeCount(long)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getEMFFeatureOverlay_VariableFeatureReferenceChangeCount()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getEMFFeatureOverlay_VariableFeatureReferenceChangeCount()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated

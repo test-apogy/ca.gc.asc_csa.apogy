@@ -50,12 +50,12 @@ public final class SymphonyExampleRoverEditPlugin extends EMFPlugin {
 	public SymphonyExampleRoverEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     SymphonyCoreEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}
 

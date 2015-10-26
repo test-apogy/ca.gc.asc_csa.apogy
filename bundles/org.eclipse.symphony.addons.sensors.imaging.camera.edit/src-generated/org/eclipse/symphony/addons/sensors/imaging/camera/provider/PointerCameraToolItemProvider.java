@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 
@@ -72,7 +72,7 @@ public class PointerCameraToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointerCameraTool_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointerCameraTool_fov_feature", "_UI_PointerCameraTool_type"),
-				 SymphonyCameraToolsPackage.Literals.POINTER_CAMERA_TOOL__FOV,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__FOV,
 				 false,
 				 false,
 				 true,
@@ -94,7 +94,7 @@ public class PointerCameraToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointerCameraTool_vectorColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointerCameraTool_vectorColor_feature", "_UI_PointerCameraTool_type"),
-				 SymphonyCameraToolsPackage.Literals.POINTER_CAMERA_TOOL__VECTOR_COLOR,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__VECTOR_COLOR,
 				 true,
 				 false,
 				 false,
@@ -116,7 +116,7 @@ public class PointerCameraToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PointerCameraTool_intersectionDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PointerCameraTool_intersectionDistance_feature", "_UI_PointerCameraTool_type"),
-				 SymphonyCameraToolsPackage.Literals.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE,
 				 false,
 				 false,
 				 false,
@@ -222,11 +222,11 @@ public class PointerCameraToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PointerCameraTool.class)) {
-			case SymphonyCameraToolsPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
-			case SymphonyCameraToolsPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__VECTOR_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__INTERSECTION_DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyCameraToolsPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
+			case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

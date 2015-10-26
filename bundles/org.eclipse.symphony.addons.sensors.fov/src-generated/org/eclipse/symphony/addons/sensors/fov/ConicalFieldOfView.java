@@ -15,14 +15,14 @@ package org.eclipse.symphony.addons.sensors.fov;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getRange <em>Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getFieldOfViewAngle <em>Field Of View Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView#getVolume <em>Volume</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getConicalFieldOfView()
+ * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ConicalFieldOfView extends FieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range</em>' containment reference.
 	 * @see #setRange(DistanceRange)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getConicalFieldOfView_Range()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView_Range()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface ConicalFieldOfView extends FieldOfView {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Field Of View Angle</em>' attribute.
 	 * @see #setFieldOfViewAngle(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getConicalFieldOfView_FieldOfViewAngle()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView_FieldOfViewAngle()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -87,7 +87,7 @@ public interface ConicalFieldOfView extends FieldOfView {
 	 * The volume of the contained within the field of view.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Volume</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getConicalFieldOfView_Volume()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView_Volume()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

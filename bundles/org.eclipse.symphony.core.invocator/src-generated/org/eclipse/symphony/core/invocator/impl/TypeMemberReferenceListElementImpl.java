@@ -21,6 +21,7 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceListElementImpl#getChild <em>Child</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceListElementImpl#getParent <em>Parent</em>}</li>
@@ -30,7 +31,6 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceListElementImpl#isLeaf <em>Leaf</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceListElementImpl#getSubSegmentsCount <em>Sub Segments Count</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

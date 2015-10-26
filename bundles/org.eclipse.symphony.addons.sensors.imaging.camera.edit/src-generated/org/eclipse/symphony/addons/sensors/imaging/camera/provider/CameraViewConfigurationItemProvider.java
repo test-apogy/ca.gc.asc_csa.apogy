@@ -15,8 +15,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.core.invocator.provider.VariableFeatureReferenceItemProvider;
 
@@ -102,7 +102,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_cameraViewConfigurationList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_cameraViewConfigurationList_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST,
 				 true,
 				 false,
 				 true,
@@ -125,7 +125,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_camera_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_camera_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__CAMERA,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__CAMERA,
 				 false,
 				 false,
 				 true,
@@ -148,7 +148,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageWidth_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -171,7 +171,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageHeight_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -193,7 +193,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageCount_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT,
 				 true,
 				 false,
 				 false,
@@ -216,7 +216,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_displayRectifiedImage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_displayRectifiedImage_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE,
 				 true,
 				 false,
 				 false,
@@ -238,7 +238,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageAutoSaveEnable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageAutoSaveEnable_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE,
 				 true,
 				 false,
 				 false,
@@ -260,7 +260,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_saveImageWithOverlays_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_saveImageWithOverlays_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS,
 				 true,
 				 false,
 				 false,
@@ -282,7 +282,7 @@ public class CameraViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraViewConfiguration_imageAutoSaveFolderPath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_imageAutoSaveFolderPath_feature", "_UI_CameraViewConfiguration_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH,
 				 true,
 				 false,
 				 false,
@@ -304,9 +304,9 @@ public class CameraViewConfigurationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__TOOL_LIST);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__FILTER_LIST);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__TOOL_LIST);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__FILTER_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -365,19 +365,19 @@ public class CameraViewConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraViewConfiguration.class)) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__TOOL_LIST:
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__FILTER_LIST:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__TOOL_LIST:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__FILTER_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -398,18 +398,18 @@ public class CameraViewConfigurationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST,
-				 SymphonyCameraToolsFactory.eINSTANCE.createCameraOverlayList()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraOverlayList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__TOOL_LIST,
-				 SymphonyCameraToolsFactory.eINSTANCE.createCameraToolList()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__TOOL_LIST,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraToolList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION__FILTER_LIST,
-				 SymphonyCameraToolsFactory.eINSTANCE.createFilterList()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__FILTER_LIST,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFilterList()));
 	}
 
 }

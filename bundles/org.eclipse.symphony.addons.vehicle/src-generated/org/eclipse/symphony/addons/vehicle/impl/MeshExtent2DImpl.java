@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,13 +16,13 @@ import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshExtent2DImpl#getMinimumX <em>Minimum X</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshExtent2DImpl#getMinimumY <em>Minimum Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshExtent2DImpl#getMaximumX <em>Maximum X</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshExtent2DImpl#getMaximumY <em>Maximum Y</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -126,7 +126,7 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.MESH_EXTENT2_D;
+		return Symphony__AddonsVehiclePackage.Literals.MESH_EXTENT2_D;
 	}
 
   /**
@@ -149,7 +149,7 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
 		double oldMinimumX = minimumX;
 		minimumX = newMinimumX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X, oldMinimumX, minimumX));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X, oldMinimumX, minimumX));
 	}
 
   /**
@@ -172,7 +172,7 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
 		double oldMinimumY = minimumY;
 		minimumY = newMinimumY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y, oldMinimumY, minimumY));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y, oldMinimumY, minimumY));
 	}
 
   /**
@@ -195,7 +195,7 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
 		double oldMaximumX = maximumX;
 		maximumX = newMaximumX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X, oldMaximumX, maximumX));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X, oldMaximumX, maximumX));
 	}
 
   /**
@@ -218,7 +218,7 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
 		double oldMaximumY = maximumY;
 		maximumY = newMaximumY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y, oldMaximumY, maximumY));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y, oldMaximumY, maximumY));
 	}
 
   /**
@@ -230,13 +230,13 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
 				return getMinimumX();
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
 				return getMinimumY();
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
 				return getMaximumX();
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
 				return getMaximumY();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -251,16 +251,16 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
 				setMinimumX((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
 				setMinimumY((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
 				setMaximumX((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
 				setMaximumY((Double)newValue);
 				return;
 		}
@@ -276,16 +276,16 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
 				setMinimumX(MINIMUM_X_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
 				setMinimumY(MINIMUM_Y_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
 				setMaximumX(MAXIMUM_X_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
 				setMaximumY(MAXIMUM_Y_EDEFAULT);
 				return;
 		}
@@ -301,13 +301,13 @@ public class MeshExtent2DImpl extends MinimalEObjectImpl.Container implements Me
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
 				return minimumX != MINIMUM_X_EDEFAULT;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
 				return minimumY != MINIMUM_Y_EDEFAULT;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
 				return maximumX != MAXIMUM_X_EDEFAULT;
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
 				return maximumY != MAXIMUM_Y_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

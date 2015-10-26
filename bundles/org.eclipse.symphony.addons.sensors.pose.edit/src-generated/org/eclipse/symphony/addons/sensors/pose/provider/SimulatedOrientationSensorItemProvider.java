@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -73,7 +73,7 @@ public class SimulatedOrientationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedOrientationSensor_xAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedOrientationSensor_xAngularVelocity_feature", "_UI_SimulatedOrientationSensor_type"),
-				 PosePackage.Literals.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY,
+				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -96,7 +96,7 @@ public class SimulatedOrientationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedOrientationSensor_yAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedOrientationSensor_yAngularVelocity_feature", "_UI_SimulatedOrientationSensor_type"),
-				 PosePackage.Literals.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY,
+				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class SimulatedOrientationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedOrientationSensor_zAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedOrientationSensor_zAngularVelocity_feature", "_UI_SimulatedOrientationSensor_type"),
-				 PosePackage.Literals.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY,
+				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -142,7 +142,7 @@ public class SimulatedOrientationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedOrientationSensor_updatePeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedOrientationSensor_updatePeriod_feature", "_UI_SimulatedOrientationSensor_type"),
-				 PosePackage.Literals.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD,
+				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -191,10 +191,10 @@ public class SimulatedOrientationSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimulatedOrientationSensor.class)) {
-			case PosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
-			case PosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
-			case PosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
-			case PosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
+			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__XANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__YANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__ZANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsPosePackage.SIMULATED_ORIENTATION_SENSOR__UPDATE_PERIOD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

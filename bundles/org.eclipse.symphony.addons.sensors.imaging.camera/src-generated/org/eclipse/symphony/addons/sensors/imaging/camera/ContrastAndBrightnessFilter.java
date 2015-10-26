@@ -11,13 +11,13 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getContrast <em>Contrast</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ContrastAndBrightnessFilter#getBrightness <em>Brightness</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getContrastAndBrightnessFilter()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getContrastAndBrightnessFilter()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ContrastAndBrightnessFilter extends ImageFilter
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contrast</em>' attribute.
 	 * @see #setContrast(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getContrastAndBrightnessFilter_Contrast()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getContrastAndBrightnessFilter_Contrast()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated
@@ -62,7 +62,7 @@ public interface ContrastAndBrightnessFilter extends ImageFilter
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Brightness</em>' attribute.
 	 * @see #setBrightness(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getContrastAndBrightnessFilter_Brightness()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getContrastAndBrightnessFilter_Brightness()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated

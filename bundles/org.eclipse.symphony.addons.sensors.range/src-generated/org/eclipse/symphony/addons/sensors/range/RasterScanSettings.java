@@ -12,14 +12,14 @@ import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getVerticalResolution <em>Vertical Resolution</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getHorizontalResolution <em>Horizontal Resolution</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanSettings#getNumberOfPoints <em>Number Of Points</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanSettings()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanSettings()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface RasterScanSettings extends RectangularFrustrumFieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vertical Resolution</em>' attribute.
 	 * @see #setVerticalResolution(int)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanSettings_VerticalResolution()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanSettings_VerticalResolution()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface RasterScanSettings extends RectangularFrustrumFieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Horizontal Resolution</em>' attribute.
 	 * @see #setHorizontalResolution(int)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanSettings_HorizontalResolution()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanSettings_HorizontalResolution()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface RasterScanSettings extends RectangularFrustrumFieldOfView {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Points</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanSettings_NumberOfPoints()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanSettings_NumberOfPoints()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

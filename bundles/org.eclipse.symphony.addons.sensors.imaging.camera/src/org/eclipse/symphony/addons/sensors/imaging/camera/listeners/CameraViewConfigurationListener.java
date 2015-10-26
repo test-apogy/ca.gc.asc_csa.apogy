@@ -13,7 +13,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
 import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -115,20 +115,20 @@ public class CameraViewConfigurationListener
 						int featureID = msg.getFeatureID(CameraViewConfiguration.class);
 						switch (featureID) 
 						{
-							case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:
-							case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
+							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT:
+							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH:
 								imageSizeChanged(cameraViewConfiguration.getImageWidth(), cameraViewConfiguration.getImageHeight());
 							break;
 
-							case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__CAMERA:
+							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__CAMERA:
 								cameraChanged((AbstractCamera) msg.getNewValue());
 							break;
 								
-							case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE:
+							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE:
 								displayRectifiedChanged(msg.getNewBooleanValue());
 							break;
 							
-							case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__VARIABLE:
+							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__VARIABLE:
 								if(msg.getOldValue() instanceof Variable)
 								{
 									getAbstractVariableFeatureReferenceListener().setVariableFeatureReference(null);

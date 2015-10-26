@@ -20,8 +20,8 @@ import org.eclipse.symphony.addons.vehicle.Line3d;
 import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
 import org.eclipse.symphony.addons.vehicle.Plane;
 import org.eclipse.symphony.addons.vehicle.Segment2D;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.TerrainProfile;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
@@ -34,8 +34,6 @@ import Jama.Matrix;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Wheel Vehicle Utilities</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -70,7 +68,7 @@ public class WheelVehicleUtilitiesImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.WHEEL_VEHICLE_UTILITIES;
+		return Symphony__AddonsVehiclePackage.Literals.WHEEL_VEHICLE_UTILITIES;
 	}
 
   /**
@@ -349,7 +347,7 @@ public class WheelVehicleUtilitiesImpl extends MinimalEObjectImpl.Container impl
    */
   public MeshExtent2D findMeshExtent2D(CartesianTriangularMesh mesh)
   {
-	  MeshExtent2D meshExtent2D = SymphonyToolsVehicleFactory.eINSTANCE.createMeshExtent2D();
+	  MeshExtent2D meshExtent2D = Symphony__AddonsVehicleFactory.eINSTANCE.createMeshExtent2D();
 	  
 	  if(mesh.getPoints().size() > 0)
 	  {
@@ -447,21 +445,21 @@ public class WheelVehicleUtilitiesImpl extends MinimalEObjectImpl.Container impl
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES___GET_WHEEL_CENTER_POINT__DOUBLE_DOUBLE_SEGMENT2D:
+			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES___GET_WHEEL_CENTER_POINT__DOUBLE_DOUBLE_SEGMENT2D:
 				return getWheelCenterPoint((Double)arguments.get(0), (Double)arguments.get(1), (Segment2D)arguments.get(2));
-			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES___GET_WHEEL_CENTER_POINT__DOUBLE_DOUBLE_TERRAINPROFILE:
+			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES___GET_WHEEL_CENTER_POINT__DOUBLE_DOUBLE_TERRAINPROFILE:
 				return getWheelCenterPoint((Double)arguments.get(0), (Double)arguments.get(1), (TerrainProfile)arguments.get(2));
-			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES___FIND_TERRAIN_PROFILE__CARTESIANTRIANGULARMESH_PLANE:
+			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES___FIND_TERRAIN_PROFILE__CARTESIANTRIANGULARMESH_PLANE:
 				return findTerrainProfile((CartesianTriangularMesh)arguments.get(0), (Plane)arguments.get(1));
-			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES___FIND_INTERSECTION__PLANE_LINE3D:
+			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES___FIND_INTERSECTION__PLANE_LINE3D:
 				return findIntersection((Plane)arguments.get(0), (Line3d)arguments.get(1));
-			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES___IS_POINT_ON_SEGMENT__POINT2D_SEGMENT2D:
+			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES___IS_POINT_ON_SEGMENT__POINT2D_SEGMENT2D:
 				return isPointOnSegment((Point2d)arguments.get(0), (Segment2D)arguments.get(1));
-			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES___FIND_MESH_EXTENT2_D__CARTESIANTRIANGULARMESH:
+			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES___FIND_MESH_EXTENT2_D__CARTESIANTRIANGULARMESH:
 				return findMeshExtent2D((CartesianTriangularMesh)arguments.get(0));
-			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES___IS_WITHIN__POINT3D_MESHEXTENT2D:
+			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES___IS_WITHIN__POINT3D_MESHEXTENT2D:
 				return isWithin((Point3d)arguments.get(0), (MeshExtent2D)arguments.get(1));
-			case SymphonyToolsVehiclePackage.WHEEL_VEHICLE_UTILITIES___FIND_BEST_FIT_PLANE__LIST:
+			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES___FIND_BEST_FIT_PLANE__LIST:
 				return findBestFitPlane((List<Point3d>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

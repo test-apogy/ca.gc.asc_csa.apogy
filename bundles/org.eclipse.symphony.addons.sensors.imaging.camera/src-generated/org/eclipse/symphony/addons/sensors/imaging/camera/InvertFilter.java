@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getInvertFilter()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getInvertFilter()
  * @model
  * @generated
  */

@@ -12,7 +12,7 @@ import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.vehicle.ui.Activator;
-import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage;
+import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterSceneObject;
 import org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesConstants;
@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#getPlumeEnvelopeLenght <em>Plume Envelope Lenght</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,7 +98,7 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehicleUIPackage.Literals.THRUSTER_PRESENTATION;
+		return Symphony__AddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION;
 	}
 
 		/**
@@ -119,7 +119,7 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 		boolean oldPlumeEnvelopeVisible = plumeEnvelopeVisible;
 		plumeEnvelopeVisible = newPlumeEnvelopeVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE, oldPlumeEnvelopeVisible, plumeEnvelopeVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE, oldPlumeEnvelopeVisible, plumeEnvelopeVisible));
 	}
 
 		/**
@@ -140,7 +140,7 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 		double oldPlumeEnvelopeLenght = plumeEnvelopeLenght;
 		plumeEnvelopeLenght = newPlumeEnvelopeLenght;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT, oldPlumeEnvelopeLenght, plumeEnvelopeLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT, oldPlumeEnvelopeLenght, plumeEnvelopeLenght));
 	}
 
 		/**
@@ -151,9 +151,9 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				return isPlumeEnvelopeVisible();
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
 				return getPlumeEnvelopeLenght();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -167,10 +167,10 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				setPlumeEnvelopeVisible((Boolean)newValue);
 				return;
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
 				setPlumeEnvelopeLenght((Double)newValue);
 				return;
 		}
@@ -185,10 +185,10 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				setPlumeEnvelopeVisible(PLUME_ENVELOPE_VISIBLE_EDEFAULT);
 				return;
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
 				setPlumeEnvelopeLenght(PLUME_ENVELOPE_LENGHT_EDEFAULT);
 				return;
 		}
@@ -203,9 +203,9 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				return plumeEnvelopeVisible != PLUME_ENVELOPE_VISIBLE_EDEFAULT;
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
 				return plumeEnvelopeLenght != PLUME_ENVELOPE_LENGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -257,15 +257,15 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 			
 			switch (featureID) 
 			{
-				case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 					thrusterSceneObject.setPlumeEnvelopeVisible(notification.getNewBooleanValue());
 				break;
 								
-				case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
+				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
 					thrusterSceneObject.setPlumeEnvelopeLenght(notification.getNewDoubleValue());
 				break;
 				
-				case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__COLOR:
+				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__COLOR:
 					if(notification.getNewValue() instanceof RGB)
 					{
 						RGB color = (RGB) notification.getNewValue();

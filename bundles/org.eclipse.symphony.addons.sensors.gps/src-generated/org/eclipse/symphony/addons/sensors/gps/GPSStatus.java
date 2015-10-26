@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>GPS STATUS</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSStatus()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSStatus()
  * @model
  * @generated
  */
@@ -171,6 +171,8 @@ public enum GPSStatus implements Enumerator {
 	 * Returns the '<em><b>GPS Status</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GPSStatus get(String literal) {
@@ -187,6 +189,8 @@ public enum GPSStatus implements Enumerator {
 	 * Returns the '<em><b>GPS Status</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GPSStatus getByName(String name) {
@@ -203,6 +207,8 @@ public enum GPSStatus implements Enumerator {
 	 * Returns the '<em><b>GPS Status</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static GPSStatus get(int value) {

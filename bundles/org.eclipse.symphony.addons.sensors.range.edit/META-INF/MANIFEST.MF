@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.range.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.addons.sensors.range.provider.RangeEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.sensors.range.provider.Symphony__AddonsSensorsRangeEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.range.ContactSensor;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.symphony.addons.sensors.range.RangePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.ContactSensorImpl#isContacted <em>Contacted</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,7 +65,7 @@ public class ContactSensorImpl extends RangeSensorImpl implements ContactSensor
 	@Override
 	protected EClass eStaticClass()
 	{
-		return RangePackage.Literals.CONTACT_SENSOR;
+		return Symphony__AddonsSensorsRangePackage.Literals.CONTACT_SENSOR;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class ContactSensorImpl extends RangeSensorImpl implements ContactSensor
 		boolean oldContacted = contacted;
 		contacted = newContacted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.CONTACT_SENSOR__CONTACTED, oldContacted, contacted));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.CONTACT_SENSOR__CONTACTED, oldContacted, contacted));
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class ContactSensorImpl extends RangeSensorImpl implements ContactSensor
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case RangePackage.CONTACT_SENSOR__CONTACTED:
+			case Symphony__AddonsSensorsRangePackage.CONTACT_SENSOR__CONTACTED:
 				return isContacted();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class ContactSensorImpl extends RangeSensorImpl implements ContactSensor
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case RangePackage.CONTACT_SENSOR__CONTACTED:
+			case Symphony__AddonsSensorsRangePackage.CONTACT_SENSOR__CONTACTED:
 				setContacted((Boolean)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public class ContactSensorImpl extends RangeSensorImpl implements ContactSensor
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case RangePackage.CONTACT_SENSOR__CONTACTED:
+			case Symphony__AddonsSensorsRangePackage.CONTACT_SENSOR__CONTACTED:
 				setContacted(CONTACTED_EDEFAULT);
 				return;
 		}
@@ -147,7 +147,7 @@ public class ContactSensorImpl extends RangeSensorImpl implements ContactSensor
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case RangePackage.CONTACT_SENSOR__CONTACTED:
+			case Symphony__AddonsSensorsRangePackage.CONTACT_SENSOR__CONTACTED:
 				return contacted != CONTACTED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

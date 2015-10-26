@@ -13,7 +13,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.sensors.motion.MotionFactory;
+import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionFactory;
 import org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
 import org.eclipse.symphony.common.topology.TopologyPackage;
@@ -110,42 +110,42 @@ public class SelfMotionSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MotionFactory.eINSTANCE.createSelfMotionSensor()));
+				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MotionFactory.eINSTANCE.createAngularVelocitySensor()));
+				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MotionFactory.eINSTANCE.createLinearAccelerationSensor()));
+				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MotionFactory.eINSTANCE.createLinearVelocitySensor()));
+				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 MotionFactory.eINSTANCE.createSelfMotionSensor()));
+				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 MotionFactory.eINSTANCE.createAngularVelocitySensor()));
+				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 MotionFactory.eINSTANCE.createLinearAccelerationSensor()));
+				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 MotionFactory.eINSTANCE.createLinearVelocitySensor()));
+				 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 	}
 
 	/**

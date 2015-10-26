@@ -11,11 +11,11 @@ package org.eclipse.symphony.core.programs.controllers;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning#getMinimum <em>Minimum</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning#getMaximum <em>Maximum</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getParabolicInputConditioning()
  * @model

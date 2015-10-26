@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.sensors.gps"
-            class="org.eclipse.symphony.addons.sensors.gps.provider.GpsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.sensors.gps.provider.Symphony__AddonsSensorsGPSItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -22,7 +22,7 @@
       <!-- @generated GPS -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.gps.provider.GpsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.gps.provider.Symphony__AddonsSensorsGPSItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

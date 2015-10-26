@@ -19,12 +19,12 @@ import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackag
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.impl.CameraDataImpl#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.impl.CameraDataImpl#getZoom <em>Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.impl.CameraDataImpl#isInitialized <em>Initialized</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

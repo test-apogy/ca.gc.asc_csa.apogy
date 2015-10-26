@@ -18,13 +18,13 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry#getNode <em>Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry#getMesh <em>Mesh</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshNodeEntry()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshNodeEntry()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface MeshNodeEntry extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(Node)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshNodeEntry_Node()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshNodeEntry_Node()
 	 * @model
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface MeshNodeEntry extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' reference.
 	 * @see #setMesh(CartesianTriangularMesh)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshNodeEntry_Mesh()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshNodeEntry_Mesh()
 	 * @model
 	 * @generated
 	 */

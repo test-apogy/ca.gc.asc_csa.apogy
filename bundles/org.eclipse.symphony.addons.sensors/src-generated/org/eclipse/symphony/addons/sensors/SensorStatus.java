@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  *  * Data acquition (nominal): READY -> BUSY (Acquisition) -> READY
  * Data acquition (off-nominal): READY -> BUSY (Acquisition) -> FAILED
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.addons.sensors.SensorsPackage#getSensorStatus()
+ * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#getSensorStatus()
  * @model
  * @generated
  */
@@ -153,6 +153,8 @@ public enum SensorStatus implements Enumerator {
 	 * Returns the '<em><b>Sensor Status</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static SensorStatus get(String literal) {
@@ -169,6 +171,8 @@ public enum SensorStatus implements Enumerator {
 	 * Returns the '<em><b>Sensor Status</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static SensorStatus getByName(String name) {
@@ -185,6 +189,8 @@ public enum SensorStatus implements Enumerator {
 	 * Returns the '<em><b>Sensor Status</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static SensorStatus get(int value) {

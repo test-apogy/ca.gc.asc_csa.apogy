@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.range.ContactSensor;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
@@ -70,7 +70,7 @@ public class ContactSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ContactSensor_contacted_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ContactSensor_contacted_feature", "_UI_ContactSensor_type"),
-				 RangePackage.Literals.CONTACT_SENSOR__CONTACTED,
+				 Symphony__AddonsSensorsRangePackage.Literals.CONTACT_SENSOR__CONTACTED,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class ContactSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContactSensor.class)) {
-			case RangePackage.CONTACT_SENSOR__CONTACTED:
+			case Symphony__AddonsSensorsRangePackage.CONTACT_SENSOR__CONTACTED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

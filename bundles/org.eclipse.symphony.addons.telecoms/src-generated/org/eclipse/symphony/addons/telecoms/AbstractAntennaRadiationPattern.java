@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getAbstractAntennaRadiationPattern()
+ * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getAbstractAntennaRadiationPattern()
  * @model abstract="true"
  * @generated
  */

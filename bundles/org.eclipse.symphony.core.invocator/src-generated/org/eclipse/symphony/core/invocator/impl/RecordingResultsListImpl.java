@@ -31,6 +31,7 @@ import com.google.common.base.Objects;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getDescription <em>Description</em>}</li>
@@ -38,7 +39,6 @@ import com.google.common.base.Objects;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getDataProductsList <em>Data Products List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.RecordingResultsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

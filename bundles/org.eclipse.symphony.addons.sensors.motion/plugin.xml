@@ -13,7 +13,7 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "org.eclipse.symphony.addons.sensors.motion" 
-       class = "org.eclipse.symphony.addons.sensors.motion.MotionPackage"
+       class = "org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage"
        genModel = "model/symphony_addons_sensors_motion.xcore" /> 
   </extension>
 

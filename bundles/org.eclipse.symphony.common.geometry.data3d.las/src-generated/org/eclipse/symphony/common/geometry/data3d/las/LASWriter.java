@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getFileName <em>File Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getProgressMonitor <em>Progress Monitor</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getZOffset <em>ZOffset</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter#getOutputStream <em>Output Stream</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASWriter()
  * @model

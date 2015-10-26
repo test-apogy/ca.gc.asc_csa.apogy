@@ -11,12 +11,12 @@ package org.eclipse.symphony.addons.sensors.range;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor#getDistanceMeasured <em>Distance Measured</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRangeSensor()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRangeSensor()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface SimpleRangeSensor extends RangeSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distance Measured</em>' attribute.
 	 * @see #setDistanceMeasured(double)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRangeSensor_DistanceMeasured()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRangeSensor_DistanceMeasured()
 	 * @model unique="false"
 	 * @generated
 	 */

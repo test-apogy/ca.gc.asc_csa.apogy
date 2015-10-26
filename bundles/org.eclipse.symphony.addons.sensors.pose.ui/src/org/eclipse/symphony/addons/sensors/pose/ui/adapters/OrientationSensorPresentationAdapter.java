@@ -3,7 +3,7 @@ package org.eclipse.symphony.addons.sensors.pose.ui.adapters;
 import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.ui.OrientationSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIFactory;
+import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIFactory;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 import org.eclipse.symphony.common.topology.Node;
@@ -38,7 +38,7 @@ public class OrientationSensorPresentationAdapter implements NodePresentationAda
 
 		OrientationSensor orientationSensor = (OrientationSensor) obj;
 		
-		OrientationSensorPresentation presentationNode = SensorsPoseUIFactory.eINSTANCE.createOrientationSensorPresentation();
+		OrientationSensorPresentation presentationNode = Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createOrientationSensorPresentation();
 		presentationNode.setNode(orientationSensor);			
 						
 		return presentationNode;

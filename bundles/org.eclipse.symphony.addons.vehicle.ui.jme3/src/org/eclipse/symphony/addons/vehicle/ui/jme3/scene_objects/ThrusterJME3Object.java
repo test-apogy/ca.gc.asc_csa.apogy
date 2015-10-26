@@ -8,7 +8,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterSceneObject;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -417,11 +417,11 @@ public class ThrusterJME3Object extends DefaultJME3SceneObject<Thruster> impleme
 					
 						switch (featureId) 
 						{
-							case SymphonyToolsVehiclePackage.THRUSTER__PLUME_ANGLE:
+							case Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
 								updateExhaustPlume((float) getTopologyNode().getThrustLevel(), (float) getTopologyNode().getPlumeAngle());
 								updateGeometry();
 							break;
-							case SymphonyToolsVehiclePackage.THRUSTER__THRUST_LEVEL:
+							case Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
 								updateExhaustPlume((float) getTopologyNode().getThrustLevel(), (float) getTopologyNode().getPlumeAngle());
 							break;
 

@@ -29,8 +29,8 @@ import org.eclipse.symphony.addons.vehicle.ContactProvider;
 import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
 import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
 import org.eclipse.symphony.addons.vehicle.OrientationCorrectionMode;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
 import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
@@ -56,6 +56,7 @@ import org.eclipse.symphony.core.impl.PoseCorrectorImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePoseCorrectorImpl#isInitializing <em>Initializing</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePoseCorrectorImpl#getMeshes <em>Meshes</em>}</li>
@@ -66,7 +67,6 @@ import org.eclipse.symphony.core.impl.PoseCorrectorImpl;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePoseCorrectorImpl#getOrientationCorrection <em>Orientation Correction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePoseCorrectorImpl#getContactProvider <em>Contact Provider</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -220,7 +220,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR;
+		return Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR;
 	}
 
   /**
@@ -243,7 +243,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		boolean oldInitializing = initializing;
 		initializing = newInitializing;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING, oldInitializing, initializing));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING, oldInitializing, initializing));
 	}
 
   /**
@@ -313,7 +313,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public EList<MeshNodeEntry> getMeshesGen()
   {
 		if (meshes == null) {
-			meshes = new EObjectResolvingEList<MeshNodeEntry>(MeshNodeEntry.class, this, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES);
+			meshes = new EObjectResolvingEList<MeshNodeEntry>(MeshNodeEntry.class, this, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES);
 		}
 		return meshes;
 	}
@@ -342,7 +342,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public EList<PhysicalBody> getContactBodiesGen()
   {
 		if (contactBodies == null) {
-			contactBodies = new EObjectResolvingEList<PhysicalBody>(PhysicalBody.class, this, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES);
+			contactBodies = new EObjectResolvingEList<PhysicalBody>(PhysicalBody.class, this, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES);
 		}
 		return contactBodies;
 	}
@@ -367,7 +367,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		ZCorrectionMode oldZCorrectionMode = zCorrectionMode;
 		zCorrectionMode = newZCorrectionMode == null ? ZCORRECTION_MODE_EDEFAULT : newZCorrectionMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE, oldZCorrectionMode, zCorrectionMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE, oldZCorrectionMode, zCorrectionMode));
 	}
 
   /**
@@ -390,7 +390,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		double oldZCorrection = zCorrection;
 		zCorrection = newZCorrection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION, oldZCorrection, zCorrection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION, oldZCorrection, zCorrection));
 	}
 
   /**
@@ -413,7 +413,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		OrientationCorrectionMode oldOrientationCorrectionMode = orientationCorrectionMode;
 		orientationCorrectionMode = newOrientationCorrectionMode == null ? ORIENTATION_CORRECTION_MODE_EDEFAULT : newOrientationCorrectionMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE, oldOrientationCorrectionMode, orientationCorrectionMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE, oldOrientationCorrectionMode, orientationCorrectionMode));
 	}
 
   /**
@@ -428,7 +428,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 			orientationCorrection = (Matrix3x3)eResolveProxy(oldOrientationCorrection);
 			if (orientationCorrection != oldOrientationCorrection) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION, oldOrientationCorrection, orientationCorrection));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION, oldOrientationCorrection, orientationCorrection));
 			}
 		}
 		return orientationCorrection;
@@ -454,7 +454,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		Matrix3x3 oldOrientationCorrection = orientationCorrection;
 		orientationCorrection = newOrientationCorrection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION, oldOrientationCorrection, orientationCorrection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION, oldOrientationCorrection, orientationCorrection));
 	}
 
   /**
@@ -477,7 +477,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		ContactProvider oldContactProvider = contactProvider;
 		contactProvider = newContactProvider;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, oldContactProvider, newContactProvider);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, oldContactProvider, newContactProvider);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -493,14 +493,14 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		if (newContactProvider != contactProvider) {
 			NotificationChain msgs = null;
 			if (contactProvider != null)
-				msgs = ((InternalEObject)contactProvider).eInverseRemove(this, SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, ContactProvider.class, msgs);
+				msgs = ((InternalEObject)contactProvider).eInverseRemove(this, Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, ContactProvider.class, msgs);
 			if (newContactProvider != null)
-				msgs = ((InternalEObject)newContactProvider).eInverseAdd(this, SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, ContactProvider.class, msgs);
+				msgs = ((InternalEObject)newContactProvider).eInverseAdd(this, Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, ContactProvider.class, msgs);
 			msgs = basicSetContactProvider(newContactProvider, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, newContactProvider, newContactProvider));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, newContactProvider, newContactProvider));
 	}
 
   @Override
@@ -641,9 +641,9 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
 				if (contactProvider != null)
-					msgs = ((InternalEObject)contactProvider).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, null, msgs);
+					msgs = ((InternalEObject)contactProvider).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, null, msgs);
 				return basicSetContactProvider((ContactProvider)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -658,7 +658,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
 				return basicSetContactProvider(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -673,22 +673,22 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
 				return isInitializing();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
 				return getMeshes();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
 				return getContactBodies();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
 				return getZCorrectionMode();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
 				return getZCorrection();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
 				return getOrientationCorrectionMode();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
 				if (resolve) return getOrientationCorrection();
 				return basicGetOrientationCorrection();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
 				return getContactProvider();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -704,30 +704,30 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
 				setInitializing((Boolean)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
 				getMeshes().clear();
 				getMeshes().addAll((Collection<? extends MeshNodeEntry>)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
 				getContactBodies().clear();
 				getContactBodies().addAll((Collection<? extends PhysicalBody>)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
 				setZCorrectionMode((ZCorrectionMode)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
 				setZCorrection((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
 				setOrientationCorrectionMode((OrientationCorrectionMode)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
 				setOrientationCorrection((Matrix3x3)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
 				setContactProvider((ContactProvider)newValue);
 				return;
 		}
@@ -743,28 +743,28 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
 				setInitializing(INITIALIZING_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
 				getMeshes().clear();
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
 				getContactBodies().clear();
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
 				setZCorrectionMode(ZCORRECTION_MODE_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
 				setZCorrection(ZCORRECTION_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
 				setOrientationCorrectionMode(ORIENTATION_CORRECTION_MODE_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
 				setOrientationCorrection((Matrix3x3)null);
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
 				setContactProvider((ContactProvider)null);
 				return;
 		}
@@ -780,21 +780,21 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
 				return initializing != INITIALIZING_EDEFAULT;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
 				return meshes != null && !meshes.isEmpty();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
 				return contactBodies != null && !contactBodies.isEmpty();
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
 				return zCorrectionMode != ZCORRECTION_MODE_EDEFAULT;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
 				return zCorrection != ZCORRECTION_EDEFAULT;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
 				return orientationCorrectionMode != ORIENTATION_CORRECTION_MODE_EDEFAULT;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
 				return orientationCorrection != null;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
 				return contactProvider != null;
 		}
 		return super.eIsSet(featureID);
@@ -809,12 +809,12 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR___RE_INITIALIZE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR___RE_INITIALIZE:
 				reInitialize();
 				return null;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR___GET_MESH_EXTENT2_D__CARTESIANTRIANGULARMESH:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR___GET_MESH_EXTENT2_D__CARTESIANTRIANGULARMESH:
 				return getMeshExtent2D((CartesianTriangularMesh)arguments.get(0));
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR___GET_CLOSEST_NEIGHBOUR_ITERATOR_PROVIDER__CARTESIANTRIANGULARMESH:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR___GET_CLOSEST_NEIGHBOUR_ITERATOR_PROVIDER__CARTESIANTRIANGULARMESH:
 				return getClosestNeighbourIteratorProvider((CartesianTriangularMesh)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -874,7 +874,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 					   {
 						  if(!extractedMeshes.contains((ContentNode<CartesianTriangularMesh>) contentNode))
 						  {						  
-							  MeshNodeEntry entry = SymphonyToolsVehicleFactory.eINSTANCE.createMeshNodeEntry();
+							  MeshNodeEntry entry = Symphony__AddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
 							  entry.setNode(contentNode);
 							  entry.setMesh(((ContentNode<CartesianTriangularMesh>) contentNode).getContent());							  							 
 							  extractedMeshes.add(entry);
@@ -886,7 +886,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 					  CartesianTriangularMeshMapLayerNode cartesianTriangularMeshMapLayerNode = (CartesianTriangularMeshMapLayerNode) node;
 					  if(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer() != null)
 					  {
-						  MeshNodeEntry entry = SymphonyToolsVehicleFactory.eINSTANCE.createMeshNodeEntry();
+						  MeshNodeEntry entry = Symphony__AddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
 						  entry.setNode(cartesianTriangularMeshMapLayerNode);
 						  entry.setMesh(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer().getCurrentMesh());	
 						  extractedMeshes.add(entry);

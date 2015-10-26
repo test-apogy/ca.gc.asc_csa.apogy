@@ -14,7 +14,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.fov.AngularSpan;
 import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.Activator;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.CircularSectorFieldOfViewImageProjectorControl;
@@ -325,8 +325,8 @@ public class CircularSectorFieldOfViewJME3Object extends AbstractFieldOfViewJME3
 						
 						switch (featureId) 
 						{
-							case FovPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
-							case FovPackage.ANGULAR_SPAN__MINIMUM_ANGLE:							
+							case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
+							case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE:							
 								
 								// Updates Geometry.
 								updateGeometry();
@@ -354,14 +354,14 @@ public class CircularSectorFieldOfViewJME3Object extends AbstractFieldOfViewJME3
 			{				
 				public void notifyChanged(Notification notification)
 				{					
-					if (notification.getFeatureID(CircularSectorFieldOfView.class) == FovPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE)
+					if (notification.getFeatureID(CircularSectorFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE)
 					{
 						updateGeometry();	
 						
 						// Updates the FOV Settings of the projector.
 						getCircularSectorFieldOfViewImageProjectorControl().updateProjectorFOVSettings();
 					} 
-					else if (notification.getFeatureID(CircularSectorFieldOfView.class) == FovPackage.DISTANCE_RANGE__MINIMUM_DISTANCE)
+					else if (notification.getFeatureID(CircularSectorFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE)
 					{
 						updateGeometry();
 						

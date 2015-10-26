@@ -13,7 +13,7 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "org.eclipse.symphony.addons.sensors.range" 
-       class = "org.eclipse.symphony.addons.sensors.range.RangePackage"
+       class = "org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage"
        genModel = "model/symphony_addons_sensors_range.xcore" /> 
   </extension>
 

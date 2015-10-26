@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#getCameraToolList <em>Camera Tool List</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraTool()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraTool()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface CameraTool extends CameraImageAnnotation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Camera Tool List</em>' container reference.
 	 * @see #setCameraToolList(CameraToolList)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraTool_CameraToolList()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraTool_CameraToolList()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getTools
 	 * @model opposite="tools" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

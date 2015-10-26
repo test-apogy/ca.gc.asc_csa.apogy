@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAzimuthElevationFOVOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAzimuthElevationFOVOverlay()
  * @model
  * @generated
  */

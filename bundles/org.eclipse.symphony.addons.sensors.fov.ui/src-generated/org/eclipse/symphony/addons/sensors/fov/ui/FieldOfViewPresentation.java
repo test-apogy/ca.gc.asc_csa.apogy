@@ -14,6 +14,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation#getTransparency <em>Transparency</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
@@ -21,9 +22,8 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation#isShowProjection <em>Show Projection</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation#getProjectionColor <em>Projection Color</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage#getFieldOfViewPresentation()
+ * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#getFieldOfViewPresentation()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface FieldOfViewPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transparency</em>' attribute.
 	 * @see #setTransparency(float)
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage#getFieldOfViewPresentation_Transparency()
+	 * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#getFieldOfViewPresentation_Transparency()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface FieldOfViewPresentation extends NodePresentation {
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #setPresentationMode(MeshPresentationMode)
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage#getFieldOfViewPresentation_PresentationMode()
+	 * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#getFieldOfViewPresentation_PresentationMode()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface FieldOfViewPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Show Outline Only</em>' attribute.
 	 * @see #setShowOutlineOnly(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage#getFieldOfViewPresentation_ShowOutlineOnly()
+	 * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#getFieldOfViewPresentation_ShowOutlineOnly()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -121,7 +121,7 @@ public interface FieldOfViewPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Show Projection</em>' attribute.
 	 * @see #setShowProjection(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage#getFieldOfViewPresentation_ShowProjection()
+	 * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#getFieldOfViewPresentation_ShowProjection()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
@@ -147,7 +147,7 @@ public interface FieldOfViewPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Projection Color</em>' attribute.
 	 * @see #setProjectionColor(RGB)
-	 * @see org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage#getFieldOfViewPresentation_ProjectionColor()
+	 * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#getFieldOfViewPresentation_ProjectionColor()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.RGB"
 	 * @generated
 	 */

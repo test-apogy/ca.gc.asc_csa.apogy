@@ -29,7 +29,7 @@ public class ImageSnapshotPresentationAdapter implements NodePresentationAdapter
 		}
 		
 		ImageSnapshot imageSnapshot = (ImageSnapshot) obj;
-		ImageSnapshotPresentation presentationNode = MRTSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation();
+		ImageSnapshotPresentation presentationNode = Symphony__AddonsSensorsImagingUIFactory.eINSTANCE.createImageSnapshotPresentation();
 		presentationNode.setNode(imageSnapshot);
 		return presentationNode;
 	}

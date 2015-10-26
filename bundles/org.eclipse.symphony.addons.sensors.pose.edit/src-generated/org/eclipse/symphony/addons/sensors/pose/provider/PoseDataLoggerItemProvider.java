@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.symphony.addons.sensors.pose.PoseDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.pose.PoseDataLogger} object.
@@ -80,7 +80,7 @@ public class PoseDataLoggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PoseDataLogger_outputFile_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PoseDataLogger_outputFile_feature", "_UI_PoseDataLogger_type"),
-				 PosePackage.Literals.POSE_DATA_LOGGER__OUTPUT_FILE,
+				 Symphony__AddonsSensorsPosePackage.Literals.POSE_DATA_LOGGER__OUTPUT_FILE,
 				 true,
 				 false,
 				 false,
@@ -116,7 +116,7 @@ public class PoseDataLoggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PoseDataLogger.class)) {
-			case PosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
+			case Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

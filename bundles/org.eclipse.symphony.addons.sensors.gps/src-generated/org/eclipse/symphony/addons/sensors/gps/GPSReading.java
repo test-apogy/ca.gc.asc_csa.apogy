@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getLatitude <em>Latitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getLongitude <em>Longitude</em>}</li>
@@ -25,9 +26,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getMeanSeaLevel <em>Mean Sea Level</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSReading#getCheckSum <em>Check Sum</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Latitude</em>' attribute.
 	 * @see #setLatitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_Latitude()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_Latitude()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Longitude</em>' attribute.
 	 * @see #setLongitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_Longitude()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_Longitude()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elevation</em>' attribute.
 	 * @see #setElevation(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_Elevation()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_Elevation()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -122,7 +122,7 @@ public interface GPSReading extends EObject {
 	 * @return the value of the '<em>Quality</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.gps.GPSQuality
 	 * @see #setQuality(GPSQuality)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_Quality()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_Quality()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -149,7 +149,7 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Stamp</em>' attribute.
 	 * @see #setTimeStamp(Date)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_TimeStamp()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_TimeStamp()
 	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.gps.Date"
 	 * @generated
 	 */
@@ -175,7 +175,7 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Satellites</em>' attribute.
 	 * @see #setNumberOfSatellites(int)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_NumberOfSatellites()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_NumberOfSatellites()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -201,7 +201,7 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Horizontal Dilution Pos</em>' attribute.
 	 * @see #setHorizontalDilutionPos(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_HorizontalDilutionPos()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_HorizontalDilutionPos()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -227,7 +227,7 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mean Sea Level</em>' attribute.
 	 * @see #setMeanSeaLevel(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_MeanSeaLevel()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_MeanSeaLevel()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -253,7 +253,7 @@ public interface GPSReading extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check Sum</em>' attribute.
 	 * @see #setCheckSum(int)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSReading_CheckSum()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSReading_CheckSum()
 	 * @model unique="false"
 	 * @generated
 	 */

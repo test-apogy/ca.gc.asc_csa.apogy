@@ -21,6 +21,7 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentImpl#getDeadZone <em>Dead Zone</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentImpl#getIdentifier <em>Identifier</em>}</li>
@@ -31,7 +32,6 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentImpl#getPollData <em>Poll Data</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentImpl#getEComponents <em>EComponents</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

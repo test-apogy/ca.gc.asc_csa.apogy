@@ -16,10 +16,10 @@ import org.orekit.utils.ElevationMask;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.ConstantElevationMaskImpl#getConstantElevation <em>Constant Elevation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

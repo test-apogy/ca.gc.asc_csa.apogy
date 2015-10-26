@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
 import org.eclipse.symphony.examples.lidar.Lidar;
 
@@ -210,7 +210,7 @@ public class LidarItemProvider extends ItemProviderAdapter
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreExampleLidarPackage.Literals.LIDAR__FOV,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
 	/**

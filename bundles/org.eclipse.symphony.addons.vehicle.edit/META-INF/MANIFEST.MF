@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.addons.vehicle.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.vehicle.provider.Symphony__AddonsVehicleEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

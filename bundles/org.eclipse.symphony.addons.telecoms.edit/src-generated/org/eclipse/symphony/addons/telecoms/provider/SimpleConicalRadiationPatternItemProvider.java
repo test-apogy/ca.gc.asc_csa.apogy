@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
@@ -67,7 +67,7 @@ public class SimpleConicalRadiationPatternItemProvider extends AbstractAntennaRa
 				 getResourceLocator(),
 				 getString("_UI_SimpleConicalRadiationPattern_apexAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleConicalRadiationPattern_apexAngle_feature", "_UI_SimpleConicalRadiationPattern_type"),
-				 SymphonyTelecomToolsPackage.Literals.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE,
+				 Symphony__AddonsTelecomsPackage.Literals.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class SimpleConicalRadiationPatternItemProvider extends AbstractAntennaRa
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleConicalRadiationPattern.class)) {
-			case SymphonyTelecomToolsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_CONICAL_RADIATION_PATTERN__APEX_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

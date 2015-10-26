@@ -27,10 +27,10 @@ import org.eclipse.symphony.common.geometry.data25d.Data25dPackage;
  * <em><b>Coordinates Set25 D</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data25d.impl.CoordinatesSet25DImpl#isEnforceUniqueness <em>Enforce Uniqueness</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

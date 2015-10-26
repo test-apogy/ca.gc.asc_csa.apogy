@@ -17,6 +17,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getStartTime <em>Start Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getEndTime <em>End Time</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getRightSwathAngle <em>Right Swath Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getCorridor <em>Corridor</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor()
  * @model

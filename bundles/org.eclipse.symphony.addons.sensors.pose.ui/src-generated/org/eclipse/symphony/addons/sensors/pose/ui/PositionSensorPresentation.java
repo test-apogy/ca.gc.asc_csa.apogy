@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation#isFrameVisible <em>Frame Visible</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage#getPositionSensorPresentation()
+ * @see org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage#getPositionSensorPresentation()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface PositionSensorPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Frame Visible</em>' attribute.
 	 * @see #setFrameVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage#getPositionSensorPresentation_FrameVisible()
+	 * @see org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage#getPositionSensorPresentation_FrameVisible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */

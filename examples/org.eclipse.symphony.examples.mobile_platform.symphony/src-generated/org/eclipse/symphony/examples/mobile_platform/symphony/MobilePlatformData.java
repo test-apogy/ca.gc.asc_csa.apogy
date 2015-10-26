@@ -19,13 +19,13 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#isDisposed <em>Disposed</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#getLinearVelocity <em>Linear Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#getAngularVelocity <em>Angular Velocity</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage#getMobilePlatformData()
  * @model

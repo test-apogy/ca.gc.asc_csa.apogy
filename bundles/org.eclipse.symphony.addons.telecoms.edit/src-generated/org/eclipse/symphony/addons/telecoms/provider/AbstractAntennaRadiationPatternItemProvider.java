@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
@@ -105,7 +105,7 @@ public class AbstractAntennaRadiationPatternItemProvider extends NodeItemProvide
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractAntennaRadiationPattern.class)) {
-			case SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
+			case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -30,6 +30,7 @@ import org.eclipse.symphony.common.topology.ui.NodeSelection;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getRulerColor <em>Ruler Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getExtremitiesRadius <em>Extremities Radius</em>}</li>
@@ -41,7 +42,6 @@ import org.eclipse.symphony.common.topology.ui.NodeSelection;
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMajorTickLenght <em>Major Tick Lenght</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getRuler3dToolNode <em>Ruler3d Tool Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

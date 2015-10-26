@@ -18,11 +18,11 @@ import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySe
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList <em>Configurations List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getVisibilitySet <em>Visibility Set</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftVisibilityPassViewConfiguration()
  * @model

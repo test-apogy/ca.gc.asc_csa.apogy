@@ -14,11 +14,11 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMember#getMemberType <em>Member Type</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMember()
  * @model

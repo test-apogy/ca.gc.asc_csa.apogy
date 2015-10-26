@@ -2,7 +2,7 @@ package org.eclipse.symphony.addons.ui.adapters;
 
 import org.eclipse.symphony.addons.SunVector3DToolNode;
 import org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation;
-import org.eclipse.symphony.addons.ui.SymphonyToolsUIFactory;
+import org.eclipse.symphony.addons.ui.Symphony__AddonsUIFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
@@ -36,7 +36,7 @@ public class SunVector3DToolNodePresentationAdapter implements NodePresentationA
 
 		SunVector3DToolNode ruler3dToolNode = (SunVector3DToolNode) obj;
 		
-		SunVector3DToolNodePresentation presentationNode = SymphonyToolsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation();
+		SunVector3DToolNodePresentation presentationNode = Symphony__AddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation();
 		presentationNode.setNode(ruler3dToolNode);			
 						
 		return presentationNode;

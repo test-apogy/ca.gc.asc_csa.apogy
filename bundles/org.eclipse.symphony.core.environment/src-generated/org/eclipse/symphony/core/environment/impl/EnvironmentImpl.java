@@ -18,11 +18,11 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EnvironmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.EnvironmentImpl#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

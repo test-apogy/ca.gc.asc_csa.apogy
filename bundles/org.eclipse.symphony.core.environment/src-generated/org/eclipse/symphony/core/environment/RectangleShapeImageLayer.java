@@ -16,12 +16,12 @@ package org.eclipse.symphony.core.environment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#getRectangleWidth <em>Rectangle Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#getRectangleHeight <em>Rectangle Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangleShapeImageLayer()
  * @model

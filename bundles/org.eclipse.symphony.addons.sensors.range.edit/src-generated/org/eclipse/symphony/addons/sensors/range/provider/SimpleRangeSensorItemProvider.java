@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -70,7 +70,7 @@ public class SimpleRangeSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRangeSensor_distanceMeasured_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRangeSensor_distanceMeasured_feature", "_UI_SimpleRangeSensor_type"),
-				 RangePackage.Literals.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED,
+				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class SimpleRangeSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleRangeSensor.class)) {
-			case RangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_RANGE_SENSOR__DISTANCE_MEASURED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

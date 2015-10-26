@@ -15,10 +15,10 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.SensorsFactory;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
-import org.eclipse.symphony.addons.sensors.range.RangeFactory;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFactory;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanData;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.geometry.data25d.Data25dFactory;
@@ -93,8 +93,8 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(RangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS);
-			childrenFeatures.add(RangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA);
+			childrenFeatures.add(Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS);
+			childrenFeatures.add(Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA);
 		}
 		return childrenFeatures;
 	}
@@ -148,11 +148,11 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RasterScanData.class)) {
-			case RangePackage.RASTER_SCAN_DATA__TIME:
+			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case RangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
-			case RangePackage.RASTER_SCAN_DATA__SCAN_DATA:
+			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS:
+			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA__SCAN_DATA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -174,181 +174,181 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanSettings()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createContactSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createContactSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleSonar()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleSonar()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createLineRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanData()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanData()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
+				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanSettings()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createContactSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createContactSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleSonar()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleSonar()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createLineRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleLineRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanRangeSensor()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanRangeSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSimpleRasterScanRangeScannerSimulator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 RangeFactory.eINSTANCE.createRasterScanData()));
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanData()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
+				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(RangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS,
-				 RangeFactory.eINSTANCE.createRasterScanSettings()));
+				(Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS,
+				 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(RangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA,
+				(Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__SCAN_DATA,
 				 Data25dFactory.eINSTANCE.createVolumetricCoordinatesSet25D()));
 	}
 
@@ -368,7 +368,7 @@ public class RasterScanDataItemProvider extends AggregateGroupNodeItemProvider {
 		boolean qualify =
 			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
 			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == RangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS;
+			childFeature == Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS;
 
 		if (qualify) {
 			return getString

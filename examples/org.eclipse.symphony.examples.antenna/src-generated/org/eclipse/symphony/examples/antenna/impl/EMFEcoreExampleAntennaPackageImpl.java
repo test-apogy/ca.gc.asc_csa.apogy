@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.examples.antenna.Antenna;
 import org.eclipse.symphony.examples.antenna.DishAntenna;
 import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaFactory;
@@ -111,7 +111,7 @@ public class EMFEcoreExampleAntennaPackageImpl extends EPackageImpl implements E
 		isInited = true;
 
 		// Initialize simple dependencies
-		FovPackage.eINSTANCE.eClass();
+		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleAntennaPackage.createPackageContents();
@@ -327,7 +327,7 @@ public class EMFEcoreExampleAntennaPackageImpl extends EPackageImpl implements E
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		FovPackage theFovPackage = (FovPackage)EPackage.Registry.INSTANCE.getEPackage(FovPackage.eNS_URI);
+		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -346,7 +346,7 @@ public class EMFEcoreExampleAntennaPackageImpl extends EPackageImpl implements E
 		initEOperation(getAntenna__Init(), theEcorePackage.getEBoolean(), "init", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(dishAntennaEClass, DishAntenna.class, "DishAntenna", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDishAntenna_Fov(), theFovPackage.getConicalFieldOfView(), null, "fov", null, 1, 1, DishAntenna.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDishAntenna_Fov(), theSymphony__AddonsSensorsFOVPackage.getConicalFieldOfView(), null, "fov", null, 1, 1, DishAntenna.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ptuDishAntennaEClass, PTUDishAntenna.class, "PTUDishAntenna", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPTUDishAntenna_PanAngle(), theEcorePackage.getEDouble(), "panAngle", null, 0, 1, PTUDishAntenna.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

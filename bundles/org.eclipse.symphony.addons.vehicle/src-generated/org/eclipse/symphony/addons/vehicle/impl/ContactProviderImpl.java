@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.vehicle.ClosestNeighbourIteratorProvider;
 import org.eclipse.symphony.addons.vehicle.ContactProvider;
 import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
@@ -44,10 +44,10 @@ import org.jgrapht.traverse.BreadthFirstIterator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ContactProviderImpl#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -76,7 +76,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.CONTACT_PROVIDER;
+		return Symphony__AddonsVehiclePackage.Literals.CONTACT_PROVIDER;
 	}
 
   /**
@@ -86,7 +86,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	 */
   public VehiclePoseCorrector getVehiclePoseCorrector()
   {
-		if (eContainerFeatureID() != SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR) return null;
+		if (eContainerFeatureID() != Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR) return null;
 		return (VehiclePoseCorrector)eContainer();
 	}
 
@@ -97,7 +97,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	 */
   public VehiclePoseCorrector basicGetVehiclePoseCorrector()
   {
-		if (eContainerFeatureID() != SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR) return null;
+		if (eContainerFeatureID() != Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR) return null;
 		return (VehiclePoseCorrector)eInternalContainer();
 	}
 
@@ -108,7 +108,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	 */
   public NotificationChain basicSetVehiclePoseCorrector(VehiclePoseCorrector newVehiclePoseCorrector, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newVehiclePoseCorrector, SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newVehiclePoseCorrector, Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, msgs);
 		return msgs;
 	}
 
@@ -119,19 +119,19 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	 */
   public void setVehiclePoseCorrector(VehiclePoseCorrector newVehiclePoseCorrector)
   {
-		if (newVehiclePoseCorrector != eInternalContainer() || (eContainerFeatureID() != SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR && newVehiclePoseCorrector != null)) {
+		if (newVehiclePoseCorrector != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR && newVehiclePoseCorrector != null)) {
 			if (EcoreUtil.isAncestor(this, newVehiclePoseCorrector))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newVehiclePoseCorrector != null)
-				msgs = ((InternalEObject)newVehiclePoseCorrector).eInverseAdd(this, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, VehiclePoseCorrector.class, msgs);
+				msgs = ((InternalEObject)newVehiclePoseCorrector).eInverseAdd(this, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, VehiclePoseCorrector.class, msgs);
 			msgs = basicSetVehiclePoseCorrector(newVehiclePoseCorrector, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, newVehiclePoseCorrector, newVehiclePoseCorrector));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR, newVehiclePoseCorrector, newVehiclePoseCorrector));
 	}
 
   /**
@@ -167,7 +167,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetVehiclePoseCorrector((VehiclePoseCorrector)otherEnd, msgs);
@@ -184,7 +184,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				return basicSetVehiclePoseCorrector(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -199,8 +199,8 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
-				return eInternalContainer().eInverseRemove(this, SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, VehiclePoseCorrector.class, msgs);
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+				return eInternalContainer().eInverseRemove(this, Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER, VehiclePoseCorrector.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -214,7 +214,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				if (resolve) return getVehiclePoseCorrector();
 				return basicGetVehiclePoseCorrector();
 		}
@@ -230,7 +230,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				setVehiclePoseCorrector((VehiclePoseCorrector)newValue);
 				return;
 		}
@@ -246,7 +246,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				setVehiclePoseCorrector((VehiclePoseCorrector)null);
 				return;
 		}
@@ -262,7 +262,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR:
 				return basicGetVehiclePoseCorrector() != null;
 		}
 		return super.eIsSet(featureID);
@@ -278,9 +278,9 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER___EXTRACT_CONTACT_BODIES:
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER___EXTRACT_CONTACT_BODIES:
 				return extractContactBodies();
-			case SymphonyToolsVehiclePackage.CONTACT_PROVIDER___UPDATE_CONTACT_POINTS__MATRIX4X4_MAP:
+			case Symphony__AddonsVehiclePackage.CONTACT_PROVIDER___UPDATE_CONTACT_POINTS__MATRIX4X4_MAP:
 				updateContactPoints((Matrix4x4)arguments.get(0), (Map<PhysicalBody, Point3d>)arguments.get(1));
 				return null;
 		}

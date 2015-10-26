@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.Sensor#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.SensorsPackage#getSensor()
+ * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#getSensor()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface Sensor extends AggregateGroupNode {
 	 * @return the value of the '<em>Status</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.SensorStatus
 	 * @see #setStatus(SensorStatus)
-	 * @see org.eclipse.symphony.addons.sensors.SensorsPackage#getSensor_Status()
+	 * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#getSensor_Status()
 	 * @model default="OFF" unique="false" transient="true"
 	 * @generated
 	 */

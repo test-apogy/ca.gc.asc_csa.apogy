@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
 
 /**
@@ -64,7 +64,7 @@ public class URLImageOverlayItemProvider extends ImageCameraOverlayItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_URLImageOverlay_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLImageOverlay_url_feature", "_UI_URLImageOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.URL_IMAGE_OVERLAY__URL,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__URL,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class URLImageOverlayItemProvider extends ImageCameraOverlayItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_URLImageOverlay_imageSizePolicy_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLImageOverlay_imageSizePolicy_feature", "_UI_URLImageOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class URLImageOverlayItemProvider extends ImageCameraOverlayItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_URLImageOverlay_image_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLImageOverlay_image_feature", "_UI_URLImageOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.URL_IMAGE_OVERLAY__IMAGE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.URL_IMAGE_OVERLAY__IMAGE,
 				 false,
 				 false,
 				 true,
@@ -154,8 +154,8 @@ public class URLImageOverlayItemProvider extends ImageCameraOverlayItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLImageOverlay.class)) {
-			case SymphonyCameraToolsPackage.URL_IMAGE_OVERLAY__URL:
-			case SymphonyCameraToolsPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
+			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__URL:
+			case Symphony__AddonsSensorsImagingCameraPackage.URL_IMAGE_OVERLAY__IMAGE_SIZE_POLICY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

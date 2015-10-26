@@ -4,7 +4,7 @@ package org.eclipse.symphony.addons.vehicle.ui.adapters;
 
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
 import org.eclipse.symphony.addons.vehicle.ui.LanderSphericalFootPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIFactory;
+import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
@@ -32,7 +32,7 @@ public class LanderSphericalFootPresentationAdapter implements NodePresentationA
 
 		LanderSphericalFoot foot = (LanderSphericalFoot) obj;
 		
-		LanderSphericalFootPresentation presentationNode = SymphonyToolsVehicleUIFactory.eINSTANCE.createLanderSphericalFootPresentation();
+		LanderSphericalFootPresentation presentationNode = Symphony__AddonsVehicleUIFactory.eINSTANCE.createLanderSphericalFootPresentation();
 		presentationNode.setNode(foot);			
 						
 		return presentationNode;

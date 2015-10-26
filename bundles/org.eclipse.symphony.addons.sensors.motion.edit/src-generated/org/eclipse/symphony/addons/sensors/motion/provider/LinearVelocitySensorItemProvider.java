@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor;
-import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
+import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
@@ -73,7 +73,7 @@ public class LinearVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearVelocitySensor_xVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearVelocitySensor_xVelocity_feature", "_UI_LinearVelocitySensor_type"),
-				 MotionPackage.Literals.LINEAR_VELOCITY_SENSOR__XVELOCITY,
+				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__XVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -96,7 +96,7 @@ public class LinearVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearVelocitySensor_yVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearVelocitySensor_yVelocity_feature", "_UI_LinearVelocitySensor_type"),
-				 MotionPackage.Literals.LINEAR_VELOCITY_SENSOR__YVELOCITY,
+				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__YVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class LinearVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearVelocitySensor_zVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearVelocitySensor_zVelocity_feature", "_UI_LinearVelocitySensor_type"),
-				 MotionPackage.Literals.LINEAR_VELOCITY_SENSOR__ZVELOCITY,
+				 Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR__ZVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -168,9 +168,9 @@ public class LinearVelocitySensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LinearVelocitySensor.class)) {
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

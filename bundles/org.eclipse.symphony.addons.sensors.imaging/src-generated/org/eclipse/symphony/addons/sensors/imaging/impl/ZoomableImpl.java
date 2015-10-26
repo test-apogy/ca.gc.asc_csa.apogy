@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 
 /**
@@ -19,11 +19,11 @@ import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ZoomableImpl#getCurrentZoom <em>Current Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ZoomableImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,7 +87,7 @@ public abstract class ZoomableImpl extends MinimalEObjectImpl.Container implemen
   @Override
   protected EClass eStaticClass()
   {
-		return MRTSensorsImagingPackage.Literals.ZOOMABLE;
+		return Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE;
 	}
 
   /**
@@ -110,7 +110,7 @@ public abstract class ZoomableImpl extends MinimalEObjectImpl.Container implemen
 		double oldCurrentZoom = currentZoom;
 		currentZoom = newCurrentZoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM, oldCurrentZoom, currentZoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM, oldCurrentZoom, currentZoom));
 	}
 
   /**
@@ -133,7 +133,7 @@ public abstract class ZoomableImpl extends MinimalEObjectImpl.Container implemen
 		double oldCommandedZoom = commandedZoom;
 		commandedZoom = newCommandedZoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM, oldCommandedZoom, commandedZoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM, oldCommandedZoom, commandedZoom));
 	}
 
   /**
@@ -181,9 +181,9 @@ public abstract class ZoomableImpl extends MinimalEObjectImpl.Container implemen
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
 				return getCurrentZoom();
-			case MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
 				return getCommandedZoom();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -198,10 +198,10 @@ public abstract class ZoomableImpl extends MinimalEObjectImpl.Container implemen
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
 				setCurrentZoom((Double)newValue);
 				return;
-			case MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
 				setCommandedZoom((Double)newValue);
 				return;
 		}
@@ -217,10 +217,10 @@ public abstract class ZoomableImpl extends MinimalEObjectImpl.Container implemen
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
 				setCurrentZoom(CURRENT_ZOOM_EDEFAULT);
 				return;
-			case MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
 				setCommandedZoom(COMMANDED_ZOOM_EDEFAULT);
 				return;
 		}
@@ -236,9 +236,9 @@ public abstract class ZoomableImpl extends MinimalEObjectImpl.Container implemen
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
 				return currentZoom != CURRENT_ZOOM_EDEFAULT;
-			case MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
 				return commandedZoom != COMMANDED_ZOOM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -253,11 +253,11 @@ public abstract class ZoomableImpl extends MinimalEObjectImpl.Container implemen
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case MRTSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE:
 				return commandZoom((Double)arguments.get(0));
-			case MRTSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM:
 				return getMinimumZoom();
-			case MRTSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM:
 				return getMaximumZoom();
 		}
 		return super.eInvoke(operationID, arguments);

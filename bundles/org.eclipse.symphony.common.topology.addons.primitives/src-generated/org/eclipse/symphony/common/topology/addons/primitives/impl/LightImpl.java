@@ -22,11 +22,11 @@ import org.eclipse.symphony.common.topology.impl.LeafImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.LightImpl#isEnabled <em>Enabled</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.LightImpl#getColor <em>Color</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

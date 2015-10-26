@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage;
+import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
 import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
@@ -64,7 +64,7 @@ public class SimpleSonarPresentationItemProvider extends NodePresentationItemPro
 				 getResourceLocator(),
 				 getString("_UI_SimpleSonarPresentation_detectedRangeVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleSonarPresentation_detectedRangeVisible_feature", "_UI_SimpleSonarPresentation_type"),
-				 RangeSensorsUIPackage.Literals.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE,
+				 Symphony__AddonsSensorsRangeUIPackage.Literals.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class SimpleSonarPresentationItemProvider extends NodePresentationItemPro
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleSonarPresentation.class)) {
-			case RangeSensorsUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

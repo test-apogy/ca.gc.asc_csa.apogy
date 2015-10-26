@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.motion.LinearVelocitySensor;
-import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
+import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,12 +18,12 @@ import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearVelocitySensorImpl#getXVelocity <em>XVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearVelocitySensorImpl#getYVelocity <em>YVelocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.LinearVelocitySensorImpl#getZVelocity <em>ZVelocity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -104,7 +104,7 @@ public class LinearVelocitySensorImpl extends SelfMotionSensorImpl implements Li
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MotionPackage.Literals.LINEAR_VELOCITY_SENSOR;
+		return Symphony__AddonsSensorsMotionPackage.Literals.LINEAR_VELOCITY_SENSOR;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class LinearVelocitySensorImpl extends SelfMotionSensorImpl implements Li
 		double oldXVelocity = xVelocity;
 		xVelocity = newXVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY, oldXVelocity, xVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY, oldXVelocity, xVelocity));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class LinearVelocitySensorImpl extends SelfMotionSensorImpl implements Li
 		double oldYVelocity = yVelocity;
 		yVelocity = newYVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY, oldYVelocity, yVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY, oldYVelocity, yVelocity));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class LinearVelocitySensorImpl extends SelfMotionSensorImpl implements Li
 		double oldZVelocity = zVelocity;
 		zVelocity = newZVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY, oldZVelocity, zVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY, oldZVelocity, zVelocity));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class LinearVelocitySensorImpl extends SelfMotionSensorImpl implements Li
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
 				return getXVelocity();
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
 				return getYVelocity();
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
 				return getZVelocity();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class LinearVelocitySensorImpl extends SelfMotionSensorImpl implements Li
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
 				setXVelocity((Double)newValue);
 				return;
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
 				setYVelocity((Double)newValue);
 				return;
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
 				setZVelocity((Double)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public class LinearVelocitySensorImpl extends SelfMotionSensorImpl implements Li
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
 				setXVelocity(XVELOCITY_EDEFAULT);
 				return;
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
 				setYVelocity(YVELOCITY_EDEFAULT);
 				return;
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
 				setZVelocity(ZVELOCITY_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public class LinearVelocitySensorImpl extends SelfMotionSensorImpl implements Li
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__XVELOCITY:
 				return xVelocity != XVELOCITY_EDEFAULT;
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__YVELOCITY:
 				return yVelocity != YVELOCITY_EDEFAULT;
-			case MotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.LINEAR_VELOCITY_SENSOR__ZVELOCITY:
 				return zVelocity != ZVELOCITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

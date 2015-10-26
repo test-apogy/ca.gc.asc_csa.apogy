@@ -1,7 +1,7 @@
 package org.eclipse.symphony.addons.sensors.fov.ui.adapters;
 
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.ui.FovUIFactory;
+import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIFactory;
 import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
@@ -30,7 +30,7 @@ public class RectangularFrustrumFieldOfViewPresentationAdapter implements
 
 		RectangularFrustrumFieldOfView rectangularFrustrumFieldOfView = (RectangularFrustrumFieldOfView) obj;
 
-		RectangularFrustrumFieldOfViewPresentation presentationNode = FovUIFactory.eINSTANCE
+		RectangularFrustrumFieldOfViewPresentation presentationNode = Symphony__AddonsSensorsFOVUIFactory.eINSTANCE
 				.createRectangularFrustrumFieldOfViewPresentation();		
 		presentationNode.setNode(rectangularFrustrumFieldOfView);
 

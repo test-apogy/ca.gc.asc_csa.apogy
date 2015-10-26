@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList} object.
@@ -79,7 +79,7 @@ public class CameraOverlayListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class CameraOverlayListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraOverlayList.class)) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,48 +156,48 @@ public class CameraOverlayListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createEMFFeatureOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createCameraNameOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraNameOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createImageCountOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageCountOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createImageFrozenOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createImageFrozenOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createURLImageOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createURLImageOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createSymphonyLogoOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createSymphonyLogoOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createFOVOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFOVOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthElevationFOVOverlay()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST__OVERLAYS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEMFFeatureAzimuthElevationFOVOverlay()));
 	}
 
   /**

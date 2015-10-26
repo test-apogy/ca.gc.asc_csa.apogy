@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-model-doc -->
  * Enumeration of available methods use to compute the orientation correction.
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getOrientationCorrectionMode()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getOrientationCorrectionMode()
  * @model
  * @generated
  */
@@ -95,6 +95,8 @@ public enum OrientationCorrectionMode implements Enumerator
 	 * Returns the '<em><b>Orientation Correction Mode</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static OrientationCorrectionMode get(String literal)
@@ -112,6 +114,8 @@ public enum OrientationCorrectionMode implements Enumerator
 	 * Returns the '<em><b>Orientation Correction Mode</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static OrientationCorrectionMode getByName(String name)
@@ -129,6 +133,8 @@ public enum OrientationCorrectionMode implements Enumerator
 	 * Returns the '<em><b>Orientation Correction Mode</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static OrientationCorrectionMode get(int value)

@@ -13,12 +13,12 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations <em>Camera View Configurations</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraViewConfigurationList()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfigurationList()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface CameraViewConfigurationList extends AbstractToolsListContainer
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Camera View Configurations</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraViewConfigurationList_CameraViewConfigurations()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfigurationList_CameraViewConfigurations()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getCameraViewConfigurationList
 	 * @model opposite="cameraViewConfigurationList" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

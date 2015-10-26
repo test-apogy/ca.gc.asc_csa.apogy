@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.addons.sensors.pose.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.addons.sensors.pose.provider.Symphony__AddonsSensorsPoseEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

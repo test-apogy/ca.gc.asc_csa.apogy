@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.LanderSphericalFoot#getRadius <em>Radius</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getLanderSphericalFoot()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getLanderSphericalFoot()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface LanderSphericalFoot extends PhysicalBody
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getLanderSphericalFoot_Radius()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getLanderSphericalFoot_Radius()
 	 * @model default="0.01" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated

@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
 
@@ -68,7 +68,7 @@ public class WheelContactProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WheelContactProvider_contactMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WheelContactProvider_contactMode_feature", "_UI_WheelContactProvider_type"),
-				 SymphonyToolsVehiclePackage.Literals.WHEEL_CONTACT_PROVIDER__CONTACT_MODE,
+				 Symphony__AddonsVehiclePackage.Literals.WHEEL_CONTACT_PROVIDER__CONTACT_MODE,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class WheelContactProviderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WheelContactProvider.class)) {
-			case SymphonyToolsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

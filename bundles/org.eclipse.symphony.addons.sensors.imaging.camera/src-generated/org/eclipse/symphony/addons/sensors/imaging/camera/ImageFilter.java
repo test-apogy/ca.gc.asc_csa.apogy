@@ -15,12 +15,12 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter#isEnabled <em>Enabled</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageFilter()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFilter()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface ImageFilter extends Named, Described
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Enabled</em>' attribute.
 	 * @see #setEnabled(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageFilter_Enabled()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFilter_Enabled()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated

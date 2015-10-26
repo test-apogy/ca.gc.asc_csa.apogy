@@ -14,13 +14,13 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanData#getRasterScanSettings <em>Raster Scan Settings</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RasterScanData#getScanData <em>Scan Data</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanData()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanData()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface RasterScanData extends AggregateGroupNode, Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Raster Scan Settings</em>' containment reference.
 	 * @see #setRasterScanSettings(RasterScanSettings)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanData_RasterScanSettings()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanData_RasterScanSettings()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface RasterScanData extends AggregateGroupNode, Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scan Data</em>' containment reference.
 	 * @see #setScanData(VolumetricCoordinatesSet25D)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRasterScanData_ScanData()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRasterScanData_ScanData()
 	 * @model containment="true"
 	 * @generated
 	 */

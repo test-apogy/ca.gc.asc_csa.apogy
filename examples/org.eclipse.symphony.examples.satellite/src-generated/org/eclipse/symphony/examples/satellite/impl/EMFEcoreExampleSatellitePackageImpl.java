@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
@@ -219,8 +219,8 @@ public class EMFEcoreExampleSatellitePackageImpl extends EPackageImpl implements
 		isInited = true;
 
 		// Initialize simple dependencies
+		Symphony__AddonsSensorsImagingPackage.eINSTANCE.eClass();
 		SymphonyEarthOrbitEnvironmentPackage.eINSTANCE.eClass();
-		MRTSensorsImagingPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleSatellitePackage.createPackageContents();
@@ -911,7 +911,7 @@ public class EMFEcoreExampleSatellitePackageImpl extends EPackageImpl implements
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		SymphonyOrbitEnvironmentPackage theSymphonyOrbitEnvironmentPackage = (SymphonyOrbitEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyOrbitEnvironmentPackage.eNS_URI);
 		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
-		MRTSensorsImagingPackage theMRTSensorsImagingPackage = (MRTSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(MRTSensorsImagingPackage.eNS_URI);
+		Symphony__AddonsSensorsImagingPackage theSymphony__AddonsSensorsImagingPackage = (Symphony__AddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingPackage.eNS_URI);
 		ImagesCorePackage theImagesCorePackage = (ImagesCorePackage)EPackage.Registry.INSTANCE.getEPackage(ImagesCorePackage.eNS_URI);
 		SymphonyEarthOrbitEnvironmentPackage theSymphonyEarthOrbitEnvironmentPackage = (SymphonyEarthOrbitEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEarthOrbitEnvironmentPackage.eNS_URI);
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
@@ -928,8 +928,8 @@ public class EMFEcoreExampleSatellitePackageImpl extends EPackageImpl implements
 		satelliteStubEClass.getESuperTypes().add(this.getSatellite());
 		satelliteCommandRollEClass.getESuperTypes().add(this.getSatelliteCommand());
 		satelliteCommandAcquireImageEClass.getESuperTypes().add(this.getSatelliteCommand());
-		satelliteImagerEClass.getESuperTypes().add(theMRTSensorsImagingPackage.getAbstractCamera());
-		satelliteImagerEClass.getESuperTypes().add(theMRTSensorsImagingPackage.getZoomable());
+		satelliteImagerEClass.getESuperTypes().add(theSymphony__AddonsSensorsImagingPackage.getAbstractCamera());
+		satelliteImagerEClass.getESuperTypes().add(theSymphony__AddonsSensorsImagingPackage.getZoomable());
 		orbitalImageEClass.getESuperTypes().add(theImagesCorePackage.getAbstractEImage());
 		satelliteConstellationTypeApiAdapterEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getTypeApiAdapter());
 		satelliteConstellationInitializationDataEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractInitializationData());

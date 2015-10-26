@@ -16,8 +16,6 @@ import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Camera Stub</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

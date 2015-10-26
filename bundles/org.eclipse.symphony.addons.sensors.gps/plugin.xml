@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.addons.sensors.gps"
-            class="org.eclipse.symphony.addons.sensors.gps.GpsPackage"
+            class="org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage"
             genModel="model/symphony_addons_sensors_gps.xcore"/>
    </extension>
 

@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
 import org.eclipse.symphony.addons.sensors.pose.Activator;
 import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
 import org.eclipse.symphony.addons.sensors.pose.PoseDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
@@ -47,6 +47,7 @@ import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
  * <em><b>Sensor</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
@@ -54,7 +55,6 @@ import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getPose <em>Pose</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl#getDataLogger <em>Data Logger</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -128,7 +128,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PosePackage.Literals.POSE_SENSOR;
+		return Symphony__AddonsSensorsPosePackage.Literals.POSE_SENSOR;
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		SensorStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PosePackage.POSE_SENSOR__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -256,7 +256,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		PoseDataLogger oldDataLogger = dataLogger;
 		dataLogger = newDataLogger;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PosePackage.POSE_SENSOR__DATA_LOGGER, oldDataLogger, newDataLogger);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, oldDataLogger, newDataLogger);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -270,14 +270,14 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		if (newDataLogger != dataLogger) {
 			NotificationChain msgs = null;
 			if (dataLogger != null)
-				msgs = ((InternalEObject)dataLogger).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PosePackage.POSE_SENSOR__DATA_LOGGER, null, msgs);
+				msgs = ((InternalEObject)dataLogger).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, null, msgs);
 			if (newDataLogger != null)
-				msgs = ((InternalEObject)newDataLogger).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PosePackage.POSE_SENSOR__DATA_LOGGER, null, msgs);
+				msgs = ((InternalEObject)newDataLogger).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, null, msgs);
 			msgs = basicSetDataLogger(newDataLogger, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PosePackage.POSE_SENSOR__DATA_LOGGER, newDataLogger, newDataLogger));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER, newDataLogger, newDataLogger));
 	}
 
 	/**
@@ -335,7 +335,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PosePackage.POSE_SENSOR__DATA_LOGGER:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				return basicSetDataLogger(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -348,18 +348,18 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PosePackage.POSE_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS:
 				return getStatus();
-			case PosePackage.POSE_SENSOR__POSITION_COORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES:
 				if (resolve) return getPositionCoordinates();
 				return basicGetPositionCoordinates();
-			case PosePackage.POSE_SENSOR__ORIENTATION_COORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES:
 				if (resolve) return getOrientationCoordinates();
 				return basicGetOrientationCoordinates();
-			case PosePackage.POSE_SENSOR__POSE:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSE:
 				if (resolve) return getPose();
 				return basicGetPose();
-			case PosePackage.POSE_SENSOR__DATA_LOGGER:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				return getDataLogger();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -372,10 +372,10 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PosePackage.POSE_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS:
 				setStatus((SensorStatus)newValue);
 				return;
-			case PosePackage.POSE_SENSOR__DATA_LOGGER:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				setDataLogger((PoseDataLogger)newValue);
 				return;
 		}
@@ -389,10 +389,10 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PosePackage.POSE_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case PosePackage.POSE_SENSOR__DATA_LOGGER:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				setDataLogger((PoseDataLogger)null);
 				return;
 		}
@@ -406,15 +406,15 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PosePackage.POSE_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS:
 				return status != STATUS_EDEFAULT;
-			case PosePackage.POSE_SENSOR__POSITION_COORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES:
 				return positionCoordinates != null;
-			case PosePackage.POSE_SENSOR__ORIENTATION_COORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES:
 				return orientationCoordinates != null;
-			case PosePackage.POSE_SENSOR__POSE:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSE:
 				return pose != null;
-			case PosePackage.POSE_SENSOR__DATA_LOGGER:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__DATA_LOGGER:
 				return dataLogger != null;
 		}
 		return super.eIsSet(featureID);
@@ -428,7 +428,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Sensor.class) {
 			switch (derivedFeatureID) {
-				case PosePackage.POSE_SENSOR__STATUS: return SensorsPackage.SENSOR__STATUS;
+				case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS: return Symphony__AddonsSensorsPackage.SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -439,13 +439,13 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		}
 		if (baseClass == PositionSensor.class) {
 			switch (derivedFeatureID) {
-				case PosePackage.POSE_SENSOR__POSITION_COORDINATES: return PosePackage.POSITION_SENSOR__POSITION_COORDINATES;
+				case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES: return Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == OrientationSensor.class) {
 			switch (derivedFeatureID) {
-				case PosePackage.POSE_SENSOR__ORIENTATION_COORDINATES: return PosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES;
+				case Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES: return Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES;
 				default: return -1;
 			}
 		}
@@ -460,7 +460,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Sensor.class) {
 			switch (baseFeatureID) {
-				case SensorsPackage.SENSOR__STATUS: return PosePackage.POSE_SENSOR__STATUS;
+				case Symphony__AddonsSensorsPackage.SENSOR__STATUS: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -471,13 +471,13 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		}
 		if (baseClass == PositionSensor.class) {
 			switch (baseFeatureID) {
-				case PosePackage.POSITION_SENSOR__POSITION_COORDINATES: return PosePackage.POSE_SENSOR__POSITION_COORDINATES;
+				case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION_COORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == OrientationSensor.class) {
 			switch (baseFeatureID) {
-				case PosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES: return PosePackage.POSE_SENSOR__ORIENTATION_COORDINATES;
+				case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ORIENTATION_COORDINATES;
 				default: return -1;
 			}
 		}
@@ -503,14 +503,14 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 		}
 		if (baseClass == PositionSensor.class) {
 			switch (baseOperationID) {
-				case PosePackage.POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES: return PosePackage.POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES;
+				case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == OrientationSensor.class) {
 			switch (baseOperationID) {
-				case PosePackage.ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES: return PosePackage.POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES;
-				case PosePackage.ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3: return PosePackage.POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3;
+				case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES;
+				case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3: return Symphony__AddonsSensorsPosePackage.POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3;
 				default: return -1;
 			}
 		}
@@ -525,7 +525,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PosePackage.POSE_SENSOR___RESET_POSE__POSE:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_POSE__POSE:
 				try {
 					resetPose((Pose)arguments.get(0));
 					return null;
@@ -533,7 +533,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case PosePackage.POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES:
 				try {
 					resetOrientation((CartesianOrientationCoordinates)arguments.get(0));
 					return null;
@@ -541,9 +541,9 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case PosePackage.POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3:
 				return extractOrientationFromMatrix((Matrix3x3)arguments.get(0));
-			case PosePackage.POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES:
 				try {
 					resetPosition((CartesianPositionCoordinates)arguments.get(0));
 					return null;

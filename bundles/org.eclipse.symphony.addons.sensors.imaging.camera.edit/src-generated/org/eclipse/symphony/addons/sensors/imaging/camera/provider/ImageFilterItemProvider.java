@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 /**
@@ -130,7 +130,7 @@ public class ImageFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageFilter_enabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageFilter_enabled_feature", "_UI_ImageFilter_type"),
-				 SymphonyCameraToolsPackage.Literals.IMAGE_FILTER__ENABLED,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FILTER__ENABLED,
 				 true,
 				 false,
 				 false,
@@ -167,9 +167,9 @@ public class ImageFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageFilter.class)) {
-			case SymphonyCameraToolsPackage.IMAGE_FILTER__NAME:
-			case SymphonyCameraToolsPackage.IMAGE_FILTER__DESCRIPTION:
-			case SymphonyCameraToolsPackage.IMAGE_FILTER__ENABLED:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__DESCRIPTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FILTER__ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

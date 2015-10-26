@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.sensors.fov.bindings"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,19 +23,19 @@
       <!-- @generated mrt_fov_bindings -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.MRTFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

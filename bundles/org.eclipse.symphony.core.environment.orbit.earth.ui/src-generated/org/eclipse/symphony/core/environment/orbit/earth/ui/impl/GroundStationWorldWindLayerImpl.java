@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
@@ -42,11 +42,11 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.MultiEObjectsA
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl#getGroundStation <em>Ground Station</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.impl.GroundStationWorldWindLayerImpl#getReferenceAltitude <em>Reference Altitude</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -459,7 +459,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 						
 						switch (featureId) 
 						{
-							case FovPackage.CONICAL_FIELD_OF_VIEW__RANGE:							
+							case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:							
 								if(msg.getOldValue() instanceof DistanceRange)
 								{
 									getGroundStationAdapter().unregisterFromEObject((DistanceRange) msg.getOldValue());

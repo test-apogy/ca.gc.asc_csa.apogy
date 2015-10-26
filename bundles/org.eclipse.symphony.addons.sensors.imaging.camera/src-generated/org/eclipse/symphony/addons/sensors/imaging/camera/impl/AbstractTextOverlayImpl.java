@@ -21,8 +21,8 @@ import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
@@ -35,6 +35,7 @@ import org.eclipse.symphony.common.log.Logger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl#getFontName <em>Font Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl#getFontSize <em>Font Size</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipse.symphony.common.log.Logger;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl#getVerticalOffset <em>Vertical Offset</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.AbstractTextOverlayImpl#getTextColor <em>Text Color</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -136,7 +136,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Color3f TEXT_COLOR_EDEFAULT = (Color3f)SymphonyCameraToolsFactory.eINSTANCE.createFromString(SymphonyCameraToolsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+  protected static final Color3f TEXT_COLOR_EDEFAULT = (Color3f)Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFromString(Symphony__AddonsSensorsImagingCameraPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 
   /**
 	 * The cached value of the '{@link #getTextColor() <em>Text Color</em>}' attribute.
@@ -166,7 +166,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.ABSTRACT_TEXT_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.ABSTRACT_TEXT_OVERLAY;
 	}
 
   /**
@@ -189,7 +189,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
 		String oldFontName = fontName;
 		fontName = newFontName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME, oldFontName, fontName));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME, oldFontName, fontName));
 	}
 
   /**
@@ -212,7 +212,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
 		int oldFontSize = fontSize;
 		fontSize = newFontSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE, oldFontSize, fontSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE, oldFontSize, fontSize));
 	}
 
   /**
@@ -235,7 +235,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
 		int oldHorizontalOffset = horizontalOffset;
 		horizontalOffset = newHorizontalOffset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET, oldHorizontalOffset, horizontalOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET, oldHorizontalOffset, horizontalOffset));
 	}
 
   /**
@@ -258,7 +258,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
 		int oldVerticalOffset = verticalOffset;
 		verticalOffset = newVerticalOffset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET, oldVerticalOffset, verticalOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET, oldVerticalOffset, verticalOffset));
 	}
 
   /**
@@ -281,7 +281,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
 		Color3f oldTextColor = textColor;
 		textColor = newTextColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR, oldTextColor, textColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR, oldTextColor, textColor));
 	}
 
   /**
@@ -305,15 +305,15 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
 				return getFontName();
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
 				return getFontSize();
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
 				return getHorizontalOffset();
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
 				return getVerticalOffset();
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
 				return getTextColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -328,19 +328,19 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
 				setFontName((String)newValue);
 				return;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
 				setFontSize((Integer)newValue);
 				return;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
 				setHorizontalOffset((Integer)newValue);
 				return;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
 				setVerticalOffset((Integer)newValue);
 				return;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
 				setTextColor((Color3f)newValue);
 				return;
 		}
@@ -356,19 +356,19 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
 				setFontName(FONT_NAME_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
 				setFontSize(FONT_SIZE_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
 				setHorizontalOffset(HORIZONTAL_OFFSET_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
 				setVerticalOffset(VERTICAL_OFFSET_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
 				setTextColor(TEXT_COLOR_EDEFAULT);
 				return;
 		}
@@ -384,15 +384,15 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
 				return FONT_NAME_EDEFAULT == null ? fontName != null : !FONT_NAME_EDEFAULT.equals(fontName);
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
 				return fontSize != FONT_SIZE_EDEFAULT;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
 				return horizontalOffset != HORIZONTAL_OFFSET_EDEFAULT;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
 				return verticalOffset != VERTICAL_OFFSET_EDEFAULT;
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
 				return TEXT_COLOR_EDEFAULT == null ? textColor != null : !TEXT_COLOR_EDEFAULT.equals(textColor);
 		}
 		return super.eIsSet(featureID);
@@ -407,7 +407,7 @@ public abstract class AbstractTextOverlayImpl extends DrawnCameraOverlayImpl imp
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY___GET_DISPLAYED_STRING:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY___GET_DISPLAYED_STRING:
 				return getDisplayedString();
 		}
 		return super.eInvoke(operationID, arguments);

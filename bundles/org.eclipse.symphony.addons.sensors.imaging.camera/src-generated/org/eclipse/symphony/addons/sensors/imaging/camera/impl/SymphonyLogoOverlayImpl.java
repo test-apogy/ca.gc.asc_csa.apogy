@@ -8,7 +8,7 @@ import java.awt.Graphics2D;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyLogoOverlay;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
@@ -19,8 +19,6 @@ import org.eclipse.symphony.common.images.URLEImage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Symphony Logo Overlay</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -46,7 +44,7 @@ public class SymphonyLogoOverlayImpl extends ImageCameraOverlayImpl implements S
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.SYMPHONY_LOGO_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.SYMPHONY_LOGO_OVERLAY;
 	}
 
   @Override

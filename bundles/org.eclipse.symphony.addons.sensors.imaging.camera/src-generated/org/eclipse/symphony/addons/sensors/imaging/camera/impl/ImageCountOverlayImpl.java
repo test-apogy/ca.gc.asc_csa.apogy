@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,10 +16,10 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPac
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageCountOverlayImpl#isIndicatorVisible <em>Indicator Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,7 +68,7 @@ public class ImageCountOverlayImpl extends AbstractTextOverlayImpl implements Im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCameraToolsPackage.Literals.IMAGE_COUNT_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_COUNT_OVERLAY;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class ImageCountOverlayImpl extends AbstractTextOverlayImpl implements Im
 		boolean oldIndicatorVisible = indicatorVisible;
 		indicatorVisible = newIndicatorVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE, oldIndicatorVisible, indicatorVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE, oldIndicatorVisible, indicatorVisible));
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class ImageCountOverlayImpl extends AbstractTextOverlayImpl implements Im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
 				return isIndicatorVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -114,7 +114,7 @@ public class ImageCountOverlayImpl extends AbstractTextOverlayImpl implements Im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
 				setIndicatorVisible((Boolean)newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public class ImageCountOverlayImpl extends AbstractTextOverlayImpl implements Im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
 				setIndicatorVisible(INDICATOR_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -144,7 +144,7 @@ public class ImageCountOverlayImpl extends AbstractTextOverlayImpl implements Im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
 				return indicatorVisible != INDICATOR_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

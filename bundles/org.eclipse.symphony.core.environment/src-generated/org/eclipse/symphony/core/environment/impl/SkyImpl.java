@@ -37,6 +37,7 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getSurfaceWorksite <em>Surface Worksite</em>}</li>
@@ -45,7 +46,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getSunHorizontalCoordinates <em>Sun Horizontal Coordinates</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SkyImpl#getStarField <em>Star Field</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

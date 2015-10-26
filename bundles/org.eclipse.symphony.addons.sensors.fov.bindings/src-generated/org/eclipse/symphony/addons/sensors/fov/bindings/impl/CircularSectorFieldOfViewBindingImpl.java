@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.sensors.fov.AngularSpan;
 import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
+import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.common.topology.Node;
@@ -30,10 +30,10 @@ import org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindin
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.CircularSectorFieldOfViewBindingImpl#getFov <em>Fov</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,7 +67,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
   @Override
   protected EClass eStaticClass()
   {
-		return MRTFOVBindingsPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING;
+		return Symphony__AddonsSensorsFOVBindingsPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING;
 	}
 
   /**
@@ -82,7 +82,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
 			fov = (CircularSectorFieldOfView)eResolveProxy(oldFov);
 			if (fov != oldFov) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MRTFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
 			}
 		}
 		return fov;
@@ -108,7 +108,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
 		CircularSectorFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
 	}
 
   /**
@@ -120,7 +120,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV:
 				if (resolve) return getFov();
 				return basicGetFov();
 		}
@@ -136,7 +136,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV:
 				setFov((CircularSectorFieldOfView)newValue);
 				return;
 		}
@@ -152,7 +152,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV:
 				setFov((CircularSectorFieldOfView)null);
 				return;
 		}
@@ -168,7 +168,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV:
 				return fov != null;
 		}
 		return super.eIsSet(featureID);
@@ -230,7 +230,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
 				  }				
 				  else if(notification.getNotifier() instanceof CircularSectorFieldOfView)
 				  {					  
-					  if(notification.getFeatureID(CircularSectorFieldOfView.class) == FovPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE)
+					  if(notification.getFeatureID(CircularSectorFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__RANGE)
 					  {
 						  if(notification.getOldValue() instanceof DistanceRange)
 						  {
@@ -245,7 +245,7 @@ public class CircularSectorFieldOfViewBindingImpl extends AbstractTopologyBindin
 							  updateDistanceRange(newDistanceRange);
 						  }						  						 
 					  }
-					  else if(notification.getFeatureID(CircularSectorFieldOfView.class) == FovPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN)
+					  else if(notification.getFeatureID(CircularSectorFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW__ANGULAR_SPAN)
 					  {
 						  if(notification.getOldValue() instanceof AngularSpan)
 						  {

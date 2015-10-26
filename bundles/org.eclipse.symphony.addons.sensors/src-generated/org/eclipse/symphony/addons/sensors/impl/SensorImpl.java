@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
 
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.impl.SensorImpl#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,7 +65,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SensorsPackage.Literals.SENSOR;
+		return Symphony__AddonsSensorsPackage.Literals.SENSOR;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 		SensorStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SensorsPackage.SENSOR__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPackage.SENSOR__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SensorsPackage.SENSOR__STATUS:
+			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
 				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,7 +111,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SensorsPackage.SENSOR__STATUS:
+			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
 				setStatus((SensorStatus)newValue);
 				return;
 		}
@@ -126,7 +126,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SensorsPackage.SENSOR__STATUS:
+			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
 		}
@@ -141,7 +141,7 @@ public class SensorImpl extends AggregateGroupNodeImpl implements Sensor {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SensorsPackage.SENSOR__STATUS:
+			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
 				return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

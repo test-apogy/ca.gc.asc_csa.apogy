@@ -11,12 +11,12 @@ package org.eclipse.symphony.addons.sensors.range;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ContactSensor#isContacted <em>Contacted</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getContactSensor()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getContactSensor()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface ContactSensor extends RangeSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contacted</em>' attribute.
 	 * @see #setContacted(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getContactSensor_Contacted()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getContactSensor_Contacted()
 	 * @model unique="false"
 	 * @generated
 	 */

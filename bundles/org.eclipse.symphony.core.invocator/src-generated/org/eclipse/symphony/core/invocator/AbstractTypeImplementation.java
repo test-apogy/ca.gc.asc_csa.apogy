@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getTypeMemberImplementations <em>Type Member Implementations</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getImplementationClass <em>Implementation Class</em>}</li>
@@ -22,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getAdapterInstance <em>Adapter Instance</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getHandlingType <em>Handling Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractTypeImplementation()
  * @model abstract="true"

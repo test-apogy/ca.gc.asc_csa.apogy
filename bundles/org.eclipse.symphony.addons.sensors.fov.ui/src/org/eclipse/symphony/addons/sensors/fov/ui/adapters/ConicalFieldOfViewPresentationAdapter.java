@@ -2,7 +2,7 @@ package org.eclipse.symphony.addons.sensors.fov.ui.adapters;
 
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.FovUIFactory;
+import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
@@ -30,7 +30,7 @@ public class ConicalFieldOfViewPresentationAdapter implements NodePresentationAd
 
 		ConicalFieldOfView conicalFieldOfView = (ConicalFieldOfView) obj;
 		
-		ConicalFieldOfViewPresentation presentationNode = FovUIFactory.eINSTANCE.createConicalFieldOfViewPresentation();
+		ConicalFieldOfViewPresentation presentationNode = Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createConicalFieldOfViewPresentation();
 		presentationNode.setNode(conicalFieldOfView);			
 						
 		return presentationNode;

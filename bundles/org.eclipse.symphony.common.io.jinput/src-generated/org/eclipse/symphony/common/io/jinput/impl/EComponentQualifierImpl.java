@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.io.jinput.JInputPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentQualifierImpl#getEComponentName <em>EComponent Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.io.jinput.impl.EComponentQualifierImpl#getEControllerName <em>EController Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

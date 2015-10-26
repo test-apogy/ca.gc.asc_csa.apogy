@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.SensorsPackage;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
@@ -33,11 +33,11 @@ import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PositionSensorImpl#getPositionCoordinates <em>Position Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -95,7 +95,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PosePackage.Literals.POSITION_SENSOR;
+		return Symphony__AddonsSensorsPosePackage.Literals.POSITION_SENSOR;
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 		SensorStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PosePackage.POSITION_SENSOR__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -165,9 +165,9 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case PosePackage.POSITION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
 				return getStatus();
-			case PosePackage.POSITION_SENSOR__POSITION_COORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES:
 				if (resolve) return getPositionCoordinates();
 				return basicGetPositionCoordinates();
 		}
@@ -183,7 +183,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case PosePackage.POSITION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
 				setStatus((SensorStatus)newValue);
 				return;
 		}
@@ -199,7 +199,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case PosePackage.POSITION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
 		}
@@ -215,9 +215,9 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case PosePackage.POSITION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS:
 				return status != STATUS_EDEFAULT;
-			case PosePackage.POSITION_SENSOR__POSITION_COORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__POSITION_COORDINATES:
 				return positionCoordinates != null;
 		}
 		return super.eIsSet(featureID);
@@ -233,7 +233,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	{
 		if (baseClass == Sensor.class) {
 			switch (derivedFeatureID) {
-				case PosePackage.POSITION_SENSOR__STATUS: return SensorsPackage.SENSOR__STATUS;
+				case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS: return Symphony__AddonsSensorsPackage.SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -255,7 +255,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	{
 		if (baseClass == Sensor.class) {
 			switch (baseFeatureID) {
-				case SensorsPackage.SENSOR__STATUS: return PosePackage.POSITION_SENSOR__STATUS;
+				case Symphony__AddonsSensorsPackage.SENSOR__STATUS: return Symphony__AddonsSensorsPosePackage.POSITION_SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -275,7 +275,7 @@ public class PositionSensorImpl extends PositionNodeImpl implements PositionSens
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PosePackage.POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES:
+			case Symphony__AddonsSensorsPosePackage.POSITION_SENSOR___RESET_POSITION__CARTESIANPOSITIONCOORDINATES:
 				try {
 					resetPosition((CartesianPositionCoordinates)arguments.get(0));
 					return null;

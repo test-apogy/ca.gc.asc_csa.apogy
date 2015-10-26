@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSFacade()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSFacade()
  * @model
  * @generated
  */

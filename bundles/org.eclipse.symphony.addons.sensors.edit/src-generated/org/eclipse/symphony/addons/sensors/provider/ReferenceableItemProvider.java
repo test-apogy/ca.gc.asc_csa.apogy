@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
-import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.Referenceable} object.
@@ -77,7 +77,7 @@ public class ReferenceableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Referenceable_referenceFrame_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Referenceable_referenceFrame_feature", "_UI_Referenceable_type"),
-				 SensorsPackage.Literals.REFERENCEABLE__REFERENCE_FRAME,
+				 Symphony__AddonsSensorsPackage.Literals.REFERENCEABLE__REFERENCE_FRAME,
 				 true,
 				 false,
 				 true,

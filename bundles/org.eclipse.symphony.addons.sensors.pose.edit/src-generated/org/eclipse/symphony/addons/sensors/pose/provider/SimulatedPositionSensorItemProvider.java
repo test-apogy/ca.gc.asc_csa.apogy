@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.SimulatedPositionSensor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -73,7 +73,7 @@ public class SimulatedPositionSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPositionSensor_xVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPositionSensor_xVelocity_feature", "_UI_SimulatedPositionSensor_type"),
-				 PosePackage.Literals.SIMULATED_POSITION_SENSOR__XVELOCITY,
+				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__XVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -96,7 +96,7 @@ public class SimulatedPositionSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPositionSensor_yVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPositionSensor_yVelocity_feature", "_UI_SimulatedPositionSensor_type"),
-				 PosePackage.Literals.SIMULATED_POSITION_SENSOR__YVELOCITY,
+				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__YVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class SimulatedPositionSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPositionSensor_zVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPositionSensor_zVelocity_feature", "_UI_SimulatedPositionSensor_type"),
-				 PosePackage.Literals.SIMULATED_POSITION_SENSOR__ZVELOCITY,
+				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__ZVELOCITY,
 				 true,
 				 false,
 				 false,
@@ -142,7 +142,7 @@ public class SimulatedPositionSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimulatedPositionSensor_updatePeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimulatedPositionSensor_updatePeriod_feature", "_UI_SimulatedPositionSensor_type"),
-				 PosePackage.Literals.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD,
+				 Symphony__AddonsSensorsPosePackage.Literals.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -191,10 +191,10 @@ public class SimulatedPositionSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimulatedPositionSensor.class)) {
-			case PosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
-			case PosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
-			case PosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
-			case PosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
+			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__XVELOCITY:
+			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__YVELOCITY:
+			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__ZVELOCITY:
+			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSITION_SENSOR__UPDATE_PERIOD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

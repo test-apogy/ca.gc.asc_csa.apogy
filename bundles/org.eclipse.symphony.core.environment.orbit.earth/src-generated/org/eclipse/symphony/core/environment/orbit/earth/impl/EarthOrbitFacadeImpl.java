@@ -74,8 +74,6 @@ import org.orekit.utils.TimeStampedPVCoordinates;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Earth Orbit Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

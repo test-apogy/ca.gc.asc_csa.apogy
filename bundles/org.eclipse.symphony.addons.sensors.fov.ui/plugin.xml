@@ -41,7 +41,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.addons.sensors.fov.ui"
-            class="org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage"
+            class="org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage"
             genModel="model/symphony_addons_sensors_fov_ui.xcore"/>
    </extension>
 

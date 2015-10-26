@@ -17,15 +17,15 @@ package org.eclipse.symphony.addons.sensors.fov;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getRange <em>Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getHorizontalFieldOfViewAngle <em>Horizontal Field Of View Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getVerticalFieldOfViewAngle <em>Vertical Field Of View Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView#getVolume <em>Volume</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getRectangularFrustrumFieldOfView()
+ * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfView()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface RectangularFrustrumFieldOfView extends FieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range</em>' containment reference.
 	 * @see #setRange(DistanceRange)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getRectangularFrustrumFieldOfView_Range()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfView_Range()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface RectangularFrustrumFieldOfView extends FieldOfView {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Horizontal Field Of View Angle</em>' attribute.
 	 * @see #setHorizontalFieldOfViewAngle(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getRectangularFrustrumFieldOfView_HorizontalFieldOfViewAngle()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfView_HorizontalFieldOfViewAngle()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -91,7 +91,7 @@ public interface RectangularFrustrumFieldOfView extends FieldOfView {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vertical Field Of View Angle</em>' attribute.
 	 * @see #setVerticalFieldOfViewAngle(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getRectangularFrustrumFieldOfView_VerticalFieldOfViewAngle()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfView_VerticalFieldOfViewAngle()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -116,7 +116,7 @@ public interface RectangularFrustrumFieldOfView extends FieldOfView {
 	 * The volume of the contained within the field of view.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Volume</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getRectangularFrustrumFieldOfView_Volume()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfView_Volume()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

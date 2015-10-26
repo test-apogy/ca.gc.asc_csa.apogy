@@ -11,14 +11,14 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#isFrozen <em>Frozen</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay#getFrozenMessage <em>Frozen Message</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageFrozenOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Frozen</em>' attribute.
 	 * @see #setFrozen(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageFrozenOverlay_Frozen()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay_Frozen()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES' property='Readonly'"
 	 * @generated
@@ -62,7 +62,7 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Expected Image Update Period</em>' attribute.
 	 * @see #setExpectedImageUpdatePeriod(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageFrozenOverlay_ExpectedImageUpdatePeriod()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay_ExpectedImageUpdatePeriod()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES' csa_units='s'"
 	 * @generated
@@ -94,7 +94,7 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Frozen Message</em>' attribute.
 	 * @see #setFrozenMessage(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageFrozenOverlay_FrozenMessage()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay_FrozenMessage()
 	 * @model default="Frozen" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES'"
 	 * @generated

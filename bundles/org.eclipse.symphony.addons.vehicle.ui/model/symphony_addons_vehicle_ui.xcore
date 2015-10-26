@@ -1,7 +1,10 @@
-@GenModel(prefix="SymphonyToolsVehicleUI", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2014 Copyrights (c)", modelName="SymphonyToolsVehicleUI") 
+@GenModel(prefix="Symphony__AddonsVehicleUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__AddonsVehicleUI") 
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.vehicle.ui/src-generated")
 @GenModel(editDirectory= "/org.eclipse.symphony.addons.vehicle.ui.edit/src-generated")
-
 
 package org.eclipse.symphony.addons.vehicle.ui
 

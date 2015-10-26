@@ -11,13 +11,13 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getGain <em>Gain</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter#getBias <em>Bias</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getGainFilter()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getGainFilter()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface GainFilter extends ImageFilter
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gain</em>' attribute.
 	 * @see #setGain(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getGainFilter_Gain()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getGainFilter_Gain()
 	 * @model default="50" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated
@@ -62,7 +62,7 @@ public interface GainFilter extends ImageFilter
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bias</em>' attribute.
 	 * @see #setBias(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getGainFilter_Bias()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getGainFilter_Bias()
 	 * @model default="50" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated

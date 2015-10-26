@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
 import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
-import org.eclipse.symphony.addons.sensors.range.RangeFactory;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFactory;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
 import org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade;
 
@@ -22,8 +22,6 @@ import org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Sensors Range Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -59,7 +57,7 @@ public class SensorsRangeFacadeImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	protected EClass eStaticClass()
 	{
-		return RangePackage.Literals.SENSORS_RANGE_FACADE;
+		return Symphony__AddonsSensorsRangePackage.Literals.SENSORS_RANGE_FACADE;
 	}
 
 	/**
@@ -69,7 +67,7 @@ public class SensorsRangeFacadeImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public RasterScanSettings createRasterScanSettings(double minimumDistance, double maximumDistance, double horizontalFieldOfViewAngle, double verticalFieldOfViewAngle, int horizontalResolution, int verticalResolution)
 	{
-		RasterScanSettings rasterScanSettings = RangeFactory.eINSTANCE.createRasterScanSettings();
+		RasterScanSettings rasterScanSettings = Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
 		
 		DistanceRange distanceRange = FOVFacade.INSTANCE.createDistanceRange(minimumDistance, maximumDistance);
 		rasterScanSettings.setRange(distanceRange);
@@ -90,7 +88,7 @@ public class SensorsRangeFacadeImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public RasterScanSettings createRasterScanSettings(RasterScanSettings rasterScanSettings)
 	{
-		RasterScanSettings results = RangeFactory.eINSTANCE.createRasterScanSettings();
+		RasterScanSettings results = Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
 		
 		if(rasterScanSettings.getRange() != null)
 		{
@@ -115,9 +113,9 @@ public class SensorsRangeFacadeImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RangePackage.SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT:
+			case Symphony__AddonsSensorsRangePackage.SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT:
 				return createRasterScanSettings((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Integer)arguments.get(4), (Integer)arguments.get(5));
-			case RangePackage.SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS:
+			case Symphony__AddonsSensorsRangePackage.SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS:
 				return createRasterScanSettings((RasterScanSettings)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

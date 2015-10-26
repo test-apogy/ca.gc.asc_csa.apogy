@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSRepository#getGpsDevices <em>Gps Devices</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSRepository()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSRepository()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -34,7 +34,7 @@ public interface GPSRepository extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gps Devices</em>' reference list.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSRepository_GpsDevices()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSRepository_GpsDevices()
 	 * @model
 	 * @generated
 	 */

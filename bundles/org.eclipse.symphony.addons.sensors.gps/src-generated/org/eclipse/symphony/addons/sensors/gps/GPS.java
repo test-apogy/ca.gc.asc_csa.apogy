@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPS#getConnection <em>Connection</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPS#getDataInterpreter <em>Data Interpreter</em>}</li>
@@ -23,9 +24,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPS#getSpeedKnots <em>Speed Knots</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPS#getSpeedKmh <em>Speed Kmh</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface GPS extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connection</em>' containment reference.
 	 * @see #setConnection(GPSConnection)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_Connection()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_Connection()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface GPS extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Interpreter</em>' containment reference.
 	 * @see #setDataInterpreter(GPSDataInterpreter)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_DataInterpreter()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_DataInterpreter()
 	 * @see org.eclipse.symphony.addons.sensors.gps.GPSDataInterpreter#getGps
 	 * @model opposite="gps" containment="true"
 	 * @generated
@@ -97,7 +97,7 @@ public interface GPS extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Reading</em>' containment reference.
 	 * @see #setReading(GPSReading)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_Reading()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_Reading()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -125,7 +125,7 @@ public interface GPS extends EObject {
 	 * @return the value of the '<em>Status</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.gps.GPSStatus
 	 * @see #setStatus(GPSStatus)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_Status()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_Status()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -152,7 +152,7 @@ public interface GPS extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Update Rate</em>' attribute.
 	 * @see #setUpdateRate(long)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_UpdateRate()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_UpdateRate()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -177,7 +177,7 @@ public interface GPS extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Last Failure</em>' attribute.
 	 * @see #setLastFailure(Exception)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_LastFailure()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_LastFailure()
 	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.gps.Exception" transient="true"
 	 * @generated
 	 */
@@ -204,7 +204,7 @@ public interface GPS extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Max Reconnect Time</em>' attribute.
 	 * @see #setMaxReconnectTime(int)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_MaxReconnectTime()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_MaxReconnectTime()
 	 * @model default="10000" unique="false"
 	 * @generated
 	 */
@@ -229,7 +229,7 @@ public interface GPS extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Speed Knots</em>' attribute.
 	 * @see #setSpeedKnots(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_SpeedKnots()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_SpeedKnots()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -254,7 +254,7 @@ public interface GPS extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Speed Kmh</em>' attribute.
 	 * @see #setSpeedKmh(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPS_SpeedKmh()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPS_SpeedKmh()
 	 * @model unique="false"
 	 * @generated
 	 */

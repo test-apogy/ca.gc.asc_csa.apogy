@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.examples.antenna.DishAntenna;
 import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
 
@@ -169,7 +169,7 @@ extends AntennaItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreExampleAntennaPackage.Literals.DISH_ANTENNA__FOV,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 	}
 
 }

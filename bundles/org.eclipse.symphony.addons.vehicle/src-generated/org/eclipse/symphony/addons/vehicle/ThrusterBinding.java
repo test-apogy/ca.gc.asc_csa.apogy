@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ThrusterBinding#getThruster <em>Thruster</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThrusterBinding()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThrusterBinding()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface ThrusterBinding extends AbstractTopologyBinding
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Thruster</em>' reference.
 	 * @see #setThruster(Thruster)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThrusterBinding_Thruster()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThrusterBinding_Thruster()
 	 * @model
 	 * @generated
 	 */

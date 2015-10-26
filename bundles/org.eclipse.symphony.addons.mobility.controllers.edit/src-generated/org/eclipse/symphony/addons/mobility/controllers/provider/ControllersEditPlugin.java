@@ -10,8 +10,8 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
 import org.eclipse.symphony.addons.mobility.provider.MobilityEditPlugin;
-import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
-import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
+import org.eclipse.symphony.addons.sensors.pose.provider.Symphony__AddonsSensorsPoseEditPlugin;
+import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
 import org.eclipse.symphony.common.math.provider.MathEditPlugin;
@@ -56,11 +56,11 @@ public final class ControllersEditPlugin extends EMFPlugin
 		     DataEditPlugin.INSTANCE,
 		     MobilityEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
-		     PoseEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsPoseEditPlugin.INSTANCE,
 		   });
 	}
 

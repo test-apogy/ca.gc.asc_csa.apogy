@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
@@ -68,7 +68,7 @@ public class SimpleRectangularFrustumRadiationPatternItemProvider extends Abstra
 				 getResourceLocator(),
 				 getString("_UI_SimpleRectangularFrustumRadiationPattern_horizontalFieldOfView_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRectangularFrustumRadiationPattern_horizontalFieldOfView_feature", "_UI_SimpleRectangularFrustumRadiationPattern_type"),
-				 SymphonyTelecomToolsPackage.Literals.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW,
+				 Symphony__AddonsTelecomsPackage.Literals.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class SimpleRectangularFrustumRadiationPatternItemProvider extends Abstra
 				 getResourceLocator(),
 				 getString("_UI_SimpleRectangularFrustumRadiationPattern_verticalFieldOfView_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRectangularFrustumRadiationPattern_verticalFieldOfView_feature", "_UI_SimpleRectangularFrustumRadiationPattern_type"),
-				 SymphonyTelecomToolsPackage.Literals.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW,
+				 Symphony__AddonsTelecomsPackage.Literals.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW,
 				 true,
 				 false,
 				 false,
@@ -147,8 +147,8 @@ public class SimpleRectangularFrustumRadiationPatternItemProvider extends Abstra
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleRectangularFrustumRadiationPattern.class)) {
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

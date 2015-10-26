@@ -16,7 +16,7 @@ import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
 import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
 import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
+import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.common.topology.Node;
@@ -29,10 +29,10 @@ import org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindin
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl#getFov <em>Fov</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -66,7 +66,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   @Override
   protected EClass eStaticClass()
   {
-		return MRTFOVBindingsPackage.Literals.CONICAL_FIELD_OF_VIEW_BINDING;
+		return Symphony__AddonsSensorsFOVBindingsPackage.Literals.CONICAL_FIELD_OF_VIEW_BINDING;
 	}
 
   /**
@@ -81,7 +81,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
 			fov = (ConicalFieldOfView)eResolveProxy(oldFov);
 			if (fov != oldFov) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MRTFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
 			}
 		}
 		return fov;
@@ -107,7 +107,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
 		ConicalFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
 	}
 
   /**
@@ -119,7 +119,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
 				if (resolve) return getFov();
 				return basicGetFov();
 		}
@@ -135,7 +135,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
 				setFov((ConicalFieldOfView)newValue);
 				return;
 		}
@@ -151,7 +151,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
 				setFov((ConicalFieldOfView)null);
 				return;
 		}
@@ -167,7 +167,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.CONICAL_FIELD_OF_VIEW_BINDING__FOV:
 				return fov != null;
 		}
 		return super.eIsSet(featureID);

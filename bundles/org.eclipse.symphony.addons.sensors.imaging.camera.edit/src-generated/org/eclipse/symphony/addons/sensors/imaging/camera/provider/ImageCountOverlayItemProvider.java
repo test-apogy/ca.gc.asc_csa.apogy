@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay} object.
@@ -62,7 +62,7 @@ public class ImageCountOverlayItemProvider extends AbstractTextOverlayItemProvid
 				 getResourceLocator(),
 				 getString("_UI_ImageCountOverlay_indicatorVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageCountOverlay_indicatorVisible_feature", "_UI_ImageCountOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class ImageCountOverlayItemProvider extends AbstractTextOverlayItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageCountOverlay.class)) {
-			case SymphonyCameraToolsPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_COUNT_OVERLAY__INDICATOR_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

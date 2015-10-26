@@ -7,15 +7,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraNameOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Camera Name Overlay</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -43,7 +41,7 @@ public class CameraNameOverlayImpl extends AbstractTextOverlayImpl implements Ca
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.CAMERA_NAME_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_NAME_OVERLAY;
 	}
   
   @Override

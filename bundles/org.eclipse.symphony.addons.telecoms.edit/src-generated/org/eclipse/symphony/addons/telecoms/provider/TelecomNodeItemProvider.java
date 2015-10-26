@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.addons.telecoms.TelecomNode;
 
 /**
@@ -89,7 +89,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_statusMonitorTool_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_statusMonitorTool_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__STATUS_MONITOR_TOOL,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__STATUS_MONITOR_TOOL,
 				 true,
 				 false,
 				 true,
@@ -111,7 +111,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_enabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_enabled_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__ENABLED,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__ENABLED,
 				 false,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_name_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__NAME,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__NAME,
 				 true,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_address_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_address_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__ADDRESS,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__ADDRESS,
 				 true,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_packetsToSend_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_packetsToSend_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__PACKETS_TO_SEND,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKETS_TO_SEND,
 				 true,
 				 false,
 				 false,
@@ -199,7 +199,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_connectionTimeout_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_connectionTimeout_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__CONNECTION_TIMEOUT,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__CONNECTION_TIMEOUT,
 				 true,
 				 false,
 				 false,
@@ -221,7 +221,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_latencyWarning_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_latencyWarning_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__LATENCY_WARNING,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY_WARNING,
 				 true,
 				 false,
 				 false,
@@ -243,7 +243,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_latencyAlarm_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_latencyAlarm_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__LATENCY_ALARM,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY_ALARM,
 				 true,
 				 false,
 				 false,
@@ -265,7 +265,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_packetLossWarning_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_packetLossWarning_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__PACKET_LOSS_WARNING,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS_WARNING,
 				 true,
 				 false,
 				 false,
@@ -287,7 +287,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_packetLossAlarm_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_packetLossAlarm_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__PACKET_LOSS_ALARM,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS_ALARM,
 				 true,
 				 false,
 				 false,
@@ -309,7 +309,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_latency_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_latency_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__LATENCY,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY,
 				 false,
 				 false,
 				 false,
@@ -331,7 +331,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_packetLoss_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_packetLoss_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__PACKET_LOSS,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS,
 				 false,
 				 false,
 				 false,
@@ -353,7 +353,7 @@ public class TelecomNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TelecomNode_status_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TelecomNode_status_feature", "_UI_TelecomNode_type"),
-				 SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__STATUS,
+				 Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__STATUS,
 				 false,
 				 false,
 				 false,
@@ -400,18 +400,18 @@ public class TelecomNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TelecomNode.class)) {
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__ENABLED:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__NAME:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__ADDRESS:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__PACKETS_TO_SEND:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__LATENCY_WARNING:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__LATENCY_ALARM:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__LATENCY:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__PACKET_LOSS:
-			case SymphonyTelecomToolsPackage.TELECOM_NODE__STATUS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ENABLED:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__NAME:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__ADDRESS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKETS_TO_SEND:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__CONNECTION_TIMEOUT:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_WARNING:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY_ALARM:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_WARNING:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS_ALARM:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__LATENCY:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__PACKET_LOSS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_NODE__STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

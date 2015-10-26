@@ -1,7 +1,7 @@
 package org.eclipse.symphony.addons.sensors.range.ui.adapters;
 
 import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
-import org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIFactory;
+import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIFactory;
 import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
@@ -31,7 +31,7 @@ public class SimpleSonarPresentationAdapter implements NodePresentationAdapter
 		}
 		
 		SimpleSonar simpleSonar = (SimpleSonar) obj;
-		SimpleSonarPresentation presentationNode = RangeSensorsUIFactory.eINSTANCE.createSimpleSonarPresentation();
+		SimpleSonarPresentation presentationNode = Symphony__AddonsSensorsRangeUIFactory.eINSTANCE.createSimpleSonarPresentation();
 		presentationNode.setNode(simpleSonar);		
 		return presentationNode;
 	}

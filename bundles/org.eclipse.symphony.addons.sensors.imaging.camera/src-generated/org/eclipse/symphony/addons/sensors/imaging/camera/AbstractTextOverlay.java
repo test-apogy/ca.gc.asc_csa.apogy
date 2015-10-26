@@ -12,6 +12,7 @@ import javax.vecmath.Color3f;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontName <em>Font Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getFontSize <em>Font Size</em>}</li>
@@ -19,9 +20,8 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getVerticalOffset <em>Vertical Offset</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay#getTextColor <em>Text Color</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAbstractTextOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay()
  * @model abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Font Name</em>' attribute.
 	 * @see #setFontName(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAbstractTextOverlay_FontName()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_FontName()
 	 * @model default="SansSerif" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -64,7 +64,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Font Size</em>' attribute.
 	 * @see #setFontSize(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAbstractTextOverlay_FontSize()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_FontSize()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -91,7 +91,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Horizontal Offset</em>' attribute.
 	 * @see #setHorizontalOffset(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAbstractTextOverlay_HorizontalOffset()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_HorizontalOffset()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_POSITION_PROPERTIES'"
 	 * @generated
@@ -118,7 +118,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vertical Offset</em>' attribute.
 	 * @see #setVerticalOffset(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAbstractTextOverlay_VerticalOffset()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_VerticalOffset()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_POSITION_PROPERTIES'"
 	 * @generated
@@ -145,7 +145,7 @@ public interface AbstractTextOverlay extends DrawnCameraOverlay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Text Color</em>' attribute.
 	 * @see #setTextColor(Color3f)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAbstractTextOverlay_TextColor()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAbstractTextOverlay_TextColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated

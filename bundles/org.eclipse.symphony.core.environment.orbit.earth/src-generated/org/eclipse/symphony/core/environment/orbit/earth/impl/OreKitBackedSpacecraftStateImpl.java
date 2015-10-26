@@ -17,10 +17,10 @@ import org.orekit.propagation.SpacecraftState;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.OreKitBackedSpacecraftStateImpl#getOreKitSpacecraftState <em>Ore Kit Spacecraft State</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

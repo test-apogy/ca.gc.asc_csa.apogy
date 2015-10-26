@@ -16,13 +16,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSConnection#getInput <em>Input</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSConnection#getOutput <em>Output</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSConnection()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSConnection()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface GPSConnection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSConnection_Input()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSConnection_Input()
 	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.gps.InputStream" required="true" changeable="false"
 	 * @generated
 	 */
@@ -51,7 +51,7 @@ public interface GPSConnection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSConnection_Output()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSConnection_Output()
 	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.gps.OutputStream" required="true" changeable="false"
 	 * @generated
 	 */

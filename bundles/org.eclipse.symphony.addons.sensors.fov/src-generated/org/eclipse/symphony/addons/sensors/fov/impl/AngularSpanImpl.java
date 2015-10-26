@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.sensors.fov.AngularSpan;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.common.math.GeometricUtils;
 
 /**
@@ -22,13 +22,13 @@ import org.eclipse.symphony.common.math.GeometricUtils;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl#getMinimumAngle <em>Minimum Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl#getMaximumAngle <em>Maximum Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl#getSpanningAngle <em>Spanning Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.impl.AngularSpanImpl#getCenterAngle <em>Center Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,7 +109,7 @@ public class AngularSpanImpl extends MinimalEObjectImpl.Container implements Ang
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return FovPackage.Literals.ANGULAR_SPAN;
+		return Symphony__AddonsSensorsFOVPackage.Literals.ANGULAR_SPAN;
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class AngularSpanImpl extends MinimalEObjectImpl.Container implements Ang
 		double oldMinimumAngle = minimumAngle;
 		minimumAngle = newMinimumAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FovPackage.ANGULAR_SPAN__MINIMUM_ANGLE, oldMinimumAngle, minimumAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE, oldMinimumAngle, minimumAngle));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class AngularSpanImpl extends MinimalEObjectImpl.Container implements Ang
 		double oldMaximumAngle = maximumAngle;
 		maximumAngle = newMaximumAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FovPackage.ANGULAR_SPAN__MAXIMUM_ANGLE, oldMaximumAngle, maximumAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE, oldMaximumAngle, maximumAngle));
 	}
 
 	/**
@@ -195,13 +195,13 @@ public class AngularSpanImpl extends MinimalEObjectImpl.Container implements Ang
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FovPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
 				return getMinimumAngle();
-			case FovPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
 				return getMaximumAngle();
-			case FovPackage.ANGULAR_SPAN__SPANNING_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__SPANNING_ANGLE:
 				return getSpanningAngle();
-			case FovPackage.ANGULAR_SPAN__CENTER_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__CENTER_ANGLE:
 				return getCenterAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,10 +215,10 @@ public class AngularSpanImpl extends MinimalEObjectImpl.Container implements Ang
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FovPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
 				setMinimumAngle((Double)newValue);
 				return;
-			case FovPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
 				setMaximumAngle((Double)newValue);
 				return;
 		}
@@ -233,10 +233,10 @@ public class AngularSpanImpl extends MinimalEObjectImpl.Container implements Ang
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FovPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
 				setMinimumAngle(MINIMUM_ANGLE_EDEFAULT);
 				return;
-			case FovPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
 				setMaximumAngle(MAXIMUM_ANGLE_EDEFAULT);
 				return;
 		}
@@ -251,13 +251,13 @@ public class AngularSpanImpl extends MinimalEObjectImpl.Container implements Ang
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FovPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
 				return minimumAngle != MINIMUM_ANGLE_EDEFAULT;
-			case FovPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
 				return maximumAngle != MAXIMUM_ANGLE_EDEFAULT;
-			case FovPackage.ANGULAR_SPAN__SPANNING_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__SPANNING_ANGLE:
 				return getSpanningAngle() != SPANNING_ANGLE_EDEFAULT;
-			case FovPackage.ANGULAR_SPAN__CENTER_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__CENTER_ANGLE:
 				return getCenterAngle() != CENTER_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -271,7 +271,7 @@ public class AngularSpanImpl extends MinimalEObjectImpl.Container implements Ang
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case FovPackage.ANGULAR_SPAN___IS_WITHIN_RANGE__DOUBLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN___IS_WITHIN_RANGE__DOUBLE:
 				return isWithinRange((Double)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

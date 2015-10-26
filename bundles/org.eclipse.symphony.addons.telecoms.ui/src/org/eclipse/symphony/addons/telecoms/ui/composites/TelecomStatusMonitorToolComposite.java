@@ -39,7 +39,7 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.addons.telecoms.TelecomNode;
 import org.eclipse.symphony.addons.telecoms.TelecomNodeStatus;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
@@ -599,13 +599,13 @@ public class TelecomStatusMonitorToolComposite extends Composite
 				{
 					case COLUMN_NAME:
 						
-						feature = SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__NAME;
+						feature = Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__NAME;
 						setVal = strVal;
 						break;
 					
 					case COLUMN_ADDRESS:
 						
-						feature = SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__ADDRESS;
+						feature = Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__ADDRESS;
 						setVal = strVal;
 						break;
 					
@@ -621,7 +621,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 							}
 							else
 							{
-								feature = SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__PACKETS_TO_SEND;
+								feature = Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKETS_TO_SEND;
 								setVal = new Integer(newNoOfPackets);
 							}
 						}
@@ -649,7 +649,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 							}
 							else
 							{
-								feature = SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__CONNECTION_TIMEOUT;
+								feature = Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__CONNECTION_TIMEOUT;
 								setVal = new Integer(newTimeout);
 							}
 						}
@@ -678,7 +678,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 							}
 							else
 							{
-								feature = SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__LATENCY_WARNING;
+								feature = Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY_WARNING;
 								setVal = new Double(newLatencyWarning);
 							}
 						}
@@ -708,7 +708,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 							}
 							else
 							{
-								feature = SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__LATENCY_ALARM;
+								feature = Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__LATENCY_ALARM;
 								setVal = new Double(newLatencyAlarm);
 							}
 						}
@@ -739,7 +739,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 							}
 							else
 							{
-								feature = SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__PACKET_LOSS_WARNING;
+								feature = Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS_WARNING;
 								setVal = new Double(newPacketLossWarning);
 							}
 						}
@@ -770,7 +770,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 							}
 							else
 							{
-								feature = SymphonyTelecomToolsPackage.Literals.TELECOM_NODE__PACKET_LOSS_ALARM;
+								feature = Symphony__AddonsTelecomsPackage.Literals.TELECOM_NODE__PACKET_LOSS_ALARM;
 								setVal = new Double(newPacketLossAlarm);
 							}
 						}
@@ -823,7 +823,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 				TelecomStatusMonitorTool statusMonitor = (TelecomStatusMonitorTool) notification.getNotifier();
 				
 				// If the list of telecom nodes is being changed
-				if (notification.getFeatureID(TelecomStatusMonitorTool.class) == SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES)
+				if (notification.getFeatureID(TelecomStatusMonitorTool.class) == Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__TELECOM_NODES)
 				{
 					// If neither the composite nor the telecom status monitor has been disposed.
 					if (TelecomStatusMonitorToolComposite.this.isDisposed() == false &&
@@ -857,7 +857,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 				TelecomStatusMonitorToolList statusMonitorList = (TelecomStatusMonitorToolList) notification.getNotifier();
 				
 				// If the list of status monitors is being changed
-				if (notification.getFeatureID(TelecomStatusMonitorToolList.class) == SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS)
+				if (notification.getFeatureID(TelecomStatusMonitorToolList.class) == Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS)
 				{
 					// If one or more telecom status monitors are being removed from the list
 					if (notification.getEventType() == Notification.REMOVE ||
@@ -888,7 +888,7 @@ public class TelecomStatusMonitorToolComposite extends Composite
 					}
 				}
 				// Otherwise if the container is changed
-				else if (notification.getFeatureID(TelecomStatusMonitorToolList.class) == SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TOOL_LIST)
+				else if (notification.getFeatureID(TelecomStatusMonitorToolList.class) == Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TOOL_LIST)
 				{
 					// If the container value is being set
 					if (notification.getEventType() == Notification.SET)

@@ -11,9 +11,9 @@ import org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeome
 
 import org.eclipse.symphony.addons.mobility.provider.Symphony__AddonsMobilityEditPlugin;
 
-import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
+import org.eclipse.symphony.addons.sensors.pose.provider.Symphony__AddonsSensorsPoseEditPlugin;
 
-import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
+import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
 
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 
@@ -55,9 +55,9 @@ public final class MobilityControllersEditPlugin extends EMFPlugin {
 	public MobilityControllersEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     PoseEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsPoseEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
 		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     Symphony__AddonsMobilityEditPlugin.INSTANCE,

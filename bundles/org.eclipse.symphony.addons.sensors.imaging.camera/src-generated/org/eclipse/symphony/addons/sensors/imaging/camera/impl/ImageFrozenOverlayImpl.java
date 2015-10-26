@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.addons.sensors.imaging.camera.internal.WatchDog;
 
 /**
@@ -19,12 +19,12 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.internal.WatchDog;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl#isFrozen <em>Frozen</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl#getExpectedImageUpdatePeriod <em>Expected Image Update Period</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ImageFrozenOverlayImpl#getFrozenMessage <em>Frozen Message</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -111,7 +111,7 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCameraToolsPackage.Literals.IMAGE_FROZEN_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY;
 	}
 
 	/**
@@ -132,7 +132,7 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 		boolean oldFrozen = frozen;
 		frozen = newFrozen;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN, oldFrozen, frozen));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN, oldFrozen, frozen));
 	}
 
 	/**
@@ -165,7 +165,7 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 		double oldExpectedImageUpdatePeriod = expectedImageUpdatePeriod;
 		expectedImageUpdatePeriod = newExpectedImageUpdatePeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD, oldExpectedImageUpdatePeriod, expectedImageUpdatePeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD, oldExpectedImageUpdatePeriod, expectedImageUpdatePeriod));
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 		String oldFrozenMessage = frozenMessage;
 		frozenMessage = newFrozenMessage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE, oldFrozenMessage, frozenMessage));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE, oldFrozenMessage, frozenMessage));
 	}
 
 	/**
@@ -197,11 +197,11 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
 				return isFrozen();
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
 				return getExpectedImageUpdatePeriod();
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
 				return getFrozenMessage();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,13 +215,13 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
 				setFrozen((Boolean)newValue);
 				return;
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
 				setExpectedImageUpdatePeriod((Double)newValue);
 				return;
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
 				setFrozenMessage((String)newValue);
 				return;
 		}
@@ -236,13 +236,13 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
 				setFrozen(FROZEN_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
 				setExpectedImageUpdatePeriod(EXPECTED_IMAGE_UPDATE_PERIOD_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
 				setFrozenMessage(FROZEN_MESSAGE_EDEFAULT);
 				return;
 		}
@@ -257,11 +257,11 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
 				return frozen != FROZEN_EDEFAULT;
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
 				return expectedImageUpdatePeriod != EXPECTED_IMAGE_UPDATE_PERIOD_EDEFAULT;
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
 				return FROZEN_MESSAGE_EDEFAULT == null ? frozenMessage != null : !FROZEN_MESSAGE_EDEFAULT.equals(frozenMessage);
 		}
 		return super.eIsSet(featureID);
@@ -331,7 +331,7 @@ public class ImageFrozenOverlayImpl extends AbstractTextOverlayImpl implements I
 						int featureId = msg.getFeatureID(CameraViewConfiguration.class);
 						switch (featureId) 
 						{
-							case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT:
+							case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT:
 								getImageWatchDog().kick();
 								setFrozen(false);
 							

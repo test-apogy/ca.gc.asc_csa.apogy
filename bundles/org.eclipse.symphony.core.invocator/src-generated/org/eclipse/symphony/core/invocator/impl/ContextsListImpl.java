@@ -26,11 +26,11 @@ import org.eclipse.symphony.core.invocator.Environment;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ContextsListImpl#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ContextsListImpl#getContexts <em>Contexts</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

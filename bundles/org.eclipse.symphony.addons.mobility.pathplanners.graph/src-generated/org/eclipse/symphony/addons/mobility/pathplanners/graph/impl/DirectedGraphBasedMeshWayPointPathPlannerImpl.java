@@ -19,10 +19,10 @@ import org.jgrapht.DirectedGraph;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DirectedGraphBasedMeshWayPointPathPlannerImpl#getDirectedGraph <em>Directed Graph</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

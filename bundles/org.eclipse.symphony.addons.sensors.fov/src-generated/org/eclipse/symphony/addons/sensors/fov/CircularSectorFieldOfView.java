@@ -16,14 +16,14 @@ package org.eclipse.symphony.addons.sensors.fov;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getRange <em>Range</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getAngularSpan <em>Angular Span</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView#getArea <em>Area</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getCircularSectorFieldOfView()
+ * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getCircularSectorFieldOfView()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface CircularSectorFieldOfView extends FieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range</em>' containment reference.
 	 * @see #setRange(DistanceRange)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getCircularSectorFieldOfView_Range()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getCircularSectorFieldOfView_Range()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface CircularSectorFieldOfView extends FieldOfView {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Span</em>' containment reference.
 	 * @see #setAngularSpan(AngularSpan)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getCircularSectorFieldOfView_AngularSpan()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getCircularSectorFieldOfView_AngularSpan()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface CircularSectorFieldOfView extends FieldOfView {
 	 * The area of the circular sector.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Area</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getCircularSectorFieldOfView_Area()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getCircularSectorFieldOfView_Area()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

@@ -6,7 +6,7 @@ package org.eclipse.symphony.addons.vehicle.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl;
 
@@ -16,11 +16,11 @@ import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImp
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getRadius <em>Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getLenght <em>Lenght</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -84,7 +84,7 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.WHEEL;
+		return Symphony__AddonsVehiclePackage.Literals.WHEEL;
 	}
 
   /**
@@ -107,7 +107,7 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.WHEEL__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.WHEEL__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -130,7 +130,7 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 		double oldLenght = lenght;
 		lenght = newLenght;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.WHEEL__LENGHT, oldLenght, lenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.WHEEL__LENGHT, oldLenght, lenght));
 	}
 
   /**
@@ -142,9 +142,9 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.WHEEL__RADIUS:
+			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 				return getRadius();
-			case SymphonyToolsVehiclePackage.WHEEL__LENGHT:
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
 				return getLenght();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -159,10 +159,10 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.WHEEL__RADIUS:
+			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 				setRadius((Double)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.WHEEL__LENGHT:
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
 				setLenght((Double)newValue);
 				return;
 		}
@@ -178,10 +178,10 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.WHEEL__RADIUS:
+			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
-			case SymphonyToolsVehiclePackage.WHEEL__LENGHT:
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
 				setLenght(LENGHT_EDEFAULT);
 				return;
 		}
@@ -197,9 +197,9 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.WHEEL__RADIUS:
+			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 				return radius != RADIUS_EDEFAULT;
-			case SymphonyToolsVehiclePackage.WHEEL__LENGHT:
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
 				return lenght != LENGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

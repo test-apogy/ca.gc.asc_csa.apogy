@@ -13,7 +13,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.Activator;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
@@ -298,15 +298,15 @@ public class RectangularFrustumFieldOfViewJME3Object extends AbstractFieldOfView
 					{
 						int featureId = notification.getFeatureID(RectangularFrustrumFieldOfView.class);
 						
-						if (featureId == FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE || 
-							featureId == FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE)
+						if (featureId == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE || 
+							featureId == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE)
 						{
 							updateGeometry();
 							
 							// Updates the FOV Settings of the projector.
 							getRectangularFrustrumFieldOfViewImageProjectorControl().updateProjectorFOVSettings();
 						} 					
-						else if(featureId == FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE)
+						else if(featureId == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE)
 						{
 							if(notification.getOldValue() instanceof DistanceRange)
 							{
@@ -343,8 +343,8 @@ public class RectangularFrustumFieldOfViewJME3Object extends AbstractFieldOfView
 					if(notification.getNotifier() instanceof DistanceRange)
 					{
 						int featureId = notification.getFeatureID(DistanceRange.class);
-						if (featureId == FovPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE || 
-							featureId == FovPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE )
+						if (featureId == Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE || 
+							featureId == Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE )
 						{
 							updateGeometry();
 						} 

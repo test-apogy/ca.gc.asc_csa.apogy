@@ -10,15 +10,13 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.SimpleLineRangeScanner;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Simple Line Range Scanner</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,7 @@ public class SimpleLineRangeScannerImpl extends LineRangeScannerImpl implements 
 	@Override
 	protected EClass eStaticClass()
 	{
-		return RangePackage.Literals.SIMPLE_LINE_RANGE_SCANNER;
+		return Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_LINE_RANGE_SCANNER;
 	}
 
 	/**
@@ -65,7 +63,7 @@ public class SimpleLineRangeScannerImpl extends LineRangeScannerImpl implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RangePackage.SIMPLE_LINE_RANGE_SCANNER___ACQUIRE_SCAN:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_LINE_RANGE_SCANNER___ACQUIRE_SCAN:
 				return acquireScan();
 		}
 		return super.eInvoke(operationID, arguments);

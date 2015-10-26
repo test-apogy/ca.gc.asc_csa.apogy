@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.sensors.pose;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getCSVDataLogger()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getCSVDataLogger()
  * @model
  * @generated
  */

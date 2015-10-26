@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.gps.GPS;
 import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
-import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
-import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFactory;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.gps.GPS} object.
@@ -84,7 +84,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_status_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_status_feature", "_UI_GPS_type"),
-				 GpsPackage.Literals.GPS__STATUS,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__STATUS,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_updateRate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_updateRate_feature", "_UI_GPS_type"),
-				 GpsPackage.Literals.GPS__UPDATE_RATE,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__UPDATE_RATE,
 				 true,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_lastFailure_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_lastFailure_feature", "_UI_GPS_type"),
-				 GpsPackage.Literals.GPS__LAST_FAILURE,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__LAST_FAILURE,
 				 true,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_maxReconnectTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_maxReconnectTime_feature", "_UI_GPS_type"),
-				 GpsPackage.Literals.GPS__MAX_RECONNECT_TIME,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__MAX_RECONNECT_TIME,
 				 true,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_speedKnots_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_speedKnots_feature", "_UI_GPS_type"),
-				 GpsPackage.Literals.GPS__SPEED_KNOTS,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__SPEED_KNOTS,
 				 true,
 				 false,
 				 false,
@@ -194,7 +194,7 @@ public class GPSItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPS_speedKmh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPS_speedKmh_feature", "_UI_GPS_type"),
-				 GpsPackage.Literals.GPS__SPEED_KMH,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS__SPEED_KMH,
 				 true,
 				 false,
 				 false,
@@ -215,9 +215,9 @@ public class GPSItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GpsPackage.Literals.GPS__CONNECTION);
-			childrenFeatures.add(GpsPackage.Literals.GPS__DATA_INTERPRETER);
-			childrenFeatures.add(GpsPackage.Literals.GPS__READING);
+			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.GPS__CONNECTION);
+			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.GPS__DATA_INTERPRETER);
+			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.GPS__READING);
 		}
 		return childrenFeatures;
 	}
@@ -273,17 +273,17 @@ public class GPSItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GPS.class)) {
-			case GpsPackage.GPS__STATUS:
-			case GpsPackage.GPS__UPDATE_RATE:
-			case GpsPackage.GPS__LAST_FAILURE:
-			case GpsPackage.GPS__MAX_RECONNECT_TIME:
-			case GpsPackage.GPS__SPEED_KNOTS:
-			case GpsPackage.GPS__SPEED_KMH:
+			case Symphony__AddonsSensorsGPSPackage.GPS__STATUS:
+			case Symphony__AddonsSensorsGPSPackage.GPS__UPDATE_RATE:
+			case Symphony__AddonsSensorsGPSPackage.GPS__LAST_FAILURE:
+			case Symphony__AddonsSensorsGPSPackage.GPS__MAX_RECONNECT_TIME:
+			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KNOTS:
+			case Symphony__AddonsSensorsGPSPackage.GPS__SPEED_KMH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case GpsPackage.GPS__CONNECTION:
-			case GpsPackage.GPS__DATA_INTERPRETER:
-			case GpsPackage.GPS__READING:
+			case Symphony__AddonsSensorsGPSPackage.GPS__CONNECTION:
+			case Symphony__AddonsSensorsGPSPackage.GPS__DATA_INTERPRETER:
+			case Symphony__AddonsSensorsGPSPackage.GPS__READING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -303,8 +303,8 @@ public class GPSItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GpsPackage.Literals.GPS__READING,
-				 GpsFactory.eINSTANCE.createGPSReading()));
+				(Symphony__AddonsSensorsGPSPackage.Literals.GPS__READING,
+				 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSReading()));
 	}
 
 	/**

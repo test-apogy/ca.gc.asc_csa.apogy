@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.common.math.MathFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -62,8 +62,8 @@ public class InertialMeasurementUnitItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY);
-			childrenFeatures.add(PosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION);
+			childrenFeatures.add(Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY);
+			childrenFeatures.add(Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION);
 		}
 		return childrenFeatures;
 	}
@@ -118,8 +118,8 @@ public class InertialMeasurementUnitItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(InertialMeasurementUnit.class)) {
-			case PosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
-			case PosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
+			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsPosePackage.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,12 +139,12 @@ public class InertialMeasurementUnitItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY,
+				(Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY,
 				 MathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION,
+				(Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION,
 				 MathFactory.eINSTANCE.createTuple3d()));
 	}
 
@@ -162,8 +162,8 @@ public class InertialMeasurementUnitItemProvider
 		boolean qualify =
 			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
 			childFeature == TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == PosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY ||
-			childFeature == PosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION;
+			childFeature == Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY ||
+			childFeature == Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION;
 
 		if (qualify) {
 			return getString

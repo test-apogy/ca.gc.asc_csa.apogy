@@ -15,7 +15,7 @@ import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPathBinding;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
@@ -24,10 +24,10 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolNodeImpl#getPathPlannerTool <em>Path Planner Tool</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,7 +63,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL_NODE;
+		return Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL_NODE;
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 			pathPlannerTool = (PathPlannerTool)eResolveProxy(oldPathPlannerTool);
 			if (pathPlannerTool != oldPathPlannerTool) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, oldPathPlannerTool, pathPlannerTool));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, oldPathPlannerTool, pathPlannerTool));
 			}
 		}
 		return pathPlannerTool;
@@ -112,7 +112,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 		PathPlannerTool oldPathPlannerTool = pathPlannerTool;
 		pathPlannerTool = newPathPlannerTool;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, oldPathPlannerTool, newPathPlannerTool);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, oldPathPlannerTool, newPathPlannerTool);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -138,14 +138,14 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 		if (newPathPlannerTool != pathPlannerTool) {
 			NotificationChain msgs = null;
 			if (pathPlannerTool != null)
-				msgs = ((InternalEObject)pathPlannerTool).eInverseRemove(this, SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, PathPlannerTool.class, msgs);
+				msgs = ((InternalEObject)pathPlannerTool).eInverseRemove(this, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, PathPlannerTool.class, msgs);
 			if (newPathPlannerTool != null)
-				msgs = ((InternalEObject)newPathPlannerTool).eInverseAdd(this, SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, PathPlannerTool.class, msgs);
+				msgs = ((InternalEObject)newPathPlannerTool).eInverseAdd(this, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, PathPlannerTool.class, msgs);
 			msgs = basicSetPathPlannerTool(newPathPlannerTool, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, newPathPlannerTool, newPathPlannerTool));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL, newPathPlannerTool, newPathPlannerTool));
 	}
 
 	/**
@@ -156,9 +156,9 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
 				if (pathPlannerTool != null)
-					msgs = ((InternalEObject)pathPlannerTool).eInverseRemove(this, SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, PathPlannerTool.class, msgs);
+					msgs = ((InternalEObject)pathPlannerTool).eInverseRemove(this, Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE, PathPlannerTool.class, msgs);
 				return basicSetPathPlannerTool((PathPlannerTool)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -172,7 +172,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
 				return basicSetPathPlannerTool(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -186,7 +186,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
 				if (resolve) return getPathPlannerTool();
 				return basicGetPathPlannerTool();
 		}
@@ -201,7 +201,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
 				setPathPlannerTool((PathPlannerTool)newValue);
 				return;
 		}
@@ -216,7 +216,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
 				setPathPlannerTool((PathPlannerTool)null);
 				return;
 		}
@@ -231,7 +231,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL_NODE__PATH_PLANNER_TOOL:
 				return pathPlannerTool != null;
 		}
 		return super.eIsSet(featureID);
@@ -290,7 +290,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 						
 						switch (featureId) 
 						{
-							case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:								
+							case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:								
 								updateWayPointPath((WayPointPath) msg.getNewValue());
 							break;
 

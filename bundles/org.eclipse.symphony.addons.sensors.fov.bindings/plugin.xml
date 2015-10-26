@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.addons.sensors.fov.bindings"
-            class="org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage"
+            class="org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage"
             genModel="model/symphony_addons_sensors_fov_bindings.xcore"/>
    </extension>
 

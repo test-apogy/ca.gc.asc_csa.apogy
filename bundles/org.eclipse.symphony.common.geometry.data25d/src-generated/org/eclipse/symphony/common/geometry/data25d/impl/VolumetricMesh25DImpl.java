@@ -13,8 +13,6 @@ import org.eclipse.symphony.common.geometry.data25d.VolumetricMesh25D;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Volumetric Mesh25 D</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

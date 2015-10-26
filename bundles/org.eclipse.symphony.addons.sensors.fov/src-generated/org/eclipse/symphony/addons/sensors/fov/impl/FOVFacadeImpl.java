@@ -15,16 +15,14 @@ import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
 import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>FOV Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -60,7 +58,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	@Override
 	protected EClass eStaticClass()
 	{
-		return FovPackage.Literals.FOV_FACADE;
+		return Symphony__AddonsSensorsFOVPackage.Literals.FOV_FACADE;
 	}
 
 	/**
@@ -70,7 +68,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public DistanceRange createDistanceRange(double minimumDistance, double maximumDistance)
 	{
-		DistanceRange distanceRange = FovFactory.eINSTANCE.createDistanceRange();
+		DistanceRange distanceRange = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange();
 		distanceRange.setMinimumDistance(minimumDistance);
 		distanceRange.setMaximumDistance(maximumDistance);		
 		return distanceRange;
@@ -83,7 +81,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public DistanceRange createDistanceRange(DistanceRange distanceRange)
 	{
-		DistanceRange newDistanceRange = FovFactory.eINSTANCE.createDistanceRange();
+		DistanceRange newDistanceRange = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange();
 		newDistanceRange.setMinimumDistance(distanceRange.getMinimumDistance());
 		newDistanceRange.setMaximumDistance(distanceRange.getMaximumDistance());		
 		return newDistanceRange;
@@ -96,7 +94,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public AngularSpan createAngularSpan(double minimumAngle, double maximumAngle)
 	{
-		AngularSpan angularSpan = FovFactory.eINSTANCE.createAngularSpan();
+		AngularSpan angularSpan = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createAngularSpan();
 		angularSpan.setMinimumAngle(minimumAngle);
 		angularSpan.setMaximumAngle(maximumAngle);
 		return angularSpan;
@@ -109,7 +107,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public AngularSpan createAngularSpan(AngularSpan angularSpan)
 	{
-		AngularSpan newAngularSpan = FovFactory.eINSTANCE.createAngularSpan();
+		AngularSpan newAngularSpan = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createAngularSpan();
 		newAngularSpan.setMinimumAngle(angularSpan.getMinimumAngle());
 		newAngularSpan.setMaximumAngle(angularSpan.getMaximumAngle());
 		return newAngularSpan;
@@ -122,7 +120,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public RectangularFrustrumFieldOfView createRectangularFrustrumFieldOfView(double minimumDistance, double maximumDistance, double horizontalFieldOfViewAngle, double verticalFieldOfViewAngle)
 	{
-		RectangularFrustrumFieldOfView rectangularFrustrumFieldOfView = FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView();
+		RectangularFrustrumFieldOfView rectangularFrustrumFieldOfView = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView();
 		DistanceRange distanceRange = createDistanceRange(minimumDistance, maximumDistance);
 		rectangularFrustrumFieldOfView.setRange(distanceRange);
 		rectangularFrustrumFieldOfView.setHorizontalFieldOfViewAngle(horizontalFieldOfViewAngle);
@@ -137,7 +135,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public RectangularFrustrumFieldOfView createRectangularFrustrumFieldOfView(RectangularFrustrumFieldOfView rectangularFrustrumFieldOfView)
 	{
-		RectangularFrustrumFieldOfView newRectangularFrustrumFieldOfView = FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView();
+		RectangularFrustrumFieldOfView newRectangularFrustrumFieldOfView = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView();
 		
 		if(rectangularFrustrumFieldOfView.getRange() != null)
 		{
@@ -158,7 +156,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public ConicalFieldOfView createConicalFieldOfView(double minimumDistance, double maximumDistance, double fieldOfViewAngle)
 	{
-		ConicalFieldOfView conicalFieldOfView = FovFactory.eINSTANCE.createConicalFieldOfView();
+		ConicalFieldOfView conicalFieldOfView = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView();
 		DistanceRange distanceRange = createDistanceRange(minimumDistance, maximumDistance);
 		conicalFieldOfView.setRange(distanceRange);
 		conicalFieldOfView.setFieldOfViewAngle(fieldOfViewAngle);		
@@ -172,7 +170,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public ConicalFieldOfView createConicalFieldOfView(ConicalFieldOfView conicalFieldOfView)
 	{
-		ConicalFieldOfView newConicalFieldOfView = FovFactory.eINSTANCE.createConicalFieldOfView();
+		ConicalFieldOfView newConicalFieldOfView = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView();
 		if(conicalFieldOfView.getRange() != null)
 		{
 			DistanceRange distanceRange = createDistanceRange(conicalFieldOfView.getRange());
@@ -190,7 +188,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public CircularSectorFieldOfView createCircularSectorFieldOfView(double minimumAngle, double maximumAngle, double minimumDistance, double maximumDistance)
 	{
-		CircularSectorFieldOfView circularSectorFieldOfView = FovFactory.eINSTANCE.createCircularSectorFieldOfView();
+		CircularSectorFieldOfView circularSectorFieldOfView = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView();
 		DistanceRange distanceRange = createDistanceRange(minimumDistance, maximumDistance);
 		circularSectorFieldOfView.setRange(distanceRange);		
 		AngularSpan angularSpan = createAngularSpan(minimumAngle, maximumAngle);
@@ -205,7 +203,7 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	 */
 	public CircularSectorFieldOfView createCircularSectorFieldOfView(CircularSectorFieldOfView circularSectorFieldOfView)
 	{
-		CircularSectorFieldOfView newcircularSectorFieldOfView = FovFactory.eINSTANCE.createCircularSectorFieldOfView();
+		CircularSectorFieldOfView newcircularSectorFieldOfView = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView();
 		
 		if(circularSectorFieldOfView.getRange() != null)
 		{
@@ -232,25 +230,25 @@ public class FOVFacadeImpl extends MinimalEObjectImpl.Container implements FOVFa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case FovPackage.FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE:
 				return createDistanceRange((Double)arguments.get(0), (Double)arguments.get(1));
-			case FovPackage.FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE:
 				return createDistanceRange((DistanceRange)arguments.get(0));
-			case FovPackage.FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE:
 				return createAngularSpan((Double)arguments.get(0), (Double)arguments.get(1));
-			case FovPackage.FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN:
 				return createAngularSpan((AngularSpan)arguments.get(0));
-			case FovPackage.FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createRectangularFrustrumFieldOfView((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3));
-			case FovPackage.FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW:
 				return createRectangularFrustrumFieldOfView((RectangularFrustrumFieldOfView)arguments.get(0));
-			case FovPackage.FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE:
 				return createConicalFieldOfView((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case FovPackage.FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW:
 				return createConicalFieldOfView((ConicalFieldOfView)arguments.get(0));
-			case FovPackage.FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createCircularSectorFieldOfView((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3));
-			case FovPackage.FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW:
+			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW:
 				return createCircularSectorFieldOfView((CircularSectorFieldOfView)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

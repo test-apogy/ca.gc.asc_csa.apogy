@@ -11,12 +11,12 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter#getExposure <em>Exposure</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getExposureFilter()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getExposureFilter()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface ExposureFilter extends ImageFilter
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exposure</em>' attribute.
 	 * @see #setExposure(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getExposureFilter_Exposure()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getExposureFilter_Exposure()
 	 * @model default="2.5" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FILTER_SETTING'"
 	 * @generated

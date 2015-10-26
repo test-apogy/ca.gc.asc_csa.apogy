@@ -1,4 +1,10 @@
-@GenModel(prefix="SensorsPoseUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="SensorsPoseUI", complianceLevel="6.0")
+@GenModel(prefix="Symphony__AddonsSensorsPoseUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__AddonsSensorsPoseUI",
+		  complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.pose.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.pose.ui.edit/src-generated")
 

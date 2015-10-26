@@ -21,11 +21,11 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone#getRadius <em>Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone#isInvertSamplingShape <em>Invert Sampling Shape</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getCircularExclusionZone()
  * @model

@@ -14,7 +14,7 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -30,8 +30,6 @@ import org.eclipse.symphony.examples.lander.Position;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lander Simulated</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -237,7 +235,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 		if (thruster == null)
 		{
 			// Create one
-			thruster = SymphonyToolsVehicleFactory.eINSTANCE.createThruster();
+			thruster = Symphony__AddonsVehicleFactory.eINSTANCE.createThruster();
 			
 			// Initialize it accordingly
 			thruster.setMinimumThrust(0);

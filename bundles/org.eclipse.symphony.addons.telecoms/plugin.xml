@@ -11,7 +11,7 @@
       <!-- @generated symphony_tools_telecoms -->
       <package
             uri="org.eclipse.symphony.addons.telecoms"
-            class="org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage"
+            class="org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage"
             genModel="model/symphony_addons_telecoms.xcore"/>
    </extension>
 

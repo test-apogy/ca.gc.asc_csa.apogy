@@ -13,12 +13,12 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation#isVisible <em>Visible</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraImageAnnotation()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraImageAnnotation()
  * @model abstract="true"
  * @generated
  */
@@ -34,7 +34,7 @@ public interface CameraImageAnnotation extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraImageAnnotation_Visible()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraImageAnnotation_Visible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */

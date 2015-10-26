@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 /**
@@ -124,7 +124,7 @@ public class CameraImageAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraImageAnnotation_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraImageAnnotation_visible_feature", "_UI_CameraImageAnnotation_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_IMAGE_ANNOTATION__VISIBLE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_IMAGE_ANNOTATION__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -160,9 +160,9 @@ public class CameraImageAnnotationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraImageAnnotation.class)) {
-			case SymphonyCameraToolsPackage.CAMERA_IMAGE_ANNOTATION__NAME:
-			case SymphonyCameraToolsPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
-			case SymphonyCameraToolsPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__DESCRIPTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_IMAGE_ANNOTATION__VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

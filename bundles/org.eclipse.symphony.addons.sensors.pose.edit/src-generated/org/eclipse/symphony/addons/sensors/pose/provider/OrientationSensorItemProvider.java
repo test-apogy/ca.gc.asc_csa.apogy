@@ -15,11 +15,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.SensorsFactory;
-import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
 import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
-import org.eclipse.symphony.addons.sensors.pose.PoseFactory;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFactory;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.RotationNodeItemProvider;
 
@@ -75,7 +75,7 @@ public class OrientationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Sensor_status_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sensor_status_feature", "_UI_Sensor_type"),
-				 SensorsPackage.Literals.SENSOR__STATUS,
+				 Symphony__AddonsSensorsPackage.Literals.SENSOR__STATUS,
 				 true,
 				 false,
 				 false,
@@ -98,7 +98,7 @@ public class OrientationSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OrientationSensor_orientationCoordinates_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrientationSensor_orientationCoordinates_feature", "_UI_OrientationSensor_type"),
-				 PosePackage.Literals.ORIENTATION_SENSOR__ORIENTATION_COORDINATES,
+				 Symphony__AddonsSensorsPosePackage.Literals.ORIENTATION_SENSOR__ORIENTATION_COORDINATES,
 				 false,
 				 false,
 				 false,
@@ -147,7 +147,7 @@ public class OrientationSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrientationSensor.class)) {
-			case PosePackage.ORIENTATION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -169,92 +169,92 @@ public class OrientationSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createSelfPlaceSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSelfPlaceSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createPositionSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createPositionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedPositionSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedPositionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createOrientationSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createOrientationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createInertialMeasurementUnit()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createInertialMeasurementUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createPoseSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createPoseSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedPoseSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedPoseSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
+				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createSelfPlaceSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSelfPlaceSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createPositionSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createPositionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedPositionSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedPositionSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createOrientationSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createOrientationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createInertialMeasurementUnit()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createInertialMeasurementUnit()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createPoseSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createPoseSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PoseFactory.eINSTANCE.createSimulatedPoseSensor()));
+				 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedPoseSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
+				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
 	}
 
 	/**

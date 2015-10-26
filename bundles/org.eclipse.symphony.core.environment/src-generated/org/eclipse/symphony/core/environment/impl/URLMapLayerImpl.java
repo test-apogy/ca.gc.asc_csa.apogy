@@ -15,10 +15,10 @@ import org.eclipse.symphony.core.environment.URLMapLayer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.URLMapLayerImpl#getUrl <em>Url</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

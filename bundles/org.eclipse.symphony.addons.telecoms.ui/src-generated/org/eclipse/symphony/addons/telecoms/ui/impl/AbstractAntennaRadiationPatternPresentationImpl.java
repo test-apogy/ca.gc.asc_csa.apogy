@@ -5,15 +5,13 @@ package org.eclipse.symphony.addons.telecoms.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
-import org.eclipse.symphony.addons.telecoms.ui.SymphonyTelecomToolsUIPackage;
+import org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Abstract Antenna Radiation Pattern Presentation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -34,7 +32,7 @@ public class AbstractAntennaRadiationPatternPresentationImpl extends NodePresent
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyTelecomToolsUIPackage.Literals.ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION;
+		return Symphony__AddonsTelecomsUIPackage.Literals.ABSTRACT_ANTENNA_RADIATION_PATTERN_PRESENTATION;
 	}
 
 } //AbstractAntennaRadiationPatternPresentationImpl

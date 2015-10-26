@@ -11,7 +11,7 @@ import org.eclipse.symphony.addons.sensors.Sensor;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getSelfMotionSensor()
+ * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getSelfMotionSensor()
  * @model
  * @generated
  */

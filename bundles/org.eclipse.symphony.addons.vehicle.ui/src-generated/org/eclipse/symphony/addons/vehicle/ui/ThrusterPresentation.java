@@ -12,13 +12,13 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLenght <em>Plume Envelope Lenght</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage#getThrusterPresentation()
+ * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface ThrusterPresentation extends NodePresentation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Plume Envelope Visible</em>' attribute.
 	 * @see #setPlumeEnvelopeVisible(boolean)
-	 * @see org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeVisible()
+	 * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeVisible()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='false' propertyCategory='PLUME_INFO'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface ThrusterPresentation extends NodePresentation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Plume Envelope Lenght</em>' attribute.
 	 * @see #setPlumeEnvelopeLenght(double)
-	 * @see org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeLenght()
+	 * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeLenght()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='false' propertyCategory='PLUME_INFO'"
 	 * @generated

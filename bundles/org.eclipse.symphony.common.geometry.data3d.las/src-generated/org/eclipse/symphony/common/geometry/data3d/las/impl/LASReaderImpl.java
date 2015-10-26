@@ -38,6 +38,7 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
  * <em><b>LAS Reader</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getFile <em>File</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getInputStream <em>Input Stream</em>}</li>
@@ -46,7 +47,6 @@ import org.eclipse.symphony.common.lang.java.io.LittleEndianDataInputStream;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASReaderImpl#getPoints <em>Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

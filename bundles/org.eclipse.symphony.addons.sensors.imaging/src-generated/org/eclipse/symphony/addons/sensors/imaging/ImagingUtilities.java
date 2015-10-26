@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getImagingUtilities()
+ * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getImagingUtilities()
  * @model
  * @generated
  */

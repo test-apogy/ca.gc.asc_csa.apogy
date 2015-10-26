@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,11 +26,11 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPac
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayListImpl#getCameraViewConfiguration <em>Camera View Configuration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraOverlayListImpl#getOverlays <em>Overlays</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,7 +64,7 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY_LIST;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY_LIST;
 	}
 
   /**
@@ -73,7 +73,7 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public CameraViewConfiguration getCameraViewConfiguration() {
-		if (eContainerFeatureID() != SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION) return null;
+		if (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION) return null;
 		return (CameraViewConfiguration)eContainer();
 	}
 
@@ -83,7 +83,7 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public CameraViewConfiguration basicGetCameraViewConfiguration() {
-		if (eContainerFeatureID() != SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION) return null;
+		if (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION) return null;
 		return (CameraViewConfiguration)eInternalContainer();
 	}
 
@@ -93,7 +93,7 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public NotificationChain basicSetCameraViewConfiguration(CameraViewConfiguration newCameraViewConfiguration, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newCameraViewConfiguration, SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newCameraViewConfiguration, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION, msgs);
 		return msgs;
 	}
 
@@ -103,19 +103,19 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public void setCameraViewConfiguration(CameraViewConfiguration newCameraViewConfiguration) {
-		if (newCameraViewConfiguration != eInternalContainer() || (eContainerFeatureID() != SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION && newCameraViewConfiguration != null)) {
+		if (newCameraViewConfiguration != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION && newCameraViewConfiguration != null)) {
 			if (EcoreUtil.isAncestor(this, newCameraViewConfiguration))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newCameraViewConfiguration != null)
-				msgs = ((InternalEObject)newCameraViewConfiguration).eInverseAdd(this, SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST, CameraViewConfiguration.class, msgs);
+				msgs = ((InternalEObject)newCameraViewConfiguration).eInverseAdd(this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST, CameraViewConfiguration.class, msgs);
 			msgs = basicSetCameraViewConfiguration(newCameraViewConfiguration, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION, newCameraViewConfiguration, newCameraViewConfiguration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION, newCameraViewConfiguration, newCameraViewConfiguration));
 	}
 
 		/**
@@ -126,7 +126,7 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
   public EList<CameraOverlay> getOverlays()
   {
 		if (overlays == null) {
-			overlays = new EObjectContainmentWithInverseEList<CameraOverlay>(CameraOverlay.class, this, SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__OVERLAYS, SymphonyCameraToolsPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST);
+			overlays = new EObjectContainmentWithInverseEList<CameraOverlay>(CameraOverlay.class, this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__CAMERA_OVERLAY_LIST);
 		}
 		return overlays;
 	}
@@ -140,11 +140,11 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetCameraViewConfiguration((CameraViewConfiguration)otherEnd, msgs);
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOverlays()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -159,9 +159,9 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
 				return basicSetCameraViewConfiguration(null, msgs);
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
 				return ((InternalEList<?>)getOverlays()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -175,8 +175,8 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
-				return eInternalContainer().eInverseRemove(this, SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST, CameraViewConfiguration.class, msgs);
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
+				return eInternalContainer().eInverseRemove(this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST, CameraViewConfiguration.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -190,10 +190,10 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
 				if (resolve) return getCameraViewConfiguration();
 				return basicGetCameraViewConfiguration();
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
 				return getOverlays();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,10 +209,10 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
 				setCameraViewConfiguration((CameraViewConfiguration)newValue);
 				return;
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
 				getOverlays().clear();
 				getOverlays().addAll((Collection<? extends CameraOverlay>)newValue);
 				return;
@@ -229,10 +229,10 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
 				setCameraViewConfiguration((CameraViewConfiguration)null);
 				return;
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
 				getOverlays().clear();
 				return;
 		}
@@ -248,9 +248,9 @@ public class CameraOverlayListImpl extends MinimalEObjectImpl.Container implemen
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__CAMERA_VIEW_CONFIGURATION:
 				return basicGetCameraViewConfiguration() != null;
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY_LIST__OVERLAYS:
 				return overlays != null && !overlays.isEmpty();
 		}
 		return super.eIsSet(featureID);

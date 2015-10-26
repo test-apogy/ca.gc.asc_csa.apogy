@@ -19,7 +19,7 @@ import org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection;
 import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
@@ -29,8 +29,6 @@ import org.eclipse.symphony.common.images.ImagesCoreFactory;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Imaging Utilities</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -62,7 +60,7 @@ public class ImagingUtilitiesImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MRTSensorsImagingPackage.Literals.IMAGING_UTILITIES;
+		return Symphony__AddonsSensorsImagingPackage.Literals.IMAGING_UTILITIES;
 	}
 
 	/**
@@ -359,11 +357,11 @@ public class ImagingUtilitiesImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MRTSensorsImagingPackage.IMAGING_UTILITIES___LINEAR_CONVERT_TO_HORIZONTAL_ANGLE__IMAGESNAPSHOT_INT:
+			case Symphony__AddonsSensorsImagingPackage.IMAGING_UTILITIES___LINEAR_CONVERT_TO_HORIZONTAL_ANGLE__IMAGESNAPSHOT_INT:
 				return linearConvertToHorizontalAngle((ImageSnapshot)arguments.get(0), (Integer)arguments.get(1));
-			case MRTSensorsImagingPackage.IMAGING_UTILITIES___LINEAR_CONVERT_TO_VERTICAL_ANGLE__IMAGESNAPSHOT_INT:
+			case Symphony__AddonsSensorsImagingPackage.IMAGING_UTILITIES___LINEAR_CONVERT_TO_VERTICAL_ANGLE__IMAGESNAPSHOT_INT:
 				return linearConvertToVerticalAngle((ImageSnapshot)arguments.get(0), (Integer)arguments.get(1));
-			case MRTSensorsImagingPackage.IMAGING_UTILITIES___GET_AZIMUTH_ELEVATION_OVERLAY__INT_INT_DOUBLE_DOUBLE_DOUBLE_DOUBLE_AZIMUTHDIRECTION_ELEVATIONDIRECTION_INT_STRING_INT_COLOR_COLOR_INT:
+			case Symphony__AddonsSensorsImagingPackage.IMAGING_UTILITIES___GET_AZIMUTH_ELEVATION_OVERLAY__INT_INT_DOUBLE_DOUBLE_DOUBLE_DOUBLE_AZIMUTHDIRECTION_ELEVATIONDIRECTION_INT_STRING_INT_COLOR_COLOR_INT:
 				return getAzimuthElevationOverlay((Integer)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4), (Double)arguments.get(5), (AzimuthDirection)arguments.get(6), (ElevationDirection)arguments.get(7), (Integer)arguments.get(8), (String)arguments.get(9), (Integer)arguments.get(10), (Color)arguments.get(11), (Color)arguments.get(12), (Integer)arguments.get(13));
 		}
 		return super.eInvoke(operationID, arguments);

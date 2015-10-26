@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
@@ -27,10 +27,10 @@ import org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindin
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterBindingImpl#getThruster <em>Thruster</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,7 +64,7 @@ public class ThrusterBindingImpl extends AbstractTopologyBindingImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.THRUSTER_BINDING;
+		return Symphony__AddonsVehiclePackage.Literals.THRUSTER_BINDING;
 	}
 
   /**
@@ -79,7 +79,7 @@ public class ThrusterBindingImpl extends AbstractTopologyBindingImpl implements 
 			thruster = (Thruster)eResolveProxy(oldThruster);
 			if (thruster != oldThruster) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsVehiclePackage.THRUSTER_BINDING__THRUSTER, oldThruster, thruster));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.THRUSTER_BINDING__THRUSTER, oldThruster, thruster));
 			}
 		}
 		return thruster;
@@ -105,7 +105,7 @@ public class ThrusterBindingImpl extends AbstractTopologyBindingImpl implements 
 		Thruster oldThruster = thruster;
 		thruster = newThruster;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.THRUSTER_BINDING__THRUSTER, oldThruster, thruster));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.THRUSTER_BINDING__THRUSTER, oldThruster, thruster));
 	}
 
   /**
@@ -117,7 +117,7 @@ public class ThrusterBindingImpl extends AbstractTopologyBindingImpl implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.THRUSTER_BINDING__THRUSTER:
+			case Symphony__AddonsVehiclePackage.THRUSTER_BINDING__THRUSTER:
 				if (resolve) return getThruster();
 				return basicGetThruster();
 		}
@@ -133,7 +133,7 @@ public class ThrusterBindingImpl extends AbstractTopologyBindingImpl implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.THRUSTER_BINDING__THRUSTER:
+			case Symphony__AddonsVehiclePackage.THRUSTER_BINDING__THRUSTER:
 				setThruster((Thruster)newValue);
 				return;
 		}
@@ -149,7 +149,7 @@ public class ThrusterBindingImpl extends AbstractTopologyBindingImpl implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.THRUSTER_BINDING__THRUSTER:
+			case Symphony__AddonsVehiclePackage.THRUSTER_BINDING__THRUSTER:
 				setThruster((Thruster)null);
 				return;
 		}
@@ -165,7 +165,7 @@ public class ThrusterBindingImpl extends AbstractTopologyBindingImpl implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.THRUSTER_BINDING__THRUSTER:
+			case Symphony__AddonsVehiclePackage.THRUSTER_BINDING__THRUSTER:
 				return thruster != null;
 		}
 		return super.eIsSet(featureID);
@@ -225,23 +225,23 @@ public class ThrusterBindingImpl extends AbstractTopologyBindingImpl implements 
 					  int featureId = notification.getFeatureID(Thruster.class);
 					  switch (featureId) 
 					  {
-					  	case SymphonyToolsVehiclePackage.THRUSTER__PLUME_ANGLE:
+					  	case Symphony__AddonsVehiclePackage.THRUSTER__PLUME_ANGLE:
 					  			getThruster().setPlumeAngle(notification.getNewDoubleValue());						
 						break;
 						
-					  	case SymphonyToolsVehiclePackage.THRUSTER__CURRENT_THRUST:
+					  	case Symphony__AddonsVehiclePackage.THRUSTER__CURRENT_THRUST:
 					  		getThruster().setCurrentThrust(notification.getNewDoubleValue());
 					  	break;
 					  	
-					  	case SymphonyToolsVehiclePackage.THRUSTER__MINIMUM_THRUST:
+					  	case Symphony__AddonsVehiclePackage.THRUSTER__MINIMUM_THRUST:
 					  		getThruster().setMinimumThrust(notification.getNewDoubleValue());
 					  	break;
 
-					  	case SymphonyToolsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
+					  	case Symphony__AddonsVehiclePackage.THRUSTER__MAXIMUM_THRUST:
 					  		getThruster().setMaximumThrust(notification.getNewDoubleValue());
 					  	break;
 
-					  	case SymphonyToolsVehiclePackage.THRUSTER__THRUST_LEVEL:
+					  	case Symphony__AddonsVehiclePackage.THRUSTER__THRUST_LEVEL:
 					  		getThruster().setThrustLevel(notification.getNewDoubleValue());
 					  	break;
 					  	

@@ -16,10 +16,10 @@ import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.CenteredLinearInputConditioningImpl#getDeadBand <em>Dead Band</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

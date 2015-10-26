@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.Referenceable#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.SensorsPackage#getReferenceable()
+ * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#getReferenceable()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface Referenceable extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reference Frame</em>' reference.
 	 * @see #setReferenceFrame(Node)
-	 * @see org.eclipse.symphony.addons.sensors.SensorsPackage#getReferenceable_ReferenceFrame()
+	 * @see org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage#getReferenceable_ReferenceFrame()
 	 * @model
 	 * @generated
 	 */

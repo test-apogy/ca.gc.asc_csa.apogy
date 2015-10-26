@@ -18,10 +18,10 @@ import org.eclipse.symphony.core.invocator.TypeMemberReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.TypeMemberReferenceImpl#getTypeMember <em>Type Member</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

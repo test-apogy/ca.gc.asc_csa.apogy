@@ -11,7 +11,7 @@ import org.eclipse.symphony.addons.sensors.Sensor;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSelfPlaceSensor()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSelfPlaceSensor()
  * @model
  * @generated
  */

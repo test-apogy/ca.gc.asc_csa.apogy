@@ -13,7 +13,7 @@ import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getToolTipTextProvider()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getToolTipTextProvider()
  * @model
  * @generated
  */

@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.sensors.fov.ui;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage#getConicalFieldOfViewPresentation()
+ * @see org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage#getConicalFieldOfViewPresentation()
  * @model
  * @generated
  */

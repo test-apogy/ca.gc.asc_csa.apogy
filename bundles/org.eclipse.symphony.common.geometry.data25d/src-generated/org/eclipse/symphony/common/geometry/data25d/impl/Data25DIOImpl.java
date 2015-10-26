@@ -25,8 +25,6 @@ import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Data25 DIO</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

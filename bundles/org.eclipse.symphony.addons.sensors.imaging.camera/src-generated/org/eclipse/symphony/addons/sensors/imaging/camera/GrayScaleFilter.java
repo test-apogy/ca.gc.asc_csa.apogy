@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getGrayScaleFilter()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getGrayScaleFilter()
  * @model
  * @generated
  */

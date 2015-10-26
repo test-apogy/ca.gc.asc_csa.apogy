@@ -11,15 +11,15 @@ package org.eclipse.symphony.addons.sensors.pose;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor#getUpdatePeriod <em>Update Period</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedOrientationSensor()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface SimulatedOrientationSensor extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XAngular Velocity</em>' attribute.
 	 * @see #setXAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedOrientationSensor_XAngularVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor_XAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface SimulatedOrientationSensor extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YAngular Velocity</em>' attribute.
 	 * @see #setYAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedOrientationSensor_YAngularVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor_YAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface SimulatedOrientationSensor extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZAngular Velocity</em>' attribute.
 	 * @see #setZAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedOrientationSensor_ZAngularVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor_ZAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -113,7 +113,7 @@ public interface SimulatedOrientationSensor extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(double)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getSimulatedOrientationSensor_UpdatePeriod()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getSimulatedOrientationSensor_UpdatePeriod()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

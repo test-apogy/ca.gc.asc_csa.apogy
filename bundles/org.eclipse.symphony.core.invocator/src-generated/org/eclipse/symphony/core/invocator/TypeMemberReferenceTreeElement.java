@@ -13,6 +13,7 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getChild <em>Child</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent <em>Parent</em>}</li>
@@ -21,7 +22,6 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getRootElement <em>Root Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isLeaf <em>Leaf</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement()
  * @model

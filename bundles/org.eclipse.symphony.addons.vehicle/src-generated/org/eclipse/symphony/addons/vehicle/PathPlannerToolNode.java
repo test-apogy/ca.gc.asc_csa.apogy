@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerToolNode#getPathPlannerTool <em>Path Planner Tool</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerToolNode()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerToolNode()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface PathPlannerToolNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path Planner Tool</em>' reference.
 	 * @see #setPathPlannerTool(PathPlannerTool)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerToolNode_PathPlannerTool()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerToolNode_PathPlannerTool()
 	 * @see org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPathPlannerToolNode
 	 * @model opposite="pathPlannerToolNode" transient="true"
 	 * @generated

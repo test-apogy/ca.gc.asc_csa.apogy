@@ -22,11 +22,11 @@ import org.eclipse.symphony.core.SymphonyEnvironment;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.impl.Simple3DToolImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Simple3DToolImpl#getRootNode <em>Root Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

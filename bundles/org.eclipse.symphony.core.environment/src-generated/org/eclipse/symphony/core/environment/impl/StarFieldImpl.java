@@ -36,11 +36,11 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.StarFieldImpl#getStars <em>Stars</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.StarFieldImpl#getStarFieldFileName <em>Star Field File Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

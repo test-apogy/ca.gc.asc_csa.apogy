@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
@@ -149,7 +149,7 @@ public class LanderSphericalFootJME3Object extends DefaultJME3SceneObject<Lander
 					
 						switch (featureId) 
 						{
-							case SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:							
+							case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:							
 								updateGeometry();
 							break;
 

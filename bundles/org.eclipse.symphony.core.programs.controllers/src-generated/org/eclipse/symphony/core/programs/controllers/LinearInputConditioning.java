@@ -11,11 +11,11 @@ package org.eclipse.symphony.core.programs.controllers;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning#getMinimum <em>Minimum</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning#getMaximum <em>Maximum</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getLinearInputConditioning()
  * @model

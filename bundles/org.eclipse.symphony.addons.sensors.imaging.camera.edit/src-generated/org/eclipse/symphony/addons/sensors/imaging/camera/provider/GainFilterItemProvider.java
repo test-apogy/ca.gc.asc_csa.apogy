@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.GainFilter} object.
@@ -68,7 +68,7 @@ public class GainFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GainFilter_gain_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GainFilter_gain_feature", "_UI_GainFilter_type"),
-				 SymphonyCameraToolsPackage.Literals.GAIN_FILTER__GAIN,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.GAIN_FILTER__GAIN,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class GainFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GainFilter_bias_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GainFilter_bias_feature", "_UI_GainFilter_type"),
-				 SymphonyCameraToolsPackage.Literals.GAIN_FILTER__BIAS,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.GAIN_FILTER__BIAS,
 				 true,
 				 false,
 				 false,
@@ -137,8 +137,8 @@ public class GainFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GainFilter.class)) {
-			case SymphonyCameraToolsPackage.GAIN_FILTER__GAIN:
-			case SymphonyCameraToolsPackage.GAIN_FILTER__BIAS:
+			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__GAIN:
+			case Symphony__AddonsSensorsImagingCameraPackage.GAIN_FILTER__BIAS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

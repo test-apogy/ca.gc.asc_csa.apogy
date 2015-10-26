@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
 
 /**
@@ -22,10 +22,10 @@ import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationListImpl#getCameraViewConfigurations <em>Camera View Configurations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,7 +59,7 @@ public class CameraViewConfigurationListImpl extends AbstractToolsListContainerI
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION_LIST;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class CameraViewConfigurationListImpl extends AbstractToolsListContainerI
   public EList<CameraViewConfiguration> getCameraViewConfigurations()
   {
 		if (cameraViewConfigurations == null) {
-			cameraViewConfigurations = new EObjectContainmentWithInverseEList<CameraViewConfiguration>(CameraViewConfiguration.class, this, SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS, SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST);
+			cameraViewConfigurations = new EObjectContainmentWithInverseEList<CameraViewConfiguration>(CameraViewConfiguration.class, this, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS, Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST);
 		}
 		return cameraViewConfigurations;
 	}
@@ -84,7 +84,7 @@ public class CameraViewConfigurationListImpl extends AbstractToolsListContainerI
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCameraViewConfigurations()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class CameraViewConfigurationListImpl extends AbstractToolsListContainerI
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
 				return ((InternalEList<?>)getCameraViewConfigurations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -114,7 +114,7 @@ public class CameraViewConfigurationListImpl extends AbstractToolsListContainerI
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
 				return getCameraViewConfigurations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class CameraViewConfigurationListImpl extends AbstractToolsListContainerI
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
 				getCameraViewConfigurations().clear();
 				getCameraViewConfigurations().addAll((Collection<? extends CameraViewConfiguration>)newValue);
 				return;
@@ -147,7 +147,7 @@ public class CameraViewConfigurationListImpl extends AbstractToolsListContainerI
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
 				getCameraViewConfigurations().clear();
 				return;
 		}
@@ -163,7 +163,7 @@ public class CameraViewConfigurationListImpl extends AbstractToolsListContainerI
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
 				return cameraViewConfigurations != null && !cameraViewConfigurations.isEmpty();
 		}
 		return super.eIsSet(featureID);

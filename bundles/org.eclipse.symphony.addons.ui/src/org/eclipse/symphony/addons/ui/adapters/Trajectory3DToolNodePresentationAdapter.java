@@ -1,7 +1,7 @@
 package org.eclipse.symphony.addons.ui.adapters;
 
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.addons.ui.SymphonyToolsUIFactory;
+import org.eclipse.symphony.addons.ui.Symphony__AddonsUIFactory;
 import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
@@ -34,7 +34,7 @@ public class Trajectory3DToolNodePresentationAdapter implements NodePresentation
 		}
 
 		Trajectory3DToolNode trajectory3DToolNode = (Trajectory3DToolNode) obj;		
-		Trajectory3DToolNodePresentation presentationNode = SymphonyToolsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation();
+		Trajectory3DToolNodePresentation presentationNode = Symphony__AddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation();
 		presentationNode.setNode(trajectory3DToolNode);			
 						
 		return presentationNode;

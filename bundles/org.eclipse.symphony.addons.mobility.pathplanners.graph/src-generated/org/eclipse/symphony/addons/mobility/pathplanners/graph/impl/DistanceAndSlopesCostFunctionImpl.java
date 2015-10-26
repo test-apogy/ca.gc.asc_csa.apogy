@@ -21,6 +21,7 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getUpSlopeCostFactor <em>Up Slope Cost Factor</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getDownSlopeCostFactor <em>Down Slope Cost Factor</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getMaximumUpSlope <em>Maximum Up Slope</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.DistanceAndSlopesCostFunctionImpl#getMaximumDownSlope <em>Maximum Down Slope</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -18,11 +18,11 @@ import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPack
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CapsuleGeometryImpl#getRadius <em>Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.CapsuleGeometryImpl#getLength <em>Length</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

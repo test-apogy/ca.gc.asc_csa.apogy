@@ -12,12 +12,12 @@ import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleSonar#isEchoDetected <em>Echo Detected</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleSonar()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleSonar()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface SimpleSonar extends SimpleRangeSensor {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Echo Detected</em>' attribute.
 	 * @see #setEchoDetected(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleSonar_EchoDetected()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleSonar_EchoDetected()
 	 * @model unique="false"
 	 * @generated
 	 */

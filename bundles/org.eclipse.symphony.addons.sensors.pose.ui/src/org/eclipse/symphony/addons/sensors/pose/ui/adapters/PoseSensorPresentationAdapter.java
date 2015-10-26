@@ -2,7 +2,7 @@ package org.eclipse.symphony.addons.sensors.pose.ui.adapters;
 
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIFactory;
+import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIFactory;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 import org.eclipse.symphony.common.topology.Node;
@@ -39,7 +39,7 @@ public class PoseSensorPresentationAdapter implements NodePresentationAdapter
 
 		PoseSensor poseSensor = (PoseSensor) obj;
 		
-		PoseSensorPresentation presentationNode = SensorsPoseUIFactory.eINSTANCE.createPoseSensorPresentation();
+		PoseSensorPresentation presentationNode = Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPoseSensorPresentation();
 		presentationNode.setNode(poseSensor);			
 						
 		return presentationNode;

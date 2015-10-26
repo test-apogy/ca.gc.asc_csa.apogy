@@ -12,13 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable#getCurrentZoom <em>Current Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable#getCommandedZoom <em>Commanded Zoom</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getZoomable()
+ * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getZoomable()
  * @model abstract="true"
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Zoomable extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Zoom</em>' attribute.
 	 * @see #setCurrentZoom(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getZoomable_CurrentZoom()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getZoomable_CurrentZoom()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ZOOMABLE_PROPERTIES'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface Zoomable extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Commanded Zoom</em>' attribute.
 	 * @see #setCommandedZoom(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getZoomable_CommandedZoom()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getZoomable_CommandedZoom()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ZOOMABLE_PROPERTIES'"
 	 * @generated

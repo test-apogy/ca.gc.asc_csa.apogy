@@ -23,11 +23,11 @@ import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.NormalPointCloudImpl#getPoints <em>Points</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.NormalPointCloudImpl#getNormals <em>Normals</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

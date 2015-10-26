@@ -18,12 +18,12 @@ import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding#getFov <em>Fov</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage#getConicalFieldOfViewBinding()
+ * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage#getConicalFieldOfViewBinding()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface ConicalFieldOfViewBinding extends AbstractTopologyBinding
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fov</em>' reference.
 	 * @see #setFov(ConicalFieldOfView)
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage#getConicalFieldOfViewBinding_Fov()
+	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage#getConicalFieldOfViewBinding_Fov()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */

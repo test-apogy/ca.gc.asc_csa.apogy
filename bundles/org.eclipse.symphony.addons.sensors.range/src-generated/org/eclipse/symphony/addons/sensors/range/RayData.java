@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RayData#getOrigin <em>Origin</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.RayData#getDirection <em>Direction</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRayData()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRayData()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface RayData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Origin</em>' attribute.
 	 * @see #setOrigin(Point3d)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRayData_Origin()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRayData_Origin()
 	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.range.Point3d"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface RayData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction</em>' attribute.
 	 * @see #setDirection(Vector3d)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRayData_Direction()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRayData_Direction()
 	 * @model unique="false" dataType="org.eclipse.symphony.addons.sensors.range.Vector3d"
 	 * @generated
 	 */

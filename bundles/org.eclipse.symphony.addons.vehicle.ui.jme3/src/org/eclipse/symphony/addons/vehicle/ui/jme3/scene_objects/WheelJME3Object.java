@@ -8,7 +8,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
@@ -148,8 +148,8 @@ public class WheelJME3Object extends DefaultJME3SceneObject<Wheel>
 					
 						switch (featureId) 
 						{
-							case SymphonyToolsVehiclePackage.WHEEL__LENGHT:
-							case SymphonyToolsVehiclePackage.WHEEL__RADIUS:
+							case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
+							case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 								updateGeometry();
 							break;
 

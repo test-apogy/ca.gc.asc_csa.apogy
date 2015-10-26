@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.pose.CSVDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 
 import com.csvreader.CsvWriter;
@@ -18,8 +18,6 @@ import com.csvreader.CsvWriter;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>CSV Data Logger</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -40,7 +38,7 @@ public class CSVDataLoggerImpl extends PoseDataLoggerImpl implements CSVDataLogg
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PosePackage.Literals.CSV_DATA_LOGGER;
+		return Symphony__AddonsSensorsPosePackage.Literals.CSV_DATA_LOGGER;
 	}
 
 	/**
@@ -53,7 +51,7 @@ public class CSVDataLoggerImpl extends PoseDataLoggerImpl implements CSVDataLogg
 		outputFile = newOutputFile;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					PosePackage.CSV_DATA_LOGGER__OUTPUT_FILE, oldOutputFile,
+					Symphony__AddonsSensorsPosePackage.CSV_DATA_LOGGER__OUTPUT_FILE, oldOutputFile,
 					outputFile));
 
 		if (csvWriter != null) {

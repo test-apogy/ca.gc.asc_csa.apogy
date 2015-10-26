@@ -13,11 +13,11 @@ import org.eclipse.symphony.common.processors.Processor;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler#getPolygonSamplingShapes <em>Polygon Sampling Shapes</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data.MeshPolygonShapesSampler#getShapeSamplingMode <em>Shape Sampling Mode</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data.DataPackage#getMeshPolygonShapesSampler()
  * @model abstract="true"

@@ -15,13 +15,13 @@ package org.eclipse.symphony.addons.telecoms;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern#getVerticalFieldOfView <em>Vertical Field Of View</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getSimpleRectangularFrustumRadiationPattern()
+ * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface SimpleRectangularFrustumRadiationPattern extends AbstractAntenn
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Horizontal Field Of View</em>' attribute.
 	 * @see #setHorizontalFieldOfView(double)
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getSimpleRectangularFrustumRadiationPattern_HorizontalFieldOfView()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern_HorizontalFieldOfView()
 	 * @model default="0.79" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -71,7 +71,7 @@ public interface SimpleRectangularFrustumRadiationPattern extends AbstractAntenn
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vertical Field Of View</em>' attribute.
 	 * @see #setVerticalFieldOfView(double)
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView()
 	 * @model default="1.57" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated

@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarFactory;
 import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
@@ -96,7 +96,7 @@ public class EMFEcoreExampleLidarPackageImpl extends EPackageImpl implements EMF
 		isInited = true;
 
 		// Initialize simple dependencies
-		FovPackage.eINSTANCE.eClass();
+		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleLidarPackage.createPackageContents();
@@ -257,7 +257,7 @@ public class EMFEcoreExampleLidarPackageImpl extends EPackageImpl implements EMF
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		FovPackage theFovPackage = (FovPackage)EPackage.Registry.INSTANCE.getEPackage(FovPackage.eNS_URI);
+		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
 
@@ -271,7 +271,7 @@ public class EMFEcoreExampleLidarPackageImpl extends EPackageImpl implements EMF
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(lidarEClass, Lidar.class, "Lidar", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLidar_Fov(), theFovPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, Lidar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLidar_Fov(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, Lidar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLidar_Initialized(), theEcorePackage.getEBoolean(), "initialized", "false", 0, 1, Lidar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getLidar__Init(), theEcorePackage.getEBoolean(), "init", 0, 1, !IS_UNIQUE, IS_ORDERED);

@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.topology.impl.NodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,7 +65,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyTelecomToolsPackage.Literals.ABSTRACT_ANTENNA_RADIATION_PATTERN;
+		return Symphony__AddonsTelecomsPackage.Literals.ABSTRACT_ANTENNA_RADIATION_PATTERN;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME, oldName, name));
 	}
 
 	/**
@@ -108,7 +108,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
+			case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -122,7 +122,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
+			case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -137,7 +137,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
+			case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -152,7 +152,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
+			case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -167,7 +167,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME: return EMFEcorePackage.NAMED__NAME;
+				case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME: return EMFEcorePackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -183,7 +183,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME;
+				case EMFEcorePackage.NAMED__NAME: return Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN__NAME;
 				default: return -1;
 			}
 		}
@@ -198,7 +198,7 @@ public abstract class AbstractAntennaRadiationPatternImpl extends NodeImpl imple
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyTelecomToolsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN___COMPUTE_GAIN__DOUBLE_DOUBLE:
+			case Symphony__AddonsTelecomsPackage.ABSTRACT_ANTENNA_RADIATION_PATTERN___COMPUTE_GAIN__DOUBLE_DOUBLE:
 				return computeGain((Double)arguments.get(0), (Double)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

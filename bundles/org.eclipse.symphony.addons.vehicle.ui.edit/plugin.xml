@@ -11,7 +11,7 @@
       <!-- @generated symphony_tools_vehicle_ui -->
       <factory
             uri="org.eclipse.symphony.addons.vehicle.ui"
-            class="org.eclipse.symphony.addons.vehicle.ui.provider.SymphonyToolsVehicleUIItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.vehicle.ui.provider.Symphony__AddonsVehicleUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,23 +21,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_vehicle_ui -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.vehicle.ui.provider.SymphonyToolsVehicleUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.vehicle.ui.provider.SymphonyToolsVehicleUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_vehicle_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.vehicle.ui.provider.SymphonyToolsVehicleUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.vehicle.ui.provider.Symphony__AddonsVehicleUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.vehicle.ui.provider.SymphonyToolsVehicleUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.vehicle.ui.provider.Symphony__AddonsVehicleUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

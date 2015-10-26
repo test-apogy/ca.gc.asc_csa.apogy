@@ -11,14 +11,14 @@ package org.eclipse.symphony.addons.sensors.motion;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getXAcceleration <em>XAcceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getYAcceleration <em>YAcceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.LinearAccelerationSensor#getZAcceleration <em>ZAcceleration</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearAccelerationSensor()
+ * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearAccelerationSensor()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface LinearAccelerationSensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XAcceleration</em>' attribute.
 	 * @see #setXAcceleration(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearAccelerationSensor_XAcceleration()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearAccelerationSensor_XAcceleration()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface LinearAccelerationSensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YAcceleration</em>' attribute.
 	 * @see #setYAcceleration(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearAccelerationSensor_YAcceleration()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearAccelerationSensor_YAcceleration()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface LinearAccelerationSensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZAcceleration</em>' attribute.
 	 * @see #setZAcceleration(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getLinearAccelerationSensor_ZAcceleration()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getLinearAccelerationSensor_ZAcceleration()
 	 * @model unique="false"
 	 * @generated
 	 */

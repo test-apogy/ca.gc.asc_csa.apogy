@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.vehicle;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getLanderSphericalFootContactProvider()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getLanderSphericalFootContactProvider()
  * @model
  * @generated
  */

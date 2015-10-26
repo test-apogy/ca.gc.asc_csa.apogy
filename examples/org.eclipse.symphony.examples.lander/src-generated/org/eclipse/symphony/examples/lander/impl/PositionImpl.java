@@ -18,13 +18,13 @@ import org.eclipse.symphony.examples.lander.Position;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lander.impl.PositionImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.impl.PositionImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.impl.PositionImpl#getZ <em>Z</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.impl.PositionImpl#getAttitude <em>Attitude</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

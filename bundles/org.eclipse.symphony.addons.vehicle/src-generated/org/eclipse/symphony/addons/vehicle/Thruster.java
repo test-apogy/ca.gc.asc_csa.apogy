@@ -17,6 +17,7 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getMinimumThrust <em>Minimum Thrust</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getMaximumThrust <em>Maximum Thrust</em>}</li>
@@ -24,9 +25,8 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getThrustLevel <em>Thrust Level</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Thruster#getPlumeAngle <em>Plume Angle</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThruster()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minimum Thrust</em>' attribute.
 	 * @see #setMinimumThrust(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThruster_MinimumThrust()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_MinimumThrust()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
@@ -71,7 +71,7 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Thrust</em>' attribute.
 	 * @see #setMaximumThrust(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThruster_MaximumThrust()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_MaximumThrust()
 	 * @model default="100" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
@@ -98,7 +98,7 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Thrust</em>' attribute.
 	 * @see #setCurrentThrust(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThruster_CurrentThrust()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_CurrentThrust()
 	 * @model unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
@@ -125,7 +125,7 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Plume Angle</em>' attribute.
 	 * @see #setPlumeAngle(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThruster_PlumeAngle()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_PlumeAngle()
 	 * @model default="0.5" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -153,7 +153,7 @@ public interface Thruster extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Thrust Level</em>' attribute.
 	 * @see #setThrustLevel(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getThruster_ThrustLevel()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_ThrustLevel()
 	 * @model default="0.0" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='THRUST_INFO'"
 	 * @generated

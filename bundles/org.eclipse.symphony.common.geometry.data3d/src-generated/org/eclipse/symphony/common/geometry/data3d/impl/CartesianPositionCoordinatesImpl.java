@@ -22,12 +22,12 @@ import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
  * <em><b>Cartesian Position Coordinates</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl#getZ <em>Z</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

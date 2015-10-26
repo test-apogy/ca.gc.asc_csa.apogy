@@ -22,12 +22,12 @@ import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinate
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.SpacecraftAttitudeImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.SpacecraftAttitudeImpl#getOrientation <em>Orientation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.SpacecraftAttitudeImpl#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

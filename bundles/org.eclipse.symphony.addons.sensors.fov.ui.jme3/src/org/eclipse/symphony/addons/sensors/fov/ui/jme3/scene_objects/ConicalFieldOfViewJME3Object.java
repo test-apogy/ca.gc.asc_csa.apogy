@@ -14,7 +14,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.Activator;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.AbstractFieldOfViewImageProjectorControl;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.utils.ConicalFieldOfViewImageProjectorControl;
@@ -348,7 +348,7 @@ public class ConicalFieldOfViewJME3Object extends AbstractFieldOfViewJME3Object<
 							
 							switch (featureId) 
 							{
-								case FovPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
+								case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
 									updateGeometry();
 									
 									// Updates the FOV Settings of the projector.
@@ -356,7 +356,7 @@ public class ConicalFieldOfViewJME3Object extends AbstractFieldOfViewJME3Object<
 									
 								break;
 
-								case FovPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+								case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 									
 									if(notification.getOldValue() instanceof DistanceRange)
 									{
@@ -385,8 +385,8 @@ public class ConicalFieldOfViewJME3Object extends AbstractFieldOfViewJME3Object<
 							
 							switch (featureId) 
 							{
-								case FovPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
-								case FovPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
+								case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
+								case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
 									
 									// Updates the geometry.
 									updateGeometry();

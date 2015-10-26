@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.range.LineRangeScanner;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
@@ -70,7 +70,7 @@ public class LineRangeScannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LineRangeScanner_angularResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LineRangeScanner_angularResolution_feature", "_UI_LineRangeScanner_type"),
-				 RangePackage.Literals.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION,
+				 Symphony__AddonsSensorsRangePackage.Literals.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class LineRangeScannerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LineRangeScanner.class)) {
-			case RangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
+			case Symphony__AddonsSensorsRangePackage.LINE_RANGE_SCANNER__ANGULAR_RESOLUTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

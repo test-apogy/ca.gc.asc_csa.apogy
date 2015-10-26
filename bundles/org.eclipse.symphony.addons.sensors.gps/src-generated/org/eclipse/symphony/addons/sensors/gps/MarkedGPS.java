@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.MarkedGPS#getMarker <em>Marker</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getMarkedGPS()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getMarkedGPS()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface MarkedGPS extends GPS {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Marker</em>' containment reference.
 	 * @see #setMarker(PositionMarker)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getMarkedGPS_Marker()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getMarkedGPS_Marker()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -1,4 +1,10 @@
-@GenModel(prefix="RangeSensorsUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="RangeSensorsUI", complianceLevel="6.0")
+@GenModel(prefix="Symphony__AddonsSensorsRangeUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__AddonsSensorsRangeUI",
+		  complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.range.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.range.ui.edit/src-generated")
 

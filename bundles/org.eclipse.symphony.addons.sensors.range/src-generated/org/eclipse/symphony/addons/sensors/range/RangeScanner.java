@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.processors.Processor;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeScanner()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeScanner()
  * @model
  * @generated
  */

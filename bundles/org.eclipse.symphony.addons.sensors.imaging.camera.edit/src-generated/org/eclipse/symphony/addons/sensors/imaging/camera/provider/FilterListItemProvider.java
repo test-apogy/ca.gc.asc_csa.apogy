@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.FilterList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList} object.
@@ -79,7 +79,7 @@ public class FilterListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.FILTER_LIST__IMAGE_FILTERS);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class FilterListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FilterList.class)) {
-			case SymphonyCameraToolsPackage.FILTER_LIST__IMAGE_FILTERS:
+			case Symphony__AddonsSensorsImagingCameraPackage.FILTER_LIST__IMAGE_FILTERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,38 +156,38 @@ public class FilterListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createGrayScaleFilter()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGrayScaleFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createEdgeFilter()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createEdgeFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createContrastAndBrightnessFilter()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createContrastAndBrightnessFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createExposureFilter()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createExposureFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createGainFilter()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createGainFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createInvertFilter()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createInvertFilter()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createRescaleFilter()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.FILTER_LIST__IMAGE_FILTERS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createRescaleFilter()));
 	}
 
   /**

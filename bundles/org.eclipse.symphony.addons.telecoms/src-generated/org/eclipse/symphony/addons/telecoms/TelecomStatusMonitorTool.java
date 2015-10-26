@@ -18,15 +18,15 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getTelecomNodes <em>Telecom Nodes</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList <em>Status Monitor Tool List</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isRunning <em>Running</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#isDisposed <em>Disposed</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomStatusMonitorTool()
+ * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool()
  * @model
  * @generated
  */
@@ -46,7 +46,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 	 * associated with this status monitor tool
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Telecom Nodes</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomStatusMonitorTool_TelecomNodes()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool_TelecomNodes()
 	 * @see org.eclipse.symphony.addons.telecoms.TelecomNode#getStatusMonitorTool
 	 * @model opposite="statusMonitorTool" containment="true"
 	 * @generated
@@ -63,7 +63,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Status Monitor Tool List</em>' container reference.
 	 * @see #setStatusMonitorToolList(TelecomStatusMonitorToolList)
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomStatusMonitorTool_StatusMonitorToolList()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool_StatusMonitorToolList()
 	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors
 	 * @model opposite="telecomStatusMonitors" transient="false"
 	 * @generated
@@ -94,7 +94,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Running</em>' attribute.
 	 * @see #setRunning(boolean)
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomStatusMonitorTool_Running()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool_Running()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' children='false'"
 	 * @generated
@@ -121,7 +121,7 @@ public interface TelecomStatusMonitorTool extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomStatusMonitorTool_Disposed()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorTool_Disposed()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' children='false'"
 	 * @generated

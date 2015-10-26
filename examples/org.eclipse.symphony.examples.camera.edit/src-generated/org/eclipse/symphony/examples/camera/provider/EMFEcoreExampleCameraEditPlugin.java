@@ -6,9 +6,9 @@ package org.eclipse.symphony.examples.camera.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.addons.actuators.provider.Symphony__AddonsActuatorsEditPlugin;
-import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
-import org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
-import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
+import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVEditPlugin;
+import org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingEditPlugin;
+import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
@@ -51,11 +51,11 @@ public final class EMFEcoreExampleCameraEditPlugin extends EMFPlugin
   {
 		super
 		  (new ResourceLocator [] {
-		     MRTSensorsImagingEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsImagingEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
 		     Symphony__AddonsActuatorsEditPlugin.INSTANCE,
 		     ImagesCoreEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,

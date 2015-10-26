@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.telecoms.SimpleRectangularFrustumRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,11 +15,11 @@ import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl#getHorizontalFieldOfView <em>Horizontal Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.SimpleRectangularFrustumRadiationPatternImpl#getVerticalFieldOfView <em>Vertical Field Of View</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,7 +83,7 @@ public class SimpleRectangularFrustumRadiationPatternImpl extends AbstractAntenn
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyTelecomToolsPackage.Literals.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN;
+		return Symphony__AddonsTelecomsPackage.Literals.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN;
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class SimpleRectangularFrustumRadiationPatternImpl extends AbstractAntenn
 		double oldHorizontalFieldOfView = horizontalFieldOfView;
 		horizontalFieldOfView = newHorizontalFieldOfView;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW, oldHorizontalFieldOfView, horizontalFieldOfView));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW, oldHorizontalFieldOfView, horizontalFieldOfView));
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class SimpleRectangularFrustumRadiationPatternImpl extends AbstractAntenn
 		double oldVerticalFieldOfView = verticalFieldOfView;
 		verticalFieldOfView = newVerticalFieldOfView;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW, oldVerticalFieldOfView, verticalFieldOfView));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW, oldVerticalFieldOfView, verticalFieldOfView));
 	}
 
 	/**
@@ -158,9 +158,9 @@ public class SimpleRectangularFrustumRadiationPatternImpl extends AbstractAntenn
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
 				return getHorizontalFieldOfView();
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
 				return getVerticalFieldOfView();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -174,10 +174,10 @@ public class SimpleRectangularFrustumRadiationPatternImpl extends AbstractAntenn
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
 				setHorizontalFieldOfView((Double)newValue);
 				return;
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
 				setVerticalFieldOfView((Double)newValue);
 				return;
 		}
@@ -192,10 +192,10 @@ public class SimpleRectangularFrustumRadiationPatternImpl extends AbstractAntenn
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
 				setHorizontalFieldOfView(HORIZONTAL_FIELD_OF_VIEW_EDEFAULT);
 				return;
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
 				setVerticalFieldOfView(VERTICAL_FIELD_OF_VIEW_EDEFAULT);
 				return;
 		}
@@ -210,9 +210,9 @@ public class SimpleRectangularFrustumRadiationPatternImpl extends AbstractAntenn
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__HORIZONTAL_FIELD_OF_VIEW:
 				return horizontalFieldOfView != HORIZONTAL_FIELD_OF_VIEW_EDEFAULT;
-			case SymphonyTelecomToolsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
+			case Symphony__AddonsTelecomsPackage.SIMPLE_RECTANGULAR_FRUSTUM_RADIATION_PATTERN__VERTICAL_FIELD_OF_VIEW:
 				return verticalFieldOfView != VERTICAL_FIELD_OF_VIEW_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

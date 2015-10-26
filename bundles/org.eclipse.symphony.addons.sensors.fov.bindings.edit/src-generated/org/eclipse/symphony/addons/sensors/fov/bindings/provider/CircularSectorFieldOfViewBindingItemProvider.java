@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
+import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.provider.AbstractTopologyBindingItemProvider;
 
 /**
@@ -66,7 +66,7 @@ public class CircularSectorFieldOfViewBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CircularSectorFieldOfViewBinding_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularSectorFieldOfViewBinding_fov_feature", "_UI_CircularSectorFieldOfViewBinding_type"),
-				 MRTFOVBindingsPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV,
+				 Symphony__AddonsSensorsFOVBindingsPackage.Literals.CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV,
 				 true,
 				 false,
 				 true,

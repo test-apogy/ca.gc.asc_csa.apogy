@@ -10,10 +10,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotSceneObject;
 import org.eclipse.symphony.addons.sensors.imaging.ui.jme3.Activator;
@@ -485,14 +485,14 @@ public class ImageSnapshotJME3Object extends DefaultJME3SceneObject<ImageSnapsho
 						
 						switch (featureId) 
 						{
-							case MRTSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT___GET_RECTIFIED_IMAGE:
+							case Symphony__AddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT___GET_RECTIFIED_IMAGE:
 								// Force image to be updated.
 								bufferedImage = null;
 								
 								updateGeometry();
 							break;
 							
-							case MRTSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+							case Symphony__AddonsSensorsImagingPackage.RECTIFIED_IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 								if(msg.getOldValue() instanceof RectangularFrustrumFieldOfView)
 								{
 									RectangularFrustrumFieldOfView oldValue = (RectangularFrustrumFieldOfView) msg.getOldValue();
@@ -518,14 +518,14 @@ public class ImageSnapshotJME3Object extends DefaultJME3SceneObject<ImageSnapsho
 						
 						switch (featureId) 
 						{
-							case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+							case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 								// Force image to be updated.
 								bufferedImage = null;
 								
 								updateGeometry();
 							break;
 
-							case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+							case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 								if(msg.getOldValue() instanceof RectangularFrustrumFieldOfView)
 								{
 									RectangularFrustrumFieldOfView oldValue = (RectangularFrustrumFieldOfView) msg.getOldValue();
@@ -550,7 +550,7 @@ public class ImageSnapshotJME3Object extends DefaultJME3SceneObject<ImageSnapsho
 						int featureId = msg.getFeatureID(RectangularFrustrumFieldOfView.class);
 						switch (featureId) 
 						{
-							case FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
+							case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE:
 								
 								if(msg.getOldValue() instanceof DistanceRange)
 								{
@@ -567,8 +567,8 @@ public class ImageSnapshotJME3Object extends DefaultJME3SceneObject<ImageSnapsho
 								updateGeometry();
 							break;
 
-							case FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
-							case FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
+							case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE:
+							case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE:
 								updateGeometry();
 							break;
 							

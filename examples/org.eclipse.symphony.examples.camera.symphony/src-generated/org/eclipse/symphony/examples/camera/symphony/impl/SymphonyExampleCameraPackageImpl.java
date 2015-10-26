@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.examples.camera.symphony.CameraData;
 import org.eclipse.symphony.examples.camera.symphony.CameraSymphonySystemApiAdapter;
@@ -99,8 +99,8 @@ public class SymphonyExampleCameraPackageImpl extends EPackageImpl implements Sy
 		isInited = true;
 
 		// Initialize simple dependencies
-		FovPackage.eINSTANCE.eClass();
 		SymphonyCorePackage.eINSTANCE.eClass();
+		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphonyExampleCameraPackage.createPackageContents();
@@ -273,7 +273,7 @@ public class SymphonyExampleCameraPackageImpl extends EPackageImpl implements Sy
 
 		// Obtain other dependent packages
 		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
-		FovPackage theFovPackage = (FovPackage)EPackage.Registry.INSTANCE.getEPackage(FovPackage.eNS_URI);
+		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -290,7 +290,7 @@ public class SymphonyExampleCameraPackageImpl extends EPackageImpl implements Sy
 		initEClass(cameraSymphonySystemApiAdapterEClass, CameraSymphonySystemApiAdapter.class, "CameraSymphonySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(cameraDataEClass, CameraData.class, "CameraData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCameraData_Fov(), theFovPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, CameraData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCameraData_Fov(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, CameraData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCameraData_Zoom(), theEcorePackage.getEDouble(), "zoom", null, 0, 1, CameraData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCameraData_Initialized(), theEcorePackage.getEBoolean(), "initialized", "false", 0, 1, CameraData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

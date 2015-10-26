@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.SensorsFactory;
-import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
 
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -69,7 +69,7 @@ public class SensorItemProvider extends AggregateGroupNodeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Sensor_status_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sensor_status_feature", "_UI_Sensor_type"),
-				 SensorsPackage.Literals.SENSOR__STATUS,
+				 Symphony__AddonsSensorsPackage.Literals.SENSOR__STATUS,
 				 true,
 				 false,
 				 false,
@@ -116,7 +116,7 @@ public class SensorItemProvider extends AggregateGroupNodeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Sensor.class)) {
-			case SensorsPackage.SENSOR__STATUS:
+			case Symphony__AddonsSensorsPackage.SENSOR__STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -137,12 +137,12 @@ public class SensorItemProvider extends AggregateGroupNodeItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
+				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
+				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
 	}
 
 	/**

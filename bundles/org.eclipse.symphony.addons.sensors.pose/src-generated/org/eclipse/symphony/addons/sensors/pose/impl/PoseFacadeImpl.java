@@ -12,14 +12,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.sensors.pose.CSVDataLogger;
 import org.eclipse.symphony.addons.sensors.pose.PoseFacade;
-import org.eclipse.symphony.addons.sensors.pose.PoseFactory;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFactory;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Facade</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -39,7 +37,7 @@ public class PoseFacadeImpl extends MinimalEObjectImpl.Container implements Pose
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PosePackage.Literals.POSE_FACADE;
+		return Symphony__AddonsSensorsPosePackage.Literals.POSE_FACADE;
 	}
 
 	/**
@@ -48,7 +46,7 @@ public class PoseFacadeImpl extends MinimalEObjectImpl.Container implements Pose
 	 * @generated_NOT
 	 */
 	public CSVDataLogger createCSVDataLogger(String fileName) {
-		CSVDataLogger logger = PoseFactory.eINSTANCE.createCSVDataLogger();
+		CSVDataLogger logger = Symphony__AddonsSensorsPoseFactory.eINSTANCE.createCSVDataLogger();
 		logger.setOutputFile(fileName);
 
 		return logger;
@@ -62,7 +60,7 @@ public class PoseFacadeImpl extends MinimalEObjectImpl.Container implements Pose
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PosePackage.POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING:
+			case Symphony__AddonsSensorsPosePackage.POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING:
 				return createCSVDataLogger((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

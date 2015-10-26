@@ -13,11 +13,11 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ConnectionPoint#getPointsList <em>Points List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ConnectionPoint#getNode <em>Node</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getConnectionPoint()
  * @model

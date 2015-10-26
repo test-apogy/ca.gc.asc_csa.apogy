@@ -14,10 +14,10 @@ import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction#getExclusionZones <em>Exclusion Zones</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getExclusionZonesCostFunction()
  * @model

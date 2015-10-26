@@ -14,6 +14,7 @@ import org.eclipse.symphony.common.emf.Server;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getGps <em>Gps</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginLatitude <em>Origin Latitude</em>}</li>
@@ -22,9 +23,8 @@ import org.eclipse.symphony.common.emf.Server;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getOriginElevation <em>Origin Elevation</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor#getMaxInitTime <em>Max Init Time</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSPoseSensor()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gps</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSPoseSensor_Gps()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_Gps()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -57,7 +57,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Origin Latitude</em>' attribute.
 	 * @see #setOriginLatitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSPoseSensor_OriginLatitude()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_OriginLatitude()
 	 * @model default="45.518206644445" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg'"
 	 * @generated
@@ -86,7 +86,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Origin Longitude</em>' attribute.
 	 * @see #setOriginLongitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSPoseSensor_OriginLongitude()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_OriginLongitude()
 	 * @model default="-73.393904468182" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg'"
 	 * @generated
@@ -114,7 +114,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ne Angle</em>' attribute.
 	 * @see #setNeAngle(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSPoseSensor_NeAngle()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_NeAngle()
 	 * @model default="0.5940676" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -142,7 +142,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Origin Elevation</em>' attribute.
 	 * @see #setOriginElevation(double)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSPoseSensor_OriginElevation()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_OriginElevation()
 	 * @model default="33.0985" unique="false"
 	 * @generated
 	 */
@@ -170,7 +170,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Max Init Time</em>' attribute.
 	 * @see #setMaxInitTime(long)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSPoseSensor_MaxInitTime()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_MaxInitTime()
 	 * @model default="10000" unique="false"
 	 * @generated
 	 */

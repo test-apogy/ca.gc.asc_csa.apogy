@@ -17,8 +17,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView} object.
@@ -71,7 +71,7 @@ public class ConicalFieldOfViewItemProvider
 				getResourceLocator(),
 				getString("_UI_ConicalFieldOfView_fieldOfViewAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_ConicalFieldOfView_fieldOfViewAngle_feature", "_UI_ConicalFieldOfView_type"),
-				FovPackage.Literals.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE,
+				Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE,
 				true, 
 				false,
 				false, 
@@ -96,7 +96,7 @@ public class ConicalFieldOfViewItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConicalFieldOfView_volume_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConicalFieldOfView_volume_feature", "_UI_ConicalFieldOfView_type"),
-				 FovPackage.Literals.CONICAL_FIELD_OF_VIEW__VOLUME,
+				 Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__VOLUME,
 				 false,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class ConicalFieldOfViewItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FovPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE);
+			childrenFeatures.add(Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE);
 		}
 		return childrenFeatures;
 	}
@@ -189,11 +189,11 @@ public class ConicalFieldOfViewItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConicalFieldOfView.class)) {
-			case FovPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
-			case FovPackage.CONICAL_FIELD_OF_VIEW__VOLUME:
+			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__FIELD_OF_VIEW_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__VOLUME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case FovPackage.CONICAL_FIELD_OF_VIEW__RANGE:
+			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW__RANGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -214,8 +214,8 @@ public class ConicalFieldOfViewItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FovPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE,
-				 FovFactory.eINSTANCE.createDistanceRange()));
+				(Symphony__AddonsSensorsFOVPackage.Literals.CONICAL_FIELD_OF_VIEW__RANGE,
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createDistanceRange()));
 	}
 
 }

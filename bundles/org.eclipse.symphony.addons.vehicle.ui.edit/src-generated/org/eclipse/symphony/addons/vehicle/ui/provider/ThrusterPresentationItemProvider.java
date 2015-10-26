@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage;
+import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
@@ -69,7 +69,7 @@ public class ThrusterPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ThrusterPresentation_plumeEnvelopeVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ThrusterPresentation_plumeEnvelopeVisible_feature", "_UI_ThrusterPresentation_type"),
-				 SymphonyToolsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE,
+				 Symphony__AddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class ThrusterPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ThrusterPresentation_plumeEnvelopeLenght_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ThrusterPresentation_plumeEnvelopeLenght_feature", "_UI_ThrusterPresentation_type"),
-				 SymphonyToolsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT,
+				 Symphony__AddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT,
 				 true,
 				 false,
 				 false,
@@ -141,8 +141,8 @@ public class ThrusterPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ThrusterPresentation.class)) {
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
-			case SymphonyToolsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -24,13 +24,13 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractMapLayerImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractMapLayerImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractMapLayerImpl#getMap <em>Map</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.AbstractMapLayerImpl#getAbstractMapLayerNode <em>Abstract Map Layer Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

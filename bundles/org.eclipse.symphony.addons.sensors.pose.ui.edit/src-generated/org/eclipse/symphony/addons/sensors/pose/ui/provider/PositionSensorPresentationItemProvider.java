@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage;
+import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
@@ -63,7 +63,7 @@ public class PositionSensorPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_PositionSensorPresentation_frameVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PositionSensorPresentation_frameVisible_feature", "_UI_PositionSensorPresentation_type"),
-				 SensorsPoseUIPackage.Literals.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE,
+				 Symphony__AddonsSensorsPoseUIPackage.Literals.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class PositionSensorPresentationItemProvider extends NodePresentationItem
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PositionSensorPresentation.class)) {
-			case SensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

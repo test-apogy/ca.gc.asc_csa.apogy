@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
@@ -665,7 +665,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__PARENT = MRTSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
+	int SATELLITE_IMAGER__PARENT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -674,7 +674,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__DESCRIPTION = MRTSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
+	int SATELLITE_IMAGER__DESCRIPTION = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -683,7 +683,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__NODE_ID = MRTSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
+	int SATELLITE_IMAGER__NODE_ID = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -692,7 +692,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__CHILDREN = MRTSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
+	int SATELLITE_IMAGER__CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
@@ -701,7 +701,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__AGGREGATED_CHILDREN = MRTSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
+	int SATELLITE_IMAGER__AGGREGATED_CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -710,7 +710,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__STATUS = MRTSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
+	int SATELLITE_IMAGER__STATUS = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -719,7 +719,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__NAME = MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
+	int SATELLITE_IMAGER__NAME = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.
@@ -728,7 +728,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__LATEST_IMAGE_SNAPSHOT = MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT;
+	int SATELLITE_IMAGER__LATEST_IMAGE_SNAPSHOT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT;
 
 	/**
 	 * The feature id for the '<em><b>Current Zoom</b></em>' attribute.
@@ -737,7 +737,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__CURRENT_ZOOM = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 0;
+	int SATELLITE_IMAGER__CURRENT_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Commanded Zoom</b></em>' attribute.
@@ -746,7 +746,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__COMMANDED_ZOOM = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 1;
+	int SATELLITE_IMAGER__COMMANDED_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' container reference.
@@ -755,7 +755,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__SATELLITE = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 2;
+	int SATELLITE_IMAGER__SATELLITE = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Images Acquired</b></em>' containment reference list.
@@ -764,7 +764,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER__IMAGES_ACQUIRED = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 3;
+	int SATELLITE_IMAGER__IMAGES_ACQUIRED = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Satellite Imager</em>' class.
@@ -773,7 +773,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER_FEATURE_COUNT = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
+	int SATELLITE_IMAGER_FEATURE_COUNT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -782,7 +782,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER___ACCEPT__INODEVISITOR = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
+	int SATELLITE_IMAGER___ACCEPT__INODEVISITOR = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
 
 	/**
 	 * The operation id for the '<em>Take Snapshot</em>' operation.
@@ -791,7 +791,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER___TAKE_SNAPSHOT = MRTSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT;
+	int SATELLITE_IMAGER___TAKE_SNAPSHOT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT;
 
 	/**
 	 * The operation id for the '<em>Get Field Of View</em>' operation.
@@ -800,7 +800,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER___GET_FIELD_OF_VIEW = MRTSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW;
+	int SATELLITE_IMAGER___GET_FIELD_OF_VIEW = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW;
 
 	/**
 	 * The operation id for the '<em>Command Zoom</em>' operation.
@@ -809,7 +809,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 0;
+	int SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Minimum Zoom</em>' operation.
@@ -818,7 +818,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER___GET_MINIMUM_ZOOM = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 1;
+	int SATELLITE_IMAGER___GET_MINIMUM_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get Maximum Zoom</em>' operation.
@@ -827,7 +827,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER___GET_MAXIMUM_ZOOM = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 2;
+	int SATELLITE_IMAGER___GET_MAXIMUM_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Download Images</em>' operation.
@@ -836,7 +836,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER___DOWNLOAD_IMAGES__INT = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 3;
+	int SATELLITE_IMAGER___DOWNLOAD_IMAGES__INT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Satellite Imager</em>' class.
@@ -845,7 +845,7 @@ public interface EMFEcoreExampleSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_IMAGER_OPERATION_COUNT = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 4;
+	int SATELLITE_IMAGER_OPERATION_COUNT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl <em>Orbital Image</em>}' class.

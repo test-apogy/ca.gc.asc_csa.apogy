@@ -14,10 +14,10 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.provider.SensorItemProvider;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
@@ -97,7 +97,7 @@ public class AbstractCameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractCamera_latestImageSnapshot_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractCamera_latestImageSnapshot_feature", "_UI_AbstractCamera_type"),
-				 MRTSensorsImagingPackage.Literals.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT,
+				 Symphony__AddonsSensorsImagingPackage.Literals.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT,
 				 true,
 				 false,
 				 true,
@@ -119,7 +119,7 @@ public class AbstractCameraItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MRTSensorsImagingPackage.Literals.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingPackage.Literals.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT);
 		}
 		return childrenFeatures;
 	}
@@ -166,10 +166,10 @@ public class AbstractCameraItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractCamera.class)) {
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,62 +191,62 @@ public class AbstractCameraItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MRTSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
+				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MRTSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
+				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 MRTSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
+				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 MRTSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
+				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 	}
 
   /**

@@ -13,15 +13,15 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#getPresentationMode <em>Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#getTransparency <em>Transparency</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionVisible <em>Image Projection Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation#isImageProjectionOnFOVVisible <em>Image Projection On FOV Visible</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage#getImageSnapshotPresentation()
+ * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface ImageSnapshotPresentation extends NodePresentation
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #setPresentationMode(MeshPresentationMode)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage#getImageSnapshotPresentation_PresentationMode()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation_PresentationMode()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface ImageSnapshotPresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transparency</em>' attribute.
 	 * @see #setTransparency(float)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage#getImageSnapshotPresentation_Transparency()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation_Transparency()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface ImageSnapshotPresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Projection Visible</em>' attribute.
 	 * @see #setImageProjectionVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage#getImageSnapshotPresentation_ImageProjectionVisible()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation_ImageProjectionVisible()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
@@ -121,7 +121,7 @@ public interface ImageSnapshotPresentation extends NodePresentation
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Projection On FOV Visible</em>' attribute.
 	 * @see #setImageProjectionOnFOVVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage#getImageSnapshotPresentation_ImageProjectionOnFOVVisible()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage#getImageSnapshotPresentation_ImageProjectionOnFOVVisible()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */

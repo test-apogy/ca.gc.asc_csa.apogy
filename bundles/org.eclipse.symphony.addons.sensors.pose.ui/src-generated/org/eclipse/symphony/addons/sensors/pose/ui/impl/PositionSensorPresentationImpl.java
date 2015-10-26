@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage;
+import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
 import org.eclipse.symphony.addons.sensors.pose.ui.scene_objects.PositionSensorSceneObject;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.ui.impl.PositionSensorPresentationImpl#isFrameVisible <em>Frame Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -66,7 +66,7 @@ public class PositionSensorPresentationImpl extends NodePresentationImpl impleme
 	@Override
 	protected EClass eStaticClass()
 	{
-		return SensorsPoseUIPackage.Literals.POSITION_SENSOR_PRESENTATION;
+		return Symphony__AddonsSensorsPoseUIPackage.Literals.POSITION_SENSOR_PRESENTATION;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class PositionSensorPresentationImpl extends NodePresentationImpl impleme
 		boolean oldFrameVisible = frameVisible;
 		frameVisible = newFrameVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE, oldFrameVisible, frameVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE, oldFrameVisible, frameVisible));
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class PositionSensorPresentationImpl extends NodePresentationImpl impleme
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case SensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				return isFrameVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -116,7 +116,7 @@ public class PositionSensorPresentationImpl extends NodePresentationImpl impleme
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case SensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				setFrameVisible((Boolean)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class PositionSensorPresentationImpl extends NodePresentationImpl impleme
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case SensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				setFrameVisible(FRAME_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -148,7 +148,7 @@ public class PositionSensorPresentationImpl extends NodePresentationImpl impleme
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case SensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
+			case Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE:
 				return frameVisible != FRAME_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -185,7 +185,7 @@ public class PositionSensorPresentationImpl extends NodePresentationImpl impleme
 	{
 		PositionSensorSceneObject j3dObject = (PositionSensorSceneObject) getSceneObject();
 		
-		if(notification.getFeatureID(PositionSensorPresentationImpl.class) == SensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE)
+		if(notification.getFeatureID(PositionSensorPresentationImpl.class) == Symphony__AddonsSensorsPoseUIPackage.POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE)
 		{			
 			j3dObject.setFrameVisible(notification.getNewBooleanValue());
 		}

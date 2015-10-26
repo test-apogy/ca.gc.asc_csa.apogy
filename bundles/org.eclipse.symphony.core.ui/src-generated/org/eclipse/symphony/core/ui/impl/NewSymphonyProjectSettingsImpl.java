@@ -23,11 +23,11 @@ import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonyProjectSettingsImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.ui.impl.NewSymphonyProjectSettingsImpl#isImportRegisteredProject <em>Import Registered Project</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

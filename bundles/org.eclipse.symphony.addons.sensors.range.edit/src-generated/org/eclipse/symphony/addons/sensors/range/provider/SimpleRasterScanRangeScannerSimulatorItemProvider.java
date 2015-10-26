@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -69,7 +69,7 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRasterScanRangeScannerSimulator_rangeNoiseAmplitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRasterScanRangeScannerSimulator_rangeNoiseAmplitude_feature", "_UI_SimpleRasterScanRangeScannerSimulator_type"),
-				 RangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__RANGE_NOISE_AMPLITUDE,
+				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__RANGE_NOISE_AMPLITUDE,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRasterScanRangeScannerSimulator_azimuthNoiseAmplitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRasterScanRangeScannerSimulator_azimuthNoiseAmplitude_feature", "_UI_SimpleRasterScanRangeScannerSimulator_type"),
-				 RangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__AZIMUTH_NOISE_AMPLITUDE,
+				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__AZIMUTH_NOISE_AMPLITUDE,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRasterScanRangeScannerSimulator_elevationNoiseAmplitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRasterScanRangeScannerSimulator_elevationNoiseAmplitude_feature", "_UI_SimpleRasterScanRangeScannerSimulator_type"),
-				 RangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__ELEVATION_NOISE_AMPLITUDE,
+				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__ELEVATION_NOISE_AMPLITUDE,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleRasterScanRangeScannerSimulator_horizonDetectionEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleRasterScanRangeScannerSimulator_horizonDetectionEnabled_feature", "_UI_SimpleRasterScanRangeScannerSimulator_type"),
-				 RangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__HORIZON_DETECTION_ENABLED,
+				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__HORIZON_DETECTION_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -181,10 +181,10 @@ public class SimpleRasterScanRangeScannerSimulatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleRasterScanRangeScannerSimulator.class)) {
-			case RangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__RANGE_NOISE_AMPLITUDE:
-			case RangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__AZIMUTH_NOISE_AMPLITUDE:
-			case RangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__ELEVATION_NOISE_AMPLITUDE:
-			case RangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__HORIZON_DETECTION_ENABLED:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__RANGE_NOISE_AMPLITUDE:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__AZIMUTH_NOISE_AMPLITUDE:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__ELEVATION_NOISE_AMPLITUDE:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR__HORIZON_DETECTION_ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

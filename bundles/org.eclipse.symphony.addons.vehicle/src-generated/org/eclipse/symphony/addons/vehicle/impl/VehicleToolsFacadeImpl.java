@@ -5,15 +5,13 @@ package org.eclipse.symphony.addons.vehicle.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehicleToolsFacade;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Vehicule Tools Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -37,7 +35,7 @@ public class VehicleToolsFacadeImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.VEHICLE_TOOLS_FACADE;
+		return Symphony__AddonsVehiclePackage.Literals.VEHICLE_TOOLS_FACADE;
 	}
 
 } //VehicleToolsFacadeImpl

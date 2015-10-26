@@ -14,7 +14,7 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.Activator;
 import org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage;
+import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
 import org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesConstants;
 import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.ConicalFieldOfViewSceneObject;
 import org.eclipse.symphony.common.math.MathFacade;
@@ -25,8 +25,6 @@ import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Conical Field Of View Presentation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -53,7 +51,7 @@ public class ConicalFieldOfViewPresentationImpl extends FieldOfViewPresentationI
 	@Override
 	protected EClass eStaticClass()
 	{
-		return FovUIPackage.Literals.CONICAL_FIELD_OF_VIEW_PRESENTATION;
+		return Symphony__AddonsSensorsFOVUIPackage.Literals.CONICAL_FIELD_OF_VIEW_PRESENTATION;
 	}
 
 	@Override

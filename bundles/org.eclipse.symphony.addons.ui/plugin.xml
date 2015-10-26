@@ -11,7 +11,7 @@
       <!-- @generated symphony_tools_ui -->
       <package
             uri="org.eclipse.symphony.addons.ui"
-            class="org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage"
+            class="org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage"
             genModel="model/symphony_addons_ui.xcore"/>
    </extension>
    <extension

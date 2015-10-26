@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.RescaleFilter} object.
@@ -67,7 +67,7 @@ public class RescaleFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RescaleFilter_scale_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RescaleFilter_scale_feature", "_UI_RescaleFilter_type"),
-				 SymphonyCameraToolsPackage.Literals.RESCALE_FILTER__SCALE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.RESCALE_FILTER__SCALE,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class RescaleFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RescaleFilter.class)) {
-			case SymphonyCameraToolsPackage.RESCALE_FILTER__SCALE:
+			case Symphony__AddonsSensorsImagingCameraPackage.RESCALE_FILTER__SCALE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

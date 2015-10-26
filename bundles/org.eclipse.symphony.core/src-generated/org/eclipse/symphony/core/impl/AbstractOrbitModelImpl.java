@@ -23,13 +23,13 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl#getOrbitModelsList <em>Orbit Models List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

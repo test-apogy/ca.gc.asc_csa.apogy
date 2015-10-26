@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.examples.camera.Camera;
 import org.eclipse.symphony.examples.camera.CameraSimulated;
 import org.eclipse.symphony.examples.camera.CameraStub;
@@ -129,7 +129,7 @@ public class EMFEcoreExampleCameraPackageImpl extends EPackageImpl implements EM
 		isInited = true;
 
 		// Initialize simple dependencies
-		MRTSensorsImagingPackage.eINSTANCE.eClass();
+		Symphony__AddonsSensorsImagingPackage.eINSTANCE.eClass();
 		Symphony__AddonsActuatorsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -335,8 +335,8 @@ public class EMFEcoreExampleCameraPackageImpl extends EPackageImpl implements EM
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		MRTSensorsImagingPackage theMRTSensorsImagingPackage = (MRTSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(MRTSensorsImagingPackage.eNS_URI);
-		FovPackage theFovPackage = (FovPackage)EPackage.Registry.INSTANCE.getEPackage(FovPackage.eNS_URI);
+		Symphony__AddonsSensorsImagingPackage theSymphony__AddonsSensorsImagingPackage = (Symphony__AddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingPackage.eNS_URI);
+		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Symphony__AddonsActuatorsPackage theSymphony__AddonsActuatorsPackage = (Symphony__AddonsActuatorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsActuatorsPackage.eNS_URI);
 
@@ -345,8 +345,8 @@ public class EMFEcoreExampleCameraPackageImpl extends EPackageImpl implements EM
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		cameraEClass.getESuperTypes().add(theMRTSensorsImagingPackage.getAbstractCamera());
-		cameraEClass.getESuperTypes().add(theMRTSensorsImagingPackage.getZoomable());
+		cameraEClass.getESuperTypes().add(theSymphony__AddonsSensorsImagingPackage.getAbstractCamera());
+		cameraEClass.getESuperTypes().add(theSymphony__AddonsSensorsImagingPackage.getZoomable());
 		cameraStubEClass.getESuperTypes().add(this.getCamera());
 		cameraSimulatedEClass.getESuperTypes().add(this.getCamera());
 		ptuCameraEClass.getESuperTypes().add(this.getCamera());
@@ -358,7 +358,7 @@ public class EMFEcoreExampleCameraPackageImpl extends EPackageImpl implements EM
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(cameraEClass, Camera.class, "Camera", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCamera_Fov(), theFovPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCamera_Fov(), theSymphony__AddonsSensorsFOVPackage.getRectangularFrustrumFieldOfView(), null, "fov", null, 1, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCamera_Initialized(), theEcorePackage.getEBoolean(), "initialized", "false", 0, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCamera_StreamingEnabled(), theEcorePackage.getEBoolean(), "streamingEnabled", "false", 0, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -12,15 +12,15 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMinimumX <em>Minimum X</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMinimumY <em>Minimum Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMaximumX <em>Maximum X</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.MeshExtent2D#getMaximumY <em>Maximum Y</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshExtent2D()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface MeshExtent2D extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum X</em>' attribute.
 	 * @see #setMinimumX(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshExtent2D_MinimumX()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D_MinimumX()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface MeshExtent2D extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Y</em>' attribute.
 	 * @see #setMinimumY(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshExtent2D_MinimumY()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D_MinimumY()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
@@ -91,7 +91,7 @@ public interface MeshExtent2D extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum X</em>' attribute.
 	 * @see #setMaximumX(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshExtent2D_MaximumX()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D_MaximumX()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
@@ -118,7 +118,7 @@ public interface MeshExtent2D extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Y</em>' attribute.
 	 * @see #setMaximumY(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getMeshExtent2D_MaximumY()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getMeshExtent2D_MaximumY()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */

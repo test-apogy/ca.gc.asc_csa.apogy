@@ -26,11 +26,11 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractTrajectoryToolImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.AbstractTrajectoryToolImpl#isActive <em>Active</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

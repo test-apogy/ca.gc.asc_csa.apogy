@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.lidar.symphony.LidarData;
 import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage;
@@ -189,7 +189,7 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyExampleLidarPackage.Literals.LIDAR_DATA__FOV,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
 	/**

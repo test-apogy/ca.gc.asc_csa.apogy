@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.sensors.fov"
-            class="org.eclipse.symphony.addons.sensors.fov.provider.FovItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -22,7 +22,7 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.fov.provider.FovItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

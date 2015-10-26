@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 
 /**
@@ -82,7 +82,7 @@ public class ZoomableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Zoomable_currentZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Zoomable_currentZoom_feature", "_UI_Zoomable_type"),
-				 MRTSensorsImagingPackage.Literals.ZOOMABLE__CURRENT_ZOOM,
+				 Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE__CURRENT_ZOOM,
 				 false,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class ZoomableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Zoomable_commandedZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Zoomable_commandedZoom_feature", "_UI_Zoomable_type"),
-				 MRTSensorsImagingPackage.Literals.ZOOMABLE__COMMANDED_ZOOM,
+				 Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE__COMMANDED_ZOOM,
 				 false,
 				 false,
 				 false,
@@ -140,8 +140,8 @@ public class ZoomableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Zoomable.class)) {
-			case MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
-			case MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM:
+			case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

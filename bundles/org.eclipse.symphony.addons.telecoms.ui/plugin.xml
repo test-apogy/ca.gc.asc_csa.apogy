@@ -16,7 +16,7 @@
       <!-- @generated symphony_tools_telecoms_ui -->
       <package
             uri="org.eclipse.symphony.addons.telecoms.ui"
-            class="org.eclipse.symphony.addons.telecoms.ui.SymphonyTelecomToolsUIPackage"
+            class="org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage"
             genModel="model/symphony_addons_telecoms_ui.xcore"/>
    </extension>
    <extension

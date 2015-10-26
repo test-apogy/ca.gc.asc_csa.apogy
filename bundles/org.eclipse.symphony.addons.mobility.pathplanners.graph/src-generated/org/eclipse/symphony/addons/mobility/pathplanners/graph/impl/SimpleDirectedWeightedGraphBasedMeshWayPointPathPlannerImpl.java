@@ -56,13 +56,13 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl#isVerbose <em>Verbose</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl#getSimpleDirectedWeightedGraph <em>Simple Directed Weighted Graph</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl#isEnablePathSimplification <em>Enable Path Simplification</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.impl.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl#getRobotWidthForPathSimplication <em>Robot Width For Path Simplication</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

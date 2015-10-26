@@ -3,7 +3,7 @@ package org.eclipse.symphony.addons.vehicle.ui.adapters;
 
 
 import org.eclipse.symphony.addons.vehicle.Thruster;
-import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIFactory;
+import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
@@ -32,7 +32,7 @@ public class ThrusterPresentationAdapter implements NodePresentationAdapter
 
 		Thruster thruster = (Thruster) obj;
 		
-		ThrusterPresentation presentationNode = SymphonyToolsVehicleUIFactory.eINSTANCE.createThrusterPresentation();
+		ThrusterPresentation presentationNode = Symphony__AddonsVehicleUIFactory.eINSTANCE.createThrusterPresentation();
 		presentationNode.setNode(thruster);			
 						
 		return presentationNode;

@@ -11,15 +11,15 @@ package org.eclipse.symphony.addons.sensors.range;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getRangeNoiseAmplitude <em>Range Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getAzimuthNoiseAmplitude <em>Azimuth Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#getElevationNoiseAmplitude <em>Elevation Noise Amplitude</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator#isHorizonDetectionEnabled <em>Horizon Detection Enabled</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRasterScanRangeScannerSimulator()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface SimpleRasterScanRangeScannerSimulator extends RangeScannerSimul
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range Noise Amplitude</em>' attribute.
 	 * @see #setRangeNoiseAmplitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRasterScanRangeScannerSimulator_RangeNoiseAmplitude()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_RangeNoiseAmplitude()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface SimpleRasterScanRangeScannerSimulator extends RangeScannerSimul
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Azimuth Noise Amplitude</em>' attribute.
 	 * @see #setAzimuthNoiseAmplitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRasterScanRangeScannerSimulator_AzimuthNoiseAmplitude()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_AzimuthNoiseAmplitude()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -89,7 +89,7 @@ public interface SimpleRasterScanRangeScannerSimulator extends RangeScannerSimul
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elevation Noise Amplitude</em>' attribute.
 	 * @see #setElevationNoiseAmplitude(double)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRasterScanRangeScannerSimulator_ElevationNoiseAmplitude()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_ElevationNoiseAmplitude()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -117,7 +117,7 @@ public interface SimpleRasterScanRangeScannerSimulator extends RangeScannerSimul
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Horizon Detection Enabled</em>' attribute.
 	 * @see #setHorizonDetectionEnabled(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRasterScanRangeScannerSimulator_HorizonDetectionEnabled()
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScannerSimulator_HorizonDetectionEnabled()
 	 * @model unique="false"
 	 * @generated
 	 */

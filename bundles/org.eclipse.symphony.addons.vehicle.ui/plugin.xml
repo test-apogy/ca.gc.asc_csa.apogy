@@ -11,7 +11,7 @@
       <!-- @generated symphony_tools_vehicle_ui -->
       <package
             uri="org.eclipse.symphony.addons.vehicle.ui"
-            class="org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage"
+            class="org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage"
             genModel="model/symphony_addons_vehicle_ui.xcore"/>
    </extension>
    <extension

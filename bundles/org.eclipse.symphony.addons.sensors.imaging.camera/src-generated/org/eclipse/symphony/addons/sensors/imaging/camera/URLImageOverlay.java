@@ -13,14 +13,14 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getUrl <em>Url</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImageSizePolicy <em>Image Size Policy</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay#getImage <em>Image</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getURLImageOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getURLImageOverlay()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface URLImageOverlay extends ImageCameraOverlay {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getURLImageOverlay_Url()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getURLImageOverlay_Url()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface URLImageOverlay extends ImageCameraOverlay {
 	 * @return the value of the '<em>Image Size Policy</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.ImageSizePolicy
 	 * @see #setImageSizePolicy(ImageSizePolicy)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getURLImageOverlay_ImageSizePolicy()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getURLImageOverlay_ImageSizePolicy()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -97,7 +97,7 @@ public interface URLImageOverlay extends ImageCameraOverlay {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image</em>' reference.
 	 * @see #setImage(AbstractEImage)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getURLImageOverlay_Image()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getURLImageOverlay_Image()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel child='true' property='Readonly'"
 	 * @generated

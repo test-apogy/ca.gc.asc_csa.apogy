@@ -25,6 +25,7 @@ import org.eclipse.symphony.core.invocator.WatchesList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchImpl#getDescription <em>Description</em>}</li>
@@ -33,7 +34,6 @@ import org.eclipse.symphony.core.invocator.WatchesList;
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchImpl#getTypeMemberReferenceTreeElement <em>Type Member Reference Tree Element</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.WatchImpl#getTreeRootNode <em>Tree Root Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

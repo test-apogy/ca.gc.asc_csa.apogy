@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.topology.PositionNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PositionSensor#getPositionCoordinates <em>Position Coordinates</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPositionSensor()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPositionSensor()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface PositionSensor extends PositionNode, SelfPlaceSensor {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position Coordinates</em>' reference.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPositionSensor_PositionCoordinates()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPositionSensor_PositionCoordinates()
 	 * @model transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

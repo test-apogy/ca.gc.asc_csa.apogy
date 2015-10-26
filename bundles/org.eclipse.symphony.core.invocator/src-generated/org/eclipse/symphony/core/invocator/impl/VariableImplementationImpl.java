@@ -21,11 +21,11 @@ import org.eclipse.symphony.core.invocator.VariableImplementationsList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableImplementationImpl#getVariableImplementationsList <em>Variable Implementations List</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.VariableImplementationImpl#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

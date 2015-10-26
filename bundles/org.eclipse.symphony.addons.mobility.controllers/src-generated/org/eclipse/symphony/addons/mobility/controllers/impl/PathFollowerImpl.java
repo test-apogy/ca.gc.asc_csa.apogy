@@ -24,7 +24,7 @@ import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobility
 import org.eclipse.symphony.addons.mobility.controllers.PathFollower;
 import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -35,6 +35,7 @@ import org.eclipse.symphony.common.log.Logger;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPath <em>Path</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPlatform <em>Platform</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipse.symphony.common.log.Logger;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#isDestinationReached <em>Destination Reached</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.PathFollowerImpl#getPathFollowerState <em>Path Follower State</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -672,7 +672,7 @@ public class PathFollowerImpl<PlatformType extends MobilePlatform, PathType exte
 				@Override
 				public void notifyChanged(Notification msg)
 				{										
-					if(msg.getFeatureID(PoseSensor.class) == PosePackage.ORIENTATION_SENSOR__STATUS)
+					if(msg.getFeatureID(PoseSensor.class) == Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS)
 					{
 						if(msg.getNewValue() == SensorStatus.FAILED)
 						{

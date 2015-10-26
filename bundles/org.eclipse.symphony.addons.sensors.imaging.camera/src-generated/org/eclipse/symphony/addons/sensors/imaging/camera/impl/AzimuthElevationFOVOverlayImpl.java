@@ -15,7 +15,7 @@ import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthElevationFOVOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 
@@ -23,8 +23,6 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Azimuth Elevation FOV Overlay</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -49,7 +47,7 @@ public class AzimuthElevationFOVOverlayImpl extends FOVOverlayImpl implements Az
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCameraToolsPackage.Literals.AZIMUTH_ELEVATION_FOV_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.AZIMUTH_ELEVATION_FOV_OVERLAY;
 	}
 
 	/**
@@ -80,10 +78,10 @@ public class AzimuthElevationFOVOverlayImpl extends FOVOverlayImpl implements Az
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyCameraToolsPackage.AZIMUTH_ELEVATION_FOV_OVERLAY___CHANGE_AZIMUTH__DOUBLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.AZIMUTH_ELEVATION_FOV_OVERLAY___CHANGE_AZIMUTH__DOUBLE:
 				changeAzimuth((Double)arguments.get(0));
 				return null;
-			case SymphonyCameraToolsPackage.AZIMUTH_ELEVATION_FOV_OVERLAY___CHANGE_ELEVATION__DOUBLE:
+			case Symphony__AddonsSensorsImagingCameraPackage.AZIMUTH_ELEVATION_FOV_OVERLAY___CHANGE_ELEVATION__DOUBLE:
 				changeElevation((Double)arguments.get(0));
 				return null;
 		}

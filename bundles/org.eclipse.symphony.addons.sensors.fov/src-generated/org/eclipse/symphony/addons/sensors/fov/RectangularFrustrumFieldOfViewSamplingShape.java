@@ -18,13 +18,13 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getTransform <em>Transform</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfViewSamplingShape#getRectangularFrustrumFieldOfView <em>Rectangular Frustrum Field Of View</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getRectangularFrustrumFieldOfViewSamplingShape()
+ * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfViewSamplingShape()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface RectangularFrustrumFieldOfViewSamplingShape<PolygonType extends
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transform</em>' reference.
 	 * @see #setTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getRectangularFrustrumFieldOfViewSamplingShape_Transform()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfViewSamplingShape_Transform()
 	 * @model
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface RectangularFrustrumFieldOfViewSamplingShape<PolygonType extends
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rectangular Frustrum Field Of View</em>' reference.
 	 * @see #setRectangularFrustrumFieldOfView(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView()
 	 * @model
 	 * @generated
 	 */

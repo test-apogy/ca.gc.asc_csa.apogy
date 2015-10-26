@@ -16,12 +16,12 @@ import org.eclipse.symphony.common.topology.RotationNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.OrientationSensor#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getOrientationSensor()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getOrientationSensor()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface OrientationSensor extends RotationNode, SelfPlaceSensor {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orientation Coordinates</em>' reference.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getOrientationSensor_OrientationCoordinates()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getOrientationSensor_OrientationCoordinates()
 	 * @model transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

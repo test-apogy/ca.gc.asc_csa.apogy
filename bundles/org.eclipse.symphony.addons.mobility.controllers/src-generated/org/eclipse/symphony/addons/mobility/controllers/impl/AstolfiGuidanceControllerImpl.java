@@ -23,7 +23,7 @@ import org.eclipse.symphony.addons.mobility.controllers.Activator;
 import org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController;
 import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathFollowerState;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PoseUtils;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
@@ -39,6 +39,7 @@ import org.eclipse.symphony.common.math.GeometricUtils;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getCurrentWayPoint <em>Current Way Point</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getPreviousWayPoint <em>Previous Way Point</em>}</li>
@@ -60,7 +61,6 @@ import org.eclipse.symphony.common.math.GeometricUtils;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#getAlphaThresholdForReducedVelocity <em>Alpha Threshold For Reduced Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.impl.AstolfiGuidanceControllerImpl#isSmoothPathEnabled <em>Smooth Path Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -1474,7 +1474,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 				{
 					//System.out.println("Notified");
 					
-					if (notification.getFeatureID(PoseSensor.class) == PosePackage.POSE_SENSOR__POSITION)		
+					if (notification.getFeatureID(PoseSensor.class) == Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION)		
 					{				
 						if (noRefresh == 0) 
 						{

@@ -7,15 +7,13 @@ package org.eclipse.symphony.addons.sensors.pose.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Self Place Sensor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -36,7 +34,7 @@ public class SelfPlaceSensorImpl extends SensorImpl implements SelfPlaceSensor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PosePackage.Literals.SELF_PLACE_SENSOR;
+		return Symphony__AddonsSensorsPosePackage.Literals.SELF_PLACE_SENSOR;
 	}
 
 } //SelfPlaceSensorImpl

@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getFieldOfView()
+ * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getFieldOfView()
  * @model
  * @generated
  */

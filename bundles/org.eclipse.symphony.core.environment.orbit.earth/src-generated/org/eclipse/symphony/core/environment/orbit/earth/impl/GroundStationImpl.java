@@ -19,11 +19,11 @@ import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvir
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationImpl#getFieldOfViewOrientation <em>Field Of View Orientation</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationImpl#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -12,7 +12,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewUtiliti
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraViewUtilities()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewUtilities()
  * @model
  * @generated
  */

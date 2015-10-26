@@ -17,12 +17,12 @@ import org.eclipse.symphony.common.emf.EMFEcorePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractFeatureSpecifierImpl#getStructuralFeature <em>Structural Feature</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractFeatureSpecifierImpl#isMultiValued <em>Multi Valued</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.emf.impl.AbstractFeatureSpecifierImpl#getIndex <em>Index</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

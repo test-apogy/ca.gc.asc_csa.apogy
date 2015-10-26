@@ -12,7 +12,7 @@ import org.eclipse.symphony.addons.sensors.fov.impl.FOVFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getFOVFacade()
+ * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getFOVFacade()
  * @model
  * @generated
  */

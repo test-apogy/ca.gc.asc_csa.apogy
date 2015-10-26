@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.provider.AbstractCameraItemProvider;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
@@ -70,7 +70,7 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Zoomable_currentZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Zoomable_currentZoom_feature", "_UI_Zoomable_type"),
-				 MRTSensorsImagingPackage.Literals.ZOOMABLE__CURRENT_ZOOM,
+				 Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE__CURRENT_ZOOM,
 				 false,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_Zoomable_commandedZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Zoomable_commandedZoom_feature", "_UI_Zoomable_type"),
-				 MRTSensorsImagingPackage.Literals.ZOOMABLE__COMMANDED_ZOOM,
+				 Symphony__AddonsSensorsImagingPackage.Literals.ZOOMABLE__COMMANDED_ZOOM,
 				 false,
 				 false,
 				 false,
@@ -221,26 +221,6 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 		newChildDescriptors.add
@@ -307,6 +287,26 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -316,26 +316,6 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
 
 		newChildDescriptors.add
@@ -402,6 +382,26 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter

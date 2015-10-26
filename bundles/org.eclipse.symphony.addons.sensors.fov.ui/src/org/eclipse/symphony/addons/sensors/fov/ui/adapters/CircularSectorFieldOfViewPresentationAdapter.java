@@ -2,7 +2,7 @@ package org.eclipse.symphony.addons.sensors.fov.ui.adapters;
 
 import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.CircularSectorFieldOfViewPresentation;
-import org.eclipse.symphony.addons.sensors.fov.ui.FovUIFactory;
+import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
@@ -36,7 +36,7 @@ public class CircularSectorFieldOfViewPresentationAdapter implements NodePresent
 
 		CircularSectorFieldOfView circularSectorFieldOfView = (CircularSectorFieldOfView) obj;
 		
-		CircularSectorFieldOfViewPresentation presentationNode = FovUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation();
+		CircularSectorFieldOfViewPresentation presentationNode = Symphony__AddonsSensorsFOVUIFactory.eINSTANCE.createCircularSectorFieldOfViewPresentation();
 		presentationNode.setNode(circularSectorFieldOfView);			
 						
 		return presentationNode;

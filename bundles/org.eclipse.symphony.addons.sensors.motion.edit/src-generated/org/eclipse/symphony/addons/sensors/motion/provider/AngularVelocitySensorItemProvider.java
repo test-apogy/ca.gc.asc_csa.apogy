@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor;
-import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
+import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
 /**
@@ -73,7 +73,7 @@ public class AngularVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AngularVelocitySensor_xAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AngularVelocitySensor_xAngularVelocity_feature", "_UI_AngularVelocitySensor_type"),
-				 MotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY,
+				 Symphony__AddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -96,7 +96,7 @@ public class AngularVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AngularVelocitySensor_yAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AngularVelocitySensor_yAngularVelocity_feature", "_UI_AngularVelocitySensor_type"),
-				 MotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY,
+				 Symphony__AddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class AngularVelocitySensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AngularVelocitySensor_zAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AngularVelocitySensor_zAngularVelocity_feature", "_UI_AngularVelocitySensor_type"),
-				 MotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY,
+				 Symphony__AddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -168,9 +168,9 @@ public class AngularVelocitySensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AngularVelocitySensor.class)) {
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

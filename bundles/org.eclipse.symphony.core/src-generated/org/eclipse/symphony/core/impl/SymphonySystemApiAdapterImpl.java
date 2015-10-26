@@ -35,12 +35,12 @@ import org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl;
  * <em><b>Symphony System Api Adapter</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl#getPoseTransform <em>Pose Transform</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl#getPoseCorrector <em>Pose Corrector</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl#getSymphonySystem <em>Symphony System</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

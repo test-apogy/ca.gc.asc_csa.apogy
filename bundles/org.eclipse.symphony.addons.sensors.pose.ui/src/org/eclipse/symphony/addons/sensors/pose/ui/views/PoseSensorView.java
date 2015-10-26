@@ -10,7 +10,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IWorkbenchPart;
@@ -117,9 +117,9 @@ public class PoseSensorView extends ViewPart implements ISelectionListener {
 				public void notifyChanged(Notification msg) {
 					int featureId = msg.getFeatureID(PoseSensor.class);
 
-					if (featureId == PosePackage.POSE_SENSOR__POSITION
-							|| featureId == PosePackage.POSE_SENSOR__ROTATION_MATRIX
-							|| featureId == PosePackage.POSE_SENSOR__STATUS) {
+					if (featureId == Symphony__AddonsSensorsPosePackage.POSE_SENSOR__POSITION
+							|| featureId == Symphony__AddonsSensorsPosePackage.POSE_SENSOR__ROTATION_MATRIX
+							|| featureId == Symphony__AddonsSensorsPosePackage.POSE_SENSOR__STATUS) {
 						updateView();
 					}
 				}

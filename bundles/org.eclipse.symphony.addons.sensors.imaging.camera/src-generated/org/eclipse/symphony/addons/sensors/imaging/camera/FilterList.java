@@ -21,13 +21,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList#getCameraViewConfiguration <em>Camera View Configuration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FilterList#getImageFilters <em>Image Filters</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFilterList()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFilterList()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface FilterList extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Camera View Configuration</em>' container reference.
 	 * @see #setCameraViewConfiguration(CameraViewConfiguration)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFilterList_CameraViewConfiguration()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFilterList_CameraViewConfiguration()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getFilterList
 	 * @model opposite="filterList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -71,7 +71,7 @@ public interface FilterList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Filters</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFilterList_ImageFilters()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFilterList_ImageFilters()
 	 * @model containment="true"
 	 * @generated
 	 */

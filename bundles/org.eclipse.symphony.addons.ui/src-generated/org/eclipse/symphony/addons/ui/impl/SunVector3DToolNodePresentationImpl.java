@@ -11,7 +11,7 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.ui.Activator;
 import org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation;
-import org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage;
+import org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage;
 import org.eclipse.symphony.addons.ui.preferences.SymphonyToolsUIPreferencesConstants;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
@@ -19,8 +19,6 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Sun Vector3 DTool Node Presentation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -48,7 +46,7 @@ public class SunVector3DToolNodePresentationImpl extends NodePresentationImpl im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsUIPackage.Literals.SUN_VECTOR3_DTOOL_NODE_PRESENTATION;
+		return Symphony__AddonsUIPackage.Literals.SUN_VECTOR3_DTOOL_NODE_PRESENTATION;
 	}
 
 	@Override

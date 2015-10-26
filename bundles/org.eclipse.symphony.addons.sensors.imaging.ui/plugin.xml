@@ -28,7 +28,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.addons.sensors.imaging.ui"
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage"
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage"
             genModel="model/symphony_addons_sensors_imaging_ui.xcore"/>
    </extension>
    <extension

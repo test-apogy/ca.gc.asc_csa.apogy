@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-model-doc -->
  * Enumeration of available methods use to compute the correction along the Z axis.
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getZCorrectionMode()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getZCorrectionMode()
  * @model
  * @generated
  */
@@ -143,6 +143,8 @@ public enum ZCorrectionMode implements Enumerator
 	 * Returns the '<em><b>ZCorrection Mode</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static ZCorrectionMode get(String literal)
@@ -160,6 +162,8 @@ public enum ZCorrectionMode implements Enumerator
 	 * Returns the '<em><b>ZCorrection Mode</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static ZCorrectionMode getByName(String name)
@@ -177,6 +181,8 @@ public enum ZCorrectionMode implements Enumerator
 	 * Returns the '<em><b>ZCorrection Mode</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static ZCorrectionMode get(int value)

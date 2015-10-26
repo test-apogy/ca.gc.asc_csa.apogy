@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.Symphony__AddonsFactory;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
@@ -77,7 +77,7 @@ public class WheelItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Wheel_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Wheel_radius_feature", "_UI_Wheel_type"),
-				 SymphonyToolsVehiclePackage.Literals.WHEEL__RADIUS,
+				 Symphony__AddonsVehiclePackage.Literals.WHEEL__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class WheelItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Wheel_lenght_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Wheel_lenght_feature", "_UI_Wheel_type"),
-				 SymphonyToolsVehiclePackage.Literals.WHEEL__LENGHT,
+				 Symphony__AddonsVehiclePackage.Literals.WHEEL__LENGHT,
 				 true,
 				 false,
 				 false,
@@ -149,8 +149,8 @@ public class WheelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Wheel.class)) {
-			case SymphonyToolsVehiclePackage.WHEEL__RADIUS:
-			case SymphonyToolsVehiclePackage.WHEEL__LENGHT:
+			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -172,22 +172,22 @@ public class WheelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createWheel()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createThruster()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -317,22 +317,22 @@ public class WheelItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createWheel()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createThruster()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter

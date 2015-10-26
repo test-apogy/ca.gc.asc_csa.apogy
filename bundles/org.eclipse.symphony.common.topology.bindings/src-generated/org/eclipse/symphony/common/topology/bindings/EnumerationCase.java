@@ -20,11 +20,11 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationCase#getEnumerationLiterals <em>Enumeration Literals</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationCase#getTopologyRoot <em>Topology Root</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationCase()
  * @model

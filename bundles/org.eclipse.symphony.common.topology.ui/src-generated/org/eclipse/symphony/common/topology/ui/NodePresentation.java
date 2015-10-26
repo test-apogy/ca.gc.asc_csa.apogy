@@ -16,6 +16,7 @@ import org.eclipse.symphony.common.topology.Node;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getNode <em>Node</em>}</li>
@@ -31,7 +32,6 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getZRange <em>ZRange</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getSceneObject <em>Scene Object</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation()
  * @model

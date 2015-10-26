@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImpl;
 
 /**
@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImp
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.LanderSphericalFootImpl#getRadius <em>Radius</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,7 +63,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT;
+		return Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT;
 	}
 
   /**
@@ -86,7 +86,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -98,7 +98,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -145,7 +145,7 @@ public class LanderSphericalFootImpl extends PhysicalBodyImpl implements LanderS
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

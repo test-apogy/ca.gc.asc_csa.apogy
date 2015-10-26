@@ -22,6 +22,7 @@ import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentU
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl#isAxisVisible <em>Axis Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl#getAxisLength <em>Axis Length</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentU
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl#getPlaneGridSize <em>Plane Grid Size</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.EarthSurfaceWorksitePresentationImpl#getPlaneSize <em>Plane Size</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

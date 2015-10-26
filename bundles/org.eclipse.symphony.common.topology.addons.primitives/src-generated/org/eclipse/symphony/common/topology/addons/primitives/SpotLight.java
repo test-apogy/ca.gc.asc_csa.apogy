@@ -22,12 +22,12 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getConcentration <em>Concentration</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getSpreadAngle <em>Spread Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getDirection <em>Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getSpotLight()
  * @model

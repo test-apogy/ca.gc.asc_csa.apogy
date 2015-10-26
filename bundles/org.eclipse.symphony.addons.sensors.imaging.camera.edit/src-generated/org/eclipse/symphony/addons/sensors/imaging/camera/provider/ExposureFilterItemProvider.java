@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter} object.
@@ -67,7 +67,7 @@ public class ExposureFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExposureFilter_exposure_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExposureFilter_exposure_feature", "_UI_ExposureFilter_type"),
-				 SymphonyCameraToolsPackage.Literals.EXPOSURE_FILTER__EXPOSURE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.EXPOSURE_FILTER__EXPOSURE,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class ExposureFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ExposureFilter.class)) {
-			case SymphonyCameraToolsPackage.EXPOSURE_FILTER__EXPOSURE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.GPSDataInterpreter#getGps <em>Gps</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSDataInterpreter()
+ * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSDataInterpreter()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface GPSDataInterpreter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gps</em>' container reference.
 	 * @see #setGps(GPS)
-	 * @see org.eclipse.symphony.addons.sensors.gps.GpsPackage#getGPSDataInterpreter_Gps()
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSDataInterpreter_Gps()
 	 * @see org.eclipse.symphony.addons.sensors.gps.GPS#getDataInterpreter
 	 * @model opposite="dataInterpreter" transient="false"
 	 * @generated

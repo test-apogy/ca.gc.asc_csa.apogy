@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage#getLanderSphericalFootPresentation()
+ * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getLanderSphericalFootPresentation()
  * @model
  * @generated
  */

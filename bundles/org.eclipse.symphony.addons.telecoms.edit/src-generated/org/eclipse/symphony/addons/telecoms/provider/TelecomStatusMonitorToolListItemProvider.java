@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.provider.SimpleToolItemProvider;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsFactory;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
 
 /**
@@ -61,7 +61,7 @@ public class TelecomStatusMonitorToolListItemProvider extends SimpleToolItemProv
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyTelecomToolsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS);
+			childrenFeatures.add(Symphony__AddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS);
 		}
 		return childrenFeatures;
 	}
@@ -117,7 +117,7 @@ public class TelecomStatusMonitorToolListItemProvider extends SimpleToolItemProv
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TelecomStatusMonitorToolList.class)) {
-			case SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,8 +137,8 @@ public class TelecomStatusMonitorToolListItemProvider extends SimpleToolItemProv
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyTelecomToolsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS,
-				 SymphonyTelecomToolsFactory.eINSTANCE.createTelecomStatusMonitorTool()));
+				(Symphony__AddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS,
+				 Symphony__AddonsTelecomsFactory.eINSTANCE.createTelecomStatusMonitorTool()));
 	}
 
 }

@@ -8,15 +8,13 @@ package org.eclipse.symphony.addons.sensors.range.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RangeSensor;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Sensor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -40,7 +38,7 @@ public class RangeSensorImpl extends SensorImpl implements RangeSensor
 	@Override
 	protected EClass eStaticClass()
 	{
-		return RangePackage.Literals.RANGE_SENSOR;
+		return Symphony__AddonsSensorsRangePackage.Literals.RANGE_SENSOR;
 	}
 
 } //RangeSensorImpl

@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.impl.SpherePrimitiveImpl#getRadius <em>Radius</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

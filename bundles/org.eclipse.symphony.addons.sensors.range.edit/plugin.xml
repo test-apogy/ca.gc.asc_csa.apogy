@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.sensors.range"
-            class="org.eclipse.symphony.addons.sensors.range.provider.RangeItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.sensors.range.provider.Symphony__AddonsSensorsRangeItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -26,7 +26,7 @@
       <!-- @generated range -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.range.provider.RangeItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.range.provider.Symphony__AddonsSensorsRangeItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay} object.
@@ -70,7 +70,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_lineWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_lineWidth_feature", "_UI_FOVOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.FOV_OVERLAY__LINE_WIDTH,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__LINE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_positiveValuesColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_positiveValuesColor_feature", "_UI_FOVOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.FOV_OVERLAY__POSITIVE_VALUES_COLOR,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__POSITIVE_VALUES_COLOR,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_negativeValueColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_negativeValueColor_feature", "_UI_FOVOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.FOV_OVERLAY__NEGATIVE_VALUE_COLOR,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__NEGATIVE_VALUE_COLOR,
 				 true,
 				 false,
 				 false,
@@ -136,7 +136,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_angleInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_angleInterval_feature", "_UI_FOVOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.FOV_OVERLAY__ANGLE_INTERVAL,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__ANGLE_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -158,7 +158,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_fontName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_fontName_feature", "_UI_FOVOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.FOV_OVERLAY__FONT_NAME,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__FONT_NAME,
 				 true,
 				 false,
 				 false,
@@ -180,7 +180,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_fontSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_fontSize_feature", "_UI_FOVOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.FOV_OVERLAY__FONT_SIZE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__FONT_SIZE,
 				 true,
 				 false,
 				 false,
@@ -202,7 +202,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_azimuthDirection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_azimuthDirection_feature", "_UI_FOVOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.FOV_OVERLAY__AZIMUTH_DIRECTION,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__AZIMUTH_DIRECTION,
 				 true,
 				 false,
 				 false,
@@ -224,7 +224,7 @@ public class FOVOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FOVOverlay_elevationDirection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FOVOverlay_elevationDirection_feature", "_UI_FOVOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.FOV_OVERLAY__ELEVATION_DIRECTION,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY__ELEVATION_DIRECTION,
 				 true,
 				 false,
 				 false,
@@ -269,14 +269,14 @@ public class FOVOverlayItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FOVOverlay.class)) {
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__LINE_WIDTH:
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ANGLE_INTERVAL:
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_NAME:
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_SIZE:
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__LINE_WIDTH:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ANGLE_INTERVAL:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -11,7 +11,7 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.vehicle.ui.Activator;
 import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIPackage;
+import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
 import org.eclipse.symphony.addons.vehicle.ui.preferences.VehicleUIPreferencesConstants;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
@@ -19,8 +19,6 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Physical Wheel Presentation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -51,7 +49,7 @@ public class PhysicalWheelPresentationImpl extends NodePresentationImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehicleUIPackage.Literals.PHYSICAL_WHEEL_PRESENTATION;
+		return Symphony__AddonsVehicleUIPackage.Literals.PHYSICAL_WHEEL_PRESENTATION;
 	}
 
   @Override

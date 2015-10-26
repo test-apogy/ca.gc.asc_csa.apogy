@@ -11,7 +11,7 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getElevationFeatureReference()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getElevationFeatureReference()
  * @model
  * @generated
  */

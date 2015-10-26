@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.core.invocator.provider.AbstractToolsListContainerItemProvider;
 
 /**
@@ -66,7 +66,7 @@ public class CameraViewConfigurationListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -122,7 +122,7 @@ public class CameraViewConfigurationListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraViewConfigurationList.class)) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -143,8 +143,8 @@ public class CameraViewConfigurationListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createCameraViewConfiguration()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
 	}
 
 }

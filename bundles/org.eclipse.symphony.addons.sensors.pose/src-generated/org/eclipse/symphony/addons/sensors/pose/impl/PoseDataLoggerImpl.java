@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.symphony.addons.sensors.pose.PoseDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 
@@ -27,10 +27,10 @@ import org.eclipse.symphony.common.geometry.data3d.Pose;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseDataLoggerImpl#getOutputFile <em>Output File</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -71,7 +71,7 @@ public abstract class PoseDataLoggerImpl extends MinimalEObjectImpl.Container im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PosePackage.Literals.POSE_DATA_LOGGER;
+		return Symphony__AddonsSensorsPosePackage.Literals.POSE_DATA_LOGGER;
 	}
 
 	/**
@@ -92,7 +92,7 @@ public abstract class PoseDataLoggerImpl extends MinimalEObjectImpl.Container im
 		String oldOutputFile = outputFile;
 		outputFile = newOutputFile;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PosePackage.POSE_DATA_LOGGER__OUTPUT_FILE, oldOutputFile, outputFile));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER__OUTPUT_FILE, oldOutputFile, outputFile));
 	}
 
 	/**
@@ -114,7 +114,7 @@ public abstract class PoseDataLoggerImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
+			case Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
 				return getOutputFile();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -128,7 +128,7 @@ public abstract class PoseDataLoggerImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
+			case Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
 				setOutputFile((String)newValue);
 				return;
 		}
@@ -143,7 +143,7 @@ public abstract class PoseDataLoggerImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
+			case Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
 				setOutputFile(OUTPUT_FILE_EDEFAULT);
 				return;
 		}
@@ -158,7 +158,7 @@ public abstract class PoseDataLoggerImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
+			case Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER__OUTPUT_FILE:
 				return OUTPUT_FILE_EDEFAULT == null ? outputFile != null : !OUTPUT_FILE_EDEFAULT.equals(outputFile);
 		}
 		return super.eIsSet(featureID);
@@ -172,7 +172,7 @@ public abstract class PoseDataLoggerImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PosePackage.POSE_DATA_LOGGER___LOG_POSE__POSE:
+			case Symphony__AddonsSensorsPosePackage.POSE_DATA_LOGGER___LOG_POSE__POSE:
 				try {
 					logPose((Pose)arguments.get(0));
 					return null;

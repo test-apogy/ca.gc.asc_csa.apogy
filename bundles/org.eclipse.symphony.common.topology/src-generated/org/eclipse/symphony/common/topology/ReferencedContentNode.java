@@ -11,10 +11,10 @@ package org.eclipse.symphony.common.topology;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ReferencedContentNode#getReferencedContent <em>Referenced Content</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.TopologyPackage#getReferencedContentNode()
  * @model

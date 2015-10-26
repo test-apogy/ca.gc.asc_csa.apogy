@@ -11,14 +11,14 @@ package org.eclipse.symphony.addons.sensors.motion;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getAngularVelocitySensor()
+ * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getAngularVelocitySensor()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface AngularVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XAngular Velocity</em>' attribute.
 	 * @see #setXAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getAngularVelocitySensor_XAngularVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getAngularVelocitySensor_XAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface AngularVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YAngular Velocity</em>' attribute.
 	 * @see #setYAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getAngularVelocitySensor_YAngularVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getAngularVelocitySensor_YAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface AngularVelocitySensor extends SelfMotionSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZAngular Velocity</em>' attribute.
 	 * @see #setZAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.sensors.motion.MotionPackage#getAngularVelocitySensor_ZAngularVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage#getAngularVelocitySensor_ZAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */

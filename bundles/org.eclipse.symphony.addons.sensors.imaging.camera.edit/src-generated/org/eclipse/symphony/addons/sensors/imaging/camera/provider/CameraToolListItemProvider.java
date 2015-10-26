@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList} object.
@@ -75,7 +75,7 @@ public class CameraToolListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.CAMERA_TOOL_LIST__TOOLS);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_TOOL_LIST__TOOLS);
 		}
 		return childrenFeatures;
 	}
@@ -128,7 +128,7 @@ public class CameraToolListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraToolList.class)) {
-			case SymphonyCameraToolsPackage.CAMERA_TOOL_LIST__TOOLS:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_TOOL_LIST__TOOLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -148,8 +148,8 @@ public class CameraToolListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.CAMERA_TOOL_LIST__TOOLS,
-				 SymphonyCameraToolsFactory.eINSTANCE.createPointerCameraTool()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_TOOL_LIST__TOOLS,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createPointerCameraTool()));
 	}
 
 	/**

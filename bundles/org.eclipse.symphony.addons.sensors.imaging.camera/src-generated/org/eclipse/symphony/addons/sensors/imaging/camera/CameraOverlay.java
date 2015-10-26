@@ -15,13 +15,13 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay#getCameraOverlayList <em>Camera Overlay List</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay#getOverlayAlignment <em>Overlay Alignment</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraOverlay()
  * @model abstract="true"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface CameraOverlay extends CameraImageAnnotation
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Camera Overlay List</em>' container reference.
 	 * @see #setCameraOverlayList(CameraOverlayList)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraOverlay_CameraOverlayList()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraOverlay_CameraOverlayList()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getOverlays
 	 * @model opposite="overlays" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -71,7 +71,7 @@ public interface CameraOverlay extends CameraImageAnnotation
 	 * @return the value of the '<em>Overlay Alignment</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment
 	 * @see #setOverlayAlignment(OverlayAlignment)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraOverlay_OverlayAlignment()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraOverlay_OverlayAlignment()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_POSITION_PROPERTIES'"
 	 * @generated

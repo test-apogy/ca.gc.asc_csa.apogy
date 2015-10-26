@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 
 /**
@@ -60,7 +60,7 @@ public class VehiclePathPlannerToolItemProvider extends PathPlannerToolItemProvi
 				 getResourceLocator(),
 				 getString("_UI_VehiclePathPlannerTool_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePathPlannerTool_variable_feature", "_UI_VehiclePathPlannerTool_type"),
-				 SymphonyToolsVehiclePackage.Literals.VEHICLE_PATH_PLANNER_TOOL__VARIABLE,
+				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_PATH_PLANNER_TOOL__VARIABLE,
 				 true,
 				 false,
 				 true,

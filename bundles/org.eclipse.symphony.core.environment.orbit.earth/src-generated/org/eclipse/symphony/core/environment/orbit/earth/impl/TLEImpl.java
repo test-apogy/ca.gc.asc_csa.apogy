@@ -25,6 +25,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.TLE;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.TLEImpl#getLine1 <em>Line1</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.TLEImpl#getLine2 <em>Line2</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.TLE;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.TLEImpl#getRevolutionNumberAtEpoch <em>Revolution Number At Epoch</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.TLEImpl#getSatelliteNumber <em>Satellite Number</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

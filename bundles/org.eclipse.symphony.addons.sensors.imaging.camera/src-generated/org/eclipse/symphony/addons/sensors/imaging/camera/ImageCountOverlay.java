@@ -15,12 +15,12 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.ImageCountOverlay#isIndicatorVisible <em>Indicator Visible</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageCountOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageCountOverlay()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ImageCountOverlay extends AbstractTextOverlay {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Indicator Visible</em>' attribute.
 	 * @see #setIndicatorVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getImageCountOverlay_IndicatorVisible()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageCountOverlay_IndicatorVisible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */

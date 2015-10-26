@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehicleToolsFacade()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehicleToolsFacade()
  * @model
  * @generated
  */

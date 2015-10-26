@@ -4,7 +4,7 @@ package org.eclipse.symphony.addons.vehicle.ui.adapters;
 
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
-import org.eclipse.symphony.addons.vehicle.ui.SymphonyToolsVehicleUIFactory;
+import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
@@ -32,7 +32,7 @@ public class WheelPresentationAdapter implements NodePresentationAdapter
 
 		Wheel wheel = (Wheel) obj;
 		
-		PhysicalWheelPresentation presentationNode = SymphonyToolsVehicleUIFactory.eINSTANCE.createPhysicalWheelPresentation();
+		PhysicalWheelPresentation presentationNode = Symphony__AddonsVehicleUIFactory.eINSTANCE.createPhysicalWheelPresentation();
 		presentationNode.setNode(wheel);			
 						
 		return presentationNode;

@@ -15,7 +15,7 @@ package org.eclipse.symphony.addons.telecoms;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getIsotropicAntenna()
+ * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getIsotropicAntenna()
  * @model
  * @generated
  */

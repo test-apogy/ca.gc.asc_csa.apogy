@@ -19,12 +19,12 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ContactProvider#getVehiclePoseCorrector <em>Vehicle Pose Corrector</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getContactProvider()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getContactProvider()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface ContactProvider extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vehicle Pose Corrector</em>' container reference.
 	 * @see #setVehiclePoseCorrector(VehiclePoseCorrector)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getContactProvider_VehiclePoseCorrector()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getContactProvider_VehiclePoseCorrector()
 	 * @see org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getContactProvider
 	 * @model opposite="contactProvider" transient="false"
 	 * @generated

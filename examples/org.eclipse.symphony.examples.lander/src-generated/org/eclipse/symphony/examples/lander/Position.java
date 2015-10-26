@@ -21,13 +21,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lander.Position#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.Position#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.Position#getZ <em>Z</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.Position#getAttitude <em>Attitude</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getPosition()
  * @model

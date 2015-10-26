@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -70,7 +70,7 @@ public class SimpleSonarItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleSonar_echoDetected_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleSonar_echoDetected_feature", "_UI_SimpleSonar_type"),
-				 RangePackage.Literals.SIMPLE_SONAR__ECHO_DETECTED,
+				 Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_SONAR__ECHO_DETECTED,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class SimpleSonarItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleSonar.class)) {
-			case RangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

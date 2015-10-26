@@ -14,8 +14,6 @@ import org.eclipse.symphony.examples.rover.RoverSimulated;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Rover Simulated</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

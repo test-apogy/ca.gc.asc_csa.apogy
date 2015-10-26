@@ -15,8 +15,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 
 /**
@@ -70,7 +70,7 @@ public class EMFFeatureOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EMFFeatureOverlay_numberFormat_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EMFFeatureOverlay_numberFormat_feature", "_UI_EMFFeatureOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.EMF_FEATURE_OVERLAY__NUMBER_FORMAT,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__NUMBER_FORMAT,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class EMFFeatureOverlayItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE);
 		}
 		return childrenFeatures;
 	}
@@ -148,11 +148,11 @@ public class EMFFeatureOverlayItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EMFFeatureOverlay.class)) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -173,27 +173,27 @@ public class EMFFeatureOverlayItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
-				 SymphonyCameraToolsFactory.eINSTANCE.createCameraViewConfiguration()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createCameraViewConfiguration()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
-				 SymphonyCameraToolsFactory.eINSTANCE.createAzimuthFeatureReference()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
-				 SymphonyCameraToolsFactory.eINSTANCE.createElevationFeatureReference()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
 				 EMFEcoreInvocatorFactory.eINSTANCE.createVariableFeatureReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
 				 EMFEcoreInvocatorFactory.eINSTANCE.createOperationCall()));
 	}
 

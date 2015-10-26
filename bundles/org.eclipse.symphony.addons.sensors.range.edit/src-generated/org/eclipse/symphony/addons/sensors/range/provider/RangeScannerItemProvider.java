@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RangeScanner;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
@@ -136,9 +136,9 @@ public class RangeScannerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RangeScanner.class)) {
-			case RangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
-			case RangePackage.RANGE_SCANNER__INPUT:
-			case RangePackage.RANGE_SCANNER__OUTPUT:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__PROGRESS_MONITOR:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__INPUT:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER__OUTPUT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

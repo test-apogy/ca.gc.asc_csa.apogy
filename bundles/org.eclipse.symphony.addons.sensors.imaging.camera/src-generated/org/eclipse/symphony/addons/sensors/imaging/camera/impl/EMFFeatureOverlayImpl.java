@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor.PropertyValueWrapper;
 import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
@@ -34,12 +34,12 @@ import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureRefe
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl#getNumberFormat <em>Number Format</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureOverlayImpl#getVariableFeatureReferenceChangeCount <em>Variable Feature Reference Change Count</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -118,7 +118,7 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.EMF_FEATURE_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY;
 	}
 
   /**
@@ -158,7 +158,7 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
 		VariableFeatureReference oldVariableFeatureReference = variableFeatureReference;
 		variableFeatureReference = newVariableFeatureReference;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, newVariableFeatureReference);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, newVariableFeatureReference);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -190,14 +190,14 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
 		if (newVariableFeatureReference != variableFeatureReference) {
 			NotificationChain msgs = null;
 			if (variableFeatureReference != null)
-				msgs = ((InternalEObject)variableFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)variableFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE, null, msgs);
 			if (newVariableFeatureReference != null)
-				msgs = ((InternalEObject)newVariableFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)newVariableFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE, null, msgs);
 			msgs = basicSetVariableFeatureReference(newVariableFeatureReference, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE, newVariableFeatureReference, newVariableFeatureReference));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE, newVariableFeatureReference, newVariableFeatureReference));
 	}
 
   /**
@@ -220,7 +220,7 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
 		String oldNumberFormat = numberFormat;
 		numberFormat = newNumberFormat;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT, oldNumberFormat, numberFormat));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT, oldNumberFormat, numberFormat));
 	}
 
   /**
@@ -241,7 +241,7 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
 		long oldVariableFeatureReferenceChangeCount = variableFeatureReferenceChangeCount;
 		variableFeatureReferenceChangeCount = newVariableFeatureReferenceChangeCount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT, oldVariableFeatureReferenceChangeCount, variableFeatureReferenceChangeCount));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT, oldVariableFeatureReferenceChangeCount, variableFeatureReferenceChangeCount));
 	}
 
 		/**
@@ -253,7 +253,7 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
 				return basicSetVariableFeatureReference(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -268,11 +268,11 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
 				return getVariableFeatureReference();
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
 				return getNumberFormat();
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
 				return getVariableFeatureReferenceChangeCount();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -287,13 +287,13 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
 				setVariableFeatureReference((VariableFeatureReference)newValue);
 				return;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
 				setNumberFormat((String)newValue);
 				return;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
 				setVariableFeatureReferenceChangeCount((Long)newValue);
 				return;
 		}
@@ -309,13 +309,13 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
 				setVariableFeatureReference((VariableFeatureReference)null);
 				return;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
 				setNumberFormat(NUMBER_FORMAT_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
 				setVariableFeatureReferenceChangeCount(VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT_EDEFAULT);
 				return;
 		}
@@ -331,11 +331,11 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE:
 				return variableFeatureReference != null;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__NUMBER_FORMAT:
 				return NUMBER_FORMAT_EDEFAULT == null ? numberFormat != null : !NUMBER_FORMAT_EDEFAULT.equals(numberFormat);
-			case SymphonyCameraToolsPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT:
 				return variableFeatureReferenceChangeCount != VARIABLE_FEATURE_REFERENCE_CHANGE_COUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

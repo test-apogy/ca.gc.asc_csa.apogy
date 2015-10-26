@@ -6,7 +6,7 @@ package org.eclipse.symphony.addons.sensors.imaging.camera.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.GrayScaleFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 
@@ -14,8 +14,6 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Gray Scale Filter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -39,7 +37,7 @@ public class GrayScaleFilterImpl extends ImageFilterImpl implements GrayScaleFil
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.GRAY_SCALE_FILTER;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.GRAY_SCALE_FILTER;
 	}
 
   @Override

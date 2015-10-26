@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.sensors"
-            class="org.eclipse.symphony.addons.sensors.provider.SensorsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -25,7 +25,7 @@
       <!-- @generated sensors -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.provider.SensorsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

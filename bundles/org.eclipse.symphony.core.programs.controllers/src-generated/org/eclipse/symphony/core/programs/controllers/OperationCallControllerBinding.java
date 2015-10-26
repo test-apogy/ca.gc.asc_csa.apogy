@@ -12,12 +12,12 @@ import org.eclipse.symphony.core.invocator.OperationCall;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding#isCreateResult <em>Create Result</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding#isActive <em>Active</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding#getTrigger <em>Trigger</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getOperationCallControllerBinding()
  * @model

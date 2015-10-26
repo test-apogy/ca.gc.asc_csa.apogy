@@ -1,9 +1,9 @@
-@GenModel(prefix="SymphonyTelecomTools",
+@GenModel(prefix="Symphony__AddonsTelecoms",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
-	      modelName="SymphonyTelecomTools",
+	      modelName="Symphony__AddonsTelecoms",
 	      complianceLevel="6.0",
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.telecoms/src-generated")

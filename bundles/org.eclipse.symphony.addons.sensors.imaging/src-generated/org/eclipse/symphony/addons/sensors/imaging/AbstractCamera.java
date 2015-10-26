@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.emf.Named;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera#getLatestImageSnapshot <em>Latest Image Snapshot</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getAbstractCamera()
+ * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getAbstractCamera()
  * @model abstract="true"
  * @generated
  */
@@ -39,7 +39,7 @@ public interface AbstractCamera extends Sensor, Named
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Latest Image Snapshot</em>' reference.
 	 * @see #setLatestImageSnapshot(ImageSnapshot)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getAbstractCamera_LatestImageSnapshot()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getAbstractCamera_LatestImageSnapshot()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' propertyCategory='CAMERA_PROPERTIES'"
 	 * @generated

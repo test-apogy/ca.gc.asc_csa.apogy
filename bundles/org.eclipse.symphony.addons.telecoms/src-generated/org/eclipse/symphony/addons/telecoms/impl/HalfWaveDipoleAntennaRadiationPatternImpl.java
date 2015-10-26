@@ -5,14 +5,12 @@ package org.eclipse.symphony.addons.telecoms.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.telecoms.HalfWaveDipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Half Wave Dipole Antenna Radiation Pattern</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -33,7 +31,7 @@ public class HalfWaveDipoleAntennaRadiationPatternImpl extends AbstractAntennaRa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyTelecomToolsPackage.Literals.HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN;
+		return Symphony__AddonsTelecomsPackage.Literals.HALF_WAVE_DIPOLE_ANTENNA_RADIATION_PATTERN;
 	}
 
 	@Override

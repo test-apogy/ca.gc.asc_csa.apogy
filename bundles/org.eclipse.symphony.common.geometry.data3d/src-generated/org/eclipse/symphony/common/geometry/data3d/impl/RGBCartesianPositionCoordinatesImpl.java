@@ -15,12 +15,12 @@ import org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinat
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.RGBCartesianPositionCoordinatesImpl#getRed <em>Red</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.RGBCartesianPositionCoordinatesImpl#getGreen <em>Green</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.RGBCartesianPositionCoordinatesImpl#getBlue <em>Blue</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

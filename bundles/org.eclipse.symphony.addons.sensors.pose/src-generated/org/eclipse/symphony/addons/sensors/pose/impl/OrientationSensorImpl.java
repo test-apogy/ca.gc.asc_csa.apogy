@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.Sensor;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.SensorsPackage;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage;
 import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
@@ -36,11 +36,11 @@ import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.impl.OrientationSensorImpl#getOrientationCoordinates <em>Orientation Coordinates</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -97,7 +97,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PosePackage.Literals.ORIENTATION_SENSOR;
+		return Symphony__AddonsSensorsPosePackage.Literals.ORIENTATION_SENSOR;
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 		SensorStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PosePackage.ORIENTATION_SENSOR__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -179,9 +179,9 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case PosePackage.ORIENTATION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				return getStatus();
-			case PosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES:
 				if (resolve) return getOrientationCoordinates();
 				return basicGetOrientationCoordinates();
 		}
@@ -197,7 +197,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case PosePackage.ORIENTATION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				setStatus((SensorStatus)newValue);
 				return;
 		}
@@ -213,7 +213,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case PosePackage.ORIENTATION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
 		}
@@ -229,9 +229,9 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case PosePackage.ORIENTATION_SENSOR__STATUS:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS:
 				return status != STATUS_EDEFAULT;
-			case PosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__ORIENTATION_COORDINATES:
 				return orientationCoordinates != null;
 		}
 		return super.eIsSet(featureID);
@@ -247,7 +247,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	{
 		if (baseClass == Sensor.class) {
 			switch (derivedFeatureID) {
-				case PosePackage.ORIENTATION_SENSOR__STATUS: return SensorsPackage.SENSOR__STATUS;
+				case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS: return Symphony__AddonsSensorsPackage.SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -269,7 +269,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	{
 		if (baseClass == Sensor.class) {
 			switch (baseFeatureID) {
-				case SensorsPackage.SENSOR__STATUS: return PosePackage.ORIENTATION_SENSOR__STATUS;
+				case Symphony__AddonsSensorsPackage.SENSOR__STATUS: return Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR__STATUS;
 				default: return -1;
 			}
 		}
@@ -289,7 +289,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PosePackage.ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR___RESET_ORIENTATION__CARTESIANORIENTATIONCOORDINATES:
 				try {
 					resetOrientation((CartesianOrientationCoordinates)arguments.get(0));
 					return null;
@@ -297,7 +297,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case PosePackage.ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3:
+			case Symphony__AddonsSensorsPosePackage.ORIENTATION_SENSOR___EXTRACT_ORIENTATION_FROM_MATRIX__MATRIX3X3:
 				return extractOrientationFromMatrix((Matrix3x3)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

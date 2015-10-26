@@ -39,7 +39,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.addons.sensors.pose.ui"
-            class="org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIPackage"
+            class="org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage"
             genModel="model/symphony_addons_sensors_pose_ui.xcore"/>
    </extension>
 

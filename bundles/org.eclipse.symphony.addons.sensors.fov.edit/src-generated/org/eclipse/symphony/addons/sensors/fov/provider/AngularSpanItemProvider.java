@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.AngularSpan;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.AngularSpan} object.
@@ -88,7 +88,7 @@ public class AngularSpanItemProvider
 				getResourceLocator(),
 				getString("_UI_AngularSpan_minimumAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_minimumAngle_feature", "_UI_AngularSpan_type"),
-				FovPackage.Literals.ANGULAR_SPAN__MINIMUM_ANGLE,
+				Symphony__AddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__MINIMUM_ANGLE,
 				true, 
 				false,
 				false, 
@@ -112,7 +112,7 @@ public class AngularSpanItemProvider
 				getResourceLocator(),
 				getString("_UI_AngularSpan_maximumAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_maximumAngle_feature", "_UI_AngularSpan_type"),
-				FovPackage.Literals.ANGULAR_SPAN__MAXIMUM_ANGLE,
+				Symphony__AddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__MAXIMUM_ANGLE,
 				true, 
 				false,
 				false, 
@@ -136,7 +136,7 @@ public class AngularSpanItemProvider
 				getResourceLocator(),
 				getString("_UI_AngularSpan_spanningAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_spanningAngle_feature", "_UI_AngularSpan_type"),
-				FovPackage.Literals.ANGULAR_SPAN__SPANNING_ANGLE,
+				Symphony__AddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__SPANNING_ANGLE,
 				false, 
 				false,
 				false, 
@@ -160,7 +160,7 @@ public class AngularSpanItemProvider
 				getResourceLocator(),
 				getString("_UI_AngularSpan_centerAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_AngularSpan_centerAngle_feature", "_UI_AngularSpan_type"),
-				FovPackage.Literals.ANGULAR_SPAN__CENTER_ANGLE,
+				Symphony__AddonsSensorsFOVPackage.Literals.ANGULAR_SPAN__CENTER_ANGLE,
 				false, 
 				false,
 				false, 
@@ -209,10 +209,10 @@ public class AngularSpanItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AngularSpan.class)) {
-			case FovPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
-			case FovPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
-			case FovPackage.ANGULAR_SPAN__SPANNING_ANGLE:
-			case FovPackage.ANGULAR_SPAN__CENTER_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MINIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__MAXIMUM_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__SPANNING_ANGLE:
+			case Symphony__AddonsSensorsFOVPackage.ANGULAR_SPAN__CENTER_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

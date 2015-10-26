@@ -17,8 +17,8 @@ import org.eclipse.symphony.addons.Symphony__AddonsFactory;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.provider.PhysicalBodyItemProvider;
@@ -76,7 +76,7 @@ public class LanderSphericalFootItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LanderSphericalFoot_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderSphericalFoot_radius_feature", "_UI_LanderSphericalFoot_type"),
-				 SymphonyToolsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT__RADIUS,
+				 Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class LanderSphericalFootItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LanderSphericalFoot.class)) {
-			case SymphonyToolsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
+			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -147,22 +147,22 @@ public class LanderSphericalFootItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createWheel()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createThruster()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -292,22 +292,22 @@ public class LanderSphericalFootItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createWheel()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createThruster()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -5,14 +5,12 @@ package org.eclipse.symphony.addons.telecoms.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Dipole Antenna Radiation Pattern</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -33,7 +31,7 @@ public class DipoleAntennaRadiationPatternImpl extends AbstractAntennaRadiationP
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyTelecomToolsPackage.Literals.DIPOLE_ANTENNA_RADIATION_PATTERN;
+		return Symphony__AddonsTelecomsPackage.Literals.DIPOLE_ANTENNA_RADIATION_PATTERN;
 	}
 
 } //DipoleAntennaRadiationPatternImpl

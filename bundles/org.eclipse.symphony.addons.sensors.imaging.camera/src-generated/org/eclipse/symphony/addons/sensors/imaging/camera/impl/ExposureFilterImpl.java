@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ExposureFilter;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 
@@ -18,10 +18,10 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ExposureFilterImpl#getExposure <em>Exposure</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,7 +65,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.EXPOSURE_FILTER;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.EXPOSURE_FILTER;
 	}
 
   /**
@@ -88,7 +88,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
 		double oldExposure = exposure;
 		exposure = newExposure;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EXPOSURE_FILTER__EXPOSURE, oldExposure, exposure));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE, oldExposure, exposure));
 	}
 
   /**
@@ -100,7 +100,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EXPOSURE_FILTER__EXPOSURE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				return getExposure();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EXPOSURE_FILTER__EXPOSURE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				setExposure((Double)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EXPOSURE_FILTER__EXPOSURE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				setExposure(EXPOSURE_EDEFAULT);
 				return;
 		}
@@ -147,7 +147,7 @@ public class ExposureFilterImpl extends ImageFilterImpl implements ExposureFilte
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EXPOSURE_FILTER__EXPOSURE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EXPOSURE_FILTER__EXPOSURE:
 				return exposure != EXPOSURE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

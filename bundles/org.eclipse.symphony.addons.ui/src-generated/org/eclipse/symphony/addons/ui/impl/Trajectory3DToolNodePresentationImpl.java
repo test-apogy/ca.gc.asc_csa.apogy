@@ -4,7 +4,7 @@
 package org.eclipse.symphony.addons.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage;
+import org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage;
 import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
@@ -12,8 +12,6 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Trajectory3 DTool Node Presentation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -34,7 +32,7 @@ public class Trajectory3DToolNodePresentationImpl extends NodePresentationImpl i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsUIPackage.Literals.TRAJECTORY3_DTOOL_NODE_PRESENTATION;
+		return Symphony__AddonsUIPackage.Literals.TRAJECTORY3_DTOOL_NODE_PRESENTATION;
 	}
 
 } //Trajectory3DToolNodePresentationImpl

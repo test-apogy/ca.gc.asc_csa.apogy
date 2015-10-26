@@ -11,7 +11,7 @@
       <!-- @generated symphony_tools_ui -->
       <factory
             uri="org.eclipse.symphony.addons.ui"
-            class="org.eclipse.symphony.addons.ui.provider.SymphonyToolsUIItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.ui.provider.Symphony__AddonsUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,23 +21,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_ui -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.ui.provider.SymphonyToolsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.ui.provider.SymphonyToolsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.ui.provider.SymphonyToolsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.ui.provider.Symphony__AddonsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.ui.provider.SymphonyToolsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.ui.provider.Symphony__AddonsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

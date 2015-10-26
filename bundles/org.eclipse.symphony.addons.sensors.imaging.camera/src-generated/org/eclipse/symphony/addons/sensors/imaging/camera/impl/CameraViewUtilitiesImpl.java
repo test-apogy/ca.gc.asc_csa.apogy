@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -23,8 +23,6 @@ import org.eclipse.symphony.core.invocator.ToolsList;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Camera View Utilities</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -57,7 +55,7 @@ public class CameraViewUtilitiesImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCameraToolsPackage.Literals.CAMERA_VIEW_UTILITIES;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_UTILITIES;
 	}
 
 	/**
@@ -144,11 +142,11 @@ public class CameraViewUtilitiesImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__CAMERAVIEWCONFIGURATION:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_CAMERA_VIEW_CONFIGURATION_IDENTIFIER__CAMERAVIEWCONFIGURATION:
 				return getCameraViewConfigurationIdentifier((CameraViewConfiguration)arguments.get(0));
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION__STRING:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION__STRING:
 				return getActiveCameraViewConfiguration((String)arguments.get(0));
-			case SymphonyCameraToolsPackage.CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION_LIST:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_VIEW_UTILITIES___GET_ACTIVE_CAMERA_VIEW_CONFIGURATION_LIST:
 				return getActiveCameraViewConfigurationList();
 		}
 		return super.eInvoke(operationID, arguments);

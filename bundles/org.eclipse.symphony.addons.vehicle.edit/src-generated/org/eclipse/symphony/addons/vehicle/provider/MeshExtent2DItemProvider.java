@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.vehicle.MeshExtent2D;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.MeshExtent2D} object.
@@ -84,7 +84,7 @@ public class MeshExtent2DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshExtent2D_minimumX_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshExtent2D_minimumX_feature", "_UI_MeshExtent2D_type"),
-				 SymphonyToolsVehiclePackage.Literals.MESH_EXTENT2_D__MINIMUM_X,
+				 Symphony__AddonsVehiclePackage.Literals.MESH_EXTENT2_D__MINIMUM_X,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class MeshExtent2DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshExtent2D_minimumY_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshExtent2D_minimumY_feature", "_UI_MeshExtent2D_type"),
-				 SymphonyToolsVehiclePackage.Literals.MESH_EXTENT2_D__MINIMUM_Y,
+				 Symphony__AddonsVehiclePackage.Literals.MESH_EXTENT2_D__MINIMUM_Y,
 				 true,
 				 false,
 				 false,
@@ -130,7 +130,7 @@ public class MeshExtent2DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshExtent2D_maximumX_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshExtent2D_maximumX_feature", "_UI_MeshExtent2D_type"),
-				 SymphonyToolsVehiclePackage.Literals.MESH_EXTENT2_D__MAXIMUM_X,
+				 Symphony__AddonsVehiclePackage.Literals.MESH_EXTENT2_D__MAXIMUM_X,
 				 true,
 				 false,
 				 false,
@@ -153,7 +153,7 @@ public class MeshExtent2DItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshExtent2D_maximumY_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshExtent2D_maximumY_feature", "_UI_MeshExtent2D_type"),
-				 SymphonyToolsVehiclePackage.Literals.MESH_EXTENT2_D__MAXIMUM_Y,
+				 Symphony__AddonsVehiclePackage.Literals.MESH_EXTENT2_D__MAXIMUM_Y,
 				 true,
 				 false,
 				 false,
@@ -200,10 +200,10 @@ public class MeshExtent2DItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MeshExtent2D.class)) {
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
-			case SymphonyToolsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MINIMUM_Y:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_X:
+			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D__MAXIMUM_Y:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

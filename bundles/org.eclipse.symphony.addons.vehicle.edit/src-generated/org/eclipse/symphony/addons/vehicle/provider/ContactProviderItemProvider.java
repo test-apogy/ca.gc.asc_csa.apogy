@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.ContactProvider} object.
@@ -78,7 +78,7 @@ public class ContactProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ContactProvider_vehiclePoseCorrector_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ContactProvider_vehiclePoseCorrector_feature", "_UI_ContactProvider_type"),
-				 SymphonyToolsVehiclePackage.Literals.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR,
+				 Symphony__AddonsVehiclePackage.Literals.CONTACT_PROVIDER__VEHICLE_POSE_CORRECTOR,
 				 true,
 				 false,
 				 true,

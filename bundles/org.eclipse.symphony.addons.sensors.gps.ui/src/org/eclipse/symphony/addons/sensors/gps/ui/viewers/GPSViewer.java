@@ -25,7 +25,7 @@ import org.eclipse.symphony.addons.sensors.gps.Activator;
 import org.eclipse.symphony.addons.sensors.gps.GPS;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
 import org.eclipse.symphony.addons.sensors.gps.GPSRepository;
-import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.common.emf.EListAdapter;
 import org.eclipse.symphony.common.emf.ListEventDelegate;
 import org.eclipse.symphony.common.lang.java.Timer;
@@ -306,7 +306,7 @@ public class GPSViewer extends Viewer {
 			};
 
 			gpsRepListener = new EListAdapter<GPS>(
-					GpsPackage.GPS_REPOSITORY__GPS_DEVICES, delegate,
+					Symphony__AddonsSensorsGPSPackage.GPS_REPOSITORY__GPS_DEVICES, delegate,
 					GPSRepository.class);
 		}
 		return gpsRepListener;
@@ -371,7 +371,7 @@ public class GPSViewer extends Viewer {
 					int featureId = msg.getFeatureID(GPS.class);
 
 					// A new gps reading is available.
-					if (featureId == GpsPackage.GPS__READING
+					if (featureId == Symphony__AddonsSensorsGPSPackage.GPS__READING
 							&& msg.getEventType() == Notification.SET
 							&& msg.getNewValue() != null) {
 						getGpsTimer().stop();
@@ -384,7 +384,7 @@ public class GPSViewer extends Viewer {
 						GPSReading reading = (GPSReading) msg.getNewValue();
 
 						updateGUIThreadSafe(reading, refreshRate);
-					} else if (featureId == GpsPackage.GPS__STATUS) {
+					} else if (featureId == Symphony__AddonsSensorsGPSPackage.GPS__STATUS) {
 						updateGUIThreadSafe(null, 0);
 					}
 

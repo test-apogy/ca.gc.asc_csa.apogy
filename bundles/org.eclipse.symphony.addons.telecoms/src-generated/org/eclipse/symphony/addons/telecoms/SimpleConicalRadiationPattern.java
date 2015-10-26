@@ -15,12 +15,12 @@ package org.eclipse.symphony.addons.telecoms;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.SimpleConicalRadiationPattern#getApexAngle <em>Apex Angle</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getSimpleConicalRadiationPattern()
+ * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleConicalRadiationPattern()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface SimpleConicalRadiationPattern extends AbstractAntennaRadiationP
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Apex Angle</em>' attribute.
 	 * @see #setApexAngle(double)
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getSimpleConicalRadiationPattern_ApexAngle()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleConicalRadiationPattern_ApexAngle()
 	 * @model default="0.79" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated

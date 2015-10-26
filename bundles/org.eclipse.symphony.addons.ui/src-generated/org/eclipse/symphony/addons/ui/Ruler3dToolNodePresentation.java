@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.ui.SymphonyToolsUIPackage#getRuler3dToolNodePresentation()
+ * @see org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage#getRuler3dToolNodePresentation()
  * @model
  * @generated
  */

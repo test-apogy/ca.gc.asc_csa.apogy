@@ -27,8 +27,8 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
-import org.eclipse.symphony.addons.sensors.imaging.util.MRTSensorsImagingSwitch;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.util.Symphony__AddonsSensorsImagingSwitch;
 import org.eclipse.symphony.common.images.ImagesAlbum;
 import org.eclipse.symphony.common.images.ImagesCorePackage;
 import org.eclipse.symphony.common.images.util.ImagesCoreSwitch;
@@ -668,6 +668,93 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 	}
 
 	/**
+	 * A child creation extender for the {@link Symphony__AddonsSensorsImagingPackage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static class Symphony__AddonsSensorsImagingChildCreationExtender implements IChildCreationExtender {
+		/**
+		 * The switch for creating child descriptors specific to each extended class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		protected static class CreationSwitch extends Symphony__AddonsSensorsImagingSwitch<Object> {
+			/**
+			 * The child descriptors being populated.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected List<Object> newChildDescriptors;
+
+			/**
+			 * The domain in which to create the children.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected EditingDomain editingDomain;
+
+			/**
+			 * Creates the a switch for populating child descriptors in the given domain.
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+				this.newChildDescriptors = newChildDescriptors;
+				this.editingDomain = editingDomain;
+			}
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseImageSnapshot(ImageSnapshot object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
+						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
+
+				return null;
+			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			protected CommandParameter createChildParameter(Object feature, Object child) {
+				return new CommandParameter(null, feature, child);
+			}
+
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+			ArrayList<Object> result = new ArrayList<Object>();
+			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
+			return result;
+		}
+
+		/**
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public ResourceLocator getResourceLocator() {
+			return EMFEcoreExampleSatelliteEditPlugin.INSTANCE;
+		}
+	}
+
+	/**
 	 * A child creation extender for the {@link ImagesCorePackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1260,92 +1347,6 @@ public class EMFEcoreExampleSatelliteItemProviderAdapterFactory extends EMFEcore
 					(createChildParameter
 						(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return EMFEcoreExampleSatelliteEditPlugin.INSTANCE;
-		}
-	}
-
-	/**
-	 * A child creation extender for the {@link MRTSensorsImagingPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class MRTSensorsImagingChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends MRTSensorsImagingSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseImageSnapshot(ImageSnapshot object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
-						 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				return null;
 			}

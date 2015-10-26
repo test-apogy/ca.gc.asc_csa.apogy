@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getCameraViewConfiguration <em>Camera View Configuration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraToolList#getTools <em>Tools</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraToolList()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraToolList()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface CameraToolList extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Camera View Configuration</em>' container reference.
 	 * @see #setCameraViewConfiguration(CameraViewConfiguration)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraToolList_CameraViewConfiguration()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraToolList_CameraViewConfiguration()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getToolList
 	 * @model opposite="toolList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -66,7 +66,7 @@ public interface CameraToolList extends EObject {
 	 *  The list of overlay shown onto the camera image.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tools</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraToolList_Tools()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraToolList_Tools()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraTool#getCameraToolList
 	 * @model opposite="cameraToolList" containment="true"
 	 * @generated

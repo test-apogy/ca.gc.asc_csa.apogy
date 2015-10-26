@@ -15,8 +15,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsFactory;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 import org.eclipse.symphony.core.environment.provider.LineOfSightImageMapLayerItemProvider;
 
@@ -68,7 +68,7 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 				 getResourceLocator(),
 				 getString("_UI_AntennaRadiationPatternImageMapLayer_antennaRadiationPattern_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AntennaRadiationPatternImageMapLayer_antennaRadiationPattern_feature", "_UI_AntennaRadiationPatternImageMapLayer_type"),
-				 SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 				 getResourceLocator(),
 				 getString("_UI_AntennaRadiationPatternImageMapLayer_signalStrengthCutoff_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AntennaRadiationPatternImageMapLayer_signalStrengthCutoff_feature", "_UI_AntennaRadiationPatternImageMapLayer_type"),
-				 SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF,
+				 Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 				 getResourceLocator(),
 				 getString("_UI_AntennaRadiationPatternImageMapLayer_bellowCutoffColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AntennaRadiationPatternImageMapLayer_bellowCutoffColor_feature", "_UI_AntennaRadiationPatternImageMapLayer_type"),
-				 SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR,
+				 Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR,
 				 true,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN);
+			childrenFeatures.add(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN);
 		}
 		return childrenFeatures;
 	}
@@ -195,11 +195,11 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AntennaRadiationPatternImageMapLayer.class)) {
-			case SymphonyTelecomToolsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
-			case SymphonyTelecomToolsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
+			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF:
+			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyTelecomToolsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
+			case Symphony__AddonsTelecomsPackage.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -219,33 +219,33 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 SymphonyTelecomToolsFactory.eINSTANCE.createIsotropicAntenna()));
+				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 SymphonyTelecomToolsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
+				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 SymphonyTelecomToolsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
+				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 SymphonyTelecomToolsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
+				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 SymphonyTelecomToolsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
+				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyTelecomToolsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
-				 SymphonyTelecomToolsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
+				(Symphony__AddonsTelecomsPackage.Literals.ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN,
+				 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 	}
 
 	/**

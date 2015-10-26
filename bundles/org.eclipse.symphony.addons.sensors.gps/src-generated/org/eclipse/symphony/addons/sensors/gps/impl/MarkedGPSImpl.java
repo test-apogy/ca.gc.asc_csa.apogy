@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 
@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.MarkedGPSImpl#getMarker <em>Marker</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -55,7 +55,7 @@ public class MarkedGPSImpl extends GPSImpl implements MarkedGPS {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GpsPackage.Literals.MARKED_GPS;
+		return Symphony__AddonsSensorsGPSPackage.Literals.MARKED_GPS;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class MarkedGPSImpl extends GPSImpl implements MarkedGPS {
 		PositionMarker oldMarker = marker;
 		marker = newMarker;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GpsPackage.MARKED_GPS__MARKER, oldMarker, newMarker);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER, oldMarker, newMarker);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -91,14 +91,14 @@ public class MarkedGPSImpl extends GPSImpl implements MarkedGPS {
 		if (newMarker != marker) {
 			NotificationChain msgs = null;
 			if (marker != null)
-				msgs = ((InternalEObject)marker).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GpsPackage.MARKED_GPS__MARKER, null, msgs);
+				msgs = ((InternalEObject)marker).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER, null, msgs);
 			if (newMarker != null)
-				msgs = ((InternalEObject)newMarker).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GpsPackage.MARKED_GPS__MARKER, null, msgs);
+				msgs = ((InternalEObject)newMarker).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER, null, msgs);
 			msgs = basicSetMarker(newMarker, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpsPackage.MARKED_GPS__MARKER, newMarker, newMarker));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER, newMarker, newMarker));
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class MarkedGPSImpl extends GPSImpl implements MarkedGPS {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GpsPackage.MARKED_GPS__MARKER:
+			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER:
 				return basicSetMarker(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -123,7 +123,7 @@ public class MarkedGPSImpl extends GPSImpl implements MarkedGPS {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GpsPackage.MARKED_GPS__MARKER:
+			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER:
 				return getMarker();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -137,7 +137,7 @@ public class MarkedGPSImpl extends GPSImpl implements MarkedGPS {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GpsPackage.MARKED_GPS__MARKER:
+			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER:
 				setMarker((PositionMarker)newValue);
 				return;
 		}
@@ -152,7 +152,7 @@ public class MarkedGPSImpl extends GPSImpl implements MarkedGPS {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GpsPackage.MARKED_GPS__MARKER:
+			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER:
 				setMarker((PositionMarker)null);
 				return;
 		}
@@ -167,7 +167,7 @@ public class MarkedGPSImpl extends GPSImpl implements MarkedGPS {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GpsPackage.MARKED_GPS__MARKER:
+			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS__MARKER:
 				return marker != null;
 		}
 		return super.eIsSet(featureID);

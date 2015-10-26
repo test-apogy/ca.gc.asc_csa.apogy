@@ -1,7 +1,7 @@
 package org.eclipse.symphony.addons.sensors.range.ui.adapters;
 
 import org.eclipse.symphony.addons.sensors.range.RasterScanData;
-import org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIFactory;
+import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIFactory;
 import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
@@ -31,7 +31,7 @@ public class RasterScanDataPresentationAdapter implements NodePresentationAdapte
 		}
 		
 		RasterScanData rasterScanData = (RasterScanData) obj;
-		RasterScanDataPresentation presentationNode = RangeSensorsUIFactory.eINSTANCE.createRasterScanDataPresentation();
+		RasterScanDataPresentation presentationNode = Symphony__AddonsSensorsRangeUIFactory.eINSTANCE.createRasterScanDataPresentation();
 		presentationNode.setNode(rasterScanData);
 		return presentationNode;
 	}

@@ -16,13 +16,13 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Wheel#getRadius <em>Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Wheel#getLenght <em>Lenght</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getWheel()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface Wheel extends PhysicalBody
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getWheel_Radius()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel_Radius()
 	 * @model default="0.25" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -67,7 +67,7 @@ public interface Wheel extends PhysicalBody
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lenght</em>' attribute.
 	 * @see #setLenght(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getWheel_Lenght()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel_Lenght()
 	 * @model default="0.1" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated

@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.fov.DistanceRange} object.
@@ -89,7 +89,7 @@ public class DistanceRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceRange_minimumDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceRange_minimumDistance_feature", "_UI_DistanceRange_type"),
-				 FovPackage.Literals.DISTANCE_RANGE__MINIMUM_DISTANCE,
+				 Symphony__AddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__MINIMUM_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class DistanceRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceRange_maximumDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceRange_maximumDistance_feature", "_UI_DistanceRange_type"),
-				 FovPackage.Literals.DISTANCE_RANGE__MAXIMUM_DISTANCE,
+				 Symphony__AddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__MAXIMUM_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class DistanceRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceRange_distance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceRange_distance_feature", "_UI_DistanceRange_type"),
-				 FovPackage.Literals.DISTANCE_RANGE__DISTANCE,
+				 Symphony__AddonsSensorsFOVPackage.Literals.DISTANCE_RANGE__DISTANCE,
 				 false,
 				 false,
 				 false,
@@ -182,9 +182,9 @@ public class DistanceRangeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DistanceRange.class)) {
-			case FovPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
-			case FovPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
-			case FovPackage.DISTANCE_RANGE__DISTANCE:
+			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MINIMUM_DISTANCE:
+			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__MAXIMUM_DISTANCE:
+			case Symphony__AddonsSensorsFOVPackage.DISTANCE_RANGE__DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

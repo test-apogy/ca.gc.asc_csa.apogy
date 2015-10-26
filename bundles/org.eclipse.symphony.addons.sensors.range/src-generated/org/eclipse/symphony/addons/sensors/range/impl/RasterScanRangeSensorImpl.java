@@ -12,8 +12,8 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.range.RangeFactory;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFactory;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanRangeSensor;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
 import org.eclipse.symphony.common.topology.Node;
@@ -22,8 +22,6 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Raster Scan Range Sensor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -49,7 +47,7 @@ public class RasterScanRangeSensorImpl extends RangeScannerImpl<RasterScanSettin
 	@Override
 	protected EClass eStaticClass()
 	{
-		return RangePackage.Literals.RASTER_SCAN_RANGE_SENSOR;
+		return Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_RANGE_SENSOR;
 	}
 
 	/**
@@ -100,7 +98,7 @@ public class RasterScanRangeSensorImpl extends RangeScannerImpl<RasterScanSettin
 	    	// If no RasterScanSettings is found, creates one.
 	    	if(rasterScanSettings == null)
 	    	{
-	    		rasterScanSettings = RangeFactory.eINSTANCE.createRasterScanSettings();
+	    		rasterScanSettings = Symphony__AddonsSensorsRangeFactory.eINSTANCE.createRasterScanSettings();
 	    		getChildren().add(rasterScanSettings);
 	    	}
 		}
@@ -116,7 +114,7 @@ public class RasterScanRangeSensorImpl extends RangeScannerImpl<RasterScanSettin
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RangePackage.RASTER_SCAN_RANGE_SENSOR___GET_SCAN_SETTINGS:
+			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_RANGE_SENSOR___GET_SCAN_SETTINGS:
 				return getScanSettings();
 		}
 		return super.eInvoke(operationID, arguments);

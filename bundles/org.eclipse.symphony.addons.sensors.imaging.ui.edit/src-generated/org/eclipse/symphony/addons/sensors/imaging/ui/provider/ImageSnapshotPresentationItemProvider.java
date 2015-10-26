@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation;
-import org.eclipse.symphony.addons.sensors.imaging.ui.MRTSensorsImagingUIPackage;
+import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
@@ -72,7 +72,7 @@ public class ImageSnapshotPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSnapshotPresentation_presentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSnapshotPresentation_presentationMode_feature", "_UI_ImageSnapshotPresentation_type"),
-				 MRTSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE,
+				 Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class ImageSnapshotPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSnapshotPresentation_transparency_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSnapshotPresentation_transparency_feature", "_UI_ImageSnapshotPresentation_type"),
-				 MRTSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY,
+				 Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class ImageSnapshotPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSnapshotPresentation_imageProjectionVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSnapshotPresentation_imageProjectionVisible_feature", "_UI_ImageSnapshotPresentation_type"),
-				 MRTSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE,
+				 Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class ImageSnapshotPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageSnapshotPresentation_imageProjectionOnFOVVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageSnapshotPresentation_imageProjectionOnFOVVisible_feature", "_UI_ImageSnapshotPresentation_type"),
-				 MRTSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE,
+				 Symphony__AddonsSensorsImagingUIPackage.Literals.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -190,10 +190,10 @@ public class ImageSnapshotPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageSnapshotPresentation.class)) {
-			case MRTSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
-			case MRTSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
-			case MRTSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
-			case MRTSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
+			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__TRANSPARENCY:
+			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_VISIBLE:
+			case Symphony__AddonsSensorsImagingUIPackage.IMAGE_SNAPSHOT_PRESENTATION__IMAGE_PROJECTION_ON_FOV_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

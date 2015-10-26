@@ -11,7 +11,7 @@ import org.eclipse.symphony.addons.sensors.Sensor;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getRangeSensor()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getRangeSensor()
  * @model
  * @generated
  */

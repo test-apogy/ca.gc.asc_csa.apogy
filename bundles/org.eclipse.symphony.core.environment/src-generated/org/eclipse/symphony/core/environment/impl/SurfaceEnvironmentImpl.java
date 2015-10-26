@@ -19,11 +19,11 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SurfaceEnvironmentImpl#getAtmosphere <em>Atmosphere</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SurfaceEnvironmentImpl#getGravity <em>Gravity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

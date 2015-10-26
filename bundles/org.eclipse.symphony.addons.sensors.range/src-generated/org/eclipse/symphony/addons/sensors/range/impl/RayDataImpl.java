@@ -13,7 +13,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RayData;
 
 /**
@@ -22,11 +22,11 @@ import org.eclipse.symphony.addons.sensors.range.RayData;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RayDataImpl#getOrigin <em>Origin</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RayDataImpl#getDirection <em>Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,7 +87,7 @@ public class RayDataImpl extends MinimalEObjectImpl.Container implements RayData
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return RangePackage.Literals.RAY_DATA;
+		return Symphony__AddonsSensorsRangePackage.Literals.RAY_DATA;
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class RayDataImpl extends MinimalEObjectImpl.Container implements RayData
 		Point3d oldOrigin = origin;
 		origin = newOrigin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.RAY_DATA__ORIGIN, oldOrigin, origin));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RAY_DATA__ORIGIN, oldOrigin, origin));
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class RayDataImpl extends MinimalEObjectImpl.Container implements RayData
 		Vector3d oldDirection = direction;
 		direction = newDirection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.RAY_DATA__DIRECTION, oldDirection, direction));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RAY_DATA__DIRECTION, oldDirection, direction));
 	}
 
 	/**
@@ -140,9 +140,9 @@ public class RayDataImpl extends MinimalEObjectImpl.Container implements RayData
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RangePackage.RAY_DATA__ORIGIN:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__ORIGIN:
 				return getOrigin();
-			case RangePackage.RAY_DATA__DIRECTION:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__DIRECTION:
 				return getDirection();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -156,10 +156,10 @@ public class RayDataImpl extends MinimalEObjectImpl.Container implements RayData
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RangePackage.RAY_DATA__ORIGIN:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__ORIGIN:
 				setOrigin((Point3d)newValue);
 				return;
-			case RangePackage.RAY_DATA__DIRECTION:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__DIRECTION:
 				setDirection((Vector3d)newValue);
 				return;
 		}
@@ -174,10 +174,10 @@ public class RayDataImpl extends MinimalEObjectImpl.Container implements RayData
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RangePackage.RAY_DATA__ORIGIN:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__ORIGIN:
 				setOrigin(ORIGIN_EDEFAULT);
 				return;
-			case RangePackage.RAY_DATA__DIRECTION:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__DIRECTION:
 				setDirection(DIRECTION_EDEFAULT);
 				return;
 		}
@@ -192,9 +192,9 @@ public class RayDataImpl extends MinimalEObjectImpl.Container implements RayData
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RangePackage.RAY_DATA__ORIGIN:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__ORIGIN:
 				return ORIGIN_EDEFAULT == null ? origin != null : !ORIGIN_EDEFAULT.equals(origin);
-			case RangePackage.RAY_DATA__DIRECTION:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__DIRECTION:
 				return DIRECTION_EDEFAULT == null ? direction != null : !DIRECTION_EDEFAULT.equals(direction);
 		}
 		return super.eIsSet(featureID);

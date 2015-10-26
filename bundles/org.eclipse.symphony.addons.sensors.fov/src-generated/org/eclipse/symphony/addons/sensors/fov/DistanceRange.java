@@ -16,14 +16,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMinimumDistance <em>Minimum Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getMaximumDistance <em>Maximum Distance</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.DistanceRange#getDistance <em>Distance</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getDistanceRange()
+ * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getDistanceRange()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface DistanceRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Distance</em>' attribute.
 	 * @see #setMinimumDistance(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getDistanceRange_MinimumDistance()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getDistanceRange_MinimumDistance()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface DistanceRange extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Distance</em>' attribute.
 	 * @see #setMaximumDistance(double)
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getDistanceRange_MaximumDistance()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getDistanceRange_MaximumDistance()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -91,7 +91,7 @@ public interface DistanceRange extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distance</em>' attribute.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FovPackage#getDistanceRange_Distance()
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getDistanceRange_Distance()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

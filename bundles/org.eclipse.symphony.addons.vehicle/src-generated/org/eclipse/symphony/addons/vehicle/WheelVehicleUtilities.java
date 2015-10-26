@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getWheelVehicleUtilities()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheelVehicleUtilities()
  * @model
  * @generated
  */

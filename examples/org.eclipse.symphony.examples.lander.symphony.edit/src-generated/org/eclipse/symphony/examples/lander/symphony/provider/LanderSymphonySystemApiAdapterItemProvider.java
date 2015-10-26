@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
 import org.eclipse.symphony.core.SymphonyCorePackage;
 import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
 
@@ -104,7 +104,7 @@ public class LanderSymphonySystemApiAdapterItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 	}
 
   /**

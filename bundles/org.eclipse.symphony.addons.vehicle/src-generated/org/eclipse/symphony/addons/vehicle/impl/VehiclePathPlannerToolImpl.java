@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
@@ -26,10 +26,10 @@ import org.eclipse.symphony.core.invocator.VariableImplementation;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.VehiclePathPlannerToolImpl#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,7 +60,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsVehiclePackage.Literals.VEHICLE_PATH_PLANNER_TOOL;
+		return Symphony__AddonsVehiclePackage.Literals.VEHICLE_PATH_PLANNER_TOOL;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 			variable = (Variable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -98,7 +98,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
 		}
@@ -124,7 +124,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
 		}
@@ -139,7 +139,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
 				setVariable((Variable)null);
 				return;
 		}
@@ -154,7 +154,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_PATH_PLANNER_TOOL__VARIABLE:
 				return variable != null;
 		}
 		return super.eIsSet(featureID);

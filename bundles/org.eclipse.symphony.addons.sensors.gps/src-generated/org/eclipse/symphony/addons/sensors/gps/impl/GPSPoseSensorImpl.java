@@ -34,7 +34,7 @@ import org.eclipse.symphony.addons.sensors.gps.GPS;
 import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
 import org.eclipse.symphony.addons.sensors.gps.GPSStatus;
-import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.addons.sensors.gps.MarkedGPS;
 import org.eclipse.symphony.addons.sensors.pose.impl.PoseSensorImpl;
 import org.eclipse.symphony.common.emf.DefaultListEventDelegate;
@@ -65,6 +65,7 @@ import org.gavaghan.geodesy.GlobalCoordinates;
  * <em><b>GPS Pose Sensor</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSPoseSensorImpl#isStarted <em>Started</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSPoseSensorImpl#getServerJob <em>Server Job</em>}</li>
@@ -75,7 +76,6 @@ import org.gavaghan.geodesy.GlobalCoordinates;
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSPoseSensorImpl#getOriginElevation <em>Origin Elevation</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSPoseSensorImpl#getMaxInitTime <em>Max Init Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -242,7 +242,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GpsPackage.Literals.GPS_POSE_SENSOR;
+		return Symphony__AddonsSensorsGPSPackage.Literals.GPS_POSE_SENSOR;
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 		started = newStarted;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GpsPackage.GPS_POSE_SENSOR__STARTED, oldStarted, started));
+					Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED, oldStarted, started));
 
 		if (started && newStarted != oldStarted) {
 			getServerJob().schedule();
@@ -481,11 +481,11 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	public EList<MarkedGPS> getGps() {
 		if (gps == null) {
 			gps = new EObjectContainmentEList<MarkedGPS>(MarkedGPS.class, this,
-					GpsPackage.GPS_POSE_SENSOR__GPS);
+					Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__GPS);
 
 			// We add a listener to the list.
 			EListAdapter<GPS> adapter = new EListAdapter<GPS>(
-					GpsPackage.GPS_POSE_SENSOR__GPS, getGpsListDelegate(),
+					Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__GPS, getGpsListDelegate(),
 					GPSPoseSensor.class);
 
 			this.eAdapters().add(adapter);
@@ -532,7 +532,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 		double oldOriginLatitude = originLatitude;
 		originLatitude = newOriginLatitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpsPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE, oldOriginLatitude, originLatitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE, oldOriginLatitude, originLatitude));
 	}
 
 	/**
@@ -551,7 +551,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 		double oldOriginLongitude = originLongitude;
 		originLongitude = newOriginLongitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpsPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE, oldOriginLongitude, originLongitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE, oldOriginLongitude, originLongitude));
 	}
 
 	/**
@@ -570,7 +570,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 		double oldNeAngle = neAngle;
 		neAngle = newNeAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpsPackage.GPS_POSE_SENSOR__NE_ANGLE, oldNeAngle, neAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__NE_ANGLE, oldNeAngle, neAngle));
 	}
 
 	/**
@@ -589,7 +589,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 		double oldOriginElevation = originElevation;
 		originElevation = newOriginElevation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpsPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION, oldOriginElevation, originElevation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION, oldOriginElevation, originElevation));
 	}
 
 	/**
@@ -608,7 +608,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 		long oldMaxInitTime = maxInitTime;
 		maxInitTime = newMaxInitTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpsPackage.GPS_POSE_SENSOR__MAX_INIT_TIME, oldMaxInitTime, maxInitTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__MAX_INIT_TIME, oldMaxInitTime, maxInitTime));
 	}
 
 	/**
@@ -619,7 +619,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GpsPackage.GPS_POSE_SENSOR__GPS:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__GPS:
 				return ((InternalEList<?>)getGps()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -632,21 +632,21 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GpsPackage.GPS_POSE_SENSOR__STARTED:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED:
 				return isStarted();
-			case GpsPackage.GPS_POSE_SENSOR__SERVER_JOB:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB:
 				return getServerJob();
-			case GpsPackage.GPS_POSE_SENSOR__GPS:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__GPS:
 				return getGps();
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
 				return getOriginLatitude();
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
 				return getOriginLongitude();
-			case GpsPackage.GPS_POSE_SENSOR__NE_ANGLE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__NE_ANGLE:
 				return getNeAngle();
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
 				return getOriginElevation();
-			case GpsPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
 				return getMaxInitTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -660,26 +660,26 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GpsPackage.GPS_POSE_SENSOR__STARTED:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED:
 				setStarted((Boolean)newValue);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__GPS:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__GPS:
 				getGps().clear();
 				getGps().addAll((Collection<? extends MarkedGPS>)newValue);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
 				setOriginLatitude((Double)newValue);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
 				setOriginLongitude((Double)newValue);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__NE_ANGLE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__NE_ANGLE:
 				setNeAngle((Double)newValue);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
 				setOriginElevation((Double)newValue);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
 				setMaxInitTime((Long)newValue);
 				return;
 		}
@@ -693,25 +693,25 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GpsPackage.GPS_POSE_SENSOR__STARTED:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED:
 				setStarted(STARTED_EDEFAULT);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__GPS:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__GPS:
 				getGps().clear();
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
 				setOriginLatitude(ORIGIN_LATITUDE_EDEFAULT);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
 				setOriginLongitude(ORIGIN_LONGITUDE_EDEFAULT);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__NE_ANGLE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__NE_ANGLE:
 				setNeAngle(NE_ANGLE_EDEFAULT);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
 				setOriginElevation(ORIGIN_ELEVATION_EDEFAULT);
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
 				setMaxInitTime(MAX_INIT_TIME_EDEFAULT);
 				return;
 		}
@@ -725,21 +725,21 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GpsPackage.GPS_POSE_SENSOR__STARTED:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED:
 				return started != STARTED_EDEFAULT;
-			case GpsPackage.GPS_POSE_SENSOR__SERVER_JOB:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB:
 				return SERVER_JOB_EDEFAULT == null ? serverJob != null : !SERVER_JOB_EDEFAULT.equals(serverJob);
-			case GpsPackage.GPS_POSE_SENSOR__GPS:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__GPS:
 				return gps != null && !gps.isEmpty();
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
 				return originLatitude != ORIGIN_LATITUDE_EDEFAULT;
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
 				return originLongitude != ORIGIN_LONGITUDE_EDEFAULT;
-			case GpsPackage.GPS_POSE_SENSOR__NE_ANGLE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__NE_ANGLE:
 				return neAngle != NE_ANGLE_EDEFAULT;
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
 				return originElevation != ORIGIN_ELEVATION_EDEFAULT;
-			case GpsPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
 				return maxInitTime != MAX_INIT_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -753,13 +753,13 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Startable.class) {
 			switch (derivedFeatureID) {
-				case GpsPackage.GPS_POSE_SENSOR__STARTED: return EMFEcorePackage.STARTABLE__STARTED;
+				case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED: return EMFEcorePackage.STARTABLE__STARTED;
 				default: return -1;
 			}
 		}
 		if (baseClass == Server.class) {
 			switch (derivedFeatureID) {
-				case GpsPackage.GPS_POSE_SENSOR__SERVER_JOB: return EMFEcorePackage.SERVER__SERVER_JOB;
+				case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB: return EMFEcorePackage.SERVER__SERVER_JOB;
 				default: return -1;
 			}
 		}
@@ -774,13 +774,13 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Startable.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.STARTABLE__STARTED: return GpsPackage.GPS_POSE_SENSOR__STARTED;
+				case EMFEcorePackage.STARTABLE__STARTED: return Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED;
 				default: return -1;
 			}
 		}
 		if (baseClass == Server.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.SERVER__SERVER_JOB: return GpsPackage.GPS_POSE_SENSOR__SERVER_JOB;
+				case EMFEcorePackage.SERVER__SERVER_JOB: return Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB;
 				default: return -1;
 			}
 		}
@@ -1179,7 +1179,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 				public void notifyChanged(Notification msg) {
 					int featureId = msg.getFeatureID(GPSPoseSensor.class);
 
-					if (featureId == GpsPackage.GPS__STATUS) {
+					if (featureId == Symphony__AddonsSensorsGPSPackage.GPS__STATUS) {
 						if (msg.getNewValue() == GPSStatus.RECONNECTING) {
 							// The gps is trying to reconnect, we fall into
 							// 'busy' state.

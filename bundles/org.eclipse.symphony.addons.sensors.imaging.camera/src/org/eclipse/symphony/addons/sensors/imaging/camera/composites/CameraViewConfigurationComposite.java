@@ -25,7 +25,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Activator;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraImageAnnotation;
@@ -510,7 +510,7 @@ public class CameraViewConfigurationComposite extends Composite
 				@Override
 				public void notifyChanged(Notification msg) 
 				{				
-					if(msg.getFeatureID(AbstractCamera.class) == MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT)
+					if(msg.getFeatureID(AbstractCamera.class) == Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT)
 					{															
 						ImageSnapshot newImageSnapshot = (ImageSnapshot) msg.getNewValue();
 						updateImageSnapshot(newImageSnapshot);												

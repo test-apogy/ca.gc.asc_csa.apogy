@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage;
+import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
 import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
@@ -66,7 +66,7 @@ public class RasterScanDataPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_RasterScanDataPresentation_fovPresentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanDataPresentation_fovPresentationMode_feature", "_UI_RasterScanDataPresentation_type"),
-				 RangeSensorsUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE,
+				 Symphony__AddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class RasterScanDataPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_RasterScanDataPresentation_fovVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanDataPresentation_fovVisible_feature", "_UI_RasterScanDataPresentation_type"),
-				 RangeSensorsUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE,
+				 Symphony__AddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class RasterScanDataPresentationItemProvider extends NodePresentationItem
 				 getResourceLocator(),
 				 getString("_UI_RasterScanDataPresentation_dataVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanDataPresentation_dataVisible_feature", "_UI_RasterScanDataPresentation_type"),
-				 RangeSensorsUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE,
+				 Symphony__AddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -158,9 +158,9 @@ public class RasterScanDataPresentationItemProvider extends NodePresentationItem
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RasterScanDataPresentation.class)) {
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

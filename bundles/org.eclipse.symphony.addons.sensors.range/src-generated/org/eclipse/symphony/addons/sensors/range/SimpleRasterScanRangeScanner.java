@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.sensors.range;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSimpleRasterScanRangeScanner()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSimpleRasterScanRangeScanner()
  * @model
  * @generated
  */

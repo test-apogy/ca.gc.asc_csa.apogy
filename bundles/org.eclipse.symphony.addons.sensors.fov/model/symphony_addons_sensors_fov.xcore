@@ -1,9 +1,9 @@
-@GenModel(prefix="Fov",
+@GenModel(prefix="Symphony__AddonsSensorsFOV",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Fov",
+	      modelName="Symphony__AddonsSensorsFOV",
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.fov/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.fov.edit/src-generated")

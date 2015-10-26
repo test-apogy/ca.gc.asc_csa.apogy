@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFrozenOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
@@ -65,7 +65,7 @@ public class ImageFrozenOverlayItemProvider extends AbstractTextOverlayItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ImageFrozenOverlay_frozen_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageFrozenOverlay_frozen_feature", "_UI_ImageFrozenOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.IMAGE_FROZEN_OVERLAY__FROZEN,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__FROZEN,
 				 false,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class ImageFrozenOverlayItemProvider extends AbstractTextOverlayItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ImageFrozenOverlay_expectedImageUpdatePeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageFrozenOverlay_expectedImageUpdatePeriod_feature", "_UI_ImageFrozenOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class ImageFrozenOverlayItemProvider extends AbstractTextOverlayItemProvi
 				 getResourceLocator(),
 				 getString("_UI_ImageFrozenOverlay_frozenMessage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageFrozenOverlay_frozenMessage_feature", "_UI_ImageFrozenOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE,
 				 true,
 				 false,
 				 false,
@@ -162,9 +162,9 @@ public class ImageFrozenOverlayItemProvider extends AbstractTextOverlayItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageFrozenOverlay.class)) {
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
-			case SymphonyCameraToolsPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__EXPECTED_IMAGE_UPDATE_PERIOD:
+			case Symphony__AddonsSensorsImagingCameraPackage.IMAGE_FROZEN_OVERLAY__FROZEN_MESSAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

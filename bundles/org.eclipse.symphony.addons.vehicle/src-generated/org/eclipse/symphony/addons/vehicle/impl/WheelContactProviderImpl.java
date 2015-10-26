@@ -15,7 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
@@ -33,10 +33,10 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelContactProviderImpl#getContactMode <em>Contact Mode</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -80,7 +80,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.WHEEL_CONTACT_PROVIDER;
+		return Symphony__AddonsVehiclePackage.Literals.WHEEL_CONTACT_PROVIDER;
 	}
 
   /**
@@ -103,7 +103,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
 		WheelContactMode oldContactMode = contactMode;
 		contactMode = newContactMode == null ? CONTACT_MODE_EDEFAULT : newContactMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE, oldContactMode, contactMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE, oldContactMode, contactMode));
 	}
 
   /**
@@ -115,7 +115,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				return getContactMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				setContactMode((WheelContactMode)newValue);
 				return;
 		}
@@ -146,7 +146,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				setContactMode(CONTACT_MODE_EDEFAULT);
 				return;
 		}
@@ -162,7 +162,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
+			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER__CONTACT_MODE:
 				return contactMode != CONTACT_MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -193,7 +193,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
 	  try
 	  {
 		  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();
-		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(SymphonyToolsVehiclePackage.Literals.WHEEL, root);
+		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__AddonsVehiclePackage.Literals.WHEEL, root);
 		  
 		  for(Node node : nodes)
 		  {

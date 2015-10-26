@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getY <em>Y</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getGreen <em>Green</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.LASPoint#getBlue <em>Blue</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasPackage#getLASPoint()
  * @model

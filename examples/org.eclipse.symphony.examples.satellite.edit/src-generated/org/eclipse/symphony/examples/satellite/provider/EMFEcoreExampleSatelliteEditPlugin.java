@@ -5,9 +5,9 @@ package org.eclipse.symphony.examples.satellite.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
-import org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
-import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
+import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVEditPlugin;
+import org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingEditPlugin;
+import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
@@ -54,22 +54,22 @@ public final class EMFEcoreExampleSatelliteEditPlugin extends EMFPlugin {
 	public EMFEcoreExampleSatelliteEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ImagesCoreEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
-		     ProcessorsEditPlugin.INSTANCE,
-		     FovEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
-		     DataEditPlugin.INSTANCE,
-		     MathEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
-		     Data3dEditPlugin.INSTANCE,
+		     SymphonyOrbitEnvironmentEditPlugin.INSTANCE,
+		     SymphonyEnvironmentEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsImagingEditPlugin.INSTANCE,
+		     TopologyEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
+		     ImagesCoreEditPlugin.INSTANCE,
 		     SymphonyEarthOrbitEnvironmentEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     TopologyEditPlugin.INSTANCE,
-		     MRTSensorsImagingEditPlugin.INSTANCE,
-		     SensorsEditPlugin.INSTANCE,
+		     SymphonyCoreEditPlugin.INSTANCE,
+		     MathEditPlugin.INSTANCE,
+		     Data3dEditPlugin.INSTANCE,
+		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
+		     TopologyBindingsEditPlugin.INSTANCE,
+		     DataEditPlugin.INSTANCE,
+		     ProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
 import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
+import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.common.topology.Node;
@@ -29,10 +29,10 @@ import org.eclipse.symphony.common.topology.bindings.impl.AbstractTopologyBindin
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl#getFov <em>Fov</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -66,7 +66,7 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
   @Override
   protected EClass eStaticClass()
   {
-		return MRTFOVBindingsPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING;
+		return Symphony__AddonsSensorsFOVBindingsPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING;
 	}
 
   /**
@@ -81,7 +81,7 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
 			fov = (RectangularFrustrumFieldOfView)eResolveProxy(oldFov);
 			if (fov != oldFov) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MRTFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
 			}
 		}
 		return fov;
@@ -107,7 +107,7 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
 		RectangularFrustrumFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV, oldFov, fov));
 	}
 
   /**
@@ -119,7 +119,7 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV:
 				if (resolve) return getFov();
 				return basicGetFov();
 		}
@@ -135,7 +135,7 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV:
 				setFov((RectangularFrustrumFieldOfView)newValue);
 				return;
 		}
@@ -151,7 +151,7 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV:
 				setFov((RectangularFrustrumFieldOfView)null);
 				return;
 		}
@@ -167,7 +167,7 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV:
+			case Symphony__AddonsSensorsFOVBindingsPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV:
 				return fov != null;
 		}
 		return super.eIsSet(featureID);
@@ -219,7 +219,7 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
 				  }				
 				  else if(notification.getNotifier() instanceof RectangularFrustrumFieldOfView)
 				  {					  
-					  if(notification.getFeatureID(RectangularFrustrumFieldOfView.class) == FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE)						  
+					  if(notification.getFeatureID(RectangularFrustrumFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RANGE)						  
 					  {
 						  if(notification.getOldValue() instanceof DistanceRange)
 						  {
@@ -236,11 +236,11 @@ public class RectangularFrustrumFieldOfViewBindingImpl extends AbstractTopologyB
 							  updateDistanceRange(newDistanceRange);
 						  }						  						 
 					  }
-					  else if(notification.getFeatureID(RectangularFrustrumFieldOfView.class) == FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE)
+					  else if(notification.getFeatureID(RectangularFrustrumFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__HORIZONTAL_FIELD_OF_VIEW_ANGLE)
 					  {
 						  updateHorizontalFieldOfViewAngle(notification.getNewDoubleValue());
 					  }
-					  else if(notification.getFeatureID(RectangularFrustrumFieldOfView.class) == FovPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE)
+					  else if(notification.getFeatureID(RectangularFrustrumFieldOfView.class) == Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__VERTICAL_FIELD_OF_VIEW_ANGLE)
 					  {
 						  updateVerticalFieldOfViewAngle(notification.getNewDoubleValue());
 					  }

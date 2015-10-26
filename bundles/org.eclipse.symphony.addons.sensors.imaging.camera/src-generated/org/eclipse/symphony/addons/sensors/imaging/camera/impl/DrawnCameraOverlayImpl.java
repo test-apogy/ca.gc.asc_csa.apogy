@@ -10,15 +10,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.camera.DrawnCameraOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.images.AbstractEImage;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Drawn Camera Overlay</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -42,7 +40,7 @@ public abstract class DrawnCameraOverlayImpl extends CameraOverlayImpl implement
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCameraToolsPackage.Literals.DRAWN_CAMERA_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.DRAWN_CAMERA_OVERLAY;
 	}
 
   /**
@@ -66,7 +64,7 @@ public abstract class DrawnCameraOverlayImpl extends CameraOverlayImpl implement
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyCameraToolsPackage.DRAWN_CAMERA_OVERLAY___APPLY_OVERLAY__ABSTRACTCAMERA_ABSTRACTEIMAGE_OVERLAYALIGNMENT_INT_INT:
+			case Symphony__AddonsSensorsImagingCameraPackage.DRAWN_CAMERA_OVERLAY___APPLY_OVERLAY__ABSTRACTCAMERA_ABSTRACTEIMAGE_OVERLAYALIGNMENT_INT_INT:
 				return applyOverlay((AbstractCamera)arguments.get(0), (AbstractEImage)arguments.get(1), (OverlayAlignment)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
 		}
 		return super.eInvoke(operationID, arguments);

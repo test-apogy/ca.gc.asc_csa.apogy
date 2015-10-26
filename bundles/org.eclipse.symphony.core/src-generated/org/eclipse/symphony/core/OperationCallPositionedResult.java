@@ -13,10 +13,10 @@ import org.eclipse.symphony.core.invocator.OperationCallResult;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.OperationCallPositionedResult#getRelativePose <em>Relative Pose</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.SymphonyCorePackage#getOperationCallPositionedResult()
  * @model

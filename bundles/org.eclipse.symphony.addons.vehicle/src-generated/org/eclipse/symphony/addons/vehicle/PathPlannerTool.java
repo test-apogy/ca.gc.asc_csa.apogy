@@ -15,6 +15,7 @@ import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#isBusy <em>Busy</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#isAutoPathPlanEnabled <em>Auto Path Plan Enabled</em>}</li>
@@ -23,9 +24,8 @@ import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPlannedPath <em>Planned Path</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.PathPlannerTool#getPathPlannerToolNode <em>Path Planner Tool Node</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerTool()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Busy</em>' attribute.
 	 * @see #setBusy(boolean)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerTool_Busy()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_Busy()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
@@ -71,7 +71,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Auto Path Plan Enabled</em>' attribute.
 	 * @see #setAutoPathPlanEnabled(boolean)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerTool_AutoPathPlanEnabled()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_AutoPathPlanEnabled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -102,7 +102,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mesh Layer</em>' reference.
 	 * @see #setMeshLayer(CartesianTriangularMeshMapLayer)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerTool_MeshLayer()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_MeshLayer()
 	 * @model
 	 * @generated
 	 */
@@ -128,7 +128,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path Planner</em>' containment reference.
 	 * @see #setPathPlanner(MeshWayPointPathPlanner)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerTool_PathPlanner()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_PathPlanner()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true'"
 	 * @generated
@@ -155,7 +155,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Planned Path</em>' containment reference.
 	 * @see #setPlannedPath(WayPointPath)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerTool_PlannedPath()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_PlannedPath()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly'"
 	 * @generated
@@ -183,7 +183,7 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path Planner Tool Node</em>' reference.
 	 * @see #setPathPlannerToolNode(PathPlannerToolNode)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getPathPlannerTool_PathPlannerToolNode()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getPathPlannerTool_PathPlannerToolNode()
 	 * @see org.eclipse.symphony.addons.vehicle.PathPlannerToolNode#getPathPlannerTool
 	 * @model opposite="pathPlannerTool" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='None' propertyCategory='TRAJECTORY_3D_TOOL'"

@@ -13,7 +13,7 @@
       <!-- @generated symphony_tools_camera -->
       <factory
             uri="org.eclipse.symphony.addons.sensors.imaging.camera"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,23 +23,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_addons_imaging_camera -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_tools_camera -->
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.SymphonyCameraToolsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

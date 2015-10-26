@@ -14,11 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.SensorsFactory;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
+import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
@@ -97,8 +97,8 @@ public class ImageSnapshotItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW);
-			childrenFeatures.add(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE);
 		}
 		return childrenFeatures;
 	}
@@ -157,11 +157,11 @@ public class ImageSnapshotItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageSnapshot.class)) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -183,51 +183,51 @@ public class ImageSnapshotItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MRTSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
+				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MRTSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
+				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createFieldOfView()));
+				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createConicalFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 FovFactory.eINSTANCE.createCircularSectorFieldOfView()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SensorsFactory.eINSTANCE.createSensor()));
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW,
-				 FovFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
+				(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW,
+				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
+				(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
 				 ImagesCoreFactory.eINSTANCE.createEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
+				(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
 				 ImagesCoreFactory.eINSTANCE.createURLEImage()));
 	}
 
@@ -245,7 +245,7 @@ public class ImageSnapshotItemProvider
 
 		boolean qualify =
 			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW;
+			childFeature == Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW;
 
 		if (qualify) {
 			return getString

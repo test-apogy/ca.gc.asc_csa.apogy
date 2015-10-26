@@ -19,11 +19,11 @@ import org.eclipse.symphony.common.topology.ui.preferences.PreferencesConstants;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl#isAxisVisible <em>Axis Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl#getAxisLenght <em>Axis Lenght</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

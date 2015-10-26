@@ -20,11 +20,11 @@ package org.eclipse.symphony.examples.camera.symphony;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData#getPanAngle <em>Pan Angle</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData#getTiltAngle <em>Tilt Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage#getPTUCameraData()
  * @model

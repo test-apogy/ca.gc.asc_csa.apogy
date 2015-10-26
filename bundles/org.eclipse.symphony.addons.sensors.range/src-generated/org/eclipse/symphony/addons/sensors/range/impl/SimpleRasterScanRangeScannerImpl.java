@@ -8,7 +8,7 @@ package org.eclipse.symphony.addons.sensors.range.impl;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
 import org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
@@ -21,8 +21,6 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Simple Raster Scan Range Scanner</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -46,7 +44,7 @@ public class SimpleRasterScanRangeScannerImpl extends RasterScanRangeSensorImpl 
 	@Override
 	protected EClass eStaticClass()
 	{
-		return RangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER;
+		return Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_RASTER_SCAN_RANGE_SCANNER;
 	}
 
 	@Override

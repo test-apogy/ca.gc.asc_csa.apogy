@@ -30,13 +30,13 @@ import org.eclipse.symphony.common.topology.INodeVisitor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.WayPointImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.WayPointImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.WayPointImpl#getNodeId <em>Node Id</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.impl.WayPointImpl#getChildren <em>Children</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

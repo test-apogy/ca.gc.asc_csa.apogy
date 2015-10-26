@@ -14,13 +14,13 @@ import org.eclipse.symphony.common.topology.TransformNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getPose <em>Pose</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.PoseSensor#getDataLogger <em>Data Logger</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPoseSensor()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseSensor()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface PoseSensor extends TransformNode, PositionSensor, OrientationSe
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose</em>' reference.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPoseSensor_Pose()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseSensor_Pose()
 	 * @model transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -50,7 +50,7 @@ public interface PoseSensor extends TransformNode, PositionSensor, OrientationSe
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Logger</em>' containment reference.
 	 * @see #setDataLogger(PoseDataLogger)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getPoseSensor_DataLogger()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getPoseSensor_DataLogger()
 	 * @model containment="true"
 	 * @generated
 	 */

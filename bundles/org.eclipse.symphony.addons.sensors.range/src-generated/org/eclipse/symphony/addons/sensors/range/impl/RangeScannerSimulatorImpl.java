@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.addons.sensors.range.Activator;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator;
 import org.eclipse.symphony.addons.sensors.range.RayData;
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
@@ -50,6 +50,7 @@ import com.sun.j3d.utils.geometry.NormalGenerator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerSimulatorImpl#getMeshNode <em>Mesh Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerSimulatorImpl#isNoiseEnabled <em>Noise Enabled</em>}</li>
@@ -57,7 +58,6 @@ import com.sun.j3d.utils.geometry.NormalGenerator;
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerSimulatorImpl#getTimeFindingIntersections <em>Time Finding Intersections</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.RangeScannerSimulatorImpl#getTimeGettingSimulatedRays <em>Time Getting Simulated Rays</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -169,7 +169,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return RangePackage.Literals.RANGE_SCANNER_SIMULATOR;
+		return Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR;
 	}
 
 	/**
@@ -184,7 +184,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 			meshNode = (ContentNode<CartesianTriangularMesh>)eResolveProxy(oldMeshNode);
 			if (meshNode != oldMeshNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE, oldMeshNode, meshNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE, oldMeshNode, meshNode));
 			}
 		}
 		return meshNode;
@@ -208,7 +208,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 		ContentNode<CartesianTriangularMesh> oldMeshNode = meshNode;
 		meshNode = newMeshNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE, oldMeshNode, meshNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE, oldMeshNode, meshNode));
 	}
 
 	/**
@@ -229,7 +229,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 		boolean oldNoiseEnabled = noiseEnabled;
 		noiseEnabled = newNoiseEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED, oldNoiseEnabled, noiseEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED, oldNoiseEnabled, noiseEnabled));
 	}
 
 	/**
@@ -250,7 +250,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 		long oldTimeCroppingMesh = timeCroppingMesh;
 		timeCroppingMesh = newTimeCroppingMesh;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH, oldTimeCroppingMesh, timeCroppingMesh));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH, oldTimeCroppingMesh, timeCroppingMesh));
 	}
 
 	/**
@@ -271,7 +271,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 		long oldTimeFindingIntersections = timeFindingIntersections;
 		timeFindingIntersections = newTimeFindingIntersections;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS, oldTimeFindingIntersections, timeFindingIntersections));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS, oldTimeFindingIntersections, timeFindingIntersections));
 	}
 
 	/**
@@ -292,7 +292,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 		long oldTimeGettingSimulatedRays = timeGettingSimulatedRays;
 		timeGettingSimulatedRays = newTimeGettingSimulatedRays;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS, oldTimeGettingSimulatedRays, timeGettingSimulatedRays));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS, oldTimeGettingSimulatedRays, timeGettingSimulatedRays));
 	}
 
 	/**
@@ -423,16 +423,16 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE:
 				if (resolve) return getMeshNode();
 				return basicGetMeshNode();
-			case RangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
 				return isNoiseEnabled();
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
 				return getTimeCroppingMesh();
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
 				return getTimeFindingIntersections();
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
 				return getTimeGettingSimulatedRays();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -447,19 +447,19 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE:
 				setMeshNode((ContentNode<CartesianTriangularMesh>)newValue);
 				return;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
 				setNoiseEnabled((Boolean)newValue);
 				return;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
 				setTimeCroppingMesh((Long)newValue);
 				return;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
 				setTimeFindingIntersections((Long)newValue);
 				return;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
 				setTimeGettingSimulatedRays((Long)newValue);
 				return;
 		}
@@ -474,19 +474,19 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE:
 				setMeshNode((ContentNode<CartesianTriangularMesh>)null);
 				return;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
 				setNoiseEnabled(NOISE_ENABLED_EDEFAULT);
 				return;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
 				setTimeCroppingMesh(TIME_CROPPING_MESH_EDEFAULT);
 				return;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
 				setTimeFindingIntersections(TIME_FINDING_INTERSECTIONS_EDEFAULT);
 				return;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
 				setTimeGettingSimulatedRays(TIME_GETTING_SIMULATED_RAYS_EDEFAULT);
 				return;
 		}
@@ -501,15 +501,15 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__MESH_NODE:
 				return meshNode != null;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
 				return noiseEnabled != NOISE_ENABLED_EDEFAULT;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
 				return timeCroppingMesh != TIME_CROPPING_MESH_EDEFAULT;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
 				return timeFindingIntersections != TIME_FINDING_INTERSECTIONS_EDEFAULT;
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
 				return timeGettingSimulatedRays != TIME_GETTING_SIMULATED_RAYS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -523,11 +523,11 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RangePackage.RANGE_SCANNER_SIMULATOR___GET_CROPPED_MESH:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR___GET_CROPPED_MESH:
 				return getCroppedMesh();
-			case RangePackage.RANGE_SCANNER_SIMULATOR___GET_SIMULATED_RAYS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR___GET_SIMULATED_RAYS:
 				return getSimulatedRays();
-			case RangePackage.RANGE_SCANNER_SIMULATOR___ACQUIRE_DATA:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR___ACQUIRE_DATA:
 				try {
 					acquireData();
 					return null;
@@ -535,11 +535,11 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case RangePackage.RANGE_SCANNER_SIMULATOR___APPLY_ORIENTATION_NOISE__RAYDATA:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR___APPLY_ORIENTATION_NOISE__RAYDATA:
 				return applyOrientationNoise((RayData)arguments.get(0));
-			case RangePackage.RANGE_SCANNER_SIMULATOR___APPLY_RANGE_NOISE__DOUBLE_RAYDATA_RAYDATA:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR___APPLY_RANGE_NOISE__DOUBLE_RAYDATA_RAYDATA:
 				return applyRangeNoise((Double)arguments.get(0), (RayData)arguments.get(1), (RayData)arguments.get(2));
-			case RangePackage.RANGE_SCANNER_SIMULATOR___CREATE_COORDINATES25_D__RAYDATA_DOUBLE:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR___CREATE_COORDINATES25_D__RAYDATA_DOUBLE:
 				return createCoordinates25D((RayData)arguments.get(0), (Double)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

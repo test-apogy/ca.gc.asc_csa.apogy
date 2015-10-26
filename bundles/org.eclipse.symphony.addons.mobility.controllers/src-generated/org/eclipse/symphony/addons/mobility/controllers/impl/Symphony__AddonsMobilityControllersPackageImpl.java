@@ -28,7 +28,7 @@ import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode
 import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
 import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
 import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
-import org.eclipse.symphony.addons.sensors.pose.PosePackage;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.common.geometry.data3d.Data3dPackage;
 
 /**
@@ -146,7 +146,7 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		// Initialize simple dependencies
 		Symphony__AddonsMobilityPackage.eINSTANCE.eClass();
 		Symphony__AddonsGeometryPathsPackage.eINSTANCE.eClass();
-		PosePackage.eINSTANCE.eClass();
+		Symphony__AddonsSensorsPosePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsMobilityControllersPackage.createPackageContents();
@@ -686,7 +686,7 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		// Obtain other dependent packages
 		Symphony__AddonsMobilityPackage theSymphony__AddonsMobilityPackage = (Symphony__AddonsMobilityPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPackage.eNS_URI);
 		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
-		PosePackage thePosePackage = (PosePackage)EPackage.Registry.INSTANCE.getEPackage(PosePackage.eNS_URI);
+		Symphony__AddonsSensorsPosePackage theSymphony__AddonsSensorsPosePackage = (Symphony__AddonsSensorsPosePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsPosePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Data3dPackage theData3dPackage = (Data3dPackage)EPackage.Registry.INSTANCE.getEPackage(Data3dPackage.eNS_URI);
 
@@ -739,7 +739,7 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		initEReference(getPathFollower_Path(), g1, null, "path", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		g1 = createEGenericType(pathFollowerEClass_PlatformType);
 		initEReference(getPathFollower_Platform(), g1, null, "platform", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPathFollower_PoseSensor(), thePosePackage.getPoseSensor(), null, "poseSensor", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathFollower_PoseSensor(), theSymphony__AddonsSensorsPosePackage.getPoseSensor(), null, "poseSensor", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathFollower_DestinationReached(), theEcorePackage.getEBoolean(), "destinationReached", null, 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathFollower_PathFollowerState(), this.getPathFollowerState(), "pathFollowerState", "IDLE", 0, 1, PathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -759,7 +759,7 @@ public class Symphony__AddonsMobilityControllersPackageImpl extends EPackageImpl
 		initEAttribute(getSkidSteeredPlatformPathFollower_MaximumLinearVelocity(), theEcorePackage.getEDouble(), "maximumLinearVelocity", null, 0, 1, SkidSteeredPlatformPathFollower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pathRecorderEClass, PathRecorder.class, "PathRecorder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPathRecorder_PositionSensor(), thePosePackage.getPoseSensor(), null, "positionSensor", null, 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathRecorder_PositionSensor(), theSymphony__AddonsSensorsPosePackage.getPoseSensor(), null, "positionSensor", null, 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathRecorder_MinimumDistanceDelta(), theEcorePackage.getEDouble(), "minimumDistanceDelta", "0.1", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathRecorder_MinimumTimeDelta(), theEcorePackage.getEDouble(), "minimumTimeDelta", "1.0", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathRecorder_SamplingMode(), this.getPathRecorderSamplingMode(), "samplingMode", "ON_DISTANCE_DELTA", 0, 1, PathRecorder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

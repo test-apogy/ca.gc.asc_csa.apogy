@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFoot;
 import org.eclipse.symphony.addons.vehicle.LanderSphericalFootContactProvider;
 import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
@@ -28,8 +28,6 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lander Spherical Foot Contact Provider</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -53,7 +51,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER;
+		return Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER;
 	}
 
   @Override
@@ -64,7 +62,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 	  try
 	  {
 		  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();
-		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(SymphonyToolsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT, root);
+		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT, root);
 		  
 		  for(Node node : nodes)
 		  {

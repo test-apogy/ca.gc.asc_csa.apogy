@@ -12,12 +12,12 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation#isDetectedRangeVisible <em>Detected Range Visible</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage#getSimpleSonarPresentation()
+ * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage#getSimpleSonarPresentation()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface SimpleSonarPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Detected Range Visible</em>' attribute.
 	 * @see #setDetectedRangeVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage#getSimpleSonarPresentation_DetectedRangeVisible()
+	 * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage#getSimpleSonarPresentation_DetectedRangeVisible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */

@@ -19,10 +19,10 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList#getFeatureRoots <em>Feature Roots</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getFeatureRootsList()
  * @model

@@ -13,14 +13,14 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#getFovPresentationMode <em>Fov Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#isFovVisible <em>Fov Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation#isDataVisible <em>Data Visible</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage#getRasterScanDataPresentation()
+ * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage#getRasterScanDataPresentation()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface RasterScanDataPresentation extends NodePresentation {
 	 * @return the value of the '<em>Fov Presentation Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #setFovPresentationMode(MeshPresentationMode)
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage#getRasterScanDataPresentation_FovPresentationMode()
+	 * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage#getRasterScanDataPresentation_FovPresentationMode()
 	 * @model default="WIREFRAME" unique="false"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface RasterScanDataPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fov Visible</em>' attribute.
 	 * @see #setFovVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage#getRasterScanDataPresentation_FovVisible()
+	 * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage#getRasterScanDataPresentation_FovVisible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -93,7 +93,7 @@ public interface RasterScanDataPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Visible</em>' attribute.
 	 * @see #setDataVisible(boolean)
-	 * @see org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage#getRasterScanDataPresentation_DataVisible()
+	 * @see org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage#getRasterScanDataPresentation_DataVisible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */

@@ -16,6 +16,7 @@ import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getLineWidth <em>Line Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getPositiveValuesColor <em>Positive Values Color</em>}</li>
@@ -26,9 +27,8 @@ import org.eclipse.symphony.addons.sensors.imaging.ElevationDirection;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getAzimuthDirection <em>Azimuth Direction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay#getElevationDirection <em>Elevation Direction</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Line Width</em>' attribute.
 	 * @see #setLineWidth(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_LineWidth()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_LineWidth()
 	 * @model default="2" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES'"
 	 * @generated
@@ -73,7 +73,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Positive Values Color</em>' attribute.
 	 * @see #setPositiveValuesColor(Color3f)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_PositiveValuesColor()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_PositiveValuesColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES'"
 	 * @generated
@@ -101,7 +101,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Negative Value Color</em>' attribute.
 	 * @see #setNegativeValueColor(Color3f)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_NegativeValueColor()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_NegativeValueColor()
 	 * @model default="1.0,0.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES'"
 	 * @generated
@@ -128,7 +128,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angle Interval</em>' attribute.
 	 * @see #setAngleInterval(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_AngleInterval()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_AngleInterval()
 	 * @model default="5" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES' csa_units='deg'"
 	 * @generated
@@ -155,7 +155,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Font Name</em>' attribute.
 	 * @see #setFontName(String)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_FontName()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_FontName()
 	 * @model default="SansSerif" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -182,7 +182,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Font Size</em>' attribute.
 	 * @see #setFontSize(int)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_FontSize()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_FontSize()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FONT_PROPERTIES'"
 	 * @generated
@@ -214,7 +214,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * @return the value of the '<em>Azimuth Direction</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.imaging.AzimuthDirection
 	 * @see #setAzimuthDirection(AzimuthDirection)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_AzimuthDirection()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_AzimuthDirection()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DIRECTIONS_PROPERTIES'"
 	 * @generated
@@ -247,7 +247,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * @return the value of the '<em>Elevation Direction</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.imaging.ElevationDirection
 	 * @see #setElevationDirection(ElevationDirection)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getFOVOverlay_ElevationDirection()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_ElevationDirection()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DIRECTIONS_PROPERTIES'"
 	 * @generated

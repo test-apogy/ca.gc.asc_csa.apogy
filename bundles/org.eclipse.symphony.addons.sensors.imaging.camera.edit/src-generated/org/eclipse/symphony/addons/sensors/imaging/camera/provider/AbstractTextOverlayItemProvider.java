@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay} object.
@@ -71,7 +71,7 @@ public class AbstractTextOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTextOverlay_fontName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTextOverlay_fontName_feature", "_UI_AbstractTextOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.ABSTRACT_TEXT_OVERLAY__FONT_NAME,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.ABSTRACT_TEXT_OVERLAY__FONT_NAME,
 				 true,
 				 false,
 				 false,
@@ -94,7 +94,7 @@ public class AbstractTextOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTextOverlay_fontSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTextOverlay_fontSize_feature", "_UI_AbstractTextOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.ABSTRACT_TEXT_OVERLAY__FONT_SIZE,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.ABSTRACT_TEXT_OVERLAY__FONT_SIZE,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class AbstractTextOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTextOverlay_horizontalOffset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTextOverlay_horizontalOffset_feature", "_UI_AbstractTextOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class AbstractTextOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTextOverlay_verticalOffset_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTextOverlay_verticalOffset_feature", "_UI_AbstractTextOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET,
 				 true,
 				 false,
 				 false,
@@ -163,7 +163,7 @@ public class AbstractTextOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTextOverlay_textColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTextOverlay_textColor_feature", "_UI_AbstractTextOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR,
 				 true,
 				 false,
 				 false,
@@ -200,11 +200,11 @@ public class AbstractTextOverlayItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractTextOverlay.class)) {
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
-			case SymphonyCameraToolsPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__HORIZONTAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__VERTICAL_OFFSET:
+			case Symphony__AddonsSensorsImagingCameraPackage.ABSTRACT_TEXT_OVERLAY__TEXT_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

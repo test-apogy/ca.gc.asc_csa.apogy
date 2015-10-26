@@ -22,14 +22,14 @@ import org.eclipse.symphony.core.AbsolutePoseProvider;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getVectorColor <em>Vector Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool#getIntersectionDistance <em>Intersection Distance</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getPointerCameraTool()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getPointerCameraTool()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface PointerCameraTool extends CameraTool, ToolTipTextProvider, Abso
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fov</em>' reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getPointerCameraTool_Fov()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getPointerCameraTool_Fov()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TOOL_PROPERTIES'"
 	 * @generated
@@ -72,7 +72,7 @@ public interface PointerCameraTool extends CameraTool, ToolTipTextProvider, Abso
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vector Color</em>' attribute.
 	 * @see #setVectorColor(Color3f)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getPointerCameraTool_VectorColor()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getPointerCameraTool_VectorColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.sensors.imaging.camera.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TOOL_PROPERTIES'"
 	 * @generated
@@ -99,7 +99,7 @@ public interface PointerCameraTool extends CameraTool, ToolTipTextProvider, Abso
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Intersection Distance</em>' attribute.
 	 * @see #setIntersectionDistance(double)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getPointerCameraTool_IntersectionDistance()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getPointerCameraTool_IntersectionDistance()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TOOL_PROPERTIES' sca_units='m'"
 	 * @generated

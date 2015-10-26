@@ -8,7 +8,7 @@ package org.eclipse.symphony.addons.sensors.range.ui.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.sensors.range.ui.RangeSensorsUIPackage;
+import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
 import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
 import org.eclipse.symphony.addons.sensors.range.ui.scene_objects.RasterScanDataSceneObject;
 import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
@@ -20,12 +20,12 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl#getFovPresentationMode <em>Fov Presentation Mode</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl#isFovVisible <em>Fov Visible</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.ui.impl.RasterScanDataPresentationImpl#isDataVisible <em>Data Visible</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,7 +109,7 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 	@Override
 	protected EClass eStaticClass()
 	{
-		return RangeSensorsUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION;
+		return Symphony__AddonsSensorsRangeUIPackage.Literals.RASTER_SCAN_DATA_PRESENTATION;
 	}
 
 	/**
@@ -132,7 +132,7 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 		MeshPresentationMode oldFovPresentationMode = fovPresentationMode;
 		fovPresentationMode = newFovPresentationMode == null ? FOV_PRESENTATION_MODE_EDEFAULT : newFovPresentationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE, oldFovPresentationMode, fovPresentationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE, oldFovPresentationMode, fovPresentationMode));
 	}
 
 	/**
@@ -155,7 +155,7 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 		boolean oldFovVisible = fovVisible;
 		fovVisible = newFovVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE, oldFovVisible, fovVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE, oldFovVisible, fovVisible));
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 		boolean oldDataVisible = dataVisible;
 		dataVisible = newDataVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE, oldDataVisible, dataVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE, oldDataVisible, dataVisible));
 	}
 
 	/**
@@ -190,11 +190,11 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
 				return getFovPresentationMode();
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
 				return isFovVisible();
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
 				return isDataVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,13 +209,13 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
 				setFovPresentationMode((MeshPresentationMode)newValue);
 				return;
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
 				setFovVisible((Boolean)newValue);
 				return;
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
 				setDataVisible((Boolean)newValue);
 				return;
 		}
@@ -231,13 +231,13 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
 				setFovPresentationMode(FOV_PRESENTATION_MODE_EDEFAULT);
 				return;
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
 				setFovVisible(FOV_VISIBLE_EDEFAULT);
 				return;
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
 				setDataVisible(DATA_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -253,11 +253,11 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE:
 				return fovPresentationMode != FOV_PRESENTATION_MODE_EDEFAULT;
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE:
 				return fovVisible != FOV_VISIBLE_EDEFAULT;
-			case RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
+			case Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE:
 				return dataVisible != DATA_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -289,15 +289,15 @@ public class RasterScanDataPresentationImpl extends NodePresentationImpl impleme
 	protected void updateSceneObject(Notification notification)
 	{
 		RasterScanDataSceneObject j3DObject = (RasterScanDataSceneObject) getSceneObject();
-		if(notification.getFeatureID( RasterScanDataPresentation.class) == RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE)
+		if(notification.getFeatureID( RasterScanDataPresentation.class) == Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE)
 		{
 			j3DObject.setDataVisible(notification.getNewBooleanValue());
 		}
-		else if(notification.getFeatureID( RasterScanDataPresentation.class) == RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE)
+		else if(notification.getFeatureID( RasterScanDataPresentation.class) == Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE)
 		{
 			j3DObject.setFovVisible(notification.getNewBooleanValue());
 		}
-		else if(notification.getFeatureID( RasterScanDataPresentation.class) == RangeSensorsUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE)
+		else if(notification.getFeatureID( RasterScanDataPresentation.class) == Symphony__AddonsSensorsRangeUIPackage.RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE)
 		{
 			MeshPresentationMode meshPresentationMode = (MeshPresentationMode) notification.getNewValue();
 			j3DObject.setFovMeshPresentationMode(meshPresentationMode);

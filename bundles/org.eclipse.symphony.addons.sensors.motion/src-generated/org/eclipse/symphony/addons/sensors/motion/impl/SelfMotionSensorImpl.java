@@ -8,15 +8,13 @@ package org.eclipse.symphony.addons.sensors.motion.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
-import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
+import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
 import org.eclipse.symphony.addons.sensors.motion.SelfMotionSensor;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Self Motion Sensor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -37,7 +35,7 @@ public class SelfMotionSensorImpl extends SensorImpl implements SelfMotionSensor
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MotionPackage.Literals.SELF_MOTION_SENSOR;
+		return Symphony__AddonsSensorsMotionPackage.Literals.SELF_MOTION_SENSOR;
 	}
 
 } //SelfMotionSensorImpl

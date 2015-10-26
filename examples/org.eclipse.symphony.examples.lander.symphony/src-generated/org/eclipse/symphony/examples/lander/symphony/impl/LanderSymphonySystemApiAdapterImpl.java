@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.MathFacade;
@@ -33,8 +33,6 @@ import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackag
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Lander Symphony System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -101,10 +99,10 @@ implements LanderSymphonySystemApiAdapter
 
 		// Create a vehicle pose corrector to perform the required changes
 		// to update the pose of the lander
-		VehiclePoseCorrector corrector = SymphonyToolsVehicleFactory.eINSTANCE.createVehiclePoseCorrector();
+		VehiclePoseCorrector corrector = Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector();
 		
 		// Indicate that the corrector is using spherical feet when determining contact points 
-		corrector.setContactProvider(SymphonyToolsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider());
+		corrector.setContactProvider(Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider());
 
 		// Set the pose corrector for the lander
 		this.setPoseCorrector(corrector);

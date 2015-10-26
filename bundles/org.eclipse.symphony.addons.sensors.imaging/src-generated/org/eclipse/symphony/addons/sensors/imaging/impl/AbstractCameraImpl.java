@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.impl.SensorImpl;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.emf.Named;
@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl#getLatestImageSnapshot <em>Latest Image Snapshot</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -82,7 +82,7 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   @Override
   protected EClass eStaticClass()
   {
-		return MRTSensorsImagingPackage.Literals.ABSTRACT_CAMERA;
+		return Symphony__AddonsSensorsImagingPackage.Literals.ABSTRACT_CAMERA;
 	}
 
   /**
@@ -105,7 +105,7 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME, oldName, name));
 	}
 
   /**
@@ -120,7 +120,7 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
 			latestImageSnapshot = (ImageSnapshot)eResolveProxy(oldLatestImageSnapshot);
 			if (latestImageSnapshot != oldLatestImageSnapshot) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT, oldLatestImageSnapshot, latestImageSnapshot));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT, oldLatestImageSnapshot, latestImageSnapshot));
 			}
 		}
 		return latestImageSnapshot;
@@ -146,7 +146,7 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
 		ImageSnapshot oldLatestImageSnapshot = latestImageSnapshot;
 		latestImageSnapshot = newLatestImageSnapshot;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT, oldLatestImageSnapshot, latestImageSnapshot));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT, oldLatestImageSnapshot, latestImageSnapshot));
 	}
 
   /**
@@ -182,9 +182,9 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
 				return getName();
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
 				if (resolve) return getLatestImageSnapshot();
 				return basicGetLatestImageSnapshot();
 		}
@@ -200,10 +200,10 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
 				setName((String)newValue);
 				return;
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
 				setLatestImageSnapshot((ImageSnapshot)newValue);
 				return;
 		}
@@ -219,10 +219,10 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
 				setLatestImageSnapshot((ImageSnapshot)null);
 				return;
 		}
@@ -238,9 +238,9 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT:
 				return latestImageSnapshot != null;
 		}
 		return super.eIsSet(featureID);
@@ -256,7 +256,7 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME: return EMFEcorePackage.NAMED__NAME;
+				case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME: return EMFEcorePackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -273,7 +273,7 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.NAMED__NAME: return MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
+				case EMFEcorePackage.NAMED__NAME: return Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
 				default: return -1;
 			}
 		}
@@ -289,9 +289,9 @@ public abstract class AbstractCameraImpl extends SensorImpl implements AbstractC
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT:
 				return takeSnapshot();
-			case MRTSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW:
+			case Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW:
 				return getFieldOfView();
 		}
 		return super.eInvoke(operationID, arguments);

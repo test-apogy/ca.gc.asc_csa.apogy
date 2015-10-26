@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.motion.AngularVelocitySensor;
-import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
+import org.eclipse.symphony.addons.sensors.motion.Symphony__AddonsSensorsMotionPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,12 +18,12 @@ import org.eclipse.symphony.addons.sensors.motion.MotionPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl#getXAngularVelocity <em>XAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl#getYAngularVelocity <em>YAngular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.motion.impl.AngularVelocitySensorImpl#getZAngularVelocity <em>ZAngular Velocity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -104,7 +104,7 @@ public class AngularVelocitySensorImpl extends SelfMotionSensorImpl implements A
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MotionPackage.Literals.ANGULAR_VELOCITY_SENSOR;
+		return Symphony__AddonsSensorsMotionPackage.Literals.ANGULAR_VELOCITY_SENSOR;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class AngularVelocitySensorImpl extends SelfMotionSensorImpl implements A
 		double oldXAngularVelocity = xAngularVelocity;
 		xAngularVelocity = newXAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY, oldXAngularVelocity, xAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY, oldXAngularVelocity, xAngularVelocity));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class AngularVelocitySensorImpl extends SelfMotionSensorImpl implements A
 		double oldYAngularVelocity = yAngularVelocity;
 		yAngularVelocity = newYAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY, oldYAngularVelocity, yAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY, oldYAngularVelocity, yAngularVelocity));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class AngularVelocitySensorImpl extends SelfMotionSensorImpl implements A
 		double oldZAngularVelocity = zAngularVelocity;
 		zAngularVelocity = newZAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY, oldZAngularVelocity, zAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY, oldZAngularVelocity, zAngularVelocity));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class AngularVelocitySensorImpl extends SelfMotionSensorImpl implements A
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
 				return getXAngularVelocity();
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
 				return getYAngularVelocity();
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
 				return getZAngularVelocity();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class AngularVelocitySensorImpl extends SelfMotionSensorImpl implements A
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
 				setXAngularVelocity((Double)newValue);
 				return;
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
 				setYAngularVelocity((Double)newValue);
 				return;
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
 				setZAngularVelocity((Double)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public class AngularVelocitySensorImpl extends SelfMotionSensorImpl implements A
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
 				setXAngularVelocity(XANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
 				setYAngularVelocity(YANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
 				setZAngularVelocity(ZANGULAR_VELOCITY_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public class AngularVelocitySensorImpl extends SelfMotionSensorImpl implements A
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__XANGULAR_VELOCITY:
 				return xAngularVelocity != XANGULAR_VELOCITY_EDEFAULT;
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__YANGULAR_VELOCITY:
 				return yAngularVelocity != YANGULAR_VELOCITY_EDEFAULT;
-			case MotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
+			case Symphony__AddonsSensorsMotionPackage.ANGULAR_VELOCITY_SENSOR__ZANGULAR_VELOCITY:
 				return zAngularVelocity != ZANGULAR_VELOCITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

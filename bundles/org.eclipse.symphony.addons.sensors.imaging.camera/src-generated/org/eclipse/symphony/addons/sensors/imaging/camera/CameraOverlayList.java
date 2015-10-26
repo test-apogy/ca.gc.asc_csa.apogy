@@ -21,13 +21,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getCameraViewConfiguration <em>Camera View Configuration</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlayList#getOverlays <em>Overlays</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraOverlayList()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraOverlayList()
  * @model
  * @generated
  */
@@ -47,7 +47,7 @@ public interface CameraOverlayList extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Camera View Configuration</em>' container reference.
 	 * @see #setCameraViewConfiguration(CameraViewConfiguration)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraOverlayList_CameraViewConfiguration()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraOverlayList_CameraViewConfiguration()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguration#getOverlayList
 	 * @model opposite="overlayList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -75,7 +75,7 @@ public interface CameraOverlayList extends EObject
 	 *  The list of overlay shown onto the camera image.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Overlays</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getCameraOverlayList_Overlays()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraOverlayList_Overlays()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay#getCameraOverlayList
 	 * @model opposite="cameraOverlayList" containment="true"
 	 * @generated

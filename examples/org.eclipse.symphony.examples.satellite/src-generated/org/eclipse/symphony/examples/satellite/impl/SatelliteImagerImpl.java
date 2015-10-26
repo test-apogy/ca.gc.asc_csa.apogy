@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 import org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl;
 import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
@@ -30,13 +30,13 @@ import org.eclipse.symphony.examples.satellite.SatelliteImager;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl#getCurrentZoom <em>Current Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl#getSatellite <em>Satellite</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl#getImagesAcquired <em>Images Acquired</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -401,8 +401,8 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Zoomable.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM: return MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM;
-				case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM: return MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM;
+				case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM;
+				case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM;
 				default: return -1;
 			}
 		}
@@ -418,8 +418,8 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Zoomable.class) {
 			switch (baseFeatureID) {
-				case MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM;
-				case MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM;
 				default: return -1;
 			}
 		}
@@ -435,9 +435,9 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == Zoomable.class) {
 			switch (baseOperationID) {
-				case MRTSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE;
-				case MRTSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___GET_MINIMUM_ZOOM;
-				case MRTSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___GET_MAXIMUM_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___GET_MINIMUM_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___GET_MAXIMUM_ZOOM;
 				default: return -1;
 			}
 		}

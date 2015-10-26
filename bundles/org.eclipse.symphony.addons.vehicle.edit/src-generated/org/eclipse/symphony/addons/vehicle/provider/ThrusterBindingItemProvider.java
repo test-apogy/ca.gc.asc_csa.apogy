@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.common.topology.bindings.provider.AbstractTopologyBindingItemProvider;
 
@@ -66,7 +66,7 @@ public class ThrusterBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ThrusterBinding_thruster_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ThrusterBinding_thruster_feature", "_UI_ThrusterBinding_type"),
-				 SymphonyToolsVehiclePackage.Literals.THRUSTER_BINDING__THRUSTER,
+				 Symphony__AddonsVehiclePackage.Literals.THRUSTER_BINDING__THRUSTER,
 				 true,
 				 false,
 				 true,

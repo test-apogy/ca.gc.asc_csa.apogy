@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderFactory;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
@@ -585,7 +585,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 		newChildDescriptors.add
 			(createChildParameter
 				(EMFEcoreExampleLanderPackage.Literals.LANDER__THRUSTER,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createThruster()));
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 	}
 
 	/**

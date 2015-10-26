@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner#getCostFunctions <em>Cost Functions</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getCostBasedMeshWayPointPathPlanner()
  * @model

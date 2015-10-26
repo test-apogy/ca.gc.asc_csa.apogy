@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
-import org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage;
+import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.provider.AbstractTopologyBindingItemProvider;
 
 /**
@@ -66,7 +66,7 @@ public class ConicalFieldOfViewBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConicalFieldOfViewBinding_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConicalFieldOfViewBinding_fov_feature", "_UI_ConicalFieldOfViewBinding_type"),
-				 MRTFOVBindingsPackage.Literals.CONICAL_FIELD_OF_VIEW_BINDING__FOV,
+				 Symphony__AddonsSensorsFOVBindingsPackage.Literals.CONICAL_FIELD_OF_VIEW_BINDING__FOV,
 				 true,
 				 false,
 				 true,

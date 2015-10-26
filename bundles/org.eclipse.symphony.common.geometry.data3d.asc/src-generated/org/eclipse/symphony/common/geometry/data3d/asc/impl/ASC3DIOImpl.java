@@ -35,8 +35,6 @@ import org.eclipse.symphony.common.log.Logger;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>ASC3DIO</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

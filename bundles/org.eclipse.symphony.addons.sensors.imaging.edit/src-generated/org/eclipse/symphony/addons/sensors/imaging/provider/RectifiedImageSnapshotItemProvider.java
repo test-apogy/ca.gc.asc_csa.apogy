@@ -10,7 +10,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.RectifiedImageSnapshot;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -118,7 +118,7 @@ public class RectifiedImageSnapshotItemProvider
 
 		boolean qualify =
 			childFeature == TopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW;
+			childFeature == Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW;
 
 		if (qualify) {
 			return getString

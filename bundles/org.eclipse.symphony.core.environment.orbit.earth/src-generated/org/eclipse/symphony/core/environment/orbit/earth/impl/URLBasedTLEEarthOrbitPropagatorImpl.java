@@ -20,10 +20,10 @@ import org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPr
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.impl.URLBasedTLEEarthOrbitPropagatorImpl#getTleURL <em>Tle URL</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

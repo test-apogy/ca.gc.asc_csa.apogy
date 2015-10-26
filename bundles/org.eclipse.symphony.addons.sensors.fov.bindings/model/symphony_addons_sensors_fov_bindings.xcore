@@ -1,4 +1,10 @@
-@GenModel(prefix="MRTFOVBindings", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne - Canadian Space Agency 2013 Copyrights (c)", modelName="MRTFOVBindings", complianceLevel="6.0")
+@GenModel(prefix="Symphony__AddonsSensorsFOVBindings",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne - Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__AddonsSensorsFOVBindings",
+		  complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.sensors.fov.bindings/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.addons.sensors.fov.bindings.edit/src-generated")
 

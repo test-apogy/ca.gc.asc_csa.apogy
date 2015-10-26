@@ -18,6 +18,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getOrientation <em>Orientation</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getLinearAcceleration <em>Linear Acceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getAngularAcceleration <em>Angular Acceleration</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getKinematicState()
  * @model

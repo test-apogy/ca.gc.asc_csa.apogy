@@ -73,8 +73,6 @@ import org.eclipse.symphony.core.invocator.Environment;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Environment Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

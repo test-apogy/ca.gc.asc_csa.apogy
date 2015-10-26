@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__PARENT = MRTSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
+  int CAMERA__PARENT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__DESCRIPTION = MRTSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
+  int CAMERA__DESCRIPTION = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__NODE_ID = MRTSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
+  int CAMERA__NODE_ID = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
   /**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -99,7 +99,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__CHILDREN = MRTSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
+  int CAMERA__CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
   /**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -107,7 +107,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__AGGREGATED_CHILDREN = MRTSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
+  int CAMERA__AGGREGATED_CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
   /**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,7 +115,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__STATUS = MRTSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
+  int CAMERA__STATUS = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -123,7 +123,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__NAME = MRTSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
+  int CAMERA__NAME = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
   /**
 	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -131,7 +131,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__LATEST_IMAGE_SNAPSHOT = MRTSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT;
+  int CAMERA__LATEST_IMAGE_SNAPSHOT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT;
   /**
 	 * The feature id for the '<em><b>Current Zoom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -139,7 +139,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__CURRENT_ZOOM = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 0;
+  int CAMERA__CURRENT_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 0;
   /**
 	 * The feature id for the '<em><b>Commanded Zoom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -147,7 +147,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__COMMANDED_ZOOM = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 1;
+  int CAMERA__COMMANDED_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 1;
   /**
 	 * The feature id for the '<em><b>Fov</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -155,7 +155,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__FOV = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 2;
+  int CAMERA__FOV = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 2;
   /**
 	 * The feature id for the '<em><b>Initialized</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -163,7 +163,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__INITIALIZED = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 3;
+	int CAMERA__INITIALIZED = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 3;
 		/**
 	 * The feature id for the '<em><b>Streaming Enabled</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -171,7 +171,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA__STREAMING_ENABLED = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
+	int CAMERA__STREAMING_ENABLED = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
 		/**
 	 * The number of structural features of the '<em>Camera</em>' class.
 	 * <!-- begin-user-doc -->
@@ -179,7 +179,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_FEATURE_COUNT = MRTSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 5;
+  int CAMERA_FEATURE_COUNT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 5;
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -187,7 +187,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___ACCEPT__INODEVISITOR = MRTSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
+  int CAMERA___ACCEPT__INODEVISITOR = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
   /**
 	 * The operation id for the '<em>Take Snapshot</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -195,7 +195,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___TAKE_SNAPSHOT = MRTSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT;
+  int CAMERA___TAKE_SNAPSHOT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT;
   /**
 	 * The operation id for the '<em>Get Field Of View</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -203,7 +203,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___GET_FIELD_OF_VIEW = MRTSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW;
+  int CAMERA___GET_FIELD_OF_VIEW = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW;
   /**
 	 * The operation id for the '<em>Command Zoom</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -211,7 +211,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___COMMAND_ZOOM__DOUBLE = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 0;
+  int CAMERA___COMMAND_ZOOM__DOUBLE = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 0;
   /**
 	 * The operation id for the '<em>Get Minimum Zoom</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -219,7 +219,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___GET_MINIMUM_ZOOM = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 1;
+  int CAMERA___GET_MINIMUM_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 1;
   /**
 	 * The operation id for the '<em>Get Maximum Zoom</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -227,7 +227,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___GET_MAXIMUM_ZOOM = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 2;
+  int CAMERA___GET_MAXIMUM_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 2;
   /**
 	 * The operation id for the '<em>Init</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -235,7 +235,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA___INIT = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 3;
+	int CAMERA___INIT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 3;
 		/**
 	 * The operation id for the '<em>Command Streaming</em>' operation.
 	 * <!-- begin-user-doc -->
@@ -243,7 +243,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA___COMMAND_STREAMING__BOOLEAN = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 4;
+	int CAMERA___COMMAND_STREAMING__BOOLEAN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 4;
 		/**
 	 * The number of operations of the '<em>Camera</em>' class.
 	 * <!-- begin-user-doc -->
@@ -251,7 +251,7 @@ public interface EMFEcoreExampleCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_OPERATION_COUNT = MRTSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 5;
+  int CAMERA_OPERATION_COUNT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 5;
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.camera.impl.CameraStubImpl <em>Camera Stub</em>}' class.
 	 * <!-- begin-user-doc -->

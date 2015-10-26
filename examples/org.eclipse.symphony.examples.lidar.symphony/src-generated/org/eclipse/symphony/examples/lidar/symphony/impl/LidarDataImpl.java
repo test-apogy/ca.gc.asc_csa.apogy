@@ -19,11 +19,11 @@ import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarDataImpl#getFov <em>Fov</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.impl.LidarDataImpl#isInitialized <em>Initialized</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -16,7 +16,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.AzimuthFeatureReferenc
 import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ElevationFeatureReference;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
@@ -30,11 +30,11 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl#getAzimuthFeatureReference <em>Azimuth Feature Reference</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.EMFFeatureAzimuthElevationFOVOverlayImpl#getElevationFeatureReference <em>Elevation Feature Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -78,7 +78,7 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCameraToolsPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY;
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 		AzimuthFeatureReference oldAzimuthFeatureReference = azimuthFeatureReference;
 		azimuthFeatureReference = newAzimuthFeatureReference;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, oldAzimuthFeatureReference, newAzimuthFeatureReference);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, oldAzimuthFeatureReference, newAzimuthFeatureReference);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -114,14 +114,14 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 		if (newAzimuthFeatureReference != azimuthFeatureReference) {
 			NotificationChain msgs = null;
 			if (azimuthFeatureReference != null)
-				msgs = ((InternalEObject)azimuthFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)azimuthFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, null, msgs);
 			if (newAzimuthFeatureReference != null)
-				msgs = ((InternalEObject)newAzimuthFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)newAzimuthFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, null, msgs);
 			msgs = basicSetAzimuthFeatureReference(newAzimuthFeatureReference, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, newAzimuthFeatureReference, newAzimuthFeatureReference));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE, newAzimuthFeatureReference, newAzimuthFeatureReference));
 	}
 
 	/**
@@ -142,7 +142,7 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 		ElevationFeatureReference oldElevationFeatureReference = elevationFeatureReference;
 		elevationFeatureReference = newElevationFeatureReference;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, oldElevationFeatureReference, newElevationFeatureReference);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, oldElevationFeatureReference, newElevationFeatureReference);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -157,14 +157,14 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 		if (newElevationFeatureReference != elevationFeatureReference) {
 			NotificationChain msgs = null;
 			if (elevationFeatureReference != null)
-				msgs = ((InternalEObject)elevationFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)elevationFeatureReference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, null, msgs);
 			if (newElevationFeatureReference != null)
-				msgs = ((InternalEObject)newElevationFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, null, msgs);
+				msgs = ((InternalEObject)newElevationFeatureReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, null, msgs);
 			msgs = basicSetElevationFeatureReference(newElevationFeatureReference, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, newElevationFeatureReference, newElevationFeatureReference));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE, newElevationFeatureReference, newElevationFeatureReference));
 	}
 
 	/**
@@ -175,9 +175,9 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				return basicSetAzimuthFeatureReference(null, msgs);
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				return basicSetElevationFeatureReference(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -191,9 +191,9 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				return getAzimuthFeatureReference();
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				return getElevationFeatureReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -207,10 +207,10 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				setAzimuthFeatureReference((AzimuthFeatureReference)newValue);
 				return;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				setElevationFeatureReference((ElevationFeatureReference)newValue);
 				return;
 		}
@@ -225,10 +225,10 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				setAzimuthFeatureReference((AzimuthFeatureReference)null);
 				return;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				setElevationFeatureReference((ElevationFeatureReference)null);
 				return;
 		}
@@ -243,9 +243,9 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
 				return azimuthFeatureReference != null;
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				return elevationFeatureReference != null;
 		}
 		return super.eIsSet(featureID);

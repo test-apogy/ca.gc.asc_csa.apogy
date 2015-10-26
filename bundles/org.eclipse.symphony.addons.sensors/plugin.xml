@@ -9,7 +9,7 @@
    <extension
          point="org.eclipse.emf.ecore.generated_package">
       <package
-            class="org.eclipse.symphony.addons.sensors.SensorsPackage"
+            class="org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsPackage"
             genModel="model/symphony_addons_sensors.xcore"
             uri="org.eclipse.symphony.addons.sensors">
       </package>

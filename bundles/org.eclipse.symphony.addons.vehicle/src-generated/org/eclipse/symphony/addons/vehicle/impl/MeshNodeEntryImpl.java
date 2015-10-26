@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.topology.Node;
 
@@ -19,11 +19,11 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshNodeEntryImpl#getNode <em>Node</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.MeshNodeEntryImpl#getMesh <em>Mesh</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,7 +64,7 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsVehiclePackage.Literals.MESH_NODE_ENTRY;
+		return Symphony__AddonsVehiclePackage.Literals.MESH_NODE_ENTRY;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 			node = (Node)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -102,7 +102,7 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 		Node oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__NODE, oldNode, node));
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 			mesh = (CartesianTriangularMesh)eResolveProxy(oldMesh);
 			if (mesh != oldMesh) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__MESH, oldMesh, mesh));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__MESH, oldMesh, mesh));
 			}
 		}
 		return mesh;
@@ -140,7 +140,7 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 		CartesianTriangularMesh oldMesh = mesh;
 		mesh = newMesh;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__MESH, oldMesh, mesh));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__MESH, oldMesh, mesh));
 	}
 
 	/**
@@ -151,10 +151,10 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__NODE:
+			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
-			case SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__MESH:
+			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__MESH:
 				if (resolve) return getMesh();
 				return basicGetMesh();
 		}
@@ -169,10 +169,10 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__NODE:
+			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__NODE:
 				setNode((Node)newValue);
 				return;
-			case SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__MESH:
+			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__MESH:
 				setMesh((CartesianTriangularMesh)newValue);
 				return;
 		}
@@ -187,10 +187,10 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__NODE:
+			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__NODE:
 				setNode((Node)null);
 				return;
-			case SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__MESH:
+			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__MESH:
 				setMesh((CartesianTriangularMesh)null);
 				return;
 		}
@@ -205,9 +205,9 @@ public class MeshNodeEntryImpl extends MinimalEObjectImpl.Container implements M
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__NODE:
+			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__NODE:
 				return node != null;
-			case SymphonyToolsVehiclePackage.MESH_NODE_ENTRY__MESH:
+			case Symphony__AddonsVehiclePackage.MESH_NODE_ENTRY__MESH:
 				return mesh != null;
 		}
 		return super.eIsSet(featureID);

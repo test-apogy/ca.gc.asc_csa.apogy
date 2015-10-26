@@ -20,6 +20,7 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  * <em><b>Matrix3x3</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Matrix3x3Impl#getM00 <em>M00</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Matrix3x3Impl#getM01 <em>M01</em>}</li>
@@ -31,7 +32,6 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  *   <li>{@link org.eclipse.symphony.common.math.impl.Matrix3x3Impl#getM21 <em>M21</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.math.impl.Matrix3x3Impl#getM22 <em>M22</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

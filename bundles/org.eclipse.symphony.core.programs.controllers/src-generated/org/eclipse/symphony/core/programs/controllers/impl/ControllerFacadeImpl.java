@@ -21,8 +21,6 @@ import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Controller Facade</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

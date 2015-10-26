@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Overlay Alignment</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getOverlayAlignment()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getOverlayAlignment()
  * @model
  * @generated
  */
@@ -172,6 +172,8 @@ public enum OverlayAlignment implements Enumerator
 	 * Returns the '<em><b>Overlay Alignment</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static OverlayAlignment get(String literal)
@@ -189,6 +191,8 @@ public enum OverlayAlignment implements Enumerator
 	 * Returns the '<em><b>Overlay Alignment</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static OverlayAlignment getByName(String name)
@@ -206,6 +210,8 @@ public enum OverlayAlignment implements Enumerator
 	 * Returns the '<em><b>Overlay Alignment</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
   public static OverlayAlignment get(int value)

@@ -13,8 +13,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
-import org.eclipse.symphony.addons.sensors.gps.GpsFactory;
-import org.eclipse.symphony.addons.sensors.gps.GpsPackage;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFactory;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage;
 import org.eclipse.symphony.addons.sensors.pose.provider.PoseSensorItemProvider;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
@@ -116,7 +116,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSPoseSensor_originLatitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSPoseSensor_originLatitude_feature", "_UI_GPSPoseSensor_type"),
-				 GpsPackage.Literals.GPS_POSE_SENSOR__ORIGIN_LATITUDE,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_POSE_SENSOR__ORIGIN_LATITUDE,
 				 true,
 				 false,
 				 false,
@@ -138,7 +138,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSPoseSensor_originLongitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSPoseSensor_originLongitude_feature", "_UI_GPSPoseSensor_type"),
-				 GpsPackage.Literals.GPS_POSE_SENSOR__ORIGIN_LONGITUDE,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_POSE_SENSOR__ORIGIN_LONGITUDE,
 				 true,
 				 false,
 				 false,
@@ -160,7 +160,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSPoseSensor_neAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSPoseSensor_neAngle_feature", "_UI_GPSPoseSensor_type"),
-				 GpsPackage.Literals.GPS_POSE_SENSOR__NE_ANGLE,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_POSE_SENSOR__NE_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -182,7 +182,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSPoseSensor_originElevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSPoseSensor_originElevation_feature", "_UI_GPSPoseSensor_type"),
-				 GpsPackage.Literals.GPS_POSE_SENSOR__ORIGIN_ELEVATION,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_POSE_SENSOR__ORIGIN_ELEVATION,
 				 true,
 				 false,
 				 false,
@@ -204,7 +204,7 @@ public class GPSPoseSensorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GPSPoseSensor_maxInitTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GPSPoseSensor_maxInitTime_feature", "_UI_GPSPoseSensor_type"),
-				 GpsPackage.Literals.GPS_POSE_SENSOR__MAX_INIT_TIME,
+				 Symphony__AddonsSensorsGPSPackage.Literals.GPS_POSE_SENSOR__MAX_INIT_TIME,
 				 true,
 				 false,
 				 false,
@@ -225,7 +225,7 @@ public class GPSPoseSensorItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GpsPackage.Literals.GPS_POSE_SENSOR__GPS);
+			childrenFeatures.add(Symphony__AddonsSensorsGPSPackage.Literals.GPS_POSE_SENSOR__GPS);
 		}
 		return childrenFeatures;
 	}
@@ -280,16 +280,16 @@ public class GPSPoseSensorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GPSPoseSensor.class)) {
-			case GpsPackage.GPS_POSE_SENSOR__STARTED:
-			case GpsPackage.GPS_POSE_SENSOR__SERVER_JOB:
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
-			case GpsPackage.GPS_POSE_SENSOR__NE_ANGLE:
-			case GpsPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
-			case GpsPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__STARTED:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__SERVER_JOB:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LATITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_LONGITUDE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__NE_ANGLE:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__ORIGIN_ELEVATION:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__MAX_INIT_TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case GpsPackage.GPS_POSE_SENSOR__GPS:
+			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR__GPS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -310,17 +310,17 @@ public class GPSPoseSensorItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 GpsFactory.eINSTANCE.createGPSPoseSensor()));
+				 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSPoseSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 GpsFactory.eINSTANCE.createGPSPoseSensor()));
+				 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSPoseSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GpsPackage.Literals.GPS_POSE_SENSOR__GPS,
-				 GpsFactory.eINSTANCE.createMarkedGPS()));
+				(Symphony__AddonsSensorsGPSPackage.Literals.GPS_POSE_SENSOR__GPS,
+				 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createMarkedGPS()));
 	}
 
 	/**

@@ -15,8 +15,6 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Distance Only Cost Function</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -16,8 +16,6 @@ import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Rover Symphony System Api Adapter</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

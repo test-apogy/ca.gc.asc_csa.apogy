@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.telecoms.ui.SymphonyTelecomToolsUIPackage#getAbstractAntennaRadiationPatternPresentation()
+ * @see org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage#getAbstractAntennaRadiationPatternPresentation()
  * @model
  * @generated
  */

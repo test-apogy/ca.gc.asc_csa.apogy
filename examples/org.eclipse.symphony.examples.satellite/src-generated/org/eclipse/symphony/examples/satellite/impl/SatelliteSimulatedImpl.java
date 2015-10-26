@@ -11,8 +11,6 @@ import org.eclipse.symphony.examples.satellite.SatelliteSimulated;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Satellite Simulated</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

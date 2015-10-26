@@ -22,10 +22,10 @@ import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentU
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.ui.impl.StarFieldPresentationImpl#getCutOffMagnitude <em>Cut Off Magnitude</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

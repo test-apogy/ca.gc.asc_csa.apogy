@@ -11,6 +11,7 @@ package org.eclipse.symphony.core.invocator;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getChild <em>Child</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getParent <em>Parent</em>}</li>
@@ -20,7 +21,6 @@ package org.eclipse.symphony.core.invocator;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#isLeaf <em>Leaf</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount <em>Sub Segments Count</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement()
  * @model

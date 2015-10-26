@@ -21,8 +21,8 @@ import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.camera.FOVOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
@@ -33,6 +33,7 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl#getLineWidth <em>Line Width</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl#getPositiveValuesColor <em>Positive Values Color</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl#getAzimuthDirection <em>Azimuth Direction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.FOVOverlayImpl#getElevationDirection <em>Elevation Direction</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -78,7 +78,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f POSITIVE_VALUES_COLOR_EDEFAULT = (Color3f)SymphonyCameraToolsFactory.eINSTANCE.createFromString(SymphonyCameraToolsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f POSITIVE_VALUES_COLOR_EDEFAULT = (Color3f)Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFromString(Symphony__AddonsSensorsImagingCameraPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 	/**
 	 * The cached value of the '{@link #getPositiveValuesColor() <em>Positive Values Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -96,7 +96,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f NEGATIVE_VALUE_COLOR_EDEFAULT = (Color3f)SymphonyCameraToolsFactory.eINSTANCE.createFromString(SymphonyCameraToolsPackage.eINSTANCE.getColor3f(), "1.0,0.0,0.0");
+	protected static final Color3f NEGATIVE_VALUE_COLOR_EDEFAULT = (Color3f)Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createFromString(Symphony__AddonsSensorsImagingCameraPackage.eINSTANCE.getColor3f(), "1.0,0.0,0.0");
 	/**
 	 * The cached value of the '{@link #getNegativeValueColor() <em>Negative Value Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -214,7 +214,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCameraToolsPackage.Literals.FOV_OVERLAY;
+		return Symphony__AddonsSensorsImagingCameraPackage.Literals.FOV_OVERLAY;
 	}
 
 	/**
@@ -235,7 +235,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 		int oldLineWidth = lineWidth;
 		lineWidth = newLineWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.FOV_OVERLAY__LINE_WIDTH, oldLineWidth, lineWidth));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__LINE_WIDTH, oldLineWidth, lineWidth));
 	}
 
 	/**
@@ -256,7 +256,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 		Color3f oldPositiveValuesColor = positiveValuesColor;
 		positiveValuesColor = newPositiveValuesColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR, oldPositiveValuesColor, positiveValuesColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR, oldPositiveValuesColor, positiveValuesColor));
 	}
 
 	/**
@@ -277,7 +277,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 		Color3f oldNegativeValueColor = negativeValueColor;
 		negativeValueColor = newNegativeValueColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR, oldNegativeValueColor, negativeValueColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR, oldNegativeValueColor, negativeValueColor));
 	}
 
 	/**
@@ -298,7 +298,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 		int oldAngleInterval = angleInterval;
 		angleInterval = newAngleInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.FOV_OVERLAY__ANGLE_INTERVAL, oldAngleInterval, angleInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ANGLE_INTERVAL, oldAngleInterval, angleInterval));
 	}
 
 	/**
@@ -319,7 +319,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 		String oldFontName = fontName;
 		fontName = newFontName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_NAME, oldFontName, fontName));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_NAME, oldFontName, fontName));
 	}
 
 	/**
@@ -340,7 +340,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 		int oldFontSize = fontSize;
 		fontSize = newFontSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_SIZE, oldFontSize, fontSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_SIZE, oldFontSize, fontSize));
 	}
 
 	/**
@@ -361,7 +361,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 		AzimuthDirection oldAzimuthDirection = azimuthDirection;
 		azimuthDirection = newAzimuthDirection == null ? AZIMUTH_DIRECTION_EDEFAULT : newAzimuthDirection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.FOV_OVERLAY__AZIMUTH_DIRECTION, oldAzimuthDirection, azimuthDirection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__AZIMUTH_DIRECTION, oldAzimuthDirection, azimuthDirection));
 	}
 
 	/**
@@ -382,7 +382,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 		ElevationDirection oldElevationDirection = elevationDirection;
 		elevationDirection = newElevationDirection == null ? ELEVATION_DIRECTION_EDEFAULT : newElevationDirection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCameraToolsPackage.FOV_OVERLAY__ELEVATION_DIRECTION, oldElevationDirection, elevationDirection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ELEVATION_DIRECTION, oldElevationDirection, elevationDirection));
 	}
 
 	/**
@@ -423,21 +423,21 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__LINE_WIDTH:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__LINE_WIDTH:
 				return getLineWidth();
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
 				return getPositiveValuesColor();
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
 				return getNegativeValueColor();
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ANGLE_INTERVAL:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ANGLE_INTERVAL:
 				return getAngleInterval();
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_NAME:
 				return getFontName();
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_SIZE:
 				return getFontSize();
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
 				return getAzimuthDirection();
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
 				return getElevationDirection();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -451,28 +451,28 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__LINE_WIDTH:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__LINE_WIDTH:
 				setLineWidth((Integer)newValue);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
 				setPositiveValuesColor((Color3f)newValue);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
 				setNegativeValueColor((Color3f)newValue);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ANGLE_INTERVAL:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ANGLE_INTERVAL:
 				setAngleInterval((Integer)newValue);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_NAME:
 				setFontName((String)newValue);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_SIZE:
 				setFontSize((Integer)newValue);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
 				setAzimuthDirection((AzimuthDirection)newValue);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
 				setElevationDirection((ElevationDirection)newValue);
 				return;
 		}
@@ -487,28 +487,28 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__LINE_WIDTH:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__LINE_WIDTH:
 				setLineWidth(LINE_WIDTH_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
 				setPositiveValuesColor(POSITIVE_VALUES_COLOR_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
 				setNegativeValueColor(NEGATIVE_VALUE_COLOR_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ANGLE_INTERVAL:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ANGLE_INTERVAL:
 				setAngleInterval(ANGLE_INTERVAL_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_NAME:
 				setFontName(FONT_NAME_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_SIZE:
 				setFontSize(FONT_SIZE_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
 				setAzimuthDirection(AZIMUTH_DIRECTION_EDEFAULT);
 				return;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
 				setElevationDirection(ELEVATION_DIRECTION_EDEFAULT);
 				return;
 		}
@@ -523,21 +523,21 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__LINE_WIDTH:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__LINE_WIDTH:
 				return lineWidth != LINE_WIDTH_EDEFAULT;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__POSITIVE_VALUES_COLOR:
 				return POSITIVE_VALUES_COLOR_EDEFAULT == null ? positiveValuesColor != null : !POSITIVE_VALUES_COLOR_EDEFAULT.equals(positiveValuesColor);
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__NEGATIVE_VALUE_COLOR:
 				return NEGATIVE_VALUE_COLOR_EDEFAULT == null ? negativeValueColor != null : !NEGATIVE_VALUE_COLOR_EDEFAULT.equals(negativeValueColor);
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ANGLE_INTERVAL:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ANGLE_INTERVAL:
 				return angleInterval != ANGLE_INTERVAL_EDEFAULT;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_NAME:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_NAME:
 				return FONT_NAME_EDEFAULT == null ? fontName != null : !FONT_NAME_EDEFAULT.equals(fontName);
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__FONT_SIZE:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__FONT_SIZE:
 				return fontSize != FONT_SIZE_EDEFAULT;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__AZIMUTH_DIRECTION:
 				return azimuthDirection != AZIMUTH_DIRECTION_EDEFAULT;
-			case SymphonyCameraToolsPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY__ELEVATION_DIRECTION:
 				return elevationDirection != ELEVATION_DIRECTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -552,7 +552,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == ToolTipTextProvider.class) {
 			switch (baseOperationID) {
-				case SymphonyCameraToolsPackage.TOOL_TIP_TEXT_PROVIDER___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT: return SymphonyCameraToolsPackage.FOV_OVERLAY___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT;
+				case Symphony__AddonsSensorsImagingCameraPackage.TOOL_TIP_TEXT_PROVIDER___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT: return Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT;
 				default: return -1;
 			}
 		}
@@ -567,7 +567,7 @@ public class FOVOverlayImpl extends DrawnCameraOverlayImpl implements FOVOverlay
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyCameraToolsPackage.FOV_OVERLAY___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT:
+			case Symphony__AddonsSensorsImagingCameraPackage.FOV_OVERLAY___GET_TOOL_TIP_TEXT__ABSTRACTCAMERA_IMAGESNAPSHOT_INT_INT_INT:
 				return getToolTipText((AbstractCamera)arguments.get(0), (ImageSnapshot)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4));
 		}
 		return super.eInvoke(operationID, arguments);

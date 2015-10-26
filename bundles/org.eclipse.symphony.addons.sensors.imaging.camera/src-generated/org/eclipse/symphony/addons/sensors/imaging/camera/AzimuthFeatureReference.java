@@ -11,7 +11,7 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getAzimuthFeatureReference()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getAzimuthFeatureReference()
  * @model
  * @generated
  */

@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RangeScannerSimulator;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -70,7 +70,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_meshNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_meshNode_feature", "_UI_RangeScannerSimulator_type"),
-				 RangePackage.Literals.RANGE_SCANNER_SIMULATOR__MESH_NODE,
+				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__MESH_NODE,
 				 true,
 				 false,
 				 true,
@@ -92,7 +92,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_noiseEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_noiseEnabled_feature", "_UI_RangeScannerSimulator_type"),
-				 RangePackage.Literals.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED,
+				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_timeCroppingMesh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_timeCroppingMesh_feature", "_UI_RangeScannerSimulator_type"),
-				 RangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH,
+				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH,
 				 true,
 				 false,
 				 false,
@@ -136,7 +136,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_timeFindingIntersections_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_timeFindingIntersections_feature", "_UI_RangeScannerSimulator_type"),
-				 RangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS,
+				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS,
 				 true,
 				 false,
 				 false,
@@ -158,7 +158,7 @@ public class RangeScannerSimulatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RangeScannerSimulator_timeGettingSimulatedRays_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RangeScannerSimulator_timeGettingSimulatedRays_feature", "_UI_RangeScannerSimulator_type"),
-				 RangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS,
+				 Symphony__AddonsSensorsRangePackage.Literals.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS,
 				 true,
 				 false,
 				 false,
@@ -193,10 +193,10 @@ public class RangeScannerSimulatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RangeScannerSimulator.class)) {
-			case RangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
-			case RangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__NOISE_ENABLED:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_CROPPING_MESH:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_FINDING_INTERSECTIONS:
+			case Symphony__AddonsSensorsRangePackage.RANGE_SCANNER_SIMULATOR__TIME_GETTING_SIMULATED_RAYS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.ImagingUtilities;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.images.AbstractEImage;
@@ -29,12 +29,12 @@ import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getFieldOfView <em>Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.impl.ImageSnapshotImpl#getImage <em>Image</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,7 +98,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   @Override
   protected EClass eStaticClass()
   {
-		return MRTSensorsImagingPackage.Literals.IMAGE_SNAPSHOT;
+		return Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT;
 	}
 
   /**
@@ -121,7 +121,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME, oldTime, time));
 	}
 
   /**
@@ -144,7 +144,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		RectangularFrustrumFieldOfView oldFieldOfView = fieldOfView;
 		fieldOfView = newFieldOfView;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, oldFieldOfView, newFieldOfView);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, oldFieldOfView, newFieldOfView);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -160,14 +160,14 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		if (newFieldOfView != fieldOfView) {
 			NotificationChain msgs = null;
 			if (fieldOfView != null)
-				msgs = ((InternalEObject)fieldOfView).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, null, msgs);
+				msgs = ((InternalEObject)fieldOfView).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, null, msgs);
 			if (newFieldOfView != null)
-				msgs = ((InternalEObject)newFieldOfView).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, null, msgs);
+				msgs = ((InternalEObject)newFieldOfView).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, null, msgs);
 			msgs = basicSetFieldOfView(newFieldOfView, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, newFieldOfView, newFieldOfView));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW, newFieldOfView, newFieldOfView));
 	}
 
   /**
@@ -190,7 +190,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		AbstractEImage oldImage = image;
 		image = newImage;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, oldImage, newImage);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, oldImage, newImage);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -206,14 +206,14 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 		if (newImage != image) {
 			NotificationChain msgs = null;
 			if (image != null)
-				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, null, msgs);
+				msgs = ((InternalEObject)image).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, null, msgs);
 			if (newImage != null)
-				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, null, msgs);
+				msgs = ((InternalEObject)newImage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, null, msgs);
 			msgs = basicSetImage(newImage, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, newImage, newImage));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE, newImage, newImage));
 	}
 
   	/**
@@ -245,9 +245,9 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				return basicSetFieldOfView(null, msgs);
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				return basicSetImage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -262,11 +262,11 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				return getTime();
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				return getFieldOfView();
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				return getImage();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -281,13 +281,13 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				setTime((Date)newValue);
 				return;
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				setFieldOfView((RectangularFrustrumFieldOfView)newValue);
 				return;
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				setImage((AbstractEImage)newValue);
 				return;
 		}
@@ -303,13 +303,13 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				setFieldOfView((RectangularFrustrumFieldOfView)null);
 				return;
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				setImage((AbstractEImage)null);
 				return;
 		}
@@ -325,11 +325,11 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__FIELD_OF_VIEW:
 				return fieldOfView != null;
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__IMAGE:
 				return image != null;
 		}
 		return super.eIsSet(featureID);
@@ -345,7 +345,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME: return EMFEcorePackage.TIMED__TIME;
+				case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME: return EMFEcorePackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -362,7 +362,7 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
   {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.TIMED__TIME: return MRTSensorsImagingPackage.IMAGE_SNAPSHOT__TIME;
+				case EMFEcorePackage.TIMED__TIME: return Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT__TIME;
 				default: return -1;
 			}
 		}
@@ -377,9 +377,9 @@ public class ImageSnapshotImpl extends GroupNodeImpl implements ImageSnapshot
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT___CONVERT_TO_HORIZONTAL_ANGLE__INT:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT___CONVERT_TO_HORIZONTAL_ANGLE__INT:
 				return convertToHorizontalAngle((Integer)arguments.get(0));
-			case MRTSensorsImagingPackage.IMAGE_SNAPSHOT___CONVERT_TO_VERTICAL_ANGLE__INT:
+			case Symphony__AddonsSensorsImagingPackage.IMAGE_SNAPSHOT___CONVERT_TO_VERTICAL_ANGLE__INT:
 				return convertToVerticalAngle((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

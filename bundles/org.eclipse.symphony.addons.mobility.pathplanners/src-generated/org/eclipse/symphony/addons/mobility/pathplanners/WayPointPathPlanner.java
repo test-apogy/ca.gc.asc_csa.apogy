@@ -22,11 +22,11 @@ import org.eclipse.symphony.common.processors.Processor;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentPosition <em>Current Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getWayPointPathPlanner()
  * @model

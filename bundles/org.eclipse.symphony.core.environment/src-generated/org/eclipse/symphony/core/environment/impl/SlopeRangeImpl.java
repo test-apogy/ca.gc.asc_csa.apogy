@@ -21,6 +21,7 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getDescription <em>Description</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getSlopeUpperBound <em>Slope Upper Bound</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.impl.SlopeRangeImpl#getColor <em>Color</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

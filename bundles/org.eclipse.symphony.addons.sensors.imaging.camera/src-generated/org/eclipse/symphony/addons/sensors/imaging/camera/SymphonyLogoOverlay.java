@@ -14,7 +14,7 @@ package org.eclipse.symphony.addons.sensors.imaging.camera;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getSymphonyLogoOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getSymphonyLogoOverlay()
  * @model
  * @generated
  */

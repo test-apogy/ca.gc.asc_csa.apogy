@@ -26,7 +26,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RayData;
 
 /**
@@ -83,7 +83,7 @@ public class RayDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RayData_origin_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RayData_origin_feature", "_UI_RayData_type"),
-				 RangePackage.Literals.RAY_DATA__ORIGIN,
+				 Symphony__AddonsSensorsRangePackage.Literals.RAY_DATA__ORIGIN,
 				 true,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class RayDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RayData_direction_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RayData_direction_feature", "_UI_RayData_type"),
-				 RangePackage.Literals.RAY_DATA__DIRECTION,
+				 Symphony__AddonsSensorsRangePackage.Literals.RAY_DATA__DIRECTION,
 				 true,
 				 false,
 				 false,
@@ -152,8 +152,8 @@ public class RayDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RayData.class)) {
-			case RangePackage.RAY_DATA__ORIGIN:
-			case RangePackage.RAY_DATA__DIRECTION:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__ORIGIN:
+			case Symphony__AddonsSensorsRangePackage.RAY_DATA__DIRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

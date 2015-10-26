@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints <em>Attachment Points</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getSimulationProperties <em>Simulation Properties</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getConstaintId <em>Constaint Id</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#isEnabled <em>Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage#getAbstractConstraint()
  * @model abstract="true"

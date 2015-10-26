@@ -19,7 +19,7 @@ import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsF
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
 import org.eclipse.symphony.addons.provider.AbstractTwoPoints3DToolItemProvider;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.PathPlannerTool} object.
@@ -73,7 +73,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerTool_busy_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerTool_busy_feature", "_UI_PathPlannerTool_type"),
-				 SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__BUSY,
+				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__BUSY,
 				 false,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerTool_autoPathPlanEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerTool_autoPathPlanEnabled_feature", "_UI_PathPlannerTool_type"),
-				 SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED,
+				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerTool_meshLayer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerTool_meshLayer_feature", "_UI_PathPlannerTool_type"),
-				 SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__MESH_LAYER,
+				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__MESH_LAYER,
 				 true,
 				 false,
 				 true,
@@ -139,7 +139,7 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 				 getResourceLocator(),
 				 getString("_UI_PathPlannerTool_plannedPath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathPlannerTool_plannedPath_feature", "_UI_PathPlannerTool_type"),
-				 SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
+				 Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
 				 false,
 				 false,
 				 false,
@@ -160,8 +160,8 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER);
-			childrenFeatures.add(SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH);
+			childrenFeatures.add(Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER);
+			childrenFeatures.add(Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH);
 		}
 		return childrenFeatures;
 	}
@@ -260,13 +260,13 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PathPlannerTool.class)) {
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__BUSY:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
-			case SymphonyToolsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PATH_PLANNER:
+			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL__PLANNED_PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -286,12 +286,12 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER,
+				(Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER,
 				 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
+				(Symphony__AddonsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
 				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 	}
 

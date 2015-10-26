@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.vehicle.MeshNodeEntry} object.
@@ -75,7 +75,7 @@ public class MeshNodeEntryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshNodeEntry_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshNodeEntry_node_feature", "_UI_MeshNodeEntry_type"),
-				 SymphonyToolsVehiclePackage.Literals.MESH_NODE_ENTRY__NODE,
+				 Symphony__AddonsVehiclePackage.Literals.MESH_NODE_ENTRY__NODE,
 				 true,
 				 false,
 				 true,
@@ -97,7 +97,7 @@ public class MeshNodeEntryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshNodeEntry_mesh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshNodeEntry_mesh_feature", "_UI_MeshNodeEntry_type"),
-				 SymphonyToolsVehiclePackage.Literals.MESH_NODE_ENTRY__MESH,
+				 Symphony__AddonsVehiclePackage.Literals.MESH_NODE_ENTRY__MESH,
 				 true,
 				 false,
 				 true,

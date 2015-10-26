@@ -14,7 +14,7 @@ package org.eclipse.symphony.addons.telecoms;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getHalfWaveDipoleAntennaRadiationPattern()
+ * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getHalfWaveDipoleAntennaRadiationPattern()
  * @model
  * @generated
  */

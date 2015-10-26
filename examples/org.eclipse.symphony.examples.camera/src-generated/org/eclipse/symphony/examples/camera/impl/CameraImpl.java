@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 import org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl;
 import org.eclipse.symphony.examples.camera.Camera;
@@ -25,6 +25,7 @@ import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#getCurrentZoom <em>Current Zoom</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#getCommandedZoom <em>Commanded Zoom</em>}</li>
@@ -32,7 +33,6 @@ import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.camera.impl.CameraImpl#isStreamingEnabled <em>Streaming Enabled</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -475,8 +475,8 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	{
 		if (baseClass == Zoomable.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreExampleCameraPackage.CAMERA__CURRENT_ZOOM: return MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM;
-				case EMFEcoreExampleCameraPackage.CAMERA__COMMANDED_ZOOM: return MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM;
+				case EMFEcoreExampleCameraPackage.CAMERA__CURRENT_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM;
+				case EMFEcoreExampleCameraPackage.CAMERA__COMMANDED_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM;
 				default: return -1;
 			}
 		}
@@ -493,8 +493,8 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	{
 		if (baseClass == Zoomable.class) {
 			switch (baseFeatureID) {
-				case MRTSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM: return EMFEcoreExampleCameraPackage.CAMERA__CURRENT_ZOOM;
-				case MRTSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM: return EMFEcoreExampleCameraPackage.CAMERA__COMMANDED_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM: return EMFEcoreExampleCameraPackage.CAMERA__CURRENT_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM: return EMFEcoreExampleCameraPackage.CAMERA__COMMANDED_ZOOM;
 				default: return -1;
 			}
 		}
@@ -511,9 +511,9 @@ public abstract class CameraImpl extends AbstractCameraImpl implements Camera
 	{
 		if (baseClass == Zoomable.class) {
 			switch (baseOperationID) {
-				case MRTSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE: return EMFEcoreExampleCameraPackage.CAMERA___COMMAND_ZOOM__DOUBLE;
-				case MRTSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM: return EMFEcoreExampleCameraPackage.CAMERA___GET_MINIMUM_ZOOM;
-				case MRTSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM: return EMFEcoreExampleCameraPackage.CAMERA___GET_MAXIMUM_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE: return EMFEcoreExampleCameraPackage.CAMERA___COMMAND_ZOOM__DOUBLE;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM: return EMFEcoreExampleCameraPackage.CAMERA___GET_MINIMUM_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM: return EMFEcoreExampleCameraPackage.CAMERA___GET_MAXIMUM_ZOOM;
 				default: return -1;
 			}
 		}

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.CameraOverlay} object.
@@ -67,7 +67,7 @@ public class CameraOverlayItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraOverlay_overlayAlignment_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraOverlay_overlayAlignment_feature", "_UI_CameraOverlay_type"),
-				 SymphonyCameraToolsPackage.Literals.CAMERA_OVERLAY__OVERLAY_ALIGNMENT,
+				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_OVERLAY__OVERLAY_ALIGNMENT,
 				 true,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class CameraOverlayItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraOverlay.class)) {
-			case SymphonyCameraToolsPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
+			case Symphony__AddonsSensorsImagingCameraPackage.CAMERA_OVERLAY__OVERLAY_ALIGNMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -13,7 +13,7 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.Activator;
-import org.eclipse.symphony.addons.sensors.fov.ui.FovUIPackage;
+import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
 import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
 import org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesConstants;
 import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.RectangularFrustrumFieldOfViewSceneObject;
@@ -25,8 +25,6 @@ import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Rectangular Frustrum Field Of View Presentation</b></em>'. <!--
  * end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -53,7 +51,7 @@ public class RectangularFrustrumFieldOfViewPresentationImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return FovUIPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_PRESENTATION;
+		return Symphony__AddonsSensorsFOVUIPackage.Literals.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_PRESENTATION;
 	}
 
 	@Override

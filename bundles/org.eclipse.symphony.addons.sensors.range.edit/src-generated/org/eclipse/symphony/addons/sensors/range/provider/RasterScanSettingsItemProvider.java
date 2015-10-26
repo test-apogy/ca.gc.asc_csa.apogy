@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.provider.RectangularFrustrumFieldOfViewItemProvider;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
 
 /**
@@ -72,7 +72,7 @@ public class RasterScanSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RasterScanSettings_verticalResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanSettings_verticalResolution_feature", "_UI_RasterScanSettings_type"),
-				 RangePackage.Literals.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION,
+				 Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class RasterScanSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RasterScanSettings_horizontalResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanSettings_horizontalResolution_feature", "_UI_RasterScanSettings_type"),
-				 RangePackage.Literals.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION,
+				 Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class RasterScanSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RasterScanSettings_numberOfPoints_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RasterScanSettings_numberOfPoints_feature", "_UI_RasterScanSettings_type"),
-				 RangePackage.Literals.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS,
+				 Symphony__AddonsSensorsRangePackage.Literals.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS,
 				 false,
 				 false,
 				 false,
@@ -167,9 +167,9 @@ public class RasterScanSettingsItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RasterScanSettings.class)) {
-			case RangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
-			case RangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
-			case RangePackage.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS:
+			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__VERTICAL_RESOLUTION:
+			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__HORIZONTAL_RESOLUTION:
+			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_SETTINGS__NUMBER_OF_POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

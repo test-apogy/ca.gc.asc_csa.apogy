@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsFactory;
-import org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
+import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureAzimuthElevationFOVOverlay} object.
@@ -61,8 +61,8 @@ public class EMFFeatureAzimuthElevationFOVOverlayItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE);
-			childrenFeatures.add(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE);
+			childrenFeatures.add(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE);
 		}
 		return childrenFeatures;
 	}
@@ -115,8 +115,8 @@ public class EMFFeatureAzimuthElevationFOVOverlayItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EMFFeatureAzimuthElevationFOVOverlay.class)) {
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
-			case SymphonyCameraToolsPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE:
+			case Symphony__AddonsSensorsImagingCameraPackage.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -136,13 +136,13 @@ public class EMFFeatureAzimuthElevationFOVOverlayItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE,
-				 SymphonyCameraToolsFactory.eINSTANCE.createAzimuthFeatureReference()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__AZIMUTH_FEATURE_REFERENCE,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createAzimuthFeatureReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCameraToolsPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE,
-				 SymphonyCameraToolsFactory.eINSTANCE.createElevationFeatureReference()));
+				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_AZIMUTH_ELEVATION_FOV_OVERLAY__ELEVATION_FEATURE_REFERENCE,
+				 Symphony__AddonsSensorsImagingCameraFactory.eINSTANCE.createElevationFeatureReference()));
 	}
 
 }

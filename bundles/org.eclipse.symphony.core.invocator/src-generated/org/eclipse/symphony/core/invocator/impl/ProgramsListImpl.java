@@ -26,11 +26,11 @@ import org.eclipse.symphony.core.invocator.ProgramsList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramsListImpl#getInvocatorSession <em>Invocator Session</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.ProgramsListImpl#getPrograms <em>Programs</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderFactory;
 import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
@@ -123,7 +123,7 @@ public class EMFEcoreExampleLanderPackageImpl extends EPackageImpl implements EM
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyToolsVehiclePackage.eINSTANCE.eClass();
+		Symphony__AddonsVehiclePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleLanderPackage.createPackageContents();
@@ -604,7 +604,7 @@ public class EMFEcoreExampleLanderPackageImpl extends EPackageImpl implements EM
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
-		SymphonyToolsVehiclePackage theSymphonyToolsVehiclePackage = (SymphonyToolsVehiclePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyToolsVehiclePackage.eNS_URI);
+		Symphony__AddonsVehiclePackage theSymphony__AddonsVehiclePackage = (Symphony__AddonsVehiclePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsVehiclePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -624,7 +624,7 @@ public class EMFEcoreExampleLanderPackageImpl extends EPackageImpl implements EM
 
 		initEClass(landerEClass, Lander.class, "Lander", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLander_Position(), this.getPosition(), null, "position", null, 1, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLander_Thruster(), theSymphonyToolsVehiclePackage.getThruster(), null, "thruster", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLander_Thruster(), theSymphony__AddonsVehiclePackage.getThruster(), null, "thruster", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_LegAExtension(), this.getLanderLegExtension(), "legAExtension", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_LegBExtension(), this.getLanderLegExtension(), "legBExtension", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLander_LegCExtension(), this.getLanderLegExtension(), "legCExtension", null, 0, 1, Lander.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

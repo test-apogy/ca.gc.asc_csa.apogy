@@ -12,12 +12,12 @@ import org.eclipse.symphony.core.invocator.Variable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePathPlannerTool()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePathPlannerTool()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface VehiclePathPlannerTool extends PathPlannerTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePathPlannerTool_Variable()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePathPlannerTool_Variable()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TRAJECTORY_3D_TOOL'"
 	 * @generated

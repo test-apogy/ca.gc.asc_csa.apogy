@@ -15,12 +15,12 @@ package org.eclipse.symphony.addons.telecoms;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern#getUrl <em>Url</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getURlBasedAntennaRadiationPattern()
+ * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getURlBasedAntennaRadiationPattern()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface URlBasedAntennaRadiationPattern extends AbstractAntennaRadiatio
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getURlBasedAntennaRadiationPattern_Url()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getURlBasedAntennaRadiationPattern_Url()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='URL'"
 	 * @generated

@@ -3,7 +3,7 @@ package org.eclipse.symphony.addons.sensors.pose.ui.adapters;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
-import org.eclipse.symphony.addons.sensors.pose.ui.SensorsPoseUIFactory;
+import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIFactory;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 
 import org.eclipse.symphony.common.topology.Node;
@@ -38,7 +38,7 @@ public class PositionSensorPresentationAdapter implements NodePresentationAdapte
 
 		PositionSensor vector = (PositionSensor) obj;
 		
-		PositionSensorPresentation presentationNode = SensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation();
+		PositionSensorPresentation presentationNode = Symphony__AddonsSensorsPoseUIFactory.eINSTANCE.createPositionSensorPresentation();
 		presentationNode.setNode(vector);			
 						
 		return presentationNode;

@@ -12,7 +12,7 @@ import org.eclipse.symphony.addons.sensors.range.impl.SensorsRangeFacadeImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.range.RangePackage#getSensorsRangeFacade()
+ * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage#getSensorsRangeFacade()
  * @model
  * @generated
  */

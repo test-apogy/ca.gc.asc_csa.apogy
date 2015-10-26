@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.camera.SymphonyCameraToolsPackage#getDrawnCameraOverlay()
+ * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getDrawnCameraOverlay()
  * @model abstract="true"
  * @generated
  */

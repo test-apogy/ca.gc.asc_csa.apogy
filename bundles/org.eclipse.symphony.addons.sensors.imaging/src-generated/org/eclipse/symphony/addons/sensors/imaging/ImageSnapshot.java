@@ -15,13 +15,13 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot#getFieldOfView <em>Field Of View</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot#getImage <em>Image</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getImageSnapshot()
+ * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getImageSnapshot()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface ImageSnapshot extends GroupNode, Timed
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Field Of View</em>' containment reference.
 	 * @see #setFieldOfView(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getImageSnapshot_FieldOfView()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getImageSnapshot_FieldOfView()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface ImageSnapshot extends GroupNode, Timed
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image</em>' containment reference.
 	 * @see #setImage(AbstractEImage)
-	 * @see org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage#getImageSnapshot_Image()
+	 * @see org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage#getImageSnapshot_Image()
 	 * @model containment="true"
 	 * @generated
 	 */

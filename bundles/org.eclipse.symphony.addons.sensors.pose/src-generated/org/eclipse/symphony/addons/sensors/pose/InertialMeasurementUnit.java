@@ -12,13 +12,13 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getAngularVelocity <em>Angular Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit#getLinearAcceleration <em>Linear Acceleration</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getInertialMeasurementUnit()
+ * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getInertialMeasurementUnit()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface InertialMeasurementUnit extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' containment reference.
 	 * @see #setAngularVelocity(Tuple3d)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getInertialMeasurementUnit_AngularVelocity()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getInertialMeasurementUnit_AngularVelocity()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface InertialMeasurementUnit extends OrientationSensor {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linear Acceleration</em>' containment reference.
 	 * @see #setLinearAcceleration(Tuple3d)
-	 * @see org.eclipse.symphony.addons.sensors.pose.PosePackage#getInertialMeasurementUnit_LinearAcceleration()
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage#getInertialMeasurementUnit_LinearAcceleration()
 	 * @model containment="true"
 	 * @generated
 	 */

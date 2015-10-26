@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.addons.impl.SimpleToolImpl;
-import org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage;
+import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool;
 import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
 
@@ -22,10 +22,10 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.impl.TelecomStatusMonitorToolListImpl#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -56,7 +56,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyTelecomToolsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST;
+		return Symphony__AddonsTelecomsPackage.Literals.TELECOM_STATUS_MONITOR_TOOL_LIST;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	 */
 	public EList<TelecomStatusMonitorTool> getTelecomStatusMonitors() {
 		if (telecomStatusMonitors == null) {
-			telecomStatusMonitors = new EObjectContainmentWithInverseEList<TelecomStatusMonitorTool>(TelecomStatusMonitorTool.class, this, SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS, SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST);
+			telecomStatusMonitors = new EObjectContainmentWithInverseEList<TelecomStatusMonitorTool>(TelecomStatusMonitorTool.class, this, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS, Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL__STATUS_MONITOR_TOOL_LIST);
 		}
 		return telecomStatusMonitors;
 	}
@@ -80,7 +80,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTelecomStatusMonitors()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -94,7 +94,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				return ((InternalEList<?>)getTelecomStatusMonitors()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -108,7 +108,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				return getTelecomStatusMonitors();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -123,7 +123,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				getTelecomStatusMonitors().clear();
 				getTelecomStatusMonitors().addAll((Collection<? extends TelecomStatusMonitorTool>)newValue);
 				return;
@@ -139,7 +139,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				getTelecomStatusMonitors().clear();
 				return;
 		}
@@ -154,7 +154,7 @@ public class TelecomStatusMonitorToolListImpl extends SimpleToolImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyTelecomToolsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
+			case Symphony__AddonsTelecomsPackage.TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS:
 				return telecomStatusMonitors != null && !telecomStatusMonitors.isEmpty();
 		}
 		return super.eIsSet(featureID);

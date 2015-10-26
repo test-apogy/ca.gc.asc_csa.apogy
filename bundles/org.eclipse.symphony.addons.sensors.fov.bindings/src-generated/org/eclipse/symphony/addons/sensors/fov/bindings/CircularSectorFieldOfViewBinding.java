@@ -18,12 +18,12 @@ import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.fov.bindings.CircularSectorFieldOfViewBinding#getFov <em>Fov</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage#getCircularSectorFieldOfViewBinding()
+ * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage#getCircularSectorFieldOfViewBinding()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface CircularSectorFieldOfViewBinding extends AbstractTopologyBindin
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fov</em>' reference.
 	 * @see #setFov(CircularSectorFieldOfView)
-	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.MRTFOVBindingsPackage#getCircularSectorFieldOfViewBinding_Fov()
+	 * @see org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage#getCircularSectorFieldOfViewBinding_Fov()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */

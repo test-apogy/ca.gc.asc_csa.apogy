@@ -16,6 +16,7 @@ import org.eclipse.symphony.core.PoseCorrector;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#isInitializing <em>Initializing</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getMeshes <em>Meshes</em>}</li>
@@ -26,9 +27,8 @@ import org.eclipse.symphony.core.PoseCorrector;
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getOrientationCorrection <em>Orientation Correction</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector#getContactProvider <em>Contact Provider</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initializing</em>' attribute.
 	 * @see #setInitializing(boolean)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector_Initializing()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_Initializing()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='INTERNAL_INFO'"
 	 * @generated
@@ -70,7 +70,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 *  The list of ContentNode containing the meshes being processed to find contact points.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Meshes</em>' reference list.
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector_Meshes()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_Meshes()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' propertyCategory='INTERNAL_INFO'"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 *  The list of physical bodies being processed to find contact points.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Contact Bodies</em>' reference list.
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector_ContactBodies()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ContactBodies()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='INTERNAL_INFO'"
 	 * @generated
 	 */
@@ -102,7 +102,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * @return the value of the '<em>ZCorrection Mode</em>' attribute.
 	 * @see org.eclipse.symphony.addons.vehicle.ZCorrectionMode
 	 * @see #setZCorrectionMode(ZCorrectionMode)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector_ZCorrectionMode()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ZCorrectionMode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='SETTINGS_INFO'"
 	 * @generated
@@ -130,7 +130,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZCorrection</em>' attribute.
 	 * @see #setZCorrection(double)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector_ZCorrection()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ZCorrection()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='CORRECTION_INFO' csa_units='m'"
 	 * @generated
@@ -158,7 +158,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * @return the value of the '<em>Orientation Correction Mode</em>' attribute.
 	 * @see org.eclipse.symphony.addons.vehicle.OrientationCorrectionMode
 	 * @see #setOrientationCorrectionMode(OrientationCorrectionMode)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector_OrientationCorrectionMode()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_OrientationCorrectionMode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='SETTINGS_INFO'"
 	 * @generated
@@ -185,7 +185,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orientation Correction</em>' reference.
 	 * @see #setOrientationCorrection(Matrix3x3)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector_OrientationCorrection()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_OrientationCorrection()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='true' property='Readonly' propertyCategory='CORRECTION_INFO'"
 	 * @generated
@@ -212,7 +212,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Contact Provider</em>' containment reference.
 	 * @see #setContactProvider(ContactProvider)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getVehiclePoseCorrector_ContactProvider()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ContactProvider()
 	 * @see org.eclipse.symphony.addons.vehicle.ContactProvider#getVehiclePoseCorrector
 	 * @model opposite="vehiclePoseCorrector" containment="true" required="true"
 	 * @generated

@@ -2,7 +2,7 @@ package org.eclipse.symphony.addons.telecoms.ui.adapters;
 
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
 import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
-import org.eclipse.symphony.addons.telecoms.ui.SymphonyTelecomToolsUIFactory;
+import org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
@@ -34,7 +34,7 @@ public class AbstractAntennaRadiationPatternAdapter implements NodePresentationA
 			throw new IllegalArgumentException();
 		}
 
-		AbstractAntennaRadiationPatternPresentation presentationNode = SymphonyTelecomToolsUIFactory.eINSTANCE.createAbstractAntennaRadiationPatternPresentation();
+		AbstractAntennaRadiationPatternPresentation presentationNode = Symphony__AddonsTelecomsUIFactory.eINSTANCE.createAbstractAntennaRadiationPatternPresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

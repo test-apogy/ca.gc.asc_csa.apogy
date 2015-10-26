@@ -15,12 +15,12 @@ package org.eclipse.symphony.core.environment;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer#isAutoScale <em>Auto Scale</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer#getMinimumHeight <em>Minimum Height</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer#getMaximumHeight <em>Maximum Height</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer()
  * @model

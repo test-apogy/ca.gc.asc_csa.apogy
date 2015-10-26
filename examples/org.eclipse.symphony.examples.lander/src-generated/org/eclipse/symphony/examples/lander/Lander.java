@@ -20,6 +20,7 @@ import org.eclipse.symphony.common.emf.Disposable;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.Lander#getThruster <em>Thruster</em>}</li>
@@ -40,7 +41,6 @@ import org.eclipse.symphony.common.emf.Disposable;
  *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isDisposed <em>Disposed</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander()
  * @model abstract="true"

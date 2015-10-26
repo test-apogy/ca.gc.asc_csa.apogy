@@ -19,7 +19,7 @@ import org.eclipse.symphony.addons.sensors.SensorStatus;
 import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingFactory;
+import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.ImagesCoreFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -32,8 +32,6 @@ import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Camera Simulated</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -514,7 +512,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.INFO);
 
 			// Create an image snapshot
-			ImageSnapshot imageSnapshot = MRTSensorsImagingFactory.eINSTANCE.createImageSnapshot();
+			ImageSnapshot imageSnapshot = Symphony__AddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot();
 			
 			// Set the time of the snapshot to the current date and time
 			imageSnapshot.setTime(new Date());

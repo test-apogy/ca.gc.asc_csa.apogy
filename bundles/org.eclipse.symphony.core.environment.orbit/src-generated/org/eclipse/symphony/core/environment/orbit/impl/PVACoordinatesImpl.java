@@ -19,13 +19,13 @@ import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPacka
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.PVACoordinatesImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.PVACoordinatesImpl#getVelocity <em>Velocity</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.PVACoordinatesImpl#getAcceleration <em>Acceleration</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.impl.PVACoordinatesImpl#getAngularVelocity <em>Angular Velocity</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

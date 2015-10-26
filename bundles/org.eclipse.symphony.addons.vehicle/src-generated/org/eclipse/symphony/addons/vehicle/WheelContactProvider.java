@@ -11,12 +11,12 @@ package org.eclipse.symphony.addons.vehicle;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.WheelContactProvider#getContactMode <em>Contact Mode</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getWheelContactProvider()
+ * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheelContactProvider()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface WheelContactProvider extends ContactProvider
 	 * @return the value of the '<em>Contact Mode</em>' attribute.
 	 * @see org.eclipse.symphony.addons.vehicle.WheelContactMode
 	 * @see #setContactMode(WheelContactMode)
-	 * @see org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage#getWheelContactProvider_ContactMode()
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheelContactProvider_ContactMode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='SETTINGS_INFO'"
 	 * @generated

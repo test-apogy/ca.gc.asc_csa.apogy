@@ -18,12 +18,12 @@ import org.eclipse.symphony.addons.SimpleTool;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList#getTelecomStatusMonitors <em>Telecom Status Monitors</em>}</li>
  * </ul>
- * </p>
  *
- * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomStatusMonitorToolList()
+ * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorToolList()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface TelecomStatusMonitorToolList extends SimpleTool {
 	 * Used to keep track of all of the telecom status monitors
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Telecom Status Monitors</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.telecoms.SymphonyTelecomToolsPackage#getTelecomStatusMonitorToolList_TelecomStatusMonitors()
+	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getTelecomStatusMonitorToolList_TelecomStatusMonitors()
 	 * @see org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorTool#getStatusMonitorToolList
 	 * @model opposite="statusMonitorToolList" containment="true"
 	 * @generated

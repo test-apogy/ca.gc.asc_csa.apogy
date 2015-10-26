@@ -7,15 +7,13 @@ package org.eclipse.symphony.addons.sensors.fov.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.fov.FieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.FovPackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Field Of View</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -36,7 +34,7 @@ public class FieldOfViewImpl extends NodeImpl implements FieldOfView {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return FovPackage.Literals.FIELD_OF_VIEW;
+		return Symphony__AddonsSensorsFOVPackage.Literals.FIELD_OF_VIEW;
 	}
 
 } //FieldOfViewImpl

@@ -24,6 +24,7 @@ import org.eclipse.symphony.examples.lander.Position;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#getThruster <em>Thruster</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipse.symphony.examples.lander.Position;
  *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#isInitialized <em>Initialized</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.lander.impl.LanderImpl#isDisposed <em>Disposed</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

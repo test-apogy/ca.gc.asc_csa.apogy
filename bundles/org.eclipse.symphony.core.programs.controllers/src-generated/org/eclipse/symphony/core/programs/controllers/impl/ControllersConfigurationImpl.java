@@ -29,11 +29,11 @@ import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBin
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllersConfigurationImpl#getOperationCalls <em>Operation Calls</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.impl.ControllersConfigurationImpl#isActive <em>Active</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -15,8 +15,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
-import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
 import org.eclipse.symphony.core.provider.PoseCorrectorItemProvider;
@@ -81,7 +81,7 @@ public class VehiclePoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehiclePoseCorrector_initializing_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePoseCorrector_initializing_feature", "_UI_VehiclePoseCorrector_type"),
-				 SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__INITIALIZING,
+				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__INITIALIZING,
 				 false,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class VehiclePoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehiclePoseCorrector_meshes_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePoseCorrector_meshes_feature", "_UI_VehiclePoseCorrector_type"),
-				 SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__MESHES,
+				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__MESHES,
 				 true,
 				 false,
 				 true,
@@ -127,7 +127,7 @@ public class VehiclePoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehiclePoseCorrector_contactBodies_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePoseCorrector_contactBodies_feature", "_UI_VehiclePoseCorrector_type"),
-				 SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES,
+				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES,
 				 false,
 				 false,
 				 true,
@@ -150,7 +150,7 @@ public class VehiclePoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehiclePoseCorrector_zCorrectionMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePoseCorrector_zCorrectionMode_feature", "_UI_VehiclePoseCorrector_type"),
-				 SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE,
+				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE,
 				 true,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class VehiclePoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehiclePoseCorrector_zCorrection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePoseCorrector_zCorrection_feature", "_UI_VehiclePoseCorrector_type"),
-				 SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__ZCORRECTION,
+				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__ZCORRECTION,
 				 false,
 				 false,
 				 false,
@@ -196,7 +196,7 @@ public class VehiclePoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehiclePoseCorrector_orientationCorrectionMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePoseCorrector_orientationCorrectionMode_feature", "_UI_VehiclePoseCorrector_type"),
-				 SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE,
+				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE,
 				 true,
 				 false,
 				 false,
@@ -219,7 +219,7 @@ public class VehiclePoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehiclePoseCorrector_orientationCorrection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehiclePoseCorrector_orientationCorrection_feature", "_UI_VehiclePoseCorrector_type"),
-				 SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION,
+				 Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION,
 				 false,
 				 false,
 				 true,
@@ -241,8 +241,8 @@ public class VehiclePoseCorrectorItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__MESHES);
-			childrenFeatures.add(SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER);
+			childrenFeatures.add(Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__MESHES);
+			childrenFeatures.add(Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER);
 		}
 		return childrenFeatures;
 	}
@@ -318,16 +318,16 @@ public class VehiclePoseCorrectorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VehiclePoseCorrector.class)) {
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__INITIALIZING:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_BODIES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ZCORRECTION:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION_MODE:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__ORIENTATION_CORRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
-			case SymphonyToolsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__MESHES:
+			case Symphony__AddonsVehiclePackage.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -348,13 +348,13 @@ public class VehiclePoseCorrectorItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createWheelContactProvider()));
+				(Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER,
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createWheelContactProvider()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER,
-				 SymphonyToolsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
+				(Symphony__AddonsVehiclePackage.Literals.VEHICLE_POSE_CORRECTOR__CONTACT_PROVIDER,
+				 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFootContactProvider()));
 	}
 
 }

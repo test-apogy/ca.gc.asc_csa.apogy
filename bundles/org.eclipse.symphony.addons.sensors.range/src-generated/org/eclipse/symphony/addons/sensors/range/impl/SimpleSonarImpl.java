@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.FovFactory;
-import org.eclipse.symphony.addons.sensors.range.RangePackage;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
 import org.eclipse.symphony.common.topology.Node;
 
@@ -24,10 +24,10 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.sensors.range.impl.SimpleSonarImpl#isEchoDetected <em>Echo Detected</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -73,7 +73,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	@Override
 	protected EClass eStaticClass()
 	{
-		return RangePackage.Literals.SIMPLE_SONAR;
+		return Symphony__AddonsSensorsRangePackage.Literals.SIMPLE_SONAR;
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	    	// If no ConicalFieldOfView is found, creates one.
 	    	if(fov == null)
 	    	{
-	    		fov = FovFactory.eINSTANCE.createConicalFieldOfView();	
+	    		fov = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView();	
 	    		getChildren().add(fov);
 	    	}
 		}
@@ -125,7 +125,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 		boolean oldEchoDetected = echoDetected;
 		echoDetected = newEchoDetected;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RangePackage.SIMPLE_SONAR__ECHO_DETECTED, oldEchoDetected, echoDetected));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED, oldEchoDetected, echoDetected));
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case RangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				return isEchoDetected();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,7 +152,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case RangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				setEchoDetected((Boolean)newValue);
 				return;
 		}
@@ -168,7 +168,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case RangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				setEchoDetected(ECHO_DETECTED_EDEFAULT);
 				return;
 		}
@@ -184,7 +184,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case RangePackage.SIMPLE_SONAR__ECHO_DETECTED:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR__ECHO_DETECTED:
 				return echoDetected != ECHO_DETECTED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -198,7 +198,7 @@ public class SimpleSonarImpl extends SimpleRangeSensorImpl implements SimpleSona
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case RangePackage.SIMPLE_SONAR___GET_FIELD_OF_VIEW:
+			case Symphony__AddonsSensorsRangePackage.SIMPLE_SONAR___GET_FIELD_OF_VIEW:
 				return getFieldOfView();
 		}
 		return super.eInvoke(operationID, arguments);
