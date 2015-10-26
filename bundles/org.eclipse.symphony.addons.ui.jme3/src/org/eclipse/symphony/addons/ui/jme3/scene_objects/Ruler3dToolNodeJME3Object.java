@@ -16,7 +16,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.addons.Ruler3DTool;
 import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.ui.Ruler3dToolSceneObject;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
@@ -745,7 +745,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 					if(msg.getNotifier() instanceof Ruler3dToolNode)
 					{												
 						int featureId = msg.getFeatureID(Ruler3dToolNode.class);
-						if(featureId == SymphonyToolsCorePackage.RULER3D_TOOL_NODE__RULER3_DTOOL)
+						if(featureId == Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL)
 						{
 							if(msg.getOldValue() instanceof Ruler3dToolNode)
 							{
@@ -767,56 +767,56 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 						int featureId = msg.getFeatureID(Ruler3DTool.class);
 						switch(featureId)
 						{							
-							case SymphonyToolsCorePackage.RULER3_DTOOL__FROM_ABSOLUTE_POSITION:
-							case SymphonyToolsCorePackage.RULER3_DTOOL__TO_ABSOLUTE_POSITION:
+							case Symphony__AddonsPackage.RULER3_DTOOL__FROM_ABSOLUTE_POSITION:
+							case Symphony__AddonsPackage.RULER3_DTOOL__TO_ABSOLUTE_POSITION:
 								
 								updateGeometry();
 																	
 								break;
-							case SymphonyToolsCorePackage.RULER3_DTOOL__RULER_COLOR:
+							case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
 									if(msg.getNewValue() instanceof Color3f)
 									{
 										Color3f color = (Color3f) msg.getNewValue();
 										setRulerColor(color);								
 									}
 								break;
-							case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 									setMinorTickSpacing((float) msg.getNewDoubleValue());
 								break;
-							case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 									setMajorTickSpacing((float) msg.getNewDoubleValue());
 								break;
-							case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
+							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
 									setMinorTickLength((float) msg.getNewDoubleValue());
 								break;
-							case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
+							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
 									setMajorTickLength((float) msg.getNewDoubleValue());		
 								break;
-							case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 									if(msg.getNewValue() instanceof Color3f)
 									{
 										Color3f color = (Color3f) msg.getNewValue();
 										setMinorTicksColor(color);								
 									}
 								break;
-							case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 									if(msg.getNewValue() instanceof Color3f)
 									{
 										Color3f color = (Color3f) msg.getNewValue();
 										setMajorTicksColor(color);								
 									}
 								break;
-							case SymphonyToolsCorePackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+							case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 							{
 								setExtremitiesRadius((float) msg.getNewDoubleValue());
 							}
 							break;
 							
-							case SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE:							
+							case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:							
 								setVisible(msg.getNewBooleanValue());
 							break;
 							
-							case SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+							case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 								
 								// Removes adapter if applicable.
 								if(getTopologyNode().getRuler3DTool() != null)
@@ -830,7 +830,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 								}
 							break;
 						
-							case SymphonyToolsCorePackage.SIMPLE3_DTOOL___DISPOSE:	
+							case Symphony__AddonsPackage.SIMPLE3_DTOOL___DISPOSE:	
 								System.out.println("Dispose");
 								dispose();
 							break;

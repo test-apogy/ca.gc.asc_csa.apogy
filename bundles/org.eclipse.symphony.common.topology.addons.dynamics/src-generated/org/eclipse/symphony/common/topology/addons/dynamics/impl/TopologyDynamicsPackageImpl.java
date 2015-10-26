@@ -1470,7 +1470,6 @@ public class TopologyDynamicsPackageImpl extends EPackageImpl implements Topolog
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "TopologyDynamics",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.topology.addons.dynamics/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.topology.addons.dynamics.edit/src-generated",

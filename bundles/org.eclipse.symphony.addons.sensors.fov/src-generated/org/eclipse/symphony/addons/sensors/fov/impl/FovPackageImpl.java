@@ -749,7 +749,6 @@ public class FovPackageImpl extends EPackageImpl implements FovPackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Fov",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.fov/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.sensors.fov.edit/src-generated",

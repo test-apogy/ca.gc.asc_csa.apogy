@@ -1012,7 +1012,6 @@ public class RangePackageImpl extends EPackageImpl implements RangePackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Range",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.range/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.sensors.range.edit/src-generated",

@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.geometry.paths.PathsFacade;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
@@ -56,7 +56,7 @@ public class PathsFacadeImpl extends MinimalEObjectImpl.Container implements Pat
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathsPackage.Literals.PATHS_FACADE;
+		return Symphony__AddonsGeometryPathsPackage.Literals.PATHS_FACADE;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class PathsFacadeImpl extends MinimalEObjectImpl.Container implements Pat
 	@Override
 	public WayPointPath createWayPointPath(List<CartesianPositionCoordinates> points)
 	{
-		WayPointPath path = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 				
 		// Copies all of the points.
 		Iterator <CartesianPositionCoordinates> it = points.iterator();
@@ -105,9 +105,9 @@ public class PathsFacadeImpl extends MinimalEObjectImpl.Container implements Pat
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PathsPackage.PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH:
+			case Symphony__AddonsGeometryPathsPackage.PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH:
 				return createWayPointPath((WayPointPath)arguments.get(0));
-			case PathsPackage.PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST:
+			case Symphony__AddonsGeometryPathsPackage.PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST:
 				return createWayPointPath((List<CartesianPositionCoordinates>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

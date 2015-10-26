@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data3d.provider.CartesianCoordinatesSetItemProvider;
@@ -146,7 +146,7 @@ public class WayPointPathItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WayPointPath_length_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPath_length_feature", "_UI_WayPointPath_type"),
-				 PathsPackage.Literals.WAY_POINT_PATH__LENGTH,
+				 Symphony__AddonsGeometryPathsPackage.Literals.WAY_POINT_PATH__LENGTH,
 				 false,
 				 false,
 				 false,
@@ -202,9 +202,9 @@ public class WayPointPathItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WayPointPath.class)) {
-			case PathsPackage.WAY_POINT_PATH__DESCRIPTION:
-			case PathsPackage.WAY_POINT_PATH__NODE_ID:
-			case PathsPackage.WAY_POINT_PATH__LENGTH:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH__DESCRIPTION:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH__NODE_ID:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH__LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -226,7 +226,7 @@ public class WayPointPathItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(DataPackage.Literals.COORDINATES_SET__POINTS,
-				 PathsFactory.eINSTANCE.createWayPoint()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 	}
 
 }

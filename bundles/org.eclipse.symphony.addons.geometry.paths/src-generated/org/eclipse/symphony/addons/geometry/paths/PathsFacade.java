@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getPathsFacade()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getPathsFacade()
  * @model
  * @generated
  */

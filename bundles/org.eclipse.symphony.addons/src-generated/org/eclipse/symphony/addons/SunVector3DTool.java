@@ -28,7 +28,7 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.addons.SunVector3DTool#getSunVector3DToolNode <em>Sun Vector3 DTool Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vector Color</em>' attribute.
 	 * @see #setVectorColor(Color3f)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool_VectorColor()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_VectorColor()
 	 * @model default="1.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
@@ -70,7 +70,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vector Length</em>' attribute.
 	 * @see #setVectorLength(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool_VectorLength()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_VectorLength()
 	 * @model default="10.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
@@ -97,7 +97,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>End Point Radius</em>' attribute.
 	 * @see #setEndPointRadius(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool_EndPointRadius()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_EndPointRadius()
 	 * @model default="0.01" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
@@ -128,7 +128,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sun Intensity</em>' attribute.
 	 * @see #setSunIntensity(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool_SunIntensity()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_SunIntensity()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
@@ -155,7 +155,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Day Maximum Sun Intensity</em>' attribute.
 	 * @see #setCurrentDayMaximumSunIntensity(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool_CurrentDayMaximumSunIntensity()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_CurrentDayMaximumSunIntensity()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
@@ -182,7 +182,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Sun Intensity Percentage</em>' attribute.
 	 * @see #setCurrentSunIntensityPercentage(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool_CurrentSunIntensityPercentage()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_CurrentSunIntensityPercentage()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='%' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
@@ -209,7 +209,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sun Vector3 DTool Node</em>' reference.
 	 * @see #setSunVector3DToolNode(SunVector3DToolNode)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DTool_SunVector3DToolNode()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_SunVector3DToolNode()
 	 * @see org.eclipse.symphony.addons.SunVector3DToolNode#getSunVector3DTool
 	 * @model opposite="sunVector3DTool" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='true' property='Readonly' propertyCategory='SUN_VECTOR_PROPERTIES'"

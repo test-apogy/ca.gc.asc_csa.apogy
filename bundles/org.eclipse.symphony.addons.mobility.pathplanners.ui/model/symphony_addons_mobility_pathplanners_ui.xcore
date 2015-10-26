@@ -1,4 +1,10 @@
-@GenModel(prefix="PathPlannersUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="PathPlannersUI", complianceLevel="6.0")
+@GenModel(prefix="Symphony__AddonsMobilityPathplannersUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__AddonsMobilityPathplannersUI",
+		  complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.pathplanners.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.pathplanners.ui.edit/src-generated")
 

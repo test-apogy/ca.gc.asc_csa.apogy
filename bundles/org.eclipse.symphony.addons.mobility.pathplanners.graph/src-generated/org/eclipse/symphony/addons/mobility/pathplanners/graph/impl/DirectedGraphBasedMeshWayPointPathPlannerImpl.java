@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DirectedGraphBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.jgrapht.DirectedGraph;
 
@@ -62,7 +62,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersGraphPackage.Literals.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER;
+		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 		boolean oldDirectedGraphESet = directedGraphESet;
 		directedGraphESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH, oldDirectedGraph, directedGraph, !oldDirectedGraphESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH, oldDirectedGraph, directedGraph, !oldDirectedGraphESet));
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 		directedGraph = null;
 		directedGraphESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH, oldDirectedGraph, null, oldDirectedGraphESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH, oldDirectedGraph, null, oldDirectedGraphESet));
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
 				return getDirectedGraph();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -134,7 +134,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
 				setDirectedGraph((DirectedGraph<?, ?>)newValue);
 				return;
 		}
@@ -149,7 +149,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
 				unsetDirectedGraph();
 				return;
 		}
@@ -164,7 +164,7 @@ public class DirectedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends C
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.DIRECTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__DIRECTED_GRAPH:
 				return isSetDirectedGraph();
 		}
 		return super.eIsSet(featureID);

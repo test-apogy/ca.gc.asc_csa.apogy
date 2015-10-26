@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
 /**
@@ -103,7 +103,7 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersGraphPackage.Literals.MOBILITY_EDGE;
+		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 	 */
 	public EList<DisplacementCostFunction> getCostFunctions() {
 		if (costFunctions == null) {
-			costFunctions = new EObjectResolvingEList<DisplacementCostFunction>(DisplacementCostFunction.class, this, PathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS);
+			costFunctions = new EObjectResolvingEList<DisplacementCostFunction>(DisplacementCostFunction.class, this, Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS);
 		}
 		return costFunctions;
 	}
@@ -129,7 +129,7 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 			from = (CartesianPolygon)eResolveProxy(oldFrom);
 			if (from != oldFrom) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PathplannersGraphPackage.MOBILITY_EDGE__FROM, oldFrom, from));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__FROM, oldFrom, from));
 			}
 		}
 		return from;
@@ -153,7 +153,7 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 		CartesianPolygon oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.MOBILITY_EDGE__FROM, oldFrom, from));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__FROM, oldFrom, from));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 			to = (CartesianPolygon)eResolveProxy(oldTo);
 			if (to != oldTo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PathplannersGraphPackage.MOBILITY_EDGE__TO, oldTo, to));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__TO, oldTo, to));
 			}
 		}
 		return to;
@@ -191,7 +191,7 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 		CartesianPolygon oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.MOBILITY_EDGE__TO, oldTo, to));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__TO, oldTo, to));
 	}
 
 	/**
@@ -202,15 +202,15 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS:
 				return getCostFunctions();
-			case PathplannersGraphPackage.MOBILITY_EDGE__FROM:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__FROM:
 				if (resolve) return getFrom();
 				return basicGetFrom();
-			case PathplannersGraphPackage.MOBILITY_EDGE__TO:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__TO:
 				if (resolve) return getTo();
 				return basicGetTo();
-			case PathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
 				return getWeight();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -225,17 +225,17 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS:
 				getCostFunctions().clear();
 				getCostFunctions().addAll((Collection<? extends DisplacementCostFunction>)newValue);
 				return;
-			case PathplannersGraphPackage.MOBILITY_EDGE__FROM:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__FROM:
 				setFrom((CartesianPolygon)newValue);
 				return;
-			case PathplannersGraphPackage.MOBILITY_EDGE__TO:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__TO:
 				setTo((CartesianPolygon)newValue);
 				return;
-			case PathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
 				setWeight((Double)newValue);
 				return;
 		}
@@ -250,16 +250,16 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS:
 				getCostFunctions().clear();
 				return;
-			case PathplannersGraphPackage.MOBILITY_EDGE__FROM:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__FROM:
 				setFrom((CartesianPolygon)null);
 				return;
-			case PathplannersGraphPackage.MOBILITY_EDGE__TO:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__TO:
 				setTo((CartesianPolygon)null);
 				return;
-			case PathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
 				setWeight(WEIGHT_EDEFAULT);
 				return;
 		}
@@ -274,13 +274,13 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__COST_FUNCTIONS:
 				return costFunctions != null && !costFunctions.isEmpty();
-			case PathplannersGraphPackage.MOBILITY_EDGE__FROM:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__FROM:
 				return from != null;
-			case PathplannersGraphPackage.MOBILITY_EDGE__TO:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__TO:
 				return to != null;
-			case PathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
 				return weight != WEIGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -345,7 +345,7 @@ public class MobilityEdgeImpl extends MinimalEObjectImpl.Container implements Mo
 	
 	public Object clone() 
 	{		
-		MobilityEdge edge = PathplannersGraphFactory.eINSTANCE.createMobilityEdge();
+		MobilityEdge edge = Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdge();
 		
 		edge.getCostFunctions().addAll(getCostFunctions());
 		edge.setFrom(getFrom());

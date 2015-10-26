@@ -13,8 +13,8 @@ import javax.vecmath.Point3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
@@ -73,7 +73,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	@Override
 	protected EClass eStaticClass()
 	{
-		return PathsPackage.Literals.SEGMENT_WAY_POINT_PATH_INTERPOLATOR;
+		return Symphony__AddonsGeometryPathsPackage.Literals.SEGMENT_WAY_POINT_PATH_INTERPOLATOR;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 		double oldMaximumDistanceInterval = maximumDistanceInterval;
 		maximumDistanceInterval = newMaximumDistanceInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL, oldMaximumDistanceInterval, maximumDistanceInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL, oldMaximumDistanceInterval, maximumDistanceInterval));
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case PathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				return getMaximumDistanceInterval();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -123,7 +123,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case PathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				setMaximumDistanceInterval((Double)newValue);
 				return;
 		}
@@ -139,7 +139,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case PathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				setMaximumDistanceInterval(MAXIMUM_DISTANCE_INTERVAL_EDEFAULT);
 				return;
 		}
@@ -155,7 +155,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case PathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				return maximumDistanceInterval != MAXIMUM_DISTANCE_INTERVAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -229,7 +229,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 		
 		if(getProgressMonitor() != null) getProgressMonitor().beginTask("Interpolating WayPointPath.", input.getPoints().size());
 		
-		WayPointPath result = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath result = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		setOutput(result);		
 		
 		if(input.getPoints().size() > 1)

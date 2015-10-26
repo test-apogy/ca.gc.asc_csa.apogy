@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getMeshWayPointPathPlanner()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getMeshWayPointPathPlanner()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface MeshWayPointPathPlanner<T extends CartesianPolygon> extends Way
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' reference.
 	 * @see #setMesh(Mesh)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getMeshWayPointPathPlanner_Mesh()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getMeshWayPointPathPlanner_Mesh()
 	 * @model transient="true"
 	 * @generated
 	 */

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.Node;
@@ -182,7 +182,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsCorePackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL;
+		return Symphony__AddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL;
 	}
 
 	/**
@@ -196,7 +196,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			fromAbsolutePosition = (Tuple3d)eResolveProxy(oldFromAbsolutePosition);
 			if (fromAbsolutePosition != oldFromAbsolutePosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION, oldFromAbsolutePosition, fromAbsolutePosition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION, oldFromAbsolutePosition, fromAbsolutePosition));
 			}
 		}
 		return fromAbsolutePosition;
@@ -220,7 +220,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		Tuple3d oldFromAbsolutePosition = fromAbsolutePosition;
 		fromAbsolutePosition = newFromAbsolutePosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION, oldFromAbsolutePosition, fromAbsolutePosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION, oldFromAbsolutePosition, fromAbsolutePosition));
 	}
 
 
@@ -235,7 +235,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			fromRelativePosition = (Tuple3d)eResolveProxy(oldFromRelativePosition);
 			if (fromRelativePosition != oldFromRelativePosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION, oldFromRelativePosition, fromRelativePosition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION, oldFromRelativePosition, fromRelativePosition));
 			}
 		}
 		return fromRelativePosition;
@@ -271,7 +271,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		Tuple3d oldFromRelativePosition = fromRelativePosition;
 		fromRelativePosition = newFromRelativePosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION, oldFromRelativePosition, fromRelativePosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION, oldFromRelativePosition, fromRelativePosition));
 	}
 
 	/**
@@ -285,7 +285,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			fromNode = (Node)eResolveProxy(oldFromNode);
 			if (fromNode != oldFromNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE, oldFromNode, fromNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE, oldFromNode, fromNode));
 			}
 		}
 		return fromNode;
@@ -322,7 +322,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		Node oldFromNode = fromNode;
 		fromNode = newFromNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE, oldFromNode, fromNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE, oldFromNode, fromNode));
 	}
 
 	/**
@@ -343,7 +343,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		boolean oldFromNodeLock = fromNodeLock;
 		fromNodeLock = newFromNodeLock;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK, oldFromNodeLock, fromNodeLock));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK, oldFromNodeLock, fromNodeLock));
 	}
 
 	/**
@@ -357,7 +357,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			toAbsolutePosition = (Tuple3d)eResolveProxy(oldToAbsolutePosition);
 			if (toAbsolutePosition != oldToAbsolutePosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION, oldToAbsolutePosition, toAbsolutePosition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION, oldToAbsolutePosition, toAbsolutePosition));
 			}
 		}
 		return toAbsolutePosition;
@@ -381,7 +381,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		Tuple3d oldToAbsolutePosition = toAbsolutePosition;
 		toAbsolutePosition = newToAbsolutePosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION, oldToAbsolutePosition, toAbsolutePosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION, oldToAbsolutePosition, toAbsolutePosition));
 	}
 
 	/**
@@ -395,7 +395,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			toRelativePosition = (Tuple3d)eResolveProxy(oldToRelativePosition);
 			if (toRelativePosition != oldToRelativePosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION, oldToRelativePosition, toRelativePosition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION, oldToRelativePosition, toRelativePosition));
 			}
 		}
 		return toRelativePosition;
@@ -431,7 +431,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		Tuple3d oldToRelativePosition = toRelativePosition;
 		toRelativePosition = newToRelativePosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION, oldToRelativePosition, toRelativePosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION, oldToRelativePosition, toRelativePosition));
 	}
 
 	/**
@@ -445,7 +445,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			toNode = (Node)eResolveProxy(oldToNode);
 			if (toNode != oldToNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE, oldToNode, toNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE, oldToNode, toNode));
 			}
 		}
 		return toNode;
@@ -482,7 +482,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		Node oldToNode = toNode;
 		toNode = newToNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE, oldToNode, toNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE, oldToNode, toNode));
 	}
 
 	/**
@@ -503,7 +503,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		boolean oldToNodeLock = toNodeLock;
 		toNodeLock = newToNodeLock;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK, oldToNodeLock, toNodeLock));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK, oldToNodeLock, toNodeLock));
 	}
 
 	/**
@@ -524,7 +524,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		double oldDistance = distance;
 		distance = newDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE, oldDistance, distance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE, oldDistance, distance));
 	}
 	
 	/**
@@ -554,29 +554,29 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
 				if (resolve) return getFromAbsolutePosition();
 				return basicGetFromAbsolutePosition();
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
 				if (resolve) return getFromRelativePosition();
 				return basicGetFromRelativePosition();
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
 				if (resolve) return getFromNode();
 				return basicGetFromNode();
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
 				return isFromNodeLock();
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
 				if (resolve) return getToAbsolutePosition();
 				return basicGetToAbsolutePosition();
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
 				if (resolve) return getToRelativePosition();
 				return basicGetToRelativePosition();
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
 				if (resolve) return getToNode();
 				return basicGetToNode();
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
 				return isToNodeLock();
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
 				return getDistance();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -590,31 +590,31 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
 				setFromAbsolutePosition((Tuple3d)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
 				setFromRelativePosition((Tuple3d)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
 				setFromNode((Node)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
 				setFromNodeLock((Boolean)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
 				setToAbsolutePosition((Tuple3d)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
 				setToRelativePosition((Tuple3d)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
 				setToNode((Node)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
 				setToNodeLock((Boolean)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
 				setDistance((Double)newValue);
 				return;
 		}
@@ -629,31 +629,31 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
 				setFromAbsolutePosition((Tuple3d)null);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
 				setFromRelativePosition((Tuple3d)null);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
 				setFromNode((Node)null);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
 				setFromNodeLock(FROM_NODE_LOCK_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
 				setToAbsolutePosition((Tuple3d)null);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
 				setToRelativePosition((Tuple3d)null);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
 				setToNode((Node)null);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
 				setToNodeLock(TO_NODE_LOCK_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
 				setDistance(DISTANCE_EDEFAULT);
 				return;
 		}
@@ -668,23 +668,23 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION:
 				return fromAbsolutePosition != null;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION:
 				return fromRelativePosition != null;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE:
 				return fromNode != null;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK:
 				return fromNodeLock != FROM_NODE_LOCK_EDEFAULT;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION:
 				return toAbsolutePosition != null;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION:
 				return toRelativePosition != null;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE:
 				return toNode != null;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK:
 				return toNodeLock != TO_NODE_LOCK_EDEFAULT;
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE:
 				return distance != DISTANCE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -698,7 +698,7 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D:
+			case Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D:
 				pointsRelativePoseChanged((Matrix4d)arguments.get(0));
 				return null;
 		}

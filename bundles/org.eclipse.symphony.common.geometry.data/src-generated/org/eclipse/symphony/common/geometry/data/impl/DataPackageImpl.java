@@ -782,7 +782,6 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Data",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data.edit/src-generated",

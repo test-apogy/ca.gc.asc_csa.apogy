@@ -11,7 +11,7 @@
       <!-- @generated symphony_addons_mobility_pathplanners_graph -->
       <package
             uri="org.eclipse.symphony.addons.mobility.pathplanners.graph"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage"
+            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage"
             genModel="model/symphony_addons_mobility_pathplanners_graph.xcore"/>
    </extension>
 

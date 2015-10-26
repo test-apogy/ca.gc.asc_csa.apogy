@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.addons.Ruler3dToolNode#getRuler3DTool <em>Ruler3 DTool</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3dToolNode()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3dToolNode()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface Ruler3dToolNode extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ruler3 DTool</em>' reference.
 	 * @see #setRuler3DTool(Ruler3DTool)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3dToolNode_Ruler3DTool()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3dToolNode_Ruler3DTool()
 	 * @see org.eclipse.symphony.addons.Ruler3DTool#getRuler3dToolNode
 	 * @model opposite="ruler3dToolNode" transient="true"
 	 * @generated

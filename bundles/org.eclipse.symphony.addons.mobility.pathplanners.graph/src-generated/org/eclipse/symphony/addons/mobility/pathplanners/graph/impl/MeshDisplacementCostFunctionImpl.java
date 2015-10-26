@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
 /**
@@ -54,7 +54,7 @@ public class MeshDisplacementCostFunctionImpl extends DisplacementCostFunctionIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersGraphPackage.Literals.MESH_DISPLACEMENT_COST_FUNCTION;
+		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MESH_DISPLACEMENT_COST_FUNCTION;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class MeshDisplacementCostFunctionImpl extends DisplacementCostFunctionIm
 			planner = (CostBasedMeshWayPointPathPlanner<? extends CartesianPolygon>)eResolveProxy(oldPlanner);
 			if (planner != oldPlanner) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER, oldPlanner, planner));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER, oldPlanner, planner));
 			}
 		}
 		return planner;
@@ -93,7 +93,7 @@ public class MeshDisplacementCostFunctionImpl extends DisplacementCostFunctionIm
 		CostBasedMeshWayPointPathPlanner<? extends CartesianPolygon> oldPlanner = planner;
 		planner = newPlanner;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER, oldPlanner, planner));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER, oldPlanner, planner));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class MeshDisplacementCostFunctionImpl extends DisplacementCostFunctionIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER:
 				if (resolve) return getPlanner();
 				return basicGetPlanner();
 		}
@@ -120,7 +120,7 @@ public class MeshDisplacementCostFunctionImpl extends DisplacementCostFunctionIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER:
 				setPlanner((CostBasedMeshWayPointPathPlanner<? extends CartesianPolygon>)newValue);
 				return;
 		}
@@ -135,7 +135,7 @@ public class MeshDisplacementCostFunctionImpl extends DisplacementCostFunctionIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER:
 				setPlanner((CostBasedMeshWayPointPathPlanner<? extends CartesianPolygon>)null);
 				return;
 		}
@@ -150,7 +150,7 @@ public class MeshDisplacementCostFunctionImpl extends DisplacementCostFunctionIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER:
 				return planner != null;
 		}
 		return super.eIsSet(featureID);

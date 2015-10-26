@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.topology.ui.NodeSelection;
  *   <li>{@link org.eclipse.symphony.addons.Simple3DTool#getRootNode <em>Root Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimple3DTool()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimple3DTool()
  * @model abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Simple3DTool extends SimpleTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimple3DTool_Visible()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimple3DTool_Visible()
 	 * @model default="true" unique="false" transient="true"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface Simple3DTool extends SimpleTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Root Node</em>' reference.
 	 * @see #setRootNode(Node)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimple3DTool_RootNode()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimple3DTool_RootNode()
 	 * @model transient="true"
 	 * @generated
 	 */

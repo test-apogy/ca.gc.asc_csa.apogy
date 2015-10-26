@@ -267,7 +267,6 @@ public class SensorsPackageImpl extends EPackageImpl implements SensorsPackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Sensors",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons.sensors/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.sensors.edit/src-generated",

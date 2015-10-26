@@ -13,8 +13,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode;
 import org.eclipse.symphony.addons.geometry.paths.SplinesUtilities;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
@@ -112,7 +112,7 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathsPackage.Literals.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR;
+		return Symphony__AddonsGeometryPathsPackage.Literals.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR;
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 		double oldTension = tension;
 		tension = newTension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION, oldTension, tension));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION, oldTension, tension));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 		double oldMaximumWayPointsDistance = maximumWayPointsDistance;
 		maximumWayPointsDistance = newMaximumWayPointsDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE, oldMaximumWayPointsDistance, maximumWayPointsDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE, oldMaximumWayPointsDistance, maximumWayPointsDistance));
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 		SplineEndControlPointGenerationMode oldEndControlPointGenerationMode = endControlPointGenerationMode;
 		endControlPointGenerationMode = newEndControlPointGenerationMode == null ? END_CONTROL_POINT_GENERATION_MODE_EDEFAULT : newEndControlPointGenerationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE, oldEndControlPointGenerationMode, endControlPointGenerationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE, oldEndControlPointGenerationMode, endControlPointGenerationMode));
 	}
 
 	/**
@@ -186,11 +186,11 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
 				return getTension();
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
 				return getMaximumWayPointsDistance();
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
 				return getEndControlPointGenerationMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -204,13 +204,13 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
 				setTension((Double)newValue);
 				return;
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
 				setMaximumWayPointsDistance((Double)newValue);
 				return;
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
 				setEndControlPointGenerationMode((SplineEndControlPointGenerationMode)newValue);
 				return;
 		}
@@ -225,13 +225,13 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
 				setTension(TENSION_EDEFAULT);
 				return;
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
 				setMaximumWayPointsDistance(MAXIMUM_WAY_POINTS_DISTANCE_EDEFAULT);
 				return;
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
 				setEndControlPointGenerationMode(END_CONTROL_POINT_GENERATION_MODE_EDEFAULT);
 				return;
 		}
@@ -246,11 +246,11 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__TENSION:
 				return tension != TENSION_EDEFAULT;
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_WAY_POINTS_DISTANCE:
 				return maximumWayPointsDistance != MAXIMUM_WAY_POINTS_DISTANCE_EDEFAULT;
-			case PathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
+			case Symphony__AddonsGeometryPathsPackage.CATMULL_ROM_WAY_POINT_PATH_INTERPOLATOR__END_CONTROL_POINT_GENERATION_MODE:
 				return endControlPointGenerationMode != END_CONTROL_POINT_GENERATION_MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -279,7 +279,7 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 	@Override
 	public WayPointPath process(WayPointPath input) throws Exception {
 		
-		WayPointPath output = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath output = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		
 		List<Point3d> controlPoints = Geometry3dUtilities.getPoint3dList(input.getPoints());
 		

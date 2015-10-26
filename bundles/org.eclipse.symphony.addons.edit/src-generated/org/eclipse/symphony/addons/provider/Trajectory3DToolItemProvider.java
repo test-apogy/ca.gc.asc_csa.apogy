@@ -15,9 +15,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
@@ -74,7 +74,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_penDown_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_penDown_feature", "_UI_Trajectory3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL__PEN_DOWN,
+				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__PEN_DOWN,
 				 true,
 				 false,
 				 false,
@@ -96,7 +96,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_variable_feature", "_UI_Trajectory3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL__VARIABLE,
+				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -118,7 +118,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_distanceThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_distanceThreshold_feature", "_UI_Trajectory3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD,
+				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_totalDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_totalDistance_feature", "_UI_Trajectory3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL__TOTAL_DISTANCE,
+				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__TOTAL_DISTANCE,
 				 false,
 				 false,
 				 false,
@@ -162,7 +162,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_poseProvider_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_poseProvider_feature", "_UI_Trajectory3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER,
+				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER,
 				 false,
 				 false,
 				 true,
@@ -184,7 +184,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DTool_trajectory3DToolNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DTool_trajectory3DToolNode_feature", "_UI_Trajectory3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE,
+				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE,
 				 false,
 				 false,
 				 true,
@@ -205,7 +205,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL__PATHS);
+			childrenFeatures.add(Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__PATHS);
 		}
 		return childrenFeatures;
 	}
@@ -294,14 +294,14 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Trajectory3DTool.class)) {
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PEN_DOWN:
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -321,8 +321,8 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL__PATHS,
-				 PathsFactory.eINSTANCE.createWayPointPath()));
+				(Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL__PATHS,
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 	}
 
 }

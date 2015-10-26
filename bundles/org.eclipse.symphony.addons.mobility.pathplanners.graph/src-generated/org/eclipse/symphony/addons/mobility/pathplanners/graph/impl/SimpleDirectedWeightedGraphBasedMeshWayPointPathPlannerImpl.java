@@ -25,14 +25,14 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.symphony.addons.geometry.paths.PathUtilities;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.GraphUtilities;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
@@ -166,7 +166,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER;
+		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER;
 	}
 
 	/**
@@ -187,7 +187,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		boolean oldVerbose = verbose;
 		verbose = newVerbose;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE, oldVerbose, verbose));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE, oldVerbose, verbose));
 	}
 
 	/**
@@ -197,7 +197,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public SimpleDirectedWeightedGraph getSimpleDirectedWeightedGraph() {
-		if(!eIsSet(PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH))
+		if(!eIsSet(Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH))
 		{
 			printVerbose("Graph is dirty, regenerating it...");
 			try
@@ -207,7 +207,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 			catch(Exception e)
 			{
 				e.printStackTrace();
-				eUnset(PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH);
+				eUnset(Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH);
 			}
 		}
 		return getSimpleDirectedWeightedGraphGen();
@@ -231,7 +231,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		SimpleDirectedWeightedGraph<?, ?> oldSimpleDirectedWeightedGraph = simpleDirectedWeightedGraph;
 		simpleDirectedWeightedGraph = newSimpleDirectedWeightedGraph;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH, oldSimpleDirectedWeightedGraph, simpleDirectedWeightedGraph));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH, oldSimpleDirectedWeightedGraph, simpleDirectedWeightedGraph));
 	}
 
 	/**
@@ -252,7 +252,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		boolean oldEnablePathSimplification = enablePathSimplification;
 		enablePathSimplification = newEnablePathSimplification;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION, oldEnablePathSimplification, enablePathSimplification));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION, oldEnablePathSimplification, enablePathSimplification));
 	}
 
 	/**
@@ -273,7 +273,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		double oldRobotWidthForPathSimplication = robotWidthForPathSimplication;
 		robotWidthForPathSimplication = newRobotWidthForPathSimplication;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION, oldRobotWidthForPathSimplication, robotWidthForPathSimplication));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION, oldRobotWidthForPathSimplication, robotWidthForPathSimplication));
 	}
 
 	/**
@@ -293,13 +293,13 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
 				return isVerbose();
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 				return getSimpleDirectedWeightedGraph();
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
 				return isEnablePathSimplification();
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
 				return getRobotWidthForPathSimplication();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -314,16 +314,16 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
 				setVerbose((Boolean)newValue);
 				return;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 				setSimpleDirectedWeightedGraph((SimpleDirectedWeightedGraph<?, ?>)newValue);
 				return;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
 				setEnablePathSimplification((Boolean)newValue);
 				return;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
 				setRobotWidthForPathSimplication((Double)newValue);
 				return;
 		}
@@ -338,16 +338,16 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
 				setVerbose(VERBOSE_EDEFAULT);
 				return;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 				setSimpleDirectedWeightedGraph((SimpleDirectedWeightedGraph<?, ?>)null);
 				return;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
 				setEnablePathSimplification(ENABLE_PATH_SIMPLIFICATION_EDEFAULT);
 				return;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
 				setRobotWidthForPathSimplication(ROBOT_WIDTH_FOR_PATH_SIMPLICATION_EDEFAULT);
 				return;
 		}
@@ -362,13 +362,13 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
 				return verbose != VERBOSE_EDEFAULT;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
 				return simpleDirectedWeightedGraph != null;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
 				return enablePathSimplification != ENABLE_PATH_SIMPLIFICATION_EDEFAULT;
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
 				return robotWidthForPathSimplication != ROBOT_WIDTH_FOR_PATH_SIMPLICATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -383,7 +383,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == VerboseProvider.class) {
 			switch (derivedFeatureID) {
-				case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE: return ProcessorsPackage.VERBOSE_PROVIDER__VERBOSE;
+				case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE: return ProcessorsPackage.VERBOSE_PROVIDER__VERBOSE;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == VerboseProvider.class) {
 			switch (baseFeatureID) {
-				case ProcessorsPackage.VERBOSE_PROVIDER__VERBOSE: return PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE;
+				case ProcessorsPackage.VERBOSE_PROVIDER__VERBOSE: return Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE;
 				default: return -1;
 			}
 		}
@@ -415,7 +415,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == VerboseProvider.class) {
 			switch (baseOperationID) {
-				case ProcessorsPackage.VERBOSE_PROVIDER___PRINT_VERBOSE__STRING: return PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER___PRINT_VERBOSE__STRING;
+				case ProcessorsPackage.VERBOSE_PROVIDER___PRINT_VERBOSE__STRING: return Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER___PRINT_VERBOSE__STRING;
 				default: return -1;
 			}
 		}
@@ -430,7 +430,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER___PRINT_VERBOSE__STRING:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER___PRINT_VERBOSE__STRING:
 				printVerbose((String)arguments.get(0));
 				return null;
 		}
@@ -466,7 +466,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		setCurrentDestination(destinationPosition);
 		
 		Date start = new Date();
-		WayPointPath path = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 				
 		// Gets the polygon path.
 		List<CartesianPolygon> polygonPath = null;
@@ -497,7 +497,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 			throw new Exception("Needs to specify at least two points to plan a path ! Specified <" + input.getPoints().size() + "> points !");
 		}
 
-		WayPointPath path = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 				
 		try
 		{
@@ -555,7 +555,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		{								
 			printVerbose("Creating Graph using <" + getCostFunctions() + "> cost function(s)...");
 						
-			MobilityEdgeFactory edgeFactory = PathplannersGraphFactory.eINSTANCE.createMobilityEdgeFactory();
+			MobilityEdgeFactory edgeFactory = Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMobilityEdgeFactory();
 			edgeFactory.getCostFunctions().addAll(getCostFunctions());
 			Date start = new Date();
 			SimpleDirectedWeightedGraph tempGraph = GraphUtilities.createGraph(getMesh(), edgeFactory, null);
@@ -709,7 +709,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	@Override
 	public void setMesh(@SuppressWarnings("rawtypes") Mesh newMesh)
 	{
-		eUnset(PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH);
+		eUnset(Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH);
 		super.setMesh(newMesh);
 	}
 	
@@ -726,9 +726,9 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 				@Override
 				public void notifyChanged(Notification msg)
 				{
-					if(msg.getFeatureID(CostBasedMeshWayPointPathPlanner.class) == PathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS)
+					if(msg.getFeatureID(CostBasedMeshWayPointPathPlanner.class) == Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS)
 					{
-						eUnset(PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH);
+						eUnset(Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH);
 					}
 				}
 			};

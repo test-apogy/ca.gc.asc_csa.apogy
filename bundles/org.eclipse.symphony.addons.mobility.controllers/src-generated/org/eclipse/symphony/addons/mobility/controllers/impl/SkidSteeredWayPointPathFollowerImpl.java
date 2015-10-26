@@ -6,7 +6,7 @@ package org.eclipse.symphony.addons.mobility.controllers.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
-import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
+import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredWayPointPathFollower;
 
 /**
@@ -33,7 +33,7 @@ public class SkidSteeredWayPointPathFollowerImpl extends SkidSteeredPlatformPath
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ControllersPackage.Literals.SKID_STEERED_WAY_POINT_PATH_FOLLOWER;
+		return Symphony__AddonsMobilityControllersPackage.Literals.SKID_STEERED_WAY_POINT_PATH_FOLLOWER;
 	}
 
 } //SkidSteeredWayPointPathFollowerImpl

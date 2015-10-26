@@ -25,7 +25,7 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathRecorder#getRecordedPath <em>Recorded Path</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder()
+ * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathRecorder()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface PathRecorder<PathType extends Path> extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position Sensor</em>' reference.
 	 * @see #setPositionSensor(PoseSensor)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder_PositionSensor()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathRecorder_PositionSensor()
 	 * @model
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface PathRecorder<PathType extends Path> extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Distance Delta</em>' attribute.
 	 * @see #setMinimumDistanceDelta(double)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder_MinimumDistanceDelta()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathRecorder_MinimumDistanceDelta()
 	 * @model default="0.1" unique="false"
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface PathRecorder<PathType extends Path> extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Time Delta</em>' attribute.
 	 * @see #setMinimumTimeDelta(double)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder_MinimumTimeDelta()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathRecorder_MinimumTimeDelta()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -123,7 +123,7 @@ public interface PathRecorder<PathType extends Path> extends EObject {
 	 * @return the value of the '<em>Sampling Mode</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode
 	 * @see #setSamplingMode(PathRecorderSamplingMode)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder_SamplingMode()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathRecorder_SamplingMode()
 	 * @model default="ON_DISTANCE_DELTA" unique="false"
 	 * @generated
 	 */
@@ -150,7 +150,7 @@ public interface PathRecorder<PathType extends Path> extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recorded Path</em>' reference.
 	 * @see #setRecordedPath(Path)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathRecorder_RecordedPath()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathRecorder_RecordedPath()
 	 * @model
 	 * @generated
 	 */

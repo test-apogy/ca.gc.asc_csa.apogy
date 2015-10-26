@@ -10,8 +10,8 @@ import javax.vecmath.Point3d;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
 import org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
@@ -71,7 +71,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	@Override
 	protected EClass eStaticClass()
 	{
-		return PathsPackage.Literals.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR;
+		return Symphony__AddonsGeometryPathsPackage.Literals.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR;
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 		double oldDistanceInterval = distanceInterval;
 		distanceInterval = newDistanceInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL, oldDistanceInterval, distanceInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL, oldDistanceInterval, distanceInterval));
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case PathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				return getDistanceInterval();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -121,7 +121,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case PathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				setDistanceInterval((Double)newValue);
 				return;
 		}
@@ -137,7 +137,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case PathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				setDistanceInterval(DISTANCE_INTERVAL_EDEFAULT);
 				return;
 		}
@@ -153,7 +153,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case PathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				return distanceInterval != DISTANCE_INTERVAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -183,7 +183,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	
 	private WayPointPath getHighResolutionWayPointPath(WayPointPath path) throws Exception
 	{	
-		SegmentWayPointPathInterpolator interpolator = PathsFactory.eINSTANCE.createSegmentWayPointPathInterpolator();			
+		SegmentWayPointPathInterpolator interpolator = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSegmentWayPointPathInterpolator();			
 		interpolator.setMaximumDistanceInterval(getHighResolutionMaximumDistanceInterval());		
 		return interpolator.process(path);				
 	}
@@ -201,7 +201,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 	
 	private WayPointPath filterPath(WayPointPath path) throws Exception
 	{
-		WayPointPath result = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath result = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		
 		int n = Math.round( (float) Math.ceil(getDistanceInterval() / getHighResolutionMaximumDistanceInterval())); 
 		int nlPath = (int) Math.round((float) path.getLength() / getDistanceInterval());
@@ -284,7 +284,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 		
 		if(getProgressMonitor() != null) getProgressMonitor().beginTask("Interpolating WayPointPath.", 2);
 		
-		WayPointPath result = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath result = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		setOutput(result);	
 				
 		// First, interpolate the path at high resolution.

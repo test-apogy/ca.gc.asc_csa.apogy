@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter} object.
@@ -70,7 +70,7 @@ public class MinimumDistanceFilterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MinimumDistanceFilter_minimumDistance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MinimumDistanceFilter_minimumDistance_feature", "_UI_MinimumDistanceFilter_type"),
-				 PathsPackage.Literals.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE,
+				 Symphony__AddonsGeometryPathsPackage.Literals.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class MinimumDistanceFilterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MinimumDistanceFilter.class)) {
-			case PathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
+			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER__MINIMUM_DISTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

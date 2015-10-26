@@ -1,7 +1,7 @@
 package org.eclipse.symphony.addons.geometry.paths.ui.adapters;
 
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIFactory;
+import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIFactory;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
 
 import org.eclipse.symphony.common.topology.Node;
@@ -25,7 +25,7 @@ public class WayPointPathPresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 				
-		WayPointPathPresentation presentationNode = PathsUIFactory.eINSTANCE.createWayPointPathPresentation();						
+		WayPointPathPresentation presentationNode = Symphony__AddonsGeometryPathsUIFactory.eINSTANCE.createWayPointPathPresentation();						
 		presentationNode.setNode((WayPointPath) obj);
 		
 		return presentationNode;

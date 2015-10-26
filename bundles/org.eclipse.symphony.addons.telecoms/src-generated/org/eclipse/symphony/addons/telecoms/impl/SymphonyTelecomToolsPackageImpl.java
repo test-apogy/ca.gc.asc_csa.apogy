@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.telecoms.AbstractAntennaRadiationPattern;
 import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import org.eclipse.symphony.addons.telecoms.DipoleAntennaRadiationPattern;
@@ -178,7 +178,7 @@ public class SymphonyTelecomToolsPackageImpl extends EPackageImpl implements Sym
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyToolsCorePackage.eINSTANCE.eClass();
+		Symphony__AddonsPackage.eINSTANCE.eClass();
 		SymphonyEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -685,7 +685,7 @@ public class SymphonyTelecomToolsPackageImpl extends EPackageImpl implements Sym
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		SymphonyToolsCorePackage theSymphonyToolsCorePackage = (SymphonyToolsCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyToolsCorePackage.eNS_URI);
+		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
 		TopologyPackage theTopologyPackage = (TopologyPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyPackage.eNS_URI);
 		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
 		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
@@ -695,7 +695,7 @@ public class SymphonyTelecomToolsPackageImpl extends EPackageImpl implements Sym
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		telecomStatusMonitorToolListEClass.getESuperTypes().add(theSymphonyToolsCorePackage.getSimpleTool());
+		telecomStatusMonitorToolListEClass.getESuperTypes().add(theSymphony__AddonsPackage.getSimpleTool());
 		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theTopologyPackage.getNode());
 		abstractAntennaRadiationPatternEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
 		isotropicAntennaEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());

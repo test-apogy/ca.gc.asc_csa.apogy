@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Spline End Control Point Generation Mode</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getSplineEndControlPointGenerationMode()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getSplineEndControlPointGenerationMode()
  * @model
  * @generated
  */

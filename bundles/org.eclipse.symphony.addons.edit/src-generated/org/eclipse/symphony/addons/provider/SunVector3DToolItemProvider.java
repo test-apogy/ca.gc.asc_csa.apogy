@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.SunVector3DTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
@@ -77,7 +77,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_vectorColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_vectorColor_feature", "_UI_SunVector3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL__VECTOR_COLOR,
+				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__VECTOR_COLOR,
 				 true,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_vectorLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_vectorLength_feature", "_UI_SunVector3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL__VECTOR_LENGTH,
+				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__VECTOR_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_endPointRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_endPointRadius_feature", "_UI_SunVector3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL__END_POINT_RADIUS,
+				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__END_POINT_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_sunIntensity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_sunIntensity_feature", "_UI_SunVector3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL__SUN_INTENSITY,
+				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_INTENSITY,
 				 false,
 				 false,
 				 false,
@@ -165,7 +165,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_currentDayMaximumSunIntensity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_currentDayMaximumSunIntensity_feature", "_UI_SunVector3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY,
+				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY,
 				 false,
 				 false,
 				 false,
@@ -187,7 +187,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_currentSunIntensityPercentage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_currentSunIntensityPercentage_feature", "_UI_SunVector3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE,
+				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE,
 				 false,
 				 false,
 				 false,
@@ -209,7 +209,7 @@ public class SunVector3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DTool_sunVector3DToolNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DTool_sunVector3DToolNode_feature", "_UI_SunVector3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE,
+				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE,
 				 false,
 				 false,
 				 true,
@@ -230,7 +230,7 @@ public class SunVector3DToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE);
+			childrenFeatures.add(Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -321,15 +321,15 @@ public class SunVector3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SunVector3DTool.class)) {
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

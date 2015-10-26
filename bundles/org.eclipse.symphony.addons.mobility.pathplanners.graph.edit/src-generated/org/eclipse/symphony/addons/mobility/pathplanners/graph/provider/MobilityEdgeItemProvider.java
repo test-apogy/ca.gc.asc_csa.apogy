@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge} object.
@@ -83,7 +83,7 @@ public class MobilityEdgeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MobilityEdge_costFunctions_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilityEdge_costFunctions_feature", "_UI_MobilityEdge_type"),
-				 PathplannersGraphPackage.Literals.MOBILITY_EDGE__COST_FUNCTIONS,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE__COST_FUNCTIONS,
 				 true,
 				 false,
 				 true,
@@ -105,7 +105,7 @@ public class MobilityEdgeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MobilityEdge_from_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilityEdge_from_feature", "_UI_MobilityEdge_type"),
-				 PathplannersGraphPackage.Literals.MOBILITY_EDGE__FROM,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE__FROM,
 				 true,
 				 false,
 				 true,
@@ -127,7 +127,7 @@ public class MobilityEdgeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MobilityEdge_to_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilityEdge_to_feature", "_UI_MobilityEdge_type"),
-				 PathplannersGraphPackage.Literals.MOBILITY_EDGE__TO,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE__TO,
 				 true,
 				 false,
 				 true,
@@ -149,7 +149,7 @@ public class MobilityEdgeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MobilityEdge_weight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilityEdge_weight_feature", "_UI_MobilityEdge_type"),
-				 PathplannersGraphPackage.Literals.MOBILITY_EDGE__WEIGHT,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MOBILITY_EDGE__WEIGHT,
 				 true,
 				 false,
 				 false,
@@ -193,7 +193,7 @@ public class MobilityEdgeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobilityEdge.class)) {
-			case PathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.MOBILITY_EDGE__WEIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

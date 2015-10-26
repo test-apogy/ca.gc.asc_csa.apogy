@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Actuator Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getActuatorStatus()
+ * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getActuatorStatus()
  * @model
  * @generated
  */

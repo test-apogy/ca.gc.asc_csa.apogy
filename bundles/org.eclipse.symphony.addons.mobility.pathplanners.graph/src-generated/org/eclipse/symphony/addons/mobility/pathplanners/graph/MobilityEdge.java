@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge#getWeight <em>Weight</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdge()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface MobilityEdge extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cost Functions</em>' reference list.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdge_CostFunctions()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge_CostFunctions()
 	 * @model
 	 * @generated
 	 */
@@ -55,7 +55,7 @@ public interface MobilityEdge extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From</em>' reference.
 	 * @see #setFrom(CartesianPolygon)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdge_From()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge_From()
 	 * @model
 	 * @generated
 	 */
@@ -81,7 +81,7 @@ public interface MobilityEdge extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To</em>' reference.
 	 * @see #setTo(CartesianPolygon)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdge_To()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge_To()
 	 * @model
 	 * @generated
 	 */
@@ -107,7 +107,7 @@ public interface MobilityEdge extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Weight</em>' attribute.
 	 * @see #setWeight(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdge_Weight()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdge_Weight()
 	 * @model unique="false" derived="true"
 	 * @generated
 	 */

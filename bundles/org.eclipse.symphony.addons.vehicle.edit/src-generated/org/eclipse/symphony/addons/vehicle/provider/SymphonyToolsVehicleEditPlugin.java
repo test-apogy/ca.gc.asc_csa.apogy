@@ -5,9 +5,9 @@ package org.eclipse.symphony.addons.vehicle.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
-import org.eclipse.symphony.addons.mobility.pathplanners.provider.PathplannersEditPlugin;
-import org.eclipse.symphony.addons.provider.SymphonyToolsCoreEditPlugin;
+import org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsEditPlugin;
+import org.eclipse.symphony.addons.mobility.pathplanners.provider.Symphony__AddonsMobilityPathplannersEditPlugin;
+import org.eclipse.symphony.addons.provider.Symphony__AddonsEditPlugin;
 import org.eclipse.symphony.common.emf.provider.EMFEcoreEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.DataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Data3dEditPlugin;
@@ -61,11 +61,11 @@ public final class SymphonyToolsVehicleEditPlugin extends EMFPlugin
 		     MathEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     Symphony__AddonsEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		     SymphonyEnvironmentEditPlugin.INSTANCE,
-		     PathplannersEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
+		     Symphony__AddonsMobilityPathplannersEditPlugin.INSTANCE,
+		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,

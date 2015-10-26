@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.SimpleTool;
 import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,7 +86,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsCorePackage.Literals.SIMPLE_TOOL;
+		return Symphony__AddonsPackage.Literals.SIMPLE_TOOL;
 	}
 
 	/**
@@ -95,7 +95,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	 * @generated
 	 */
 	public SimpleToolList getToolList() {
-		if (eContainerFeatureID() != SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST) return null;
+		if (eContainerFeatureID() != Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST) return null;
 		return (SimpleToolList)eContainer();
 	}
 
@@ -105,7 +105,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	 * @generated
 	 */
 	public SimpleToolList basicGetToolList() {
-		if (eContainerFeatureID() != SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST) return null;
+		if (eContainerFeatureID() != Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST) return null;
 		return (SimpleToolList)eInternalContainer();
 	}
 
@@ -115,7 +115,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	 * @generated
 	 */
 	public NotificationChain basicSetToolList(SimpleToolList newToolList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newToolList, SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newToolList, Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST, msgs);
 		return msgs;
 	}
 
@@ -125,19 +125,19 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	 * @generated
 	 */
 	public void setToolList(SimpleToolList newToolList) {
-		if (newToolList != eInternalContainer() || (eContainerFeatureID() != SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST && newToolList != null)) {
+		if (newToolList != eInternalContainer() || (eContainerFeatureID() != Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST && newToolList != null)) {
 			if (EcoreUtil.isAncestor(this, newToolList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newToolList != null)
-				msgs = ((InternalEObject)newToolList).eInverseAdd(this, SymphonyToolsCorePackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS, SimpleToolList.class, msgs);
+				msgs = ((InternalEObject)newToolList).eInverseAdd(this, Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS, SimpleToolList.class, msgs);
 			msgs = basicSetToolList(newToolList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST, newToolList, newToolList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST, newToolList, newToolList));
 	}
 
 	/**
@@ -158,7 +158,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.SIMPLE_TOOL__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SIMPLE_TOOL__ACTIVE, oldActive, active));
 	}
 
 	/**
@@ -179,7 +179,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.SIMPLE_TOOL__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SIMPLE_TOOL__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -200,7 +200,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetToolList((SimpleToolList)otherEnd, msgs);
@@ -216,7 +216,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST:
 				return basicSetToolList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -230,8 +230,8 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST:
-				return eInternalContainer().eInverseRemove(this, SymphonyToolsCorePackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS, SimpleToolList.class, msgs);
+			case Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS, SimpleToolList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -244,12 +244,12 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST:
 				if (resolve) return getToolList();
 				return basicGetToolList();
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__ACTIVE:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__ACTIVE:
 				return isActive();
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__DISPOSED:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__DISPOSED:
 				return isDisposed();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -263,13 +263,13 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST:
 				setToolList((SimpleToolList)newValue);
 				return;
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__ACTIVE:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__DISPOSED:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
 		}
@@ -284,13 +284,13 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST:
 				setToolList((SimpleToolList)null);
 				return;
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__ACTIVE:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__DISPOSED:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
 		}
@@ -305,11 +305,11 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST:
 				return basicGetToolList() != null;
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__ACTIVE:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__DISPOSED:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -323,7 +323,7 @@ public abstract class SimpleToolImpl extends AbstractToolImpl implements SimpleT
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL___DISPOSE:
+			case Symphony__AddonsPackage.SIMPLE_TOOL___DISPOSE:
 				dispose();
 				return null;
 		}

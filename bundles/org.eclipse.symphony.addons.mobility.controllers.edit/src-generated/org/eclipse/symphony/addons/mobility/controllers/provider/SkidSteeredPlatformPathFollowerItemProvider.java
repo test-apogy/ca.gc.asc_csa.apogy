@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
+import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower;
 
 /**
@@ -70,7 +70,7 @@ public class SkidSteeredPlatformPathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredPlatformPathFollower_maximumAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredPlatformPathFollower_maximumAngularVelocity_feature", "_UI_SkidSteeredPlatformPathFollower_type"),
-				 ControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY,
+				 Symphony__AddonsMobilityControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -93,7 +93,7 @@ public class SkidSteeredPlatformPathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredPlatformPathFollower_maximumLinearVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredPlatformPathFollower_maximumLinearVelocity_feature", "_UI_SkidSteeredPlatformPathFollower_type"),
-				 ControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY,
+				 Symphony__AddonsMobilityControllersPackage.Literals.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -140,8 +140,8 @@ public class SkidSteeredPlatformPathFollowerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SkidSteeredPlatformPathFollower.class)) {
-			case ControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
-			case ControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
+			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityControllersPackage.SKID_STEERED_PLATFORM_PATH_FOLLOWER__MAXIMUM_LINEAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

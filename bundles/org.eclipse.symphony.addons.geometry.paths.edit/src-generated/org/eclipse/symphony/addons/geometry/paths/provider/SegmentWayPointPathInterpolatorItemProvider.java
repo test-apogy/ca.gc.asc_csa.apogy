@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
 
 /**
@@ -70,7 +70,7 @@ public class SegmentWayPointPathInterpolatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SegmentWayPointPathInterpolator_maximumDistanceInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SegmentWayPointPathInterpolator_maximumDistanceInterval_feature", "_UI_SegmentWayPointPathInterpolator_type"),
-				 PathsPackage.Literals.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL,
+				 Symphony__AddonsGeometryPathsPackage.Literals.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class SegmentWayPointPathInterpolatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SegmentWayPointPathInterpolator.class)) {
-			case PathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR__MAXIMUM_DISTANCE_INTERVAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

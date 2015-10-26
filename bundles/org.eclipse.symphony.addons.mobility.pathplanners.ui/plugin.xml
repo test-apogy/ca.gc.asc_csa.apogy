@@ -4,7 +4,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.addons.mobility.pathplanners.ui"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage"
+            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage"
             genModel="model/symphony_addons_mobility_pathplanners_ui.xcore"/>
    </extension>
 

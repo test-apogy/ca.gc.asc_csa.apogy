@@ -7,7 +7,7 @@ package org.eclipse.symphony.addons.mobility.pathplanners.graph.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
 
@@ -35,7 +35,7 @@ public class DistanceOnlyCostFunctionImpl extends MeshDisplacementCostFunctionIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersGraphPackage.Literals.DISTANCE_ONLY_COST_FUNCTION;
+		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_ONLY_COST_FUNCTION;
 	}
 
 	@Override

@@ -10,10 +10,10 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsFactory;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 import org.eclipse.symphony.core.SymphonyCoreFactory;
@@ -64,7 +64,7 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 				 getResourceLocator(),
 				 getString("_UI_Trajectory3DToolNode_trajectory3DTool_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Trajectory3DToolNode_trajectory3DTool_feature", "_UI_Trajectory3DToolNode_type"),
-				 SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL,
+				 Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL,
 				 true,
 				 false,
 				 true,
@@ -126,17 +126,17 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
+				 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
+				 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
+				 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -161,32 +161,32 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PathsFactory.eINSTANCE.createWayPoint()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PathsFactory.eINSTANCE.createPath()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PathsFactory.eINSTANCE.createWayPointPath()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode()));
+				 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DToolNode()));
+				 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode()));
+				 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -211,17 +211,17 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PathsFactory.eINSTANCE.createWayPoint()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PathsFactory.eINSTANCE.createPath()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PathsFactory.eINSTANCE.createWayPointPath()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 	}
 
 	/**

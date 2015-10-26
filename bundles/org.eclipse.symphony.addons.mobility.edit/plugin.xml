@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.mobility"
-            class="org.eclipse.symphony.addons.mobility.provider.MobilityItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.mobility.provider.Symphony__AddonsMobilityItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -25,7 +25,7 @@
       <!-- @generated symphony_addons_mobility -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.mobility.provider.MobilityItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.mobility.provider.Symphony__AddonsMobilityItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

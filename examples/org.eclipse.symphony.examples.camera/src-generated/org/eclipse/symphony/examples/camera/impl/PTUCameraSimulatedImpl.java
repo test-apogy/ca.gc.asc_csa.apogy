@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.ActuatorStatus;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -1054,17 +1054,17 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == AbstractActuator.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__MOVING: return MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING;
-				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS: return MRTActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS;
+				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__MOVING: return Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING;
+				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS: return Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS;
 				default: return -1;
 			}
 		}
 		if (baseClass == PanTiltUnit.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE: return MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE;
-				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE: return MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE;
-				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE: return MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE;
-				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE: return MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE;
+				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE: return Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE;
+				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE: return Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE;
+				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE: return Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE;
+				case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE: return Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE;
 				default: return -1;
 			}
 		}
@@ -1085,17 +1085,17 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == AbstractActuator.class) {
 			switch (baseFeatureID) {
-				case MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__MOVING;
-				case MRTActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS;
+				case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__MOVING;
+				case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS;
 				default: return -1;
 			}
 		}
 		if (baseClass == PanTiltUnit.class) {
 			switch (baseFeatureID) {
-				case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE;
 				default: return -1;
 			}
 		}
@@ -1121,17 +1121,17 @@ public class PTUCameraSimulatedImpl extends CameraSimulatedImpl implements PTUCa
 		}
 		if (baseClass == PanTiltUnit.class) {
 			switch (baseOperationID) {
-				case MRTActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_PAN_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_PAN_ANGLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_PAN_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_PAN_ANGLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_TILT_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_TILT_ANGLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_TILT_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_TILT_ANGLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN__DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN__DOUBLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_TILT__DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_TILT__DOUBLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN__DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN__DOUBLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_TILT__DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_TILT__DOUBLE;
-				case MRTActuatorsPackage.PAN_TILT_UNIT___STOP_MOTION: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___STOP_MOTION;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_PAN_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_PAN_ANGLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_PAN_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_PAN_ANGLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_TILT_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___GET_MAXIMUM_TILT_ANGLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_TILT_ANGLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___GET_MINIMUM_TILT_ANGLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN__DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_PAN__DOUBLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_TILT__DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_TO_TILT__DOUBLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN__DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_PAN__DOUBLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_TILT__DOUBLE: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___MOVE_BY_TILT__DOUBLE;
+				case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___STOP_MOTION: return EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED___STOP_MOTION;
 				default: return -1;
 			}
 		}

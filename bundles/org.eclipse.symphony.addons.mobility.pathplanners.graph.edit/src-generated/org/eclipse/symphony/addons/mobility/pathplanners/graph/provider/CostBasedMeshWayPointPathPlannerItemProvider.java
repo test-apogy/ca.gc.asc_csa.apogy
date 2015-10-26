@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.provider.MeshWayPointPathPlannerItemProvider;
 
 /**
@@ -64,7 +64,7 @@ public class CostBasedMeshWayPointPathPlannerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS);
+			childrenFeatures.add(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -120,7 +120,7 @@ public class CostBasedMeshWayPointPathPlannerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CostBasedMeshWayPointPathPlanner.class)) {
-			case PathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -140,28 +140,28 @@ public class CostBasedMeshWayPointPathPlannerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 PathplannersGraphFactory.eINSTANCE.createMeshDisplacementCostFunction()));
+				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createMeshDisplacementCostFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 PathplannersGraphFactory.eINSTANCE.createDistanceOnlyCostFunction()));
+				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceOnlyCostFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 PathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction()));
+				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 PathplannersGraphFactory.eINSTANCE.createExclusionZonesCostFunction()));
+				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createExclusionZonesCostFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
-				 PathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
+				(Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS,
+				 Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndRoverFootprintCostFunction()));
 	}
 
 }

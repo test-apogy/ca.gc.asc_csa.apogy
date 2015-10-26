@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner#getCostFunctions <em>Cost Functions</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getCostBasedMeshWayPointPathPlanner()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getCostBasedMeshWayPointPathPlanner()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface CostBasedMeshWayPointPathPlanner<PolygonType extends CartesianP
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cost Functions</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getCostBasedMeshWayPointPathPlanner_CostFunctions()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getCostBasedMeshWayPointPathPlanner_CostFunctions()
 	 * @model containment="true"
 	 * @generated
 	 */

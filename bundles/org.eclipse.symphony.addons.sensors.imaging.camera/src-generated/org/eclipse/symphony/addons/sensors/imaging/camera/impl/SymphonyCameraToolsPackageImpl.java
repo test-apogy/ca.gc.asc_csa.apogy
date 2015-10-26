@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.camera.AbstractTextOverlay;
@@ -345,7 +345,7 @@ public class SymphonyCameraToolsPackageImpl extends EPackageImpl implements Symp
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyToolsCorePackage.eINSTANCE.eClass();
+		Symphony__AddonsPackage.eINSTANCE.eClass();
 		MRTSensorsImagingPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -1637,7 +1637,7 @@ public class SymphonyCameraToolsPackageImpl extends EPackageImpl implements Symp
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
-		SymphonyToolsCorePackage theSymphonyToolsCorePackage = (SymphonyToolsCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyToolsCorePackage.eNS_URI);
+		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
 		MRTSensorsImagingPackage theMRTSensorsImagingPackage = (MRTSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(MRTSensorsImagingPackage.eNS_URI);
 		EMFEcorePackage theEMFEcorePackage = (EMFEcorePackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcorePackage.eNS_URI);
 		ImagesCorePackage theImagesCorePackage = (ImagesCorePackage)EPackage.Registry.INSTANCE.getEPackage(ImagesCorePackage.eNS_URI);
@@ -1652,7 +1652,7 @@ public class SymphonyCameraToolsPackageImpl extends EPackageImpl implements Symp
 		// Add supertypes to classes
 		cameraViewConfigurationListEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractToolsListContainer());
 		cameraViewConfigurationEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getVariableFeatureReference());
-		cameraViewConfigurationEClass.getESuperTypes().add(theSymphonyToolsCorePackage.getAbstractTool());
+		cameraViewConfigurationEClass.getESuperTypes().add(theSymphony__AddonsPackage.getAbstractTool());
 		imageFilterEClass.getESuperTypes().add(theEMFEcorePackage.getNamed());
 		imageFilterEClass.getESuperTypes().add(theEMFEcorePackage.getDescribed());
 		grayScaleFilterEClass.getESuperTypes().add(this.getImageFilter());

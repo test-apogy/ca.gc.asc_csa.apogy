@@ -16,7 +16,7 @@ package org.eclipse.symphony.addons.geometry.paths;
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator#getDistanceInterval <em>Distance Interval</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getUniformDistanceWayPointPathInterpolator()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getUniformDistanceWayPointPathInterpolator()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface UniformDistanceWayPointPathInterpolator extends WayPointPathFil
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Distance Interval</em>' attribute.
 	 * @see #setDistanceInterval(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getUniformDistanceWayPointPathInterpolator_DistanceInterval()
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getUniformDistanceWayPointPathInterpolator_DistanceInterval()
 	 * @model unique="false"
 	 * @generated
 	 */

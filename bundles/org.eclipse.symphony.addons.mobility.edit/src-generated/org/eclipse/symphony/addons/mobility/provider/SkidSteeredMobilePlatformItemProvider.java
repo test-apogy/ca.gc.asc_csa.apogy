@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.MobilityPackage;
+import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
 import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 
@@ -77,7 +77,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_commandedRightWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_commandedRightWheelsVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_actualRightWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_actualRightWheelsVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_commandedLeftWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_commandedLeftWheelsVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -146,7 +146,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_actualLeftWheelsVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_actualLeftWheelsVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -169,7 +169,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_commandedAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_commandedAngularVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -192,7 +192,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_actualAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_actualAngularVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -215,7 +215,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_commandedTranslationVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_commandedTranslationVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -238,7 +238,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_actualTranslationVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_actualTranslationVelocity_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -261,7 +261,7 @@ public class SkidSteeredMobilePlatformItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SkidSteeredMobilePlatform_effectiveSteeringWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SkidSteeredMobilePlatform_effectiveSteeringWidth_feature", "_UI_SkidSteeredMobilePlatform_type"),
-				 MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH,
+				 Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -310,15 +310,15 @@ public class SkidSteeredMobilePlatformItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SkidSteeredMobilePlatform.class)) {
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

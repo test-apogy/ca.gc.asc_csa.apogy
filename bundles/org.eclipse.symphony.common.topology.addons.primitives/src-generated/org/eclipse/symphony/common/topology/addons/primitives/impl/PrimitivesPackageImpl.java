@@ -974,7 +974,6 @@ public class PrimitivesPackageImpl extends EPackageImpl implements PrimitivesPac
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Primitives",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.topology.addons.primitives/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.topology.addons.primitives.edit/src-generated",

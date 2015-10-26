@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.sensors.range.RangeFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Range' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Range' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.range/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.range.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Range' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Range' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.range/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.range.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
  * @generated
  */
 public interface RangePackage extends EPackage {

@@ -13,7 +13,7 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getSkidSteeredWayPointPathFollower()
+ * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getSkidSteeredWayPointPathFollower()
  * @model
  * @generated
  */

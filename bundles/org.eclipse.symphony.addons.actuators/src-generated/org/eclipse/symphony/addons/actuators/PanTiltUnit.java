@@ -19,7 +19,7 @@ package org.eclipse.symphony.addons.actuators;
  *   <li>{@link org.eclipse.symphony.addons.actuators.PanTiltUnit#getCommandedTiltAngle <em>Commanded Tilt Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getPanTiltUnit()
+ * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Pan Angle</em>' attribute.
 	 * @see #setCurrentPanAngle(double)
-	 * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getPanTiltUnit_CurrentPanAngle()
+	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit_CurrentPanAngle()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' csa_units='rad'"
 	 * @generated
@@ -71,7 +71,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Tilt Angle</em>' attribute.
 	 * @see #setCurrentTiltAngle(double)
-	 * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getPanTiltUnit_CurrentTiltAngle()
+	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit_CurrentTiltAngle()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' csa_units='rad'"
 	 * @generated
@@ -102,7 +102,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Commanded Pan Angle</em>' attribute.
 	 * @see #setCommandedPanAngle(double)
-	 * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getPanTiltUnit_CommandedPanAngle()
+	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit_CommandedPanAngle()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' csa_units='rad'"
 	 * @generated
@@ -133,7 +133,7 @@ public interface PanTiltUnit extends AbstractActuator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Commanded Tilt Angle</em>' attribute.
 	 * @see #setCommandedTiltAngle(double)
-	 * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getPanTiltUnit_CommandedTiltAngle()
+	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getPanTiltUnit_CommandedTiltAngle()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION' csa_units='rad'"
 	 * @generated

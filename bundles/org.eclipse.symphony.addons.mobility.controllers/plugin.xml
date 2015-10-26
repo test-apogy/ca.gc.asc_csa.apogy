@@ -11,7 +11,7 @@
       <!-- @generated symphony_addons_mobility_controllers -->
       <package
             uri="org.eclipse.symphony.addons.mobility.controllers"
-            class="org.eclipse.symphony.addons.mobility.controllers.ControllersPackage"
+            class="org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage"
             genModel="model/symphony_addons_mobility_controllers.xcore"/>
    </extension>
 

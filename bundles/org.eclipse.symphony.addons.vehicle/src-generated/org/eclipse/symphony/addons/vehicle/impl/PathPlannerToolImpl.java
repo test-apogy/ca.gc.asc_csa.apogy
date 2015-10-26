@@ -24,7 +24,7 @@ import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.impl.AbstractTwoPoints3DToolImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
@@ -268,8 +268,8 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	{		
 		if(pathPlanner == null)
 		{
-			SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<CartesianPolygon> tmp = PathplannersGraphFactory.eINSTANCE.createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
-			DistanceAndSlopesCostFunction das = PathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction();			
+			SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<CartesianPolygon> tmp = Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createSimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner();
+			DistanceAndSlopesCostFunction das = Symphony__AddonsMobilityPathplannersGraphFactory.eINSTANCE.createDistanceAndSlopesCostFunction();			
 			das.setGravityAxis(CartesianAxis.Z);
 			tmp.getCostFunctions().add(das);						
 			tmp.setEnablePathSimplification(false);

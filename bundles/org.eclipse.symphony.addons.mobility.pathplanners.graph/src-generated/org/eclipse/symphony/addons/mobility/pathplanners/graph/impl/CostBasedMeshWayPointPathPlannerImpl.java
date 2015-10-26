@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.CostBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.impl.MeshWayPointPathPlannerImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
@@ -58,7 +58,7 @@ public class CostBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianP
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER;
+		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.COST_BASED_MESH_WAY_POINT_PATH_PLANNER;
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class CostBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianP
 	 */
 	public EList<DisplacementCostFunction> getCostFunctions() {
 		if (costFunctions == null) {
-			costFunctions = new EObjectContainmentEList<DisplacementCostFunction>(DisplacementCostFunction.class, this, PathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS);
+			costFunctions = new EObjectContainmentEList<DisplacementCostFunction>(DisplacementCostFunction.class, this, Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS);
 		}
 		return costFunctions;
 	}
@@ -81,7 +81,7 @@ public class CostBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianP
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
 				return ((InternalEList<?>)getCostFunctions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -95,7 +95,7 @@ public class CostBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianP
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
 				return getCostFunctions();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -110,7 +110,7 @@ public class CostBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianP
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
 				getCostFunctions().clear();
 				getCostFunctions().addAll((Collection<? extends DisplacementCostFunction>)newValue);
 				return;
@@ -126,7 +126,7 @@ public class CostBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
 				getCostFunctions().clear();
 				return;
 		}
@@ -141,7 +141,7 @@ public class CostBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.COST_BASED_MESH_WAY_POINT_PATH_PLANNER__COST_FUNCTIONS:
 				return costFunctions != null && !costFunctions.isEmpty();
 		}
 		return super.eIsSet(featureID);

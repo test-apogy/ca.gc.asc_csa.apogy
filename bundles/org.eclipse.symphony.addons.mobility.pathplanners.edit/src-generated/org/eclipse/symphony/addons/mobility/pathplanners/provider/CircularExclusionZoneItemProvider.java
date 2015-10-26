@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone} object.
@@ -70,7 +70,7 @@ public class CircularExclusionZoneItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CircularExclusionZone_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularExclusionZone_radius_feature", "_UI_CircularExclusionZone_type"),
-				 PathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE__RADIUS,
+				 Symphony__AddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class CircularExclusionZoneItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CircularExclusionZone_invertSamplingShape_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CircularExclusionZone_invertSamplingShape_feature", "_UI_CircularExclusionZone_type"),
-				 PathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE,
+				 Symphony__AddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE,
 				 true,
 				 false,
 				 false,
@@ -141,8 +141,8 @@ public class CircularExclusionZoneItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CircularExclusionZone.class)) {
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

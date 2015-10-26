@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.common.topology.GroupNode;
 
 /**
@@ -39,7 +39,7 @@ public class PathPlannersFacadeImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersPackage.Literals.PATH_PLANNERS_FACADE;
+		return Symphony__AddonsMobilityPathplannersPackage.Literals.PATH_PLANNERS_FACADE;
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class PathPlannersFacadeImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public CircularExclusionZone createCircularExclusionZone(double radius, GroupNode parent)
 	{
-		CircularExclusionZone zone  = PathplannersFactory.eINSTANCE.createCircularExclusionZone();				
+		CircularExclusionZone zone  = Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone();				
 		zone.setRadius(radius);	
 		parent.getChildren().add(zone);
 		return zone;
@@ -63,7 +63,7 @@ public class PathPlannersFacadeImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PathplannersPackage.PATH_PLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE:
+			case Symphony__AddonsMobilityPathplannersPackage.PATH_PLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE:
 				return createCircularExclusionZone((Double)arguments.get(0), (GroupNode)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

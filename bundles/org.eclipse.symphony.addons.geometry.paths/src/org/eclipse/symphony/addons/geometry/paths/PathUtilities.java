@@ -45,7 +45,7 @@ public class PathUtilities {
 	 */
 	public static WayPointPath append(List<WayPointPath> paths, boolean removeDuplicateAtEnds)
 	{
-		WayPointPath path = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		
 		Iterator <WayPointPath> pathsIt = paths.iterator();
 		while(pathsIt.hasNext())
@@ -230,7 +230,7 @@ public class PathUtilities {
 	 */
 	public static WayPointPath applyTransform(final WayPointPath path, final Matrix4d transform)
 	{
-		WayPointPath transformedPath = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath transformedPath = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		Transform3D transform3d = new Transform3D(transform);
 		
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();

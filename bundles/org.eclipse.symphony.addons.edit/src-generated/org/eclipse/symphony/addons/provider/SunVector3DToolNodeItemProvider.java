@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 /**
@@ -62,7 +62,7 @@ public class SunVector3DToolNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SunVector3DToolNode_sunVector3DTool_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SunVector3DToolNode_sunVector3DTool_feature", "_UI_SunVector3DToolNode_type"),
-				 SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL,
+				 Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL,
 				 true,
 				 false,
 				 true,

@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getExclusionZone()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getExclusionZone()
  * @model abstract="true"
  * @generated
  */

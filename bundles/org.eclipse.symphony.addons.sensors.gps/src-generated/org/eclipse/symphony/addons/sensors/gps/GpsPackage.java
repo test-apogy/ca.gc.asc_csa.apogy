@@ -27,7 +27,7 @@ import org.eclipse.symphony.addons.sensors.pose.PosePackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.sensors.gps.GpsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Gps' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Gps' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.gps/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.gps.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Gps' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Gps' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.gps/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.gps.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
  * @generated
  */
 public interface GpsPackage extends EPackage {

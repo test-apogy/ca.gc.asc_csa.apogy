@@ -33,10 +33,10 @@
             class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.addons"
-            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$Symphony__AddonsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.addons.geometry.paths"
-            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$PathsChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.vehicle.provider.SymphonyToolsVehicleItemProviderAdapterFactory$Symphony__AddonsGeometryPathsChildCreationExtender"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">

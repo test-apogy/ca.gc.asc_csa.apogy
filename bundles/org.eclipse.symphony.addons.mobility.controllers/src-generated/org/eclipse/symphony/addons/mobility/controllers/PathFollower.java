@@ -35,7 +35,7 @@ import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.PathFollower#getPathFollowerState <em>Path Follower State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower()
+ * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower()
  * @model
  * @generated
  */
@@ -50,7 +50,7 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path</em>' reference.
 	 * @see #setPath(Path)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower_Path()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_Path()
 	 * @model
 	 * @generated
 	 */
@@ -76,7 +76,7 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Platform</em>' reference.
 	 * @see #setPlatform(MobilePlatform)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower_Platform()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_Platform()
 	 * @model
 	 * @generated
 	 */
@@ -102,7 +102,7 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose Sensor</em>' reference.
 	 * @see #setPoseSensor(PoseSensor)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower_PoseSensor()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_PoseSensor()
 	 * @model
 	 * @generated
 	 */
@@ -128,7 +128,7 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Destination Reached</em>' attribute.
 	 * @see #setDestinationReached(boolean)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower_DestinationReached()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_DestinationReached()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -157,7 +157,7 @@ public interface PathFollower<PlatformType extends MobilePlatform, PathType exte
 	 * @return the value of the '<em>Path Follower State</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.controllers.PathFollowerState
 	 * @see #setPathFollowerState(PathFollowerState)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getPathFollower_PathFollowerState()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getPathFollower_PathFollowerState()
 	 * @model default="IDLE" unique="false"
 	 * @generated
 	 */

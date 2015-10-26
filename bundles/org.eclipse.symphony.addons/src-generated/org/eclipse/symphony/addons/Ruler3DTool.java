@@ -30,7 +30,7 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getRuler3dToolNode <em>Ruler3d Tool Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool()
  * @model
  * @generated
  */
@@ -50,7 +50,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ruler3d Tool Node</em>' reference.
 	 * @see #setRuler3dToolNode(Ruler3dToolNode)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_Ruler3dToolNode()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_Ruler3dToolNode()
 	 * @see org.eclipse.symphony.addons.Ruler3dToolNode#getRuler3DTool
 	 * @model opposite="ruler3DTool" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='true' property='Readonly' propertyCategory='RULER_PROPERTIES'"
@@ -78,7 +78,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ruler Color</em>' attribute.
 	 * @see #setRulerColor(Color3f)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_RulerColor()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_RulerColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='RULER_PROPERTIES'"
 	 * @generated
@@ -105,7 +105,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Extremities Radius</em>' attribute.
 	 * @see #setExtremitiesRadius(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_ExtremitiesRadius()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_ExtremitiesRadius()
 	 * @model default="0.01" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='RULER_PROPERTIES'"
 	 * @generated
@@ -132,7 +132,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minor Tick Color</em>' attribute.
 	 * @see #setMinorTickColor(Color3f)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_MinorTickColor()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MinorTickColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MINOR_TICKS_PROPERTIES'"
 	 * @generated
@@ -163,7 +163,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minor Tick Spacing</em>' attribute.
 	 * @see #setMinorTickSpacing(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_MinorTickSpacing()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MinorTickSpacing()
 	 * @model default="0.1" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
 	 * @generated
@@ -194,7 +194,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minor Tick Lenght</em>' attribute.
 	 * @see #setMinorTickLenght(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_MinorTickLenght()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MinorTickLenght()
 	 * @model default="0.1" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
 	 * @generated
@@ -221,7 +221,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Major Tick Color</em>' attribute.
 	 * @see #setMajorTickColor(Color3f)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_MajorTickColor()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MajorTickColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.addons.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MAJOR_TICKS_PROPERTIES'"
 	 * @generated
@@ -252,7 +252,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Major Tick Spacing</em>' attribute.
 	 * @see #setMajorTickSpacing(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_MajorTickSpacing()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MajorTickSpacing()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
 	 * @generated
@@ -283,7 +283,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Major Tick Lenght</em>' attribute.
 	 * @see #setMajorTickLenght(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getRuler3DTool_MajorTickLenght()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MajorTickLenght()
 	 * @model default="0.2" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
 	 * @generated

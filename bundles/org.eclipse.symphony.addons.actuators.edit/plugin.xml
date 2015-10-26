@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.actuators"
-            class="org.eclipse.symphony.addons.actuators.provider.MRTActuatorsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.actuators.provider.Symphony__AddonsActuatorsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,4 +21,5 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
+null
 </plugin>

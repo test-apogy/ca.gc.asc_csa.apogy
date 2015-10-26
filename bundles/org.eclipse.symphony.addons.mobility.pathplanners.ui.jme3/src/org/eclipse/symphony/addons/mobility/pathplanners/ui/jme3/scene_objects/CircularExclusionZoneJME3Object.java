@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.jme3.Activator;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.scene_objects.CircularExclusionZoneSceneObject;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -241,7 +241,7 @@ public class CircularExclusionZoneJME3Object extends DefaultJME3SceneObject<Circ
 						
 						switch (featureId) 
 						{
-							case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+							case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 								 updateGeometry();
 							break;
 

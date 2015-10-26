@@ -6,9 +6,7 @@ package org.eclipse.symphony.examples.rover.provider;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.symphony.addons.actuators.provider.MRTActuatorsEditPlugin;
-
+import org.eclipse.symphony.addons.actuators.provider.Symphony__AddonsActuatorsEditPlugin;
 import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
@@ -67,7 +65,7 @@ public final class EMFEcoreExampleRoverEditPlugin extends EMFPlugin {
 		     TopologyEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     MRTActuatorsEditPlugin.INSTANCE,
+		     Symphony__AddonsActuatorsEditPlugin.INSTANCE,
 		     ImagesCoreEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,

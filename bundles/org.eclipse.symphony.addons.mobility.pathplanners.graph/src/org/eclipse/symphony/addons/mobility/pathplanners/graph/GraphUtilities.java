@@ -8,7 +8,7 @@ import javax.vecmath.Vector2d;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
@@ -106,7 +106,7 @@ public class GraphUtilities {
 	 */
 	public static WayPointPath getPathThroughPolygonsCentroid(List <CartesianPolygon> polygons)
 	{
-		WayPointPath path = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		
 		Iterator <CartesianPolygon> it = polygons.iterator();
 		while(it.hasNext())
@@ -137,7 +137,7 @@ public class GraphUtilities {
 			throw new UnsupportedOperationException("getSimplifiedPathThroughPolygonsCentroid only supported for XY plane !");
 		}
 		
-		WayPointPath path = PathsFactory.eINSTANCE.createWayPointPath();
+		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 	
 		// Always add the start of the path to the path.
 		path.getPoints().add(data3dFacade.createCartesianPositionCoordinates(start));

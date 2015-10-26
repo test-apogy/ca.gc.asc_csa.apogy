@@ -10,7 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
@@ -38,7 +38,7 @@ public abstract class ExclusionZoneImpl extends NodeImpl implements ExclusionZon
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersPackage.Literals.EXCLUSION_ZONE;
+		return Symphony__AddonsMobilityPathplannersPackage.Literals.EXCLUSION_ZONE;
 	}
 
 	/**
@@ -71,9 +71,9 @@ public abstract class ExclusionZoneImpl extends NodeImpl implements ExclusionZon
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PathplannersPackage.EXCLUSION_ZONE___IS_INSIDE__CARTESIANPOSITIONCOORDINATES:
+			case Symphony__AddonsMobilityPathplannersPackage.EXCLUSION_ZONE___IS_INSIDE__CARTESIANPOSITIONCOORDINATES:
 				return isInside((CartesianPositionCoordinates)arguments.get(0));
-			case PathplannersPackage.EXCLUSION_ZONE___INTERSECTS__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
+			case Symphony__AddonsMobilityPathplannersPackage.EXCLUSION_ZONE___INTERSECTS__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
 				return intersects((CartesianPositionCoordinates)arguments.get(0), (CartesianPositionCoordinates)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

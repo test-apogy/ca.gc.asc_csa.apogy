@@ -570,7 +570,6 @@ public class Data25dPackageImpl extends EPackageImpl implements Data25dPackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Data25d",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data25d/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data25d.edit/src-generated",

@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.Ruler3DTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
 /**
@@ -77,7 +77,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_ruler3dToolNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_ruler3dToolNode_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE,
 				 false,
 				 false,
 				 true,
@@ -98,7 +98,7 @@ public class Ruler3DToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyToolsCorePackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE);
+			childrenFeatures.add(Symphony__AddonsPackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -129,7 +129,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_rulerColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_rulerColor_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__RULER_COLOR,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__RULER_COLOR,
 				 true,
 				 false,
 				 false,
@@ -151,7 +151,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_extremitiesRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_extremitiesRadius_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__EXTREMITIES_RADIUS,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__EXTREMITIES_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickColor_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__MINOR_TICK_COLOR,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_COLOR,
 				 true,
 				 false,
 				 false,
@@ -195,7 +195,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickSpacing_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickSpacing_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__MINOR_TICK_SPACING,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_SPACING,
 				 true,
 				 false,
 				 false,
@@ -217,7 +217,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_minorTickLenght_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickLenght_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__MINOR_TICK_LENGHT,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_LENGHT,
 				 true,
 				 false,
 				 false,
@@ -239,7 +239,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickColor_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__MAJOR_TICK_COLOR,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_COLOR,
 				 true,
 				 false,
 				 false,
@@ -261,7 +261,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickSpacing_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickSpacing_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__MAJOR_TICK_SPACING,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_SPACING,
 				 true,
 				 false,
 				 false,
@@ -283,7 +283,7 @@ public class Ruler3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3DTool_majorTickLenght_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickLenght_feature", "_UI_Ruler3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3_DTOOL__MAJOR_TICK_LENGHT,
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_LENGHT,
 				 true,
 				 false,
 				 false,
@@ -358,17 +358,17 @@ public class Ruler3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Ruler3DTool.class)) {
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER_COLOR:
-			case SymphonyToolsCorePackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_COLOR:
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_SPACING:
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

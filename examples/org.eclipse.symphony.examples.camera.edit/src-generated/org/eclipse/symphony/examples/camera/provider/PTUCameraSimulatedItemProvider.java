@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
@@ -70,7 +70,7 @@ public class PTUCameraSimulatedItemProvider extends CameraSimulatedItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_AbstractActuator_moving_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractActuator_moving_feature", "_UI_AbstractActuator_type"),
-				 MRTActuatorsPackage.Literals.ABSTRACT_ACTUATOR__MOVING,
+				 Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__MOVING,
 				 false,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class PTUCameraSimulatedItemProvider extends CameraSimulatedItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_AbstractActuator_actuatorStatus_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractActuator_actuatorStatus_feature", "_UI_AbstractActuator_type"),
-				 MRTActuatorsPackage.Literals.ABSTRACT_ACTUATOR__ACTUATOR_STATUS,
+				 Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__ACTUATOR_STATUS,
 				 false,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class PTUCameraSimulatedItemProvider extends CameraSimulatedItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_currentPanAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentPanAngle_feature", "_UI_PanTiltUnit_type"),
-				 MRTActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
+				 Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
 				 false,
 				 false,
 				 false,
@@ -136,7 +136,7 @@ public class PTUCameraSimulatedItemProvider extends CameraSimulatedItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_currentTiltAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentTiltAngle_feature", "_UI_PanTiltUnit_type"),
-				 MRTActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
+				 Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
 				 false,
 				 false,
 				 false,
@@ -158,7 +158,7 @@ public class PTUCameraSimulatedItemProvider extends CameraSimulatedItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_commandedPanAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedPanAngle_feature", "_UI_PanTiltUnit_type"),
-				 MRTActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
+				 Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
 				 false,
 				 false,
 				 false,
@@ -180,7 +180,7 @@ public class PTUCameraSimulatedItemProvider extends CameraSimulatedItemProvider 
 				 getResourceLocator(),
 				 getString("_UI_PanTiltUnit_commandedTiltAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedTiltAngle_feature", "_UI_PanTiltUnit_type"),
-				 MRTActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
+				 Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
 				 false,
 				 false,
 				 false,

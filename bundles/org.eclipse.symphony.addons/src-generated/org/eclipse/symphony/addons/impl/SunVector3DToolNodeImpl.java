@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.SunVector3DTool;
 import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
@@ -53,7 +53,7 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsCorePackage.Literals.SUN_VECTOR3_DTOOL_NODE;
+		return Symphony__AddonsPackage.Literals.SUN_VECTOR3_DTOOL_NODE;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 			sunVector3DTool = (SunVector3DTool)eResolveProxy(oldSunVector3DTool);
 			if (sunVector3DTool != oldSunVector3DTool) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, oldSunVector3DTool, sunVector3DTool));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, oldSunVector3DTool, sunVector3DTool));
 			}
 		}
 		return sunVector3DTool;
@@ -91,7 +91,7 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 		SunVector3DTool oldSunVector3DTool = sunVector3DTool;
 		sunVector3DTool = newSunVector3DTool;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, oldSunVector3DTool, newSunVector3DTool);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, oldSunVector3DTool, newSunVector3DTool);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -106,14 +106,14 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 		if (newSunVector3DTool != sunVector3DTool) {
 			NotificationChain msgs = null;
 			if (sunVector3DTool != null)
-				msgs = ((InternalEObject)sunVector3DTool).eInverseRemove(this, SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, SunVector3DTool.class, msgs);
+				msgs = ((InternalEObject)sunVector3DTool).eInverseRemove(this, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, SunVector3DTool.class, msgs);
 			if (newSunVector3DTool != null)
-				msgs = ((InternalEObject)newSunVector3DTool).eInverseAdd(this, SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, SunVector3DTool.class, msgs);
+				msgs = ((InternalEObject)newSunVector3DTool).eInverseAdd(this, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, SunVector3DTool.class, msgs);
 			msgs = basicSetSunVector3DTool(newSunVector3DTool, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, newSunVector3DTool, newSunVector3DTool));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL, newSunVector3DTool, newSunVector3DTool));
 	}
 
 	/**
@@ -124,9 +124,9 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
 				if (sunVector3DTool != null)
-					msgs = ((InternalEObject)sunVector3DTool).eInverseRemove(this, SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, SunVector3DTool.class, msgs);
+					msgs = ((InternalEObject)sunVector3DTool).eInverseRemove(this, Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, SunVector3DTool.class, msgs);
 				return basicSetSunVector3DTool((SunVector3DTool)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -140,7 +140,7 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
 				return basicSetSunVector3DTool(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -154,7 +154,7 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
 				if (resolve) return getSunVector3DTool();
 				return basicGetSunVector3DTool();
 		}
@@ -169,7 +169,7 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
 				setSunVector3DTool((SunVector3DTool)newValue);
 				return;
 		}
@@ -184,7 +184,7 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
 				setSunVector3DTool((SunVector3DTool)null);
 				return;
 		}
@@ -199,7 +199,7 @@ public class SunVector3DToolNodeImpl extends NodeImpl implements SunVector3DTool
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
+			case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL:
 				return sunVector3DTool != null;
 		}
 		return super.eIsSet(featureID);

@@ -459,7 +459,6 @@ public class ProcessorsPackageImpl extends EPackageImpl implements ProcessorsPac
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Processors",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.processors/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.processors.edit/src-generated",

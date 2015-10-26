@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsFactory;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.core.invocator.provider.AbstractToolsListContainerItemProvider;
 
 /**
@@ -62,7 +62,7 @@ public class SimpleToolListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyToolsCorePackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS);
+			childrenFeatures.add(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS);
 		}
 		return childrenFeatures;
 	}
@@ -115,7 +115,7 @@ public class SimpleToolListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleToolList.class)) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
+			case Symphony__AddonsPackage.SIMPLE_TOOL_LIST__SIMPLE_TOOLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -135,23 +135,23 @@ public class SimpleToolListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsCorePackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
-				 SymphonyToolsCoreFactory.eINSTANCE.createRuler3DTool()));
+				(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+				 Symphony__AddonsFactory.eINSTANCE.createRuler3DTool()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsCorePackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
-				 SymphonyToolsCoreFactory.eINSTANCE.createFeatureOfInterestPickingTool()));
+				(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+				 Symphony__AddonsFactory.eINSTANCE.createFeatureOfInterestPickingTool()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsCorePackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
-				 SymphonyToolsCoreFactory.eINSTANCE.createSunVector3DTool()));
+				(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+				 Symphony__AddonsFactory.eINSTANCE.createSunVector3DTool()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyToolsCorePackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
-				 SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DTool()));
+				(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+				 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DTool()));
 	}
 
 }

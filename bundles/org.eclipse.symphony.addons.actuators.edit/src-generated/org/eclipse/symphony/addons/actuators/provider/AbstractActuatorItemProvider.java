@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 /**
@@ -69,7 +69,7 @@ public class AbstractActuatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractActuator_moving_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractActuator_moving_feature", "_UI_AbstractActuator_type"),
-				 MRTActuatorsPackage.Literals.ABSTRACT_ACTUATOR__MOVING,
+				 Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__MOVING,
 				 false,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class AbstractActuatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractActuator_actuatorStatus_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractActuator_actuatorStatus_feature", "_UI_AbstractActuator_type"),
-				 MRTActuatorsPackage.Literals.ABSTRACT_ACTUATOR__ACTUATOR_STATUS,
+				 Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR__ACTUATOR_STATUS,
 				 false,
 				 false,
 				 false,
@@ -129,8 +129,8 @@ public class AbstractActuatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractActuator.class)) {
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

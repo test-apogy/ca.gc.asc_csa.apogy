@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
+import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathFollower;
 
 /**
@@ -87,7 +87,7 @@ public class PathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathFollower_path_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathFollower_path_feature", "_UI_PathFollower_type"),
-				 ControllersPackage.Literals.PATH_FOLLOWER__PATH,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_FOLLOWER__PATH,
 				 true,
 				 false,
 				 true,
@@ -110,7 +110,7 @@ public class PathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathFollower_platform_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathFollower_platform_feature", "_UI_PathFollower_type"),
-				 ControllersPackage.Literals.PATH_FOLLOWER__PLATFORM,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_FOLLOWER__PLATFORM,
 				 true,
 				 false,
 				 true,
@@ -133,7 +133,7 @@ public class PathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathFollower_poseSensor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathFollower_poseSensor_feature", "_UI_PathFollower_type"),
-				 ControllersPackage.Literals.PATH_FOLLOWER__POSE_SENSOR,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_FOLLOWER__POSE_SENSOR,
 				 true,
 				 false,
 				 true,
@@ -156,7 +156,7 @@ public class PathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathFollower_destinationReached_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathFollower_destinationReached_feature", "_UI_PathFollower_type"),
-				 ControllersPackage.Literals.PATH_FOLLOWER__DESTINATION_REACHED,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_FOLLOWER__DESTINATION_REACHED,
 				 true,
 				 false,
 				 false,
@@ -179,7 +179,7 @@ public class PathFollowerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathFollower_pathFollowerState_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathFollower_pathFollowerState_feature", "_UI_PathFollower_type"),
-				 ControllersPackage.Literals.PATH_FOLLOWER__PATH_FOLLOWER_STATE,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_FOLLOWER__PATH_FOLLOWER_STATE,
 				 true,
 				 false,
 				 false,
@@ -226,8 +226,8 @@ public class PathFollowerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PathFollower.class)) {
-			case ControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
-			case ControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
+			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__DESTINATION_REACHED:
+			case Symphony__AddonsMobilityControllersPackage.PATH_FOLLOWER__PATH_FOLLOWER_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

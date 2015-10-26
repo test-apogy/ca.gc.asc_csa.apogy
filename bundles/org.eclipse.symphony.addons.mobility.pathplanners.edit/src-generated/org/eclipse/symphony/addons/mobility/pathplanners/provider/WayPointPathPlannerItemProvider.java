@@ -13,7 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
 import org.eclipse.symphony.common.processors.provider.ProcessorItemProvider;
 
@@ -69,7 +69,7 @@ public class WayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPlanner_currentPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPlanner_currentPosition_feature", "_UI_WayPointPathPlanner_type"),
-				 PathplannersPackage.Literals.WAY_POINT_PATH_PLANNER__CURRENT_POSITION,
+				 Symphony__AddonsMobilityPathplannersPackage.Literals.WAY_POINT_PATH_PLANNER__CURRENT_POSITION,
 				 true,
 				 false,
 				 true,
@@ -91,7 +91,7 @@ public class WayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPlanner_currentDestination_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPlanner_currentDestination_feature", "_UI_WayPointPathPlanner_type"),
-				 PathplannersPackage.Literals.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION,
+				 Symphony__AddonsMobilityPathplannersPackage.Literals.WAY_POINT_PATH_PLANNER__CURRENT_DESTINATION,
 				 true,
 				 false,
 				 true,

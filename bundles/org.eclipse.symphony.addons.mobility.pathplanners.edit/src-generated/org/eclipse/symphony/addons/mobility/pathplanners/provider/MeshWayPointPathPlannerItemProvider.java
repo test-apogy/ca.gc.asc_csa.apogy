@@ -15,7 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner} object.
@@ -68,7 +68,7 @@ public class MeshWayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshWayPointPathPlanner_mesh_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshWayPointPathPlanner_mesh_feature", "_UI_MeshWayPointPathPlanner_type"),
-				 PathplannersPackage.Literals.MESH_WAY_POINT_PATH_PLANNER__MESH,
+				 Symphony__AddonsMobilityPathplannersPackage.Literals.MESH_WAY_POINT_PATH_PLANNER__MESH,
 				 true,
 				 false,
 				 true,

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage;
+import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
@@ -66,7 +66,7 @@ public class WayPointPathPresentationItemProvider extends NodePresentationItemPr
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPresentation_pointSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPresentation_pointSize_feature", "_UI_WayPointPathPresentation_type"),
-				 PathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__POINT_SIZE,
+				 Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__POINT_SIZE,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class WayPointPathPresentationItemProvider extends NodePresentationItemPr
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPresentation_presentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPresentation_presentationMode_feature", "_UI_WayPointPathPresentation_type"),
-				 PathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE,
+				 Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ public class WayPointPathPresentationItemProvider extends NodePresentationItemPr
 				 getResourceLocator(),
 				 getString("_UI_WayPointPathPresentation_endPointsRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WayPointPathPresentation_endPointsRadius_feature", "_UI_WayPointPathPresentation_type"),
-				 PathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS,
+				 Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -158,9 +158,9 @@ public class WayPointPathPresentationItemProvider extends NodePresentationItemPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WayPointPathPresentation.class)) {
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

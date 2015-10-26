@@ -362,7 +362,6 @@ public class MotionPackageImpl extends EPackageImpl implements MotionPackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Motion",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.motion/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.sensors.motion.edit/src-generated",

@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.common.topology.Node;
 
@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.Node;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage
+ * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage
  * @generated
  */
 public class MRTActuatorsSwitch<T> extends Switch<T>
@@ -32,7 +32,7 @@ public class MRTActuatorsSwitch<T> extends Switch<T>
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static MRTActuatorsPackage modelPackage;
+  protected static Symphony__AddonsActuatorsPackage modelPackage;
 
   /**
 	 * Creates an instance of the switch.
@@ -43,7 +43,7 @@ public class MRTActuatorsSwitch<T> extends Switch<T>
   public MRTActuatorsSwitch()
   {
 		if (modelPackage == null) {
-			modelPackage = MRTActuatorsPackage.eINSTANCE;
+			modelPackage = Symphony__AddonsActuatorsPackage.eINSTANCE;
 		}
 	}
 
@@ -72,14 +72,14 @@ public class MRTActuatorsSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR: {
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR: {
 				AbstractActuator abstractActuator = (AbstractActuator)theEObject;
 				T result = caseAbstractActuator(abstractActuator);
 				if (result == null) result = caseNode(abstractActuator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MRTActuatorsPackage.PAN_TILT_UNIT: {
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT: {
 				PanTiltUnit panTiltUnit = (PanTiltUnit)theEObject;
 				T result = casePanTiltUnit(panTiltUnit);
 				if (result == null) result = caseAbstractActuator(panTiltUnit);

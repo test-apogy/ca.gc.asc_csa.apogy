@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Primitives' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Primitives' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.topology.addons.primitives/src-generated' editDirectory='/org.eclipse.symphony.common.topology.addons.primitives.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Primitives' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Primitives' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.topology.addons.primitives/src-generated' editDirectory='/org.eclipse.symphony.common.topology.addons.primitives.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.addons'"
  * @generated
  */
 public interface PrimitivesPackage extends EPackage {

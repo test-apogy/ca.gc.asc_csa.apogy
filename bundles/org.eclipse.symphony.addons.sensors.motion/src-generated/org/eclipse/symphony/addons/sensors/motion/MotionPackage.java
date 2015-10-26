@@ -23,7 +23,7 @@ import org.eclipse.symphony.addons.sensors.SensorsPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.addons.sensors.motion.MotionFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Motion' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Motion' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.motion/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.motion.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Motion' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Motion' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.addons.sensors.motion/src-generated' editDirectory='/org.eclipse.symphony.addons.sensors.motion.edit/src-generated' basePackage='org.eclipse.symphony.addons.sensors'"
  * @generated
  */
 public interface MotionPackage extends EPackage {

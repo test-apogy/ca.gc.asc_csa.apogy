@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
+import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
 
 /**
@@ -86,7 +86,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_recordedPath_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_recordedPath_feature", "_UI_PathRecorder_type"),
-				 ControllersPackage.Literals.PATH_RECORDER__RECORDED_PATH,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__RECORDED_PATH,
 				 true,
 				 false,
 				 true,
@@ -109,7 +109,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_positionSensor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_positionSensor_feature", "_UI_PathRecorder_type"),
-				 ControllersPackage.Literals.PATH_RECORDER__POSITION_SENSOR,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__POSITION_SENSOR,
 				 true,
 				 false,
 				 true,
@@ -132,7 +132,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_minimumDistanceDelta_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_minimumDistanceDelta_feature", "_UI_PathRecorder_type"),
-				 ControllersPackage.Literals.PATH_RECORDER__MINIMUM_DISTANCE_DELTA,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__MINIMUM_DISTANCE_DELTA,
 				 true,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_minimumTimeDelta_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_minimumTimeDelta_feature", "_UI_PathRecorder_type"),
-				 ControllersPackage.Literals.PATH_RECORDER__MINIMUM_TIME_DELTA,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__MINIMUM_TIME_DELTA,
 				 true,
 				 false,
 				 false,
@@ -178,7 +178,7 @@ public class PathRecorderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PathRecorder_samplingMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PathRecorder_samplingMode_feature", "_UI_PathRecorder_type"),
-				 ControllersPackage.Literals.PATH_RECORDER__SAMPLING_MODE,
+				 Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER__SAMPLING_MODE,
 				 true,
 				 false,
 				 false,
@@ -225,9 +225,9 @@ public class PathRecorderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PathRecorder.class)) {
-			case ControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
-			case ControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
-			case ControllersPackage.PATH_RECORDER__SAMPLING_MODE:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__SAMPLING_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

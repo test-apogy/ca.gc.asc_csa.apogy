@@ -798,7 +798,6 @@ public class PosePackageImpl extends EPackageImpl implements PosePackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Pose",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.pose/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.sensors.pose.edit/src-generated",

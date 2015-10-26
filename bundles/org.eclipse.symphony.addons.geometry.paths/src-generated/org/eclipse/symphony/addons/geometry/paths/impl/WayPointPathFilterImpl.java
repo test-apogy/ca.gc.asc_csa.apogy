@@ -5,7 +5,7 @@ package org.eclipse.symphony.addons.geometry.paths.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPathFilter;
 
@@ -35,7 +35,7 @@ public abstract class WayPointPathFilterImpl extends ProcessorImpl<WayPointPath,
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathsPackage.Literals.WAY_POINT_PATH_FILTER;
+		return Symphony__AddonsGeometryPathsPackage.Literals.WAY_POINT_PATH_FILTER;
 	}
 
 	/**

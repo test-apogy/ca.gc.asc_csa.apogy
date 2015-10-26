@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
+import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
@@ -133,7 +133,7 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 	@Override
 	protected EClass eStaticClass()
 	{
-		return ControllersPackage.Literals.PATH_RECORDER;
+		return Symphony__AddonsMobilityControllersPackage.Literals.PATH_RECORDER;
 	}
 
 	/**
@@ -149,7 +149,7 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 			recordedPath = (PathType)eResolveProxy(oldRecordedPath);
 			if (recordedPath != oldRecordedPath) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ControllersPackage.PATH_RECORDER__RECORDED_PATH, oldRecordedPath, recordedPath));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__RECORDED_PATH, oldRecordedPath, recordedPath));
 			}
 		}
 		return recordedPath;
@@ -175,7 +175,7 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 		PathType oldRecordedPath = recordedPath;
 		recordedPath = newRecordedPath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ControllersPackage.PATH_RECORDER__RECORDED_PATH, oldRecordedPath, recordedPath));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__RECORDED_PATH, oldRecordedPath, recordedPath));
 	}
 
 	/**
@@ -190,7 +190,7 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 			positionSensor = (PoseSensor)eResolveProxy(oldPositionSensor);
 			if (positionSensor != oldPositionSensor) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ControllersPackage.PATH_RECORDER__POSITION_SENSOR, oldPositionSensor, positionSensor));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR, oldPositionSensor, positionSensor));
 			}
 		}
 		return positionSensor;
@@ -216,7 +216,7 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 		PoseSensor oldPositionSensor = positionSensor;
 		positionSensor = newPositionSensor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ControllersPackage.PATH_RECORDER__POSITION_SENSOR, oldPositionSensor, positionSensor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR, oldPositionSensor, positionSensor));
 	}
 
 	/**
@@ -237,7 +237,7 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 		double oldMinimumDistanceDelta = minimumDistanceDelta;
 		minimumDistanceDelta = newMinimumDistanceDelta;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA, oldMinimumDistanceDelta, minimumDistanceDelta));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA, oldMinimumDistanceDelta, minimumDistanceDelta));
 	}
 
 	/**
@@ -258,7 +258,7 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 		double oldMinimumTimeDelta = minimumTimeDelta;
 		minimumTimeDelta = newMinimumTimeDelta;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA, oldMinimumTimeDelta, minimumTimeDelta));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA, oldMinimumTimeDelta, minimumTimeDelta));
 	}
 
 	/**
@@ -281,7 +281,7 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 		PathRecorderSamplingMode oldSamplingMode = samplingMode;
 		samplingMode = newSamplingMode == null ? SAMPLING_MODE_EDEFAULT : newSamplingMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ControllersPackage.PATH_RECORDER__SAMPLING_MODE, oldSamplingMode, samplingMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__SAMPLING_MODE, oldSamplingMode, samplingMode));
 	}
 
 	/**
@@ -293,16 +293,16 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case ControllersPackage.PATH_RECORDER__POSITION_SENSOR:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR:
 				if (resolve) return getPositionSensor();
 				return basicGetPositionSensor();
-			case ControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
 				return getMinimumDistanceDelta();
-			case ControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
 				return getMinimumTimeDelta();
-			case ControllersPackage.PATH_RECORDER__SAMPLING_MODE:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__SAMPLING_MODE:
 				return getSamplingMode();
-			case ControllersPackage.PATH_RECORDER__RECORDED_PATH:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__RECORDED_PATH:
 				if (resolve) return getRecordedPath();
 				return basicGetRecordedPath();
 		}
@@ -319,19 +319,19 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case ControllersPackage.PATH_RECORDER__POSITION_SENSOR:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR:
 				setPositionSensor((PoseSensor)newValue);
 				return;
-			case ControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
 				setMinimumDistanceDelta((Double)newValue);
 				return;
-			case ControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
 				setMinimumTimeDelta((Double)newValue);
 				return;
-			case ControllersPackage.PATH_RECORDER__SAMPLING_MODE:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__SAMPLING_MODE:
 				setSamplingMode((PathRecorderSamplingMode)newValue);
 				return;
-			case ControllersPackage.PATH_RECORDER__RECORDED_PATH:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__RECORDED_PATH:
 				setRecordedPath((PathType)newValue);
 				return;
 		}
@@ -347,19 +347,19 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case ControllersPackage.PATH_RECORDER__POSITION_SENSOR:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR:
 				setPositionSensor((PoseSensor)null);
 				return;
-			case ControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
 				setMinimumDistanceDelta(MINIMUM_DISTANCE_DELTA_EDEFAULT);
 				return;
-			case ControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
 				setMinimumTimeDelta(MINIMUM_TIME_DELTA_EDEFAULT);
 				return;
-			case ControllersPackage.PATH_RECORDER__SAMPLING_MODE:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__SAMPLING_MODE:
 				setSamplingMode(SAMPLING_MODE_EDEFAULT);
 				return;
-			case ControllersPackage.PATH_RECORDER__RECORDED_PATH:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__RECORDED_PATH:
 				setRecordedPath((PathType)null);
 				return;
 		}
@@ -375,15 +375,15 @@ public class PathRecorderImpl<PathType extends Path> extends MinimalEObjectImpl.
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case ControllersPackage.PATH_RECORDER__POSITION_SENSOR:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR:
 				return positionSensor != null;
-			case ControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_DISTANCE_DELTA:
 				return minimumDistanceDelta != MINIMUM_DISTANCE_DELTA_EDEFAULT;
-			case ControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__MINIMUM_TIME_DELTA:
 				return minimumTimeDelta != MINIMUM_TIME_DELTA_EDEFAULT;
-			case ControllersPackage.PATH_RECORDER__SAMPLING_MODE:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__SAMPLING_MODE:
 				return samplingMode != SAMPLING_MODE_EDEFAULT;
-			case ControllersPackage.PATH_RECORDER__RECORDED_PATH:
+			case Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__RECORDED_PATH:
 				return recordedPath != null;
 		}
 		return super.eIsSet(featureID);

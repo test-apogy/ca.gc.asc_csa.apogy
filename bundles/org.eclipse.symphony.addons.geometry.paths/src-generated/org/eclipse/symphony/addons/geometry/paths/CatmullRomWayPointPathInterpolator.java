@@ -24,7 +24,7 @@ package org.eclipse.symphony.addons.geometry.paths;
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator#getEndControlPointGenerationMode <em>End Control Point Generation Mode</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getCatmullRomWayPointPathInterpolator()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface CatmullRomWayPointPathInterpolator extends WayPointPathInterpol
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tension</em>' attribute.
 	 * @see #setTension(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getCatmullRomWayPointPathInterpolator_Tension()
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_Tension()
 	 * @model default="0.5" unique="false"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface CatmullRomWayPointPathInterpolator extends WayPointPathInterpol
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Way Points Distance</em>' attribute.
 	 * @see #setMaximumWayPointsDistance(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getCatmullRomWayPointPathInterpolator_MaximumWayPointsDistance()
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_MaximumWayPointsDistance()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface CatmullRomWayPointPathInterpolator extends WayPointPathInterpol
 	 * @return the value of the '<em>End Control Point Generation Mode</em>' attribute.
 	 * @see org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode
 	 * @see #setEndControlPointGenerationMode(SplineEndControlPointGenerationMode)
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getCatmullRomWayPointPathInterpolator_EndControlPointGenerationMode()
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getCatmullRomWayPointPathInterpolator_EndControlPointGenerationMode()
 	 * @model default="AUTO_CTRL_POINTS_DUPLICATE_ENDNODES" unique="false"
 	 * @generated
 	 */

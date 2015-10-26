@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
 import org.eclipse.symphony.common.processors.ProcessorsPackage;
 
@@ -92,7 +92,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_simpleDirectedWeightedGraph_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_simpleDirectedWeightedGraph_feature", "_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_type"),
-				 PathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_enablePathSimplification_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_enablePathSimplification_feature", "_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_type"),
-				 PathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION,
 				 true,
 				 false,
 				 false,
@@ -136,7 +136,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_robotWidthForPathSimplication_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_robotWidthForPathSimplication_feature", "_UI_SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner_type"),
-				 PathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION,
 				 true,
 				 false,
 				 false,
@@ -183,10 +183,10 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner.class)) {
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
-			case PathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__VERBOSE:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__SIMPLE_DIRECTED_WEIGHTED_GRAPH:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ENABLE_PATH_SIMPLIFICATION:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.SIMPLE_DIRECTED_WEIGHTED_GRAPH_BASED_MESH_WAY_POINT_PATH_PLANNER__ROBOT_WIDTH_FOR_PATH_SIMPLICATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

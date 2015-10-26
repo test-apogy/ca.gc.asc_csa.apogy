@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
 import org.eclipse.symphony.addons.actuators.ActuatorStatus;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
@@ -85,7 +85,7 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   @Override
   protected EClass eStaticClass()
   {
-		return MRTActuatorsPackage.Literals.ABSTRACT_ACTUATOR;
+		return Symphony__AddonsActuatorsPackage.Literals.ABSTRACT_ACTUATOR;
 	}
 
   /**
@@ -108,7 +108,7 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
 		boolean oldMoving = moving;
 		moving = newMoving;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING, oldMoving, moving));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING, oldMoving, moving));
 	}
 
   /**
@@ -131,7 +131,7 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
 		ActuatorStatus oldActuatorStatus = actuatorStatus;
 		actuatorStatus = newActuatorStatus == null ? ACTUATOR_STATUS_EDEFAULT : newActuatorStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS, oldActuatorStatus, actuatorStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS, oldActuatorStatus, actuatorStatus));
 	}
 
   /**
@@ -143,9 +143,9 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
 				return isMoving();
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				return getActuatorStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -160,10 +160,10 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
 				setMoving((Boolean)newValue);
 				return;
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				setActuatorStatus((ActuatorStatus)newValue);
 				return;
 		}
@@ -179,10 +179,10 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
 				setMoving(MOVING_EDEFAULT);
 				return;
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				setActuatorStatus(ACTUATOR_STATUS_EDEFAULT);
 				return;
 		}
@@ -198,9 +198,9 @@ public abstract class AbstractActuatorImpl extends NodeImpl implements AbstractA
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__MOVING:
 				return moving != MOVING_EDEFAULT;
-			case MRTActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
+			case Symphony__AddonsActuatorsPackage.ABSTRACT_ACTUATOR__ACTUATOR_STATUS:
 				return actuatorStatus != ACTUATOR_STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

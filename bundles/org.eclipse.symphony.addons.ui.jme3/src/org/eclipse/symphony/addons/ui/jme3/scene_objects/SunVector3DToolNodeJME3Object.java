@@ -14,7 +14,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.SunVector3DTool;
 import org.eclipse.symphony.addons.SunVector3DToolNode;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.ui.jme3.Activator;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -485,7 +485,7 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 					{												
 						int featureId = msg.getFeatureID(SunVector3DToolNode.class);
 						
-						if(featureId == SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL)
+						if(featureId == Symphony__AddonsPackage.SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL)
 						{
 							if(msg.getOldValue() instanceof SunVector3DToolNode)
 							{
@@ -511,30 +511,30 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 							int featureId = msg.getFeatureID(SunVector3DTool.class);
 							switch(featureId)
 							{
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__FROM_RELATIVE_POSITION:
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__FROM_ABSOLUTE_POSITION:
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__TO_ABSOLUTE_POSITION:
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__TO_RELATIVE_POSITION:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_LENGTH:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__FROM_RELATIVE_POSITION:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__FROM_ABSOLUTE_POSITION:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__TO_ABSOLUTE_POSITION:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_INTENSITY:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__TO_RELATIVE_POSITION:
 										updateGeometry();
 								break;
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__VECTOR_COLOR:
 										if(msg.getNewValue() instanceof Color3f)
 										{
 											Color3f color = (Color3f) msg.getNewValue();
 											setColor(convertToRGB(color));								
 										}
 								break;							
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__END_POINT_RADIUS:
 								{
 									setEndPointRadius((float) msg.getNewDoubleValue());
 								}		
 								break;
-								case SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE:
+								case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 									setVisible(msg.getNewBooleanValue());
 								break;
-								case SymphonyToolsCorePackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
+								case Symphony__AddonsPackage.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE:
 									
 									// Removes adapter if applicable.
 									if(getTopologyNode().getSunVector3DTool() != null)
@@ -556,7 +556,7 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 										});
 									}
 								break;
-								case SymphonyToolsCorePackage.SIMPLE3_DTOOL___DISPOSE:
+								case Symphony__AddonsPackage.SIMPLE3_DTOOL___DISPOSE:
 									jme3Application.enqueue(new Callable<Object>() 
 									{
 										@Override

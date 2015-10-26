@@ -15,7 +15,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.mobility.controllers.Activator;
-import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
+import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorder;
 import org.eclipse.symphony.addons.mobility.controllers.PathRecorderSamplingMode;
 import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
@@ -66,7 +66,7 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 	@Override
 	protected EClass eStaticClass()
 	{
-		return ControllersPackage.Literals.WAYPOINT_PATH_RECORDER;
+		return Symphony__AddonsMobilityControllersPackage.Literals.WAYPOINT_PATH_RECORDER;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 				@Override
 				public void notifyChanged(Notification msg)
 				{
-					if(msg.getFeatureID(PathRecorder.class) == ControllersPackage.PATH_RECORDER__POSITION_SENSOR)
+					if(msg.getFeatureID(PathRecorder.class) == Symphony__AddonsMobilityControllersPackage.PATH_RECORDER__POSITION_SENSOR)
 					{												
 						// Unregister from the old sensor.
 						PoseSensor oldPoseSensor = (PoseSensor) msg.getOldValue();

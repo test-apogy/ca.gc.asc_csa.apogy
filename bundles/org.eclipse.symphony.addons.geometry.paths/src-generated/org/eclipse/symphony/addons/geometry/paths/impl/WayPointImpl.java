@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPoint;
 import org.eclipse.symphony.common.geometry.data3d.impl.CartesianPositionCoordinatesImpl;
 import org.eclipse.symphony.common.topology.GroupNode;
@@ -120,7 +120,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	@Override
 	protected EClass eStaticClass()
 	{
-		return PathsPackage.Literals.WAY_POINT;
+		return Symphony__AddonsGeometryPathsPackage.Literals.WAY_POINT;
 	}
 
 	/**
@@ -135,7 +135,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 			parent = (Node)eResolveProxy(oldParent);
 			if (parent != oldParent) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PathsPackage.WAY_POINT__PARENT, oldParent, parent));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT, oldParent, parent));
 			}
 		}
 		return parent;
@@ -161,7 +161,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 		Node oldParent = parent;
 		parent = newParent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsPackage.WAY_POINT__PARENT, oldParent, parent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT, oldParent, parent));
 	}
 
 	/**
@@ -184,7 +184,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsPackage.WAY_POINT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -205,7 +205,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 		String oldNodeId = nodeId;
 		nodeId = newNodeId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsPackage.WAY_POINT__NODE_ID, oldNodeId, nodeId));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID, oldNodeId, nodeId));
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	public EList<Node> getChildren()
 	{
 		if (children == null) {
-			children = new EObjectContainmentEList<Node>(Node.class, this, PathsPackage.WAY_POINT__CHILDREN);
+			children = new EObjectContainmentEList<Node>(Node.class, this, Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN);
 		}
 		return children;
 	}
@@ -248,7 +248,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case PathsPackage.WAY_POINT__CHILDREN:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN:
 				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -263,14 +263,14 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case PathsPackage.WAY_POINT__PARENT:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
-			case PathsPackage.WAY_POINT__DESCRIPTION:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION:
 				return getDescription();
-			case PathsPackage.WAY_POINT__NODE_ID:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID:
 				return getNodeId();
-			case PathsPackage.WAY_POINT__CHILDREN:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN:
 				return getChildren();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -286,16 +286,16 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case PathsPackage.WAY_POINT__PARENT:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT:
 				setParent((Node)newValue);
 				return;
-			case PathsPackage.WAY_POINT__DESCRIPTION:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case PathsPackage.WAY_POINT__NODE_ID:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID:
 				setNodeId((String)newValue);
 				return;
-			case PathsPackage.WAY_POINT__CHILDREN:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN:
 				getChildren().clear();
 				getChildren().addAll((Collection<? extends Node>)newValue);
 				return;
@@ -312,16 +312,16 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case PathsPackage.WAY_POINT__PARENT:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT:
 				setParent((Node)null);
 				return;
-			case PathsPackage.WAY_POINT__DESCRIPTION:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case PathsPackage.WAY_POINT__NODE_ID:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID:
 				setNodeId(NODE_ID_EDEFAULT);
 				return;
-			case PathsPackage.WAY_POINT__CHILDREN:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN:
 				getChildren().clear();
 				return;
 		}
@@ -337,13 +337,13 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case PathsPackage.WAY_POINT__PARENT:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT:
 				return parent != null;
-			case PathsPackage.WAY_POINT__DESCRIPTION:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case PathsPackage.WAY_POINT__NODE_ID:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID:
 				return NODE_ID_EDEFAULT == null ? nodeId != null : !NODE_ID_EDEFAULT.equals(nodeId);
-			case PathsPackage.WAY_POINT__CHILDREN:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN:
 				return children != null && !children.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -359,15 +359,15 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	{
 		if (baseClass == Node.class) {
 			switch (derivedFeatureID) {
-				case PathsPackage.WAY_POINT__PARENT: return TopologyPackage.NODE__PARENT;
-				case PathsPackage.WAY_POINT__DESCRIPTION: return TopologyPackage.NODE__DESCRIPTION;
-				case PathsPackage.WAY_POINT__NODE_ID: return TopologyPackage.NODE__NODE_ID;
+				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT: return TopologyPackage.NODE__PARENT;
+				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION: return TopologyPackage.NODE__DESCRIPTION;
+				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID: return TopologyPackage.NODE__NODE_ID;
 				default: return -1;
 			}
 		}
 		if (baseClass == GroupNode.class) {
 			switch (derivedFeatureID) {
-				case PathsPackage.WAY_POINT__CHILDREN: return TopologyPackage.GROUP_NODE__CHILDREN;
+				case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN: return TopologyPackage.GROUP_NODE__CHILDREN;
 				default: return -1;
 			}
 		}
@@ -384,15 +384,15 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	{
 		if (baseClass == Node.class) {
 			switch (baseFeatureID) {
-				case TopologyPackage.NODE__PARENT: return PathsPackage.WAY_POINT__PARENT;
-				case TopologyPackage.NODE__DESCRIPTION: return PathsPackage.WAY_POINT__DESCRIPTION;
-				case TopologyPackage.NODE__NODE_ID: return PathsPackage.WAY_POINT__NODE_ID;
+				case TopologyPackage.NODE__PARENT: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__PARENT;
+				case TopologyPackage.NODE__DESCRIPTION: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION;
+				case TopologyPackage.NODE__NODE_ID: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID;
 				default: return -1;
 			}
 		}
 		if (baseClass == GroupNode.class) {
 			switch (baseFeatureID) {
-				case TopologyPackage.GROUP_NODE__CHILDREN: return PathsPackage.WAY_POINT__CHILDREN;
+				case TopologyPackage.GROUP_NODE__CHILDREN: return Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN;
 				default: return -1;
 			}
 		}
@@ -408,7 +408,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == Node.class) {
 			switch (baseOperationID) {
-				case TopologyPackage.NODE___ACCEPT__INODEVISITOR: return PathsPackage.WAY_POINT___ACCEPT__INODEVISITOR;
+				case TopologyPackage.NODE___ACCEPT__INODEVISITOR: return Symphony__AddonsGeometryPathsPackage.WAY_POINT___ACCEPT__INODEVISITOR;
 				default: return -1;
 			}
 		}
@@ -428,7 +428,7 @@ public class WayPointImpl extends CartesianPositionCoordinatesImpl implements Wa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PathsPackage.WAY_POINT___ACCEPT__INODEVISITOR:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT___ACCEPT__INODEVISITOR:
 				accept((INodeVisitor)arguments.get(0));
 				return null;
 		}

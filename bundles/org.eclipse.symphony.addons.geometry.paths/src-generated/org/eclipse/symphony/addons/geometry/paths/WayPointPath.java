@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.WayPointPath#getLength <em>Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getWayPointPath()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getWayPointPath()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface WayPointPath extends CartesianCoordinatesSet, Path {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Length</em>' attribute.
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getWayPointPath_Length()
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getWayPointPath_Length()
 	 * @model default="0.0" unique="false" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

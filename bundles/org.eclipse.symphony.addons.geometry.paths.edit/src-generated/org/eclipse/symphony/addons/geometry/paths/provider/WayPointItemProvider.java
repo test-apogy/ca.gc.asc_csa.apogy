@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPoint;
 import org.eclipse.symphony.common.geometry.data3d.provider.CartesianPositionCoordinatesItemProvider;
 import org.eclipse.symphony.common.topology.TopologyFactory;
@@ -200,11 +200,11 @@ public class WayPointItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WayPoint.class)) {
-			case PathsPackage.WAY_POINT__DESCRIPTION:
-			case PathsPackage.WAY_POINT__NODE_ID:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__DESCRIPTION:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__NODE_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case PathsPackage.WAY_POINT__CHILDREN:
+			case Symphony__AddonsGeometryPathsPackage.WAY_POINT__CHILDREN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -226,17 +226,17 @@ public class WayPointItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PathsFactory.eINSTANCE.createWayPoint()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PathsFactory.eINSTANCE.createPath()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PathsFactory.eINSTANCE.createWayPointPath()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 		newChildDescriptors.add
 			(createChildParameter

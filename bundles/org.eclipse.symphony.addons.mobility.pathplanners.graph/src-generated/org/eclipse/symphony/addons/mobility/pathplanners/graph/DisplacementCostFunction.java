@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDisplacementCostFunction()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDisplacementCostFunction()
  * @model abstract="true"
  * @generated
  */

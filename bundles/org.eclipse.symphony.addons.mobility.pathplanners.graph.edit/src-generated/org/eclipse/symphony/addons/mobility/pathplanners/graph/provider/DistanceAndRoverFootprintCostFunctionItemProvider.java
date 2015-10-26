@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction} object.
@@ -71,7 +71,7 @@ public class DistanceAndRoverFootprintCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndRoverFootprintCostFunction_roverFootPrintRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndRoverFootprintCostFunction_roverFootPrintRadius_feature", "_UI_DistanceAndRoverFootprintCostFunction_type"),
-				 PathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -94,7 +94,7 @@ public class DistanceAndRoverFootprintCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndRoverFootprintCostFunction_maximumRoughness_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndRoverFootprintCostFunction_maximumRoughness_feature", "_UI_DistanceAndRoverFootprintCostFunction_type"),
-				 PathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class DistanceAndRoverFootprintCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DistanceAndRoverFootprintCostFunction_maximumCrossSlope_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DistanceAndRoverFootprintCostFunction_maximumCrossSlope_feature", "_UI_DistanceAndRoverFootprintCostFunction_type"),
-				 PathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE,
 				 true,
 				 false,
 				 false,
@@ -164,9 +164,9 @@ public class DistanceAndRoverFootprintCostFunctionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DistanceAndRoverFootprintCostFunction.class)) {
-			case PathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
-			case PathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
-			case PathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__ROVER_FOOT_PRINT_RADIUS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_ROUGHNESS:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.DISTANCE_AND_ROVER_FOOTPRINT_COST_FUNCTION__MAXIMUM_CROSS_SLOPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

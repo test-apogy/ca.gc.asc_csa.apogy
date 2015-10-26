@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.processors.Processor;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner#getCurrentDestination <em>Current Destination</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getWayPointPathPlanner()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getWayPointPathPlanner()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface WayPointPathPlanner extends Processor<CartesianCoordinatesSet, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Position</em>' reference.
 	 * @see #setCurrentPosition(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getWayPointPathPlanner_CurrentPosition()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getWayPointPathPlanner_CurrentPosition()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface WayPointPathPlanner extends Processor<CartesianCoordinatesSet, 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Destination</em>' reference.
 	 * @see #setCurrentDestination(CartesianPositionCoordinates)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getWayPointPathPlanner_CurrentDestination()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getWayPointPathPlanner_CurrentDestination()
 	 * @model transient="true"
 	 * @generated
 	 */

@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.mobility.pathplanners.graph"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.provider.PathplannersGraphItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.provider.Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -25,7 +25,7 @@
       <!-- @generated symphony_addons_mobility_pathplanners_graph -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.provider.PathplannersGraphItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.mobility.pathplanners.graph.provider.Symphony__AddonsMobilityPathplannersGraphItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

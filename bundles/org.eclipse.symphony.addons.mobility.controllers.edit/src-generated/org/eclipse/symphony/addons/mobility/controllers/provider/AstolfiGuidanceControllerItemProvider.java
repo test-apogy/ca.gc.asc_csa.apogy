@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController;
-import org.eclipse.symphony.addons.mobility.controllers.ControllersPackage;
+import org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.controllers.AstolfiGuidanceController} object.
@@ -80,7 +80,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_currentWayPoint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_currentWayPoint_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_WAY_POINT,
 				 true,
 				 false,
 				 true,
@@ -102,7 +102,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_previousWayPoint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_previousWayPoint_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__PREVIOUS_WAY_POINT,
 				 true,
 				 false,
 				 true,
@@ -124,7 +124,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_currentPoseInGuidanceReferenceFrame_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_currentPoseInGuidanceReferenceFrame_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__CURRENT_POSE_IN_GUIDANCE_REFERENCE_FRAME,
 				 true,
 				 false,
 				 true,
@@ -146,7 +146,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_rho_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_rho_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__RHO,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__RHO,
 				 false,
 				 false,
 				 false,
@@ -168,7 +168,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_phi_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_phi_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__PHI,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__PHI,
 				 false,
 				 false,
 				 false,
@@ -190,7 +190,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_alpha_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_alpha_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA,
 				 false,
 				 false,
 				 false,
@@ -212,7 +212,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_yaw_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_yaw_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__YAW,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__YAW,
 				 false,
 				 false,
 				 false,
@@ -234,7 +234,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_nu_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_nu_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__NU,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__NU,
 				 false,
 				 false,
 				 false,
@@ -256,7 +256,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_omega_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_omega_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__OMEGA,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__OMEGA,
 				 false,
 				 false,
 				 false,
@@ -278,7 +278,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_krho_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_krho_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__KRHO,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__KRHO,
 				 true,
 				 false,
 				 false,
@@ -300,7 +300,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_kphi_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_kphi_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__KPHI,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__KPHI,
 				 true,
 				 false,
 				 false,
@@ -322,7 +322,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_kalpha_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_kalpha_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA,
 				 true,
 				 false,
 				 false,
@@ -344,7 +344,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_destinationDistanceThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_destinationDistanceThreshold_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -366,7 +366,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_wayPointDistanceThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_wayPointDistanceThreshold_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -388,7 +388,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_kHill_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_kHill_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__KHILL,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__KHILL,
 				 true,
 				 false,
 				 false,
@@ -410,7 +410,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_hillThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_hillThreshold_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -432,7 +432,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_phiThresholdForReducedVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_phiThresholdForReducedVelocity_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -454,7 +454,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_alphaThresholdForReducedVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_alphaThresholdForReducedVelocity_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -476,7 +476,7 @@ public class AstolfiGuidanceControllerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AstolfiGuidanceController_smoothPathEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AstolfiGuidanceController_smoothPathEnabled_feature", "_UI_AstolfiGuidanceController_type"),
-				 ControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED,
+				 Symphony__AddonsMobilityControllersPackage.Literals.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -520,22 +520,22 @@ public class AstolfiGuidanceControllerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AstolfiGuidanceController.class)) {
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__RHO:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__YAW:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__NU:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__OMEGA:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
-			case ControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__RHO:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__YAW:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__NU:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__OMEGA:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KRHO:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KPHI:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KALPHA:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__DESTINATION_DISTANCE_THRESHOLD:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__WAY_POINT_DISTANCE_THRESHOLD:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__KHILL:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__HILL_THRESHOLD:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__PHI_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__ALPHA_THRESHOLD_FOR_REDUCED_VELOCITY:
+			case Symphony__AddonsMobilityControllersPackage.ASTOLFI_GUIDANCE_CONTROLLER__SMOOTH_PATH_ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

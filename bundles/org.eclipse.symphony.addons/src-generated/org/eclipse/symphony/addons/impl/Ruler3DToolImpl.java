@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.Ruler3DTool;
 import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsFactory;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.GroupNode;
@@ -59,7 +59,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f RULER_COLOR_EDEFAULT = (Color3f)SymphonyToolsCoreFactory.eINSTANCE.createFromString(SymphonyToolsCorePackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f RULER_COLOR_EDEFAULT = (Color3f)Symphony__AddonsFactory.eINSTANCE.createFromString(Symphony__AddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 	/**
 	 * The cached value of the '{@link #getRulerColor() <em>Ruler Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -95,7 +95,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f MINOR_TICK_COLOR_EDEFAULT = (Color3f)SymphonyToolsCoreFactory.eINSTANCE.createFromString(SymphonyToolsCorePackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f MINOR_TICK_COLOR_EDEFAULT = (Color3f)Symphony__AddonsFactory.eINSTANCE.createFromString(Symphony__AddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 	/**
 	 * The cached value of the '{@link #getMinorTickColor() <em>Minor Tick Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -149,7 +149,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f MAJOR_TICK_COLOR_EDEFAULT = (Color3f)SymphonyToolsCoreFactory.eINSTANCE.createFromString(SymphonyToolsCorePackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f MAJOR_TICK_COLOR_EDEFAULT = (Color3f)Symphony__AddonsFactory.eINSTANCE.createFromString(Symphony__AddonsPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 	/**
 	 * The cached value of the '{@link #getMajorTickColor() <em>Major Tick Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -221,7 +221,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsCorePackage.Literals.RULER3_DTOOL;
+		return Symphony__AddonsPackage.Literals.RULER3_DTOOL;
 	}
 
 	/**
@@ -235,7 +235,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			ruler3dToolNode = (Ruler3dToolNode)eResolveProxy(oldRuler3dToolNode);
 			if (ruler3dToolNode != oldRuler3dToolNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE, oldRuler3dToolNode, ruler3dToolNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, oldRuler3dToolNode, ruler3dToolNode));
 			}
 		}
 		return ruler3dToolNode;
@@ -259,7 +259,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		Ruler3dToolNode oldRuler3dToolNode = ruler3dToolNode;
 		ruler3dToolNode = newRuler3dToolNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE, oldRuler3dToolNode, newRuler3dToolNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, oldRuler3dToolNode, newRuler3dToolNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -274,14 +274,14 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		if (newRuler3dToolNode != ruler3dToolNode) {
 			NotificationChain msgs = null;
 			if (ruler3dToolNode != null)
-				msgs = ((InternalEObject)ruler3dToolNode).eInverseRemove(this, SymphonyToolsCorePackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
+				msgs = ((InternalEObject)ruler3dToolNode).eInverseRemove(this, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
 			if (newRuler3dToolNode != null)
-				msgs = ((InternalEObject)newRuler3dToolNode).eInverseAdd(this, SymphonyToolsCorePackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
+				msgs = ((InternalEObject)newRuler3dToolNode).eInverseAdd(this, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
 			msgs = basicSetRuler3dToolNode(newRuler3dToolNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE, newRuler3dToolNode, newRuler3dToolNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE, newRuler3dToolNode, newRuler3dToolNode));
 	}
 
 	/**
@@ -292,9 +292,9 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				if (ruler3dToolNode != null)
-					msgs = ((InternalEObject)ruler3dToolNode).eInverseRemove(this, SymphonyToolsCorePackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
+					msgs = ((InternalEObject)ruler3dToolNode).eInverseRemove(this, Symphony__AddonsPackage.RULER3D_TOOL_NODE__RULER3_DTOOL, Ruler3dToolNode.class, msgs);
 				return basicSetRuler3dToolNode((Ruler3dToolNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -308,7 +308,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				return basicSetRuler3dToolNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -332,7 +332,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		Color3f oldRulerColor = rulerColor;
 		rulerColor = newRulerColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__RULER_COLOR, oldRulerColor, rulerColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR, oldRulerColor, rulerColor));
 	}
 
 	/**
@@ -353,7 +353,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldExtremitiesRadius = extremitiesRadius;
 		extremitiesRadius = newExtremitiesRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__EXTREMITIES_RADIUS, oldExtremitiesRadius, extremitiesRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS, oldExtremitiesRadius, extremitiesRadius));
 	}
 
 	/**
@@ -374,7 +374,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		Color3f oldMinorTickColor = minorTickColor;
 		minorTickColor = newMinorTickColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_COLOR, oldMinorTickColor, minorTickColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR, oldMinorTickColor, minorTickColor));
 	}
 
 	/**
@@ -395,7 +395,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldMinorTickSpacing = minorTickSpacing;
 		minorTickSpacing = newMinorTickSpacing;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_SPACING, oldMinorTickSpacing, minorTickSpacing));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING, oldMinorTickSpacing, minorTickSpacing));
 	}
 
 	/**
@@ -416,7 +416,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldMinorTickLenght = minorTickLenght;
 		minorTickLenght = newMinorTickLenght;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_LENGHT, oldMinorTickLenght, minorTickLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT, oldMinorTickLenght, minorTickLenght));
 	}
 
 	/**
@@ -437,7 +437,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		Color3f oldMajorTickColor = majorTickColor;
 		majorTickColor = newMajorTickColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_COLOR, oldMajorTickColor, majorTickColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR, oldMajorTickColor, majorTickColor));
 	}
 
 	/**
@@ -458,7 +458,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldMajorTickSpacing = majorTickSpacing;
 		majorTickSpacing = newMajorTickSpacing;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_SPACING, oldMajorTickSpacing, majorTickSpacing));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING, oldMajorTickSpacing, majorTickSpacing));
 	}
 
 	/**
@@ -479,7 +479,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		double oldMajorTickLenght = majorTickLenght;
 		majorTickLenght = newMajorTickLenght;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_LENGHT, oldMajorTickLenght, majorTickLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT, oldMajorTickLenght, majorTickLenght));
 	}
 
 	/**
@@ -490,23 +490,23 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
 				return getRulerColor();
-			case SymphonyToolsCorePackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 				return getExtremitiesRadius();
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 				return getMinorTickColor();
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				return getMinorTickSpacing();
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
 				return getMinorTickLenght();
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				return getMajorTickColor();
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				return getMajorTickSpacing();
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
 				return getMajorTickLenght();
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				if (resolve) return getRuler3dToolNode();
 				return basicGetRuler3dToolNode();
 		}
@@ -521,31 +521,31 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
 				setRulerColor((Color3f)newValue);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 				setExtremitiesRadius((Double)newValue);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 				setMinorTickColor((Color3f)newValue);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				setMinorTickSpacing((Double)newValue);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
 				setMinorTickLenght((Double)newValue);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				setMajorTickColor((Color3f)newValue);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				setMajorTickSpacing((Double)newValue);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
 				setMajorTickLenght((Double)newValue);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				setRuler3dToolNode((Ruler3dToolNode)newValue);
 				return;
 		}
@@ -560,31 +560,31 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
 				setRulerColor(RULER_COLOR_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 				setExtremitiesRadius(EXTREMITIES_RADIUS_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 				setMinorTickColor(MINOR_TICK_COLOR_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				setMinorTickSpacing(MINOR_TICK_SPACING_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
 				setMinorTickLenght(MINOR_TICK_LENGHT_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				setMajorTickColor(MAJOR_TICK_COLOR_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				setMajorTickSpacing(MAJOR_TICK_SPACING_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
 				setMajorTickLenght(MAJOR_TICK_LENGHT_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				setRuler3dToolNode((Ruler3dToolNode)null);
 				return;
 		}
@@ -599,23 +599,23 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER_COLOR:
 				return RULER_COLOR_EDEFAULT == null ? rulerColor != null : !RULER_COLOR_EDEFAULT.equals(rulerColor);
-			case SymphonyToolsCorePackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
+			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 				return extremitiesRadius != EXTREMITIES_RADIUS_EDEFAULT;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 				return MINOR_TICK_COLOR_EDEFAULT == null ? minorTickColor != null : !MINOR_TICK_COLOR_EDEFAULT.equals(minorTickColor);
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				return minorTickSpacing != MINOR_TICK_SPACING_EDEFAULT;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
 				return minorTickLenght != MINOR_TICK_LENGHT_EDEFAULT;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				return MAJOR_TICK_COLOR_EDEFAULT == null ? majorTickColor != null : !MAJOR_TICK_COLOR_EDEFAULT.equals(majorTickColor);
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				return majorTickSpacing != MAJOR_TICK_SPACING_EDEFAULT;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
 				return majorTickLenght != MAJOR_TICK_LENGHT_EDEFAULT;
-			case SymphonyToolsCorePackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
+			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				return ruler3dToolNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -745,7 +745,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		// Creates Ruler3dToolNode if no yet initialized.
 		if(getRuler3dToolNode() == null) 
 		{
-			setRuler3dToolNode(SymphonyToolsCoreFactory.eINSTANCE.createRuler3dToolNode());
+			setRuler3dToolNode(Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode());
 		}		
 		attachRuler3dToolNode();
 		

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 
@@ -73,7 +73,7 @@ public class PanTiltUnitItemProvider
 		         getResourceLocator(),
 		         getString("_UI_PanTiltUnit_currentPanAngle_feature"),
 		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentPanAngle_feature", "_UI_PanTiltUnit_type"),
-		         MRTActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
+		         Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_PAN_ANGLE,
 		         false,
 		         false,
 		         false,
@@ -96,7 +96,7 @@ public class PanTiltUnitItemProvider
 		         getResourceLocator(),
 		         getString("_UI_PanTiltUnit_currentTiltAngle_feature"),
 		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_currentTiltAngle_feature", "_UI_PanTiltUnit_type"),
-		         MRTActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
+		         Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__CURRENT_TILT_ANGLE,
 		         false,
 		         false,
 		         false,
@@ -119,7 +119,7 @@ public class PanTiltUnitItemProvider
 		         getResourceLocator(),
 		         getString("_UI_PanTiltUnit_commandedPanAngle_feature"),
 		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedPanAngle_feature", "_UI_PanTiltUnit_type"),
-		         MRTActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
+		         Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE,
 		         false,
 		         false,
 		         false,
@@ -142,7 +142,7 @@ public class PanTiltUnitItemProvider
 		         getResourceLocator(),
 		         getString("_UI_PanTiltUnit_commandedTiltAngle_feature"),
 		         getString("_UI_PropertyDescriptor_description", "_UI_PanTiltUnit_commandedTiltAngle_feature", "_UI_PanTiltUnit_type"),
-		         MRTActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
+		         Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE,
 		         false,
 		         false,
 		         false,
@@ -186,10 +186,10 @@ public class PanTiltUnitItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PanTiltUnit.class)) {
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

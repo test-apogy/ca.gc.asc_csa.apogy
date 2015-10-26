@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getAbstractTool()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTool()
  * @model abstract="true"
  * @generated
  */

@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.space.math.Matrix4x4} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.math.Matrix4x4} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * @generated
  */

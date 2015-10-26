@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.addons.SymphonyToolsCoreFactory;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsFactory;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
@@ -176,7 +176,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsCorePackage.Literals.TRAJECTORY3_DTOOL;
+		return Symphony__AddonsPackage.Literals.TRAJECTORY3_DTOOL;
 	}
 		
 	@Override
@@ -244,7 +244,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		boolean oldPenDown = penDown;
 		penDown = newPenDown;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PEN_DOWN, oldPenDown, penDown));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN, oldPenDown, penDown));
 	}
 	
 	/**
@@ -258,7 +258,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			variable = (Variable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -282,7 +282,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -303,7 +303,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		double oldDistanceThreshold = distanceThreshold;
 		distanceThreshold = newDistanceThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD, oldDistanceThreshold, distanceThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD, oldDistanceThreshold, distanceThreshold));
 	}
 
 	/**
@@ -343,7 +343,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		double oldTotalDistance = totalDistance;
 		totalDistance = newTotalDistance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE, oldTotalDistance, totalDistance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE, oldTotalDistance, totalDistance));
 	}
 
 	/**
@@ -353,7 +353,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 */
 	public EList<WayPointPath> getPaths() {
 		if (paths == null) {
-			paths = new EObjectContainmentEList<WayPointPath>(WayPointPath.class, this, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS);
+			paths = new EObjectContainmentEList<WayPointPath>(WayPointPath.class, this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS);
 		}
 		return paths;
 	}
@@ -369,7 +369,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			poseProvider = (PoseProvider)eResolveProxy(oldPoseProvider);
 			if (poseProvider != oldPoseProvider) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__POSE_PROVIDER, oldPoseProvider, poseProvider));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER, oldPoseProvider, poseProvider));
 			}
 		}
 		return poseProvider;
@@ -414,7 +414,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		PoseProvider oldPoseProvider = poseProvider;
 		poseProvider = newPoseProvider;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__POSE_PROVIDER, oldPoseProvider, poseProvider));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER, oldPoseProvider, poseProvider));
 	}
 
 	/**
@@ -428,7 +428,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		
 		if(node == null)
 		{
-			node = SymphonyToolsCoreFactory.eINSTANCE.createTrajectory3DToolNode();
+			node = Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode();
 			setTrajectory3DToolNode(node);
 		}
 		
@@ -446,7 +446,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			trajectory3DToolNode = (Trajectory3DToolNode)eResolveProxy(oldTrajectory3DToolNode);
 			if (trajectory3DToolNode != oldTrajectory3DToolNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, oldTrajectory3DToolNode, trajectory3DToolNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, oldTrajectory3DToolNode, trajectory3DToolNode));
 			}
 		}
 		return trajectory3DToolNode;
@@ -470,7 +470,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		Trajectory3DToolNode oldTrajectory3DToolNode = trajectory3DToolNode;
 		trajectory3DToolNode = newTrajectory3DToolNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, oldTrajectory3DToolNode, newTrajectory3DToolNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, oldTrajectory3DToolNode, newTrajectory3DToolNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -485,14 +485,14 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		if (newTrajectory3DToolNode != trajectory3DToolNode) {
 			NotificationChain msgs = null;
 			if (trajectory3DToolNode != null)
-				msgs = ((InternalEObject)trajectory3DToolNode).eInverseRemove(this, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
+				msgs = ((InternalEObject)trajectory3DToolNode).eInverseRemove(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
 			if (newTrajectory3DToolNode != null)
-				msgs = ((InternalEObject)newTrajectory3DToolNode).eInverseAdd(this, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
+				msgs = ((InternalEObject)newTrajectory3DToolNode).eInverseAdd(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
 			msgs = basicSetTrajectory3DToolNode(newTrajectory3DToolNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, newTrajectory3DToolNode, newTrajectory3DToolNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, newTrajectory3DToolNode, newTrajectory3DToolNode));
 	}
 
 	/**
@@ -503,9 +503,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				if (trajectory3DToolNode != null)
-					msgs = ((InternalEObject)trajectory3DToolNode).eInverseRemove(this, SymphonyToolsCorePackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
+					msgs = ((InternalEObject)trajectory3DToolNode).eInverseRemove(this, Symphony__AddonsPackage.TRAJECTORY3_DTOOL_NODE__TRAJECTORY3_DTOOL, Trajectory3DToolNode.class, msgs);
 				return basicSetTrajectory3DToolNode((Trajectory3DToolNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -519,9 +519,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				return ((InternalEList<?>)getPaths()).basicRemove(otherEnd, msgs);
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				return basicSetTrajectory3DToolNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -535,21 +535,21 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
 				return isPenDown();
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__VARIABLE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
 				return getDistanceThreshold();
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
 				return getTotalDistance();
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				return getPaths();
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				if (resolve) return getPoseProvider();
 				return basicGetPoseProvider();
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				if (resolve) return getTrajectory3DToolNode();
 				return basicGetTrajectory3DToolNode();
 		}
@@ -565,26 +565,26 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
 				setPenDown((Boolean)newValue);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__VARIABLE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
 				setDistanceThreshold((Double)newValue);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
 				setTotalDistance((Double)newValue);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				getPaths().clear();
 				getPaths().addAll((Collection<? extends WayPointPath>)newValue);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				setPoseProvider((PoseProvider)newValue);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				setTrajectory3DToolNode((Trajectory3DToolNode)newValue);
 				return;
 		}
@@ -599,25 +599,25 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
 				setPenDown(PEN_DOWN_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__VARIABLE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
 				setVariable((Variable)null);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
 				setDistanceThreshold(DISTANCE_THRESHOLD_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
 				setTotalDistance(TOTAL_DISTANCE_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				getPaths().clear();
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				setPoseProvider((PoseProvider)null);
 				return;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				setTrajectory3DToolNode((Trajectory3DToolNode)null);
 				return;
 		}
@@ -632,19 +632,19 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PEN_DOWN:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PEN_DOWN:
 				return penDown != PEN_DOWN_EDEFAULT;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__VARIABLE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__VARIABLE:
 				return variable != null;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__DISTANCE_THRESHOLD:
 				return distanceThreshold != DISTANCE_THRESHOLD_EDEFAULT;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TOTAL_DISTANCE:
 				return totalDistance != TOTAL_DISTANCE_EDEFAULT;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__PATHS:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__PATHS:
 				return paths != null && !paths.isEmpty();
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__POSE_PROVIDER:
 				return poseProvider != null;
-			case SymphonyToolsCorePackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
+			case Symphony__AddonsPackage.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE:
 				return trajectory3DToolNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -738,7 +738,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	private void penDown()
 	{
 		// Adds a new path to the list
-		WayPointPath newWayPointPath = PathsFactory.eINSTANCE.createWayPointPath(); 
+		WayPointPath newWayPointPath = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath(); 
 		getPaths().add(newWayPointPath);
 		currentWayPointPath = newWayPointPath;
 	}
@@ -803,7 +803,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		{
 			if(getPaths().isEmpty())
 			{
-				currentWayPointPath = PathsFactory.eINSTANCE.createWayPointPath();
+				currentWayPointPath = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 				getPaths().add(currentWayPointPath);
 			}
 			else

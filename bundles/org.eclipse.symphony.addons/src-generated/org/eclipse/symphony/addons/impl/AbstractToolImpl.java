@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
@@ -86,7 +86,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyToolsCorePackage.Literals.ABSTRACT_TOOL;
+		return Symphony__AddonsPackage.Literals.ABSTRACT_TOOL;
 	}
 
   /**
@@ -109,7 +109,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TOOL__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TOOL__NAME, oldName, name));
 	}
 
   /**
@@ -132,7 +132,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.ABSTRACT_TOOL__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -144,9 +144,9 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__NAME:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
 				return getName();
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__DESCRIPTION:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,10 +161,10 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__NAME:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__DESCRIPTION:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__NAME:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__DESCRIPTION:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -199,9 +199,9 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__NAME:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__DESCRIPTION:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
@@ -217,7 +217,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyToolsCorePackage.ABSTRACT_TOOL__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
+				case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION: return EMFEcorePackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -234,7 +234,7 @@ public abstract class AbstractToolImpl extends MinimalEObjectImpl.Container impl
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return SymphonyToolsCorePackage.ABSTRACT_TOOL__DESCRIPTION;
+				case EMFEcorePackage.DESCRIBED__DESCRIPTION: return Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION;
 				default: return -1;
 			}
 		}

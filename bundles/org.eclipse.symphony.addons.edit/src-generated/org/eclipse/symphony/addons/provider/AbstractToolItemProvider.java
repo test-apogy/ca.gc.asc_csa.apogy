@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.AbstractTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.emf.EMFEcorePackage;
 
 /**
@@ -143,8 +143,8 @@ public class AbstractToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractTool.class)) {
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__NAME:
-			case SymphonyToolsCorePackage.ABSTRACT_TOOL__DESCRIPTION:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__NAME:
+			case Symphony__AddonsPackage.ABSTRACT_TOOL__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

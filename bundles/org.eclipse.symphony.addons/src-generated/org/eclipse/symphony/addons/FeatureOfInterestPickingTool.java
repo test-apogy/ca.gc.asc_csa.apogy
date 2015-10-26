@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.FeatureOfInterestList;
  *   <li>{@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool#getPickRelativeNormal <em>Pick Relative Normal</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getFeatureOfInterestPickingTool()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Of Interest List</em>' reference.
 	 * @see #setFeatureOfInterestList(FeatureOfInterestList)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getFeatureOfInterestPickingTool_FeatureOfInterestList()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_FeatureOfInterestList()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false'"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pick Absolute Position</em>' reference.
 	 * @see #setPickAbsolutePosition(Tuple3d)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getFeatureOfInterestPickingTool_PickAbsolutePosition()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickAbsolutePosition()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -95,7 +95,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pick Relative Position</em>' reference.
 	 * @see #setPickRelativePosition(Tuple3d)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getFeatureOfInterestPickingTool_PickRelativePosition()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickRelativePosition()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -122,7 +122,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Picked Node</em>' reference.
 	 * @see #setPickedNode(Node)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getFeatureOfInterestPickingTool_PickedNode()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickedNode()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -149,7 +149,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pick Absolute Normal</em>' reference.
 	 * @see #setPickAbsoluteNormal(Tuple3d)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getFeatureOfInterestPickingTool_PickAbsoluteNormal()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickAbsoluteNormal()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' propertyCategory='PICKED_NODE'"
 	 * @generated
@@ -176,7 +176,7 @@ public interface FeatureOfInterestPickingTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pick Relative Normal</em>' reference.
 	 * @see #setPickRelativeNormal(Tuple3d)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getFeatureOfInterestPickingTool_PickRelativeNormal()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getFeatureOfInterestPickingTool_PickRelativeNormal()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' propertyCategory='PICKED_NODE'"
 	 * @generated

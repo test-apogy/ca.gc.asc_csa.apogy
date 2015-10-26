@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.Simple3DTool} object.
@@ -64,7 +64,7 @@ public class Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Simple3DTool_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Simple3DTool_visible_feature", "_UI_Simple3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SIMPLE3_DTOOL__VISIBLE,
+				 Symphony__AddonsPackage.Literals.SIMPLE3_DTOOL__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class Simple3DToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Simple3DTool_rootNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Simple3DTool_rootNode_feature", "_UI_Simple3DTool_type"),
-				 SymphonyToolsCorePackage.Literals.SIMPLE3_DTOOL__ROOT_NODE,
+				 Symphony__AddonsPackage.Literals.SIMPLE3_DTOOL__ROOT_NODE,
 				 true,
 				 false,
 				 true,
@@ -143,7 +143,7 @@ public class Simple3DToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Simple3DTool.class)) {
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -5,7 +5,7 @@ package org.eclipse.symphony.examples.camera.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.actuators.provider.MRTActuatorsEditPlugin;
+import org.eclipse.symphony.addons.actuators.provider.Symphony__AddonsActuatorsEditPlugin;
 import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
@@ -56,7 +56,7 @@ public final class EMFEcoreExampleCameraEditPlugin extends EMFPlugin
 		     SensorsEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		     FovEditPlugin.INSTANCE,
-		     MRTActuatorsEditPlugin.INSTANCE,
+		     Symphony__AddonsActuatorsEditPlugin.INSTANCE,
 		     ImagesCoreEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,

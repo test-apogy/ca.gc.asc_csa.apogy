@@ -13,7 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction} object.
@@ -62,7 +62,7 @@ public class ExclusionZonesCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExclusionZonesCostFunction_exclusionZones_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExclusionZonesCostFunction_exclusionZones_feature", "_UI_ExclusionZonesCostFunction_type"),
-				 PathplannersGraphPackage.Literals.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.EXCLUSION_ZONES_COST_FUNCTION__EXCLUSION_ZONES,
 				 true,
 				 false,
 				 true,

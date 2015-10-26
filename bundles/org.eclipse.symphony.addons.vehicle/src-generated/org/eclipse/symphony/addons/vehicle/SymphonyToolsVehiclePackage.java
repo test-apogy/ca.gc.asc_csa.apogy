@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsPackage;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
@@ -1176,7 +1176,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__NAME = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__NAME;
+	int PATH_PLANNER_TOOL__NAME = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1185,7 +1185,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__DESCRIPTION = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__DESCRIPTION;
+	int PATH_PLANNER_TOOL__DESCRIPTION = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DESCRIPTION;
 
 		/**
 	 * The feature id for the '<em><b>Tool List</b></em>' container reference.
@@ -1194,7 +1194,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__TOOL_LIST = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TOOL_LIST;
+	int PATH_PLANNER_TOOL__TOOL_LIST = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TOOL_LIST;
 
 		/**
 	 * The feature id for the '<em><b>Active</b></em>' attribute.
@@ -1203,7 +1203,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__ACTIVE = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__ACTIVE;
+	int PATH_PLANNER_TOOL__ACTIVE = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__ACTIVE;
 
 		/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -1212,7 +1212,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__DISPOSED = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__DISPOSED;
+	int PATH_PLANNER_TOOL__DISPOSED = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISPOSED;
 
 		/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1221,7 +1221,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__VISIBLE = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__VISIBLE;
+	int PATH_PLANNER_TOOL__VISIBLE = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__VISIBLE;
 
 		/**
 	 * The feature id for the '<em><b>Root Node</b></em>' reference.
@@ -1230,7 +1230,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__ROOT_NODE = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__ROOT_NODE;
+	int PATH_PLANNER_TOOL__ROOT_NODE = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__ROOT_NODE;
 
 		/**
 	 * The feature id for the '<em><b>From Absolute Position</b></em>' reference.
@@ -1239,7 +1239,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__FROM_ABSOLUTE_POSITION = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION;
+	int PATH_PLANNER_TOOL__FROM_ABSOLUTE_POSITION = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION;
 
 		/**
 	 * The feature id for the '<em><b>From Relative Position</b></em>' reference.
@@ -1248,7 +1248,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__FROM_RELATIVE_POSITION = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION;
+	int PATH_PLANNER_TOOL__FROM_RELATIVE_POSITION = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION;
 
 		/**
 	 * The feature id for the '<em><b>From Node</b></em>' reference.
@@ -1257,7 +1257,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__FROM_NODE = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE;
+	int PATH_PLANNER_TOOL__FROM_NODE = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE;
 
 		/**
 	 * The feature id for the '<em><b>From Node Lock</b></em>' attribute.
@@ -1266,7 +1266,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__FROM_NODE_LOCK = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK;
+	int PATH_PLANNER_TOOL__FROM_NODE_LOCK = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE_LOCK;
 
 		/**
 	 * The feature id for the '<em><b>To Absolute Position</b></em>' reference.
@@ -1275,7 +1275,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__TO_ABSOLUTE_POSITION = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION;
+	int PATH_PLANNER_TOOL__TO_ABSOLUTE_POSITION = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION;
 
 		/**
 	 * The feature id for the '<em><b>To Relative Position</b></em>' reference.
@@ -1284,7 +1284,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__TO_RELATIVE_POSITION = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION;
+	int PATH_PLANNER_TOOL__TO_RELATIVE_POSITION = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION;
 
 		/**
 	 * The feature id for the '<em><b>To Node</b></em>' reference.
@@ -1293,7 +1293,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__TO_NODE = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE;
+	int PATH_PLANNER_TOOL__TO_NODE = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE;
 
 		/**
 	 * The feature id for the '<em><b>To Node Lock</b></em>' attribute.
@@ -1302,7 +1302,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__TO_NODE_LOCK = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK;
+	int PATH_PLANNER_TOOL__TO_NODE_LOCK = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE_LOCK;
 
 		/**
 	 * The feature id for the '<em><b>Distance</b></em>' attribute.
@@ -1311,7 +1311,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__DISTANCE = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE;
+	int PATH_PLANNER_TOOL__DISTANCE = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE;
 
 		/**
 	 * The feature id for the '<em><b>Busy</b></em>' attribute.
@@ -1320,7 +1320,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__BUSY = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 0;
+	int PATH_PLANNER_TOOL__BUSY = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Auto Path Plan Enabled</b></em>' attribute.
@@ -1329,7 +1329,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 1;
+	int PATH_PLANNER_TOOL__AUTO_PATH_PLAN_ENABLED = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Mesh Layer</b></em>' reference.
@@ -1338,7 +1338,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__MESH_LAYER = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 2;
+	int PATH_PLANNER_TOOL__MESH_LAYER = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 2;
 
 		/**
 	 * The feature id for the '<em><b>Path Planner</b></em>' containment reference.
@@ -1347,7 +1347,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__PATH_PLANNER = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 3;
+	int PATH_PLANNER_TOOL__PATH_PLANNER = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 3;
 
 		/**
 	 * The feature id for the '<em><b>Planned Path</b></em>' containment reference.
@@ -1356,7 +1356,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__PLANNED_PATH = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 4;
+	int PATH_PLANNER_TOOL__PLANNED_PATH = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Path Planner Tool Node</b></em>' reference.
@@ -1365,7 +1365,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 5;
+	int PATH_PLANNER_TOOL__PATH_PLANNER_TOOL_NODE = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 5;
 
 		/**
 	 * The number of structural features of the '<em>Path Planner Tool</em>' class.
@@ -1374,7 +1374,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_FEATURE_COUNT = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 6;
+	int PATH_PLANNER_TOOL_FEATURE_COUNT = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 6;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -1383,7 +1383,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL___DISPOSE = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL___DISPOSE;
+	int PATH_PLANNER_TOOL___DISPOSE = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL___DISPOSE;
 
 		/**
 	 * The operation id for the '<em>Selection Changed</em>' operation.
@@ -1392,7 +1392,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL___SELECTION_CHANGED__NODESELECTION = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL___SELECTION_CHANGED__NODESELECTION;
+	int PATH_PLANNER_TOOL___SELECTION_CHANGED__NODESELECTION = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL___SELECTION_CHANGED__NODESELECTION;
 
 		/**
 	 * The operation id for the '<em>Points Relative Pose Changed</em>' operation.
@@ -1401,7 +1401,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D;
+	int PATH_PLANNER_TOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL___POINTS_RELATIVE_POSE_CHANGED__MATRIX4D;
 
 		/**
 	 * The operation id for the '<em>Plan Path</em>' operation.
@@ -1410,7 +1410,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL___PLAN_PATH = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_OPERATION_COUNT + 0;
+	int PATH_PLANNER_TOOL___PLAN_PATH = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Path Planner Tool</em>' class.
@@ -1419,7 +1419,7 @@ public interface SymphonyToolsVehiclePackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNER_TOOL_OPERATION_COUNT = SymphonyToolsCorePackage.ABSTRACT_TWO_POINTS3_DTOOL_OPERATION_COUNT + 1;
+	int PATH_PLANNER_TOOL_OPERATION_COUNT = Symphony__AddonsPackage.ABSTRACT_TWO_POINTS3_DTOOL_OPERATION_COUNT + 1;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.vehicle.impl.PathPlannerToolNodeImpl <em>Path Planner Tool Node</em>}' class.

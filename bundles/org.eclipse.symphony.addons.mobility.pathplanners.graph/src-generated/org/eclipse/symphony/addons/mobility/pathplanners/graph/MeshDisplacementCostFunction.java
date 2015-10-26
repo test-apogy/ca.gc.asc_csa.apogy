@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction#getPlanner <em>Planner</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMeshDisplacementCostFunction()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMeshDisplacementCostFunction()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface MeshDisplacementCostFunction extends DisplacementCostFunction {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Planner</em>' reference.
 	 * @see #setPlanner(CostBasedMeshWayPointPathPlanner)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMeshDisplacementCostFunction_Planner()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMeshDisplacementCostFunction_Planner()
 	 * @model
 	 * @generated
 	 */

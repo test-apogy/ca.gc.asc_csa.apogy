@@ -1307,7 +1307,6 @@ public class LasPackageImpl extends EPackageImpl implements LasPackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Las",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d.las/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.las.edit/src-generated",

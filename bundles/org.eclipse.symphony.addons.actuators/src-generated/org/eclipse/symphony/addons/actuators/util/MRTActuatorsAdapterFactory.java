@@ -8,7 +8,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.actuators.AbstractActuator;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 import org.eclipse.symphony.common.topology.Node;
 
@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.Node;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage
+ * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage
  * @generated
  */
 public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
@@ -28,7 +28,7 @@ public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected static MRTActuatorsPackage modelPackage;
+  protected static Symphony__AddonsActuatorsPackage modelPackage;
 
   /**
 	 * Creates an instance of the adapter factory.
@@ -39,7 +39,7 @@ public class MRTActuatorsAdapterFactory extends AdapterFactoryImpl
   public MRTActuatorsAdapterFactory()
   {
 		if (modelPackage == null) {
-			modelPackage = MRTActuatorsPackage.eINSTANCE;
+			modelPackage = Symphony__AddonsActuatorsPackage.eINSTANCE;
 		}
 	}
 

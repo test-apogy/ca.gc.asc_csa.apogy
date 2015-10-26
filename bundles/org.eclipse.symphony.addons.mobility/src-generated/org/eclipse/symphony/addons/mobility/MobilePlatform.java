@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.addons.mobility.MobilePlatform#getMobilePlatformStatus <em>Mobile Platform Status</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getMobilePlatform()
+ * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getMobilePlatform()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface MobilePlatform extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Moving</em>' attribute.
 	 * @see #setMoving(boolean)
-	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getMobilePlatform_Moving()
+	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getMobilePlatform_Moving()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface MobilePlatform extends AggregateGroupNode {
 	 * @return the value of the '<em>Mobile Platform Status</em>' attribute.
 	 * @see org.eclipse.symphony.addons.mobility.MobilePlatformStatus
 	 * @see #setMobilePlatformStatus(MobilePlatformStatus)
-	 * @see org.eclipse.symphony.addons.mobility.MobilityPackage#getMobilePlatform_MobilePlatformStatus()
+	 * @see org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage#getMobilePlatform_MobilePlatformStatus()
 	 * @model default="OFF" unique="false"
 	 * @generated
 	 */

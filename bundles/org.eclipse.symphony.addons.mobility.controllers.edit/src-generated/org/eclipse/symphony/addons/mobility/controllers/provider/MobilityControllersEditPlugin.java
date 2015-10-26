@@ -7,9 +7,9 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
+import org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsEditPlugin;
 
-import org.eclipse.symphony.addons.mobility.provider.MobilityEditPlugin;
+import org.eclipse.symphony.addons.mobility.provider.Symphony__AddonsMobilityEditPlugin;
 
 import org.eclipse.symphony.addons.sensors.pose.provider.PoseEditPlugin;
 
@@ -58,9 +58,9 @@ public final class MobilityControllersEditPlugin extends EMFPlugin {
 		     PoseEditPlugin.INSTANCE,
 		     ProcessorsEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
+		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
-		     MobilityEditPlugin.INSTANCE,
+		     Symphony__AddonsMobilityEditPlugin.INSTANCE,
 		     Data3dEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,
 		   });

@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.addons.SunVector3DToolNode#getSunVector3DTool <em>Sun Vector3 DTool</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DToolNode()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DToolNode()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface SunVector3DToolNode extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sun Vector3 DTool</em>' reference.
 	 * @see #setSunVector3DTool(SunVector3DTool)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSunVector3DToolNode_SunVector3DTool()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DToolNode_SunVector3DTool()
 	 * @see org.eclipse.symphony.addons.SunVector3DTool#getSunVector3DToolNode
 	 * @model opposite="sunVector3DToolNode" transient="true"
 	 * @generated

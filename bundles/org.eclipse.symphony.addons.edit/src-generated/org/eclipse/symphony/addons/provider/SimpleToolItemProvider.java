@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.SimpleTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.SimpleTool} object.
@@ -65,7 +65,7 @@ public class SimpleToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleTool_toolList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleTool_toolList_feature", "_UI_SimpleTool_type"),
-				 SymphonyToolsCorePackage.Literals.SIMPLE_TOOL__TOOL_LIST,
+				 Symphony__AddonsPackage.Literals.SIMPLE_TOOL__TOOL_LIST,
 				 true,
 				 false,
 				 true,
@@ -87,7 +87,7 @@ public class SimpleToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleTool_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleTool_active_feature", "_UI_SimpleTool_type"),
-				 SymphonyToolsCorePackage.Literals.SIMPLE_TOOL__ACTIVE,
+				 Symphony__AddonsPackage.Literals.SIMPLE_TOOL__ACTIVE,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class SimpleToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SimpleTool_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleTool_disposed_feature", "_UI_SimpleTool_type"),
-				 SymphonyToolsCorePackage.Literals.SIMPLE_TOOL__DISPOSED,
+				 Symphony__AddonsPackage.Literals.SIMPLE_TOOL__DISPOSED,
 				 false,
 				 false,
 				 false,
@@ -145,8 +145,8 @@ public class SimpleToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleTool.class)) {
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__ACTIVE:
-			case SymphonyToolsCorePackage.SIMPLE_TOOL__DISPOSED:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__ACTIVE:
+			case Symphony__AddonsPackage.SIMPLE_TOOL__DISPOSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

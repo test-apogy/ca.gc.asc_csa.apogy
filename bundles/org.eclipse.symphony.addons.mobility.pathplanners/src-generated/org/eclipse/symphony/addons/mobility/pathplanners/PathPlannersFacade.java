@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getPathPlannersFacade()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getPathPlannersFacade()
  * @model
  * @generated
  */

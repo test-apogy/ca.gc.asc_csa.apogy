@@ -12,7 +12,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.geometry.paths"
-            class="org.eclipse.symphony.addons.geometry.paths.provider.PathsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -25,10 +25,10 @@
       <!-- @generated paths -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.geometry.paths.provider.PathsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.geometry.data"
-            class="org.eclipse.symphony.addons.geometry.paths.provider.PathsItemProviderAdapterFactory$DataChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsItemProviderAdapterFactory$DataChildCreationExtender"/>
    </extension>
 
 </plugin>

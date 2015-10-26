@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DisplacementCostFunction;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 
 /**
@@ -37,7 +37,7 @@ public abstract class DisplacementCostFunctionImpl extends MinimalEObjectImpl.Co
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersGraphPackage.Literals.DISPLACEMENT_COST_FUNCTION;
+		return Symphony__AddonsMobilityPathplannersGraphPackage.Literals.DISPLACEMENT_COST_FUNCTION;
 	}
 
 	/**
@@ -59,7 +59,7 @@ public abstract class DisplacementCostFunctionImpl extends MinimalEObjectImpl.Co
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PathplannersGraphPackage.DISPLACEMENT_COST_FUNCTION___GET_COST__CARTESIANPOLYGON_CARTESIANPOLYGON:
+			case Symphony__AddonsMobilityPathplannersGraphPackage.DISPLACEMENT_COST_FUNCTION___GET_COST__CARTESIANPOLYGON_CARTESIANPOLYGON:
 				return getCost((CartesianPolygon)arguments.get(0), (CartesianPolygon)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -20,7 +20,7 @@ import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
@@ -130,7 +130,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsCorePackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL;
+		return Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL;
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			featureOfInterestList = (FeatureOfInterestList)eResolveProxy(oldFeatureOfInterestList);
 			if (featureOfInterestList != oldFeatureOfInterestList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
 			}
 		}
 		return featureOfInterestList;
@@ -168,7 +168,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		FeatureOfInterestList oldFeatureOfInterestList = featureOfInterestList;
 		featureOfInterestList = newFeatureOfInterestList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
 	}
 
 	/**
@@ -182,7 +182,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickAbsolutePosition = (Tuple3d)eResolveProxy(oldPickAbsolutePosition);
 			if (pickAbsolutePosition != oldPickAbsolutePosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION, oldPickAbsolutePosition, pickAbsolutePosition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION, oldPickAbsolutePosition, pickAbsolutePosition));
 			}
 		}
 		return pickAbsolutePosition;
@@ -206,7 +206,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Tuple3d oldPickAbsolutePosition = pickAbsolutePosition;
 		pickAbsolutePosition = newPickAbsolutePosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION, oldPickAbsolutePosition, pickAbsolutePosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION, oldPickAbsolutePosition, pickAbsolutePosition));
 	}
 
 	/**
@@ -220,7 +220,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickRelativePosition = (Tuple3d)eResolveProxy(oldPickRelativePosition);
 			if (pickRelativePosition != oldPickRelativePosition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION, oldPickRelativePosition, pickRelativePosition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION, oldPickRelativePosition, pickRelativePosition));
 			}
 		}
 		return pickRelativePosition;
@@ -244,7 +244,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Tuple3d oldPickRelativePosition = pickRelativePosition;
 		pickRelativePosition = newPickRelativePosition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION, oldPickRelativePosition, pickRelativePosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION, oldPickRelativePosition, pickRelativePosition));
 	}
 
 	/**
@@ -258,7 +258,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickedNode = (Node)eResolveProxy(oldPickedNode);
 			if (pickedNode != oldPickedNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE, oldPickedNode, pickedNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE, oldPickedNode, pickedNode));
 			}
 		}
 		return pickedNode;
@@ -282,7 +282,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Node oldPickedNode = pickedNode;
 		pickedNode = newPickedNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE, oldPickedNode, pickedNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE, oldPickedNode, pickedNode));
 	}
 
 	/**
@@ -296,7 +296,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickAbsoluteNormal = (Tuple3d)eResolveProxy(oldPickAbsoluteNormal);
 			if (pickAbsoluteNormal != oldPickAbsoluteNormal) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL, oldPickAbsoluteNormal, pickAbsoluteNormal));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL, oldPickAbsoluteNormal, pickAbsoluteNormal));
 			}
 		}
 		return pickAbsoluteNormal;
@@ -320,7 +320,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Tuple3d oldPickAbsoluteNormal = pickAbsoluteNormal;
 		pickAbsoluteNormal = newPickAbsoluteNormal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL, oldPickAbsoluteNormal, pickAbsoluteNormal));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL, oldPickAbsoluteNormal, pickAbsoluteNormal));
 	}
 
 	/**
@@ -334,7 +334,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			pickRelativeNormal = (Tuple3d)eResolveProxy(oldPickRelativeNormal);
 			if (pickRelativeNormal != oldPickRelativeNormal) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL, oldPickRelativeNormal, pickRelativeNormal));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL, oldPickRelativeNormal, pickRelativeNormal));
 			}
 		}
 		return pickRelativeNormal;
@@ -358,7 +358,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Tuple3d oldPickRelativeNormal = pickRelativeNormal;
 		pickRelativeNormal = newPickRelativeNormal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL, oldPickRelativeNormal, pickRelativeNormal));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL, oldPickRelativeNormal, pickRelativeNormal));
 	}
 
 	/**
@@ -369,22 +369,22 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
 				if (resolve) return getFeatureOfInterestList();
 				return basicGetFeatureOfInterestList();
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
 				if (resolve) return getPickAbsolutePosition();
 				return basicGetPickAbsolutePosition();
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
 				if (resolve) return getPickRelativePosition();
 				return basicGetPickRelativePosition();
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
 				if (resolve) return getPickedNode();
 				return basicGetPickedNode();
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
 				if (resolve) return getPickAbsoluteNormal();
 				return basicGetPickAbsoluteNormal();
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				if (resolve) return getPickRelativeNormal();
 				return basicGetPickRelativeNormal();
 		}
@@ -399,22 +399,22 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
 				setFeatureOfInterestList((FeatureOfInterestList)newValue);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
 				setPickAbsolutePosition((Tuple3d)newValue);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
 				setPickRelativePosition((Tuple3d)newValue);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
 				setPickedNode((Node)newValue);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
 				setPickAbsoluteNormal((Tuple3d)newValue);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				setPickRelativeNormal((Tuple3d)newValue);
 				return;
 		}
@@ -429,22 +429,22 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
 				setFeatureOfInterestList((FeatureOfInterestList)null);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
 				setPickAbsolutePosition((Tuple3d)null);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
 				setPickRelativePosition((Tuple3d)null);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
 				setPickedNode((Node)null);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
 				setPickAbsoluteNormal((Tuple3d)null);
 				return;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				setPickRelativeNormal((Tuple3d)null);
 				return;
 		}
@@ -459,17 +459,17 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
 				return featureOfInterestList != null;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
 				return pickAbsolutePosition != null;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
 				return pickRelativePosition != null;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
 				return pickedNode != null;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
 				return pickAbsoluteNormal != null;
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				return pickRelativeNormal != null;
 		}
 		return super.eIsSet(featureID);

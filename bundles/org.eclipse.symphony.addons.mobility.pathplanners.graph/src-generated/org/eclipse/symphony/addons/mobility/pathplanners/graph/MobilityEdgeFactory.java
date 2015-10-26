@@ -23,7 +23,7 @@ import org.jgrapht.EdgeFactory;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdgeFactory#getCostFunctions <em>Cost Functions</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdgeFactory()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdgeFactory()
  * @model superTypes="org.eclipse.symphony.addons.mobility.pathplanners.graph.EdgeFactory<org.eclipse.symphony.common.geometry.data3d.CartesianPolygon, org.eclipse.symphony.addons.mobility.pathplanners.graph.MobilityEdge>"
  * @generated
  */
@@ -38,7 +38,7 @@ public interface MobilityEdgeFactory extends EObject, EdgeFactory<CartesianPolyg
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cost Functions</em>' reference list.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getMobilityEdgeFactory_CostFunctions()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getMobilityEdgeFactory_CostFunctions()
 	 * @model
 	 * @generated
 	 */

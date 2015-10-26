@@ -18,7 +18,7 @@ package org.eclipse.symphony.addons.mobility.pathplanners.graph;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceAndRoverFootprintCostFunction#getMaximumCrossSlope <em>Maximum Cross Slope</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface DistanceAndRoverFootprintCostFunction extends DistanceAndSlopes
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rover Foot Print Radius</em>' attribute.
 	 * @see #setRoverFootPrintRadius(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_RoverFootPrintRadius()
 	 * @model default="0.5" unique="false"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface DistanceAndRoverFootprintCostFunction extends DistanceAndSlopes
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Roughness</em>' attribute.
 	 * @see #setMaximumRoughness(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_MaximumRoughness()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_MaximumRoughness()
 	 * @model default="0.1" unique="false"
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface DistanceAndRoverFootprintCostFunction extends DistanceAndSlopes
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Cross Slope</em>' attribute.
 	 * @see #setMaximumCrossSlope(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceAndRoverFootprintCostFunction_MaximumCrossSlope()
 	 * @model default="0.488" unique="false"
 	 * @generated
 	 */

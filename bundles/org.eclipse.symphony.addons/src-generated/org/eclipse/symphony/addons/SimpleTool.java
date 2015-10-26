@@ -18,7 +18,7 @@ package org.eclipse.symphony.addons;
  *   <li>{@link org.eclipse.symphony.addons.SimpleTool#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimpleTool()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleTool()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface SimpleTool extends AbstractTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tool List</em>' container reference.
 	 * @see #setToolList(SimpleToolList)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimpleTool_ToolList()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleTool_ToolList()
 	 * @see org.eclipse.symphony.addons.SimpleToolList#getSimpleTools
 	 * @model opposite="simpleTools" transient="false"
 	 * @generated
@@ -63,7 +63,7 @@ public interface SimpleTool extends AbstractTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimpleTool_Active()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleTool_Active()
 	 * @model default="false" unique="false" transient="true"
 	 * @generated
 	 */
@@ -90,7 +90,7 @@ public interface SimpleTool extends AbstractTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimpleTool_Disposed()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleTool_Disposed()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated

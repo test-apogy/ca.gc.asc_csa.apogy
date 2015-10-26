@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.topology.TopologyPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.topology.addons.dynamics.TopologyDynamicsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='TopologyDynamics' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='TopologyDynamics' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.topology.addons.dynamics/src-generated' editDirectory='/org.eclipse.symphony.common.topology.addons.dynamics.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.addons'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='TopologyDynamics' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='TopologyDynamics' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.topology.addons.dynamics/src-generated' editDirectory='/org.eclipse.symphony.common.topology.addons.dynamics.edit/src-generated' basePackage='org.eclipse.symphony.common.topology.addons'"
  * @generated
  */
 public interface TopologyDynamicsPackage extends EPackage {

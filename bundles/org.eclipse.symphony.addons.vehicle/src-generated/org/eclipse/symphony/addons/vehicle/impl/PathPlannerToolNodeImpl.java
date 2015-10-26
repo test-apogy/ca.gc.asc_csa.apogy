@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPathBinding;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
@@ -269,7 +269,7 @@ public class PathPlannerToolNodeImpl extends AggregateGroupNodeImpl implements P
 		
 		if(newWayPointPath != null)
 		{
-			plannedPathLocal = PathsFactory.eINSTANCE.createWayPointPath();			
+			plannedPathLocal = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();			
 			binding = new WayPointPathBinding(newWayPointPath, plannedPathLocal);
 			getChildren().add(plannedPathLocal);
 		}

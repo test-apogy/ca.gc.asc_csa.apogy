@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.FeatureOfInterestPickingTool} object.
@@ -67,7 +67,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_featureOfInterestList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_featureOfInterestList_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 SymphonyToolsCorePackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST,
+				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST,
 				 true,
 				 false,
 				 true,
@@ -89,7 +89,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickAbsolutePosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickAbsolutePosition_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 SymphonyToolsCorePackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION,
+				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION,
 				 false,
 				 false,
 				 true,
@@ -111,7 +111,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickRelativePosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickRelativePosition_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 SymphonyToolsCorePackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION,
+				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION,
 				 true,
 				 false,
 				 true,
@@ -133,7 +133,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickedNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickedNode_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 SymphonyToolsCorePackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE,
+				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE,
 				 true,
 				 false,
 				 true,
@@ -155,7 +155,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickAbsoluteNormal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickAbsoluteNormal_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 SymphonyToolsCorePackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL,
+				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL,
 				 true,
 				 false,
 				 true,
@@ -177,7 +177,7 @@ public class FeatureOfInterestPickingToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestPickingTool_pickRelativeNormal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestPickingTool_pickRelativeNormal_feature", "_UI_FeatureOfInterestPickingTool_type"),
-				 SymphonyToolsCorePackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL,
+				 Symphony__AddonsPackage.Literals.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL,
 				 true,
 				 false,
 				 true,
@@ -238,12 +238,12 @@ public class FeatureOfInterestPickingToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeatureOfInterestPickingTool.class)) {
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
-			case SymphonyToolsCorePackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__FEATURE_OF_INTEREST_LIST:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_POSITION:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICKED_NODE:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_ABSOLUTE_NORMAL:
+			case Symphony__AddonsPackage.FEATURE_OF_INTEREST_PICKING_TOOL__PICK_RELATIVE_NORMAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

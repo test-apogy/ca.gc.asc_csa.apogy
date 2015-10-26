@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DToolNode#getTrajectory3DTool <em>Trajectory3 DTool</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DToolNode()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DToolNode()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Trajectory3DToolNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Trajectory3 DTool</em>' reference.
 	 * @see #setTrajectory3DTool(Trajectory3DTool)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DToolNode_Trajectory3DTool()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DToolNode_Trajectory3DTool()
 	 * @see org.eclipse.symphony.addons.Trajectory3DTool#getTrajectory3DToolNode
 	 * @model opposite="trajectory3DToolNode" transient="true"
 	 * @generated

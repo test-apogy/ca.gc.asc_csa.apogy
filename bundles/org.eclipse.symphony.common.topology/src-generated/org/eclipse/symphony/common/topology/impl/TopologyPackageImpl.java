@@ -1193,7 +1193,6 @@ public class TopologyPackageImpl extends EPackageImpl implements TopologyPackage
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Topology",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.topology/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.topology.edit/src-generated",

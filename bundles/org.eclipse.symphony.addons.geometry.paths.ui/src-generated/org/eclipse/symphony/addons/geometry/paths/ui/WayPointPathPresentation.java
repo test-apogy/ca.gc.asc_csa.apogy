@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation#getEndPointsRadius <em>End Points Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage#getWayPointPathPresentation()
+ * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getWayPointPathPresentation()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface WayPointPathPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Point Size</em>' attribute.
 	 * @see #setPointSize(int)
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage#getWayPointPathPresentation_PointSize()
+	 * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getWayPointPathPresentation_PointSize()
 	 * @model default="2" unique="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface WayPointPathPresentation extends NodePresentation {
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
 	 * @see org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode
 	 * @see #setPresentationMode(PathPresentationMode)
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage#getWayPointPathPresentation_PresentationMode()
+	 * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getWayPointPathPresentation_PresentationMode()
 	 * @model default="Points Lines" unique="false"
 	 * @generated
 	 */
@@ -92,7 +92,7 @@ public interface WayPointPathPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Points Radius</em>' attribute.
 	 * @see #setEndPointsRadius(float)
-	 * @see org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage#getWayPointPathPresentation_EndPointsRadius()
+	 * @see org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage#getWayPointPathPresentation_EndPointsRadius()
 	 * @model default="0.02" unique="false"
 	 * @generated
 	 */

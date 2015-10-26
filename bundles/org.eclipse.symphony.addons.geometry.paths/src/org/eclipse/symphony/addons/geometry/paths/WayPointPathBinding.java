@@ -161,7 +161,7 @@ public class WayPointPathBinding
 						int featureId = msg.getFeatureID(WayPointPath.class);
 						switch (featureId) 
 						{
-							case PathsPackage.WAY_POINT_PATH__POINTS:
+							case Symphony__AddonsGeometryPathsPackage.WAY_POINT_PATH__POINTS:
 								
 								int eventType = msg.getEventType();
 								switch (eventType) 

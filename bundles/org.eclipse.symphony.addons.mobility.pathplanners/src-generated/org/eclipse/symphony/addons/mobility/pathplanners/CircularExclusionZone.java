@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone#isInvertSamplingShape <em>Invert Sampling Shape</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getCircularExclusionZone()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getCircularExclusionZone()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface CircularExclusionZone extends ExclusionZone, CoordinatesSamplin
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getCircularExclusionZone_Radius()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getCircularExclusionZone_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface CircularExclusionZone extends ExclusionZone, CoordinatesSamplin
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invert Sampling Shape</em>' attribute.
 	 * @see #setInvertSamplingShape(boolean)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage#getCircularExclusionZone_InvertSamplingShape()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage#getCircularExclusionZone_InvertSamplingShape()
 	 * @model unique="false"
 	 * @generated
 	 */

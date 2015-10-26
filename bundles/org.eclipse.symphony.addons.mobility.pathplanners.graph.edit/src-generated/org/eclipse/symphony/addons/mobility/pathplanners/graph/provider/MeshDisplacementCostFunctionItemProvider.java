@@ -13,7 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.graph.MeshDisplacementCostFunction} object.
@@ -62,7 +62,7 @@ public class MeshDisplacementCostFunctionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MeshDisplacementCostFunction_planner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MeshDisplacementCostFunction_planner_feature", "_UI_MeshDisplacementCostFunction_type"),
-				 PathplannersGraphPackage.Literals.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER,
+				 Symphony__AddonsMobilityPathplannersGraphPackage.Literals.MESH_DISPLACEMENT_COST_FUNCTION__PLANNER,
 				 true,
 				 false,
 				 true,

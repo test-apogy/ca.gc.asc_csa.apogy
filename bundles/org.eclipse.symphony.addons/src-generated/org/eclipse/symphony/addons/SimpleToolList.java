@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  *   <li>{@link org.eclipse.symphony.addons.SimpleToolList#getSimpleTools <em>Simple Tools</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimpleToolList()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleToolList()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface SimpleToolList extends AbstractToolsListContainer {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Simple Tools</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getSimpleToolList_SimpleTools()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSimpleToolList_SimpleTools()
 	 * @see org.eclipse.symphony.addons.SimpleTool#getToolList
 	 * @model opposite="toolList" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

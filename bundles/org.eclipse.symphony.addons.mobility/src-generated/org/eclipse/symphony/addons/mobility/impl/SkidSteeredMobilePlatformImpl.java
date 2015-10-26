@@ -8,7 +8,7 @@ package org.eclipse.symphony.addons.mobility.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.mobility.MobilityPackage;
+import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
 import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
 
 /**
@@ -229,7 +229,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM;
+		return Symphony__AddonsMobilityPackage.Literals.SKID_STEERED_MOBILE_PLATFORM;
 	}
 
 	/**
@@ -250,7 +250,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldCommandedRightWheelsVelocity = commandedRightWheelsVelocity;
 		commandedRightWheelsVelocity = newCommandedRightWheelsVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY, oldCommandedRightWheelsVelocity, commandedRightWheelsVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY, oldCommandedRightWheelsVelocity, commandedRightWheelsVelocity));
 	}
 
 	/**
@@ -273,7 +273,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldActualRightWheelsVelocity = actualRightWheelsVelocity;
 		actualRightWheelsVelocity = newActualRightWheelsVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY, oldActualRightWheelsVelocity, actualRightWheelsVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY, oldActualRightWheelsVelocity, actualRightWheelsVelocity));
 	}
 
 	/**
@@ -294,7 +294,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldCommandedLeftWheelsVelocity = commandedLeftWheelsVelocity;
 		commandedLeftWheelsVelocity = newCommandedLeftWheelsVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY, oldCommandedLeftWheelsVelocity, commandedLeftWheelsVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY, oldCommandedLeftWheelsVelocity, commandedLeftWheelsVelocity));
 	}
 
 	/**
@@ -317,7 +317,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldActualLeftWheelsVelocity = actualLeftWheelsVelocity;
 		actualLeftWheelsVelocity = newActualLeftWheelsVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY, oldActualLeftWheelsVelocity, actualLeftWheelsVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY, oldActualLeftWheelsVelocity, actualLeftWheelsVelocity));
 	}
 
 	/**
@@ -340,7 +340,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldCommandedAngularVelocity = commandedAngularVelocity;
 		commandedAngularVelocity = newCommandedAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY, oldCommandedAngularVelocity, commandedAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY, oldCommandedAngularVelocity, commandedAngularVelocity));
 	}
 
 	/**
@@ -363,7 +363,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldActualAngularVelocity = actualAngularVelocity;
 		actualAngularVelocity = newActualAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY, oldActualAngularVelocity, actualAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY, oldActualAngularVelocity, actualAngularVelocity));
 	}
 
 	/**
@@ -386,7 +386,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldCommandedTranslationVelocity = commandedTranslationVelocity;
 		commandedTranslationVelocity = newCommandedTranslationVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY, oldCommandedTranslationVelocity, commandedTranslationVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY, oldCommandedTranslationVelocity, commandedTranslationVelocity));
 	}
 
 	/**
@@ -409,7 +409,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldActualTranslationVelocity = actualTranslationVelocity;
 		actualTranslationVelocity = newActualTranslationVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY, oldActualTranslationVelocity, actualTranslationVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY, oldActualTranslationVelocity, actualTranslationVelocity));
 	}
 
 	/**
@@ -432,7 +432,7 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 		double oldEffectiveSteeringWidth = effectiveSteeringWidth;
 		effectiveSteeringWidth = newEffectiveSteeringWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH, oldEffectiveSteeringWidth, effectiveSteeringWidth));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH, oldEffectiveSteeringWidth, effectiveSteeringWidth));
 	}
 
 	/**
@@ -443,23 +443,23 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
 				return getCommandedRightWheelsVelocity();
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
 				return getActualRightWheelsVelocity();
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
 				return getCommandedLeftWheelsVelocity();
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
 				return getActualLeftWheelsVelocity();
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
 				return getCommandedAngularVelocity();
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
 				return getActualAngularVelocity();
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
 				return getCommandedTranslationVelocity();
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
 				return getActualTranslationVelocity();
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
 				return getEffectiveSteeringWidth();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -473,31 +473,31 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
 				setCommandedRightWheelsVelocity((Double)newValue);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
 				setActualRightWheelsVelocity((Double)newValue);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
 				setCommandedLeftWheelsVelocity((Double)newValue);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
 				setActualLeftWheelsVelocity((Double)newValue);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
 				setCommandedAngularVelocity((Double)newValue);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
 				setActualAngularVelocity((Double)newValue);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
 				setCommandedTranslationVelocity((Double)newValue);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
 				setActualTranslationVelocity((Double)newValue);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
 				setEffectiveSteeringWidth((Double)newValue);
 				return;
 		}
@@ -512,31 +512,31 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
 				setCommandedRightWheelsVelocity(COMMANDED_RIGHT_WHEELS_VELOCITY_EDEFAULT);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
 				setActualRightWheelsVelocity(ACTUAL_RIGHT_WHEELS_VELOCITY_EDEFAULT);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
 				setCommandedLeftWheelsVelocity(COMMANDED_LEFT_WHEELS_VELOCITY_EDEFAULT);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
 				setActualLeftWheelsVelocity(ACTUAL_LEFT_WHEELS_VELOCITY_EDEFAULT);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
 				setCommandedAngularVelocity(COMMANDED_ANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
 				setActualAngularVelocity(ACTUAL_ANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
 				setCommandedTranslationVelocity(COMMANDED_TRANSLATION_VELOCITY_EDEFAULT);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
 				setActualTranslationVelocity(ACTUAL_TRANSLATION_VELOCITY_EDEFAULT);
 				return;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
 				setEffectiveSteeringWidth(EFFECTIVE_STEERING_WIDTH_EDEFAULT);
 				return;
 		}
@@ -551,23 +551,23 @@ public class SkidSteeredMobilePlatformImpl extends MobilePlatformImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_RIGHT_WHEELS_VELOCITY:
 				return commandedRightWheelsVelocity != COMMANDED_RIGHT_WHEELS_VELOCITY_EDEFAULT;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_RIGHT_WHEELS_VELOCITY:
 				return actualRightWheelsVelocity != ACTUAL_RIGHT_WHEELS_VELOCITY_EDEFAULT;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_LEFT_WHEELS_VELOCITY:
 				return commandedLeftWheelsVelocity != COMMANDED_LEFT_WHEELS_VELOCITY_EDEFAULT;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_LEFT_WHEELS_VELOCITY:
 				return actualLeftWheelsVelocity != ACTUAL_LEFT_WHEELS_VELOCITY_EDEFAULT;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_ANGULAR_VELOCITY:
 				return commandedAngularVelocity != COMMANDED_ANGULAR_VELOCITY_EDEFAULT;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_ANGULAR_VELOCITY:
 				return actualAngularVelocity != ACTUAL_ANGULAR_VELOCITY_EDEFAULT;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__COMMANDED_TRANSLATION_VELOCITY:
 				return commandedTranslationVelocity != COMMANDED_TRANSLATION_VELOCITY_EDEFAULT;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__ACTUAL_TRANSLATION_VELOCITY:
 				return actualTranslationVelocity != ACTUAL_TRANSLATION_VELOCITY_EDEFAULT;
-			case MobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
+			case Symphony__AddonsMobilityPackage.SKID_STEERED_MOBILE_PLATFORM__EFFECTIVE_STEERING_WIDTH:
 				return effectiveSteeringWidth != EFFECTIVE_STEERING_WIDTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

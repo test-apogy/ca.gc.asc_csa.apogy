@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation#getHeight <em>Height</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage#getCircularExclusionZonePresentation()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage#getCircularExclusionZonePresentation()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface CircularExclusionZonePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transparency</em>' attribute.
 	 * @see #setTransparency(float)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage#getCircularExclusionZonePresentation_Transparency()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage#getCircularExclusionZonePresentation_Transparency()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface CircularExclusionZonePresentation extends NodePresentation {
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #setPresentationMode(MeshPresentationMode)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage#getCircularExclusionZonePresentation_PresentationMode()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage#getCircularExclusionZonePresentation_PresentationMode()
 	 * @model default="SURFACE" unique="false"
 	 * @generated
 	 */
@@ -92,7 +92,7 @@ public interface CircularExclusionZonePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(double)
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.PathPlannersUIPackage#getCircularExclusionZonePresentation_Height()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage#getCircularExclusionZonePresentation_Height()
 	 * @model default="10.0" unique="false"
 	 * @generated
 	 */

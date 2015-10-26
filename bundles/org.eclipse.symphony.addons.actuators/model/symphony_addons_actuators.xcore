@@ -1,9 +1,9 @@
-@GenModel(prefix="MRTActuators",
+@GenModel(prefix="Symphony__AddonsActuators",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2014 Copyrights (c)",
-		  modelName="MRTActuators",
+		  modelName="Symphony__AddonsActuators",
 		  suppressGenModelAnnotations="false")
 		  
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.actuators/src-generated")

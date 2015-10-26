@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.addons.actuators.PanTiltUnit;
 
 /**
@@ -122,7 +122,7 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
   @Override
   protected EClass eStaticClass()
   {
-		return MRTActuatorsPackage.Literals.PAN_TILT_UNIT;
+		return Symphony__AddonsActuatorsPackage.Literals.PAN_TILT_UNIT;
 	}
 
   /**
@@ -145,7 +145,7 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
 		double oldCurrentPanAngle = currentPanAngle;
 		currentPanAngle = newCurrentPanAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE, oldCurrentPanAngle, currentPanAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE, oldCurrentPanAngle, currentPanAngle));
 	}
 
   /**
@@ -168,7 +168,7 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
 		double oldCurrentTiltAngle = currentTiltAngle;
 		currentTiltAngle = newCurrentTiltAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE, oldCurrentTiltAngle, currentTiltAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE, oldCurrentTiltAngle, currentTiltAngle));
 	}
 
   /**
@@ -191,7 +191,7 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
 		double oldCommandedPanAngle = commandedPanAngle;
 		commandedPanAngle = newCommandedPanAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE, oldCommandedPanAngle, commandedPanAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE, oldCommandedPanAngle, commandedPanAngle));
 	}
 
   /**
@@ -214,7 +214,7 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
 		double oldCommandedTiltAngle = commandedTiltAngle;
 		commandedTiltAngle = newCommandedTiltAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE, oldCommandedTiltAngle, commandedTiltAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE, oldCommandedTiltAngle, commandedTiltAngle));
 	}
 
   /**
@@ -358,13 +358,13 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
 				return getCurrentPanAngle();
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
 				return getCurrentTiltAngle();
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
 				return getCommandedPanAngle();
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
 				return getCommandedTiltAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -379,16 +379,16 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
 				setCurrentPanAngle((Double)newValue);
 				return;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
 				setCurrentTiltAngle((Double)newValue);
 				return;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
 				setCommandedPanAngle((Double)newValue);
 				return;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
 				setCommandedTiltAngle((Double)newValue);
 				return;
 		}
@@ -404,16 +404,16 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
 				setCurrentPanAngle(CURRENT_PAN_ANGLE_EDEFAULT);
 				return;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
 				setCurrentTiltAngle(CURRENT_TILT_ANGLE_EDEFAULT);
 				return;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
 				setCommandedPanAngle(COMMANDED_PAN_ANGLE_EDEFAULT);
 				return;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
 				setCommandedTiltAngle(COMMANDED_TILT_ANGLE_EDEFAULT);
 				return;
 		}
@@ -429,13 +429,13 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_PAN_ANGLE:
 				return currentPanAngle != CURRENT_PAN_ANGLE_EDEFAULT;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__CURRENT_TILT_ANGLE:
 				return currentTiltAngle != CURRENT_TILT_ANGLE_EDEFAULT;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_PAN_ANGLE:
 				return commandedPanAngle != COMMANDED_PAN_ANGLE_EDEFAULT;
-			case MRTActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT__COMMANDED_TILT_ANGLE:
 				return commandedTiltAngle != COMMANDED_TILT_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -450,27 +450,27 @@ public abstract class PanTiltUnitImpl extends AbstractActuatorImpl implements Pa
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case MRTActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_PAN_ANGLE:
 				return getMaximumPanAngle();
-			case MRTActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_PAN_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_PAN_ANGLE:
 				return getMinimumPanAngle();
-			case MRTActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MAXIMUM_TILT_ANGLE:
 				return getMaximumTiltAngle();
-			case MRTActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_TILT_ANGLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___GET_MINIMUM_TILT_ANGLE:
 				return getMinimumTiltAngle();
-			case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN_TILT__DOUBLE_DOUBLE:
 				return moveToPanTilt((Double)arguments.get(0), (Double)arguments.get(1));
-			case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN__DOUBLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_PAN__DOUBLE:
 				return moveToPan((Double)arguments.get(0));
-			case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_TILT__DOUBLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_TO_TILT__DOUBLE:
 				return moveToTilt((Double)arguments.get(0));
-			case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN_TILT__DOUBLE_DOUBLE:
 				return moveByPanTilt((Double)arguments.get(0), (Double)arguments.get(1));
-			case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN__DOUBLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_PAN__DOUBLE:
 				return moveByPan((Double)arguments.get(0));
-			case MRTActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_TILT__DOUBLE:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___MOVE_BY_TILT__DOUBLE:
 				return moveByTilt((Double)arguments.get(0));
-			case MRTActuatorsPackage.PAN_TILT_UNIT___STOP_MOTION:
+			case Symphony__AddonsActuatorsPackage.PAN_TILT_UNIT___STOP_MOTION:
 				return stopMotion();
 		}
 		return super.eInvoke(operationID, arguments);

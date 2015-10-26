@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getWayPoint()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getWayPoint()
  * @model
  * @generated
  */

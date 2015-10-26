@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.addons.actuators.MRTActuatorsPackage;
+import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.addons.sensors.fov.FovPackage;
 import org.eclipse.symphony.addons.sensors.imaging.MRTSensorsImagingPackage;
 import org.eclipse.symphony.examples.camera.Camera;
@@ -130,7 +130,7 @@ public class EMFEcoreExampleCameraPackageImpl extends EPackageImpl implements EM
 
 		// Initialize simple dependencies
 		MRTSensorsImagingPackage.eINSTANCE.eClass();
-		MRTActuatorsPackage.eINSTANCE.eClass();
+		Symphony__AddonsActuatorsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theEMFEcoreExampleCameraPackage.createPackageContents();
@@ -338,7 +338,7 @@ public class EMFEcoreExampleCameraPackageImpl extends EPackageImpl implements EM
 		MRTSensorsImagingPackage theMRTSensorsImagingPackage = (MRTSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(MRTSensorsImagingPackage.eNS_URI);
 		FovPackage theFovPackage = (FovPackage)EPackage.Registry.INSTANCE.getEPackage(FovPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		MRTActuatorsPackage theMRTActuatorsPackage = (MRTActuatorsPackage)EPackage.Registry.INSTANCE.getEPackage(MRTActuatorsPackage.eNS_URI);
+		Symphony__AddonsActuatorsPackage theSymphony__AddonsActuatorsPackage = (Symphony__AddonsActuatorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsActuatorsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -350,7 +350,7 @@ public class EMFEcoreExampleCameraPackageImpl extends EPackageImpl implements EM
 		cameraStubEClass.getESuperTypes().add(this.getCamera());
 		cameraSimulatedEClass.getESuperTypes().add(this.getCamera());
 		ptuCameraEClass.getESuperTypes().add(this.getCamera());
-		ptuCameraEClass.getESuperTypes().add(theMRTActuatorsPackage.getPanTiltUnit());
+		ptuCameraEClass.getESuperTypes().add(theSymphony__AddonsActuatorsPackage.getPanTiltUnit());
 		ptuCameraStubEClass.getESuperTypes().add(this.getCameraStub());
 		ptuCameraStubEClass.getESuperTypes().add(this.getPTUCamera());
 		ptuCameraSimulatedEClass.getESuperTypes().add(this.getCameraSimulated());

@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.Ruler3dToolNode;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 /**
@@ -62,7 +62,7 @@ public class Ruler3dToolNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Ruler3dToolNode_ruler3DTool_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3dToolNode_ruler3DTool_feature", "_UI_Ruler3dToolNode_type"),
-				 SymphonyToolsCorePackage.Literals.RULER3D_TOOL_NODE__RULER3_DTOOL,
+				 Symphony__AddonsPackage.Literals.RULER3D_TOOL_NODE__RULER3_DTOOL,
 				 true,
 				 false,
 				 true,

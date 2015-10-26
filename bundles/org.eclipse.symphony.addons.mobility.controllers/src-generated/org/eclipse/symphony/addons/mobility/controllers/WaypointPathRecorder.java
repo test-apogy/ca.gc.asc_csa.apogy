@@ -11,7 +11,7 @@ import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getWaypointPathRecorder()
+ * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getWaypointPathRecorder()
  * @model
  * @generated
  */

@@ -20,7 +20,7 @@ import org.eclipse.symphony.addons.mobility.SkidSteeredMobilePlatform;
  *   <li>{@link org.eclipse.symphony.addons.mobility.controllers.SkidSteeredPlatformPathFollower#getMaximumLinearVelocity <em>Maximum Linear Velocity</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getSkidSteeredPlatformPathFollower()
+ * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getSkidSteeredPlatformPathFollower()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface SkidSteeredPlatformPathFollower<PlateformType extends SkidSteer
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Angular Velocity</em>' attribute.
 	 * @see #setMaximumAngularVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getSkidSteeredPlatformPathFollower_MaximumAngularVelocity()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getSkidSteeredPlatformPathFollower_MaximumAngularVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface SkidSteeredPlatformPathFollower<PlateformType extends SkidSteer
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Linear Velocity</em>' attribute.
 	 * @see #setMaximumLinearVelocity(double)
-	 * @see org.eclipse.symphony.addons.mobility.controllers.ControllersPackage#getSkidSteeredPlatformPathFollower_MaximumLinearVelocity()
+	 * @see org.eclipse.symphony.addons.mobility.controllers.Symphony__AddonsMobilityControllersPackage#getSkidSteeredPlatformPathFollower_MaximumLinearVelocity()
 	 * @model unique="false"
 	 * @generated
 	 */

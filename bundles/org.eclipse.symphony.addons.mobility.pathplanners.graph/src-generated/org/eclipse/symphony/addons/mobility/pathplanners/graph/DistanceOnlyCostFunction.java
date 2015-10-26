@@ -10,7 +10,7 @@ package org.eclipse.symphony.addons.mobility.pathplanners.graph;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getDistanceOnlyCostFunction()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getDistanceOnlyCostFunction()
  * @model
  * @generated
  */

@@ -16,7 +16,7 @@ package org.eclipse.symphony.addons.geometry.paths;
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator#getMaximumDistanceInterval <em>Maximum Distance Interval</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getSegmentWayPointPathInterpolator()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getSegmentWayPointPathInterpolator()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface SegmentWayPointPathInterpolator extends WayPointPathInterpolato
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum Distance Interval</em>' attribute.
 	 * @see #setMaximumDistanceInterval(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getSegmentWayPointPathInterpolator_MaximumDistanceInterval()
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getSegmentWayPointPathInterpolator_MaximumDistanceInterval()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

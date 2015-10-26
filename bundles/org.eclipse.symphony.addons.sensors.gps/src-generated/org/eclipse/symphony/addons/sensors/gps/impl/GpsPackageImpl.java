@@ -951,7 +951,6 @@ public class GpsPackageImpl extends EPackageImpl implements GpsPackage {
 			 "multipleEditorPages", "false",
 			 "copyrightText", "Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
 			 "modelName", "Gps",
-			 "operationReflection", "true",
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.addons.sensors.gps/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.addons.sensors.gps.edit/src-generated",

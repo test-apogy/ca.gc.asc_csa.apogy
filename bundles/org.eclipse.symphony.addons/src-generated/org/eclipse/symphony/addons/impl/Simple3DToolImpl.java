@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.Simple3DTool;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.SymphonyEnvironment;
@@ -77,7 +77,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyToolsCorePackage.Literals.SIMPLE3_DTOOL;
+		return Symphony__AddonsPackage.Literals.SIMPLE3_DTOOL;
 	}
 		
 	/**
@@ -98,7 +98,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE, oldVisible, visible));
 	}
 
 	/**
@@ -112,7 +112,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 			rootNode = (Node)eResolveProxy(oldRootNode);
 			if (rootNode != oldRootNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyToolsCorePackage.SIMPLE3_DTOOL__ROOT_NODE, oldRootNode, rootNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE, oldRootNode, rootNode));
 			}
 		}
 		return rootNode;
@@ -136,7 +136,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 		Node oldRootNode = rootNode;
 		rootNode = newRootNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyToolsCorePackage.SIMPLE3_DTOOL__ROOT_NODE, oldRootNode, rootNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE, oldRootNode, rootNode));
 	}
 
 	/**
@@ -158,9 +158,9 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				return isVisible();
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__ROOT_NODE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
 				if (resolve) return getRootNode();
 				return basicGetRootNode();
 		}
@@ -175,10 +175,10 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__ROOT_NODE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
 				setRootNode((Node)newValue);
 				return;
 		}
@@ -193,10 +193,10 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__ROOT_NODE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
 				setRootNode((Node)null);
 				return;
 		}
@@ -211,9 +211,9 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL__ROOT_NODE:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL__ROOT_NODE:
 				return rootNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -227,7 +227,7 @@ public abstract class Simple3DToolImpl extends SimpleToolImpl implements Simple3
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyToolsCorePackage.SIMPLE3_DTOOL___SELECTION_CHANGED__NODESELECTION:
+			case Symphony__AddonsPackage.SIMPLE3_DTOOL___SELECTION_CHANGED__NODESELECTION:
 				selectionChanged((NodeSelection)arguments.get(0));
 				return null;
 		}

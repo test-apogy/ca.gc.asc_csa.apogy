@@ -12,7 +12,7 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "org.eclipse.symphony.addons.geometry.paths" 
-       class = "org.eclipse.symphony.addons.geometry.paths.PathsPackage"
+       class = "org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage"
        genModel = "model/symphony_addons_geometry_paths.xcore" /> 
   </extension>
 

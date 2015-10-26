@@ -1,8 +1,8 @@
-@GenModel(prefix="Controllers",
+@GenModel(prefix="Symphony__AddonsMobilityControllers",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)",
-		  modelName="Controllers")
+		  modelName="Symphony__AddonsMobilityControllers")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.mobility.controllers/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.addons.mobility.controllers.edit/src-generated")
 

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.geometry.data3d.las.LasFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Las' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Las' operationReflection='true' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d.las/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.las.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry.data3d'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Las' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Las' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d.las/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.las.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry.data3d'"
  * @generated
  */
 public interface LasPackage extends EPackage {

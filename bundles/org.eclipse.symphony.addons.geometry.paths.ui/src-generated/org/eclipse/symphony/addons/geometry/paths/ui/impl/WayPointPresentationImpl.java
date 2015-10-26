@@ -8,7 +8,7 @@ package org.eclipse.symphony.addons.geometry.paths.ui.impl;
 
 import javax.vecmath.Point3d;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage;
+import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
@@ -41,7 +41,7 @@ public class WayPointPresentationImpl extends NodePresentationImpl implements Wa
 	@Override
 	protected EClass eStaticClass()
 	{
-		return PathsUIPackage.Literals.WAY_POINT_PRESENTATION;
+		return Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PRESENTATION;
 	}
 	
 	@Override

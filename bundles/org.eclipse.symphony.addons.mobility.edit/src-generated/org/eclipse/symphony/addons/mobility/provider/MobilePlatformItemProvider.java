@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.mobility.MobilePlatform;
-import org.eclipse.symphony.addons.mobility.MobilityFactory;
-import org.eclipse.symphony.addons.mobility.MobilityPackage;
+import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityFactory;
+import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
@@ -66,7 +66,7 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_moving_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_moving_feature", "_UI_MobilePlatform_type"),
-				 MobilityPackage.Literals.MOBILE_PLATFORM__MOVING,
+				 Symphony__AddonsMobilityPackage.Literals.MOBILE_PLATFORM__MOVING,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_mobilePlatformStatus_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_mobilePlatformStatus_feature", "_UI_MobilePlatform_type"),
-				 MobilityPackage.Literals.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS,
+				 Symphony__AddonsMobilityPackage.Literals.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS,
 				 true,
 				 false,
 				 false,
@@ -134,8 +134,8 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobilePlatform.class)) {
-			case MobilityPackage.MOBILE_PLATFORM__MOVING:
-			case MobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOVING:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -157,22 +157,22 @@ public class MobilePlatformItemProvider extends AggregateGroupNodeItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MobilityFactory.eINSTANCE.createMobilePlatform()));
+				 Symphony__AddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 MobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
+				 Symphony__AddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 MobilityFactory.eINSTANCE.createMobilePlatform()));
+				 Symphony__AddonsMobilityFactory.eINSTANCE.createMobilePlatform()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(TopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 MobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
+				 Symphony__AddonsMobilityFactory.eINSTANCE.createSkidSteeredMobilePlatform()));
 	}
 
 	/**

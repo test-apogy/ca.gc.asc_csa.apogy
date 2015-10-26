@@ -14,7 +14,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.addons.geometry.paths.ui"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory"
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -27,19 +27,19 @@
       <!-- @generated symphony_addons_geometry_paths_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.PathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -15,8 +15,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.PathsFactory;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersFactory;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
 import org.eclipse.symphony.addons.provider.AbstractTwoPoints3DToolItemProvider;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
@@ -287,12 +287,12 @@ public class PathPlannerToolItemProvider extends AbstractTwoPoints3DToolItemProv
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__PATH_PLANNER,
-				 PathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
+				 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createMeshWayPointPathPlanner()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SymphonyToolsVehiclePackage.Literals.PATH_PLANNER_TOOL__PLANNED_PATH,
-				 PathsFactory.eINSTANCE.createWayPointPath()));
+				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 	}
 
 }

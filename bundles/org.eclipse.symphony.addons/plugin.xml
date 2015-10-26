@@ -12,7 +12,7 @@
       <!-- @generated symphony_tools_core -->
       <package
             uri="org.eclipse.symphony.addons"
-            class="org.eclipse.symphony.addons.SymphonyToolsCorePackage"
+            class="org.eclipse.symphony.addons.Symphony__AddonsPackage"
             genModel="model/symphony_addons.xcore"/>
    </extension>
 

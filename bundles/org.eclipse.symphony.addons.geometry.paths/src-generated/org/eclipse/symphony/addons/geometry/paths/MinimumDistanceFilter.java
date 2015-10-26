@@ -16,7 +16,7 @@ package org.eclipse.symphony.addons.geometry.paths;
  *   <li>{@link org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter#getMinimumDistance <em>Minimum Distance</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getMinimumDistanceFilter()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getMinimumDistanceFilter()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface MinimumDistanceFilter extends WayPointPathFilter {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum Distance</em>' attribute.
 	 * @see #setMinimumDistance(double)
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getMinimumDistanceFilter_MinimumDistance()
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getMinimumDistanceFilter_MinimumDistance()
 	 * @model unique="false"
 	 * @generated
 	 */

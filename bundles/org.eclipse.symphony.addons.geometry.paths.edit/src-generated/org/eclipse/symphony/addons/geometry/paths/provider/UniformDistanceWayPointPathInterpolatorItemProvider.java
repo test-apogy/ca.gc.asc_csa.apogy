@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator;
 
 /**
@@ -70,7 +70,7 @@ public class UniformDistanceWayPointPathInterpolatorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_UniformDistanceWayPointPathInterpolator_distanceInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_UniformDistanceWayPointPathInterpolator_distanceInterval_feature", "_UI_UniformDistanceWayPointPathInterpolator_type"),
-				 PathsPackage.Literals.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL,
+				 Symphony__AddonsGeometryPathsPackage.Literals.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class UniformDistanceWayPointPathInterpolatorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UniformDistanceWayPointPathInterpolator.class)) {
-			case PathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
+			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

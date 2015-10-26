@@ -17,7 +17,7 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.addons.geometry.paths.ui.Activator;
 import org.eclipse.symphony.addons.geometry.paths.ui.PathPresentationMode;
-import org.eclipse.symphony.addons.geometry.paths.ui.PathsUIPackage;
+import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathSceneObject;
 import org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesConstants;
@@ -128,7 +128,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	@Override
 	protected EClass eStaticClass()
 	{
-		return PathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION;
+		return Symphony__AddonsGeometryPathsUIPackage.Literals.WAY_POINT_PATH_PRESENTATION;
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 		int oldPointSize = pointSize;
 		pointSize = newPointSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE, oldPointSize, pointSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE, oldPointSize, pointSize));
 	}
 
 	/**
@@ -174,7 +174,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 		PathPresentationMode oldPresentationMode = presentationMode;
 		presentationMode = newPresentationMode == null ? PRESENTATION_MODE_EDEFAULT : newPresentationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
 	}
 
 	/**
@@ -195,7 +195,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 		float oldEndPointsRadius = endPointsRadius;
 		endPointsRadius = newEndPointsRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS, oldEndPointsRadius, endPointsRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS, oldEndPointsRadius, endPointsRadius));
 	}
 
 	/**
@@ -207,11 +207,11 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 				return getPointSize();
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 				return getPresentationMode();
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				return getEndPointsRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -226,13 +226,13 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 				setPointSize((Integer)newValue);
 				return;
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode((PathPresentationMode)newValue);
 				return;
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				setEndPointsRadius((Float)newValue);
 				return;
 		}
@@ -248,13 +248,13 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 				setPointSize(POINT_SIZE_EDEFAULT);
 				return;
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode(PRESENTATION_MODE_EDEFAULT);
 				return;
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				setEndPointsRadius(END_POINTS_RADIUS_EDEFAULT);
 				return;
 		}
@@ -270,11 +270,11 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 				return pointSize != POINT_SIZE_EDEFAULT;
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 				return presentationMode != PRESENTATION_MODE_EDEFAULT;
-			case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+			case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 				return endPointsRadius != END_POINTS_RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -312,15 +312,15 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 			
 			switch (featureId) 
 			{
-				case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
+				case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__PRESENTATION_MODE:
 					wayPointPathSceneObject.setPathPresentationMode(this.presentationMode);		
 				break;
 				
-				case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
+				case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__POINT_SIZE:
 					wayPointPathSceneObject.setPointSize(this.pointSize);			
 				break;
 
-				case PathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
+				case Symphony__AddonsGeometryPathsUIPackage.WAY_POINT_PATH_PRESENTATION__END_POINTS_RADIUS:
 					wayPointPathSceneObject.setEndPointsRadius(this.endPointsRadius);		
 				break;
 				

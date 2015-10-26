@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.processors.Processor;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.addons.geometry.paths.PathsPackage#getWayPointPathInterpolator()
+ * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage#getWayPointPathInterpolator()
  * @model abstract="true"
  * @generated
  */

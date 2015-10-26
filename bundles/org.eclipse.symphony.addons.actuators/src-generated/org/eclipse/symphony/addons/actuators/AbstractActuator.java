@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.addons.actuators.AbstractActuator#getActuatorStatus <em>Actuator Status</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getAbstractActuator()
+ * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getAbstractActuator()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface AbstractActuator extends Node
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Moving</em>' attribute.
 	 * @see #setMoving(boolean)
-	 * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getAbstractActuator_Moving()
+	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getAbstractActuator_Moving()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION'"
 	 * @generated
@@ -64,7 +64,7 @@ public interface AbstractActuator extends Node
 	 * @return the value of the '<em>Actuator Status</em>' attribute.
 	 * @see org.eclipse.symphony.addons.actuators.ActuatorStatus
 	 * @see #setActuatorStatus(ActuatorStatus)
-	 * @see org.eclipse.symphony.addons.actuators.MRTActuatorsPackage#getAbstractActuator_ActuatorStatus()
+	 * @see org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage#getAbstractActuator_ActuatorStatus()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='ACTUATOR_INFORMATION'"
 	 * @generated

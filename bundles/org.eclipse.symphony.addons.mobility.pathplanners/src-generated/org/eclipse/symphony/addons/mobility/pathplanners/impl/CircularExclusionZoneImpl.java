@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathplannersPackage;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSamplingShape;
 import org.eclipse.symphony.common.geometry.data.DataPackage;
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
@@ -106,7 +106,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE;
+		return Symphony__AddonsMobilityPathplannersPackage.Literals.CIRCULAR_EXCLUSION_ZONE;
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS, oldRadius, radius));
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		boolean oldInvertSamplingShape = invertSamplingShape;
 		invertSamplingShape = newInvertSamplingShape;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE, oldInvertSamplingShape, invertSamplingShape));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE, oldInvertSamplingShape, invertSamplingShape));
 	}
 
 	/**
@@ -220,9 +220,9 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 				return getRadius();
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				return isInvertSamplingShape();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -236,10 +236,10 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 				setRadius((Double)newValue);
 				return;
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				setInvertSamplingShape((Boolean)newValue);
 				return;
 		}
@@ -254,10 +254,10 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				setInvertSamplingShape(INVERT_SAMPLING_SHAPE_EDEFAULT);
 				return;
 		}
@@ -272,9 +272,9 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__RADIUS:
 				return radius != RADIUS_EDEFAULT;
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE:
 				return invertSamplingShape != INVERT_SAMPLING_SHAPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -294,13 +294,13 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		}
 		if (baseClass == CoordinatesSamplingShape.class) {
 			switch (baseOperationID) {
-				case DataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES: return PathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_INSIDE__COORDINATES;
+				case DataPackage.COORDINATES_SAMPLING_SHAPE___IS_INSIDE__COORDINATES: return Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_INSIDE__COORDINATES;
 				default: return -1;
 			}
 		}
 		if (baseClass == PolygonSamplingShape.class) {
 			switch (baseOperationID) {
-				case DataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return PathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON;
+				case DataPackage.POLYGON_SAMPLING_SHAPE___IS_POLYGON_INSIDE__POLYGON: return Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON;
 				default: return -1;
 			}
 		}
@@ -316,7 +316,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON:
+			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE___IS_POLYGON_INSIDE__POLYGON:
 				return isPolygonInside((CartesianTriangle)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

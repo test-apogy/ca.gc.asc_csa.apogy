@@ -28,10 +28,10 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.symphony.addons.SimpleToolList;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
-import org.eclipse.symphony.addons.geometry.paths.util.PathsSwitch;
-import org.eclipse.symphony.addons.util.SymphonyToolsCoreSwitch;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.util.Symphony__AddonsGeometryPathsSwitch;
+import org.eclipse.symphony.addons.util.Symphony__AddonsSwitch;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.SymphonyToolsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.util.SymphonyToolsVehicleAdapterFactory;
@@ -870,19 +870,19 @@ public class SymphonyToolsVehicleItemProviderAdapterFactory extends SymphonyTool
   }
 
   /**
-	 * A child creation extender for the {@link SymphonyToolsCorePackage}.
+	 * A child creation extender for the {@link Symphony__AddonsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class SymphonyToolsCoreChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__AddonsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends SymphonyToolsCoreSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__AddonsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -918,12 +918,12 @@ public class SymphonyToolsVehicleItemProviderAdapterFactory extends SymphonyTool
 			public Object caseSimpleToolList(SimpleToolList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyToolsCorePackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+						(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
 						 SymphonyToolsVehicleFactory.eINSTANCE.createPathPlannerTool()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyToolsCorePackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
+						(Symphony__AddonsPackage.Literals.SIMPLE_TOOL_LIST__SIMPLE_TOOLS,
 						 SymphonyToolsVehicleFactory.eINSTANCE.createVehiclePathPlannerTool()));
 
 				return null;
@@ -962,19 +962,19 @@ public class SymphonyToolsVehicleItemProviderAdapterFactory extends SymphonyTool
 	}
 
 		/**
-	 * A child creation extender for the {@link PathsPackage}.
+	 * A child creation extender for the {@link Symphony__AddonsGeometryPathsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class PathsChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__AddonsGeometryPathsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends PathsSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__AddonsGeometryPathsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->

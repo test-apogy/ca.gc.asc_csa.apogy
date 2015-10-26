@@ -31,7 +31,7 @@ import org.eclipse.symphony.core.invocator.Variable;
  *   <li>{@link org.eclipse.symphony.addons.Trajectory3DTool#getTrajectory3DToolNode <em>Trajectory3 DTool Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool()
+ * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool()
  * @model
  * @generated
  */
@@ -50,7 +50,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pen Down</em>' attribute.
 	 * @see #setPenDown(boolean)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool_PenDown()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_PenDown()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TRAJECTORY_3D_TOOL'"
 	 * @generated
@@ -76,7 +76,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool_Variable()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_Variable()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TRAJECTORY_3D_TOOL'"
 	 * @generated
@@ -103,7 +103,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Distance Threshold</em>' attribute.
 	 * @see #setDistanceThreshold(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool_DistanceThreshold()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_DistanceThreshold()
 	 * @model default="0.01" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TRAJECTORY_3D_TOOL' csa_units='m'"
 	 * @generated
@@ -131,7 +131,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Total Distance</em>' attribute.
 	 * @see #setTotalDistance(double)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool_TotalDistance()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_TotalDistance()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='TRAJECTORY_3D_TOOL' csa_units='m'"
 	 * @generated
@@ -161,7 +161,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * * The  WayPointPath currently recorded.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Paths</em>' containment reference list.
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool_Paths()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_Paths()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -180,7 +180,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pose Provider</em>' reference.
 	 * @see #setPoseProvider(PoseProvider)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool_PoseProvider()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_PoseProvider()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='TRAJECTORY_3D_TOOL'"
 	 * @generated
@@ -208,7 +208,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Trajectory3 DTool Node</em>' reference.
 	 * @see #setTrajectory3DToolNode(Trajectory3DToolNode)
-	 * @see org.eclipse.symphony.addons.SymphonyToolsCorePackage#getTrajectory3DTool_Trajectory3DToolNode()
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_Trajectory3DToolNode()
 	 * @see org.eclipse.symphony.addons.Trajectory3DToolNode#getTrajectory3DTool
 	 * @model opposite="trajectory3DTool" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly' propertyCategory='TRAJECTORY_3D_TOOL'"

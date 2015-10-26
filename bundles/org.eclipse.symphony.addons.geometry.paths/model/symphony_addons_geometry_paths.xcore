@@ -1,10 +1,9 @@
-@GenModel(prefix="Paths",
+@GenModel(prefix="Symphony__AddonsGeometryPaths",
 	      childCreationExtenders="true",
 	      extensibleProviderFactory="true",
 	      multipleEditorPages="false",
 	      copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
-	      modelName="Paths",
-	      operationReflection="true",
+	      modelName="Symphony__AddonsGeometryPaths",
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.addons.geometry.paths/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.addons.geometry.paths.edit/src-generated")

@@ -7,7 +7,7 @@ package org.eclipse.symphony.addons.geometry.paths.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.geometry.paths.PathsPackage;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
@@ -31,7 +31,7 @@ public class PathImpl extends NodeImpl implements Path {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PathsPackage.Literals.PATH;
+		return Symphony__AddonsGeometryPathsPackage.Literals.PATH;
 	}
 
 } // PathImpl

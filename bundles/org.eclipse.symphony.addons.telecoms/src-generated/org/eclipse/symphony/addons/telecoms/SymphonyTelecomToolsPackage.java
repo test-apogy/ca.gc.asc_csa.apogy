@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.topology.TopologyPackage;
 import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
 
@@ -317,7 +317,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__NAME = SymphonyToolsCorePackage.SIMPLE_TOOL__NAME;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__NAME = Symphony__AddonsPackage.SIMPLE_TOOL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -326,7 +326,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__DESCRIPTION = SymphonyToolsCorePackage.SIMPLE_TOOL__DESCRIPTION;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__DESCRIPTION = Symphony__AddonsPackage.SIMPLE_TOOL__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Tool List</b></em>' container reference.
@@ -335,7 +335,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__TOOL_LIST = SymphonyToolsCorePackage.SIMPLE_TOOL__TOOL_LIST;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__TOOL_LIST = Symphony__AddonsPackage.SIMPLE_TOOL__TOOL_LIST;
 
 	/**
 	 * The feature id for the '<em><b>Active</b></em>' attribute.
@@ -344,7 +344,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__ACTIVE = SymphonyToolsCorePackage.SIMPLE_TOOL__ACTIVE;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__ACTIVE = Symphony__AddonsPackage.SIMPLE_TOOL__ACTIVE;
 
 	/**
 	 * The feature id for the '<em><b>Disposed</b></em>' attribute.
@@ -353,7 +353,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__DISPOSED = SymphonyToolsCorePackage.SIMPLE_TOOL__DISPOSED;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__DISPOSED = Symphony__AddonsPackage.SIMPLE_TOOL__DISPOSED;
 
 	/**
 	 * The feature id for the '<em><b>Telecom Status Monitors</b></em>' containment reference list.
@@ -362,7 +362,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS = SymphonyToolsCorePackage.SIMPLE_TOOL_FEATURE_COUNT + 0;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST__TELECOM_STATUS_MONITORS = Symphony__AddonsPackage.SIMPLE_TOOL_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Telecom Status Monitor Tool List</em>' class.
@@ -371,7 +371,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST_FEATURE_COUNT = SymphonyToolsCorePackage.SIMPLE_TOOL_FEATURE_COUNT + 1;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST_FEATURE_COUNT = Symphony__AddonsPackage.SIMPLE_TOOL_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -380,7 +380,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST___DISPOSE = SymphonyToolsCorePackage.SIMPLE_TOOL___DISPOSE;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST___DISPOSE = Symphony__AddonsPackage.SIMPLE_TOOL___DISPOSE;
 
 	/**
 	 * The number of operations of the '<em>Telecom Status Monitor Tool List</em>' class.
@@ -389,7 +389,7 @@ public interface SymphonyTelecomToolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TELECOM_STATUS_MONITOR_TOOL_LIST_OPERATION_COUNT = SymphonyToolsCorePackage.SIMPLE_TOOL_OPERATION_COUNT + 0;
+	int TELECOM_STATUS_MONITOR_TOOL_LIST_OPERATION_COUNT = Symphony__AddonsPackage.SIMPLE_TOOL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.impl.AbstractAntennaRadiationPatternImpl <em>Abstract Antenna Radiation Pattern</em>}' class.

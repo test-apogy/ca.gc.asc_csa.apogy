@@ -3,7 +3,7 @@ package org.eclipse.symphony.addons.vehicle.ui.jme3.scene_objects;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.symphony.addons.SymphonyToolsCorePackage;
+import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.vehicle.PathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.PathPlannerToolNode;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
@@ -49,7 +49,7 @@ public class PathPlannerToolNodeJME3Object extends DefaultJME3SceneObject<PathPl
 						
 						switch(featureId)
 						{
-							case SymphonyToolsCorePackage.SIMPLE3_DTOOL__VISIBLE:
+							case Symphony__AddonsPackage.SIMPLE3_DTOOL__VISIBLE:
 								setVisible(msg.getNewBooleanValue());
 							break;
 						}						

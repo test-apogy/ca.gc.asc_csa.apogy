@@ -19,7 +19,7 @@ import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
  *   <li>{@link org.eclipse.symphony.addons.mobility.pathplanners.graph.ExclusionZonesCostFunction#getExclusionZones <em>Exclusion Zones</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getExclusionZonesCostFunction()
+ * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getExclusionZonesCostFunction()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ExclusionZonesCostFunction extends DisplacementCostFunction {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exclusion Zones</em>' reference list.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.PathplannersGraphPackage#getExclusionZonesCostFunction_ExclusionZones()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage#getExclusionZonesCostFunction_ExclusionZones()
 	 * @model
 	 * @generated
 	 */

@@ -5,8 +5,8 @@ package org.eclipse.symphony.addons.sensors.imaging.camera.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.geometry.paths.provider.PathsEditPlugin;
-import org.eclipse.symphony.addons.provider.SymphonyToolsCoreEditPlugin;
+import org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsEditPlugin;
+import org.eclipse.symphony.addons.provider.Symphony__AddonsEditPlugin;
 import org.eclipse.symphony.addons.sensors.fov.provider.FovEditPlugin;
 import org.eclipse.symphony.addons.sensors.imaging.provider.MRTSensorsImagingEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.SensorsEditPlugin;
@@ -56,7 +56,7 @@ public final class SymphonyCameraToolsEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     EMFEcoreInvocatorEditPlugin.INSTANCE,
-		     SymphonyToolsCoreEditPlugin.INSTANCE,
+		     Symphony__AddonsEditPlugin.INSTANCE,
 		     EMFEcoreEditPlugin.INSTANCE,
 		     MRTSensorsImagingEditPlugin.INSTANCE,
 		     ImagesCoreEditPlugin.INSTANCE,
@@ -64,7 +64,7 @@ public final class SymphonyCameraToolsEditPlugin extends EMFPlugin
 		     FovEditPlugin.INSTANCE,
 		     TopologyEditPlugin.INSTANCE,
 		     MathEditPlugin.INSTANCE,
-		     PathsEditPlugin.INSTANCE,
+		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
 		     SensorsEditPlugin.INSTANCE,
 		     TopologyBindingsEditPlugin.INSTANCE,
 		     DataEditPlugin.INSTANCE,

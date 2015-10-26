@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.mobility.MobilePlatform;
 import org.eclipse.symphony.addons.mobility.MobilePlatformStatus;
-import org.eclipse.symphony.addons.mobility.MobilityPackage;
+import org.eclipse.symphony.addons.mobility.Symphony__AddonsMobilityPackage;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
@@ -80,7 +80,7 @@ public class MobilePlatformImpl extends AggregateGroupNodeImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MobilityPackage.Literals.MOBILE_PLATFORM;
+		return Symphony__AddonsMobilityPackage.Literals.MOBILE_PLATFORM;
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class MobilePlatformImpl extends AggregateGroupNodeImpl implements
 		boolean oldMoving = moving;
 		moving = newMoving;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.MOBILE_PLATFORM__MOVING, oldMoving, moving));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOVING, oldMoving, moving));
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class MobilePlatformImpl extends AggregateGroupNodeImpl implements
 		MobilePlatformStatus oldMobilePlatformStatus = mobilePlatformStatus;
 		mobilePlatformStatus = newMobilePlatformStatus == null ? MOBILE_PLATFORM_STATUS_EDEFAULT : newMobilePlatformStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS, oldMobilePlatformStatus, mobilePlatformStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS, oldMobilePlatformStatus, mobilePlatformStatus));
 	}
 
 	/**
@@ -130,9 +130,9 @@ public class MobilePlatformImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MobilityPackage.MOBILE_PLATFORM__MOVING:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOVING:
 				return isMoving();
-			case MobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
 				return getMobilePlatformStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -145,10 +145,10 @@ public class MobilePlatformImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MobilityPackage.MOBILE_PLATFORM__MOVING:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOVING:
 				setMoving((Boolean)newValue);
 				return;
-			case MobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
 				setMobilePlatformStatus((MobilePlatformStatus)newValue);
 				return;
 		}
@@ -162,10 +162,10 @@ public class MobilePlatformImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MobilityPackage.MOBILE_PLATFORM__MOVING:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOVING:
 				setMoving(MOVING_EDEFAULT);
 				return;
-			case MobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
 				setMobilePlatformStatus(MOBILE_PLATFORM_STATUS_EDEFAULT);
 				return;
 		}
@@ -179,9 +179,9 @@ public class MobilePlatformImpl extends AggregateGroupNodeImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MobilityPackage.MOBILE_PLATFORM__MOVING:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOVING:
 				return moving != MOVING_EDEFAULT;
-			case MobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
+			case Symphony__AddonsMobilityPackage.MOBILE_PLATFORM__MOBILE_PLATFORM_STATUS:
 				return mobilePlatformStatus != MOBILE_PLATFORM_STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
