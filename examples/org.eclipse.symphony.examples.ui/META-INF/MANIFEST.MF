@@ -1,7 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
+<<<<<<< HEAD
 Bundle-SymbolicName: org.eclipse.symphony.examples.ui;singleton:=true
+=======
+Bundle-SymbolicName: org.eclipse.symphony.examples.ui
+>>>>>>> branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.examples.ui.Activator
 Bundle-Vendor: %providerName
