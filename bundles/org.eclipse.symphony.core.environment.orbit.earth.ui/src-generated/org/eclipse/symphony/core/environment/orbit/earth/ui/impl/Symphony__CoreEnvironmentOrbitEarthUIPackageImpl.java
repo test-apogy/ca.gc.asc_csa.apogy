@@ -841,7 +841,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getAbstractWorldWindLayer__Dispose(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nMethod called when the layer is not longer needed (i.e. when it gets deleted.)"
+			 "documentation", "*\nMethod called when the layer is not longer\nneeded (i.e. when it gets deleted.)"
 		   });	
 		addAnnotation
 		  (getAbstractWorldWindLayer_Visible(), 
@@ -871,14 +871,14 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getSpacecraftLocationWorldWindLayer_TimeSource(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The time source to used to get the time used to compute the S/C position.",
+			 "documentation", "The time source to used to get the time\nused to compute the S/C position.",
 			 "propertyCategory", "TIME"
 		   });	
 		addAnnotation
 		  (getSpacecraftLocationWorldWindLayer_ShowGroundProjection(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Whether or not to display the position projected on the ground.",
+			 "documentation", "Whether or not to display the position\nprojected on the ground.",
 			 "notify", "true",
 			 "property", "Editable"
 		   });	
@@ -886,7 +886,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getSpacecraftLocationWorldWindLayer_ShowLatLon(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Whether or not to the longitude and latitude of the spacecraft.",
+			 "documentation", "Whether or not to the longitude and\nlatitude of the spacecraft.",
 			 "notify", "true",
 			 "property", "Editable"
 		   });	
@@ -901,14 +901,14 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getOrbitModelWorldWindLayer_TimeSource(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The time source to used to get the time used to define the reference time.",
+			 "documentation", "The time source to used to get the time\nused to define the reference time.",
 			 "propertyCategory", "TIME"
 		   });	
 		addAnnotation
 		  (getOrbitModelWorldWindLayer_TimeInterval(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The time interval at which to show the position.",
+			 "documentation", "The time interval at which to show\nthe position.",
 			 "propertyCategory", "TIME_PERIOD",
 			 "csa_units", "s"
 		   });	
@@ -916,7 +916,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getOrbitModelWorldWindLayer_ForwardPropagationDuration(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The forward propagation duration from the current time.",
+			 "documentation", "The forward propagation duration\nfrom the current time.",
 			 "propertyCategory", "TIME_PERIOD",
 			 "csa_units", "s"
 		   });	
@@ -924,7 +924,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getOrbitModelWorldWindLayer_BackwardPropagationDuration(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The backward propagation duration from the current time.",
+			 "documentation", "The backward propagation duration\nfrom the current time.",
 			 "propertyCategory", "TIME_PERIOD",
 			 "csa_units", "s"
 		   });	
@@ -932,7 +932,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getOrbitModelWorldWindLayer_ShowGroundTrace(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Whether or not to display the orbit projected on the ground.",
+			 "documentation", "Whether or not to display the orbit\nprojected on the ground.",
 			 "propertyCategory", "VISUALS",
 			 "notify", "true",
 			 "property", "Editable"
@@ -957,14 +957,14 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getSpacecraftSwathWorldWindLayer_TimeSource(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The time source to used to get the time used to define the reference time.",
+			 "documentation", "The time source to used to get the time\nused to define the reference time.",
 			 "propertyCategory", "TIME"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_ForwardPropagationDuration(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The forward propagation duration from the current time.",
+			 "documentation", "The forward propagation duration from\nthe current time.",
 			 "propertyCategory", "TIME_PERIOD",
 			 "csa_units", "s"
 		   });	
@@ -972,7 +972,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getSpacecraftSwathWorldWindLayer_BackwardPropagationDuration(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The backward propagation duration from the current time.",
+			 "documentation", "The backward propagation duration from\nthe current time.",
 			 "propertyCategory", "TIME_PERIOD",
 			 "csa_units", "s"
 		   });	
@@ -980,7 +980,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getSpacecraftSwathWorldWindLayer_TimeInterval(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The time interval at which to show the position.",
+			 "documentation", "The time interval at which to show\nthe position.",
 			 "notify", "true",
 			 "propertyCategory", "TIME_PERIOD",
 			 "property", "Editable",
@@ -1008,7 +1008,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getSpacecraftSwathWorldWindLayer_ShowGroundTrace(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Whether or not to display the orbit projected on the ground.",
+			 "documentation", "Whether or not to display the orbit\nprojected on the ground.",
 			 "notify", "true",
 			 "propertyCategory", "VISUALS",
 			 "property", "Editable"
@@ -1025,7 +1025,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (getGroundStationWorldWindLayer_ReferenceAltitude(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The altitude to which to project the ElevationMask.",
+			 "documentation", "The altitude to which to project\nthe ElevationMask.",
 			 "propertyCategory", "VISUALS",
 			 "csa_units", "km"
 		   });	
@@ -1033,13 +1033,13 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		  (spacecraftVisibilityPassViewConfigurationListEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nDefines a list of configuration for the view that shows the visibility of spacecraft from ground stations."
+			 "documentation", "*\nDefines a list of configuration for the view that\nshows the visibility of spacecraft from ground stations."
 		   });	
 		addAnnotation
 		  (spacecraftVisibilityPassViewConfigurationEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "Defines the configuration for the view that shows the visibility of spacecraft from ground stations."
+			 "documentation", "Defines the configuration for the view that shows the\nvisibility of spacecraft from ground stations."
 		   });	
 		addAnnotation
 		  (getSpacecraftVisibilityPassViewConfiguration_VisibilitySet(), 

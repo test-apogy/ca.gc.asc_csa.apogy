@@ -65,7 +65,8 @@ public interface SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The time source to used to get the time used to compute the S/C position.
+	 * The time source to used to get the time
+	 * used to compute the S/C position.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Source</em>' reference.
 	 * @see #setTimeSource(Timed)
@@ -91,7 +92,8 @@ public interface SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Whether or not to display the position projected on the ground.
+	 * Whether or not to display the position
+	 * projected on the ground.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Ground Projection</em>' attribute.
 	 * @see #setShowGroundProjection(boolean)
@@ -118,7 +120,8 @@ public interface SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Whether or not to the longitude and latitude of the spacecraft.
+	 * Whether or not to the longitude and
+	 * latitude of the spacecraft.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Lat Lon</em>' attribute.
 	 * @see #setShowLatLon(boolean)

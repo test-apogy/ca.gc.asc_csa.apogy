@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Described Element.
  * <!-- end-model-doc -->
  *

@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData3DASC' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData3DASC' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d.asc/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated' testsDirectory='/org.eclipse.symphony.common.geometry.data3d.asc.tests/src-generated' basePackage='org.eclipse.symphony.common.geometry.data3d'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData3DASC' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData3DASC' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d.asc/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry.data3d'"
  * @generated
  */
 public interface Symphony__CommonGeometryData3DASCPackage extends EPackage {

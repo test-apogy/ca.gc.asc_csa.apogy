@@ -4523,13 +4523,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  (getSun__GetIrradiance__double(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Returns the sun intensity at the specified radius."
+			 "documentation", "Returns the sun intensity at the specified radius.\n@param radius The distance from the sun center, in meters."
 		   });	
 		addAnnotation
 		  ((getSun__GetIrradiance__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "documentation", "The distance from the sun center, in meters."
+			 "csa_units", "m"
 		   });	
 		addAnnotation
 		  (getSun_Radius(), 

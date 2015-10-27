@@ -34,7 +34,11 @@ class Vector extends Node
 
 class PickVector extends Vector
 {
-	@GenModel(csa_units="m", documentation="The current shortest intersection distance between the ray and a node of one of the included type.")
+	/*
+	 * The current shortest intersection distance between
+	 * the ray and a node of one of the included type.
+	 */
+	@GenModel(csa_units="m")
 	double intersectionDistance = "-1.0"
 	
 	refers Node intersectedNode

@@ -54,7 +54,6 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns all the sub classes of the specified super class.  The result list contains
 	 * only implementation classes (not abstract).
 	 * @param superClass Super type of the classes to be found.
@@ -85,7 +84,6 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the {@link EClass} that fits the specified fully qualified name.
 	 * @param str Fully qualified name.
 	 * @return Reference to the class or null there is no match.
@@ -123,7 +121,6 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Documentation tags utility methods.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" eTypedElementUnique="false"
@@ -252,7 +249,6 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Feature Tree Methods.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" abstractFeatureNodeUnique="false"
@@ -264,7 +260,8 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Method that return the root of the tree for a specified AbstractFeatureNode.
+	 * Method that return the root of the tree for a
+	 * specified AbstractFeatureNode.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" abstractFeatureNodeUnique="false"
 	 * @generated
@@ -275,7 +272,9 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Method that return the list of ancestor of a specified AbstractFeatureNode, from FeatureRoot to and including the specified AbstractFeatureNode.
+	 * Method that return the list of ancestor of a
+	 * specified AbstractFeatureNode, from FeatureRoot to
+	 * (and including) the specified AbstractFeatureNode.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.common.emf.AbstractFeatureNode>" unique="false" many="false" abstractFeatureNodeUnique="false"
 	 * @generated
@@ -286,7 +285,9 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Method that return the list of descendants of a specified AbstractFeatureNode, excluding the specified AbstractFeatureNode.
+	 * Method that return the list of descendants of a
+	 * specified AbstractFeatureNode, excluding the specified
+	 * AbstractFeatureNode.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.common.emf.AbstractFeatureNode>" unique="false" many="false" abstractFeatureNodeUnique="false"
 	 * @generated
@@ -297,7 +298,8 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Method that return the list of available child EStructuralFeature type for a given Node.
+	 * Method that return the list of available child
+	 * EStructuralFeature type for a given Node.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.emf.ecore.EStructuralFeature>" unique="false" many="false" abstractFeatureNodeUnique="false"
 	 * @generated
@@ -308,7 +310,8 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Method that resolve the value of a FeatureNode for a specified source EObjet.
+	 * Method that resolve the value of a FeatureNode
+	 * for a specified source EObjet.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sourceObjectUnique="false" abstractFeatureNodeUnique="false"
 	 * @generated
@@ -327,7 +330,9 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Method that tells whether or not the a FeatureNode is currently accessible for specified source EObject.
+	 * Method that tells whether or not the
+	 * FeatureNode is currently accessible for
+	 * the specified source EObject.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sourceObjectUnique="false" abstractFeatureNodeUnique="false"
 	 * @generated
@@ -346,7 +351,6 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Resource Support.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.emf.IFile" unique="false" resourceDataType="org.eclipse.symphony.common.emf.Resource" resourceUnique="false"
@@ -358,7 +362,6 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the content contained in the resource.
 	 * @param uri Resource uri.
 	 * @return Reference to the content.
@@ -372,7 +375,6 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Timed Support
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.emf.SortedSet<org.eclipse.symphony.common.emf.Timed>" unique="false" timedCollectionDataType="org.eclipse.symphony.common.emf.Collection<org.eclipse.symphony.common.emf.Timed>" timedCollectionUnique="false"
@@ -384,7 +386,8 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the time span of a collection of Timed elements.
+	 * Returns the time span of a collection
+	 * of Timed elements.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" timedCollectionDataType="org.eclipse.symphony.common.emf.Collection<org.eclipse.symphony.common.emf.Timed>" timedCollectionUnique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='s'"
@@ -396,7 +399,6 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return an EObject unique ID.
 	 * @param eObject The EObject.
 	 * @return the unique ID, null if none is found.

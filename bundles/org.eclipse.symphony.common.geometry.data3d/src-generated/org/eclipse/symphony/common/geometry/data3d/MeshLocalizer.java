@@ -12,10 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Mesh Localizer</b></em>'.
  * <!-- end-user-doc -->
  *
- * <!-- begin-model-doc -->
- * Localize a floating mesh with respect to a fixed mesh. The transform returned is the transform between the floating mesh and the origin (i.e. a revised version of the floatingMeshTransformEstimate).
- * <!-- end-model-doc -->
- *
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getMeshLocalizer()
  * @model
@@ -25,6 +21,12 @@ public interface MeshLocalizer extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Localize a floating mesh with respect to a fixed mesh.
+	 * The transform returned is the transform between the floating
+	 * mesh and the origin (i.e. a revised version of the
+	 * floatingMeshTransformEstimate).
+	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.Exception" fixedMeshUnique="false" fixedMeshTransformDataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" fixedMeshTransformUnique="false" floatingMeshUnique="false" floatingMeshTransformEstimateDataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" floatingMeshTransformEstimateUnique="false"
 	 * @generated
 	 */

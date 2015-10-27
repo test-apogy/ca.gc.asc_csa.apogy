@@ -9,7 +9,6 @@ package org.eclipse.symphony.common.emf;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Time source that provides time based on a selection.
  * <!-- end-model-doc -->
  *

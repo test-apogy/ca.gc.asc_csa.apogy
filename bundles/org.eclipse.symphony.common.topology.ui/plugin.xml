@@ -135,7 +135,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.common.topology.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.common.topology.ui.views.NodesDistanceView"
             icon="icons/NodesDistanceView.gif"
             id="org.eclipse.symphony.common.topology.ui.views.NodesDistanceView"
@@ -143,7 +143,7 @@
             restorable="true">
       </view>
       <view
-            category="org.eclipse.symphony.common.topology.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.common.topology.ui.views.TopologyPresentationRegistryView"
             id="org.eclipse.symphony.common.topology.ui.views.TopologyPresentationRegistryView"
             name="TopologyPresentationRegistryView"

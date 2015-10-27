@@ -13,7 +13,8 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  *
  * <!-- begin-model-doc -->
  * *
- * Defines a list of configuration for the view that shows the visibility of spacecraft from ground stations.
+ * Defines a list of configuration for the view that
+ * shows the visibility of spacecraft from ground stations.
  * <!-- end-model-doc -->
  *
  * <p>

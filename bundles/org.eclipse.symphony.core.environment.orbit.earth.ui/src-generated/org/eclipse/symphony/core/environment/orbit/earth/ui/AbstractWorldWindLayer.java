@@ -92,7 +92,8 @@ public interface AbstractWorldWindLayer extends Updatable {
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
-	 * Method called when the layer is not longer needed (i.e. when it gets deleted.)
+	 * Method called when the layer is not longer
+	 * needed (i.e. when it gets deleted.)
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

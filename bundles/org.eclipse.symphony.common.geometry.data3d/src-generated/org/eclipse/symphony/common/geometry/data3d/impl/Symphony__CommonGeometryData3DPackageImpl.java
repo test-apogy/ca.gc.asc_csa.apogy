@@ -3518,10 +3518,10 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 			 "basePackage", "org.eclipse.symphony.common.geometry"
 		   });	
 		addAnnotation
-		  (meshLocalizerEClass, 
+		  (getMeshLocalizer__Localize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Localize a floating mesh with respect to a fixed mesh. The transform returned is the transform between the floating mesh and the origin (i.e. a revised version of the floatingMeshTransformEstimate)."
+			 "documentation", "Localize a floating mesh with respect to a fixed mesh.\nThe transform returned is the transform between the floating\nmesh and the origin (i.e. a revised version of the\nfloatingMeshTransformEstimate)."
 		   });	
 		addAnnotation
 		  (voxelBased3DPointCloudResamplerEClass, 

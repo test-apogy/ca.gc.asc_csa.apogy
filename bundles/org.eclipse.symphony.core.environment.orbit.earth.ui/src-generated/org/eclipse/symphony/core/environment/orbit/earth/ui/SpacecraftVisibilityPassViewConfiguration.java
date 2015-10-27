@@ -13,7 +13,8 @@ import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySe
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Defines the configuration for the view that shows the visibility of spacecraft from ground stations.
+ * Defines the configuration for the view that shows the
+ * visibility of spacecraft from ground stations.
  * <!-- end-model-doc -->
  *
  * <p>

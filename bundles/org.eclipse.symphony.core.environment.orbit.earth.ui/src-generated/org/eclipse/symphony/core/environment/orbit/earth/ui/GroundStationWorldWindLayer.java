@@ -55,7 +55,8 @@ public interface GroundStationWorldWindLayer extends EarthSurfaceLocationWorldWi
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The altitude to which to project the ElevationMask.
+	 * The altitude to which to project
+	 * the ElevationMask.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Reference Altitude</em>' attribute.
 	 * @see #setReferenceAltitude(double)

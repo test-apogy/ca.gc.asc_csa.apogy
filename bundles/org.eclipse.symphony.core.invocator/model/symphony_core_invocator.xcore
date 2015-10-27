@@ -9,7 +9,6 @@
 @GenModel(modelDirectory="/org.eclipse.symphony.core.invocator/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.core.invocator.edit/src-generated")
 @GenModel(editorDirectory="/org.eclipse.symphony.core.invocator.editor/src-generated")
-@GenModel(testsDirectory="/org.eclipse.symphony.core.invocator.tests/src-generated")
 
 package org.eclipse.symphony.core.invocator
 

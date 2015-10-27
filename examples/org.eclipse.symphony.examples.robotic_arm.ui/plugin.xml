@@ -9,17 +9,16 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.examples.robotic_arm.category"
+            category="org.eclipse.symphony.examples.ui.category"
             class="org.eclipse.symphony.examples.robotic_arm.ui.views.RoboticArmControlView"
             id="org.eclipse.symphony.examples.robotic_arm.ui.views.RoboticArmControlView"
             name="Robotic Arm Control View"
             restorable="true">
       </view>
-      
-            
+ 
       <category
-            id="org.eclipse.symphony.examples.robotic_arm.category"
-            name="ASC/CSA Eclipse Examples - Robotic Arm">
+            id="org.eclipse.symphony.examples.ui.category"
+            name="Symphony Examples">
       </category>
    </extension>
    <extension

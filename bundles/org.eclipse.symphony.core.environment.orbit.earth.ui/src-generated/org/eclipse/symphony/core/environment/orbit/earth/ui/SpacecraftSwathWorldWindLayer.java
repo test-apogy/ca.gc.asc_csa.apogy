@@ -71,7 +71,8 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The time source to used to get the time used to define the reference time.
+	 * The time source to used to get the time
+	 * used to define the reference time.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Source</em>' reference.
 	 * @see #setTimeSource(Timed)
@@ -97,7 +98,8 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The forward propagation duration from the current time.
+	 * The forward propagation duration from
+	 * the current time.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Forward Propagation Duration</em>' attribute.
 	 * @see #setForwardPropagationDuration(double)
@@ -124,7 +126,8 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The backward propagation duration from the current time.
+	 * The backward propagation duration from
+	 * the current time.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Backward Propagation Duration</em>' attribute.
 	 * @see #setBackwardPropagationDuration(double)
@@ -151,7 +154,8 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The time interval at which to show the position.
+	 * The time interval at which to show
+	 * the position.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Interval</em>' attribute.
 	 * @see #setTimeInterval(double)
@@ -234,7 +238,8 @@ public interface SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Whether or not to display the orbit projected on the ground.
+	 * Whether or not to display the orbit
+	 * projected on the ground.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Ground Trace</em>' attribute.
 	 * @see #setShowGroundTrace(boolean)

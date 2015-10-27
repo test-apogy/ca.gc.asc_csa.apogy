@@ -7,7 +7,6 @@
 		  complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.topology.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.topology.ui.edit/src-generated")
-@GenModel(testsDirectory="/org.eclipse.symphony.common.topology.ui.tests/src-generated")
 
 package org.eclipse.symphony.common.topology.ui
 

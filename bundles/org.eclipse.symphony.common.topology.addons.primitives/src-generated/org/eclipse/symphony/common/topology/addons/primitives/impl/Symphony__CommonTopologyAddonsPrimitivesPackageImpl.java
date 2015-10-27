@@ -983,8 +983,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 		  (getPickVector_IntersectionDistance(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m",
-			 "documentation", "The current shortest intersection distance between the ray and a node of one of the included type."
+			 "documentation", "The current shortest intersection distance between\nthe ray and a node of one of the included type.",
+			 "csa_units", "m"
 		   });	
 		addAnnotation
 		  (pointLightEClass, 

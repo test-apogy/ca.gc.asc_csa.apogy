@@ -273,9 +273,14 @@ class VecmathKdTreePointLocator extends VecmathPointLocator
 	
 }
 
-@GenModel(documentation="Localize a floating mesh with respect to a fixed mesh. The transform returned is the transform between the floating mesh and the origin (i.e. a revised version of the floatingMeshTransformEstimate).")
 class MeshLocalizer
 {
+	/*
+	 * Localize a floating mesh with respect to a fixed mesh.
+	 * The transform returned is the transform between the floating
+	 * mesh and the origin (i.e. a revised version of the
+	 * floatingMeshTransformEstimate).
+	 */
 	op Matrix4d localize(CartesianTriangularMesh fixedMesh, Matrix4d fixedMeshTransform, CartesianTriangularMesh floatingMesh, Matrix4d floatingMeshTransformEstimate) throws Exception
 }
 

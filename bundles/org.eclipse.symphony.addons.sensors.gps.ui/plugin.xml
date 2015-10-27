@@ -22,16 +22,12 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.symphony.addons.sensors.gps.ui.gpsCategory"
+            category="org.eclipse.symphony.addons.ui.category"
             class="org.eclipse.symphony.addons.sensors.gps.ui.views.GPSView"
             id="org.eclipse.symphony.addons.sensors.gps.ui.views.GPSView"
             name="GPS View"
             restorable="true">
       </view>
-      <category
-            id="org.eclipse.symphony.addons.sensors.gps.ui.gpsCategory"
-            name="GPS">
-      </category>
    </extension>
    <extension
          id="product"

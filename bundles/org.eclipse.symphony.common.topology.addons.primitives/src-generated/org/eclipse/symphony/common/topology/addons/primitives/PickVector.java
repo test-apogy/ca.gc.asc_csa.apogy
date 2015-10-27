@@ -39,7 +39,8 @@ public interface PickVector extends Vector {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The current shortest intersection distance between the ray and a node of one of the included type.
+	 * The current shortest intersection distance between
+	 * the ray and a node of one of the included type.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Intersection Distance</em>' attribute.
 	 * @see #setIntersectionDistance(double)

@@ -996,13 +996,12 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		  (getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval."
+			 "documentation", "Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.\n@param timeInterval The time interval to get spacecraft states, in seconds."
 		   });	
 		addAnnotation
 		  ((getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "documentation", "The time interval to get spacecraft states, in seconds.",
 			 "csa_units", "s"
 		   });	
 		addAnnotation

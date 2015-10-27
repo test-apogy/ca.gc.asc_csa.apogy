@@ -63,6 +63,7 @@ public interface Sun extends GroupNode
 	 * @param radius The distance from the sun center, in meters.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" radiusUnique="false"
+	 *        radiusAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
 	 */
   double getIrradiance(double radius);

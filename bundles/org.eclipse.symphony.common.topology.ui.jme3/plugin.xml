@@ -14,7 +14,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="org.eclipse.symphony.common.topology.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.common.topology.ui.jme3.views.JME3Topology3DView"
             icon="icons/3d_topology_viewer.png"
             id="org.eclipse.symphony.common.topology.ui.jme3.views.JME3Topology3DView"

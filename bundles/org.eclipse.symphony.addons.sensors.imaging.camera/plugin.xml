@@ -11,7 +11,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            category="org.eclipse.symphony.core.ui.category"
+            category="org.eclipse.symphony.addons.ui.category"
             class="org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView"
             icon="icons/CameraView.gif"
             id="org.eclipse.symphony.addons.sensors.imaging.camera.views.CameraView"
@@ -19,7 +19,6 @@
             restorable="true">
       </view>
    </extension>
-
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_tools_camera -->

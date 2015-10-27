@@ -7,7 +7,7 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="false"
-            category="org.eclipse.symphony.core.ui.category.toolbox"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.common.converters.ui.views.ConvertersView"
             icon="icons/convert.gif"
             id="org.eclipse.symphony.common.converters.ui.views.ConvertersView"

@@ -358,8 +358,9 @@ class Sun extends GroupNode
 {
 	/*
 	 * Returns the sun intensity at the specified radius.
+	 * @param radius The distance from the sun center, in meters.
 	 */
-	op double getIrradiance(@GenModel(documentation="The distance from the sun center, in meters.") double radius)
+	op double getIrradiance(@GenModel(csa_units="m") double radius)
 	
 	/*
 	 * Sun radius, in meters.

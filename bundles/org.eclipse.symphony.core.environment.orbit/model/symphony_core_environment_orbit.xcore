@@ -195,9 +195,9 @@ abstract class AbstractOrbitPropagator extends Named, Described
 	
 	/*
 	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
+	 * @param timeInterval The time interval to get spacecraft states, in seconds.
 	 */
-	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(documentation="The time interval to get spacecraft states, in seconds.",csa_units="s")double timeInterval) throws Exception
-	
+	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(csa_units="s") double timeInterval) throws Exception
 	
 	/*
 	 * Defines the earliest data for which the propagator is valid.

@@ -9,7 +9,6 @@ package org.eclipse.symphony.common.emf;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Time source that provides the current time.
  * <!-- end-model-doc -->
  *
@@ -32,7 +31,7 @@ public interface CurrentTimeSource extends TimeSource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The update period of the time.
+	 * The update period of the time, in milliseconds
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Update Period</em>' attribute.
 	 * @see #setUpdatePeriod(int)
@@ -84,7 +83,7 @@ public interface CurrentTimeSource extends TimeSource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Pause time.
+	 * Pause the time.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

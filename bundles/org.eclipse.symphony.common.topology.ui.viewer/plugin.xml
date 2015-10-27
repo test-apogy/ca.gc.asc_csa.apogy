@@ -17,13 +17,6 @@
       </command>
    </extension>
    <extension
-         point="org.eclipse.ui.views">
-      <category
-            id="org.eclipse.symphony.common.topology.ui.category"
-            name="ASC/CSA Topology">
-      </category>
-   </extension>
-   <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
             class="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesInitializer">

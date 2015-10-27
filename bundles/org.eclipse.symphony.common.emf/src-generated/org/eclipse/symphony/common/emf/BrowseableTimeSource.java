@@ -34,7 +34,8 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The start time. Default to current time upon creation.
+	 * The start time. Default to current
+	 * time upon creation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(Date)
@@ -142,7 +143,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Plays time forward.
+	 * Play time forward.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -153,7 +154,7 @@ public interface BrowseableTimeSource extends TimeSource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Plays time in reverse.
+	 * Play time in reverse.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

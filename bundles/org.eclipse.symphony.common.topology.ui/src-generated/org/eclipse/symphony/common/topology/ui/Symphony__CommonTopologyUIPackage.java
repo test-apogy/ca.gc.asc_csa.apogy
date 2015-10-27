@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonTopologyUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonTopologyUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.ui/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.edit/src-generated' testsDirectory='/org.eclipse.symphony.common.topology.ui.tests/src-generated' basePackage='org.eclipse.symphony.common.topology'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonTopologyUI' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CommonTopologyUI' complianceLevel='6.0' modelDirectory='/org.eclipse.symphony.common.topology.ui/src-generated' editDirectory='/org.eclipse.symphony.common.topology.ui.edit/src-generated' basePackage='org.eclipse.symphony.common.topology'"
  * @generated
  */
 public interface Symphony__CommonTopologyUIPackage extends EPackage {

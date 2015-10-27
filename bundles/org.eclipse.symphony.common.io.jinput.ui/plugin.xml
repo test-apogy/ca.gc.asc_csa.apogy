@@ -4,14 +4,10 @@
 
    <extension
          point="org.eclipse.ui.views">
-      <category
-            name="Controller"
-            id="org.eclipse.symphony.common.io.jinput.ui.category">
-      </category>
       <view
             name="Controllers Status"
             icon="icons/joystick.png"
-            category="org.eclipse.symphony.common.io.jinput.ui.category"
+            category="org.eclipse.symphony.core.ui.category"
             class="org.eclipse.symphony.common.io.jinput.ui.views.JInputStatusView"
             id="org.eclipse.symphony.common.io.jinput.ui.views.JInputStatusView">
       </view>

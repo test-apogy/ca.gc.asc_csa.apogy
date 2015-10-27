@@ -77,7 +77,8 @@ public interface AbstractFeatureSpecifier extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Index of the value if the EStructuralFeature referred to by this FeatureSpecifier if multi-valued.
+	 * Index of the value if the EStructuralFeature referred
+	 * to by this FeatureSpecifier if multi-valued.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Index</em>' attribute.
 	 * @see #setIndex(int)

@@ -12,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Time source that is based on a list of Timed elements.
  * <!-- end-model-doc -->
  *
@@ -38,7 +37,7 @@ public interface CollectionTimedTimeSource extends BrowseableTimeSource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Enables time looping when end of list of time is reached.
+	 * Whether or not to enable time looping when end of list of time is reached.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Loop Enable</em>' attribute.
 	 * @see #setLoopEnable(boolean)

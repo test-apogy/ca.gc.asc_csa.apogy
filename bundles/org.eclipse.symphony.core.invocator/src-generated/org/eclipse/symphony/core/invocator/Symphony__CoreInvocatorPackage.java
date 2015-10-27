@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreInvocator' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)' modelName='Symphony__CoreInvocator' fileExtensions='sym' resource='XMI' modelDirectory='/org.eclipse.symphony.core.invocator/src-generated' editDirectory='/org.eclipse.symphony.core.invocator.edit/src-generated' editorDirectory='/org.eclipse.symphony.core.invocator.editor/src-generated' testsDirectory='/org.eclipse.symphony.core.invocator.tests/src-generated' basePackage='org.eclipse.symphony.core'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreInvocator' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2012-2015 Copyrights (c)' modelName='Symphony__CoreInvocator' fileExtensions='sym' resource='XMI' modelDirectory='/org.eclipse.symphony.core.invocator/src-generated' editDirectory='/org.eclipse.symphony.core.invocator.edit/src-generated' editorDirectory='/org.eclipse.symphony.core.invocator.editor/src-generated' basePackage='org.eclipse.symphony.core'"
  * @generated
  */
 public interface Symphony__CoreInvocatorPackage extends EPackage
