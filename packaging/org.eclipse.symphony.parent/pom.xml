@@ -302,7 +302,7 @@
 		
 		<!-- Tests -->
 		<module>../../tests/org.eclipse.symphony.common.converters.tests</module>
-		<module>../../tests/org.eclipse.symphony.common.geometry.data3d.asc.tests</module>
+		<!-- <module>../../tests/org.eclipse.symphony.common.geometry.data3d.asc.tests</module> -->
 		<module>../../tests/org.eclipse.symphony.common.log.tests</module>
 		<module>../../tests/org.eclipse.symphony.common.topology.ui.tests</module>		
 		<module>../../tests/org.eclipse.symphony.core.invocator.tests</module>		
